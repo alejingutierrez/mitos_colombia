@@ -31,6 +31,7 @@ CREATE TABLE IF NOT EXISTS myths (
   focus_keyword TEXT NOT NULL,
   focus_keywords_raw TEXT NOT NULL,
   image_prompt TEXT NOT NULL,
+  image_url TEXT,
   source_row INTEGER NOT NULL,
   created_at TEXT NOT NULL DEFAULT (datetime('now')),
   updated_at TEXT NOT NULL DEFAULT (datetime('now')),

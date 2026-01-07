@@ -28,10 +28,13 @@ CREATE TABLE IF NOT EXISTS myths (
   focus_keyword TEXT NOT NULL,
   focus_keywords_raw TEXT NOT NULL,
   image_prompt TEXT NOT NULL,
+  image_url TEXT,
   source_row INTEGER NOT NULL,
   created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
   updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
 );
+
+ALTER TABLE myths ADD COLUMN IF NOT EXISTS image_url TEXT;
 
 CREATE INDEX IF NOT EXISTS idx_myths_region ON myths(region_id);
 CREATE INDEX IF NOT EXISTS idx_myths_community ON myths(community_id);

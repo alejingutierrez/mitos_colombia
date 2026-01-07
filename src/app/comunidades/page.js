@@ -2,6 +2,7 @@ import Header from "../../components/Header";
 import { Badge } from "../../components/ui/Badge";
 import { ButtonLink } from "../../components/ui/Button";
 import { GlassCard } from "../../components/ui/GlassCard";
+import { ImageSlot } from "../../components/ui/ImageSlot";
 import { SectionHeader } from "../../components/ui/SectionHeader";
 import { getTaxonomy } from "../../lib/myths";
 
@@ -74,6 +75,7 @@ export default async function ComunidadesPage() {
                     key={community.slug}
                     className="flex flex-col gap-4 p-6 transition hover:-translate-y-1 hover:shadow-lift"
                   >
+                    <ImageSlot size="compact" />
                     <div className="flex items-start justify-between">
                       <div className="flex-1">
                         <h3 className="font-display text-xl text-ink-900">

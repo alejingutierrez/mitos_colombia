@@ -2,6 +2,7 @@ import Header from "../../components/Header";
 import { Badge } from "../../components/ui/Badge";
 import { ButtonLink } from "../../components/ui/Button";
 import { GlassCard } from "../../components/ui/GlassCard";
+import { ImageSlot } from "../../components/ui/ImageSlot";
 import { SectionHeader } from "../../components/ui/SectionHeader";
 import { getTaxonomy, listMyths } from "../../lib/myths";
 
@@ -160,6 +161,11 @@ export default async function MitosPage({ searchParams }) {
                 key={myth.slug}
                 className="flex flex-col gap-4 p-6 transition hover:-translate-y-1 hover:shadow-lift"
               >
+                <ImageSlot
+                  src={myth.image_url}
+                  alt={`Ilustracion de ${myth.title}`}
+                  size="card"
+                />
                 <div className="flex flex-wrap items-center gap-2">
                   <Badge className="border-jungle-500/30 bg-jungle-500/10 text-jungle-600">
                     {myth.region}

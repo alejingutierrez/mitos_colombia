@@ -3,6 +3,7 @@ import Header from "../../../components/Header";
 import { Badge } from "../../../components/ui/Badge";
 import { ButtonLink } from "../../../components/ui/Button";
 import { GlassCard } from "../../../components/ui/GlassCard";
+import { ImageSlot } from "../../../components/ui/ImageSlot";
 import { getMythBySlug } from "../../../lib/myths";
 
 export const runtime = "nodejs";
@@ -71,6 +72,12 @@ export default async function MythDetailPage({ params }) {
           <p className="mt-4 max-w-2xl text-sm text-ink-700 md:text-base">
             {myth.excerpt}
           </p>
+          <ImageSlot
+            src={myth.image_url}
+            alt={`Ilustracion de ${myth.title}`}
+            size="hero"
+            className="mt-6"
+          />
           <div className="mt-6 flex flex-wrap gap-3 text-xs uppercase tracking-[0.3em] text-ink-500">
             <span>{myth.category_path}</span>
             <span>Fuente: archivo editorial</span>
