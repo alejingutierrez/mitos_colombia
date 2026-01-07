@@ -7,8 +7,16 @@ const rootDir = path.resolve(__dirname, "..");
 const excelPath = path.join(rootDir, "docs", "base_mitos.xlsx");
 const schemaPath = path.join(rootDir, "scripts", "schema.pg.sql");
 
-if (!process.env.POSTGRES_URL) {
-  console.error("POSTGRES_URL is required to import into Postgres.");
+const postgresUrl =
+  process.env.POSTGRES_URL_NON_POOLING ||
+  process.env.DATABASE_URL_UNPOOLED ||
+  process.env.POSTGRES_URL ||
+  process.env.DATABASE_URL;
+
+if (!postgresUrl) {
+  console.error(
+    "POSTGRES_URL (or DATABASE_URL) is required to import into Postgres."
+  );
   process.exit(1);
 }
 
@@ -84,7 +92,7 @@ function buildSlug(base, region, community, index) {
 }
 
 async function run() {
-  const client = new Client({ connectionString: process.env.POSTGRES_URL });
+  const client = new Client({ connectionString: postgresUrl });
   await client.connect();
 
   const schemaSql = fs.readFileSync(schemaPath, "utf8");

@@ -8,7 +8,12 @@ const dbPath =
   process.env.MITOS_DB_PATH ||
   path.join(process.cwd(), "data", "mitos.sqlite");
 
-const usePostgres = Boolean(process.env.POSTGRES_URL);
+const postgresUrl = process.env.POSTGRES_URL || process.env.DATABASE_URL;
+if (postgresUrl && !process.env.POSTGRES_URL) {
+  process.env.POSTGRES_URL = postgresUrl;
+}
+
+const usePostgres = Boolean(postgresUrl);
 let sqliteDb;
 
 export function isPostgres() {
