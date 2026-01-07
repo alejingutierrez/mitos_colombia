@@ -8,7 +8,18 @@
       "Bash(vercel inspect:*)",
       "Bash(curl:*)",
       "Bash(vercel env ls:*)",
-      "Bash(vercel --prod --token=\"uP3oU7UMV9qpe0SkPW1zszwz\" --yes)"
+      "Bash(vercel --prod --token=\"uP3oU7UMV9qpe0SkPW1zszwz\" --yes)",
+      "Bash(xargs:*)",
+      "Bash(cat:*)",
+      "Bash(npm install:*)",
+      "Bash(vercel env add:*)",
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nAgregar sistema de administración para generar imágenes de mitos\n\n- Crear página de admin \\(/admin\\) con autenticación básica\n- Implementar API route para generar imágenes usando OpenAI DALL-E 3\n- Agregar función getSqliteDbWritable para permitir escrituras en BD\n- Instalar dependencia openai\n- Configurar variables de entorno: OPENAI_API_KEY, ADMIN_USERNAME, ADMIN_PASSWORD\n- Generar imágenes en formato landscape \\(1792x1024\\) con calidad HD\n- Mostrar resultados con enlaces directos a las imágenes generadas\n\n🤖 Generated with [Claude Code]\\(https://claude.com/claude-code\\)\n\nCo-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(git push)",
+      "Bash(git commit:*)",
+      "Bash(vercel env pull:*)",
+      "Bash(vercel env rm:*)",
+      "Bash(printf:*)"
     ]
   }
 }

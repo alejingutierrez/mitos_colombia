@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import OpenAI from "openai";
+import { put } from "@vercel/blob";
 import { isPostgres, getSqlClient, getSqliteDb, getSqliteDbWritable } from "../../../../lib/db.js";
 
 export const runtime = "nodejs";
@@ -100,9 +101,12 @@ async function updateMythImage(mythId, imageUrl) {
   }
 }
 
-// Generate image using OpenAI GPT Image
-async function generateImage(prompt) {
+// Generate image using OpenAI GPT Image and upload to Vercel Blob
+async function generateImage(prompt, mythSlug) {
   try {
+    console.log(`[IMG] Generating image with OpenAI for ${mythSlug}...`);
+
+    // Step 1: Generate image with OpenAI
     const response = await openai.images.generate({
       model: "gpt-image-1-mini",
       prompt: prompt,
@@ -111,9 +115,34 @@ async function generateImage(prompt) {
       quality: "high",
     });
 
-    return response.data[0].url;
+    const temporaryUrl = response.data[0].url;
+    console.log(`[IMG] Temporary URL received from OpenAI`);
+
+    // Step 2: Download the image from OpenAI's temporary URL
+    console.log(`[IMG] Downloading image from temporary URL...`);
+    const imageResponse = await fetch(temporaryUrl);
+
+    if (!imageResponse.ok) {
+      throw new Error(`Failed to download image: ${imageResponse.statusText}`);
+    }
+
+    const imageBlob = await imageResponse.blob();
+    console.log(`[IMG] Image downloaded, size: ${imageBlob.size} bytes`);
+
+    // Step 3: Upload to Vercel Blob Storage
+    const filename = `mitos/${mythSlug}-${Date.now()}.png`;
+    console.log(`[IMG] Uploading to Vercel Blob as ${filename}...`);
+
+    const blob = await put(filename, imageBlob, {
+      access: 'public',
+      contentType: 'image/png',
+    });
+
+    console.log(`[IMG] Upload successful! Permanent URL: ${blob.url}`);
+    return blob.url;
+
   } catch (error) {
-    console.error("Error generating image:", error);
+    console.error("[IMG] Error in generateImage:", error);
     throw error;
   }
 }
@@ -155,7 +184,7 @@ export async function POST(request) {
         console.log(`[GEN] Starting generation for myth ${myth.id}: ${myth.title}`);
         console.log(`[GEN] Using prompt: ${myth.image_prompt?.substring(0, 100)}...`);
 
-        const imageUrl = await generateImage(myth.image_prompt);
+        const imageUrl = await generateImage(myth.image_prompt, myth.slug);
         console.log(`[GEN] Image generated successfully, URL: ${imageUrl?.substring(0, 50)}...`);
 
         const updateResult = await updateMythImage(myth.id, imageUrl);
