@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import OpenAI from "openai";
-import { isPostgres, getSqlClient, getSqliteDb, getSqliteDbWritable } from "@/lib/db";
+import { isPostgres, getSqlClient, getSqliteDb, getSqliteDbWritable } from "../../../../lib/db.js";
 
 export const runtime = "nodejs";
 export const maxDuration = 300; // 5 minutes max for image generation
