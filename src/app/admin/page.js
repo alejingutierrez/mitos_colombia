@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 
 export default function AdminPage() {
-  const [count, setCount] = useState(5);
+  const [count, setCount] = useState(1);
   const [loading, setLoading] = useState(false);
   const [results, setResults] = useState(null);
   const [mythsWithoutImages, setMythsWithoutImages] = useState(null);
@@ -64,6 +64,18 @@ export default function AdminPage() {
         return;
       }
 
+      if (response.status === 504) {
+        alert("Timeout: La generación tomó demasiado tiempo. Intenta con 1 imagen a la vez.");
+        return;
+      }
+
+      if (!response.ok) {
+        const errorText = await response.text();
+        console.error("API Error:", errorText);
+        alert(`Error del servidor (${response.status}): ${errorText.substring(0, 100)}`);
+        return;
+      }
+
       const data = await response.json();
       setResults(data);
 
@@ -71,7 +83,11 @@ export default function AdminPage() {
       await fetchCount(credentials.username, credentials.password);
     } catch (error) {
       console.error("Error generating images:", error);
-      alert("Error al generar imágenes: " + error.message);
+      if (error.message.includes("JSON")) {
+        alert("Error de timeout o conexión. Intenta generar 1 imagen a la vez.");
+      } else {
+        alert("Error al generar imágenes: " + error.message);
+      }
     } finally {
       setLoading(false);
     }
@@ -200,7 +216,7 @@ export default function AdminPage() {
               <input
                 type="number"
                 min="1"
-                max="50"
+                max="2"
                 value={count}
                 onChange={(e) => setCount(parseInt(e.target.value) || 1)}
                 className="w-32 px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white text-lg font-semibold focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -216,9 +232,13 @@ export default function AdminPage() {
             </div>
             {loading && (
               <p className="text-yellow-300 mt-4 text-sm">
-                Esto puede tomar varios minutos. Por favor espera...
+                Generando imágenes (15-30 segundos por imagen)...
               </p>
             )}
+            <p className="text-gray-400 mt-2 text-xs">
+              Límite: 1-2 imágenes por generación para evitar timeouts.
+              Cada imagen toma 15-30 segundos.
+            </p>
           </div>
 
           {results && (

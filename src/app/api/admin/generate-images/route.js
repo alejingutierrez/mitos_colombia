@@ -4,7 +4,7 @@ import { put } from "@vercel/blob";
 import { isPostgres, getSqlClient, getSqliteDb, getSqliteDbWritable } from "../../../../lib/db.js";
 
 export const runtime = "nodejs";
-export const maxDuration = 300; // 5 minutes max for image generation
+export const maxDuration = 60; // 60 seconds (Vercel free tier limit)
 
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
@@ -371,7 +371,8 @@ export async function POST(request) {
     }
 
     const body = await request.json();
-    const count = Math.min(Math.max(1, body.count || 1), 50); // Limit between 1 and 50
+    // Limit to 2 images per request to avoid timeout (each image takes ~15-30 seconds)
+    const count = Math.min(Math.max(1, body.count || 1), 2);
 
     // Get items without images (myths, communities, categories, regions)
     const items = await getItemsWithoutImages(count);
