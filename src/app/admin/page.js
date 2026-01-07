@@ -7,6 +7,8 @@ export default function AdminPage() {
   const [loading, setLoading] = useState(false);
   const [results, setResults] = useState(null);
   const [mythsWithoutImages, setMythsWithoutImages] = useState(null);
+  const [totalPending, setTotalPending] = useState(null);
+  const [breakdown, setBreakdown] = useState(null);
   const [credentials, setCredentials] = useState({ username: "", password: "" });
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
@@ -27,6 +29,8 @@ export default function AdminPage() {
       if (response.ok) {
         const data = await response.json();
         setMythsWithoutImages(data.mythsWithoutImages);
+        setTotalPending(data.total);
+        setBreakdown(data.breakdown);
         setIsAuthenticated(true);
       }
     } catch (error) {
@@ -141,29 +145,50 @@ export default function AdminPage() {
             </button>
           </div>
 
-          <div className="mb-8 p-6 bg-blue-500/10 rounded-xl border border-blue-500/20">
-            <div className="flex items-center justify-between">
-              <div>
-                <p className="text-blue-300 text-sm font-medium mb-1">
-                  Mitos sin imagen
-                </p>
-                <p className="text-4xl font-bold text-white">
-                  {mythsWithoutImages !== null ? mythsWithoutImages : "..."}
-                </p>
-              </div>
-              <svg
-                className="w-16 h-16 text-blue-400"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
-                />
-              </svg>
+          <div className="mb-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
+            <div className="p-6 bg-blue-500/10 rounded-xl border border-blue-500/20">
+              <p className="text-blue-300 text-sm font-medium mb-1">
+                Total Pendiente
+              </p>
+              <p className="text-4xl font-bold text-white">
+                {totalPending !== null ? totalPending : "..."}
+              </p>
+            </div>
+
+            <div className="p-6 bg-purple-500/10 rounded-xl border border-purple-500/20">
+              <p className="text-purple-300 text-sm font-medium mb-1">
+                Mitos
+              </p>
+              <p className="text-4xl font-bold text-white">
+                {breakdown?.myths !== undefined ? breakdown.myths : "..."}
+              </p>
+            </div>
+
+            <div className="p-6 bg-green-500/10 rounded-xl border border-green-500/20">
+              <p className="text-green-300 text-sm font-medium mb-1">
+                Comunidades
+              </p>
+              <p className="text-4xl font-bold text-white">
+                {breakdown?.communities !== undefined ? breakdown.communities : "..."}
+              </p>
+            </div>
+
+            <div className="p-6 bg-yellow-500/10 rounded-xl border border-yellow-500/20">
+              <p className="text-yellow-300 text-sm font-medium mb-1">
+                Categorías
+              </p>
+              <p className="text-4xl font-bold text-white">
+                {breakdown?.categories !== undefined ? breakdown.categories : "..."}
+              </p>
+            </div>
+
+            <div className="p-6 bg-pink-500/10 rounded-xl border border-pink-500/20">
+              <p className="text-pink-300 text-sm font-medium mb-1">
+                Regiones
+              </p>
+              <p className="text-4xl font-bold text-white">
+                {breakdown?.regions !== undefined ? breakdown.regions : "..."}
+              </p>
             </div>
           </div>
 
@@ -183,7 +208,7 @@ export default function AdminPage() {
               />
               <button
                 onClick={handleGenerate}
-                disabled={loading || mythsWithoutImages === 0}
+                disabled={loading || totalPending === 0}
                 className="flex-1 py-3 px-6 bg-gradient-to-r from-green-600 to-emerald-600 text-white rounded-lg font-semibold hover:from-green-700 hover:to-emerald-700 disabled:from-gray-600 disabled:to-gray-700 disabled:cursor-not-allowed transition-all"
               >
                 {loading ? "Generando..." : "Generar Imágenes"}
@@ -211,7 +236,7 @@ export default function AdminPage() {
               <div className="space-y-4">
                 {results.generated?.map((myth, index) => (
                   <div
-                    key={myth.id}
+                    key={`${myth.type}-${myth.id}`}
                     className={`p-4 rounded-lg border ${
                       myth.success
                         ? "bg-green-500/10 border-green-500/20"
@@ -220,6 +245,17 @@ export default function AdminPage() {
                   >
                     <div className="flex items-start gap-4">
                       <div className="flex-1">
+                        <div className="flex items-center gap-2 mb-2">
+                          <span className={`px-2 py-1 rounded text-xs font-medium ${
+                            myth.type === 'myth' ? 'bg-purple-500/20 text-purple-300' :
+                            myth.type === 'community' ? 'bg-green-500/20 text-green-300' :
+                            myth.type === 'category' ? 'bg-yellow-500/20 text-yellow-300' :
+                            myth.type === 'region' ? 'bg-pink-500/20 text-pink-300' :
+                            'bg-gray-500/20 text-gray-300'
+                          }`}>
+                            {myth.typeLabel || myth.type}
+                          </span>
+                        </div>
                         <h3 className="text-lg font-semibold text-white mb-2">
                           {index + 1}. {myth.title}
                         </h3>
