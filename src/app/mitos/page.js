@@ -4,6 +4,7 @@ import { ButtonLink } from "../../components/ui/Button";
 import { GlassCard } from "../../components/ui/GlassCard";
 import { ImageSlot } from "../../components/ui/ImageSlot";
 import { SectionHeader } from "../../components/ui/SectionHeader";
+import { filterAllowedCommunities } from "../../lib/communityFilters";
 import { getTaxonomy, listMyths } from "../../lib/myths";
 
 export const runtime = "nodejs";
@@ -41,6 +42,7 @@ export default async function MitosPage({ searchParams }) {
   const result = await listMyths({ region, community, tag, q, limit, offset });
   const taxonomy = await getTaxonomy();
   const tagOptions = taxonomy.tags.slice(0, 40);
+  const communityOptions = filterAllowedCommunities(taxonomy.communities);
 
   const hasPrev = offset > 0;
   const hasNext = offset + result.limit < result.total;
@@ -101,7 +103,7 @@ export default async function MitosPage({ searchParams }) {
                 defaultValue={community}
               >
                 <option value="">Todas</option>
-                {taxonomy.communities.map((item) => (
+                {communityOptions.map((item) => (
                   <option key={item.slug} value={item.slug}>
                     {item.name}
                   </option>

@@ -4,26 +4,19 @@ import { ButtonLink } from "../../components/ui/Button";
 import { GlassCard } from "../../components/ui/GlassCard";
 import { ImageSlot } from "../../components/ui/ImageSlot";
 import { SectionHeader } from "../../components/ui/SectionHeader";
+import { filterAllowedCommunities } from "../../lib/communityFilters";
 import { getTaxonomy } from "../../lib/myths";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
-// Departamentos y ciudades a excluir (no son comunidades indígenas)
-const EXCLUDED_COMMUNITIES = [
-  "Antioquia", "Bogota", "Boyacá", "Caldas", "Cartagena", "Casanare",
-  "Córdoba", "Huila", "Leticia", "Llanos orientales", "Magdalena",
-  "Nariño", "San Andrés", "Santander", "Tolima", "Tumaco",
-  "Andino", "Caribe", "Orinoquía", "Pacifico", "Varios"
-];
-
 export default async function ComunidadesPage() {
   const taxonomy = await getTaxonomy();
 
   // Filtrar solo comunidades indígenas
-  const communities = taxonomy.communities
-    .filter((c) => !EXCLUDED_COMMUNITIES.includes(c.name))
-    .sort((a, b) => b.myth_count - a.myth_count);
+  const communities = filterAllowedCommunities(taxonomy.communities).sort(
+    (a, b) => b.myth_count - a.myth_count
+  );
 
   // Agrupar por región
   const communitiesByRegion = communities.reduce((acc, community) => {

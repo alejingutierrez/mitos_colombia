@@ -5,6 +5,7 @@ import { ButtonLink } from "../../../components/ui/Button";
 import { GlassCard } from "../../../components/ui/GlassCard";
 import { ImageSlot } from "../../../components/ui/ImageSlot";
 import { SectionHeader } from "../../../components/ui/SectionHeader";
+import { filterAllowedCommunities } from "../../../lib/communityFilters";
 import { getTaxonomy, listMyths } from "../../../lib/myths";
 
 export const runtime = "nodejs";
@@ -51,7 +52,7 @@ const REGION_INFO = {
       "Resistencia y preservación cultural"
     ]
   },
-  "orinoquía": {
+  "orinoquia": {
     title: "Región Orinoquía",
     description: "Los vastos llanos orientales, donde pueblos como los Sikuani preservan tradiciones sobre héroes culturales, espíritus de la sabana y el manejo de ecosistemas inundables.",
     longDescription: "La Orinoquía colombiana, conocida como los Llanos Orientales, es una extensa región de sabanas tropicales surcadas por ríos que se inundan estacionalmente. Pueblos indígenas como los Sikuani, Kuiva, Kurripaco y otros han desarrollado mitologías adaptadas a este ecosistema único. Los mitos llaneros incluyen relatos sobre Kuwai y otros héroes culturales que transformaron el paisaje, crearon los ríos y establecieron prácticas culturales. Las narrativas explican el origen de animales característicos de la sabana como el chigüiro, el venado y diversas aves. La mitología de la Orinoquía también incluye conocimientos sobre navegación de ríos y caños, manejo de ganado cimarrón, y la importancia de las ceremonias de rezo. Los pueblos llaneros han desarrollado profundos conocimientos sobre los ciclos de inundación y sequía que caracterizan este ecosistema.",
@@ -168,7 +169,7 @@ export default async function RegionDetailPage({ params, searchParams }) {
   });
 
   // Comunidades de esta región
-  const regionCommunities = taxonomy.communities.filter(
+  const regionCommunities = filterAllowedCommunities(taxonomy.communities).filter(
     (c) => c.region_slug === region.slug
   );
 

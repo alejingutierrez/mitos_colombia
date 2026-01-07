@@ -2,14 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
-
-// Departamentos y ciudades a excluir (no son comunidades indígenas)
-const EXCLUDED_COMMUNITIES = [
-  "Antioquia", "Bogota", "Boyacá", "Caldas", "Cartagena", "Casanare",
-  "Córdoba", "Huila", "Leticia", "Llanos orientales", "Magdalena",
-  "Nariño", "San Andrés", "Santander", "Tolima", "Tumaco",
-  "Andino", "Caribe", "Orinoquía", "Pacifico", "Varios"
-];
+import { filterAllowedCommunities } from "../lib/communityFilters";
 
 const navLinks = [
   { label: "Mitos", href: "/mitos", hasDropdown: true },
@@ -42,8 +35,7 @@ export default function Header() {
 
   // Obtener top 10 comunidades indígenas con más mitos
   const getTopCommunities = () => {
-    return taxonomy.communities
-      .filter(c => !EXCLUDED_COMMUNITIES.includes(c.name))
+    return filterAllowedCommunities(taxonomy.communities)
       .sort((a, b) => b.myth_count - a.myth_count)
       .slice(0, 10);
   };

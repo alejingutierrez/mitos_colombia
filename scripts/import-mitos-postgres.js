@@ -4,7 +4,7 @@ const xlsx = require("xlsx");
 const { Client } = require("pg");
 
 const rootDir = path.resolve(__dirname, "..");
-const excelPath = path.join(rootDir, "docs", "base_mitos.xlsx");
+const excelPath = path.join(rootDir, "docs", "mitos_seo_actualizados.xlsx");
 const schemaPath = path.join(rootDir, "scripts", "schema.pg.sql");
 
 const postgresUrl =
@@ -31,10 +31,11 @@ if (!fs.existsSync(schemaPath)) {
 }
 
 const workbook = xlsx.readFile(excelPath);
-const sheet = workbook.Sheets.Mitos;
+const sheetName = "Sheet1";
+const sheet = workbook.Sheets[sheetName] || workbook.Sheets[workbook.SheetNames[0]];
 
 if (!sheet) {
-  console.error("Sheet 'Mitos' not found in the Excel file.");
+  console.error("No sheets found in the Excel file.");
   process.exit(1);
 }
 
@@ -59,6 +60,109 @@ function splitList(value, delimiter) {
     .split(delimiter)
     .map((item) => item.trim())
     .filter(Boolean);
+}
+
+const REGION_ALIASES = {
+  "Amazonía": "Amazonas",
+  Amazonia: "Amazonas",
+  Varias: "Varios",
+};
+
+function normalizeRegionName(value) {
+  const trimmed = String(value || "").trim();
+  if (!trimmed) {
+    return "Varios";
+  }
+  return REGION_ALIASES[trimmed] || trimmed;
+}
+
+function splitKeywords(value) {
+  if (!value) {
+    return [];
+  }
+  return String(value)
+    .split(/[|,]/)
+    .map((item) => item.trim())
+    .filter(Boolean);
+}
+
+function addKeywords(set, value) {
+  splitKeywords(value).forEach((item) => set.add(item));
+}
+
+function buildContent({ mito, historia, versiones, leccion, similitudes }) {
+  const sections = [
+    ["Mito", mito],
+    ["Historia", historia],
+    ["Versiones", versiones],
+    ["Lección", leccion],
+    ["Similitudes", similitudes],
+  ];
+
+  return sections
+    .map(([title, value]) => {
+      const text = String(value || "").trim();
+      return text ? `${title}\n${text}` : null;
+    })
+    .filter(Boolean)
+    .join("\n\n");
+}
+
+function buildImagePrompt({
+  mito,
+  region,
+  comunidad,
+  representacionVisual,
+  representacionPersonaje,
+  icono,
+  simbolos,
+  tipo,
+  clasificacion,
+  temaPrincipal,
+  temaSecundario,
+  emociones,
+  geografia,
+}) {
+  const parts = [
+    "Ilustración en estilo paper quilling que represente el siguiente mito colombiano.",
+  ];
+
+  if (representacionVisual) {
+    parts.push(`Escena principal: ${representacionVisual}`);
+  }
+  if (representacionPersonaje) {
+    parts.push(`Personaje: ${representacionPersonaje}`);
+  }
+  if (icono) {
+    parts.push(`Icono: ${icono}`);
+  }
+  if (simbolos) {
+    parts.push(`Símbolos: ${simbolos}`);
+  }
+  if (tipo || clasificacion) {
+    const values = [tipo, clasificacion].filter(Boolean).join("; ");
+    parts.push(`Tipo y clasificación: ${values}`);
+  }
+  if (temaPrincipal || temaSecundario) {
+    const values = [temaPrincipal, temaSecundario].filter(Boolean).join("; ");
+    parts.push(`Temas: ${values}`);
+  }
+  if (emociones) {
+    parts.push(`Emociones: ${emociones}`);
+  }
+  if (geografia) {
+    parts.push(`Geografía/ambiente: ${geografia}`);
+  }
+
+  const regionLabel = region || "Varios";
+  const communityLabel = comunidad || "Sin comunidad";
+  parts.push(`Región: ${regionLabel}. Comunidad: ${communityLabel}.`);
+
+  if (mito) {
+    parts.push(`Texto del mito:\n${mito}`);
+  }
+
+  return parts.join("\n\n");
 }
 
 const usedSlugs = new Set();
@@ -111,14 +215,12 @@ async function run() {
     const tagCache = new Map();
 
     for (const [index, row] of rows.entries()) {
-      const categoryPath = String(row.CATEGORIA || "").trim();
-      const parts = categoryPath
-        .split(">")
-        .map((part) => part.trim())
-        .filter(Boolean);
-
-      const regionName = parts[0] || "Varios";
-      const communityName = parts.length > 1 ? parts.slice(1).join(" > ") : "";
+      const regionName = normalizeRegionName(row.region);
+      const departmentName = String(row.departamento || "").trim();
+      const communityName = String(row.comunidad || "").trim();
+      const categoryPath = [regionName, departmentName, communityName]
+        .filter(Boolean)
+        .join(" > ");
 
       let regionId = regionCache.get(regionName);
       if (!regionId) {
@@ -154,19 +256,71 @@ async function run() {
         }
       }
 
-      const title = String(row.TITULO || "").trim();
+      const title = String(row.nombre || "").trim();
       const slug = buildSlug(title, regionName, communityName, index);
 
-      const tags = splitList(String(row.TAGS || ""), ",");
+      const tags = Array.from(
+        new Set(splitList(String(row.etiquetas || ""), ","))
+      );
       const tagsRaw = tags.join(", ");
 
-      const content = String(row["Contenido 2"] || "").trim();
-      const excerpt = String(row.post_excerpt || "").trim();
-      const seoTitle = String(row.post_title_seo || "").trim();
-      const seoDescription = String(row.meta_desc || "").trim();
-      const focusKeyword = String(row.focus_keyword || "").trim();
-      const focusKeywordsRaw = String(row.focuskeywords || "").trim();
-      const imagePrompt = String(row.MIDJOURNEY || "").trim();
+      const mito = String(row.mito || "").trim();
+      const historia = String(row.historia || "").trim();
+      const versiones = String(row.versiones || "").trim();
+      const leccion = String(row["lección"] || "").trim();
+      const similitudes = String(row.similitudes || "").trim();
+
+      const content = buildContent({
+        mito,
+        historia,
+        versiones,
+        leccion,
+        similitudes,
+      });
+      const excerpt = String(row.excerpt || "").trim();
+      const seoTitle = title;
+      const seoDescription = excerpt;
+
+      const personaje = String(row.personaje || "").trim();
+      const focusKeyword =
+        personaje || String(row.tema_principal || "").trim() || title;
+
+      const keywordSet = new Set();
+      addKeywords(keywordSet, row.etiquetas);
+      addKeywords(keywordSet, row.tema_principal);
+      addKeywords(keywordSet, row.tema_secundario);
+      addKeywords(keywordSet, row.tipo);
+      addKeywords(keywordSet, row["clasificación"]);
+      addKeywords(keywordSet, row.personaje);
+      addKeywords(keywordSet, row.simbolos);
+      addKeywords(keywordSet, row.emociones);
+      addKeywords(keywordSet, row["geografía"]);
+      addKeywords(keywordSet, regionName);
+      addKeywords(keywordSet, departmentName);
+      addKeywords(keywordSet, communityName);
+
+      if (focusKeyword) {
+        keywordSet.add(focusKeyword);
+      }
+
+      const focusKeywordsRaw = Array.from(keywordSet).join("|");
+      const imagePrompt = buildImagePrompt({
+        mito,
+        region: regionName,
+        comunidad: communityName,
+        representacionVisual: String(row["representación_visual"] || "").trim(),
+        representacionPersonaje: String(
+          row.representacion_personaje || ""
+        ).trim(),
+        icono: String(row.icono || "").trim(),
+        simbolos: String(row.simbolos || "").trim(),
+        tipo: String(row.tipo || "").trim(),
+        clasificacion: String(row["clasificación"] || "").trim(),
+        temaPrincipal: String(row.tema_principal || "").trim(),
+        temaSecundario: String(row.tema_secundario || "").trim(),
+        emociones: String(row.emociones || "").trim(),
+        geografia: String(row["geografía"] || "").trim(),
+      });
 
       const mythResult = await client.query(
         `INSERT INTO myths (
