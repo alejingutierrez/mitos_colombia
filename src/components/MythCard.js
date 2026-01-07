@@ -9,56 +9,65 @@ export function MythCard({ myth, featured = false }) {
 
   if (featured) {
     return (
-      <Link href={`/mitos/${myth.slug}`}>
-        <GlassCard className="group relative overflow-hidden p-6 transition hover:-translate-y-1 hover:shadow-lift">
+      <Link href={`/mitos/${myth.slug}`} className="group block">
+        <GlassCard className="relative h-full overflow-hidden transition hover:-translate-y-2 hover:shadow-2xl">
           {hasImage && (
-            <div className="relative mb-4 h-48 overflow-hidden rounded-xl">
+            <div className="relative aspect-[4/3] overflow-hidden">
               <img
                 src={myth.image_url}
                 alt={myth.title}
-                className="h-full w-full object-cover transition group-hover:scale-105"
+                className="h-full w-full object-cover transition duration-700 group-hover:scale-110"
               />
+              <div className="absolute inset-0 bg-gradient-to-t from-ink-900/60 to-transparent opacity-0 transition duration-300 group-hover:opacity-100" />
             </div>
           )}
-          <div className="flex items-center justify-between">
+          <div className="p-6">
             <Badge className="border-river-500/30 bg-river-500/10 text-river-600">
               {myth.region}
             </Badge>
+            <h3 className="mt-4 font-display text-2xl leading-tight text-ink-900 transition group-hover:text-river-600 line-clamp-2">
+              {myth.title}
+            </h3>
+            {myth.excerpt && (
+              <p className="mt-3 text-sm leading-relaxed text-ink-600 line-clamp-3">
+                {myth.excerpt}
+              </p>
+            )}
+            <div className="mt-4 flex items-center gap-2 text-xs font-medium uppercase tracking-[0.3em] text-river-600 opacity-0 transition group-hover:opacity-100">
+              <span>Leer mas</span>
+              <span className="transition group-hover:translate-x-1">→</span>
+            </div>
           </div>
-          <h3 className="mt-3 font-display text-2xl text-ink-900 line-clamp-2">
-            {myth.title}
-          </h3>
-          {myth.excerpt && (
-            <p className="mt-2 text-sm text-ink-700 line-clamp-3">
-              {myth.excerpt}
-            </p>
-          )}
         </GlassCard>
       </Link>
     );
   }
 
   return (
-    <Link href={`/mitos/${myth.slug}`}>
-      <GlassCard className="group p-5 transition hover:-translate-y-1 hover:shadow-lift">
-        <div className="flex items-center justify-between">
-          <p className="text-xs uppercase tracking-[0.3em] text-river-600">
+    <Link href={`/mitos/${myth.slug}`} className="group block">
+      <GlassCard className="h-full p-6 transition hover:-translate-y-2 hover:shadow-2xl">
+        <div className="flex items-center justify-between gap-3">
+          <p className="text-xs font-medium uppercase tracking-[0.3em] text-river-600">
             {myth.region}
           </p>
           {hasImage && (
             <Badge className="border-jungle-500/30 bg-jungle-500/10 text-jungle-600 text-xs">
-              Con imagen
+              Ilustrado
             </Badge>
           )}
         </div>
-        <h3 className="mt-2 font-display text-xl text-ink-900 line-clamp-2 group-hover:text-river-600 transition">
+        <h3 className="mt-4 font-display text-xl leading-tight text-ink-900 transition group-hover:text-river-600 line-clamp-2">
           {myth.title}
         </h3>
         {myth.excerpt && (
-          <p className="mt-2 text-sm text-ink-700 line-clamp-2">
+          <p className="mt-3 text-sm leading-relaxed text-ink-600 line-clamp-3">
             {myth.excerpt}
           </p>
         )}
+        <div className="mt-4 flex items-center gap-2 text-xs font-medium uppercase tracking-[0.3em] text-river-600 opacity-0 transition group-hover:opacity-100">
+          <span>Leer mas</span>
+          <span className="transition group-hover:translate-x-1">→</span>
+        </div>
       </GlassCard>
     </Link>
   );
