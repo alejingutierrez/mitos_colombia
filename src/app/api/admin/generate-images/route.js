@@ -76,15 +76,15 @@ async function updateMythImage(mythId, imageUrl) {
   }
 }
 
-// Generate image using OpenAI DALL-E
+// Generate image using OpenAI GPT Image
 async function generateImage(prompt) {
   try {
     const response = await openai.images.generate({
-      model: "dall-e-3",
+      model: "gpt-image-1-mini",
       prompt: prompt,
       n: 1,
-      size: "1792x1024", // Landscape format (closest to 1536x1024)
-      quality: "hd",
+      size: "1536x1024", // Landscape format
+      quality: "high",
     });
 
     return response.data[0].url;
