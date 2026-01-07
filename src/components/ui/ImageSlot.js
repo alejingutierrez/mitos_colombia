@@ -5,6 +5,7 @@ const sizes = {
   compact: "h-32",
   wide: "h-48 md:h-56",
   hero: "h-60 md:h-72",
+  large: "h-[27rem] md:h-[30rem]",
 };
 
 export function ImageSlot({
@@ -30,7 +31,7 @@ export function ImageSlot({
           <img
             src={src}
             alt={alt}
-            className="h-full w-full object-cover"
+            className="h-full w-full object-cover object-top"
             loading="lazy"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-ink-900/40 via-transparent to-transparent" />

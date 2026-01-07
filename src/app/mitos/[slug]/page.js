@@ -81,8 +81,9 @@ export default async function MythDetailPage({ params }) {
   const comments = await getComments(myth.id);
 
   return (
-    <main className="relative min-h-screen overflow-hidden pb-24">
+    <>
       <Header />
+      <main className="relative min-h-screen pb-24">
 
       <section className="container-shell mt-12">
         <GlassCard className="p-8">
@@ -174,6 +175,7 @@ export default async function MythDetailPage({ params }) {
       <section className="container-shell mt-10">
         <Comments mythId={myth.id} initialComments={comments} />
       </section>
-    </main>
+      </main>
+    </>
   );
 }

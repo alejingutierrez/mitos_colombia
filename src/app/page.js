@@ -99,14 +99,14 @@ export default async function Home() {
     { value: `${taxonomy.communities.length || 50}+`, label: "Comunidades" },
   ];
   return (
-    <main className="relative min-h-screen overflow-hidden pb-24">
-      <div className="pointer-events-none absolute inset-0 -z-10">
-        <div className="absolute -top-32 left-12 h-72 w-72 rounded-full bg-jungle-500/30 blur-3xl motion-safe:animate-float-slow" />
-        <div className="absolute right-0 top-6 h-80 w-80 rounded-full bg-river-500/25 blur-3xl motion-safe:animate-float-slow" />
-        <div className="absolute bottom-10 left-1/2 h-[26rem] w-[26rem] -translate-x-1/2 rounded-full bg-ember-400/25 blur-[140px] motion-safe:animate-float-slow" />
-      </div>
-
+    <>
       <Header />
+      <main className="relative min-h-screen pb-24">
+        <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
+          <div className="absolute -top-32 left-12 h-72 w-72 rounded-full bg-jungle-500/30 blur-3xl motion-safe:animate-float-slow" />
+          <div className="absolute right-0 top-6 h-80 w-80 rounded-full bg-river-500/25 blur-3xl motion-safe:animate-float-slow" />
+          <div className="absolute bottom-10 left-1/2 h-[26rem] w-[26rem] -translate-x-1/2 rounded-full bg-ember-400/25 blur-[140px] motion-safe:animate-float-slow" />
+        </div>
 
       <section className="container-shell mt-16">
         <div className="grid gap-12 lg:grid-cols-[1fr_1fr] lg:gap-16">
@@ -371,6 +371,7 @@ export default async function Home() {
           </div>
         </GlassCard>
       </section>
-    </main>
+      </main>
+    </>
   );
 }
