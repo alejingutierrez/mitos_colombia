@@ -115,7 +115,11 @@ async function generateImage(prompt, mythSlug) {
       quality: "high",
     });
 
-    const temporaryUrl = response.data[0].url;
+    console.log(`[IMG] OpenAI response:`, JSON.stringify(response, null, 2));
+    console.log(`[IMG] response.data:`, JSON.stringify(response.data, null, 2));
+    console.log(`[IMG] response.data[0]:`, JSON.stringify(response.data?.[0], null, 2));
+
+    const temporaryUrl = response.data?.[0]?.url;
     console.log(`[IMG] Temporary URL received: ${temporaryUrl}`);
 
     // Step 2: Download image from temporary URL using node-fetch compatible method
