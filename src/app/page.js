@@ -3,6 +3,23 @@ import { Badge } from "../components/ui/Badge";
 import { ButtonLink } from "../components/ui/Button";
 import { GlassCard } from "../components/ui/GlassCard";
 import { SectionHeader } from "../components/ui/SectionHeader";
+import { MythCard } from "../components/MythCard";
+import {
+  getFeaturedMythsWithImages,
+  getDiverseMyths,
+  getHomeStats,
+  getTaxonomy,
+} from "../lib/myths";
+
+// Generate a seed based on the current day to rotate content daily
+function getDailySeed() {
+  const now = new Date();
+  const startOfYear = new Date(now.getFullYear(), 0, 0);
+  const diff = now - startOfYear;
+  const oneDay = 1000 * 60 * 60 * 24;
+  const dayOfYear = Math.floor(diff / oneDay);
+  return dayOfYear;
+}
 
 const quickTags = [
   "Guardianes del agua",
@@ -11,33 +28,6 @@ const quickTags = [
   "Ritos del mar",
   "Fronteras y caminos",
   "Voces urbanas",
-];
-
-const stats = [
-  { value: "120+", label: "Mitos curados" },
-  { value: "6", label: "Regiones culturales" },
-  { value: "18", label: "Ejes tematicos" },
-];
-
-const featured = [
-  {
-    title: "El Mohan y las voces del rio",
-    region: "Magdalena",
-    theme: "Guardianes del agua",
-    readTime: "6 min",
-  },
-  {
-    title: "La Madremonte",
-    region: "Andina",
-    theme: "Bosques y limites",
-    readTime: "5 min",
-  },
-  {
-    title: "La Tunda",
-    region: "Pacifico",
-    theme: "Manglar y hechizo",
-    readTime: "7 min",
-  },
 ];
 
 const routes = [
@@ -58,33 +48,6 @@ const routes = [
   },
 ];
 
-const atlas = [
-  {
-    title: "Amazonia",
-    detail: "Guardianes de selva, origenes y ciclos rituales.",
-  },
-  {
-    title: "Orinoquia",
-    detail: "Llanos abiertos, fuego y relatos de madrugada.",
-  },
-  {
-    title: "Andina",
-    detail: "Montanas, paramos y memorias del camino.",
-  },
-  {
-    title: "Caribe",
-    detail: "Mareas, viento y cantos del puerto.",
-  },
-  {
-    title: "Pacifico",
-    detail: "Manglares, ritmo y memoria afro.",
-  },
-  {
-    title: "Insular",
-    detail: "Islas, navegantes y mares abiertos.",
-  },
-];
-
 const collections = [
   {
     title: "Relatos de frontera",
@@ -100,7 +63,38 @@ const collections = [
   },
 ];
 
-export default function Home() {
+const regionDescriptions = {
+  Amazonas: "Guardianes de selva, origenes y ciclos rituales.",
+  Orinoquía: "Llanos abiertos, fuego y relatos de madrugada.",
+  Andina: "Montanas, paramos y memorias del camino.",
+  Caribe: "Mareas, viento y cantos del puerto.",
+  Pacífico: "Manglares, ritmo y memoria afro.",
+  Varios: "Historias diversas que cruzan territorios.",
+};
+
+export default async function Home() {
+  const seed = getDailySeed();
+
+  // Fetch dynamic data
+  const [featuredMyths, diverseMyths, stats, taxonomy] = await Promise.all([
+    getFeaturedMythsWithImages(9, seed),
+    getDiverseMyths(6, seed),
+    getHomeStats(),
+    getTaxonomy(),
+  ]);
+
+  // Get the main featured myth (first one with image)
+  const heroMyth = featuredMyths[0];
+
+  // Get remaining featured myths for gallery
+  const galleryMyths = featuredMyths.slice(1, 7);
+
+  // Prepare stats for display
+  const displayStats = [
+    { value: `${stats.total_myths || 505}`, label: "Mitos curados" },
+    { value: `${stats.total_regions || 6}`, label: "Regiones culturales" },
+    { value: `${stats.myths_with_images || 23}`, label: "Con imagenes" },
+  ];
   return (
     <main className="relative min-h-screen overflow-hidden pb-24">
       <div className="pointer-events-none absolute inset-0 -z-10">
@@ -143,7 +137,7 @@ export default function Home() {
           </div>
 
           <div className="grid gap-4 sm:grid-cols-3">
-            {stats.map((stat) => (
+            {displayStats.map((stat) => (
               <GlassCard key={stat.label} className="p-4">
                 <p className="font-display text-2xl text-ink-900">
                   {stat.value}
@@ -157,44 +151,50 @@ export default function Home() {
         </div>
 
         <div className="relative animate-fade-up-2">
-          <GlassCard className="p-6">
-            <div className="flex items-center justify-between">
+          {heroMyth ? (
+            <GlassCard className="p-6">
+              <div className="flex items-center justify-between">
+                <p className="eyebrow text-ember-500">Mito destacado del dia</p>
+                <Badge className="border-ember-400/30 bg-ember-400/15 text-ember-500">
+                  {heroMyth.region}
+                </Badge>
+              </div>
+              <h2 className="mt-4 font-display text-3xl text-ink-900">
+                {heroMyth.title}
+              </h2>
+              <p className="mt-3 text-sm text-ink-700 line-clamp-3">
+                {heroMyth.excerpt}
+              </p>
+              {heroMyth.category_path && (
+                <div className="mt-4">
+                  <p className="text-xs text-ink-500">{heroMyth.category_path}</p>
+                </div>
+              )}
+              {heroMyth.image_url && (
+                <div className="mt-6 h-44 overflow-hidden rounded-2xl border border-white/60">
+                  <img
+                    src={heroMyth.image_url}
+                    alt={heroMyth.title}
+                    className="h-full w-full object-cover"
+                  />
+                </div>
+              )}
+              <ButtonLink href={`/mitos/${heroMyth.slug}`} className="mt-6 w-full">
+                Leer mito
+              </ButtonLink>
+            </GlassCard>
+          ) : (
+            <GlassCard className="p-6">
               <p className="eyebrow text-ember-500">Mito destacado</p>
-              <Badge className="border-ember-400/30 bg-ember-400/15 text-ember-500">
-                Lectura 6 min
-              </Badge>
-            </div>
-            <h2 className="mt-4 font-display text-3xl text-ink-900">
-              El Mohan y las voces del rio
-            </h2>
-            <p className="mt-3 text-sm text-ink-700">
-              Un guardian ambivalente del Magdalena que seduce, protege y marca
-              los limites del agua.
-            </p>
-            <div className="mt-5 flex flex-wrap gap-2 text-xs">
-              <Badge className="border-river-500/30 bg-river-500/10 text-river-600">
-                Rio Magdalena
-              </Badge>
-              <Badge className="border-jungle-500/30 bg-jungle-500/10 text-jungle-600">
-                Guardian
-              </Badge>
-              <Badge className="border-ember-400/30 bg-ember-400/10 text-ember-500">
-                Agua y pacto
-              </Badge>
-            </div>
-            <div
-                className="mt-6 h-44 rounded-2xl border border-white/60"
-                style={{
-                  backgroundImage:
-                    "radial-gradient(circle at 15% 20%, rgba(30, 120, 94, 0.35), transparent 60%), radial-gradient(circle at 85% 0%, rgba(35, 98, 158, 0.35), transparent 55%), linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(234, 240, 235, 0.4))",
-                }}
-            />
-          </GlassCard>
+              <h2 className="mt-4 font-display text-3xl text-ink-900">
+                Cargando contenido...
+              </h2>
+            </GlassCard>
+          )}
           <GlassCard className="absolute -bottom-10 left-6 right-6 p-4">
-            <p className="eyebrow">Ruta sugerida</p>
+            <p className="eyebrow">Explora la coleccion</p>
             <p className="mt-2 text-sm text-ink-700">
-              Explora mitos conectados por rios, ofrendas y guardianes
-              invisibles.
+              Descubre mitos conectados por region, tema y simbolos compartidos.
             </p>
           </GlassCard>
         </div>
@@ -231,64 +231,38 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="container-shell mt-24 grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
-        <div className="animate-fade-up-2">
+      {galleryMyths.length > 0 && (
+        <section className="container-shell mt-24 animate-fade-up-3">
           <SectionHeader
-            eyebrow="Guia editorial"
-            title="Cada mito se cuenta con capas: origen, simbolos y resonancia."
-            description="La lectura incluye contexto, fuentes y visuales que evocan papel
-              cortado y texturas artesanales."
+            eyebrow="Galeria visual"
+            title="Mitos ilustrados con IA generativa"
+            description="Cada imagen es generada especialmente para capturar la esencia y simbolismo del mito."
           />
-          <div className="mt-6 space-y-3">
-            <GlassCard className="p-4">
-              <p className="text-xs uppercase tracking-[0.3em] text-ember-500">
-                SEO listo
-              </p>
-              <p className="mt-2 text-sm text-ink-700">
-                Metadata, rutas limpias y jerarquia semantica en cada pagina.
-              </p>
-            </GlassCard>
-            <GlassCard className="p-4">
-              <p className="text-xs uppercase tracking-[0.3em] text-ember-500">
-                Lectura comoda
-              </p>
-              <p className="mt-2 text-sm text-ink-700">
-                Tipografia editorial, contraste suave y ritmo visual.
-              </p>
-            </GlassCard>
-            <GlassCard className="p-4">
-              <p className="text-xs uppercase tracking-[0.3em] text-ember-500">
-                Assets vivos
-              </p>
-              <p className="mt-2 text-sm text-ink-700">
-                Ilustraciones paper cut y recursos de archivo en cada mito.
-              </p>
-            </GlassCard>
+          <div className="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+            {galleryMyths.map((myth) => (
+              <MythCard key={myth.id} myth={myth} featured />
+            ))}
           </div>
-        </div>
+          <div className="mt-8 text-center">
+            <ButtonLink href="/mitos">Ver todos los mitos</ButtonLink>
+          </div>
+        </section>
+      )}
 
-        <div className="grid gap-4 animate-fade-up-3">
-          {featured.map((item) => (
-            <GlassCard
-              key={item.title}
-              className="p-5 transition hover:-translate-y-1 hover:shadow-lift"
-            >
-              <div className="flex items-center justify-between">
-                <p className="text-xs uppercase tracking-[0.3em] text-river-600">
-                  {item.region}
-                </p>
-                <Badge className="border-white/60 bg-white/80 text-ink-700">
-                  {item.readTime}
-                </Badge>
-              </div>
-              <h3 className="mt-2 font-display text-2xl text-ink-900">
-                {item.title}
-              </h3>
-              <p className="mt-2 text-sm text-ink-700">{item.theme}</p>
-            </GlassCard>
-          ))}
-        </div>
-      </section>
+      {diverseMyths.length > 0 && (
+        <section className="container-shell mt-24 animate-fade-up-3">
+          <SectionHeader
+            eyebrow="Descubre mas"
+            title="Exploracion diaria desde distintas regiones"
+            description="Una seleccion rotativa que cambia cada dia para descubrir nuevos relatos."
+          />
+          <div className="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+            {diverseMyths.map((myth) => (
+              <MythCard key={myth.id} myth={myth} />
+            ))}
+          </div>
+        </section>
+      )}
 
       <section className="container-shell mt-24 animate-fade-up-3">
         <SectionHeader
@@ -298,16 +272,26 @@ export default function Home() {
             vista abre la puerta a navegaciones locales."
         />
         <div className="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-          {atlas.map((item) => (
-            <GlassCard
-              key={item.title}
-              className="p-5 transition hover:-translate-y-1 hover:shadow-lift"
+          {taxonomy.regions.map((region) => (
+            <a
+              key={region.slug}
+              href={`/mitos?region=${region.slug}`}
+              className="block"
             >
-              <h3 className="font-display text-xl text-ink-900">
-                {item.title}
-              </h3>
-              <p className="mt-2 text-sm text-ink-700">{item.detail}</p>
-            </GlassCard>
+              <GlassCard className="p-5 transition hover:-translate-y-1 hover:shadow-lift h-full">
+                <div className="flex items-start justify-between">
+                  <h3 className="font-display text-xl text-ink-900 group-hover:text-river-600">
+                    {region.name}
+                  </h3>
+                  <Badge className="border-river-500/30 bg-river-500/10 text-river-600">
+                    {region.myth_count}
+                  </Badge>
+                </div>
+                <p className="mt-2 text-sm text-ink-700">
+                  {regionDescriptions[region.name] || "Explora los mitos de esta region."}
+                </p>
+              </GlassCard>
+            </a>
           ))}
         </div>
       </section>
@@ -342,20 +326,21 @@ export default function Home() {
 
       <section className="container-shell mt-24">
         <GlassCard className="p-8">
-          <p className="eyebrow text-ember-500">Proximamente</p>
+          <p className="eyebrow text-ember-500">Biblioteca viva</p>
           <h2 className="mt-3 font-display text-3xl text-ink-900">
-            Ilustraciones paper cut y contenido enriquecido con IA.
+            {stats.total_myths}+ mitos colombianos con ilustraciones generadas por IA.
           </h2>
           <p className="mt-3 max-w-2xl text-sm text-ink-700">
-            Integraremos OpenAI para expandir los relatos con cuidado editorial y
-            generar imagenes con un estilo artesanal.
+            Esta coleccion crece constantemente. Cada dia descubriras nuevos mitos destacados
+            con un sistema de rotacion inteligente que prioriza contenido visual y distribucion
+            geografica equilibrada.
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
-            <ButtonLink href="/manifiesto" variant="subtle">
-              Ver manifiesto
+            <ButtonLink href="/mitos" variant="subtle">
+              Explorar coleccion completa
             </ButtonLink>
-            <ButtonLink href="/contacto" variant="outline">
-              Contacto
+            <ButtonLink href="/mitos?region=amazonas" variant="outline">
+              Ver mitos del Amazonas
             </ButtonLink>
           </div>
         </GlassCard>

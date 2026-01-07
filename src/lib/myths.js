@@ -488,3 +488,415 @@ export function parseListParams(searchParams) {
     offset: searchParams.get("offset"),
   };
 }
+
+// Get recommended myths based on region, community, and tags
+function getRecommendedMythsSqlite(mythId, { region_id, community_id, tags }, limit = 8) {
+  const db = getSqliteDb();
+
+  try {
+    // Get myths from same region or community, or with shared tags
+    const sql = `
+      SELECT DISTINCT
+        myths.id,
+        myths.title,
+        myths.slug,
+        myths.excerpt,
+        myths.image_url,
+        regions.name AS region,
+        regions.slug AS region_slug,
+        communities.name AS community,
+        communities.slug AS community_slug,
+        (CASE WHEN myths.region_id = ? THEN 2 ELSE 0 END +
+         CASE WHEN myths.community_id = ? THEN 3 ELSE 0 END) AS score
+      FROM myths
+      JOIN regions ON regions.id = myths.region_id
+      LEFT JOIN communities ON communities.id = myths.community_id
+      WHERE myths.id != ?
+        AND (myths.region_id = ? OR myths.community_id = ?)
+      ORDER BY score DESC, RANDOM()
+      LIMIT ?
+    `;
+
+    return db.prepare(sql).all(
+      region_id,
+      community_id,
+      mythId,
+      region_id,
+      community_id,
+      limit
+    );
+  } catch (error) {
+    console.error("Error getting recommended myths (SQLite):", error);
+    return [];
+  }
+}
+
+async function getRecommendedMythsPostgres(mythId, { region_id, community_id, tags }, limit = 8) {
+  const sql = getSqlClient();
+
+  try {
+    const result = await sql.query(
+      `
+      SELECT DISTINCT
+        myths.id,
+        myths.title,
+        myths.slug,
+        myths.excerpt,
+        myths.image_url,
+        regions.name AS region,
+        regions.slug AS region_slug,
+        communities.name AS community,
+        communities.slug AS community_slug,
+        (CASE WHEN myths.region_id = $1 THEN 2 ELSE 0 END +
+         CASE WHEN myths.community_id = $2 THEN 3 ELSE 0 END) AS score
+      FROM myths
+      JOIN regions ON regions.id = myths.region_id
+      LEFT JOIN communities ON communities.id = myths.community_id
+      WHERE myths.id != $3
+        AND (myths.region_id = $1 OR myths.community_id = $2)
+      ORDER BY score DESC, myths.id ASC
+      LIMIT $4
+      `,
+      [region_id, community_id, mythId, limit]
+    );
+
+    return result.rows;
+  } catch (error) {
+    console.error("Error getting recommended myths:", error);
+    return [];
+  }
+}
+
+export async function getRecommendedMyths(myth, limit = 8) {
+  if (!myth || !myth.id || !myth.region_id) {
+    return [];
+  }
+
+  try {
+    if (isPostgres()) {
+      return await getRecommendedMythsPostgres(myth.id, myth, limit);
+    }
+    return getRecommendedMythsSqlite(myth.id, myth, limit);
+  } catch (error) {
+    console.error("Error in getRecommendedMyths:", error);
+    return [];
+  }
+}
+
+// Get featured myths with images for home page
+async function getFeaturedMythsWithImagesPostgres(limit = 12, seed = 0) {
+  const sql = getSqlClient();
+
+  try {
+    // Use date-based rotation: get myths with images, rotate by seed
+    const result = await sql.query(
+      `
+      SELECT
+        myths.id,
+        myths.title,
+        myths.slug,
+        myths.excerpt,
+        myths.image_url,
+        myths.category_path,
+        regions.name AS region,
+        regions.slug AS region_slug,
+        communities.name AS community,
+        communities.slug AS community_slug
+      FROM myths
+      JOIN regions ON regions.id = myths.region_id
+      LEFT JOIN communities ON communities.id = myths.community_id
+      WHERE myths.image_url IS NOT NULL
+      ORDER BY (myths.id + $1) % 23, myths.id
+      LIMIT $2
+      `,
+      [seed, limit]
+    );
+
+    return result.rows;
+  } catch (error) {
+    console.error("Error getting featured myths with images:", error);
+    return [];
+  }
+}
+
+function getFeaturedMythsWithImagesSqlite(limit = 12, seed = 0) {
+  const db = getSqliteDb();
+
+  try {
+    const sql = `
+      SELECT
+        myths.id,
+        myths.title,
+        myths.slug,
+        myths.excerpt,
+        myths.image_url,
+        myths.category_path,
+        regions.name AS region,
+        regions.slug AS region_slug,
+        communities.name AS community,
+        communities.slug AS community_slug
+      FROM myths
+      JOIN regions ON regions.id = myths.region_id
+      LEFT JOIN communities ON communities.id = myths.community_id
+      WHERE myths.image_url IS NOT NULL
+      ORDER BY (myths.id + ?) % 23, myths.id
+      LIMIT ?
+    `;
+
+    return db.prepare(sql).all(seed, limit);
+  } catch (error) {
+    console.error("Error getting featured myths with images (SQLite):", error);
+    return [];
+  }
+}
+
+export async function getFeaturedMythsWithImages(limit = 12, seed = 0) {
+  try {
+    if (isPostgres()) {
+      return await getFeaturedMythsWithImagesPostgres(limit, seed);
+    }
+    return getFeaturedMythsWithImagesSqlite(limit, seed);
+  } catch (error) {
+    console.error("Error in getFeaturedMythsWithImages:", error);
+    return [];
+  }
+}
+
+// Get myths by region for home page
+async function getMythsByRegionPostgres(regionSlug, limit = 6, seed = 0) {
+  const sql = getSqlClient();
+
+  try {
+    const result = await sql.query(
+      `
+      SELECT
+        myths.id,
+        myths.title,
+        myths.slug,
+        myths.excerpt,
+        myths.image_url,
+        myths.category_path,
+        regions.name AS region,
+        regions.slug AS region_slug
+      FROM myths
+      JOIN regions ON regions.id = myths.region_id
+      WHERE regions.slug = $1
+      ORDER BY
+        CASE WHEN myths.image_url IS NOT NULL THEN 0 ELSE 1 END,
+        (myths.id + $2) % 100,
+        myths.id
+      LIMIT $3
+      `,
+      [regionSlug, seed, limit]
+    );
+
+    return result.rows;
+  } catch (error) {
+    console.error("Error getting myths by region:", error);
+    return [];
+  }
+}
+
+function getMythsByRegionSqlite(regionSlug, limit = 6, seed = 0) {
+  const db = getSqliteDb();
+
+  try {
+    const sql = `
+      SELECT
+        myths.id,
+        myths.title,
+        myths.slug,
+        myths.excerpt,
+        myths.image_url,
+        myths.category_path,
+        regions.name AS region,
+        regions.slug AS region_slug
+      FROM myths
+      JOIN regions ON regions.id = myths.region_id
+      WHERE regions.slug = ?
+      ORDER BY
+        CASE WHEN myths.image_url IS NOT NULL THEN 0 ELSE 1 END,
+        (myths.id + ?) % 100,
+        myths.id
+      LIMIT ?
+    `;
+
+    return db.prepare(sql).all(regionSlug, seed, limit);
+  } catch (error) {
+    console.error("Error getting myths by region (SQLite):", error);
+    return [];
+  }
+}
+
+export async function getMythsByRegion(regionSlug, limit = 6, seed = 0) {
+  try {
+    if (isPostgres()) {
+      return await getMythsByRegionPostgres(regionSlug, limit, seed);
+    }
+    return getMythsByRegionSqlite(regionSlug, limit, seed);
+  } catch (error) {
+    console.error("Error in getMythsByRegion:", error);
+    return [];
+  }
+}
+
+// Get diverse myths from different regions for home page
+async function getDiverseMythsPostgres(limit = 9, seed = 0) {
+  const sql = getSqlClient();
+
+  try {
+    // Get myths distributed across regions, prioritize those with images
+    const result = await sql.query(
+      `
+      WITH ranked_myths AS (
+        SELECT
+          myths.id,
+          myths.title,
+          myths.slug,
+          myths.excerpt,
+          myths.image_url,
+          myths.category_path,
+          regions.name AS region,
+          regions.slug AS region_slug,
+          ROW_NUMBER() OVER (
+            PARTITION BY regions.id
+            ORDER BY
+              CASE WHEN myths.image_url IS NOT NULL THEN 0 ELSE 1 END,
+              (myths.id + $1) % 100
+          ) as rn
+        FROM myths
+        JOIN regions ON regions.id = myths.region_id
+      )
+      SELECT id, title, slug, excerpt, image_url, category_path, region, region_slug
+      FROM ranked_myths
+      WHERE rn <= 2
+      ORDER BY
+        CASE WHEN image_url IS NOT NULL THEN 0 ELSE 1 END,
+        (id + $1) % 100
+      LIMIT $2
+      `,
+      [seed, limit]
+    );
+
+    return result.rows;
+  } catch (error) {
+    console.error("Error getting diverse myths:", error);
+    return [];
+  }
+}
+
+function getDiverseMythsSqlite(limit = 9, seed = 0) {
+  const db = getSqliteDb();
+
+  try {
+    // Simplified version for SQLite - get diverse myths across regions
+    const sql = `
+      SELECT
+        myths.id,
+        myths.title,
+        myths.slug,
+        myths.excerpt,
+        myths.image_url,
+        myths.category_path,
+        regions.name AS region,
+        regions.slug AS region_slug
+      FROM myths
+      JOIN regions ON regions.id = myths.region_id
+      ORDER BY
+        CASE WHEN myths.image_url IS NOT NULL THEN 0 ELSE 1 END,
+        (myths.id + ?) % 100
+      LIMIT ?
+    `;
+
+    return db.prepare(sql).all(seed, limit);
+  } catch (error) {
+    console.error("Error getting diverse myths (SQLite):", error);
+    return [];
+  }
+}
+
+export async function getDiverseMyths(limit = 9, seed = 0) {
+  try {
+    if (isPostgres()) {
+      return await getDiverseMythsPostgres(limit, seed);
+    }
+    return getDiverseMythsSqlite(limit, seed);
+  } catch (error) {
+    console.error("Error in getDiverseMyths:", error);
+    return [];
+  }
+}
+
+// Get home page stats
+async function getHomeStatsPostgres() {
+  const sql = getSqlClient();
+
+  try {
+    const result = await sql.query(`
+      SELECT
+        COUNT(DISTINCT myths.id) as total_myths,
+        COUNT(DISTINCT regions.id) as total_regions,
+        COUNT(DISTINCT CASE WHEN myths.image_url IS NOT NULL THEN myths.id END) as myths_with_images,
+        COUNT(DISTINCT tags.id) as total_tags
+      FROM myths
+      CROSS JOIN regions
+      LEFT JOIN myth_tags ON myth_tags.myth_id = myths.id
+      LEFT JOIN tags ON tags.id = myth_tags.tag_id
+    `);
+
+    return result.rows[0];
+  } catch (error) {
+    console.error("Error getting home stats:", error);
+    return {
+      total_myths: 0,
+      total_regions: 0,
+      myths_with_images: 0,
+      total_tags: 0
+    };
+  }
+}
+
+function getHomeStatsSqlite() {
+  const db = getSqliteDb();
+
+  try {
+    const result = db.prepare(`
+      SELECT
+        COUNT(DISTINCT myths.id) as total_myths,
+        COUNT(DISTINCT regions.id) as total_regions,
+        COUNT(DISTINCT CASE WHEN myths.image_url IS NOT NULL THEN myths.id END) as myths_with_images,
+        COUNT(DISTINCT tags.id) as total_tags
+      FROM myths
+      CROSS JOIN regions
+      LEFT JOIN myth_tags ON myth_tags.myth_id = myths.id
+      LEFT JOIN tags ON tags.id = myth_tags.tag_id
+    `).get();
+
+    return result;
+  } catch (error) {
+    console.error("Error getting home stats (SQLite):", error);
+    return {
+      total_myths: 0,
+      total_regions: 0,
+      myths_with_images: 0,
+      total_tags: 0
+    };
+  }
+}
+
+export async function getHomeStats() {
+  try {
+    if (isPostgres()) {
+      return await getHomeStatsPostgres();
+    }
+    return getHomeStatsSqlite();
+  } catch (error) {
+    console.error("Error in getHomeStats:", error);
+    return {
+      total_myths: 0,
+      total_regions: 0,
+      myths_with_images: 0,
+      total_tags: 0
+    };
+  }
+}
