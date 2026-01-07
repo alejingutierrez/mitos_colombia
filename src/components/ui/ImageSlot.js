@@ -5,7 +5,7 @@ const sizes = {
   compact: "h-32",
   wide: "h-48 md:h-56",
   hero: "h-60 md:h-72",
-  large: "h-[27rem] md:h-[30rem]",
+  large: "h-[19rem] md:h-[21rem]",
 };
 
 export function ImageSlot({
