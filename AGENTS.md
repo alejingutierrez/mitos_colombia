@@ -41,7 +41,7 @@ Crear un sitio web moderno de contenidos que recopile todos los mitos de Colombi
 - Despues de cada ajuste relevante, recrear el contenedor con `docker-compose up -d --build`.
 
 ## Vercel + Neon (operacion)
-- No se guardan secretos en el repo. Usa variables de entorno locales o en Vercel.
+- No se guardan secretos en el repo. Usa `.env` local (ignorado) o variables en Vercel.
 - Configura `POSTGRES_URL` (Neon) y opcionalmente `POSTGRES_URL_NON_POOLING`.
-- Para importar datos a Neon: `POSTGRES_URL=... npm run db:import:pg`.
+- Para importar datos a Neon: `source .env && npm run db:import:pg`.
 - Para Vercel CLI, usa `VERCEL_TOKEN` en tu shell y el archivo `.vercel/project.json` para linkear el proyecto.

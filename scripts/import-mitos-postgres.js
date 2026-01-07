@@ -104,6 +104,11 @@ async function run() {
 
   try {
     await client.query("BEGIN");
+    await client.query("SET synchronous_commit TO OFF");
+
+    const regionCache = new Map();
+    const communityCache = new Map();
+    const tagCache = new Map();
 
     for (const [index, row] of rows.entries()) {
       const categoryPath = String(row.CATEGORIA || "").trim();
@@ -115,29 +120,38 @@ async function run() {
       const regionName = parts[0] || "Varios";
       const communityName = parts.length > 1 ? parts.slice(1).join(" > ") : "";
 
-      const regionSlug = slugify(regionName);
-      const regionResult = await client.query(
-        `INSERT INTO regions (name, slug)
-         VALUES ($1, $2)
-         ON CONFLICT (name)
-         DO UPDATE SET slug = EXCLUDED.slug
-         RETURNING id`,
-        [regionName, regionSlug]
-      );
-      const regionId = regionResult.rows[0].id;
+      let regionId = regionCache.get(regionName);
+      if (!regionId) {
+        const regionSlug = slugify(regionName);
+        const regionResult = await client.query(
+          `INSERT INTO regions (name, slug)
+           VALUES ($1, $2)
+           ON CONFLICT (name)
+           DO UPDATE SET slug = EXCLUDED.slug
+           RETURNING id`,
+          [regionName, regionSlug]
+        );
+        regionId = regionResult.rows[0].id;
+        regionCache.set(regionName, regionId);
+      }
 
       let communityId = null;
       if (communityName) {
-        const communitySlug = slugify(communityName);
-        const communityResult = await client.query(
-          `INSERT INTO communities (region_id, name, slug)
-           VALUES ($1, $2, $3)
-           ON CONFLICT (region_id, name)
-           DO UPDATE SET slug = EXCLUDED.slug
-           RETURNING id`,
-          [regionId, communityName, communitySlug]
-        );
-        communityId = communityResult.rows[0].id;
+        const communityKey = `${regionId}:${communityName}`;
+        communityId = communityCache.get(communityKey);
+        if (!communityId) {
+          const communitySlug = slugify(communityName);
+          const communityResult = await client.query(
+            `INSERT INTO communities (region_id, name, slug)
+             VALUES ($1, $2, $3)
+             ON CONFLICT (region_id, name)
+             DO UPDATE SET slug = EXCLUDED.slug
+             RETURNING id`,
+            [regionId, communityName, communitySlug]
+          );
+          communityId = communityResult.rows[0].id;
+          communityCache.set(communityKey, communityId);
+        }
       }
 
       const title = String(row.TITULO || "").trim();
@@ -191,36 +205,59 @@ async function run() {
       );
       const mythId = mythResult.rows[0].id;
 
+      const tagIds = [];
       for (const tag of tags) {
         const tagSlug = slugify(tag);
         if (!tagSlug) {
           continue;
         }
 
-        const tagResult = await client.query(
-          `INSERT INTO tags (name, slug)
-           VALUES ($1, $2)
-           ON CONFLICT (slug)
-           DO UPDATE SET name = EXCLUDED.name
-           RETURNING id`,
-          [tag, tagSlug]
-        );
-        const tagId = tagResult.rows[0].id;
+        let tagId = tagCache.get(tagSlug);
+        if (!tagId) {
+          const tagResult = await client.query(
+            `INSERT INTO tags (name, slug)
+             VALUES ($1, $2)
+             ON CONFLICT (slug)
+             DO UPDATE SET name = EXCLUDED.name
+             RETURNING id`,
+            [tag, tagSlug]
+          );
+          tagId = tagResult.rows[0].id;
+          tagCache.set(tagSlug, tagId);
+        }
+        tagIds.push(tagId);
+      }
+
+      if (tagIds.length) {
+        const values = [];
+        const placeholders = tagIds.map((tagId) => {
+          values.push(mythId, tagId);
+          const idx = values.length;
+          return `($${idx - 1}, $${idx})`;
+        });
+
         await client.query(
           `INSERT INTO myth_tags (myth_id, tag_id)
-           VALUES ($1, $2)
+           VALUES ${placeholders.join(", ")}
            ON CONFLICT DO NOTHING`,
-          [mythId, tagId]
+          values
         );
       }
 
-      const keywords = new Set(splitList(focusKeywordsRaw, "|"));
-      for (const keyword of keywords) {
+      const keywords = Array.from(new Set(splitList(focusKeywordsRaw, "|")));
+      if (keywords.length) {
+        const values = [];
+        const placeholders = keywords.map((keyword) => {
+          values.push(mythId, keyword);
+          const idx = values.length;
+          return `($${idx - 1}, $${idx})`;
+        });
+
         await client.query(
           `INSERT INTO myth_keywords (myth_id, keyword)
-           VALUES ($1, $2)
+           VALUES ${placeholders.join(", ")}
            ON CONFLICT DO NOTHING`,
-          [mythId, keyword]
+          values
         );
       }
     }
