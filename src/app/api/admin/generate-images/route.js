@@ -13,7 +13,13 @@ const openai = new OpenAI({
 function checkAuth(request) {
   const authHeader = request.headers.get("authorization");
 
+  console.log("[AUTH] Checking authentication...");
+  console.log("[AUTH] Has auth header:", !!authHeader);
+  console.log("[AUTH] Expected username:", process.env.ADMIN_USERNAME || "admin");
+  console.log("[AUTH] Has password env:", !!process.env.ADMIN_PASSWORD);
+
   if (!authHeader || !authHeader.startsWith("Basic ")) {
+    console.log("[AUTH] Missing or invalid auth header");
     return false;
   }
 
@@ -21,10 +27,15 @@ function checkAuth(request) {
   const credentials = Buffer.from(base64Credentials, "base64").toString("utf-8");
   const [username, password] = credentials.split(":");
 
+  console.log("[AUTH] Received username:", username);
+
   const validUsername = process.env.ADMIN_USERNAME || "admin";
   const validPassword = process.env.ADMIN_PASSWORD || "admin";
 
-  return username === validUsername && password === validPassword;
+  const isValid = username === validUsername && password === validPassword;
+  console.log("[AUTH] Auth result:", isValid);
+
+  return isValid;
 }
 
 // Get myths without images
