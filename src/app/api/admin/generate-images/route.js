@@ -58,21 +58,45 @@ async function getMythsWithoutImages(limit = 10) {
 async function updateMythImage(mythId, imageUrl) {
   const isPg = isPostgres();
 
-  if (isPg) {
-    const db = getSqlClient();
-    await db`
-      UPDATE myths
-      SET image_url = ${imageUrl}, updated_at = NOW()
-      WHERE id = ${mythId}
-    `;
-  } else {
-    const db = getSqliteDbWritable();
-    const stmt = db.prepare(`
-      UPDATE myths
-      SET image_url = ?, updated_at = datetime('now')
-      WHERE id = ?
-    `);
-    stmt.run(imageUrl, mythId);
+  console.log(`[UPDATE] Attempting to update myth ${mythId} with image URL`);
+  console.log(`[UPDATE] Using Postgres: ${isPg}`);
+  console.log(`[UPDATE] Image URL length: ${imageUrl?.length}`);
+
+  try {
+    if (isPg) {
+      const db = getSqlClient();
+      const result = await db`
+        UPDATE myths
+        SET image_url = ${imageUrl}, updated_at = NOW()
+        WHERE id = ${mythId}
+        RETURNING id, title, image_url
+      `;
+      console.log(`[UPDATE] Postgres update result:`, result);
+
+      if (!result || result.length === 0) {
+        throw new Error(`No myth found with id ${mythId}`);
+      }
+
+      return result[0];
+    } else {
+      const db = getSqliteDbWritable();
+      const stmt = db.prepare(`
+        UPDATE myths
+        SET image_url = ?, updated_at = datetime('now')
+        WHERE id = ?
+      `);
+      const info = stmt.run(imageUrl, mythId);
+      console.log(`[UPDATE] SQLite update result:`, info);
+
+      if (info.changes === 0) {
+        throw new Error(`No myth found with id ${mythId}`);
+      }
+
+      return { id: mythId, changes: info.changes };
+    }
+  } catch (error) {
+    console.error(`[UPDATE] Error updating myth ${mythId}:`, error);
+    throw error;
   }
 }
 
@@ -128,10 +152,14 @@ export async function POST(request) {
     // Generate images for each myth
     for (const myth of myths) {
       try {
-        console.log(`Generating image for: ${myth.title}`);
+        console.log(`[GEN] Starting generation for myth ${myth.id}: ${myth.title}`);
+        console.log(`[GEN] Using prompt: ${myth.image_prompt?.substring(0, 100)}...`);
 
         const imageUrl = await generateImage(myth.image_prompt);
-        await updateMythImage(myth.id, imageUrl);
+        console.log(`[GEN] Image generated successfully, URL: ${imageUrl?.substring(0, 50)}...`);
+
+        const updateResult = await updateMythImage(myth.id, imageUrl);
+        console.log(`[GEN] Database updated successfully:`, updateResult);
 
         results.push({
           id: myth.id,
@@ -141,9 +169,10 @@ export async function POST(request) {
           success: true,
         });
 
-        console.log(`✓ Image generated for: ${myth.title}`);
+        console.log(`[GEN] ✓ Complete for: ${myth.title}`);
       } catch (error) {
-        console.error(`✗ Failed to generate image for ${myth.title}:`, error);
+        console.error(`[GEN] ✗ Failed for ${myth.title}:`, error);
+        console.error(`[GEN] Error stack:`, error.stack);
         results.push({
           id: myth.id,
           title: myth.title,
