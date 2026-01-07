@@ -42,6 +42,12 @@ const CATEGORY_INFO = {
     longDescription: "Los mitos de castigo en Colombia cumplen una función social crucial: establecer límites, transmitir valores y advertir sobre las consecuencias de transgredir normas comunitarias. Desde castigos divinos hasta transformaciones como consecuencia de actos indebidos, estos relatos enseñan respeto por la naturaleza, los ancianos y las tradiciones.",
     imagePrompt: "Divine punishment in mystical Colombian landscape, dramatic transformation, moral lesson visualization, powerful natural forces"
   },
+  "castigos": {
+    title: "Mitos de Castigos",
+    description: "Narrativas sobre transgresiones del orden natural y social, y las consecuencias que restauran el equilibrio cósmico y moral.",
+    longDescription: "Los mitos de castigos en la tradición oral colombiana funcionan como guardianes del orden social y natural, estableciendo claramente las consecuencias de violar normas fundamentales. Yepá castiga a los animales por su comportamiento irracional en la selva del Vaupés, cambiando permanentemente su destino y relación con los humanos, enseñando sobre las consecuencias de actuar sin razonamiento. La historia de Damián Vásquez Montiel, el perulero que hizo un pacto con el Diablo, advierte sobre los peligros de la avaricia y los acuerdos sobrenaturales, culminando en su misteriosa desaparición en la Villa de Arma. El mito de la Dama Verde explora advertencias morales a través de encuentros misteriosos que pueden traer fortuna o desgracia dependiendo del comportamiento del protagonista. Estos relatos no solo castigan transgresiones individuales, sino que refuerzan valores comunitarios esenciales: el respeto a lo sagrado, la honestidad en los tratos, la moderación en los deseos, y la importancia de mantener el equilibrio entre lo humano y lo sobrenatural.",
+    imagePrompt: "Divine punishment in Colombian mythology, Yepá judging animals, moral consequences, supernatural justice, balance restoration"
+  },
   "familia": {
     title: "Mitos de Familia",
     description: "Relatos sobre relaciones familiares, genealogías míticas y la importancia de los lazos de sangre en la estructura social.",
@@ -90,11 +96,17 @@ const CATEGORY_INFO = {
     longDescription: "Los héroes de la mitología colombiana son guerreros, cazadores, líderes y seres dotados de poderes especiales que enfrentan monstruos, solucionan crisis y establecen el orden. Sus hazañas inspiran y establecen modelos de comportamiento para la comunidad.",
     imagePrompt: "Colombian mythological hero facing epic challenge, warrior spirit, protective stance, legendary feat"
   },
+  "heroicos": {
+    title: "Mitos Héroicos",
+    description: "Historias de personajes extraordinarios que usan la astucia, fuerza y sabiduría para superar obstáculos imposibles y proteger a sus comunidades.",
+    longDescription: "Los mitos héroicos de Colombia presentan personajes que encarnan virtudes admirables y enfrentan desafíos que ponen a prueba su valor, inteligencia y determinación. Petapeta demuestra cómo la codicia y el engaño pueden despojar a alguien de su poder mágico, mientras que Jirayauma enfrenta a su suegra en una batalla de astucia y supervivencia. Konago, la tortuga sabia, vence a los poderosos jaguares usando la inteligencia sobre la fuerza bruta, estableciendo que la paciencia y la estrategia son más efectivas que la violencia. Estos héroes no solo protegen a sus comunidades de amenazas externas, sino que también enseñan lecciones morales importantes: el uso responsable del poder, la importancia del ingenio sobre la fuerza física, y las consecuencias de la avaricia. Sus hazañas se transmiten de generación en generación como modelos de comportamiento, inspirando a las comunidades a valorar la astucia, la paciencia y la ética en lugar de depender únicamente de la fuerza.",
+    imagePrompt: "Colombian mythological heroes, Konago the wise turtle, Jirayauma's cunning, strategic victories, protective guardians"
+  },
   "transformacion": {
     title: "Mitos de Transformación",
-    description: "Historias sobre metamorfosis de seres humanos en animales, plantas u otros elementos naturales.",
-    longDescription: "La transformación es un motivo central en la mitología colombiana, reflejando la interconexión entre todos los seres. Personas que se convierten en montañas, aves, ríos o estrellas pueblan estos relatos, mostrando que las fronteras entre categorías de existencia son permeables.",
-    imagePrompt: "Magical transformation in Colombian nature, human becoming animal or natural element, metamorphosis, fluid boundaries"
+    description: "Historias sobre metamorfosis de seres humanos en animales, plantas, espíritus o elementos naturales, revelando la interconexión de todas las formas de existencia.",
+    longDescription: "La transformación es uno de los motivos más recurrentes y profundos de la mitología colombiana, reflejando la cosmovisión indígena de que todas las formas de existencia están interconectadas y las fronteras entre categorías son permeables. Los fantasmas multiplicadores en relatos andoques exploran el enigma de seres que se transforman con elementos mágicos, desafiando la comprensión ordinaria de la realidad. La venganza de los brujos narra cómo dos hermanos chamanes se transforman en jaguares y anacondas, atacando comunidades que los ofendieron, demostrando el poder peligroso de quienes dominan las artes de la metamorfosis. La brujería de la danta revela cómo Trueno-de-piedra y brujos huitotos se transforman en tapires y otros animales, utilizando estas formas para viajar entre mundos, cazar o ejercer poder sobre otros. Estas transformaciones no son meros trucos mágicos, sino cambios fundamentales que revelan la verdadera naturaleza fluida de la existencia: un humano puede convertirse en jaguar porque comparte esencia con él; una persona puede transformarse en montaña porque su espíritu se fusiona con la tierra. Los mitos de transformación enseñan que la identidad no es fija, que lo humano y lo natural están en constante diálogo, y que respetar esta fluidez es esencial para vivir en armonía con el cosmos.",
+    imagePrompt: "Colombian mythological transformations, shamans becoming jaguars, spirit metamorphosis, fluid boundaries between human and animal"
   },
   "cosmogenico": {
     title: "Mitos Cosmogónicos",
@@ -155,6 +167,24 @@ const CATEGORY_INFO = {
     description: "Relatos sobre la creación de los seres humanos y el origen de diferentes pueblos.",
     longDescription: "Los mitos antropogónicos narran cómo surgieron los primeros humanos, de qué materiales fueron hechos, y cómo se diferenciaron los diversos pueblos. Estos relatos establecen la identidad ancestral de las comunidades.",
     imagePrompt: "Creation of humanity in Colombian indigenous mythology, first humans emerging, ancestral origins, sacred birth"
+  },
+  "culturales": {
+    title: "Mitos Culturales",
+    description: "Relatos sobre el origen de prácticas sociales, técnicas agrícolas, ceremonias y elementos que definen la identidad de los pueblos.",
+    longDescription: "Los mitos culturales explican cómo surgieron las prácticas y conocimientos que definen la identidad de las comunidades colombianas. Los gigantes nombran elementos naturales en actos que resaltan su significado cultural y espiritual, estableciendo la relación sagrada entre el lenguaje y el mundo. Plumón-amarillo lidera la reconstrucción de un pueblo disperso, uniendo a su gente y restaurando la identidad colectiva en tierras sagradas, demostrando la importancia de la cohesión comunitaria. El origen de los vegetales cultivados revela ciclos de apropiación y redistribución de recursos mágicos entre los indígenas, explicando cómo la humanidad obtuvo los alimentos que sustentan la vida. Estos relatos no solo narran eventos del pasado, sino que transmiten conocimientos prácticos sobre agricultura, organización social, ceremonias y técnicas de subsistencia. Los mitos culturales funcionan como manuales de identidad que enseñan a las nuevas generaciones quiénes son, de dónde vienen, y cómo deben vivir para mantener viva la herencia de sus ancestros.",
+    imagePrompt: "Colombian cultural origins, naming ceremony of natural elements, community rebuilding, sacred agricultural knowledge"
+  },
+  "selva": {
+    title: "Mitos de la Selva",
+    description: "Narrativas sobre los espíritus, peligros y maravillas de las selvas tropicales, hogar de pueblos amazónicos y del Pacífico.",
+    longDescription: "La selva en la mitología colombiana es un espacio de misterio, poder y conocimiento profundo, habitada por espíritus, guardianes y seres transformados. El sol que nace en Araracuara narra el origen cósmico de la luz en la selva amazónica, con versiones que varían en detalle y enfoque narrativo según cada pueblo. La venganza de los brujos relata cómo dos hermanos se transforman en animales peligrosos, atacando comunidades y enfrentando a aldeanos que intentan detenerlos, explorando los límites entre lo humano y lo animal. La brujería de la danta revela narrativas de transformación, poder y magia en la interacción entre diferentes pueblos amazónicos. Estos mitos enseñan sobre los peligros de adentrarse sin respeto en la selva, el poder de los chamanes y brujos que pueden transformarse, y la importancia de mantener el equilibrio con los espíritus que habitan cada árbol, río y montaña. La selva no es solo un paisaje físico, sino un universo espiritual donde las leyes ordinarias se suspenden y lo imposible se vuelve cotidiano.",
+    imagePrompt: "Amazon rainforest mythology, Araracuara sun origin, shape-shifting shamans, jungle spirits, transformational magic"
+  },
+  "naturaleza": {
+    title: "Mitos de la Naturaleza",
+    description: "Relatos sobre la creación y transformación de elementos naturales, y la relación sagrada entre humanos y el mundo natural.",
+    longDescription: "Los mitos de la naturaleza en Colombia expresan la profunda interconexión entre todos los seres vivos y los elementos del cosmos. La curiosidad de Imárika Kayafikí impulsa cambios fundamentales que revelan diversidad y transformación en el mundo, mostrando cómo las acciones individuales pueden alterar el equilibrio natural. El diluvio y las hazañas de Buinaima narran cómo la curiosidad de Fïzido Jïzuma desata un diluvio devastador, revelando la interacción entre humanos y entidades naturales, y las consecuencias de interferir con fuerzas primordiales. Chuya-Chaqui, el guardián del bosque con pies disparejos, protege la selva amazónica de aquellos que buscan explotarla sin respeto, castigando a los invasores y premiando a quienes tratan la naturaleza con reverencia. Estos mitos enseñan que la naturaleza no es un recurso pasivo para uso humano, sino un ser vivo con voluntad propia, espíritus guardianes y leyes que deben respetarse. La relación con el mundo natural debe basarse en reciprocidad, agradecimiento y cuidado, no en extracción sin límites.",
+    imagePrompt: "Colombian nature mythology, Chullachaqui forest guardian, primordial flood, natural transformations, sacred ecology"
   }
 };
 

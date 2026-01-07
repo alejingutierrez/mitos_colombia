@@ -14,9 +14,9 @@ export const dynamic = "force-dynamic";
 const COMMUNITY_INFO = {
   "muiscas": {
     title: "Muiscas",
-    description: "Pueblo indígena que habitó el altiplano cundiboyacense, conocido por su avanzada organización social y rica mitología.",
-    longDescription: "Los Muiscas o Chibchas fueron una de las civilizaciones más importantes de Colombia precolombina. Habitaron el altiplano andino en lo que hoy es Cundinamarca y Boyacá, desarrollando una compleja estructura social y religiosa. Su mitología incluye relatos sobre la creación del mundo, dioses como Chiminigagua, Bachué, Bochica y Chía, y prácticas ceremoniales en lagunas sagradas como Guatavita. Los mitos muiscas explican el origen del sol, la luna, las lagunas y establecen códigos morales y sociales que rigieron su civilización.",
-    imagePrompt: "Muisca sacred ceremony at lagoon, golden offerings, Andean mountains, mystical fog"
+    description: "Pueblo indígena del altiplano cundiboyacense, conocido por su avanzada civilización, ceremonias en lagunas sagradas y la leyenda de El Dorado.",
+    longDescription: "Los Muiscas o Chibchas fueron una de las civilizaciones más avanzadas de Colombia precolombina, habitantes del altiplano andino en lo que hoy es Cundinamarca y Boyacá en la región Andina. Su mitología es extraordinariamente rica e incluye relatos cosmogónicos sobre Chiminigagua, el ser supremo creador de la luz, y Bachué, la madre primordial que emergió de la laguna de Iguaque con un niño que luego se convirtió en su esposo, poblando la tierra de humanos. Bochica, el anciano sabio y héroe civilizador, enseñó a los chibchas a cultivar, tejer y organizarse socialmente, salvando su tierra de inundaciones y transformando oro en maíz para alimentar al pueblo. Los mitos muiscas narran el origen divino de Goranchacha, hijo del sol que se manifestó a través de una doncella, y el nacimiento del sol y la luna a través de los caciques que trajeron luz al mundo. La laguna de Guatavita fue escenario de ceremonias de ofrendas de oro que dieron origen a la leyenda de El Dorado, rituales que reflejaban la profunda conexión espiritual entre los Muiscas y sus lugares sagrados. Su tradición oral estableció códigos morales y sociales que rigieron una de las sociedades más complejas de los Andes colombianos.",
+    imagePrompt: "Muisca golden ceremony at Guatavita lagoon, Bochica civilizer, Andean mountains, sacred offerings, El Dorado ritual"
   },
   "yukuna": {
     title: "Yukuna",
@@ -25,16 +25,40 @@ const COMMUNITY_INFO = {
     imagePrompt: "Yukuna village in Amazon rainforest, sacred river, tropical mythology, ancestral spirits"
   },
   "wayuu": {
-    title: "Wayuu",
-    description: "Pueblo indígena de la península de La Guajira, con una cultura matrilineal y rica tradición de relatos morales.",
-    longDescription: "Los Wayuu son el pueblo indígena más numeroso de Colombia y Venezuela, habitando la península de La Guajira. Su sociedad matrilineal se refleja en sus mitos, donde figuras femeninas tienen roles centrales. La mitología wayuu incluye relatos sobre Maleiwa (el creador), Pulowi (espíritu femenino de la sequía y el viento) y Juyá (la lluvia). Sus mitos enseñan sobre la importancia de la familia, el respeto a los mayores, y la armonía con el territorio desértico que habitan.",
-    imagePrompt: "Wayuu desert landscape, traditional patterns, spiritual figures, La Guajira peninsula"
+    title: "Wayúu",
+    description: "Pueblo indígena de La Guajira, con cultura matrilineal y rica tradición oral sobre el viaje entre mundos, espíritus ancestrales y el equilibrio cósmico.",
+    longDescription: "Los Wayúu son el pueblo indígena más numeroso de Colombia y Venezuela, habitantes ancestrales de la península de La Guajira en la región Caribe. Su sociedad matrilineal se refleja profundamente en su mitología, donde figuras femeninas como Pulowi (espíritu de la sequía y el viento) ocupan roles centrales. Los mitos wayúu narran el origen del fuego a través de un joven audaz que lo robó de los dioses, desatando un ciclo de castigos y transformaciones que definió la relación de la humanidad con este elemento sagrado. Maleiwa (Mareigua), el dios creador, estableció el orden del cosmos y las normas que rigen la vida wayúu. El relato de Ulépala explora temas de amor, lealtad y el tránsito entre el mundo de los vivos y los muertos, mientras que los dominios de Juyá (la lluvia) representan una rica tradición sobre el viaje de autodescubrimiento y supervivencia. Los mitos wayúu sobre el viaje al más allá revelan complejas narrativas sobre la interacción con seres sobrenaturales y la continuidad de la existencia después de la muerte. Su tradición oral enseña sobre la importancia del clan familiar, el respeto a los mayores, el sistema de justicia basado en compensación, y la armonía necesaria con el territorio desértico que habitan.",
+    imagePrompt: "Wayuu matrilineal society in La Guajira desert, Pulowi and Juyá spirits, traditional patterns, journey between worlds"
   },
   "catios": {
     title: "Catíos",
     description: "Grupo indígena del grupo emberá en la región andina, con tradiciones que mezclan elementos de selva y montaña.",
     longDescription: "Los Catíos son parte de la familia lingüística emberá y habitan regiones del occidente colombiano, principalmente en Antioquia y Chocó. Sus mitos reflejan su conexión con entornos de montaña y selva tropical, incluyendo relatos sobre espíritus de la naturaleza, la creación de ríos y montañas, y enseñanzas sobre el equilibrio entre humanos y naturaleza. La tradición oral catía preserva conocimientos sobre plantas medicinales, caza y la relación con el territorio ancestral.",
     imagePrompt: "Catío village in tropical mountains, sacred forest, river spirits, traditional dwellings"
+  },
+  "katios": {
+    title: "Katíos",
+    description: "Pueblo emberá de la región andina, guardianes de relatos sobre la creación del mundo y la resistencia cultural.",
+    longDescription: "Los Katíos son parte de la familia lingüística emberá y habitan regiones del occidente colombiano, principalmente en Antioquia y Chocó, en la zona de transición entre los Andes y el Pacífico. Su mitología es rica en relatos cosmogónicos centrados en Caragabí, el creador que organizó el mundo y estableció el orden natural y social. Los mitos katíos narran la creación del universo, la aparición de figuras míticas como los Aribamias (seres transformados después de la muerte), y episodios de resistencia indígena como la liderada por Ambeu contra los conquistadores españoles. La tradición oral katía también incluye relatos sobre el origen de alimentos como el ñame, la intervención de la serpiente desafiando la autoridad divina, y enseñanzas sobre el respeto a los espíritus de la selva y los ríos. Sus mitos preservan profundos conocimientos sobre plantas medicinales, técnicas de caza sostenible, y la importancia de mantener el equilibrio entre lo humano y lo natural.",
+    imagePrompt: "Katío village in Andean-Pacific transition, Caragabí creation myth, resistance warriors, sacred forest spirits"
+  },
+  "embera": {
+    title: "Emberá",
+    description: "Pueblo indígena del Pacífico colombiano, con rica tradición oral sobre la naturaleza, espíritus del bosque y ceremonias ancestrales.",
+    longDescription: "Los Emberá son uno de los pueblos indígenas más importantes de la región Pacífica colombiana, habitando los departamentos de Chocó, Valle del Cauca y Risaralda. Su mitología está profundamente conectada con la selva húmeda tropical, los ríos caudalosos y la extraordinaria biodiversidad de su territorio. Los mitos emberá incluyen relatos sobre la creación del mundo, espíritus guardianes de la selva, transformaciones entre humanos y animales, y la importancia de mantener el equilibrio con la naturaleza. Su tradición oral transmite conocimientos sobre el uso sostenible de recursos naturales, plantas medicinales, técnicas de pesca y navegación fluvial. Los Emberá han preservado su identidad cultural a pesar de presiones externas, manteniendo vivas ceremonias tradicionales, el uso de la lengua emberá, y prácticas artesanales como la cestería y la elaboración de tallas en tagua. Sus mitos enfatizan valores comunitarios, respeto a los mayores, y la responsabilidad de cuidar la selva para las futuras generaciones.",
+    imagePrompt: "Emberá village on Pacific river, traditional palafitos, rainforest spirits, ceremonial gathering, artisan crafts"
+  },
+  "chimila": {
+    title: "Chimila",
+    description: "Pueblo indígena del Caribe colombiano, herederos de relatos sobre la creación, los primeros pobladores y las guerras ancestrales.",
+    longDescription: "Los Chimila, originalmente conocidos como Paretare, son un pueblo indígena de la región Caribe colombiana, habitantes ancestrales del departamento del Cesar y áreas cercanas a la Sierra Nevada de Santa Marta. Su mitología preserva relatos fundamentales sobre la creación del mundo por Papá Grande, quien formó la tierra y los primeros pueblos, guiando a los Chimila con flechas de caña maná que marcaron lugares sagrados como San Ángel y Cartagena. Los mitos chimila narran el origen del sol y la luna en una danza cósmica que refleja la interacción entre lo divino y lo natural, personificando al sol con fragilidad y fuerza simultáneas. La tradición oral chimila también incluye relatos sobre encuentros con caníbales que exploran el miedo y los conflictos comunitarios, así como las primeras guerras entre Aruacos, Chimilas y Karíbi, mostrando una historia de tensiones y reconciliaciones en un contexto de cambio sociocultural. Estos mitos transmiten enseñanzas sobre la importancia del territorio, la defensa de la identidad cultural y el mantenimiento de la memoria ancestral.",
+    imagePrompt: "Chimila people in Caribbean lowlands, Papá Grande creation myth, sacred arrows marking territory, ancestral gatherings"
+  },
+  "pananes": {
+    title: "Pananes",
+    description: "Comuneros de Panán, guardianes de tradiciones mestizas sobre lugares sagrados, espíritus de agua y sincretismo cultural.",
+    longDescription: "Los Pananes o comuneros de Panán son habitantes de la región andina que han preservado una rica tradición oral que fusiona elementos indígenas prehispánicos con influencias católicas coloniales, creando un sincretismo cultural único. Su mitología está profundamente conectada con la geografía sagrada de su territorio, incluyendo lugares como el Ojo de Agua, la Laguna de María Panana, y la Chorrera del Duende. Los mitos pananes narran el origen de su estirpe en La Tuta, donde la dualidad entre luz y sombra forjó una comunidad inmortal. El Cucho de Cuaichala representa el sincretismo cultural donde música y danza expresan la evolución espiritual del pueblo. Los relatos sobre el Cualchio y la Olla del Granizo explican fenómenos naturales como la precipitación, mientras que la Laguna de María Panana es venerada como lugar sagrado de encantos y purificación. La tradición oral de Panán preserva historias sobre el duende de la Cangagua, entrelazando misterio y realidad en narrativas que mantienen viva la conexión entre los comuneros y su territorio ancestral.",
+    imagePrompt: "Pananes highland community, sacred lagoons and water springs, Catholic-indigenous syncretism, mystical fog-covered landscapes"
   },
   "tanimuka": {
     title: "Tanimuka",
@@ -48,17 +72,35 @@ const COMMUNITY_INFO = {
     longDescription: "Los Uitoto o Huitoto habitan la región amazónica de Colombia y Perú. Su mitología es particularmente compleja y filosófica, centrada en conceptos sobre la palabra, el conocimiento y la creación a través del pensamiento. Los mitos uitoto incluyen elaborados relatos sobre el origen del mundo mediante la palabra divina, la importancia de las ceremonias de mambeadero, y la transmisión de conocimiento ancestral. Su tradición oral enfatiza la relación entre lenguaje, pensamiento y creación del mundo.",
     imagePrompt: "Uitoto ceremonial gathering, sacred word and knowledge, Amazon shamanic tradition, maloca"
   },
+  "huitotos": {
+    title: "Huitotos",
+    description: "Pueblo amazónico guardián de una rica tradición sobre la creación, la palabra sagrada y los ciclos de renovación.",
+    longDescription: "Los Huitotos son un pueblo indígena de la región amazónica que ha preservado una de las mitologías más complejas y filosóficas de Colombia. Sus relatos cosmogónicos narran cómo Nofïdeño (la Madre) y Uuikï (el Padre) ordenaron el caos primordial y crearon el mundo a través de la palabra sagrada. Los mitos huitotos exploran temas de creación y restauración, transformación espiritual, y el profundo conocimiento sobre plantas sagradas como el tabaco y la yuca. Historias como la de Jirayauma revelan astucia y supervivencia, mientras que los relatos de Jitoma y Fïboi exploran la traición y las consecuencias de romper el equilibrio natural. La tradición oral huitoto enfatiza la importancia de las ceremonias en maloca, el mambeadero como espacio de transmisión de conocimiento, y la relación sagrada entre pensamiento, palabra y creación del cosmos.",
+    imagePrompt: "Huitoto ceremonial maloca, sacred tobacco and yuca, Amazon creation mythology, spiritual renewal"
+  },
   "kogui": {
     title: "Kogui",
     description: "Pueblo de la Sierra Nevada de Santa Marta, guardianes de conocimiento ancestral y equilibrio ecológico.",
     longDescription: "Los Kogui habitan la Sierra Nevada de Santa Marta, considerada por ellos el 'Corazón del Mundo'. Su mitología está profundamente arraigada en la concepción de que la Sierra es el centro del universo y que ellos son sus guardianes. Los mitos kogui hablan sobre la creación del mundo por la Madre Universal, la importancia del equilibrio entre fuerzas opuestas, y el rol de los Mamos (líderes espirituales) como intermediarios entre el mundo material y espiritual. Sus relatos enfatizan la responsabilidad humana en mantener el equilibrio ecológico.",
     imagePrompt: "Kogui people in Sierra Nevada, sacred mountains, Mother Universal, spiritual guardianship"
   },
+  "koguis": {
+    title: "Koguis",
+    description: "Guardianes ancestrales de la Sierra Nevada de Santa Marta, el corazón del mundo y centro del equilibrio cósmico.",
+    longDescription: "Los Koguis son uno de los cuatro pueblos indígenas que habitan la Sierra Nevada de Santa Marta en la región Caribe, considerada por ellos como el 'Corazón del Mundo' y centro del universo. Su mitología cosmogónica narra la creación del mundo a través de nueve mundos previos, cada uno habitado por seres espirituales que evolucionaron hasta formar la humanidad actual. Los mitos koguis hablan de la Madre Wastora (Haba-Naowa) quien creó la diversidad étnica de la humanidad a partir de transformaciones corporales y espirituales. El relato de Kimaku y otros héroes culturales explica el origen del sol y la luna, los rituales necesarios para mantener su luz, y la importancia del primer hombre y la primera mujer en establecer el orden social. Los Mamos (líderes espirituales) son depositarios de este conocimiento sagrado y actúan como intermediarios entre lo material y lo espiritual, guiando a su pueblo en el cuidado del equilibrio ecológico del planeta.",
+    imagePrompt: "Kogui mamos in Sierra Nevada, sacred mountain peaks, Mother Universal creation, cosmic balance guardianship"
+  },
   "nasa": {
     title: "Nasa",
     description: "Pueblo indígena del Cauca y Huila, con una tradición de resistencia y rica mitología andino-amazónica.",
     longDescription: "Los Nasa, también conocidos como Páez, habitan principalmente el departamento del Cauca y el sur del Huila. Su mitología combina elementos andinos y amazónicos, reflejando su ubicación geográfica de transición. Los mitos nasa incluyen relatos sobre héroes culturales, el origen de sus territorios ancestrales, y luchas contra fuerzas opresoras. Su tradición oral ha sido central en la preservación de su identidad cultural a pesar de siglos de colonización, y sus mitos transmiten valores de resistencia, comunidad y armonía con la naturaleza.",
     imagePrompt: "Nasa people in Cauca mountains, resistance symbols, cultural heroes, sacred territories"
+  },
+  "nasa-paeces": {
+    title: "Nasa - Páez",
+    description: "Pueblo indígena del Cauca y Huila, conocido por su resistencia cultural y profunda conexión con la tierra ancestral.",
+    longDescription: "Los Nasa o Páez son uno de los pueblos indígenas más emblemáticos de Colombia, habitantes ancestrales del departamento del Cauca y sur del Huila en la región Pacífica. Su mitología es rica en relatos de resistencia, transformación y conexión con la naturaleza. Los mitos nasa narran historias de héroes culturales que enfrentan adversidades, la importancia de mantener el equilibrio con la Pachamama (madre tierra), y enseñanzas sobre la defensa del territorio. Su tradición oral ha sido fundamental para preservar su identidad cultural a través de siglos de colonización y conflictos. Los relatos nasa transmiten valores de unidad comunitaria, lucha por la autonomía, respeto a los mayores y armonía con los ciclos naturales.",
+    imagePrompt: "Nasa people in Cauca mountains, traditional clothing, resistance symbols, sacred territory protection"
   },
   "desano": {
     title: "Desano",
