@@ -77,7 +77,7 @@ export default function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-[100] bg-gradient-to-b from-paper-100 via-paper-100/95 to-paper-100/0 pb-4 pt-8 backdrop-blur-sm">
+    <header className="sticky top-0 z-[100] w-full bg-paper-100/95 pb-4 pt-8 backdrop-blur-md shadow-sm">
       <div className="container-wide">
         <div className="glass-panel flex w-full flex-col gap-4 px-6 py-5 md:flex-row md:items-center md:justify-between md:gap-10 md:flex-nowrap">
         <div className="flex items-center justify-between gap-3 md:justify-start">
