@@ -4,10 +4,15 @@ import { Badge } from "../../../components/ui/Badge";
 import { ButtonLink } from "../../../components/ui/Button";
 import { GlassCard } from "../../../components/ui/GlassCard";
 import { ImageSlot } from "../../../components/ui/ImageSlot";
-import { getMythBySlug } from "../../../lib/myths";
+import { getMythBySlug, getRecommendedMyths } from "../../../lib/myths";
+import { getComments } from "../../../lib/comments";
+import { RecommendedMyths } from "../../../components/RecommendedMyths";
+import { Comments } from "../../../components/Comments";
+import Link from "next/link";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
+export const revalidate = 0;
 
 export async function generateMetadata({ params }) {
   const myth = await getMythBySlug(params.slug);
@@ -28,17 +33,41 @@ export async function generateMetadata({ params }) {
 }
 
 function splitContent(content) {
-  return content
+  const blocks = content
     .split(/\n{2,}/)
     .map((block) => block.trim())
     .filter(Boolean);
+
+  // Process blocks to separate headings from their content
+  const processedBlocks = [];
+  const sectionHeadings = ["Mito", "Historia", "Versiones", "Lección", "Similitudes"];
+
+  blocks.forEach((block) => {
+    // Check if block starts with a section heading followed by newline
+    const firstLineEnd = block.indexOf('\n');
+    if (firstLineEnd !== -1) {
+      const firstLine = block.substring(0, firstLineEnd).trim();
+      if (sectionHeadings.includes(firstLine)) {
+        // Skip "Mito" heading
+        if (firstLine !== "Mito") {
+          processedBlocks.push(firstLine); // Add heading as separate block
+        }
+        const restOfContent = block.substring(firstLineEnd + 1).trim();
+        if (restOfContent) {
+          processedBlocks.push(restOfContent); // Add content
+        }
+        return;
+      }
+    }
+    processedBlocks.push(block);
+  });
+
+  return processedBlocks;
 }
 
 function isHeading(block) {
-  if (block.length > 70) {
-    return false;
-  }
-  return !/[.!?]/.test(block);
+  const sectionHeadings = ["Historia", "Versiones", "Lección", "Similitudes"];
+  return sectionHeadings.includes(block);
 }
 
 export default async function MythDetailPage({ params }) {
@@ -48,6 +77,8 @@ export default async function MythDetailPage({ params }) {
   }
 
   const blocks = splitContent(myth.content);
+  const recommendedMyths = await getRecommendedMyths(myth, 8);
+  const comments = await getComments(myth.id);
 
   return (
     <main className="relative min-h-screen overflow-hidden pb-24">
@@ -69,76 +100,79 @@ export default async function MythDetailPage({ params }) {
           <h1 className="mt-4 font-display text-4xl text-ink-900 md:text-5xl">
             {myth.title}
           </h1>
-          <p className="mt-4 max-w-2xl text-sm text-ink-700 md:text-base">
+          <p className="mt-4 max-w-3xl text-sm text-ink-700 md:text-base">
             {myth.excerpt}
           </p>
           <ImageSlot
             src={myth.image_url}
             alt={`Ilustracion de ${myth.title}`}
-            size="hero"
+            size="large"
             className="mt-6"
           />
-          <div className="mt-6 flex flex-wrap gap-3 text-xs uppercase tracking-[0.3em] text-ink-500">
-            <span>{myth.category_path}</span>
-            <span>Fuente: archivo editorial</span>
-          </div>
         </GlassCard>
       </section>
 
-      <section className="container-shell mt-10 grid gap-8 lg:grid-cols-[1.2fr_0.8fr]">
+      <section className="container-shell mt-10">
         <article className="glass-panel p-8">
-          <div className="space-y-5 text-ink-700">
-            {blocks.map((block, index) =>
-              isHeading(block) ? (
-                <h2
+          <div className="space-y-6 text-ink-700">
+            {blocks.map((block, index) => {
+              // Skip "Mito" heading
+              if (block === "Mito") {
+                return null;
+              }
+
+              return isHeading(block) ? (
+                <h3
                   key={`${block}-${index}`}
-                  className="font-display text-2xl text-ink-900"
+                  className="mt-8 first:mt-0 mb-4 font-display text-2xl font-bold text-ink-900 border-b border-white/60 pb-2"
                 >
                   {block}
-                </h2>
+                </h3>
               ) : (
-                <p key={`${block}-${index}`} className="text-sm md:text-base">
+                <p key={`${block}-${index}`} className="text-sm md:text-base leading-relaxed">
                   {block}
                 </p>
-              )
-            )}
+              );
+            })}
+          </div>
+
+          {myth.keywords && myth.keywords.length > 0 && (
+            <div className="mt-12 border-t border-white/60 pt-8">
+              <h3 className="font-display text-lg font-bold text-ink-900 mb-4">
+                Palabras clave
+              </h3>
+              <div className="flex flex-wrap gap-2">
+                {myth.keywords.slice(0, 20).map((keyword) => (
+                  <Link
+                    key={keyword}
+                    href={`/mitos?q=${encodeURIComponent(keyword)}`}
+                    className="transition hover:scale-105"
+                  >
+                    <Badge className="cursor-pointer hover:bg-jungle-500/20 hover:border-jungle-500/50">
+                      {keyword}
+                    </Badge>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          )}
+
+          <div className="mt-8">
+            <ButtonLink href="/mitos" variant="outline">
+              Volver al archivo
+            </ButtonLink>
           </div>
         </article>
+      </section>
 
-        <aside className="flex flex-col gap-5">
-          <GlassCard className="p-6">
-            <p className="eyebrow text-ember-500">Resumen SEO</p>
-            <p className="mt-3 text-sm text-ink-700">{myth.seo_description}</p>
-            <div className="mt-4 flex flex-wrap gap-2">
-              {myth.tags.map((tag) => (
-                <Badge key={tag.slug}>{tag.name}</Badge>
-              ))}
-            </div>
-          </GlassCard>
+      {recommendedMyths.length > 0 && (
+        <section className="container-shell mt-10">
+          <RecommendedMyths myths={recommendedMyths} />
+        </section>
+      )}
 
-          <GlassCard className="p-6">
-            <p className="eyebrow">Palabras clave</p>
-            <div className="mt-3 flex flex-wrap gap-2">
-              {myth.keywords.slice(0, 12).map((keyword) => (
-                <Badge key={keyword}>{keyword}</Badge>
-              ))}
-            </div>
-          </GlassCard>
-
-          <GlassCard className="p-6">
-            <p className="eyebrow">Prompt de ilustracion</p>
-            <details className="mt-3 text-sm text-ink-700">
-              <summary className="cursor-pointer text-xs uppercase tracking-[0.3em] text-ink-500">
-                Ver prompt
-              </summary>
-              <p className="mt-3 whitespace-pre-line">{myth.image_prompt}</p>
-            </details>
-          </GlassCard>
-
-          <ButtonLink href="/mitos" variant="outline">
-            Volver al archivo
-          </ButtonLink>
-        </aside>
+      <section className="container-shell mt-10">
+        <Comments mythId={myth.id} initialComments={comments} />
       </section>
     </main>
   );
