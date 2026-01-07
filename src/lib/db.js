@@ -15,6 +15,7 @@ if (postgresUrl && !process.env.POSTGRES_URL) {
 
 const usePostgres = Boolean(postgresUrl);
 let sqliteDb;
+let sqliteDbWritable;
 
 export function isPostgres() {
   return usePostgres;
@@ -39,4 +40,16 @@ export function getSqliteDb() {
     sqliteDb = new Database(dbPath, { readonly: true, fileMustExist: true });
   }
   return sqliteDb;
+}
+
+export function getSqliteDbWritable() {
+  if (!sqliteDbWritable) {
+    if (!fs.existsSync(dbPath)) {
+      throw new Error(
+        `Database not found at ${dbPath}. Run \"npm run db:import\" first.`
+      );
+    }
+    sqliteDbWritable = new Database(dbPath, { fileMustExist: true });
+  }
+  return sqliteDbWritable;
 }
