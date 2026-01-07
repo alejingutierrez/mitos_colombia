@@ -106,30 +106,22 @@ async function generateImage(prompt, mythSlug) {
   try {
     console.log(`[IMG] Generating image with OpenAI for ${mythSlug}...`);
 
-    // Step 1: Generate image with OpenAI
+    // Step 1: Generate image with OpenAI - Request base64 format
     const response = await openai.images.generate({
       model: "gpt-image-1-mini",
       prompt: prompt,
       n: 1,
       size: "1536x1024", // Landscape format
       quality: "high",
+      response_format: "b64_json", // Get base64 instead of URL
     });
 
-    const temporaryUrl = response.data[0].url;
-    console.log(`[IMG] Temporary URL received from OpenAI`);
+    const base64Image = response.data[0].b64_json;
+    console.log(`[IMG] Base64 image received from OpenAI`);
 
-    // Step 2: Download the image from OpenAI's temporary URL
-    console.log(`[IMG] Downloading image from temporary URL...`);
-    const imageResponse = await fetch(temporaryUrl);
-
-    if (!imageResponse.ok) {
-      throw new Error(`Failed to download image: ${imageResponse.statusText}`);
-    }
-
-    // Convert to ArrayBuffer then to Buffer (Node.js compatible)
-    const arrayBuffer = await imageResponse.arrayBuffer();
-    const buffer = Buffer.from(arrayBuffer);
-    console.log(`[IMG] Image downloaded, size: ${buffer.length} bytes`);
+    // Step 2: Convert base64 to Buffer
+    const buffer = Buffer.from(base64Image, 'base64');
+    console.log(`[IMG] Image converted to buffer, size: ${buffer.length} bytes`);
 
     // Step 3: Upload to Vercel Blob Storage
     const filename = `mitos/${mythSlug}-${Date.now()}.png`;
