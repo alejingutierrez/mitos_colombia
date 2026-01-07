@@ -4,7 +4,7 @@ import { put } from "@vercel/blob";
 import { isPostgres, getSqlClient, getSqliteDb, getSqliteDbWritable } from "../../../../lib/db.js";
 
 export const runtime = "nodejs";
-export const maxDuration = 60; // 60 seconds (Vercel free tier limit)
+export const maxDuration = 300; // 5 minutes max for image generation
 
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
@@ -28,58 +28,56 @@ function checkAuth(request) {
   return username === validUsername && password === validPassword;
 }
 
-// Get items without images (from all tables)
+// Get items without images (from all tables) - Optimized single query
 async function getItemsWithoutImages(limit = 10) {
   const isPg = isPostgres();
-  const items = [];
 
   if (isPg) {
     const db = getSqlClient();
 
-    // Get myths
-    const myths = await db`
-      SELECT id, title as name, slug, image_prompt, 'myth' as type
-      FROM myths
-      WHERE image_url IS NULL AND image_prompt IS NOT NULL
-      ORDER BY id
-      LIMIT ${Math.ceil(limit * 0.7)}
+    // Use UNION ALL to get all items in a single query - much faster!
+    const result = await db`
+      (
+        SELECT id, title as name, slug, image_prompt, 'myth' as type, 1 as priority
+        FROM myths
+        WHERE image_url IS NULL AND image_prompt IS NOT NULL
+        ORDER BY id
+        LIMIT ${Math.ceil(limit * 0.7)}
+      )
+      UNION ALL
+      (
+        SELECT id, name, slug, image_prompt, 'community' as type, 2 as priority
+        FROM communities
+        WHERE image_url IS NULL AND image_prompt IS NOT NULL
+        ORDER BY id
+        LIMIT ${Math.ceil(limit * 0.15)}
+      )
+      UNION ALL
+      (
+        SELECT id, name, slug, image_prompt, 'category' as type, 3 as priority
+        FROM tags
+        WHERE image_url IS NULL AND image_prompt IS NOT NULL
+        ORDER BY id
+        LIMIT ${Math.ceil(limit * 0.1)}
+      )
+      UNION ALL
+      (
+        SELECT id, name, slug, image_prompt, 'region' as type, 4 as priority
+        FROM regions
+        WHERE image_url IS NULL AND image_prompt IS NOT NULL
+        ORDER BY id
+        LIMIT ${Math.ceil(limit * 0.05)}
+      )
+      ORDER BY priority, id
+      LIMIT ${limit}
     `;
-    items.push(...(myths.rows || myths));
 
-    // Get communities
-    const communities = await db`
-      SELECT id, name, slug, image_prompt, 'community' as type
-      FROM communities
-      WHERE image_url IS NULL AND image_prompt IS NOT NULL
-      ORDER BY id
-      LIMIT ${Math.ceil(limit * 0.15)}
-    `;
-    items.push(...(communities.rows || communities));
-
-    // Get categories (tags)
-    const categories = await db`
-      SELECT id, name, slug, image_prompt, 'category' as type
-      FROM tags
-      WHERE image_url IS NULL AND image_prompt IS NOT NULL
-      ORDER BY id
-      LIMIT ${Math.ceil(limit * 0.1)}
-    `;
-    items.push(...(categories.rows || categories));
-
-    // Get regions
-    const regions = await db`
-      SELECT id, name, slug, image_prompt, 'region' as type
-      FROM regions
-      WHERE image_url IS NULL AND image_prompt IS NOT NULL
-      ORDER BY id
-      LIMIT ${Math.ceil(limit * 0.05)}
-    `;
-    items.push(...(regions.rows || regions));
-
+    return result.rows || result;
   } else {
     const db = getSqliteDb();
+    const items = [];
 
-    // Get myths
+    // For SQLite, do separate queries (it's fast enough locally)
     const mythsStmt = db.prepare(`
       SELECT id, title as name, slug, image_prompt, 'myth' as type
       FROM myths
@@ -89,7 +87,6 @@ async function getItemsWithoutImages(limit = 10) {
     `);
     items.push(...mythsStmt.all(Math.ceil(limit * 0.7)));
 
-    // Get communities
     const communitiesStmt = db.prepare(`
       SELECT id, name, slug, image_prompt, 'community' as type
       FROM communities
@@ -99,7 +96,6 @@ async function getItemsWithoutImages(limit = 10) {
     `);
     items.push(...communitiesStmt.all(Math.ceil(limit * 0.15)));
 
-    // Get categories
     const categoriesStmt = db.prepare(`
       SELECT id, name, slug, image_prompt, 'category' as type
       FROM tags
@@ -109,7 +105,6 @@ async function getItemsWithoutImages(limit = 10) {
     `);
     items.push(...categoriesStmt.all(Math.ceil(limit * 0.1)));
 
-    // Get regions
     const regionsStmt = db.prepare(`
       SELECT id, name, slug, image_prompt, 'region' as type
       FROM regions
@@ -118,9 +113,9 @@ async function getItemsWithoutImages(limit = 10) {
       LIMIT ?
     `);
     items.push(...regionsStmt.all(Math.ceil(limit * 0.05)));
-  }
 
-  return items.slice(0, limit);
+    return items.slice(0, limit);
+  }
 }
 
 // Legacy function for backwards compatibility
@@ -371,8 +366,7 @@ export async function POST(request) {
     }
 
     const body = await request.json();
-    // Limit to 2 images per request to avoid timeout (each image takes ~15-30 seconds)
-    const count = Math.min(Math.max(1, body.count || 1), 2);
+    const count = Math.min(Math.max(1, body.count || 1), 50); // Limit between 1 and 50
 
     // Get items without images (myths, communities, categories, regions)
     const items = await getItemsWithoutImages(count);

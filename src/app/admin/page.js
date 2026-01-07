@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 
 export default function AdminPage() {
-  const [count, setCount] = useState(1);
+  const [count, setCount] = useState(5);
   const [loading, setLoading] = useState(false);
   const [results, setResults] = useState(null);
   const [mythsWithoutImages, setMythsWithoutImages] = useState(null);
@@ -216,7 +216,7 @@ export default function AdminPage() {
               <input
                 type="number"
                 min="1"
-                max="2"
+                max="50"
                 value={count}
                 onChange={(e) => setCount(parseInt(e.target.value) || 1)}
                 className="w-32 px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white text-lg font-semibold focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -232,13 +232,9 @@ export default function AdminPage() {
             </div>
             {loading && (
               <p className="text-yellow-300 mt-4 text-sm">
-                Generando imágenes (15-30 segundos por imagen)...
+                Esto puede tomar varios minutos. Por favor espera...
               </p>
             )}
-            <p className="text-gray-400 mt-2 text-xs">
-              Límite: 1-2 imágenes por generación para evitar timeouts.
-              Cada imagen toma 15-30 segundos.
-            </p>
           </div>
 
           {results && (
