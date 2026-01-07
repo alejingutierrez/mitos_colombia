@@ -112,9 +112,9 @@ function buildQuery(params, overrides = {}) {
   return search.toString();
 }
 
-export function generateMetadata({ params }) {
-  const taxonomy = getTaxonomy();
-  const region = taxonomy.regions.find(r => r.slug === params.slug);
+export async function generateMetadata({ params }) {
+  const taxonomy = await getTaxonomy();
+  const region = taxonomy.regions.find((r) => r.slug === params.slug);
 
   if (!region) {
     return {
@@ -134,9 +134,9 @@ export function generateMetadata({ params }) {
   };
 }
 
-export default function RegionDetailPage({ params, searchParams }) {
-  const taxonomy = getTaxonomy();
-  const region = taxonomy.regions.find(r => r.slug === params.slug);
+export default async function RegionDetailPage({ params, searchParams }) {
+  const taxonomy = await getTaxonomy();
+  const region = taxonomy.regions.find((r) => r.slug === params.slug);
 
   if (!region) {
     notFound();
@@ -157,7 +157,7 @@ export default function RegionDetailPage({ params, searchParams }) {
   const offset = Number.parseInt(getParamValue(searchParams.offset) || "0", 10);
 
   // Filtrar mitos de esta región
-  const result = listMyths({
+  const result = await listMyths({
     region: region.slug,
     community,
     tag,
@@ -167,14 +167,17 @@ export default function RegionDetailPage({ params, searchParams }) {
   });
 
   // Comunidades de esta región
-  const regionCommunities = taxonomy.communities.filter(c => c.region_slug === region.slug);
+  const regionCommunities = taxonomy.communities.filter(
+    (c) => c.region_slug === region.slug
+  );
 
   // Tags para filtrar (excluir regiones y "ninguno")
-  const regionNames = taxonomy.regions.map(r => r.name.toLowerCase());
+  const regionNames = taxonomy.regions.map((r) => r.name.toLowerCase());
   const tagOptions = taxonomy.tags
-    .filter(t =>
-      !regionNames.includes(t.name.toLowerCase()) &&
-      t.name.toLowerCase() !== 'ninguno'
+    .filter(
+      (t) =>
+        !regionNames.includes(t.name.toLowerCase()) &&
+        t.name.toLowerCase() !== "ninguno"
     )
     .slice(0, 40);
 
@@ -328,7 +331,7 @@ export default function RegionDetailPage({ params, searchParams }) {
       <section className="container-shell mt-8">
         <div className="grid gap-4 lg:grid-cols-2">
           {result.items.map((myth) => {
-            const tags = myth.tags_raw
+            const tags = (myth.tags_raw || "")
               .split(",")
               .map((item) => item.trim())
               .filter(Boolean)

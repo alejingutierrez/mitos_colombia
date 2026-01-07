@@ -3,11 +3,11 @@ import { listMyths, parseListParams } from "../../../lib/myths";
 
 export const runtime = "nodejs";
 
-export function GET(request) {
+export async function GET(request) {
   try {
     const { searchParams } = new URL(request.url);
     const params = parseListParams(searchParams);
-    const result = listMyths(params);
+    const result = await listMyths(params);
     return NextResponse.json(result);
   } catch (error) {
     return NextResponse.json(

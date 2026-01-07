@@ -8,8 +8,8 @@ import { getMythBySlug } from "../../../lib/myths";
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
-export function generateMetadata({ params }) {
-  const myth = getMythBySlug(params.slug);
+export async function generateMetadata({ params }) {
+  const myth = await getMythBySlug(params.slug);
   if (!myth) {
     return {
       title: "Mito no encontrado | Mitos de Colombia",
@@ -40,8 +40,8 @@ function isHeading(block) {
   return !/[.!?]/.test(block);
 }
 
-export default function MythDetailPage({ params }) {
-  const myth = getMythBySlug(params.slug);
+export default async function MythDetailPage({ params }) {
+  const myth = await getMythBySlug(params.slug);
   if (!myth) {
     notFound();
   }

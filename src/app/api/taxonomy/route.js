@@ -3,9 +3,9 @@ import { getTaxonomy } from "../../../lib/myths";
 
 export const runtime = "nodejs";
 
-export function GET() {
+export async function GET() {
   try {
-    const taxonomy = getTaxonomy();
+    const taxonomy = await getTaxonomy();
     return NextResponse.json(taxonomy);
   } catch (error) {
     return NextResponse.json(

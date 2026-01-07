@@ -29,7 +29,7 @@ function buildQuery(params, overrides = {}) {
   return search.toString();
 }
 
-export default function MitosPage({ searchParams }) {
+export default async function MitosPage({ searchParams }) {
   const region = getParamValue(searchParams.region);
   const community = getParamValue(searchParams.community);
   const tag = getParamValue(searchParams.tag);
@@ -37,8 +37,8 @@ export default function MitosPage({ searchParams }) {
   const limit = Number.parseInt(getParamValue(searchParams.limit) || "24", 10);
   const offset = Number.parseInt(getParamValue(searchParams.offset) || "0", 10);
 
-  const result = listMyths({ region, community, tag, q, limit, offset });
-  const taxonomy = getTaxonomy();
+  const result = await listMyths({ region, community, tag, q, limit, offset });
+  const taxonomy = await getTaxonomy();
   const tagOptions = taxonomy.tags.slice(0, 40);
 
   const hasPrev = offset > 0;
@@ -149,7 +149,7 @@ export default function MitosPage({ searchParams }) {
 
         <div className="mt-8 grid gap-4 lg:grid-cols-2">
           {result.items.map((myth) => {
-            const tags = myth.tags_raw
+            const tags = (myth.tags_raw || "")
               .split(",")
               .map((item) => item.trim())
               .filter(Boolean)

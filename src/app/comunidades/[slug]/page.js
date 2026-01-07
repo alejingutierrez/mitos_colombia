@@ -160,8 +160,8 @@ function buildQuery(params, overrides = {}) {
   return search.toString();
 }
 
-export function generateMetadata({ params }) {
-  const taxonomy = getTaxonomy();
+export async function generateMetadata({ params }) {
+  const taxonomy = await getTaxonomy();
   const community = taxonomy.communities.find(c => c.slug === params.slug);
 
   if (!community) {
@@ -182,8 +182,8 @@ export function generateMetadata({ params }) {
   };
 }
 
-export default function CommunityDetailPage({ params, searchParams }) {
-  const taxonomy = getTaxonomy();
+export default async function CommunityDetailPage({ params, searchParams }) {
+  const taxonomy = await getTaxonomy();
   const community = taxonomy.communities.find(c => c.slug === params.slug);
 
   if (!community) {
@@ -203,7 +203,7 @@ export default function CommunityDetailPage({ params, searchParams }) {
   const offset = Number.parseInt(getParamValue(searchParams.offset) || "0", 10);
 
   // Filtrar mitos de esta comunidad
-  const result = listMyths({
+  const result = await listMyths({
     community: community.slug,
     tag,
     q,
@@ -336,7 +336,7 @@ export default function CommunityDetailPage({ params, searchParams }) {
       <section className="container-shell mt-8">
         <div className="grid gap-4 lg:grid-cols-2">
           {result.items.map((myth) => {
-            const tags = myth.tags_raw
+            const tags = (myth.tags_raw || "")
               .split(",")
               .map((item) => item.trim())
               .filter(Boolean)

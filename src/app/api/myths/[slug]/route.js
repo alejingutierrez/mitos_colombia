@@ -3,9 +3,9 @@ import { getMythBySlug } from "../../../../lib/myths";
 
 export const runtime = "nodejs";
 
-export function GET(_request, { params }) {
+export async function GET(_request, { params }) {
   try {
-    const myth = getMythBySlug(params.slug);
+    const myth = await getMythBySlug(params.slug);
     if (!myth) {
       return NextResponse.json({ error: "Not found" }, { status: 404 });
     }

@@ -7,7 +7,8 @@ Construir una web editorial moderna para mitos de Colombia. La experiencia debe 
 - Next.js (App Router) + React 19, JavaScript puro.
 - Tailwind CSS para el sistema de diseno (tokens y utilidades).
 - Framer Motion para animaciones de carga y transiciones.
-- Deploy en Vercel con render estatico y edge caching cuando aplique.
+- Vercel como hosting con Vercel Postgres en produccion.
+- SQLite local para desarrollo rapido.
 - Node 20 + npm.
 
 ## Arquitectura frontend
@@ -37,15 +38,16 @@ Construir una web editorial moderna para mitos de Colombia. La experiencia debe 
 - Transiciones suaves en hover y focus.
 - Respetar `prefers-reduced-motion`.
 
-## Pipeline de datos (futuro)
-- Script `scripts/import-mitos.js` para convertir Excel a JSON.
+## Pipeline de datos
+- `scripts/import-mitos.js` carga Excel a SQLite local.
+- `scripts/import-mitos-postgres.js` carga Excel a Postgres (usa `POSTGRES_URL`).
 - Validacion de campos y slugs estables.
-- Preparar un esquema base: titulo, region, origen, resumen, cuerpo, fuentes.
+- Esquema base: titulo, region, comunidad, tags, excerpt, contenido, SEO, prompt.
 
 ## Docker y desarrollo
 - `docker-compose up --build` levanta el entorno local en `http://localhost:3000`.
 - `Dockerfile` con target `dev` y `prod` para pruebas de build.
 
 ## Despliegue
-- Vercel como destino principal.
-- Variables sugeridas: `NEXT_PUBLIC_SITE_URL`, `NEXT_PUBLIC_OG_IMAGE_BASE`.
+- Vercel como destino principal con `POSTGRES_URL`.
+- Variables sugeridas: `POSTGRES_URL`, `MITOS_DB_PATH`.

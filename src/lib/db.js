@@ -2,21 +2,36 @@ import "server-only";
 import fs from "fs";
 import path from "path";
 import Database from "better-sqlite3";
+import { sql } from "@vercel/postgres";
 
 const dbPath =
   process.env.MITOS_DB_PATH ||
   path.join(process.cwd(), "data", "mitos.sqlite");
 
-let db;
+const usePostgres = Boolean(process.env.POSTGRES_URL);
+let sqliteDb;
 
-export function getDb() {
-  if (!db) {
+export function isPostgres() {
+  return usePostgres;
+}
+
+export function getSqlClient() {
+  if (!usePostgres) {
+    throw new Error(
+      "POSTGRES_URL is not set. Configure a Postgres database or use SQLite."
+    );
+  }
+  return sql;
+}
+
+export function getSqliteDb() {
+  if (!sqliteDb) {
     if (!fs.existsSync(dbPath)) {
       throw new Error(
         `Database not found at ${dbPath}. Run \"npm run db:import\" first.`
       );
     }
-    db = new Database(dbPath, { readonly: true, fileMustExist: true });
+    sqliteDb = new Database(dbPath, { readonly: true, fileMustExist: true });
   }
-  return db;
+  return sqliteDb;
 }

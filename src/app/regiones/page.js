@@ -8,9 +8,11 @@ import { getTaxonomy } from "../../lib/myths";
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
-export default function RegionesPage() {
-  const taxonomy = getTaxonomy();
-  const regions = [...taxonomy.regions].sort((a, b) => a.name.localeCompare(b.name));
+export default async function RegionesPage() {
+  const taxonomy = await getTaxonomy();
+  const regions = [...taxonomy.regions].sort((a, b) =>
+    a.name.localeCompare(b.name)
+  );
 
   const regionDescriptions = {
     Amazonas: "La región amazónica colombiana alberga una rica tradición oral de pueblos indígenas como Yukuna, Tanimuka, Uitoto y Desano.",
@@ -44,7 +46,8 @@ export default function RegionesPage() {
                     {region.name}
                   </h3>
                   <p className="mt-3 text-sm text-ink-700 leading-relaxed">
-                    {regionDescriptions[region.name] || "Región con rica tradición mitológica."}
+                    {regionDescriptions[region.name] ||
+                      "Región con rica tradición mitológica."}
                   </p>
                 </div>
                 <Badge className="border-jungle-500/30 bg-jungle-500/10 text-jungle-600 text-base px-3 py-1">
@@ -53,7 +56,8 @@ export default function RegionesPage() {
               </div>
               <div className="mt-auto flex items-center justify-between">
                 <p className="text-xs text-ink-500">
-                  {region.myth_count} {region.myth_count === 1 ? 'mito' : 'mitos'}
+                  {region.myth_count}{" "}
+                  {region.myth_count === 1 ? "mito" : "mitos"}
                 </p>
                 <ButtonLink
                   href={`/regiones/${region.slug}`}

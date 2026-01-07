@@ -16,12 +16,12 @@ const EXCLUDED_COMMUNITIES = [
   "Andino", "Caribe", "Orinoquía", "Pacifico", "Varios"
 ];
 
-export default function ComunidadesPage() {
-  const taxonomy = getTaxonomy();
+export default async function ComunidadesPage() {
+  const taxonomy = await getTaxonomy();
 
   // Filtrar solo comunidades indígenas
   const communities = taxonomy.communities
-    .filter(c => !EXCLUDED_COMMUNITIES.includes(c.name))
+    .filter((c) => !EXCLUDED_COMMUNITIES.includes(c.name))
     .sort((a, b) => b.myth_count - a.myth_count);
 
   // Agrupar por región
@@ -34,8 +34,15 @@ export default function ComunidadesPage() {
     return acc;
   }, {});
 
-  const regionOrder = ["Amazonas", "Andina", "Caribe", "Pacífico", "Orinoquía", "Otros"];
-  const sortedRegions = regionOrder.filter(r => communitiesByRegion[r]);
+  const regionOrder = [
+    "Amazonas",
+    "Andina",
+    "Caribe",
+    "Pacífico",
+    "Orinoquía",
+    "Otros",
+  ];
+  const sortedRegions = regionOrder.filter((r) => communitiesByRegion[r]);
 
   return (
     <main className="relative min-h-screen overflow-hidden pb-24">
@@ -54,7 +61,10 @@ export default function ComunidadesPage() {
               <div className="mb-4 flex items-center gap-3">
                 <h2 className="font-display text-2xl text-ink-900">{regionName}</h2>
                 <Badge className="border-jungle-500/30 bg-jungle-500/10 text-jungle-600">
-                  {communitiesByRegion[regionName].length} {communitiesByRegion[regionName].length === 1 ? 'comunidad' : 'comunidades'}
+                  {communitiesByRegion[regionName].length}{" "}
+                  {communitiesByRegion[regionName].length === 1
+                    ? "comunidad"
+                    : "comunidades"}
                 </Badge>
               </div>
 
@@ -73,7 +83,8 @@ export default function ComunidadesPage() {
                           {community.region}
                         </p>
                         <p className="mt-2 text-sm text-ink-500">
-                          {community.myth_count} {community.myth_count === 1 ? 'mito' : 'mitos'}
+                          {community.myth_count}{" "}
+                          {community.myth_count === 1 ? "mito" : "mitos"}
                         </p>
                       </div>
                       <Badge className="border-river-500/30 bg-river-500/10 text-river-600">
@@ -99,7 +110,8 @@ export default function ComunidadesPage() {
 
         <div className="mt-12 text-center">
           <p className="text-sm text-ink-600">
-            Total: {communities.length} comunidades indígenas preservando {communities.reduce((sum, c) => sum + c.myth_count, 0)} mitos
+            Total: {communities.length} comunidades indígenas preservando{" "}
+            {communities.reduce((sum, c) => sum + c.myth_count, 0)} mitos
           </p>
         </div>
       </section>

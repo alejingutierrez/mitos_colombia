@@ -7,9 +7,11 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "db:import": "node scripts/import-mitos.js"
+    "db:import": "node scripts/import-mitos.js",
+    "db:import:pg": "node scripts/import-mitos-postgres.js"
   },
   "dependencies": {
+    "@vercel/postgres": "^0.10.0",
     "clsx": "^2.1.1",
     "better-sqlite3": "^11.7.0",
     "framer-motion": "^11.11.17",
@@ -24,6 +26,7 @@
     "autoprefixer": "^10.4.20",
     "eslint": "^9.14.0",
     "eslint-config-next": "^15.1.0",
+    "pg": "^8.13.1",
     "postcss": "^8.4.47",
     "tailwindcss": "^3.4.15",
     "xlsx": "^0.18.5"

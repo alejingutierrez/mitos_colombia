@@ -8,14 +8,15 @@ import { getTaxonomy } from "../../lib/myths";
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
-export default function CategoriasPage() {
-  const taxonomy = getTaxonomy();
+export default async function CategoriasPage() {
+  const taxonomy = await getTaxonomy();
 
   // Filtrar tags excluyendo regiones y "ninguno"
-  const regionNames = taxonomy.regions.map(r => r.name.toLowerCase());
-  const tags = taxonomy.tags.filter(tag =>
-    !regionNames.includes(tag.name.toLowerCase()) &&
-    tag.name.toLowerCase() !== 'ninguno'
+  const regionNames = taxonomy.regions.map((r) => r.name.toLowerCase());
+  const tags = taxonomy.tags.filter(
+    (tag) =>
+      !regionNames.includes(tag.name.toLowerCase()) &&
+      tag.name.toLowerCase() !== "ninguno"
   );
 
   return (
@@ -41,7 +42,7 @@ export default function CategoriasPage() {
                     {tag.name}
                   </h3>
                   <p className="mt-2 text-sm text-ink-500">
-                    {tag.myth_count} {tag.myth_count === 1 ? 'mito' : 'mitos'}
+                    {tag.myth_count} {tag.myth_count === 1 ? "mito" : "mitos"}
                   </p>
                 </div>
                 <Badge className="border-jungle-500/30 bg-jungle-500/10 text-jungle-600">
