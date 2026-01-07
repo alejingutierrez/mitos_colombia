@@ -106,28 +106,39 @@ async function generateImage(prompt, mythSlug) {
   try {
     console.log(`[IMG] Generating image with OpenAI for ${mythSlug}...`);
 
-    // Step 1: Generate image with OpenAI - Request base64 format
+    // Step 1: Generate image with OpenAI (returns URL)
     const response = await openai.images.generate({
       model: "gpt-image-1-mini",
       prompt: prompt,
       n: 1,
       size: "1536x1024", // Landscape format
       quality: "high",
-      response_format: "b64_json", // Get base64 instead of URL
     });
 
-    const base64Image = response.data[0].b64_json;
-    console.log(`[IMG] Base64 image received from OpenAI`);
+    const temporaryUrl = response.data[0].url;
+    console.log(`[IMG] Temporary URL received: ${temporaryUrl}`);
 
-    // Step 2: Convert base64 to Buffer
-    const buffer = Buffer.from(base64Image, 'base64');
-    console.log(`[IMG] Image converted to buffer, size: ${buffer.length} bytes`);
+    // Step 2: Download image from temporary URL using node-fetch compatible method
+    console.log(`[IMG] Downloading image from temporary URL...`);
+
+    // Use dynamic import for node-fetch if needed, or use native fetch
+    const imageResponse = await fetch(temporaryUrl);
+
+    if (!imageResponse.ok) {
+      throw new Error(`Failed to fetch image: ${imageResponse.status} ${imageResponse.statusText}`);
+    }
+
+    // Convert response to buffer
+    const arrayBuffer = await imageResponse.arrayBuffer();
+    const imageBuffer = Buffer.from(arrayBuffer);
+
+    console.log(`[IMG] Image downloaded, size: ${imageBuffer.length} bytes`);
 
     // Step 3: Upload to Vercel Blob Storage
     const filename = `mitos/${mythSlug}-${Date.now()}.png`;
     console.log(`[IMG] Uploading to Vercel Blob as ${filename}...`);
 
-    const blob = await put(filename, buffer, {
+    const blob = await put(filename, imageBuffer, {
       access: 'public',
       contentType: 'image/png',
     });
@@ -137,7 +148,10 @@ async function generateImage(prompt, mythSlug) {
 
   } catch (error) {
     console.error("[IMG] Error in generateImage:", error);
-    console.error("[IMG] Error stack:", error.stack);
+    console.error("[IMG] Error details:", error.message);
+    if (error.stack) {
+      console.error("[IMG] Error stack:", error.stack);
+    }
     throw error;
   }
 }
