@@ -1,5 +1,6 @@
 import "./globals.css";
 import { Fraunces, Sora } from "next/font/google";
+import Footer from "../components/Footer";
 
 const display = Fraunces({
   subsets: ["latin"],
@@ -29,6 +30,7 @@ export default function RootLayout({ children }) {
     <html lang="es" className={`${display.variable} ${body.variable}`}>
       <body className="font-body text-ink-900 antialiased">
         <div className="min-h-screen">{children}</div>
+        <Footer />
       </body>
     </html>
   );

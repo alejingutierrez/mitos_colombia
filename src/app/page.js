@@ -35,16 +35,19 @@ const routes = [
     title: "Guardianes del agua",
     detail: "Relatos que protegen rios, lagunas y corrientes invisibles.",
     tone: "Rios y neblina",
+    href: "/rutas/guardianes-del-agua",
   },
   {
     title: "Cartografia de la selva",
     detail: "Mitos que explican caminos, limites y pactos con la tierra.",
     tone: "Selva y bruma",
+    href: "/rutas/cartografia-selva",
   },
   {
     title: "Bestiario colombiano",
     detail: "Criaturas que advierten, transforman y cuidan territorios.",
     tone: "Sombras y fuego",
+    href: "/rutas/bestiario-colombiano",
   },
 ];
 
@@ -93,7 +96,7 @@ export default async function Home() {
   const displayStats = [
     { value: `${stats.total_myths || 505}`, label: "Mitos curados" },
     { value: `${stats.total_regions || 6}`, label: "Regiones culturales" },
-    { value: `${stats.myths_with_images || 23}`, label: "Con imagenes" },
+    { value: `${taxonomy.communities.length || 50}+`, label: "Comunidades" },
   ];
   return (
     <main className="relative min-h-screen overflow-hidden pb-24">
@@ -152,7 +155,7 @@ export default async function Home() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-ink-900/90 via-ink-900/40 to-transparent" />
                     <div className="absolute bottom-0 left-0 right-0 p-8">
-                      <Badge className="mb-3 border-ember-400/40 bg-ember-400/20 text-ember-100 backdrop-blur-sm">
+                      <Badge className="mb-3 border-white/60 bg-white/95 text-ink-900 backdrop-blur-md shadow-lg">
                         {heroMyth.region}
                       </Badge>
                       <h2 className="font-display text-3xl leading-tight text-white md:text-4xl">
@@ -202,26 +205,27 @@ export default async function Home() {
           description="Listas tematicas pensadas para descubrir patrones, conexiones y
             simbolos que se repiten en distintas regiones."
         />
-        <div className="mt-8 grid gap-4 lg:grid-cols-3">
+        <div className="mt-8 grid gap-6 lg:grid-cols-3">
           {routes.map((route) => (
-            <GlassCard
+            <a
               key={route.title}
-              className="p-5 transition hover:-translate-y-1 hover:shadow-lift"
+              href={route.href}
+              className="group block"
             >
-              <p className="text-xs uppercase tracking-[0.3em] text-river-600">
-                {route.tone}
-              </p>
-              <h3 className="mt-3 font-display text-xl text-ink-900">
-                {route.title}
-              </h3>
-              <p className="mt-2 text-sm text-ink-700">{route.detail}</p>
-              <button
-                type="button"
-                className="mt-4 text-xs uppercase tracking-[0.3em] text-ink-500"
-              >
-                Ver ruta
-              </button>
-            </GlassCard>
+              <GlassCard className="h-full p-8 transition hover:-translate-y-2 hover:shadow-2xl">
+                <p className="text-xs font-medium uppercase tracking-[0.3em] text-river-600">
+                  {route.tone}
+                </p>
+                <h3 className="mt-4 font-display text-2xl text-ink-900 transition group-hover:text-river-600">
+                  {route.title}
+                </h3>
+                <p className="mt-3 text-sm leading-relaxed text-ink-600">{route.detail}</p>
+                <div className="mt-6 flex items-center gap-2 text-xs font-medium uppercase tracking-[0.3em] text-river-600 transition group-hover:gap-3">
+                  <span>Ver ruta</span>
+                  <span className="transition group-hover:translate-x-1">→</span>
+                </div>
+              </GlassCard>
+            </a>
           ))}
         </div>
       </section>

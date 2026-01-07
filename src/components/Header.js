@@ -77,8 +77,9 @@ export default function Header() {
   };
 
   return (
-    <header className="container-wide pt-8 relative z-[100]">
-      <div className="glass-panel flex w-full flex-col gap-4 px-6 py-5 md:flex-row md:items-center md:justify-between md:gap-10 md:flex-nowrap">
+    <header className="sticky top-0 z-[100] bg-gradient-to-b from-paper-100 via-paper-100/95 to-paper-100/0 pb-4 pt-8 backdrop-blur-sm">
+      <div className="container-wide">
+        <div className="glass-panel flex w-full flex-col gap-4 px-6 py-5 md:flex-row md:items-center md:justify-between md:gap-10 md:flex-nowrap">
         <div className="flex items-center justify-between gap-3 md:justify-start">
           <Link href="/" className="flex items-center gap-3">
             <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-jungle-600 text-xs font-semibold uppercase tracking-[0.3em] text-white shadow">
@@ -152,26 +153,27 @@ export default function Header() {
             </div>
           ))}
         </nav>
-      </div>
+        </div>
 
-      <div
-        className={`md:hidden overflow-hidden transition-all duration-300 ${
-          open ? "max-h-[400px] opacity-100" : "max-h-0 opacity-0"
-        }`}
-      >
-        <div className="glass-panel mt-3 flex flex-col gap-5 px-6 py-5">
-          <nav id="site-menu" className="flex flex-col gap-4">
-            {navLinks.map((link) => (
-              <Link
-                key={link.label}
-                href={link.href}
-                className="nav-link text-sm tracking-[0.25em]"
-                onClick={() => setOpen(false)}
-              >
-                {link.label}
-              </Link>
-            ))}
-          </nav>
+        <div
+          className={`md:hidden overflow-hidden transition-all duration-300 ${
+            open ? "max-h-[400px] opacity-100" : "max-h-0 opacity-0"
+          }`}
+        >
+          <div className="glass-panel mt-3 flex flex-col gap-5 px-6 py-5">
+            <nav id="site-menu" className="flex flex-col gap-4">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.label}
+                  href={link.href}
+                  className="nav-link text-sm tracking-[0.25em]"
+                  onClick={() => setOpen(false)}
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </nav>
+          </div>
         </div>
       </div>
     </header>
