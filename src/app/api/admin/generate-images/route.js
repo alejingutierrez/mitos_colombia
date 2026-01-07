@@ -126,14 +126,16 @@ async function generateImage(prompt, mythSlug) {
       throw new Error(`Failed to download image: ${imageResponse.statusText}`);
     }
 
-    const imageBlob = await imageResponse.blob();
-    console.log(`[IMG] Image downloaded, size: ${imageBlob.size} bytes`);
+    // Convert to ArrayBuffer then to Buffer (Node.js compatible)
+    const arrayBuffer = await imageResponse.arrayBuffer();
+    const buffer = Buffer.from(arrayBuffer);
+    console.log(`[IMG] Image downloaded, size: ${buffer.length} bytes`);
 
     // Step 3: Upload to Vercel Blob Storage
     const filename = `mitos/${mythSlug}-${Date.now()}.png`;
     console.log(`[IMG] Uploading to Vercel Blob as ${filename}...`);
 
-    const blob = await put(filename, imageBlob, {
+    const blob = await put(filename, buffer, {
       access: 'public',
       contentType: 'image/png',
     });
@@ -143,6 +145,7 @@ async function generateImage(prompt, mythSlug) {
 
   } catch (error) {
     console.error("[IMG] Error in generateImage:", error);
+    console.error("[IMG] Error stack:", error.stack);
     throw error;
   }
 }
