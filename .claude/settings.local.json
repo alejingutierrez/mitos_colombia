@@ -1,7 +1,14 @@
 {
   "permissions": {
     "allow": [
-      "Bash(sqlite3:*)"
+      "Bash(sqlite3:*)",
+      "Bash(npm run build:*)",
+      "Bash(vercel logs:*)",
+      "Bash(vercel ls:*)",
+      "Bash(vercel inspect:*)",
+      "Bash(curl:*)",
+      "Bash(vercel env ls:*)",
+      "Bash(vercel --prod --token=\"uP3oU7UMV9qpe0SkPW1zszwz\" --yes)"
     ]
   }
 }

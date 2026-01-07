@@ -213,7 +213,7 @@ async function listMythsPostgres({
     LEFT JOIN communities ON communities.id = myths.community_id
     ${tagJoin}
     ${whereClause}
-    ORDER BY LOWER(myths.title) ASC
+    ORDER BY myths.title ASC
     LIMIT $${limitIndex} OFFSET $${offsetIndex}
   `;
 
