@@ -86,10 +86,31 @@ export default async function MythDetailPage({ params }) {
 
       <section className="container-shell mt-12">
         <GlassCard className="p-8">
-          <div className="grid gap-6 md:grid-cols-[1fr_2fr] md:gap-8">
-            {/* Columna izquierda: Imagen 1:1 */}
+          <div className="grid gap-6 md:grid-cols-[2fr_1.2fr] md:gap-8">
+            {/* Columna izquierda: Contenido */}
             <div className="order-2 md:order-1">
-              <div className="relative aspect-square overflow-hidden rounded-2xl border border-white/60 bg-white/40 shadow-sm">
+              <div className="flex flex-wrap items-center gap-2">
+                <Badge className="border-jungle-500/30 bg-jungle-500/10 text-jungle-600">
+                  {myth.region}
+                </Badge>
+                {myth.community ? (
+                  <Badge className="border-river-500/30 bg-river-500/10 text-river-600">
+                    {myth.community}
+                  </Badge>
+                ) : null}
+                <Badge>{myth.focus_keyword}</Badge>
+              </div>
+              <h1 className="mt-4 font-display text-4xl text-ink-900 md:text-5xl">
+                {myth.title}
+              </h1>
+              <p className="mt-4 text-sm text-ink-700 md:text-base">
+                {myth.excerpt}
+              </p>
+            </div>
+
+            {/* Columna derecha: Imagen */}
+            <div className="order-1 md:order-2">
+              <div className="relative aspect-[4/5] overflow-hidden rounded-2xl border border-white/60 bg-white/40 shadow-sm">
                 {myth.image_url ? (
                   <>
                     <img
@@ -117,27 +138,6 @@ export default async function MythDetailPage({ params }) {
                   </>
                 )}
               </div>
-            </div>
-
-            {/* Columna derecha: Contenido */}
-            <div className="order-1 md:order-2">
-              <div className="flex flex-wrap items-center gap-2">
-                <Badge className="border-jungle-500/30 bg-jungle-500/10 text-jungle-600">
-                  {myth.region}
-                </Badge>
-                {myth.community ? (
-                  <Badge className="border-river-500/30 bg-river-500/10 text-river-600">
-                    {myth.community}
-                  </Badge>
-                ) : null}
-                <Badge>{myth.focus_keyword}</Badge>
-              </div>
-              <h1 className="mt-4 font-display text-4xl text-ink-900 md:text-5xl">
-                {myth.title}
-              </h1>
-              <p className="mt-4 text-sm text-ink-700 md:text-base">
-                {myth.excerpt}
-              </p>
             </div>
           </div>
         </GlassCard>
