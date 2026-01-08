@@ -283,9 +283,45 @@ export default function FormatContentPage() {
         {results.length > 0 && (
           <div className="space-y-6">
             <div className="p-6 bg-jungle-500/10 border border-jungle-500/20 rounded-2xl">
-              <p className="text-jungle-700 font-semibold">
+              <p className="text-jungle-700 font-semibold mb-4">
                 Resultados: {results.filter(r => r.success).length} exitosos de {results.length} intentos
               </p>
+
+              {/* URLs List */}
+              {results.filter(r => r.success).length > 0 && (
+                <div className="mt-4 pt-4 border-t border-jungle-500/20">
+                  <p className="text-jungle-700 text-sm font-medium mb-3">
+                    URLs de mitos formateados para revisión:
+                  </p>
+                  <div className="space-y-2">
+                    {results.filter(r => r.success).map((item, idx) => (
+                      <div key={item.id} className="flex items-center gap-2 text-sm">
+                        <span className="text-jungle-600 font-mono">
+                          {idx + 1}.
+                        </span>
+                        <a
+                          href={`https://mitos-colombia.vercel.app/mitos/${item.slug}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-river-600 hover:text-river-700 underline font-mono text-xs break-all"
+                        >
+                          https://mitos-colombia.vercel.app/mitos/{item.slug}
+                        </a>
+                        <button
+                          onClick={() => {
+                            navigator.clipboard.writeText(`https://mitos-colombia.vercel.app/mitos/${item.slug}`);
+                            alert('URL copiada al portapapeles');
+                          }}
+                          className="ml-auto px-2 py-1 text-xs bg-jungle-500/10 hover:bg-jungle-500/20 text-jungle-700 rounded transition"
+                          title="Copiar URL"
+                        >
+                          Copiar
+                        </button>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
             </div>
 
             <GlassCard className="p-8">
