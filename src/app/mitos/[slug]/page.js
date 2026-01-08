@@ -3,7 +3,6 @@ import Header from "../../../components/Header";
 import { Badge } from "../../../components/ui/Badge";
 import { ButtonLink } from "../../../components/ui/Button";
 import { GlassCard } from "../../../components/ui/GlassCard";
-import { ImageSlot } from "../../../components/ui/ImageSlot";
 import { getMythBySlug, getRecommendedMyths } from "../../../lib/myths";
 import { getComments } from "../../../lib/comments";
 import { RecommendedMyths } from "../../../components/RecommendedMyths";
@@ -87,29 +86,60 @@ export default async function MythDetailPage({ params }) {
 
       <section className="container-shell mt-12">
         <GlassCard className="p-8">
-          <div className="flex flex-wrap items-center gap-2">
-            <Badge className="border-jungle-500/30 bg-jungle-500/10 text-jungle-600">
-              {myth.region}
-            </Badge>
-            {myth.community ? (
-              <Badge className="border-river-500/30 bg-river-500/10 text-river-600">
-                {myth.community}
-              </Badge>
-            ) : null}
-            <Badge>{myth.focus_keyword}</Badge>
+          <div className="grid gap-6 md:grid-cols-[1fr_2fr] md:gap-8">
+            {/* Columna izquierda: Imagen 1:1 */}
+            <div className="order-2 md:order-1">
+              <div className="relative aspect-square overflow-hidden rounded-2xl border border-white/60 bg-white/40 shadow-sm">
+                {myth.image_url ? (
+                  <>
+                    <img
+                      src={myth.image_url}
+                      alt={`Ilustración de ${myth.title}`}
+                      className="h-full w-full object-cover"
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-ink-900/40 via-transparent to-transparent" />
+                  </>
+                ) : (
+                  <>
+                    <div
+                      className="absolute inset-0"
+                      style={{
+                        backgroundImage:
+                          "radial-gradient(circle at 20% 20%, rgba(30, 120, 94, 0.35), transparent 60%), radial-gradient(circle at 80% 10%, rgba(35, 98, 158, 0.3), transparent 55%), linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(234, 240, 235, 0.55))",
+                      }}
+                    />
+                    <div className="absolute inset-0 border border-white/50" />
+                    <div className="relative flex h-full items-end justify-between px-4 pb-3 text-[10px] uppercase tracking-[0.3em] text-ink-500">
+                      <span>Imagen en proceso</span>
+                      <span>AI</span>
+                    </div>
+                  </>
+                )}
+              </div>
+            </div>
+
+            {/* Columna derecha: Contenido */}
+            <div className="order-1 md:order-2">
+              <div className="flex flex-wrap items-center gap-2">
+                <Badge className="border-jungle-500/30 bg-jungle-500/10 text-jungle-600">
+                  {myth.region}
+                </Badge>
+                {myth.community ? (
+                  <Badge className="border-river-500/30 bg-river-500/10 text-river-600">
+                    {myth.community}
+                  </Badge>
+                ) : null}
+                <Badge>{myth.focus_keyword}</Badge>
+              </div>
+              <h1 className="mt-4 font-display text-4xl text-ink-900 md:text-5xl">
+                {myth.title}
+              </h1>
+              <p className="mt-4 text-sm text-ink-700 md:text-base">
+                {myth.excerpt}
+              </p>
+            </div>
           </div>
-          <h1 className="mt-4 font-display text-4xl text-ink-900 md:text-5xl">
-            {myth.title}
-          </h1>
-          <p className="mt-4 max-w-3xl text-sm text-ink-700 md:text-base">
-            {myth.excerpt}
-          </p>
-          <ImageSlot
-            src={myth.image_url}
-            alt={`Ilustracion de ${myth.title}`}
-            size="large"
-            className="mt-6"
-          />
         </GlassCard>
       </section>
 
