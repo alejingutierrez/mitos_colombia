@@ -7,7 +7,7 @@ import { Button } from "../../components/ui/Button";
 import { Badge } from "../../components/ui/Badge";
 
 export default function AdminPage() {
-  const [count, setCount] = useState(5);
+  const [count, setCount] = useState(1);
   const [loading, setLoading] = useState(false);
   const [results, setResults] = useState(null);
   const [mythsWithoutImages, setMythsWithoutImages] = useState(null);
@@ -86,7 +86,7 @@ export default function AdminPage() {
           "Content-Type": "application/json",
           Authorization: `Basic ${auth}`,
         },
-        body: JSON.stringify({ count }),
+        body: JSON.stringify({ count: 1 }), // Always generate 1 image at a time
       });
 
       if (response.status === 401) {
@@ -96,7 +96,7 @@ export default function AdminPage() {
       }
 
       if (response.status === 504) {
-        alert("Timeout: La generación tomó demasiado tiempo. Intenta con 1 imagen a la vez.");
+        alert("Timeout: La generación excedió el límite de 5 minutos de Vercel. Por favor, intenta de nuevo generando 1 imagen a la vez.");
         return;
       }
 
@@ -113,8 +113,8 @@ export default function AdminPage() {
       await fetchCount(credentials.username, credentials.password);
     } catch (error) {
       console.error("Error generating images:", error);
-      if (error.message.includes("JSON")) {
-        alert("Error de timeout o conexión. Intenta generar 1 imagen a la vez.");
+      if (error.message.includes("JSON") || error.message.includes("timeout")) {
+        alert("Error: La solicitud excedió el tiempo límite. Verifica tu conexión e intenta nuevamente.");
       } else {
         alert("Error al generar imágenes: " + error.message);
       }
@@ -248,6 +248,24 @@ export default function AdminPage() {
           </h2>
 
           <div className="space-y-4">
+            {/* Warning about limit */}
+            <div className="p-4 bg-river-500/10 border border-river-500/20 rounded-xl">
+              <div className="flex items-start gap-3">
+                <svg className="w-5 h-5 text-river-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <p className="text-river-700 text-sm font-medium">
+                    Límite de 1 imagen por generación
+                  </p>
+                  <p className="text-river-600 text-xs mt-1">
+                    Debido al límite de tiempo de Vercel (5 minutos), solo puedes generar 1 imagen a la vez.
+                    Cada imagen toma aproximadamente 1-2 minutos en generarse.
+                  </p>
+                </div>
+              </div>
+            </div>
+
             <div>
               <label className="block text-sm font-medium text-ink-700 mb-2">
                 Cantidad de imágenes
@@ -256,18 +274,17 @@ export default function AdminPage() {
                 <input
                   type="number"
                   min="1"
-                  max="50"
-                  value={count}
-                  onChange={(e) => setCount(parseInt(e.target.value) || 1)}
+                  max="1"
+                  value={1}
                   className="input-glass w-32"
-                  disabled={loading}
+                  disabled={true}
                 />
                 <Button
                   onClick={handleGenerate}
                   disabled={loading || totalPending === 0}
                   className="flex-1"
                 >
-                  {loading ? "Generando..." : "Generar Imágenes"}
+                  {loading ? "Generando..." : "Generar 1 Imagen"}
                 </Button>
               </div>
             </div>
@@ -275,7 +292,7 @@ export default function AdminPage() {
             {loading && (
               <div className="p-4 bg-ember-500/10 border border-ember-500/20 rounded-xl">
                 <p className="text-ember-600 text-sm">
-                  Esto puede tomar varios minutos. Por favor espera...
+                  Generando imagen... Esto tomará 1-2 minutos. Por favor espera.
                 </p>
               </div>
             )}
