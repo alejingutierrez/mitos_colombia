@@ -23,6 +23,7 @@ export default function AdminPage() {
 
       if (response.status === 401) {
         setIsAuthenticated(false);
+        localStorage.removeItem("admin_auth");
         return;
       }
 
@@ -32,6 +33,8 @@ export default function AdminPage() {
         setTotalPending(data.total);
         setBreakdown(data.breakdown);
         setIsAuthenticated(true);
+        // Save auth to localStorage for persistence
+        localStorage.setItem("admin_auth", btoa(`${username}:${password}`));
       }
     } catch (error) {
       console.error("Error fetching count:", error);
@@ -42,6 +45,32 @@ export default function AdminPage() {
     e.preventDefault();
     fetchCount(credentials.username, credentials.password);
   };
+
+  const handleLogout = () => {
+    setIsAuthenticated(false);
+    setCredentials({ username: "", password: "" });
+    setResults(null);
+    setMythsWithoutImages(null);
+    setTotalPending(null);
+    setBreakdown(null);
+    localStorage.removeItem("admin_auth");
+  };
+
+  // Load saved session on mount
+  useEffect(() => {
+    const savedAuth = localStorage.getItem("admin_auth");
+    if (savedAuth) {
+      try {
+        const decoded = atob(savedAuth);
+        const [username, password] = decoded.split(":");
+        setCredentials({ username, password });
+        fetchCount(username, password);
+      } catch (error) {
+        console.error("Error loading saved session:", error);
+        localStorage.removeItem("admin_auth");
+      }
+    }
+  }, []);
 
   const handleGenerate = async () => {
     setLoading(true);
@@ -59,7 +88,7 @@ export default function AdminPage() {
       });
 
       if (response.status === 401) {
-        setIsAuthenticated(false);
+        handleLogout();
         alert("Sesión expirada. Por favor, inicia sesión nuevamente.");
         return;
       }
@@ -154,7 +183,7 @@ export default function AdminPage() {
               Generador de Imágenes - Mitos Colombia
             </h1>
             <button
-              onClick={() => setIsAuthenticated(false)}
+              onClick={handleLogout}
               className="px-4 py-2 bg-red-500/20 text-red-300 rounded-lg hover:bg-red-500/30 transition-all"
             >
               Cerrar Sesión
