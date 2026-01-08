@@ -1,6 +1,10 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import AdminLayout from "../../components/AdminLayout";
+import { GlassCard } from "../../components/ui/GlassCard";
+import { Button } from "../../components/ui/Button";
+import { Badge } from "../../components/ui/Badge";
 
 export default function AdminPage() {
   const [count, setCount] = useState(5);
@@ -33,7 +37,6 @@ export default function AdminPage() {
         setTotalPending(data.total);
         setBreakdown(data.breakdown);
         setIsAuthenticated(true);
-        // Save auth to localStorage for persistence
         localStorage.setItem("admin_auth", btoa(`${username}:${password}`));
       }
     } catch (error) {
@@ -56,7 +59,6 @@ export default function AdminPage() {
     localStorage.removeItem("admin_auth");
   };
 
-  // Load saved session on mount
   useEffect(() => {
     const savedAuth = localStorage.getItem("admin_auth");
     if (savedAuth) {
@@ -108,7 +110,6 @@ export default function AdminPage() {
       const data = await response.json();
       setResults(data);
 
-      // Refresh count
       await fetchCount(credentials.username, credentials.password);
     } catch (error) {
       console.error("Error generating images:", error);
@@ -124,15 +125,27 @@ export default function AdminPage() {
 
   if (!isAuthenticated) {
     return (
-      <div className="min-h-screen bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center p-4">
+      <div className="min-h-screen flex items-center justify-center p-4">
+        <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
+          <div className="absolute -top-32 left-12 h-72 w-72 rounded-full bg-jungle-500/30 blur-3xl motion-safe:animate-float-slow" />
+          <div className="absolute right-0 top-6 h-80 w-80 rounded-full bg-river-500/25 blur-3xl motion-safe:animate-float-slow" />
+        </div>
+
         <div className="w-full max-w-md">
-          <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 shadow-2xl border border-white/20">
-            <h1 className="text-3xl font-bold text-white mb-6 text-center">
-              Admin - Mitos Colombia
-            </h1>
+          <GlassCard className="p-8">
+            <div className="text-center mb-8">
+              <div className="inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-jungle-600 text-sm font-semibold uppercase tracking-[0.3em] text-white shadow-lg mb-4">
+                MC
+              </div>
+              <h1 className="font-display text-3xl text-ink-900 mb-2">
+                Panel de Administración
+              </h1>
+              <p className="text-sm text-ink-600">Mitos de Colombia</p>
+            </div>
+
             <form onSubmit={handleLogin} className="space-y-4">
               <div>
-                <label className="block text-sm font-medium text-white/80 mb-2">
+                <label className="block text-sm font-medium text-ink-700 mb-2">
                   Usuario
                 </label>
                 <input
@@ -141,13 +154,13 @@ export default function AdminPage() {
                   onChange={(e) =>
                     setCredentials({ ...credentials, username: e.target.value })
                   }
-                  className="w-full px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="input-glass"
                   placeholder="Ingresa tu usuario"
                   required
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium text-white/80 mb-2">
+                <label className="block text-sm font-medium text-ink-700 mb-2">
                   Contraseña
                 </label>
                 <input
@@ -156,125 +169,130 @@ export default function AdminPage() {
                   onChange={(e) =>
                     setCredentials({ ...credentials, password: e.target.value })
                   }
-                  className="w-full px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="input-glass"
                   placeholder="Ingresa tu contraseña"
                   required
                 />
               </div>
-              <button
-                type="submit"
-                className="w-full py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all"
-              >
+              <Button type="submit" className="w-full">
                 Iniciar Sesión
-              </button>
+              </Button>
             </form>
-          </div>
+          </GlassCard>
         </div>
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 p-8">
-      <div className="max-w-6xl mx-auto">
-        <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 shadow-2xl border border-white/20">
-          <div className="flex justify-between items-center mb-8">
-            <h1 className="text-4xl font-bold text-white">
-              Generador de Imágenes - Mitos Colombia
-            </h1>
-            <button
-              onClick={handleLogout}
-              className="px-4 py-2 bg-red-500/20 text-red-300 rounded-lg hover:bg-red-500/30 transition-all"
-            >
-              Cerrar Sesión
-            </button>
-          </div>
+    <AdminLayout onLogout={handleLogout}>
+      <div className="space-y-6">
+        {/* Header */}
+        <div>
+          <h1 className="font-display text-4xl text-ink-900">Generador de Imágenes</h1>
+          <p className="mt-2 text-ink-600">Genera imágenes para mitos, comunidades, categorías y regiones sin imágenes</p>
+        </div>
 
-          <div className="mb-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
-            <div className="p-6 bg-blue-500/10 rounded-xl border border-blue-500/20">
-              <p className="text-blue-300 text-sm font-medium mb-1">
-                Total Pendiente
-              </p>
-              <p className="text-4xl font-bold text-white">
-                {totalPending !== null ? totalPending : "..."}
-              </p>
+        {/* Stats Cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+          <GlassCard className="p-6">
+            <p className="text-xs uppercase tracking-[0.3em] text-river-600 mb-2">
+              Total Pendiente
+            </p>
+            <p className="font-display text-4xl text-ink-900">
+              {totalPending !== null ? totalPending : "..."}
+            </p>
+          </GlassCard>
+
+          <GlassCard className="p-6">
+            <p className="text-xs uppercase tracking-[0.3em] text-jungle-600 mb-2">
+              Mitos
+            </p>
+            <p className="font-display text-4xl text-ink-900">
+              {breakdown?.myths !== undefined ? breakdown.myths : "..."}
+            </p>
+          </GlassCard>
+
+          <GlassCard className="p-6">
+            <p className="text-xs uppercase tracking-[0.3em] text-ember-500 mb-2">
+              Comunidades
+            </p>
+            <p className="font-display text-4xl text-ink-900">
+              {breakdown?.communities !== undefined ? breakdown.communities : "..."}
+            </p>
+          </GlassCard>
+
+          <GlassCard className="p-6">
+            <p className="text-xs uppercase tracking-[0.3em] text-river-500 mb-2">
+              Categorías
+            </p>
+            <p className="font-display text-4xl text-ink-900">
+              {breakdown?.categories !== undefined ? breakdown.categories : "..."}
+            </p>
+          </GlassCard>
+
+          <GlassCard className="p-6">
+            <p className="text-xs uppercase tracking-[0.3em] text-jungle-500 mb-2">
+              Regiones
+            </p>
+            <p className="font-display text-4xl text-ink-900">
+              {breakdown?.regions !== undefined ? breakdown.regions : "..."}
+            </p>
+          </GlassCard>
+        </div>
+
+        {/* Generator Form */}
+        <GlassCard className="p-8">
+          <h2 className="font-display text-2xl text-ink-900 mb-6">
+            Generar Imágenes
+          </h2>
+
+          <div className="space-y-4">
+            <div>
+              <label className="block text-sm font-medium text-ink-700 mb-2">
+                Cantidad de imágenes
+              </label>
+              <div className="flex gap-4 items-center">
+                <input
+                  type="number"
+                  min="1"
+                  max="50"
+                  value={count}
+                  onChange={(e) => setCount(parseInt(e.target.value) || 1)}
+                  className="input-glass w-32"
+                  disabled={loading}
+                />
+                <Button
+                  onClick={handleGenerate}
+                  disabled={loading || totalPending === 0}
+                  className="flex-1"
+                >
+                  {loading ? "Generando..." : "Generar Imágenes"}
+                </Button>
+              </div>
             </div>
 
-            <div className="p-6 bg-purple-500/10 rounded-xl border border-purple-500/20">
-              <p className="text-purple-300 text-sm font-medium mb-1">
-                Mitos
-              </p>
-              <p className="text-4xl font-bold text-white">
-                {breakdown?.myths !== undefined ? breakdown.myths : "..."}
-              </p>
-            </div>
-
-            <div className="p-6 bg-green-500/10 rounded-xl border border-green-500/20">
-              <p className="text-green-300 text-sm font-medium mb-1">
-                Comunidades
-              </p>
-              <p className="text-4xl font-bold text-white">
-                {breakdown?.communities !== undefined ? breakdown.communities : "..."}
-              </p>
-            </div>
-
-            <div className="p-6 bg-yellow-500/10 rounded-xl border border-yellow-500/20">
-              <p className="text-yellow-300 text-sm font-medium mb-1">
-                Categorías
-              </p>
-              <p className="text-4xl font-bold text-white">
-                {breakdown?.categories !== undefined ? breakdown.categories : "..."}
-              </p>
-            </div>
-
-            <div className="p-6 bg-pink-500/10 rounded-xl border border-pink-500/20">
-              <p className="text-pink-300 text-sm font-medium mb-1">
-                Regiones
-              </p>
-              <p className="text-4xl font-bold text-white">
-                {breakdown?.regions !== undefined ? breakdown.regions : "..."}
-              </p>
-            </div>
-          </div>
-
-          <div className="mb-8">
-            <label className="block text-lg font-semibold text-white mb-4">
-              ¿Cuántas imágenes deseas generar?
-            </label>
-            <div className="flex gap-4 items-center">
-              <input
-                type="number"
-                min="1"
-                max="50"
-                value={count}
-                onChange={(e) => setCount(parseInt(e.target.value) || 1)}
-                className="w-32 px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white text-lg font-semibold focus:outline-none focus:ring-2 focus:ring-blue-500"
-                disabled={loading}
-              />
-              <button
-                onClick={handleGenerate}
-                disabled={loading || totalPending === 0}
-                className="flex-1 py-3 px-6 bg-gradient-to-r from-green-600 to-emerald-600 text-white rounded-lg font-semibold hover:from-green-700 hover:to-emerald-700 disabled:from-gray-600 disabled:to-gray-700 disabled:cursor-not-allowed transition-all"
-              >
-                {loading ? "Generando..." : "Generar Imágenes"}
-              </button>
-            </div>
             {loading && (
-              <p className="text-yellow-300 mt-4 text-sm">
-                Esto puede tomar varios minutos. Por favor espera...
-              </p>
-            )}
-          </div>
-
-          {results && (
-            <div className="mt-8">
-              <div className="mb-6 p-4 bg-green-500/10 rounded-lg border border-green-500/20">
-                <p className="text-green-300 font-semibold text-lg">
-                  {results.message}
+              <div className="p-4 bg-ember-500/10 border border-ember-500/20 rounded-xl">
+                <p className="text-ember-600 text-sm">
+                  Esto puede tomar varios minutos. Por favor espera...
                 </p>
               </div>
+            )}
+          </div>
+        </GlassCard>
 
-              <h2 className="text-2xl font-bold text-white mb-4">
+        {/* Results */}
+        {results && (
+          <div className="space-y-6">
+            <div className="p-6 bg-jungle-500/10 border border-jungle-500/20 rounded-2xl">
+              <p className="text-jungle-700 font-semibold">
+                {results.message}
+              </p>
+            </div>
+
+            <GlassCard className="p-8">
+              <h2 className="font-display text-2xl text-ink-900 mb-6">
                 Resultados ({results.generated?.length || 0})
               </h2>
 
@@ -282,38 +300,44 @@ export default function AdminPage() {
                 {results.generated?.map((myth, index) => (
                   <div
                     key={`${myth.type}-${myth.id}`}
-                    className={`p-4 rounded-lg border ${
+                    className={`p-6 rounded-xl border ${
                       myth.success
-                        ? "bg-green-500/10 border-green-500/20"
-                        : "bg-red-500/10 border-red-500/20"
+                        ? "bg-jungle-500/5 border-jungle-500/20"
+                        : "bg-ember-500/5 border-ember-500/20"
                     }`}
                   >
                     <div className="flex items-start gap-4">
                       <div className="flex-1">
-                        <div className="flex items-center gap-2 mb-2">
-                          <span className={`px-2 py-1 rounded text-xs font-medium ${
-                            myth.type === 'myth' ? 'bg-purple-500/20 text-purple-300' :
-                            myth.type === 'community' ? 'bg-green-500/20 text-green-300' :
-                            myth.type === 'category' ? 'bg-yellow-500/20 text-yellow-300' :
-                            myth.type === 'region' ? 'bg-pink-500/20 text-pink-300' :
-                            'bg-gray-500/20 text-gray-300'
-                          }`}>
+                        <div className="flex items-center gap-2 mb-3">
+                          <Badge
+                            className={
+                              myth.type === "myth"
+                                ? "border-jungle-500/30 bg-jungle-500/10 text-jungle-700"
+                                : myth.type === "community"
+                                ? "border-river-500/30 bg-river-500/10 text-river-700"
+                                : myth.type === "category"
+                                ? "border-ember-400/30 bg-ember-400/10 text-ember-600"
+                                : myth.type === "region"
+                                ? "border-ink-500/30 bg-ink-500/10 text-ink-700"
+                                : "border-ink-500/30 bg-ink-500/10 text-ink-700"
+                            }
+                          >
                             {myth.typeLabel || myth.type}
-                          </span>
+                          </Badge>
                         </div>
-                        <h3 className="text-lg font-semibold text-white mb-2">
+                        <h3 className="text-lg font-semibold text-ink-900 mb-2">
                           {index + 1}. {myth.title}
                         </h3>
                         {myth.success ? (
-                          <div className="space-y-2">
-                            <p className="text-green-300 text-sm">
+                          <div className="space-y-3">
+                            <p className="text-jungle-600 text-sm">
                               Imagen generada exitosamente
                             </p>
                             <a
                               href={myth.imageUrl}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 text-sm underline"
+                              className="inline-flex items-center gap-2 text-river-600 hover:text-river-500 text-sm font-medium"
                             >
                               Ver imagen
                               <svg
@@ -331,17 +355,17 @@ export default function AdminPage() {
                               </svg>
                             </a>
                             {myth.imageUrl && (
-                              <div className="mt-3">
+                              <div className="mt-4">
                                 <img
                                   src={myth.imageUrl}
                                   alt={myth.title}
-                                  className="w-full max-w-md rounded-lg shadow-lg"
+                                  className="w-full max-w-md rounded-xl shadow-lg border border-white/60"
                                 />
                               </div>
                             )}
                           </div>
                         ) : (
-                          <p className="text-red-300 text-sm">
+                          <p className="text-ember-600 text-sm">
                             Error: {myth.error}
                           </p>
                         )}
@@ -350,10 +374,10 @@ export default function AdminPage() {
                   </div>
                 ))}
               </div>
-            </div>
-          )}
-        </div>
+            </GlassCard>
+          </div>
+        )}
       </div>
-    </div>
+    </AdminLayout>
   );
 }
