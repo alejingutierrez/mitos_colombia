@@ -35,6 +35,7 @@ CREATE TABLE IF NOT EXISTS myths (
 );
 
 ALTER TABLE myths ADD COLUMN IF NOT EXISTS image_url TEXT;
+ALTER TABLE myths ADD COLUMN IF NOT EXISTS content_formatted BOOLEAN DEFAULT FALSE;
 
 CREATE INDEX IF NOT EXISTS idx_myths_region ON myths(region_id);
 CREATE INDEX IF NOT EXISTS idx_myths_community ON myths(community_id);
@@ -56,3 +57,16 @@ CREATE TABLE IF NOT EXISTS myth_keywords (
   keyword TEXT NOT NULL,
   PRIMARY KEY (myth_id, keyword)
 );
+
+CREATE TABLE IF NOT EXISTS comments (
+  id SERIAL PRIMARY KEY,
+  myth_id INTEGER NOT NULL REFERENCES myths(id) ON DELETE CASCADE,
+  author_name TEXT NOT NULL,
+  author_email TEXT NOT NULL,
+  content TEXT NOT NULL,
+  status TEXT NOT NULL DEFAULT 'pending',
+  created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);
+
+CREATE INDEX IF NOT EXISTS idx_comments_myth ON comments(myth_id);
+CREATE INDEX IF NOT EXISTS idx_comments_status ON comments(status);

@@ -15,6 +15,15 @@ const adminMenuItems = [
       </svg>
     ),
   },
+  {
+    label: "Formatear Contenido",
+    href: "/admin/format-content",
+    icon: (
+      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h7" />
+      </svg>
+    ),
+  },
 ];
 
 export default function AdminLayout({ children, onLogout }) {

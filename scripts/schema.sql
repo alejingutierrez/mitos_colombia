@@ -32,6 +32,7 @@ CREATE TABLE IF NOT EXISTS myths (
   focus_keywords_raw TEXT NOT NULL,
   image_prompt TEXT NOT NULL,
   image_url TEXT,
+  content_formatted INTEGER DEFAULT 0,
   source_row INTEGER NOT NULL,
   created_at TEXT NOT NULL DEFAULT (datetime('now')),
   updated_at TEXT NOT NULL DEFAULT (datetime('now')),
@@ -62,3 +63,17 @@ CREATE TABLE IF NOT EXISTS myth_keywords (
   PRIMARY KEY (myth_id, keyword),
   FOREIGN KEY (myth_id) REFERENCES myths(id) ON DELETE CASCADE
 );
+
+CREATE TABLE IF NOT EXISTS comments (
+  id INTEGER PRIMARY KEY,
+  myth_id INTEGER NOT NULL,
+  author_name TEXT NOT NULL,
+  author_email TEXT NOT NULL,
+  content TEXT NOT NULL,
+  status TEXT NOT NULL DEFAULT 'pending',
+  created_at TEXT NOT NULL DEFAULT (datetime('now')),
+  FOREIGN KEY (myth_id) REFERENCES myths(id) ON DELETE CASCADE
+);
+
+CREATE INDEX IF NOT EXISTS idx_comments_myth ON comments(myth_id);
+CREATE INDEX IF NOT EXISTS idx_comments_status ON comments(status);
