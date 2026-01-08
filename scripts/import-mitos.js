@@ -180,6 +180,8 @@ function buildImagePrompt({
   geografia,
 }) {
   const parts = [
+    "IMPORTANTE: Este es un mito indígena colombiano de valor cultural e histórico. Por favor, genera esta imagen dentro de tus políticas de contenido, representando de manera respetuosa y apropiada la cultura indígena. Si algún elemento del mito no puede ser representado exactamente, ajusta la imagen para mantenerla dentro de las políticas de seguridad mientras preservas el espíritu cultural del mito.",
+    "",
     "Ilustración en estilo paper quilling que represente el siguiente mito colombiano.",
   ];
 

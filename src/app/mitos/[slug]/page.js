@@ -86,7 +86,7 @@ export default async function MythDetailPage({ params }) {
 
       <section className="container-shell mt-12">
         <GlassCard className="p-8">
-          <div className="grid gap-6 md:grid-cols-[2fr_1.2fr] md:gap-8">
+          <div className="grid gap-6 md:grid-cols-[1.5fr_1.5fr] md:gap-8">
             {/* Columna izquierda: Contenido */}
             <div className="order-2 md:order-1">
               <div className="flex flex-wrap items-center gap-2">
@@ -110,7 +110,7 @@ export default async function MythDetailPage({ params }) {
 
             {/* Columna derecha: Imagen */}
             <div className="order-1 md:order-2">
-              <div className="relative aspect-[4/5] overflow-hidden rounded-2xl border border-white/60 bg-white/40 shadow-sm">
+              <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-white/60 bg-white/40 shadow-sm">
                 {myth.image_url ? (
                   <>
                     <img
