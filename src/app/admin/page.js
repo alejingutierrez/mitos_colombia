@@ -7,9 +7,10 @@ import { Button } from "../../components/ui/Button";
 import { Badge } from "../../components/ui/Badge";
 
 export default function AdminPage() {
-  const [count, setCount] = useState(1);
+  const [count, setCount] = useState(5);
   const [loading, setLoading] = useState(false);
-  const [results, setResults] = useState(null);
+  const [progress, setProgress] = useState({ current: 0, total: 0 });
+  const [results, setResults] = useState([]);
   const [mythsWithoutImages, setMythsWithoutImages] = useState(null);
   const [totalPending, setTotalPending] = useState(null);
   const [breakdown, setBreakdown] = useState(null);
@@ -52,7 +53,7 @@ export default function AdminPage() {
   const handleLogout = () => {
     setIsAuthenticated(false);
     setCredentials({ username: "", password: "" });
-    setResults(null);
+    setResults([]);
     setMythsWithoutImages(null);
     setTotalPending(null);
     setBreakdown(null);
@@ -74,52 +75,92 @@ export default function AdminPage() {
     }
   }, []);
 
+  // Generate images one at a time with progress tracking
   const handleGenerate = async () => {
     setLoading(true);
-    setResults(null);
+    setResults([]);
+    setProgress({ current: 0, total: count });
+
+    const auth = btoa(`${credentials.username}:${credentials.password}`);
+    const allResults = [];
 
     try {
-      const auth = btoa(`${credentials.username}:${credentials.password}`);
-      const response = await fetch("/api/admin/generate-images", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Basic ${auth}`,
-        },
-        body: JSON.stringify({ count: 1 }), // Always generate 1 image at a time
-      });
+      // Generate images one by one with separate API calls
+      for (let i = 0; i < count; i++) {
+        setProgress({ current: i + 1, total: count });
 
-      if (response.status === 401) {
-        handleLogout();
-        alert("Sesión expirada. Por favor, inicia sesión nuevamente.");
-        return;
+        try {
+          const response = await fetch("/api/admin/generate-images", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              Authorization: `Basic ${auth}`,
+            },
+            body: JSON.stringify({ count: 1 }), // Always 1 image per request
+          });
+
+          if (response.status === 401) {
+            handleLogout();
+            alert("Sesión expirada. Por favor, inicia sesión nuevamente.");
+            break;
+          }
+
+          if (response.status === 504) {
+            const errorResult = {
+              title: `Imagen ${i + 1}`,
+              error: "Timeout: La generación excedió el límite de tiempo",
+              success: false,
+            };
+            allResults.push(errorResult);
+            setResults([...allResults]);
+            continue; // Continue with next image
+          }
+
+          if (!response.ok) {
+            const errorText = await response.text();
+            console.error("API Error:", errorText);
+            const errorResult = {
+              title: `Imagen ${i + 1}`,
+              error: `Error del servidor (${response.status})`,
+              success: false,
+            };
+            allResults.push(errorResult);
+            setResults([...allResults]);
+            continue; // Continue with next image
+          }
+
+          const data = await response.json();
+
+          // Add the generated image(s) to results
+          if (data.generated && data.generated.length > 0) {
+            allResults.push(...data.generated);
+          }
+
+          // Update results in real-time
+          setResults([...allResults]);
+
+        } catch (error) {
+          console.error(`Error generating image ${i + 1}:`, error);
+          const errorResult = {
+            title: `Imagen ${i + 1}`,
+            error: error.message || "Error desconocido",
+            success: false,
+          };
+          allResults.push(errorResult);
+          setResults([...allResults]);
+          // Continue with next image even if this one failed
+        }
       }
 
-      if (response.status === 504) {
-        alert("Timeout: La generación excedió el límite de 5 minutos de Vercel. Por favor, intenta de nuevo generando 1 imagen a la vez.");
-        return;
-      }
-
-      if (!response.ok) {
-        const errorText = await response.text();
-        console.error("API Error:", errorText);
-        alert(`Error del servidor (${response.status}): ${errorText.substring(0, 100)}`);
-        return;
-      }
-
-      const data = await response.json();
-      setResults(data);
-
+      // Refresh count after all generations
       await fetchCount(credentials.username, credentials.password);
+
     } catch (error) {
-      console.error("Error generating images:", error);
-      if (error.message.includes("JSON") || error.message.includes("timeout")) {
-        alert("Error: La solicitud excedió el tiempo límite. Verifica tu conexión e intenta nuevamente.");
-      } else {
-        alert("Error al generar imágenes: " + error.message);
-      }
+      console.error("Error in generation process:", error);
+      alert("Error en el proceso de generación: " + error.message);
     } finally {
       setLoading(false);
+      setProgress({ current: 0, total: 0 });
     }
   };
 
@@ -248,7 +289,7 @@ export default function AdminPage() {
           </h2>
 
           <div className="space-y-4">
-            {/* Warning about limit */}
+            {/* Info about how it works */}
             <div className="p-4 bg-river-500/10 border border-river-500/20 rounded-xl">
               <div className="flex items-start gap-3">
                 <svg className="w-5 h-5 text-river-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -256,11 +297,11 @@ export default function AdminPage() {
                 </svg>
                 <div>
                   <p className="text-river-700 text-sm font-medium">
-                    Límite de 1 imagen por generación
+                    Generación secuencial optimizada
                   </p>
                   <p className="text-river-600 text-xs mt-1">
-                    Debido al límite de tiempo de Vercel (5 minutos), solo puedes generar 1 imagen a la vez.
-                    Cada imagen toma aproximadamente 1-2 minutos en generarse.
+                    Las imágenes se generan una por una para evitar timeouts. Cada imagen toma ~1-2 minutos.
+                    Verás el progreso en tiempo real.
                   </p>
                 </div>
               </div>
@@ -268,31 +309,46 @@ export default function AdminPage() {
 
             <div>
               <label className="block text-sm font-medium text-ink-700 mb-2">
-                Cantidad de imágenes
+                Cantidad de imágenes (1-20)
               </label>
               <div className="flex gap-4 items-center">
                 <input
                   type="number"
                   min="1"
-                  max="1"
-                  value={1}
+                  max="20"
+                  value={count}
+                  onChange={(e) => setCount(Math.min(20, Math.max(1, parseInt(e.target.value) || 1)))}
                   className="input-glass w-32"
-                  disabled={true}
+                  disabled={loading}
                 />
                 <Button
                   onClick={handleGenerate}
                   disabled={loading || totalPending === 0}
                   className="flex-1"
                 >
-                  {loading ? "Generando..." : "Generar 1 Imagen"}
+                  {loading ? `Generando ${progress.current}/${progress.total}...` : `Generar ${count} Imagen${count > 1 ? 'es' : ''}`}
                 </Button>
               </div>
             </div>
 
             {loading && (
               <div className="p-4 bg-ember-500/10 border border-ember-500/20 rounded-xl">
-                <p className="text-ember-600 text-sm">
-                  Generando imagen... Esto tomará 1-2 minutos. Por favor espera.
+                <div className="flex items-center justify-between mb-2">
+                  <p className="text-ember-700 text-sm font-medium">
+                    Generando imagen {progress.current} de {progress.total}...
+                  </p>
+                  <p className="text-ember-600 text-xs">
+                    {Math.round((progress.current / progress.total) * 100)}%
+                  </p>
+                </div>
+                <div className="w-full bg-ember-500/20 rounded-full h-2">
+                  <div
+                    className="bg-ember-500 h-2 rounded-full transition-all duration-300"
+                    style={{ width: `${(progress.current / progress.total) * 100}%` }}
+                  />
+                </div>
+                <p className="text-ember-600 text-xs mt-2">
+                  Por favor espera. No cierres esta ventana.
                 </p>
               </div>
             )}
@@ -300,25 +356,25 @@ export default function AdminPage() {
         </GlassCard>
 
         {/* Results */}
-        {results && (
+        {results.length > 0 && (
           <div className="space-y-6">
             <div className="p-6 bg-jungle-500/10 border border-jungle-500/20 rounded-2xl">
               <p className="text-jungle-700 font-semibold">
-                {results.message}
+                Resultados: {results.filter(r => r.success).length} exitosas de {results.length} intentos
               </p>
             </div>
 
             <GlassCard className="p-8">
               <h2 className="font-display text-2xl text-ink-900 mb-6">
-                Resultados ({results.generated?.length || 0})
+                Imágenes Generadas ({results.length})
               </h2>
 
               <div className="space-y-4">
-                {results.generated?.map((myth, index) => (
+                {results.map((item, index) => (
                   <div
-                    key={`${myth.type}-${myth.id}`}
+                    key={`${item.type}-${item.id}-${index}`}
                     className={`p-6 rounded-xl border ${
-                      myth.success
+                      item.success
                         ? "bg-jungle-500/5 border-jungle-500/20"
                         : "bg-ember-500/5 border-ember-500/20"
                     }`}
@@ -328,30 +384,30 @@ export default function AdminPage() {
                         <div className="flex items-center gap-2 mb-3">
                           <Badge
                             className={
-                              myth.type === "myth"
+                              item.type === "myth"
                                 ? "border-jungle-500/30 bg-jungle-500/10 text-jungle-700"
-                                : myth.type === "community"
+                                : item.type === "community"
                                 ? "border-river-500/30 bg-river-500/10 text-river-700"
-                                : myth.type === "category"
+                                : item.type === "category"
                                 ? "border-ember-400/30 bg-ember-400/10 text-ember-600"
-                                : myth.type === "region"
+                                : item.type === "region"
                                 ? "border-ink-500/30 bg-ink-500/10 text-ink-700"
                                 : "border-ink-500/30 bg-ink-500/10 text-ink-700"
                             }
                           >
-                            {myth.typeLabel || myth.type}
+                            {item.typeLabel || item.type}
                           </Badge>
                         </div>
                         <h3 className="text-lg font-semibold text-ink-900 mb-2">
-                          {index + 1}. {myth.title}
+                          {index + 1}. {item.title}
                         </h3>
-                        {myth.success ? (
+                        {item.success ? (
                           <div className="space-y-3">
                             <p className="text-jungle-600 text-sm">
                               Imagen generada exitosamente
                             </p>
                             <a
-                              href={myth.imageUrl}
+                              href={item.imageUrl}
                               target="_blank"
                               rel="noopener noreferrer"
                               className="inline-flex items-center gap-2 text-river-600 hover:text-river-500 text-sm font-medium"
@@ -371,11 +427,11 @@ export default function AdminPage() {
                                 />
                               </svg>
                             </a>
-                            {myth.imageUrl && (
+                            {item.imageUrl && (
                               <div className="mt-4">
                                 <img
-                                  src={myth.imageUrl}
-                                  alt={myth.title}
+                                  src={item.imageUrl}
+                                  alt={item.title}
                                   className="w-full max-w-md rounded-xl shadow-lg border border-white/60"
                                 />
                               </div>
@@ -383,7 +439,7 @@ export default function AdminPage() {
                           </div>
                         ) : (
                           <p className="text-ember-600 text-sm">
-                            Error: {myth.error}
+                            Error: {item.error}
                           </p>
                         )}
                       </div>
