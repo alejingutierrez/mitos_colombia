@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Footer() {
@@ -9,9 +10,13 @@ export default function Footer() {
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
           <div>
             <div className="flex items-center gap-3">
-              <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-jungle-600 text-xs font-semibold uppercase tracking-[0.3em] text-white shadow">
-                MC
-              </span>
+              <Image 
+                src="/logo_mitos.png" 
+                alt="Mitos de Colombia" 
+                width={48} 
+                height={48}
+                className="h-12 w-12"
+              />
               <span className="block">
                 <span className="eyebrow">Archivo vivo</span>
                 <span className="block font-display text-lg text-ink-900">
