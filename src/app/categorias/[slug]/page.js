@@ -442,9 +442,8 @@ export default async function CategoryDetailPage({ params, searchParams }) {
             total={result.total}
             limit={result.limit}
             offset={offset}
-            buildUrl={({ offset: newOffset, limit: newLimit }) =>
-              `/categorias/${params.slug}?${buildQuery(paginationBase, { offset: newOffset, limit: newLimit })}`
-            }
+            pathname={`/categorias/${params.slug}`}
+            searchParams={paginationBase}
             limitOptions={[12, 24, 48]}
           />
         </div>

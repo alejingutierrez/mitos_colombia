@@ -9,16 +9,39 @@ import { cn } from "../../lib/utils";
  * @param {number} props.total - Total de items
  * @param {number} props.limit - Items por página actual
  * @param {number} props.offset - Offset actual
- * @param {Function} props.buildUrl - Función que construye URLs con {offset, limit}
+ * @param {string} props.pathname - Ruta base para construir URLs (ej: "/regiones/andina")
+ * @param {Object} props.searchParams - Parámetros de búsqueda actuales (sin offset/limit)
  * @param {number[]} [props.limitOptions=[12, 24, 48]] - Opciones para el selector de límite
  */
 export function Pagination({
   total,
   limit,
   offset,
-  buildUrl,
+  pathname,
+  searchParams = {},
   limitOptions = [12, 24, 48]
 }) {
+  // Función para construir URLs con nuevos offset/limit
+  const buildUrl = ({ offset: newOffset, limit: newLimit }) => {
+    const params = new URLSearchParams();
+
+    // Agregar parámetros de búsqueda existentes
+    Object.entries(searchParams).forEach(([key, value]) => {
+      if (value !== undefined && value !== null && value !== "") {
+        params.set(key, String(value));
+      }
+    });
+
+    // Agregar nuevos offset y limit
+    if (newOffset > 0) {
+      params.set("offset", String(newOffset));
+    }
+    params.set("limit", String(newLimit));
+
+    const queryString = params.toString();
+    return queryString ? `${pathname}?${queryString}` : pathname;
+  };
+
   // Calcular información de paginación
   const currentPage = Math.floor(offset / limit) + 1;
   const totalPages = Math.ceil(total / limit);

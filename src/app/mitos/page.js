@@ -233,9 +233,8 @@ export default async function MitosPage({ searchParams }) {
             total={result.total}
             limit={result.limit}
             offset={offset}
-            buildUrl={({ offset: newOffset, limit: newLimit }) =>
-              `/mitos?${buildQuery(paginationBase, { offset: newOffset, limit: newLimit })}`
-            }
+            pathname="/mitos"
+            searchParams={paginationBase}
             limitOptions={[12, 24, 48]}
           />
         </div>
