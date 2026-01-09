@@ -4,6 +4,7 @@ import { ButtonLink } from "../components/ui/Button";
 import { GlassCard } from "../components/ui/GlassCard";
 import { SectionHeader } from "../components/ui/SectionHeader";
 import { MythCard } from "../components/MythCard";
+import { ROUTES } from "../lib/routes";
 import SmartSearch from "../components/SmartSearch";
 import {
   getFeaturedMythsWithImages,
@@ -29,27 +30,6 @@ const quickTags = [
   "Ritos del mar",
   "Fronteras y caminos",
   "Voces urbanas",
-];
-
-const routes = [
-  {
-    title: "Guardianes del agua",
-    detail: "Relatos que protegen rios, lagunas y corrientes invisibles.",
-    tone: "Rios y neblina",
-    href: "/rutas/guardianes-del-agua",
-  },
-  {
-    title: "Cartografia de la selva",
-    detail: "Mitos que explican caminos, limites y pactos con la tierra.",
-    tone: "Selva y bruma",
-    href: "/rutas/cartografia-selva",
-  },
-  {
-    title: "Bestiario colombiano",
-    detail: "Criaturas que advierten, transforman y cuidan territorios.",
-    tone: "Sombras y fuego",
-    href: "/rutas/bestiario-colombiano",
-  },
 ];
 
 const collections = [
@@ -199,10 +179,10 @@ export default async function Home() {
             simbolos que se repiten en distintas regiones."
         />
         <div className="mt-8 grid gap-6 lg:grid-cols-3">
-          {routes.map((route) => (
+          {ROUTES.map((route) => (
             <a
               key={route.title}
-              href={route.href}
+              href={`/rutas/${route.slug}`}
               className="group block"
             >
               <GlassCard className="h-full p-8 transition hover:-translate-y-2 hover:shadow-2xl">
