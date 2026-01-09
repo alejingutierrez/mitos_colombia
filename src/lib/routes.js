@@ -319,8 +319,75 @@ async function getRouteMythsPostgres({ keywords = [], limit = 12, seed = 0 }) {
   const seedIndex = values.length + 1;
   const limitIndex = values.length + 2;
 
-  const result = await sql.query(
-    `
+  try {
+    const result = await sql.query(
+      `
+        SELECT
+          DISTINCT myths.id,
+          myths.title,
+          myths.slug,
+          myths.excerpt,
+          myths.category_path,
+          COALESCE(vi.image_url, myths.image_url) AS image_url,
+          regions.name AS region,
+          regions.slug AS region_slug,
+          communities.name AS community,
+          communities.slug AS community_slug
+        FROM myths
+        JOIN regions ON regions.id = myths.region_id
+        LEFT JOIN communities ON communities.id = myths.community_id
+        LEFT JOIN vertical_images vi
+          ON vi.entity_type = 'myth' AND vi.entity_id = myths.id
+        ${whereClause}
+        ORDER BY
+          CASE WHEN COALESCE(vi.image_url, myths.image_url) IS NOT NULL THEN 0 ELSE 1 END,
+          (myths.id + $${seedIndex}) % 97,
+          myths.id
+        LIMIT $${limitIndex}
+      `,
+      [...values, seedValue, limitValue]
+    );
+
+    return result.rows;
+  } catch (error) {
+    console.error("[routes] vertical_images unavailable, fallback to myths.image_url", error);
+    const result = await sql.query(
+      `
+        SELECT
+          DISTINCT myths.id,
+          myths.title,
+          myths.slug,
+          myths.excerpt,
+          myths.category_path,
+          myths.image_url,
+          regions.name AS region,
+          regions.slug AS region_slug,
+          communities.name AS community,
+          communities.slug AS community_slug
+        FROM myths
+        JOIN regions ON regions.id = myths.region_id
+        LEFT JOIN communities ON communities.id = myths.community_id
+        ${whereClause}
+        ORDER BY
+          CASE WHEN myths.image_url IS NOT NULL THEN 0 ELSE 1 END,
+          (myths.id + $${seedIndex}) % 97,
+          myths.id
+        LIMIT $${limitIndex}
+      `,
+      [...values, seedValue, limitValue]
+    );
+    return result.rows;
+  }
+}
+
+function getRouteMythsSqlite({ keywords = [], limit = 12, seed = 0 }) {
+  const db = getSqliteDb();
+  const { whereClause, params } = buildKeywordWhereSqlite(keywords);
+  const limitValue = clampNumber(limit, 1, 24, 12);
+  const seedValue = Number.isFinite(seed) ? seed : 0;
+
+  try {
+    const sql = `
       SELECT
         DISTINCT myths.id,
         myths.title,
@@ -340,48 +407,38 @@ async function getRouteMythsPostgres({ keywords = [], limit = 12, seed = 0 }) {
       ${whereClause}
       ORDER BY
         CASE WHEN COALESCE(vi.image_url, myths.image_url) IS NOT NULL THEN 0 ELSE 1 END,
-        (myths.id + $${seedIndex}) % 97,
+        (myths.id + :seed) % 97,
         myths.id
-      LIMIT $${limitIndex}
-    `,
-    [...values, seedValue, limitValue]
-  );
+      LIMIT :limit
+    `;
 
-  return result.rows;
-}
-
-function getRouteMythsSqlite({ keywords = [], limit = 12, seed = 0 }) {
-  const db = getSqliteDb();
-  const { whereClause, params } = buildKeywordWhereSqlite(keywords);
-  const limitValue = clampNumber(limit, 1, 24, 12);
-  const seedValue = Number.isFinite(seed) ? seed : 0;
-
-  const sql = `
-    SELECT
-      DISTINCT myths.id,
-      myths.title,
-      myths.slug,
-      myths.excerpt,
-      myths.category_path,
-      COALESCE(vi.image_url, myths.image_url) AS image_url,
-      regions.name AS region,
-      regions.slug AS region_slug,
-      communities.name AS community,
-      communities.slug AS community_slug
-    FROM myths
-    JOIN regions ON regions.id = myths.region_id
-    LEFT JOIN communities ON communities.id = myths.community_id
-    LEFT JOIN vertical_images vi
-      ON vi.entity_type = 'myth' AND vi.entity_id = myths.id
-    ${whereClause}
-    ORDER BY
-      CASE WHEN COALESCE(vi.image_url, myths.image_url) IS NOT NULL THEN 0 ELSE 1 END,
-      (myths.id + :seed) % 97,
-      myths.id
-    LIMIT :limit
-  `;
-
-  return db.prepare(sql).all({ ...params, seed: seedValue, limit: limitValue });
+    return db.prepare(sql).all({ ...params, seed: seedValue, limit: limitValue });
+  } catch (error) {
+    console.error("[routes] vertical_images unavailable, fallback to myths.image_url", error);
+    const sql = `
+      SELECT
+        DISTINCT myths.id,
+        myths.title,
+        myths.slug,
+        myths.excerpt,
+        myths.category_path,
+        myths.image_url,
+        regions.name AS region,
+        regions.slug AS region_slug,
+        communities.name AS community,
+        communities.slug AS community_slug
+      FROM myths
+      JOIN regions ON regions.id = myths.region_id
+      LEFT JOIN communities ON communities.id = myths.community_id
+      ${whereClause}
+      ORDER BY
+        CASE WHEN myths.image_url IS NOT NULL THEN 0 ELSE 1 END,
+        (myths.id + :seed) % 97,
+        myths.id
+      LIMIT :limit
+    `;
+    return db.prepare(sql).all({ ...params, seed: seedValue, limit: limitValue });
+  }
 }
 
 export async function getRouteMyths({ keywords = [], limit = 12, seed = 0 } = {}) {
@@ -389,6 +446,23 @@ export async function getRouteMyths({ keywords = [], limit = 12, seed = 0 } = {}
     return getRouteMythsPostgres({ keywords, limit, seed });
   }
   return getRouteMythsSqlite({ keywords, limit, seed });
+}
+
+export async function getRoutePreviews(seed = 0) {
+  const safeSeed = Number.isFinite(seed) ? seed : 0;
+  const previews = await Promise.all(
+    ROUTES.map(async (route, index) => {
+      const myths = await getRouteMyths({
+        keywords: route.keywords,
+        limit: 3,
+        seed: safeSeed + index * 7,
+      });
+      const preview = myths.find((item) => item.image_url) || myths[0] || null;
+      return { ...route, preview };
+    })
+  );
+
+  return previews;
 }
 
 export function getRouteBySlug(slug) {
