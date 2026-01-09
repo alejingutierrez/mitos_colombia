@@ -50,7 +50,8 @@ export async function GET(request) {
           SELECT COUNT(*) as total FROM vertical_images
           WHERE entity_type = ${entityType}
         `;
-        total = parseInt(countResult[0].total);
+        const countRow = countResult.rows?.[0] || countResult[0];
+        total = parseInt(countRow?.total || 0);
 
         items = await db`
           SELECT * FROM vertical_images
@@ -63,7 +64,8 @@ export async function GET(request) {
         const countResult = await db`
           SELECT COUNT(*) as total FROM vertical_images
         `;
-        total = parseInt(countResult[0].total);
+        const countRow = countResult.rows?.[0] || countResult[0];
+        total = parseInt(countRow?.total || 0);
 
         items = await db`
           SELECT * FROM vertical_images
@@ -77,7 +79,7 @@ export async function GET(request) {
         total,
         page,
         limit,
-        totalPages: Math.ceil(total / limit),
+        totalPages: Math.ceil(total / limit) || 1,
       });
 
     } else {

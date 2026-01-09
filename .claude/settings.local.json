@@ -34,7 +34,18 @@
       "Bash(claude mcp list:*)",
       "WebFetch(domain:github.com)",
       "Bash(claude mcp:*)",
-      "Bash(pip install:*)"
+      "Bash(pip install:*)",
+      "Bash(ssh:*)",
+      "Bash(pkill -f \"git push\")",
+      "Bash(git diff-tree:*)",
+      "Bash(find:*)",
+      "Bash(GIT_TRACE=1 GIT_CURL_VERBOSE=1 git push:*)",
+      "Bash(npm run dev:*)",
+      "Bash(lsof:*)",
+      "Bash(ls:*)",
+      "Bash(git restore:*)",
+      "Bash(node scripts/migrate-vertical-images-pg.mjs:*)",
+      "Bash(git fetch:*)"
     ]
   }
 }

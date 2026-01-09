@@ -1,11 +1,11 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
 import AdminLayout from "../../../components/AdminLayout";
 import { GlassCard } from "../../../components/ui/GlassCard";
 import { Button } from "../../../components/ui/Button";
 import { Badge } from "../../../components/ui/Badge";
-import { useRouter } from "next/navigation";
 
 export default function VerticalImagesPage() {
   const router = useRouter();
@@ -15,8 +15,7 @@ export default function VerticalImagesPage() {
   const [totalPages, setTotalPages] = useState(1);
   const [total, setTotal] = useState(0);
   const [entityTypeFilter, setEntityTypeFilter] = useState("");
-  const [credentials, setCredentials] = useState({ username: "", password: "" });
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [auth, setAuth] = useState(null);
 
   // Edit states
   const [editingId, setEditingId] = useState(null);
@@ -29,9 +28,21 @@ export default function VerticalImagesPage() {
   // Generation stats
   const [pendingStats, setPendingStats] = useState(null);
 
-  const fetchItems = async (username, password, currentPage = 1, filter = "") => {
+  // Check authentication on mount
+  useEffect(() => {
+    const savedAuth = localStorage.getItem("admin_auth");
+    if (!savedAuth) {
+      router.push("/admin");
+      return;
+    }
+    setAuth(savedAuth);
+    fetchItems(savedAuth, 1, entityTypeFilter);
+    fetchPendingStats(savedAuth);
+  }, []);
+
+  const fetchItems = async (authToken, currentPage = 1, filter = "") => {
     try {
-      const auth = btoa(`${username}:${password}`);
+      setLoading(true);
       const params = new URLSearchParams({
         page: currentPage.toString(),
         limit: "20",
@@ -43,13 +54,13 @@ export default function VerticalImagesPage() {
 
       const response = await fetch(`/api/admin/vertical-images/list?${params}`, {
         headers: {
-          Authorization: `Basic ${auth}`,
+          Authorization: `Basic ${authToken}`,
         },
       });
 
       if (response.status === 401) {
-        setIsAuthenticated(false);
         localStorage.removeItem("admin_auth");
+        router.push("/admin");
         return;
       }
 
@@ -59,7 +70,9 @@ export default function VerticalImagesPage() {
         setTotal(data.total || 0);
         setTotalPages(data.totalPages || 1);
         setPage(currentPage);
-        setIsAuthenticated(true);
+      } else {
+        const error = await response.json();
+        console.error("Error fetching items:", error);
       }
     } catch (error) {
       console.error("Error fetching items:", error);
@@ -68,12 +81,11 @@ export default function VerticalImagesPage() {
     }
   };
 
-  const fetchPendingStats = async (username, password) => {
+  const fetchPendingStats = async (authToken) => {
     try {
-      const auth = btoa(`${username}:${password}`);
       const response = await fetch("/api/admin/vertical-images/generate", {
         headers: {
-          Authorization: `Basic ${auth}`,
+          Authorization: `Basic ${authToken}`,
         },
       });
 
@@ -86,49 +98,20 @@ export default function VerticalImagesPage() {
     }
   };
 
-  const handleLogin = (e) => {
-    e.preventDefault();
-    setLoading(true);
-    fetchItems(credentials.username, credentials.password, 1, entityTypeFilter);
-    fetchPendingStats(credentials.username, credentials.password);
-  };
-
   const handleLogout = () => {
-    setIsAuthenticated(false);
-    setCredentials({ username: "", password: "" });
-    setItems([]);
     localStorage.removeItem("admin_auth");
     router.push("/admin");
   };
 
-  useEffect(() => {
-    const savedAuth = localStorage.getItem("admin_auth");
-    if (savedAuth) {
-      try {
-        const decoded = atob(savedAuth);
-        const [username, password] = decoded.split(":");
-        setCredentials({ username, password });
-        fetchItems(username, password, page, entityTypeFilter);
-        fetchPendingStats(username, password);
-      } catch (error) {
-        console.error("Error loading saved session:", error);
-        localStorage.removeItem("admin_auth");
-        setLoading(false);
-      }
-    } else {
-      setLoading(false);
-    }
-  }, []);
-
   const handlePageChange = (newPage) => {
-    setLoading(true);
-    fetchItems(credentials.username, credentials.password, newPage, entityTypeFilter);
+    if (!auth) return;
+    fetchItems(auth, newPage, entityTypeFilter);
   };
 
   const handleFilterChange = (filter) => {
+    if (!auth) return;
     setEntityTypeFilter(filter);
-    setLoading(true);
-    fetchItems(credentials.username, credentials.password, 1, filter);
+    fetchItems(auth, 1, filter);
   };
 
   const startEdit = (item, field) => {
@@ -144,9 +127,9 @@ export default function VerticalImagesPage() {
   };
 
   const saveEdit = async (item) => {
-    try {
-      const auth = btoa(`${credentials.username}:${credentials.password}`);
+    if (!auth) return;
 
+    try {
       const updateData = editingField === 'base'
         ? { id: item.id, basePrompt: editValue }
         : { id: item.id, customPrompt: editValue };
@@ -162,7 +145,6 @@ export default function VerticalImagesPage() {
 
       if (response.ok) {
         const result = await response.json();
-        // Update local state
         setItems(items.map(i => i.id === item.id ? result.data : i));
         cancelEdit();
       } else {
@@ -176,6 +158,8 @@ export default function VerticalImagesPage() {
   };
 
   const regenerateImage = async (item) => {
+    if (!auth) return;
+
     if (!confirm(`¿Estás seguro de que quieres regenerar la imagen para "${item.entity_name}"? La imagen actual será eliminada.`)) {
       return;
     }
@@ -183,8 +167,6 @@ export default function VerticalImagesPage() {
     setRegeneratingId(item.id);
 
     try {
-      const auth = btoa(`${credentials.username}:${credentials.password}`);
-
       const response = await fetch("/api/admin/vertical-images/regenerate", {
         method: "POST",
         headers: {
@@ -196,7 +178,6 @@ export default function VerticalImagesPage() {
 
       if (response.ok) {
         const result = await response.json();
-        // Update local state
         setItems(items.map(i => i.id === item.id ? result.data : i));
         alert("Imagen regenerada exitosamente");
       } else {
@@ -211,63 +192,11 @@ export default function VerticalImagesPage() {
     }
   };
 
-  if (!isAuthenticated) {
+  // Show loading while checking auth
+  if (!auth) {
     return (
-      <div className="min-h-screen flex items-center justify-center p-4">
-        <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
-          <div className="absolute -top-32 left-12 h-72 w-72 rounded-full bg-jungle-500/30 blur-3xl motion-safe:animate-float-slow" />
-          <div className="absolute right-0 top-6 h-80 w-80 rounded-full bg-river-500/25 blur-3xl motion-safe:animate-float-slow" />
-        </div>
-
-        <div className="w-full max-w-md">
-          <GlassCard className="p-8">
-            <div className="text-center mb-8">
-              <div className="inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-jungle-600 text-sm font-semibold uppercase tracking-[0.3em] text-white shadow-lg mb-4">
-                MC
-              </div>
-              <h1 className="font-display text-3xl text-ink-900 mb-2">
-                Imágenes Verticales
-              </h1>
-              <p className="text-sm text-ink-600">Curaduría Editorial</p>
-            </div>
-
-            <form onSubmit={handleLogin} className="space-y-4">
-              <div>
-                <label className="block text-sm font-medium text-ink-700 mb-2">
-                  Usuario
-                </label>
-                <input
-                  type="text"
-                  value={credentials.username}
-                  onChange={(e) =>
-                    setCredentials({ ...credentials, username: e.target.value })
-                  }
-                  className="input-glass"
-                  placeholder="Ingresa tu usuario"
-                  required
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-ink-700 mb-2">
-                  Contraseña
-                </label>
-                <input
-                  type="password"
-                  value={credentials.password}
-                  onChange={(e) =>
-                    setCredentials({ ...credentials, password: e.target.value })
-                  }
-                  className="input-glass"
-                  placeholder="Ingresa tu contraseña"
-                  required
-                />
-              </div>
-              <Button type="submit" className="w-full">
-                Iniciar Sesión
-              </Button>
-            </form>
-          </GlassCard>
-        </div>
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-jungle-600"></div>
       </div>
     );
   }
@@ -396,6 +325,7 @@ export default function VerticalImagesPage() {
         ) : items.length === 0 ? (
           <GlassCard className="p-12 text-center">
             <p className="text-ink-600">No hay imágenes verticales creadas aún.</p>
+            <p className="text-ink-500 text-sm mt-2">Las imágenes se generan automáticamente desde la página principal de generación de imágenes.</p>
           </GlassCard>
         ) : (
           <>
