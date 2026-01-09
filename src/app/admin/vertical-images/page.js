@@ -19,16 +19,18 @@ export default function VerticalImagesPage() {
 
   // Edit states
   const [editingId, setEditingId] = useState(null);
-  const [editingField, setEditingField] = useState(null); // 'base' or 'custom'
+  const [editingField, setEditingField] = useState(null);
   const [editValue, setEditValue] = useState("");
 
-  // Regenerating state
-  const [regeneratingId, setRegeneratingId] = useState(null);
+  // Generation states
+  const [generatingId, setGeneratingId] = useState(null);
+  const [batchGenerating, setBatchGenerating] = useState(false);
+  const [batchCount, setBatchCount] = useState(5);
 
-  // Generation stats
-  const [pendingStats, setPendingStats] = useState(null);
+  // Stats
+  const [stats, setStats] = useState(null);
 
-  // Check authentication on mount
+  // Check authentication
   useEffect(() => {
     const savedAuth = localStorage.getItem("admin_auth");
     if (!savedAuth) {
@@ -37,7 +39,7 @@ export default function VerticalImagesPage() {
     }
     setAuth(savedAuth);
     fetchItems(savedAuth, 1, entityTypeFilter);
-    fetchPendingStats(savedAuth);
+    fetchStats(savedAuth);
   }, []);
 
   const fetchItems = async (authToken, currentPage = 1, filter = "") => {
@@ -52,7 +54,7 @@ export default function VerticalImagesPage() {
         params.append("entityType", filter);
       }
 
-      const response = await fetch(`/api/admin/vertical-images/list?${params}`, {
+      const response = await fetch(`/api/admin/vertical-images/all-entities?${params}`, {
         headers: {
           Authorization: `Basic ${authToken}`,
         },
@@ -70,9 +72,6 @@ export default function VerticalImagesPage() {
         setTotal(data.total || 0);
         setTotalPages(data.totalPages || 1);
         setPage(currentPage);
-      } else {
-        const error = await response.json();
-        console.error("Error fetching items:", error);
       }
     } catch (error) {
       console.error("Error fetching items:", error);
@@ -81,7 +80,7 @@ export default function VerticalImagesPage() {
     }
   };
 
-  const fetchPendingStats = async (authToken) => {
+  const fetchStats = async (authToken) => {
     try {
       const response = await fetch("/api/admin/vertical-images/generate", {
         headers: {
@@ -91,10 +90,10 @@ export default function VerticalImagesPage() {
 
       if (response.ok) {
         const data = await response.json();
-        setPendingStats(data);
+        setStats(data);
       }
     } catch (error) {
-      console.error("Error fetching pending stats:", error);
+      console.error("Error fetching stats:", error);
     }
   };
 
@@ -115,9 +114,9 @@ export default function VerticalImagesPage() {
   };
 
   const startEdit = (item, field) => {
-    setEditingId(item.id);
+    setEditingId(`${item.entity_type}-${item.id}`);
     setEditingField(field);
-    setEditValue(field === 'base' ? item.base_prompt : (item.custom_prompt || ""));
+    setEditValue(field === 'base' ? item.base_prompt : (item.custom_prompt || item.image_prompt || ""));
   };
 
   const cancelEdit = () => {
@@ -127,12 +126,12 @@ export default function VerticalImagesPage() {
   };
 
   const saveEdit = async (item) => {
-    if (!auth) return;
+    if (!auth || !item.vertical_image_id) return;
 
     try {
       const updateData = editingField === 'base'
-        ? { id: item.id, basePrompt: editValue }
-        : { id: item.id, customPrompt: editValue };
+        ? { id: item.vertical_image_id, basePrompt: editValue }
+        : { id: item.vertical_image_id, customPrompt: editValue };
 
       const response = await fetch("/api/admin/vertical-images/update-prompt", {
         method: "POST",
@@ -144,12 +143,12 @@ export default function VerticalImagesPage() {
       });
 
       if (response.ok) {
-        const result = await response.json();
-        setItems(items.map(i => i.id === item.id ? result.data : i));
+        alert("Prompt actualizado exitosamente");
+        fetchItems(auth, page, entityTypeFilter);
         cancelEdit();
       } else {
         const error = await response.json();
-        alert(`Error: ${error.error || 'No se pudo actualizar el prompt'}`);
+        alert(`Error: ${error.error || 'No se pudo actualizar'}`);
       }
     } catch (error) {
       console.error("Error saving prompt:", error);
@@ -157,14 +156,53 @@ export default function VerticalImagesPage() {
     }
   };
 
-  const regenerateImage = async (item) => {
+  const generateSingle = async (item) => {
     if (!auth) return;
 
-    if (!confirm(`¿Estás seguro de que quieres regenerar la imagen para "${item.entity_name}"? La imagen actual será eliminada.`)) {
+    const itemKey = `${item.entity_type}-${item.id}`;
+    setGeneratingId(itemKey);
+
+    try {
+      const response = await fetch("/api/admin/vertical-images/generate-single", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Basic ${auth}`,
+        },
+        body: JSON.stringify({
+          entityType: item.entity_type,
+          entityId: item.id,
+          entityName: item.name,
+          entitySlug: item.slug,
+          customPrompt: item.image_prompt || ""
+        }),
+      });
+
+      if (response.ok) {
+        alert("Imagen generada exitosamente");
+        fetchItems(auth, page, entityTypeFilter);
+        fetchStats(auth);
+      } else {
+        const error = await response.json();
+        alert(`Error: ${error.error || 'No se pudo generar'}`);
+      }
+    } catch (error) {
+      console.error("Error generating image:", error);
+      alert("Error al generar la imagen");
+    } finally {
+      setGeneratingId(null);
+    }
+  };
+
+  const regenerateImage = async (item) => {
+    if (!auth || !item.vertical_image_id) return;
+
+    if (!confirm(`¿Regenerar imagen para "${item.name}"? La actual será eliminada.`)) {
       return;
     }
 
-    setRegeneratingId(item.id);
+    const itemKey = `${item.entity_type}-${item.id}`;
+    setGeneratingId(itemKey);
 
     try {
       const response = await fetch("/api/admin/vertical-images/regenerate", {
@@ -173,26 +211,60 @@ export default function VerticalImagesPage() {
           "Content-Type": "application/json",
           Authorization: `Basic ${auth}`,
         },
-        body: JSON.stringify({ id: item.id }),
+        body: JSON.stringify({ id: item.vertical_image_id }),
       });
 
       if (response.ok) {
-        const result = await response.json();
-        setItems(items.map(i => i.id === item.id ? result.data : i));
         alert("Imagen regenerada exitosamente");
+        fetchItems(auth, page, entityTypeFilter);
       } else {
         const error = await response.json();
-        alert(`Error: ${error.error || 'No se pudo regenerar la imagen'}`);
+        alert(`Error: ${error.error}`);
       }
     } catch (error) {
-      console.error("Error regenerating image:", error);
-      alert("Error al regenerar la imagen");
+      console.error("Error regenerating:", error);
+      alert("Error al regenerar");
     } finally {
-      setRegeneratingId(null);
+      setGeneratingId(null);
     }
   };
 
-  // Show loading while checking auth
+  const generateBatch = async () => {
+    if (!auth) return;
+
+    if (!confirm(`¿Generar ${batchCount} imágenes verticales? Esto puede tomar varios minutos.`)) {
+      return;
+    }
+
+    setBatchGenerating(true);
+
+    try {
+      const response = await fetch("/api/admin/vertical-images/generate", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Basic ${auth}`,
+        },
+        body: JSON.stringify({ count: batchCount }),
+      });
+
+      if (response.ok) {
+        const data = await response.json();
+        alert(`✓ Generadas ${data.generated?.filter(g => g.success).length || 0} de ${batchCount} imágenes`);
+        fetchItems(auth, page, entityTypeFilter);
+        fetchStats(auth);
+      } else {
+        const error = await response.json();
+        alert(`Error: ${error.error}`);
+      }
+    } catch (error) {
+      console.error("Error batch generation:", error);
+      alert("Error en generación masiva");
+    } finally {
+      setBatchGenerating(false);
+    }
+  };
+
   if (!auth) {
     return (
       <div className="min-h-screen flex items-center justify-center">
@@ -211,14 +283,14 @@ export default function VerticalImagesPage() {
         </div>
 
         {/* Stats */}
-        {pendingStats && (
+        {stats && (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
             <GlassCard className="p-6">
               <p className="text-xs uppercase tracking-[0.3em] text-river-600 mb-2">
-                Total Pendiente
+                Pendientes
               </p>
               <p className="font-display text-4xl text-ink-900">
-                {pendingStats.total || 0}
+                {stats.total || 0}
               </p>
             </GlassCard>
 
@@ -227,7 +299,7 @@ export default function VerticalImagesPage() {
                 Mitos
               </p>
               <p className="font-display text-4xl text-ink-900">
-                {pendingStats.breakdown?.myths || 0}
+                {stats.breakdown?.myths || 0}
               </p>
             </GlassCard>
 
@@ -236,7 +308,7 @@ export default function VerticalImagesPage() {
                 Comunidades
               </p>
               <p className="font-display text-4xl text-ink-900">
-                {pendingStats.breakdown?.communities || 0}
+                {stats.breakdown?.communities || 0}
               </p>
             </GlassCard>
 
@@ -245,7 +317,7 @@ export default function VerticalImagesPage() {
                 Categorías
               </p>
               <p className="font-display text-4xl text-ink-900">
-                {pendingStats.breakdown?.categories || 0}
+                {stats.breakdown?.categories || 0}
               </p>
             </GlassCard>
 
@@ -254,11 +326,43 @@ export default function VerticalImagesPage() {
                 Regiones
               </p>
               <p className="font-display text-4xl text-ink-900">
-                {pendingStats.breakdown?.regions || 0}
+                {stats.breakdown?.regions || 0}
               </p>
             </GlassCard>
           </div>
         )}
+
+        {/* Batch Generation */}
+        <GlassCard className="p-6">
+          <h2 className="font-display text-xl text-ink-900 mb-4">Generación Masiva</h2>
+          <div className="flex items-center gap-4">
+            <select
+              value={batchCount}
+              onChange={(e) => setBatchCount(parseInt(e.target.value))}
+              className="input-glass w-32"
+              disabled={batchGenerating}
+            >
+              <option value={5}>5 imágenes</option>
+              <option value={10}>10 imágenes</option>
+              <option value={20}>20 imágenes</option>
+              <option value={50}>50 imágenes</option>
+            </select>
+            <Button
+              onClick={generateBatch}
+              disabled={batchGenerating || (stats?.total || 0) === 0}
+              className="flex-1"
+            >
+              {batchGenerating ? (
+                <>
+                  <div className="inline-block animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2"></div>
+                  Generando...
+                </>
+              ) : (
+                `Generar ${batchCount} Imágenes`
+              )}
+            </Button>
+          </div>
+        </GlassCard>
 
         {/* Filters */}
         <GlassCard className="p-6">
@@ -320,169 +424,197 @@ export default function VerticalImagesPage() {
         {loading ? (
           <div className="text-center py-12">
             <div className="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-jungle-600"></div>
-            <p className="mt-4 text-ink-600">Cargando imágenes...</p>
+            <p className="mt-4 text-ink-600">Cargando entidades...</p>
           </div>
         ) : items.length === 0 ? (
           <GlassCard className="p-12 text-center">
-            <p className="text-ink-600">No hay imágenes verticales creadas aún.</p>
-            <p className="text-ink-500 text-sm mt-2">Las imágenes se generan automáticamente desde la página principal de generación de imágenes.</p>
+            <p className="text-ink-600">No hay entidades para mostrar.</p>
+            <p className="text-ink-500 text-sm mt-2">Asegúrate de que las entidades tengan prompts configurados.</p>
           </GlassCard>
         ) : (
           <>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-              {items.map((item) => (
-                <GlassCard key={item.id} className="p-6">
-                  <div className="flex flex-col h-full">
-                    {/* Header */}
-                    <div className="flex items-start justify-between mb-4">
-                      <div className="flex-1">
-                        <div className="flex items-center gap-2 mb-2">
-                          <Badge
-                            className={
-                              item.entity_type === "myth"
-                                ? "border-jungle-500/30 bg-jungle-500/10 text-jungle-700"
-                                : item.entity_type === "community"
-                                ? "border-river-500/30 bg-river-500/10 text-river-700"
-                                : item.entity_type === "category"
-                                ? "border-ember-400/30 bg-ember-400/10 text-ember-600"
-                                : "border-ink-500/30 bg-ink-500/10 text-ink-700"
-                            }
-                          >
-                            {item.entity_type}
-                          </Badge>
+              {items.map((item) => {
+                const itemKey = `${item.entity_type}-${item.id}`;
+                const isGenerating = generatingId === itemKey;
+                const hasVerticalImage = !!item.vertical_image_url;
+
+                return (
+                  <GlassCard key={itemKey} className="p-6">
+                    <div className="flex flex-col h-full">
+                      {/* Header */}
+                      <div className="flex items-start justify-between mb-4">
+                        <div className="flex-1">
+                          <div className="flex items-center gap-2 mb-2">
+                            <Badge
+                              className={
+                                item.entity_type === "myth"
+                                  ? "border-jungle-500/30 bg-jungle-500/10 text-jungle-700"
+                                  : item.entity_type === "community"
+                                  ? "border-river-500/30 bg-river-500/10 text-river-700"
+                                  : item.entity_type === "category"
+                                  ? "border-ember-400/30 bg-ember-400/10 text-ember-600"
+                                  : "border-ink-500/30 bg-ink-500/10 text-ink-700"
+                              }
+                            >
+                              {item.entity_type}
+                            </Badge>
+                            {hasVerticalImage && (
+                              <Badge className="border-jungle-500/30 bg-jungle-500/10 text-jungle-700">
+                                ✓ Con imagen
+                              </Badge>
+                            )}
+                            {!hasVerticalImage && (
+                              <Badge className="border-ember-400/30 bg-ember-400/10 text-ember-600">
+                                Sin imagen
+                              </Badge>
+                            )}
+                          </div>
+                          <h3 className="text-lg font-semibold text-ink-900">
+                            {item.name}
+                          </h3>
+                          <p className="text-sm text-ink-600 mt-1">{item.slug}</p>
                         </div>
-                        <h3 className="text-lg font-semibold text-ink-900">
-                          {item.entity_name}
-                        </h3>
-                        <p className="text-sm text-ink-600 mt-1">{item.entity_slug}</p>
                       </div>
-                    </div>
 
-                    {/* Image */}
-                    {item.image_url && (
-                      <div className="mb-4 aspect-[9/16] relative bg-ink-100 rounded-xl overflow-hidden">
-                        <img
-                          src={item.image_url}
-                          alt={item.entity_name}
-                          className="w-full h-full object-cover"
-                        />
-                      </div>
-                    )}
-
-                    {/* Base Prompt */}
-                    <div className="mb-4">
-                      <div className="flex items-center justify-between mb-2">
-                        <label className="text-xs font-medium text-ink-700 uppercase tracking-wider">
-                          Prompt Base
-                        </label>
-                        {editingId === item.id && editingField === 'base' ? (
-                          <div className="flex gap-2">
-                            <button
-                              onClick={() => saveEdit(item)}
-                              className="text-xs text-jungle-600 hover:text-jungle-700 font-medium"
-                            >
-                              Guardar
-                            </button>
-                            <button
-                              onClick={cancelEdit}
-                              className="text-xs text-ember-600 hover:text-ember-700 font-medium"
-                            >
-                              Cancelar
-                            </button>
-                          </div>
-                        ) : (
-                          <button
-                            onClick={() => startEdit(item, 'base')}
-                            className="text-xs text-river-600 hover:text-river-700 font-medium"
-                          >
-                            Editar
-                          </button>
-                        )}
-                      </div>
-                      {editingId === item.id && editingField === 'base' ? (
-                        <textarea
-                          value={editValue}
-                          onChange={(e) => setEditValue(e.target.value)}
-                          className="input-glass min-h-[100px] text-sm"
-                          rows={4}
-                        />
-                      ) : (
-                        <p className="text-sm text-ink-600 bg-ink-50 rounded-lg p-3 line-clamp-3">
-                          {item.base_prompt}
-                        </p>
+                      {/* Image Preview */}
+                      {hasVerticalImage && (
+                        <div className="mb-4 aspect-[9/16] relative bg-ink-100 rounded-xl overflow-hidden max-h-80">
+                          <img
+                            src={item.vertical_image_url}
+                            alt={item.name}
+                            className="w-full h-full object-cover"
+                          />
+                        </div>
                       )}
-                    </div>
 
-                    {/* Custom Prompt */}
-                    <div className="mb-4">
-                      <div className="flex items-center justify-between mb-2">
-                        <label className="text-xs font-medium text-ink-700 uppercase tracking-wider">
-                          Prompt Individual
-                        </label>
-                        {editingId === item.id && editingField === 'custom' ? (
-                          <div className="flex gap-2">
-                            <button
-                              onClick={() => saveEdit(item)}
-                              className="text-xs text-jungle-600 hover:text-jungle-700 font-medium"
-                            >
-                              Guardar
-                            </button>
-                            <button
-                              onClick={cancelEdit}
-                              className="text-xs text-ember-600 hover:text-ember-700 font-medium"
-                            >
-                              Cancelar
-                            </button>
+                      {/* Prompts - Solo si ya tiene imagen vertical */}
+                      {hasVerticalImage && (
+                        <>
+                          {/* Base Prompt */}
+                          {item.base_prompt && (
+                            <div className="mb-3">
+                              <div className="flex items-center justify-between mb-1">
+                                <label className="text-xs font-medium text-ink-700 uppercase tracking-wider">
+                                  Prompt Base
+                                </label>
+                                {editingId === itemKey && editingField === 'base' ? (
+                                  <div className="flex gap-2">
+                                    <button
+                                      onClick={() => saveEdit(item)}
+                                      className="text-xs text-jungle-600 hover:text-jungle-700 font-medium"
+                                    >
+                                      Guardar
+                                    </button>
+                                    <button
+                                      onClick={cancelEdit}
+                                      className="text-xs text-ember-600 hover:text-ember-700 font-medium"
+                                    >
+                                      Cancelar
+                                    </button>
+                                  </div>
+                                ) : (
+                                  <button
+                                    onClick={() => startEdit(item, 'base')}
+                                    className="text-xs text-river-600 hover:text-river-700 font-medium"
+                                  >
+                                    Editar
+                                  </button>
+                                )}
+                              </div>
+                              {editingId === itemKey && editingField === 'base' ? (
+                                <textarea
+                                  value={editValue}
+                                  onChange={(e) => setEditValue(e.target.value)}
+                                  className="input-glass min-h-[80px] text-sm"
+                                  rows={3}
+                                />
+                              ) : (
+                                <p className="text-sm text-ink-600 bg-ink-50 rounded-lg p-2 line-clamp-2">
+                                  {item.base_prompt}
+                                </p>
+                              )}
+                            </div>
+                          )}
+
+                          {/* Custom Prompt */}
+                          <div className="mb-4">
+                            <div className="flex items-center justify-between mb-1">
+                              <label className="text-xs font-medium text-ink-700 uppercase tracking-wider">
+                                Prompt Individual
+                              </label>
+                              {editingId === itemKey && editingField === 'custom' ? (
+                                <div className="flex gap-2">
+                                  <button
+                                    onClick={() => saveEdit(item)}
+                                    className="text-xs text-jungle-600 hover:text-jungle-700 font-medium"
+                                  >
+                                    Guardar
+                                  </button>
+                                  <button
+                                    onClick={cancelEdit}
+                                    className="text-xs text-ember-600 hover:text-ember-700 font-medium"
+                                  >
+                                    Cancelar
+                                  </button>
+                                </div>
+                              ) : (
+                                <button
+                                  onClick={() => startEdit(item, 'custom')}
+                                  className="text-xs text-river-600 hover:text-river-700 font-medium"
+                                >
+                                  Editar
+                                </button>
+                              )}
+                            </div>
+                            {editingId === itemKey && editingField === 'custom' ? (
+                              <textarea
+                                value={editValue}
+                                onChange={(e) => setEditValue(e.target.value)}
+                                className="input-glass min-h-[80px] text-sm"
+                                rows={3}
+                                placeholder="Detalles específicos..."
+                              />
+                            ) : (
+                              <p className="text-sm text-ink-600 bg-ink-50 rounded-lg p-2 line-clamp-2">
+                                {item.custom_prompt || item.image_prompt || "(Sin prompt personalizado)"}
+                              </p>
+                            )}
                           </div>
-                        ) : (
-                          <button
-                            onClick={() => startEdit(item, 'custom')}
-                            className="text-xs text-river-600 hover:text-river-700 font-medium"
+                        </>
+                      )}
+
+                      {/* Actions */}
+                      <div className="mt-auto pt-4 border-t border-ink-200">
+                        {hasVerticalImage ? (
+                          <Button
+                            onClick={() => regenerateImage(item)}
+                            disabled={isGenerating}
+                            className="w-full bg-ember-500 hover:bg-ember-600"
                           >
-                            Editar
-                          </button>
+                            {isGenerating ? "Regenerando..." : "Regenerar Imagen"}
+                          </Button>
+                        ) : (
+                          <Button
+                            onClick={() => generateSingle(item)}
+                            disabled={isGenerating}
+                            className="w-full bg-jungle-600 hover:bg-jungle-700"
+                          >
+                            {isGenerating ? (
+                              <>
+                                <div className="inline-block animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2"></div>
+                                Generando...
+                              </>
+                            ) : (
+                              "Generar Imagen"
+                            )}
+                          </Button>
                         )}
                       </div>
-                      {editingId === item.id && editingField === 'custom' ? (
-                        <textarea
-                          value={editValue}
-                          onChange={(e) => setEditValue(e.target.value)}
-                          className="input-glass min-h-[100px] text-sm"
-                          rows={4}
-                          placeholder="Detalles específicos para esta entidad..."
-                        />
-                      ) : (
-                        <p className="text-sm text-ink-600 bg-ink-50 rounded-lg p-3 line-clamp-3">
-                          {item.custom_prompt || "(Sin prompt personalizado)"}
-                        </p>
-                      )}
                     </div>
-
-                    {/* Actions */}
-                    <div className="mt-auto pt-4 border-t border-ink-200">
-                      <Button
-                        onClick={() => regenerateImage(item)}
-                        disabled={regeneratingId === item.id}
-                        className="w-full bg-ember-500 hover:bg-ember-600"
-                      >
-                        {regeneratingId === item.id ? (
-                          <>
-                            <div className="inline-block animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2"></div>
-                            Regenerando...
-                          </>
-                        ) : (
-                          <>
-                            <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
-                            </svg>
-                            Regenerar Imagen
-                          </>
-                        )}
-                      </Button>
-                    </div>
-                  </div>
-                </GlassCard>
-              ))}
+                  </GlassCard>
+                );
+              })}
             </div>
 
             {/* Pagination */}
