@@ -182,36 +182,38 @@ export default async function Home() {
         <div className="mt-8 grid gap-6 lg:grid-cols-3">
           {routePreviews.map((route) => (
             <a
-              key={route.title}
+              key={route.slug}
               href={`/rutas/${route.slug}`}
               className="group block"
             >
-              <GlassCard className="relative h-full overflow-hidden p-0 transition hover:-translate-y-2 hover:shadow-2xl">
-                {route.preview?.image_url ? (
-                  <img
-                    src={route.preview.image_url}
-                    alt={route.title}
-                    className="h-full w-full object-cover transition duration-700 group-hover:scale-110"
-                  />
-                ) : (
-                  <div className="h-full w-full bg-gradient-to-br from-jungle-600 via-river-600 to-ember-500" />
-                )}
-                <div className="absolute inset-0 bg-gradient-to-t from-ink-900/80 via-ink-900/35 to-transparent" />
-                <div className="relative flex h-full flex-col justify-between p-8">
-                  <div>
-                    <p className="text-xs font-medium uppercase tracking-[0.3em] text-white/70">
-                      {route.tone}
-                    </p>
-                    <h3 className="mt-4 font-display text-2xl text-white">
-                      {route.title}
-                    </h3>
-                    <p className="mt-3 text-sm leading-relaxed text-white/80">
-                      {route.detail}
-                    </p>
-                  </div>
-                  <div className="mt-6 flex items-center gap-2 text-xs font-medium uppercase tracking-[0.3em] text-white">
-                    <span>Ver ruta</span>
-                    <span className="transition group-hover:translate-x-1">→</span>
+              <GlassCard className="relative overflow-hidden p-0 transition hover:-translate-y-2 hover:shadow-2xl">
+                <div className="relative aspect-square">
+                  {route.preview?.image_url ? (
+                    <img
+                      src={route.preview.image_url}
+                      alt={route.title}
+                      className="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-110"
+                    />
+                  ) : (
+                    <div className="absolute inset-0 bg-gradient-to-br from-jungle-600 via-river-600 to-ember-500" />
+                  )}
+                  <div className="absolute inset-0 bg-gradient-to-t from-ink-900/90 via-ink-900/45 to-transparent" />
+                  <div className="absolute inset-0 z-10 flex flex-col justify-between p-6 text-white drop-shadow-sm">
+                    <div>
+                      <p className="text-xs font-medium uppercase tracking-[0.3em] text-white/75">
+                        {route.tone}
+                      </p>
+                      <h3 className="mt-4 font-display text-2xl">
+                        {route.title}
+                      </h3>
+                      <p className="mt-3 text-sm leading-relaxed text-white/85">
+                        {route.detail}
+                      </p>
+                    </div>
+                    <div className="mt-6 flex items-center gap-2 text-xs font-medium uppercase tracking-[0.3em] text-white">
+                      <span>Ver ruta</span>
+                      <span className="transition group-hover:translate-x-1">→</span>
+                    </div>
                   </div>
                 </div>
               </GlassCard>
