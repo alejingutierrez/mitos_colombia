@@ -4,6 +4,7 @@ import { Badge } from "../../../components/ui/Badge";
 import { ButtonLink } from "../../../components/ui/Button";
 import { GlassCard } from "../../../components/ui/GlassCard";
 import { ImageSlot } from "../../../components/ui/ImageSlot";
+import { Pagination } from "../../../components/ui/Pagination";
 import { SectionHeader } from "../../../components/ui/SectionHeader";
 import { getTaxonomy, listMyths } from "../../../lib/myths";
 
@@ -263,13 +264,9 @@ export default async function CommunityDetailPage({ params, searchParams }) {
     )
     .slice(0, 40);
 
-  const hasPrev = offset > 0;
-  const hasNext = offset + result.limit < result.total;
-
   const paginationBase = {
     q,
     tag,
-    limit: result.limit,
   };
 
   return (
@@ -436,26 +433,16 @@ export default async function CommunityDetailPage({ params, searchParams }) {
         </div>
 
         {/* Paginación */}
-        <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
-          {hasPrev ? (
-            <ButtonLink
-              href={`/comunidades/${params.slug}?${buildQuery(paginationBase, {
-                offset: Math.max(offset - result.limit, 0),
-              })}`}
-              variant="outline"
-            >
-              Anterior
-            </ButtonLink>
-          ) : null}
-          {hasNext ? (
-            <ButtonLink
-              href={`/comunidades/${params.slug}?${buildQuery(paginationBase, {
-                offset: offset + result.limit,
-              })}`}
-            >
-              Siguiente
-            </ButtonLink>
-          ) : null}
+        <div className="mt-10">
+          <Pagination
+            total={result.total}
+            limit={result.limit}
+            offset={offset}
+            buildUrl={({ offset: newOffset, limit: newLimit }) =>
+              `/comunidades/${params.slug}?${buildQuery(paginationBase, { offset: newOffset, limit: newLimit })}`
+            }
+            limitOptions={[12, 24, 48]}
+          />
         </div>
 
         {/* Botón volver */}

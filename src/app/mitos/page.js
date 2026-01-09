@@ -2,6 +2,7 @@ import Header from "../../components/Header";
 import { Badge } from "../../components/ui/Badge";
 import { ButtonLink } from "../../components/ui/Button";
 import { GlassCard } from "../../components/ui/GlassCard";
+import { Pagination } from "../../components/ui/Pagination";
 import { SectionHeader } from "../../components/ui/SectionHeader";
 import { filterAllowedCommunities } from "../../lib/communityFilters";
 import { getTaxonomy, listMyths } from "../../lib/myths";
@@ -44,15 +45,11 @@ export default async function MitosPage({ searchParams }) {
   const tagOptions = taxonomy.tags.slice(0, 40);
   const communityOptions = filterAllowedCommunities(taxonomy.communities);
 
-  const hasPrev = offset > 0;
-  const hasNext = offset + result.limit < result.total;
-
   const paginationBase = {
     region,
     community,
     tag,
     q,
-    limit: result.limit,
   };
 
   return (
@@ -231,26 +228,16 @@ export default async function MitosPage({ searchParams }) {
           })}
         </div>
 
-        <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
-          {hasPrev ? (
-            <ButtonLink
-              href={`/mitos?${buildQuery(paginationBase, {
-                offset: Math.max(offset - result.limit, 0),
-              })}`}
-              variant="outline"
-            >
-              Anterior
-            </ButtonLink>
-          ) : null}
-          {hasNext ? (
-            <ButtonLink
-              href={`/mitos?${buildQuery(paginationBase, {
-                offset: offset + result.limit,
-              })}`}
-            >
-              Siguiente
-            </ButtonLink>
-          ) : null}
+        <div className="mt-10">
+          <Pagination
+            total={result.total}
+            limit={result.limit}
+            offset={offset}
+            buildUrl={({ offset: newOffset, limit: newLimit }) =>
+              `/mitos?${buildQuery(paginationBase, { offset: newOffset, limit: newLimit })}`
+            }
+            limitOptions={[12, 24, 48]}
+          />
         </div>
       </section>
     </main>
