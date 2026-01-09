@@ -4,6 +4,7 @@ import { ButtonLink } from "../components/ui/Button";
 import { GlassCard } from "../components/ui/GlassCard";
 import { SectionHeader } from "../components/ui/SectionHeader";
 import { MythCard } from "../components/MythCard";
+import SmartSearch from "../components/SmartSearch";
 import {
   getFeaturedMythsWithImages,
   getDiverseMyths,
@@ -124,16 +125,7 @@ export default async function Home() {
               </p>
             </div>
 
-            <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
-              <input
-                className="input-glass flex-1"
-                placeholder="Buscar mito, region o tema"
-                type="text"
-              />
-              <ButtonLink href="/mitos" className="whitespace-nowrap">
-                Explorar coleccion
-              </ButtonLink>
-            </div>
+            <SmartSearch />
 
             <div className="flex flex-wrap gap-2">
               {quickTags.map((tag) => (

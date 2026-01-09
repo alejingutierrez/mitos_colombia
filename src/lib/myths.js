@@ -41,7 +41,7 @@ function buildFiltersSqlite({ region, community, tag, q }) {
   const queryValue = normalizeInput(q);
   if (queryValue) {
     where.push(
-      "(myths.title LIKE :q OR myths.excerpt LIKE :q OR myths.content LIKE :q)"
+      `(\n        myths.title LIKE :q OR\n        myths.excerpt LIKE :q OR\n        myths.content LIKE :q OR\n        myths.tags_raw LIKE :q OR\n        myths.focus_keywords_raw LIKE :q OR\n        regions.name LIKE :q OR\n        regions.slug LIKE :q OR\n        communities.name LIKE :q OR\n        communities.slug LIKE :q\n      )`
     );
     params.q = `%${queryValue}%`;
   }
@@ -79,7 +79,7 @@ function buildFiltersPostgres({ region, community, tag, q }) {
     values.push(`%${queryValue}%`);
     const idx = values.length;
     where.push(
-      `(myths.title ILIKE $${idx} OR myths.excerpt ILIKE $${idx} OR myths.content ILIKE $${idx})`
+      `(\n        myths.title ILIKE $${idx} OR\n        myths.excerpt ILIKE $${idx} OR\n        myths.content ILIKE $${idx} OR\n        myths.tags_raw ILIKE $${idx} OR\n        myths.focus_keywords_raw ILIKE $${idx} OR\n        regions.name ILIKE $${idx} OR\n        regions.slug ILIKE $${idx} OR\n        communities.name ILIKE $${idx} OR\n        communities.slug ILIKE $${idx}\n      )`
     );
   }
 
