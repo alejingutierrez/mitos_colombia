@@ -624,35 +624,30 @@ export default function VerticalImagesPage() {
             </div>
 
             {/* Pagination */}
-            {total > 0 && (
-              <div className="mt-8">
-                {totalPages > 1 && (
-                  <div className="flex justify-center items-center gap-4 mb-3">
-                    <Button
-                      onClick={() => handlePageChange(page - 1)}
-                      disabled={page === 1}
-                      className="bg-ink-700"
-                    >
-                      Anterior
-                    </Button>
-                    <span className="text-ink-700 font-medium">
-                      Página {page} de {totalPages}
-                    </span>
-                    <Button
-                      onClick={() => handlePageChange(page + 1)}
-                      disabled={page === totalPages}
-                      className="bg-ink-700"
-                    >
-                      Siguiente
-                    </Button>
-                  </div>
-                )}
-                <p className="text-center text-ink-600 text-sm">
-                  Mostrando {items.length} de {total} entidades totales
-                  {totalPages > 1 && ` • ${totalPages} páginas`}
-                </p>
+            <div className="mt-8">
+              <div className="flex justify-center items-center gap-4 mb-3">
+                <Button
+                  onClick={() => handlePageChange(page - 1)}
+                  disabled={page === 1}
+                  className="bg-ink-700"
+                >
+                  Anterior
+                </Button>
+                <span className="text-ink-700 font-medium">
+                  Página {page} {totalPages > 1 && `de ${totalPages}`}
+                </span>
+                <Button
+                  onClick={() => handlePageChange(page + 1)}
+                  disabled={items.length < 20}
+                  className="bg-ink-700"
+                >
+                  Siguiente
+                </Button>
               </div>
-            )}
+              <p className="text-center text-ink-600 text-sm">
+                Mostrando {items.length} entidades {total > 0 && `de ${total} totales`}
+              </p>
+            </div>
           </>
         )}
       </div>
