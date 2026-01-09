@@ -186,8 +186,8 @@ export default async function Home() {
               href={`/rutas/${route.slug}`}
               className="group block"
             >
-              <GlassCard className="relative overflow-hidden p-0 transition hover:-translate-y-2 hover:shadow-2xl">
-                <div className="relative aspect-square">
+              <GlassCard className="relative overflow-hidden p-0 transition hover:-translate-y-2 hover:shadow-2xl bg-transparent">
+                <div className="relative w-full" style={{ aspectRatio: "1 / 1" }}>
                   {route.preview?.image_url ? (
                     <img
                       src={route.preview.image_url}
@@ -197,20 +197,20 @@ export default async function Home() {
                   ) : (
                     <div className="absolute inset-0 bg-gradient-to-br from-jungle-600 via-river-600 to-ember-500" />
                   )}
-                  <div className="absolute inset-0 bg-gradient-to-t from-ink-900/90 via-ink-900/45 to-transparent" />
-                  <div className="absolute inset-0 z-10 flex flex-col justify-between p-6 text-white drop-shadow-sm">
-                    <div>
-                      <p className="text-xs font-medium uppercase tracking-[0.3em] text-white/75">
+                  <div className="absolute inset-0 bg-gradient-to-t from-ink-900/90 via-ink-900/55 to-transparent" />
+                  <div className="absolute inset-0 z-10 flex flex-col justify-between p-5 text-white">
+                    <div className="rounded-2xl bg-ink-900/55 p-4 backdrop-blur-sm">
+                      <p className="text-xs font-medium uppercase tracking-[0.3em] text-white/80">
                         {route.tone}
                       </p>
-                      <h3 className="mt-4 font-display text-2xl">
+                      <h3 className="mt-3 font-display text-2xl">
                         {route.title}
                       </h3>
-                      <p className="mt-3 text-sm leading-relaxed text-white/85">
+                      <p className="mt-3 text-sm leading-relaxed text-white/85 line-clamp-3">
                         {route.detail}
                       </p>
                     </div>
-                    <div className="mt-6 flex items-center gap-2 text-xs font-medium uppercase tracking-[0.3em] text-white">
+                    <div className="mt-4 inline-flex w-fit items-center gap-2 rounded-full bg-white/15 px-3 py-2 text-xs font-medium uppercase tracking-[0.3em] text-white backdrop-blur">
                       <span>Ver ruta</span>
                       <span className="transition group-hover:translate-x-1">→</span>
                     </div>
