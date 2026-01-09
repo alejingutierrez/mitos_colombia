@@ -1,191 +1,143 @@
-import { sql } from '@vercel/postgres';
+#!/usr/bin/env node
 
-// Community info with image prompts (top 10)
-const COMMUNITY_INFO = {
-  "muiscas": {
-    imagePrompt: "Muisca golden ceremony at Guatavita lagoon, Bochica civilizer, Andean mountains, sacred offerings, El Dorado ritual"
-  },
-  "nasa-paeces": {
-    imagePrompt: "Nasa people in Cauca mountains, traditional clothing, resistance symbols, sacred territory protection"
-  },
-  "wayuu": {
-    imagePrompt: "Wayuu matrilineal society in La Guajira desert, Pulowi and Juyá spirits, traditional patterns, journey between worlds"
-  },
-  "huitotos": {
-    imagePrompt: "Huitoto ceremonial maloca, sacred tobacco and yuca, Amazon creation mythology, spiritual renewal"
-  },
-  "embera": {
-    imagePrompt: "Emberá village on Pacific river, traditional palafitos, rainforest spirits, ceremonial gathering, artisan crafts"
-  },
-  "chimila": {
-    imagePrompt: "Chimila people in Caribbean lowlands, Papá Grande creation myth, sacred arrows marking territory, ancestral gatherings"
-  },
-  "koguis": {
-    imagePrompt: "Kogui mamos in Sierra Nevada, sacred mountain peaks, Mother Universal creation, cosmic balance guardianship"
-  },
-  "katios": {
-    imagePrompt: "Katío village in Andean-Pacific transition, Caragabí creation myth, resistance warriors, sacred forest spirits"
-  },
-  "pananes": {
-    imagePrompt: "Pananes highland community, sacred lagoons and water springs, Catholic-indigenous syncretism, mystical fog-covered landscapes"
-  },
-  "andoque": {
-    imagePrompt: "Andoque village in Caquetá, sacred yuca cultivation, forest spirits, Amazon traditions"
-  }
+/**
+ * Script para popular prompts de imagen en tablas de taxonomía
+ * (communities, tags, regions)
+ *
+ * Uso: node scripts/populate-taxonomy-prompts.js
+ */
+
+import Database from "better-sqlite3";
+import OpenAI from "openai";
+import path from "path";
+import { fileURLToPath } from "url";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+const dbPath = path.join(__dirname, "..", "data", "mitos.sqlite");
+const db = new Database(dbPath);
+
+const openai = new OpenAI({
+  apiKey: process.env.OPENAI_API_KEY,
+});
+
+// Prompts base para cada tipo
+const BASE_PROMPTS = {
+  community: "Crea un prompt detallado en español para generar una imagen vertical (9:16) que represente visualmente a la comunidad indígena colombiana llamada '{name}'. La imagen debe capturar la esencia cultural, vestimenta tradicional, prácticas culturales y conexión con su territorio. Estilo artístico, respetuoso y educativo. NO incluir texto, desnudez ni violencia gráfica.",
+
+  category: "Crea un prompt detallado en español para generar una imagen vertical (9:16) que represente el concepto '{name}' en el contexto de la mitología y cultura colombiana. Usa simbolismo, elementos visuales abstractos o concretos que evoquen este concepto. Estilo artístico y místico. NO incluir texto.",
+
+  region: "Crea un prompt detallado en español para generar una imagen vertical (9:16) que capture la esencia natural y biodiversidad de la región {name} de Colombia. Incluye paisajes característicos, flora y fauna endémica, elementos geográficos distintivos. Estilo fotorrealista con toques artísticos. NO incluir texto ni personas."
 };
 
-// Category info with image prompts (top 10)
-const CATEGORY_INFO = {
-  "transformacion": {
-    imagePrompt: "Colombian mythological transformations, shamans becoming jaguars, spirit metamorphosis, fluid boundaries between human and animal"
-  },
-  "culturales": {
-    imagePrompt: "Colombian cultural origins, naming ceremony of natural elements, community rebuilding, sacred agricultural knowledge"
-  },
-  "selva": {
-    imagePrompt: "Amazon rainforest mythology, Araracuara sun origin, shape-shifting shamans, jungle spirits, transformational magic"
-  },
-  "creacion": {
-    imagePrompt: "Cosmic creation scene, primordial chaos becoming order, celestial bodies emerging, indigenous Colombian cosmology"
-  },
-  "muerte": {
-    imagePrompt: "Journey to the afterlife in Colombian mythology, spirits crossing boundaries, ancestral realm, mystical transition"
-  },
-  "heroicos": {
-    imagePrompt: "Colombian mythological heroes, Konago the wise turtle, Jirayauma's cunning, strategic victories, protective guardians"
-  },
-  "naturaleza": {
-    imagePrompt: "Colombian nature mythology, Chullachaqui forest guardian, primordial flood, natural transformations, sacred ecology"
-  },
-  "castigos": {
-    imagePrompt: "Divine punishment in Colombian mythology, Yepá judging animals, moral consequences, supernatural justice, balance restoration"
-  },
-  "castigo": {
-    imagePrompt: "Divine punishment in mystical Colombian landscape, dramatic transformation, moral lesson visualization, powerful natural forces"
-  },
-  "amor": {
-    imagePrompt: "Romantic encounter in Colombian mystical setting, lovers from different worlds, passionate folklore, enchanted atmosphere"
+async function generatePromptWithAI(entityType, entityName) {
+  const systemPrompt = BASE_PROMPTS[entityType].replace('{name}', entityName);
+
+  try {
+    const response = await openai.chat.completions.create({
+      model: "gpt-4o-mini",
+      messages: [
+        {
+          role: "system",
+          content: "Eres un experto en crear prompts para generación de imágenes. Tu trabajo es crear prompts descriptivos, detallados y efectivos en español para generar imágenes con DALL-E. Los prompts deben ser culturalmente sensibles y apropiados para contenido educativo."
+        },
+        {
+          role: "user",
+          content: systemPrompt
+        }
+      ],
+      temperature: 0.7,
+      max_tokens: 300
+    });
+
+    const prompt = response.choices[0].message.content.trim();
+    console.log(`✓ Prompt generado para ${entityName}: ${prompt.substring(0, 100)}...`);
+    return prompt;
+  } catch (error) {
+    console.error(`✗ Error generando prompt para ${entityName}:`, error.message);
+    return null;
   }
-};
-
-// Region info with image prompts (all)
-const REGION_INFO = {
-  "amazonas": {
-    imagePrompt: "Colombian Amazon rainforest, sacred rivers, indigenous maloca, anaconda mythology, pristine jungle"
-  },
-  "andina": {
-    imagePrompt: "Colombian Andes mountains, sacred lagoons, Muisca gold offerings, misty páramo, highland mythology"
-  },
-  "caribe": {
-    imagePrompt: "Colombian Caribbean coast, Sierra Nevada sacred mountains, Wayuu culture, coastal spirits, tropical mythology"
-  },
-  "orinoquia": {
-    imagePrompt: "Colombian Llanos plains, Orinoco rivers, savanna wildlife, seasonal floods, cultural heroes"
-  },
-  "pacifico": {
-    imagePrompt: "Colombian Pacific rainforest, humid jungle, coastal communities, resistance mythology, Afro-indigenous fusion"
-  },
-  "varios": {
-    imagePrompt: "Colombian diverse landscapes merging, cultural crossroads, shared mythology, universal themes"
-  }
-};
-
-async function populatePrompts() {
-  console.log('🎨 Populating image prompts for taxonomy...\n');
-
-  let totalUpdated = 0;
-
-  // Update communities
-  console.log('📍 Updating communities...');
-  for (const [slug, info] of Object.entries(COMMUNITY_INFO)) {
-    try {
-      const result = await sql`
-        UPDATE communities
-        SET image_prompt = ${info.imagePrompt}
-        WHERE slug = ${slug}
-        RETURNING id, name, slug
-      `;
-
-      if (result.rows && result.rows.length > 0) {
-        console.log(`  ✓ ${result.rows[0].name} (${slug})`);
-        totalUpdated++;
-      } else {
-        console.log(`  ✗ Not found: ${slug}`);
-      }
-    } catch (error) {
-      console.error(`  ✗ Error updating ${slug}:`, error.message);
-    }
-  }
-
-  // Update categories (tags)
-  console.log('\n🏷️  Updating categories...');
-  for (const [slug, info] of Object.entries(CATEGORY_INFO)) {
-    try {
-      const result = await sql`
-        UPDATE tags
-        SET image_prompt = ${info.imagePrompt}
-        WHERE slug = ${slug}
-        RETURNING id, name, slug
-      `;
-
-      if (result.rows && result.rows.length > 0) {
-        console.log(`  ✓ ${result.rows[0].name} (${slug})`);
-        totalUpdated++;
-      } else {
-        console.log(`  ✗ Not found: ${slug}`);
-      }
-    } catch (error) {
-      console.error(`  ✗ Error updating ${slug}:`, error.message);
-    }
-  }
-
-  // Update regions
-  console.log('\n🌎 Updating regions...');
-  for (const [slug, info] of Object.entries(REGION_INFO)) {
-    try {
-      const result = await sql`
-        UPDATE regions
-        SET image_prompt = ${info.imagePrompt}
-        WHERE slug = ${slug}
-        RETURNING id, name, slug
-      `;
-
-      if (result.rows && result.rows.length > 0) {
-        console.log(`  ✓ ${result.rows[0].name} (${slug})`);
-        totalUpdated++;
-      } else {
-        console.log(`  ✗ Not found: ${slug}`);
-      }
-    } catch (error) {
-      console.error(`  ✗ Error updating ${slug}:`, error.message);
-    }
-  }
-
-  console.log(`\n✅ Total updated: ${totalUpdated}`);
-
-  // Show summary
-  const summary = await sql`
-    SELECT
-      (SELECT COUNT(*) FROM communities WHERE image_prompt IS NOT NULL AND image_url IS NULL) as communities_pending,
-      (SELECT COUNT(*) FROM tags WHERE image_prompt IS NOT NULL AND image_url IS NULL) as categories_pending,
-      (SELECT COUNT(*) FROM regions WHERE image_prompt IS NOT NULL AND image_url IS NULL) as regions_pending,
-      (SELECT COUNT(*) FROM myths WHERE image_prompt IS NOT NULL AND image_url IS NULL) as myths_pending
-  `;
-
-  console.log('\n📊 Images pending:');
-  console.log(`  Communities: ${summary.rows[0].communities_pending}`);
-  console.log(`  Categories: ${summary.rows[0].categories_pending}`);
-  console.log(`  Regions: ${summary.rows[0].regions_pending}`);
-  console.log(`  Myths: ${summary.rows[0].myths_pending}`);
-  console.log(`  TOTAL: ${summary.rows[0].communities_pending + summary.rows[0].categories_pending + summary.rows[0].regions_pending + summary.rows[0].myths_pending}`);
 }
 
-populatePrompts()
-  .then(() => {
-    console.log('\n✨ Done!');
-    process.exit(0);
-  })
-  .catch((error) => {
-    console.error('\n❌ Error:', error);
+async function populatePrompts(entityType, tableName) {
+  console.log(`\n🔄 Procesando ${tableName}...`);
+
+  // Get entities without prompts
+  const entities = db.prepare(`
+    SELECT id, name, slug
+    FROM ${tableName}
+    WHERE image_prompt IS NULL
+    ORDER BY id
+  `).all();
+
+  console.log(`📊 Encontradas ${entities.length} entidades sin prompts en ${tableName}`);
+
+  if (entities.length === 0) {
+    console.log(`✓ Todas las entidades en ${tableName} ya tienen prompts`);
+    return;
+  }
+
+  const updateStmt = db.prepare(`
+    UPDATE ${tableName}
+    SET image_prompt = ?
+    WHERE id = ?
+  `);
+
+  let successCount = 0;
+  let failCount = 0;
+
+  for (const entity of entities) {
+    const prompt = await generatePromptWithAI(entityType, entity.name);
+
+    if (prompt) {
+      updateStmt.run(prompt, entity.id);
+      successCount++;
+    } else {
+      failCount++;
+    }
+
+    // Rate limiting - pausa pequeña entre requests
+    await new Promise(resolve => setTimeout(resolve, 500));
+  }
+
+  console.log(`✅ ${tableName}: ${successCount} prompts generados, ${failCount} fallos`);
+}
+
+async function main() {
+  console.log("🚀 Iniciando generación de prompts para taxonomías...\n");
+
+  try {
+    // Verificar que OpenAI API key esté configurada
+    if (!process.env.OPENAI_API_KEY) {
+      throw new Error("OPENAI_API_KEY no está configurada en las variables de entorno");
+    }
+
+    // Procesar cada tipo de entidad
+    await populatePrompts("region", "regions");
+    await populatePrompts("community", "communities");
+    await populatePrompts("category", "tags");
+
+    console.log("\n✅ Proceso completado exitosamente!");
+
+    // Mostrar estadísticas finales
+    const stats = {
+      regions: db.prepare("SELECT COUNT(*) as count FROM regions WHERE image_prompt IS NOT NULL").get().count,
+      communities: db.prepare("SELECT COUNT(*) as count FROM communities WHERE image_prompt IS NOT NULL").get().count,
+      tags: db.prepare("SELECT COUNT(*) as count FROM tags WHERE image_prompt IS NOT NULL").get().count,
+    };
+
+    console.log("\n📊 Estadísticas finales:");
+    console.log(`   Regiones con prompt: ${stats.regions}/6`);
+    console.log(`   Comunidades con prompt: ${stats.communities}/42`);
+    console.log(`   Categorías con prompt: ${stats.tags}/599`);
+
+  } catch (error) {
+    console.error("\n❌ Error:", error.message);
     process.exit(1);
-  });
+  } finally {
+    db.close();
+  }
+}
+
+main();
