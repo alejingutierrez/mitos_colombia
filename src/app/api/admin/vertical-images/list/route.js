@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { getSqliteDb } from "../../../../../lib/db";
+import { isPostgres, getSqlClient, getSqliteDb } from "../../../../../lib/db";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -35,43 +35,90 @@ export async function GET(request) {
     const entityType = searchParams.get("entityType") || "";
     const offset = (page - 1) * limit;
 
-    const db = await getSqliteDb();
+    const isPg = isPostgres();
 
-    // Construir query base
-    let whereClause = "";
-    const params = [];
+    if (isPg) {
+      const db = getSqlClient();
 
-    if (entityType) {
-      whereClause = "WHERE entity_type = ?";
-      params.push(entityType);
+      // PostgreSQL version
+      let total = 0;
+      let items = [];
+
+      if (entityType) {
+        // Con filtro
+        const countResult = await db`
+          SELECT COUNT(*) as total FROM vertical_images
+          WHERE entity_type = ${entityType}
+        `;
+        total = parseInt(countResult[0].total);
+
+        items = await db`
+          SELECT * FROM vertical_images
+          WHERE entity_type = ${entityType}
+          ORDER BY created_at DESC
+          LIMIT ${limit} OFFSET ${offset}
+        `;
+      } else {
+        // Sin filtro
+        const countResult = await db`
+          SELECT COUNT(*) as total FROM vertical_images
+        `;
+        total = parseInt(countResult[0].total);
+
+        items = await db`
+          SELECT * FROM vertical_images
+          ORDER BY created_at DESC
+          LIMIT ${limit} OFFSET ${offset}
+        `;
+      }
+
+      return NextResponse.json({
+        items: items.rows || items,
+        total,
+        page,
+        limit,
+        totalPages: Math.ceil(total / limit),
+      });
+
+    } else {
+      // SQLite version
+      const db = getSqliteDb();
+
+      let whereClause = "";
+      const params = [];
+
+      if (entityType) {
+        whereClause = "WHERE entity_type = ?";
+        params.push(entityType);
+      }
+
+      // Obtener total
+      const countQuery = `SELECT COUNT(*) as total FROM vertical_images ${whereClause}`;
+      const countResult = db.prepare(countQuery).get(...params);
+      const total = countResult.total;
+
+      // Obtener items paginados
+      const query = `
+        SELECT *
+        FROM vertical_images
+        ${whereClause}
+        ORDER BY created_at DESC
+        LIMIT ? OFFSET ?
+      `;
+      const items = db.prepare(query).all(...params, limit, offset);
+
+      return NextResponse.json({
+        items,
+        total,
+        page,
+        limit,
+        totalPages: Math.ceil(total / limit),
+      });
     }
-
-    // Obtener total
-    const countQuery = `SELECT COUNT(*) as total FROM vertical_images ${whereClause}`;
-    const countResult = db.prepare(countQuery).get(...params);
-    const total = countResult.total;
-
-    // Obtener items paginados
-    const query = `
-      SELECT *
-      FROM vertical_images
-      ${whereClause}
-      ORDER BY created_at DESC
-      LIMIT ? OFFSET ?
-    `;
-    const items = db.prepare(query).all(...params, limit, offset);
-
-    return NextResponse.json({
-      items,
-      total,
-      page,
-      limit,
-      totalPages: Math.ceil(total / limit),
-    });
   } catch (error) {
     console.error("Error listing vertical images:", error);
     return NextResponse.json(
-      { error: "Failed to list vertical images" },
+      { error: "Failed to list vertical images", details: error.message },
       { status: 500 }
     );
   }
