@@ -371,6 +371,7 @@ function getTaxonomySqlite() {
         regions.id,
         regions.name,
         regions.slug,
+        regions.image_url,
         COUNT(myths.id) AS myth_count
       FROM regions
       LEFT JOIN myths ON myths.region_id = regions.id
@@ -426,6 +427,7 @@ async function getTaxonomyPostgres() {
         regions.id,
         regions.name,
         regions.slug,
+        regions.image_url,
         COUNT(myths.id) AS myth_count
       FROM regions
       LEFT JOIN myths ON myths.region_id = regions.id

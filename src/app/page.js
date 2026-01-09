@@ -288,21 +288,33 @@ export default async function Home() {
               href={`/mitos?region=${region.slug}`}
               className="group block"
             >
-              <GlassCard className="h-full p-8 transition hover:-translate-y-2 hover:shadow-2xl">
-                <div className="flex items-start justify-between gap-4">
-                  <h3 className="font-display text-2xl text-ink-900 transition group-hover:text-river-600">
-                    {region.name}
-                  </h3>
-                  <Badge className="shrink-0 border-river-500/30 bg-river-500/10 text-river-600">
-                    {region.myth_count}
-                  </Badge>
-                </div>
-                <p className="mt-4 text-sm leading-relaxed text-ink-600">
-                  {regionDescriptions[region.name] || "Explora los mitos de esta region."}
-                </p>
-                <div className="mt-6 flex items-center gap-2 text-xs font-medium uppercase tracking-[0.3em] text-river-600 transition group-hover:gap-3">
-                  <span>Explorar</span>
-                  <span className="transition group-hover:translate-x-1">→</span>
+              <GlassCard className="relative h-full overflow-hidden p-0 transition hover:-translate-y-2 hover:shadow-2xl">
+                {region.image_url ? (
+                  <div className="relative aspect-[16/9] overflow-hidden">
+                    <img
+                      src={region.image_url}
+                      alt={`Region ${region.name}`}
+                      className="h-full w-full object-cover transition duration-700 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-ink-900/60 via-ink-900/10 to-transparent opacity-0 transition duration-300 group-hover:opacity-100" />
+                  </div>
+                ) : null}
+                <div className="p-6">
+                  <div className="flex items-start justify-between gap-4">
+                    <h3 className="font-display text-2xl text-ink-900 transition group-hover:text-river-600">
+                      {region.name}
+                    </h3>
+                    <Badge className="shrink-0 border-river-500/30 bg-river-500/10 text-river-600">
+                      {region.myth_count}
+                    </Badge>
+                  </div>
+                  <p className="mt-4 text-sm leading-relaxed text-ink-600">
+                    {regionDescriptions[region.name] || "Explora los mitos de esta region."}
+                  </p>
+                  <div className="mt-6 flex items-center gap-2 text-xs font-medium uppercase tracking-[0.3em] text-river-600 transition group-hover:gap-3">
+                    <span>Explorar</span>
+                    <span className="transition group-hover:translate-x-1">→</span>
+                  </div>
                 </div>
               </GlassCard>
             </a>
