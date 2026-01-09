@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { filterAllowedCommunities } from "../lib/communityFilters";
@@ -82,9 +83,13 @@ export default function Header() {
         <div className="glass-panel flex w-full flex-col gap-4 px-6 py-5 md:flex-row md:items-center md:justify-between md:gap-10 md:flex-nowrap">
         <div className="flex items-center justify-between gap-3 md:justify-start">
           <Link href="/" className="flex items-center gap-3">
-            <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-jungle-600 text-xs font-semibold uppercase tracking-[0.3em] text-white shadow">
-              MC
-            </span>
+            <Image 
+              src="/logo_mitos.png" 
+              alt="Mitos de Colombia" 
+              width={48} 
+              height={48}
+              className="h-12 w-12"
+            />
             <span className="block">
               <span className="eyebrow">Archivo vivo</span>
               <span className="block font-display text-lg text-ink-900">
