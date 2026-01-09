@@ -6,6 +6,7 @@ import AdminLayout from "../../../components/AdminLayout";
 import { GlassCard } from "../../../components/ui/GlassCard";
 import { Button } from "../../../components/ui/Button";
 import { Badge } from "../../../components/ui/Badge";
+import { Toast, useToast } from "../../../components/ui/Toast";
 
 export default function VerticalImagesPage() {
   const router = useRouter();
@@ -29,6 +30,9 @@ export default function VerticalImagesPage() {
 
   // Stats
   const [stats, setStats] = useState(null);
+
+  // Toast notifications
+  const { toast, showToast, hideToast } = useToast();
 
   // Check authentication
   useEffect(() => {
@@ -149,16 +153,16 @@ export default function VerticalImagesPage() {
       });
 
       if (response.ok) {
-        alert("Prompt actualizado exitosamente");
+        showToast("Prompt actualizado exitosamente", "success");
         fetchItems(auth, page, entityTypeFilter);
         cancelEdit();
       } else {
         const error = await response.json();
-        alert(`Error: ${error.error || 'No se pudo actualizar'}`);
+        showToast(error.error || 'No se pudo actualizar el prompt', "error");
       }
     } catch (error) {
       console.error("Error saving prompt:", error);
-      alert("Error al guardar el prompt");
+      showToast("Error al guardar el prompt", "error");
     }
   };
 
@@ -185,16 +189,16 @@ export default function VerticalImagesPage() {
       });
 
       if (response.ok) {
-        alert("Imagen generada exitosamente");
+        showToast("Imagen generada exitosamente", "success");
         fetchItems(auth, page, entityTypeFilter);
         fetchStats(auth);
       } else {
         const error = await response.json();
-        alert(`Error: ${error.error || 'No se pudo generar'}`);
+        showToast(error.error || 'No se pudo generar la imagen', "error");
       }
     } catch (error) {
       console.error("Error generating image:", error);
-      alert("Error al generar la imagen");
+      showToast("Error al generar la imagen", "error");
     } finally {
       setGeneratingId(null);
     }
@@ -221,15 +225,15 @@ export default function VerticalImagesPage() {
       });
 
       if (response.ok) {
-        alert("Imagen regenerada exitosamente");
+        showToast("Imagen regenerada exitosamente", "success");
         fetchItems(auth, page, entityTypeFilter);
       } else {
         const error = await response.json();
-        alert(`Error: ${error.error}`);
+        showToast(error.error || 'No se pudo regenerar la imagen', "error");
       }
     } catch (error) {
       console.error("Error regenerating:", error);
-      alert("Error al regenerar");
+      showToast("Error al regenerar la imagen", "error");
     } finally {
       setGeneratingId(null);
     }
@@ -256,16 +260,17 @@ export default function VerticalImagesPage() {
 
       if (response.ok) {
         const data = await response.json();
-        alert(`✓ Generadas ${data.generated?.filter(g => g.success).length || 0} de ${batchCount} imágenes`);
+        const successCount = data.generated?.filter(g => g.success).length || 0;
+        showToast(`Generadas ${successCount} de ${batchCount} imágenes exitosamente`, "success");
         fetchItems(auth, page, entityTypeFilter);
         fetchStats(auth);
       } else {
         const error = await response.json();
-        alert(`Error: ${error.error}`);
+        showToast(error.error || 'Error en generación masiva', "error");
       }
     } catch (error) {
       console.error("Error batch generation:", error);
-      alert("Error en generación masiva");
+      showToast("Error en generación masiva", "error");
     } finally {
       setBatchGenerating(false);
     }
@@ -280,8 +285,10 @@ export default function VerticalImagesPage() {
   }
 
   return (
-    <AdminLayout onLogout={handleLogout}>
-      <div className="space-y-6">
+    <>
+      <Toast toast={toast} onClose={hideToast} />
+      <AdminLayout onLogout={handleLogout}>
+        <div className="space-y-6">
         {/* Header */}
         <div>
           <h1 className="font-display text-4xl text-ink-900">Imágenes Verticales</h1>
@@ -650,7 +657,8 @@ export default function VerticalImagesPage() {
             </div>
           </>
         )}
-      </div>
-    </AdminLayout>
+        </div>
+      </AdminLayout>
+    </>
   );
 }
