@@ -618,27 +618,34 @@ export default function VerticalImagesPage() {
             </div>
 
             {/* Pagination */}
-            {totalPages > 1 && (
-              <div className="flex justify-center items-center gap-4 mt-8">
-                <Button
-                  onClick={() => handlePageChange(page - 1)}
-                  disabled={page === 1}
-                  className="bg-ink-700"
-                >
-                  Anterior
-                </Button>
-                <span className="text-ink-700 font-medium">
-                  Página {page} de {totalPages}
-                </span>
-                <Button
-                  onClick={() => handlePageChange(page + 1)}
-                  disabled={page === totalPages}
-                  className="bg-ink-700"
-                >
-                  Siguiente
-                </Button>
+            <div className="mt-8">
+              <div className="flex justify-center items-center gap-4">
+                {totalPages > 1 && (
+                  <>
+                    <Button
+                      onClick={() => handlePageChange(page - 1)}
+                      disabled={page === 1}
+                      className="bg-ink-700"
+                    >
+                      Anterior
+                    </Button>
+                    <span className="text-ink-700 font-medium">
+                      Página {page} de {totalPages}
+                    </span>
+                    <Button
+                      onClick={() => handlePageChange(page + 1)}
+                      disabled={page === totalPages}
+                      className="bg-ink-700"
+                    >
+                      Siguiente
+                    </Button>
+                  </>
+                )}
               </div>
-            )}
+              <p className="text-center text-ink-600 text-sm mt-3">
+                Mostrando {items.length} de {total} entidades
+              </p>
+            </div>
           </>
         )}
       </div>
