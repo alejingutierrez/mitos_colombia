@@ -117,7 +117,7 @@ async function getVerticalImageById(id) {
     const result = await db`
       SELECT * FROM vertical_images WHERE id = ${id}
     `;
-    return result[0];
+    return result.rows?.[0] || result[0];
   } else {
     const db = getSqliteDb();
     const stmt = db.prepare("SELECT * FROM vertical_images WHERE id = ?");
@@ -137,7 +137,7 @@ async function updateVerticalImageUrl(id, imageUrl) {
       WHERE id = ${id}
       RETURNING *
     `;
-    return result[0];
+    return result.rows?.[0] || result[0];
   } else {
     const db = getSqliteDbWritable();
     const stmt = db.prepare(`
