@@ -85,10 +85,10 @@ export default async function MythDetailPage({ params }) {
       <main className="relative min-h-screen pb-24">
 
       <section className="container-shell mt-12">
-        <GlassCard className="p-8">
-          <div className="grid gap-6 md:grid-cols-[1.5fr_1.5fr] md:gap-8">
+        <GlassCard className="overflow-hidden p-0">
+          <div className="grid md:grid-cols-[1.5fr_1.5fr]">
             {/* Columna izquierda: Contenido */}
-            <div className="order-2 md:order-1">
+            <div className="order-2 p-8 md:order-1">
               <div className="flex flex-wrap items-center gap-2">
                 <Badge className="border-jungle-500/30 bg-jungle-500/10 text-jungle-600">
                   {myth.region}
@@ -109,8 +109,8 @@ export default async function MythDetailPage({ params }) {
             </div>
 
             {/* Columna derecha: Imagen */}
-            <div className="order-1 md:order-2 md:h-full">
-              <div className="relative h-full min-h-[300px] overflow-hidden rounded-2xl border border-white/60 bg-white/40 shadow-sm md:min-h-0">
+            <div className="order-1 md:order-2">
+              <div className="relative h-full min-h-[300px] overflow-hidden border-white/60 bg-white/40 md:min-h-0 md:border-l">
                 {myth.image_url ? (
                   <>
                     <img

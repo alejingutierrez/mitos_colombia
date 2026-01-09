@@ -66,35 +66,37 @@ export default async function ComunidadesPage() {
                 {communitiesByRegion[regionName].map((community) => (
                   <GlassCard
                     key={community.slug}
-                    className="flex flex-col gap-4 p-6 transition hover:-translate-y-1 hover:shadow-lift"
+                    className="flex flex-col overflow-hidden p-0 transition hover:-translate-y-1 hover:shadow-lift"
                   >
-                    <ImageSlot size="compact" />
-                    <div className="flex items-start justify-between">
-                      <div className="flex-1">
-                        <h3 className="font-display text-xl text-ink-900">
-                          {community.name}
-                        </h3>
-                        <p className="mt-1 text-xs uppercase tracking-[0.3em] text-ink-500">
-                          {community.region}
-                        </p>
-                        <p className="mt-2 text-sm text-ink-500">
-                          {community.myth_count}{" "}
-                          {community.myth_count === 1 ? "mito" : "mitos"}
-                        </p>
+                    <ImageSlot size="compact" className="rounded-none" />
+                    <div className="flex flex-col gap-4 p-6">
+                      <div className="flex items-start justify-between">
+                        <div className="flex-1">
+                          <h3 className="font-display text-xl text-ink-900">
+                            {community.name}
+                          </h3>
+                          <p className="mt-1 text-xs uppercase tracking-[0.3em] text-ink-500">
+                            {community.region}
+                          </p>
+                          <p className="mt-2 text-sm text-ink-500">
+                            {community.myth_count}{" "}
+                            {community.myth_count === 1 ? "mito" : "mitos"}
+                          </p>
+                        </div>
+                        <Badge className="border-river-500/30 bg-river-500/10 text-river-600">
+                          {community.myth_count}
+                        </Badge>
                       </div>
-                      <Badge className="border-river-500/30 bg-river-500/10 text-river-600">
-                        {community.myth_count}
-                      </Badge>
-                    </div>
-                    <div className="mt-auto">
-                      <ButtonLink
-                        href={`/comunidades/${community.slug}`}
-                        variant="outline"
-                        size="sm"
-                        className="w-full"
-                      >
-                        Explorar comunidad
-                      </ButtonLink>
+                      <div className="mt-auto">
+                        <ButtonLink
+                          href={`/comunidades/${community.slug}`}
+                          variant="outline"
+                          size="sm"
+                          className="w-full"
+                        >
+                          Explorar comunidad
+                        </ButtonLink>
+                      </div>
                     </div>
                   </GlassCard>
                 ))}

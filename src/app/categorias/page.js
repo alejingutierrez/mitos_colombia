@@ -35,31 +35,33 @@ export default async function CategoriasPage() {
           {tags.map((tag) => (
             <GlassCard
               key={tag.slug}
-              className="flex flex-col gap-4 p-6 transition hover:-translate-y-1 hover:shadow-lift"
+              className="flex flex-col overflow-hidden p-0 transition hover:-translate-y-1 hover:shadow-lift"
             >
-              <ImageSlot size="compact" />
-              <div className="flex items-start justify-between">
-                <div className="flex-1">
-                  <h3 className="font-display text-2xl text-ink-900">
-                    {tag.name}
-                  </h3>
-                  <p className="mt-2 text-sm text-ink-500">
-                    {tag.myth_count} {tag.myth_count === 1 ? "mito" : "mitos"}
-                  </p>
+              <ImageSlot size="compact" className="rounded-none" />
+              <div className="flex flex-col gap-4 p-6">
+                <div className="flex items-start justify-between">
+                  <div className="flex-1">
+                    <h3 className="font-display text-2xl text-ink-900">
+                      {tag.name}
+                    </h3>
+                    <p className="mt-2 text-sm text-ink-500">
+                      {tag.myth_count} {tag.myth_count === 1 ? "mito" : "mitos"}
+                    </p>
+                  </div>
+                  <Badge className="border-jungle-500/30 bg-jungle-500/10 text-jungle-600">
+                    {tag.myth_count}
+                  </Badge>
                 </div>
-                <Badge className="border-jungle-500/30 bg-jungle-500/10 text-jungle-600">
-                  {tag.myth_count}
-                </Badge>
-              </div>
-              <div className="mt-auto">
-                <ButtonLink
-                  href={`/categorias/${tag.slug}`}
-                  variant="outline"
-                  size="sm"
-                  className="w-full"
-                >
-                  Explorar categoría
-                </ButtonLink>
+                <div className="mt-auto">
+                  <ButtonLink
+                    href={`/categorias/${tag.slug}`}
+                    variant="outline"
+                    size="sm"
+                    className="w-full"
+                  >
+                    Explorar categoría
+                  </ButtonLink>
+                </div>
               </div>
             </GlassCard>
           ))}
