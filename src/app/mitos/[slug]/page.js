@@ -109,8 +109,8 @@ export default async function MythDetailPage({ params }) {
             </div>
 
             {/* Columna derecha: Imagen */}
-            <div className="order-1 md:order-2">
-              <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-white/60 bg-white/40 shadow-sm">
+            <div className="order-1 md:order-2 md:h-full">
+              <div className="relative h-full min-h-[300px] overflow-hidden rounded-2xl border border-white/60 bg-white/40 shadow-sm md:min-h-0">
                 {myth.image_url ? (
                   <>
                     <img
