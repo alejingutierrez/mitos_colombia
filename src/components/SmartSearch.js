@@ -31,7 +31,7 @@ function buildSearchHref(query, fallback = "/mitos") {
 
 export default function SmartSearch({
   placeholder = "Buscar mito, region o tema",
-  ctaLabel = "Explorar coleccion",
+  ctaLabel = "Buscar",
   className,
 }) {
   const router = useRouter();
@@ -69,7 +69,7 @@ export default function SmartSearch({
       try {
         setLoading(true);
         const response = await fetch(
-          `/api/search?q=${encodeURIComponent(trimmed)}&limit=9`,
+          `/api/search?q=${encodeURIComponent(trimmed)}&limit=6`,
           { signal: controller.signal }
         );
         if (!response.ok) {
@@ -106,7 +106,7 @@ export default function SmartSearch({
   };
 
   return (
-    <div ref={containerRef} className={cn("relative w-full", className)}>
+    <div ref={containerRef} className={cn("relative z-30 w-full", className)}>
       <form
         className="flex flex-col gap-3 sm:flex-row sm:items-center"
         action="/mitos"
@@ -135,49 +135,55 @@ export default function SmartSearch({
       </form>
 
       {showDropdown && (
-        <div className="absolute left-0 right-0 z-20 mt-3">
+        <div className="absolute left-0 right-0 z-50 mt-3">
           <GlassCard className="p-4 shadow-2xl">
-            <div className="flex flex-col gap-2" role="listbox" id={listboxId}>
-              {loading && (
-                <div className="px-3 py-2 text-xs uppercase tracking-[0.3em] text-ink-500">
-                  Buscando coincidencias...
-                </div>
-              )}
+            <div
+              className="flex max-h-[280px] flex-col gap-2 overflow-hidden"
+              role="listbox"
+              id={listboxId}
+            >
+              <div className="flex min-h-0 flex-col gap-2 overflow-y-auto pr-1">
+                {loading && (
+                  <div className="px-3 py-2 text-xs uppercase tracking-[0.3em] text-ink-500">
+                    Buscando coincidencias...
+                  </div>
+                )}
 
-              {!loading && suggestions.length === 0 && (
-                <div className="rounded-2xl border border-dashed border-ink-300/70 bg-white/70 px-4 py-3 text-sm text-ink-600">
-                  Sin coincidencias claras. Prueba con otra palabra o explora el archivo.
-                </div>
-              )}
+                {!loading && suggestions.length === 0 && (
+                  <div className="rounded-2xl border border-dashed border-ink-300/70 bg-white/70 px-4 py-3 text-sm text-ink-600">
+                    Sin coincidencias claras. Prueba con otra palabra o explora el archivo.
+                  </div>
+                )}
 
-              {!loading && suggestions.length > 0 && (
-                <div className="flex flex-col gap-2">
-                  {suggestions.map((item) => (
-                    <Link
-                      key={item.id}
-                      href={item.href}
-                      className="group rounded-2xl border border-transparent px-3 py-2 transition hover:border-white/80 hover:bg-white/70"
-                      role="option"
-                    >
-                      <div className="flex items-start justify-between gap-3">
-                        <div>
-                          <p className="text-sm font-medium text-ink-900 transition group-hover:text-river-700">
-                            {item.title}
-                          </p>
-                          {item.subtitle ? (
-                            <p className="mt-1 text-xs text-ink-500">
-                              {item.subtitle}
+                {!loading && suggestions.length > 0 && (
+                  <div className="flex flex-col gap-2">
+                    {suggestions.map((item) => (
+                      <Link
+                        key={item.id}
+                        href={item.href}
+                        className="group rounded-2xl border border-transparent px-3 py-2 transition hover:border-white/80 hover:bg-white/70"
+                        role="option"
+                      >
+                        <div className="flex items-start justify-between gap-3">
+                          <div>
+                            <p className="text-sm font-medium text-ink-900 transition group-hover:text-river-700">
+                              {item.title}
                             </p>
-                          ) : null}
+                            {item.subtitle ? (
+                              <p className="mt-1 text-xs text-ink-500">
+                                {item.subtitle}
+                              </p>
+                            ) : null}
+                          </div>
+                          <Badge className={TYPE_STYLES[item.type] || TYPE_STYLES.tag}>
+                            {TYPE_LABELS[item.type] || "Resultado"}
+                          </Badge>
                         </div>
-                        <Badge className={TYPE_STYLES[item.type] || TYPE_STYLES.tag}>
-                          {TYPE_LABELS[item.type] || "Resultado"}
-                        </Badge>
-                      </div>
-                    </Link>
-                  ))}
-                </div>
-              )}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
 
               <Link
                 href={searchHref}
