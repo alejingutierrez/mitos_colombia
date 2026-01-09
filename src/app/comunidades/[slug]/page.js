@@ -278,7 +278,7 @@ export default async function CommunityDetailPage({ params, searchParams }) {
 
       {/* Hero Section */}
       <section className="container-shell mt-12">
-        <GlassCard className="relative overflow-hidden">
+        <GlassCard className="relative overflow-hidden p-0">
           <div
             className="absolute inset-0 bg-gradient-to-br from-jungle-500/20 via-river-500/20 to-ember-400/20"
           />
@@ -305,7 +305,9 @@ export default async function CommunityDetailPage({ params, searchParams }) {
                 {community.myth_count === 1 ? 'mito' : 'mitos'}
               </span>
             </div>
-            <ImageSlot size="wide" className="mt-6" />
+          </div>
+          <div className="group relative overflow-hidden">
+            <ImageSlot size="wide" className="rounded-none transition-transform duration-700 group-hover:scale-105" />
           </div>
         </GlassCard>
       </section>
@@ -389,39 +391,44 @@ export default async function CommunityDetailPage({ params, searchParams }) {
             return (
               <GlassCard
                 key={myth.slug}
-                className="flex flex-col gap-4 p-6 transition hover:-translate-y-1 hover:shadow-lift"
+                className="group flex flex-col overflow-hidden p-0 transition hover:-translate-y-1 hover:shadow-lift"
               >
-                <ImageSlot
-                  src={myth.image_url}
-                  alt={`Ilustracion de ${myth.title}`}
-                  size="card"
-                />
-                <div className="flex flex-wrap items-center gap-2">
-                  <Badge className="border-jungle-500/30 bg-jungle-500/10 text-jungle-600">
-                    {myth.region}
-                  </Badge>
-                  {myth.community ? (
-                    <Badge className="border-river-500/30 bg-river-500/10 text-river-600">
-                      {myth.community}
+                <div className="relative overflow-hidden">
+                  <ImageSlot
+                    src={myth.image_url}
+                    alt={`Ilustracion de ${myth.title}`}
+                    size="card"
+                    className="rounded-none transition-transform duration-700 group-hover:scale-110"
+                  />
+                </div>
+                <div className="flex flex-col gap-4 p-6">
+                  <div className="flex flex-wrap items-center gap-2">
+                    <Badge className="border-jungle-500/30 bg-jungle-500/10 text-jungle-600">
+                      {myth.region}
                     </Badge>
-                  ) : null}
-                </div>
-                <div>
-                  <h3 className="font-display text-2xl text-ink-900">
-                    {myth.title}
-                  </h3>
-                  <p className="mt-2 text-sm text-ink-700">{myth.excerpt}</p>
-                </div>
-                <div className="flex flex-wrap gap-2">
-                  {tags.map((item) => (
-                    <Badge key={item}>{item}</Badge>
-                  ))}
-                </div>
-                <div className="flex items-center justify-between text-xs uppercase tracking-[0.3em] text-ink-500">
-                  <span>{myth.focus_keyword}</span>
-                  <ButtonLink href={`/mitos/${myth.slug}`} size="sm">
-                    Leer mito
-                  </ButtonLink>
+                    {myth.community ? (
+                      <Badge className="border-river-500/30 bg-river-500/10 text-river-600">
+                        {myth.community}
+                      </Badge>
+                    ) : null}
+                  </div>
+                  <div>
+                    <h3 className="font-display text-2xl text-ink-900">
+                      {myth.title}
+                    </h3>
+                    <p className="mt-2 text-sm text-ink-700">{myth.excerpt}</p>
+                  </div>
+                  <div className="flex flex-wrap gap-2">
+                    {tags.map((item) => (
+                      <Badge key={item}>{item}</Badge>
+                    ))}
+                  </div>
+                  <div className="flex items-center justify-between text-xs uppercase tracking-[0.3em] text-ink-500">
+                    <span>{myth.focus_keyword}</span>
+                    <ButtonLink href={`/mitos/${myth.slug}`} size="sm">
+                      Leer mito
+                    </ButtonLink>
+                  </div>
                 </div>
               </GlassCard>
             );

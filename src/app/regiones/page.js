@@ -39,9 +39,11 @@ export default async function RegionesPage() {
           {regions.map((region) => (
             <GlassCard
               key={region.slug}
-              className="flex flex-col overflow-hidden p-0 transition hover:-translate-y-1 hover:shadow-lift"
+              className="group flex flex-col overflow-hidden p-0 transition hover:-translate-y-1 hover:shadow-lift"
             >
-              <ImageSlot size="compact" className="rounded-none" />
+              <div className="relative overflow-hidden">
+                <ImageSlot size="compact" className="rounded-none transition-transform duration-700 group-hover:scale-110" />
+              </div>
               <div className="flex flex-col gap-4 p-6">
                 <div className="flex items-start justify-between">
                   <div className="flex-1">
