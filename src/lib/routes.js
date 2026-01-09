@@ -323,7 +323,7 @@ async function getRouteMythsPostgres({ keywords = [], limit = 12, seed = 0 }) {
     const result = await sql.query(
       `
         SELECT
-          DISTINCT myths.id,
+          myths.id,
           myths.title,
           myths.slug,
           myths.excerpt,
@@ -336,8 +336,13 @@ async function getRouteMythsPostgres({ keywords = [], limit = 12, seed = 0 }) {
         FROM myths
         JOIN regions ON regions.id = myths.region_id
         LEFT JOIN communities ON communities.id = myths.community_id
-        LEFT JOIN vertical_images vi
-          ON vi.entity_type = 'myth' AND vi.entity_id = myths.id
+        LEFT JOIN LATERAL (
+          SELECT image_url
+          FROM vertical_images
+          WHERE entity_type = 'myth' AND entity_id = myths.id
+          ORDER BY updated_at DESC NULLS LAST, created_at DESC NULLS LAST
+          LIMIT 1
+        ) vi ON true
         ${whereClause}
         ORDER BY
           CASE WHEN COALESCE(vi.image_url, myths.image_url) IS NOT NULL THEN 0 ELSE 1 END,
@@ -354,7 +359,7 @@ async function getRouteMythsPostgres({ keywords = [], limit = 12, seed = 0 }) {
     const result = await sql.query(
       `
         SELECT
-          DISTINCT myths.id,
+          myths.id,
           myths.title,
           myths.slug,
           myths.excerpt,
@@ -389,12 +394,21 @@ function getRouteMythsSqlite({ keywords = [], limit = 12, seed = 0 }) {
   try {
     const sql = `
       SELECT
-        DISTINCT myths.id,
+        myths.id,
         myths.title,
         myths.slug,
         myths.excerpt,
         myths.category_path,
-        COALESCE(vi.image_url, myths.image_url) AS image_url,
+        COALESCE(
+          (
+            SELECT image_url
+            FROM vertical_images vi
+            WHERE vi.entity_type = 'myth' AND vi.entity_id = myths.id
+            ORDER BY vi.updated_at DESC, vi.created_at DESC
+            LIMIT 1
+          ),
+          myths.image_url
+        ) AS image_url,
         regions.name AS region,
         regions.slug AS region_slug,
         communities.name AS community,
@@ -402,11 +416,9 @@ function getRouteMythsSqlite({ keywords = [], limit = 12, seed = 0 }) {
       FROM myths
       JOIN regions ON regions.id = myths.region_id
       LEFT JOIN communities ON communities.id = myths.community_id
-      LEFT JOIN vertical_images vi
-        ON vi.entity_type = 'myth' AND vi.entity_id = myths.id
       ${whereClause}
       ORDER BY
-        CASE WHEN COALESCE(vi.image_url, myths.image_url) IS NOT NULL THEN 0 ELSE 1 END,
+        CASE WHEN image_url IS NOT NULL THEN 0 ELSE 1 END,
         (myths.id + :seed) % 97,
         myths.id
       LIMIT :limit
@@ -417,7 +429,7 @@ function getRouteMythsSqlite({ keywords = [], limit = 12, seed = 0 }) {
     console.error("[routes] vertical_images unavailable, fallback to myths.image_url", error);
     const sql = `
       SELECT
-        DISTINCT myths.id,
+        myths.id,
         myths.title,
         myths.slug,
         myths.excerpt,
