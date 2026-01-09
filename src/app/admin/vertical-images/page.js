@@ -68,6 +68,12 @@ export default function VerticalImagesPage() {
 
       if (response.ok) {
         const data = await response.json();
+        console.log('[PAGINATION DEBUG]', {
+          total: data.total,
+          totalPages: data.totalPages,
+          page: currentPage,
+          itemsCount: data.items?.length
+        });
         setItems(data.items || []);
         setTotal(data.total || 0);
         setTotalPages(data.totalPages || 1);
@@ -618,10 +624,10 @@ export default function VerticalImagesPage() {
             </div>
 
             {/* Pagination */}
-            <div className="mt-8">
-              <div className="flex justify-center items-center gap-4">
+            {total > 0 && (
+              <div className="mt-8">
                 {totalPages > 1 && (
-                  <>
+                  <div className="flex justify-center items-center gap-4 mb-3">
                     <Button
                       onClick={() => handlePageChange(page - 1)}
                       disabled={page === 1}
@@ -639,13 +645,14 @@ export default function VerticalImagesPage() {
                     >
                       Siguiente
                     </Button>
-                  </>
+                  </div>
                 )}
+                <p className="text-center text-ink-600 text-sm">
+                  Mostrando {items.length} de {total} entidades totales
+                  {totalPages > 1 && ` • ${totalPages} páginas`}
+                </p>
               </div>
-              <p className="text-center text-ink-600 text-sm mt-3">
-                Mostrando {items.length} de {total} entidades
-              </p>
-            </div>
+            )}
           </>
         )}
       </div>
