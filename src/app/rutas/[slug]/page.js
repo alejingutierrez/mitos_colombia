@@ -3,7 +3,13 @@ import Link from "next/link";
 import { Badge } from "../../../components/ui/Badge";
 import { GlassCard } from "../../../components/ui/GlassCard";
 import { ButtonLink } from "../../../components/ui/Button";
-import { ROUTES, getAccentStyles, getRouteBySlug, getRouteMyths } from "../../../lib/routes";
+import {
+  ROUTES,
+  getAccentStyles,
+  getMythsBySlugs,
+  getRouteBySlug,
+  getRouteMyths,
+} from "../../../lib/routes";
 import { notFound } from "next/navigation";
 
 export const runtime = "nodejs";
@@ -99,15 +105,53 @@ export default async function RutaPage({ params }) {
   }
 
   const seed = getDailySeed();
-  const myths = await getRouteMyths({
+  const curatedHero = route.curated?.heroSlugs || [];
+  const curatedGallery = route.curated?.gallerySlugs || [];
+  const curatedSlugs = Array.from(
+    new Set([...curatedHero, ...curatedGallery].filter(Boolean))
+  );
+  const curatedMyths = curatedSlugs.length
+    ? await getMythsBySlugs(curatedSlugs)
+    : [];
+  const curatedMap = new Map(curatedMyths.map((myth) => [myth.slug, myth]));
+
+  const fallbackMyths = await getRouteMyths({
     keywords: route.keywords,
     limit: 12,
     seed,
   });
 
-  const heroMyths = myths.filter((item) => item.image_url).slice(0, 3);
-  const heroItems = heroMyths.length >= 2 ? heroMyths : myths.slice(0, 3);
-  const galleryMyths = myths.slice(0, 8);
+  const used = new Set();
+  const pickFromSlugs = (slugs, preferImage = false) => {
+    const items = slugs
+      .map((slug) => curatedMap.get(slug))
+      .filter(Boolean);
+    const ordered = preferImage
+      ? [
+          ...items.filter((item) => item.image_url),
+          ...items.filter((item) => !item.image_url),
+        ]
+      : items;
+    ordered.forEach((myth) => {
+      used.add(myth.slug);
+    });
+    return ordered;
+  };
+
+  const fillFromFallback = (items, target) => {
+    const filled = [...items];
+    for (const myth of fallbackMyths) {
+      if (filled.length >= target) break;
+      if (!used.has(myth.slug)) {
+        used.add(myth.slug);
+        filled.push(myth);
+      }
+    }
+    return filled;
+  };
+
+  const heroItems = fillFromFallback(pickFromSlugs(curatedHero, true), 3);
+  const galleryMyths = fillFromFallback(pickFromSlugs(curatedGallery), 8);
   const accent = getAccentStyles(route.accent);
   const searchQuery = route.keywords[0] || route.title;
 
@@ -128,7 +172,7 @@ export default async function RutaPage({ params }) {
                 {route.title}
               </h1>
               <p className="section-body max-w-xl text-lg">
-                {route.description}
+                {route.intro || route.description}
               </p>
               <div className="flex flex-wrap gap-2">
                 {route.keywords.slice(0, 5).map((keyword) => (
@@ -189,8 +233,8 @@ export default async function RutaPage({ params }) {
                 Imagenes que ya narran la ruta
               </h2>
               <p className="section-body mt-4 max-w-2xl">
-                Seleccion visual a partir de los mitos ya ilustrados. Cada pieza
-                aporta textura, tono y contexto para leer esta ruta.
+                {route.galleryIntro ||
+                  "Selección visual a partir de los mitos ya ilustrados. Cada pieza aporta textura, tono y contexto para leer esta ruta."}
               </p>
             </div>
             <ButtonLink href={`/mitos?q=${encodeURIComponent(searchQuery)}`} variant="subtle">
