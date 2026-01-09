@@ -111,7 +111,7 @@ export default async function Home() {
       <main className="relative min-h-screen pb-24">
 
       <section className="container-shell mt-16">
-        <div className="grid gap-12 lg:grid-cols-[1fr_1fr] lg:gap-16">
+        <div className="relative z-20 grid gap-12 lg:grid-cols-[1fr_1fr] lg:gap-16">
           <div className="flex flex-col justify-center gap-8 animate-fade-up">
             <div>
               <p className="eyebrow">Biblioteca editorial</p>
@@ -177,7 +177,7 @@ export default async function Home() {
           </div>
         </div>
 
-        <div className="mt-12 grid gap-4 sm:grid-cols-3 lg:mt-16">
+        <div className="relative z-10 mt-12 grid gap-4 sm:grid-cols-3 lg:mt-16">
           {displayStats.map((stat) => (
             <GlassCard key={stat.label} className="p-6 text-center">
               <p className="font-display text-4xl text-ink-900">
