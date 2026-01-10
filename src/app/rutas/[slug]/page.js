@@ -6,22 +6,14 @@ import { ButtonLink } from "../../../components/ui/Button";
 import {
   ROUTES,
   getAccentStyles,
-  getMythsBySlugs,
+  getMythsByTitles,
   getRouteBySlug,
-  getRouteMyths,
+  resolveMythsByTitles,
 } from "../../../lib/routes";
 import { notFound } from "next/navigation";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
-
-function getDailySeed() {
-  const now = new Date();
-  const startOfYear = new Date(now.getFullYear(), 0, 0);
-  const diff = now - startOfYear;
-  const oneDay = 1000 * 60 * 60 * 24;
-  return Math.floor(diff / oneDay);
-}
 
 export async function generateStaticParams() {
   return ROUTES.map((route) => ({ slug: route.slug }));
@@ -104,54 +96,21 @@ export default async function RutaPage({ params }) {
     notFound();
   }
 
-  const seed = getDailySeed();
-  const curatedHero = route.curated?.heroSlugs || [];
-  const curatedGallery = route.curated?.gallerySlugs || [];
-  const curatedSlugs = Array.from(
+  const curatedHero = route.curated?.heroTitles || [];
+  const curatedGallery = route.curated?.galleryTitles || [];
+  const curatedTitles = Array.from(
     new Set([...curatedHero, ...curatedGallery].filter(Boolean))
   );
-  const curatedMyths = curatedSlugs.length
-    ? await getMythsBySlugs(curatedSlugs)
+  const curatedMyths = curatedTitles.length
+    ? await getMythsByTitles(curatedTitles)
     : [];
-  const curatedMap = new Map(curatedMyths.map((myth) => [myth.slug, myth]));
-
-  const fallbackMyths = await getRouteMyths({
-    keywords: route.keywords,
-    limit: 12,
-    seed,
-  });
-
-  const used = new Set();
-  const pickFromSlugs = (slugs, preferImage = false) => {
-    const items = slugs
-      .map((slug) => curatedMap.get(slug))
-      .filter(Boolean);
-    const ordered = preferImage
-      ? [
-          ...items.filter((item) => item.image_url),
-          ...items.filter((item) => !item.image_url),
-        ]
-      : items;
-    ordered.forEach((myth) => {
-      used.add(myth.slug);
-    });
-    return ordered;
-  };
-
-  const fillFromFallback = (items, target) => {
-    const filled = [...items];
-    for (const myth of fallbackMyths) {
-      if (filled.length >= target) break;
-      if (!used.has(myth.slug)) {
-        used.add(myth.slug);
-        filled.push(myth);
-      }
-    }
-    return filled;
-  };
-
-  const heroItems = fillFromFallback(pickFromSlugs(curatedHero, true), 3);
-  const galleryMyths = fillFromFallback(pickFromSlugs(curatedGallery), 8);
+  const resolvedMap = resolveMythsByTitles(curatedTitles, curatedMyths);
+  const heroItems = curatedHero
+    .map((title) => resolvedMap.get(title))
+    .filter(Boolean);
+  const galleryMyths = curatedGallery
+    .map((title) => resolvedMap.get(title))
+    .filter(Boolean);
   const accent = getAccentStyles(route.accent);
   const searchQuery = route.keywords[0] || route.title;
 

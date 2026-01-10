@@ -13,7 +13,7 @@ export const ROUTES = [
       "Selección curada de mitos donde el agua es protagonista y los guardianes sostienen la memoria del territorio.",
     tone: "Ríos y neblina",
     accent: "river",
-    keywords: ["agua", "rio", "mohan", "poira", "bachue", "pescadores", "charco"],
+    keywords: ["agua", "laguna", "mohan", "poira", "madre", "tesoro", "pescadores"],
     highlights: [
       {
         title: "Ríos con memoria",
@@ -29,21 +29,20 @@ export const ROUTES = [
       },
     ],
     curated: {
-      coverSlug: "el-mohan-guardian-de-aguas-doradas",
-      heroSlugs: [
-        "el-mohan-guardian-de-aguas-doradas",
-        "el-poira-seductor-de-aguas-profundas",
-        "bachue-madre-de-aguas-sagradas",
+      coverTitle: "La madre agua",
+      heroTitles: [
+        "La madre agua",
+        "Héntserá y el agua",
+        "Lagunas encantadas",
       ],
-      gallerySlugs: [
-        "bachue-madre-aguas-chibchas",
-        "caragabi-y-el-origen-del-agua",
-        "amor-prohibido-en-aguas-encantadas",
-        "encantamiento-y-engano-del-mohan",
-        "el-mohan-encantador-y-perseguidor-tolimense",
-        "encuentro-con-el-hechicero-mohan",
-        "pescadores-ingeniosos-del-rio-costeno",
-        "pescadores-rio-y-misterio-nocturno",
+      galleryTitles: [
+        "Zequiel",
+        "El tesoro de Caribare",
+        "Kugï y Nokuerai",
+        "El retorno de plumón amarillo",
+        "El origen del agua",
+        "El Carriazo de vereda San Isidro",
+        "El Reventón de Jacobo",
       ],
     },
   },
@@ -58,7 +57,7 @@ export const ROUTES = [
       "Mitos de selva donde los guardianes trazan fronteras, rutas y señales invisibles.",
     tone: "Selva y bruma",
     accent: "jungle",
-    keywords: ["selva", "madremonte", "monte", "guardiana", "venganza", "guerra"],
+    keywords: ["selva", "monte", "cazador", "tigre", "castigo", "venganza"],
     highlights: [
       {
         title: "Fronteras vivas",
@@ -74,21 +73,20 @@ export const ROUTES = [
       },
     ],
     curated: {
-      coverSlug: "madremonte-guardiana-verde-del-monte",
-      heroSlugs: [
-        "madremonte-guardiana-verde-del-monte",
-        "guardiana-peluda-de-la-selva",
-        "madremonte-guardiana-de-justicia-natural",
+      coverTitle: "Los muertos en el monte",
+      heroTitles: [
+        "Los muertos en el monte",
+        "La sed da los civilizados",
+        "El Morrocoyo",
       ],
-      gallerySlugs: [
-        "madremonte-guardiana-de-la-naturaleza",
-        "madremonte-guardiana-de-selvas-vivas",
-        "encuentro-magico-en-la-selva",
-        "venganza-en-la-selva-encantada",
-        "engano-astuto-en-la-selva",
-        "engano-y-venganza-en-la-selva",
-        "duelo-ancestral-en-la-selva-colombiana",
-        "guerra-y-destino-en-la-selva",
+      galleryTitles: [
+        "Juma",
+        "Peleas y aventuras entre el sobrino conejo y el tío tigre",
+        "Dïïjoma",
+        "Kugï y Nokuerai",
+        "Jobiya Jitoma",
+        "Yepá castiaga a los animales",
+        "El cazador",
       ],
     },
   },
@@ -103,16 +101,7 @@ export const ROUTES = [
       "Relatos donde las criaturas marcan límites, castigos y transformaciones.",
     tone: "Sombras y fuego",
     accent: "ember",
-    keywords: [
-      "patasola",
-      "basilisco",
-      "serpiente",
-      "boa",
-      "tigre",
-      "monstruo",
-      "bestia",
-      "culebra",
-    ],
+    keywords: ["caiman", "tigre", "serpiente", "brujo", "transformacion", "bestia"],
     highlights: [
       {
         title: "Metamorfosis",
@@ -128,21 +117,20 @@ export const ROUTES = [
       },
     ],
     curated: {
-      coverSlug: "la-patasola-devoradora-de-montanas",
-      heroSlugs: [
-        "la-patasola-devoradora-de-montanas",
-        "el-basilisco-devorador-de-caminos",
-        "monstruo-encantado-del-lago-tota",
+      coverTitle: "El hombre que soñó con caimán",
+      heroTitles: [
+        "El hombre que soñó con caimán",
+        "Los brujos",
+        "El hombre caimán",
       ],
-      gallerySlugs: [
-        "aribamia-encarnacion-tigre-del-mas-alla",
-        "tigre-luminoso-en-tsorueto",
-        "serpiente-bicefala-del-cananguchal",
-        "cacique-dijoma-y-la-boa-acuatica",
-        "cazadores-imarikakana-y-la-boa-voraz",
-        "crianza-fatal-de-la-culebra-ingrata",
-        "jose-sangam-y-la-culebra-voraz",
-        "la-nina-convertida-en-serpiente",
+      galleryTitles: [
+        "El hombre tigre",
+        "El tigre",
+        "La niña que se volvió serpiente",
+        "Yepá castiaga a los animales",
+        "Aribamias",
+        "Tasime (El Incesto)",
+        "La vieja colmillona",
       ],
     },
   },
@@ -157,7 +145,7 @@ export const ROUTES = [
       "Historias donde la bruma, el musgo y el bosque marcan fronteras sagradas.",
     tone: "Humedad y bruma",
     accent: "jungle",
-    keywords: ["bosque", "niebla", "bruma", "hojarasquin", "duende", "tamarindo", "monte"],
+    keywords: ["bosque", "niebla", "monte", "pacto", "cazador", "diablo", "redencion"],
     highlights: [
       {
         title: "Bruma protectora",
@@ -173,21 +161,20 @@ export const ROUTES = [
       },
     ],
     curated: {
-      coverSlug: "hojarasquin-guardian-del-bosque-encantado",
-      heroSlugs: [
-        "hojarasquin-guardian-del-bosque-encantado",
-        "el-guardian-velludo-del-bosque",
-        "devoradores-nocturnos-del-bosque-antiguo",
+      coverTitle: "El Dominguez",
+      heroTitles: [
+        "El Dominguez",
+        "Los muertos en el monte",
+        "El diablo del puente del Común",
       ],
-      gallerySlugs: [
-        "sombra-misteriosa-del-tamarindo",
-        "silbidos-nocturnos-y-duendes-voraces",
-        "duendes-ahuyentados-con-melodias-magicas",
-        "baltazar-el-duende-jugueton",
-        "el-cazador-fantasma-del-monte",
-        "cazador-madre-monte-y-engano-mortal",
-        "chuyachaque-enganos-en-el-monte",
-        "la-hechicera-unipeda-del-monte",
+      galleryTitles: [
+        "El Doctor Galeacer",
+        "Historia de un viejo",
+        "Coste",
+        "El dalo",
+        "El guatín astuto",
+        "Tal para cual",
+        "El cazador",
       ],
     },
   },
@@ -202,7 +189,7 @@ export const ROUTES = [
       "Relatos de apariciones y presencias que se cuentan para sobrevivir la noche.",
     tone: "Noches rituales",
     accent: "ink",
-    keywords: ["llorona", "fantasma", "noche", "guando", "lavandera", "jinete", "patetarro"],
+    keywords: ["fantasma", "diablo", "pacto", "noche", "bus", "guango", "misterio"],
     highlights: [
       {
         title: "Lamentos",
@@ -218,21 +205,20 @@ export const ROUTES = [
       },
     ],
     curated: {
-      coverSlug: "lagrimas-y-misterio-de-la-llorona",
-      heroSlugs: [
-        "lagrimas-y-misterio-de-la-llorona",
-        "la-lavandera-fantasma-de-la-noche",
-        "el-caballo-fantasma-de-medianoche",
+      coverTitle: "El diablo del puente del Común",
+      heroTitles: [
+        "El diablo del puente del Común",
+        "Los fantasmas",
+        "El Doctor Galeacer",
       ],
-      gallerySlugs: [
-        "lagrimas-eternas-de-la-llorona",
-        "el-errante-fantasma-del-patetarro",
-        "caballo-fantasma-de-playon-blanco",
-        "el-guando-camilla-fantasma-andina",
-        "el-guando-carga-mortal-y-avaricia",
-        "caceria-nocturna-de-la-cabeza-errante",
-        "el-jinete-oscuro-de-la-noche",
-        "desfile-fantasmal-del-capitan-sandoval",
+      galleryTitles: [
+        "El fantasma de El Horizonte",
+        "No hay deuda que no se pague",
+        "El diablo",
+        "El guango",
+        "El bus fantasma",
+        "Taik",
+        "La niña de la carta",
       ],
     },
   },
@@ -247,7 +233,7 @@ export const ROUTES = [
       "Historias donde el mar es oráculo, peligro y refugio para las comunidades.",
     tone: "Mareas y sal",
     accent: "river",
-    keywords: ["sirena", "caribe", "costa", "puerto", "barco", "pirata", "playa", "marea"],
+    keywords: ["mar", "playa", "barco", "fantasma", "caribe", "marea", "costero"],
     highlights: [
       {
         title: "Cantos y sirenas",
@@ -263,21 +249,20 @@ export const ROUTES = [
       },
     ],
     curated: {
-      coverSlug: "maria-la-larga-belleza-aterradora",
-      heroSlugs: [
-        "maria-la-larga-belleza-aterradora",
-        "sirena-del-arco-encanto-mortal",
-        "el-barco-dorado-de-curay",
+      coverTitle: "Marineritis sentimental",
+      heroTitles: [
+        "Marineritis sentimental",
+        "Madre de playa",
+        "El barco fantasma",
       ],
-      gallerySlugs: [
-        "danza-nocturna-con-sirenas",
-        "canto-sirena-muerte-y-huida",
-        "chontaduro-y-venganza-sirena",
-        "guardianes-y-piratas-de-santa-marta",
-        "la-madre-playa-y-su-cancion-nocturna",
-        "milagro-en-la-tempestad-caribena",
-        "salvacion-en-la-tormenta-caribena",
-        "amor-imposible-en-la-costa-caribe",
+      galleryTitles: [
+        "El padre Mera",
+        "Creación",
+        "El héroe",
+        "El castellano de San Juan",
+        "El mal del mar",
+        "En el sitio de Morillo",
+        "El Incesto",
       ],
     },
   },
@@ -292,7 +277,7 @@ export const ROUTES = [
       "Relatos donde viajar implica negociar con fuerzas invisibles y guardianes.",
     tone: "Cruces y caminos",
     accent: "ember",
-    keywords: ["camino", "viaje", "canoa", "puente", "cruce", "sendero", "trocha"],
+    keywords: ["camino", "viaje", "puente", "ultratumba", "infierno", "tunjo", "redencion"],
     highlights: [
       {
         title: "Puentes y umbrales",
@@ -308,21 +293,20 @@ export const ROUTES = [
       },
     ],
     curated: {
-      coverSlug: "puente-del-comun-pacto-diabolico",
-      heroSlugs: [
-        "puente-del-comun-pacto-diabolico",
-        "viaje-ancestral-por-caminos-subterraneos",
-        "viaje-celestial-de-los-cuatro-estantillos",
+      coverTitle: "El diablo del puente del Común",
+      heroTitles: [
+        "El diablo del puente del Común",
+        "Kugï y Nokuerai",
+        "El mundo de ultratumba",
       ],
-      gallerySlugs: [
-        "viaje-primigenio-en-canoa-serpiente",
-        "viaje-magico-en-canoa-transformadora",
-        "nacimiento-de-la-primera-canoa",
-        "el-senor-de-las-enfermedades-y-la-canoa-prohibida",
-        "viaje-mistico-del-piache-chaman",
-        "camino-acuatico-y-renacimiento-ancestral",
-        "viaje-alado-al-mas-alla",
-        "viaje-celestial-al-palacio-resplandeciente",
+      galleryTitles: [
+        "El viaje al cielo",
+        "La mina de oro en el infierno",
+        "El tunjo",
+        "La vista del libertador",
+        "El hombre flaco",
+        "La vieja, el burro y los huevos",
+        "La comida para los muertos",
       ],
     },
   },
@@ -337,7 +321,7 @@ export const ROUTES = [
       "Historias urbanas donde la memoria colonial y los rumores actuales se cruzan.",
     tone: "Ciudad y eco",
     accent: "ink",
-    keywords: ["cartagena", "candelaria", "ciudad", "urbano", "plaza", "calle", "colonial"],
+    keywords: ["bogota", "tranvia", "ascensor", "teatro", "ciudad", "urbano", "plaza"],
     highlights: [
       {
         title: "Rumores de barrio",
@@ -353,21 +337,20 @@ export const ROUTES = [
       },
     ],
     curated: {
-      coverSlug: "fantasmas-y-misterios-de-la-candelaria",
-      heroSlugs: [
-        "fantasmas-y-misterios-de-la-candelaria",
-        "cartagena-encanto-de-piedra-y-tradicion",
-        "amor-inolvidable-en-cartagena",
+      coverTitle: "El bobo del tranvía",
+      heroTitles: [
+        "El bobo del tranvía",
+        "El toro en el ascensor",
+        "Anansi",
       ],
-      gallerySlugs: [
-        "candelaria-y-la-barca-sacrilega",
-        "candelaria-y-el-exvoto-marino",
-        "acusaciones-y-secretos-en-la-inquisicion",
-        "amores-clandestinos-en-cartagena-colonial",
-        "amores-secretos-en-cartagena-colonial",
-        "amor-y-libertad-en-cartagena",
-        "amor-y-engano-en-cartagena",
-        "adios-en-glorietas-de-cartagena",
+      galleryTitles: [
+        "El chenche",
+        "La confesión",
+        "La sombra",
+        "En el sitio de Morillo",
+        "El mono de la pila",
+        "El fantasma del teatro azul",
+        "Una reunión clandestina",
       ],
     },
   },
@@ -382,7 +365,7 @@ export const ROUTES = [
       "Relatos de altura donde el viento y las lagunas marcan el ritmo del territorio.",
     tone: "Alturas y viento",
     accent: "river",
-    keywords: ["cerro", "sierra", "paramo", "monserrate", "guatavita", "laguna", "cumbre"],
+    keywords: ["cerro", "paramo", "laguna", "tesoro", "encantado", "montana", "sierra"],
     highlights: [
       {
         title: "Lagunas de altura",
@@ -398,21 +381,20 @@ export const ROUTES = [
       },
     ],
     curated: {
-      coverSlug: "furatena-esmeraldas-entre-cerros-sagrados",
-      heroSlugs: [
-        "furatena-esmeraldas-entre-cerros-sagrados",
-        "cerros-magicos-y-espiritus-ancestrales",
-        "guardianes-de-la-sierra-nevada",
+      coverTitle: "Lagunas encantadas",
+      heroTitles: [
+        "Lagunas encantadas",
+        "La laguna de María Panana.",
+        "Tradición del cerro",
       ],
-      gallerySlugs: [
-        "rescate-magico-en-cerro-plateado",
-        "inirida-princesa-del-cerro-encantado",
-        "conquista-hambrienta-en-sierra-nevada",
-        "misterios-y-milagros-de-monserrate",
-        "guatavita-traicion-sacrificio-y-encantamiento",
-        "princesa-fantasma-de-guatavita",
-        "diosa-dorada-de-la-laguna-encantada",
-        "toquecha-y-el-secreto-de-la-laguna",
+      galleryTitles: [
+        "Fu, el dios de la torpeza",
+        "Namaku",
+        "El tesoro de Buzaga",
+        "El cerro encantado",
+        "La visita del joven desconocido",
+        "El Incesto",
+        "La chama",
       ],
     },
   },
@@ -447,6 +429,157 @@ function normalizeInput(value) {
   }
   const trimmed = String(value).trim().toLowerCase();
   return trimmed.length ? trimmed : null;
+}
+
+const TITLE_STOPWORDS = new Set([
+  "el",
+  "la",
+  "los",
+  "las",
+  "del",
+  "de",
+  "y",
+  "en",
+  "al",
+  "un",
+  "una",
+  "unos",
+  "unas",
+  "por",
+  "para",
+  "con",
+]);
+
+function stripDiacritics(value) {
+  if (!value) {
+    return "";
+  }
+  return value.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+}
+
+function normalizeTitle(value) {
+  if (!value) {
+    return "";
+  }
+  const cleaned = stripDiacritics(String(value).toLowerCase());
+  return cleaned.replace(/[^a-z0-9]+/g, " ").trim();
+}
+
+function getTitleTokens(value) {
+  const normalized = normalizeTitle(value);
+  return normalized
+    .split(" ")
+    .map((token) => token.trim())
+    .filter((token) => token.length > 2 && !TITLE_STOPWORDS.has(token));
+}
+
+function buildTitlePatterns(titles = []) {
+  const patterns = new Set();
+
+  titles
+    .map((item) => (item ? String(item).trim() : ""))
+    .filter(Boolean)
+    .forEach((title) => {
+      const noParens = title.replace(/\([^)]*\)/g, " ").trim();
+      const noPunct = title.replace(/[^A-Za-z0-9\u00C0-\u017F]+/g, " ").trim();
+      const normalized = normalizeTitle(title);
+      const tokens = getTitleTokens(title);
+      const compact = tokens.join(" ").trim();
+
+      [title, noParens, noPunct, normalized, compact]
+        .filter(Boolean)
+        .forEach((candidate) => {
+          const trimmed = candidate.trim();
+          if (trimmed.length >= 4 && !TITLE_STOPWORDS.has(trimmed)) {
+            patterns.add(trimmed);
+          }
+        });
+
+      if (tokens.length) {
+        const longest = tokens.reduce((acc, item) => (item.length > acc.length ? item : acc), "");
+        if (longest.length >= 4) {
+          patterns.add(longest);
+        }
+        if (tokens.length >= 2) {
+          patterns.add(tokens.slice(0, 2).join(" "));
+        }
+        if (tokens.length >= 3) {
+          patterns.add(tokens.slice(0, 3).join(" "));
+        }
+      }
+    });
+
+  return Array.from(patterns);
+}
+
+function scoreTitleMatch(requestedTitle, candidateTitle) {
+  const requested = normalizeTitle(requestedTitle);
+  const candidate = normalizeTitle(candidateTitle);
+
+  if (!requested || !candidate) {
+    return 0;
+  }
+
+  if (requested === candidate) {
+    return 100;
+  }
+
+  let score = 0;
+  if (candidate.includes(requested) || requested.includes(candidate)) {
+    score += 50;
+  }
+
+  const requestedTokens = requested.split(" ").filter(Boolean);
+  const candidateTokens = new Set(candidate.split(" ").filter(Boolean));
+  let overlap = 0;
+  requestedTokens.forEach((token) => {
+    if (candidateTokens.has(token)) {
+      overlap += 1;
+    }
+  });
+  score += overlap * 10;
+
+  if (requestedTokens.length) {
+    const longest = requestedTokens.reduce(
+      (acc, item) => (item.length > acc.length ? item : acc),
+      ""
+    );
+    if (longest && candidate.includes(longest)) {
+      score += 5;
+    }
+  }
+
+  return score;
+}
+
+export function resolveMythsByTitles(titles, candidates = []) {
+  const resolved = new Map();
+  const used = new Set();
+
+  titles.forEach((title) => {
+    let best = null;
+    let bestScore = 0;
+
+    candidates.forEach((candidate) => {
+      if (!candidate || used.has(candidate.slug)) {
+        return;
+      }
+      const score = scoreTitleMatch(title, candidate.title);
+      if (score > bestScore) {
+        bestScore = score;
+        best = candidate;
+      }
+    });
+
+    if (best && bestScore > 0) {
+      used.add(best.slug);
+      resolved.set(title, best);
+    } else {
+      resolved.set(title, null);
+    }
+  });
+
+  return resolved;
 }
 
 function clampNumber(value, min, max, fallback) {
@@ -668,6 +801,168 @@ export async function getRouteMyths({ keywords = [], limit = 12, seed = 0 } = {}
   return getRouteMythsSqlite({ keywords, limit, seed });
 }
 
+function buildTitleWhereSqlite(patterns = []) {
+  const clauses = [];
+  const params = {};
+
+  patterns
+    .map((item) => (item ? String(item).trim().toLowerCase() : ""))
+    .filter(Boolean)
+    .forEach((pattern, index) => {
+      const key = `t${index}`;
+      params[key] = `%${pattern}%`;
+      clauses.push(
+        `(
+          lower(myths.title) LIKE :${key} OR
+          lower(myths.tags_raw) LIKE :${key} OR
+          lower(myths.focus_keywords_raw) LIKE :${key} OR
+          lower(myths.category_path) LIKE :${key}
+        )`
+      );
+    });
+
+  return {
+    whereClause: clauses.length ? `WHERE ${clauses.join(" OR ")}` : "",
+    params,
+  };
+}
+
+async function getMythsByTitlesPostgres(titles = []) {
+  const patterns = buildTitlePatterns(titles).map((pattern) => `%${pattern}%`);
+  if (!patterns.length) {
+    return [];
+  }
+  const sql = getSqlClient();
+
+  try {
+    const result = await sql.query(
+      `
+        SELECT
+          myths.id,
+          myths.title,
+          myths.slug,
+          myths.excerpt,
+          myths.category_path,
+          COALESCE(vi.image_url, myths.image_url) AS image_url,
+          regions.name AS region,
+          regions.slug AS region_slug,
+          communities.name AS community,
+          communities.slug AS community_slug
+        FROM myths
+        JOIN regions ON regions.id = myths.region_id
+        LEFT JOIN communities ON communities.id = myths.community_id
+        LEFT JOIN LATERAL (
+          SELECT image_url
+          FROM vertical_images
+          WHERE entity_type = 'myth' AND entity_id = myths.id
+          ORDER BY updated_at DESC NULLS LAST, created_at DESC NULLS LAST
+          LIMIT 1
+        ) vi ON true
+        WHERE
+          myths.title ILIKE ANY($1) OR
+          myths.tags_raw ILIKE ANY($1) OR
+          myths.focus_keywords_raw ILIKE ANY($1) OR
+          myths.category_path ILIKE ANY($1)
+      `,
+      [patterns]
+    );
+    return result.rows;
+  } catch (error) {
+    console.error("[routes] fallback: myths by titles without vertical_images", error);
+    const result = await sql.query(
+      `
+        SELECT
+          myths.id,
+          myths.title,
+          myths.slug,
+          myths.excerpt,
+          myths.category_path,
+          myths.image_url,
+          regions.name AS region,
+          regions.slug AS region_slug,
+          communities.name AS community,
+          communities.slug AS community_slug
+        FROM myths
+        JOIN regions ON regions.id = myths.region_id
+        LEFT JOIN communities ON communities.id = myths.community_id
+        WHERE
+          myths.title ILIKE ANY($1) OR
+          myths.tags_raw ILIKE ANY($1) OR
+          myths.focus_keywords_raw ILIKE ANY($1) OR
+          myths.category_path ILIKE ANY($1)
+      `,
+      [patterns]
+    );
+    return result.rows;
+  }
+}
+
+function getMythsByTitlesSqlite(titles = []) {
+  const patterns = buildTitlePatterns(titles);
+  if (!patterns.length) {
+    return [];
+  }
+  const db = getSqliteDb();
+  const { whereClause, params } = buildTitleWhereSqlite(patterns);
+
+  try {
+    const sql = `
+      SELECT
+        myths.id,
+        myths.title,
+        myths.slug,
+        myths.excerpt,
+        myths.category_path,
+        COALESCE(
+          (
+            SELECT image_url
+            FROM vertical_images vi
+            WHERE vi.entity_type = 'myth' AND vi.entity_id = myths.id
+            ORDER BY vi.updated_at DESC, vi.created_at DESC
+            LIMIT 1
+          ),
+          myths.image_url
+        ) AS image_url,
+        regions.name AS region,
+        regions.slug AS region_slug,
+        communities.name AS community,
+        communities.slug AS community_slug
+      FROM myths
+      JOIN regions ON regions.id = myths.region_id
+      LEFT JOIN communities ON communities.id = myths.community_id
+      ${whereClause}
+    `;
+    return db.prepare(sql).all(params);
+  } catch (error) {
+    console.error("[routes] fallback: myths by titles without vertical_images", error);
+    const sql = `
+      SELECT
+        myths.id,
+        myths.title,
+        myths.slug,
+        myths.excerpt,
+        myths.category_path,
+        myths.image_url,
+        regions.name AS region,
+        regions.slug AS region_slug,
+        communities.name AS community,
+        communities.slug AS community_slug
+      FROM myths
+      JOIN regions ON regions.id = myths.region_id
+      LEFT JOIN communities ON communities.id = myths.community_id
+      ${whereClause}
+    `;
+    return db.prepare(sql).all(params);
+  }
+}
+
+export async function getMythsByTitles(titles = []) {
+  if (isPostgres()) {
+    return getMythsByTitlesPostgres(titles);
+  }
+  return getMythsByTitlesSqlite(titles);
+}
+
 async function getMythsBySlugsPostgres(slugs = []) {
   if (!slugs.length) {
     return [];
@@ -808,19 +1103,24 @@ export async function getRoutePreviews(seed = 0) {
   const previews = await Promise.all(
     ROUTES.map(async (route, index) => {
       let preview = null;
-      const curatedSlugs = [
-        route.curated?.coverSlug,
-        ...(route.curated?.heroSlugs || []),
-        ...(route.curated?.gallerySlugs || []),
+      const curatedTitles = [
+        route.curated?.coverTitle,
+        ...(route.curated?.heroTitles || []),
+        ...(route.curated?.galleryTitles || []),
       ].filter(Boolean);
-      const uniqueCurated = Array.from(new Set(curatedSlugs));
+      const uniqueCurated = Array.from(new Set(curatedTitles));
 
       if (uniqueCurated.length) {
-        const curatedResult = await getMythsBySlugs(uniqueCurated);
-        preview = curatedResult.find((item) => item.image_url) || curatedResult[0] || null;
-      }
-
-      if (!preview || !preview.image_url) {
+        const curatedResult = await getMythsByTitles(uniqueCurated);
+        const resolvedMap = resolveMythsByTitles(uniqueCurated, curatedResult);
+        const cover = route.curated?.coverTitle
+          ? resolvedMap.get(route.curated.coverTitle)
+          : null;
+        const resolvedList = uniqueCurated
+          .map((title) => resolvedMap.get(title))
+          .filter(Boolean);
+        preview = cover || resolvedList.find((item) => item.image_url) || resolvedList[0] || null;
+      } else {
         const myths = await getRouteMyths({
           keywords: route.keywords,
           limit: 3,
