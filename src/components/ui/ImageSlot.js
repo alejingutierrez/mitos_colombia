@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { cn } from "../../lib/utils";
 
 const sizes = {
@@ -14,6 +15,7 @@ export function ImageSlot({
   size = "card",
   label = "Imagen en proceso",
   className,
+  sizes = "(max-width: 768px) 100vw, 50vw",
 }) {
   return (
     <div
@@ -28,12 +30,7 @@ export function ImageSlot({
     >
       {src ? (
         <>
-          <img
-            src={src}
-            alt={alt}
-            className="h-full w-full object-cover object-top"
-            loading="lazy"
-          />
+          <Image src={src} alt={alt} fill sizes={sizes} className="object-cover object-top" />
           <div className="absolute inset-0 bg-gradient-to-t from-ink-900/40 via-transparent to-transparent" />
         </>
       ) : (

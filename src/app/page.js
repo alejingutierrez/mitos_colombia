@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Header from "../components/Header";
 import { Badge } from "../components/ui/Badge";
 import { ButtonLink } from "../components/ui/Button";
@@ -12,6 +13,8 @@ import {
   getHomeStats,
   getTaxonomy,
 } from "../lib/myths";
+
+export const revalidate = 86400;
 
 // Generate a seed based on the current day to rotate content daily
 function getDailySeed() {
@@ -121,11 +124,14 @@ export default async function Home() {
             {heroMyth ? (
               <div className="relative">
                 {heroMyth.image_url && (
-                  <div className="relative overflow-hidden rounded-3xl border border-white/60 shadow-2xl">
-                    <img
+                  <div className="relative aspect-[4/5] overflow-hidden rounded-3xl border border-white/60 shadow-2xl">
+                    <Image
                       src={heroMyth.image_url}
                       alt={heroMyth.title}
-                      className="aspect-[4/5] w-full object-cover"
+                      fill
+                      priority
+                      sizes="(max-width: 1024px) 100vw, 50vw"
+                      className="object-cover"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-ink-900/90 via-ink-900/40 to-transparent" />
                     <div className="absolute bottom-0 left-0 right-0 p-8">
@@ -188,10 +194,12 @@ export default async function Home() {
             >
               <div className="relative aspect-square overflow-hidden rounded-3xl border border-white/60 shadow-glass transition hover:-translate-y-2 hover:shadow-2xl">
                 {route.preview?.image_url ? (
-                  <img
+                  <Image
                     src={route.preview.image_url}
                     alt={route.title}
-                    className="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-110"
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 33vw"
+                    className="object-cover transition duration-700 group-hover:scale-110"
                   />
                 ) : (
                   <div className="absolute inset-0 bg-gradient-to-br from-jungle-600 via-river-600 to-ember-500" />
@@ -288,10 +296,12 @@ export default async function Home() {
               <GlassCard className="relative h-full overflow-hidden p-0 transition hover:-translate-y-2 hover:shadow-2xl">
                 {region.image_url ? (
                   <div className="relative aspect-[16/9] overflow-hidden">
-                    <img
+                    <Image
                       src={region.image_url}
                       alt={`Region ${region.name}`}
-                      className="h-full w-full object-cover transition duration-700 group-hover:scale-110"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
+                      className="object-cover transition duration-700 group-hover:scale-110"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-ink-900/60 via-ink-900/10 to-transparent opacity-0 transition duration-300 group-hover:opacity-100" />
                   </div>

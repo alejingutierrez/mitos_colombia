@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import Header from "../../../components/Header";
 import { Badge } from "../../../components/ui/Badge";
@@ -113,11 +114,13 @@ export default async function MythDetailPage({ params }) {
               <div className="relative h-full min-h-[300px] overflow-hidden border-white/60 bg-white/40 md:min-h-0 md:border-l">
                 {myth.image_url ? (
                   <>
-                    <img
+                    <Image
                       src={myth.image_url}
                       alt={`Ilustración de ${myth.title}`}
-                      className="h-full w-full object-cover"
-                      loading="lazy"
+                      fill
+                      priority
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                      className="object-cover"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-ink-900/40 via-transparent to-transparent" />
                   </>

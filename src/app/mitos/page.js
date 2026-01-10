@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Header from "../../components/Header";
 import { Badge } from "../../components/ui/Badge";
 import { ButtonLink } from "../../components/ui/Button";
@@ -9,7 +10,7 @@ import { getTaxonomy, listMyths } from "../../lib/myths";
 import Link from "next/link";
 
 export const runtime = "nodejs";
-export const dynamic = "force-dynamic";
+export const revalidate = 300;
 
 function getParamValue(value) {
   if (Array.isArray(value)) {
@@ -161,10 +162,12 @@ export default async function MitosPage({ searchParams }) {
                   <div className="relative aspect-[16/9] overflow-hidden">
                     {myth.image_url ? (
                       <>
-                        <img
+                        <Image
                           src={myth.image_url}
                           alt={`Ilustracion de ${myth.title}`}
-                          className="h-full w-full object-cover transition duration-700 group-hover:scale-110"
+                          fill
+                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
+                          className="object-cover transition duration-700 group-hover:scale-110"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-ink-900/40 via-transparent to-transparent" />
                       </>

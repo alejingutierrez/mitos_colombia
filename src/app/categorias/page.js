@@ -7,7 +7,7 @@ import { SectionHeader } from "../../components/ui/SectionHeader";
 import { getTaxonomy } from "../../lib/myths";
 
 export const runtime = "nodejs";
-export const dynamic = "force-dynamic";
+export const revalidate = 3600;
 
 export default async function CategoriasPage() {
   const taxonomy = await getTaxonomy();

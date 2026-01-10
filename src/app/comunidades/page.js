@@ -8,7 +8,7 @@ import { filterAllowedCommunities } from "../../lib/communityFilters";
 import { getTaxonomy } from "../../lib/myths";
 
 export const runtime = "nodejs";
-export const dynamic = "force-dynamic";
+export const revalidate = 3600;
 
 export default async function ComunidadesPage() {
   const taxonomy = await getTaxonomy();

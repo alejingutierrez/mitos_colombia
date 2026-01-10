@@ -1,4 +1,7 @@
+import { unstable_cache } from "next/cache";
 import { getSqlClient, getSqliteDb, isPostgres } from "./db";
+
+const ONE_DAY = 60 * 60 * 24;
 
 export const ROUTES = [
   {
@@ -1098,42 +1101,70 @@ export async function getMythsBySlugs(slugs = []) {
   return getMythsBySlugsSqlite(slugs);
 }
 
-export async function getRoutePreviews(seed = 0) {
-  const safeSeed = Number.isFinite(seed) ? seed : 0;
-  const previews = await Promise.all(
-    ROUTES.map(async (route, index) => {
-      let preview = null;
+const getRoutePreviewsCached = unstable_cache(
+  async (seed = 0) => {
+    const safeSeed = Number.isFinite(seed) ? seed : 0;
+    const routesWithCurated = ROUTES.map((route) => {
       const curatedTitles = [
         route.curated?.coverTitle,
         ...(route.curated?.heroTitles || []),
         ...(route.curated?.galleryTitles || []),
       ].filter(Boolean);
-      const uniqueCurated = Array.from(new Set(curatedTitles));
+      return {
+        route,
+        curatedTitles: Array.from(new Set(curatedTitles)),
+      };
+    });
 
-      if (uniqueCurated.length) {
-        const curatedResult = await getMythsByTitles(uniqueCurated);
-        const resolvedMap = resolveMythsByTitles(uniqueCurated, curatedResult);
-        const cover = route.curated?.coverTitle
-          ? resolvedMap.get(route.curated.coverTitle)
-          : null;
-        const resolvedList = uniqueCurated
-          .map((title) => resolvedMap.get(title))
-          .filter(Boolean);
-        preview = cover || resolvedList.find((item) => item.image_url) || resolvedList[0] || null;
-      } else {
-        const myths = await getRouteMyths({
-          keywords: route.keywords,
-          limit: 3,
-          seed: safeSeed + index * 7,
-        });
-        const fallback = myths.find((item) => item.image_url) || myths[0] || null;
-        preview = fallback || preview;
-      }
-      return { ...route, preview };
-    })
-  );
+    const allCuratedTitles = Array.from(
+      new Set(
+        routesWithCurated.flatMap((item) => item.curatedTitles)
+      )
+    );
+    const curatedResult = allCuratedTitles.length
+      ? await getMythsByTitles(allCuratedTitles)
+      : [];
 
-  return previews;
+    const previews = await Promise.all(
+      routesWithCurated.map(async ({ route, curatedTitles }, index) => {
+        let preview = null;
+
+        if (curatedTitles.length) {
+          const resolvedMap = resolveMythsByTitles(curatedTitles, curatedResult);
+          const cover = route.curated?.coverTitle
+            ? resolvedMap.get(route.curated.coverTitle)
+            : null;
+          const resolvedList = curatedTitles
+            .map((title) => resolvedMap.get(title))
+            .filter(Boolean);
+          preview =
+            cover ||
+            resolvedList.find((item) => item.image_url) ||
+            resolvedList[0] ||
+            null;
+        }
+
+        if (!preview) {
+          const myths = await getRouteMyths({
+            keywords: route.keywords,
+            limit: 3,
+            seed: safeSeed + index * 7,
+          });
+          preview = myths.find((item) => item.image_url) || myths[0] || null;
+        }
+
+        return { ...route, preview };
+      })
+    );
+
+    return previews;
+  },
+  ["route-previews"],
+  { revalidate: ONE_DAY }
+);
+
+export async function getRoutePreviews(seed = 0) {
+  return getRoutePreviewsCached(seed);
 }
 
 export function getRouteBySlug(slug) {

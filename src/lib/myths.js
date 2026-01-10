@@ -1,4 +1,8 @@
+import { unstable_cache } from "next/cache";
 import { getSqlClient, getSqliteDb, isPostgres } from "./db";
+
+const ONE_HOUR = 60 * 60;
+const ONE_DAY = 60 * 60 * 24;
 
 function normalizeInput(value) {
   if (!value) {
@@ -354,11 +358,19 @@ async function getMythBySlugPostgres(slug) {
   };
 }
 
+const getMythBySlugCached = unstable_cache(
+  async (slug) => {
+    if (isPostgres()) {
+      return getMythBySlugPostgres(slug);
+    }
+    return getMythBySlugSqlite(slug);
+  },
+  ["myth-by-slug"],
+  { revalidate: ONE_HOUR }
+);
+
 export async function getMythBySlug(slug) {
-  if (isPostgres()) {
-    return getMythBySlugPostgres(slug);
-  }
-  return getMythBySlugSqlite(slug);
+  return getMythBySlugCached(slug);
 }
 
 function getTaxonomySqlite() {
@@ -473,11 +485,19 @@ async function getTaxonomyPostgres() {
   };
 }
 
+const getTaxonomyCached = unstable_cache(
+  async () => {
+    if (isPostgres()) {
+      return getTaxonomyPostgres();
+    }
+    return getTaxonomySqlite();
+  },
+  ["taxonomy"],
+  { revalidate: ONE_HOUR }
+);
+
 export async function getTaxonomy() {
-  if (isPostgres()) {
-    return getTaxonomyPostgres();
-  }
-  return getTaxonomySqlite();
+  return getTaxonomyCached();
 }
 
 export function parseListParams(searchParams) {
@@ -569,16 +589,33 @@ async function getRecommendedMythsPostgres(mythId, { region_id, community_id, ta
   }
 }
 
+const getRecommendedMythsCached = unstable_cache(
+  async (mythId, regionId, communityId, limit = 8) => {
+    if (!mythId || !regionId) {
+      return [];
+    }
+    const payload = { region_id: regionId, community_id: communityId };
+    if (isPostgres()) {
+      return await getRecommendedMythsPostgres(mythId, payload, limit);
+    }
+    return getRecommendedMythsSqlite(mythId, payload, limit);
+  },
+  ["recommended-myths"],
+  { revalidate: ONE_HOUR }
+);
+
 export async function getRecommendedMyths(myth, limit = 8) {
   if (!myth || !myth.id || !myth.region_id) {
     return [];
   }
 
   try {
-    if (isPostgres()) {
-      return await getRecommendedMythsPostgres(myth.id, myth, limit);
-    }
-    return getRecommendedMythsSqlite(myth.id, myth, limit);
+    return await getRecommendedMythsCached(
+      myth.id,
+      myth.region_id,
+      myth.community_id,
+      limit
+    );
   } catch (error) {
     console.error("Error in getRecommendedMyths:", error);
     return [];
@@ -652,12 +689,20 @@ function getFeaturedMythsWithImagesSqlite(limit = 12, seed = 0) {
   }
 }
 
-export async function getFeaturedMythsWithImages(limit = 12, seed = 0) {
-  try {
+const getFeaturedMythsWithImagesCached = unstable_cache(
+  async (limit = 12, seed = 0) => {
     if (isPostgres()) {
       return await getFeaturedMythsWithImagesPostgres(limit, seed);
     }
     return getFeaturedMythsWithImagesSqlite(limit, seed);
+  },
+  ["featured-myths"],
+  { revalidate: ONE_DAY }
+);
+
+export async function getFeaturedMythsWithImages(limit = 12, seed = 0) {
+  try {
+    return await getFeaturedMythsWithImagesCached(limit, seed);
   } catch (error) {
     console.error("Error in getFeaturedMythsWithImages:", error);
     return [];
@@ -817,12 +862,20 @@ function getDiverseMythsSqlite(limit = 9, seed = 0) {
   }
 }
 
-export async function getDiverseMyths(limit = 9, seed = 0) {
-  try {
+const getDiverseMythsCached = unstable_cache(
+  async (limit = 9, seed = 0) => {
     if (isPostgres()) {
       return await getDiverseMythsPostgres(limit, seed);
     }
     return getDiverseMythsSqlite(limit, seed);
+  },
+  ["diverse-myths"],
+  { revalidate: ONE_DAY }
+);
+
+export async function getDiverseMyths(limit = 9, seed = 0) {
+  try {
+    return await getDiverseMythsCached(limit, seed);
   } catch (error) {
     console.error("Error in getDiverseMyths:", error);
     return [];
@@ -836,14 +889,10 @@ async function getHomeStatsPostgres() {
   try {
     const result = await sql.query(`
       SELECT
-        COUNT(DISTINCT myths.id) as total_myths,
-        COUNT(DISTINCT regions.id) as total_regions,
-        COUNT(DISTINCT CASE WHEN myths.image_url IS NOT NULL THEN myths.id END) as myths_with_images,
-        COUNT(DISTINCT tags.id) as total_tags
-      FROM myths
-      CROSS JOIN regions
-      LEFT JOIN myth_tags ON myth_tags.myth_id = myths.id
-      LEFT JOIN tags ON tags.id = myth_tags.tag_id
+        (SELECT COUNT(*) FROM myths) as total_myths,
+        (SELECT COUNT(*) FROM regions) as total_regions,
+        (SELECT COUNT(*) FROM myths WHERE image_url IS NOT NULL) as myths_with_images,
+        (SELECT COUNT(*) FROM tags) as total_tags
     `);
 
     return result.rows[0];
@@ -862,17 +911,17 @@ function getHomeStatsSqlite() {
   const db = getSqliteDb();
 
   try {
-    const result = db.prepare(`
-      SELECT
-        COUNT(DISTINCT myths.id) as total_myths,
-        COUNT(DISTINCT regions.id) as total_regions,
-        COUNT(DISTINCT CASE WHEN myths.image_url IS NOT NULL THEN myths.id END) as myths_with_images,
-        COUNT(DISTINCT tags.id) as total_tags
-      FROM myths
-      CROSS JOIN regions
-      LEFT JOIN myth_tags ON myth_tags.myth_id = myths.id
-      LEFT JOIN tags ON tags.id = myth_tags.tag_id
-    `).get();
+    const result = db
+      .prepare(
+        `
+        SELECT
+          (SELECT COUNT(*) FROM myths) as total_myths,
+          (SELECT COUNT(*) FROM regions) as total_regions,
+          (SELECT COUNT(*) FROM myths WHERE image_url IS NOT NULL) as myths_with_images,
+          (SELECT COUNT(*) FROM tags) as total_tags
+      `
+      )
+      .get();
 
     return result;
   } catch (error) {
@@ -886,12 +935,20 @@ function getHomeStatsSqlite() {
   }
 }
 
-export async function getHomeStats() {
-  try {
+const getHomeStatsCached = unstable_cache(
+  async () => {
     if (isPostgres()) {
       return await getHomeStatsPostgres();
     }
     return getHomeStatsSqlite();
+  },
+  ["home-stats"],
+  { revalidate: ONE_HOUR }
+);
+
+export async function getHomeStats() {
+  try {
+    return await getHomeStatsCached();
   } catch (error) {
     console.error("Error in getHomeStats:", error);
     return {

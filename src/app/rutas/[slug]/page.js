@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Header from "../../../components/Header";
 import Link from "next/link";
 import { Badge } from "../../../components/ui/Badge";
@@ -13,7 +14,7 @@ import {
 import { notFound } from "next/navigation";
 
 export const runtime = "nodejs";
-export const dynamic = "force-dynamic";
+export const revalidate = 86400;
 
 export async function generateStaticParams() {
   return ROUTES.map((route) => ({ slug: route.slug }));
@@ -30,14 +31,17 @@ export async function generateMetadata({ params }) {
   };
 }
 
-function HeroTile({ myth, className }) {
+function HeroTile({ myth, className, sizes, priority = false }) {
   return (
     <div className={className}>
       {myth?.image_url ? (
-        <img
+        <Image
           src={myth.image_url}
           alt={myth.title}
-          className="h-full w-full object-cover transition duration-700 group-hover:scale-110"
+          fill
+          sizes={sizes}
+          priority={priority}
+          className="object-cover transition duration-700 group-hover:scale-110"
         />
       ) : (
         <div className="h-full w-full bg-gradient-to-br from-jungle-600 via-river-600 to-ember-500" />
@@ -61,10 +65,12 @@ function RouteMythCard({ myth, accentText }) {
       <GlassCard className="relative h-full overflow-hidden p-0 transition hover:-translate-y-2 hover:shadow-2xl">
         <div className="relative aspect-[3/4] overflow-hidden">
           {myth.image_url ? (
-            <img
+            <Image
               src={myth.image_url}
               alt={myth.title}
-              className="h-full w-full object-cover transition duration-700 group-hover:scale-110"
+              fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+              className="object-cover transition duration-700 group-hover:scale-110"
             />
           ) : (
             <div className="h-full w-full bg-gradient-to-br from-ink-800 via-jungle-700 to-ember-500" />
@@ -152,14 +158,27 @@ export default async function RutaPage({ params }) {
 
             <div className="grid gap-4 sm:grid-cols-2">
               <GlassCard className="group relative aspect-[4/5] overflow-hidden p-0">
-                <HeroTile myth={heroItems[0]} className="absolute inset-0" />
+                <HeroTile
+                  myth={heroItems[0]}
+                  className="absolute inset-0"
+                  sizes="(max-width: 1024px) 100vw, 33vw"
+                  priority
+                />
               </GlassCard>
               <div className="grid gap-4">
                 <GlassCard className="group relative aspect-[16/9] overflow-hidden p-0">
-                  <HeroTile myth={heroItems[1]} className="absolute inset-0" />
+                  <HeroTile
+                    myth={heroItems[1]}
+                    className="absolute inset-0"
+                    sizes="(max-width: 1024px) 100vw, 33vw"
+                  />
                 </GlassCard>
                 <GlassCard className="group relative aspect-[16/9] overflow-hidden p-0">
-                  <HeroTile myth={heroItems[2]} className="absolute inset-0" />
+                  <HeroTile
+                    myth={heroItems[2]}
+                    className="absolute inset-0"
+                    sizes="(max-width: 1024px) 100vw, 33vw"
+                  />
                 </GlassCard>
               </div>
             </div>

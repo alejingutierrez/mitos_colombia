@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import Header from "../../../components/Header";
 import { Badge } from "../../../components/ui/Badge";
@@ -10,7 +11,7 @@ import { getTaxonomy, listMyths } from "../../../lib/myths";
 import Link from "next/link";
 
 export const runtime = "nodejs";
-export const dynamic = "force-dynamic";
+export const revalidate = 300;
 
 // Descripciones específicas para cada categoría
 const CATEGORY_INFO = {
@@ -393,10 +394,12 @@ export default async function CategoryDetailPage({ params, searchParams }) {
                 <GlassCard className="flex h-full flex-col overflow-hidden p-0 transition hover:-translate-y-1 hover:shadow-lift">
                   {myth.image_url && (
                     <div className="relative aspect-[16/9] overflow-hidden">
-                      <img
+                      <Image
                         src={myth.image_url}
                         alt={`Ilustracion de ${myth.title}`}
-                        className="h-full w-full object-cover transition duration-700 group-hover:scale-110"
+                        fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
+                        className="object-cover transition duration-700 group-hover:scale-110"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-ink-900/40 via-transparent to-transparent" />
                     </div>
