@@ -1,9 +1,10 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import AdminLayout from "../../../components/AdminLayout";
 import { GlassCard } from "../../../components/ui/GlassCard";
-import { Button } from "../../../components/ui/Button";
+import { Button, ButtonLink } from "../../../components/ui/Button";
 import { Badge } from "../../../components/ui/Badge";
 
 export default function GeoLocationsAdminPage() {
@@ -27,7 +28,7 @@ export default function GeoLocationsAdminPage() {
 
       if (response.status === 401) {
         setIsAuthenticated(false);
-        localStorage.removeItem("admin_auth_geo");
+        localStorage.removeItem("admin_auth");
         return;
       }
 
@@ -36,16 +37,10 @@ export default function GeoLocationsAdminPage() {
         setPendingTotal(data.total);
         setBreakdown(data.breakdown || []);
         setIsAuthenticated(true);
-        localStorage.setItem("admin_auth_geo", btoa(`${username}:${password}`));
       }
     } catch (error) {
       console.error("Error fetching geo counts:", error);
     }
-  };
-
-  const handleLogin = (e) => {
-    e.preventDefault();
-    fetchCount(credentials.username, credentials.password);
   };
 
   const handleLogout = () => {
@@ -54,11 +49,11 @@ export default function GeoLocationsAdminPage() {
     setResults([]);
     setPendingTotal(null);
     setBreakdown([]);
-    localStorage.removeItem("admin_auth_geo");
+    localStorage.removeItem("admin_auth");
   };
 
   useEffect(() => {
-    const savedAuth = localStorage.getItem("admin_auth_geo");
+    const savedAuth = localStorage.getItem("admin_auth");
     if (savedAuth) {
       try {
         const decoded = atob(savedAuth);
@@ -67,7 +62,7 @@ export default function GeoLocationsAdminPage() {
         fetchCount(username, password);
       } catch (error) {
         console.error("Error loading saved session:", error);
-        localStorage.removeItem("admin_auth_geo");
+        localStorage.removeItem("admin_auth");
       }
     }
   }, []);
@@ -155,44 +150,26 @@ export default function GeoLocationsAdminPage() {
               <h1 className="font-display text-3xl text-ink-900 mb-2">
                 Geolocalización
               </h1>
-              <p className="text-sm text-ink-600">Mitos de Colombia</p>
+              <p className="text-sm text-ink-600">
+                Inicia sesión desde el panel principal.
+              </p>
             </div>
 
-            <form onSubmit={handleLogin} className="space-y-4">
-              <div>
-                <label className="block text-sm font-medium text-ink-700 mb-2">
-                  Usuario
-                </label>
-                <input
-                  type="text"
-                  value={credentials.username}
-                  onChange={(e) =>
-                    setCredentials({ ...credentials, username: e.target.value })
-                  }
-                  className="input-glass"
-                  placeholder="Ingresa tu usuario"
-                  required
-                />
+            <div className="space-y-4">
+              <p className="text-sm text-ink-600">
+                Este módulo usa la misma sesión del admin de imágenes.
+              </p>
+              <ButtonLink href="/admin" className="w-full">
+                Ir a iniciar sesión
+              </ButtonLink>
+              <div className="text-xs text-ink-500">
+                Luego vuelve a{" "}
+                <Link href="/admin/geo-locations" className="underline">
+                  geolocalización
+                </Link>
+                .
               </div>
-              <div>
-                <label className="block text-sm font-medium text-ink-700 mb-2">
-                  Contraseña
-                </label>
-                <input
-                  type="password"
-                  value={credentials.password}
-                  onChange={(e) =>
-                    setCredentials({ ...credentials, password: e.target.value })
-                  }
-                  className="input-glass"
-                  placeholder="Ingresa tu contraseña"
-                  required
-                />
-              </div>
-              <Button type="submit" className="w-full">
-                Iniciar Sesión
-              </Button>
-            </form>
+            </div>
           </GlassCard>
         </div>
       </div>
