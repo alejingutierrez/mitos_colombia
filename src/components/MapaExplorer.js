@@ -421,7 +421,7 @@ export default function MapaExplorer() {
 
         </div>
 
-        <GlassCard className="relative overflow-hidden p-0 min-h-[420px] md:min-h-[520px] lg:min-h-[620px] lg:h-full">
+        <GlassCard className="relative w-full overflow-hidden p-0 aspect-[3/4]">
           {loading ? (
             <div className="flex h-full items-center justify-center bg-white/60">
               <div className="text-sm text-ink-600">Cargando mapa...</div>
