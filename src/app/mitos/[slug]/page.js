@@ -8,6 +8,7 @@ import { getMythBySlug, getRecommendedMyths } from "../../../lib/myths";
 import { RecommendedMyths } from "../../../components/RecommendedMyths";
 import { Comments } from "../../../components/Comments";
 import Link from "next/link";
+import ShareBar from "../../../components/ShareBar";
 
 export const runtime = "nodejs";
 export const revalidate = 3600;
@@ -104,6 +105,12 @@ export default async function MythDetailPage({ params }) {
               <p className="mt-4 text-sm text-ink-700 md:text-base">
                 {myth.excerpt}
               </p>
+              <ShareBar
+                title={myth.title}
+                excerpt={myth.excerpt}
+                slug={myth.slug}
+                variant="inline"
+              />
             </div>
 
             {/* Columna derecha: Imagen */}
@@ -187,6 +194,14 @@ export default async function MythDetailPage({ params }) {
               </div>
             </div>
           )}
+
+          <div className="mt-10">
+            <ShareBar
+              title={myth.title}
+              excerpt={myth.excerpt}
+              slug={myth.slug}
+            />
+          </div>
 
           <div className="mt-8">
             <ButtonLink href="/mitos" variant="outline">
