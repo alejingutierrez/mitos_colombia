@@ -1,10 +1,10 @@
 import { getTaxonomy } from "../lib/myths";
 import HeaderClient from "./HeaderClient";
 
-export default async function Header() {
+export default async function Header({ taxonomy }) {
   try {
-    const taxonomy = await getTaxonomy();
-    return <HeaderClient initialTaxonomy={taxonomy} />;
+    const resolvedTaxonomy = taxonomy ?? (await getTaxonomy());
+    return <HeaderClient initialTaxonomy={resolvedTaxonomy} />;
   } catch (error) {
     console.error("Error loading taxonomy for header:", error);
     return (

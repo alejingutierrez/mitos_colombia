@@ -194,7 +194,7 @@ export default async function RegionDetailPage({ params, searchParams }) {
 
   return (
     <main className="relative min-h-screen overflow-hidden pb-24">
-      <Header />
+      <Header taxonomy={taxonomy} />
 
       {/* Hero Section */}
       <section className="container-shell mt-12">

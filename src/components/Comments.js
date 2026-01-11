@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { GlassCard } from "./ui/GlassCard";
 
 export function Comments({ mythId, initialComments = [] }) {
@@ -10,8 +10,45 @@ export function Comments({ mythId, initialComments = [] }) {
     authorEmail: "",
     content: "",
   });
+  const [isLoading, setIsLoading] = useState(initialComments.length === 0);
+  const [loadError, setLoadError] = useState(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [message, setMessage] = useState(null);
+
+  useEffect(() => {
+    if (!mythId) return;
+    let active = true;
+
+    const loadComments = async () => {
+      setIsLoading(true);
+      setLoadError(null);
+
+      try {
+        const response = await fetch(`/api/comments?mythId=${mythId}`);
+        if (!response.ok) {
+          throw new Error("No se pudieron cargar los comentarios");
+        }
+        const data = await response.json();
+        if (active) {
+          setComments(Array.isArray(data.comments) ? data.comments : []);
+        }
+      } catch (error) {
+        if (active) {
+          setLoadError("No se pudieron cargar los comentarios en este momento.");
+        }
+      } finally {
+        if (active) {
+          setIsLoading(false);
+        }
+      }
+    };
+
+    loadComments();
+
+    return () => {
+      active = false;
+    };
+  }, [mythId]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -57,7 +94,13 @@ export function Comments({ mythId, initialComments = [] }) {
       </h2>
 
       {/* Existing Comments */}
-      {comments.length > 0 ? (
+      {loadError && (
+        <p className="text-xs text-ember-600">{loadError}</p>
+      )}
+
+      {isLoading && comments.length === 0 ? (
+        <p className="text-sm text-ink-600 italic">Cargando comentarios...</p>
+      ) : comments.length > 0 ? (
         <div className="space-y-4">
           {comments.map((comment) => (
             <GlassCard key={comment.id} className="p-4">

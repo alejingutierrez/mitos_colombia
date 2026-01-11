@@ -279,7 +279,7 @@ export default async function CategoryDetailPage({ params, searchParams }) {
 
   return (
     <main className="relative min-h-screen overflow-hidden pb-24">
-      <Header />
+      <Header taxonomy={taxonomy} />
 
       {/* Hero Section con imagen */}
       <section className="container-shell mt-12">

@@ -22,7 +22,7 @@ export default async function CategoriasPage() {
 
   return (
     <main className="relative min-h-screen overflow-hidden pb-24">
-      <Header />
+      <Header taxonomy={taxonomy} />
 
       <section className="container-shell mt-12">
         <SectionHeader

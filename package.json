@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "db:import": "node scripts/import-mitos.js",
-    "db:import:pg": "node scripts/import-mitos-postgres.js"
+    "db:import:pg": "node scripts/import-mitos-postgres.js",
+    "images:optimize:mitos": "node scripts/optimize-blob-mitos-images.js"
   },
   "dependencies": {
     "@vercel/blob": "^2.0.0",
@@ -31,6 +32,7 @@
     "eslint-config-next": "^15.1.0",
     "pg": "^8.13.1",
     "postcss": "^8.4.47",
+    "sharp": "^0.33.5",
     "tailwindcss": "^3.4.15",
     "xlsx": "^0.18.5"
   }

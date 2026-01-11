@@ -5,14 +5,12 @@ import { Badge } from "../../../components/ui/Badge";
 import { ButtonLink } from "../../../components/ui/Button";
 import { GlassCard } from "../../../components/ui/GlassCard";
 import { getMythBySlug, getRecommendedMyths } from "../../../lib/myths";
-import { getComments } from "../../../lib/comments";
 import { RecommendedMyths } from "../../../components/RecommendedMyths";
 import { Comments } from "../../../components/Comments";
 import Link from "next/link";
 
 export const runtime = "nodejs";
-export const dynamic = "force-dynamic";
-export const revalidate = 0;
+export const revalidate = 3600;
 
 export async function generateMetadata({ params }) {
   const myth = await getMythBySlug(params.slug);
@@ -78,7 +76,6 @@ export default async function MythDetailPage({ params }) {
 
   const blocks = splitContent(myth.content);
   const recommendedMyths = await getRecommendedMyths(myth, 8);
-  const comments = await getComments(myth.id);
 
   return (
     <>
@@ -206,7 +203,7 @@ export default async function MythDetailPage({ params }) {
       )}
 
       <section className="container-shell mt-10">
-        <Comments mythId={myth.id} initialComments={comments} />
+        <Comments mythId={myth.id} />
       </section>
       </main>
     </>

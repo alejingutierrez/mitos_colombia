@@ -85,7 +85,7 @@ export default async function Home() {
   ];
   return (
     <>
-      <Header />
+      <Header taxonomy={taxonomy} />
       <div className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
         <div className="absolute top-0 left-12 h-72 w-72 rounded-full bg-jungle-500/30 blur-3xl motion-safe:animate-float-slow" />
         <div className="absolute right-0 top-20 h-80 w-80 rounded-full bg-river-500/25 blur-3xl motion-safe:animate-float-slow" />

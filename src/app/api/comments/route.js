@@ -1,7 +1,41 @@
 import { NextResponse } from "next/server";
-import { addComment } from "../../../lib/comments";
+import { addComment, getComments } from "../../../lib/comments";
 
 export const runtime = "nodejs";
+
+export async function GET(request) {
+  try {
+    const mythIdParam = request.nextUrl.searchParams.get("mythId");
+    if (!mythIdParam) {
+      return NextResponse.json(
+        { error: "mythId es requerido" },
+        { status: 400 }
+      );
+    }
+
+    const mythId = Number.parseInt(mythIdParam, 10);
+    if (!Number.isFinite(mythId)) {
+      return NextResponse.json(
+        { error: "mythId inválido" },
+        { status: 400 }
+      );
+    }
+
+    const comments = await getComments(mythId);
+    const response = NextResponse.json({ comments });
+    response.headers.set(
+      "Cache-Control",
+      "public, s-maxage=300, stale-while-revalidate=300"
+    );
+    return response;
+  } catch (error) {
+    console.error("Error getting comments:", error);
+    return NextResponse.json(
+      { error: "Error al cargar los comentarios" },
+      { status: 500 }
+    );
+  }
+}
 
 export async function POST(request) {
   try {
