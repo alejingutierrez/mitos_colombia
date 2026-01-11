@@ -286,7 +286,6 @@ export default async function CategoryDetailPage({ params, searchParams }) {
   });
 
   // Tags relacionados (excluir regiones y "ninguno")
-  const regionNames = taxonomy.regions.map(r => r.name.toLowerCase());
   const relatedTags = taxonomy.tags
     .filter(t =>
       t.slug !== params.slug &&
