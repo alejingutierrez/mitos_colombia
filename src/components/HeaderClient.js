@@ -6,15 +6,15 @@ import { useEffect, useState } from "react";
 import { filterAllowedCommunities } from "../lib/communityFilters";
 
 const navLinks = [
-  { label: "Mitos", href: "/mitos", hasDropdown: true },
+  { label: "Comunidades", href: "/comunidades", hasDropdown: true },
   { label: "Categorias", href: "/categorias", hasDropdown: true },
   { label: "Regiones", href: "/regiones", hasDropdown: true },
-  { label: "Rutas", href: "/rutas", hasDropdown: false },
   { label: "Mapa", href: "/mapa", hasDropdown: false },
 ];
 
 export default function HeaderClient({ initialTaxonomy }) {
   const [open, setOpen] = useState(false);
+  const [mobileExpanded, setMobileExpanded] = useState(null);
   const [taxonomy, setTaxonomy] = useState(
     initialTaxonomy || { communities: [], tags: [], regions: [] }
   );
@@ -62,7 +62,7 @@ export default function HeaderClient({ initialTaxonomy }) {
   };
 
   const getDropdownContent = (label) => {
-    if (label === "Mitos") {
+    if (label === "Comunidades") {
       return getTopCommunities().map((community) => ({
         name: community.name,
         href: `/comunidades/${community.slug}`,
@@ -82,6 +82,16 @@ export default function HeaderClient({ initialTaxonomy }) {
       }));
     }
     return [];
+  };
+
+  const toggleMenu = () => {
+    setOpen((prev) => {
+      const next = !prev;
+      if (!next) {
+        setMobileExpanded(null);
+      }
+      return next;
+    });
   };
 
   return (
@@ -112,7 +122,7 @@ export default function HeaderClient({ initialTaxonomy }) {
               aria-expanded={open}
               aria-controls="site-menu"
               className="relative flex h-10 w-10 items-center justify-center rounded-full border border-white/70 bg-white/70 shadow-sm transition hover:bg-white md:hidden"
-              onClick={() => setOpen((prev) => !prev)}
+              onClick={toggleMenu}
             >
               <span className="sr-only">Menu</span>
               <span
@@ -172,21 +182,72 @@ export default function HeaderClient({ initialTaxonomy }) {
 
         <div
           className={`md:hidden overflow-hidden transition-all duration-300 ${
-            open ? "max-h-[400px] opacity-100" : "max-h-0 opacity-0"
+            open ? "max-h-[560px] opacity-100" : "max-h-0 opacity-0"
           }`}
         >
           <div className="glass-panel mt-3 flex flex-col gap-5 px-6 py-5">
             <nav id="site-menu" className="flex flex-col gap-4">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.label}
-                  href={link.href}
-                  className="nav-link text-sm tracking-[0.25em]"
-                  onClick={() => setOpen(false)}
-                >
-                  {link.label}
-                </Link>
-              ))}
+              {navLinks.map((link) => {
+                const dropdownItems = link.hasDropdown
+                  ? getDropdownContent(link.label).slice(0, 5)
+                  : [];
+                const isExpanded = mobileExpanded === link.label;
+
+                return (
+                  <div key={link.label} className="flex flex-col gap-2">
+                    <div className="flex items-center justify-between">
+                      <Link
+                        href={link.href}
+                        className="nav-link text-sm tracking-[0.25em]"
+                        onClick={() => {
+                          setOpen(false);
+                          setMobileExpanded(null);
+                        }}
+                      >
+                        {link.label}
+                      </Link>
+                      {link.hasDropdown && (
+                        <button
+                          type="button"
+                          aria-label={`Ver ${link.label}`}
+                          aria-expanded={isExpanded}
+                          className="flex h-8 w-8 items-center justify-center rounded-full border border-white/70 bg-white/70 text-ink-700 transition hover:bg-white"
+                          onClick={() =>
+                            setMobileExpanded((prev) =>
+                              prev === link.label ? null : link.label
+                            )
+                          }
+                        >
+                          <span className={`transition ${isExpanded ? "rotate-180" : ""}`}>
+                            ▾
+                          </span>
+                        </button>
+                      )}
+                    </div>
+
+                    {link.hasDropdown && isExpanded && dropdownItems.length > 0 && (
+                      <div className="ml-3 flex flex-col gap-2 rounded-2xl border border-white/60 bg-white/70 p-3 shadow-sm">
+                        {dropdownItems.map((item) => (
+                          <Link
+                            key={item.name}
+                            href={item.href}
+                            className="flex items-center justify-between text-xs text-ink-700 hover:text-ink-900"
+                            onClick={() => {
+                              setOpen(false);
+                              setMobileExpanded(null);
+                            }}
+                          >
+                            <span className="font-medium">{item.name}</span>
+                            <span className="text-[10px] text-ink-500">
+                              {item.count}
+                            </span>
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
             </nav>
           </div>
         </div>
