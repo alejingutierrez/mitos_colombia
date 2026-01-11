@@ -7,6 +7,7 @@ import { GlassCard } from "../../../components/ui/GlassCard";
 import { ImageSlot } from "../../../components/ui/ImageSlot";
 import { Pagination } from "../../../components/ui/Pagination";
 import { SectionHeader } from "../../../components/ui/SectionHeader";
+import { formatCategoryName } from "../../../lib/formatters";
 import { getTaxonomy, listMyths } from "../../../lib/myths";
 import Link from "next/link";
 
@@ -266,7 +267,7 @@ export default async function CategoryDetailPage({ params, searchParams }) {
   }
 
   const categoryInfo = CATEGORY_INFO[params.slug] || {
-    title: category.name,
+    title: formatCategoryName(category.name),
     description: `Explora la colección completa de mitos relacionados con ${category.name.toLowerCase()}.`,
     longDescription: `Los mitos de la categoría ${category.name} forman parte del rico patrimonio cultural de Colombia, transmitidos de generación en generación por comunidades que preservan sus tradiciones orales.`,
     imagePrompt: "Colombian folklore scene, traditional mythology, cultural heritage"
@@ -378,7 +379,7 @@ export default async function CategoryDetailPage({ params, searchParams }) {
                 <option value="">Ninguna</option>
                 {relatedTags.map((tag) => (
                   <option key={tag.slug} value={tag.name}>
-                    {tag.name} ({tag.myth_count})
+                    {formatCategoryName(tag.name)} ({tag.myth_count})
                   </option>
                 ))}
               </select>

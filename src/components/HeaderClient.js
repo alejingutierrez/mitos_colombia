@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { filterAllowedCommunities } from "../lib/communityFilters";
+import { formatCategoryName } from "../lib/formatters";
 
 const navLinks = [
   { label: "Comunidades", href: "/comunidades", hasDropdown: true },
@@ -189,20 +190,25 @@ export default function HeaderClient({ initialTaxonomy }) {
                   <div className="absolute left-1/2 top-full z-[110] w-64 -translate-x-1/2 pt-2">
                     <div className="rounded-2xl border border-white/70 bg-white/95 p-4 shadow-xl backdrop-blur-sm">
                       <div className="flex flex-col gap-2">
-                        {getDropdownContent(link.label).map((item) => (
+                        {getDropdownContent(link.label).map((item) => {
+                          const displayName = item.isAll
+                            ? item.name
+                            : formatCategoryName(item.name);
+                          return (
                           <Link
                             key={item.name}
                             href={item.href}
                             className="flex items-center justify-between rounded-lg px-3 py-2 text-sm text-ink-700 transition hover:bg-jungle-50 hover:text-jungle-900"
                           >
                             <span className={item.isAll ? "font-semibold" : "font-medium"}>
-                              {item.name}
+                              {displayName}
                             </span>
                             <span className="text-xs text-ink-500">
                               {item.count}
                             </span>
                           </Link>
-                        ))}
+                          );
+                        })}
                       </div>
                     </div>
                   </div>
@@ -263,7 +269,11 @@ export default function HeaderClient({ initialTaxonomy }) {
 
                     {link.hasDropdown && isExpanded && limitedItems.length > 0 && (
                       <div className="ml-3 flex flex-col gap-2 rounded-2xl border border-white/60 bg-white/70 p-3 shadow-sm">
-                        {limitedItems.map((item) => (
+                        {limitedItems.map((item) => {
+                          const displayName = item.isAll
+                            ? item.name
+                            : formatCategoryName(item.name);
+                          return (
                           <Link
                             key={item.name}
                             href={item.href}
@@ -274,13 +284,14 @@ export default function HeaderClient({ initialTaxonomy }) {
                             }}
                           >
                             <span className={item.isAll ? "font-semibold" : "font-medium"}>
-                              {item.name}
+                              {displayName}
                             </span>
                             <span className="text-[10px] text-ink-500">
                               {item.count}
                             </span>
                           </Link>
-                        ))}
+                          );
+                        })}
                       </div>
                     )}
                   </div>

@@ -5,6 +5,7 @@ import { GlassCard } from "../../components/ui/GlassCard";
 import { ImageSlot } from "../../components/ui/ImageSlot";
 import { Pagination } from "../../components/ui/Pagination";
 import { SectionHeader } from "../../components/ui/SectionHeader";
+import { formatCategoryName } from "../../lib/formatters";
 import { getTaxonomy } from "../../lib/myths";
 
 export const runtime = "nodejs";
@@ -64,7 +65,7 @@ export default async function CategoriasPage({ searchParams }) {
                 <div className="flex items-start justify-between">
                   <div className="flex-1">
                     <h3 className="font-display text-2xl text-ink-900">
-                      {tag.name}
+                      {formatCategoryName(tag.name)}
                     </h3>
                     <p className="mt-2 text-sm text-ink-500">
                       {tag.myth_count} {tag.myth_count === 1 ? "mito" : "mitos"}

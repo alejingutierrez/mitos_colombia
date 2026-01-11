@@ -7,17 +7,16 @@ import { GlassCard } from "../../../components/ui/GlassCard";
 import { ImageSlot } from "../../../components/ui/ImageSlot";
 import { Pagination } from "../../../components/ui/Pagination";
 import { SectionHeader } from "../../../components/ui/SectionHeader";
+import { filterAllowedCommunities, MIN_COMMUNITY_MYTHS } from "../../../lib/communityFilters";
 import { getTaxonomy, listMyths } from "../../../lib/myths";
 import Link from "next/link";
 
 export const runtime = "nodejs";
 export const revalidate = 300;
-const MIN_COMMUNITY_MYTHS = 6;
 
 export async function generateStaticParams() {
   const taxonomy = await getTaxonomy();
-  return taxonomy.communities
-    .filter((community) => Number(community.myth_count || 0) >= MIN_COMMUNITY_MYTHS)
+  return filterAllowedCommunities(taxonomy.communities, MIN_COMMUNITY_MYTHS)
     .map((community) => ({ slug: community.slug }));
 }
 
@@ -238,9 +237,13 @@ export async function generateMetadata({ params }) {
 
 export default async function CommunityDetailPage({ params, searchParams }) {
   const taxonomy = await getTaxonomy();
-  const community = taxonomy.communities.find(c => c.slug === params.slug);
+  const allowedCommunities = filterAllowedCommunities(
+    taxonomy.communities,
+    MIN_COMMUNITY_MYTHS
+  );
+  const community = allowedCommunities.find((c) => c.slug === params.slug);
 
-  if (!community || Number(community.myth_count || 0) < MIN_COMMUNITY_MYTHS) {
+  if (!community) {
     notFound();
   }
 
