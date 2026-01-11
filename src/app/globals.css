@@ -194,14 +194,14 @@ body {
 
 .map-pin {
   position: relative;
-  height: 52px;
-  width: 40px;
+  height: 38px;
+  width: 28px;
 }
 
 .map-pin svg {
   display: block;
-  height: 52px;
-  width: 40px;
+  height: 38px;
+  width: 28px;
   filter: drop-shadow(0 10px 18px rgba(18, 22, 24, 0.18));
 }
 
@@ -225,18 +225,18 @@ body {
 
 .map-pin-count {
   position: absolute;
-  top: -6px;
-  right: -6px;
-  min-width: 22px;
-  height: 22px;
-  padding: 0 6px;
+  top: -5px;
+  right: -5px;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 5px;
   border-radius: 999px;
   border: 1px solid rgba(30, 120, 94, 0.35);
   background: rgba(255, 255, 255, 0.95);
   color: rgb(var(--ink-700));
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 600;
-  line-height: 22px;
+  line-height: 18px;
   text-align: center;
   box-shadow: 0 6px 16px rgba(18, 22, 24, 0.12);
 }

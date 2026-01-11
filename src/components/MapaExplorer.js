@@ -13,10 +13,8 @@ import {
 } from "react-leaflet";
 import L from "leaflet";
 import { GlassCard } from "./ui/GlassCard";
-import { Badge } from "./ui/Badge";
 import { SectionHeader } from "./ui/SectionHeader";
 
-const COLOMBIA_CENTER = [4.570868, -74.297333];
 const COLOMBIA_BOUNDS = [
   [-4.8, -79.4],
   [13.8, -66.4],
@@ -27,6 +25,9 @@ const MAP_TILES =
 
 const MAP_ATTRIBUTION =
   '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>';
+
+const PIN_WIDTH = 28;
+const PIN_HEIGHT = 38;
 
 const PIN_SVG = `
   <svg viewBox="0 0 40 52" aria-hidden="true" focusable="false">
@@ -54,8 +55,8 @@ function getPinIcon({ count = 0, isActive }) {
   const icon = L.divIcon({
     className: "map-pin-shell",
     html,
-    iconSize: [40, 52],
-    iconAnchor: [20, 50],
+    iconSize: [PIN_WIDTH, PIN_HEIGHT],
+    iconAnchor: [Math.round(PIN_WIDTH / 2), PIN_HEIGHT - 2],
     popupAnchor: [0, -42],
   });
 
@@ -114,11 +115,24 @@ function useMapData() {
 
 function buildGroups(myths) {
   const grouped = new Map();
+  const [minLat, minLng] = COLOMBIA_BOUNDS[0];
+  const [maxLat, maxLng] = COLOMBIA_BOUNDS[1];
+
+  const clamp = (value, min, max) => Math.min(Math.max(value, min), max);
+  const parseCoord = (value) => {
+    if (value === null || value === undefined) return null;
+    const normalized = String(value).trim().replace(/,/g, ".");
+    const parsed = Number.parseFloat(normalized);
+    return Number.isFinite(parsed) ? parsed : null;
+  };
 
   myths.forEach((myth) => {
-    const lat = Number(myth.latitude);
-    const lng = Number(myth.longitude);
-    if (!Number.isFinite(lat) || !Number.isFinite(lng)) return;
+    const rawLat = parseCoord(myth.latitude);
+    const rawLng = parseCoord(myth.longitude);
+    if (rawLat === null || rawLng === null) return;
+
+    const lat = clamp(rawLat, minLat, maxLat);
+    const lng = clamp(rawLng, minLng, maxLng);
     const key = `${lat.toFixed(5)}|${lng.toFixed(5)}`;
     if (!grouped.has(key)) {
       grouped.set(key, { key, lat, lng, items: [] });
@@ -375,7 +389,7 @@ export default function MapaExplorer() {
           <SectionHeader
             eyebrow="Mapa vivo"
             title="Explora mitos ubicados en el territorio colombiano."
-            description="Encuentra relatos por geografia. Pasa el cursor para ver el nombre y usa el doble clic (pin + tarjeta) para abrir el mito."
+            description="Cartografiar un mito es fijar una huella en el territorio: cada punto es memoria viva que vuelve a contarse."
           />
 
           <div className="grid gap-4 sm:grid-cols-3 lg:grid-cols-1">
@@ -405,27 +419,6 @@ export default function MapaExplorer() {
             </GlassCard>
           </div>
 
-          <GlassCard className="p-6 space-y-3">
-            <p className="text-xs uppercase tracking-[0.3em] text-ink-500">
-              Como leer el mapa
-            </p>
-            <p className="text-sm text-ink-600 leading-relaxed">
-              Los puntos con contador se expanden al hacer clic para que puedas
-              elegir el mito exacto. Pasa el cursor para ver el titulo, haz clic
-              para ver la tarjeta y vuelve a hacer clic para abrir el relato.
-            </p>
-            <div className="flex flex-wrap gap-2">
-              <Badge className="border-river-500/30 bg-river-500/10 text-river-600">
-                Click = expandir
-              </Badge>
-              <Badge className="border-ember-500/30 bg-ember-500/10 text-ember-600">
-                Click = mostrar tarjeta
-              </Badge>
-              <Badge className="border-ink-500/30 bg-ink-500/10 text-ink-600">
-                Click en tarjeta = abrir
-              </Badge>
-            </div>
-          </GlassCard>
         </div>
 
         <GlassCard className="relative overflow-hidden p-0 min-h-[420px] md:min-h-[520px] lg:min-h-[620px] lg:h-full">
@@ -440,11 +433,12 @@ export default function MapaExplorer() {
           ) : (
             <div className="absolute inset-0">
               <MapContainer
-                center={COLOMBIA_CENTER}
-                zoom={5}
-                minZoom={4}
+                bounds={COLOMBIA_BOUNDS}
+                boundsOptions={{ padding: [18, 18] }}
+                minZoom={5}
                 scrollWheelZoom={true}
                 maxBounds={COLOMBIA_BOUNDS}
+                maxBoundsViscosity={0.8}
                 className="h-full w-full"
               >
                 <MapEvents
