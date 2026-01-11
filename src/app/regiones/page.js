@@ -42,7 +42,12 @@ export default async function RegionesPage() {
               className="group flex flex-col overflow-hidden p-0 transition hover:-translate-y-1 hover:shadow-lift"
             >
               <div className="relative overflow-hidden">
-                <ImageSlot size="compact" className="rounded-none transition-transform duration-700 group-hover:scale-110" />
+                <ImageSlot
+                  src={region.image_url}
+                  alt={`Ilustracion de la region ${region.name}`}
+                  size="compact"
+                  className="rounded-none transition-transform duration-700 group-hover:scale-110"
+                />
               </div>
               <div className="flex flex-col gap-4 p-6">
                 <div className="flex items-start justify-between">

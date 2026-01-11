@@ -4,9 +4,7 @@ import Header from "../../../components/Header";
 import { Badge } from "../../../components/ui/Badge";
 import { ButtonLink } from "../../../components/ui/Button";
 import { GlassCard } from "../../../components/ui/GlassCard";
-import { ImageSlot } from "../../../components/ui/ImageSlot";
 import { Pagination } from "../../../components/ui/Pagination";
-import { SectionHeader } from "../../../components/ui/SectionHeader";
 import { formatCategoryName } from "../../../lib/formatters";
 import { getTaxonomy, listMyths } from "../../../lib/myths";
 import Link from "next/link";
@@ -272,6 +270,23 @@ export default async function CategoryDetailPage({ params, searchParams }) {
     longDescription: `Los mitos de la categoría ${category.name} forman parte del rico patrimonio cultural de Colombia, transmitidos de generación en generación por comunidades que preservan sus tradiciones orales.`,
     imagePrompt: "Colombian folklore scene, traditional mythology, cultural heritage"
   };
+  const shortDescription =
+    (categoryInfo.description || "").length < 150
+      ? `${categoryInfo.description} Estos relatos revelan cómo las comunidades explican el mundo, conservan memoria y transmiten valores colectivos.`
+      : categoryInfo.description;
+  const needsExpansion =
+    !category.image_url || (categoryInfo.longDescription || "").length < 520;
+  const longDescriptionBlocks = [
+    categoryInfo.longDescription,
+    ...(needsExpansion
+      ? [
+          `En esta categoría se agrupan relatos provenientes de distintas regiones, pueblos y épocas, lo que permite ver patrones y variaciones en una misma temática. El mismo motivo mítico puede aparecer en la Amazonía, los Andes o el Caribe, cambiando según el paisaje y la cosmovisión de cada comunidad.`,
+          `Actualmente reunimos ${category.myth_count} ${
+            category.myth_count === 1 ? "mito" : "mitos"
+          } bajo esta etiqueta. Explorar esta colección ayuda a comparar versiones, reconocer símbolos compartidos y descubrir cómo una idea atraviesa todo el territorio colombiano.`,
+        ]
+      : []),
+  ];
 
   const q = getParamValue(searchParams.q);
   const relatedTag = getParamValue(searchParams.relatedTag);
@@ -306,37 +321,43 @@ export default async function CategoryDetailPage({ params, searchParams }) {
 
       {/* Hero Section con imagen */}
       <section className="container-shell mt-12">
-        <GlassCard className="relative overflow-hidden">
-          <div
-            className="absolute inset-0 bg-gradient-to-br from-jungle-500/20 via-ember-400/20 to-river-500/20"
-            style={{
-              backgroundImage: `linear-gradient(135deg, rgba(var(--jungle-500), 0.1) 0%, rgba(var(--ember-400), 0.1) 50%, rgba(var(--river-500), 0.1) 100%)`
-            }}
-          />
-          <div className="relative p-8 md:p-12">
-            <Badge className="border-jungle-500/30 bg-jungle-500/10 text-jungle-600">
-              Categoría temática
-            </Badge>
-            <h1 className="mt-4 font-display text-4xl text-ink-900 md:text-5xl lg:text-6xl">
-              {categoryInfo.title}
-            </h1>
-            <p className="mt-4 max-w-3xl text-base text-ink-700 md:text-lg">
-              {categoryInfo.description}
-            </p>
-            <div className="mt-6 flex items-center gap-4 text-sm text-ink-500">
-              <span className="flex items-center gap-2">
-                <Badge className="border-jungle-500/30 bg-jungle-500/10 text-jungle-600">
-                  {category.myth_count}
-                </Badge>
-                {category.myth_count === 1 ? 'mito' : 'mitos'}
-              </span>
-            </div>
-            <ImageSlot
+        <GlassCard className="relative min-h-[360px] overflow-hidden p-0 md:min-h-[420px]">
+          {category.image_url ? (
+            <Image
               src={category.image_url}
               alt={`Ilustracion de la categoria ${category.name}`}
-              size="wide"
-              className="mt-6"
+              fill
+              sizes="100vw"
+              className="object-cover"
             />
+          ) : (
+            <div
+              className="absolute inset-0"
+              style={{
+                backgroundImage:
+                  "radial-gradient(circle at 15% 20%, rgba(30, 120, 94, 0.5), transparent 55%), radial-gradient(circle at 80% 15%, rgba(200, 140, 70, 0.45), transparent 50%), linear-gradient(135deg, rgba(12, 18, 27, 0.95), rgba(12, 18, 27, 0.6))",
+              }}
+            />
+          )}
+          <div className="absolute inset-0 bg-gradient-to-br from-ink-900/80 via-ink-900/45 to-ink-900/10" />
+          <div className="relative z-10 p-8 text-white md:p-12">
+            <Badge className="border-white/30 bg-white/20 text-white">
+              Categoría temática
+            </Badge>
+            <h1 className="mt-4 font-display text-4xl text-white md:text-5xl lg:text-6xl">
+              {categoryInfo.title}
+            </h1>
+            <p className="mt-4 max-w-3xl text-base text-white/90 md:text-lg">
+              {shortDescription}
+            </p>
+            <div className="mt-6 flex items-center gap-4 text-sm text-white/80">
+              <span className="flex items-center gap-2">
+                <Badge className="border-white/30 bg-white/20 text-white">
+                  {category.myth_count}
+                </Badge>
+                {category.myth_count === 1 ? "mito" : "mitos"}
+              </span>
+            </div>
           </div>
         </GlassCard>
       </section>
@@ -344,9 +365,16 @@ export default async function CategoryDetailPage({ params, searchParams }) {
       {/* Descripción extendida */}
       <section className="container-shell mt-8">
         <GlassCard className="p-6 md:p-8">
-          <p className="text-sm leading-relaxed text-ink-700 md:text-base">
-            {categoryInfo.longDescription}
-          </p>
+          <div className="space-y-4">
+            {longDescriptionBlocks.map((block, idx) => (
+              <p
+                key={`${category.slug}-intro-${idx}`}
+                className="text-sm leading-relaxed text-ink-700 md:text-base"
+              >
+                {block}
+              </p>
+            ))}
+          </div>
         </GlassCard>
       </section>
 

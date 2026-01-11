@@ -18,9 +18,11 @@ export default async function ComunidadesPage() {
     (a, b) => b.myth_count - a.myth_count
   );
 
-  // Agrupar por región
+  const maxPerRegion = 6;
+
+  // Agrupar por región y limitar el listado visible
   const communitiesByRegion = communities.reduce((acc, community) => {
-    const region = community.region || "Otros";
+    const region = community.region || "Varios";
     if (!acc[region]) {
       acc[region] = [];
     }
@@ -28,15 +30,26 @@ export default async function ComunidadesPage() {
     return acc;
   }, {});
 
+  const communitiesByRegionVisible = Object.fromEntries(
+    Object.entries(communitiesByRegion).map(([region, items]) => [
+      region,
+      items.slice(0, maxPerRegion),
+    ])
+  );
+
   const regionOrder = [
     "Amazonas",
     "Andina",
     "Caribe",
     "Pacífico",
     "Orinoquía",
+    "Varios",
     "Otros",
   ];
-  const sortedRegions = regionOrder.filter((r) => communitiesByRegion[r]);
+  const sortedRegions = [
+    ...regionOrder.filter((r) => communitiesByRegion[r]),
+    ...Object.keys(communitiesByRegion).filter((r) => !regionOrder.includes(r)),
+  ];
 
   return (
     <main className="relative min-h-screen overflow-hidden pb-24">
@@ -63,7 +76,7 @@ export default async function ComunidadesPage() {
               </div>
 
               <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                {communitiesByRegion[regionName].map((community) => (
+                {communitiesByRegionVisible[regionName].map((community) => (
                   <GlassCard
                     key={community.slug}
                     className="group flex flex-col overflow-hidden p-0 transition hover:-translate-y-1 hover:shadow-lift"

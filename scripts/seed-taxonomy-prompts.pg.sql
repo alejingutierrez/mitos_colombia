@@ -44,3 +44,10 @@ WHERE tags.id = tag_counts.id
   AND (tags.image_prompt IS NULL OR tags.image_prompt = '')
   AND lower(tags.name) NOT IN (SELECT name FROM region_names)
   AND lower(tags.name) <> 'ninguno';
+
+UPDATE regions
+SET image_prompt =
+  'Ilustracion editorial horizontal (3:2) estilo paper quilling y paper cut de la region '
+  || regions.name
+  || ' de Colombia. Paisajes iconicos, rios, montanas o selva, simbolos culturales y paleta verde selva, azul rio y dorado tierra. Sin texto ni logos.'
+WHERE (regions.image_prompt IS NULL OR regions.image_prompt = '');

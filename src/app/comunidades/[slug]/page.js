@@ -4,9 +4,7 @@ import Header from "../../../components/Header";
 import { Badge } from "../../../components/ui/Badge";
 import { ButtonLink } from "../../../components/ui/Button";
 import { GlassCard } from "../../../components/ui/GlassCard";
-import { ImageSlot } from "../../../components/ui/ImageSlot";
 import { Pagination } from "../../../components/ui/Pagination";
-import { SectionHeader } from "../../../components/ui/SectionHeader";
 import { filterAllowedCommunities, MIN_COMMUNITY_MYTHS } from "../../../lib/communityFilters";
 import { getTaxonomy, listMyths } from "../../../lib/myths";
 import Link from "next/link";
@@ -253,6 +251,23 @@ export default async function CommunityDetailPage({ params, searchParams }) {
     longDescription: `El pueblo ${community.name} es parte del patrimonio cultural de Colombia, preservando tradiciones ancestrales en la región ${community.region}. Sus mitos transmiten conocimientos, valores y cosmovisiones que han sido heredados de generación en generación.`,
     imagePrompt: "Colombian indigenous community, traditional culture, ancestral wisdom"
   };
+  const shortDescription =
+    (communityInfo.description || "").length < 140
+      ? `${communityInfo.description} Sus relatos conservan memoria territorial y saberes que siguen vivos en ${community.region}.`
+      : communityInfo.description;
+  const needsExpansion =
+    !community.image_url || (communityInfo.longDescription || "").length < 520;
+  const longDescriptionBlocks = [
+    communityInfo.longDescription,
+    ...(needsExpansion
+      ? [
+          `En el territorio ${community.region}, los mitos ayudan a recordar rutas, pactos de convivencia y el vínculo con ríos, montañas o sabanas. Estas narrativas no solo explican el origen del mundo, también orientan la vida diaria: cómo cuidar el agua, cuándo sembrar, cómo leer los ciclos del clima y qué rituales protegen a la comunidad.`,
+          `Esta colección reúne ${community.myth_count} ${
+            community.myth_count === 1 ? "mito" : "mitos"
+          } que dialogan con temas de creación, transformación y memoria. Leerlos es acercarse a la manera en que ${community.name} entiende el tiempo, la naturaleza y la responsabilidad colectiva.`,
+        ]
+      : []),
+  ];
 
   const q = getParamValue(searchParams.q);
   const tag = getParamValue(searchParams.tag);
@@ -288,41 +303,48 @@ export default async function CommunityDetailPage({ params, searchParams }) {
 
       {/* Hero Section */}
       <section className="container-shell mt-12">
-        <GlassCard className="relative overflow-hidden p-0">
-          <div
-            className="absolute inset-0 bg-gradient-to-br from-jungle-500/20 via-river-500/20 to-ember-400/20"
-          />
-          <div className="relative p-8 md:p-12">
+        <GlassCard className="relative min-h-[360px] overflow-hidden p-0 md:min-h-[420px]">
+          {community.image_url ? (
+            <Image
+              src={community.image_url}
+              alt={`Ilustracion de la comunidad ${community.name}`}
+              fill
+              sizes="100vw"
+              className="object-cover"
+            />
+          ) : (
+            <div
+              className="absolute inset-0"
+              style={{
+                backgroundImage:
+                  "radial-gradient(circle at 10% 20%, rgba(30, 120, 94, 0.6), transparent 55%), radial-gradient(circle at 85% 10%, rgba(35, 98, 158, 0.45), transparent 50%), linear-gradient(135deg, rgba(12, 18, 27, 0.95), rgba(12, 18, 27, 0.6))",
+              }}
+            />
+          )}
+          <div className="absolute inset-0 bg-gradient-to-br from-ink-900/80 via-ink-900/45 to-ink-900/10" />
+          <div className="relative z-10 p-8 text-white md:p-12">
             <div className="flex flex-wrap items-center gap-2">
-              <Badge className="border-river-500/30 bg-river-500/10 text-river-600">
+              <Badge className="border-white/30 bg-white/20 text-white">
                 Pueblo indígena
               </Badge>
-              <Badge className="border-jungle-500/30 bg-jungle-500/10 text-jungle-600">
+              <Badge className="border-white/30 bg-white/20 text-white">
                 {community.region}
               </Badge>
             </div>
-            <h1 className="mt-4 font-display text-4xl text-ink-900 md:text-5xl lg:text-6xl">
+            <h1 className="mt-4 font-display text-4xl text-white md:text-5xl lg:text-6xl">
               {communityInfo.title}
             </h1>
-            <p className="mt-4 max-w-3xl text-base text-ink-700 md:text-lg">
-              {communityInfo.description}
+            <p className="mt-4 max-w-3xl text-base text-white/90 md:text-lg">
+              {shortDescription}
             </p>
-            <div className="mt-6 flex items-center gap-4 text-sm text-ink-500">
+            <div className="mt-6 flex items-center gap-4 text-sm text-white/80">
               <span className="flex items-center gap-2">
-                <Badge className="border-jungle-500/30 bg-jungle-500/10 text-jungle-600">
+                <Badge className="border-white/30 bg-white/20 text-white">
                   {community.myth_count}
                 </Badge>
-                {community.myth_count === 1 ? 'mito' : 'mitos'}
+                {community.myth_count === 1 ? "mito" : "mitos"}
               </span>
             </div>
-          </div>
-          <div className="group relative overflow-hidden">
-            <ImageSlot
-              src={community.image_url}
-              alt={`Ilustracion de la comunidad ${community.name}`}
-              size="wide"
-              className="rounded-none transition-transform duration-700 group-hover:scale-105"
-            />
           </div>
         </GlassCard>
       </section>
@@ -330,9 +352,16 @@ export default async function CommunityDetailPage({ params, searchParams }) {
       {/* Descripción extendida */}
       <section className="container-shell mt-8">
         <GlassCard className="p-6 md:p-8">
-          <p className="text-sm leading-relaxed text-ink-700 md:text-base">
-            {communityInfo.longDescription}
-          </p>
+          <div className="space-y-4">
+            {longDescriptionBlocks.map((block, idx) => (
+              <p
+                key={`${community.slug}-intro-${idx}`}
+                className="text-sm leading-relaxed text-ink-700 md:text-base"
+              >
+                {block}
+              </p>
+            ))}
+          </div>
         </GlassCard>
       </section>
 
