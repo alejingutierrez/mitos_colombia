@@ -7,6 +7,7 @@ import {
   Marker,
   TileLayer,
   Tooltip,
+  useMap,
   useMapEvents,
 } from "react-leaflet";
 import L from "leaflet";
@@ -127,26 +128,42 @@ function buildGroups(myths) {
   return Array.from(grouped.values());
 }
 
-function spreadGroupItems(group) {
-  const count = group.items.length;
-  const baseRadius = Math.min(0.004, 0.0014 + count * 0.00015);
+function buildRingPlan(total) {
+  const rings = [];
+  let remaining = total;
+  let ring = 0;
 
-  return group.items.map((item, index) => {
-    let offsetLat = 0;
-    let offsetLng = 0;
-    if (count > 1) {
-      const angle = (2 * Math.PI * index) / count;
-      offsetLat = Math.cos(angle) * baseRadius;
-      offsetLng = Math.sin(angle) * baseRadius;
+  while (remaining > 0) {
+    const capacity = Math.min(remaining, 6 + ring * 4);
+    rings.push(capacity);
+    remaining -= capacity;
+    ring += 1;
+  }
+
+  return rings;
+}
+
+function computeExpandedPositions(map, group, zoom) {
+  const center = L.latLng(group.lat, group.lng);
+  const centerPoint = map.project(center, zoom);
+  const ringPlan = buildRingPlan(group.items.length);
+  const positions = [];
+
+  ringPlan.forEach((ringCount, ringIndex) => {
+    const radius = 48 + ringIndex * 34;
+    const angleStep = (2 * Math.PI) / ringCount;
+
+    for (let i = 0; i < ringCount; i += 1) {
+      const angle = angleStep * i - Math.PI / 2;
+      const point = L.point(
+        centerPoint.x + Math.cos(angle) * radius,
+        centerPoint.y + Math.sin(angle) * radius
+      );
+      positions.push(map.unproject(point, zoom));
     }
-
-    return {
-      ...item,
-      displayLat: group.lat + offsetLat,
-      displayLng: group.lng + offsetLng,
-      groupKey: group.key,
-    };
   });
+
+  return positions;
 }
 
 function MythMarker({ myth, onSelect, icon }) {
@@ -183,12 +200,54 @@ function GroupMarker({ group, isExpanded, onToggle }) {
   );
 }
 
+function ExpandedGroupMarkers({ group, onSelect }) {
+  const map = useMap();
+  const [zoom, setZoom] = useState(map.getZoom());
+
+  useMapEvents({
+    zoomend: () => setZoom(map.getZoom()),
+  });
+
+  const positions = useMemo(
+    () => computeExpandedPositions(map, group, zoom),
+    [group, map, zoom]
+  );
+
+  return (
+    <>
+      {positions.map((position, index) => {
+        const myth = group.items[index];
+        if (!myth) return null;
+        return (
+          <Marker
+            key={`${group.key}-${myth.id}`}
+            position={position}
+            icon={getPinIcon({ count: 0, isActive: true })}
+            riseOnHover={true}
+            eventHandlers={{
+              click: () => onSelect(myth),
+            }}
+          >
+            <Tooltip direction="top" offset={[0, -10]} opacity={0.85}>
+              {myth.title}
+            </Tooltip>
+          </Marker>
+        );
+      })}
+    </>
+  );
+}
+
 export default function MapaExplorer() {
   const router = useRouter();
   const { data, loading, error } = useMapData();
   const [expandedGroupKey, setExpandedGroupKey] = useState(null);
 
   const groups = useMemo(() => buildGroups(data), [data]);
+  const expandedGroup = useMemo(
+    () => groups.find((group) => group.key === expandedGroupKey) || null,
+    [expandedGroupKey, groups]
+  );
 
   const { groupMarkers, mythMarkers, uniqueLocations } = useMemo(() => {
     const groupMarkers = [];
@@ -206,9 +265,7 @@ export default function MapaExplorer() {
         return;
       }
 
-      if (expandedGroupKey === group.key) {
-        mythMarkers.push(...spreadGroupItems(group));
-      } else {
+      if (expandedGroupKey !== group.key) {
         groupMarkers.push(group);
       }
     });
@@ -332,6 +389,12 @@ export default function MapaExplorer() {
                     onToggle={handleToggleGroup}
                   />
                 ))}
+                {expandedGroup ? (
+                  <ExpandedGroupMarkers
+                    group={expandedGroup}
+                    onSelect={handleMythClick}
+                  />
+                ) : null}
                 {mythMarkers.map((myth) => (
                   <MythMarker
                     key={`${myth.id}-${myth.displayLat}-${myth.displayLng}`}
