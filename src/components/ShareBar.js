@@ -21,7 +21,7 @@ export default function ShareBar({
 }) {
   const fallbackBase = process.env.NEXT_PUBLIC_SITE_URL || "";
   const fallbackUrl = fallbackBase
-    ? `${fallbackBase.replace(/\\/$/, "")}/mitos/${slug}`
+    ? `${fallbackBase.replace(/\/+$/, "")}/mitos/${slug}`
     : `/mitos/${slug}`;
   const [shareUrl, setShareUrl] = useState(fallbackUrl);
   const [copied, setCopied] = useState(false);
