@@ -37,9 +37,9 @@ const PIN_SVG = `
 
 const iconCache = new Map();
 
-function getPinIcon({ groupSize, isActive }) {
-  const count = groupSize > 1 ? groupSize : 0;
-  const key = `${count}-${isActive ? "active" : "base"}`;
+function getPinIcon({ count = 0, isActive }) {
+  const badgeCount = count > 1 ? count : 0;
+  const key = `${badgeCount}-${isActive ? "active" : "base"}`;
   if (iconCache.has(key)) {
     return iconCache.get(key);
   }
@@ -47,7 +47,7 @@ function getPinIcon({ groupSize, isActive }) {
   const html = `
     <div class="map-pin ${isActive ? "is-active" : ""}">
       ${PIN_SVG}
-      ${count ? `<span class="map-pin-count">${count}</span>` : ""}
+      ${badgeCount ? `<span class="map-pin-count">${badgeCount}</span>` : ""}
     </div>
   `;
 
@@ -118,7 +118,7 @@ function useMapData() {
   return { data, loading, error };
 }
 
-function buildMarkers(myths) {
+function buildGroups(myths) {
   const grouped = new Map();
 
   myths.forEach((myth) => {
@@ -127,36 +127,34 @@ function buildMarkers(myths) {
     if (!Number.isFinite(lat) || !Number.isFinite(lng)) return;
     const key = `${lat.toFixed(5)}|${lng.toFixed(5)}`;
     if (!grouped.has(key)) {
-      grouped.set(key, []);
+      grouped.set(key, { key, lat, lng, items: [] });
     }
-    grouped.get(key).push({ ...myth, latitude: lat, longitude: lng });
+    grouped.get(key).items.push({ ...myth, latitude: lat, longitude: lng });
   });
 
-  const markers = [];
+  return Array.from(grouped.values());
+}
 
-  grouped.forEach((items) => {
-    const count = items.length;
-    const baseRadius = Math.min(0.0012, 0.0005 + count * 0.00012);
+function spreadGroupItems(group) {
+  const count = group.items.length;
+  const baseRadius = Math.min(0.004, 0.0014 + count * 0.00015);
 
-    items.forEach((item, index) => {
-      let offsetLat = 0;
-      let offsetLng = 0;
-      if (count > 1) {
-        const angle = (2 * Math.PI * index) / count;
-        offsetLat = Math.cos(angle) * baseRadius;
-        offsetLng = Math.sin(angle) * baseRadius;
-      }
+  return group.items.map((item, index) => {
+    let offsetLat = 0;
+    let offsetLng = 0;
+    if (count > 1) {
+      const angle = (2 * Math.PI * index) / count;
+      offsetLat = Math.cos(angle) * baseRadius;
+      offsetLng = Math.sin(angle) * baseRadius;
+    }
 
-      markers.push({
-        ...item,
-        displayLat: item.latitude + offsetLat,
-        displayLng: item.longitude + offsetLng,
-        groupSize: count,
-      });
-    });
+    return {
+      ...item,
+      displayLat: group.lat + offsetLat,
+      displayLng: group.lng + offsetLng,
+      groupKey: group.key,
+    };
   });
-
-  return { markers, uniqueLocations: grouped.size };
 }
 
 function MythMarker({ myth, activeId, onActivate, icon }) {
@@ -178,8 +176,7 @@ function MythMarker({ myth, activeId, onActivate, icon }) {
       icon={icon}
       riseOnHover={true}
       eventHandlers={{
-        click: () => onActivate(myth, "click"),
-        mouseover: () => onActivate(myth, "hover"),
+        click: () => onActivate(myth),
       }}
     >
       <Tooltip direction="top" offset={[0, -10]} opacity={0.85}>
@@ -206,9 +203,9 @@ function MythMarker({ myth, activeId, onActivate, icon }) {
             <p className="text-xs text-ink-600 leading-relaxed">
               {formatExcerpt(myth.excerpt)}
             </p>
-            {myth.groupSize > 1 ? (
+            {myth.groupCount > 1 ? (
               <Badge className="border-ember-500/30 bg-ember-500/10 text-ember-600">
-                Ubicacion compartida ({myth.groupSize})
+                Ubicacion compartida ({myth.groupCount})
               </Badge>
             ) : null}
             <ButtonLink href={`/mitos/${myth.slug}`} size="sm" className="w-full">
@@ -221,15 +218,62 @@ function MythMarker({ myth, activeId, onActivate, icon }) {
   );
 }
 
+function GroupMarker({ group, isExpanded, onToggle }) {
+  return (
+    <Marker
+      position={[group.lat, group.lng]}
+      icon={getPinIcon({ count: group.items.length, isActive: isExpanded })}
+      riseOnHover={true}
+      eventHandlers={{
+        click: () => onToggle(group.key),
+      }}
+    >
+      <Tooltip direction="top" offset={[0, -10]} opacity={0.85}>
+        {group.items.length} mitos en este lugar
+      </Tooltip>
+    </Marker>
+  );
+}
+
 export default function MapaExplorer() {
   const router = useRouter();
   const { data, loading, error } = useMapData();
   const [activeId, setActiveId] = useState(null);
+  const [expandedGroupKey, setExpandedGroupKey] = useState(null);
 
-  const { markers, uniqueLocations } = useMemo(
-    () => buildMarkers(data),
-    [data]
-  );
+  const groups = useMemo(() => buildGroups(data), [data]);
+
+  const { groupMarkers, mythMarkers, uniqueLocations } = useMemo(() => {
+    const groupMarkers = [];
+    const mythMarkers = [];
+
+    groups.forEach((group) => {
+      if (group.items.length === 1) {
+        const item = group.items[0];
+        mythMarkers.push({
+          ...item,
+          displayLat: group.lat,
+          displayLng: group.lng,
+          groupKey: group.key,
+          groupCount: 1,
+        });
+        return;
+      }
+
+      if (expandedGroupKey === group.key) {
+        mythMarkers.push(
+          ...spreadGroupItems(group).map((item) => ({
+            ...item,
+            groupCount: group.items.length,
+          }))
+        );
+      } else {
+        groupMarkers.push(group);
+      }
+    });
+
+    return { groupMarkers, mythMarkers, uniqueLocations: groups.length };
+  }, [groups, expandedGroupKey]);
 
   const stats = useMemo(() => {
     const withImages = data.filter((item) => item.image_url).length;
@@ -241,12 +285,25 @@ export default function MapaExplorer() {
     };
   }, [data]);
 
-  const handleActivate = (myth, action) => {
-    if (action === "click" && activeId === myth.id) {
+  useEffect(() => {
+    if (!expandedGroupKey) return;
+    const stillExists = groups.some((group) => group.key === expandedGroupKey);
+    if (!stillExists) {
+      setExpandedGroupKey(null);
+    }
+  }, [expandedGroupKey, groups]);
+
+  const handleMythClick = (myth) => {
+    if (activeId === myth.id) {
       router.push(`/mitos/${myth.slug}`);
       return;
     }
     setActiveId(myth.id);
+  };
+
+  const handleToggleGroup = (groupKey) => {
+    setActiveId(null);
+    setExpandedGroupKey((prev) => (prev === groupKey ? null : groupKey));
   };
 
   return (
@@ -291,13 +348,13 @@ export default function MapaExplorer() {
               Como leer el mapa
             </p>
             <p className="text-sm text-ink-600 leading-relaxed">
-              Los puntos apilados se separan levemente para que puedas distinguir
-              relatos en el mismo lugar. Haz hover o clic para abrir el avance.
-              Si haces clic de nuevo, iras al mito completo.
+              Los puntos con contador se expanden al hacer clic para que puedas
+              elegir el mito exacto. Pasa el cursor para ver el titulo y vuelve
+              a hacer clic para abrir el relato completo.
             </p>
             <div className="flex flex-wrap gap-2">
               <Badge className="border-river-500/30 bg-river-500/10 text-river-600">
-                Hover o click
+                Click = expandir
               </Badge>
               <Badge className="border-ember-500/30 bg-ember-500/10 text-ember-600">
                 Click otra vez = abrir
@@ -325,18 +382,28 @@ export default function MapaExplorer() {
                 maxBounds={COLOMBIA_BOUNDS}
                 className="h-full w-full"
               >
-                <MapEvents onMapClick={() => setActiveId(null)} />
+                <MapEvents
+                  onMapClick={() => {
+                    setActiveId(null);
+                    setExpandedGroupKey(null);
+                  }}
+                />
                 <TileLayer attribution={MAP_ATTRIBUTION} url={MAP_TILES} />
-                {markers.map((myth) => (
+                {groupMarkers.map((group) => (
+                  <GroupMarker
+                    key={group.key}
+                    group={group}
+                    isExpanded={expandedGroupKey === group.key}
+                    onToggle={handleToggleGroup}
+                  />
+                ))}
+                {mythMarkers.map((myth) => (
                   <MythMarker
                     key={`${myth.id}-${myth.displayLat}-${myth.displayLng}`}
                     myth={myth}
                     activeId={activeId}
-                    onActivate={handleActivate}
-                    icon={getPinIcon({
-                      groupSize: myth.groupSize,
-                      isActive: activeId === myth.id,
-                    })}
+                    onActivate={handleMythClick}
+                    icon={getPinIcon({ count: 0, isActive: activeId === myth.id })}
                   />
                 ))}
               </MapContainer>
