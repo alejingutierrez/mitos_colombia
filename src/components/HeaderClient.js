@@ -9,6 +9,7 @@ const navLinks = [
   { label: "Mitos", href: "/mitos", hasDropdown: true },
   { label: "Categorias", href: "/categorias", hasDropdown: true },
   { label: "Regiones", href: "/regiones", hasDropdown: true },
+  { label: "Mapa", href: "/mapa", hasDropdown: false },
 ];
 
 export default function HeaderClient({ initialTaxonomy }) {

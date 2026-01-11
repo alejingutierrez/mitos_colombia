@@ -38,6 +38,9 @@ export default function Footer() {
               <Link href="/mitos" className="text-sm text-ink-700 transition hover:text-jungle-600">
                 Todos los mitos
               </Link>
+              <Link href="/mapa" className="text-sm text-ink-700 transition hover:text-jungle-600">
+                Mapa
+              </Link>
               <Link href="/regiones" className="text-sm text-ink-700 transition hover:text-jungle-600">
                 Regiones
               </Link>
