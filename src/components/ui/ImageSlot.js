@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { cn } from "../../lib/utils";
 
-const sizes = {
+const sizeMap = {
   card: "h-40",
   compact: "h-32",
   wide: "h-48 md:h-56",
@@ -15,7 +15,7 @@ export function ImageSlot({
   size = "card",
   label = "Imagen en proceso",
   className,
-  sizes = "(max-width: 768px) 100vw, 50vw",
+  sizes: imageSizes = "(max-width: 768px) 100vw, 50vw",
 }) {
   return (
     <div
@@ -24,13 +24,19 @@ export function ImageSlot({
       className={cn(
         "relative overflow-hidden rounded-2xl border border-white/60",
         "bg-white/40 shadow-sm",
-        sizes[size] || sizes.card,
+        sizeMap[size] || sizeMap.card,
         className
       )}
     >
       {src ? (
         <>
-          <Image src={src} alt={alt} fill sizes={sizes} className="object-cover object-top" />
+          <Image
+            src={src}
+            alt={alt}
+            fill
+            sizes={imageSizes}
+            className="object-cover object-top"
+          />
           <div className="absolute inset-0 bg-gradient-to-t from-ink-900/40 via-transparent to-transparent" />
         </>
       ) : (
