@@ -1,11 +1,10 @@
 "use client";
 
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
 import {
   MapContainer,
   Marker,
-  Popup,
   TileLayer,
   Tooltip,
   useMapEvents,
@@ -13,7 +12,6 @@ import {
 import L from "leaflet";
 import { GlassCard } from "./ui/GlassCard";
 import { Badge } from "./ui/Badge";
-import { ButtonLink } from "./ui/Button";
 import { SectionHeader } from "./ui/SectionHeader";
 
 const COLOMBIA_CENTER = [4.570868, -74.297333];
@@ -61,12 +59,6 @@ function getPinIcon({ count = 0, isActive }) {
 
   iconCache.set(key, icon);
   return icon;
-}
-
-function formatExcerpt(value) {
-  if (!value) return "";
-  if (value.length <= 140) return value;
-  return `${value.slice(0, 140).trim()}...`;
 }
 
 function MapEvents({ onMapClick }) {
@@ -157,63 +149,19 @@ function spreadGroupItems(group) {
   });
 }
 
-function MythMarker({ myth, activeId, onActivate, icon }) {
-  const markerRef = useRef(null);
-
-  useEffect(() => {
-    if (!markerRef.current) return;
-    if (activeId === myth.id) {
-      markerRef.current.openPopup();
-    } else {
-      markerRef.current.closePopup();
-    }
-  }, [activeId, myth.id]);
-
+function MythMarker({ myth, onSelect, icon }) {
   return (
     <Marker
-      ref={markerRef}
       position={[myth.displayLat, myth.displayLng]}
       icon={icon}
       riseOnHover={true}
       eventHandlers={{
-        click: () => onActivate(myth),
+        click: () => onSelect(myth),
       }}
     >
       <Tooltip direction="top" offset={[0, -10]} opacity={0.85}>
         {myth.title}
       </Tooltip>
-      <Popup maxWidth={260} closeButton={false} autoPan={true}>
-        <div className="overflow-hidden rounded-2xl">
-          {myth.image_url ? (
-            <img
-              src={myth.image_url}
-              alt={myth.title}
-              className="h-32 w-full object-cover"
-              loading="lazy"
-            />
-          ) : (
-            <div className="h-32 w-full bg-gradient-to-br from-jungle-600 via-river-600 to-ember-500" />
-          )}
-          <div className="p-4 space-y-3">
-            <div className="flex flex-wrap items-center gap-2 text-xs uppercase tracking-[0.3em] text-ink-500">
-              <span>{myth.region}</span>
-              {myth.community ? <span>· {myth.community}</span> : null}
-            </div>
-            <h3 className="font-display text-lg text-ink-900">{myth.title}</h3>
-            <p className="text-xs text-ink-600 leading-relaxed">
-              {formatExcerpt(myth.excerpt)}
-            </p>
-            {myth.groupCount > 1 ? (
-              <Badge className="border-ember-500/30 bg-ember-500/10 text-ember-600">
-                Ubicacion compartida ({myth.groupCount})
-              </Badge>
-            ) : null}
-            <ButtonLink href={`/mitos/${myth.slug}`} size="sm" className="w-full">
-              Leer mito
-            </ButtonLink>
-          </div>
-        </div>
-      </Popup>
     </Marker>
   );
 }
@@ -238,7 +186,6 @@ function GroupMarker({ group, isExpanded, onToggle }) {
 export default function MapaExplorer() {
   const router = useRouter();
   const { data, loading, error } = useMapData();
-  const [activeId, setActiveId] = useState(null);
   const [expandedGroupKey, setExpandedGroupKey] = useState(null);
 
   const groups = useMemo(() => buildGroups(data), [data]);
@@ -255,18 +202,12 @@ export default function MapaExplorer() {
           displayLat: group.lat,
           displayLng: group.lng,
           groupKey: group.key,
-          groupCount: 1,
         });
         return;
       }
 
       if (expandedGroupKey === group.key) {
-        mythMarkers.push(
-          ...spreadGroupItems(group).map((item) => ({
-            ...item,
-            groupCount: group.items.length,
-          }))
-        );
+        mythMarkers.push(...spreadGroupItems(group));
       } else {
         groupMarkers.push(group);
       }
@@ -294,15 +235,10 @@ export default function MapaExplorer() {
   }, [expandedGroupKey, groups]);
 
   const handleMythClick = (myth) => {
-    if (activeId === myth.id) {
-      router.push(`/mitos/${myth.slug}`);
-      return;
-    }
-    setActiveId(myth.id);
+    router.push(`/mitos/${myth.slug}`);
   };
 
   const handleToggleGroup = (groupKey) => {
-    setActiveId(null);
     setExpandedGroupKey((prev) => (prev === groupKey ? null : groupKey));
   };
 
@@ -349,15 +285,15 @@ export default function MapaExplorer() {
             </p>
             <p className="text-sm text-ink-600 leading-relaxed">
               Los puntos con contador se expanden al hacer clic para que puedas
-              elegir el mito exacto. Pasa el cursor para ver el titulo y vuelve
-              a hacer clic para abrir el relato completo.
+              elegir el mito exacto. Pasa el cursor para ver el titulo y haz
+              clic para ir directo al relato.
             </p>
             <div className="flex flex-wrap gap-2">
               <Badge className="border-river-500/30 bg-river-500/10 text-river-600">
                 Click = expandir
               </Badge>
               <Badge className="border-ember-500/30 bg-ember-500/10 text-ember-600">
-                Click otra vez = abrir
+                Click = abrir mito
               </Badge>
             </div>
           </GlassCard>
@@ -384,7 +320,6 @@ export default function MapaExplorer() {
               >
                 <MapEvents
                   onMapClick={() => {
-                    setActiveId(null);
                     setExpandedGroupKey(null);
                   }}
                 />
@@ -401,9 +336,8 @@ export default function MapaExplorer() {
                   <MythMarker
                     key={`${myth.id}-${myth.displayLat}-${myth.displayLng}`}
                     myth={myth}
-                    activeId={activeId}
-                    onActivate={handleMythClick}
-                    icon={getPinIcon({ count: 0, isActive: activeId === myth.id })}
+                    onSelect={handleMythClick}
+                    icon={getPinIcon({ count: 0, isActive: false })}
                   />
                 ))}
               </MapContainer>
