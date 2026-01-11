@@ -7,6 +7,7 @@ import { GlassCard } from "../../../components/ui/GlassCard";
 import { Pagination } from "../../../components/ui/Pagination";
 import { formatCategoryName } from "../../../lib/formatters";
 import { getTaxonomy, listMyths } from "../../../lib/myths";
+import { buildSeoMetadata, getSeoEntry } from "../../../lib/seo";
 import Link from "next/link";
 
 export const runtime = "nodejs";
@@ -266,12 +267,17 @@ export async function generateMetadata({ params }) {
     storedDescription ||
     categoryInfo.description ||
     `Explora los mitos de la categoría ${category.name}`;
+  const seo = await getSeoEntry("category", params.slug);
 
-  return {
-    title: `${title} | Mitos de Colombia`,
-    description,
-    keywords: [category.name, "mitos", "Colombia", "folklore", "tradición oral"],
-  };
+  return buildSeoMetadata({
+    fallback: {
+      title: `${title} | Mitos de Colombia`,
+      description,
+      keywords: [category.name, "mitos", "Colombia", "folklore", "tradición oral"],
+    },
+    seo,
+    canonicalPath: `/categorias/${params.slug}`,
+  });
 }
 
 export default async function CategoryDetailPage({ params, searchParams }) {

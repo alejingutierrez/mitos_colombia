@@ -7,6 +7,7 @@ import { GlassCard } from "../../../components/ui/GlassCard";
 import { Pagination } from "../../../components/ui/Pagination";
 import { filterAllowedCommunities, MIN_COMMUNITY_MYTHS } from "../../../lib/communityFilters";
 import { getTaxonomy, listMyths } from "../../../lib/myths";
+import { buildSeoMetadata, getSeoEntry } from "../../../lib/seo";
 import Link from "next/link";
 
 export const runtime = "nodejs";
@@ -225,12 +226,17 @@ export async function generateMetadata({ params }) {
   const communityInfo = COMMUNITY_INFO[params.slug] || {};
   const title = communityInfo.title || community.name;
   const description = communityInfo.description || `Explora los mitos del pueblo ${community.name}`;
+  const seo = await getSeoEntry("community", params.slug);
 
-  return {
-    title: `Mitos ${title} | Mitos de Colombia`,
-    description,
-    keywords: [community.name, "pueblo indígena", "Colombia", "mitología", "tradición oral"],
-  };
+  return buildSeoMetadata({
+    fallback: {
+      title: `Mitos ${title} | Mitos de Colombia`,
+      description,
+      keywords: [community.name, "pueblo indígena", "Colombia", "mitología", "tradición oral"],
+    },
+    seo,
+    canonicalPath: `/comunidades/${params.slug}`,
+  });
 }
 
 export default async function CommunityDetailPage({ params, searchParams }) {

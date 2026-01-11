@@ -9,6 +9,7 @@ import HomeBannerCarousel from "../components/HomeBannerCarousel";
 import { getRoutePreviews } from "../lib/routes";
 import { getHomeBanners } from "../lib/home-banners";
 import SmartSearch from "../components/SmartSearch";
+import { buildSeoMetadata, getSeoEntry } from "../lib/seo";
 import {
   getFeaturedMythsWithImages,
   getDiverseMyths,
@@ -17,6 +18,26 @@ import {
 } from "../lib/myths";
 
 export const revalidate = 86400;
+
+export async function generateMetadata() {
+  const seo = await getSeoEntry("page", "home");
+  return buildSeoMetadata({
+    fallback: {
+      title: "Mitos de Colombia",
+      description:
+        "Archivo editorial de mitos colombianos organizado por regiones, comunidades y rutas temáticas.",
+      keywords: [
+        "mitos colombianos",
+        "leyendas",
+        "folclor",
+        "tradición oral",
+        "Colombia",
+      ],
+    },
+    seo,
+    canonicalPath: "/",
+  });
+}
 
 // Generate a seed based on the current day to rotate content daily
 function getDailySeed() {

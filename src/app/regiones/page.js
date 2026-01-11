@@ -5,9 +5,24 @@ import { GlassCard } from "../../components/ui/GlassCard";
 import { ImageSlot } from "../../components/ui/ImageSlot";
 import { SectionHeader } from "../../components/ui/SectionHeader";
 import { getTaxonomy } from "../../lib/myths";
+import { buildSeoMetadata, getSeoEntry } from "../../lib/seo";
 
 export const runtime = "nodejs";
 export const revalidate = 3600;
+
+export async function generateMetadata() {
+  const seo = await getSeoEntry("page", "regiones");
+  return buildSeoMetadata({
+    fallback: {
+      title: "Regiones culturales | Mitos de Colombia",
+      description:
+        "Explora los mitos colombianos organizados por regiones culturales y territorios ancestrales.",
+      keywords: ["regiones", "mitos colombianos", "territorio", "cultura"],
+    },
+    seo,
+    canonicalPath: "/regiones",
+  });
+}
 
 export default async function RegionesPage() {
   const taxonomy = await getTaxonomy();

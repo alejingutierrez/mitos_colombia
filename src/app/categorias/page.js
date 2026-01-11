@@ -7,10 +7,25 @@ import { Pagination } from "../../components/ui/Pagination";
 import { SectionHeader } from "../../components/ui/SectionHeader";
 import { formatCategoryName } from "../../lib/formatters";
 import { getTaxonomy } from "../../lib/myths";
+import { buildSeoMetadata, getSeoEntry } from "../../lib/seo";
 
 export const runtime = "nodejs";
 export const revalidate = 3600;
 const MIN_CATEGORY_MYTHS = 6;
+
+export async function generateMetadata() {
+  const seo = await getSeoEntry("page", "categorias");
+  return buildSeoMetadata({
+    fallback: {
+      title: "Categorías | Mitos de Colombia",
+      description:
+        "Explora los mitos de Colombia por categorías temáticas y descubre relatos de creación, castigo, transformación y más.",
+      keywords: ["categorías", "mitos colombianos", "temáticas", "folclor"],
+    },
+    seo,
+    canonicalPath: "/categorias",
+  });
+}
 
 function clampNumber(value, min, max, fallback) {
   const parsed = Number.parseInt(value, 10);

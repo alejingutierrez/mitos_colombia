@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Badge } from "../../../components/ui/Badge";
 import { GlassCard } from "../../../components/ui/GlassCard";
 import { ButtonLink } from "../../../components/ui/Button";
+import { buildSeoMetadata, getSeoEntry } from "../../../lib/seo";
 import {
   ROUTES,
   getAccentStyles,
@@ -25,10 +26,16 @@ export async function generateMetadata({ params }) {
   if (!route) {
     return {};
   }
-  return {
-    title: route.title,
-    description: route.description,
-  };
+  const seo = await getSeoEntry("route", params.slug);
+  return buildSeoMetadata({
+    fallback: {
+      title: route.title,
+      description: route.description,
+      keywords: route.keywords,
+    },
+    seo,
+    canonicalPath: `/rutas/${params.slug}`,
+  });
 }
 
 function HeroTile({ myth, className, sizes, priority = false }) {

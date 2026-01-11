@@ -7,6 +7,7 @@ import { GlassCard } from "../../../components/ui/GlassCard";
 import { getMythBySlug, getRecommendedMyths } from "../../../lib/myths";
 import { RecommendedMyths } from "../../../components/RecommendedMyths";
 import { Comments } from "../../../components/Comments";
+import { buildSeoMetadata, getSeoEntry } from "../../../lib/seo";
 import Link from "next/link";
 import ShareBar from "../../../components/ShareBar";
 
@@ -23,12 +24,18 @@ export async function generateMetadata({ params }) {
   }
 
   const keywords = [myth.focus_keyword, ...(myth.keywords || [])].filter(Boolean);
+  const seo = await getSeoEntry("myth", params.slug);
 
-  return {
-    title: myth.seo_title || myth.title,
-    description: myth.seo_description || myth.excerpt,
-    keywords,
-  };
+  return buildSeoMetadata({
+    fallback: {
+      title: myth.seo_title || myth.title,
+      description: myth.seo_description || myth.excerpt,
+      keywords,
+    },
+    seo,
+    canonicalPath: `/mitos/${params.slug}`,
+    openGraphType: "article",
+  });
 }
 
 function splitContent(content) {

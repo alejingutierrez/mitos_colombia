@@ -7,6 +7,7 @@ import { GlassCard } from "../../../components/ui/GlassCard";
 import { Pagination } from "../../../components/ui/Pagination";
 import { filterAllowedCommunities } from "../../../lib/communityFilters";
 import { getTaxonomy, listMyths } from "../../../lib/myths";
+import { buildSeoMetadata, getSeoEntry } from "../../../lib/seo";
 import Link from "next/link";
 
 export const runtime = "nodejs";
@@ -129,12 +130,17 @@ export async function generateMetadata({ params }) {
   const regionInfo = REGION_INFO[params.slug] || {};
   const title = regionInfo.title || region.name;
   const description = regionInfo.description || `Explora los mitos de la región ${region.name}`;
+  const seo = await getSeoEntry("region", params.slug);
 
-  return {
-    title: `${title} | Mitos de Colombia`,
-    description,
-    keywords: [region.name, "región cultural", "Colombia", "mitología", "tradición oral"],
-  };
+  return buildSeoMetadata({
+    fallback: {
+      title: `${title} | Mitos de Colombia`,
+      description,
+      keywords: [region.name, "región cultural", "Colombia", "mitología", "tradición oral"],
+    },
+    seo,
+    canonicalPath: `/regiones/${params.slug}`,
+  });
 }
 
 export default async function RegionDetailPage({ params, searchParams }) {

@@ -4,12 +4,21 @@ import { GlassCard } from "../../components/ui/GlassCard";
 import { SectionHeader } from "../../components/ui/SectionHeader";
 import { MythCard } from "../../components/MythCard";
 import { getFeaturedMythsWithImages } from "../../lib/myths";
+import { buildSeoMetadata, getSeoEntry } from "../../lib/seo";
 
-export const metadata = {
-  title: "Privacidad",
-  description:
-    "Política de privacidad de Mitos de Colombia y uso responsable de datos.",
-};
+export async function generateMetadata() {
+  const seo = await getSeoEntry("page", "privacidad");
+  return buildSeoMetadata({
+    fallback: {
+      title: "Privacidad | Mitos de Colombia",
+      description:
+        "Política de privacidad de Mitos de Colombia y uso responsable de datos.",
+      keywords: ["privacidad", "datos", "mitos colombianos", "política"],
+    },
+    seo,
+    canonicalPath: "/privacidad",
+  });
+}
 
 export const revalidate = 86400;
 

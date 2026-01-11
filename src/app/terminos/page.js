@@ -4,11 +4,20 @@ import { GlassCard } from "../../components/ui/GlassCard";
 import { SectionHeader } from "../../components/ui/SectionHeader";
 import { MythCard } from "../../components/MythCard";
 import { getFeaturedMythsWithImages } from "../../lib/myths";
+import { buildSeoMetadata, getSeoEntry } from "../../lib/seo";
 
-export const metadata = {
-  title: "Términos",
-  description: "Términos de uso del archivo editorial Mitos de Colombia.",
-};
+export async function generateMetadata() {
+  const seo = await getSeoEntry("page", "terminos");
+  return buildSeoMetadata({
+    fallback: {
+      title: "Términos | Mitos de Colombia",
+      description: "Términos de uso del archivo editorial Mitos de Colombia.",
+      keywords: ["términos", "condiciones", "mitos colombianos", "uso"],
+    },
+    seo,
+    canonicalPath: "/terminos",
+  });
+}
 
 export const revalidate = 86400;
 

@@ -6,9 +6,29 @@ import { ImageSlot } from "../../components/ui/ImageSlot";
 import { SectionHeader } from "../../components/ui/SectionHeader";
 import { filterAllowedCommunities } from "../../lib/communityFilters";
 import { getTaxonomy } from "../../lib/myths";
+import { buildSeoMetadata, getSeoEntry } from "../../lib/seo";
 
 export const runtime = "nodejs";
 export const revalidate = 3600;
+
+export async function generateMetadata() {
+  const seo = await getSeoEntry("page", "comunidades");
+  return buildSeoMetadata({
+    fallback: {
+      title: "Comunidades indígenas | Mitos de Colombia",
+      description:
+        "Conoce las comunidades indígenas que preservan la tradición oral y explora sus mitos por región.",
+      keywords: [
+        "comunidades indígenas",
+        "mitos colombianos",
+        "tradición oral",
+        "pueblos originarios",
+      ],
+    },
+    seo,
+    canonicalPath: "/comunidades",
+  });
+}
 
 export default async function ComunidadesPage() {
   const taxonomy = await getTaxonomy();

@@ -7,10 +7,25 @@ import { Pagination } from "../../components/ui/Pagination";
 import { SectionHeader } from "../../components/ui/SectionHeader";
 import { filterAllowedCommunities } from "../../lib/communityFilters";
 import { getTaxonomy, listMyths } from "../../lib/myths";
+import { buildSeoMetadata, getSeoEntry } from "../../lib/seo";
 import Link from "next/link";
 
 export const runtime = "nodejs";
 export const revalidate = 300;
+
+export async function generateMetadata() {
+  const seo = await getSeoEntry("page", "mitos");
+  return buildSeoMetadata({
+    fallback: {
+      title: "Archivo de mitos | Mitos de Colombia",
+      description:
+        "Archivo completo de mitos colombianos para explorar por región, comunidad, categorías y palabras clave.",
+      keywords: ["mitos", "archivo", "Colombia", "relatos", "folclor"],
+    },
+    seo,
+    canonicalPath: "/mitos",
+  });
+}
 
 function getParamValue(value) {
   if (Array.isArray(value)) {

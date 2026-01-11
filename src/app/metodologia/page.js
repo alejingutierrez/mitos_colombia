@@ -5,12 +5,21 @@ import { SectionHeader } from "../../components/ui/SectionHeader";
 import { MythCard } from "../../components/MythCard";
 import { RecommendedMyths } from "../../components/RecommendedMyths";
 import { getDiverseMyths, getFeaturedMythsWithImages, getHomeStats } from "../../lib/myths";
+import { buildSeoMetadata, getSeoEntry } from "../../lib/seo";
 
-export const metadata = {
-  title: "Metodología",
-  description:
-    "Cómo investigamos, organizamos y presentamos los mitos colombianos.",
-};
+export async function generateMetadata() {
+  const seo = await getSeoEntry("page", "metodologia");
+  return buildSeoMetadata({
+    fallback: {
+      title: "Metodología | Mitos de Colombia",
+      description:
+        "Cómo investigamos, organizamos y presentamos los mitos colombianos.",
+      keywords: ["metodología", "curaduría", "mitos colombianos", "archivo"],
+    },
+    seo,
+    canonicalPath: "/metodologia",
+  });
+}
 
 export const revalidate = 86400;
 

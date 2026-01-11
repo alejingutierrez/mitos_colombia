@@ -1,11 +1,20 @@
 import Header from "../../components/Header";
 import MapaPageClient from "./MapaPageClient";
+import { buildSeoMetadata, getSeoEntry } from "../../lib/seo";
 
-export const metadata = {
-  title: "Mapa",
-  description:
-    "Mapa interactivo de mitos colombianos. Explora relatos por ubicacion y territorio.",
-};
+export async function generateMetadata() {
+  const seo = await getSeoEntry("page", "mapa");
+  return buildSeoMetadata({
+    fallback: {
+      title: "Mapa de mitos | Mitos de Colombia",
+      description:
+        "Mapa interactivo de mitos colombianos. Explora relatos por ubicación y territorio.",
+      keywords: ["mapa", "mitos colombianos", "territorio", "geografía"],
+    },
+    seo,
+    canonicalPath: "/mapa",
+  });
+}
 
 export default function MapaPage() {
   return (

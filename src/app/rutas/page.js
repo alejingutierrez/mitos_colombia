@@ -7,12 +7,21 @@ import { Badge } from "../../components/ui/Badge";
 import { MythCard } from "../../components/MythCard";
 import { getRoutePreviews } from "../../lib/routes";
 import { getFeaturedMythsWithImages, getHomeStats } from "../../lib/myths";
+import { buildSeoMetadata, getSeoEntry } from "../../lib/seo";
 
-export const metadata = {
-  title: "Rutas",
-  description:
-    "Rutas editoriales para explorar mitos colombianos por simbolos, territorios y resonancias culturales.",
-};
+export async function generateMetadata() {
+  const seo = await getSeoEntry("page", "rutas");
+  return buildSeoMetadata({
+    fallback: {
+      title: "Rutas | Mitos de Colombia",
+      description:
+        "Rutas editoriales para explorar mitos colombianos por símbolos, territorios y resonancias culturales.",
+      keywords: ["rutas", "mitos colombianos", "curaduría", "territorio"],
+    },
+    seo,
+    canonicalPath: "/rutas",
+  });
+}
 
 export const revalidate = 86400;
 

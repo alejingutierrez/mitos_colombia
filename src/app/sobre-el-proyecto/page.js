@@ -6,12 +6,21 @@ import { MythCard } from "../../components/MythCard";
 import { getFeaturedMythsWithImages, getHomeStats } from "../../lib/myths";
 import { getRoutePreviews } from "../../lib/routes";
 import { ImageSlot } from "../../components/ui/ImageSlot";
+import { buildSeoMetadata, getSeoEntry } from "../../lib/seo";
 
-export const metadata = {
-  title: "Sobre el proyecto",
-  description:
-    "Conoce la visión editorial detrás de Mitos de Colombia y la curaduría del archivo.",
-};
+export async function generateMetadata() {
+  const seo = await getSeoEntry("page", "sobre-el-proyecto");
+  return buildSeoMetadata({
+    fallback: {
+      title: "Sobre el proyecto | Mitos de Colombia",
+      description:
+        "Conoce la visión editorial detrás de Mitos de Colombia y la curaduría del archivo.",
+      keywords: ["proyecto", "mitos colombianos", "archivo", "visión editorial"],
+    },
+    seo,
+    canonicalPath: "/sobre-el-proyecto",
+  });
+}
 
 export const revalidate = 86400;
 

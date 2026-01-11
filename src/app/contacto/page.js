@@ -5,12 +5,21 @@ import { GlassCard } from "../../components/ui/GlassCard";
 import ContactForm from "./ContactForm";
 import { MythCard } from "../../components/MythCard";
 import { getFeaturedMythsWithImages, getDiverseMyths } from "../../lib/myths";
+import { buildSeoMetadata, getSeoEntry } from "../../lib/seo";
 
-export const metadata = {
-  title: "Contacto",
-  description:
-    "Escríbenos para compartir mitos, correcciones o colaboraciones editoriales.",
-};
+export async function generateMetadata() {
+  const seo = await getSeoEntry("page", "contacto");
+  return buildSeoMetadata({
+    fallback: {
+      title: "Contacto | Mitos de Colombia",
+      description:
+        "Escríbenos para compartir mitos, correcciones o colaboraciones editoriales.",
+      keywords: ["contacto", "mitos colombianos", "colaboraciones", "archivo"],
+    },
+    seo,
+    canonicalPath: "/contacto",
+  });
+}
 
 export const revalidate = 86400;
 
