@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import {
   MapContainer,
   Marker,
+  Polyline,
   TileLayer,
   Tooltip,
   useMap,
@@ -212,9 +213,25 @@ function ExpandedGroupMarkers({ group, onSelect }) {
     () => computeExpandedPositions(map, group, zoom),
     [group, map, zoom]
   );
+  const center = [group.lat, group.lng];
 
   return (
     <>
+      {positions.map((position, index) => {
+        const myth = group.items[index];
+        if (!myth) return null;
+        return (
+          <Polyline
+            key={`${group.key}-${myth.id}-line`}
+            positions={[center, [position.lat, position.lng]]}
+            pathOptions={{
+              color: "rgba(35, 98, 158, 0.45)",
+              weight: 1.2,
+              dashArray: "5 7",
+            }}
+          />
+        );
+      })}
       {positions.map((position, index) => {
         const myth = group.items[index];
         if (!myth) return null;
@@ -238,10 +255,57 @@ function ExpandedGroupMarkers({ group, onSelect }) {
   );
 }
 
+function MythPreviewCard({ myth, onOpen }) {
+  if (!myth) return null;
+
+  return (
+    <div className="pointer-events-none absolute bottom-6 left-6 right-6 z-[600] md:left-6 md:right-auto md:max-w-sm">
+      <GlassCard
+        className="pointer-events-auto overflow-hidden p-0 cursor-pointer transition hover:-translate-y-1 hover:shadow-lift"
+        onClick={() => onOpen(myth)}
+        role="button"
+        tabIndex={0}
+        aria-label={`Abrir mito ${myth.title}`}
+        onKeyDown={(event) => {
+          if (event.key === "Enter" || event.key === " ") {
+            event.preventDefault();
+            onOpen(myth);
+          }
+        }}
+      >
+        {myth.image_url ? (
+          <img
+            src={myth.image_url}
+            alt={myth.title}
+            className="h-36 w-full object-cover"
+            loading="lazy"
+          />
+        ) : (
+          <div className="h-36 w-full bg-gradient-to-br from-jungle-600 via-river-600 to-ember-500" />
+        )}
+        <div className="space-y-3 p-4">
+          <div className="flex flex-wrap items-center gap-2 text-xs uppercase tracking-[0.3em] text-ink-500">
+            <span>{myth.region}</span>
+            {myth.community ? <span>· {myth.community}</span> : null}
+          </div>
+          <h3 className="font-display text-lg text-ink-900">{myth.title}</h3>
+          <p className="text-xs text-ink-600 leading-relaxed line-clamp-3">
+            {myth.excerpt}
+          </p>
+          <p className="text-[11px] uppercase tracking-[0.25em] text-ink-500">
+            Click para abrir
+          </p>
+        </div>
+      </GlassCard>
+    </div>
+  );
+}
+
 export default function MapaExplorer() {
   const router = useRouter();
   const { data, loading, error } = useMapData();
   const [expandedGroupKey, setExpandedGroupKey] = useState(null);
+  const [selectedMyth, setSelectedMyth] = useState(null);
 
   const groups = useMemo(() => buildGroups(data), [data]);
   const expandedGroup = useMemo(
@@ -292,11 +356,16 @@ export default function MapaExplorer() {
   }, [expandedGroupKey, groups]);
 
   const handleMythClick = (myth) => {
-    router.push(`/mitos/${myth.slug}`);
+    setSelectedMyth(myth);
   };
 
   const handleToggleGroup = (groupKey) => {
+    setSelectedMyth(null);
     setExpandedGroupKey((prev) => (prev === groupKey ? null : groupKey));
+  };
+
+  const handleOpenMyth = (myth) => {
+    router.push(`/mitos/${myth.slug}`);
   };
 
   return (
@@ -306,7 +375,7 @@ export default function MapaExplorer() {
           <SectionHeader
             eyebrow="Mapa vivo"
             title="Explora mitos ubicados en el territorio colombiano."
-            description="Encuentra relatos por geografia. Al pasar el cursor veras un avance, y al hacer clic nuevamente iras al mito completo."
+            description="Encuentra relatos por geografia. Pasa el cursor para ver el nombre y usa el doble clic (pin + tarjeta) para abrir el mito."
           />
 
           <div className="grid gap-4 sm:grid-cols-3 lg:grid-cols-1">
@@ -342,15 +411,18 @@ export default function MapaExplorer() {
             </p>
             <p className="text-sm text-ink-600 leading-relaxed">
               Los puntos con contador se expanden al hacer clic para que puedas
-              elegir el mito exacto. Pasa el cursor para ver el titulo y haz
-              clic para ir directo al relato.
+              elegir el mito exacto. Pasa el cursor para ver el titulo, haz clic
+              para ver la tarjeta y vuelve a hacer clic para abrir el relato.
             </p>
             <div className="flex flex-wrap gap-2">
               <Badge className="border-river-500/30 bg-river-500/10 text-river-600">
                 Click = expandir
               </Badge>
               <Badge className="border-ember-500/30 bg-ember-500/10 text-ember-600">
-                Click = abrir mito
+                Click = mostrar tarjeta
+              </Badge>
+              <Badge className="border-ink-500/30 bg-ink-500/10 text-ink-600">
+                Click en tarjeta = abrir
               </Badge>
             </div>
           </GlassCard>
@@ -378,6 +450,7 @@ export default function MapaExplorer() {
                 <MapEvents
                   onMapClick={() => {
                     setExpandedGroupKey(null);
+                    setSelectedMyth(null);
                   }}
                 />
                 <TileLayer attribution={MAP_ATTRIBUTION} url={MAP_TILES} />
@@ -404,6 +477,7 @@ export default function MapaExplorer() {
                   />
                 ))}
               </MapContainer>
+              <MythPreviewCard myth={selectedMyth} onOpen={handleOpenMyth} />
             </div>
           )}
         </GlassCard>

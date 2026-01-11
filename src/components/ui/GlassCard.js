@@ -1,8 +1,8 @@
 import { cn } from "../../lib/utils";
 
-export function GlassCard({ className, children }) {
+export function GlassCard({ className, children, ...props }) {
   return (
-    <div className={cn("glass-card", className)}>
+    <div className={cn("glass-card", className)} {...props}>
       {children}
     </div>
   );
