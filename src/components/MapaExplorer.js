@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import {
   MapContainer,
@@ -70,6 +70,34 @@ function MapEvents({ onMapClick }) {
       onMapClick();
     },
   });
+  return null;
+}
+
+function MapZoomBoost({ levels = 1 }) {
+  const map = useMap();
+  const appliedRef = useRef(false);
+
+  useEffect(() => {
+    if (!map || appliedRef.current) return;
+
+    const applyZoom = () => {
+      if (appliedRef.current) return;
+      const current = map.getZoom();
+      const maxZoom = map.getMaxZoom() ?? 18;
+      const target = Math.min(current + levels, maxZoom);
+      if (target !== current) {
+        map.setZoom(target, { animate: false });
+      }
+      appliedRef.current = true;
+    };
+
+    map.whenReady(() => {
+      requestAnimationFrame(() => {
+        requestAnimationFrame(applyZoom);
+      });
+    });
+  }, [map, levels]);
+
   return null;
 }
 
@@ -447,6 +475,7 @@ export default function MapaExplorer() {
                     setSelectedMyth(null);
                   }}
                 />
+                <MapZoomBoost levels={1} />
                 <TileLayer attribution={MAP_ATTRIBUTION} url={MAP_TILES} />
                 {groupMarkers.map((group) => (
                   <GroupMarker
