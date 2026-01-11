@@ -1,6 +1,7 @@
 "use client";
 
-import Header from "./Header";
+import { useEffect, useState } from "react";
+import HeaderClient from "./HeaderClient";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "../lib/utils";
@@ -48,10 +49,38 @@ const adminMenuItems = [
 
 export default function AdminLayout({ children, onLogout }) {
   const pathname = usePathname();
+  const [taxonomy, setTaxonomy] = useState({
+    communities: [],
+    tags: [],
+    regions: [],
+  });
+
+  useEffect(() => {
+    let active = true;
+
+    const loadTaxonomy = async () => {
+      try {
+        const response = await fetch("/api/taxonomy");
+        if (!response.ok) return;
+        const data = await response.json();
+        if (active && data) {
+          setTaxonomy(data);
+        }
+      } catch (error) {
+        console.error("Error loading taxonomy in admin:", error);
+      }
+    };
+
+    loadTaxonomy();
+
+    return () => {
+      active = false;
+    };
+  }, []);
 
   return (
     <div className="min-h-screen">
-      <Header />
+      <HeaderClient initialTaxonomy={taxonomy} />
       <div className="container-wide mt-8">
         <div className="flex flex-col lg:flex-row gap-6 pb-12">
           {/* Sidebar */}
