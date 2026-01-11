@@ -45,6 +45,15 @@ const adminMenuItems = [
       </svg>
     ),
   },
+  {
+    label: "Mensajes de Contacto",
+    href: "/admin/contacto",
+    icon: (
+      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 7h18M3 7l9 6 9-6M3 7v10a2 2 0 002 2h14a2 2 0 002-2V7" />
+      </svg>
+    ),
+  },
 ];
 
 export default function AdminLayout({ children, onLogout }) {
