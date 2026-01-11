@@ -53,7 +53,8 @@ CREATE TABLE IF NOT EXISTS tags (
   name TEXT NOT NULL,
   slug TEXT NOT NULL UNIQUE,
   image_prompt TEXT,
-  image_url TEXT
+  image_url TEXT,
+  description TEXT
 );
 
 ALTER TABLE regions ADD COLUMN IF NOT EXISTS image_prompt TEXT;
@@ -62,6 +63,7 @@ ALTER TABLE communities ADD COLUMN IF NOT EXISTS image_prompt TEXT;
 ALTER TABLE communities ADD COLUMN IF NOT EXISTS image_url TEXT;
 ALTER TABLE tags ADD COLUMN IF NOT EXISTS image_prompt TEXT;
 ALTER TABLE tags ADD COLUMN IF NOT EXISTS image_url TEXT;
+ALTER TABLE tags ADD COLUMN IF NOT EXISTS description TEXT;
 
 CREATE TABLE IF NOT EXISTS myth_tags (
   myth_id INTEGER NOT NULL REFERENCES myths(id) ON DELETE CASCADE,

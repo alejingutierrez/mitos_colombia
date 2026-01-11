@@ -54,7 +54,8 @@ CREATE TABLE IF NOT EXISTS tags (
   name TEXT NOT NULL UNIQUE,
   slug TEXT NOT NULL UNIQUE,
   image_prompt TEXT,
-  image_url TEXT
+  image_url TEXT,
+  description TEXT
 );
 
 CREATE TABLE IF NOT EXISTS myth_tags (

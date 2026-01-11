@@ -56,6 +56,15 @@ const adminMenuItems = [
     ),
   },
   {
+    label: "Descripciones de categorías",
+    href: "/admin/category-descriptions",
+    icon: (
+      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 5h16M4 9h10M4 13h16M4 17h12" />
+      </svg>
+    ),
+  },
+  {
     label: "Mensajes de Contacto",
     href: "/admin/contacto",
     icon: (

@@ -229,6 +229,25 @@ function buildQuery(params, overrides = {}) {
   return search.toString();
 }
 
+function buildShortDescription(text) {
+  const cleaned = String(text || "").replace(/\s+/g, " ").trim();
+  if (!cleaned) {
+    return "";
+  }
+  const sentences = cleaned.match(/[^.!?]+[.!?]+/g);
+  if (sentences && sentences.length > 0) {
+    const snippet = sentences.slice(0, 2).join(" ").trim();
+    if (snippet.length <= 220) {
+      return snippet;
+    }
+    return `${snippet.slice(0, 217).trim()}...`;
+  }
+  if (cleaned.length > 220) {
+    return `${cleaned.slice(0, 217).trim()}...`;
+  }
+  return cleaned;
+}
+
 export async function generateMetadata({ params }) {
   const taxonomy = await getTaxonomy();
   const category = taxonomy.tags.find(t => t.slug === params.slug);
@@ -242,7 +261,11 @@ export async function generateMetadata({ params }) {
 
   const categoryInfo = CATEGORY_INFO[params.slug] || {};
   const title = categoryInfo.title || category.name;
-  const description = categoryInfo.description || `Explora los mitos de la categoría ${category.name}`;
+  const storedDescription = String(category.description || "").trim();
+  const description =
+    storedDescription ||
+    categoryInfo.description ||
+    `Explora los mitos de la categoría ${category.name}`;
 
   return {
     title: `${title} | Mitos de Colombia`,
@@ -270,14 +293,15 @@ export default async function CategoryDetailPage({ params, searchParams }) {
     longDescription: `Los mitos de la categoría ${category.name} forman parte del rico patrimonio cultural de Colombia, transmitidos de generación en generación por comunidades que preservan sus tradiciones orales.`,
     imagePrompt: "Colombian folklore scene, traditional mythology, cultural heritage"
   };
-  const shortDescription =
-    (categoryInfo.description || "").length < 150
-      ? `${categoryInfo.description} Estos relatos revelan cómo las comunidades explican el mundo, conservan memoria y transmiten valores colectivos.`
-      : categoryInfo.description;
+  const storedDescription = String(category.description || "").trim();
+  const descriptionSource = storedDescription || categoryInfo.description;
+  const longSource = storedDescription || categoryInfo.longDescription;
+  const shortDescription = buildShortDescription(descriptionSource);
   const needsExpansion =
-    !category.image_url || (categoryInfo.longDescription || "").length < 520;
+    !storedDescription &&
+    (!category.image_url || String(longSource || "").length < 520);
   const longDescriptionBlocks = [
-    categoryInfo.longDescription,
+    longSource,
     ...(needsExpansion
       ? [
           `En esta categoría se agrupan relatos provenientes de distintas regiones, pueblos y épocas, lo que permite ver patrones y variaciones en una misma temática. El mismo motivo mítico puede aparecer en la Amazonía, los Andes o el Caribe, cambiando según el paisaje y la cosmovisión de cada comunidad.`,

@@ -423,6 +423,7 @@ function getTaxonomySqlite() {
         tags.slug,
         tags.image_url,
         tags.image_prompt,
+        tags.description,
         COUNT(myth_tags.myth_id) AS myth_count
       FROM tags
       JOIN myth_tags ON myth_tags.tag_id = tags.id
@@ -480,6 +481,7 @@ async function getTaxonomyPostgres() {
         tags.slug,
         tags.image_url,
         tags.image_prompt,
+        tags.description,
         COUNT(myth_tags.myth_id) AS myth_count
       FROM tags
       JOIN myth_tags ON myth_tags.tag_id = tags.id
