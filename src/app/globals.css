@@ -181,3 +181,66 @@ body {
 .leaflet-popup-tip {
   background: rgba(255, 255, 255, 0.96);
 }
+
+.leaflet-container {
+  height: 100%;
+  width: 100%;
+}
+
+.map-pin-shell {
+  background: transparent;
+  border: 0;
+}
+
+.map-pin {
+  position: relative;
+  height: 52px;
+  width: 40px;
+}
+
+.map-pin svg {
+  display: block;
+  height: 52px;
+  width: 40px;
+  filter: drop-shadow(0 10px 18px rgba(18, 22, 24, 0.18));
+}
+
+.map-pin-shape {
+  fill: rgb(var(--jungle-600));
+  stroke: rgba(255, 255, 255, 0.95);
+  stroke-width: 2px;
+}
+
+.map-pin-dot {
+  fill: rgba(255, 255, 255, 0.95);
+}
+
+.map-pin.is-active .map-pin-shape {
+  fill: rgb(var(--ember-500));
+}
+
+.map-pin.is-active .map-pin-dot {
+  fill: rgba(255, 255, 255, 0.98);
+}
+
+.map-pin-count {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  min-width: 22px;
+  height: 22px;
+  padding: 0 6px;
+  border-radius: 999px;
+  border: 1px solid rgba(30, 120, 94, 0.35);
+  background: rgba(255, 255, 255, 0.95);
+  color: rgb(var(--ink-700));
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 22px;
+  text-align: center;
+  box-shadow: 0 6px 16px rgba(18, 22, 24, 0.12);
+}
+
+.map-pin.is-active .map-pin-count {
+  border-color: rgba(189, 134, 66, 0.4);
+}

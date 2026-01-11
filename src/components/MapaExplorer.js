@@ -11,9 +11,6 @@ import {
   useMapEvents,
 } from "react-leaflet";
 import L from "leaflet";
-import iconRetinaUrl from "leaflet/dist/images/marker-icon-2x.png";
-import iconUrl from "leaflet/dist/images/marker-icon.png";
-import shadowUrl from "leaflet/dist/images/marker-shadow.png";
 import { GlassCard } from "./ui/GlassCard";
 import { Badge } from "./ui/Badge";
 import { ButtonLink } from "./ui/Button";
@@ -31,17 +28,40 @@ const MAP_TILES =
 const MAP_ATTRIBUTION =
   '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>';
 
-const DEFAULT_ICON = L.icon({
-  iconRetinaUrl,
-  iconUrl,
-  shadowUrl,
-  iconSize: [25, 41],
-  iconAnchor: [12, 41],
-  popupAnchor: [1, -34],
-  shadowSize: [41, 41],
-});
+const PIN_SVG = `
+  <svg viewBox="0 0 40 52" aria-hidden="true" focusable="false">
+    <path class="map-pin-shape" d="M20 1.5c-8.28 0-15 6.72-15 15 0 11.65 13.44 30.16 14.01 30.94a1 1 0 0 0 1.98 0C21.56 46.66 35 28.15 35 16.5c0-8.28-6.72-15-15-15z" />
+    <circle class="map-pin-dot" cx="20" cy="17" r="6" />
+  </svg>
+`;
 
-L.Marker.prototype.options.icon = DEFAULT_ICON;
+const iconCache = new Map();
+
+function getPinIcon({ groupSize, isActive }) {
+  const count = groupSize > 1 ? groupSize : 0;
+  const key = `${count}-${isActive ? "active" : "base"}`;
+  if (iconCache.has(key)) {
+    return iconCache.get(key);
+  }
+
+  const html = `
+    <div class="map-pin ${isActive ? "is-active" : ""}">
+      ${PIN_SVG}
+      ${count ? `<span class="map-pin-count">${count}</span>` : ""}
+    </div>
+  `;
+
+  const icon = L.divIcon({
+    className: "map-pin-shell",
+    html,
+    iconSize: [40, 52],
+    iconAnchor: [20, 50],
+    popupAnchor: [0, -42],
+  });
+
+  iconCache.set(key, icon);
+  return icon;
+}
 
 function formatExcerpt(value) {
   if (!value) return "";
@@ -139,7 +159,7 @@ function buildMarkers(myths) {
   return { markers, uniqueLocations: grouped.size };
 }
 
-function MythMarker({ myth, activeId, onActivate }) {
+function MythMarker({ myth, activeId, onActivate, icon }) {
   const markerRef = useRef(null);
 
   useEffect(() => {
@@ -155,6 +175,8 @@ function MythMarker({ myth, activeId, onActivate }) {
     <Marker
       ref={markerRef}
       position={[myth.displayLat, myth.displayLng]}
+      icon={icon}
+      riseOnHover={true}
       eventHandlers={{
         click: () => onActivate(myth, "click"),
         mouseover: () => onActivate(myth, "hover"),
@@ -284,7 +306,7 @@ export default function MapaExplorer() {
           </GlassCard>
         </div>
 
-        <GlassCard className="relative overflow-hidden p-0 min-h-[420px] md:min-h-[520px]">
+        <GlassCard className="relative overflow-hidden p-0 min-h-[420px] md:min-h-[520px] lg:min-h-[620px] lg:h-full">
           {loading ? (
             <div className="flex h-full items-center justify-center bg-white/60">
               <div className="text-sm text-ink-600">Cargando mapa...</div>
@@ -294,25 +316,31 @@ export default function MapaExplorer() {
               <div className="text-sm text-ember-600">{error}</div>
             </div>
           ) : (
-            <MapContainer
-              center={COLOMBIA_CENTER}
-              zoom={5}
-              minZoom={4}
-              scrollWheelZoom={true}
-              maxBounds={COLOMBIA_BOUNDS}
-              className="h-[420px] md:h-[520px] w-full"
-            >
-              <MapEvents onMapClick={() => setActiveId(null)} />
-              <TileLayer attribution={MAP_ATTRIBUTION} url={MAP_TILES} />
-              {markers.map((myth) => (
-                <MythMarker
-                  key={`${myth.id}-${myth.displayLat}-${myth.displayLng}`}
-                  myth={myth}
-                  activeId={activeId}
-                  onActivate={handleActivate}
-                />
-              ))}
-            </MapContainer>
+            <div className="absolute inset-0">
+              <MapContainer
+                center={COLOMBIA_CENTER}
+                zoom={5}
+                minZoom={4}
+                scrollWheelZoom={true}
+                maxBounds={COLOMBIA_BOUNDS}
+                className="h-full w-full"
+              >
+                <MapEvents onMapClick={() => setActiveId(null)} />
+                <TileLayer attribution={MAP_ATTRIBUTION} url={MAP_TILES} />
+                {markers.map((myth) => (
+                  <MythMarker
+                    key={`${myth.id}-${myth.displayLat}-${myth.displayLng}`}
+                    myth={myth}
+                    activeId={activeId}
+                    onActivate={handleActivate}
+                    icon={getPinIcon({
+                      groupSize: myth.groupSize,
+                      isActive: activeId === myth.id,
+                    })}
+                  />
+                ))}
+              </MapContainer>
+            </div>
           )}
         </GlassCard>
       </div>
