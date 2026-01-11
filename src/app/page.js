@@ -5,7 +5,9 @@ import { ButtonLink } from "../components/ui/Button";
 import { GlassCard } from "../components/ui/GlassCard";
 import { SectionHeader } from "../components/ui/SectionHeader";
 import { MythCard } from "../components/MythCard";
+import HomeBannerCarousel from "../components/HomeBannerCarousel";
 import { getRoutePreviews } from "../lib/routes";
+import { getHomeBanners } from "../lib/home-banners";
 import SmartSearch from "../components/SmartSearch";
 import {
   getFeaturedMythsWithImages,
@@ -63,12 +65,20 @@ export default async function Home() {
   const seed = getDailySeed();
 
   // Fetch dynamic data
-  const [featuredMyths, diverseMyths, stats, taxonomy, routePreviews] = await Promise.all([
+  const [
+    featuredMyths,
+    diverseMyths,
+    stats,
+    taxonomy,
+    routePreviews,
+    homeBanners,
+  ] = await Promise.all([
     getFeaturedMythsWithImages(9, seed),
     getDiverseMyths(6, seed),
     getHomeStats(),
     getTaxonomy(),
     getRoutePreviews(seed),
+    getHomeBanners(),
   ]);
 
   // Get the main featured myth (first one with image)
@@ -227,6 +237,10 @@ export default async function Home() {
           ))}
         </div>
       </section>
+
+      {homeBanners.length > 0 && (
+        <HomeBannerCarousel banners={homeBanners} />
+      )}
 
       {galleryMyths.length > 0 && (
         <section className="container-shell mt-32">

@@ -96,6 +96,19 @@ const insertMythTag = db.prepare(
 const insertMythKeyword = db.prepare(
   "INSERT OR IGNORE INTO myth_keywords (myth_id, keyword) VALUES (?, ?)"
 );
+const insertHomeBanner = db.prepare(
+  `INSERT OR IGNORE INTO home_banners (
+    slug,
+    title,
+    subtitle,
+    description,
+    cta_label,
+    cta_href,
+    image_prompt,
+    order_index,
+    is_active
+  ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)`
+);
 
 function slugify(value) {
   return value
@@ -222,6 +235,74 @@ function buildImagePrompt({
 
   return parts.join("\n\n");
 }
+
+const HOME_BANNERS = [
+  {
+    slug: "envia-tu-mito",
+    title: "Envia tu mito",
+    subtitle: "Convocatoria abierta",
+    description:
+      "Abrimos un canal para recibir relatos, versiones y memorias de tu territorio. Si tu comunidad protege una historia, queremos escucharla.",
+    cta_label: "Escribenos",
+    cta_href: "/contacto",
+    image_prompt:
+      "Ilustracion horizontal (16:9) estilo paper quilling + paper cut. Un escritorio editorial con cartas, cuadernos, mapas antiguos, hilos de colores y fragmentos de selva colombiana. Luz calida, texturas de papel, paleta verde selva, azul rio y dorado tierra. Sin texto, sin logos, sin marcas.",
+    order_index: 1,
+    is_active: 1,
+  },
+  {
+    slug: "libro-en-camino",
+    title: "Libro en camino",
+    subtitle: "Edicion impresa",
+    description:
+      "Estamos preparando un libro con relatos seleccionados, entrevistas y arte original. Un archivo para leer con calma y guardar en casa.",
+    cta_label: "Conocer mas",
+    cta_href: "/sobre-el-proyecto",
+    image_prompt:
+      "Ilustracion horizontal (16:9) estilo paper quilling + paper cut. Un libro abierto que se transforma en montanas, rios y nieblas; capas de papel formando un paisaje colombiano. Luz suave, atmosfera editorial, paleta verde, azul, dorado. Sin texto.",
+    order_index: 2,
+    is_active: 1,
+  },
+  {
+    slug: "rutas-editoriales",
+    title: "Rutas para explorar",
+    subtitle: "Cartografias editoriales",
+    description:
+      "Recorridos tematicos que conectan simbolos, guardianes y paisajes. Una forma de leer el territorio como un mapa vivo.",
+    cta_label: "Ver rutas",
+    cta_href: "/rutas",
+    image_prompt:
+      "Ilustracion horizontal (16:9) estilo paper quilling + paper cut. Mapa abstracto con caminos y rutas que conectan rios, montanas y selva; pines de papel y trazos curvos. Paleta verde selva, azul rio, dorado tierra. Sin texto.",
+    order_index: 3,
+    is_active: 1,
+  },
+  {
+    slug: "metodologia-editorial",
+    title: "Nuestra metodologia",
+    subtitle: "Como curamos los mitos",
+    description:
+      "Cada mito pasa por un proceso de investigacion, verificacion y edicion sensible. La metodologia deja ver el tejido de voces y fuentes.",
+    cta_label: "Leer metodologia",
+    cta_href: "/metodologia",
+    image_prompt:
+      "Ilustracion horizontal (16:9) estilo paper quilling + paper cut. Mesa de archivo con fichas, etiquetas, lupa, hilos que conectan notas y mapas; simbolos editoriales. Paleta verde, azul, dorado. Sin texto.",
+    order_index: 4,
+    is_active: 1,
+  },
+  {
+    slug: "mapa-vivo",
+    title: "Mapa vivo",
+    subtitle: "Geografia del mito",
+    description:
+      "Los relatos no flotan: nacen de rios, montes y caminos reales. Mira donde respiran y visita su territorio.",
+    cta_label: "Explorar mapa",
+    cta_href: "/mapa",
+    image_prompt:
+      "Ilustracion horizontal (16:9) estilo paper quilling + paper cut. Mapa de Colombia en relieve de papel con rios azules, selva verde y pines dorados; textura artesanal. Sin texto.",
+    order_index: 5,
+    is_active: 1,
+  },
+];
 
 const usedSlugs = new Set();
 
@@ -380,6 +461,24 @@ const importRows = db.transaction((dataRows) => {
 
 importRows(rows);
 
+const seedHomeBanners = db.transaction((items) => {
+  items.forEach((item) => {
+    insertHomeBanner.run(
+      item.slug,
+      item.title,
+      item.subtitle,
+      item.description,
+      item.cta_label,
+      item.cta_href,
+      item.image_prompt,
+      item.order_index,
+      item.is_active
+    );
+  });
+});
+
+seedHomeBanners(HOME_BANNERS);
+
 const counts = {
   myths: db.prepare("SELECT COUNT(*) AS count FROM myths").get().count,
   regions: db.prepare("SELECT COUNT(*) AS count FROM regions").get().count,
@@ -389,6 +488,9 @@ const counts = {
   tags: db.prepare("SELECT COUNT(*) AS count FROM tags").get().count,
   keywords: db
     .prepare("SELECT COUNT(*) AS count FROM myth_keywords")
+    .get().count,
+  home_banners: db
+    .prepare("SELECT COUNT(*) AS count FROM home_banners")
     .get().count,
 };
 

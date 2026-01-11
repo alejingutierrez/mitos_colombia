@@ -58,6 +58,9 @@ export default function Footer() {
               Rutas tematicas
             </h3>
             <nav className="mt-4 flex flex-col gap-3">
+              <Link href="/rutas" className="text-sm text-ink-700 transition hover:text-jungle-600">
+                Todas las rutas
+              </Link>
               <Link href="/rutas/guardianes-del-agua" className="text-sm text-ink-700 transition hover:text-jungle-600">
                 Guardianes del agua
               </Link>

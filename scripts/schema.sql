@@ -92,3 +92,21 @@ CREATE TABLE IF NOT EXISTS contact_messages (
 
 CREATE INDEX IF NOT EXISTS idx_contact_status ON contact_messages(status);
 CREATE INDEX IF NOT EXISTS idx_contact_created_at ON contact_messages(created_at);
+
+CREATE TABLE IF NOT EXISTS home_banners (
+  id INTEGER PRIMARY KEY,
+  slug TEXT NOT NULL UNIQUE,
+  title TEXT NOT NULL,
+  subtitle TEXT,
+  description TEXT NOT NULL,
+  cta_label TEXT NOT NULL,
+  cta_href TEXT NOT NULL,
+  image_prompt TEXT NOT NULL,
+  image_url TEXT,
+  order_index INTEGER NOT NULL DEFAULT 0,
+  is_active INTEGER NOT NULL DEFAULT 1,
+  created_at TEXT NOT NULL DEFAULT (datetime('now')),
+  updated_at TEXT NOT NULL DEFAULT (datetime('now'))
+);
+
+CREATE INDEX IF NOT EXISTS idx_home_banners_active_order ON home_banners(is_active, order_index);

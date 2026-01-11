@@ -9,6 +9,7 @@ const navLinks = [
   { label: "Mitos", href: "/mitos", hasDropdown: true },
   { label: "Categorias", href: "/categorias", hasDropdown: true },
   { label: "Regiones", href: "/regiones", hasDropdown: true },
+  { label: "Rutas", href: "/rutas", hasDropdown: false },
   { label: "Mapa", href: "/mapa", hasDropdown: false },
 ];
 
