@@ -1,7 +1,9 @@
 CREATE TABLE IF NOT EXISTS regions (
   id SERIAL PRIMARY KEY,
   name TEXT NOT NULL UNIQUE,
-  slug TEXT NOT NULL UNIQUE
+  slug TEXT NOT NULL UNIQUE,
+  image_prompt TEXT,
+  image_url TEXT
 );
 
 CREATE TABLE IF NOT EXISTS communities (
@@ -9,6 +11,8 @@ CREATE TABLE IF NOT EXISTS communities (
   region_id INTEGER NOT NULL REFERENCES regions(id) ON DELETE CASCADE,
   name TEXT NOT NULL,
   slug TEXT NOT NULL,
+  image_prompt TEXT,
+  image_url TEXT,
   UNIQUE(region_id, name),
   UNIQUE(region_id, slug)
 );
@@ -47,8 +51,17 @@ CREATE INDEX IF NOT EXISTS idx_myths_community ON myths(community_id);
 CREATE TABLE IF NOT EXISTS tags (
   id SERIAL PRIMARY KEY,
   name TEXT NOT NULL,
-  slug TEXT NOT NULL UNIQUE
+  slug TEXT NOT NULL UNIQUE,
+  image_prompt TEXT,
+  image_url TEXT
 );
+
+ALTER TABLE regions ADD COLUMN IF NOT EXISTS image_prompt TEXT;
+ALTER TABLE regions ADD COLUMN IF NOT EXISTS image_url TEXT;
+ALTER TABLE communities ADD COLUMN IF NOT EXISTS image_prompt TEXT;
+ALTER TABLE communities ADD COLUMN IF NOT EXISTS image_url TEXT;
+ALTER TABLE tags ADD COLUMN IF NOT EXISTS image_prompt TEXT;
+ALTER TABLE tags ADD COLUMN IF NOT EXISTS image_url TEXT;
 
 CREATE TABLE IF NOT EXISTS myth_tags (
   myth_id INTEGER NOT NULL REFERENCES myths(id) ON DELETE CASCADE,

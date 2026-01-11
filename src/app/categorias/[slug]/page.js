@@ -12,6 +12,24 @@ import Link from "next/link";
 
 export const runtime = "nodejs";
 export const revalidate = 300;
+const MIN_CATEGORY_MYTHS = 6;
+
+export async function generateStaticParams() {
+  const taxonomy = await getTaxonomy();
+  const regionNames = new Set(taxonomy.regions.map((region) => region.name.toLowerCase()));
+
+  return taxonomy.tags
+    .filter((tag) => {
+      const mythCount = Number(tag.myth_count || 0);
+      const lowerName = String(tag.name || "").toLowerCase();
+      return (
+        mythCount >= MIN_CATEGORY_MYTHS &&
+        !regionNames.has(lowerName) &&
+        lowerName !== "ninguno"
+      );
+    })
+    .map((tag) => ({ slug: tag.slug }));
+}
 
 // Descripciones específicas para cada categoría
 const CATEGORY_INFO = {
@@ -238,7 +256,12 @@ export default async function CategoryDetailPage({ params, searchParams }) {
   const taxonomy = await getTaxonomy();
   const category = taxonomy.tags.find(t => t.slug === params.slug);
 
-  if (!category) {
+  const regionNames = taxonomy.regions.map(r => r.name.toLowerCase());
+  const categoryName = String(category?.name || "").toLowerCase();
+  const isExcluded =
+    regionNames.includes(categoryName) || categoryName === "ninguno";
+
+  if (!category || isExcluded || Number(category.myth_count || 0) < MIN_CATEGORY_MYTHS) {
     notFound();
   }
 
@@ -308,7 +331,12 @@ export default async function CategoryDetailPage({ params, searchParams }) {
                 {category.myth_count === 1 ? 'mito' : 'mitos'}
               </span>
             </div>
-            <ImageSlot size="wide" className="mt-6" />
+            <ImageSlot
+              src={category.image_url}
+              alt={`Ilustracion de la categoria ${category.name}`}
+              size="wide"
+              className="mt-6"
+            />
           </div>
         </GlassCard>
       </section>

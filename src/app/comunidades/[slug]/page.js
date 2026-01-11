@@ -12,6 +12,14 @@ import Link from "next/link";
 
 export const runtime = "nodejs";
 export const revalidate = 300;
+const MIN_COMMUNITY_MYTHS = 6;
+
+export async function generateStaticParams() {
+  const taxonomy = await getTaxonomy();
+  return taxonomy.communities
+    .filter((community) => Number(community.myth_count || 0) >= MIN_COMMUNITY_MYTHS)
+    .map((community) => ({ slug: community.slug }));
+}
 
 // Información específica sobre cada comunidad indígena
 const COMMUNITY_INFO = {
@@ -232,7 +240,7 @@ export default async function CommunityDetailPage({ params, searchParams }) {
   const taxonomy = await getTaxonomy();
   const community = taxonomy.communities.find(c => c.slug === params.slug);
 
-  if (!community) {
+  if (!community || Number(community.myth_count || 0) < MIN_COMMUNITY_MYTHS) {
     notFound();
   }
 
@@ -306,7 +314,12 @@ export default async function CommunityDetailPage({ params, searchParams }) {
             </div>
           </div>
           <div className="group relative overflow-hidden">
-            <ImageSlot size="wide" className="rounded-none transition-transform duration-700 group-hover:scale-105" />
+            <ImageSlot
+              src={community.image_url}
+              alt={`Ilustracion de la comunidad ${community.name}`}
+              size="wide"
+              className="rounded-none transition-transform duration-700 group-hover:scale-105"
+            />
           </div>
         </GlassCard>
       </section>

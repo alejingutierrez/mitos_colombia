@@ -3,22 +3,37 @@ import { Badge } from "../../components/ui/Badge";
 import { ButtonLink } from "../../components/ui/Button";
 import { GlassCard } from "../../components/ui/GlassCard";
 import { ImageSlot } from "../../components/ui/ImageSlot";
+import { Pagination } from "../../components/ui/Pagination";
 import { SectionHeader } from "../../components/ui/SectionHeader";
 import { getTaxonomy } from "../../lib/myths";
 
 export const runtime = "nodejs";
 export const revalidate = 3600;
+const MIN_CATEGORY_MYTHS = 6;
 
-export default async function CategoriasPage() {
+function clampNumber(value, min, max, fallback) {
+  const parsed = Number.parseInt(value, 10);
+  if (Number.isNaN(parsed)) {
+    return fallback;
+  }
+  return Math.min(Math.max(parsed, min), max);
+}
+
+export default async function CategoriasPage({ searchParams }) {
   const taxonomy = await getTaxonomy();
 
   // Filtrar tags excluyendo regiones y "ninguno"
   const regionNames = taxonomy.regions.map((r) => r.name.toLowerCase());
   const tags = taxonomy.tags.filter(
     (tag) =>
+      Number(tag.myth_count || 0) >= MIN_CATEGORY_MYTHS &&
       !regionNames.includes(tag.name.toLowerCase()) &&
       tag.name.toLowerCase() !== "ninguno"
   );
+
+  const limit = clampNumber(searchParams?.limit, 12, 48, 24);
+  const offset = clampNumber(searchParams?.offset, 0, 5000, 0);
+  const paginatedTags = tags.slice(offset, offset + limit);
 
   return (
     <main className="relative min-h-screen overflow-hidden pb-24">
@@ -32,13 +47,18 @@ export default async function CategoriasPage() {
         />
 
         <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {tags.map((tag) => (
+          {paginatedTags.map((tag) => (
             <GlassCard
               key={tag.slug}
               className="group flex flex-col overflow-hidden p-0 transition hover:-translate-y-1 hover:shadow-lift"
             >
               <div className="relative overflow-hidden">
-                <ImageSlot size="compact" className="rounded-none transition-transform duration-700 group-hover:scale-110" />
+                <ImageSlot
+                  src={tag.image_url}
+                  alt={`Ilustracion de la categoria ${tag.name}`}
+                  size="compact"
+                  className="rounded-none transition-transform duration-700 group-hover:scale-110"
+                />
               </div>
               <div className="flex flex-col gap-4 p-6">
                 <div className="flex items-start justify-between">
@@ -67,6 +87,17 @@ export default async function CategoriasPage() {
               </div>
             </GlassCard>
           ))}
+        </div>
+
+        <div className="mt-10">
+          <Pagination
+            total={tags.length}
+            limit={limit}
+            offset={offset}
+            pathname="/categorias"
+            searchParams={{}}
+            limitOptions={[12, 24, 48]}
+          />
         </div>
       </section>
     </main>

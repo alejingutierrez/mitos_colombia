@@ -37,12 +37,16 @@ export default function HeaderClient({ initialTaxonomy }) {
     }
   }, [initialTaxonomy]);
 
-  // Obtener top 10 comunidades indígenas con más mitos
-  const getTopCommunities = () => {
-    return filterAllowedCommunities(taxonomy.communities)
-      .sort((a, b) => b.myth_count - a.myth_count)
-      .slice(0, 10);
+  const minCount = 6;
+
+  const getCommunities = () => {
+    return filterAllowedCommunities(taxonomy.communities, minCount).sort(
+      (a, b) => Number(b.myth_count) - Number(a.myth_count)
+    );
   };
+
+  // Obtener top 10 comunidades con más mitos
+  const getTopCommunities = () => getCommunities().slice(0, 10);
 
   // Obtener top 10 tags con más mitos (excluyendo nombres de regiones y "ninguno")
   const getTopTags = () => {
@@ -50,6 +54,7 @@ export default function HeaderClient({ initialTaxonomy }) {
     return taxonomy.tags
       .filter(
         (tag) =>
+          Number(tag.myth_count || 0) >= minCount &&
           !regionNames.includes(tag.name.toLowerCase()) &&
           tag.name.toLowerCase() !== "ninguno"
       )
@@ -63,17 +68,42 @@ export default function HeaderClient({ initialTaxonomy }) {
 
   const getDropdownContent = (label) => {
     if (label === "Comunidades") {
-      return getTopCommunities().map((community) => ({
-        name: community.name,
-        href: `/comunidades/${community.slug}`,
-        count: community.myth_count,
-      }));
+      const communities = getCommunities();
+      return [
+        {
+          name: "Ver todas",
+          href: "/comunidades",
+          count: communities.length,
+          isAll: true,
+        },
+        ...getTopCommunities().map((community) => ({
+          name: community.name,
+          href: `/comunidades/${community.slug}`,
+          count: community.myth_count,
+        })),
+      ];
     } else if (label === "Categorias") {
-      return getTopTags().map((tag) => ({
-        name: tag.name,
-        href: `/categorias/${tag.slug}`,
-        count: tag.myth_count,
-      }));
+      const allTags = taxonomy.tags.filter((tag) => {
+        const regionNames = taxonomy.regions.map((r) => r.name.toLowerCase());
+        return (
+          Number(tag.myth_count || 0) >= minCount &&
+          !regionNames.includes(tag.name.toLowerCase()) &&
+          tag.name.toLowerCase() !== "ninguno"
+        );
+      });
+      return [
+        {
+          name: "Ver todas",
+          href: "/categorias",
+          count: allTags.length,
+          isAll: true,
+        },
+        ...getTopTags().map((tag) => ({
+          name: tag.name,
+          href: `/categorias/${tag.slug}`,
+          count: tag.myth_count,
+        })),
+      ];
     } else if (label === "Regiones") {
       return getRegions().map((region) => ({
         name: region.name,
@@ -165,7 +195,9 @@ export default function HeaderClient({ initialTaxonomy }) {
                             href={item.href}
                             className="flex items-center justify-between rounded-lg px-3 py-2 text-sm text-ink-700 transition hover:bg-jungle-50 hover:text-jungle-900"
                           >
-                            <span className="font-medium">{item.name}</span>
+                            <span className={item.isAll ? "font-semibold" : "font-medium"}>
+                              {item.name}
+                            </span>
                             <span className="text-xs text-ink-500">
                               {item.count}
                             </span>
@@ -189,8 +221,12 @@ export default function HeaderClient({ initialTaxonomy }) {
             <nav id="site-menu" className="flex flex-col gap-4">
               {navLinks.map((link) => {
                 const dropdownItems = link.hasDropdown
-                  ? getDropdownContent(link.label).slice(0, 5)
+                  ? getDropdownContent(link.label)
                   : [];
+                const [allItem, ...restItems] = dropdownItems;
+                const limitedItems = allItem
+                  ? [allItem, ...restItems.slice(0, 5)]
+                  : restItems.slice(0, 5);
                 const isExpanded = mobileExpanded === link.label;
 
                 return (
@@ -225,9 +261,9 @@ export default function HeaderClient({ initialTaxonomy }) {
                       )}
                     </div>
 
-                    {link.hasDropdown && isExpanded && dropdownItems.length > 0 && (
+                    {link.hasDropdown && isExpanded && limitedItems.length > 0 && (
                       <div className="ml-3 flex flex-col gap-2 rounded-2xl border border-white/60 bg-white/70 p-3 shadow-sm">
-                        {dropdownItems.map((item) => (
+                        {limitedItems.map((item) => (
                           <Link
                             key={item.name}
                             href={item.href}
@@ -237,7 +273,9 @@ export default function HeaderClient({ initialTaxonomy }) {
                               setMobileExpanded(null);
                             }}
                           >
-                            <span className="font-medium">{item.name}</span>
+                            <span className={item.isAll ? "font-semibold" : "font-medium"}>
+                              {item.name}
+                            </span>
                             <span className="text-[10px] text-ink-500">
                               {item.count}
                             </span>

@@ -1,22 +1,8 @@
-export const COMMUNITY_ALLOWLIST = new Set([
-  "muiscas",
-  "nasa-paeces",
-  "wayuu",
-  "huitotos",
-  "chimila",
-  "embera",
-  "koguis",
-  "katios",
-  "pananes",
-  "andoque",
-  "guahibo-sikuani",
-  "tucano",
-  "misak-guambianos",
-]);
+export const MIN_COMMUNITY_MYTHS = 6;
 
-export function filterAllowedCommunities(communities = []) {
+export function filterAllowedCommunities(communities = [], minMyths = MIN_COMMUNITY_MYTHS) {
   return communities.filter((community) => {
-    const slug = String(community?.slug || "").trim().toLowerCase();
-    return COMMUNITY_ALLOWLIST.has(slug);
+    const mythCount = Number(community?.myth_count || 0);
+    return mythCount >= minMyths;
   });
 }

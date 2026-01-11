@@ -384,6 +384,7 @@ function getTaxonomySqlite() {
         regions.name,
         regions.slug,
         regions.image_url,
+        regions.image_prompt,
         COUNT(myths.id) AS myth_count
       FROM regions
       LEFT JOIN myths ON myths.region_id = regions.id
@@ -400,6 +401,8 @@ function getTaxonomySqlite() {
         communities.id,
         communities.name,
         communities.slug,
+        communities.image_url,
+        communities.image_prompt,
         regions.name AS region,
         regions.slug AS region_slug,
         COUNT(myths.id) AS myth_count
@@ -418,6 +421,8 @@ function getTaxonomySqlite() {
       SELECT
         tags.name,
         tags.slug,
+        tags.image_url,
+        tags.image_prompt,
         COUNT(myth_tags.myth_id) AS myth_count
       FROM tags
       JOIN myth_tags ON myth_tags.tag_id = tags.id
@@ -440,6 +445,7 @@ async function getTaxonomyPostgres() {
         regions.name,
         regions.slug,
         regions.image_url,
+        regions.image_prompt,
         COUNT(myths.id) AS myth_count
       FROM regions
       LEFT JOIN myths ON myths.region_id = regions.id
@@ -454,6 +460,8 @@ async function getTaxonomyPostgres() {
         communities.id,
         communities.name,
         communities.slug,
+        communities.image_url,
+        communities.image_prompt,
         regions.name AS region,
         regions.slug AS region_slug,
         COUNT(myths.id) AS myth_count
@@ -470,6 +478,8 @@ async function getTaxonomyPostgres() {
       SELECT
         tags.name,
         tags.slug,
+        tags.image_url,
+        tags.image_prompt,
         COUNT(myth_tags.myth_id) AS myth_count
       FROM tags
       JOIN myth_tags ON myth_tags.tag_id = tags.id

@@ -3,7 +3,9 @@ PRAGMA foreign_keys = ON;
 CREATE TABLE IF NOT EXISTS regions (
   id INTEGER PRIMARY KEY,
   name TEXT NOT NULL UNIQUE,
-  slug TEXT NOT NULL UNIQUE
+  slug TEXT NOT NULL UNIQUE,
+  image_prompt TEXT,
+  image_url TEXT
 );
 
 CREATE TABLE IF NOT EXISTS communities (
@@ -11,6 +13,8 @@ CREATE TABLE IF NOT EXISTS communities (
   region_id INTEGER NOT NULL,
   name TEXT NOT NULL,
   slug TEXT NOT NULL,
+  image_prompt TEXT,
+  image_url TEXT,
   UNIQUE(region_id, name),
   UNIQUE(region_id, slug),
   FOREIGN KEY(region_id) REFERENCES regions(id)
@@ -48,7 +52,9 @@ CREATE INDEX IF NOT EXISTS idx_myths_community ON myths(community_id);
 CREATE TABLE IF NOT EXISTS tags (
   id INTEGER PRIMARY KEY,
   name TEXT NOT NULL UNIQUE,
-  slug TEXT NOT NULL UNIQUE
+  slug TEXT NOT NULL UNIQUE,
+  image_prompt TEXT,
+  image_url TEXT
 );
 
 CREATE TABLE IF NOT EXISTS myth_tags (
