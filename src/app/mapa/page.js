@@ -1,7 +1,5 @@
-import { Suspense } from "react";
 import Header from "../../components/Header";
-import MapaExplorer from "../../components/MapaExplorer";
-import { GlassCard } from "../../components/ui/GlassCard";
+import MapaPageClient from "./MapaPageClient";
 
 export const metadata = {
   title: "Mapa",
@@ -19,18 +17,7 @@ export default function MapaPage() {
         <div className="absolute bottom-12 left-1/2 h-[24rem] w-[24rem] -translate-x-1/2 rounded-full bg-ember-400/20 blur-[140px] motion-safe:animate-float-slow" />
       </div>
       <main className="relative min-h-screen pb-24">
-        <Suspense
-          fallback={
-            <section className="container-shell mt-12">
-              <GlassCard className="p-8">
-                <p className="text-sm text-ink-600">Cargando mapa...</p>
-                <div className="mt-6 h-[420px] w-full rounded-2xl bg-ink-100/60" />
-              </GlassCard>
-            </section>
-          }
-        >
-          <MapaExplorer />
-        </Suspense>
+        <MapaPageClient />
       </main>
     </>
   );
