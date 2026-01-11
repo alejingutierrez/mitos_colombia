@@ -26,6 +26,16 @@ const adminMenuItems = [
     ),
   },
   {
+    label: "Geo Ubicaciones",
+    href: "/admin/geo-locations",
+    icon: (
+      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 21s6-5.686 6-10a6 6 0 10-12 0c0 4.314 6 10 6 10z" />
+        <circle cx="12" cy="11" r="2.5" stroke="currentColor" strokeWidth={2} />
+      </svg>
+    ),
+  },
+  {
     label: "Formatear Contenido",
     href: "/admin/format-content",
     icon: (

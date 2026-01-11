@@ -32,6 +32,8 @@ CREATE TABLE IF NOT EXISTS myths (
   focus_keywords_raw TEXT NOT NULL,
   image_prompt TEXT NOT NULL,
   image_url TEXT,
+  latitude REAL,
+  longitude REAL,
   content_formatted INTEGER DEFAULT 0,
   source_row INTEGER NOT NULL,
   created_at TEXT NOT NULL DEFAULT (datetime('now')),
