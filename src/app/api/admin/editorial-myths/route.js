@@ -918,6 +918,44 @@ async function findOrCreateCommunity(regionId, name) {
     .get(regionId, slug);
 }
 
+async function findCommunityByName(regionId, name) {
+  if (!name) return null;
+  const normalized = normalizeText(name);
+  if (!normalized) return null;
+
+  if (isPostgres()) {
+    const db = getSqlClient();
+    const existing = await db.query(
+      `
+      SELECT id, name, slug
+      FROM communities
+      WHERE region_id = $1
+    `,
+      [regionId]
+    );
+    const rows = existing.rows || existing;
+    return (
+      rows.find(
+        (row) =>
+          normalizeText(row.name) === normalized ||
+          normalizeText(row.slug) === normalized
+      ) || null
+    );
+  }
+
+  const db = getSqliteDb();
+  const rows = db
+    .prepare("SELECT id, name, slug FROM communities WHERE region_id = ?")
+    .all(regionId);
+  return (
+    rows.find(
+      (row) =>
+        normalizeText(row.name) === normalized ||
+        normalizeText(row.slug) === normalized
+    ) || null
+  );
+}
+
 async function findOrCreateTag(name) {
   const cleanName = String(name || "").trim();
   if (!cleanName) return null;
@@ -944,6 +982,32 @@ async function findOrCreateTag(name) {
   );
   const row = db.prepare("SELECT id FROM tags WHERE slug = ?").get(slug);
   return row?.id || null;
+}
+
+function resolveExistingTags(tags, tagsList) {
+  const tagMap = new Map();
+  tags.forEach((tag) => {
+    const nameKey = normalizeText(tag?.name);
+    const slugKey = normalizeText(tag?.slug);
+    if (nameKey) tagMap.set(nameKey, tag);
+    if (slugKey) tagMap.set(slugKey, tag);
+  });
+
+  const tagIds = [];
+  const tagNames = [];
+  const seen = new Set();
+  tagsList.forEach((tagName) => {
+    const normalized = normalizeText(tagName);
+    if (!normalized) return;
+    const match = tagMap.get(normalized);
+    if (match && !seen.has(match.id)) {
+      seen.add(match.id);
+      tagIds.push(match.id);
+      tagNames.push(match.name);
+    }
+  });
+
+  return { tagIds, tagNames };
 }
 
 async function insertMythTags(mythId, tagIds) {
@@ -1766,6 +1830,9 @@ async function generateNewMyth(query, context) {
       "Usa busqueda web obligatoria para reunir al menos 20 fuentes. El mito debe seguir la estructura editorial del proyecto: Mito, Historia, Versiones, Leccion, Similitudes. " +
       "Incluye descripciones SEO y prompts de imagen en formato horizontal (16:9) y vertical (9:16) estilo paper quilling/paper cut. " +
       "Selecciona la region colombiana adecuada (usa solo las regiones entregadas). " +
+      "Elige tags solo de la lista entregada; no inventes nuevas categorias. Si ninguna aplica, devuelve un array vacio. " +
+      "Si no puedes determinar comunidad o departamento con certeza, usa una cadena vacia en esos campos. " +
+      "El category_path debe tener el formato 'Region > Departamento > Comunidad' usando solo los valores definidos. " +
       "Si no hay una ubicacion precisa, usa el centro de la region o de Colombia. " +
       "No incluyas razonamiento fuera del JSON. Usa el campo analysis_summary para resumir pasos y decisiones. " +
       "No uses comillas dobles dentro de strings; si necesitas citar, usa comillas simples. " +
@@ -2083,7 +2150,7 @@ async function createNewMyth(query) {
     throw new Error("No hay regiones disponibles en la base de datos");
   }
 
-  const community = await findOrCreateCommunity(regionMatch.id, creation.community);
+  const community = await findCommunityByName(regionMatch.id, creation.community);
   const coordinates = normalizeCoordinates(
     {
       latitude: creation.latitude,
@@ -2104,14 +2171,20 @@ async function createNewMyth(query) {
     focusKeywords = [creation.focus_keyword || title].filter(Boolean);
   }
 
-  const tagsList = (creation.tags || [])
-    .map((tag) => String(tag || "").trim())
-    .filter(Boolean);
-  const tagsRaw = tagsList.length
-    ? tagsList.join("|")
-    : focusKeywords.join("|") || regionMatch.name;
+  const tagsList = Array.from(
+    new Set(
+      (creation.tags || [])
+        .map((tag) => String(tag || "").trim())
+        .filter(Boolean)
+    )
+  );
+  const { tagIds, tagNames } = resolveExistingTags(tags, tagsList);
+  const tagsRawList = tagNames.length ? tagNames : tagsList;
+  const tagsRaw = tagsRawList.length
+    ? tagsRawList.join(", ")
+    : focusKeywords.join(", ") || regionMatch.name;
 
-  const categoryPath = creation.category_path || [regionMatch.name, creation.department, community?.name]
+  const categoryPath = [regionMatch.name, creation.department, community?.name]
     .filter(Boolean)
     .join(" > ");
 
@@ -2187,12 +2260,6 @@ async function createNewMyth(query) {
   const newMyth = await insertMyth(mythPayload);
   if (!newMyth?.id) {
     throw new Error("No se pudo crear el mito nuevo");
-  }
-
-  const tagIds = [];
-  for (const tag of tagsList) {
-    const tagId = await findOrCreateTag(tag);
-    if (tagId) tagIds.push(tagId);
   }
 
   await insertMythTags(newMyth.id, tagIds);
