@@ -1,12 +1,28 @@
 import { ROUTES } from "../../lib/routes";
 import { filterAllowedCommunities } from "../../lib/communityFilters";
-import { getTaxonomy, listMyths } from "../../lib/myths";
+import { getSqlClient, getSqliteDb, isPostgres } from "../../lib/db";
+import { getTaxonomy } from "../../lib/myths";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
 const MIN_CATEGORY_MYTHS = 6;
 const ONE_HOUR = 60 * 60;
+const STATIC_PATHS = [
+  "/",
+  "/mitos",
+  "/categorias",
+  "/comunidades",
+  "/regiones",
+  "/rutas",
+  "/mapa",
+  "/tarot",
+  "/metodologia",
+  "/sobre-el-proyecto",
+  "/contacto",
+  "/privacidad",
+  "/terminos",
+];
 
 function getBaseUrl() {
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
@@ -27,9 +43,19 @@ function normalizeTimestamp(value) {
   return value instanceof Date ? value.toISOString() : new Date(value).toISOString();
 }
 
+function escapeXml(value) {
+  return String(value)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&apos;");
+}
+
 function buildSitemapXml(entries) {
   const urls = entries
     .map((entry) => {
+      const loc = escapeXml(entry.url);
       const lastmod = entry.lastModified
         ? `<lastmod>${normalizeTimestamp(entry.lastModified)}</lastmod>`
         : "";
@@ -40,7 +66,7 @@ function buildSitemapXml(entries) {
         typeof entry.priority === "number"
           ? `<priority>${entry.priority.toFixed(1)}</priority>`
           : "";
-      return `<url><loc>${entry.url}</loc>${lastmod}${changefreq}${priority}</url>`;
+      return `<url><loc>${loc}</loc>${lastmod}${changefreq}${priority}</url>`;
     })
     .join("");
 
@@ -49,21 +75,37 @@ function buildSitemapXml(entries) {
 }
 
 async function getAllMyths() {
-  const items = [];
-  let offset = 0;
-  const limit = 100;
-
-  while (true) {
-    const result = await listMyths({ limit, offset });
-    const batch = result?.items || [];
-    items.push(...batch);
-    if (batch.length < limit) {
-      break;
-    }
-    offset += limit;
+  if (isPostgres()) {
+    const db = getSqlClient();
+    const result = await db`
+      SELECT slug
+      FROM myths
+      WHERE slug IS NOT NULL AND slug != ''
+      ORDER BY id ASC
+    `;
+    return result.rows || result;
   }
 
-  return items;
+  const db = getSqliteDb();
+  return db
+    .prepare(
+      `
+      SELECT slug
+      FROM myths
+      WHERE slug IS NOT NULL AND slug != ''
+      ORDER BY id ASC
+    `
+    )
+    .all();
+}
+
+function buildStaticEntries(baseUrl, now) {
+  return STATIC_PATHS.map((path) => ({
+    url: buildUrl(baseUrl, path),
+    lastModified: now,
+    changeFrequency: path === "/" ? "daily" : "weekly",
+    priority: path === "/" ? 1 : 0.7,
+  }));
 }
 
 export async function GET() {
@@ -71,52 +113,40 @@ export async function GET() {
     const baseUrl = getBaseUrl();
     const now = new Date();
 
-    const staticPaths = [
-      "/",
-      "/mitos",
-      "/categorias",
-      "/comunidades",
-      "/regiones",
-      "/rutas",
-      "/mapa",
-      "/tarot",
-      "/metodologia",
-      "/sobre-el-proyecto",
-      "/contacto",
-      "/privacidad",
-      "/terminos",
-    ];
+    let categories = [];
+    let communities = [];
+    let regions = [];
+    let myths = [];
 
-    const taxonomy = await getTaxonomy();
-    const regionNames = new Set(
-      (taxonomy.regions || []).map((region) =>
-        String(region.name || "").toLowerCase()
-      )
-    );
+    try {
+      const taxonomy = await getTaxonomy();
+      const regionNames = new Set(
+        (taxonomy.regions || []).map((region) =>
+          String(region.name || "").toLowerCase()
+        )
+      );
 
-    const categories = (taxonomy.tags || []).filter((tag) => {
-      const mythCount = Number(tag.myth_count || 0);
-      const lowerName = String(tag.name || "").toLowerCase();
-      if (mythCount < MIN_CATEGORY_MYTHS) {
-        return false;
-      }
-      if (lowerName === "ninguno") {
-        return false;
-      }
-      return !regionNames.has(lowerName);
-    });
+      categories = (taxonomy.tags || []).filter((tag) => {
+        const mythCount = Number(tag.myth_count || 0);
+        const lowerName = String(tag.name || "").toLowerCase();
+        if (mythCount < MIN_CATEGORY_MYTHS) {
+          return false;
+        }
+        if (lowerName === "ninguno") {
+          return false;
+        }
+        return !regionNames.has(lowerName);
+      });
 
-    const communities = filterAllowedCommunities(taxonomy.communities || []);
-    const regions = taxonomy.regions || [];
-    const myths = await getAllMyths();
+      communities = filterAllowedCommunities(taxonomy.communities || []);
+      regions = taxonomy.regions || [];
+      myths = await getAllMyths();
+    } catch (error) {
+      console.error("[SITEMAP] Data load failed, using static paths only:", error);
+    }
 
     const entries = [
-      ...staticPaths.map((path) => ({
-        url: buildUrl(baseUrl, path),
-        lastModified: now,
-        changeFrequency: path === "/" ? "daily" : "weekly",
-        priority: path === "/" ? 1 : 0.7,
-      })),
+      ...buildStaticEntries(baseUrl, now),
       ...ROUTES.map((route) => ({
         url: buildUrl(baseUrl, `/rutas/${route.slug}`),
         lastModified: now,
@@ -159,6 +189,14 @@ export async function GET() {
     });
   } catch (error) {
     console.error("Error generating sitemap:", error);
-    return new Response("Error generating sitemap", { status: 500 });
+    const baseUrl = getBaseUrl();
+    const now = new Date();
+    const fallbackXml = buildSitemapXml(buildStaticEntries(baseUrl, now));
+    return new Response(fallbackXml, {
+      headers: {
+        "Content-Type": "application/xml",
+        "Cache-Control": `public, s-maxage=${ONE_HOUR}, stale-while-revalidate=${ONE_HOUR}`,
+      },
+    });
   }
 }
