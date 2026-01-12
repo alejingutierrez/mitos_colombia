@@ -194,7 +194,7 @@ const getHomeBannersCached = unstable_cache(
     return getHomeBannersSqlite();
   },
   ["home-banners"],
-  { revalidate: ONE_DAY }
+  { revalidate: ONE_DAY, tags: ["home-banners"] }
 );
 
 export async function getHomeBanners() {

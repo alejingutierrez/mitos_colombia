@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import OpenAI from "openai";
 import sharp from "sharp";
 import { put } from "@vercel/blob";
+import { revalidatePath, revalidateTag } from "next/cache";
 import {
   getSqlClient,
   getSqliteDb,
@@ -333,6 +334,8 @@ export async function POST(request) {
         );
       }
       const updated = await updateHomeBannerPrompt({ slug, prompt });
+      revalidateTag("home-banners");
+      revalidatePath("/");
       return NextResponse.json({ updated });
     }
 
@@ -428,6 +431,11 @@ export async function POST(request) {
           success: false,
         });
       }
+    }
+
+    if (generated.some((item) => item.success)) {
+      revalidateTag("home-banners");
+      revalidatePath("/");
     }
 
     return NextResponse.json({ generated });
