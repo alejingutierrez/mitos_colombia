@@ -8,6 +8,30 @@ import {
 import { TAROT_CARDS } from "./tarot-data";
 
 const ONE_DAY = 60 * 60 * 24;
+const MAJOR_ROMAN = [
+  "0",
+  "I",
+  "II",
+  "III",
+  "IV",
+  "V",
+  "VI",
+  "VII",
+  "VIII",
+  "IX",
+  "X",
+  "XI",
+  "XII",
+  "XIII",
+  "XIV",
+  "XV",
+  "XVI",
+  "XVII",
+  "XVIII",
+  "XIX",
+  "XX",
+  "XXI",
+];
 
 function slugify(value) {
   if (!value) return "";
@@ -29,6 +53,7 @@ function normalizeTitle(value) {
 function buildBasePrompt(card) {
   const isMajor = card.arcana === "major";
   const arcanaLabel = isMajor ? "Arcano mayor" : `Arcano menor de ${card.suit}`;
+  const romanNumeral = isMajor ? MAJOR_ROMAN[card.order_index] || "" : "";
 
   const lines = [
     `Carta de tarot: ${card.card_name}.`,
@@ -60,8 +85,14 @@ function buildBasePrompt(card) {
     "Plantilla base: usar tarot.png como marco fijo. Mantener el fondo dorado y los ornamentos; bordes/lineas en verde selva uniforme (#1f6b45), nunca negros. Proporciones idénticas en toda la serie."
   );
   lines.push(
-    "Tipografía: numeral romano centrado en la franja superior y nombre de la carta centrado en la franja inferior. Mantener tamaño, peso y espaciado uniformes; si el nombre es largo, ajustar tracking/interlineado sin cambiar el tamaño. Numeral romano obligatorio en TODAS las cartas (mayores: numeral tradicional; menores: As=I, Dos=II... Diez=X, Paje=XI, Caballero=XII, Reina=XIII, Rey=XIV)."
+    "Tipografía: si es arcano mayor, numeral romano centrado en la franja superior; si es arcano menor, la franja superior va sin numeral. Nombre de la carta centrado en la franja inferior con tamaño, peso y espaciado uniformes; si el nombre es largo, ajustar tracking/interlineado sin cambiar el tamaño."
   );
+  if (isMajor) {
+    lines.push(`Numeral romano superior obligatorio: ${romanNumeral}.`);
+  } else {
+    lines.push("Sin numeral romano en la franja superior (solo arcanos mayores).");
+  }
+  lines.push(`Nombre exacto en franja inferior: ${card.card_name}.`);
   lines.push("No incluir texto adicional ni el nombre del mito.");
 
   return lines.join("\n");

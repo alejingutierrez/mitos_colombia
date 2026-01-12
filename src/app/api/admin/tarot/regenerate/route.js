@@ -18,6 +18,30 @@ const OUTPUT_HEIGHT = 1536;
 const JPEG_QUALITY = 82;
 const TAROT_TEMPLATE_PATH = path.join(process.cwd(), "public", "tarot.png");
 let cachedTemplateFile;
+const MAJOR_ROMAN = [
+  "0",
+  "I",
+  "II",
+  "III",
+  "IV",
+  "V",
+  "VI",
+  "VII",
+  "VIII",
+  "IX",
+  "X",
+  "XI",
+  "XII",
+  "XIII",
+  "XIV",
+  "XV",
+  "XVI",
+  "XVII",
+  "XVIII",
+  "XIX",
+  "XX",
+  "XXI",
+];
 
 const TAROT_STYLE_PROMPT = `Ilustración de carta de tarot vertical 9:16 inspirada en Rider-Waite, reinterpretada en paper quilling + paper cut.
 Usa la plantilla base tarot.png como estructura fija: marco dorado y ornamentos idénticos en toda la serie; no alterar la geometría del marco.
@@ -27,7 +51,7 @@ Paleta colombiana: verde selva, azul río, dorados tierra y acentos cálidos. Co
 Composición centrada con figura principal del mito y símbolos claros del territorio; fondo con paisaje regional sugerido.
 La simbología del tarot debe adaptarse al mito, su comunidad y su región; evitar iconografía genérica que no dialogue con el relato.
 Alta legibilidad visual, contraste equilibrado, estética editorial elegante.
-Tipografía: numeral romano centrado en la banda superior y nombre de la carta centrado en la banda inferior. Mantener tamaño, peso y espaciado uniformes; si el nombre es largo, ajustar tracking/interlineado sin cambiar el tamaño. Numeral romano obligatorio en TODAS las cartas (mayores: numeral tradicional; menores: As=I, Dos=II... Diez=X, Paje=XI, Caballero=XII, Reina=XIII, Rey=XIV).
+Tipografía: si es arcano mayor, numeral romano centrado en la banda superior; si es arcano menor, la banda superior va sin numeral. Nombre de la carta centrado en la banda inferior con tamaño, peso y espaciado uniformes; si el nombre es largo, ajustar tracking/interlineado sin cambiar el tamaño.
 No incluir texto adicional ni el nombre del mito. Sin logos ni marcas.`;
 
 async function getTarotTemplateFile() {
@@ -123,6 +147,15 @@ function buildMythDetails(card) {
 function buildTarotPrompt(card) {
   const basePrompt = card.custom_prompt?.trim() || card.base_prompt || "";
   const mythDetails = buildMythDetails(card);
+  const romanNumeral =
+    card.arcana === "major"
+      ? MAJOR_ROMAN[card.order_index] || ""
+      : "";
+  const typographicDirective =
+    card.arcana === "major"
+      ? `Numeral romano superior obligatorio: ${romanNumeral}.`
+      : "Sin numeral romano en la banda superior (solo arcanos mayores).";
+  const nameDirective = `Nombre exacto en banda inferior: ${card.card_name}.`;
 
   return [
     TAROT_STYLE_PROMPT,
@@ -131,6 +164,9 @@ function buildTarotPrompt(card) {
     "Prioridad creativa: mito, comunidad y región; la simbología del tarot se moldea a ese universo cultural.",
     "Información completa del mito para inspirar símbolos, personajes, paisajes y atmósfera:",
     mythDetails,
+    "Indicaciones tipográficas específicas:",
+    typographicDirective,
+    nameDirective,
     "Recuerda: solo debe aparecer el título de la carta, nada más.",
   ]
     .filter(Boolean)
@@ -144,7 +180,7 @@ async function rewritePromptSafely(originalPrompt) {
       {
         role: "system",
         content:
-          "Reescribe el prompt para una imagen editorial de tarot, evitando violencia gráfica y contenido sexual. Mantén el estilo paper quilling/cut y Rider-Waite, priorizando símbolos del mito, la comunidad y la región. Usa la plantilla tarot.png como marco fijo con fondo dorado y bordes verde selva uniformes (#1f6b45). Conserva el numeral romano superior y el nombre inferior con tamaño uniforme. Devuelve solo el prompt reescrito.",
+          "Reescribe el prompt para una imagen editorial de tarot, evitando violencia gráfica y contenido sexual. Mantén el estilo paper quilling/cut y Rider-Waite, priorizando símbolos del mito, la comunidad y la región. Usa la plantilla tarot.png como marco fijo con fondo dorado y bordes verde selva uniformes (#1f6b45). Conserva el numeral romano superior solo en arcanos mayores y el nombre inferior con tamaño uniforme. Devuelve solo el prompt reescrito.",
       },
       {
         role: "user",
