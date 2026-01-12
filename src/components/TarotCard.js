@@ -8,6 +8,7 @@ export function TarotCard({ card, compact = false }) {
     ? `/mitos/${card.myth_slug}`
     : `/mitos?q=${encodeURIComponent(mythTitle)}`;
   const readingSummary = card.reading_summary?.trim() || card.meaning?.trim();
+  const imageAspect = compact ? "aspect-[3/4]" : "aspect-[4/5]";
 
   const arcanaLabel =
     card.arcana === "major"
@@ -23,7 +24,7 @@ export function TarotCard({ card, compact = false }) {
       data-analytics-label={card.card_name}
     >
       <div className="flex h-full flex-col rounded-3xl border border-white/60 bg-white/70 p-4 shadow-glass transition hover:-translate-y-2 hover:shadow-2xl">
-        <div className="relative aspect-[9/16] overflow-hidden rounded-2xl bg-ink-100">
+        <div className={`relative ${imageAspect} overflow-hidden rounded-2xl bg-ink-100`}>
           {card.image_url ? (
             <Image
               src={card.image_url}
