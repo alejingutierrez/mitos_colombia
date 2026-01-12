@@ -277,7 +277,6 @@ export default function VerticalImagesPage() {
         const failedInBatch = generated.filter((item) => !item.success).length;
 
         if (successInBatch === 0 && failedInBatch === 0) {
-          setBatchProgress({ current: i, total: i });
           break;
         }
 
@@ -290,6 +289,9 @@ export default function VerticalImagesPage() {
       }
       if (errorCount > 0) {
         showToast(`Fallaron ${errorCount} imágenes`, "error");
+      }
+      if (successCount === 0 && errorCount === 0) {
+        showToast("No hay imágenes pendientes por generar.", "info");
       }
       fetchItems(auth, page, entityTypeFilter);
       fetchStats(auth);
@@ -401,13 +403,13 @@ export default function VerticalImagesPage() {
               )}
             </Button>
           </div>
-          {(batchProgress.total > 0 || generatingId) && (
+          {(batchProgress.total > 0 || batchGenerating || generatingId) && (
             <div className="mt-4">
               <ProgressBar
                 current={batchProgress.current}
                 total={batchProgress.total}
                 label="Progreso"
-                indeterminate={batchProgress.total === 0 && Boolean(generatingId)}
+                indeterminate={batchProgress.total === 0 && (batchGenerating || Boolean(generatingId))}
                 showPercent={batchProgress.total > 0}
               />
             </div>

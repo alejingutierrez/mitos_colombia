@@ -132,7 +132,7 @@ async function getEntitiesForVerticalImages(limit = 20) {
           vi.image_url as vertical_image_url
         FROM myths m
         LEFT JOIN vertical_images vi ON vi.entity_type = 'myth' AND vi.entity_id = m.id
-        WHERE m.image_prompt IS NOT NULL
+        WHERE m.image_prompt IS NOT NULL AND vi.image_url IS NULL
         ORDER BY m.id
         LIMIT ${Math.ceil(limit * 0.7)}
       )
@@ -148,7 +148,7 @@ async function getEntitiesForVerticalImages(limit = 20) {
           vi.image_url as vertical_image_url
         FROM communities c
         LEFT JOIN vertical_images vi ON vi.entity_type = 'community' AND vi.entity_id = c.id
-        WHERE c.image_prompt IS NOT NULL
+        WHERE c.image_prompt IS NOT NULL AND vi.image_url IS NULL
         ORDER BY c.id
         LIMIT ${Math.ceil(limit * 0.15)}
       )
@@ -164,7 +164,7 @@ async function getEntitiesForVerticalImages(limit = 20) {
           vi.image_url as vertical_image_url
         FROM tags t
         LEFT JOIN vertical_images vi ON vi.entity_type = 'category' AND vi.entity_id = t.id
-        WHERE t.image_prompt IS NOT NULL
+        WHERE t.image_prompt IS NOT NULL AND vi.image_url IS NULL
         ORDER BY t.id
         LIMIT ${Math.ceil(limit * 0.1)}
       )
@@ -180,7 +180,7 @@ async function getEntitiesForVerticalImages(limit = 20) {
           vi.image_url as vertical_image_url
         FROM regions r
         LEFT JOIN vertical_images vi ON vi.entity_type = 'region' AND vi.entity_id = r.id
-        WHERE r.image_prompt IS NOT NULL
+        WHERE r.image_prompt IS NOT NULL AND vi.image_url IS NULL
         ORDER BY r.id
         LIMIT ${Math.ceil(limit * 0.05)}
       )
@@ -205,7 +205,7 @@ async function getEntitiesForVerticalImages(limit = 20) {
         vi.image_url as vertical_image_url
       FROM myths m
       LEFT JOIN vertical_images vi ON vi.entity_type = 'myth' AND vi.entity_id = m.id
-      WHERE m.image_prompt IS NOT NULL
+      WHERE m.image_prompt IS NOT NULL AND vi.image_url IS NULL
       ORDER BY m.id
       LIMIT ?
     `);
@@ -223,7 +223,7 @@ async function getEntitiesForVerticalImages(limit = 20) {
         vi.image_url as vertical_image_url
       FROM communities c
       LEFT JOIN vertical_images vi ON vi.entity_type = 'community' AND vi.entity_id = c.id
-      WHERE c.image_prompt IS NOT NULL
+      WHERE c.image_prompt IS NOT NULL AND vi.image_url IS NULL
       ORDER BY c.id
       LIMIT ?
     `);
@@ -241,7 +241,7 @@ async function getEntitiesForVerticalImages(limit = 20) {
         vi.image_url as vertical_image_url
       FROM tags t
       LEFT JOIN vertical_images vi ON vi.entity_type = 'category' AND vi.entity_id = t.id
-      WHERE t.image_prompt IS NOT NULL
+      WHERE t.image_prompt IS NOT NULL AND vi.image_url IS NULL
       ORDER BY t.id
       LIMIT ?
     `);
@@ -259,7 +259,7 @@ async function getEntitiesForVerticalImages(limit = 20) {
         vi.image_url as vertical_image_url
       FROM regions r
       LEFT JOIN vertical_images vi ON vi.entity_type = 'region' AND vi.entity_id = r.id
-      WHERE r.image_prompt IS NOT NULL
+      WHERE r.image_prompt IS NOT NULL AND vi.image_url IS NULL
       ORDER BY r.id
       LIMIT ?
     `);
