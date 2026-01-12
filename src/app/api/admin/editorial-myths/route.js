@@ -123,6 +123,71 @@ function normalizeJsonString(input) {
   return result;
 }
 
+function repairJsonStructure(input) {
+  let result = "";
+  let inString = false;
+  let escaped = false;
+  const stack = [];
+
+  for (let i = 0; i < input.length; i += 1) {
+    const char = input[i];
+
+    if (escaped) {
+      result += char;
+      escaped = false;
+      continue;
+    }
+
+    if (char === "\\") {
+      result += char;
+      escaped = true;
+      continue;
+    }
+
+    if (char === "\"") {
+      inString = !inString;
+      result += char;
+      continue;
+    }
+
+    if (!inString) {
+      if (char === "," ) {
+        let j = i + 1;
+        while (j < input.length && /\s/.test(input[j])) {
+          j += 1;
+        }
+        const next = input[j];
+        if (next === "]" || next === "}") {
+          continue;
+        }
+      }
+
+      if (char === "}" && stack.length >= 2 && stack[stack.length - 2] === "[") {
+        let j = i + 1;
+        while (j < input.length && /\s/.test(input[j])) {
+          j += 1;
+        }
+        const next = input[j];
+        if (next === "{") {
+          result += "},";
+          continue;
+        }
+      }
+
+      if (char === "[" || char === "{") {
+        stack.push(char);
+      }
+      if (char === "]" || char === "}") {
+        stack.pop();
+      }
+    }
+
+    result += char;
+  }
+
+  return result;
+}
+
 function safeParseJson(rawText) {
   if (!rawText) {
     throw new Error("Respuesta vacia de OpenAI");
@@ -140,7 +205,12 @@ function safeParseJson(rawText) {
     }
     const sliced = trimmed.slice(start, end + 1);
     const normalized = normalizeJsonString(sliced);
-    return JSON.parse(normalized);
+    try {
+      return JSON.parse(normalized);
+    } catch (parseError) {
+      const repaired = repairJsonStructure(normalized);
+      return JSON.parse(repaired);
+    }
   }
 }
 
