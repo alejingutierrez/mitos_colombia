@@ -400,6 +400,11 @@ async function run() {
           community_id,
           category_path,
           tags_raw,
+          mito,
+          historia,
+          versiones,
+          leccion,
+          similitudes,
           content,
           excerpt,
           seo_title,
@@ -408,7 +413,7 @@ async function run() {
           focus_keywords_raw,
           image_prompt,
           source_row
-        ) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14)
+        ) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19)
         RETURNING id`,
         [
           title,
@@ -417,6 +422,11 @@ async function run() {
           communityId,
           categoryPath || regionName,
           tagsRaw,
+          mito,
+          historia,
+          versiones,
+          leccion,
+          similitudes,
           content,
           excerpt,
           seoTitle,

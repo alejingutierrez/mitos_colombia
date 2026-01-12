@@ -25,6 +25,11 @@ CREATE TABLE IF NOT EXISTS myths (
   community_id INTEGER REFERENCES communities(id) ON DELETE SET NULL,
   category_path TEXT NOT NULL,
   tags_raw TEXT NOT NULL,
+  mito TEXT,
+  historia TEXT,
+  versiones TEXT,
+  leccion TEXT,
+  similitudes TEXT,
   content TEXT NOT NULL,
   excerpt TEXT NOT NULL,
   seo_title TEXT NOT NULL,
@@ -44,6 +49,11 @@ ALTER TABLE myths ADD COLUMN IF NOT EXISTS image_url TEXT;
 ALTER TABLE myths ADD COLUMN IF NOT EXISTS latitude DOUBLE PRECISION;
 ALTER TABLE myths ADD COLUMN IF NOT EXISTS longitude DOUBLE PRECISION;
 ALTER TABLE myths ADD COLUMN IF NOT EXISTS content_formatted BOOLEAN DEFAULT FALSE;
+ALTER TABLE myths ADD COLUMN IF NOT EXISTS mito TEXT;
+ALTER TABLE myths ADD COLUMN IF NOT EXISTS historia TEXT;
+ALTER TABLE myths ADD COLUMN IF NOT EXISTS versiones TEXT;
+ALTER TABLE myths ADD COLUMN IF NOT EXISTS leccion TEXT;
+ALTER TABLE myths ADD COLUMN IF NOT EXISTS similitudes TEXT;
 
 CREATE INDEX IF NOT EXISTS idx_myths_region ON myths(region_id);
 CREATE INDEX IF NOT EXISTS idx_myths_community ON myths(community_id);
@@ -86,6 +96,11 @@ CREATE TABLE IF NOT EXISTS editorial_myths (
   community_id INTEGER REFERENCES communities(id) ON DELETE SET NULL,
   category_path TEXT NOT NULL,
   tags_raw TEXT NOT NULL,
+  mito TEXT,
+  historia TEXT,
+  versiones TEXT,
+  leccion TEXT,
+  similitudes TEXT,
   content TEXT NOT NULL,
   excerpt TEXT NOT NULL,
   seo_title TEXT NOT NULL,
@@ -93,6 +108,8 @@ CREATE TABLE IF NOT EXISTS editorial_myths (
   focus_keyword TEXT NOT NULL,
   focus_keywords_raw TEXT NOT NULL,
   image_prompt TEXT NOT NULL,
+  image_prompt_horizontal TEXT,
+  image_prompt_vertical TEXT,
   image_url TEXT,
   latitude DOUBLE PRECISION,
   longitude DOUBLE PRECISION,

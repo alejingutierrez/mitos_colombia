@@ -22,6 +22,7 @@ const MODEL_FALLBACKS = (process.env.OPENAI_EDITORIAL_MODEL_FALLBACKS || "")
   .map((model) => model.trim())
   .filter(Boolean);
 const DEFAULT_MODEL_FALLBACKS = ["gpt-5.2-2025-12-11", "gpt-5.2", "gpt-4o-mini"];
+const MAX_RAW_JSON_CHARS = 200000;
 
 const MIN_SOURCES = 20;
 const DUPLICATE_THRESHOLD = 65;
@@ -73,6 +74,74 @@ function buildModelQueue(primaryModel) {
     .map((model) => model.trim())
     .filter(Boolean);
   return Array.from(new Set(models));
+}
+
+function normalizeJsonString(input) {
+  let result = "";
+  let inString = false;
+  let escaped = false;
+
+  for (let i = 0; i < input.length; i += 1) {
+    const char = input[i];
+
+    if (escaped) {
+      result += char;
+      escaped = false;
+      continue;
+    }
+
+    if (char === "\\\\") {
+      result += char;
+      escaped = true;
+      continue;
+    }
+
+    if (char === "\"") {
+      inString = !inString;
+      result += char;
+      continue;
+    }
+
+    if (inString) {
+      if (char === "\n") {
+        result += "\\n";
+        continue;
+      }
+      if (char === "\r") {
+        result += "\\r";
+        continue;
+      }
+      if (char === "\t") {
+        result += "\\t";
+        continue;
+      }
+    }
+
+    result += char;
+  }
+
+  return result;
+}
+
+function safeParseJson(rawText) {
+  if (!rawText) {
+    throw new Error("Respuesta vacia de OpenAI");
+  }
+
+  const trimmed = rawText.trim().slice(0, MAX_RAW_JSON_CHARS);
+
+  try {
+    return JSON.parse(trimmed);
+  } catch (error) {
+    const start = trimmed.indexOf("{");
+    const end = trimmed.lastIndexOf("}");
+    if (start === -1 || end === -1 || end <= start) {
+      throw error;
+    }
+    const sliced = trimmed.slice(start, end + 1);
+    const normalized = normalizeJsonString(sliced);
+    return JSON.parse(normalized);
+  }
 }
 
 function isModelAccessError(error) {
@@ -252,6 +321,11 @@ function normalizeCoordinates(value, regionInfo) {
 async function ensureEditorialTables() {
   if (isPostgres()) {
     const db = getSqlClient();
+    await db`ALTER TABLE myths ADD COLUMN IF NOT EXISTS mito TEXT`;
+    await db`ALTER TABLE myths ADD COLUMN IF NOT EXISTS historia TEXT`;
+    await db`ALTER TABLE myths ADD COLUMN IF NOT EXISTS versiones TEXT`;
+    await db`ALTER TABLE myths ADD COLUMN IF NOT EXISTS leccion TEXT`;
+    await db`ALTER TABLE myths ADD COLUMN IF NOT EXISTS similitudes TEXT`;
     await db`
       CREATE TABLE IF NOT EXISTS editorial_myths (
         id SERIAL PRIMARY KEY,
@@ -262,6 +336,11 @@ async function ensureEditorialTables() {
         community_id INTEGER REFERENCES communities(id) ON DELETE SET NULL,
         category_path TEXT NOT NULL,
         tags_raw TEXT NOT NULL,
+        mito TEXT,
+        historia TEXT,
+        versiones TEXT,
+        leccion TEXT,
+        similitudes TEXT,
         content TEXT NOT NULL,
         excerpt TEXT NOT NULL,
         seo_title TEXT NOT NULL,
@@ -269,6 +348,8 @@ async function ensureEditorialTables() {
         focus_keyword TEXT NOT NULL,
         focus_keywords_raw TEXT NOT NULL,
         image_prompt TEXT NOT NULL,
+        image_prompt_horizontal TEXT,
+        image_prompt_vertical TEXT,
         image_url TEXT,
         latitude DOUBLE PRECISION,
         longitude DOUBLE PRECISION,
@@ -281,6 +362,13 @@ async function ensureEditorialTables() {
         updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
       )
     `;
+    await db`ALTER TABLE editorial_myths ADD COLUMN IF NOT EXISTS mito TEXT`;
+    await db`ALTER TABLE editorial_myths ADD COLUMN IF NOT EXISTS historia TEXT`;
+    await db`ALTER TABLE editorial_myths ADD COLUMN IF NOT EXISTS versiones TEXT`;
+    await db`ALTER TABLE editorial_myths ADD COLUMN IF NOT EXISTS leccion TEXT`;
+    await db`ALTER TABLE editorial_myths ADD COLUMN IF NOT EXISTS similitudes TEXT`;
+    await db`ALTER TABLE editorial_myths ADD COLUMN IF NOT EXISTS image_prompt_horizontal TEXT`;
+    await db`ALTER TABLE editorial_myths ADD COLUMN IF NOT EXISTS image_prompt_vertical TEXT`;
     await db`CREATE INDEX IF NOT EXISTS idx_editorial_myths_region ON editorial_myths(region_id)`;
     await db`CREATE INDEX IF NOT EXISTS idx_editorial_myths_community ON editorial_myths(community_id)`;
     await db`
@@ -301,6 +389,23 @@ async function ensureEditorialTables() {
   }
 
   const db = getSqliteDbWritable();
+  const mythColumns = db.prepare("PRAGMA table_info(myths)").all();
+  const mythExisting = new Set(mythColumns.map((column) => column.name));
+  if (!mythExisting.has("mito")) {
+    db.prepare("ALTER TABLE myths ADD COLUMN mito TEXT").run();
+  }
+  if (!mythExisting.has("historia")) {
+    db.prepare("ALTER TABLE myths ADD COLUMN historia TEXT").run();
+  }
+  if (!mythExisting.has("versiones")) {
+    db.prepare("ALTER TABLE myths ADD COLUMN versiones TEXT").run();
+  }
+  if (!mythExisting.has("leccion")) {
+    db.prepare("ALTER TABLE myths ADD COLUMN leccion TEXT").run();
+  }
+  if (!mythExisting.has("similitudes")) {
+    db.prepare("ALTER TABLE myths ADD COLUMN similitudes TEXT").run();
+  }
   db.prepare(
     `
     CREATE TABLE IF NOT EXISTS editorial_myths (
@@ -312,6 +417,11 @@ async function ensureEditorialTables() {
       community_id INTEGER,
       category_path TEXT NOT NULL,
       tags_raw TEXT NOT NULL,
+      mito TEXT,
+      historia TEXT,
+      versiones TEXT,
+      leccion TEXT,
+      similitudes TEXT,
       content TEXT NOT NULL,
       excerpt TEXT NOT NULL,
       seo_title TEXT NOT NULL,
@@ -319,6 +429,8 @@ async function ensureEditorialTables() {
       focus_keyword TEXT NOT NULL,
       focus_keywords_raw TEXT NOT NULL,
       image_prompt TEXT NOT NULL,
+      image_prompt_horizontal TEXT,
+      image_prompt_vertical TEXT,
       image_url TEXT,
       latitude REAL,
       longitude REAL,
@@ -335,6 +447,32 @@ async function ensureEditorialTables() {
     )
   `
   ).run();
+  const editorialColumns = db
+    .prepare("PRAGMA table_info(editorial_myths)")
+    .all()
+    .map((column) => column.name);
+  const editorialExisting = new Set(editorialColumns);
+  if (!editorialExisting.has("mito")) {
+    db.prepare("ALTER TABLE editorial_myths ADD COLUMN mito TEXT").run();
+  }
+  if (!editorialExisting.has("historia")) {
+    db.prepare("ALTER TABLE editorial_myths ADD COLUMN historia TEXT").run();
+  }
+  if (!editorialExisting.has("versiones")) {
+    db.prepare("ALTER TABLE editorial_myths ADD COLUMN versiones TEXT").run();
+  }
+  if (!editorialExisting.has("leccion")) {
+    db.prepare("ALTER TABLE editorial_myths ADD COLUMN leccion TEXT").run();
+  }
+  if (!editorialExisting.has("similitudes")) {
+    db.prepare("ALTER TABLE editorial_myths ADD COLUMN similitudes TEXT").run();
+  }
+  if (!editorialExisting.has("image_prompt_horizontal")) {
+    db.prepare("ALTER TABLE editorial_myths ADD COLUMN image_prompt_horizontal TEXT").run();
+  }
+  if (!editorialExisting.has("image_prompt_vertical")) {
+    db.prepare("ALTER TABLE editorial_myths ADD COLUMN image_prompt_vertical TEXT").run();
+  }
 
   db.prepare(
     "CREATE INDEX IF NOT EXISTS idx_editorial_myths_region ON editorial_myths(region_id)"
@@ -745,6 +883,11 @@ async function upsertEditorialMyth(data) {
         community_id,
         category_path,
         tags_raw,
+        mito,
+        historia,
+        versiones,
+        leccion,
+        similitudes,
         content,
         excerpt,
         seo_title,
@@ -752,6 +895,8 @@ async function upsertEditorialMyth(data) {
         focus_keyword,
         focus_keywords_raw,
         image_prompt,
+        image_prompt_horizontal,
+        image_prompt_vertical,
         image_url,
         latitude,
         longitude,
@@ -761,7 +906,7 @@ async function upsertEditorialMyth(data) {
         key_sources_json,
         research_notes
       ) VALUES (
-        $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21,$22
+        $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21,$22,$23,$24,$25,$26,$27,$28,$29
       )
       ON CONFLICT (source_myth_id)
       DO UPDATE SET
@@ -771,6 +916,11 @@ async function upsertEditorialMyth(data) {
         community_id = EXCLUDED.community_id,
         category_path = EXCLUDED.category_path,
         tags_raw = EXCLUDED.tags_raw,
+        mito = EXCLUDED.mito,
+        historia = EXCLUDED.historia,
+        versiones = EXCLUDED.versiones,
+        leccion = EXCLUDED.leccion,
+        similitudes = EXCLUDED.similitudes,
         content = EXCLUDED.content,
         excerpt = EXCLUDED.excerpt,
         seo_title = EXCLUDED.seo_title,
@@ -778,6 +928,8 @@ async function upsertEditorialMyth(data) {
         focus_keyword = EXCLUDED.focus_keyword,
         focus_keywords_raw = EXCLUDED.focus_keywords_raw,
         image_prompt = EXCLUDED.image_prompt,
+        image_prompt_horizontal = EXCLUDED.image_prompt_horizontal,
+        image_prompt_vertical = EXCLUDED.image_prompt_vertical,
         image_url = EXCLUDED.image_url,
         latitude = EXCLUDED.latitude,
         longitude = EXCLUDED.longitude,
@@ -797,6 +949,11 @@ async function upsertEditorialMyth(data) {
         data.community_id,
         data.category_path,
         data.tags_raw,
+        data.mito,
+        data.historia,
+        data.versiones,
+        data.leccion,
+        data.similitudes,
         data.content,
         data.excerpt,
         data.seo_title,
@@ -804,6 +961,8 @@ async function upsertEditorialMyth(data) {
         data.focus_keyword,
         data.focus_keywords_raw,
         data.image_prompt,
+        data.image_prompt_horizontal,
+        data.image_prompt_vertical,
         data.image_url,
         data.latitude,
         data.longitude,
@@ -828,6 +987,11 @@ async function upsertEditorialMyth(data) {
       community_id,
       category_path,
       tags_raw,
+      mito,
+      historia,
+      versiones,
+      leccion,
+      similitudes,
       content,
       excerpt,
       seo_title,
@@ -835,6 +999,8 @@ async function upsertEditorialMyth(data) {
       focus_keyword,
       focus_keywords_raw,
       image_prompt,
+      image_prompt_horizontal,
+      image_prompt_vertical,
       image_url,
       latitude,
       longitude,
@@ -845,7 +1011,7 @@ async function upsertEditorialMyth(data) {
       research_notes,
       created_at,
       updated_at
-    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, datetime('now'), datetime('now'))
+    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, datetime('now'), datetime('now'))
     ON CONFLICT(source_myth_id) DO UPDATE SET
       title = excluded.title,
       slug = excluded.slug,
@@ -853,6 +1019,11 @@ async function upsertEditorialMyth(data) {
       community_id = excluded.community_id,
       category_path = excluded.category_path,
       tags_raw = excluded.tags_raw,
+      mito = excluded.mito,
+      historia = excluded.historia,
+      versiones = excluded.versiones,
+      leccion = excluded.leccion,
+      similitudes = excluded.similitudes,
       content = excluded.content,
       excerpt = excluded.excerpt,
       seo_title = excluded.seo_title,
@@ -860,6 +1031,8 @@ async function upsertEditorialMyth(data) {
       focus_keyword = excluded.focus_keyword,
       focus_keywords_raw = excluded.focus_keywords_raw,
       image_prompt = excluded.image_prompt,
+      image_prompt_horizontal = excluded.image_prompt_horizontal,
+      image_prompt_vertical = excluded.image_prompt_vertical,
       image_url = excluded.image_url,
       latitude = excluded.latitude,
       longitude = excluded.longitude,
@@ -880,6 +1053,11 @@ async function upsertEditorialMyth(data) {
     data.community_id,
     data.category_path,
     data.tags_raw,
+    data.mito,
+    data.historia,
+    data.versiones,
+    data.leccion,
+    data.similitudes,
     data.content,
     data.excerpt,
     data.seo_title,
@@ -887,6 +1065,8 @@ async function upsertEditorialMyth(data) {
     data.focus_keyword,
     data.focus_keywords_raw,
     data.image_prompt,
+    data.image_prompt_horizontal,
+    data.image_prompt_vertical,
     data.image_url,
     data.latitude,
     data.longitude,
@@ -921,6 +1101,11 @@ async function insertEditorialMyth(data) {
         community_id,
         category_path,
         tags_raw,
+        mito,
+        historia,
+        versiones,
+        leccion,
+        similitudes,
         content,
         excerpt,
         seo_title,
@@ -928,6 +1113,8 @@ async function insertEditorialMyth(data) {
         focus_keyword,
         focus_keywords_raw,
         image_prompt,
+        image_prompt_horizontal,
+        image_prompt_vertical,
         image_url,
         latitude,
         longitude,
@@ -937,7 +1124,7 @@ async function insertEditorialMyth(data) {
         key_sources_json,
         research_notes
       ) VALUES (
-        $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21,$22
+        $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21,$22,$23,$24,$25,$26,$27,$28,$29
       )
       RETURNING id
     `,
@@ -949,6 +1136,11 @@ async function insertEditorialMyth(data) {
         data.community_id,
         data.category_path,
         data.tags_raw,
+        data.mito,
+        data.historia,
+        data.versiones,
+        data.leccion,
+        data.similitudes,
         data.content,
         data.excerpt,
         data.seo_title,
@@ -956,6 +1148,8 @@ async function insertEditorialMyth(data) {
         data.focus_keyword,
         data.focus_keywords_raw,
         data.image_prompt,
+        data.image_prompt_horizontal,
+        data.image_prompt_vertical,
         data.image_url,
         data.latitude,
         data.longitude,
@@ -980,6 +1174,11 @@ async function insertEditorialMyth(data) {
       community_id,
       category_path,
       tags_raw,
+      mito,
+      historia,
+      versiones,
+      leccion,
+      similitudes,
       content,
       excerpt,
       seo_title,
@@ -987,6 +1186,8 @@ async function insertEditorialMyth(data) {
       focus_keyword,
       focus_keywords_raw,
       image_prompt,
+      image_prompt_horizontal,
+      image_prompt_vertical,
       image_url,
       latitude,
       longitude,
@@ -995,7 +1196,7 @@ async function insertEditorialMyth(data) {
       sources_json,
       key_sources_json,
       research_notes
-    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
   `
   );
   const info = stmt.run(
@@ -1006,6 +1207,11 @@ async function insertEditorialMyth(data) {
     data.community_id,
     data.category_path,
     data.tags_raw,
+    data.mito,
+    data.historia,
+    data.versiones,
+    data.leccion,
+    data.similitudes,
     data.content,
     data.excerpt,
     data.seo_title,
@@ -1013,6 +1219,8 @@ async function insertEditorialMyth(data) {
     data.focus_keyword,
     data.focus_keywords_raw,
     data.image_prompt,
+    data.image_prompt_horizontal,
+    data.image_prompt_vertical,
     data.image_url,
     data.latitude,
     data.longitude,
@@ -1160,6 +1368,11 @@ async function insertMyth(data) {
         community_id,
         category_path,
         tags_raw,
+        mito,
+        historia,
+        versiones,
+        leccion,
+        similitudes,
         content,
         excerpt,
         seo_title,
@@ -1171,7 +1384,7 @@ async function insertMyth(data) {
         latitude,
         longitude,
         source_row
-      ) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17)
+      ) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21,$22)
       RETURNING id
     `,
       [
@@ -1181,6 +1394,11 @@ async function insertMyth(data) {
         data.community_id,
         data.category_path,
         data.tags_raw,
+        data.mito,
+        data.historia,
+        data.versiones,
+        data.leccion,
+        data.similitudes,
         data.content,
         data.excerpt,
         data.seo_title,
@@ -1207,6 +1425,11 @@ async function insertMyth(data) {
       community_id,
       category_path,
       tags_raw,
+      mito,
+      historia,
+      versiones,
+      leccion,
+      similitudes,
       content,
       excerpt,
       seo_title,
@@ -1218,7 +1441,7 @@ async function insertMyth(data) {
       latitude,
       longitude,
       source_row
-    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
   `
   );
   const info = stmt.run(
@@ -1228,6 +1451,11 @@ async function insertMyth(data) {
     data.community_id,
     data.category_path,
     data.tags_raw,
+    data.mito,
+    data.historia,
+    data.versiones,
+    data.leccion,
+    data.similitudes,
     data.content,
     data.excerpt,
     data.seo_title,
@@ -1259,7 +1487,13 @@ async function generateEditorialEnrichment(myth) {
       tags_raw: myth.tags_raw,
       excerpt: myth.excerpt,
       content: truncateText(myth.content, MAX_MYTH_CONTENT_CHARS),
-      content_sections: contentSections,
+      content_sections: {
+        mito: myth.mito || contentSections.mito,
+        historia: myth.historia || contentSections.historia,
+        versiones: myth.versiones || contentSections.versiones,
+        leccion: myth.leccion || contentSections.leccion,
+        similitudes: myth.similitudes || contentSections.similitudes,
+      },
       focus_keyword: myth.focus_keyword,
       focus_keywords_raw: myth.focus_keywords_raw,
       seo_title: myth.seo_title,
@@ -1277,7 +1511,8 @@ async function generateEditorialEnrichment(myth) {
       "Eres un editor investigador de mitologia colombiana. Debes enriquecer el relato con una redaccion clara, literaria y cuidada, sin perder la oralidad tradicional. " +
       "Usa busqueda web obligatoria para reunir al menos 20 fuentes. Selecciona las fuentes mas relevantes y resume en notas editoriales. " +
       "No inventes datos sin respaldo. Si hay versiones distintas, comparalas. Mantén el texto en español de Colombia. " +
-      "Devuelve SOLO el JSON solicitado.",
+      "No incluyas razonamiento fuera del JSON. Usa el campo analysis_summary para resumir pasos y decisiones. " +
+      "Si necesitas saltos de linea dentro de strings, usa \\n.",
     input: JSON.stringify(payload),
     tools: [
       {
@@ -1301,6 +1536,7 @@ async function generateEditorialEnrichment(myth) {
           type: "object",
           additionalProperties: false,
           properties: {
+            analysis_summary: { type: "string" },
             mito: { type: "string" },
             historia: { type: "string" },
             versiones: { type: "string" },
@@ -1322,10 +1558,10 @@ async function generateEditorialEnrichment(myth) {
                 properties: {
                   title: { type: "string" },
                   url: { type: "string" },
-                  publisher: { type: "string" },
-                  note: { type: "string" },
+                  summary: { type: "string" },
+                  relevance_score: { type: "number" },
                 },
-                required: ["title", "url", "publisher", "note"],
+                required: ["title", "url", "summary", "relevance_score"],
               },
             },
             key_sources: {
@@ -1336,15 +1572,16 @@ async function generateEditorialEnrichment(myth) {
                 properties: {
                   title: { type: "string" },
                   url: { type: "string" },
-                  publisher: { type: "string" },
-                  reason: { type: "string" },
+                  summary: { type: "string" },
+                  relevance_score: { type: "number" },
                 },
-                required: ["title", "url", "publisher", "reason"],
+                required: ["title", "url", "summary", "relevance_score"],
               },
             },
             editorial_notes: { type: "string" },
           },
           required: [
+            "analysis_summary",
             "mito",
             "historia",
             "versiones",
@@ -1372,7 +1609,7 @@ async function generateEditorialEnrichment(myth) {
     throw new Error("OpenAI response is empty");
   }
 
-  const parsed = JSON.parse(outputText);
+  const parsed = safeParseJson(outputText);
   if (!Array.isArray(parsed.sources) || parsed.sources.length < MIN_SOURCES) {
     throw new Error("No se encontraron suficientes fuentes (minimo 20)");
   }
@@ -1395,10 +1632,11 @@ async function generateNewMyth(query, context) {
     instructions:
       "Eres un editor investigador de mitologia colombiana. Debes crear un mito nuevo a partir del tema solicitado. " +
       "Usa busqueda web obligatoria para reunir al menos 20 fuentes. El mito debe seguir la estructura editorial del proyecto: Mito, Historia, Versiones, Leccion, Similitudes. " +
-      "Incluye una descripcion SEO y un prompt de imagen estilo paper quilling/paper cut. " +
+      "Incluye descripciones SEO y prompts de imagen en formato horizontal (16:9) y vertical (9:16) estilo paper quilling/paper cut. " +
       "Selecciona la region colombiana adecuada (usa solo las regiones entregadas). " +
       "Si no hay una ubicacion precisa, usa el centro de la region o de Colombia. " +
-      "Devuelve SOLO el JSON solicitado.",
+      "No incluyas razonamiento fuera del JSON. Usa el campo analysis_summary para resumir pasos y decisiones. " +
+      "Si necesitas saltos de linea dentro de strings, usa \\n.",
     input: JSON.stringify(payload),
     tools: [
       {
@@ -1422,6 +1660,7 @@ async function generateNewMyth(query, context) {
           type: "object",
           additionalProperties: false,
           properties: {
+            analysis_summary: { type: "string" },
             title: { type: "string" },
             mito: { type: "string" },
             historia: { type: "string" },
@@ -1444,7 +1683,8 @@ async function generateNewMyth(query, context) {
             department: { type: "string" },
             community: { type: "string" },
             category_path: { type: "string" },
-            image_prompt: { type: "string" },
+            image_prompt_horizontal: { type: "string" },
+            image_prompt_vertical: { type: "string" },
             latitude: { type: "number" },
             longitude: { type: "number" },
             location_name: { type: "string" },
@@ -1456,10 +1696,10 @@ async function generateNewMyth(query, context) {
                 properties: {
                   title: { type: "string" },
                   url: { type: "string" },
-                  publisher: { type: "string" },
-                  note: { type: "string" },
+                  summary: { type: "string" },
+                  relevance_score: { type: "number" },
                 },
-                required: ["title", "url", "publisher", "note"],
+                required: ["title", "url", "summary", "relevance_score"],
               },
             },
             key_sources: {
@@ -1470,15 +1710,16 @@ async function generateNewMyth(query, context) {
                 properties: {
                   title: { type: "string" },
                   url: { type: "string" },
-                  publisher: { type: "string" },
-                  reason: { type: "string" },
+                  summary: { type: "string" },
+                  relevance_score: { type: "number" },
                 },
-                required: ["title", "url", "publisher", "reason"],
+                required: ["title", "url", "summary", "relevance_score"],
               },
             },
             editorial_notes: { type: "string" },
           },
           required: [
+            "analysis_summary",
             "title",
             "mito",
             "historia",
@@ -1495,7 +1736,8 @@ async function generateNewMyth(query, context) {
             "department",
             "community",
             "category_path",
-            "image_prompt",
+            "image_prompt_horizontal",
+            "image_prompt_vertical",
             "latitude",
             "longitude",
             "location_name",
@@ -1516,7 +1758,7 @@ async function generateNewMyth(query, context) {
     throw new Error("OpenAI response is empty");
   }
 
-  const parsed = JSON.parse(outputText);
+  const parsed = safeParseJson(outputText);
   if (!Array.isArray(parsed.sources) || parsed.sources.length < MIN_SOURCES) {
     throw new Error("No se encontraron suficientes fuentes (minimo 20)");
   }
@@ -1607,7 +1849,7 @@ async function checkMythSimilarity(query, myths) {
     if (!outputText) {
       continue;
     }
-    const parsed = JSON.parse(outputText);
+    const parsed = safeParseJson(outputText);
     if (Number(parsed.confidence) > best.confidence) {
       best = {
         confidence: Number(parsed.confidence) || 0,
@@ -1641,6 +1883,9 @@ async function enrichExistingMyth(myth) {
   const content = buildContent(enrichment);
   const excerpt = truncateText(enrichment.excerpt || myth.excerpt, MAX_EXCERPT_CHARS);
   const focusKeywords = normalizeFocusKeywords(enrichment.focus_keywords || [], enrichment.focus_keyword);
+  const researchNotes = [enrichment.analysis_summary, enrichment.editorial_notes]
+    .filter(Boolean)
+    .join("\n\n");
 
   const editorialPayload = {
     source_myth_id: myth.id,
@@ -1650,6 +1895,11 @@ async function enrichExistingMyth(myth) {
     community_id: myth.community_id,
     category_path: myth.category_path,
     tags_raw: myth.tags_raw,
+    mito: enrichment.mito,
+    historia: enrichment.historia,
+    versiones: enrichment.versiones,
+    leccion: enrichment.leccion,
+    similitudes: enrichment.similitudes,
     content,
     excerpt,
     seo_title: enrichment.seo_title || myth.seo_title,
@@ -1657,6 +1907,8 @@ async function enrichExistingMyth(myth) {
     focus_keyword: enrichment.focus_keyword || myth.focus_keyword,
     focus_keywords_raw: focusKeywords.join("|"),
     image_prompt: myth.image_prompt,
+    image_prompt_horizontal: myth.image_prompt,
+    image_prompt_vertical: myth.image_prompt,
     image_url: myth.image_url,
     latitude: myth.latitude,
     longitude: myth.longitude,
@@ -1664,7 +1916,7 @@ async function enrichExistingMyth(myth) {
     source_row: myth.source_row,
     sources_json: JSON.stringify(enrichment.sources || []),
     key_sources_json: JSON.stringify(enrichment.key_sources || []),
-    research_notes: enrichment.editorial_notes || "",
+    research_notes: researchNotes,
   };
 
   const editorial = await upsertEditorialMyth(editorialPayload);
@@ -1729,6 +1981,21 @@ async function createNewMyth(query) {
     .filter(Boolean)
     .join(" > ");
 
+  const imagePromptHorizontal =
+    creation.image_prompt_horizontal ||
+    creation.image_prompt ||
+    creation.image_prompt_vertical ||
+    "";
+  const imagePromptVertical =
+    creation.image_prompt_vertical ||
+    creation.image_prompt ||
+    creation.image_prompt_horizontal ||
+    "";
+  const baseImagePrompt = imagePromptHorizontal || imagePromptVertical || "";
+  if (!baseImagePrompt) {
+    throw new Error("Prompt de imagen faltante para el mito nuevo");
+  }
+
   const baseSlug = slugify(title) || `mito-${sourceRow}`;
   let finalSlug = baseSlug;
   if (isPostgres()) {
@@ -1765,13 +2032,18 @@ async function createNewMyth(query) {
     community_id: community?.id || null,
     category_path: categoryPath || regionMatch.name,
     tags_raw: tagsRaw,
+    mito: creation.mito,
+    historia: creation.historia,
+    versiones: creation.versiones,
+    leccion: creation.leccion,
+    similitudes: creation.similitudes,
     content: buildContent(creation),
     excerpt: truncateText(creation.excerpt, MAX_EXCERPT_CHARS),
     seo_title: creation.seo_title || title,
     seo_description: creation.seo_description || creation.excerpt || "",
     focus_keyword: creation.focus_keyword || title,
     focus_keywords_raw: focusKeywords.join("|"),
-    image_prompt: creation.image_prompt,
+    image_prompt: baseImagePrompt,
     image_url: null,
     latitude: coordinates.latitude,
     longitude: coordinates.longitude,
@@ -1800,6 +2072,11 @@ async function createNewMyth(query) {
     community_id: mythPayload.community_id,
     category_path: mythPayload.category_path,
     tags_raw: mythPayload.tags_raw,
+    mito: mythPayload.mito,
+    historia: mythPayload.historia,
+    versiones: mythPayload.versiones,
+    leccion: mythPayload.leccion,
+    similitudes: mythPayload.similitudes,
     content: mythPayload.content,
     excerpt: mythPayload.excerpt,
     seo_title: mythPayload.seo_title,
@@ -1807,6 +2084,8 @@ async function createNewMyth(query) {
     focus_keyword: mythPayload.focus_keyword,
     focus_keywords_raw: mythPayload.focus_keywords_raw,
     image_prompt: mythPayload.image_prompt,
+    image_prompt_horizontal: imagePromptHorizontal,
+    image_prompt_vertical: imagePromptVertical,
     image_url: mythPayload.image_url,
     latitude: mythPayload.latitude,
     longitude: mythPayload.longitude,
@@ -1814,7 +2093,9 @@ async function createNewMyth(query) {
     source_row: mythPayload.source_row,
     sources_json: JSON.stringify(creation.sources || []),
     key_sources_json: JSON.stringify(creation.key_sources || []),
-    research_notes: creation.editorial_notes || "",
+    research_notes: [creation.analysis_summary, creation.editorial_notes]
+      .filter(Boolean)
+      .join("\n\n"),
   };
 
   const editorial = await insertEditorialMyth(editorialPayload);

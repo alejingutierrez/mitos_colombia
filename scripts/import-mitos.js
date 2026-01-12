@@ -79,6 +79,11 @@ const insertMyth = db.prepare(
     community_id,
     category_path,
     tags_raw,
+    mito,
+    historia,
+    versiones,
+    leccion,
+    similitudes,
     content,
     excerpt,
     seo_title,
@@ -87,7 +92,7 @@ const insertMyth = db.prepare(
     focus_keywords_raw,
     image_prompt,
     source_row
-  ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`
+  ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`
 );
 
 const insertMythTag = db.prepare(
@@ -425,6 +430,11 @@ const importRows = db.transaction((dataRows) => {
       communityId,
       categoryPath || regionName,
       tagsRaw,
+      mito,
+      historia,
+      versiones,
+      leccion,
+      similitudes,
       content,
       excerpt,
       seoTitle,
