@@ -36,6 +36,16 @@ const adminMenuItems = [
     ),
   },
   {
+    label: "Tarot",
+    href: "/admin/tarot",
+    icon: (
+      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <rect x="4" y="3" width="16" height="18" rx="2" strokeWidth={2} />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 8h8M8 12h6M8 16h4" />
+      </svg>
+    ),
+  },
+  {
     label: "Banners Home",
     href: "/admin/home-banners",
     icon: (

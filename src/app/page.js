@@ -5,6 +5,7 @@ import { ButtonLink } from "../components/ui/Button";
 import { GlassCard } from "../components/ui/GlassCard";
 import { SectionHeader } from "../components/ui/SectionHeader";
 import { MythCard } from "../components/MythCard";
+import { TarotCard } from "../components/TarotCard";
 import HomeBannerCarousel from "../components/HomeBannerCarousel";
 import { getRoutePreviews } from "../lib/routes";
 import { getHomeBanners } from "../lib/home-banners";
@@ -16,6 +17,7 @@ import {
   getHomeStats,
   getTaxonomy,
 } from "../lib/myths";
+import { getDailyTarotSelection, getTarotCards } from "../lib/tarot";
 
 export const revalidate = 86400;
 
@@ -93,6 +95,7 @@ export default async function Home() {
     taxonomy,
     routePreviews,
     homeBanners,
+    tarotCards,
   ] = await Promise.all([
     getFeaturedMythsWithImages(9, seed),
     getDiverseMyths(6, seed),
@@ -100,6 +103,7 @@ export default async function Home() {
     getTaxonomy(),
     getRoutePreviews(seed),
     getHomeBanners(),
+    getTarotCards(),
   ]);
 
   // Get the main featured myth (first one with image)
@@ -107,6 +111,11 @@ export default async function Home() {
 
   // Get remaining featured myths for gallery
   const galleryMyths = featuredMyths.slice(1, 7);
+
+  const tarotWithImages = tarotCards.filter((card) => card.image_url);
+  const tarotSource =
+    tarotWithImages.length >= 3 ? tarotWithImages : tarotCards;
+  const dailyTarotCards = getDailyTarotSelection(tarotSource, 3, seed);
 
   // Prepare stats for display
   const displayStats = [
@@ -284,6 +293,36 @@ export default async function Home() {
             <ButtonLink href="/mitos" variant="subtle">
               Explorar coleccion completa
             </ButtonLink>
+          </div>
+        </section>
+      )}
+
+      {dailyTarotCards.length > 0 && (
+        <section className="container-shell mt-32">
+          <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
+            <div className="max-w-2xl">
+              <p className="eyebrow">Tarot mitológico</p>
+              <h2 className="mt-4 font-display text-4xl text-ink-900 md:text-5xl">
+                Tarot de la mitología colombiana
+              </h2>
+              <p className="section-body mt-4">
+                Tres cartas que cambian cada día para abrir nuevas rutas de lectura.
+                Cada una conecta un arcano del tarot con un mito vivo del archivo.
+              </p>
+            </div>
+            <div className="flex flex-wrap gap-3">
+              <ButtonLink href="/tarot" variant="subtle">
+                Ver baraja completa
+              </ButtonLink>
+              <ButtonLink href="/mitos" variant="outline">
+                Explorar mitos
+              </ButtonLink>
+            </div>
+          </div>
+          <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {dailyTarotCards.map((card) => (
+              <TarotCard key={card.slug} card={card} compact />
+            ))}
           </div>
         </section>
       )}
