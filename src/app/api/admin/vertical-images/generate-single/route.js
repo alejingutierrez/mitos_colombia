@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import OpenAI from "openai";
 import { put } from "@vercel/blob";
 import { isPostgres, getSqlClient, getSqliteDbWritable } from "../../../../../lib/db.js";
+import { IMAGE_STYLE_GUIDE } from "../../../../../lib/image-guidelines.js";
 
 export const runtime = "nodejs";
 export const maxDuration = 300;
@@ -72,6 +73,8 @@ async function generateVerticalImage(prompt, slug, entityType, isRetry = false) 
     const enhancedPrompt = `CONTEXTO CULTURAL: Ilustración vertical (9:16) educativa de mitología colombiana con valor histórico y antropológico.
 
 ${prompt}
+
+${IMAGE_STYLE_GUIDE}
 
 ESPECIFICACIONES:
 - Formato: Vertical 9:16 para Stories/Reels

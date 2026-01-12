@@ -10,6 +10,7 @@ import {
   isPostgres,
 } from "../../../../lib/db.js";
 import { getHomeBannerDefaults } from "../../../../lib/home-banners.js";
+import { IMAGE_STYLE_GUIDE } from "../../../../lib/image-guidelines.js";
 
 export const runtime = "nodejs";
 export const maxDuration = 300;
@@ -243,6 +244,7 @@ ESPECIFICACIONES TECNICAS:
 - Estilo artesanal, textura de papel visible
 - Paleta inspirada en verde selva, azul rio y dorado tierra
 - Contenido respetuoso, educativo y familiar`;
+  const guidedPrompt = `${enhancedPrompt}\n\n${IMAGE_STYLE_GUIDE}`;
 
   const optimizeBuffer = async (buffer) =>
     sharp(buffer)
@@ -258,7 +260,7 @@ ESPECIFICACIONES TECNICAS:
 
   const response = await openai.images.generate({
     model: "gpt-image-1-mini",
-    prompt: enhancedPrompt,
+    prompt: guidedPrompt,
     moderation: "low",
     n: 1,
     size: "1536x1024",

@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import OpenAI from "openai";
 import { put } from "@vercel/blob";
 import { isPostgres, getSqlClient, getSqliteDb, getSqliteDbWritable } from "../../../../lib/db.js";
+import { IMAGE_STYLE_GUIDE } from "../../../../lib/image-guidelines.js";
 
 export const runtime = "nodejs";
 export const maxDuration = 300; // 5 minutes max for image generation
@@ -254,7 +255,9 @@ async function generateImage(prompt, mythSlug, isRetry = false) {
     // Add cultural context disclaimer to the prompt
     const enhancedPrompt = `CONTEXTO CULTURAL: Esta es una ilustración educativa de un mito indígena colombiano con valor histórico y antropológico, destinada a un archivo cultural público. Representación artística apropiada para contenido educativo y museístico. NO incluir desnudez, contenido sexual ni violencia gráfica.
 
-${prompt}`;
+${prompt}
+
+${IMAGE_STYLE_GUIDE}`;
 
     console.log(`[IMG] Enhanced prompt length: ${enhancedPrompt.length} characters`);
 

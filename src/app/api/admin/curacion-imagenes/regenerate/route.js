@@ -8,6 +8,7 @@ import {
   getSqliteDb,
   getSqliteDbWritable,
 } from "../../../../../lib/db.js";
+import { IMAGE_STYLE_GUIDE } from "../../../../../lib/image-guidelines.js";
 
 export const runtime = "nodejs";
 export const maxDuration = 300;
@@ -95,7 +96,7 @@ async function optimizeImageBuffer(buffer) {
 
 async function generateImageBuffer(prompt, isRetry = false) {
   try {
-    const enhancedPrompt = `CONTEXTO CULTURAL: Ilustración editorial horizontal (16:9) de mitología colombiana con valor educativo y patrimonial. Sin texto ni logos, sin violencia gráfica ni desnudez.\n\n${prompt}`;
+    const enhancedPrompt = `CONTEXTO CULTURAL: Ilustración editorial horizontal (16:9) de mitología colombiana con valor educativo y patrimonial. Sin texto ni logos, sin violencia gráfica ni desnudez.\n\n${prompt}\n\n${IMAGE_STYLE_GUIDE}`;
 
     const response = await openai.images.generate({
       model: "gpt-image-1-mini",
