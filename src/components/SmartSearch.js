@@ -7,6 +7,7 @@ import { Badge } from "./ui/Badge";
 import { Button } from "./ui/Button";
 import { GlassCard } from "./ui/GlassCard";
 import { cn } from "../lib/utils";
+import { trackEvent } from "../lib/analytics";
 
 const TYPE_STYLES = {
   myth: "border-jungle-500/30 bg-jungle-500/10 text-jungle-700",
@@ -101,6 +102,15 @@ export default function SmartSearch({
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    const trimmed = query.trim();
+    if (trimmed) {
+      trackEvent({
+        action: "search",
+        category: "site",
+        label: trimmed,
+        search_term: trimmed,
+      });
+    }
     router.push(searchHref);
     setOpen(false);
   };
@@ -163,6 +173,14 @@ export default function SmartSearch({
                         href={item.href}
                         className="group rounded-2xl border border-transparent px-3 py-2 transition hover:border-white/80 hover:bg-white/70"
                         role="option"
+                        onClick={() =>
+                          trackEvent({
+                            action: "select_content",
+                            category: "search_suggestion",
+                            label: item.title,
+                            content_type: item.type,
+                          })
+                        }
                       >
                         <div className="flex items-start justify-between gap-3">
                           <div>
@@ -188,6 +206,15 @@ export default function SmartSearch({
               <Link
                 href={searchHref}
                 className="mt-1 flex items-center justify-between rounded-2xl border border-ink-200/70 px-3 py-2 text-xs font-medium uppercase tracking-[0.3em] text-ink-600 transition hover:border-ink-300/80 hover:text-ink-900"
+                onClick={() => {
+                  const trimmed = query.trim();
+                  trackEvent({
+                    action: "search",
+                    category: "site",
+                    label: trimmed || "empty",
+                    search_term: trimmed || "",
+                  });
+                }}
               >
                 <span>Buscar en todo el archivo</span>
                 <span className="text-river-600">→</span>

@@ -14,7 +14,13 @@ export function TarotCard({ card, compact = false }) {
       : `Arcano menor · ${card.suit}`;
 
   return (
-    <Link href={mythHref} className="group block h-full">
+    <Link
+      href={mythHref}
+      className="group block h-full"
+      data-analytics-event="select_content"
+      data-analytics-category="tarot_card"
+      data-analytics-label={card.card_name}
+    >
       <div className="flex h-full flex-col rounded-3xl border border-white/60 bg-white/70 p-4 shadow-glass transition hover:-translate-y-2 hover:shadow-2xl">
         <div className="relative aspect-[9/16] overflow-hidden rounded-2xl bg-ink-100">
           {card.image_url ? (

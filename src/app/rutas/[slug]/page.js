@@ -68,7 +68,13 @@ function HeroTile({ myth, className, sizes, priority = false }) {
 
 function RouteMythCard({ myth, accentText }) {
   return (
-    <Link href={`/mitos/${myth.slug}`} className="group block">
+    <Link
+      href={`/mitos/${myth.slug}`}
+      className="group block"
+      data-analytics-event="select_content"
+      data-analytics-category="route_myth"
+      data-analytics-label={myth.title}
+    >
       <GlassCard className="relative h-full overflow-hidden p-0 transition hover:-translate-y-2 hover:shadow-2xl">
         <div className="relative aspect-[3/4] overflow-hidden">
           {myth.image_url ? (

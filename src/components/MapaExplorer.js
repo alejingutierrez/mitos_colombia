@@ -14,6 +14,7 @@ import {
 import L from "leaflet";
 import { GlassCard } from "./ui/GlassCard";
 import { SectionHeader } from "./ui/SectionHeader";
+import { trackEvent } from "../lib/analytics";
 
 const COLOMBIA_BOUNDS = [
   [-4.8, -79.4],
@@ -399,14 +400,32 @@ export default function MapaExplorer() {
 
   const handleMythClick = (myth) => {
     setSelectedMyth(myth);
+    trackEvent({
+      action: "select_content",
+      category: "map_pin",
+      label: myth.title,
+      content_type: "myth",
+    });
   };
 
   const handleToggleGroup = (groupKey) => {
     setSelectedMyth(null);
     setExpandedGroupKey((prev) => (prev === groupKey ? null : groupKey));
+    trackEvent({
+      action: "select_content",
+      category: "map_cluster",
+      label: groupKey,
+      content_type: "cluster",
+    });
   };
 
   const handleOpenMyth = (myth) => {
+    trackEvent({
+      action: "select_content",
+      category: "map_card",
+      label: myth.title,
+      content_type: "myth",
+    });
     router.push(`/mitos/${myth.slug}`);
   };
 

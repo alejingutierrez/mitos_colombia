@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { cn } from "../lib/utils";
 import { GlassCard } from "./ui/GlassCard";
+import { trackEvent } from "../lib/analytics";
 
 const buttonBase =
   "inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/70 bg-white/80 text-ink-700 transition hover:bg-white hover:text-ink-900";
@@ -167,6 +168,12 @@ export default function ShareBar({
       await navigator.clipboard.writeText(shareUrl);
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
+      trackEvent({
+        action: "share",
+        category: "myth",
+        label: title,
+        method: "copy_link",
+      });
     } catch (error) {
       console.error("Error copying share URL:", error);
     }
@@ -189,6 +196,14 @@ export default function ShareBar({
             className={buttonBase}
             aria-label={`Compartir en ${item.label}`}
             title={`Compartir en ${item.label}`}
+            onClick={() =>
+              trackEvent({
+                action: "share",
+                category: "myth",
+                label: title,
+                method: item.id,
+              })
+            }
           >
             {item.icon}
           </a>

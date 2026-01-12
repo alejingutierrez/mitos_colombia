@@ -10,7 +10,13 @@ export function MythCard({ myth, featured = false }) {
 
   if (featured) {
     return (
-      <Link href={`/mitos/${myth.slug}`} className="group block">
+      <Link
+        href={`/mitos/${myth.slug}`}
+        className="group block"
+        data-analytics-event="select_content"
+        data-analytics-category="myth"
+        data-analytics-label={myth.title}
+      >
         <GlassCard className="relative h-full overflow-hidden transition hover:-translate-y-2 hover:shadow-2xl p-0">
           {hasImage && (
             <div className="relative aspect-[16/9] overflow-hidden">
@@ -47,7 +53,13 @@ export function MythCard({ myth, featured = false }) {
   }
 
   return (
-    <Link href={`/mitos/${myth.slug}`} className="group block">
+    <Link
+      href={`/mitos/${myth.slug}`}
+      className="group block"
+      data-analytics-event="select_content"
+      data-analytics-category="myth"
+      data-analytics-label={myth.title}
+    >
       <GlassCard className="relative h-full overflow-hidden transition hover:-translate-y-2 hover:shadow-2xl p-0">
         {hasImage && (
           <div className="relative aspect-[16/9] overflow-hidden">

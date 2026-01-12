@@ -1,6 +1,9 @@
 import "./globals.css";
 import { Fraunces, Sora } from "next/font/google";
+import Script from "next/script";
 import Footer from "../components/Footer";
+import Analytics from "../components/Analytics";
+import { GA_MEASUREMENT_ID } from "../lib/analytics";
 
 const display = Fraunces({
   subsets: ["latin"],
@@ -29,6 +32,17 @@ export default function RootLayout({ children }) {
   return (
     <html lang="es" className={`${display.variable} ${body.variable}`}>
       <body className="font-body text-ink-900 antialiased">
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="ga-init" strategy="afterInteractive">
+          {`window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', '${GA_MEASUREMENT_ID}', { send_page_view: false });`}
+        </Script>
+        <Analytics />
         <div className="min-h-screen">{children}</div>
         <Footer />
       </body>
