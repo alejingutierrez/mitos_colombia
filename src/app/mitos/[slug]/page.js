@@ -10,9 +10,12 @@ import { Comments } from "../../../components/Comments";
 import { buildSeoMetadata, getSeoEntry } from "../../../lib/seo";
 import Link from "next/link";
 import ShareBar from "../../../components/ShareBar";
+import MythLocationMapClient from "../../../components/MythLocationMapClient";
 
 export const runtime = "nodejs";
 export const revalidate = 3600;
+
+const COLOMBIA_CENTER = { lat: 4.5709, lng: -74.2973 };
 
 export async function generateMetadata({ params }) {
   const myth = await getMythBySlug(params.slug);
@@ -76,6 +79,26 @@ function isHeading(block) {
   return sectionHeadings.includes(block);
 }
 
+function parseCoord(value) {
+  if (value === null || value === undefined) return null;
+  const normalized = String(value).trim().replace(/,/g, ".");
+  const parsed = Number.parseFloat(normalized);
+  return Number.isFinite(parsed) ? parsed : null;
+}
+
+function resolveMythLocation(myth) {
+  const lat = parseCoord(myth.latitude);
+  const lng = parseCoord(myth.longitude);
+  if (lat !== null && lng !== null) {
+    return { lat, lng, isApproximate: false };
+  }
+  return {
+    lat: COLOMBIA_CENTER.lat,
+    lng: COLOMBIA_CENTER.lng,
+    isApproximate: true,
+  };
+}
+
 export default async function MythDetailPage({ params }) {
   const myth = await getMythBySlug(params.slug);
   if (!myth) {
@@ -84,6 +107,7 @@ export default async function MythDetailPage({ params }) {
 
   const blocks = splitContent(myth.content);
   const recommendedMyths = await getRecommendedMyths(myth, 8);
+  const location = resolveMythLocation(myth);
 
   return (
     <>
@@ -179,6 +203,35 @@ export default async function MythDetailPage({ params }) {
                 </p>
               );
             })}
+          </div>
+
+          <div className="mt-10">
+            <GlassCard className="p-6">
+              <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
+                <div>
+                  <p className="eyebrow">Territorio</p>
+                  <h3 className="mt-2 font-display text-2xl text-ink-900">
+                    Ubicacion geografica del mito
+                  </h3>
+                  <p className="mt-2 text-sm text-ink-600">
+                    {location.isApproximate
+                      ? "Ubicacion aproximada dentro del territorio colombiano."
+                      : "Ubicacion registrada para este mito en el territorio."}
+                  </p>
+                </div>
+                <ButtonLink href="/mapa" variant="outline" size="sm">
+                  Ver mapa completo
+                </ButtonLink>
+              </div>
+              <div className="mt-6 h-[320px] overflow-hidden rounded-2xl border border-white/60 md:h-[420px]">
+                <MythLocationMapClient
+                  title={myth.title}
+                  latitude={location.lat}
+                  longitude={location.lng}
+                  isApproximate={location.isApproximate}
+                />
+              </div>
+            </GlassCard>
           </div>
 
           {myth.keywords && myth.keywords.length > 0 && (
