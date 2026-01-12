@@ -357,9 +357,62 @@ export default function SeoPagesAdminPage() {
                       <span className="text-xs uppercase tracking-[0.3em] text-ink-500 mr-2">
                         Meta title
                       </span>
-                      {item.meta_title}
+                      {item.meta_title || "Sin datos"}
                     </p>
-                    <p className="text-ink-600">{item.meta_description}</p>
+                    <p className="text-ink-600">
+                      <span className="text-xs uppercase tracking-[0.3em] text-ink-500 mr-2">
+                        Meta description
+                      </span>
+                      {item.meta_description || "Sin datos"}
+                    </p>
+                    <p className="text-ink-600">
+                      <span className="text-xs uppercase tracking-[0.3em] text-ink-500 mr-2">
+                        Keywords
+                      </span>
+                      {item.meta_keywords || "Sin datos"}
+                    </p>
+                    <p className="text-ink-600">
+                      <span className="text-xs uppercase tracking-[0.3em] text-ink-500 mr-2">
+                        OG title
+                      </span>
+                      {item.og_title || "Sin datos"}
+                    </p>
+                    <p className="text-ink-600">
+                      <span className="text-xs uppercase tracking-[0.3em] text-ink-500 mr-2">
+                        OG description
+                      </span>
+                      {item.og_description || "Sin datos"}
+                    </p>
+                    <p className="text-ink-600">
+                      <span className="text-xs uppercase tracking-[0.3em] text-ink-500 mr-2">
+                        Twitter title
+                      </span>
+                      {item.twitter_title || "Sin datos"}
+                    </p>
+                    <p className="text-ink-600">
+                      <span className="text-xs uppercase tracking-[0.3em] text-ink-500 mr-2">
+                        Twitter description
+                      </span>
+                      {item.twitter_description || "Sin datos"}
+                    </p>
+                    <p className="text-ink-600">
+                      <span className="text-xs uppercase tracking-[0.3em] text-ink-500 mr-2">
+                        Canonical
+                      </span>
+                      {item.canonical_path || "Sin datos"}
+                    </p>
+                    <p className="text-ink-600 leading-relaxed">
+                      <span className="text-xs uppercase tracking-[0.3em] text-ink-500 mr-2">
+                        Summary
+                      </span>
+                      {item.summary || "Sin datos"}
+                    </p>
+                    <p className="text-ink-600">
+                      <span className="text-xs uppercase tracking-[0.3em] text-ink-500 mr-2">
+                        Focus topics
+                      </span>
+                      {item.focus_topics || "Sin datos"}
+                    </p>
                   </div>
                 ) : (
                   <p className="mt-3 text-sm text-ember-600">

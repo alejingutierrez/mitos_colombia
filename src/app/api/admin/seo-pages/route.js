@@ -1192,12 +1192,23 @@ export async function POST(request) {
           slug: page.slug,
           ...normalized,
         });
+        const focusTopics = Array.isArray(payload.focus_topics)
+          ? payload.focus_topics.filter(Boolean).join(", ")
+          : sanitizeText(payload.focus_topics);
         updated.push({
           page_type: page.page_type,
           slug: page.slug,
           title: page.title,
           meta_title: normalized.meta_title,
           meta_description: normalized.meta_description,
+          meta_keywords: normalized.meta_keywords,
+          og_title: normalized.og_title,
+          og_description: normalized.og_description,
+          twitter_title: normalized.twitter_title,
+          twitter_description: normalized.twitter_description,
+          canonical_path: normalized.canonical_path,
+          summary: normalized.summary,
+          focus_topics: focusTopics,
           summary_words: countWords(normalized.summary),
           success: true,
         });
