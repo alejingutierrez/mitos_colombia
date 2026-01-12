@@ -18,10 +18,10 @@ const OUTPUT_HEIGHT = 1536;
 const JPEG_QUALITY = 82;
 const TAROT_TEMPLATE_PATH = path.join(process.cwd(), "public", "tarot.png");
 let cachedTemplateFile;
-const MAX_PROMPT_LENGTH = 30000;
-const MAX_BASE_PROMPT = 6000;
-const MAX_IMAGE_PROMPT = 2000;
-const MAX_CONTENT_CHARS = 12000;
+const MAX_PROMPT_LENGTH = 31000;
+const MAX_BASE_PROMPT = 9000;
+const MAX_IMAGE_PROMPT = 3000;
+const MAX_CONTENT_CHARS = 16000;
 const MAJOR_ROMAN = [
   "0",
   "I",
