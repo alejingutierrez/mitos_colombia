@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import fs from "fs";
 import path from "path";
-import OpenAI from "openai";
+import OpenAI, { toFile } from "openai";
 import sharp from "sharp";
 import { put, del } from "@vercel/blob";
 import { getTarotCardById, updateTarotCardImage } from "../../../../../lib/tarot";
@@ -17,6 +17,7 @@ const OUTPUT_WIDTH = 1024;
 const OUTPUT_HEIGHT = 1536;
 const JPEG_QUALITY = 82;
 const TAROT_TEMPLATE_PATH = path.join(process.cwd(), "public", "tarot.png");
+let cachedTemplateFile;
 
 const TAROT_STYLE_PROMPT = `Ilustración de carta de tarot vertical 9:16 inspirada en Rider-Waite, reinterpretada en paper quilling + paper cut.
 Usa la plantilla base tarot.png como estructura fija: marco dorado y ornamentos idénticos en toda la serie; no alterar la geometría del marco.
@@ -29,11 +30,17 @@ Alta legibilidad visual, contraste equilibrado, estética editorial elegante.
 Tipografía: numeral romano centrado en la banda superior y nombre de la carta centrado en la banda inferior. Mantener tamaño, peso y espaciado uniformes; si el nombre es largo, ajustar tracking/interlineado sin cambiar el tamaño. Numeral romano obligatorio en TODAS las cartas (mayores: numeral tradicional; menores: As=I, Dos=II... Diez=X, Paje=XI, Caballero=XII, Reina=XIII, Rey=XIV).
 No incluir texto adicional ni el nombre del mito. Sin logos ni marcas.`;
 
-function getTarotTemplateStream() {
+async function getTarotTemplateFile() {
   if (!fs.existsSync(TAROT_TEMPLATE_PATH)) {
     throw new Error(`Plantilla de tarot no encontrada en ${TAROT_TEMPLATE_PATH}`);
   }
-  return fs.createReadStream(TAROT_TEMPLATE_PATH);
+  if (!cachedTemplateFile) {
+    const buffer = await fs.promises.readFile(TAROT_TEMPLATE_PATH);
+    cachedTemplateFile = await toFile(buffer, "tarot.png", {
+      type: "image/png",
+    });
+  }
+  return cachedTemplateFile;
 }
 
 function checkAuth(request) {
@@ -152,9 +159,10 @@ async function rewritePromptSafely(originalPrompt) {
 
 async function generateImageBuffer(prompt, isRetry = false) {
   try {
+    const templateFile = await getTarotTemplateFile();
     const response = await openai.images.edit({
       model: "gpt-image-1-mini",
-      image: getTarotTemplateStream(),
+      image: templateFile,
       prompt,
       n: 1,
       size: "1024x1536",
