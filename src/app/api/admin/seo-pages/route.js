@@ -662,7 +662,8 @@ async function getSeoEntries(pageType) {
             meta_title,
             meta_description,
             meta_keywords,
-            summary
+            summary,
+            updated_at
           FROM seo_pages
           WHERE page_type = ${pageType}
         `
@@ -673,7 +674,8 @@ async function getSeoEntries(pageType) {
             meta_title,
             meta_description,
             meta_keywords,
-            summary
+            summary,
+            updated_at
           FROM seo_pages
         `;
     const rows = result.rows || result;
@@ -691,7 +693,8 @@ async function getSeoEntries(pageType) {
           meta_title,
           meta_description,
           meta_keywords,
-          summary
+          summary,
+          updated_at
         FROM seo_pages
         WHERE page_type = ?
       `
@@ -707,7 +710,8 @@ async function getSeoEntries(pageType) {
         meta_title,
         meta_description,
         meta_keywords,
-        summary
+        summary,
+        updated_at
       FROM seo_pages
     `
     )
@@ -1074,6 +1078,18 @@ function normalizeSeoPayload(payload, fallbackPath) {
   };
 }
 
+function parseTimestamp(value) {
+  if (!value) {
+    return 0;
+  }
+  if (value instanceof Date) {
+    return value.getTime();
+  }
+  const normalized = String(value).replace(" ", "T");
+  const time = Date.parse(normalized);
+  return Number.isNaN(time) ? 0 : time;
+}
+
 export async function GET(request) {
   try {
     if (!checkAuth(request)) {
@@ -1163,10 +1179,26 @@ export async function POST(request) {
     );
     const pending = force
       ? pages
-      : pages.filter((page) => {
-          const entry = entryMap.get(buildPageKey(page.page_type, page.slug));
-          return !isSeoComplete(entry);
-        });
+      : pages
+          .map((page) => {
+            const entry = entryMap.get(buildPageKey(page.page_type, page.slug));
+            return {
+              page,
+              entry,
+              hasEntry: Boolean(entry),
+              updatedAt: parseTimestamp(entry?.updated_at),
+            };
+          })
+          .filter((item) => !isSeoComplete(item.entry))
+          .sort((a, b) => {
+            if (!a.hasEntry && b.hasEntry) return -1;
+            if (a.hasEntry && !b.hasEntry) return 1;
+            if (a.updatedAt !== b.updatedAt) {
+              return a.updatedAt - b.updatedAt;
+            }
+            return a.page.slug.localeCompare(b.page.slug);
+          })
+          .map((item) => item.page);
 
     if (pending.length === 0) {
       return NextResponse.json({
