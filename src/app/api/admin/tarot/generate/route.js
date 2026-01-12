@@ -18,6 +18,10 @@ const OUTPUT_HEIGHT = 1536;
 const JPEG_QUALITY = 82;
 const TAROT_TEMPLATE_PATH = path.join(process.cwd(), "public", "tarot.png");
 let cachedTemplateFile;
+const MAX_PROMPT_LENGTH = 30000;
+const MAX_BASE_PROMPT = 6000;
+const MAX_IMAGE_PROMPT = 2000;
+const MAX_CONTENT_CHARS = 12000;
 const MAJOR_ROMAN = [
   "0",
   "I",
@@ -95,8 +99,25 @@ function normalizePromptText(value) {
   return String(value).replace(/\s+/g, " ").trim();
 }
 
-function formatField(label, value) {
+function truncateText(value, maxLength, mode = "tail") {
   const normalized = normalizePromptText(value);
+  if (!normalized || normalized.length <= maxLength) {
+    return normalized;
+  }
+  if (maxLength <= 0) return "";
+  if (mode === "middle") {
+    const buffer = Math.max(12, Math.floor(maxLength * 0.04));
+    const sliceLength = Math.max(1, Math.floor((maxLength - buffer) / 2));
+    return `${normalized.slice(0, sliceLength)} ... ${normalized.slice(-sliceLength)}`;
+  }
+  const clipped = normalized.slice(0, Math.max(1, maxLength - 12));
+  return `${clipped}... [recortado]`;
+}
+
+function formatField(label, value, maxLength, mode) {
+  const normalized = maxLength
+    ? truncateText(value, maxLength, mode)
+    : normalizePromptText(value);
   return `${label}: ${normalized || "Sin datos"}`;
 }
 
@@ -131,10 +152,19 @@ function buildMythDetails(card) {
     formatField("Keywords (tabla)", card.myth_keywords_list),
     formatField("SEO title", card.myth_seo_title),
     formatField("SEO description", card.myth_seo_description),
-    formatField("Prompt original de imagen del mito", card.myth_image_prompt),
+    formatField(
+      "Prompt original de imagen del mito",
+      card.myth_image_prompt,
+      MAX_IMAGE_PROMPT
+    ),
     formatField("Imagen actual del mito (URL)", card.myth_image_url),
     formatField("Resumen (excerpt)", card.myth_excerpt),
-    formatField("Contenido completo", card.myth_content),
+    formatField(
+      "Contenido completo (recortado si es muy largo)",
+      card.myth_content,
+      MAX_CONTENT_CHARS,
+      "middle"
+    ),
     formatField("Contenido formateado (flag)", card.myth_content_formatted),
     formatField(
       "Coordenadas",
@@ -150,8 +180,36 @@ function buildMythDetails(card) {
   ].join("\n");
 }
 
+function assemblePrompt(sections, limit) {
+  const divider = "\n\n";
+  let output = "";
+
+  sections.forEach((section) => {
+    const chunk = String(section || "").trim();
+    if (!chunk) return;
+    if (!output) {
+      output = chunk.slice(0, limit);
+      return;
+    }
+    const candidate = `${output}${divider}${chunk}`;
+    if (candidate.length <= limit) {
+      output = candidate;
+      return;
+    }
+    const remaining = limit - output.length - divider.length;
+    if (remaining > 0) {
+      output = `${output}${divider}${truncateText(chunk, remaining)}`;
+    }
+  });
+
+  return output;
+}
+
 function buildTarotPrompt(card) {
-  const basePrompt = card.custom_prompt?.trim() || card.base_prompt || "";
+  const basePrompt = truncateText(
+    card.custom_prompt?.trim() || card.base_prompt || "",
+    MAX_BASE_PROMPT
+  );
   const mythDetails = buildMythDetails(card);
   const romanNumeral =
     card.arcana === "major"
@@ -174,9 +232,9 @@ function buildTarotPrompt(card) {
     typographicDirective,
     nameDirective,
     "Recuerda: solo debe aparecer el título de la carta, nada más.",
-  ]
-    .filter(Boolean)
-    .join("\n\n");
+  ];
+
+  return assemblePrompt(sections.filter(Boolean), MAX_PROMPT_LENGTH);
 }
 
 async function rewritePromptSafely(originalPrompt) {
