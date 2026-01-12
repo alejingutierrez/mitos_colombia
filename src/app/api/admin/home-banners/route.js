@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import OpenAI from "openai";
+import sharp from "sharp";
 import { put } from "@vercel/blob";
 import {
   getSqlClient,
@@ -15,6 +16,10 @@ export const maxDuration = 300;
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
 });
+
+const OUTPUT_WIDTH = 1536;
+const OUTPUT_HEIGHT = 864;
+const JPEG_QUALITY = 82;
 
 function checkAuth(request) {
   const authHeader = request.headers.get("authorization");
@@ -233,17 +238,29 @@ async function generateBannerImage(prompt, slug) {
 ${prompt}
 
 ESPECIFICACIONES TECNICAS:
-- Formato horizontal 16:9 (1792x1024)
+- Formato horizontal 16:9 (se recortara a 1536x864)
 - Estilo artesanal, textura de papel visible
 - Paleta inspirada en verde selva, azul rio y dorado tierra
 - Contenido respetuoso, educativo y familiar`;
+
+  const optimizeBuffer = async (buffer) =>
+    sharp(buffer)
+      .rotate()
+      .resize({
+        width: OUTPUT_WIDTH,
+        height: OUTPUT_HEIGHT,
+        fit: "cover",
+        position: "entropy",
+      })
+      .jpeg({ quality: JPEG_QUALITY, mozjpeg: true })
+      .toBuffer();
 
   const response = await openai.images.generate({
     model: "gpt-image-1-mini",
     prompt: enhancedPrompt,
     moderation: "low",
     n: 1,
-    size: "1792x1024",
+    size: "1536x1024",
     quality: "high",
   });
 
@@ -257,22 +274,22 @@ ESPECIFICACIONES TECNICAS:
         throw new Error(`Failed to fetch image: ${imageResponse.status}`);
       }
       const arrayBuffer = await imageResponse.arrayBuffer();
-      const imageBuffer = Buffer.from(arrayBuffer);
-      const filename = `banners/home/${slug}-${Date.now()}.png`;
+      const imageBuffer = await optimizeBuffer(Buffer.from(arrayBuffer));
+      const filename = `banners/home/${slug}-${Date.now()}.jpg`;
       const blob = await put(filename, imageBuffer, {
         access: "public",
-        contentType: "image/png",
+        contentType: "image/jpeg",
       });
       return blob.url;
     }
     throw new Error("No base64 data or URL received from OpenAI");
   }
 
-  const imageBuffer = Buffer.from(b64Data, "base64");
-  const filename = `banners/home/${slug}-${Date.now()}.png`;
+  const imageBuffer = await optimizeBuffer(Buffer.from(b64Data, "base64"));
+  const filename = `banners/home/${slug}-${Date.now()}.jpg`;
   const blob = await put(filename, imageBuffer, {
     access: "public",
-    contentType: "image/png",
+    contentType: "image/jpeg",
   });
   return blob.url;
 }
