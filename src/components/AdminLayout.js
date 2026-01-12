@@ -75,6 +75,16 @@ const adminMenuItems = [
     ),
   },
   {
+    label: "Mitos editoriales",
+    href: "/admin/editorial-myths",
+    icon: (
+      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 5h12a3 3 0 013 3v10a3 3 0 01-3 3H4V5z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 7h12M4 11h12M4 15h8" />
+      </svg>
+    ),
+  },
+  {
     label: "Formatear Contenido",
     href: "/admin/format-content",
     icon: (

@@ -73,6 +73,55 @@ CREATE TABLE IF NOT EXISTS myth_keywords (
   FOREIGN KEY (myth_id) REFERENCES myths(id) ON DELETE CASCADE
 );
 
+CREATE TABLE IF NOT EXISTS editorial_myths (
+  id INTEGER PRIMARY KEY,
+  source_myth_id INTEGER UNIQUE,
+  title TEXT NOT NULL,
+  slug TEXT NOT NULL UNIQUE,
+  region_id INTEGER NOT NULL,
+  community_id INTEGER,
+  category_path TEXT NOT NULL,
+  tags_raw TEXT NOT NULL,
+  content TEXT NOT NULL,
+  excerpt TEXT NOT NULL,
+  seo_title TEXT NOT NULL,
+  seo_description TEXT NOT NULL,
+  focus_keyword TEXT NOT NULL,
+  focus_keywords_raw TEXT NOT NULL,
+  image_prompt TEXT NOT NULL,
+  image_url TEXT,
+  latitude REAL,
+  longitude REAL,
+  content_formatted INTEGER DEFAULT 0,
+  source_row INTEGER,
+  sources_json TEXT,
+  key_sources_json TEXT,
+  research_notes TEXT,
+  created_at TEXT NOT NULL DEFAULT (datetime('now')),
+  updated_at TEXT NOT NULL DEFAULT (datetime('now')),
+  FOREIGN KEY(region_id) REFERENCES regions(id),
+  FOREIGN KEY(community_id) REFERENCES communities(id),
+  FOREIGN KEY(source_myth_id) REFERENCES myths(id)
+);
+
+CREATE INDEX IF NOT EXISTS idx_editorial_myths_region ON editorial_myths(region_id);
+CREATE INDEX IF NOT EXISTS idx_editorial_myths_community ON editorial_myths(community_id);
+
+CREATE TABLE IF NOT EXISTS editorial_myth_tags (
+  editorial_myth_id INTEGER NOT NULL,
+  tag_id INTEGER NOT NULL,
+  PRIMARY KEY (editorial_myth_id, tag_id),
+  FOREIGN KEY (editorial_myth_id) REFERENCES editorial_myths(id) ON DELETE CASCADE,
+  FOREIGN KEY (tag_id) REFERENCES tags(id) ON DELETE CASCADE
+);
+
+CREATE TABLE IF NOT EXISTS editorial_myth_keywords (
+  editorial_myth_id INTEGER NOT NULL,
+  keyword TEXT NOT NULL,
+  PRIMARY KEY (editorial_myth_id, keyword),
+  FOREIGN KEY (editorial_myth_id) REFERENCES editorial_myths(id) ON DELETE CASCADE
+);
+
 CREATE TABLE IF NOT EXISTS comments (
   id INTEGER PRIMARY KEY,
   myth_id INTEGER NOT NULL,
