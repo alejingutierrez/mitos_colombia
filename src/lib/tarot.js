@@ -27,8 +27,13 @@ function normalizeTitle(value) {
 }
 
 function buildBasePrompt(card) {
+  const isMajor = card.arcana === "major";
+  const arcanaLabel = isMajor ? "Arcano mayor" : `Arcano menor de ${card.suit}`;
+
   const lines = [
     `Carta de tarot: ${card.card_name}.`,
+    `Tipo de arcano: ${arcanaLabel}.`,
+    `Mito asociado (exacto BD): ${card.myth_title}.`,
   ];
 
   if (card.meaning) {
@@ -36,12 +41,19 @@ function buildBasePrompt(card) {
   }
 
   if (card.selection_reason) {
-    lines.push(`Matiz narrativo: ${card.selection_reason}`);
+    lines.push(`Justificación editorial: ${card.selection_reason}`);
   }
 
   lines.push(
-    "Incluir solo el nombre de la carta en la franja inferior. No incluir texto adicional."
+    "Composición: figura central simbólica, fondo con referencias al paisaje colombiano, equilibrio entre elementos humanos y naturales."
   );
+  lines.push(
+    "Estética: carta Rider-Waite reinterpretada en paper quilling + paper cut, capas de papel visibles, relieve sutil, textura artesanal."
+  );
+  lines.push(
+    "Tipografía: solo el nombre de la carta en la franja inferior; en arcanos mayores incluir numeral romano arriba."
+  );
+  lines.push("No incluir texto adicional ni el nombre del mito.");
 
   return lines.join("\n");
 }
@@ -202,7 +214,19 @@ async function seedTarotCards() {
         selection_reason,
         base_prompt
       ) VALUES ${placeholders.join(", ")}
-      ON CONFLICT (slug) DO NOTHING`,
+      ON CONFLICT (slug) DO UPDATE SET
+        card_name = EXCLUDED.card_name,
+        arcana = EXCLUDED.arcana,
+        suit = EXCLUDED.suit,
+        rank_label = EXCLUDED.rank_label,
+        order_index = EXCLUDED.order_index,
+        myth_title = EXCLUDED.myth_title,
+        myth_id = EXCLUDED.myth_id,
+        myth_slug = EXCLUDED.myth_slug,
+        meaning = EXCLUDED.meaning,
+        selection_reason = EXCLUDED.selection_reason,
+        base_prompt = EXCLUDED.base_prompt,
+        updated_at = NOW()`,
       values
     );
     return;
@@ -210,7 +234,7 @@ async function seedTarotCards() {
 
   const db = getSqliteDbWritable();
   const insert = db.prepare(
-    `INSERT OR IGNORE INTO tarot_cards (
+    `INSERT INTO tarot_cards (
       slug,
       card_name,
       arcana,
@@ -223,7 +247,20 @@ async function seedTarotCards() {
       meaning,
       selection_reason,
       base_prompt
-    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`
+    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+    ON CONFLICT(slug) DO UPDATE SET
+      card_name = excluded.card_name,
+      arcana = excluded.arcana,
+      suit = excluded.suit,
+      rank_label = excluded.rank_label,
+      order_index = excluded.order_index,
+      myth_title = excluded.myth_title,
+      myth_id = excluded.myth_id,
+      myth_slug = excluded.myth_slug,
+      meaning = excluded.meaning,
+      selection_reason = excluded.selection_reason,
+      base_prompt = excluded.base_prompt,
+      updated_at = datetime('now')`
   );
 
   const transaction = db.transaction((items) => {
@@ -470,11 +507,43 @@ export async function getTarotCardById(cardId) {
       `SELECT
         t.*,
         m.slug as myth_slug,
-        m.image_prompt as myth_prompt,
+        m.image_prompt as myth_image_prompt,
+        m.image_url as myth_image_url,
         m.excerpt as myth_excerpt,
-        m.content as myth_content
+        m.content as myth_content,
+        m.tags_raw as myth_tags_raw,
+        m.category_path as myth_category_path,
+        m.focus_keyword as myth_focus_keyword,
+        m.focus_keywords_raw as myth_focus_keywords_raw,
+        m.seo_title as myth_seo_title,
+        m.seo_description as myth_seo_description,
+        m.latitude as myth_latitude,
+        m.longitude as myth_longitude,
+        m.content_formatted as myth_content_formatted,
+        m.source_row as myth_source_row,
+        m.created_at as myth_created_at,
+        m.updated_at as myth_updated_at,
+        m.region_id as myth_region_id,
+        m.community_id as myth_community_id,
+        regions.name as myth_region,
+        regions.slug as myth_region_slug,
+        communities.name as myth_community,
+        communities.slug as myth_community_slug,
+        (
+          SELECT string_agg(DISTINCT tags.name, ', ')
+          FROM myth_tags
+          JOIN tags ON tags.id = myth_tags.tag_id
+          WHERE myth_tags.myth_id = m.id
+        ) as myth_tags_list,
+        (
+          SELECT string_agg(DISTINCT myth_keywords.keyword, ', ')
+          FROM myth_keywords
+          WHERE myth_keywords.myth_id = m.id
+        ) as myth_keywords_list
       FROM tarot_cards t
       LEFT JOIN myths m ON TRIM(m.title) = TRIM(t.myth_title)
+      LEFT JOIN regions ON regions.id = m.region_id
+      LEFT JOIN communities ON communities.id = m.community_id
       WHERE t.id = $1`,
       [cardId]
     );
@@ -487,11 +556,43 @@ export async function getTarotCardById(cardId) {
       `SELECT
         t.*,
         m.slug as myth_slug,
-        m.image_prompt as myth_prompt,
+        m.image_prompt as myth_image_prompt,
+        m.image_url as myth_image_url,
         m.excerpt as myth_excerpt,
-        m.content as myth_content
+        m.content as myth_content,
+        m.tags_raw as myth_tags_raw,
+        m.category_path as myth_category_path,
+        m.focus_keyword as myth_focus_keyword,
+        m.focus_keywords_raw as myth_focus_keywords_raw,
+        m.seo_title as myth_seo_title,
+        m.seo_description as myth_seo_description,
+        m.latitude as myth_latitude,
+        m.longitude as myth_longitude,
+        m.content_formatted as myth_content_formatted,
+        m.source_row as myth_source_row,
+        m.created_at as myth_created_at,
+        m.updated_at as myth_updated_at,
+        m.region_id as myth_region_id,
+        m.community_id as myth_community_id,
+        regions.name as myth_region,
+        regions.slug as myth_region_slug,
+        communities.name as myth_community,
+        communities.slug as myth_community_slug,
+        (
+          SELECT group_concat(DISTINCT tags.name)
+          FROM myth_tags
+          JOIN tags ON tags.id = myth_tags.tag_id
+          WHERE myth_tags.myth_id = m.id
+        ) as myth_tags_list,
+        (
+          SELECT group_concat(DISTINCT myth_keywords.keyword)
+          FROM myth_keywords
+          WHERE myth_keywords.myth_id = m.id
+        ) as myth_keywords_list
       FROM tarot_cards t
       LEFT JOIN myths m ON trim(m.title) = trim(t.myth_title)
+      LEFT JOIN regions ON regions.id = m.region_id
+      LEFT JOIN communities ON communities.id = m.community_id
       WHERE t.id = ?`
     )
     .get(cardId);
@@ -559,11 +660,43 @@ export async function listTarotCardsMissing(limit = 10) {
       `SELECT
         t.*,
         m.slug as myth_slug,
-        m.image_prompt as myth_prompt,
+        m.image_prompt as myth_image_prompt,
+        m.image_url as myth_image_url,
         m.excerpt as myth_excerpt,
-        m.content as myth_content
+        m.content as myth_content,
+        m.tags_raw as myth_tags_raw,
+        m.category_path as myth_category_path,
+        m.focus_keyword as myth_focus_keyword,
+        m.focus_keywords_raw as myth_focus_keywords_raw,
+        m.seo_title as myth_seo_title,
+        m.seo_description as myth_seo_description,
+        m.latitude as myth_latitude,
+        m.longitude as myth_longitude,
+        m.content_formatted as myth_content_formatted,
+        m.source_row as myth_source_row,
+        m.created_at as myth_created_at,
+        m.updated_at as myth_updated_at,
+        m.region_id as myth_region_id,
+        m.community_id as myth_community_id,
+        regions.name as myth_region,
+        regions.slug as myth_region_slug,
+        communities.name as myth_community,
+        communities.slug as myth_community_slug,
+        (
+          SELECT string_agg(DISTINCT tags.name, ', ')
+          FROM myth_tags
+          JOIN tags ON tags.id = myth_tags.tag_id
+          WHERE myth_tags.myth_id = m.id
+        ) as myth_tags_list,
+        (
+          SELECT string_agg(DISTINCT myth_keywords.keyword, ', ')
+          FROM myth_keywords
+          WHERE myth_keywords.myth_id = m.id
+        ) as myth_keywords_list
       FROM tarot_cards t
       LEFT JOIN myths m ON TRIM(m.title) = TRIM(t.myth_title)
+      LEFT JOIN regions ON regions.id = m.region_id
+      LEFT JOIN communities ON communities.id = m.community_id
       WHERE t.image_url IS NULL
       ORDER BY t.order_index ASC, t.id ASC
       LIMIT $1`,
@@ -578,11 +711,43 @@ export async function listTarotCardsMissing(limit = 10) {
       `SELECT
         t.*,
         m.slug as myth_slug,
-        m.image_prompt as myth_prompt,
+        m.image_prompt as myth_image_prompt,
+        m.image_url as myth_image_url,
         m.excerpt as myth_excerpt,
-        m.content as myth_content
+        m.content as myth_content,
+        m.tags_raw as myth_tags_raw,
+        m.category_path as myth_category_path,
+        m.focus_keyword as myth_focus_keyword,
+        m.focus_keywords_raw as myth_focus_keywords_raw,
+        m.seo_title as myth_seo_title,
+        m.seo_description as myth_seo_description,
+        m.latitude as myth_latitude,
+        m.longitude as myth_longitude,
+        m.content_formatted as myth_content_formatted,
+        m.source_row as myth_source_row,
+        m.created_at as myth_created_at,
+        m.updated_at as myth_updated_at,
+        m.region_id as myth_region_id,
+        m.community_id as myth_community_id,
+        regions.name as myth_region,
+        regions.slug as myth_region_slug,
+        communities.name as myth_community,
+        communities.slug as myth_community_slug,
+        (
+          SELECT group_concat(DISTINCT tags.name)
+          FROM myth_tags
+          JOIN tags ON tags.id = myth_tags.tag_id
+          WHERE myth_tags.myth_id = m.id
+        ) as myth_tags_list,
+        (
+          SELECT group_concat(DISTINCT myth_keywords.keyword)
+          FROM myth_keywords
+          WHERE myth_keywords.myth_id = m.id
+        ) as myth_keywords_list
       FROM tarot_cards t
       LEFT JOIN myths m ON trim(m.title) = trim(t.myth_title)
+      LEFT JOIN regions ON regions.id = m.region_id
+      LEFT JOIN communities ON communities.id = m.community_id
       WHERE t.image_url IS NULL
       ORDER BY t.order_index ASC, t.id ASC
       LIMIT ?`

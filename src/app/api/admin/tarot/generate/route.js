@@ -15,11 +15,13 @@ const OUTPUT_WIDTH = 1024;
 const OUTPUT_HEIGHT = 1536;
 const JPEG_QUALITY = 82;
 
-const TAROT_STYLE_PROMPT = `Ilustración de carta de tarot vertical 9:16 al estilo Rider-Waite, reinterpretada en paper quilling + paper cut.
-Marco decorativo clásico, bordes definidos, textura de papel en capas y relieve.
-Paleta inspirada en Colombia: verde selva, azul río, dorados tierra.
-Composición centrada y simbólica, con estética editorial limpia.
-Incluir el nombre de la carta en español en la banda inferior; en arcanos mayores agregar numeral romano arriba.
+const TAROT_STYLE_PROMPT = `Ilustración de carta de tarot vertical 9:16 inspirada en Rider-Waite, reinterpretada en paper quilling + paper cut.
+Marco ornamental clásico con borde definido y proporciones consistentes.
+Textura de papel en capas visibles, relieve sutil, sombras suaves, acabado artesanal.
+Paleta colombiana: verde selva, azul río, dorados tierra y acentos cálidos.
+Composición centrada con figura principal y símbolos claros; fondo con paisaje colombiano sugerido.
+Alta legibilidad visual, contraste equilibrado, estética editorial elegante.
+Tipografía: solo el nombre de la carta en español en banda inferior; en arcanos mayores agregar numeral romano arriba.
 No incluir texto adicional ni el nombre del mito. Sin logos ni marcas.`;
 
 function checkAuth(request) {
@@ -45,29 +47,80 @@ function clampNumber(value, min, max, fallback) {
   return Math.min(Math.max(parsed, min), max);
 }
 
-function sanitizePromptText(value, limit = 700) {
+function normalizePromptText(value) {
   if (!value) return "";
-  const compact = String(value).replace(/\s+/g, " ").trim();
-  if (compact.length <= limit) return compact;
-  return compact.slice(0, limit).trim();
+  return String(value).replace(/\s+/g, " ").trim();
+}
+
+function formatField(label, value) {
+  const normalized = normalizePromptText(value);
+  return `${label}: ${normalized || "Sin datos"}`;
+}
+
+function buildMythDetails(card) {
+  const rawMythTitle =
+    card.myth_title === undefined || card.myth_title === null
+      ? ""
+      : String(card.myth_title);
+  const mythTitleValue = rawMythTitle === "" ? "Sin datos" : rawMythTitle;
+
+  return [
+    `Mito (exacto BD): ${mythTitleValue}`,
+    formatField("Slug mito", card.myth_slug),
+    formatField("ID mito", card.myth_id),
+    formatField(
+      "Región",
+      card.myth_region
+        ? `${card.myth_region} (${card.myth_region_slug || "sin slug"})`
+        : ""
+    ),
+    formatField(
+      "Comunidad",
+      card.myth_community
+        ? `${card.myth_community} (${card.myth_community_slug || "sin slug"})`
+        : ""
+    ),
+    formatField("Categoría (category_path)", card.myth_category_path),
+    formatField("Tags (tags_raw)", card.myth_tags_raw),
+    formatField("Tags (tabla)", card.myth_tags_list),
+    formatField("Keyword foco", card.myth_focus_keyword),
+    formatField("Keywords foco (raw)", card.myth_focus_keywords_raw),
+    formatField("Keywords (tabla)", card.myth_keywords_list),
+    formatField("SEO title", card.myth_seo_title),
+    formatField("SEO description", card.myth_seo_description),
+    formatField("Prompt original de imagen del mito", card.myth_image_prompt),
+    formatField("Imagen actual del mito (URL)", card.myth_image_url),
+    formatField("Resumen (excerpt)", card.myth_excerpt),
+    formatField("Contenido completo", card.myth_content),
+    formatField("Contenido formateado (flag)", card.myth_content_formatted),
+    formatField(
+      "Coordenadas",
+      card.myth_latitude || card.myth_longitude
+        ? `${card.myth_latitude || "sin lat"}, ${card.myth_longitude || "sin lng"}`
+        : ""
+    ),
+    formatField("Region ID", card.myth_region_id),
+    formatField("Comunidad ID", card.myth_community_id),
+    formatField("Fila de origen", card.myth_source_row),
+    formatField("Creado en", card.myth_created_at),
+    formatField("Actualizado en", card.myth_updated_at),
+  ].join("\n");
 }
 
 function buildTarotPrompt(card) {
   const basePrompt = card.custom_prompt?.trim() || card.base_prompt || "";
-  const mythPrompt =
-    card.myth_prompt || card.myth_excerpt || card.myth_content || "";
-  const mythContext = sanitizePromptText(mythPrompt);
+  const mythDetails = buildMythDetails(card);
 
-  const contextLines = [
+  return [
     TAROT_STYLE_PROMPT,
+    "Guía editorial de la carta:",
     basePrompt,
-    mythContext
-      ? `Contexto del mito (sin texto literal): ${mythContext}`
-      : `Mito asociado: ${card.myth_title}`,
+    "Información completa del mito para inspirar símbolos, personajes, paisajes y atmósfera:",
+    mythDetails,
     "Recuerda: solo debe aparecer el título de la carta, nada más.",
-  ].filter(Boolean);
-
-  return contextLines.join("\n\n");
+  ]
+    .filter(Boolean)
+    .join("\n\n");
 }
 
 async function rewritePromptSafely(originalPrompt) {
