@@ -7,6 +7,7 @@ import { GlassCard } from "../../../components/ui/GlassCard";
 import { Button } from "../../../components/ui/Button";
 import { Badge } from "../../../components/ui/Badge";
 import { Toast, useToast } from "../../../components/ui/Toast";
+import { ProgressBar } from "../../../components/ui/ProgressBar";
 
 export default function CuracionImagenesPage() {
   const router = useRouter();
@@ -251,6 +252,11 @@ export default function CuracionImagenesPage() {
                 Regiones ({breakdown.region || 0})
               </button>
             </div>
+            {generatingId && (
+              <div className="mt-4">
+                <ProgressBar label="Regenerando imagen" indeterminate />
+              </div>
+            )}
           </GlassCard>
 
           {loading ? (

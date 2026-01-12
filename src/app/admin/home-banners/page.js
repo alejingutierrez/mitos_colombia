@@ -7,6 +7,7 @@ import { GlassCard } from "../../../components/ui/GlassCard";
 import { Button } from "../../../components/ui/Button";
 import { Badge } from "../../../components/ui/Badge";
 import { Toast, useToast } from "../../../components/ui/Toast";
+import { ProgressBar } from "../../../components/ui/ProgressBar";
 
 export default function HomeBannersAdminPage() {
   const router = useRouter();
@@ -16,6 +17,7 @@ export default function HomeBannersAdminPage() {
   const [loading, setLoading] = useState(true);
   const [batchCount, setBatchCount] = useState(3);
   const [batchLoading, setBatchLoading] = useState(false);
+  const [progress, setProgress] = useState({ current: 0, total: 0 });
   const [generatingSlug, setGeneratingSlug] = useState(null);
   const [editingSlug, setEditingSlug] = useState(null);
   const [editPrompt, setEditPrompt] = useState("");
@@ -136,30 +138,54 @@ export default function HomeBannersAdminPage() {
   const generateBatch = async () => {
     if (!auth) return;
     setBatchLoading(true);
+    setProgress({ current: 0, total: batchCount });
+    let successCount = 0;
+    let errorCount = 0;
     try {
-      const response = await fetch("/api/admin/home-banners", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Basic ${auth}`,
-        },
-        body: JSON.stringify({
-          count: batchCount,
-        }),
-      });
+      for (let i = 0; i < batchCount; i += 1) {
+        setProgress({ current: i + 1, total: batchCount });
+        const response = await fetch("/api/admin/home-banners", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Basic ${auth}`,
+          },
+          body: JSON.stringify({ count: 1 }),
+        });
 
-      if (response.ok) {
-        showToast("Lote generado", "success");
-        fetchBanners(auth);
-      } else {
         const data = await response.json();
-        showToast(data.error || "No se pudo generar el lote", "error");
+
+        if (!response.ok) {
+          errorCount += 1;
+          continue;
+        }
+
+        const generated = data.generated || [];
+        const successInBatch = generated.filter((item) => item.success).length;
+        const failedInBatch = generated.filter((item) => !item.success).length;
+
+        if (successInBatch === 0 && failedInBatch === 0) {
+          setProgress({ current: i, total: i });
+          break;
+        }
+
+        successCount += successInBatch;
+        errorCount += failedInBatch;
       }
+
+      if (successCount > 0) {
+        showToast(`Generados ${successCount} banners`, "success");
+      }
+      if (errorCount > 0) {
+        showToast(`Fallaron ${errorCount} banners`, "error");
+      }
+      fetchBanners(auth);
     } catch (error) {
       console.error("Error generating batch:", error);
       showToast("Error al generar el lote", "error");
     } finally {
       setBatchLoading(false);
+      setProgress({ current: 0, total: 0 });
     }
   };
 
@@ -217,6 +243,17 @@ export default function HomeBannersAdminPage() {
                 </Button>
               </div>
             </div>
+            {(progress.total > 0 || generatingSlug) && (
+              <div className="mt-4">
+                <ProgressBar
+                  current={progress.current}
+                  total={progress.total}
+                  label="Progreso de generación"
+                  indeterminate={progress.total === 0 && Boolean(generatingSlug)}
+                  showPercent={progress.total > 0}
+                />
+              </div>
+            )}
           </GlassCard>
 
           {loading ? (

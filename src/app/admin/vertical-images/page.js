@@ -7,6 +7,7 @@ import { GlassCard } from "../../../components/ui/GlassCard";
 import { Button } from "../../../components/ui/Button";
 import { Badge } from "../../../components/ui/Badge";
 import { Toast, useToast } from "../../../components/ui/Toast";
+import { ProgressBar } from "../../../components/ui/ProgressBar";
 
 export default function VerticalImagesPage() {
   const router = useRouter();
@@ -27,6 +28,7 @@ export default function VerticalImagesPage() {
   const [generatingId, setGeneratingId] = useState(null);
   const [batchGenerating, setBatchGenerating] = useState(false);
   const [batchCount, setBatchCount] = useState(5);
+  const [batchProgress, setBatchProgress] = useState({ current: 0, total: 0 });
 
   // Stats
   const [stats, setStats] = useState(null);
@@ -247,32 +249,56 @@ export default function VerticalImagesPage() {
     }
 
     setBatchGenerating(true);
+    setBatchProgress({ current: 0, total: batchCount });
+    let successCount = 0;
+    let errorCount = 0;
 
     try {
-      const response = await fetch("/api/admin/vertical-images/generate", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Basic ${auth}`,
-        },
-        body: JSON.stringify({ count: batchCount }),
-      });
+      for (let i = 0; i < batchCount; i += 1) {
+        setBatchProgress({ current: i + 1, total: batchCount });
+        const response = await fetch("/api/admin/vertical-images/generate", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Basic ${auth}`,
+          },
+          body: JSON.stringify({ count: 1 }),
+        });
 
-      if (response.ok) {
         const data = await response.json();
-        const successCount = data.generated?.filter(g => g.success).length || 0;
-        showToast(`Generadas ${successCount} de ${batchCount} imágenes exitosamente`, "success");
-        fetchItems(auth, page, entityTypeFilter);
-        fetchStats(auth);
-      } else {
-        const error = await response.json();
-        showToast(error.error || 'Error en generación masiva', "error");
+
+        if (!response.ok) {
+          errorCount += 1;
+          continue;
+        }
+
+        const generated = data.generated || [];
+        const successInBatch = generated.filter((item) => item.success).length;
+        const failedInBatch = generated.filter((item) => !item.success).length;
+
+        if (successInBatch === 0 && failedInBatch === 0) {
+          setBatchProgress({ current: i, total: i });
+          break;
+        }
+
+        successCount += successInBatch;
+        errorCount += failedInBatch;
       }
+
+      if (successCount > 0) {
+        showToast(`Generadas ${successCount} imágenes`, "success");
+      }
+      if (errorCount > 0) {
+        showToast(`Fallaron ${errorCount} imágenes`, "error");
+      }
+      fetchItems(auth, page, entityTypeFilter);
+      fetchStats(auth);
     } catch (error) {
       console.error("Error batch generation:", error);
       showToast("Error en generación masiva", "error");
     } finally {
       setBatchGenerating(false);
+      setBatchProgress({ current: 0, total: 0 });
     }
   };
 
@@ -375,6 +401,17 @@ export default function VerticalImagesPage() {
               )}
             </Button>
           </div>
+          {(batchProgress.total > 0 || generatingId) && (
+            <div className="mt-4">
+              <ProgressBar
+                current={batchProgress.current}
+                total={batchProgress.total}
+                label="Progreso"
+                indeterminate={batchProgress.total === 0 && Boolean(generatingId)}
+                showPercent={batchProgress.total > 0}
+              />
+            </div>
+          )}
         </GlassCard>
 
         {/* Filters */}

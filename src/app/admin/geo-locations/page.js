@@ -6,6 +6,7 @@ import AdminLayout from "../../../components/AdminLayout";
 import { GlassCard } from "../../../components/ui/GlassCard";
 import { Button, ButtonLink } from "../../../components/ui/Button";
 import { Badge } from "../../../components/ui/Badge";
+import { ProgressBar } from "../../../components/ui/ProgressBar";
 
 export default function GeoLocationsAdminPage() {
   const [count, setCount] = useState(5);
@@ -250,8 +251,12 @@ export default function GeoLocationsAdminPage() {
           </div>
 
           {progress.total > 0 && (
-            <div className="text-sm text-ink-600">
-              Procesando {progress.current} de {progress.total}
+            <div className="mt-2">
+              <ProgressBar
+                current={progress.current}
+                total={progress.total}
+                label="Progreso"
+              />
             </div>
           )}
         </GlassCard>

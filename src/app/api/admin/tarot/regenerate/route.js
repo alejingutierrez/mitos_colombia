@@ -19,7 +19,8 @@ const TAROT_STYLE_PROMPT = `Ilustración de carta de tarot vertical 9:16 inspira
 Marco ornamental clásico con borde definido y proporciones consistentes.
 Textura de papel en capas visibles, relieve sutil, sombras suaves, acabado artesanal.
 Paleta colombiana: verde selva, azul río, dorados tierra y acentos cálidos.
-Composición centrada con figura principal y símbolos claros; fondo con paisaje colombiano sugerido.
+Composición centrada con figura principal del mito y símbolos claros del territorio; fondo con paisaje regional sugerido.
+La simbología del tarot debe adaptarse al mito, su comunidad y su región; evitar iconografía genérica que no dialogue con el relato.
 Alta legibilidad visual, contraste equilibrado, estética editorial elegante.
 Tipografía: solo el nombre de la carta en español en banda inferior; en arcanos mayores agregar numeral romano arriba.
 No incluir texto adicional ni el nombre del mito. Sin logos ni marcas.`;
@@ -109,6 +110,7 @@ function buildTarotPrompt(card) {
     TAROT_STYLE_PROMPT,
     "Guía editorial de la carta:",
     basePrompt,
+    "Prioridad creativa: mito, comunidad y región; la simbología del tarot se moldea a ese universo cultural.",
     "Información completa del mito para inspirar símbolos, personajes, paisajes y atmósfera:",
     mythDetails,
     "Recuerda: solo debe aparecer el título de la carta, nada más.",
@@ -124,7 +126,7 @@ async function rewritePromptSafely(originalPrompt) {
       {
         role: "system",
         content:
-          "Reescribe el prompt para una imagen editorial de tarot, evitando violencia gráfica y contenido sexual. Mantén el estilo paper quilling/cut y Rider-Waite. Devuelve solo el prompt reescrito.",
+          "Reescribe el prompt para una imagen editorial de tarot, evitando violencia gráfica y contenido sexual. Mantén el estilo paper quilling/cut y Rider-Waite, priorizando símbolos del mito, la comunidad y la región. Devuelve solo el prompt reescrito.",
       },
       {
         role: "user",

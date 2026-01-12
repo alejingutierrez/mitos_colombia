@@ -9,6 +9,7 @@ import { GlassCard } from "../../../components/ui/GlassCard";
 import { Button } from "../../../components/ui/Button";
 import { Badge } from "../../../components/ui/Badge";
 import { Toast, useToast } from "../../../components/ui/Toast";
+import { ProgressBar } from "../../../components/ui/ProgressBar";
 
 const FILTERS = [
   { key: "all", label: "Todas", arcana: "", suit: "", status: "" },
@@ -36,6 +37,7 @@ export default function TarotAdminPage() {
   const [generatingId, setGeneratingId] = useState(null);
   const [batchCount, setBatchCount] = useState(5);
   const [batchGenerating, setBatchGenerating] = useState(false);
+  const [progress, setProgress] = useState({ current: 0, total: 0 });
 
   const { toast, showToast, hideToast } = useToast();
 
@@ -156,30 +158,53 @@ export default function TarotAdminPage() {
     if (!auth) return;
 
     setBatchGenerating(true);
+    setProgress({ current: 0, total: batchCount });
+    let successCount = 0;
+    let errorCount = 0;
 
     try {
-      const response = await fetch("/api/admin/tarot/generate", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Basic ${auth}`,
-        },
-        body: JSON.stringify({ count: batchCount }),
-      });
+      for (let i = 0; i < batchCount; i += 1) {
+        setProgress({ current: i + 1, total: batchCount });
+        const response = await fetch("/api/admin/tarot/generate", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Basic ${auth}`,
+          },
+          body: JSON.stringify({ count: 1 }),
+        });
 
-      const data = await response.json();
+        const data = await response.json();
 
-      if (response.ok) {
-        showToast(data.message || "Cartas generadas", "success");
-        fetchItems(auth, page, filterKey);
-      } else {
-        showToast(data.error || "No se pudieron generar", "error");
+        if (!response.ok) {
+          errorCount += 1;
+          continue;
+        }
+
+        const generated = data.generated || [];
+        const successInBatch = generated.length;
+
+        if (successInBatch === 0) {
+          setProgress({ current: i, total: i });
+          break;
+        }
+
+        successCount += successInBatch;
       }
+
+      if (successCount > 0) {
+        showToast(`Generadas ${successCount} cartas`, "success");
+      }
+      if (errorCount > 0) {
+        showToast(`Fallaron ${errorCount} cartas`, "error");
+      }
+      fetchItems(auth, page, filterKey);
     } catch (error) {
       console.error("Error generating tarot batch:", error);
       showToast("Error al generar cartas", "error");
     } finally {
       setBatchGenerating(false);
+      setProgress({ current: 0, total: 0 });
     }
   };
 
@@ -294,6 +319,17 @@ export default function TarotAdminPage() {
                 {batchGenerating ? "Generando..." : "Generar lote"}
               </Button>
             </div>
+            {(progress.total > 0 || generatingId) && (
+              <div className="mt-4 w-full lg:mt-0 lg:max-w-sm">
+                <ProgressBar
+                  current={progress.current}
+                  total={progress.total}
+                  label="Progreso"
+                  indeterminate={progress.total === 0 && Boolean(generatingId)}
+                  showPercent={progress.total > 0}
+                />
+              </div>
+            )}
           </GlassCard>
 
           {loading ? (

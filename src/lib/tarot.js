@@ -45,7 +45,13 @@ function buildBasePrompt(card) {
   }
 
   lines.push(
-    "Composición: figura central simbólica, fondo con referencias al paisaje colombiano, equilibrio entre elementos humanos y naturales."
+    "Prioridad iconográfica: símbolos, personajes, objetos rituales y paisajes propios del mito, su comunidad y su región; la simbología del tarot debe reinterpretarse desde ese universo."
+  );
+  lines.push(
+    "Si hay conflicto visual, prevalece el mito y el territorio; el tarot aporta estructura narrativa y orden compositivo."
+  );
+  lines.push(
+    "Composición: figura central del mito, elementos secundarios del territorio/comunidad, fondo con paisaje regional reconocible."
   );
   lines.push(
     "Estética: carta Rider-Waite reinterpretada en paper quilling + paper cut, capas de papel visibles, relieve sutil, textura artesanal."

@@ -6,6 +6,7 @@ import AdminLayout from "../../../components/AdminLayout";
 import { GlassCard } from "../../../components/ui/GlassCard";
 import { Button } from "../../../components/ui/Button";
 import { Badge } from "../../../components/ui/Badge";
+import { ProgressBar } from "../../../components/ui/ProgressBar";
 
 export default function CategoryDescriptionsAdminPage() {
   const router = useRouter();
@@ -246,9 +247,13 @@ export default function CategoryDescriptionsAdminPage() {
               </Button>
             </div>
             {progress.total > 0 && (
-              <p className="mt-3 text-sm text-ink-600">
-                Progreso: {progress.current} / {progress.total}
-              </p>
+              <div className="mt-4">
+                <ProgressBar
+                  current={progress.current}
+                  total={progress.total}
+                  label="Progreso"
+                />
+              </div>
             )}
           </div>
         </GlassCard>
