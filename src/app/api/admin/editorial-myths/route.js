@@ -345,6 +345,16 @@ function countWords(value) {
     .filter(Boolean).length;
 }
 
+const TITLE_BANNED_WORDS = ["mito", "nuevo"];
+
+function isTitleClean(title) {
+  const normalized = normalizeText(title);
+  if (!normalized) return false;
+  return !TITLE_BANNED_WORDS.some((word) =>
+    new RegExp(`(^|\\s)${word}(\\s|$)`).test(normalized)
+  );
+}
+
 function buildContent({ mito, historia, versiones, leccion, similitudes }) {
   const sections = [
     ["Mito", mito],
@@ -1824,6 +1834,12 @@ async function generateEditorialEnrichment(myth) {
     }
 
     const parsed = safeParseJson(outputText);
+    if (!isTitleClean(parsed.title)) {
+      lastError = new Error(
+        "El titulo del mito es invalido. Debe ser corto, solo el nombre comun y sin palabras como 'mito' o 'nuevo'."
+      );
+      continue;
+    }
     const mitoWords = countWords(parsed.mito);
     if (mitoWords < MIN_MITO_WORDS) {
       lastError = new Error(
@@ -1854,6 +1870,7 @@ async function generateNewMyth(query, context) {
   const baseInstructions =
     "Eres un editor investigador de mitologia colombiana. Debes crear un mito nuevo a partir del tema solicitado. " +
     "El campo mito debe ser un relato oral, como si un anciano estuviera narrando el mito, describiendo personajes, lugares y acciones; minimo 300 palabras. " +
+    "El titulo debe ser corto y solo el nombre comun del mito; no uses palabras como 'mito' o 'nuevo'. " +
     "Usa busqueda web obligatoria para reunir al menos 20 fuentes. El mito debe seguir la estructura editorial del proyecto: Mito, Historia, Versiones, Leccion, Similitudes. " +
     "Incluye descripciones SEO y prompts de imagen en formato horizontal (16:9) y vertical (9:16) estilo paper quilling/paper cut. " +
     "Selecciona la region colombiana adecuada (usa solo las regiones entregadas). " +
