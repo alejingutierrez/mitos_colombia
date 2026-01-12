@@ -57,10 +57,10 @@ function buildBasePrompt(card) {
     "Estética: carta Rider-Waite reinterpretada en paper quilling + paper cut, capas de papel visibles, relieve sutil, textura artesanal."
   );
   lines.push(
-    "Marco y bordes: doble marco uniforme con borde exterior dorado envejecido, borde interior marfil/pergamino y filetes finos verde selva + azul río; ornamentos simétricos en esquinas, grosor idéntico en toda la serie."
+    "Plantilla base: usar tarot.png como marco fijo. Mantener el fondo dorado y los ornamentos; bordes/lineas en verde selva uniforme (#1f6b45), nunca negros. Proporciones idénticas en toda la serie."
   );
   lines.push(
-    "Tipografía: solo el nombre de la carta en la franja inferior. Numeral romano obligatorio en la franja superior para TODAS las cartas (mayores: numeral tradicional; menores: As=I, Dos=II... Diez=X, Paje=XI, Caballero=XII, Reina=XIII, Rey=XIV)."
+    "Tipografía: numeral romano centrado en la franja superior y nombre de la carta centrado en la franja inferior. Mantener tamaño, peso y espaciado uniformes; si el nombre es largo, ajustar tracking/interlineado sin cambiar el tamaño. Numeral romano obligatorio en TODAS las cartas (mayores: numeral tradicional; menores: As=I, Dos=II... Diez=X, Paje=XI, Caballero=XII, Reina=XIII, Rey=XIV)."
   );
   lines.push("No incluir texto adicional ni el nombre del mito.");
 

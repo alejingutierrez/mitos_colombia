@@ -1,4 +1,6 @@
 import { NextResponse } from "next/server";
+import fs from "fs";
+import path from "path";
 import OpenAI from "openai";
 import sharp from "sharp";
 import { put } from "@vercel/blob";
@@ -14,16 +16,25 @@ const openai = new OpenAI({
 const OUTPUT_WIDTH = 1024;
 const OUTPUT_HEIGHT = 1536;
 const JPEG_QUALITY = 82;
+const TAROT_TEMPLATE_PATH = path.join(process.cwd(), "public", "tarot.png");
 
 const TAROT_STYLE_PROMPT = `Ilustración de carta de tarot vertical 9:16 inspirada en Rider-Waite, reinterpretada en paper quilling + paper cut.
-Marco ornamental clásico con doble borde uniforme: exterior dorado envejecido, interior marfil/pergamino con filetes finos verde selva y azul río; esquinas con ornamentos simétricos. Grosor y proporciones idénticas en toda la serie.
+Usa la plantilla base tarot.png como estructura fija: marco dorado y ornamentos idénticos en toda la serie; no alterar la geometría del marco.
+Bordes/lineas del marco en verde selva uniforme (#1f6b45), nunca negros. Mantener el fondo dorado de la plantilla.
 Textura de papel en capas visibles, relieve sutil, sombras suaves, acabado artesanal.
-Paleta colombiana: verde selva, azul río, dorados tierra y acentos cálidos. Mantener coherencia cromática en marcos y bordes.
+Paleta colombiana: verde selva, azul río, dorados tierra y acentos cálidos. Coherencia cromática entre cartas.
 Composición centrada con figura principal del mito y símbolos claros del territorio; fondo con paisaje regional sugerido.
 La simbología del tarot debe adaptarse al mito, su comunidad y su región; evitar iconografía genérica que no dialogue con el relato.
 Alta legibilidad visual, contraste equilibrado, estética editorial elegante.
-Tipografía: solo el nombre de la carta en español en banda inferior. Numeral romano obligatorio en la banda superior para TODAS las cartas (mayores: numeral tradicional; menores: As=I, Dos=II... Diez=X, Paje=XI, Caballero=XII, Reina=XIII, Rey=XIV).
+Tipografía: numeral romano centrado en la banda superior y nombre de la carta centrado en la banda inferior. Mantener tamaño, peso y espaciado uniformes; si el nombre es largo, ajustar tracking/interlineado sin cambiar el tamaño. Numeral romano obligatorio en TODAS las cartas (mayores: numeral tradicional; menores: As=I, Dos=II... Diez=X, Paje=XI, Caballero=XII, Reina=XIII, Rey=XIV).
 No incluir texto adicional ni el nombre del mito. Sin logos ni marcas.`;
+
+function getTarotTemplateStream() {
+  if (!fs.existsSync(TAROT_TEMPLATE_PATH)) {
+    throw new Error(`Plantilla de tarot no encontrada en ${TAROT_TEMPLATE_PATH}`);
+  }
+  return fs.createReadStream(TAROT_TEMPLATE_PATH);
+}
 
 function checkAuth(request) {
   const authHeader = request.headers.get("authorization");
@@ -132,7 +143,7 @@ async function rewritePromptSafely(originalPrompt) {
       {
         role: "system",
         content:
-          "Reescribe el prompt para una imagen editorial de tarot, evitando violencia gráfica y contenido sexual. Mantén el estilo paper quilling/cut y Rider-Waite, priorizando símbolos del mito, la comunidad y la región. Conserva el marco uniforme y el numeral romano superior en TODAS las cartas. Devuelve solo el prompt reescrito.",
+          "Reescribe el prompt para una imagen editorial de tarot, evitando violencia gráfica y contenido sexual. Mantén el estilo paper quilling/cut y Rider-Waite, priorizando símbolos del mito, la comunidad y la región. Usa la plantilla tarot.png como marco fijo con fondo dorado y bordes verde selva uniformes (#1f6b45). Conserva el numeral romano superior y el nombre inferior con tamaño uniforme. Devuelve solo el prompt reescrito.",
       },
       {
         role: "user",
@@ -147,13 +158,14 @@ async function rewritePromptSafely(originalPrompt) {
 
 async function generateImageBuffer(prompt, isRetry = false) {
   try {
-    const response = await openai.images.generate({
+    const response = await openai.images.edit({
       model: "gpt-image-1-mini",
+      image: getTarotTemplateStream(),
       prompt,
-      moderation: "low",
       n: 1,
       size: "1024x1536",
       quality: "high",
+      output_format: "png",
     });
 
     const b64Data = response.data?.[0]?.b64_json;
