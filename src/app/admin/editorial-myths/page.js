@@ -35,7 +35,7 @@ export default function EditorialMythsAdminPage() {
   const fetchStatus = async (token) => {
     setLoading(true);
     try {
-      const response = await fetch("/api/admin/editorial-myths?limit=20", {
+      const response = await fetch("/api/admin/editorial-myths?limit=200", {
         headers: {
           Authorization: `Basic ${token}`,
         },
