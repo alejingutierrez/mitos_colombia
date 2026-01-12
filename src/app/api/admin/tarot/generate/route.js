@@ -114,10 +114,19 @@ function truncateText(value, maxLength, mode = "tail") {
   return `${clipped}... [recortado]`;
 }
 
+function normalizePromptInput(value) {
+  if (Array.isArray(value)) {
+    return value.map((item) => String(item)).join("\n\n");
+  }
+  if (value === null || value === undefined) return "";
+  return String(value);
+}
+
 function ensurePromptLength(value) {
-  if (!value) return "";
-  if (value.length <= MAX_PROMPT_LENGTH) return value;
-  return truncateText(value, MAX_PROMPT_LENGTH);
+  const normalized = normalizePromptInput(value);
+  if (!normalized) return "";
+  if (normalized.length <= MAX_PROMPT_LENGTH) return normalized;
+  return truncateText(normalized, MAX_PROMPT_LENGTH);
 }
 
 function formatField(label, value, maxLength, mode) {
