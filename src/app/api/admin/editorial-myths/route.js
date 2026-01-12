@@ -34,6 +34,7 @@ const CHECK_MAX_OUTPUT_TOKENS = Number.parseInt(
 
 const MIN_SOURCES = 20;
 const DUPLICATE_THRESHOLD = 65;
+const MIN_MITO_WORDS = 300;
 const MAX_CHECK_CHUNK_CHARS = 18000;
 const MAX_MYTH_CONTENT_CHARS = 8000;
 const MAX_EXCERPT_CHARS = 320;
@@ -335,6 +336,13 @@ function truncateText(value, maxChars) {
     return text;
   }
   return `${text.slice(0, maxChars).trim()}...`;
+}
+
+function countWords(value) {
+  return String(value || "")
+    .trim()
+    .split(/\s+/)
+    .filter(Boolean).length;
 }
 
 function buildContent({ mito, historia, versiones, leccion, similitudes }) {
@@ -1699,117 +1707,137 @@ async function generateEditorialEnrichment(myth) {
     },
   };
 
-  const { response, model } = await createResponseWithFallback({
-    model: EDITORIAL_MODEL,
-    instructions:
-      "Eres un editor investigador de mitologia colombiana. Debes enriquecer el relato con una redaccion clara, literaria y cuidada, sin perder la oralidad tradicional. " +
-      "Usa busqueda web obligatoria para reunir al menos 20 fuentes. Selecciona las fuentes mas relevantes y resume en notas editoriales. " +
-      "No inventes datos sin respaldo. Si hay versiones distintas, comparalas. Mantén el texto en español de Colombia. " +
-      "No incluyas razonamiento fuera del JSON. Usa el campo analysis_summary para resumir pasos y decisiones. " +
-      "No uses comillas dobles dentro de strings; si necesitas citar, usa comillas simples. " +
-      "Limita analysis_summary a 120 palabras y editorial_notes a 200 palabras. " +
-      "Limita summaries de fuentes a 40 palabras. Si necesitas saltos de linea dentro de strings, usa \\n.",
-    input: JSON.stringify(payload),
-    tools: [
-      {
-        type: "web_search_preview",
-        search_context_size: "high",
-        user_location: {
-          type: "approximate",
-          country: "CO",
-          city: "Bogotá",
-          region: "Cundinamarca",
-        },
-      },
-    ],
-    tool_choice: { type: "web_search_preview" },
-    text: {
-      format: {
-        type: "json_schema",
-        name: "editorial_myth_enrichment",
-        strict: true,
-        schema: {
-          type: "object",
-          additionalProperties: false,
-          properties: {
-            analysis_summary: { type: "string" },
-            mito: { type: "string" },
-            historia: { type: "string" },
-            versiones: { type: "string" },
-            leccion: { type: "string" },
-            similitudes: { type: "string" },
-            excerpt: { type: "string" },
-            seo_title: { type: "string" },
-            seo_description: { type: "string" },
-            focus_keyword: { type: "string" },
-            focus_keywords: {
-              type: "array",
-              items: { type: "string" },
-            },
-            sources: {
-              type: "array",
-              items: {
-                type: "object",
-                additionalProperties: false,
-                properties: {
-                  title: { type: "string" },
-                  url: { type: "string" },
-                  summary: { type: "string" },
-                  relevance_score: { type: "number" },
-                },
-                required: ["title", "url", "summary", "relevance_score"],
-              },
-            },
-            key_sources: {
-              type: "array",
-              items: {
-                type: "object",
-                additionalProperties: false,
-                properties: {
-                  title: { type: "string" },
-                  url: { type: "string" },
-                  summary: { type: "string" },
-                  relevance_score: { type: "number" },
-                },
-                required: ["title", "url", "summary", "relevance_score"],
-              },
-            },
-            editorial_notes: { type: "string" },
+  const baseInstructions =
+    "Eres un editor investigador de mitologia colombiana. Debes enriquecer el relato con una redaccion clara, literaria y cuidada, sin perder la oralidad tradicional. " +
+    "El campo mito debe ser un relato oral, como si un anciano estuviera narrando el mito, describiendo personajes, lugares y acciones; minimo 300 palabras. " +
+    "Usa busqueda web obligatoria para reunir al menos 20 fuentes. Selecciona las fuentes mas relevantes y resume en notas editoriales. " +
+    "No inventes datos sin respaldo. Si hay versiones distintas, comparalas. Mantén el texto en español de Colombia. " +
+    "No incluyas razonamiento fuera del JSON. Usa el campo analysis_summary para resumir pasos y decisiones. " +
+    "No uses comillas dobles dentro de strings; si necesitas citar, usa comillas simples. " +
+    "Limita analysis_summary a 120 palabras y editorial_notes a 200 palabras. " +
+    "Limita summaries de fuentes a 40 palabras. Si necesitas saltos de linea dentro de strings, usa \\n.";
+
+  let lastError;
+  for (let attempt = 0; attempt < 2; attempt += 1) {
+    const retryNote =
+      attempt === 0
+        ? ""
+        : "La respuesta anterior no cumplio la longitud narrativa del mito. Vuelve a escribir el campo mito con minimo 300 palabras y voz de anciano narrador.";
+
+    const { response, model } = await createResponseWithFallback({
+      model: EDITORIAL_MODEL,
+      instructions: `${baseInstructions} ${retryNote}`.trim(),
+      input: JSON.stringify(payload),
+      tools: [
+        {
+          type: "web_search_preview",
+          search_context_size: "high",
+          user_location: {
+            type: "approximate",
+            country: "CO",
+            city: "Bogotá",
+            region: "Cundinamarca",
           },
-          required: [
-            "analysis_summary",
-            "mito",
-            "historia",
-            "versiones",
-            "leccion",
-            "similitudes",
-            "excerpt",
-            "seo_title",
-            "seo_description",
-            "focus_keyword",
-            "focus_keywords",
-            "sources",
-            "key_sources",
-            "editorial_notes",
-          ],
+        },
+      ],
+      tool_choice: { type: "web_search_preview" },
+      text: {
+        format: {
+          type: "json_schema",
+          name: "editorial_myth_enrichment",
+          strict: true,
+          schema: {
+            type: "object",
+            additionalProperties: false,
+            properties: {
+              analysis_summary: { type: "string" },
+              mito: { type: "string" },
+              historia: { type: "string" },
+              versiones: { type: "string" },
+              leccion: { type: "string" },
+              similitudes: { type: "string" },
+              excerpt: { type: "string" },
+              seo_title: { type: "string" },
+              seo_description: { type: "string" },
+              focus_keyword: { type: "string" },
+              focus_keywords: {
+                type: "array",
+                items: { type: "string" },
+              },
+              sources: {
+                type: "array",
+                items: {
+                  type: "object",
+                  additionalProperties: false,
+                  properties: {
+                    title: { type: "string" },
+                    url: { type: "string" },
+                    summary: { type: "string" },
+                    relevance_score: { type: "number" },
+                  },
+                  required: ["title", "url", "summary", "relevance_score"],
+                },
+              },
+              key_sources: {
+                type: "array",
+                items: {
+                  type: "object",
+                  additionalProperties: false,
+                  properties: {
+                    title: { type: "string" },
+                    url: { type: "string" },
+                    summary: { type: "string" },
+                    relevance_score: { type: "number" },
+                  },
+                  required: ["title", "url", "summary", "relevance_score"],
+                },
+              },
+              editorial_notes: { type: "string" },
+            },
+            required: [
+              "analysis_summary",
+              "mito",
+              "historia",
+              "versiones",
+              "leccion",
+              "similitudes",
+              "excerpt",
+              "seo_title",
+              "seo_description",
+              "focus_keyword",
+              "focus_keywords",
+              "sources",
+              "key_sources",
+              "editorial_notes",
+            ],
+          },
         },
       },
-    },
-    temperature: 0.4,
-    max_output_tokens: EDITORIAL_MAX_OUTPUT_TOKENS,
-    truncation: "auto",
-  });
+      temperature: 0.4,
+      max_output_tokens: EDITORIAL_MAX_OUTPUT_TOKENS,
+      truncation: "auto",
+    });
 
-  const outputText = response.output_text?.trim();
-  if (!outputText) {
-    throw new Error("OpenAI response is empty");
+    const outputText = response.output_text?.trim();
+    if (!outputText) {
+      throw new Error("OpenAI response is empty");
+    }
+
+    const parsed = safeParseJson(outputText);
+    const mitoWords = countWords(parsed.mito);
+    if (mitoWords < MIN_MITO_WORDS) {
+      lastError = new Error(
+        `El campo mito es demasiado corto (${mitoWords} palabras). Debe tener al menos ${MIN_MITO_WORDS} palabras.`
+      );
+      continue;
+    }
+    if (!Array.isArray(parsed.sources) || parsed.sources.length < MIN_SOURCES) {
+      throw new Error("No se encontraron suficientes fuentes (minimo 20)");
+    }
+    return { data: parsed, modelUsed: model };
   }
 
-  const parsed = safeParseJson(outputText);
-  if (!Array.isArray(parsed.sources) || parsed.sources.length < MIN_SOURCES) {
-    throw new Error("No se encontraron suficientes fuentes (minimo 20)");
-  }
-  return { data: parsed, modelUsed: model };
+  throw lastError || new Error("No se pudo generar un mito con la longitud requerida");
 }
 
 async function generateNewMyth(query, context) {
@@ -1823,147 +1851,167 @@ async function generateNewMyth(query, context) {
     },
   };
 
-  const { response, model } = await createResponseWithFallback({
-    model: EDITORIAL_MODEL,
-    instructions:
-      "Eres un editor investigador de mitologia colombiana. Debes crear un mito nuevo a partir del tema solicitado. " +
-      "Usa busqueda web obligatoria para reunir al menos 20 fuentes. El mito debe seguir la estructura editorial del proyecto: Mito, Historia, Versiones, Leccion, Similitudes. " +
-      "Incluye descripciones SEO y prompts de imagen en formato horizontal (16:9) y vertical (9:16) estilo paper quilling/paper cut. " +
-      "Selecciona la region colombiana adecuada (usa solo las regiones entregadas). " +
-      "Elige tags solo de la lista entregada; no inventes nuevas categorias. Si ninguna aplica, devuelve un array vacio. " +
-      "Si no puedes determinar comunidad o departamento con certeza, usa una cadena vacia en esos campos. " +
-      "El category_path debe tener el formato 'Region > Departamento > Comunidad' usando solo los valores definidos. " +
-      "Si no hay una ubicacion precisa, usa el centro de la region o de Colombia. " +
-      "No incluyas razonamiento fuera del JSON. Usa el campo analysis_summary para resumir pasos y decisiones. " +
-      "No uses comillas dobles dentro de strings; si necesitas citar, usa comillas simples. " +
-      "Limita analysis_summary a 120 palabras y editorial_notes a 200 palabras. " +
-      "Limita summaries de fuentes a 40 palabras. Si necesitas saltos de linea dentro de strings, usa \\n.",
-    input: JSON.stringify(payload),
-    tools: [
-      {
-        type: "web_search_preview",
-        search_context_size: "high",
-        user_location: {
-          type: "approximate",
-          country: "CO",
-          city: "Bogotá",
-          region: "Cundinamarca",
-        },
-      },
-    ],
-    tool_choice: { type: "web_search_preview" },
-    text: {
-      format: {
-        type: "json_schema",
-        name: "new_editorial_myth",
-        strict: true,
-        schema: {
-          type: "object",
-          additionalProperties: false,
-          properties: {
-            analysis_summary: { type: "string" },
-            title: { type: "string" },
-            mito: { type: "string" },
-            historia: { type: "string" },
-            versiones: { type: "string" },
-            leccion: { type: "string" },
-            similitudes: { type: "string" },
-            excerpt: { type: "string" },
-            seo_title: { type: "string" },
-            seo_description: { type: "string" },
-            focus_keyword: { type: "string" },
-            focus_keywords: {
-              type: "array",
-              items: { type: "string" },
-            },
-            tags: {
-              type: "array",
-              items: { type: "string" },
-            },
-            region: { type: "string" },
-            department: { type: "string" },
-            community: { type: "string" },
-            category_path: { type: "string" },
-            image_prompt_horizontal: { type: "string" },
-            image_prompt_vertical: { type: "string" },
-            latitude: { type: "number" },
-            longitude: { type: "number" },
-            location_name: { type: "string" },
-            sources: {
-              type: "array",
-              items: {
-                type: "object",
-                additionalProperties: false,
-                properties: {
-                  title: { type: "string" },
-                  url: { type: "string" },
-                  summary: { type: "string" },
-                  relevance_score: { type: "number" },
-                },
-                required: ["title", "url", "summary", "relevance_score"],
-              },
-            },
-            key_sources: {
-              type: "array",
-              items: {
-                type: "object",
-                additionalProperties: false,
-                properties: {
-                  title: { type: "string" },
-                  url: { type: "string" },
-                  summary: { type: "string" },
-                  relevance_score: { type: "number" },
-                },
-                required: ["title", "url", "summary", "relevance_score"],
-              },
-            },
-            editorial_notes: { type: "string" },
+  const baseInstructions =
+    "Eres un editor investigador de mitologia colombiana. Debes crear un mito nuevo a partir del tema solicitado. " +
+    "El campo mito debe ser un relato oral, como si un anciano estuviera narrando el mito, describiendo personajes, lugares y acciones; minimo 300 palabras. " +
+    "Usa busqueda web obligatoria para reunir al menos 20 fuentes. El mito debe seguir la estructura editorial del proyecto: Mito, Historia, Versiones, Leccion, Similitudes. " +
+    "Incluye descripciones SEO y prompts de imagen en formato horizontal (16:9) y vertical (9:16) estilo paper quilling/paper cut. " +
+    "Selecciona la region colombiana adecuada (usa solo las regiones entregadas). " +
+    "Elige tags solo de la lista entregada; no inventes nuevas categorias. Si ninguna aplica, devuelve un array vacio. " +
+    "Si no puedes determinar comunidad o departamento con certeza, usa una cadena vacia en esos campos. " +
+    "El category_path debe tener el formato 'Region > Departamento > Comunidad' usando solo los valores definidos. " +
+    "Si no hay una ubicacion precisa, usa el centro de la region o de Colombia. " +
+    "No incluyas razonamiento fuera del JSON. Usa el campo analysis_summary para resumir pasos y decisiones. " +
+    "No uses comillas dobles dentro de strings; si necesitas citar, usa comillas simples. " +
+    "Limita analysis_summary a 120 palabras y editorial_notes a 200 palabras. " +
+    "Limita summaries de fuentes a 40 palabras. Si necesitas saltos de linea dentro de strings, usa \\n.";
+
+  let lastError;
+  for (let attempt = 0; attempt < 2; attempt += 1) {
+    const retryNote =
+      attempt === 0
+        ? ""
+        : "La respuesta anterior no cumplio la longitud narrativa del mito. Vuelve a escribir el campo mito con minimo 300 palabras y voz de anciano narrador.";
+
+    const { response, model } = await createResponseWithFallback({
+      model: EDITORIAL_MODEL,
+      instructions: `${baseInstructions} ${retryNote}`.trim(),
+      input: JSON.stringify(payload),
+      tools: [
+        {
+          type: "web_search_preview",
+          search_context_size: "high",
+          user_location: {
+            type: "approximate",
+            country: "CO",
+            city: "Bogotá",
+            region: "Cundinamarca",
           },
-          required: [
-            "analysis_summary",
-            "title",
-            "mito",
-            "historia",
-            "versiones",
-            "leccion",
-            "similitudes",
-            "excerpt",
-            "seo_title",
-            "seo_description",
-            "focus_keyword",
-            "focus_keywords",
-            "tags",
-            "region",
-            "department",
-            "community",
-            "category_path",
-            "image_prompt_horizontal",
-            "image_prompt_vertical",
-            "latitude",
-            "longitude",
-            "location_name",
-            "sources",
-            "key_sources",
-            "editorial_notes",
-          ],
+        },
+      ],
+      tool_choice: { type: "web_search_preview" },
+      text: {
+        format: {
+          type: "json_schema",
+          name: "new_editorial_myth",
+          strict: true,
+          schema: {
+            type: "object",
+            additionalProperties: false,
+            properties: {
+              analysis_summary: { type: "string" },
+              title: { type: "string" },
+              mito: { type: "string" },
+              historia: { type: "string" },
+              versiones: { type: "string" },
+              leccion: { type: "string" },
+              similitudes: { type: "string" },
+              excerpt: { type: "string" },
+              seo_title: { type: "string" },
+              seo_description: { type: "string" },
+              focus_keyword: { type: "string" },
+              focus_keywords: {
+                type: "array",
+                items: { type: "string" },
+              },
+              tags: {
+                type: "array",
+                items: { type: "string" },
+              },
+              region: { type: "string" },
+              department: { type: "string" },
+              community: { type: "string" },
+              category_path: { type: "string" },
+              image_prompt_horizontal: { type: "string" },
+              image_prompt_vertical: { type: "string" },
+              latitude: { type: "number" },
+              longitude: { type: "number" },
+              location_name: { type: "string" },
+              sources: {
+                type: "array",
+                items: {
+                  type: "object",
+                  additionalProperties: false,
+                  properties: {
+                    title: { type: "string" },
+                    url: { type: "string" },
+                    summary: { type: "string" },
+                    relevance_score: { type: "number" },
+                  },
+                  required: ["title", "url", "summary", "relevance_score"],
+                },
+              },
+              key_sources: {
+                type: "array",
+                items: {
+                  type: "object",
+                  additionalProperties: false,
+                  properties: {
+                    title: { type: "string" },
+                    url: { type: "string" },
+                    summary: { type: "string" },
+                    relevance_score: { type: "number" },
+                  },
+                  required: ["title", "url", "summary", "relevance_score"],
+                },
+              },
+              editorial_notes: { type: "string" },
+            },
+            required: [
+              "analysis_summary",
+              "title",
+              "mito",
+              "historia",
+              "versiones",
+              "leccion",
+              "similitudes",
+              "excerpt",
+              "seo_title",
+              "seo_description",
+              "focus_keyword",
+              "focus_keywords",
+              "tags",
+              "region",
+              "department",
+              "community",
+              "category_path",
+              "image_prompt_horizontal",
+              "image_prompt_vertical",
+              "latitude",
+              "longitude",
+              "location_name",
+              "sources",
+              "key_sources",
+              "editorial_notes",
+            ],
+          },
         },
       },
-    },
-    temperature: 0.5,
-    max_output_tokens: EDITORIAL_MAX_OUTPUT_TOKENS,
-    truncation: "auto",
-  });
+      temperature: 0.5,
+      max_output_tokens: EDITORIAL_MAX_OUTPUT_TOKENS,
+      truncation: "auto",
+    });
 
-  const outputText = response.output_text?.trim();
-  if (!outputText) {
-    throw new Error("OpenAI response is empty");
+    const outputText = response.output_text?.trim();
+    if (!outputText) {
+      throw new Error("OpenAI response is empty");
+    }
+
+    const parsed = safeParseJson(outputText);
+    const mitoWords = countWords(parsed.mito);
+    if (mitoWords < MIN_MITO_WORDS) {
+      lastError = new Error(
+        `El campo mito es demasiado corto (${mitoWords} palabras). Debe tener al menos ${MIN_MITO_WORDS} palabras.`
+      );
+      continue;
+    }
+    if (!Array.isArray(parsed.sources) || parsed.sources.length < MIN_SOURCES) {
+      throw new Error("No se encontraron suficientes fuentes (minimo 20)");
+    }
+    return { data: parsed, modelUsed: model };
   }
 
-  const parsed = safeParseJson(outputText);
-  if (!Array.isArray(parsed.sources) || parsed.sources.length < MIN_SOURCES) {
-    throw new Error("No se encontraron suficientes fuentes (minimo 20)");
-  }
-  return { data: parsed, modelUsed: model };
+  throw lastError || new Error("No se pudo generar un mito con la longitud requerida");
 }
 
 function buildCheckChunks(items) {
