@@ -84,6 +84,7 @@ async function ensureTarotTable() {
         myth_slug TEXT,
         meaning TEXT,
         selection_reason TEXT,
+        reading_summary TEXT,
         base_prompt TEXT,
         custom_prompt TEXT,
         image_url TEXT,
@@ -99,6 +100,9 @@ async function ensureTarotTable() {
     );
     await sql.query(
       "CREATE INDEX IF NOT EXISTS idx_tarot_cards_suit ON tarot_cards(suit)"
+    );
+    await sql.query(
+      "ALTER TABLE tarot_cards ADD COLUMN IF NOT EXISTS reading_summary TEXT"
     );
     return;
   }
@@ -118,6 +122,7 @@ async function ensureTarotTable() {
       myth_slug TEXT,
       meaning TEXT,
       selection_reason TEXT,
+      reading_summary TEXT,
       base_prompt TEXT,
       custom_prompt TEXT,
       image_url TEXT,
@@ -128,6 +133,12 @@ async function ensureTarotTable() {
     CREATE INDEX IF NOT EXISTS idx_tarot_cards_arcana ON tarot_cards(arcana);
     CREATE INDEX IF NOT EXISTS idx_tarot_cards_suit ON tarot_cards(suit);
   `);
+
+  const columns = db.prepare("PRAGMA table_info(tarot_cards)").all();
+  const columnNames = new Set(columns.map((column) => column.name));
+  if (!columnNames.has("reading_summary")) {
+    db.prepare("ALTER TABLE tarot_cards ADD COLUMN reading_summary TEXT").run();
+  }
 }
 
 async function loadMythMap() {
@@ -490,7 +501,7 @@ const getTarotCardsCached = unstable_cache(
     return listAllTarotCards();
   },
   ["tarot-cards"],
-  { revalidate: ONE_DAY }
+  { revalidate: ONE_DAY, tags: ["tarot-cards"] }
 );
 
 export async function getTarotCards() {
@@ -764,4 +775,4 @@ export async function listTarotCardsMissing(limit = 10) {
     .all(limitValue);
 }
 
-export { slugify, buildBasePrompt };
+export { slugify, buildBasePrompt, ensureTarotSeeded };

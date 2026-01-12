@@ -7,6 +7,7 @@ export function TarotCard({ card, compact = false }) {
   const mythHref = card.myth_slug
     ? `/mitos/${card.myth_slug}`
     : `/mitos?q=${encodeURIComponent(mythTitle)}`;
+  const readingSummary = card.reading_summary?.trim() || card.meaning?.trim();
 
   const arcanaLabel =
     card.arcana === "major"
@@ -45,12 +46,11 @@ export function TarotCard({ card, compact = false }) {
           <p className="mt-2 text-sm text-ink-600">{mythTitle}</p>
           {!compact && (
             <>
-              <p className="mt-4 text-sm leading-relaxed text-ink-600">
-                {card.meaning}
-              </p>
-              <p className="mt-3 text-xs leading-relaxed text-ink-500">
-                {card.selection_reason}
-              </p>
+              {readingSummary ? (
+                <p className="mt-4 text-sm leading-relaxed text-ink-600">
+                  {readingSummary}
+                </p>
+              ) : null}
               <span className="mt-4 text-xs font-semibold uppercase tracking-[0.3em] text-river-600">
                 Leer mito →
               </span>
