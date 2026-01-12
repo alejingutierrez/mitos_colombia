@@ -114,6 +114,12 @@ function truncateText(value, maxLength, mode = "tail") {
   return `${clipped}... [recortado]`;
 }
 
+function ensurePromptLength(value) {
+  if (!value) return "";
+  if (value.length <= MAX_PROMPT_LENGTH) return value;
+  return truncateText(value, MAX_PROMPT_LENGTH);
+}
+
 function formatField(label, value, maxLength, mode) {
   const normalized = maxLength
     ? truncateText(value, maxLength, mode)
@@ -254,16 +260,17 @@ async function rewritePromptSafely(originalPrompt) {
     temperature: 0.3,
   });
 
-  return response.choices[0].message.content.trim();
+  return ensurePromptLength(response.choices[0].message.content.trim());
 }
 
 async function generateImageBuffer(prompt, isRetry = false) {
   try {
+    const safePrompt = ensurePromptLength(prompt);
     const templateFile = await getTarotTemplateFile();
     const response = await openai.images.edit({
       model: "gpt-image-1-mini",
       image: templateFile,
-      prompt,
+      prompt: safePrompt,
       n: 1,
       size: "1024x1536",
       quality: "high",
