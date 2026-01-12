@@ -1,6 +1,9 @@
 import { getSqlClient, getSqliteDb, isPostgres } from "./db";
 
-const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || "").replace(/\/$/, "");
+const RAW_SITE_URL =
+  process.env.NEXT_PUBLIC_SITE_URL ||
+  (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "");
+const SITE_URL = RAW_SITE_URL.replace(/\/$/, "");
 
 function normalizeKeywords(value) {
   if (!value) {
@@ -90,7 +93,9 @@ export function buildSeoMetadata({
   const twitterDescription = seo?.twitter_description || ogDescription;
   const canonical =
     seo?.canonical_path || canonicalPath
-      ? `${SITE_URL}${seo?.canonical_path || canonicalPath || ""}`
+      ? SITE_URL
+        ? `${SITE_URL}${seo?.canonical_path || canonicalPath || ""}`
+        : undefined
       : undefined;
 
   const metadata = {

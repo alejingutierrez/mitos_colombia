@@ -5,6 +5,11 @@ import Footer from "../components/Footer";
 import Analytics from "../components/Analytics";
 import { GA_MEASUREMENT_ID } from "../lib/analytics";
 
+const RAW_SITE_URL =
+  process.env.NEXT_PUBLIC_SITE_URL ||
+  (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "");
+const SITE_URL = RAW_SITE_URL.replace(/\/$/, "");
+
 const display = Fraunces({
   subsets: ["latin"],
   weight: ["600", "700", "800"],
@@ -20,6 +25,7 @@ const body = Sora({
 });
 
 export const metadata = {
+  metadataBase: SITE_URL ? new URL(SITE_URL) : undefined,
   title: {
     default: "Mitos de Colombia",
     template: "%s | Mitos de Colombia",
