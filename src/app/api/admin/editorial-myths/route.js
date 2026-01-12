@@ -14,8 +14,14 @@ const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
 });
 
-const EDITORIAL_MODEL = process.env.OPENAI_EDITORIAL_MODEL || "gpt-5.2";
+const EDITORIAL_MODEL =
+  process.env.OPENAI_EDITORIAL_MODEL || "gpt-5.2-2025-12-11";
 const CHECK_MODEL = process.env.OPENAI_EDITORIAL_CHECK_MODEL || EDITORIAL_MODEL;
+const MODEL_FALLBACKS = (process.env.OPENAI_EDITORIAL_MODEL_FALLBACKS || "")
+  .split(",")
+  .map((model) => model.trim())
+  .filter(Boolean);
+const DEFAULT_MODEL_FALLBACKS = ["gpt-5.2-2025-12-11", "gpt-5.2", "gpt-4o-mini"];
 
 const MIN_SOURCES = 20;
 const DUPLICATE_THRESHOLD = 65;
@@ -60,6 +66,49 @@ function checkAuth(request) {
   const validPassword = process.env.ADMIN_PASSWORD || "admin";
 
   return username === validUsername && password === validPassword;
+}
+
+function buildModelQueue(primaryModel) {
+  const models = [primaryModel, ...MODEL_FALLBACKS, ...DEFAULT_MODEL_FALLBACKS]
+    .map((model) => model.trim())
+    .filter(Boolean);
+  return Array.from(new Set(models));
+}
+
+function isModelAccessError(error) {
+  const status = error?.status || error?.response?.status;
+  const code = error?.code || error?.error?.code;
+  const message = String(error?.message || "");
+  return (
+    status === 403 ||
+    status === 404 ||
+    code === "model_not_found" ||
+    message.includes("does not have access") ||
+    message.includes("model_not_found")
+  );
+}
+
+async function createResponseWithFallback(options) {
+  const { model, ...request } = options;
+  const models = buildModelQueue(model);
+  let lastError;
+
+  for (const candidate of models) {
+    try {
+      const response = await openai.responses.create({
+        ...request,
+        model: candidate,
+      });
+      return { response, model: candidate };
+    } catch (error) {
+      lastError = error;
+      if (!isModelAccessError(error) || candidate === models[models.length - 1]) {
+        throw error;
+      }
+    }
+  }
+
+  throw lastError;
 }
 
 function normalizeText(value) {
@@ -1222,7 +1271,7 @@ async function generateEditorialEnrichment(myth) {
     },
   };
 
-  const response = await openai.responses.create({
+  const { response, model } = await createResponseWithFallback({
     model: EDITORIAL_MODEL,
     instructions:
       "Eres un editor investigador de mitologia colombiana. Debes enriquecer el relato con una redaccion clara, literaria y cuidada, sin perder la oralidad tradicional. " +
@@ -1327,7 +1376,7 @@ async function generateEditorialEnrichment(myth) {
   if (!Array.isArray(parsed.sources) || parsed.sources.length < MIN_SOURCES) {
     throw new Error("No se encontraron suficientes fuentes (minimo 20)");
   }
-  return parsed;
+  return { data: parsed, modelUsed: model };
 }
 
 async function generateNewMyth(query, context) {
@@ -1341,7 +1390,7 @@ async function generateNewMyth(query, context) {
     },
   };
 
-  const response = await openai.responses.create({
+  const { response, model } = await createResponseWithFallback({
     model: EDITORIAL_MODEL,
     instructions:
       "Eres un editor investigador de mitologia colombiana. Debes crear un mito nuevo a partir del tema solicitado. " +
@@ -1471,7 +1520,7 @@ async function generateNewMyth(query, context) {
   if (!Array.isArray(parsed.sources) || parsed.sources.length < MIN_SOURCES) {
     throw new Error("No se encontraron suficientes fuentes (minimo 20)");
   }
-  return parsed;
+  return { data: parsed, modelUsed: model };
 }
 
 function buildCheckChunks(items) {
@@ -1510,10 +1559,10 @@ function buildCheckChunks(items) {
 
 async function checkMythSimilarity(query, myths) {
   const chunks = buildCheckChunks(myths);
-  let best = { confidence: 0, matches: [] };
+  let best = { confidence: 0, matches: [], model_used: null };
 
   for (const chunk of chunks) {
-    const response = await openai.responses.create({
+    const { response, model } = await createResponseWithFallback({
       model: CHECK_MODEL,
       instructions:
         "Eres un bibliotecario editorial. Debes detectar si el mito solicitado ya existe en la base de datos. " +
@@ -1563,6 +1612,7 @@ async function checkMythSimilarity(query, myths) {
       best = {
         confidence: Number(parsed.confidence) || 0,
         matches: parsed.matches || [],
+        model_used: model,
       };
     } else if (Array.isArray(parsed.matches)) {
       best.matches = [...best.matches, ...parsed.matches]
@@ -1587,7 +1637,7 @@ function normalizeFocusKeywords(list, focusKeyword) {
 }
 
 async function enrichExistingMyth(myth) {
-  const enrichment = await generateEditorialEnrichment(myth);
+  const { data: enrichment, modelUsed } = await generateEditorialEnrichment(myth);
   const content = buildContent(enrichment);
   const excerpt = truncateText(enrichment.excerpt || myth.excerpt, MAX_EXCERPT_CHARS);
   const focusKeywords = normalizeFocusKeywords(enrichment.focus_keywords || [], enrichment.focus_keyword);
@@ -1632,6 +1682,7 @@ async function enrichExistingMyth(myth) {
     slug: myth.slug,
     editorial_id: editorial.id,
     sources_count: enrichment.sources?.length || 0,
+    model_used: modelUsed,
   };
 }
 
@@ -1639,7 +1690,7 @@ async function createNewMyth(query) {
   const [regions, tags] = await Promise.all([listRegions(), listTags()]);
   const context = { regions, tags };
 
-  const creation = await generateNewMyth(query, context);
+  const { data: creation, modelUsed } = await generateNewMyth(query, context);
 
   const regionMatch = (await findRegionByName(creation.region)) || (await findRegionFallback());
   if (!regionMatch) {
@@ -1785,6 +1836,7 @@ async function createNewMyth(query) {
     community: community?.name || null,
     latitude: mythPayload.latitude,
     longitude: mythPayload.longitude,
+    model_used: modelUsed,
   };
 }
 
@@ -1872,6 +1924,7 @@ export async function POST(request) {
         confidence: similarity.confidence,
         matches: similarity.matches,
         should_create: similarity.confidence < DUPLICATE_THRESHOLD,
+        model_used: similarity.model_used,
       });
     }
 
