@@ -244,25 +244,39 @@ export default function VerticalImagesPage() {
   const generateBatch = async () => {
     if (!auth) return;
 
-    if (!confirm(`¿Generar ${batchCount} imágenes verticales? Esto puede tomar varios minutos.`)) {
+    const pendingItems = items.filter((item) => !item.vertical_image_url);
+    const totalToGenerate = Math.min(batchCount, pendingItems.length);
+
+    if (pendingItems.length === 0) {
+      showToast("No hay imágenes pendientes por generar.", "info");
+      return;
+    }
+
+    if (!confirm(`¿Generar ${totalToGenerate} imágenes verticales? Esto puede tomar varios minutos.`)) {
       return;
     }
 
     setBatchGenerating(true);
-    setBatchProgress({ current: 0, total: batchCount });
+    setBatchProgress({ current: 0, total: totalToGenerate });
     let successCount = 0;
     let errorCount = 0;
 
     try {
-      for (let i = 0; i < batchCount; i += 1) {
-        setBatchProgress({ current: i + 1, total: batchCount });
+      for (let i = 0; i < totalToGenerate; i += 1) {
+        const currentItem = pendingItems[i];
+        setBatchProgress({ current: i + 1, total: totalToGenerate });
         const response = await fetch("/api/admin/vertical-images/generate", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
             Authorization: `Basic ${auth}`,
           },
-          body: JSON.stringify({ count: 1 }),
+          body: JSON.stringify({
+            count: 1,
+            orderedEntities: [
+              { entity_type: currentItem.entity_type, entity_id: currentItem.id },
+            ],
+          }),
         });
 
         const data = await response.json();

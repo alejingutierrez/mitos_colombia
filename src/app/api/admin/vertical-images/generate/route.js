@@ -269,6 +269,151 @@ async function getEntitiesForVerticalImages(limit = 20) {
   }
 }
 
+function normalizeOrderedEntities(value) {
+  if (!Array.isArray(value)) return [];
+  return value
+    .map((item) => ({
+      type: item?.entity_type || item?.entityType,
+      id: Number.parseInt(item?.entity_id ?? item?.entityId, 10),
+    }))
+    .filter((item) => item.type && Number.isFinite(item.id));
+}
+
+async function getEntitiesByOrder(orderedEntities) {
+  const isPg = isPostgres();
+  const grouped = orderedEntities.reduce(
+    (acc, item) => {
+      if (!acc[item.type]) {
+        return acc;
+      }
+      acc[item.type].push(item.id);
+      return acc;
+    },
+    { myth: [], community: [], category: [], region: [] }
+  );
+
+  const rows = [];
+
+  if (isPg) {
+    const db = getSqlClient();
+
+    if (grouped.myth.length) {
+      const result = await db.query(
+        `
+        SELECT
+          m.id,
+          m.title as name,
+          m.slug,
+          m.image_prompt as prompt,
+          'myth' as type,
+          vi.id as vertical_image_id,
+          vi.image_url as vertical_image_url
+        FROM myths m
+        LEFT JOIN vertical_images vi ON vi.entity_type = 'myth' AND vi.entity_id = m.id
+        WHERE m.id = ANY($1)
+      `,
+        [grouped.myth]
+      );
+      rows.push(...result.rows);
+    }
+
+    if (grouped.community.length) {
+      const result = await db.query(
+        `
+        SELECT
+          c.id,
+          c.name,
+          c.slug,
+          c.image_prompt as prompt,
+          'community' as type,
+          vi.id as vertical_image_id,
+          vi.image_url as vertical_image_url
+        FROM communities c
+        LEFT JOIN vertical_images vi ON vi.entity_type = 'community' AND vi.entity_id = c.id
+        WHERE c.id = ANY($1)
+      `,
+        [grouped.community]
+      );
+      rows.push(...result.rows);
+    }
+
+    if (grouped.category.length) {
+      const result = await db.query(
+        `
+        SELECT
+          t.id,
+          t.name,
+          t.slug,
+          t.image_prompt as prompt,
+          'category' as type,
+          vi.id as vertical_image_id,
+          vi.image_url as vertical_image_url
+        FROM tags t
+        LEFT JOIN vertical_images vi ON vi.entity_type = 'category' AND vi.entity_id = t.id
+        WHERE t.id = ANY($1)
+      `,
+        [grouped.category]
+      );
+      rows.push(...result.rows);
+    }
+
+    if (grouped.region.length) {
+      const result = await db.query(
+        `
+        SELECT
+          r.id,
+          r.name,
+          r.slug,
+          r.image_prompt as prompt,
+          'region' as type,
+          vi.id as vertical_image_id,
+          vi.image_url as vertical_image_url
+        FROM regions r
+        LEFT JOIN vertical_images vi ON vi.entity_type = 'region' AND vi.entity_id = r.id
+        WHERE r.id = ANY($1)
+      `,
+        [grouped.region]
+      );
+      rows.push(...result.rows);
+    }
+  } else {
+    const db = getSqliteDb();
+
+    const fetchByIds = (table, nameField, type) => {
+      const ids = grouped[type];
+      if (!ids.length) return [];
+      const placeholders = ids.map(() => "?").join(", ");
+      return db
+        .prepare(
+          `
+          SELECT
+            t.id,
+            t.${nameField} as name,
+            t.slug,
+            t.image_prompt as prompt,
+            '${type}' as type,
+            vi.id as vertical_image_id,
+            vi.image_url as vertical_image_url
+          FROM ${table} t
+          LEFT JOIN vertical_images vi ON vi.entity_type = '${type}' AND vi.entity_id = t.id
+          WHERE t.id IN (${placeholders})
+        `
+        )
+        .all(...ids);
+    };
+
+    rows.push(...fetchByIds("myths", "title", "myth"));
+    rows.push(...fetchByIds("communities", "name", "community"));
+    rows.push(...fetchByIds("tags", "name", "category"));
+    rows.push(...fetchByIds("regions", "name", "region"));
+  }
+
+  const rowMap = new Map(rows.map((row) => [`${row.type}-${row.id}`, row]));
+  return orderedEntities
+    .map((item) => rowMap.get(`${item.type}-${item.id}`))
+    .filter(Boolean);
+}
+
 // Create or update vertical image record
 async function upsertVerticalImage(entityType, entityId, entityName, entitySlug, imageUrl, basePrompt, customPrompt = null) {
   const isPg = isPostgres();
@@ -362,14 +507,20 @@ export async function POST(request) {
 
     const body = await request.json();
     const count = Math.min(Math.max(1, body.count || 1), 50);
+    const orderedEntities = normalizeOrderedEntities(body.orderedEntities);
 
     // Get entities for vertical images
-    const entities = await getEntitiesForVerticalImages(count);
+    const entities = orderedEntities.length
+      ? await getEntitiesByOrder(orderedEntities)
+      : await getEntitiesForVerticalImages(count);
 
     // Filter only those without vertical images
     const entitiesWithoutImages = entities.filter(e => !e.vertical_image_url);
+    const entitiesToGenerate = orderedEntities.length
+      ? entitiesWithoutImages.slice(0, count)
+      : entitiesWithoutImages;
 
-    if (entitiesWithoutImages.length === 0) {
+    if (entitiesToGenerate.length === 0) {
       return NextResponse.json({
         success: true,
         message: "No hay entidades sin imágenes verticales",
@@ -380,7 +531,7 @@ export async function POST(request) {
     const results = [];
 
     // Generate vertical images
-    for (const entity of entitiesWithoutImages) {
+    for (const entity of entitiesToGenerate) {
       try {
         console.log(`[GEN-VERTICAL] Starting generation for ${entity.type} ${entity.id}: ${entity.name}`);
 
