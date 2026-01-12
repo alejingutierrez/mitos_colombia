@@ -16,13 +16,13 @@ const OUTPUT_HEIGHT = 1536;
 const JPEG_QUALITY = 82;
 
 const TAROT_STYLE_PROMPT = `Ilustración de carta de tarot vertical 9:16 inspirada en Rider-Waite, reinterpretada en paper quilling + paper cut.
-Marco ornamental clásico con borde definido y proporciones consistentes.
+Marco ornamental clásico con doble borde uniforme: exterior dorado envejecido, interior marfil/pergamino con filetes finos verde selva y azul río; esquinas con ornamentos simétricos. Grosor y proporciones idénticas en toda la serie.
 Textura de papel en capas visibles, relieve sutil, sombras suaves, acabado artesanal.
-Paleta colombiana: verde selva, azul río, dorados tierra y acentos cálidos.
+Paleta colombiana: verde selva, azul río, dorados tierra y acentos cálidos. Mantener coherencia cromática en marcos y bordes.
 Composición centrada con figura principal del mito y símbolos claros del territorio; fondo con paisaje regional sugerido.
 La simbología del tarot debe adaptarse al mito, su comunidad y su región; evitar iconografía genérica que no dialogue con el relato.
 Alta legibilidad visual, contraste equilibrado, estética editorial elegante.
-Tipografía: solo el nombre de la carta en español en banda inferior; en arcanos mayores agregar numeral romano arriba.
+Tipografía: solo el nombre de la carta en español en banda inferior. Numeral romano obligatorio en la banda superior para TODAS las cartas (mayores: numeral tradicional; menores: As=I, Dos=II... Diez=X, Paje=XI, Caballero=XII, Reina=XIII, Rey=XIV).
 No incluir texto adicional ni el nombre del mito. Sin logos ni marcas.`;
 
 function checkAuth(request) {
@@ -126,7 +126,7 @@ async function rewritePromptSafely(originalPrompt) {
       {
         role: "system",
         content:
-          "Reescribe el prompt para una imagen editorial de tarot, evitando violencia gráfica y contenido sexual. Mantén el estilo paper quilling/cut y Rider-Waite, priorizando símbolos del mito, la comunidad y la región. Devuelve solo el prompt reescrito.",
+          "Reescribe el prompt para una imagen editorial de tarot, evitando violencia gráfica y contenido sexual. Mantén el estilo paper quilling/cut y Rider-Waite, priorizando símbolos del mito, la comunidad y la región. Conserva el marco uniforme y el numeral romano superior en TODAS las cartas. Devuelve solo el prompt reescrito.",
       },
       {
         role: "user",
