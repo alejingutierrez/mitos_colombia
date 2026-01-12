@@ -10,6 +10,34 @@ const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
 });
 
+async function rewritePromptSafely(originalPrompt) {
+  const rewriteResponse = await openai.chat.completions.create({
+    model: "gpt-4o-mini",
+    messages: [
+      {
+        role: "system",
+        content:
+          "Eres un experto en reescribir prompts para generación de imágenes. Tu trabajo es tomar un prompt de un mito colombiano y reescribirlo para que sea apropiado y seguro, eliminando cualquier referencia a desnudez, contenido sexual, violencia gráfica o elementos que puedan ser rechazados por sistemas de moderación. Mantén el espíritu cultural y educativo del mito.",
+      },
+      {
+        role: "user",
+        content: `Reescribe este prompt de manera segura, apropiada y educativa, manteniendo el contexto cultural pero eliminando cualquier elemento potencialmente problemático:\n\n${originalPrompt}`,
+      },
+    ],
+    temperature: 0.3,
+  });
+
+  return rewriteResponse.choices[0].message.content;
+}
+
+function isSafetyViolation(error) {
+  return (
+    error?.message?.includes("safety") ||
+    error?.message?.includes("rejected by the safety system") ||
+    error?.code === "content_policy_violation"
+  );
+}
+
 // Basic auth middleware
 function checkAuth(request) {
   const authHeader = request.headers.get("authorization");
@@ -37,7 +65,7 @@ const BASE_PROMPTS = {
 };
 
 // Generate vertical image
-async function generateVerticalImage(prompt, slug, entityType) {
+async function generateVerticalImage(prompt, slug, entityType, isRetry = false) {
   try {
     console.log(`[IMG-VERTICAL-SINGLE] Generating image for ${entityType}:${slug}`);
 
@@ -90,6 +118,16 @@ ESPECIFICACIONES:
 
   } catch (error) {
     console.error("[IMG-VERTICAL-SINGLE] Error:", error);
+    if (isSafetyViolation(error) && !isRetry) {
+      try {
+        console.log("[IMG-VERTICAL-SINGLE] Safety violation detected. Rewriting prompt...");
+        const safePrompt = await rewritePromptSafely(prompt);
+        return await generateVerticalImage(safePrompt, slug, entityType, true);
+      } catch (rewriteError) {
+        console.error("[IMG-VERTICAL-SINGLE] Safety fallback failed:", rewriteError);
+        throw rewriteError;
+      }
+    }
     throw error;
   }
 }

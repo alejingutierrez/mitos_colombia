@@ -245,14 +245,16 @@ export default function VerticalImagesPage() {
     if (!auth) return;
 
     const pendingItems = items.filter((item) => !item.vertical_image_url);
-    const totalToGenerate = Math.min(batchCount, pendingItems.length);
+    const useGlobalQueue = pendingItems.length === 0;
+    const totalToGenerate = useGlobalQueue
+      ? batchCount
+      : Math.min(batchCount, pendingItems.length);
 
-    if (pendingItems.length === 0) {
-      showToast("No hay imágenes pendientes por generar.", "info");
-      return;
-    }
-
-    if (!confirm(`¿Generar ${totalToGenerate} imágenes verticales? Esto puede tomar varios minutos.`)) {
+    if (!confirm(
+      useGlobalQueue
+        ? `No hay pendientes en esta página. ¿Generar ${totalToGenerate} imágenes del catálogo completo?`
+        : `¿Generar ${totalToGenerate} imágenes verticales? Esto puede tomar varios minutos.`
+    )) {
       return;
     }
 
@@ -262,40 +264,61 @@ export default function VerticalImagesPage() {
     let errorCount = 0;
 
     try {
-      for (let i = 0; i < totalToGenerate; i += 1) {
-        const currentItem = pendingItems[i];
-        setBatchProgress({ current: i + 1, total: totalToGenerate });
+      if (useGlobalQueue) {
         const response = await fetch("/api/admin/vertical-images/generate", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
             Authorization: `Basic ${auth}`,
           },
-          body: JSON.stringify({
-            count: 1,
-            orderedEntities: [
-              { entity_type: currentItem.entity_type, entity_id: currentItem.id },
-            ],
-          }),
+          body: JSON.stringify({ count: totalToGenerate }),
         });
 
         const data = await response.json();
-
         if (!response.ok) {
-          errorCount += 1;
-          continue;
+          throw new Error(data.error || "Error en generación masiva");
         }
 
         const generated = data.generated || [];
-        const successInBatch = generated.filter((item) => item.success).length;
-        const failedInBatch = generated.filter((item) => !item.success).length;
+        successCount = generated.filter((item) => item.success).length;
+        errorCount = generated.filter((item) => !item.success).length;
+        setBatchProgress({ current: totalToGenerate, total: totalToGenerate });
+      } else {
+        for (let i = 0; i < totalToGenerate; i += 1) {
+          const currentItem = pendingItems[i];
+          setBatchProgress({ current: i + 1, total: totalToGenerate });
+          const response = await fetch("/api/admin/vertical-images/generate", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              Authorization: `Basic ${auth}`,
+            },
+            body: JSON.stringify({
+              count: 1,
+              orderedEntities: [
+                { entity_type: currentItem.entity_type, entity_id: currentItem.id },
+              ],
+            }),
+          });
 
-        if (successInBatch === 0 && failedInBatch === 0) {
-          break;
+          const data = await response.json();
+
+          if (!response.ok) {
+            errorCount += 1;
+            continue;
+          }
+
+          const generated = data.generated || [];
+          const successInBatch = generated.filter((item) => item.success).length;
+          const failedInBatch = generated.filter((item) => !item.success).length;
+
+          if (successInBatch === 0 && failedInBatch === 0) {
+            break;
+          }
+
+          successCount += successInBatch;
+          errorCount += failedInBatch;
         }
-
-        successCount += successInBatch;
-        errorCount += failedInBatch;
       }
 
       if (successCount > 0) {
