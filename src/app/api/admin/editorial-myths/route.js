@@ -23,6 +23,14 @@ const MODEL_FALLBACKS = (process.env.OPENAI_EDITORIAL_MODEL_FALLBACKS || "")
   .filter(Boolean);
 const DEFAULT_MODEL_FALLBACKS = ["gpt-5.2-2025-12-11", "gpt-5.2", "gpt-4o-mini"];
 const MAX_RAW_JSON_CHARS = 200000;
+const EDITORIAL_MAX_OUTPUT_TOKENS = Number.parseInt(
+  process.env.OPENAI_EDITORIAL_MAX_OUTPUT_TOKENS || "8000",
+  10
+);
+const CHECK_MAX_OUTPUT_TOKENS = Number.parseInt(
+  process.env.OPENAI_EDITORIAL_CHECK_MAX_OUTPUT_TOKENS || "1200",
+  10
+);
 
 const MIN_SOURCES = 20;
 const DUPLICATE_THRESHOLD = 65;
@@ -238,6 +246,8 @@ function safeParseJson(rawText) {
   }
 
   const trimmed = rawText.trim().slice(0, MAX_RAW_JSON_CHARS);
+  const likelyTruncated =
+    trimmed && !trimmed.trim().endsWith("}") && !trimmed.trim().endsWith("]");
 
   try {
     return JSON.parse(trimmed);
@@ -254,6 +264,11 @@ function safeParseJson(rawText) {
       return JSON.parse(normalized);
     } catch (parseError) {
       const repaired = repairJsonStructure(normalized);
+      if (likelyTruncated) {
+        throw new Error(
+          "Salida JSON truncada. Aumenta OPENAI_EDITORIAL_MAX_OUTPUT_TOKENS."
+        );
+      }
       return JSON.parse(repaired);
     }
   }
@@ -1717,7 +1732,7 @@ async function generateEditorialEnrichment(myth) {
       },
     },
     temperature: 0.4,
-    max_output_tokens: 4000,
+    max_output_tokens: EDITORIAL_MAX_OUTPUT_TOKENS,
     truncation: "auto",
   });
 
@@ -1868,7 +1883,7 @@ async function generateNewMyth(query, context) {
       },
     },
     temperature: 0.5,
-    max_output_tokens: 4500,
+    max_output_tokens: EDITORIAL_MAX_OUTPUT_TOKENS,
     truncation: "auto",
   });
 
@@ -1960,7 +1975,7 @@ async function checkMythSimilarity(query, myths) {
         },
       },
       temperature: 0.2,
-      max_output_tokens: 800,
+      max_output_tokens: CHECK_MAX_OUTPUT_TOKENS,
       truncation: "auto",
     });
 
