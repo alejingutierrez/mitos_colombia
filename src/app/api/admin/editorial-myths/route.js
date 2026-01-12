@@ -188,6 +188,50 @@ function repairJsonStructure(input) {
   return result;
 }
 
+function extractBalancedJson(input) {
+  let inString = false;
+  let escaped = false;
+  let braceDepth = 0;
+  let bracketDepth = 0;
+  let lastBalancedIndex = -1;
+
+  for (let i = 0; i < input.length; i += 1) {
+    const char = input[i];
+
+    if (escaped) {
+      escaped = false;
+      continue;
+    }
+
+    if (char === "\\") {
+      escaped = true;
+      continue;
+    }
+
+    if (char === "\"") {
+      inString = !inString;
+      continue;
+    }
+
+    if (!inString) {
+      if (char === "{") braceDepth += 1;
+      if (char === "}") braceDepth = Math.max(0, braceDepth - 1);
+      if (char === "[") bracketDepth += 1;
+      if (char === "]") bracketDepth = Math.max(0, bracketDepth - 1);
+
+      if (braceDepth === 0 && bracketDepth === 0) {
+        lastBalancedIndex = i;
+      }
+    }
+  }
+
+  if (lastBalancedIndex === -1) {
+    return input;
+  }
+
+  return input.slice(0, lastBalancedIndex + 1);
+}
+
 function safeParseJson(rawText) {
   if (!rawText) {
     throw new Error("Respuesta vacia de OpenAI");
@@ -204,7 +248,8 @@ function safeParseJson(rawText) {
       throw error;
     }
     const sliced = trimmed.slice(start, end + 1);
-    const normalized = normalizeJsonString(sliced);
+    const balanced = extractBalancedJson(sliced);
+    const normalized = normalizeJsonString(balanced);
     try {
       return JSON.parse(normalized);
     } catch (parseError) {
@@ -1582,7 +1627,9 @@ async function generateEditorialEnrichment(myth) {
       "Usa busqueda web obligatoria para reunir al menos 20 fuentes. Selecciona las fuentes mas relevantes y resume en notas editoriales. " +
       "No inventes datos sin respaldo. Si hay versiones distintas, comparalas. Mantén el texto en español de Colombia. " +
       "No incluyas razonamiento fuera del JSON. Usa el campo analysis_summary para resumir pasos y decisiones. " +
-      "Si necesitas saltos de linea dentro de strings, usa \\n.",
+      "No uses comillas dobles dentro de strings; si necesitas citar, usa comillas simples. " +
+      "Limita analysis_summary a 120 palabras y editorial_notes a 200 palabras. " +
+      "Limita summaries de fuentes a 40 palabras. Si necesitas saltos de linea dentro de strings, usa \\n.",
     input: JSON.stringify(payload),
     tools: [
       {
@@ -1706,7 +1753,9 @@ async function generateNewMyth(query, context) {
       "Selecciona la region colombiana adecuada (usa solo las regiones entregadas). " +
       "Si no hay una ubicacion precisa, usa el centro de la region o de Colombia. " +
       "No incluyas razonamiento fuera del JSON. Usa el campo analysis_summary para resumir pasos y decisiones. " +
-      "Si necesitas saltos de linea dentro de strings, usa \\n.",
+      "No uses comillas dobles dentro de strings; si necesitas citar, usa comillas simples. " +
+      "Limita analysis_summary a 120 palabras y editorial_notes a 200 palabras. " +
+      "Limita summaries de fuentes a 40 palabras. Si necesitas saltos de linea dentro de strings, usa \\n.",
     input: JSON.stringify(payload),
     tools: [
       {
