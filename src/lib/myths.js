@@ -1,5 +1,5 @@
 import { unstable_cache } from "next/cache";
-import { getSqlClient, getSqliteDb, isPostgres } from "./db";
+import { getSqlClient, getSqliteDb, isPostgres, isQuotaError } from "./db";
 
 const ONE_HOUR = 60 * 60;
 const ONE_DAY = 60 * 60 * 24;
@@ -235,10 +235,27 @@ async function listMythsPostgres({
 }
 
 export async function listMyths(params = {}) {
-  if (isPostgres()) {
-    return listMythsPostgres(params);
+  try {
+    if (isPostgres()) {
+      return await listMythsPostgres(params);
+    }
+    return listMythsSqlite(params);
+  } catch (error) {
+    if (isQuotaError(error)) {
+      console.error("[MYTHS] listMyths quota exceeded:", error);
+    } else {
+      console.error("[MYTHS] listMyths failed:", error);
+    }
+    const limitValue = clampNumber(params.limit, 1, 100, 20);
+    const offsetValue = clampNumber(params.offset, 0, 5000, 0);
+    return {
+      total: 0,
+      limit: limitValue,
+      offset: offsetValue,
+      items: [],
+      error: isQuotaError(error) ? "db_quota_exceeded" : undefined,
+    };
   }
-  return listMythsSqlite(params);
 }
 
 function getMythBySlugSqlite(slug) {
@@ -360,10 +377,15 @@ async function getMythBySlugPostgres(slug) {
 
 const getMythBySlugCached = unstable_cache(
   async (slug) => {
-    if (isPostgres()) {
-      return getMythBySlugPostgres(slug);
+    try {
+      if (isPostgres()) {
+        return await getMythBySlugPostgres(slug);
+      }
+      return getMythBySlugSqlite(slug);
+    } catch (error) {
+      console.error("[MYTHS] getMythBySlug failed:", error);
+      return null;
     }
-    return getMythBySlugSqlite(slug);
   },
   ["myth-by-slug"],
   { revalidate: ONE_HOUR }
@@ -499,10 +521,15 @@ async function getTaxonomyPostgres() {
 
 const getTaxonomyCached = unstable_cache(
   async () => {
-    if (isPostgres()) {
-      return getTaxonomyPostgres();
+    try {
+      if (isPostgres()) {
+        return await getTaxonomyPostgres();
+      }
+      return getTaxonomySqlite();
+    } catch (error) {
+      console.error("[MYTHS] getTaxonomy failed:", error);
+      return { regions: [], communities: [], tags: [] };
     }
-    return getTaxonomySqlite();
   },
   ["taxonomy"],
   { revalidate: ONE_HOUR }

@@ -4,6 +4,7 @@ import {
   getSqliteDb,
   getSqliteDbWritable,
   isPostgres,
+  isQuotaError,
 } from "./db";
 import { TAROT_CARDS } from "./tarot-data";
 
@@ -354,110 +355,111 @@ export async function listTarotCards({
   suit,
   status,
 } = {}) {
-  await ensureTarotSeeded();
+  try {
+    await ensureTarotSeeded();
 
-  const limitValue = clampNumber(limit, 1, 120, 24);
-  const offsetValue = Math.max(0, (page - 1) * limitValue);
+    const limitValue = clampNumber(limit, 1, 120, 24);
+    const offsetValue = Math.max(0, (page - 1) * limitValue);
 
-  const filters = [];
-  const filterValues = [];
+    const filters = [];
+    const filterValues = [];
 
-  if (arcana) {
-    filterValues.push(arcana);
-    filters.push(`t.arcana = $${filterValues.length}`);
-  }
+    if (arcana) {
+      filterValues.push(arcana);
+      filters.push(`t.arcana = $${filterValues.length}`);
+    }
 
-  if (suit) {
-    filterValues.push(suit);
-    filters.push(`t.suit = $${filterValues.length}`);
-  }
+    if (suit) {
+      filterValues.push(suit);
+      filters.push(`t.suit = $${filterValues.length}`);
+    }
 
-  if (status === "missing") {
-    filters.push("t.image_url IS NULL");
-  }
+    if (status === "missing") {
+      filters.push("t.image_url IS NULL");
+    }
 
-  if (status === "ready") {
-    filters.push("t.image_url IS NOT NULL");
-  }
+    if (status === "ready") {
+      filters.push("t.image_url IS NOT NULL");
+    }
 
-  if (isPostgres()) {
-    const sql = getSqlClient();
-    const whereClause = filters.length
-      ? `WHERE ${filters.join(" AND ")}`
-      : "";
+    if (isPostgres()) {
+      const sql = getSqlClient();
+      const whereClause = filters.length
+        ? `WHERE ${filters.join(" AND ")}`
+        : "";
 
-    const countResult = await sql.query(
-      `SELECT COUNT(*)::int AS total FROM tarot_cards t ${whereClause}`,
-      filterValues
-    );
-    const total = Number(countResult.rows?.[0]?.total || 0);
+      const countResult = await sql.query(
+        `SELECT COUNT(*)::int AS total FROM tarot_cards t ${whereClause}`,
+        filterValues
+      );
+      const total = Number(countResult.rows?.[0]?.total || 0);
 
-    const limitIndex = filterValues.length + 1;
-    const offsetIndex = filterValues.length + 2;
-    const listSql = `
-      SELECT
-        t.*,
-        m.slug as myth_slug
-      FROM tarot_cards t
-      LEFT JOIN myths m ON TRIM(m.title) = TRIM(t.myth_title)
-      ${whereClause}
-      ORDER BY t.order_index ASC, t.id ASC
-      LIMIT $${limitIndex} OFFSET $${offsetIndex}
-    `;
+      const limitIndex = filterValues.length + 1;
+      const offsetIndex = filterValues.length + 2;
+      const listSql = `
+        SELECT
+          t.*,
+          m.slug as myth_slug
+        FROM tarot_cards t
+        LEFT JOIN myths m ON TRIM(m.title) = TRIM(t.myth_title)
+        ${whereClause}
+        ORDER BY t.order_index ASC, t.id ASC
+        LIMIT $${limitIndex} OFFSET $${offsetIndex}
+      `;
 
-    const listValues = [...filterValues, limitValue, offsetValue];
-    const items = (await sql.query(listSql, listValues)).rows;
+      const listValues = [...filterValues, limitValue, offsetValue];
+      const items = (await sql.query(listSql, listValues)).rows;
 
-    const statsResult = await sql.query(
-      `SELECT
-        COUNT(*)::int AS total,
-        SUM(CASE WHEN image_url IS NULL THEN 1 ELSE 0 END)::int AS missing
-       FROM tarot_cards`
-    );
+      const statsResult = await sql.query(
+        `SELECT
+          COUNT(*)::int AS total,
+          SUM(CASE WHEN image_url IS NULL THEN 1 ELSE 0 END)::int AS missing
+         FROM tarot_cards`
+      );
 
-    const statsRow = statsResult.rows?.[0] || {};
-    const stats = {
-      total: Number(statsRow.total || 0),
-      missing: Number(statsRow.missing || 0),
-      ready: Number(statsRow.total || 0) - Number(statsRow.missing || 0),
-    };
+      const statsRow = statsResult.rows?.[0] || {};
+      const stats = {
+        total: Number(statsRow.total || 0),
+        missing: Number(statsRow.missing || 0),
+        ready: Number(statsRow.total || 0) - Number(statsRow.missing || 0),
+      };
 
-    return {
-      items,
-      total,
-      page,
-      limit: limitValue,
-      totalPages: Math.max(1, Math.ceil(total / limitValue)),
-      stats,
-    };
-  }
+      return {
+        items,
+        total,
+        page,
+        limit: limitValue,
+        totalPages: Math.max(1, Math.ceil(total / limitValue)),
+        stats,
+      };
+    }
 
-  const db = getSqliteDb();
-  const where = [];
-  const params = [];
+    const db = getSqliteDb();
+    const where = [];
+    const params = [];
 
-  if (arcana) {
-    where.push("t.arcana = ?");
-    params.push(arcana);
-  }
+    if (arcana) {
+      where.push("t.arcana = ?");
+      params.push(arcana);
+    }
 
-  if (suit) {
-    where.push("t.suit = ?");
-    params.push(suit);
-  }
+    if (suit) {
+      where.push("t.suit = ?");
+      params.push(suit);
+    }
 
-  if (status === "missing") {
-    where.push("t.image_url IS NULL");
-  }
+    if (status === "missing") {
+      where.push("t.image_url IS NULL");
+    }
 
-  if (status === "ready") {
-    where.push("t.image_url IS NOT NULL");
-  }
+    if (status === "ready") {
+      where.push("t.image_url IS NOT NULL");
+    }
 
-  const whereClause = where.length ? `WHERE ${where.join(" AND ")}` : "";
-  const countSql = `SELECT COUNT(*) as total FROM tarot_cards t ${whereClause}`;
-  const countResult = db.prepare(countSql).get(...params);
-  const total = countResult.total || 0;
+    const whereClause = where.length ? `WHERE ${where.join(" AND ")}` : "";
+    const countSql = `SELECT COUNT(*) as total FROM tarot_cards t ${whereClause}`;
+    const countResult = db.prepare(countSql).get(...params);
+    const total = countResult.total || 0;
 
   const listSql = `
     SELECT
@@ -469,62 +471,86 @@ export async function listTarotCards({
     ORDER BY t.order_index ASC, t.id ASC
     LIMIT ? OFFSET ?
   `;
-  const items = db
-    .prepare(listSql)
-    .all(...params, limitValue, offsetValue);
+    const items = db
+      .prepare(listSql)
+      .all(...params, limitValue, offsetValue);
 
-  const statsRow = db
-    .prepare(
-      `SELECT
-        COUNT(*) AS total,
-        SUM(CASE WHEN image_url IS NULL THEN 1 ELSE 0 END) AS missing
-       FROM tarot_cards`
-    )
-    .get();
+    const statsRow = db
+      .prepare(
+        `SELECT
+          COUNT(*) AS total,
+          SUM(CASE WHEN image_url IS NULL THEN 1 ELSE 0 END) AS missing
+         FROM tarot_cards`
+      )
+      .get();
 
-  const stats = {
-    total: statsRow.total || 0,
-    missing: statsRow.missing || 0,
-    ready: (statsRow.total || 0) - (statsRow.missing || 0),
-  };
+    const stats = {
+      total: statsRow.total || 0,
+      missing: statsRow.missing || 0,
+      ready: (statsRow.total || 0) - (statsRow.missing || 0),
+    };
 
-  return {
-    items,
-    total,
-    page,
-    limit: limitValue,
-    totalPages: Math.max(1, Math.ceil(total / limitValue)),
-    stats,
-  };
+    return {
+      items,
+      total,
+      page,
+      limit: limitValue,
+      totalPages: Math.max(1, Math.ceil(total / limitValue)),
+      stats,
+    };
+  } catch (error) {
+    if (!isQuotaError(error)) {
+      throw error;
+    }
+    console.error("[TAROT] Quota exceeded when listing cards:", error);
+    const limitValue = clampNumber(limit, 1, 120, 24);
+    return {
+      items: [],
+      total: 0,
+      page,
+      limit: limitValue,
+      totalPages: 1,
+      stats: { total: 0, missing: 0, ready: 0 },
+      error: "db_quota_exceeded",
+    };
+  }
 }
 
 async function listAllTarotCards() {
-  await ensureTarotSeeded();
+  try {
+    await ensureTarotSeeded();
 
-  if (isPostgres()) {
-    const sql = getSqlClient();
-    const result = await sql.query(
-      `SELECT
-        t.*,
-        m.slug as myth_slug
-      FROM tarot_cards t
-      LEFT JOIN myths m ON TRIM(m.title) = TRIM(t.myth_title)
-      ORDER BY t.order_index ASC, t.id ASC`
-    );
-    return result.rows || result;
+    if (isPostgres()) {
+      const sql = getSqlClient();
+      const result = await sql.query(
+        `SELECT
+          t.*,
+          m.slug as myth_slug
+        FROM tarot_cards t
+        LEFT JOIN myths m ON TRIM(m.title) = TRIM(t.myth_title)
+        ORDER BY t.order_index ASC, t.id ASC`
+      );
+      return result.rows || result;
+    }
+
+    const db = getSqliteDb();
+    return db
+      .prepare(
+        `SELECT
+          t.*,
+          m.slug as myth_slug
+        FROM tarot_cards t
+        LEFT JOIN myths m ON trim(m.title) = trim(t.myth_title)
+        ORDER BY t.order_index ASC, t.id ASC`
+      )
+      .all();
+  } catch (error) {
+    if (!isQuotaError(error)) {
+      throw error;
+    }
+    console.error("[TAROT] Quota exceeded when listing all cards:", error);
+    return [];
   }
-
-  const db = getSqliteDb();
-  return db
-    .prepare(
-      `SELECT
-        t.*,
-        m.slug as myth_slug
-      FROM tarot_cards t
-      LEFT JOIN myths m ON trim(m.title) = trim(t.myth_title)
-      ORDER BY t.order_index ASC, t.id ASC`
-    )
-    .all();
 }
 
 const getTarotCardsCached = unstable_cache(

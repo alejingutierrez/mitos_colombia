@@ -21,6 +21,15 @@ export function isPostgres() {
   return usePostgres;
 }
 
+export function isQuotaError(error) {
+  const message = String(error?.message || "");
+  return (
+    message.includes("exceeded the data transfer quota") ||
+    message.includes("HTTP status 402") ||
+    message.includes("data transfer quota")
+  );
+}
+
 export function getSqlClient() {
   if (!usePostgres) {
     throw new Error(
