@@ -870,6 +870,21 @@ async function listTags() {
     .all();
 }
 
+async function listCommunities() {
+  if (isPostgres()) {
+    const db = getSqlClient();
+    const result = await db.query(
+      "SELECT id, name, slug, region_id FROM communities ORDER BY name ASC"
+    );
+    return result.rows || result;
+  }
+
+  const db = getSqliteDb();
+  return db
+    .prepare("SELECT id, name, slug, region_id FROM communities ORDER BY name COLLATE NOCASE ASC")
+    .all();
+}
+
 async function findRegionByName(name) {
   const normalized = normalizeText(name);
   if (!normalized) return null;
@@ -1880,10 +1895,22 @@ async function generateEditorialEnrichment(myth) {
 }
 
 async function generateNewMyth(query, context) {
+  const regionById = new Map(
+    (context.regions || []).map((region) => [region.id, region.name])
+  );
+  const communitiesByRegion = (context.communities || []).reduce((acc, community) => {
+    const regionName = regionById.get(community.region_id);
+    if (!regionName) return acc;
+    if (!acc[regionName]) acc[regionName] = [];
+    acc[regionName].push(community.name);
+    return acc;
+  }, {});
+
   const payload = {
     query: query,
     regions: context.regions.map((region) => region.name),
     tags: context.tags.map((tag) => tag.name),
+    communities_by_region: communitiesByRegion,
     requirement: {
       min_sources: MIN_SOURCES,
       language: "es-CO",
@@ -1897,6 +1924,8 @@ async function generateNewMyth(query, context) {
     "Usa busqueda web obligatoria para reunir al menos 20 fuentes. El mito debe seguir la estructura editorial del proyecto: Mito, Historia, Versiones, Leccion, Similitudes. " +
     "Incluye descripciones SEO y prompts de imagen en formato horizontal (16:9) y vertical (9:16) estilo paper quilling/paper cut. " +
     "Selecciona la region colombiana adecuada (usa solo las regiones entregadas). " +
+    "Selecciona la comunidad solo de la lista entregada para esa region (communities_by_region). " +
+    "Si la comunidad no esta clara o no existe en la lista, deja el campo community vacio. " +
     "Elige tags solo de la lista entregada; no inventes nuevas categorias. Si ninguna aplica, devuelve un array vacio. " +
     "Si no puedes determinar comunidad o departamento con certeza, usa una cadena vacia en esos campos. " +
     "El category_path debe tener el formato 'Region > Departamento > Comunidad' usando solo los valores definidos. " +
@@ -2230,8 +2259,12 @@ async function enrichExistingMyth(myth) {
 }
 
 async function createNewMyth(query) {
-  const [regions, tags] = await Promise.all([listRegions(), listTags()]);
-  const context = { regions, tags };
+  const [regions, tags, communities] = await Promise.all([
+    listRegions(),
+    listTags(),
+    listCommunities(),
+  ]);
+  const context = { regions, tags, communities };
 
   const { data: creation, modelUsed } = await generateNewMyth(query, context);
 
