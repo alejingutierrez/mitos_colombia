@@ -68,6 +68,8 @@ export default function MythsCmsPage() {
   const [items, setItems] = useState([]);
   const [selectedId, setSelectedId] = useState("");
   const [draft, setDraft] = useState(emptyDraft);
+  const [newCommunityName, setNewCommunityName] = useState("");
+  const [creatingCommunity, setCreatingCommunity] = useState(false);
 
   const isNew = !draft.id;
 
@@ -288,6 +290,61 @@ export default function MythsCmsPage() {
     await fetchList(auth, 0, limit, query);
   };
 
+  const handleCreateCommunity = async () => {
+    if (!auth) return;
+    if (!draft.region_id) {
+      showToast("Selecciona una region primero", "info");
+      return;
+    }
+    const name = newCommunityName.trim();
+    if (!name) {
+      showToast("Ingresa un nombre de comunidad", "info");
+      return;
+    }
+
+    setCreatingCommunity(true);
+    try {
+      const response = await fetch("/api/admin/communities", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Basic ${auth}`,
+        },
+        body: JSON.stringify({
+          name,
+          region_id: Number(draft.region_id),
+        }),
+      });
+
+      if (response.status === 401) {
+        handleLogout();
+        return;
+      }
+
+      const data = await response.json();
+      if (!response.ok) {
+        throw new Error(data.error || "No se pudo crear la comunidad");
+      }
+
+      const created = data.community;
+      setTaxonomy((prev) => {
+        const next = [
+          ...prev.communities.filter((item) => item.id !== created.id),
+          created,
+        ].sort((a, b) => a.name.localeCompare(b.name, "es"));
+        return { ...prev, communities: next };
+      });
+      setDraft((prev) => ({ ...prev, community_id: String(created.id) }));
+      setNewCommunityName("");
+      showToast(data.created ? "Comunidad creada" : "Comunidad ya existe", "success");
+    } catch (error) {
+      console.error("Error creating community:", error);
+      showToast(error.message || "No se pudo crear la comunidad", "error");
+    } finally {
+      setCreatingCommunity(false);
+    }
+  };
+
   const handlePrev = async () => {
     if (!auth) return;
     const nextOffset = Math.max(offset - limit, 0);
@@ -464,6 +521,26 @@ export default function MythsCmsPage() {
                     </option>
                   ))}
                 </select>
+                <span className="mt-2 block text-xs text-ink-500">
+                  ¿No existe? Crea una nueva comunidad para esta region.
+                </span>
+                <div className="mt-2 flex flex-wrap gap-2">
+                  <input
+                    className="input-glass flex-1 min-w-[200px]"
+                    placeholder="Nueva comunidad"
+                    value={newCommunityName}
+                    onChange={(event) => setNewCommunityName(event.target.value)}
+                    disabled={!draft.region_id || creatingCommunity}
+                  />
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    onClick={handleCreateCommunity}
+                    disabled={!draft.region_id || creatingCommunity}
+                  >
+                    {creatingCommunity ? "Creando..." : "Crear"}
+                  </Button>
+                </div>
               </label>
               <label className="text-sm text-ink-700">
                 Departamento (opcional)
