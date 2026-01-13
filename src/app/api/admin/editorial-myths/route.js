@@ -355,6 +355,27 @@ function isTitleClean(title) {
   );
 }
 
+function stripCitations(value) {
+  let text = String(value || "");
+  if (!text) return text;
+
+  text = text.replace(/\[(\d+|[\d,\s-]+)\]/g, "");
+  text = text.replace(/\(\s*(fuente|referencia|referencias|source)[^)]*\)/gi, "");
+  text = text.replace(/^\s*(fuente|referencias|bibliograf[ií]a)\s*:.*$/gim, "");
+  text = text.replace(/\s{2,}/g, " ").replace(/\n{3,}/g, "\n\n").trim();
+  return text;
+}
+
+function sanitizeEditorialContent(data) {
+  const cleaned = { ...data };
+  ["mito", "historia", "versiones", "leccion", "similitudes", "excerpt"].forEach(
+    (field) => {
+      cleaned[field] = stripCitations(cleaned[field]);
+    }
+  );
+  return cleaned;
+}
+
 function buildContent({ mito, historia, versiones, leccion, similitudes }) {
   const sections = [
     ["Mito", mito],
@@ -1722,6 +1743,7 @@ async function generateEditorialEnrichment(myth) {
     "El campo mito debe ser un relato oral, como si un anciano estuviera narrando el mito, describiendo personajes, lugares y acciones; minimo 300 palabras. " +
     "Usa busqueda web obligatoria para reunir al menos 20 fuentes. Selecciona las fuentes mas relevantes y resume en notas editoriales. " +
     "No inventes datos sin respaldo. Si hay versiones distintas, comparalas. Mantén el texto en español de Colombia. " +
+    "No incluyas citas, URLs ni referencias en el texto final de mito, historia, versiones, leccion, similitudes o excerpt. " +
     "No incluyas razonamiento fuera del JSON. Usa el campo analysis_summary para resumir pasos y decisiones. " +
     "No uses comillas dobles dentro de strings; si necesitas citar, usa comillas simples. " +
     "Limita analysis_summary a 120 palabras y editorial_notes a 200 palabras. " +
@@ -1840,17 +1862,18 @@ async function generateEditorialEnrichment(myth) {
       );
       continue;
     }
-    const mitoWords = countWords(parsed.mito);
+    const cleaned = sanitizeEditorialContent(parsed);
+    const mitoWords = countWords(cleaned.mito);
     if (mitoWords < MIN_MITO_WORDS) {
       lastError = new Error(
         `El campo mito es demasiado corto (${mitoWords} palabras). Debe tener al menos ${MIN_MITO_WORDS} palabras.`
       );
       continue;
     }
-    if (!Array.isArray(parsed.sources) || parsed.sources.length < MIN_SOURCES) {
+    if (!Array.isArray(cleaned.sources) || cleaned.sources.length < MIN_SOURCES) {
       throw new Error("No se encontraron suficientes fuentes (minimo 20)");
     }
-    return { data: parsed, modelUsed: model };
+    return { data: cleaned, modelUsed: model };
   }
 
   throw lastError || new Error("No se pudo generar un mito con la longitud requerida");
@@ -1878,6 +1901,7 @@ async function generateNewMyth(query, context) {
     "Si no puedes determinar comunidad o departamento con certeza, usa una cadena vacia en esos campos. " +
     "El category_path debe tener el formato 'Region > Departamento > Comunidad' usando solo los valores definidos. " +
     "Si no hay una ubicacion precisa, usa el centro de la region o de Colombia. " +
+    "No incluyas citas, URLs ni referencias en el texto final de mito, historia, versiones, leccion, similitudes o excerpt. " +
     "No incluyas razonamiento fuera del JSON. Usa el campo analysis_summary para resumir pasos y decisiones. " +
     "No uses comillas dobles dentro de strings; si necesitas citar, usa comillas simples. " +
     "Limita analysis_summary a 120 palabras y editorial_notes a 200 palabras. " +
@@ -2015,17 +2039,18 @@ async function generateNewMyth(query, context) {
     }
 
     const parsed = safeParseJson(outputText);
-    const mitoWords = countWords(parsed.mito);
+    const cleaned = sanitizeEditorialContent(parsed);
+    const mitoWords = countWords(cleaned.mito);
     if (mitoWords < MIN_MITO_WORDS) {
       lastError = new Error(
         `El campo mito es demasiado corto (${mitoWords} palabras). Debe tener al menos ${MIN_MITO_WORDS} palabras.`
       );
       continue;
     }
-    if (!Array.isArray(parsed.sources) || parsed.sources.length < MIN_SOURCES) {
+    if (!Array.isArray(cleaned.sources) || cleaned.sources.length < MIN_SOURCES) {
       throw new Error("No se encontraron suficientes fuentes (minimo 20)");
     }
-    return { data: parsed, modelUsed: model };
+    return { data: cleaned, modelUsed: model };
   }
 
   throw lastError || new Error("No se pudo generar un mito con la longitud requerida");
