@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { revalidateTag } from "next/cache";
 import {
   getSqlClient,
   getSqliteDb,
@@ -1015,6 +1016,9 @@ export async function POST(request) {
     const keywords = parseKeywordsRaw(normalized.focus_keywords_raw);
     await replaceMythKeywords(created.id, keywords);
 
+    revalidateTag("myth");
+    revalidateTag("taxonomy");
+
     return NextResponse.json({
       myth: {
         id: created.id,
@@ -1139,6 +1143,9 @@ export async function PUT(request) {
 
     const keywords = parseKeywordsRaw(normalized.focus_keywords_raw);
     await replaceMythKeywords(id, keywords);
+
+    revalidateTag("myth");
+    revalidateTag("taxonomy");
 
     return NextResponse.json({
       myth: {

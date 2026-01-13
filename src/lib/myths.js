@@ -388,7 +388,7 @@ const getMythBySlugCached = unstable_cache(
     }
   },
   ["myth-by-slug"],
-  { revalidate: ONE_HOUR }
+  { revalidate: ONE_HOUR, tags: ["myth"] }
 );
 
 export async function getMythBySlug(slug) {
@@ -532,7 +532,7 @@ const getTaxonomyCached = unstable_cache(
     }
   },
   ["taxonomy"],
-  { revalidate: ONE_HOUR }
+  { revalidate: ONE_HOUR, tags: ["taxonomy"] }
 );
 
 export async function getTaxonomy() {
