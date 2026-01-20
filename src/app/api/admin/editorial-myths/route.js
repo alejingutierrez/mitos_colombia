@@ -2308,9 +2308,6 @@ async function generateNewMyth(query, context) {
     regions: context.regions.map((region) => region.name),
     tags: context.tags.map((tag) => tag.name),
     communities_by_region: communitiesByRegion,
-  };
-
-  const baseInstructions =
     web_context: [],
     requirement: {
       min_sources: MIN_SOURCES,
