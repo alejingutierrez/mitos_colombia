@@ -28,7 +28,7 @@ const MODEL_FALLBACKS = (process.env.OPENAI_EDITORIAL_MODEL_FALLBACKS || "")
 const DEFAULT_MODEL_FALLBACKS = ["gpt-5.2-2025-12-11", "gpt-5.2", "gpt-4o-mini"];
 const MAX_RAW_JSON_CHARS = 200000;
 const EDITORIAL_MAX_OUTPUT_TOKENS = Number.parseInt(
-  process.env.OPENAI_EDITORIAL_MAX_OUTPUT_TOKENS || "8000",
+  process.env.OPENAI_EDITORIAL_MAX_OUTPUT_TOKENS || "30000",
   10
 );
 const CHECK_MAX_OUTPUT_TOKENS = Number.parseInt(
@@ -47,7 +47,7 @@ const WEB_SOURCES_LIMIT = Number.parseInt(
   10
 );
 const SEARCH_MAX_OUTPUT_TOKENS = Number.parseInt(
-  process.env.OPENAI_EDITORIAL_SEARCH_MAX_OUTPUT_TOKENS || "1200",
+  process.env.OPENAI_EDITORIAL_SEARCH_MAX_OUTPUT_TOKENS || "5000",
   10
 );
 const SCRAPE_TIMEOUT_MS = Number.parseInt(
