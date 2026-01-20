@@ -316,6 +316,16 @@ function isModelAccessError(error) {
   );
 }
 
+function shouldOmitTemperature(model, request) {
+  const name = String(model || "").toLowerCase();
+  if (!name.startsWith("gpt-5")) return false;
+  if (name.startsWith("gpt-5.1") || name.startsWith("gpt-5.2")) {
+    const effort = String(request?.reasoning?.effort || "").toLowerCase();
+    return effort !== "none";
+  }
+  return true;
+}
+
 async function createResponseWithFallback(options) {
   const { model, ...request } = options;
   const models = buildModelQueue(model);
@@ -323,10 +333,11 @@ async function createResponseWithFallback(options) {
 
   for (const candidate of models) {
     try {
-      const response = await openai.responses.create({
-        ...request,
-        model: candidate,
-      });
+      const payload = { ...request, model: candidate };
+      if ("temperature" in payload && shouldOmitTemperature(candidate, payload)) {
+        delete payload.temperature;
+      }
+      const response = await openai.responses.create(payload);
       return { response, model: candidate };
     } catch (error) {
       lastError = error;
