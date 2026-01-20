@@ -440,6 +440,9 @@ export default function EditorialMythsAdminPage() {
                   >
                     <option value={5}>5 mitos</option>
                     <option value={10}>10 mitos</option>
+                    <option value={25}>25 mitos</option>
+                    <option value={50}>50 mitos</option>
+                    <option value={100}>100 mitos</option>
                   </select>
                 </div>
                 <Button
