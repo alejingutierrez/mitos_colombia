@@ -14,7 +14,20 @@ const BODY_CHUNK_LIMIT = 1200;
 function splitIntoSentences(text) {
   const cleaned = String(text || "").replace(/\s+/g, " ").trim();
   if (!cleaned) return [];
-  return cleaned.split(/(?<=[.!?])\s+/);
+  const sentences = [];
+  let buffer = "";
+  for (let i = 0; i < cleaned.length; i += 1) {
+    const char = cleaned[i];
+    buffer += char;
+    if (char === "." || char === "!" || char === "?") {
+      const trimmed = buffer.trim();
+      if (trimmed) sentences.push(trimmed);
+      buffer = "";
+    }
+  }
+  const remaining = buffer.trim();
+  if (remaining) sentences.push(remaining);
+  return sentences;
 }
 
 function splitText(text, maxChars) {
