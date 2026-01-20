@@ -95,6 +95,16 @@ const adminMenuItems = [
     ),
   },
   {
+    label: "Libro editorial",
+    href: "/admin/editorial-book",
+    icon: (
+      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4h12a3 3 0 013 3v13a2 2 0 01-2 2H6a2 2 0 01-2-2V4z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 6h7M7 10h7M7 14h4" />
+      </svg>
+    ),
+  },
+  {
     label: "Formatear Contenido",
     href: "/admin/format-content",
     icon: (
