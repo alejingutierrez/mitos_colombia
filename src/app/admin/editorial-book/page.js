@@ -348,6 +348,10 @@ export default function EditorialBookPage() {
   const canPrev = spreadIndex > 0;
   const canNext = spreadIndex < totalSpreads - 1;
   const hasMore = items.length < total;
+  const naturalWidth = currentSpread?.single ? PAGE_WIDTH_PX : PAGE_WIDTH_PX * 2;
+  const naturalHeight = PAGE_HEIGHT_PX;
+  const scaledWidth = Math.max(1, Math.round(naturalWidth * bookScale));
+  const scaledHeight = Math.max(1, Math.round(naturalHeight * bookScale));
 
   useEffect(() => {
     if (!viewportRef.current) return;
@@ -366,7 +370,9 @@ export default function EditorialBookPage() {
     const { width, height } = viewportSize;
     if (!width || !height) return;
     const targetWidth = currentSpread?.single ? PAGE_WIDTH_PX : PAGE_WIDTH_PX * 2;
-    const scale = Math.min(width / targetWidth, height / PAGE_HEIGHT_PX, 1);
+    const fitScale = Math.min(width / targetWidth, height / PAGE_HEIGHT_PX, 1);
+    const heightScale = Math.min(height / PAGE_HEIGHT_PX, 1);
+    const scale = currentSpread?.single ? fitScale : heightScale;
     setBookScale(Number.isFinite(scale) && scale > 0 ? scale : 1);
   }, [viewportSize, currentSpread]);
 
@@ -458,37 +464,48 @@ export default function EditorialBookPage() {
               ref={viewportRef}
               className={cn(
                 "book-viewport transition-transform duration-300",
+                !currentSpread?.single && "book-viewport-scroll",
                 isFlipping && flipDirection === "next" && "book-flip-next",
                 isFlipping && flipDirection === "prev" && "book-flip-prev"
               )}
             >
               {currentSpread?.single ? (
                 <div
-                  className="book-canvas book-single"
-                  style={{
-                    width: `${PAGE_WIDTH_PX}px`,
-                    height: `${PAGE_HEIGHT_PX}px`,
-                    transform: `scale(${bookScale})`,
-                  }}
+                  className="book-zoom"
+                  style={{ width: `${scaledWidth}px`, height: `${scaledHeight}px` }}
                 >
-                  <div className="book-page">
-                    <PageContent page={currentSpread.right} />
+                  <div
+                    className="book-canvas book-single"
+                    style={{
+                      width: `${naturalWidth}px`,
+                      height: `${naturalHeight}px`,
+                      transform: `scale(${bookScale})`,
+                    }}
+                  >
+                    <div className="book-page">
+                      <PageContent page={currentSpread.right} />
+                    </div>
                   </div>
                 </div>
               ) : (
                 <div
-                  className="book-canvas book-spread"
-                  style={{
-                    width: `${PAGE_WIDTH_PX * 2}px`,
-                    height: `${PAGE_HEIGHT_PX}px`,
-                    transform: `scale(${bookScale})`,
-                  }}
+                  className="book-zoom"
+                  style={{ width: `${scaledWidth}px`, height: `${scaledHeight}px` }}
                 >
-                  <div className="book-page">
-                    <PageContent page={currentSpread?.left} />
-                  </div>
-                  <div className="book-page">
-                    <PageContent page={currentSpread?.right} />
+                  <div
+                    className="book-canvas book-spread"
+                    style={{
+                      width: `${naturalWidth}px`,
+                      height: `${naturalHeight}px`,
+                      transform: `scale(${bookScale})`,
+                    }}
+                  >
+                    <div className="book-page">
+                      <PageContent page={currentSpread?.left} />
+                    </div>
+                    <div className="book-page">
+                      <PageContent page={currentSpread?.right} />
+                    </div>
                   </div>
                 </div>
               )}
@@ -512,16 +529,29 @@ export default function EditorialBookPage() {
           justify-content: center;
           overflow: hidden;
         }
+        .book-viewport.book-viewport-scroll {
+          overflow-x: auto;
+          overflow-y: hidden;
+          justify-content: flex-start;
+          padding-bottom: 12px;
+          scroll-snap-type: x mandatory;
+        }
         .book-canvas {
           display: flex;
           align-items: stretch;
           justify-content: center;
-          transform-origin: center center;
           border-radius: 28px;
           overflow: hidden;
           background: linear-gradient(120deg, rgba(255, 255, 255, 0.8), rgba(252, 250, 245, 0.95));
           box-shadow: 0 24px 70px rgba(12, 20, 16, 0.18);
           border: 1px solid rgba(18, 32, 28, 0.08);
+          transform-origin: top left;
+          flex: 0 0 auto;
+        }
+        .book-zoom {
+          display: block;
+          flex-shrink: 0;
+          scroll-snap-align: center;
         }
         .book-spread {
           gap: 0;
