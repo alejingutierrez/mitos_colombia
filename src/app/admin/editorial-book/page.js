@@ -8,8 +8,8 @@ import { Button } from "../../../components/ui/Button";
 import { cn } from "../../../lib/utils";
 
 const DEFAULT_BOOK_TITLE = "Mitos editoriales de Colombia";
-const PAGE_CHAR_LIMIT = 1800;
-const BODY_CHUNK_LIMIT = 1200;
+const PAGE_CHAR_LIMIT = 2200;
+const BODY_CHUNK_LIMIT = 1500;
 
 function splitIntoSentences(text) {
   const cleaned = String(text || "").replace(/\s+/g, " ").trim();
@@ -267,7 +267,7 @@ function PageContent({ page }) {
               );
             }
             return (
-              <p key={idx} className="text-[16px] leading-relaxed text-ink-800">
+              <p key={idx} className="text-[11px] leading-[1.65] text-ink-800">
                 {block.text}
               </p>
             );
@@ -429,23 +429,23 @@ export default function EditorialBookPage() {
 
           <div
             className={cn(
-              "mx-auto flex w-full max-w-[1120px] items-center justify-center transition-transform duration-300",
+              "book-shell mx-auto flex w-full max-w-[1200px] items-center justify-center transition-transform duration-300",
               isFlipping && flipDirection === "next" && "book-flip-next",
               isFlipping && flipDirection === "prev" && "book-flip-prev"
             )}
           >
             {currentSpread?.single ? (
-              <div className="w-full max-w-[520px]">
-                <div className="book-page h-[72vh] max-h-[720px] min-h-[520px]">
+              <div className="w-full">
+                <div className="book-page">
                   <PageContent page={currentSpread.right} />
                 </div>
               </div>
             ) : (
               <div className="book-spread grid w-full grid-cols-2 gap-0">
-                <div className="book-page h-[72vh] max-h-[720px] min-h-[520px]">
+                <div className="book-page">
                   <PageContent page={currentSpread?.left} />
                 </div>
-                <div className="book-page h-[72vh] max-h-[720px] min-h-[520px]">
+                <div className="book-page">
                   <PageContent page={currentSpread?.right} />
                 </div>
               </div>
@@ -455,15 +455,31 @@ export default function EditorialBookPage() {
       </div>
 
       <style jsx>{`
+        .book-shell {
+          --page-width: clamp(260px, 38vw, 560px);
+          --page-height: calc(var(--page-width) * 1.4142);
+          overflow-x: auto;
+          padding: 12px;
+        }
         .book-spread {
           border-radius: 28px;
           overflow: hidden;
           background: linear-gradient(120deg, rgba(255, 255, 255, 0.8), rgba(252, 250, 245, 0.95));
           box-shadow: 0 24px 70px rgba(12, 20, 16, 0.18);
           border: 1px solid rgba(18, 32, 28, 0.08);
+          width: calc(var(--page-width) * 2);
         }
         .book-page {
-          padding: 20px;
+          width: var(--page-width);
+          height: var(--page-height);
+          padding: 42px 40px;
+          box-sizing: border-box;
+        }
+        @media (max-width: 1024px) {
+          .book-spread {
+            grid-template-columns: 1fr;
+            width: var(--page-width);
+          }
         }
         .book-flip-next {
           animation: flipNext 0.45s ease;
