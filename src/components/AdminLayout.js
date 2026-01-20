@@ -176,7 +176,7 @@ export default function AdminLayout({ children, onLogout }) {
   return (
     <div className="min-h-screen">
       <HeaderClient initialTaxonomy={taxonomy} />
-      <div className="w-full mt-8 px-4 lg:pl-0 lg:pr-6">
+      <div className="w-full mt-8 pl-[15px] pr-4 lg:pr-6">
         <div className="flex flex-col lg:flex-row gap-6 pb-12">
           {/* Sidebar */}
           <aside className="w-full lg:w-64 shrink-0">
