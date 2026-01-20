@@ -650,6 +650,7 @@ async function collectWebSources(payload, { purpose }) {
   const baseInstructions =
     "Eres un investigador editorial. Debes realizar busquedas web y devolver fuentes verificables. " +
     `Entrega ${MIN_SOURCES} fuentes distintas (si existen) en español o relacionadas con Colombia. ` +
+    "Incluye siempre arrays para sources, key_sources y search_queries (aunque esten vacios). " +
     "Limita cada summary a 40 palabras. No inventes URLs. Devuelve SOLO JSON con los campos solicitados.";
 
   let lastError;
@@ -718,7 +719,7 @@ async function collectWebSources(payload, { purpose }) {
                 items: { type: "string" },
               },
             },
-            required: ["sources"],
+            required: ["sources", "key_sources", "search_queries"],
           },
         },
       },
