@@ -17,6 +17,10 @@ const openai = new OpenAI({
 const EDITORIAL_MODEL =
   process.env.OPENAI_EDITORIAL_MODEL || "gpt-5.2-2025-12-11";
 const CHECK_MODEL = process.env.OPENAI_EDITORIAL_CHECK_MODEL || EDITORIAL_MODEL;
+const SEARCH_MODEL =
+  process.env.OPENAI_EDITORIAL_SEARCH_MODEL || EDITORIAL_MODEL;
+const COMPOSE_MODEL =
+  process.env.OPENAI_EDITORIAL_COMPOSE_MODEL || EDITORIAL_MODEL;
 const MODEL_FALLBACKS = (process.env.OPENAI_EDITORIAL_MODEL_FALLBACKS || "")
   .split(",")
   .map((model) => model.trim())
@@ -32,12 +36,36 @@ const CHECK_MAX_OUTPUT_TOKENS = Number.parseInt(
   10
 );
 
-const MIN_SOURCES = 20;
+const MIN_SOURCES = 10;
 const DUPLICATE_THRESHOLD = 65;
-const MIN_MITO_WORDS = 300;
+const MIN_MITO_WORDS = 600;
 const MAX_CHECK_CHUNK_CHARS = 18000;
 const MAX_MYTH_CONTENT_CHARS = 8000;
 const MAX_EXCERPT_CHARS = 320;
+const WEB_SOURCES_LIMIT = Number.parseInt(
+  process.env.OPENAI_EDITORIAL_SOURCES_LIMIT || "10",
+  10
+);
+const SEARCH_MAX_OUTPUT_TOKENS = Number.parseInt(
+  process.env.OPENAI_EDITORIAL_SEARCH_MAX_OUTPUT_TOKENS || "1200",
+  10
+);
+const SCRAPE_TIMEOUT_MS = Number.parseInt(
+  process.env.OPENAI_EDITORIAL_SCRAPE_TIMEOUT_MS || "8000",
+  10
+);
+const SCRAPE_CONCURRENCY = Number.parseInt(
+  process.env.OPENAI_EDITORIAL_SCRAPE_CONCURRENCY || "3",
+  10
+);
+const MAX_SCRAPED_CHARS = Number.parseInt(
+  process.env.OPENAI_EDITORIAL_SCRAPE_MAX_CHARS || "4000",
+  10
+);
+const MAX_WEB_CONTEXT_CHARS = Number.parseInt(
+  process.env.OPENAI_EDITORIAL_WEB_CONTEXT_MAX_CHARS || "30000",
+  10
+);
 
 const COLOMBIA_CENTER = {
   latitude: 4.570868,
@@ -343,6 +371,498 @@ function countWords(value) {
     .trim()
     .split(/\s+/)
     .filter(Boolean).length;
+}
+
+function logEditorialEvent(stage, payload = {}) {
+  const entry = {
+    stage,
+    ts: new Date().toISOString(),
+    ...payload,
+  };
+  console.log(`[editorial-myths] ${JSON.stringify(entry)}`);
+}
+
+function buildWebSearchInput({ title, content, region, community }) {
+  return {
+    title: String(title || "").trim(),
+    content: truncateText(content || "", MAX_MYTH_CONTENT_CHARS),
+    region: String(region || "").trim(),
+    community: String(community || "").trim(),
+  };
+}
+
+function normalizeUrl(value) {
+  if (!value) return null;
+  try {
+    const url = new URL(String(value));
+    if (!["http:", "https:"].includes(url.protocol)) return null;
+    url.hash = "";
+    const normalized = url.toString();
+    return normalized.endsWith("/") ? normalized.slice(0, -1) : normalized;
+  } catch (error) {
+    return null;
+  }
+}
+
+function dedupeSources(sources, limit = WEB_SOURCES_LIMIT) {
+  const cleaned = [];
+  const seen = new Set();
+  (sources || []).forEach((source) => {
+    const url = normalizeUrl(source?.url);
+    if (!url) return;
+    const key = url.toLowerCase();
+    if (seen.has(key)) return;
+    seen.add(key);
+    cleaned.push({
+      title: String(source?.title || "").trim(),
+      url,
+      summary: String(source?.summary || "").trim(),
+      relevance_score: Number(source?.relevance_score || 0),
+    });
+  });
+  return cleaned.slice(0, Math.max(1, limit));
+}
+
+function summarizeDomains(sources) {
+  const counts = new Map();
+  sources.forEach((source) => {
+    try {
+      const host = new URL(source.url).hostname.replace(/^www\./, "");
+      counts.set(host, (counts.get(host) || 0) + 1);
+    } catch (error) {
+      // ignore
+    }
+  });
+  return Array.from(counts.entries())
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, 6)
+    .map(([domain, count]) => ({ domain, count }));
+}
+
+async function mapWithConcurrency(items, limit, mapper) {
+  const results = new Array(items.length);
+  let index = 0;
+  const workers = Array.from({ length: Math.min(limit, items.length) }, async () => {
+    while (index < items.length) {
+      const current = index;
+      index += 1;
+      results[current] = await mapper(items[current], current);
+    }
+  });
+  await Promise.all(workers);
+  return results;
+}
+
+function decodeHtmlEntities(text) {
+  if (!text) return "";
+  return text
+    .replace(/&nbsp;/gi, " ")
+    .replace(/&amp;/gi, "&")
+    .replace(/&quot;/gi, "\"")
+    .replace(/&#39;/gi, "'")
+    .replace(/&lt;/gi, "<")
+    .replace(/&gt;/gi, ">")
+    .replace(/&#(x?)([0-9a-fA-F]+);/g, (match, hex, code) => {
+      try {
+        const value = Number.parseInt(code, hex ? 16 : 10);
+        return Number.isFinite(value) ? String.fromCodePoint(value) : match;
+      } catch (error) {
+        return match;
+      }
+    });
+}
+
+function extractTextFromHtml(html) {
+  if (!html) return "";
+  const withoutScripts = html
+    .replace(/<script[\s\S]*?<\/script>/gi, " ")
+    .replace(/<style[\s\S]*?<\/style>/gi, " ")
+    .replace(/<noscript[\s\S]*?<\/noscript>/gi, " ")
+    .replace(/<svg[\s\S]*?<\/svg>/gi, " ");
+  const withoutTags = withoutScripts.replace(/<[^>]+>/g, " ");
+  return decodeHtmlEntities(withoutTags).replace(/\s+/g, " ").trim();
+}
+
+async function fetchSourceText(url) {
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), SCRAPE_TIMEOUT_MS);
+  const startedAt = Date.now();
+  try {
+    const response = await fetch(url, {
+      signal: controller.signal,
+      headers: {
+        "user-agent":
+          "MitosColombiaBot/1.0 (+https://mitosdecolombia.com)",
+        accept: "text/html,text/plain;q=0.9,*/*;q=0.5",
+      },
+      redirect: "follow",
+    });
+
+    const contentType = response.headers.get("content-type") || "";
+    if (!response.ok) {
+      return {
+        ok: false,
+        status: response.status,
+        content_type: contentType,
+        elapsed_ms: Date.now() - startedAt,
+      };
+    }
+
+    if (
+      !contentType.includes("text/html") &&
+      !contentType.includes("text/plain")
+    ) {
+      return {
+        ok: false,
+        status: response.status,
+        content_type: contentType,
+        skipped: "unsupported_content_type",
+        elapsed_ms: Date.now() - startedAt,
+      };
+    }
+
+    const rawText = await response.text();
+    const normalized = contentType.includes("text/html")
+      ? extractTextFromHtml(rawText)
+      : rawText.replace(/\s+/g, " ").trim();
+    const clipped = normalized.slice(0, MAX_SCRAPED_CHARS);
+    return {
+      ok: Boolean(clipped),
+      status: response.status,
+      content_type: contentType,
+      text: clipped,
+      text_length: clipped.length,
+      elapsed_ms: Date.now() - startedAt,
+    };
+  } catch (error) {
+    const message = error?.name === "AbortError" ? "timeout" : String(error?.message || error);
+    return {
+      ok: false,
+      error: message,
+      elapsed_ms: Date.now() - startedAt,
+    };
+  } finally {
+    clearTimeout(timeout);
+  }
+}
+
+async function scrapeSources(sources) {
+  const targets = sources.slice(0, WEB_SOURCES_LIMIT);
+  if (!targets.length) return [];
+  return mapWithConcurrency(targets, SCRAPE_CONCURRENCY, async (source) => {
+    const result = await fetchSourceText(source.url);
+    if (!result.ok) {
+      logEditorialEvent("scrape_failed", {
+        url: source.url,
+        status: result.status || null,
+        error: result.error || result.skipped || null,
+        content_type: result.content_type || null,
+      });
+    }
+    return {
+      ...source,
+      scraped_text: result.ok ? result.text : "",
+      scrape_ok: Boolean(result.ok),
+      scrape_status: result.status || null,
+      scrape_error: result.error || null,
+      scrape_content_type: result.content_type || null,
+      scrape_elapsed_ms: result.elapsed_ms || null,
+      scraped_length: result.text_length || 0,
+    };
+  });
+}
+
+function buildPrimaryContext(myth) {
+  const contentSections = parseContentSections(myth.content);
+  return {
+    title: myth.title,
+    slug: myth.slug,
+    region: myth.region,
+    region_slug: myth.region_slug,
+    community: myth.community,
+    community_slug: myth.community_slug,
+    department: myth.department,
+    category_path: myth.category_path,
+    tags_raw: myth.tags_raw,
+    excerpt: truncateText(myth.excerpt, MAX_EXCERPT_CHARS),
+    content: truncateText(myth.content, MAX_MYTH_CONTENT_CHARS),
+    mito: truncateText(myth.mito || contentSections.mito, MAX_MYTH_CONTENT_CHARS),
+    historia: truncateText(
+      myth.historia || contentSections.historia,
+      MAX_MYTH_CONTENT_CHARS
+    ),
+    versiones: truncateText(
+      myth.versiones || contentSections.versiones,
+      MAX_MYTH_CONTENT_CHARS
+    ),
+    leccion: truncateText(
+      myth.leccion || contentSections.leccion,
+      MAX_MYTH_CONTENT_CHARS
+    ),
+    similitudes: truncateText(
+      myth.similitudes || contentSections.similitudes,
+      MAX_MYTH_CONTENT_CHARS
+    ),
+    seo_title: myth.seo_title,
+    seo_description: myth.seo_description,
+    focus_keyword: myth.focus_keyword,
+    focus_keywords_raw: myth.focus_keywords_raw,
+    image_prompt: myth.image_prompt,
+    image_prompt_horizontal: myth.image_prompt_horizontal,
+    image_prompt_vertical: myth.image_prompt_vertical,
+    image_url: myth.image_url,
+  };
+}
+
+function buildWebContext(scrapedSources) {
+  let totalChars = 0;
+  const entries = [];
+  const ordered = [...scrapedSources].sort(
+    (a, b) => (b.relevance_score || 0) - (a.relevance_score || 0)
+  );
+  ordered.forEach((source) => {
+    const base = {
+      title: source.title,
+      url: source.url,
+      summary: truncateText(source.summary, 420),
+      relevance_score: source.relevance_score,
+    };
+    const text = source.scraped_text || "";
+    if (!text && !source.summary) {
+      return;
+    }
+    const remaining = MAX_WEB_CONTEXT_CHARS - totalChars;
+    if (remaining <= 0) return;
+    const snippet = text ? text.slice(0, remaining) : "";
+    totalChars += snippet.length;
+    entries.push({
+      ...base,
+      scraped_text: snippet,
+      scraped_length: snippet.length,
+      scrape_ok: source.scrape_ok,
+    });
+  });
+  return entries;
+}
+
+async function collectWebSources(payload, { purpose }) {
+  const searchPayload = buildWebSearchInput(payload);
+  const baseInstructions =
+    "Eres un investigador editorial. Debes realizar busquedas web y devolver fuentes verificables. " +
+    `Entrega ${MIN_SOURCES} fuentes distintas (si existen) en español o relacionadas con Colombia. ` +
+    "Limita cada summary a 40 palabras. No inventes URLs. Devuelve SOLO JSON con los campos solicitados.";
+
+  let lastError;
+  for (let attempt = 0; attempt < 2; attempt += 1) {
+    const retryNote =
+      attempt === 0
+        ? ""
+        : "La respuesta anterior no trajo suficientes fuentes. Intenta nuevamente y completa las fuentes faltantes.";
+
+    const { response, model } = await createResponseWithFallback({
+      model: SEARCH_MODEL,
+      instructions: `${baseInstructions} ${retryNote}`.trim(),
+      input: JSON.stringify(searchPayload),
+      tools: [
+        {
+          type: "web_search_preview",
+          search_context_size: "high",
+          user_location: {
+            type: "approximate",
+            country: "CO",
+            city: "Bogotá",
+            region: "Cundinamarca",
+          },
+        },
+      ],
+      tool_choice: { type: "web_search_preview" },
+      text: {
+        format: {
+          type: "json_schema",
+          name: "editorial_web_sources",
+          strict: true,
+          schema: {
+            type: "object",
+            additionalProperties: false,
+            properties: {
+              sources: {
+                type: "array",
+                items: {
+                  type: "object",
+                  additionalProperties: false,
+                  properties: {
+                    title: { type: "string" },
+                    url: { type: "string" },
+                    summary: { type: "string" },
+                    relevance_score: { type: "number" },
+                  },
+                  required: ["title", "url", "summary", "relevance_score"],
+                },
+              },
+              key_sources: {
+                type: "array",
+                items: {
+                  type: "object",
+                  additionalProperties: false,
+                  properties: {
+                    title: { type: "string" },
+                    url: { type: "string" },
+                    summary: { type: "string" },
+                    relevance_score: { type: "number" },
+                  },
+                  required: ["title", "url", "summary", "relevance_score"],
+                },
+              },
+              search_queries: {
+                type: "array",
+                items: { type: "string" },
+              },
+            },
+            required: ["sources"],
+          },
+        },
+      },
+      temperature: 0.2,
+      max_output_tokens: SEARCH_MAX_OUTPUT_TOKENS,
+      truncation: "auto",
+    });
+
+    const outputText = response.output_text?.trim();
+    if (!outputText) {
+      lastError = new Error("OpenAI response is empty");
+      continue;
+    }
+
+    const parsed = safeParseJson(outputText);
+    const sources = dedupeSources(parsed.sources || [], WEB_SOURCES_LIMIT);
+    if (sources.length < MIN_SOURCES) {
+      lastError = new Error(
+        `No se encontraron suficientes fuentes (${sources.length}/${MIN_SOURCES}).`
+      );
+      continue;
+    }
+
+    const keySources = dedupeSources(parsed.key_sources || [], Math.min(5, sources.length));
+    logEditorialEvent("web_search_done", {
+      purpose,
+      model_used: model,
+      sources_count: sources.length,
+      key_sources_count: keySources.length,
+      domains: summarizeDomains(sources),
+      search_queries: parsed.search_queries || [],
+    });
+
+    return {
+      sources,
+      key_sources: keySources,
+      model_used: model,
+      search_queries: parsed.search_queries || [],
+    };
+  }
+
+  throw lastError || new Error("No se pudieron reunir fuentes web suficientes");
+}
+
+async function composeEditorialFromSources({ myth, scrapedSources }) {
+  const primaryContext = buildPrimaryContext(myth);
+  const webContext = buildWebContext(scrapedSources);
+  const payload = {
+    primary_context: primaryContext,
+    web_context: webContext,
+    requirement: {
+      min_sources: MIN_SOURCES,
+      min_mito_words: MIN_MITO_WORDS,
+      language: "es-CO",
+    },
+  };
+
+  const baseInstructions =
+    "Eres un editor investigador de mitologia colombiana. Tu prioridad es la informacion del mito existente (primary_context). " +
+    "No cambies titulo, region, comunidad, category_path, tags, SEO ni keywords; solo mejora contenido. " +
+    "Usa la informacion web (web_context) para enriquecer detalles, historia y versiones, sin contradecir la base. " +
+    "Si hay conflicto entre fuentes, conserva la version existente y documenta variantes en 'versiones'. " +
+    `El campo mito debe ser un relato oral con voz de anciano narrador y minimo ${MIN_MITO_WORDS} palabras. ` +
+    "Incluye detalles de contexto, lugares y personajes cuando esten respaldados. " +
+    "No inventes datos sin respaldo. Mantén el texto en español de Colombia. " +
+    "No incluyas citas, URLs ni referencias en mito, historia, versiones, leccion, similitudes o excerpt. " +
+    "No incluyas razonamiento fuera del JSON. Usa el campo analysis_summary para resumir pasos y decisiones. " +
+    "No uses comillas dobles dentro de strings; si necesitas citar, usa comillas simples. " +
+    "Limita analysis_summary a 120 palabras y editorial_notes a 200 palabras. " +
+    "Si necesitas saltos de linea dentro de strings, usa \\n.";
+
+  let lastError;
+  for (let attempt = 0; attempt < 2; attempt += 1) {
+    const retryNote =
+      attempt === 0
+        ? ""
+        : `La respuesta anterior no cumplio la longitud narrativa del mito. Reescribe el campo mito con minimo ${MIN_MITO_WORDS} palabras y voz de anciano narrador.`;
+
+    const { response, model } = await createResponseWithFallback({
+      model: COMPOSE_MODEL,
+      instructions: `${baseInstructions} ${retryNote}`.trim(),
+      input: JSON.stringify(payload),
+      text: {
+        format: {
+          type: "json_schema",
+          name: "editorial_myth_composition",
+          strict: true,
+          schema: {
+            type: "object",
+            additionalProperties: false,
+            properties: {
+              analysis_summary: { type: "string" },
+              mito: { type: "string" },
+              historia: { type: "string" },
+              versiones: { type: "string" },
+              leccion: { type: "string" },
+              similitudes: { type: "string" },
+              excerpt: { type: "string" },
+              editorial_notes: { type: "string" },
+            },
+            required: [
+              "analysis_summary",
+              "mito",
+              "historia",
+              "versiones",
+              "leccion",
+              "similitudes",
+              "excerpt",
+              "editorial_notes",
+            ],
+          },
+        },
+      },
+      temperature: 0.45,
+      max_output_tokens: EDITORIAL_MAX_OUTPUT_TOKENS,
+      truncation: "auto",
+    });
+
+    const outputText = response.output_text?.trim();
+    if (!outputText) {
+      lastError = new Error("OpenAI response is empty");
+      continue;
+    }
+
+    const parsed = safeParseJson(outputText);
+    const cleaned = sanitizeEditorialContent(parsed);
+    const mitoWords = countWords(cleaned.mito);
+    if (mitoWords < MIN_MITO_WORDS) {
+      lastError = new Error(
+        `El campo mito es demasiado corto (${mitoWords} palabras). Debe tener al menos ${MIN_MITO_WORDS} palabras.`
+      );
+      continue;
+    }
+
+    logEditorialEvent("composition_done", {
+      myth_id: myth.id,
+      model_used: model,
+      mito_words: mitoWords,
+    });
+
+    return { data: cleaned, model_used: model };
+  }
+
+  throw lastError || new Error("No se pudo generar un mito con la longitud requerida");
 }
 
 const TITLE_BANNED_WORDS = ["mito", "nuevo"];
@@ -1720,178 +2240,55 @@ async function insertMyth(data) {
 }
 
 async function generateEditorialEnrichment(myth) {
-  const contentSections = parseContentSections(myth.content);
+  logEditorialEvent("enrich_start", {
+    myth_id: myth.id,
+    slug: myth.slug,
+    title: myth.title,
+  });
 
-  const payload = {
-    myth: {
-      id: myth.id,
-      title: myth.title,
-      slug: myth.slug,
-      region: myth.region,
-      region_slug: myth.region_slug,
-      community: myth.community,
-      community_slug: myth.community_slug,
-      category_path: myth.category_path,
-      tags_raw: myth.tags_raw,
-      excerpt: myth.excerpt,
-      content: truncateText(myth.content, MAX_MYTH_CONTENT_CHARS),
-      content_sections: {
-        mito: myth.mito || contentSections.mito,
-        historia: myth.historia || contentSections.historia,
-        versiones: myth.versiones || contentSections.versiones,
-        leccion: myth.leccion || contentSections.leccion,
-        similitudes: myth.similitudes || contentSections.similitudes,
-      },
-      focus_keyword: myth.focus_keyword,
-      focus_keywords_raw: myth.focus_keywords_raw,
-      seo_title: myth.seo_title,
-      seo_description: myth.seo_description,
-    },
-    requirement: {
-      min_sources: MIN_SOURCES,
-      language: "es-CO",
-    },
+  const searchPayload = {
+    title: myth.title,
+    content: myth.content,
+    region: myth.region,
+    community: myth.community,
   };
 
-  const baseInstructions =
-    "Eres un editor investigador de mitologia colombiana. Debes enriquecer el relato con una redaccion clara, literaria y cuidada, sin perder la oralidad tradicional. " +
-    "El campo mito debe ser un relato oral, como si un anciano estuviera narrando el mito, describiendo personajes, lugares y acciones; minimo 300 palabras. " +
-    "Usa busqueda web obligatoria para reunir al menos 20 fuentes. Selecciona las fuentes mas relevantes y resume en notas editoriales. " +
-    "No inventes datos sin respaldo. Si hay versiones distintas, comparalas. Mantén el texto en español de Colombia. " +
-    "No incluyas citas, URLs ni referencias en el texto final de mito, historia, versiones, leccion, similitudes o excerpt. " +
-    "No incluyas razonamiento fuera del JSON. Usa el campo analysis_summary para resumir pasos y decisiones. " +
-    "No uses comillas dobles dentro de strings; si necesitas citar, usa comillas simples. " +
-    "Limita analysis_summary a 120 palabras y editorial_notes a 200 palabras. " +
-    "Limita summaries de fuentes a 40 palabras. Si necesitas saltos de linea dentro de strings, usa \\n.";
+  const searchStarted = Date.now();
+  const webSearch = await collectWebSources(searchPayload, { purpose: "enrich" });
+  logEditorialEvent("web_search_summary", {
+    myth_id: myth.id,
+    elapsed_ms: Date.now() - searchStarted,
+    sources_count: webSearch.sources.length,
+    key_sources_count: webSearch.key_sources.length,
+  });
 
-  let lastError;
-  for (let attempt = 0; attempt < 2; attempt += 1) {
-    const retryNote =
-      attempt === 0
-        ? ""
-        : "La respuesta anterior no cumplio la longitud narrativa del mito. Vuelve a escribir el campo mito con minimo 300 palabras y voz de anciano narrador.";
+  const scrapeStarted = Date.now();
+  const scrapedSources = await scrapeSources(webSearch.sources);
+  const scrapedOk = scrapedSources.filter((item) => item.scrape_ok).length;
+  const scrapedChars = scrapedSources.reduce(
+    (sum, item) => sum + (item.scraped_length || 0),
+    0
+  );
+  logEditorialEvent("scrape_summary", {
+    myth_id: myth.id,
+    elapsed_ms: Date.now() - scrapeStarted,
+    sources_count: scrapedSources.length,
+    scrape_ok: scrapedOk,
+    scrape_failed: scrapedSources.length - scrapedOk,
+    scraped_chars: scrapedChars,
+  });
 
-    const { response, model } = await createResponseWithFallback({
-      model: EDITORIAL_MODEL,
-      instructions: `${baseInstructions} ${retryNote}`.trim(),
-      input: JSON.stringify(payload),
-      tools: [
-        {
-          type: "web_search_preview",
-          search_context_size: "high",
-          user_location: {
-            type: "approximate",
-            country: "CO",
-            city: "Bogotá",
-            region: "Cundinamarca",
-          },
-        },
-      ],
-      tool_choice: { type: "web_search_preview" },
-      text: {
-        format: {
-          type: "json_schema",
-          name: "editorial_myth_enrichment",
-          strict: true,
-          schema: {
-            type: "object",
-            additionalProperties: false,
-            properties: {
-              analysis_summary: { type: "string" },
-              mito: { type: "string" },
-              historia: { type: "string" },
-              versiones: { type: "string" },
-              leccion: { type: "string" },
-              similitudes: { type: "string" },
-              excerpt: { type: "string" },
-              seo_title: { type: "string" },
-              seo_description: { type: "string" },
-              focus_keyword: { type: "string" },
-              focus_keywords: {
-                type: "array",
-                items: { type: "string" },
-              },
-              sources: {
-                type: "array",
-                items: {
-                  type: "object",
-                  additionalProperties: false,
-                  properties: {
-                    title: { type: "string" },
-                    url: { type: "string" },
-                    summary: { type: "string" },
-                    relevance_score: { type: "number" },
-                  },
-                  required: ["title", "url", "summary", "relevance_score"],
-                },
-              },
-              key_sources: {
-                type: "array",
-                items: {
-                  type: "object",
-                  additionalProperties: false,
-                  properties: {
-                    title: { type: "string" },
-                    url: { type: "string" },
-                    summary: { type: "string" },
-                    relevance_score: { type: "number" },
-                  },
-                  required: ["title", "url", "summary", "relevance_score"],
-                },
-              },
-              editorial_notes: { type: "string" },
-            },
-            required: [
-              "analysis_summary",
-              "mito",
-              "historia",
-              "versiones",
-              "leccion",
-              "similitudes",
-              "excerpt",
-              "seo_title",
-              "seo_description",
-              "focus_keyword",
-              "focus_keywords",
-              "sources",
-              "key_sources",
-              "editorial_notes",
-            ],
-          },
-        },
-      },
-      temperature: 0.4,
-      max_output_tokens: EDITORIAL_MAX_OUTPUT_TOKENS,
-      truncation: "auto",
-    });
+  const { data, model_used: composeModel } = await composeEditorialFromSources({
+    myth,
+    scrapedSources,
+  });
 
-    const outputText = response.output_text?.trim();
-    if (!outputText) {
-      throw new Error("OpenAI response is empty");
-    }
-
-    const parsed = safeParseJson(outputText);
-    if (!isTitleClean(parsed.title)) {
-      lastError = new Error(
-        "El titulo del mito es invalido. Debe ser corto, solo el nombre comun y sin palabras como 'mito' o 'nuevo'."
-      );
-      continue;
-    }
-    const cleaned = sanitizeEditorialContent(parsed);
-    const mitoWords = countWords(cleaned.mito);
-    if (mitoWords < MIN_MITO_WORDS) {
-      lastError = new Error(
-        `El campo mito es demasiado corto (${mitoWords} palabras). Debe tener al menos ${MIN_MITO_WORDS} palabras.`
-      );
-      continue;
-    }
-    if (!Array.isArray(cleaned.sources) || cleaned.sources.length < MIN_SOURCES) {
-      throw new Error("No se encontraron suficientes fuentes (minimo 20)");
-    }
-    return { data: cleaned, modelUsed: model };
-  }
-
-  throw lastError || new Error("No se pudo generar un mito con la longitud requerida");
+  return {
+    data,
+    modelUsed: composeModel,
+    sources: webSearch.sources,
+    key_sources: webSearch.key_sources,
+  };
 }
 
 async function generateNewMyth(query, context) {
@@ -1911,17 +2308,52 @@ async function generateNewMyth(query, context) {
     regions: context.regions.map((region) => region.name),
     tags: context.tags.map((tag) => tag.name),
     communities_by_region: communitiesByRegion,
+  };
+
+  const baseInstructions =
+    web_context: [],
     requirement: {
       min_sources: MIN_SOURCES,
+      min_mito_words: MIN_MITO_WORDS,
       language: "es-CO",
     },
   };
 
+  logEditorialEvent("create_start", { query });
+
+  const searchPayload = { title: query, content: "", region: "", community: "" };
+  const searchStarted = Date.now();
+  const webSearch = await collectWebSources(searchPayload, { purpose: "create" });
+  logEditorialEvent("web_search_summary", {
+    purpose: "create",
+    elapsed_ms: Date.now() - searchStarted,
+    sources_count: webSearch.sources.length,
+    key_sources_count: webSearch.key_sources.length,
+  });
+
+  const scrapeStarted = Date.now();
+  const scrapedSources = await scrapeSources(webSearch.sources);
+  const scrapedOk = scrapedSources.filter((item) => item.scrape_ok).length;
+  const scrapedChars = scrapedSources.reduce(
+    (sum, item) => sum + (item.scraped_length || 0),
+    0
+  );
+  logEditorialEvent("scrape_summary", {
+    purpose: "create",
+    elapsed_ms: Date.now() - scrapeStarted,
+    sources_count: scrapedSources.length,
+    scrape_ok: scrapedOk,
+    scrape_failed: scrapedSources.length - scrapedOk,
+    scraped_chars: scrapedChars,
+  });
+  payload.web_context = buildWebContext(scrapedSources);
+
   const baseInstructions =
     "Eres un editor investigador de mitologia colombiana. Debes crear un mito nuevo a partir del tema solicitado. " +
-    "El campo mito debe ser un relato oral, como si un anciano estuviera narrando el mito, describiendo personajes, lugares y acciones; minimo 300 palabras. " +
+    `El campo mito debe ser un relato oral, como si un anciano estuviera narrando el mito, minimo ${MIN_MITO_WORDS} palabras. ` +
+    "Usa la informacion web (web_context) para enriquecer detalles, historia y versiones. " +
     "El titulo debe ser corto y solo el nombre comun del mito; no uses palabras como 'mito' o 'nuevo'. " +
-    "Usa busqueda web obligatoria para reunir al menos 20 fuentes. El mito debe seguir la estructura editorial del proyecto: Mito, Historia, Versiones, Leccion, Similitudes. " +
+    "El mito debe seguir la estructura editorial del proyecto: Mito, Historia, Versiones, Leccion, Similitudes. " +
     "Incluye descripciones SEO y prompts de imagen en formato horizontal (16:9) y vertical (9:16) estilo paper quilling/paper cut. " +
     "Selecciona la region colombiana adecuada (usa solo las regiones entregadas). " +
     "Selecciona la comunidad solo de la lista entregada para esa region (communities_by_region). " +
@@ -1934,32 +2366,19 @@ async function generateNewMyth(query, context) {
     "No incluyas razonamiento fuera del JSON. Usa el campo analysis_summary para resumir pasos y decisiones. " +
     "No uses comillas dobles dentro de strings; si necesitas citar, usa comillas simples. " +
     "Limita analysis_summary a 120 palabras y editorial_notes a 200 palabras. " +
-    "Limita summaries de fuentes a 40 palabras. Si necesitas saltos de linea dentro de strings, usa \\n.";
+    "Si necesitas saltos de linea dentro de strings, usa \\n.";
 
   let lastError;
   for (let attempt = 0; attempt < 2; attempt += 1) {
     const retryNote =
       attempt === 0
         ? ""
-        : "La respuesta anterior no cumplio la longitud narrativa del mito. Vuelve a escribir el campo mito con minimo 300 palabras y voz de anciano narrador.";
+        : `La respuesta anterior no cumplio la longitud narrativa del mito. Vuelve a escribir el campo mito con minimo ${MIN_MITO_WORDS} palabras y voz de anciano narrador.`;
 
     const { response, model } = await createResponseWithFallback({
-      model: EDITORIAL_MODEL,
+      model: COMPOSE_MODEL,
       instructions: `${baseInstructions} ${retryNote}`.trim(),
       input: JSON.stringify(payload),
-      tools: [
-        {
-          type: "web_search_preview",
-          search_context_size: "high",
-          user_location: {
-            type: "approximate",
-            country: "CO",
-            city: "Bogotá",
-            region: "Cundinamarca",
-          },
-        },
-      ],
-      tool_choice: { type: "web_search_preview" },
       text: {
         format: {
           type: "json_schema",
@@ -1997,34 +2416,6 @@ async function generateNewMyth(query, context) {
               latitude: { type: "number" },
               longitude: { type: "number" },
               location_name: { type: "string" },
-              sources: {
-                type: "array",
-                items: {
-                  type: "object",
-                  additionalProperties: false,
-                  properties: {
-                    title: { type: "string" },
-                    url: { type: "string" },
-                    summary: { type: "string" },
-                    relevance_score: { type: "number" },
-                  },
-                  required: ["title", "url", "summary", "relevance_score"],
-                },
-              },
-              key_sources: {
-                type: "array",
-                items: {
-                  type: "object",
-                  additionalProperties: false,
-                  properties: {
-                    title: { type: "string" },
-                    url: { type: "string" },
-                    summary: { type: "string" },
-                    relevance_score: { type: "number" },
-                  },
-                  required: ["title", "url", "summary", "relevance_score"],
-                },
-              },
               editorial_notes: { type: "string" },
             },
             required: [
@@ -2050,8 +2441,6 @@ async function generateNewMyth(query, context) {
               "latitude",
               "longitude",
               "location_name",
-              "sources",
-              "key_sources",
               "editorial_notes",
             ],
           },
@@ -2064,10 +2453,17 @@ async function generateNewMyth(query, context) {
 
     const outputText = response.output_text?.trim();
     if (!outputText) {
-      throw new Error("OpenAI response is empty");
+      lastError = new Error("OpenAI response is empty");
+      continue;
     }
 
     const parsed = safeParseJson(outputText);
+    if (!isTitleClean(parsed.title)) {
+      lastError = new Error(
+        "El titulo del mito es invalido. Debe ser corto, solo el nombre comun y sin palabras como 'mito' o 'nuevo'."
+      );
+      continue;
+    }
     const cleaned = sanitizeEditorialContent(parsed);
     const mitoWords = countWords(cleaned.mito);
     if (mitoWords < MIN_MITO_WORDS) {
@@ -2076,10 +2472,17 @@ async function generateNewMyth(query, context) {
       );
       continue;
     }
-    if (!Array.isArray(cleaned.sources) || cleaned.sources.length < MIN_SOURCES) {
-      throw new Error("No se encontraron suficientes fuentes (minimo 20)");
-    }
-    return { data: cleaned, modelUsed: model };
+    logEditorialEvent("create_composition_done", {
+      model_used: model,
+      mito_words: mitoWords,
+      title: cleaned.title,
+    });
+    return {
+      data: cleaned,
+      modelUsed: model,
+      sources: webSearch.sources,
+      key_sources: webSearch.key_sources,
+    };
   }
 
   throw lastError || new Error("No se pudo generar un mito con la longitud requerida");
@@ -2199,10 +2602,13 @@ function normalizeFocusKeywords(list, focusKeyword) {
 }
 
 async function enrichExistingMyth(myth) {
-  const { data: enrichment, modelUsed } = await generateEditorialEnrichment(myth);
+  const { data: enrichment, modelUsed, sources, key_sources } =
+    await generateEditorialEnrichment(myth);
   const content = buildContent(enrichment);
   const excerpt = truncateText(enrichment.excerpt || myth.excerpt, MAX_EXCERPT_CHARS);
-  const focusKeywords = normalizeFocusKeywords(enrichment.focus_keywords || [], enrichment.focus_keyword);
+  const focusKeywordsRaw =
+    myth.focus_keywords_raw ||
+    normalizeFocusKeywords([], myth.focus_keyword || myth.title).join("|");
   const researchNotes = [enrichment.analysis_summary, enrichment.editorial_notes]
     .filter(Boolean)
     .join("\n\n");
@@ -2222,10 +2628,10 @@ async function enrichExistingMyth(myth) {
     similitudes: enrichment.similitudes,
     content,
     excerpt,
-    seo_title: enrichment.seo_title || myth.seo_title,
-    seo_description: enrichment.seo_description || myth.seo_description,
-    focus_keyword: enrichment.focus_keyword || myth.focus_keyword,
-    focus_keywords_raw: focusKeywords.join("|"),
+    seo_title: myth.seo_title,
+    seo_description: myth.seo_description,
+    focus_keyword: myth.focus_keyword || myth.title,
+    focus_keywords_raw: focusKeywordsRaw,
     image_prompt: myth.image_prompt,
     image_prompt_horizontal: myth.image_prompt,
     image_prompt_vertical: myth.image_prompt,
@@ -2234,8 +2640,8 @@ async function enrichExistingMyth(myth) {
     longitude: myth.longitude,
     content_formatted: Boolean(myth.content_formatted),
     source_row: myth.source_row,
-    sources_json: JSON.stringify(enrichment.sources || []),
-    key_sources_json: JSON.stringify(enrichment.key_sources || []),
+    sources_json: JSON.stringify(sources || []),
+    key_sources_json: JSON.stringify(key_sources || []),
     research_notes: researchNotes,
   };
 
@@ -2253,7 +2659,7 @@ async function enrichExistingMyth(myth) {
     title: myth.title,
     slug: myth.slug,
     editorial_id: editorial.id,
-    sources_count: enrichment.sources?.length || 0,
+    sources_count: sources?.length || 0,
     model_used: modelUsed,
   };
 }
@@ -2266,7 +2672,10 @@ async function createNewMyth(query) {
   ]);
   const context = { regions, tags, communities };
 
-  const { data: creation, modelUsed } = await generateNewMyth(query, context);
+  const { data: creation, modelUsed, sources, key_sources } = await generateNewMyth(
+    query,
+    context
+  );
 
   const regionMatch = (await findRegionByName(creation.region)) || (await findRegionFallback());
   if (!regionMatch) {
@@ -2415,8 +2824,8 @@ async function createNewMyth(query) {
     longitude: mythPayload.longitude,
     content_formatted: 0,
     source_row: mythPayload.source_row,
-    sources_json: JSON.stringify(creation.sources || []),
-    key_sources_json: JSON.stringify(creation.key_sources || []),
+    sources_json: JSON.stringify(sources || []),
+    key_sources_json: JSON.stringify(key_sources || []),
     research_notes: [creation.analysis_summary, creation.editorial_notes]
       .filter(Boolean)
       .join("\n\n"),
@@ -2436,7 +2845,7 @@ async function createNewMyth(query) {
     title: mythPayload.title,
     slug: mythPayload.slug,
     editorial_id: editorial.id,
-    sources_count: creation.sources?.length || 0,
+    sources_count: sources?.length || 0,
     region: regionMatch.name,
     community: community?.name || null,
     latitude: mythPayload.latitude,
@@ -2571,6 +2980,11 @@ export async function POST(request) {
           success: true,
         });
       } catch (error) {
+        logEditorialEvent("enrich_error", {
+          myth_id: myth.id,
+          slug: myth.slug,
+          error: error?.message || String(error),
+        });
         results.push({
           id: myth.id,
           title: myth.title,
