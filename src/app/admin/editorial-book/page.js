@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import AdminLayout from "../../../components/AdminLayout";
 import { GlassCard } from "../../../components/ui/GlassCard";
@@ -8,8 +8,10 @@ import { Button } from "../../../components/ui/Button";
 import { cn } from "../../../lib/utils";
 
 const DEFAULT_BOOK_TITLE = "Mitos editoriales de Colombia";
-const PAGE_CHAR_LIMIT = 2200;
-const BODY_CHUNK_LIMIT = 1500;
+const PAGE_WIDTH_PX = 794;
+const PAGE_HEIGHT_PX = 1123;
+const PAGE_CHAR_LIMIT = 2800;
+const BODY_CHUNK_LIMIT = 1800;
 
 function splitIntoSentences(text) {
   const cleaned = String(text || "").replace(/\s+/g, " ").trim();
@@ -291,6 +293,9 @@ export default function EditorialBookPage() {
   const [spreadIndex, setSpreadIndex] = useState(0);
   const [isFlipping, setIsFlipping] = useState(false);
   const [flipDirection, setFlipDirection] = useState("next");
+  const [bookScale, setBookScale] = useState(1);
+  const [viewportSize, setViewportSize] = useState({ width: 0, height: 0 });
+  const viewportRef = useRef(null);
 
   const fetchPage = async (token, pageNumber = 1) => {
     setLoading(true);
@@ -343,6 +348,27 @@ export default function EditorialBookPage() {
   const canPrev = spreadIndex > 0;
   const canNext = spreadIndex < totalSpreads - 1;
   const hasMore = items.length < total;
+
+  useEffect(() => {
+    if (!viewportRef.current) return;
+    const element = viewportRef.current;
+    const observer = new ResizeObserver((entries) => {
+      const entry = entries[0];
+      if (!entry) return;
+      const { width, height } = entry.contentRect;
+      setViewportSize({ width, height });
+    });
+    observer.observe(element);
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    const { width, height } = viewportSize;
+    if (!width || !height) return;
+    const targetWidth = currentSpread?.single ? PAGE_WIDTH_PX : PAGE_WIDTH_PX * 2;
+    const scale = Math.min(width / targetWidth, height / PAGE_HEIGHT_PX, 1);
+    setBookScale(Number.isFinite(scale) && scale > 0 ? scale : 1);
+  }, [viewportSize, currentSpread]);
 
   const goPrev = () => {
     if (!canPrev) return;
@@ -427,59 +453,88 @@ export default function EditorialBookPage() {
             </div>
           )}
 
-          <div
-            className={cn(
-              "book-shell mx-auto flex w-full max-w-[1200px] items-center justify-center transition-transform duration-300",
-              isFlipping && flipDirection === "next" && "book-flip-next",
-              isFlipping && flipDirection === "prev" && "book-flip-prev"
-            )}
-          >
-            {currentSpread?.single ? (
-              <div className="w-full">
-                <div className="book-page">
-                  <PageContent page={currentSpread.right} />
+          <div className="book-shell">
+            <div
+              ref={viewportRef}
+              className={cn(
+                "book-viewport transition-transform duration-300",
+                isFlipping && flipDirection === "next" && "book-flip-next",
+                isFlipping && flipDirection === "prev" && "book-flip-prev"
+              )}
+            >
+              {currentSpread?.single ? (
+                <div
+                  className="book-canvas book-single"
+                  style={{
+                    width: `${PAGE_WIDTH_PX}px`,
+                    height: `${PAGE_HEIGHT_PX}px`,
+                    transform: `scale(${bookScale})`,
+                  }}
+                >
+                  <div className="book-page">
+                    <PageContent page={currentSpread.right} />
+                  </div>
                 </div>
-              </div>
-            ) : (
-              <div className="book-spread grid w-full grid-cols-2 gap-0">
-                <div className="book-page">
-                  <PageContent page={currentSpread?.left} />
+              ) : (
+                <div
+                  className="book-canvas book-spread"
+                  style={{
+                    width: `${PAGE_WIDTH_PX * 2}px`,
+                    height: `${PAGE_HEIGHT_PX}px`,
+                    transform: `scale(${bookScale})`,
+                  }}
+                >
+                  <div className="book-page">
+                    <PageContent page={currentSpread?.left} />
+                  </div>
+                  <div className="book-page">
+                    <PageContent page={currentSpread?.right} />
+                  </div>
                 </div>
-                <div className="book-page">
-                  <PageContent page={currentSpread?.right} />
-                </div>
-              </div>
-            )}
+              )}
+            </div>
           </div>
         </div>
       </div>
 
       <style jsx>{`
         .book-shell {
-          --page-width: clamp(260px, 38vw, 560px);
-          --page-height: calc(var(--page-width) * 1.4142);
-          overflow-x: auto;
-          padding: 12px;
+          display: flex;
+          justify-content: center;
         }
-        .book-spread {
+        .book-viewport {
+          width: 100%;
+          max-width: 1280px;
+          height: min(82vh, 1200px);
+          min-height: 520px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          overflow: hidden;
+        }
+        .book-canvas {
+          display: flex;
+          align-items: stretch;
+          justify-content: center;
+          transform-origin: center center;
           border-radius: 28px;
           overflow: hidden;
           background: linear-gradient(120deg, rgba(255, 255, 255, 0.8), rgba(252, 250, 245, 0.95));
           box-shadow: 0 24px 70px rgba(12, 20, 16, 0.18);
           border: 1px solid rgba(18, 32, 28, 0.08);
-          width: calc(var(--page-width) * 2);
+        }
+        .book-spread {
+          gap: 0;
+        }
+        .book-single {
+          justify-content: center;
         }
         .book-page {
-          width: var(--page-width);
-          height: var(--page-height);
+          width: ${PAGE_WIDTH_PX}px;
+          height: ${PAGE_HEIGHT_PX}px;
           padding: 42px 40px;
           box-sizing: border-box;
-        }
-        @media (max-width: 1024px) {
-          .book-spread {
-            grid-template-columns: 1fr;
-            width: var(--page-width);
-          }
+          overflow: hidden;
         }
         .book-flip-next {
           animation: flipNext 0.45s ease;
