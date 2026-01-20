@@ -25,9 +25,13 @@ async function listEditorialMyths(limit, offset) {
   if (isPostgres()) {
     const db = getSqlClient();
     const totalResult = await db`SELECT COUNT(*)::int AS total FROM editorial_myths`;
-    const total = Number(totalResult[0]?.total || 0);
+    const total = Number(
+      totalResult?.rows?.[0]?.total ??
+        totalResult?.[0]?.total ??
+        0
+    );
 
-    const items = await db`
+    const itemsResult = await db`
       SELECT
         em.id AS editorial_id,
         em.source_myth_id,
@@ -55,6 +59,7 @@ async function listEditorialMyths(limit, offset) {
       ORDER BY em.id
       LIMIT ${limit} OFFSET ${offset}
     `;
+    const items = itemsResult?.rows ?? itemsResult ?? [];
 
     return { total, items };
   }
