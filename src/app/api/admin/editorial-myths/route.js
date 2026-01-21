@@ -303,6 +303,16 @@ function safeParseJson(rawText) {
   }
 }
 
+function parseJsonArray(input) {
+  if (!input) return [];
+  try {
+    const parsed = JSON.parse(input);
+    return Array.isArray(parsed) ? parsed : [];
+  } catch (error) {
+    return [];
+  }
+}
+
 function isModelAccessError(error) {
   const status = error?.status || error?.response?.status;
   const code = error?.code || error?.error?.code;
@@ -1073,6 +1083,17 @@ async function ensureEditorialTables() {
     await db`CREATE INDEX IF NOT EXISTS idx_editorial_myths_region ON editorial_myths(region_id)`;
     await db`CREATE INDEX IF NOT EXISTS idx_editorial_myths_community ON editorial_myths(community_id)`;
     await db`
+      CREATE TABLE IF NOT EXISTS editorial_myth_research (
+        myth_id INTEGER PRIMARY KEY REFERENCES myths(id) ON DELETE CASCADE,
+        sources_json TEXT,
+        key_sources_json TEXT,
+        search_queries_json TEXT,
+        scraped_sources_json TEXT,
+        created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+        updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+      )
+    `;
+    await db`
       CREATE TABLE IF NOT EXISTS editorial_myth_tags (
         editorial_myth_id INTEGER NOT NULL REFERENCES editorial_myths(id) ON DELETE CASCADE,
         tag_id INTEGER NOT NULL REFERENCES tags(id) ON DELETE CASCADE,
@@ -1145,6 +1166,20 @@ async function ensureEditorialTables() {
       FOREIGN KEY(region_id) REFERENCES regions(id),
       FOREIGN KEY(community_id) REFERENCES communities(id),
       FOREIGN KEY(source_myth_id) REFERENCES myths(id)
+    )
+  `
+  ).run();
+  db.prepare(
+    `
+    CREATE TABLE IF NOT EXISTS editorial_myth_research (
+      myth_id INTEGER PRIMARY KEY,
+      sources_json TEXT,
+      key_sources_json TEXT,
+      search_queries_json TEXT,
+      scraped_sources_json TEXT,
+      created_at TEXT NOT NULL DEFAULT (datetime('now')),
+      updated_at TEXT NOT NULL DEFAULT (datetime('now')),
+      FOREIGN KEY(myth_id) REFERENCES myths(id)
     )
   `
   ).run();
@@ -2251,44 +2286,91 @@ async function insertMyth(data) {
   return { id: info.lastInsertRowid };
 }
 
-async function generateEditorialEnrichment(myth) {
+async function generateEditorialEnrichment(myth, options = {}) {
+  const phase = options.phase || "full";
   logEditorialEvent("enrich_start", {
     myth_id: myth.id,
     slug: myth.slug,
     title: myth.title,
+    phase,
   });
 
-  const searchPayload = {
-    title: myth.title,
-    content: myth.content,
-    region: myth.region,
-    community: myth.community,
-  };
+  let research = await getEditorialResearch(myth.id);
+  if (research && phase !== "research") {
+    logEditorialEvent("research_cache_hit", {
+      myth_id: myth.id,
+      sources_count: research.sources.length,
+      scraped_sources: research.scraped_sources.length,
+    });
+  }
 
-  const searchStarted = Date.now();
-  const webSearch = await collectWebSources(searchPayload, { purpose: "enrich" });
-  logEditorialEvent("web_search_summary", {
-    myth_id: myth.id,
-    elapsed_ms: Date.now() - searchStarted,
-    sources_count: webSearch.sources.length,
-    key_sources_count: webSearch.key_sources.length,
-  });
+  if (phase === "compose" && !research) {
+    throw new Error(
+      "No hay investigacion previa para este mito. Ejecuta primero la fase de investigacion."
+    );
+  }
 
-  const scrapeStarted = Date.now();
-  const scrapedSources = await scrapeSources(webSearch.sources);
-  const scrapedOk = scrapedSources.filter((item) => item.scrape_ok).length;
-  const scrapedChars = scrapedSources.reduce(
-    (sum, item) => sum + (item.scraped_length || 0),
-    0
-  );
-  logEditorialEvent("scrape_summary", {
-    myth_id: myth.id,
-    elapsed_ms: Date.now() - scrapeStarted,
-    sources_count: scrapedSources.length,
-    scrape_ok: scrapedOk,
-    scrape_failed: scrapedSources.length - scrapedOk,
-    scraped_chars: scrapedChars,
-  });
+  if (!research || phase === "research") {
+    const searchPayload = {
+      title: myth.title,
+      content: myth.content,
+      region: myth.region,
+      community: myth.community,
+    };
+
+    const searchStarted = Date.now();
+    const webSearch = await collectWebSources(searchPayload, { purpose: "enrich" });
+    logEditorialEvent("web_search_summary", {
+      myth_id: myth.id,
+      elapsed_ms: Date.now() - searchStarted,
+      sources_count: webSearch.sources.length,
+      key_sources_count: webSearch.key_sources.length,
+    });
+
+    const scrapeStarted = Date.now();
+    const scrapedSources = await scrapeSources(webSearch.sources);
+    const scrapedOk = scrapedSources.filter((item) => item.scrape_ok).length;
+    const scrapedChars = scrapedSources.reduce(
+      (sum, item) => sum + (item.scraped_length || 0),
+      0
+    );
+    logEditorialEvent("scrape_summary", {
+      myth_id: myth.id,
+      elapsed_ms: Date.now() - scrapeStarted,
+      sources_count: scrapedSources.length,
+      scrape_ok: scrapedOk,
+      scrape_failed: scrapedSources.length - scrapedOk,
+      scraped_chars: scrapedChars,
+    });
+
+    research = {
+      sources: webSearch.sources,
+      key_sources: webSearch.key_sources,
+      search_queries: webSearch.search_queries || [],
+      scraped_sources: scrapedSources,
+    };
+
+    await upsertEditorialResearch(myth.id, research);
+    logEditorialEvent("research_saved", {
+      myth_id: myth.id,
+      sources_count: research.sources.length,
+      scraped_sources: scrapedSources.length,
+    });
+
+    if (phase === "research") {
+      return {
+        status: "research_ready",
+        sources: research.sources,
+        key_sources: research.key_sources,
+        search_queries: research.search_queries,
+      };
+    }
+  }
+
+  const scrapedSources = research.scraped_sources || [];
+  if (!scrapedSources.length) {
+    throw new Error("No hay contenido web scrapeado para componer el mito.");
+  }
 
   const { data, model_used: composeModel } = await composeEditorialFromSources({
     myth,
@@ -2298,8 +2380,9 @@ async function generateEditorialEnrichment(myth) {
   return {
     data,
     modelUsed: composeModel,
-    sources: webSearch.sources,
-    key_sources: webSearch.key_sources,
+    sources: research.sources,
+    key_sources: research.key_sources,
+    search_queries: research.search_queries || [],
   };
 }
 
@@ -2610,9 +2693,21 @@ function normalizeFocusKeywords(list, focusKeyword) {
   return Array.from(set);
 }
 
-async function enrichExistingMyth(myth) {
-  const { data: enrichment, modelUsed, sources, key_sources } =
-    await generateEditorialEnrichment(myth);
+async function enrichExistingMyth(myth, options = {}) {
+  const { phase } = options;
+  const enrichmentResult = await generateEditorialEnrichment(myth, { phase });
+
+  if (enrichmentResult?.status === "research_ready") {
+    return {
+      id: myth.id,
+      title: myth.title,
+      slug: myth.slug,
+      status: "research_ready",
+      sources_count: enrichmentResult.sources?.length || 0,
+    };
+  }
+
+  const { data: enrichment, modelUsed, sources, key_sources } = enrichmentResult;
   const content = buildContent(enrichment);
   const excerpt = truncateText(enrichment.excerpt || myth.excerpt, MAX_EXCERPT_CHARS);
   const focusKeywordsRaw =
@@ -2670,6 +2765,7 @@ async function enrichExistingMyth(myth) {
     editorial_id: editorial.id,
     sources_count: sources?.length || 0,
     model_used: modelUsed,
+    status: "completed",
   };
 }
 
@@ -2916,6 +3012,92 @@ export async function GET(request) {
   }
 }
 
+function normalizeResearchRow(row) {
+  return {
+    myth_id: row.myth_id,
+    sources: parseJsonArray(row.sources_json),
+    key_sources: parseJsonArray(row.key_sources_json),
+    search_queries: parseJsonArray(row.search_queries_json),
+    scraped_sources: parseJsonArray(row.scraped_sources_json),
+    updated_at: row.updated_at,
+  };
+}
+
+async function getEditorialResearch(mythId) {
+  if (isPostgres()) {
+    const db = getSqlClient();
+    const result = await db`
+      SELECT myth_id, sources_json, key_sources_json, search_queries_json, scraped_sources_json, updated_at
+      FROM editorial_myth_research
+      WHERE myth_id = ${mythId}
+      LIMIT 1
+    `;
+    const row = result.rows?.[0];
+    return row ? normalizeResearchRow(row) : null;
+  }
+
+  const db = getSqliteDb();
+  const row = db
+    .prepare(
+      `SELECT myth_id, sources_json, key_sources_json, search_queries_json, scraped_sources_json, updated_at
+       FROM editorial_myth_research WHERE myth_id = ?`
+    )
+    .get(mythId);
+  return row ? normalizeResearchRow(row) : null;
+}
+
+async function upsertEditorialResearch(mythId, data) {
+  const sourcesJson = JSON.stringify(data.sources || []);
+  const keySourcesJson = JSON.stringify(data.key_sources || []);
+  const searchQueriesJson = JSON.stringify(data.search_queries || []);
+  const scrapedSourcesJson = JSON.stringify(data.scraped_sources || []);
+
+  if (isPostgres()) {
+    const db = getSqlClient();
+    await db`
+      INSERT INTO editorial_myth_research (
+        myth_id,
+        sources_json,
+        key_sources_json,
+        search_queries_json,
+        scraped_sources_json
+      ) VALUES (
+        ${mythId},
+        ${sourcesJson},
+        ${keySourcesJson},
+        ${searchQueriesJson},
+        ${scrapedSourcesJson}
+      )
+      ON CONFLICT (myth_id) DO UPDATE SET
+        sources_json = EXCLUDED.sources_json,
+        key_sources_json = EXCLUDED.key_sources_json,
+        search_queries_json = EXCLUDED.search_queries_json,
+        scraped_sources_json = EXCLUDED.scraped_sources_json,
+        updated_at = NOW()
+    `;
+    return;
+  }
+
+  const db = getSqliteDbWritable();
+  db.prepare(
+    `
+    INSERT INTO editorial_myth_research (
+      myth_id,
+      sources_json,
+      key_sources_json,
+      search_queries_json,
+      scraped_sources_json
+    ) VALUES (?, ?, ?, ?, ?)
+    ON CONFLICT(myth_id) DO UPDATE SET
+      sources_json = excluded.sources_json,
+      key_sources_json = excluded.key_sources_json,
+      search_queries_json = excluded.search_queries_json,
+      scraped_sources_json = excluded.scraped_sources_json,
+      updated_at = datetime('now')
+  `
+  ).run(mythId, sourcesJson, keySourcesJson, searchQueriesJson, scrapedSourcesJson);
+}
+
 export async function POST(request) {
   try {
     if (!checkAuth(request)) {
@@ -2964,6 +3146,7 @@ export async function POST(request) {
       });
     }
 
+    const phase = body.phase ? String(body.phase) : null;
     const count = Math.min(Math.max(Number(body.count || 1), 1), 10);
     const mythId = body.mythId ? Number(body.mythId) : null;
 
@@ -2983,7 +3166,7 @@ export async function POST(request) {
 
     for (const myth of myths) {
       try {
-        const enriched = await enrichExistingMyth(myth);
+        const enriched = await enrichExistingMyth(myth, { phase });
         results.push({
           ...enriched,
           success: true,

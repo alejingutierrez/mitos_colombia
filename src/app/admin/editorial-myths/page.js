@@ -9,6 +9,18 @@ import { Badge } from "../../../components/ui/Badge";
 import { ProgressBar } from "../../../components/ui/ProgressBar";
 import { Toast, useToast } from "../../../components/ui/Toast";
 
+async function parseJsonResponse(response) {
+  const text = await response.text();
+  if (!text) {
+    return { data: null, raw: "" };
+  }
+  try {
+    return { data: JSON.parse(text), raw: text };
+  } catch (error) {
+    return { data: null, raw: text };
+  }
+}
+
 export default function EditorialMythsAdminPage() {
   const router = useRouter();
   const { toast, showToast, hideToast } = useToast();
@@ -121,53 +133,101 @@ export default function EditorialMythsAdminPage() {
     fetchMythDetail(auth, selectedMythId);
   }, [auth, selectedMythId]);
 
+  const runEnrichPhase = async (phase, mythId) => {
+    const response = await fetch("/api/admin/editorial-myths", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Basic ${auth}`,
+      },
+      body: JSON.stringify({ mode: "enrich", mythId, phase }),
+    });
+
+    if (response.status === 401) {
+      handleLogout();
+      return { aborted: true };
+    }
+
+    const { data, raw } = await parseJsonResponse(response);
+    if (!response.ok) {
+      return {
+        ok: false,
+        error: data?.error || raw || "Error en el servidor",
+      };
+    }
+
+    return { ok: true, data };
+  };
+
   const handleBatchEnrich = async () => {
     if (!auth) return;
 
-    if (!confirm(`¿Procesar ${count} mitos pendientes? Esto puede tomar varios minutos.`)) {
+    const targets = pendingOptions.slice(0, count);
+    if (!targets.length) {
+      showToast("No hay mitos pendientes para procesar", "info");
+      return;
+    }
+
+    if (!confirm(`¿Procesar ${targets.length} mitos pendientes? Esto puede tomar varios minutos.`)) {
       return;
     }
 
     setResults([]);
-    setProgress({ current: 0, total: count });
+    const totalSteps = targets.length * 2;
+    let completedSteps = 0;
+    setProgress({ current: 0, total: totalSteps });
 
     const batchResults = [];
 
     try {
-      for (let i = 0; i < count; i += 1) {
-        setProgress({ current: i + 1, total: count });
-        const response = await fetch("/api/admin/editorial-myths", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: `Basic ${auth}`,
-          },
-          body: JSON.stringify({ mode: "enrich", count: 1 }),
-        });
+      const advanceProgress = () => {
+        completedSteps += 1;
+        setProgress({ current: completedSteps, total: totalSteps });
+      };
 
-        if (response.status === 401) {
-          handleLogout();
+      for (const myth of targets) {
+        const research = await runEnrichPhase("research", myth.id);
+        advanceProgress();
+
+        if (research.aborted) {
           return;
         }
 
-        const data = await response.json();
-        if (!response.ok) {
+        if (!research.ok) {
           batchResults.push({
-            title: `Mito ${i + 1}`,
+            id: myth.id,
+            title: myth.title,
+            slug: myth.slug,
             success: false,
-            error: data.error || "Error en el servidor",
+            error: research.error || "Error en investigación",
+          });
+          advanceProgress();
+          setResults([...batchResults]);
+          continue;
+        }
+
+        const compose = await runEnrichPhase("compose", myth.id);
+        advanceProgress();
+
+        if (compose.aborted) {
+          return;
+        }
+
+        if (!compose.ok) {
+          batchResults.push({
+            id: myth.id,
+            title: myth.title,
+            slug: myth.slug,
+            success: false,
+            error: compose.error || "Error en composición",
           });
           setResults([...batchResults]);
           continue;
         }
 
-        const updated = data.updated || [];
+        const updated = compose.data?.updated || [];
         batchResults.push(...updated);
         setResults([...batchResults]);
-
-        if (updated.length === 0) {
-          break;
-        }
       }
 
       await fetchStatus(auth);
@@ -189,30 +249,29 @@ export default function EditorialMythsAdminPage() {
       return;
     }
 
-    setProgress({ current: 1, total: 1 });
+    setProgress({ current: 0, total: 2 });
     setResults([]);
 
     try {
-      const response = await fetch("/api/admin/editorial-myths", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Basic ${auth}`,
-        },
-        body: JSON.stringify({ mode: "enrich", mythId: Number(selectedMythId) }),
-      });
+      const advanceProgress = (current) => {
+        setProgress({ current, total: 2 });
+      };
 
-      if (response.status === 401) {
-        handleLogout();
-        return;
+      const research = await runEnrichPhase("research", Number(selectedMythId));
+      advanceProgress(1);
+      if (research.aborted) return;
+      if (!research.ok) {
+        throw new Error(research.error || "Error en investigación");
       }
 
-      const data = await response.json();
-      if (!response.ok) {
-        throw new Error(data.error || "Error en el servidor");
+      const compose = await runEnrichPhase("compose", Number(selectedMythId));
+      advanceProgress(2);
+      if (compose.aborted) return;
+      if (!compose.ok) {
+        throw new Error(compose.error || "Error en composición");
       }
 
-      setResults(data.updated || []);
+      setResults(compose.data?.updated || []);
       await fetchStatus(auth);
     } catch (error) {
       console.error("Error enriching selected myth:", error);
