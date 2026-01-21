@@ -35,6 +35,9 @@ const CHECK_MAX_OUTPUT_TOKENS = Number.parseInt(
   process.env.OPENAI_EDITORIAL_CHECK_MAX_OUTPUT_TOKENS || "1200",
   10
 );
+const REASONING_EFFORT = String(
+  process.env.OPENAI_EDITORIAL_REASONING_EFFORT || "low"
+).toLowerCase();
 
 const MIN_SOURCES = 10;
 const DUPLICATE_THRESHOLD = 65;
@@ -340,6 +343,13 @@ function shouldOmitTemperature(model, request) {
   return true;
 }
 
+function shouldAttachReasoning(model, request) {
+  const name = String(model || "").toLowerCase();
+  if (!name.startsWith("gpt-5")) return false;
+  if (request?.reasoning) return false;
+  return Boolean(REASONING_EFFORT);
+}
+
 async function createResponseWithFallback(options) {
   const { model, ...request } = options;
   const models = buildModelQueue(model);
@@ -348,6 +358,9 @@ async function createResponseWithFallback(options) {
   for (const candidate of models) {
     try {
       const payload = { ...request, model: candidate };
+      if (shouldAttachReasoning(candidate, payload)) {
+        payload.reasoning = { effort: REASONING_EFFORT };
+      }
       if ("temperature" in payload && shouldOmitTemperature(candidate, payload)) {
         delete payload.temperature;
       }
