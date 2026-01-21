@@ -12,6 +12,10 @@ const PAGE_WIDTH_PX = 794;
 const PAGE_HEIGHT_PX = 1123;
 const PAGE_CHAR_LIMIT = 2800;
 const BODY_CHUNK_LIMIT = 1800;
+const HEADING_WEIGHT = 40;
+const TITLE_WEIGHT = 80;
+const BODY_WEIGHT = 20;
+const MIN_FILL_CHARS = 220;
 
 function normalizeHeading(value) {
   return String(value || "")
@@ -119,6 +123,42 @@ function splitText(text, maxChars) {
   return chunks;
 }
 
+function splitBodyToFit(text, maxChars) {
+  const cleaned = String(text || "").replace(/\s+/g, " ").trim();
+  if (!cleaned) return { fit: "", rest: "" };
+  if (cleaned.length <= maxChars) {
+    return { fit: cleaned, rest: "" };
+  }
+  const sentences = splitIntoSentences(cleaned);
+  if (!sentences.length) {
+    return {
+      fit: cleaned.slice(0, maxChars).trim(),
+      rest: cleaned.slice(maxChars).trim(),
+    };
+  }
+  let fit = "";
+  let index = 0;
+  while (index < sentences.length) {
+    const sentence = sentences[index];
+    if (!sentence) {
+      index += 1;
+      continue;
+    }
+    const next = fit ? `${fit} ${sentence}` : sentence;
+    if (next.length > maxChars) break;
+    fit = next;
+    index += 1;
+  }
+  if (!fit) {
+    return {
+      fit: cleaned.slice(0, maxChars).trim(),
+      rest: cleaned.slice(maxChars).trim(),
+    };
+  }
+  const rest = sentences.slice(index).join(" ").trim();
+  return { fit, rest };
+}
+
 function buildTextBlocks(myth) {
   const sections = resolveMythSections(myth);
   const blocks = [];
@@ -153,16 +193,54 @@ function paginateBlocks(blocks, maxChars) {
   let current = [];
   let count = 0;
 
-  blocks.forEach((block) => {
-    const blockSize = block.text.length + (block.type === "title" ? 60 : 30);
-    if (count + blockSize > maxChars && current.length) {
+  for (let i = 0; i < blocks.length; i += 1) {
+    const block = blocks[i];
+    const weight =
+      block.type === "title"
+        ? TITLE_WEIGHT
+        : block.type === "heading"
+        ? HEADING_WEIGHT
+        : BODY_WEIGHT;
+    let blockSize = block.text.length + weight;
+    let remaining = maxChars - count;
+
+    if (block.type === "heading") {
+      const next = blocks[i + 1];
+      const nextSize = next?.text ? next.text.length + BODY_WEIGHT : 0;
+      if (current.length && blockSize + nextSize > remaining) {
+        pages.push(current);
+        current = [];
+        count = 0;
+        remaining = maxChars;
+      }
+    } else if (block.type === "body" && current.length && blockSize > remaining) {
+      if (remaining > MIN_FILL_CHARS) {
+        const { fit, rest } = splitBodyToFit(block.text, remaining - BODY_WEIGHT);
+        if (fit) {
+          current.push({ type: "body", text: fit });
+          pages.push(current);
+          current = [];
+          count = 0;
+          if (rest) {
+            blocks.splice(i + 1, 0, { type: "body", text: rest });
+          }
+          continue;
+        }
+      }
+      pages.push(current);
+      current = [];
+      count = 0;
+      remaining = maxChars;
+      blockSize = block.text.length + weight;
+    } else if (current.length && blockSize > remaining) {
       pages.push(current);
       current = [];
       count = 0;
     }
+
     current.push(block);
     count += blockSize;
-  });
+  }
 
   if (current.length) pages.push(current);
   return pages;
