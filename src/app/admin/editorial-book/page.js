@@ -10,12 +10,12 @@ import { cn } from "../../../lib/utils";
 const DEFAULT_BOOK_TITLE = "Mitos editoriales de Colombia";
 const PAGE_WIDTH_PX = 794;
 const PAGE_HEIGHT_PX = 1123;
-const PAGE_CHAR_LIMIT = 2800;
-const BODY_CHUNK_LIMIT = 1800;
+const PAGE_CHAR_LIMIT = 5200;
+const BODY_CHUNK_LIMIT = 3600;
 const HEADING_WEIGHT = 40;
 const TITLE_WEIGHT = 80;
 const BODY_WEIGHT = 20;
-const MIN_FILL_CHARS = 220;
+const MIN_FILL_CHARS = 320;
 
 function normalizeHeading(value) {
   return String(value || "")
