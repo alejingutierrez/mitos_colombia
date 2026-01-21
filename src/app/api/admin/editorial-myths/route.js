@@ -15,7 +15,7 @@ const openai = new OpenAI({
 });
 
 const EDITORIAL_MODEL =
-  process.env.OPENAI_EDITORIAL_MODEL || "gpt-5-mini";
+  process.env.OPENAI_EDITORIAL_MODEL || "gpt-5.2";
 const CHECK_MODEL = process.env.OPENAI_EDITORIAL_CHECK_MODEL || EDITORIAL_MODEL;
 const SEARCH_MODEL =
   process.env.OPENAI_EDITORIAL_SEARCH_MODEL || EDITORIAL_MODEL;
@@ -25,7 +25,7 @@ const MODEL_FALLBACKS = (process.env.OPENAI_EDITORIAL_MODEL_FALLBACKS || "")
   .split(",")
   .map((model) => model.trim())
   .filter(Boolean);
-const DEFAULT_MODEL_FALLBACKS = ["gpt-5-mini", "gpt-5.2-2025-12-11", "gpt-5.2", "gpt-4o-mini"];
+const DEFAULT_MODEL_FALLBACKS = ["gpt-5.2", "gpt-5.2-2025-12-11", "gpt-5-mini", "gpt-4o-mini"];
 const MAX_RAW_JSON_CHARS = 200000;
 const EDITORIAL_MAX_OUTPUT_TOKENS = Number.parseInt(
   process.env.OPENAI_EDITORIAL_MAX_OUTPUT_TOKENS || "40000",
