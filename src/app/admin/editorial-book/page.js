@@ -13,6 +13,67 @@ const PAGE_HEIGHT_PX = 1123;
 const PAGE_CHAR_LIMIT = 2800;
 const BODY_CHUNK_LIMIT = 1800;
 
+function normalizeHeading(value) {
+  return String(value || "")
+    .trim()
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "");
+}
+
+function parseContentSections(content) {
+  const sections = {
+    mito: "",
+    historia: "",
+    versiones: "",
+    leccion: "",
+    similitudes: "",
+  };
+  const lines = String(content || "").split(/\r?\n/);
+  let current = "mito";
+
+  lines.forEach((line) => {
+    const normalized = normalizeHeading(line);
+    if (normalized === "mito") {
+      current = "mito";
+      return;
+    }
+    if (normalized === "historia") {
+      current = "historia";
+      return;
+    }
+    if (normalized === "versiones") {
+      current = "versiones";
+      return;
+    }
+    if (normalized === "leccion" || normalized === "lecciones") {
+      current = "leccion";
+      return;
+    }
+    if (normalized === "similitudes" || normalized === "similitud") {
+      current = "similitudes";
+      return;
+    }
+    const trimmed = line.trim();
+    if (!trimmed) return;
+    sections[current] = sections[current]
+      ? `${sections[current]} ${trimmed}`
+      : trimmed;
+  });
+
+  return sections;
+}
+
+function resolveMythSections(myth) {
+  const parsed = parseContentSections(myth.content || "");
+  return {
+    mito: myth.mito || parsed.mito || myth.content || "",
+    historia: myth.historia || parsed.historia || "",
+    leccion: myth.leccion || parsed.leccion || "",
+    similitudes: myth.similitudes || parsed.similitudes || "",
+  };
+}
+
 function splitIntoSentences(text) {
   const cleaned = String(text || "").replace(/\s+/g, " ").trim();
   if (!cleaned) return [];
@@ -59,11 +120,12 @@ function splitText(text, maxChars) {
 }
 
 function buildTextBlocks(myth) {
+  const sections = resolveMythSections(myth);
   const blocks = [];
-  const mitoChunks = splitText(myth.mito, BODY_CHUNK_LIMIT);
-  const historiaChunks = splitText(myth.historia, BODY_CHUNK_LIMIT);
-  const leccionChunks = splitText(myth.leccion, BODY_CHUNK_LIMIT);
-  const similitudesChunks = splitText(myth.similitudes, BODY_CHUNK_LIMIT);
+  const mitoChunks = splitText(sections.mito, BODY_CHUNK_LIMIT);
+  const historiaChunks = splitText(sections.historia, BODY_CHUNK_LIMIT);
+  const leccionChunks = splitText(sections.leccion, BODY_CHUNK_LIMIT);
+  const similitudesChunks = splitText(sections.similitudes, BODY_CHUNK_LIMIT);
 
   blocks.push({ type: "title", text: myth.title || "" });
   mitoChunks.forEach((chunk) => blocks.push({ type: "body", text: chunk }));
