@@ -21,10 +21,10 @@ function checkAuth(request) {
   return username === validUsername && password === validPassword;
 }
 
-async function listEditorialMyths(limit, offset) {
+async function listMyths(limit, offset) {
   if (isPostgres()) {
     const db = getSqlClient();
-    const totalResult = await db`SELECT COUNT(*)::int AS total FROM editorial_myths`;
+    const totalResult = await db`SELECT COUNT(*)::int AS total FROM myths`;
     const total = Number(
       totalResult?.rows?.[0]?.total ??
         totalResult?.[0]?.total ??
@@ -33,30 +33,29 @@ async function listEditorialMyths(limit, offset) {
 
     const itemsResult = await db`
       SELECT
-        em.id AS editorial_id,
-        em.source_myth_id,
-        em.title,
-        em.slug,
-        em.mito,
-        em.historia,
-        em.leccion,
-        em.similitudes,
-        em.content,
-        em.excerpt,
-        em.region_id,
+        m.id AS myth_id,
+        m.title,
+        m.slug,
+        m.mito,
+        m.historia,
+        m.leccion,
+        m.similitudes,
+        m.content,
+        m.excerpt,
+        m.region_id,
         r.name AS region,
         r.slug AS region_slug,
-        em.community_id,
+        m.community_id,
         c.name AS community,
         c.slug AS community_slug,
         vi.image_url AS vertical_image_url,
-        em.image_url AS image_url
-      FROM editorial_myths em
-      JOIN regions r ON r.id = em.region_id
-      LEFT JOIN communities c ON c.id = em.community_id
+        m.image_url AS image_url
+      FROM myths m
+      JOIN regions r ON r.id = m.region_id
+      LEFT JOIN communities c ON c.id = m.community_id
       LEFT JOIN vertical_images vi
-        ON vi.entity_type = 'myth' AND vi.entity_id = em.source_myth_id
-      ORDER BY em.id
+        ON vi.entity_type = 'myth' AND vi.entity_id = m.id
+      ORDER BY m.id
       LIMIT ${limit} OFFSET ${offset}
     `;
     const items = itemsResult?.rows ?? itemsResult ?? [];
@@ -65,37 +64,36 @@ async function listEditorialMyths(limit, offset) {
   }
 
   const db = getSqliteDb();
-  const totalRow = db.prepare("SELECT COUNT(*) as total FROM editorial_myths").get();
+  const totalRow = db.prepare("SELECT COUNT(*) as total FROM myths").get();
   const total = Number(totalRow?.total || 0);
 
   const items = db
     .prepare(
       `
       SELECT
-        em.id AS editorial_id,
-        em.source_myth_id,
-        em.title,
-        em.slug,
-        em.mito,
-        em.historia,
-        em.leccion,
-        em.similitudes,
-        em.content,
-        em.excerpt,
-        em.region_id,
+        m.id AS myth_id,
+        m.title,
+        m.slug,
+        m.mito,
+        m.historia,
+        m.leccion,
+        m.similitudes,
+        m.content,
+        m.excerpt,
+        m.region_id,
         r.name AS region,
         r.slug AS region_slug,
-        em.community_id,
+        m.community_id,
         c.name AS community,
         c.slug AS community_slug,
         vi.image_url AS vertical_image_url,
-        em.image_url AS image_url
-      FROM editorial_myths em
-      JOIN regions r ON r.id = em.region_id
-      LEFT JOIN communities c ON c.id = em.community_id
+        m.image_url AS image_url
+      FROM myths m
+      JOIN regions r ON r.id = m.region_id
+      LEFT JOIN communities c ON c.id = m.community_id
       LEFT JOIN vertical_images vi
-        ON vi.entity_type = 'myth' AND vi.entity_id = em.source_myth_id
-      ORDER BY em.id
+        ON vi.entity_type = 'myth' AND vi.entity_id = m.id
+      ORDER BY m.id
       LIMIT ? OFFSET ?
     `
     )
@@ -123,7 +121,7 @@ export async function GET(request) {
     const limit = Math.min(Math.max(Number(searchParams.get("limit") || 40), 1), 200);
     const offset = (page - 1) * limit;
 
-    const { total, items } = await listEditorialMyths(limit, offset);
+    const { total, items } = await listMyths(limit, offset);
 
     return NextResponse.json({
       total,
