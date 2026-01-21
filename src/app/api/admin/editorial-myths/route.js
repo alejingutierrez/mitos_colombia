@@ -58,6 +58,10 @@ const SCRAPE_CONCURRENCY = Number.parseInt(
   process.env.OPENAI_EDITORIAL_SCRAPE_CONCURRENCY || "3",
   10
 );
+const SCRAPE_BATCH_LIMIT = Number.parseInt(
+  process.env.OPENAI_EDITORIAL_SCRAPE_BATCH_LIMIT || "4",
+  10
+);
 const MAX_SCRAPED_CHARS = Number.parseInt(
   process.env.OPENAI_EDITORIAL_SCRAPE_MAX_CHARS || "4000",
   10
@@ -567,8 +571,12 @@ async function fetchSourceText(url) {
   }
 }
 
-async function scrapeSources(sources) {
-  const targets = sources.slice(0, WEB_SOURCES_LIMIT);
+async function scrapeSources(sources, options = {}) {
+  const limit =
+    Number.isFinite(options.limit) && options.limit > 0
+      ? Math.min(options.limit, WEB_SOURCES_LIMIT)
+      : WEB_SOURCES_LIMIT;
+  const targets = sources.slice(0, limit);
   if (!targets.length) return [];
   return mapWithConcurrency(targets, SCRAPE_CONCURRENCY, async (source) => {
     const result = await fetchSourceText(source.url);
@@ -590,6 +598,45 @@ async function scrapeSources(sources) {
       scrape_elapsed_ms: result.elapsed_ms || null,
       scraped_length: result.text_length || 0,
     };
+  });
+}
+
+function normalizeSourceUrl(url) {
+  return String(url || "").trim().toLowerCase();
+}
+
+function mergeScrapedSources(existing, incoming) {
+  const merged = new Map();
+  (existing || []).forEach((item) => {
+    const key = normalizeSourceUrl(item.url);
+    if (key) merged.set(key, item);
+  });
+  (incoming || []).forEach((item) => {
+    const key = normalizeSourceUrl(item.url);
+    if (!key) return;
+    const prev = merged.get(key);
+    if (!prev) {
+      merged.set(key, item);
+      return;
+    }
+    if (item.scrape_ok && !prev.scrape_ok) {
+      merged.set(key, item);
+      return;
+    }
+    if ((item.scraped_length || 0) > (prev.scraped_length || 0)) {
+      merged.set(key, item);
+    }
+  });
+  return Array.from(merged.values());
+}
+
+function getPendingSources(allSources, scrapedSources) {
+  const attempted = new Set(
+    (scrapedSources || []).map((item) => normalizeSourceUrl(item.url)).filter(Boolean)
+  );
+  return (allSources || []).filter((source) => {
+    const key = normalizeSourceUrl(source.url);
+    return key && !attempted.has(key);
   });
 }
 
@@ -2310,7 +2357,7 @@ async function generateEditorialEnrichment(myth, options = {}) {
     );
   }
 
-  if (!research || phase === "research") {
+  if (!research || !research.sources.length) {
     const searchPayload = {
       title: myth.title,
       content: myth.content,
@@ -2327,44 +2374,78 @@ async function generateEditorialEnrichment(myth, options = {}) {
       key_sources_count: webSearch.key_sources.length,
     });
 
-    const scrapeStarted = Date.now();
-    const scrapedSources = await scrapeSources(webSearch.sources);
-    const scrapedOk = scrapedSources.filter((item) => item.scrape_ok).length;
-    const scrapedChars = scrapedSources.reduce(
-      (sum, item) => sum + (item.scraped_length || 0),
-      0
-    );
-    logEditorialEvent("scrape_summary", {
-      myth_id: myth.id,
-      elapsed_ms: Date.now() - scrapeStarted,
-      sources_count: scrapedSources.length,
-      scrape_ok: scrapedOk,
-      scrape_failed: scrapedSources.length - scrapedOk,
-      scraped_chars: scrapedChars,
-    });
-
     research = {
       sources: webSearch.sources,
       key_sources: webSearch.key_sources,
       search_queries: webSearch.search_queries || [],
-      scraped_sources: scrapedSources,
+      scraped_sources: research?.scraped_sources || [],
     };
 
     await upsertEditorialResearch(myth.id, research);
     logEditorialEvent("research_saved", {
       myth_id: myth.id,
       sources_count: research.sources.length,
-      scraped_sources: scrapedSources.length,
+      scraped_sources: research.scraped_sources.length,
+    });
+  }
+
+  if (phase !== "compose") {
+    const pendingSources = getPendingSources(research.sources, research.scraped_sources);
+    if (pendingSources.length) {
+      const limit = phase === "research" ? SCRAPE_BATCH_LIMIT : WEB_SOURCES_LIMIT;
+      const batch = pendingSources.slice(0, limit);
+      const scrapeStarted = Date.now();
+      const scrapedSources = await scrapeSources(batch, { limit: batch.length });
+      const scrapedOk = scrapedSources.filter((item) => item.scrape_ok).length;
+      const scrapedChars = scrapedSources.reduce(
+        (sum, item) => sum + (item.scraped_length || 0),
+        0
+      );
+      logEditorialEvent("scrape_summary", {
+        myth_id: myth.id,
+        elapsed_ms: Date.now() - scrapeStarted,
+        sources_count: scrapedSources.length,
+        scrape_ok: scrapedOk,
+        scrape_failed: scrapedSources.length - scrapedOk,
+        scraped_chars: scrapedChars,
+      });
+
+      research.scraped_sources = mergeScrapedSources(
+        research.scraped_sources,
+        scrapedSources
+      );
+      await upsertEditorialResearch(myth.id, research);
+    }
+
+    const remaining = getPendingSources(research.sources, research.scraped_sources);
+    const status = remaining.length ? "research_partial" : "research_ready";
+
+    logEditorialEvent("research_progress", {
+      myth_id: myth.id,
+      status,
+      scraped_sources: research.scraped_sources.length,
+      pending_sources: remaining.length,
     });
 
     if (phase === "research") {
       return {
-        status: "research_ready",
+        status,
+        pending_scrapes: remaining.length,
         sources: research.sources,
         key_sources: research.key_sources,
-        search_queries: research.search_queries,
+        search_queries: research.search_queries || [],
       };
     }
+  }
+
+  const remainingSources = getPendingSources(
+    research.sources,
+    research.scraped_sources
+  );
+  if (remainingSources.length) {
+    throw new Error(
+      `Investigacion incompleta: faltan ${remainingSources.length} fuentes por scrapear.`
+    );
   }
 
   const scrapedSources = research.scraped_sources || [];
@@ -2704,6 +2785,17 @@ async function enrichExistingMyth(myth, options = {}) {
       slug: myth.slug,
       status: "research_ready",
       sources_count: enrichmentResult.sources?.length || 0,
+      pending_scrapes: enrichmentResult.pending_scrapes || 0,
+    };
+  }
+  if (enrichmentResult?.status === "research_partial") {
+    return {
+      id: myth.id,
+      title: myth.title,
+      slug: myth.slug,
+      status: "research_partial",
+      sources_count: enrichmentResult.sources?.length || 0,
+      pending_scrapes: enrichmentResult.pending_scrapes || 0,
     };
   }
 

@@ -159,6 +159,38 @@ export default function EditorialMythsAdminPage() {
     return { ok: true, data };
   };
 
+  const runResearchUntilReady = async (mythId, onStep) => {
+    const maxAttempts = 6;
+    let lastStatus = null;
+
+    for (let attempt = 0; attempt < maxAttempts; attempt += 1) {
+      const research = await runEnrichPhase("research", mythId);
+      if (onStep) onStep();
+
+      if (research.aborted) return research;
+      if (!research.ok) return research;
+
+      const updated = research.data?.updated?.[0];
+      const status = updated?.status || research.data?.status;
+      lastStatus = status || lastStatus;
+
+      if (status === "research_ready") {
+        return research;
+      }
+      if (status !== "research_partial") {
+        return research;
+      }
+    }
+
+    return {
+      ok: false,
+      error:
+        lastStatus === "research_partial"
+          ? "Investigacion incompleta: se requieren mas ciclos de scraping."
+          : "No se pudo completar la investigacion.",
+    };
+  };
+
   const handleBatchEnrich = async () => {
     if (!auth) return;
 
@@ -173,7 +205,7 @@ export default function EditorialMythsAdminPage() {
     }
 
     setResults([]);
-    const totalSteps = targets.length * 2;
+    const totalSteps = targets.length * 3;
     let completedSteps = 0;
     setProgress({ current: 0, total: totalSteps });
 
@@ -182,12 +214,14 @@ export default function EditorialMythsAdminPage() {
     try {
       const advanceProgress = () => {
         completedSteps += 1;
-        setProgress({ current: completedSteps, total: totalSteps });
+        setProgress((prev) => ({
+          current: completedSteps,
+          total: Math.max(prev.total, completedSteps),
+        }));
       };
 
       for (const myth of targets) {
-        const research = await runEnrichPhase("research", myth.id);
-        advanceProgress();
+        const research = await runResearchUntilReady(myth.id, advanceProgress);
 
         if (research.aborted) {
           return;
@@ -201,7 +235,6 @@ export default function EditorialMythsAdminPage() {
             success: false,
             error: research.error || "Error en investigación",
           });
-          advanceProgress();
           setResults([...batchResults]);
           continue;
         }
@@ -249,23 +282,28 @@ export default function EditorialMythsAdminPage() {
       return;
     }
 
-    setProgress({ current: 0, total: 2 });
+    setProgress({ current: 0, total: 3 });
     setResults([]);
 
     try {
-      const advanceProgress = (current) => {
-        setProgress({ current, total: 2 });
+      const advanceProgress = () => {
+        setProgress((prev) => ({
+          current: Math.min(prev.current + 1, prev.total + 1),
+          total: Math.max(prev.total, prev.current + 1),
+        }));
       };
 
-      const research = await runEnrichPhase("research", Number(selectedMythId));
-      advanceProgress(1);
+      const research = await runResearchUntilReady(
+        Number(selectedMythId),
+        advanceProgress
+      );
       if (research.aborted) return;
       if (!research.ok) {
         throw new Error(research.error || "Error en investigación");
       }
 
       const compose = await runEnrichPhase("compose", Number(selectedMythId));
-      advanceProgress(2);
+      advanceProgress();
       if (compose.aborted) return;
       if (!compose.ok) {
         throw new Error(compose.error || "Error en composición");
