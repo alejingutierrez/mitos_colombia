@@ -1,5 +1,6 @@
-export const GA_MEASUREMENT_ID =
-  process.env.NEXT_PUBLIC_GA_ID || "G-TSQYRJVCDJ";
+export const GA_MEASUREMENT_ID = (
+  process.env.NEXT_PUBLIC_GA_ID || "G-TSQYRJVCDJ"
+).trim();
 
 export function pageview(url) {
   if (typeof window === "undefined" || !window.gtag) return;

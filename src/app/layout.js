@@ -48,14 +48,14 @@ export default function RootLayout({ children }) {
       </head>
       <body className="font-body text-ink-900 antialiased">
         <Script
-          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID.trim()}`}
           strategy="afterInteractive"
         />
         <Script id="ga-init" strategy="afterInteractive">
           {`window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', '${GA_MEASUREMENT_ID}', { send_page_view: false });`}
+window.gtag = function(){dataLayer.push(arguments);};
+window.gtag('js', new Date());
+window.gtag('config', '${GA_MEASUREMENT_ID.trim()}', { send_page_view: false });`}
         </Script>
         <Analytics />
         <div className="min-h-screen">{children}</div>
