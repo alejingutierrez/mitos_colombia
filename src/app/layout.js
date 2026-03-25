@@ -3,6 +3,7 @@ import { Fraunces, Sora } from "next/font/google";
 import Script from "next/script";
 import Footer from "../components/Footer";
 import Analytics from "../components/Analytics";
+import StructuredData from "../components/StructuredData";
 import { GA_MEASUREMENT_ID } from "../lib/analytics";
 
 const RAW_SITE_URL =
@@ -32,6 +33,11 @@ export const metadata = {
   },
   description:
     "Archivo editorial de mitos colombianos, organizado por region, origen y tema.",
+  manifest: "/manifest.json",
+  icons: {
+    icon: "/favicon.png",
+    apple: "/apple-icon.png",
+  },
 };
 
 export default function RootLayout({ children }) {
@@ -48,6 +54,23 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', '${GA_MEASUREMENT_ID}', { send_page_view: false });`}
         </Script>
+        <StructuredData
+          id="org-jsonld"
+          data={{
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            name: "Mitos de Colombia",
+            url: SITE_URL || "https://www.mitosdecolombia.com",
+            description:
+              "Archivo editorial de mitos colombianos, organizado por region, origen y tema.",
+            inLanguage: "es",
+            publisher: {
+              "@type": "Organization",
+              name: "Mitos de Colombia",
+              url: SITE_URL || "https://www.mitosdecolombia.com",
+            },
+          }}
+        />
         <Analytics />
         <div className="min-h-screen">{children}</div>
         <Footer />

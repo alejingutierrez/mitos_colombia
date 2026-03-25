@@ -83,6 +83,7 @@ export function buildSeoMetadata({
   seo = {},
   canonicalPath,
   openGraphType = "website",
+  imageUrl,
 }) {
   const metaTitle = seo?.meta_title || fallback.title;
   const metaDescription = seo?.meta_description || fallback.description;
@@ -98,6 +99,8 @@ export function buildSeoMetadata({
         : undefined
       : undefined;
 
+  const ogImage = imageUrl || (SITE_URL ? `${SITE_URL}/opengraph-image` : undefined);
+
   const metadata = {
     title: metaTitle,
     description: metaDescription,
@@ -106,11 +109,13 @@ export function buildSeoMetadata({
       title: ogTitle,
       description: ogDescription,
       type: openGraphType,
+      ...(ogImage && { images: [{ url: ogImage, width: 1200, height: 630, alt: ogTitle }] }),
     },
     twitter: {
       card: "summary_large_image",
       title: twitterTitle,
       description: twitterDescription,
+      ...(ogImage && { images: [ogImage] }),
     },
   };
 

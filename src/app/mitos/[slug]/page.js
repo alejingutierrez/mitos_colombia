@@ -11,9 +11,15 @@ import { buildSeoMetadata, getSeoEntry } from "../../../lib/seo";
 import Link from "next/link";
 import ShareBar from "../../../components/ShareBar";
 import MythLocationMapClient from "../../../components/MythLocationMapClient";
+import StructuredData from "../../../components/StructuredData";
 
 export const runtime = "nodejs";
 export const revalidate = 3600;
+
+const SITE_URL = (
+  process.env.NEXT_PUBLIC_SITE_URL ||
+  (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "")
+).replace(/\/$/, "");
 
 const COLOMBIA_CENTER = { lat: 4.5709, lng: -74.2973 };
 
@@ -38,6 +44,7 @@ export async function generateMetadata({ params }) {
     seo,
     canonicalPath: `/mitos/${params.slug}`,
     openGraphType: "article",
+    imageUrl: myth.image_url || undefined,
   });
 }
 
@@ -109,8 +116,25 @@ export default async function MythDetailPage({ params }) {
   const recommendedMyths = await getRecommendedMyths(myth, 8);
   const location = resolveMythLocation(myth);
 
+  const articleJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: myth.title,
+    description: myth.excerpt,
+    ...(myth.image_url && { image: myth.image_url }),
+    ...(SITE_URL && { url: `${SITE_URL}/mitos/${myth.slug}` }),
+    inLanguage: "es",
+    publisher: {
+      "@type": "Organization",
+      name: "Mitos de Colombia",
+      ...(SITE_URL && { url: SITE_URL }),
+    },
+    ...(myth.keywords?.length && { keywords: myth.keywords.join(", ") }),
+  };
+
   return (
     <>
+      <StructuredData id="myth-jsonld" data={articleJsonLd} />
       <Header />
       <main className="relative min-h-screen pb-24">
 
@@ -191,12 +215,12 @@ export default async function MythDetailPage({ params }) {
               }
 
               return isHeading(block) ? (
-                <h3
+                <h2
                   key={`${block}-${index}`}
                   className="mt-8 first:mt-0 mb-4 font-display text-2xl font-bold text-ink-900 border-b border-white/60 pb-2"
                 >
                   {block}
-                </h3>
+                </h2>
               ) : (
                 <p key={`${block}-${index}`} className="text-sm md:text-base leading-relaxed">
                   {block}
@@ -210,9 +234,9 @@ export default async function MythDetailPage({ params }) {
               <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
                 <div>
                   <p className="eyebrow">Territorio</p>
-                  <h3 className="mt-2 font-display text-2xl text-ink-900">
+                  <h2 className="mt-2 font-display text-2xl text-ink-900">
                     Ubicacion geografica del mito
-                  </h3>
+                  </h2>
                   <p className="mt-2 text-sm text-ink-600">
                     {location.isApproximate
                       ? "Ubicacion aproximada dentro del territorio colombiano."
@@ -236,9 +260,9 @@ export default async function MythDetailPage({ params }) {
 
           {myth.keywords && myth.keywords.length > 0 && (
             <div className="mt-12 border-t border-white/60 pt-8">
-              <h3 className="font-display text-lg font-bold text-ink-900 mb-4">
+              <h2 className="font-display text-lg font-bold text-ink-900 mb-4">
                 Palabras clave
-              </h3>
+              </h2>
               <div className="flex flex-wrap gap-2">
                 {myth.keywords.slice(0, 20).map((keyword) => (
                   <Link

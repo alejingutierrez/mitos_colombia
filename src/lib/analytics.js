@@ -3,8 +3,10 @@ export const GA_MEASUREMENT_ID =
 
 export function pageview(url) {
   if (typeof window === "undefined" || !window.gtag) return;
-  window.gtag("config", GA_MEASUREMENT_ID, {
+  window.gtag("event", "page_view", {
     page_path: url,
+    page_location: window.location.href,
+    page_title: document.title,
   });
 }
 

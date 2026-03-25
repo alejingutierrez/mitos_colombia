@@ -1,24 +1,25 @@
 "use client";
 
-import { useEffect } from "react";
-import { usePathname } from "next/navigation";
+import { Suspense, useEffect } from "react";
+import { usePathname, useSearchParams } from "next/navigation";
 import { GA_MEASUREMENT_ID, pageview, trackEvent } from "../lib/analytics";
 
 function isAdminPath(pathname) {
   return pathname?.startsWith("/admin");
 }
 
-export default function Analytics() {
+function AnalyticsInner() {
   const pathname = usePathname();
+  const searchParams = useSearchParams();
 
   useEffect(() => {
     if (!GA_MEASUREMENT_ID || isAdminPath(pathname)) {
       return;
     }
-    const query = typeof window !== "undefined" ? window.location.search : "";
-    const url = query ? `${pathname}${query}` : pathname;
+    const query = searchParams?.toString();
+    const url = query ? `${pathname}?${query}` : pathname;
     pageview(url);
-  }, [pathname]);
+  }, [pathname, searchParams]);
 
   useEffect(() => {
     const handleClick = (event) => {
@@ -50,4 +51,12 @@ export default function Analytics() {
   }, []);
 
   return null;
+}
+
+export default function Analytics() {
+  return (
+    <Suspense fallback={null}>
+      <AnalyticsInner />
+    </Suspense>
+  );
 }
