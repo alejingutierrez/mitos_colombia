@@ -11,7 +11,7 @@ import { buildSeoMetadata, getSeoEntry } from "../../../lib/seo";
 import Link from "next/link";
 import ShareBar from "../../../components/ShareBar";
 import MythLocationMapClient from "../../../components/MythLocationMapClient";
-import StructuredData from "../../../components/StructuredData";
+import { ArticleJsonLd } from "../../../components/StructuredData";
 
 export const runtime = "nodejs";
 export const revalidate = 3600;
@@ -116,25 +116,16 @@ export default async function MythDetailPage({ params }) {
   const recommendedMyths = await getRecommendedMyths(myth, 8);
   const location = resolveMythLocation(myth);
 
-  const articleJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    headline: myth.title,
-    description: myth.excerpt,
-    ...(myth.image_url && { image: myth.image_url }),
-    ...(SITE_URL && { url: `${SITE_URL}/mitos/${myth.slug}` }),
-    inLanguage: "es",
-    publisher: {
-      "@type": "Organization",
-      name: "Mitos de Colombia",
-      ...(SITE_URL && { url: SITE_URL }),
-    },
-    ...(myth.keywords?.length && { keywords: myth.keywords.join(", ") }),
-  };
-
   return (
     <>
-      <StructuredData id="myth-jsonld" data={articleJsonLd} />
+      <ArticleJsonLd
+        title={myth.title}
+        description={myth.excerpt}
+        url={SITE_URL ? `${SITE_URL}/mitos/${myth.slug}` : undefined}
+        imageUrl={myth.image_url}
+        keywords={myth.keywords?.length ? myth.keywords.join(", ") : undefined}
+        siteUrl={SITE_URL}
+      />
       <Header />
       <main className="relative min-h-screen pb-24">
 
