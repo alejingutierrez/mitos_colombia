@@ -1,15 +1,18 @@
 export const ONE_HOUR = 60 * 60;
 
 export function getBaseUrl(request) {
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL?.trim();
   if (siteUrl) {
     return siteUrl.replace(/\/$/, "");
   }
-  const host =
+  const host = (
     request?.headers?.get("x-forwarded-host") ||
-    request?.headers?.get("host");
-  const proto =
-    request?.headers?.get("x-forwarded-proto") || "https";
+    request?.headers?.get("host") ||
+    ""
+  ).trim();
+  const proto = (
+    request?.headers?.get("x-forwarded-proto") || "https"
+  ).trim();
   if (host) {
     return `${proto}://${host}`;
   }

@@ -4,11 +4,12 @@ export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
 export async function GET(request) {
-  const baseUrl = getBaseUrl(request);
+  const baseUrl = getBaseUrl(request).trim();
   const body = [
     "User-agent: *",
     "Allow: /",
     "Disallow: /admin",
+    "",
     `Sitemap: ${baseUrl}/sitemap.xml`,
     "",
   ].join("\n");
