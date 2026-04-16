@@ -17,7 +17,7 @@ export async function generateMetadata() {
   const seo = await getSeoEntry("page", "mitos");
   return buildSeoMetadata({
     fallback: {
-      title: "Archivo de mitos | Mitos de Colombia",
+      title: "Archivo de mitos",
       description:
         "Archivo completo de mitos colombianos para explorar por región, comunidad, categorías y palabras clave.",
       keywords: ["mitos", "archivo", "Colombia", "relatos", "folclor"],

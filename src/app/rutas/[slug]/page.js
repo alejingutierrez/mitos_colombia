@@ -5,6 +5,7 @@ import { Badge } from "../../../components/ui/Badge";
 import { GlassCard } from "../../../components/ui/GlassCard";
 import { ButtonLink } from "../../../components/ui/Button";
 import { buildSeoMetadata, getSeoEntry } from "../../../lib/seo";
+import { BreadcrumbJsonLd } from "../../../components/StructuredData";
 import {
   ROUTES,
   getAccentStyles,
@@ -16,6 +17,13 @@ import { notFound } from "next/navigation";
 
 export const runtime = "nodejs";
 export const revalidate = 86400;
+
+const SITE_URL = (
+  process.env.NEXT_PUBLIC_SITE_URL ||
+  (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "")
+)
+  .trim()
+  .replace(/\/+$/, "");
 
 export async function generateStaticParams() {
   return ROUTES.map((route) => ({ slug: route.slug }));
@@ -135,6 +143,15 @@ export default async function RutaPage({ params }) {
 
   return (
     <>
+      {SITE_URL && (
+        <BreadcrumbJsonLd
+          items={[
+            { name: "Inicio", url: `${SITE_URL}/` },
+            { name: "Rutas", url: `${SITE_URL}/rutas` },
+            { name: route.title, url: `${SITE_URL}/rutas/${params.slug}` },
+          ]}
+        />
+      )}
       <Header />
       <main className="relative min-h-screen pb-24">
         <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">

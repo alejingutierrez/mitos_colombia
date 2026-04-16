@@ -14,7 +14,7 @@ export async function generateMetadata() {
   const seo = await getSeoEntry("page", "tarot");
   return buildSeoMetadata({
     fallback: {
-      title: "Tarot de la mitología colombiana | Mitos de Colombia",
+      title: "Tarot de la mitología colombiana",
       description:
         "Una baraja editorial que vincula arcanos del tarot con mitos colombianos para explorar símbolos, territorios y relatos ancestrales.",
       keywords: [

@@ -10,7 +10,7 @@ export async function generateMetadata() {
   const seo = await getSeoEntry("page", "privacidad");
   return buildSeoMetadata({
     fallback: {
-      title: "Privacidad | Mitos de Colombia",
+      title: "Privacidad",
       description:
         "Política de privacidad de Mitos de Colombia y uso responsable de datos.",
       keywords: ["privacidad", "datos", "mitos colombianos", "política"],
