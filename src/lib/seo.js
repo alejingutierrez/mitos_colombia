@@ -3,7 +3,7 @@ import { getSqlClient, getSqliteDb, isPostgres } from "./db";
 const RAW_SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL ||
   (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "");
-const SITE_URL = RAW_SITE_URL.replace(/\/$/, "");
+const SITE_URL = RAW_SITE_URL.trim().replace(/\/+$/, "");
 
 function normalizeKeywords(value) {
   if (!value) {
@@ -92,12 +92,16 @@ export function buildSeoMetadata({
   const ogDescription = seo?.og_description || metaDescription;
   const twitterTitle = seo?.twitter_title || ogTitle;
   const twitterDescription = seo?.twitter_description || ogDescription;
-  const canonical =
-    seo?.canonical_path || canonicalPath
-      ? SITE_URL
-        ? `${SITE_URL}${seo?.canonical_path || canonicalPath || ""}`
-        : undefined
-      : undefined;
+  const dbCanonical =
+    typeof seo?.canonical_path === "string" ? seo.canonical_path.trim() : "";
+  const pageCanonical =
+    typeof canonicalPath === "string" ? canonicalPath.trim() : "";
+  const chosenPath = dbCanonical.startsWith("/")
+    ? dbCanonical
+    : pageCanonical.startsWith("/")
+      ? pageCanonical
+      : "";
+  const canonical = SITE_URL && chosenPath ? `${SITE_URL}${chosenPath}` : undefined;
 
   const ogImage = imageUrl || (SITE_URL ? `${SITE_URL}/opengraph-image` : undefined);
 

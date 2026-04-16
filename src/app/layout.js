@@ -9,7 +9,7 @@ import { WebsiteJsonLd } from "../components/StructuredData";
 const RAW_SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL ||
   (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "");
-const SITE_URL = RAW_SITE_URL.replace(/\/$/, "");
+const SITE_URL = RAW_SITE_URL.trim().replace(/\/+$/, "");
 
 const display = Fraunces({
   subsets: ["latin"],

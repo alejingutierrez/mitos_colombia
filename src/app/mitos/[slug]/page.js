@@ -4,22 +4,34 @@ import Header from "../../../components/Header";
 import { Badge } from "../../../components/ui/Badge";
 import { ButtonLink } from "../../../components/ui/Button";
 import { GlassCard } from "../../../components/ui/GlassCard";
-import { getMythBySlug, getRecommendedMyths } from "../../../lib/myths";
+import {
+  getMythBySlug,
+  getRecommendedMyths,
+  listAllMythSlugs,
+} from "../../../lib/myths";
 import { RecommendedMyths } from "../../../components/RecommendedMyths";
 import { Comments } from "../../../components/Comments";
 import { buildSeoMetadata, getSeoEntry } from "../../../lib/seo";
 import Link from "next/link";
 import ShareBar from "../../../components/ShareBar";
 import MythLocationMapClient from "../../../components/MythLocationMapClient";
-import { ArticleJsonLd } from "../../../components/StructuredData";
+import { ArticleJsonLd, BreadcrumbJsonLd } from "../../../components/StructuredData";
+import { regionSlugFromName, communitySlugFromName } from "../../../lib/taxonomy-slug";
 
 export const runtime = "nodejs";
 export const revalidate = 3600;
 
+export async function generateStaticParams() {
+  const slugs = await listAllMythSlugs();
+  return slugs.map((slug) => ({ slug }));
+}
+
 const SITE_URL = (
   process.env.NEXT_PUBLIC_SITE_URL ||
   (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "")
-).replace(/\/$/, "");
+)
+  .trim()
+  .replace(/\/+$/, "");
 
 const COLOMBIA_CENTER = { lat: 4.5709, lng: -74.2973 };
 
@@ -125,7 +137,30 @@ export default async function MythDetailPage({ params }) {
         imageUrl={myth.image_url}
         keywords={myth.keywords?.length ? myth.keywords.join(", ") : undefined}
         siteUrl={SITE_URL}
+        datePublished={
+          myth.created_at ? new Date(myth.created_at).toISOString() : undefined
+        }
+        dateModified={
+          myth.updated_at ? new Date(myth.updated_at).toISOString() : undefined
+        }
       />
+      {SITE_URL && (
+        <BreadcrumbJsonLd
+          items={[
+            { name: "Inicio", url: `${SITE_URL}/` },
+            { name: "Mitos", url: `${SITE_URL}/mitos` },
+            ...(myth.region
+              ? [
+                  {
+                    name: myth.region,
+                    url: `${SITE_URL}/regiones/${regionSlugFromName(myth.region)}`,
+                  },
+                ]
+              : []),
+            { name: myth.title, url: `${SITE_URL}/mitos/${myth.slug}` },
+          ]}
+        />
+      )}
       <Header />
       <main className="relative min-h-screen pb-24">
 
@@ -134,20 +169,69 @@ export default async function MythDetailPage({ params }) {
           <div className="grid md:grid-cols-[1.5fr_1.5fr]">
             {/* Columna izquierda: Contenido */}
             <div className="order-2 p-8 md:order-1">
-              <div className="flex flex-wrap items-center gap-2">
-                <Badge className="border-jungle-500/30 bg-jungle-500/10 text-jungle-600">
-                  {myth.region}
-                </Badge>
+              <nav
+                aria-label="Breadcrumb"
+                className="text-xs uppercase tracking-[0.25em] text-ink-500"
+              >
+                <ol className="flex flex-wrap items-center gap-2">
+                  <li>
+                    <Link href="/" className="hover:text-ink-900">
+                      Inicio
+                    </Link>
+                  </li>
+                  <li aria-hidden>›</li>
+                  <li>
+                    <Link href="/mitos" className="hover:text-ink-900">
+                      Mitos
+                    </Link>
+                  </li>
+                  {myth.region && (
+                    <>
+                      <li aria-hidden>›</li>
+                      <li>
+                        <Link
+                          href={`/regiones/${regionSlugFromName(myth.region)}`}
+                          className="hover:text-ink-900"
+                        >
+                          {myth.region}
+                        </Link>
+                      </li>
+                    </>
+                  )}
+                </ol>
+              </nav>
+              <div className="mt-3 flex flex-wrap items-center gap-2">
+                {myth.region && (
+                  <Link href={`/regiones/${regionSlugFromName(myth.region)}`}>
+                    <Badge className="border-jungle-500/30 bg-jungle-500/10 text-jungle-600 hover:bg-jungle-500/20">
+                      {myth.region}
+                    </Badge>
+                  </Link>
+                )}
                 {myth.community ? (
-                  <Badge className="border-river-500/30 bg-river-500/10 text-river-600">
-                    {myth.community}
-                  </Badge>
+                  <Link href={`/comunidades/${communitySlugFromName(myth.community)}`}>
+                    <Badge className="border-river-500/30 bg-river-500/10 text-river-600 hover:bg-river-500/20">
+                      {myth.community}
+                    </Badge>
+                  </Link>
                 ) : null}
-                <Badge>{myth.focus_keyword}</Badge>
+                {myth.focus_keyword && <Badge>{myth.focus_keyword}</Badge>}
               </div>
               <h1 className="mt-4 font-display text-4xl text-ink-900 md:text-5xl">
                 {myth.title}
               </h1>
+              {myth.updated_at && (
+                <p className="mt-2 text-xs uppercase tracking-[0.25em] text-ink-500">
+                  Actualizado el{" "}
+                  <time dateTime={new Date(myth.updated_at).toISOString()}>
+                    {new Date(myth.updated_at).toLocaleDateString("es-CO", {
+                      year: "numeric",
+                      month: "long",
+                      day: "numeric",
+                    })}
+                  </time>
+                </p>
+              )}
               <p className="mt-4 text-sm text-ink-700 md:text-base">
                 {myth.excerpt}
               </p>

@@ -1000,3 +1000,25 @@ export async function getHomeStats() {
     };
   }
 }
+
+export async function listAllMythSlugs() {
+  try {
+    if (isPostgres()) {
+      const sql = getSqlClient();
+      const result = await sql.query(
+        "SELECT slug FROM myths WHERE slug IS NOT NULL AND slug != '' ORDER BY id ASC"
+      );
+      return (result.rows || []).map((row) => row.slug);
+    }
+    const db = getSqliteDb();
+    return db
+      .prepare(
+        "SELECT slug FROM myths WHERE slug IS NOT NULL AND slug != '' ORDER BY id ASC"
+      )
+      .all()
+      .map((row) => row.slug);
+  } catch (error) {
+    console.error("Error in listAllMythSlugs:", error);
+    return [];
+  }
+}

@@ -2,7 +2,7 @@ import { getSqlClient, getSqliteDb, isPostgres } from "../../lib/db";
 import { buildSitemapIndexXml, buildUrl, getBaseUrl, ONE_HOUR } from "../../lib/sitemap";
 
 export const runtime = "nodejs";
-export const dynamic = "force-dynamic";
+export const revalidate = 3600;
 
 const MYTHS_PER_SITEMAP = 500;
 const SITEMAP_STATIC = "/sitemap-static.xml";

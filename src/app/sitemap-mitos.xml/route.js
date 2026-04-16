@@ -8,7 +8,7 @@ import {
 } from "../../lib/sitemap";
 
 export const runtime = "nodejs";
-export const dynamic = "force-dynamic";
+export const revalidate = 3600;
 
 const MYTHS_PER_SITEMAP = 500;
 
@@ -23,7 +23,7 @@ async function getMythsPage(limit, offset) {
     const sql = getSqlClient();
     const result = await sql.query(
       `
-        SELECT slug, updated_at
+        SELECT slug, title, excerpt, image_url, updated_at
         FROM myths
         WHERE slug IS NOT NULL AND slug != ''
         ORDER BY id ASC
@@ -38,7 +38,7 @@ async function getMythsPage(limit, offset) {
   return db
     .prepare(
       `
-      SELECT slug, updated_at
+      SELECT slug, title, excerpt, image_url, updated_at
       FROM myths
       WHERE slug IS NOT NULL AND slug != ''
       ORDER BY id ASC
@@ -68,6 +68,15 @@ export async function GET(request) {
     lastModified: myth.updated_at || now,
     changeFrequency: "monthly",
     priority: 0.5,
+    ...(myth.image_url && {
+      images: [
+        {
+          url: myth.image_url,
+          title: myth.title || undefined,
+          caption: myth.excerpt ? String(myth.excerpt).slice(0, 250) : undefined,
+        },
+      ],
+    }),
   }));
 
   const xml = buildSitemapXml(entries);

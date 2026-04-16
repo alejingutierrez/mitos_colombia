@@ -8,10 +8,25 @@ import { Pagination } from "../../../components/ui/Pagination";
 import { filterAllowedCommunities } from "../../../lib/communityFilters";
 import { getTaxonomy, listMyths } from "../../../lib/myths";
 import { buildSeoMetadata, getSeoEntry } from "../../../lib/seo";
+import { BreadcrumbJsonLd, CollectionPageJsonLd } from "../../../components/StructuredData";
 import Link from "next/link";
 
 export const runtime = "nodejs";
 export const revalidate = 300;
+
+const SITE_URL = (
+  process.env.NEXT_PUBLIC_SITE_URL ||
+  (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "")
+)
+  .trim()
+  .replace(/\/+$/, "");
+
+export async function generateStaticParams() {
+  const taxonomy = await getTaxonomy();
+  return (taxonomy.regions || [])
+    .filter((r) => r.slug)
+    .map((region) => ({ slug: region.slug }));
+}
 
 // Información específica sobre cada región
 const REGION_INFO = {
@@ -196,8 +211,30 @@ export default async function RegionDetailPage({ params, searchParams }) {
     community,
   };
 
+  const collectionItems = (result?.items || []).slice(0, 30).map((m) => ({
+    url: `${SITE_URL}/mitos/${m.slug}`,
+    name: m.title,
+  }));
+
   return (
     <main className="relative min-h-screen overflow-hidden pb-24">
+      {SITE_URL && (
+        <>
+          <BreadcrumbJsonLd
+            items={[
+              { name: "Inicio", url: `${SITE_URL}/` },
+              { name: "Regiones", url: `${SITE_URL}/regiones` },
+              { name: region.name, url: `${SITE_URL}/regiones/${region.slug}` },
+            ]}
+          />
+          <CollectionPageJsonLd
+            name={`Mitos de la región ${region.name}`}
+            description={regionInfo.description}
+            url={`${SITE_URL}/regiones/${region.slug}`}
+            items={collectionItems}
+          />
+        </>
+      )}
       <Header taxonomy={taxonomy} />
 
       {/* Hero Section */}

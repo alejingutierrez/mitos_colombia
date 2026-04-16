@@ -47,7 +47,26 @@ export function escapeXml(value) {
     .replace(/'/g, "&apos;");
 }
 
+function buildImageTags(images) {
+  if (!Array.isArray(images) || images.length === 0) return "";
+  return images
+    .filter((img) => img?.url)
+    .map((img) => {
+      const title = img.title
+        ? `<image:title>${escapeXml(img.title)}</image:title>`
+        : "";
+      const caption = img.caption
+        ? `<image:caption>${escapeXml(img.caption)}</image:caption>`
+        : "";
+      return `<image:image><image:loc>${escapeXml(img.url)}</image:loc>${title}${caption}</image:image>`;
+    })
+    .join("");
+}
+
 export function buildSitemapXml(entries) {
+  const hasImages = entries.some(
+    (entry) => Array.isArray(entry.images) && entry.images.length > 0
+  );
   const urls = entries
     .map((entry) => {
       const loc = escapeXml(entry.url);
@@ -61,13 +80,17 @@ export function buildSitemapXml(entries) {
         typeof entry.priority === "number"
           ? `<priority>${entry.priority.toFixed(1)}</priority>`
           : "";
-      return `<url><loc>${loc}</loc>${lastmod}${changefreq}${priority}</url>`;
+      const images = buildImageTags(entry.images);
+      return `<url><loc>${loc}</loc>${lastmod}${changefreq}${priority}${images}</url>`;
     })
     .join("");
 
+  const imageNs = hasImages
+    ? ' xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"'
+    : "";
   return (
     `<?xml version="1.0" encoding="UTF-8"?>` +
-    `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${urls}</urlset>`
+    `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"${imageNs}>${urls}</urlset>`
   );
 }
 

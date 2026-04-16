@@ -8,11 +8,19 @@ import { Pagination } from "../../../components/ui/Pagination";
 import { formatCategoryName } from "../../../lib/formatters";
 import { getTaxonomy, listMyths } from "../../../lib/myths";
 import { buildSeoMetadata, getSeoEntry } from "../../../lib/seo";
+import { BreadcrumbJsonLd, CollectionPageJsonLd } from "../../../components/StructuredData";
 import Link from "next/link";
 
 export const runtime = "nodejs";
 export const revalidate = 300;
 const MIN_CATEGORY_MYTHS = 6;
+
+const SITE_URL = (
+  process.env.NEXT_PUBLIC_SITE_URL ||
+  (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "")
+)
+  .trim()
+  .replace(/\/+$/, "");
 
 export async function generateStaticParams() {
   const taxonomy = await getTaxonomy();
@@ -345,8 +353,30 @@ export default async function CategoryDetailPage({ params, searchParams }) {
     relatedTag,
   };
 
+  const collectionItems = (result?.items || []).slice(0, 30).map((m) => ({
+    url: `${SITE_URL}/mitos/${m.slug}`,
+    name: m.title,
+  }));
+
   return (
     <main className="relative min-h-screen overflow-hidden pb-24">
+      {SITE_URL && (
+        <>
+          <BreadcrumbJsonLd
+            items={[
+              { name: "Inicio", url: `${SITE_URL}/` },
+              { name: "Categorías", url: `${SITE_URL}/categorias` },
+              { name: category.name, url: `${SITE_URL}/categorias/${params.slug}` },
+            ]}
+          />
+          <CollectionPageJsonLd
+            name={`Mitos de la categoría ${category.name}`}
+            description={categoryInfo?.description}
+            url={`${SITE_URL}/categorias/${params.slug}`}
+            items={collectionItems}
+          />
+        </>
+      )}
       <Header taxonomy={taxonomy} />
 
       {/* Hero Section con imagen */}
