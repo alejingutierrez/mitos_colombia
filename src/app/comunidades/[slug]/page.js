@@ -1,15 +1,14 @@
+import { Suspense } from "react";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import Header from "../../../components/Header";
 import { Badge } from "../../../components/ui/Badge";
-import { ButtonLink } from "../../../components/ui/Button";
 import { GlassCard } from "../../../components/ui/GlassCard";
-import { Pagination } from "../../../components/ui/Pagination";
 import { filterAllowedCommunities, MIN_COMMUNITY_MYTHS } from "../../../lib/communityFilters";
 import { getTaxonomy, listMyths } from "../../../lib/myths";
 import { buildSeoMetadata, getSeoEntry } from "../../../lib/seo";
 import { BreadcrumbJsonLd, CollectionPageJsonLd } from "../../../components/StructuredData";
-import Link from "next/link";
+import { FilterableMythList } from "../../../components/FilterableMythList";
 
 export const runtime = "nodejs";
 export const revalidate = 300;
@@ -247,7 +246,7 @@ export async function generateMetadata({ params }) {
   });
 }
 
-export default async function CommunityDetailPage({ params, searchParams }) {
+export default async function CommunityDetailPage({ params }) {
   const taxonomy = await getTaxonomy();
   const allowedCommunities = filterAllowedCommunities(
     taxonomy.communities,
@@ -283,18 +282,13 @@ export default async function CommunityDetailPage({ params, searchParams }) {
       : []),
   ];
 
-  const q = getParamValue(searchParams.q);
-  const tag = getParamValue(searchParams.tag);
-  const limit = Number.parseInt(getParamValue(searchParams.limit) || "24", 10);
-  const offset = Number.parseInt(getParamValue(searchParams.offset) || "0", 10);
+  const limit = 24;
 
-  // Filtrar mitos de esta comunidad
+  // Listado inicial (sin filtros) - se pregenera estáticamente
   const result = await listMyths({
     community: community.slug,
-    tag,
-    q,
     limit,
-    offset
+    offset: 0,
   });
 
   // Tags para filtrar (excluir regiones y "ninguno")
@@ -305,11 +299,6 @@ export default async function CommunityDetailPage({ params, searchParams }) {
       t.name.toLowerCase() !== 'ninguno'
     )
     .slice(0, 40);
-
-  const paginationBase = {
-    q,
-    tag,
-  };
 
   const collectionItems = (result?.items || []).slice(0, 30).map((m) => ({
     url: `${SITE_URL}/mitos/${m.slug}`,
@@ -401,142 +390,17 @@ export default async function CommunityDetailPage({ params, searchParams }) {
         </GlassCard>
       </section>
 
-      {/* Filtros */}
-      <section className="container-shell mt-8">
-        <GlassCard className="p-6">
-          <form
-            className="grid gap-4 md:grid-cols-[2fr_1.5fr_auto]"
-            action={`/comunidades/${params.slug}`}
-            method="get"
-          >
-            <label className="flex flex-col gap-2 text-xs uppercase tracking-[0.3em] text-ink-500">
-              Buscar en esta comunidad
-              <input
-                className="input-glass"
-                name="q"
-                defaultValue={q}
-                placeholder="Nombre del mito o palabra clave"
-                type="text"
-              />
-            </label>
-
-            <label className="flex flex-col gap-2 text-xs uppercase tracking-[0.3em] text-ink-500">
-              Categoría
-              <input
-                className="input-glass"
-                name="tag"
-                list="tag-options"
-                defaultValue={tag}
-                placeholder="Ej: Etiológico, Castigo"
-              />
-              <datalist id="tag-options">
-                {tagOptions.map((item) => (
-                  <option key={item.slug} value={item.name} />
-                ))}
-              </datalist>
-            </label>
-
-            <div className="flex flex-col justify-end gap-3">
-              <button className="rounded-full bg-jungle-600 px-5 py-3 text-sm text-white shadow hover:bg-jungle-700 transition">
-                Filtrar
-              </button>
-              <ButtonLink href={`/comunidades/${params.slug}`} variant="outline" size="sm">
-                Limpiar
-              </ButtonLink>
-            </div>
-          </form>
-        </GlassCard>
-
-        <div className="mt-6 flex flex-wrap items-center justify-between gap-3 text-sm text-ink-700">
-          <p>
-            Mostrando {result.items.length} de {result.total} mitos
-          </p>
-          <div className="flex items-center gap-2">
-            {q ? <Badge>{q}</Badge> : null}
-            {tag ? <Badge>{tag}</Badge> : null}
-          </div>
-        </div>
-      </section>
-
-      {/* Lista de mitos */}
-      <section className="container-shell mt-8">
-        <div className="grid gap-4 lg:grid-cols-2">
-          {result.items.map((myth) => {
-            const tags = (myth.tags_raw || "")
-              .split(",")
-              .map((item) => item.trim())
-              .filter(Boolean)
-              .slice(0, 4);
-
-            return (
-              <Link key={myth.slug} href={`/mitos/${myth.slug}`} className="group">
-                <GlassCard className="flex h-full flex-col overflow-hidden p-0 transition hover:-translate-y-1 hover:shadow-lift">
-                  {myth.image_url && (
-                    <div className="relative aspect-[16/9] overflow-hidden">
-                      <Image
-                        src={myth.image_url}
-                        alt={`Ilustracion de ${myth.title}`}
-                        fill
-                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
-                        className="object-cover transition duration-700 group-hover:scale-110"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-ink-900/40 via-transparent to-transparent" />
-                    </div>
-                  )}
-                  <div className="flex flex-1 flex-col gap-4 p-6">
-                    <div className="flex flex-wrap items-center gap-2">
-                      <Badge className="border-jungle-500/30 bg-jungle-500/10 text-jungle-600">
-                        {myth.region}
-                      </Badge>
-                      {myth.community ? (
-                        <Badge className="border-river-500/30 bg-river-500/10 text-river-600">
-                          {myth.community}
-                        </Badge>
-                      ) : null}
-                    </div>
-                    <div>
-                      <h3 className="font-display text-2xl text-ink-900 transition group-hover:text-river-600">
-                        {myth.title}
-                      </h3>
-                      <p className="mt-2 text-sm text-ink-700 line-clamp-3">{myth.excerpt}</p>
-                    </div>
-                    <div className="flex flex-wrap gap-2">
-                      {tags.map((item) => (
-                        <Badge key={item}>{item}</Badge>
-                      ))}
-                    </div>
-                    <div className="mt-auto flex items-center justify-between text-xs uppercase tracking-[0.3em] text-ink-500">
-                      <span>{myth.focus_keyword}</span>
-                      <span className="text-river-600 opacity-0 transition group-hover:opacity-100">
-                        Leer →
-                      </span>
-                    </div>
-                  </div>
-                </GlassCard>
-              </Link>
-            );
-          })}
-        </div>
-
-        {/* Paginación */}
-        <div className="mt-10">
-          <Pagination
-            total={result.total}
-            limit={result.limit}
-            offset={offset}
-            pathname={`/comunidades/${params.slug}`}
-            searchParams={paginationBase}
-            limitOptions={[12, 24, 48]}
-          />
-        </div>
-
-        {/* Botón volver */}
-        <div className="mt-10 flex justify-center">
-          <ButtonLink href="/mitos" variant="outline">
-            Ver archivo completo
-          </ButtonLink>
-        </div>
-      </section>
+      <Suspense fallback={null}>
+        <FilterableMythList
+          initialItems={result.items}
+          initialTotal={result.total}
+          initialLimit={limit}
+          baseFilter={{ community: community.slug }}
+          basePath="/comunidades"
+          showCommunityFilter={false}
+          tagOptions={tagOptions}
+        />
+      </Suspense>
     </main>
   );
 }

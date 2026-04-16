@@ -1,15 +1,14 @@
+import { Suspense } from "react";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import Header from "../../../components/Header";
 import { Badge } from "../../../components/ui/Badge";
-import { ButtonLink } from "../../../components/ui/Button";
 import { GlassCard } from "../../../components/ui/GlassCard";
-import { Pagination } from "../../../components/ui/Pagination";
 import { filterAllowedCommunities } from "../../../lib/communityFilters";
 import { getTaxonomy, listMyths } from "../../../lib/myths";
 import { buildSeoMetadata, getSeoEntry } from "../../../lib/seo";
 import { BreadcrumbJsonLd, CollectionPageJsonLd } from "../../../components/StructuredData";
-import Link from "next/link";
+import { FilterableMythList } from "../../../components/FilterableMythList";
 
 export const runtime = "nodejs";
 export const revalidate = 300;
@@ -110,27 +109,6 @@ const REGION_INFO = {
   }
 };
 
-function getParamValue(value) {
-  if (Array.isArray(value)) {
-    return value[0] ?? "";
-  }
-  return value ?? "";
-}
-
-function buildQuery(params, overrides = {}) {
-  const search = new URLSearchParams();
-  const entries = { ...params, ...overrides };
-
-  Object.entries(entries).forEach(([key, value]) => {
-    if (value === undefined || value === null || value === "") {
-      return;
-    }
-    search.set(key, String(value));
-  });
-
-  return search.toString();
-}
-
 export async function generateMetadata({ params }) {
   const taxonomy = await getTaxonomy();
   const region = taxonomy.regions.find((r) => r.slug === params.slug);
@@ -158,7 +136,7 @@ export async function generateMetadata({ params }) {
   });
 }
 
-export default async function RegionDetailPage({ params, searchParams }) {
+export default async function RegionDetailPage({ params }) {
   const taxonomy = await getTaxonomy();
   const region = taxonomy.regions.find((r) => r.slug === params.slug);
 
@@ -174,20 +152,12 @@ export default async function RegionDetailPage({ params, searchParams }) {
     characteristics: []
   };
 
-  const q = getParamValue(searchParams.q);
-  const tag = getParamValue(searchParams.tag);
-  const community = getParamValue(searchParams.community);
-  const limit = Number.parseInt(getParamValue(searchParams.limit) || "24", 10);
-  const offset = Number.parseInt(getParamValue(searchParams.offset) || "0", 10);
-
-  // Filtrar mitos de esta región
+  const limit = 24;
+  // Listado inicial (sin filtros) - se pregenera estáticamente
   const result = await listMyths({
     region: region.slug,
-    community,
-    tag,
-    q,
     limit,
-    offset
+    offset: 0,
   });
 
   // Comunidades de esta región
@@ -204,12 +174,6 @@ export default async function RegionDetailPage({ params, searchParams }) {
         t.name.toLowerCase() !== "ninguno"
     )
     .slice(0, 40);
-
-  const paginationBase = {
-    q,
-    tag,
-    community,
-  };
 
   const collectionItems = (result?.items || []).slice(0, 30).map((m) => ({
     url: `${SITE_URL}/mitos/${m.slug}`,
@@ -310,159 +274,17 @@ export default async function RegionDetailPage({ params, searchParams }) {
         )}
       </section>
 
-      {/* Filtros */}
-      <section className="container-shell mt-8">
-        <GlassCard className="p-6">
-          <form
-            className="grid gap-4 md:grid-cols-[1.5fr_1fr_1fr_auto]"
-            action={`/regiones/${params.slug}`}
-            method="get"
-          >
-            <label className="flex flex-col gap-2 text-xs uppercase tracking-[0.3em] text-ink-500">
-              Buscar en esta región
-              <input
-                className="input-glass"
-                name="q"
-                defaultValue={q}
-                placeholder="Nombre del mito o palabra clave"
-                type="text"
-              />
-            </label>
-
-            <label className="flex flex-col gap-2 text-xs uppercase tracking-[0.3em] text-ink-500">
-              Comunidad
-              <select
-                className="input-glass"
-                name="community"
-                defaultValue={community}
-              >
-                <option value="">Todas</option>
-                {regionCommunities.map((c) => (
-                  <option key={c.slug} value={c.slug}>
-                    {c.name}
-                  </option>
-                ))}
-              </select>
-            </label>
-
-            <label className="flex flex-col gap-2 text-xs uppercase tracking-[0.3em] text-ink-500">
-              Categoría
-              <input
-                className="input-glass"
-                name="tag"
-                list="tag-options"
-                defaultValue={tag}
-                placeholder="Ej: Etiológico"
-              />
-              <datalist id="tag-options">
-                {tagOptions.map((item) => (
-                  <option key={item.slug} value={item.name} />
-                ))}
-              </datalist>
-            </label>
-
-            <div className="flex flex-col justify-end gap-3">
-              <button className="rounded-full bg-jungle-600 px-5 py-3 text-sm text-white shadow hover:bg-jungle-700 transition">
-                Filtrar
-              </button>
-              <ButtonLink href={`/regiones/${params.slug}`} variant="outline" size="sm">
-                Limpiar
-              </ButtonLink>
-            </div>
-          </form>
-        </GlassCard>
-
-        <div className="mt-6 flex flex-wrap items-center justify-between gap-3 text-sm text-ink-700">
-          <p>
-            Mostrando {result.items.length} de {result.total} mitos
-          </p>
-          <div className="flex items-center gap-2">
-            {community ? <Badge>{community}</Badge> : null}
-            {tag ? <Badge>{tag}</Badge> : null}
-            {q ? <Badge>{q}</Badge> : null}
-          </div>
-        </div>
-      </section>
-
-      {/* Lista de mitos */}
-      <section className="container-shell mt-8">
-        <div className="grid gap-4 lg:grid-cols-2">
-          {result.items.map((myth) => {
-            const tags = (myth.tags_raw || "")
-              .split(",")
-              .map((item) => item.trim())
-              .filter(Boolean)
-              .slice(0, 4);
-
-            return (
-              <Link key={myth.slug} href={`/mitos/${myth.slug}`} className="group">
-                <GlassCard className="flex h-full flex-col overflow-hidden p-0 transition hover:-translate-y-1 hover:shadow-lift">
-                  {myth.image_url && (
-                    <div className="relative aspect-[16/9] overflow-hidden">
-                      <Image
-                        src={myth.image_url}
-                        alt={`Ilustracion de ${myth.title}`}
-                        fill
-                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
-                        className="object-cover transition duration-700 group-hover:scale-110"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-ink-900/40 via-transparent to-transparent" />
-                    </div>
-                  )}
-                  <div className="flex flex-1 flex-col gap-4 p-6">
-                    <div className="flex flex-wrap items-center gap-2">
-                      <Badge className="border-jungle-500/30 bg-jungle-500/10 text-jungle-600">
-                        {myth.region}
-                      </Badge>
-                      {myth.community ? (
-                        <Badge className="border-river-500/30 bg-river-500/10 text-river-600">
-                          {myth.community}
-                        </Badge>
-                      ) : null}
-                    </div>
-                    <div>
-                      <h3 className="font-display text-2xl text-ink-900 transition group-hover:text-river-600">
-                        {myth.title}
-                      </h3>
-                      <p className="mt-2 text-sm text-ink-700 line-clamp-3">{myth.excerpt}</p>
-                    </div>
-                    <div className="flex flex-wrap gap-2">
-                      {tags.map((item) => (
-                        <Badge key={item}>{item}</Badge>
-                      ))}
-                    </div>
-                    <div className="mt-auto flex items-center justify-between text-xs uppercase tracking-[0.3em] text-ink-500">
-                      <span>{myth.focus_keyword}</span>
-                      <span className="text-river-600 opacity-0 transition group-hover:opacity-100">
-                        Leer →
-                      </span>
-                    </div>
-                  </div>
-                </GlassCard>
-              </Link>
-            );
-          })}
-        </div>
-
-        {/* Paginación */}
-        <div className="mt-10">
-          <Pagination
-            total={result.total}
-            limit={result.limit}
-            offset={offset}
-            pathname={`/regiones/${params.slug}`}
-            searchParams={paginationBase}
-            limitOptions={[12, 24, 48]}
-          />
-        </div>
-
-        {/* Botón volver */}
-        <div className="mt-10 flex justify-center">
-          <ButtonLink href="/regiones" variant="outline">
-            Ver todas las regiones
-          </ButtonLink>
-        </div>
-      </section>
+      <Suspense fallback={null}>
+        <FilterableMythList
+          initialItems={result.items}
+          initialTotal={result.total}
+          initialLimit={limit}
+          baseFilter={{ region: region.slug }}
+          basePath="/regiones"
+          communityOptions={regionCommunities}
+          tagOptions={tagOptions}
+        />
+      </Suspense>
     </main>
   );
 }
