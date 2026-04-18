@@ -1,15 +1,6 @@
-import Image from "next/image";
 import Header from "../components/Header";
-import { Badge } from "../components/ui/Badge";
-import { ButtonLink } from "../components/ui/Button";
-import { GlassCard } from "../components/ui/GlassCard";
-import { SectionHeader } from "../components/ui/SectionHeader";
-import { MythCard } from "../components/MythCard";
-import { TarotCard } from "../components/TarotCard";
-import HomeBannerCarousel from "../components/HomeBannerCarousel";
+import HomeV3 from "../components/home/HomeV3";
 import { getRoutePreviews } from "../lib/routes";
-import { getHomeBanners } from "../lib/home-banners";
-import SmartSearch from "../components/SmartSearch";
 import { buildSeoMetadata, getSeoEntry } from "../lib/seo";
 import {
   getFeaturedMythsWithImages,
@@ -18,6 +9,7 @@ import {
   getTaxonomy,
 } from "../lib/myths";
 import { getDailyTarotSelection, getTarotCards } from "../lib/tarot";
+import { filterAllowedCommunities } from "../lib/communityFilters";
 
 export const revalidate = 86400;
 
@@ -41,60 +33,58 @@ export async function generateMetadata() {
   });
 }
 
-// Generate a seed based on the current day to rotate content daily
 function getDailySeed() {
   const now = new Date();
   const startOfYear = new Date(now.getFullYear(), 0, 0);
   const diff = now - startOfYear;
   const oneDay = 1000 * 60 * 60 * 24;
-  const dayOfYear = Math.floor(diff / oneDay);
-  return dayOfYear;
+  return Math.floor(diff / oneDay);
 }
 
-const quickTags = [
-  "Guardianes del agua",
-  "Bosques y niebla",
-  "Criaturas nocturnas",
-  "Ritos del mar",
-  "Fronteras y caminos",
-  "Voces urbanas",
-];
-
-const collections = [
-  {
-    title: "Relatos de frontera",
-    detail: "Lugares liminales y pactos invisibles.",
-  },
-  {
-    title: "Mitos de cosecha",
-    detail: "Ciclos de tierra, trabajo y ofrenda.",
-  },
-  {
-    title: "Noches de pueblo",
-    detail: "Historias urbanas que cruzan generaciones.",
-  },
-];
-
 const regionDescriptions = {
-  Amazonas: "Guardianes de selva, origenes y ciclos rituales.",
-  Orinoquía: "Llanos abiertos, fuego y relatos de madrugada.",
-  Andina: "Montanas, paramos y memorias del camino.",
+  Amazonas: "Selva, ciclos rituales y guardianes del agua.",
+  Andina: "Montañas, páramos y memorias del camino.",
   Caribe: "Mareas, viento y cantos del puerto.",
-  Pacífico: "Manglares, ritmo y memoria afro.",
-  Varios: "Historias diversas que cruzan territorios.",
+  Pacífico: "Manglares, ritmo y memoria afro del litoral.",
+  Orinoquía: "Llanos, sabanas y hombres de a caballo.",
+  Insular: "Raizales y memorias de alta mar.",
+  Varios: "Historias que cruzan territorios.",
 };
+
+const MAJOR_ROMAN = [
+  "0",
+  "I",
+  "II",
+  "III",
+  "IV",
+  "V",
+  "VI",
+  "VII",
+  "VIII",
+  "IX",
+  "X",
+  "XI",
+  "XII",
+  "XIII",
+  "XIV",
+  "XV",
+  "XVI",
+  "XVII",
+  "XVIII",
+  "XIX",
+  "XX",
+  "XXI",
+];
 
 export default async function Home() {
   const seed = getDailySeed();
 
-  // Fetch dynamic data
   const [
     featuredMyths,
     diverseMyths,
     stats,
     taxonomy,
     routePreviews,
-    homeBanners,
     tarotCards,
   ] = await Promise.all([
     getFeaturedMythsWithImages(9, seed),
@@ -102,361 +92,85 @@ export default async function Home() {
     getHomeStats(),
     getTaxonomy(),
     getRoutePreviews(seed),
-    getHomeBanners(),
     getTarotCards(),
   ]);
 
-  // Get the main featured myth (first one with image)
-  const heroMyth = featuredMyths[0];
+  const heroMyths = featuredMyths.slice(0, 3);
+  const galleryPool =
+    featuredMyths.length > 3 ? featuredMyths.slice(3) : diverseMyths;
+  const galleryMyths = galleryPool.slice(0, 6);
 
-  // Get remaining featured myths for gallery
-  const galleryMyths = featuredMyths.slice(1, 7);
+  const totalCommunities = filterAllowedCommunities(taxonomy.communities, 6);
 
-  const tarotWithImages = tarotCards.filter((card) => card.image_url);
-  const tarotSource =
-    tarotWithImages.length >= 3 ? tarotWithImages : tarotCards;
-  const dailyTarotCards = getDailyTarotSelection(tarotSource, 3, seed);
-
-  // Prepare stats for display
   const displayStats = [
     { value: `${stats.total_myths || 505}`, label: "Mitos curados" },
     { value: `${stats.total_regions || 6}`, label: "Regiones culturales" },
-    { value: `${taxonomy.communities.length || 50}+`, label: "Comunidades" },
+    {
+      value: `${totalCommunities.length || 50}+`,
+      label: "Comunidades portadoras",
+    },
   ];
+
+  const regions = (taxonomy.regions || []).map((r) => ({
+    name: r.name,
+    slug: r.slug,
+    myth_count: r.myth_count,
+    image_url: r.image_url,
+    description:
+      regionDescriptions[r.name] || "Explora los mitos de esta región.",
+  }));
+
+  const routes = routePreviews.map((r) => ({
+    slug: r.slug,
+    title: r.title,
+    tone: r.tone,
+    detail: r.detail,
+    accent: r.accent,
+    preview: r.preview,
+    mythCount: r.preview ? undefined : undefined,
+  }));
+
+  const tarotWithImages = tarotCards.filter((c) => c.image_url);
+  const tarotSource =
+    tarotWithImages.length >= 3 ? tarotWithImages : tarotCards;
+  const dailyTarot = getDailyTarotSelection(tarotSource, 3, seed).map((c) => {
+    const roman =
+      c.arcana === "major" && typeof c.order_index === "number"
+        ? MAJOR_ROMAN[c.order_index] || ""
+        : "";
+    return {
+      slug: c.slug,
+      name: c.card_name,
+      image_url: c.image_url,
+      myth_title: c.myth_title || "",
+      roman_numeral: roman,
+    };
+  });
+
+  const communities = totalCommunities
+    .slice()
+    .sort((a, b) => Number(b.myth_count || 0) - Number(a.myth_count || 0))
+    .slice(0, 10)
+    .map((c) => ({
+      name: c.name,
+      slug: c.slug,
+      region: c.region || "",
+    }));
+
   return (
     <>
       <Header taxonomy={taxonomy} />
-      <div className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
-        <div className="absolute top-0 left-12 h-72 w-72 rounded-full bg-jungle-500/30 blur-3xl motion-safe:animate-float-slow" />
-        <div className="absolute right-0 top-20 h-80 w-80 rounded-full bg-river-500/25 blur-3xl motion-safe:animate-float-slow" />
-        <div className="absolute bottom-10 left-1/2 h-[26rem] w-[26rem] -translate-x-1/2 rounded-full bg-ember-400/25 blur-[140px] motion-safe:animate-float-slow" />
-      </div>
-
-      <main className="relative min-h-screen pb-24">
-
-      <section className="container-shell mt-16">
-        <div className="relative z-20 grid gap-12 lg:grid-cols-[1fr_1fr] lg:gap-16">
-          <div className="flex flex-col justify-center gap-8 animate-fade-up">
-            <div>
-              <p className="eyebrow">Biblioteca editorial</p>
-              <h1 className="mt-4 font-display text-5xl leading-tight text-ink-900 md:text-6xl">
-                Relatos que nacen del territorio
-              </h1>
-              <p className="section-body mt-6 max-w-xl text-lg">
-                Una coleccion digital de mitos colombianos organizados por region,
-                comunidad y tematica. Descubre historias ancestrales con contexto
-                cultural y visuales contemporaneas.
-              </p>
-            </div>
-
-            <SmartSearch />
-
-            <div className="flex flex-wrap gap-2">
-              {quickTags.map((tag) => (
-                <Badge key={tag} className="border-river-500/20 bg-river-500/5 text-river-700">
-                  {tag}
-                </Badge>
-              ))}
-            </div>
-          </div>
-
-          <div className="relative animate-fade-up-2">
-            {heroMyth ? (
-              <div className="relative">
-                {heroMyth.image_url && (
-                  <div className="relative aspect-[4/5] overflow-hidden rounded-3xl border border-white/60 shadow-2xl">
-                    <Image
-                      src={heroMyth.image_url}
-                      alt={heroMyth.title}
-                      fill
-                      priority
-                      sizes="(max-width: 1024px) 100vw, 50vw"
-                      className="object-cover"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-ink-900/90 via-ink-900/40 to-transparent" />
-                    <div className="absolute bottom-0 left-0 right-0 p-8">
-                      <Badge className="mb-3 border-white/60 bg-white/95 text-ink-900 backdrop-blur-md shadow-lg">
-                        {heroMyth.region}
-                      </Badge>
-                      <h2 className="font-display text-3xl leading-tight text-white md:text-4xl">
-                        {heroMyth.title}
-                      </h2>
-                      <p className="mt-3 text-sm text-white/90 line-clamp-2">
-                        {heroMyth.excerpt}
-                      </p>
-                      <ButtonLink
-                        href={`/mitos/${heroMyth.slug}`}
-                        className="mt-6"
-                        variant="subtle"
-                      >
-                        Leer relato completo
-                      </ButtonLink>
-                    </div>
-                  </div>
-                )}
-              </div>
-            ) : (
-              <GlassCard className="p-8">
-                <p className="eyebrow text-ember-500">Cargando</p>
-                <div className="mt-4 h-64 animate-pulse rounded-2xl bg-ink-100/50" />
-              </GlassCard>
-            )}
-          </div>
-        </div>
-
-        <div className="relative z-10 mt-12 grid gap-4 sm:grid-cols-3 lg:mt-16">
-          {displayStats.map((stat) => (
-            <GlassCard key={stat.label} className="p-6 text-center">
-              <p className="font-display text-4xl text-ink-900">
-                {stat.value}
-              </p>
-              <p className="mt-2 text-xs uppercase tracking-[0.3em] text-ink-500">
-                {stat.label}
-              </p>
-            </GlassCard>
-          ))}
-        </div>
-      </section>
-
-      <section className="container-shell mt-24 animate-fade-up-3">
-        <SectionHeader
-          eyebrow="Rutas de exploracion"
-          title="Curaduria para leer con contexto y ritmo."
-          description="Listas tematicas pensadas para descubrir patrones, conexiones y
-            simbolos que se repiten en distintas regiones."
+      <main className="relative min-h-screen">
+        <HomeV3
+          featuredMyths={heroMyths}
+          galleryMyths={galleryMyths}
+          stats={displayStats}
+          regions={regions}
+          routes={routes}
+          tarotCards={dailyTarot}
+          communities={communities}
+          totalMyths={stats.total_myths || 505}
         />
-        <div className="mt-8 grid gap-6 lg:grid-cols-3">
-          {routePreviews.map((route) => (
-            <a
-              key={route.slug}
-              href={`/rutas/${route.slug}`}
-              className="group block"
-            >
-              <div className="relative aspect-square overflow-hidden rounded-3xl border border-white/60 shadow-glass transition hover:-translate-y-2 hover:shadow-2xl">
-                {route.preview?.image_url ? (
-                  <Image
-                    src={route.preview.image_url}
-                    alt={route.title}
-                    fill
-                    sizes="(max-width: 1024px) 100vw, 33vw"
-                    className="object-cover transition duration-700 group-hover:scale-110"
-                  />
-                ) : (
-                  <div className="absolute inset-0 bg-gradient-to-br from-jungle-600 via-river-600 to-ember-500" />
-                )}
-                <div className="absolute inset-0 bg-gradient-to-t from-ink-950/85 via-ink-900/45 to-transparent" />
-                <div className="absolute inset-0 z-10 flex flex-col justify-between p-6 text-white">
-                  <div className="max-w-[90%] rounded-2xl bg-ink-950/70 p-4 backdrop-blur-sm shadow-lg">
-                    <p className="text-xs font-semibold uppercase tracking-[0.3em] text-white/80">
-                      {route.tone}
-                    </p>
-                    <h3 className="mt-3 font-display text-2xl">
-                      {route.title}
-                    </h3>
-                    <p className="mt-3 text-sm leading-relaxed text-white/85 line-clamp-3">
-                      {route.detail}
-                    </p>
-                  </div>
-                  <div className="mt-4 inline-flex w-fit items-center gap-2 rounded-full bg-white/20 px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-white backdrop-blur">
-                    <span>Ver ruta</span>
-                    <span className="transition group-hover:translate-x-1">→</span>
-                  </div>
-                </div>
-              </div>
-            </a>
-          ))}
-        </div>
-      </section>
-
-      {homeBanners.length > 0 && (
-        <HomeBannerCarousel banners={homeBanners} />
-      )}
-
-      {galleryMyths.length > 0 && (
-        <section className="container-shell mt-32">
-          <div className="text-center">
-            <p className="eyebrow">Galeria ilustrada</p>
-            <h2 className="mt-4 font-display text-4xl text-ink-900 md:text-5xl">
-              Relatos con memoria visual
-            </h2>
-            <p className="section-body mx-auto mt-4 max-w-2xl">
-              Cada ilustracion captura la esencia, simbolismo y atmosfera
-              de los relatos ancestrales colombianos.
-            </p>
-          </div>
-          <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {galleryMyths.map((myth) => (
-              <MythCard key={myth.id} myth={myth} featured />
-            ))}
-          </div>
-          <div className="mt-12 text-center">
-            <ButtonLink href="/mitos" variant="subtle">
-              Explorar coleccion completa
-            </ButtonLink>
-          </div>
-        </section>
-      )}
-
-      {dailyTarotCards.length > 0 && (
-        <section className="container-shell mt-32">
-          <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
-            <div className="max-w-2xl">
-              <p className="eyebrow">Tarot mitológico</p>
-              <h2 className="mt-4 font-display text-4xl text-ink-900 md:text-5xl">
-                Tarot de la mitología colombiana
-              </h2>
-              <p className="section-body mt-4">
-                Tres cartas que cambian cada día para abrir nuevas rutas de lectura.
-                Cada una conecta un arcano del tarot con un mito vivo del archivo.
-              </p>
-            </div>
-            <div className="flex flex-wrap gap-3">
-              <ButtonLink href="/tarot" variant="subtle">
-                Ver baraja completa
-              </ButtonLink>
-              <ButtonLink href="/mitos" variant="outline">
-                Explorar mitos
-              </ButtonLink>
-            </div>
-          </div>
-          <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {dailyTarotCards.map((card) => (
-              <TarotCard key={card.slug} card={card} compact />
-            ))}
-          </div>
-        </section>
-      )}
-
-      {diverseMyths.length > 0 && (
-        <section className="container-shell mt-32">
-          <div className="mb-12 flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
-            <div className="max-w-2xl">
-              <p className="eyebrow">Rotacion diaria</p>
-              <h2 className="mt-4 font-display text-4xl text-ink-900 md:text-5xl">
-                Descubre relatos de todas las regiones
-              </h2>
-              <p className="section-body mt-4">
-                Una seleccion diversa que cambia cada dia, pensada para explorar
-                la riqueza geografica y cultural de Colombia.
-              </p>
-            </div>
-          </div>
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {diverseMyths.map((myth) => (
-              <MythCard key={myth.id} myth={myth} />
-            ))}
-          </div>
-        </section>
-      )}
-
-      <section className="container-shell mt-32">
-        <div className="text-center">
-          <p className="eyebrow">Atlas territorial</p>
-          <h2 className="mt-4 font-display text-4xl text-ink-900 md:text-5xl">
-            Seis territorios, cientos de historias
-          </h2>
-          <p className="section-body mx-auto mt-4 max-w-2xl">
-            Cada region de Colombia tiene sus propios relatos, guardianes y ritmos.
-            Explora la diversidad cultural del pais a traves de sus mitos.
-          </p>
-        </div>
-        <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {taxonomy.regions.map((region) => (
-            <a
-              key={region.slug}
-              href={`/mitos?region=${region.slug}`}
-              className="group block"
-            >
-              <GlassCard className="relative h-full overflow-hidden p-0 transition hover:-translate-y-2 hover:shadow-2xl">
-                {region.image_url ? (
-                  <div className="relative aspect-[16/9] overflow-hidden">
-                    <Image
-                      src={region.image_url}
-                      alt={`Region ${region.name}`}
-                      fill
-                      sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
-                      className="object-cover transition duration-700 group-hover:scale-110"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-ink-900/60 via-ink-900/10 to-transparent opacity-0 transition duration-300 group-hover:opacity-100" />
-                  </div>
-                ) : null}
-                <div className="p-6">
-                  <div className="flex items-start justify-between gap-4">
-                    <h3 className="font-display text-2xl text-ink-900 transition group-hover:text-river-600">
-                      {region.name}
-                    </h3>
-                    <Badge className="shrink-0 border-river-500/30 bg-river-500/10 text-river-600">
-                      {region.myth_count}
-                    </Badge>
-                  </div>
-                  <p className="mt-4 text-sm leading-relaxed text-ink-600">
-                    {regionDescriptions[region.name] || "Explora los mitos de esta region."}
-                  </p>
-                  <div className="mt-6 flex items-center gap-2 text-xs font-medium uppercase tracking-[0.3em] text-river-600 transition group-hover:gap-3">
-                    <span>Explorar</span>
-                    <span className="transition group-hover:translate-x-1">→</span>
-                  </div>
-                </div>
-              </GlassCard>
-            </a>
-          ))}
-        </div>
-      </section>
-
-      <section className="container-shell mt-32">
-        <div className="mb-12 text-center">
-          <p className="eyebrow">Rutas tematicas</p>
-          <h2 className="mt-4 font-display text-4xl text-ink-900 md:text-5xl">
-            Colecciones para explorar en profundidad
-          </h2>
-          <p className="section-body mx-auto mt-4 max-w-2xl">
-            Recorridos editoriales que conectan simbolos, personajes y paisajes
-            a traves de diferentes territorios.
-          </p>
-        </div>
-        <div className="grid gap-6 lg:grid-cols-3">
-          {collections.map((collection) => (
-            <GlassCard
-              key={collection.title}
-              className="group p-8 transition hover:-translate-y-2 hover:shadow-2xl"
-            >
-              <h3 className="font-display text-2xl text-ink-900 transition group-hover:text-jungle-600">
-                {collection.title}
-              </h3>
-              <p className="mt-4 text-sm leading-relaxed text-ink-600">
-                {collection.detail}
-              </p>
-              <div className="mt-8 flex items-center gap-2 text-xs font-medium uppercase tracking-[0.3em] text-jungle-600 opacity-0 transition group-hover:opacity-100">
-                <span>Proximamente</span>
-              </div>
-            </GlassCard>
-          ))}
-        </div>
-      </section>
-
-      <section className="container-shell mt-32 mb-12">
-        <GlassCard className="overflow-hidden bg-gradient-to-br from-white/95 via-river-50/50 to-jungle-50/30 p-12 md:p-16">
-          <div className="mx-auto max-w-3xl text-center">
-            <p className="eyebrow text-ember-500">Biblioteca viva</p>
-            <h2 className="mt-4 font-display text-4xl leading-tight text-ink-900 md:text-5xl">
-              {stats.total_myths}+ relatos colombianos
-            </h2>
-            <p className="section-body mx-auto mt-6 max-w-2xl text-lg">
-              Una coleccion en constante crecimiento que preserva y celebra
-              la riqueza narrativa de Colombia. Cada dia descubriras nuevos
-              relatos destacados con contenido visual que rota inteligentemente.
-            </p>
-            <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
-              <ButtonLink href="/mitos">
-                Explorar coleccion completa
-              </ButtonLink>
-              <ButtonLink href="/mitos?region=amazonas" variant="outline">
-                Ver mitos del Amazonas
-              </ButtonLink>
-            </div>
-          </div>
-        </GlassCard>
-      </section>
       </main>
     </>
   );
