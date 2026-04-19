@@ -203,21 +203,21 @@ export default async function MythDetailPage({ params }) {
               <div className="mt-3 flex flex-wrap items-center gap-2">
                 {myth.region && (
                   <Link href={`/regiones/${regionSlugFromName(myth.region)}`}>
-                    <Badge className="border-jungle-500/30 bg-jungle-500/10 text-jungle-600 hover:bg-jungle-500/20">
+                    <Badge className="hover:border-[rgba(18,22,24,0.18)] hover:bg-white/90">
                       {myth.region}
                     </Badge>
                   </Link>
                 )}
                 {myth.community ? (
                   <Link href={`/comunidades/${communitySlugFromName(myth.community)}`}>
-                    <Badge className="border-river-500/30 bg-river-500/10 text-river-600 hover:bg-river-500/20">
+                    <Badge className="hover:border-[rgba(18,22,24,0.18)] hover:bg-white/90">
                       {myth.community}
                     </Badge>
                   </Link>
                 ) : null}
                 {myth.focus_keyword && <Badge>{myth.focus_keyword}</Badge>}
               </div>
-              <h1 className="mt-4 font-display text-4xl text-ink-900 md:text-5xl">
+              <h1 className="mt-5 font-display text-[40px] font-bold leading-[0.98] tracking-[-0.025em] text-ink-900 md:text-[64px]">
                 {myth.title}
               </h1>
               {myth.updated_at && (

@@ -158,8 +158,8 @@ export function Pagination({
                 "border text-sm font-medium",
                 "transition hover:-translate-y-0.5",
                 isActive
-                  ? "border-jungle-600 bg-jungle-600 text-white shadow-md"
-                  : "border-white/60 bg-white/40 text-ink-700 backdrop-blur-sm hover:bg-white/60 hover:shadow-md"
+                  ? "border-ink-900 bg-ink-900 text-[#f1ede3] shadow-md"
+                  : "border-[rgba(18,22,24,0.1)] bg-white/70 text-ink-700 backdrop-blur-sm hover:bg-white/90 hover:shadow-md"
               )}
               aria-label={`Página ${page}`}
               aria-current={isActive ? "page" : undefined}
@@ -217,8 +217,8 @@ export function Pagination({
                     "border text-xs font-medium",
                     "transition hover:-translate-y-0.5",
                     isActive
-                      ? "border-river-600 bg-river-600 text-white shadow-sm"
-                      : "border-white/60 bg-white/40 text-ink-700 backdrop-blur-sm hover:bg-white/60"
+                      ? "border-[#bd8642] bg-[#d8aa62] text-[#0a0f0c] shadow-sm"
+                      : "border-[rgba(18,22,24,0.1)] bg-white/70 text-ink-700 backdrop-blur-sm hover:bg-white/90"
                   )}
                 >
                   {option}

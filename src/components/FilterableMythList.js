@@ -247,7 +247,7 @@ export function FilterableMythList({
             <div className="flex flex-col justify-end gap-3">
               <button
                 type="submit"
-                className="rounded-full bg-jungle-600 px-5 py-3 text-sm text-white shadow transition hover:bg-jungle-700"
+                className="v3-btn v3-btn-primary"
               >
                 Filtrar
               </button>
@@ -255,7 +255,7 @@ export function FilterableMythList({
                 <button
                   type="button"
                   onClick={clearFilters}
-                  className="rounded-full border border-ink-300 px-5 py-3 text-sm text-ink-700 transition hover:border-ink-500"
+                  className="v3-btn v3-btn-outline"
                 >
                   Limpiar
                 </button>

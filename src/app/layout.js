@@ -58,7 +58,15 @@ window.gtag('js', new Date());
 window.gtag('config', '${GA_MEASUREMENT_ID.trim()}', { send_page_view: false });`}
         </Script>
         <Analytics />
-        <div className="min-h-screen">{children}</div>
+        <div className="page-bg" aria-hidden="true">
+          <div className="page-bg-ambient">
+            <span className="page-bg-b1" />
+            <span className="page-bg-b2" />
+            <span className="page-bg-b3" />
+          </div>
+          <div className="page-bg-grain" />
+        </div>
+        <div className="page-shell min-h-screen">{children}</div>
         <Footer />
       </body>
     </html>

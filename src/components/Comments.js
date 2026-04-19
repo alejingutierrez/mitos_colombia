@@ -200,7 +200,7 @@ export function Comments({ mythId, initialComments = [] }) {
           <button
             type="submit"
             disabled={isSubmitting}
-            className="rounded-full bg-jungle-600 px-6 py-3 text-sm text-white shadow transition hover:bg-jungle-700 disabled:opacity-50 disabled:cursor-not-allowed"
+            className="v3-btn v3-btn-primary disabled:opacity-50 disabled:cursor-not-allowed"
           >
             {isSubmitting ? "Enviando..." : "Enviar comentario"}
           </button>

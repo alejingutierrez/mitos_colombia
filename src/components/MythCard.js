@@ -1,103 +1,64 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Badge } from "./ui/Badge";
-import { GlassCard } from "./ui/GlassCard";
 
 export function MythCard({ myth, featured = false }) {
   if (!myth) return null;
 
   const hasImage = myth.image_url != null;
 
-  if (featured) {
-    return (
-      <Link
-        href={`/mitos/${myth.slug}`}
-        className="group block"
-        data-analytics-event="select_content"
-        data-analytics-category="myth"
-        data-analytics-label={myth.title}
-      >
-        <GlassCard className="relative h-full overflow-hidden transition hover:-translate-y-2 hover:shadow-2xl p-0">
-          {hasImage && (
-            <div className="relative aspect-[16/9] overflow-hidden">
-              <Image
-                src={myth.image_url}
-                alt={myth.title}
-                fill
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                className="object-cover transition duration-700 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-ink-900/60 to-transparent opacity-0 transition duration-300 group-hover:opacity-100" />
-            </div>
-          )}
-          <div className="p-6">
-            <Badge className="border-river-500/30 bg-river-500/10 text-river-600">
-              {myth.region}
-            </Badge>
-            <h3 className="mt-4 font-display text-2xl leading-tight text-ink-900 transition group-hover:text-river-600 line-clamp-2">
-              {myth.title}
-            </h3>
-            {myth.excerpt && (
-              <p className="mt-3 text-sm leading-relaxed text-ink-600 line-clamp-3">
-                {myth.excerpt}
-              </p>
-            )}
-            <div className="mt-4 flex items-center gap-2 text-xs font-medium uppercase tracking-[0.3em] text-river-600 opacity-0 transition group-hover:opacity-100">
-              <span>Leer mas</span>
-              <span className="transition group-hover:translate-x-1">→</span>
-            </div>
-          </div>
-        </GlassCard>
-      </Link>
-    );
-  }
-
   return (
     <Link
       href={`/mitos/${myth.slug}`}
-      className="group block"
+      className="group block h-full"
       data-analytics-event="select_content"
       data-analytics-category="myth"
       data-analytics-label={myth.title}
     >
-      <GlassCard className="relative h-full overflow-hidden transition hover:-translate-y-2 hover:shadow-2xl p-0">
-        {hasImage && (
-          <div className="relative aspect-[16/9] overflow-hidden">
+      <article className="relative flex h-full flex-col overflow-hidden rounded-[20px] border border-white/70 bg-white/75 shadow-[0_12px_40px_rgba(18,22,24,0.06)] backdrop-blur-md transition-all duration-500 group-hover:-translate-y-1.5 group-hover:shadow-[0_30px_70px_rgba(18,22,24,0.16)]">
+        {hasImage ? (
+          <div className={`relative overflow-hidden ${featured ? "aspect-[16/10]" : "aspect-[4/3]"}`}>
             <Image
               src={myth.image_url}
               alt={myth.title}
               fill
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-              className="object-cover transition duration-700 group-hover:scale-110"
+              className="object-cover transition duration-700 group-hover:scale-[1.04]"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-ink-900/60 to-transparent opacity-0 transition duration-300 group-hover:opacity-100" />
+            {myth.region ? (
+              <span className="absolute left-4 top-4 rounded-full bg-white/95 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.28em] text-[#0c4637] shadow-sm backdrop-blur-sm">
+                {myth.region}
+              </span>
+            ) : null}
           </div>
-        )}
-        <div className="p-6">
-          <div className="flex items-center justify-between gap-3">
-            <p className="text-xs font-medium uppercase tracking-[0.3em] text-river-600">
+        ) : null}
+        <div className="flex flex-1 flex-col gap-3 p-6">
+          {!hasImage && myth.region ? (
+            <span className="text-[11px] uppercase tracking-[0.28em] text-ink-500">
               {myth.region}
-            </p>
-            {hasImage && (
-              <Badge className="border-jungle-500/30 bg-jungle-500/10 text-jungle-600 text-xs">
-                Ilustrado
-              </Badge>
-            )}
-          </div>
-          <h3 className="mt-4 font-display text-xl leading-tight text-ink-900 transition group-hover:text-river-600 line-clamp-2">
+              {myth.community ? ` · ${myth.community}` : ""}
+            </span>
+          ) : null}
+          <h3 className={`font-display ${featured ? "text-[26px] md:text-[28px]" : "text-[22px]"} font-semibold leading-[1.15] tracking-[-0.02em] text-ink-900 line-clamp-2 transition-colors group-hover:text-[#0c4637]`}>
             {myth.title}
           </h3>
-          {myth.excerpt && (
-            <p className="mt-3 text-sm leading-relaxed text-ink-600 line-clamp-3">
+          {hasImage && myth.community ? (
+            <span className="text-[11px] uppercase tracking-[0.24em] text-ink-500">
+              Pueblo · {myth.community}
+            </span>
+          ) : null}
+          {myth.excerpt ? (
+            <p className="mt-1 text-sm leading-[1.6] text-ink-700 line-clamp-3">
               {myth.excerpt}
             </p>
-          )}
-          <div className="mt-4 flex items-center gap-2 text-xs font-medium uppercase tracking-[0.3em] text-river-600 opacity-0 transition group-hover:opacity-100">
-            <span>Leer mas</span>
-            <span className="transition group-hover:translate-x-1">→</span>
+          ) : null}
+          <div className="mt-auto flex items-center gap-2 pt-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-ink-700 transition-colors group-hover:text-ink-900">
+            <span>Leer relato</span>
+            <span className="transition-transform duration-300 group-hover:translate-x-1">
+              →
+            </span>
           </div>
         </div>
-      </GlassCard>
+      </article>
     </Link>
   );
 }

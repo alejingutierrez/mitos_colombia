@@ -1,5 +1,5 @@
-import Image from "next/image";
 import Header from "../../components/Header";
+import { MythCard } from "../../components/MythCard";
 import { Badge } from "../../components/ui/Badge";
 import { ButtonLink } from "../../components/ui/Button";
 import { GlassCard } from "../../components/ui/GlassCard";
@@ -141,7 +141,7 @@ export default async function MitosPage({ searchParams }) {
             </label>
 
             <div className="flex flex-col justify-end gap-3">
-              <button className="rounded-full bg-jungle-600 px-5 py-3 text-sm text-white shadow">
+              <button className="v3-btn v3-btn-primary">
                 Filtrar
               </button>
               <ButtonLink href="/mitos" variant="outline" size="sm">
@@ -171,78 +171,7 @@ export default async function MitosPage({ searchParams }) {
               .filter(Boolean)
               .slice(0, 4);
 
-            return (
-              <Link key={myth.slug} href={`/mitos/${myth.slug}`} className="group">
-                <GlassCard className="flex h-full flex-col overflow-hidden p-0 transition hover:-translate-y-1 hover:shadow-lift">
-                  <div className="relative aspect-[16/9] overflow-hidden">
-                    {myth.image_url ? (
-                      <>
-                        <Image
-                          src={myth.image_url}
-                          alt={`Ilustracion de ${myth.title}`}
-                          fill
-                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
-                          className="object-cover transition duration-700 group-hover:scale-110"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-ink-900/40 via-transparent to-transparent" />
-                      </>
-                    ) : (
-                      <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-jungle-600 via-river-600 to-sunset-600 transition duration-700 group-hover:scale-105">
-                        <div className="flex flex-col items-center gap-2 text-white/80">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="h-16 w-16"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
-                          >
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              strokeWidth={1.5}
-                              d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
-                            />
-                          </svg>
-                          <span className="text-xs uppercase tracking-widest opacity-60">
-                            {myth.region}
-                          </span>
-                        </div>
-                        <div className="absolute inset-0 bg-gradient-to-t from-ink-900/40 via-transparent to-transparent" />
-                      </div>
-                    )}
-                  </div>
-                  <div className="flex flex-1 flex-col gap-4 p-6">
-                    <div className="flex flex-wrap items-center gap-2">
-                      <Badge className="border-jungle-500/30 bg-jungle-500/10 text-jungle-600">
-                        {myth.region}
-                      </Badge>
-                      {myth.community ? (
-                        <Badge className="border-river-500/30 bg-river-500/10 text-river-600">
-                          {myth.community}
-                        </Badge>
-                      ) : null}
-                    </div>
-                    <div>
-                      <h3 className="font-display text-2xl text-ink-900 transition group-hover:text-river-600">
-                        {myth.title}
-                      </h3>
-                      <p className="mt-2 text-sm text-ink-700 line-clamp-3">{myth.excerpt}</p>
-                    </div>
-                    <div className="flex flex-wrap gap-2">
-                      {tags.map((item) => (
-                        <Badge key={item}>{item}</Badge>
-                      ))}
-                    </div>
-                    <div className="mt-auto flex items-center justify-between text-xs uppercase tracking-[0.3em] text-ink-500">
-                      <span>{myth.focus_keyword}</span>
-                      <span className="text-river-600 opacity-0 transition group-hover:opacity-100">
-                        Leer →
-                      </span>
-                    </div>
-                  </div>
-                </GlassCard>
-              </Link>
-            );
+            return <MythCard key={myth.slug} myth={myth} />;
           })}
         </div>
 
