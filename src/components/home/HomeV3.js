@@ -26,10 +26,16 @@ function Reveal({ children, delay = 0, className = "", style, as: Tag = "div" })
           }
         });
       },
-      { threshold: 0.12, rootMargin: "0px 0px -8% 0px" }
+      { threshold: 0.04, rootMargin: "0px 0px -4% 0px" }
     );
     io.observe(el);
-    return () => io.disconnect();
+    // Safety net: if observer never fires (edge cases, taller-than-viewport sections,
+    // print, prefetch crawlers, etc.) force visibility after a generous timeout.
+    const safety = setTimeout(() => setInView(true), 1800);
+    return () => {
+      io.disconnect();
+      clearTimeout(safety);
+    };
   }, []);
 
   return (
@@ -261,11 +267,9 @@ function HeroCarousel({ myths }) {
         </div>
       </div>
 
-      <Reveal delay={3}>
-        <div className="v3-search">
-          <SmartSearch />
-        </div>
-      </Reveal>
+      <div className="v3-search">
+        <SmartSearch />
+      </div>
     </section>
   );
 }
