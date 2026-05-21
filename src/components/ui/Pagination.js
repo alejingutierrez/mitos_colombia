@@ -3,15 +3,16 @@
 import { cn } from "../../lib/utils";
 
 /**
- * Componente de paginación completo con números de página, navegación y selector de límite
+ * Pagination component with numbered pages, prev/next, and optional limit selector.
  *
  * @param {Object} props
- * @param {number} props.total - Total de items
- * @param {number} props.limit - Items por página actual
- * @param {number} props.offset - Offset actual
- * @param {string} props.pathname - Ruta base para construir URLs (ej: "/regiones/andina")
- * @param {Object} props.searchParams - Parámetros de búsqueda actuales (sin offset/limit)
- * @param {number[]} [props.limitOptions=[12, 24, 48]] - Opciones para el selector de límite
+ * @param {number} props.total - Total items
+ * @param {number} props.limit - Items per page
+ * @param {number} props.offset - Current offset (0-based)
+ * @param {string} props.pathname - Base path (e.g. "/mitos")
+ * @param {Object} props.searchParams - Other search params to preserve (without offset/limit)
+ * @param {number[]} [props.limitOptions=[12, 24, 48]] - Limit selector options ([] to hide)
+ * @param {boolean} [props.pathPagination=false] - If true, emit /pathname/pagina/N URLs instead of ?offset=N
  */
 export function Pagination({
   total,
@@ -19,90 +20,95 @@ export function Pagination({
   offset,
   pathname,
   searchParams = {},
-  limitOptions = [12, 24, 48]
+  limitOptions = [12, 24, 48],
+  pathPagination = false,
 }) {
-  // Función para construir URLs con nuevos offset/limit
-  const buildUrl = ({ offset: newOffset, limit: newLimit }) => {
-    const params = new URLSearchParams();
-
-    // Agregar parámetros de búsqueda existentes
-    Object.entries(searchParams).forEach(([key, value]) => {
-      if (value !== undefined && value !== null && value !== "") {
-        params.set(key, String(value));
-      }
-    });
-
-    // Agregar nuevos offset y limit
-    if (newOffset > 0) {
-      params.set("offset", String(newOffset));
-    }
-    params.set("limit", String(newLimit));
-
-    const queryString = params.toString();
-    return queryString ? `${pathname}?${queryString}` : pathname;
-  };
-
-  // Calcular información de paginación
   const currentPage = Math.floor(offset / limit) + 1;
   const totalPages = Math.ceil(total / limit);
   const hasNext = offset + limit < total;
   const hasPrev = offset > 0;
 
-  // Calcular rango de items mostrados
   const itemStart = Math.min(offset + 1, total);
   const itemEnd = Math.min(offset + limit, total);
 
-  // Generar números de página con ellipsis
+  const hasSearchFilters = Object.values(searchParams).some(
+    (value) => value !== undefined && value !== null && value !== ""
+  );
+
+  const buildSearchString = (extra = {}) => {
+    const params = new URLSearchParams();
+    Object.entries(searchParams).forEach(([key, value]) => {
+      if (value !== undefined && value !== null && value !== "") {
+        params.set(key, String(value));
+      }
+    });
+    Object.entries(extra).forEach(([key, value]) => {
+      if (value !== undefined && value !== null && value !== "") {
+        params.set(key, String(value));
+      }
+    });
+    return params.toString();
+  };
+
+  const buildUrl = ({ offset: newOffset, limit: newLimit }) => {
+    if (pathPagination && !hasSearchFilters) {
+      const page = Math.floor(newOffset / newLimit) + 1;
+      const base = page <= 1 ? pathname : `${pathname}/pagina/${page}`;
+      // Path pagination only used at default limit; if user changed limit, fall back to query.
+      if (newLimit && newLimit !== limit) {
+        const qs = buildSearchString({ limit: newLimit });
+        return qs ? `${base}?${qs}` : base;
+      }
+      return base;
+    }
+    const qs = buildSearchString({
+      ...(newOffset > 0 ? { offset: newOffset } : {}),
+      ...(newLimit ? { limit: newLimit } : {}),
+    });
+    return qs ? `${pathname}?${qs}` : pathname;
+  };
+
   const getPageNumbers = () => {
     const pages = [];
-    const maxVisible = 7; // Cantidad máxima de números visibles
+    const maxVisible = 7;
 
     if (totalPages <= maxVisible) {
-      // Mostrar todas las páginas
       for (let i = 1; i <= totalPages; i++) {
         pages.push(i);
       }
+    } else if (currentPage <= 4) {
+      for (let i = 1; i <= 5; i++) pages.push(i);
+      pages.push("ellipsis");
+      pages.push(totalPages);
+    } else if (currentPage >= totalPages - 3) {
+      pages.push(1);
+      pages.push("ellipsis");
+      for (let i = totalPages - 4; i <= totalPages; i++) pages.push(i);
     } else {
-      // Lógica para mostrar con ellipsis
-      if (currentPage <= 4) {
-        // Cerca del inicio
-        for (let i = 1; i <= 5; i++) pages.push(i);
-        pages.push('ellipsis');
-        pages.push(totalPages);
-      } else if (currentPage >= totalPages - 3) {
-        // Cerca del final
-        pages.push(1);
-        pages.push('ellipsis');
-        for (let i = totalPages - 4; i <= totalPages; i++) pages.push(i);
-      } else {
-        // En medio
-        pages.push(1);
-        pages.push('ellipsis');
-        for (let i = currentPage - 1; i <= currentPage + 1; i++) pages.push(i);
-        pages.push('ellipsis');
-        pages.push(totalPages);
-      }
+      pages.push(1);
+      pages.push("ellipsis");
+      for (let i = currentPage - 1; i <= currentPage + 1; i++) pages.push(i);
+      pages.push("ellipsis");
+      pages.push(totalPages);
     }
 
     return pages;
   };
 
   if (totalPages <= 1 && limitOptions.length === 0) {
-    return null; // No mostrar paginación si solo hay una página y no hay opciones de límite
+    return null;
   }
 
   const pageNumbers = getPageNumbers();
 
   return (
     <div className="flex flex-col gap-4">
-      {/* Información de rango */}
       <div className="text-center text-sm text-ink-600">
         Mostrando <span className="font-semibold text-ink-900">{itemStart}-{itemEnd}</span> de{" "}
         <span className="font-semibold text-ink-900">{total}</span> resultados
       </div>
 
       <div className="flex flex-wrap items-center justify-center gap-3">
-        {/* Botón primera página */}
         {hasPrev && currentPage > 2 && (
           <a
             href={buildUrl({ offset: 0, limit })}
@@ -118,10 +124,10 @@ export function Pagination({
           </a>
         )}
 
-        {/* Botón anterior */}
         {hasPrev && (
           <a
             href={buildUrl({ offset: Math.max(0, offset - limit), limit })}
+            rel="prev"
             className={cn(
               "flex h-10 items-center gap-1 rounded-lg px-4",
               "border border-white/60 bg-white/40 backdrop-blur-sm",
@@ -133,9 +139,8 @@ export function Pagination({
           </a>
         )}
 
-        {/* Números de página */}
         {pageNumbers.map((page, idx) => {
-          if (page === 'ellipsis') {
+          if (page === "ellipsis") {
             return (
               <span
                 key={`ellipsis-${idx}`}
@@ -169,10 +174,10 @@ export function Pagination({
           );
         })}
 
-        {/* Botón siguiente */}
         {hasNext && (
           <a
             href={buildUrl({ offset: offset + limit, limit })}
+            rel="next"
             className={cn(
               "flex h-10 items-center gap-1 rounded-lg px-4",
               "border border-white/60 bg-white/40 backdrop-blur-sm",
@@ -184,7 +189,6 @@ export function Pagination({
           </a>
         )}
 
-        {/* Botón última página */}
         {hasNext && currentPage < totalPages - 1 && (
           <a
             href={buildUrl({ offset: (totalPages - 1) * limit, limit })}
@@ -201,7 +205,6 @@ export function Pagination({
         )}
       </div>
 
-      {/* Selector de límite */}
       {limitOptions.length > 0 && (
         <div className="flex items-center justify-center gap-2 text-sm text-ink-600">
           <span>Resultados por página:</span>
@@ -212,6 +215,7 @@ export function Pagination({
                 <a
                   key={option}
                   href={buildUrl({ offset: 0, limit: option })}
+                  rel="nofollow"
                   className={cn(
                     "flex h-8 w-12 items-center justify-center rounded-lg",
                     "border text-xs font-medium",

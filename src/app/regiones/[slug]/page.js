@@ -1,4 +1,3 @@
-import { Suspense } from "react";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import Header from "../../../components/Header";
@@ -274,17 +273,15 @@ export default async function RegionDetailPage({ params }) {
         )}
       </section>
 
-      <Suspense fallback={null}>
-        <FilterableMythList
-          initialItems={result.items}
-          initialTotal={result.total}
-          initialLimit={limit}
-          baseFilter={{ region: region.slug }}
-          basePath="/regiones"
-          communityOptions={regionCommunities}
-          tagOptions={tagOptions}
-        />
-      </Suspense>
+      <FilterableMythList
+        initialItems={result.items}
+        initialTotal={result.total}
+        initialLimit={limit}
+        baseFilter={{ region: region.slug }}
+        basePath="/regiones"
+        communityOptions={regionCommunities}
+        tagOptions={tagOptions}
+      />
     </main>
   );
 }

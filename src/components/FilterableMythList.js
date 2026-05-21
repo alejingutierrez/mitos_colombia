@@ -1,7 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
-import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import { Badge } from "./ui/Badge";
@@ -34,27 +34,22 @@ export function FilterableMythList({
 }) {
   const router = useRouter();
   const pathname = usePathname();
-  const urlSearchParams = useSearchParams();
 
+  // Initial state intentionally mirrors the SSR-rendered list. Reading
+  // useSearchParams() here would force a Suspense bailout and strip the
+  // static <ul> of myth links — devastating for indexation.
   const [items, setItems] = useState(initialItems);
   const [total, setTotal] = useState(initialTotal);
-  const [limit, setLimit] = useState(
-    clampLimit(urlSearchParams.get("limit") || initialLimit, initialLimit)
-  );
-  const [offset, setOffset] = useState(
-    clampOffset(urlSearchParams.get("offset") || 0)
-  );
-  const [q, setQ] = useState(urlSearchParams.get("q") || "");
-  const [community, setCommunity] = useState(
-    urlSearchParams.get("community") || ""
-  );
-  const [tag, setTag] = useState(urlSearchParams.get("tag") || "");
+  const [limit, setLimit] = useState(initialLimit);
+  const [offset, setOffset] = useState(0);
+  const [q, setQ] = useState("");
+  const [community, setCommunity] = useState("");
+  const [tag, setTag] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  // Track whether current state matches the initial server-rendered state.
-  // If yes we skip the first network call entirely and avoid a flash.
-  const isInitialRender = useRef(true);
+  const didMount = useRef(false);
+  const isFirstReactiveRun = useRef(true);
 
   const hasFilters = Boolean(q || community || tag || offset !== 0);
 
@@ -89,7 +84,6 @@ export function FilterableMythList({
     [baseFilter]
   );
 
-  // Sync URL on filter changes (shallow, doesn't force SSR).
   const syncUrl = useCallback(
     ({ nextQ, nextCommunity, nextTag, nextOffset, nextLimit }) => {
       const params = new URLSearchParams();
@@ -107,10 +101,48 @@ export function FilterableMythList({
     [initialLimit, pathname, router]
   );
 
-  // Trigger fetch when any filter dimension changes (except first render).
+  // Hydrate filter state from the URL (deep-linked filters). Runs once.
   useEffect(() => {
-    if (isInitialRender.current) {
-      isInitialRender.current = false;
+    if (typeof window === "undefined") return;
+    const params = new URLSearchParams(window.location.search);
+    const nextQ = params.get("q") || "";
+    const nextCommunity = params.get("community") || "";
+    const nextTag = params.get("tag") || "";
+    const nextOffset = clampOffset(params.get("offset") || 0);
+    const nextLimit = clampLimit(params.get("limit") || initialLimit, initialLimit);
+
+    didMount.current = true;
+
+    const hasUrlFilters =
+      nextQ ||
+      nextCommunity ||
+      nextTag ||
+      nextOffset !== 0 ||
+      nextLimit !== initialLimit;
+    if (!hasUrlFilters) return;
+
+    setQ(nextQ);
+    setCommunity(nextCommunity);
+    setTag(nextTag);
+    setOffset(nextOffset);
+    setLimit(nextLimit);
+    fetchMyths({
+      nextQ,
+      nextCommunity,
+      nextTag,
+      nextOffset,
+      nextLimit,
+    });
+    // Mark as "consumed" so the reactive effect doesn't double-fetch.
+    isFirstReactiveRun.current = false;
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  // Refetch when filters change post-mount.
+  useEffect(() => {
+    if (!didMount.current) return;
+    if (isFirstReactiveRun.current) {
+      isFirstReactiveRun.current = false;
       return;
     }
     fetchMyths({

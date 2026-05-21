@@ -1,4 +1,3 @@
-import { Suspense } from "react";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import Header from "../../../components/Header";
@@ -428,20 +427,18 @@ export default async function CategoryDetailPage({ params }) {
         </GlassCard>
       </section>
 
-      <Suspense fallback={null}>
-        <FilterableMythList
-          initialItems={result.items}
-          initialTotal={result.total}
-          initialLimit={limit}
-          baseFilter={{ tag: category.name }}
-          basePath="/categorias"
-          showCommunityFilter={false}
-          tagOptions={relatedTags.map((t) => ({
-            slug: t.slug,
-            name: formatCategoryName(t.name),
-          }))}
-        />
-      </Suspense>
+      <FilterableMythList
+        initialItems={result.items}
+        initialTotal={result.total}
+        initialLimit={limit}
+        baseFilter={{ tag: category.name }}
+        basePath="/categorias"
+        showCommunityFilter={false}
+        tagOptions={relatedTags.map((t) => ({
+          slug: t.slug,
+          name: formatCategoryName(t.name),
+        }))}
+      />
     </main>
   );
 }

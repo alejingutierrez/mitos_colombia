@@ -1,4 +1,3 @@
-import { Suspense } from "react";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import Header from "../../../components/Header";
@@ -390,17 +389,15 @@ export default async function CommunityDetailPage({ params }) {
         </GlassCard>
       </section>
 
-      <Suspense fallback={null}>
-        <FilterableMythList
-          initialItems={result.items}
-          initialTotal={result.total}
-          initialLimit={limit}
-          baseFilter={{ community: community.slug }}
-          basePath="/comunidades"
-          showCommunityFilter={false}
-          tagOptions={tagOptions}
-        />
-      </Suspense>
+      <FilterableMythList
+        initialItems={result.items}
+        initialTotal={result.total}
+        initialLimit={limit}
+        baseFilter={{ community: community.slug }}
+        basePath="/comunidades"
+        showCommunityFilter={false}
+        tagOptions={tagOptions}
+      />
     </main>
   );
 }
