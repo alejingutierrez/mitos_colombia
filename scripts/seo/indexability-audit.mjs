@@ -45,6 +45,42 @@ function parseJsonLdBlocks(html) {
   ].map((match) => match[1].trim());
 }
 
+const SECTION_LINK_MINIMUMS = {
+  "/categorias/": 5,
+  "/comunidades/": 5,
+  "/regiones/": 5,
+  "/rutas/": 3,
+  "/mitos/": 3,
+};
+
+function pathFromUrl(url) {
+  try {
+    return new URL(url).pathname;
+  } catch {
+    return String(url || "");
+  }
+}
+
+export function countMythLinks(html) {
+  const matches = String(html || "").match(/href=["']\/mitos\/[a-z0-9-]+["']/gi);
+  return matches ? new Set(matches.map((m) => m.toLowerCase())).size : 0;
+}
+
+function expectedMythLinkFloor(url) {
+  const pathname = pathFromUrl(url).toLowerCase();
+  if (pathname === "/mitos" || pathname.startsWith("/mitos/pagina/")) {
+    return 12;
+  }
+  for (const [prefix, floor] of Object.entries(SECTION_LINK_MINIMUMS)) {
+    if (pathname.startsWith(prefix) && pathname !== "/mitos") {
+      // Detail myth pages need 3, taxonomy/listing pages need 5+
+      if (prefix === "/mitos/") return floor;
+      return floor;
+    }
+  }
+  return 0;
+}
+
 export function auditHtml(url, html, headers) {
   const canonical = extractFirst(
     /<link\b[^>]*rel=["']canonical["'][^>]*href=["']([^"']+)["'][^>]*>/i,
@@ -66,6 +102,10 @@ export function auditHtml(url, html, headers) {
     }
   });
 
+  const mythLinkCount = countMythLinks(html);
+  const linkFloor = expectedMythLinkFloor(url);
+  const hasTooFewMythLinks = linkFloor > 0 && mythLinkCount < linkFloor;
+
   return {
     canonical,
     canonicalSelf:
@@ -75,6 +115,9 @@ export function auditHtml(url, html, headers) {
     h1Count: (String(html || "").match(/<h1\b/gi) || []).length,
     jsonLdCount: jsonLdBlocks.length,
     jsonLdValid,
+    mythLinkCount,
+    mythLinkFloor: linkFloor,
+    hasTooFewMythLinks,
     title,
   };
 }
@@ -158,6 +201,11 @@ async function auditUrl(url, sitemapUrls) {
     if (htmlAudit && !htmlAudit.canonical) issues.push("missing_canonical");
     if (htmlAudit && !htmlAudit.canonicalSelf) issues.push("non_self_canonical");
     if (htmlAudit && !htmlAudit.jsonLdValid) issues.push("invalid_jsonld");
+    if (htmlAudit?.hasTooFewMythLinks) {
+      issues.push(
+        `too_few_myth_links:${htmlAudit.mythLinkCount}/${htmlAudit.mythLinkFloor}`
+      );
+    }
     if (!sitemapUrls.has(url)) issues.push("not_in_sitemap");
 
     return {

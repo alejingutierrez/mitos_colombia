@@ -3,6 +3,7 @@ import test from "node:test";
 
 import {
   auditHtml,
+  countMythLinks,
   extractCsvUrls,
   extractLocs,
 } from "./indexability-audit.mjs";
@@ -16,6 +17,11 @@ test("extracts sitemap loc values and decodes XML entities", () => {
 });
 
 test("audits indexability signals from rendered HTML", () => {
+  const relatedLinks = Array.from(
+    { length: 4 },
+    (_, idx) => `<a href="/mitos/relacionado-${idx + 1}">Relacionado ${idx + 1}</a>`
+  ).join("");
+
   const html = `
     <html>
       <head>
@@ -23,7 +29,10 @@ test("audits indexability signals from rendered HTML", () => {
         <link rel="canonical" href="https://www.mitosdecolombia.com/mitos/el-agua" />
         <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article"}</script>
       </head>
-      <body><h1>El agua</h1></body>
+      <body>
+        <h1>El agua</h1>
+        ${relatedLinks}
+      </body>
     </html>
   `;
 
@@ -36,9 +45,44 @@ test("audits indexability signals from rendered HTML", () => {
       h1Count: 1,
       jsonLdCount: 1,
       jsonLdValid: true,
+      mythLinkCount: 4,
+      mythLinkFloor: 3,
+      hasTooFewMythLinks: false,
       title: "El agua",
     }
   );
+});
+
+test("flags taxonomy pages with too few myth links (the Suspense regression we missed)", () => {
+  const html = `
+    <html>
+      <head>
+        <title>Agua</title>
+        <link rel="canonical" href="https://www.mitosdecolombia.com/categorias/agua" />
+      </head>
+      <body><h1>Agua</h1><p>Once mitos de agua</p></body>
+    </html>
+  `;
+
+  const result = auditHtml(
+    "https://www.mitosdecolombia.com/categorias/agua",
+    html,
+    new Headers()
+  );
+
+  assert.equal(result.mythLinkCount, 0);
+  assert.equal(result.mythLinkFloor, 5);
+  assert.equal(result.hasTooFewMythLinks, true);
+});
+
+test("counts unique myth links case-insensitively", () => {
+  const html = `
+    <a href="/mitos/foo">foo</a>
+    <a href="/mitos/Foo">foo dup</a>
+    <a href='/mitos/bar'>bar</a>
+    <a href="/mitos/baz">baz</a>
+  `;
+  assert.equal(countMythLinks(html), 3);
 });
 
 test("treats root URL canonical with and without trailing slash as self", () => {
@@ -55,6 +99,8 @@ test("treats root URL canonical with and without trailing slash as self", () => 
   const result = auditHtml("https://www.mitosdecolombia.com/", html, new Headers());
 
   assert.equal(result.canonicalSelf, true);
+  assert.equal(result.hasTooFewMythLinks, false);
+  assert.equal(result.mythLinkFloor, 0);
 });
 
 test("extracts URLs from Search Console CSV exports and plain URL lists", () => {
