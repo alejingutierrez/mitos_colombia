@@ -329,26 +329,19 @@ async function listMythLinksByTaxonPostgres(kind, value) {
   return result.rows || [];
 }
 
-const listMythLinksByTaxonCached = unstable_cache(
-  async (kind, value) => {
-    try {
-      if (isPostgres()) {
-        return await listMythLinksByTaxonPostgres(kind, value);
-      }
-      return listMythLinksByTaxonSqlite(kind, value);
-    } catch (error) {
-      console.error("[MYTHS] listMythLinksByTaxon failed:", error);
-      return [];
-    }
-  },
-  ["myth-links-by-taxon"],
-  { revalidate: ONE_HOUR, tags: ["myth"] }
-);
-
+// Deliberately NOT wrapped in unstable_cache: this is called many times
+// concurrently (Promise.all over every taxon on the index pages), and
+// unstable_cache returned intermittently-empty results under that concurrency
+// at build time, silently dropping the myth links. The query is tiny
+// (slug + title only) and the rendered pages are already cached via the route
+// `revalidate`, so a direct read is both safe and deterministic.
 export async function listMythLinksByTaxon(kind, value) {
   if (!kind || !value) return [];
   try {
-    return await listMythLinksByTaxonCached(kind, value);
+    if (isPostgres()) {
+      return await listMythLinksByTaxonPostgres(kind, value);
+    }
+    return listMythLinksByTaxonSqlite(kind, value);
   } catch (error) {
     console.error("[MYTHS] listMythLinksByTaxon error:", error);
     return [];

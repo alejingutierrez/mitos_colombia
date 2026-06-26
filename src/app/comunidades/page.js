@@ -5,7 +5,8 @@ import { GlassCard } from "../../components/ui/GlassCard";
 import { ImageSlot } from "../../components/ui/ImageSlot";
 import { SectionHeader } from "../../components/ui/SectionHeader";
 import { filterAllowedCommunities } from "../../lib/communityFilters";
-import { getTaxonomy } from "../../lib/myths";
+import { getTaxonomy, listMythLinksByTaxon } from "../../lib/myths";
+import { TaxonMythLinks } from "../../components/TaxonMythLinks";
 import { buildSeoMetadata, getSeoEntry } from "../../lib/seo";
 
 export const runtime = "nodejs";
@@ -55,6 +56,19 @@ export default async function ComunidadesPage() {
       region,
       items.slice(0, maxPerRegion),
     ])
+  );
+
+  // A few representative myth links per visible community for the hub cards.
+  const visibleCommunitySlugs = Object.values(communitiesByRegionVisible)
+    .flat()
+    .map((community) => community.slug);
+  const communityMythMap = Object.fromEntries(
+    await Promise.all(
+      visibleCommunitySlugs.map(async (slug) => [
+        slug,
+        await listMythLinksByTaxon("community", slug),
+      ])
+    )
   );
 
   const regionOrder = [
@@ -127,6 +141,10 @@ export default async function ComunidadesPage() {
                           {community.myth_count}
                         </Badge>
                       </div>
+                      <TaxonMythLinks
+                        myths={communityMythMap[community.slug]}
+                        max={4}
+                      />
                       <div className="mt-auto">
                         <ButtonLink
                           href={`/comunidades/${community.slug}`}
