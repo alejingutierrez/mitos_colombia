@@ -4,7 +4,8 @@ import { ButtonLink } from "../../components/ui/Button";
 import { GlassCard } from "../../components/ui/GlassCard";
 import { ImageSlot } from "../../components/ui/ImageSlot";
 import { SectionHeader } from "../../components/ui/SectionHeader";
-import { getTaxonomy } from "../../lib/myths";
+import { getTaxonomy, listMythLinksByTaxon } from "../../lib/myths";
+import { TaxonMythLinks } from "../../components/TaxonMythLinks";
 import { buildSeoMetadata, getSeoEntry } from "../../lib/seo";
 
 export const runtime = "nodejs";
@@ -30,6 +31,11 @@ export default async function RegionesPage() {
     a.name.localeCompare(b.name)
   );
 
+  // A few representative myth links per region for the hub cards.
+  const regionMyths = await Promise.all(
+    regions.map((region) => listMythLinksByTaxon("region", region.slug))
+  );
+
   const regionDescriptions = {
     Amazonas: "La región amazónica colombiana alberga una rica tradición oral de pueblos indígenas como Yukuna, Tanimuka, Uitoto y Desano.",
     Andina: "Corazón cultural de Colombia, hogar de los Muiscas y heredera de tradiciones mestizas que fusionan lo indígena y lo español.",
@@ -51,7 +57,7 @@ export default async function RegionesPage() {
         />
 
         <div className="mt-8 grid gap-6 lg:grid-cols-2">
-          {regions.map((region) => (
+          {regions.map((region, regionIndex) => (
             <GlassCard
               key={region.slug}
               className="group flex flex-col overflow-hidden p-0 transition hover:-translate-y-1 hover:shadow-lift"
@@ -79,6 +85,7 @@ export default async function RegionesPage() {
                     {region.myth_count}
                   </Badge>
                 </div>
+                <TaxonMythLinks myths={regionMyths[regionIndex]} max={5} />
                 <div className="mt-auto flex items-center justify-between">
                   <p className="text-xs text-ink-500">
                     {region.myth_count}{" "}

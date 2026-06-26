@@ -6,7 +6,8 @@ import { ImageSlot } from "../../components/ui/ImageSlot";
 import { Pagination } from "../../components/ui/Pagination";
 import { SectionHeader } from "../../components/ui/SectionHeader";
 import { formatCategoryName } from "../../lib/formatters";
-import { getTaxonomy } from "../../lib/myths";
+import { getTaxonomy, listMythLinksByTaxon } from "../../lib/myths";
+import { TaxonMythLinks } from "../../components/TaxonMythLinks";
 import { buildSeoMetadata, getSeoEntry } from "../../lib/seo";
 
 export const runtime = "nodejs";
@@ -51,6 +52,16 @@ export default async function CategoriasPage({ searchParams }) {
   const offset = clampNumber(searchParams?.offset, 0, 5000, 0);
   const paginatedTags = tags.slice(offset, offset + limit);
 
+  // A few representative myth links per category for the hub cards.
+  const categoryMythMap = Object.fromEntries(
+    await Promise.all(
+      paginatedTags.map(async (tag) => [
+        tag.slug,
+        await listMythLinksByTaxon("tag", tag.slug),
+      ])
+    )
+  );
+
   return (
     <main className="relative min-h-screen overflow-hidden pb-24">
       <Header taxonomy={taxonomy} />
@@ -90,6 +101,7 @@ export default async function CategoriasPage({ searchParams }) {
                     {tag.myth_count}
                   </Badge>
                 </div>
+                <TaxonMythLinks myths={categoryMythMap[tag.slug]} max={4} />
                 <div className="mt-auto">
                   <ButtonLink
                     href={`/categorias/${tag.slug}`}
