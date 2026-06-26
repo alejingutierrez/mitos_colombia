@@ -4,10 +4,11 @@ import Header from "../../../components/Header";
 import { Badge } from "../../../components/ui/Badge";
 import { GlassCard } from "../../../components/ui/GlassCard";
 import { formatCategoryName } from "../../../lib/formatters";
-import { getTaxonomy, listMyths } from "../../../lib/myths";
+import { getTaxonomy, listMyths, listMythLinksByTaxon } from "../../../lib/myths";
 import { buildSeoMetadata, getSeoEntry } from "../../../lib/seo";
 import { BreadcrumbJsonLd, CollectionPageJsonLd } from "../../../components/StructuredData";
 import { FilterableMythList } from "../../../components/FilterableMythList";
+import { MythIndexList } from "../../../components/MythIndexList";
 
 export const runtime = "nodejs";
 export const revalidate = 300;
@@ -347,6 +348,9 @@ export default async function CategoryDetailPage({ params }) {
     name: m.title,
   }));
 
+  // Índice completo, crawleable, de todos los mitos de la categoría.
+  const allMythLinks = await listMythLinksByTaxon("tag", category.slug);
+
   return (
     <main className="relative min-h-screen overflow-hidden pb-24">
       {SITE_URL && (
@@ -438,6 +442,11 @@ export default async function CategoryDetailPage({ params }) {
           slug: t.slug,
           name: formatCategoryName(t.name),
         }))}
+      />
+
+      <MythIndexList
+        title={`Todos los mitos de la categoría ${formatCategoryName(category.name)}`}
+        myths={allMythLinks}
       />
     </main>
   );

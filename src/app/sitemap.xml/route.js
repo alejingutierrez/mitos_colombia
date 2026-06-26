@@ -8,7 +8,7 @@ const MYTHS_PER_SITEMAP = 500;
 const SITEMAP_STATIC = "/sitemap-static.xml";
 const SITEMAP_ROUTES = "/sitemap-rutas.xml";
 const SITEMAP_TAXONOMY = "/sitemap-taxonomia.xml";
-const SITEMAP_MYTHS = "/sitemap-mitos.xml";
+const SITEMAP_MYTHS = "/sitemap-mitos";
 
 async function getMythCount() {
   if (isPostgres()) {
@@ -32,7 +32,7 @@ function buildMythSitemapUrls(baseUrl, totalMyths, now) {
   const urls = [];
   for (let page = 1; page <= totalPages; page += 1) {
     urls.push({
-      url: buildUrl(baseUrl, `${SITEMAP_MYTHS}?page=${page}`),
+      url: buildUrl(baseUrl, `${SITEMAP_MYTHS}/${page}`),
       lastModified: now,
     });
   }
@@ -74,7 +74,7 @@ export async function GET(request) {
       { url: buildUrl(baseUrl, SITEMAP_STATIC), lastModified: now },
       { url: buildUrl(baseUrl, SITEMAP_ROUTES), lastModified: now },
       { url: buildUrl(baseUrl, SITEMAP_TAXONOMY), lastModified: now },
-      { url: buildUrl(baseUrl, `${SITEMAP_MYTHS}?page=1`), lastModified: now },
+      { url: buildUrl(baseUrl, `${SITEMAP_MYTHS}/1`), lastModified: now },
     ]);
     return new Response(fallbackXml, {
       headers: {

@@ -258,6 +258,103 @@ export async function listMyths(params = {}) {
   }
 }
 
+// Lightweight: every myth (slug + title) belonging to a taxon, with NO cap.
+// Used to render a crawlable, server-side complete index of links on each
+// taxonomy detail page so the long tail isn't reachable only via deep
+// JS-paginated lists (which Googlebot does not follow).
+function listMythLinksByTaxonSqlite(kind, value) {
+  const db = getSqliteDb();
+  const v = normalizeInput(value);
+  if (!v) return [];
+
+  let join = "";
+  let where = "";
+  if (kind === "region") {
+    where = "(regions.slug = :v OR regions.name = :v)";
+  } else if (kind === "community") {
+    where = "(communities.slug = :v OR communities.name = :v)";
+  } else if (kind === "tag") {
+    join =
+      "JOIN myth_tags ON myth_tags.myth_id = myths.id JOIN tags ON tags.id = myth_tags.tag_id";
+    where = "(tags.slug = :v OR tags.name = :v)";
+  } else {
+    return [];
+  }
+
+  const sql = `
+    SELECT DISTINCT myths.slug AS slug, myths.title AS title
+    FROM myths
+    JOIN regions ON regions.id = myths.region_id
+    LEFT JOIN communities ON communities.id = myths.community_id
+    ${join}
+    WHERE ${where} AND myths.slug IS NOT NULL AND myths.slug != ''
+    ORDER BY myths.title COLLATE NOCASE ASC
+  `;
+
+  return db.prepare(sql).all({ v });
+}
+
+async function listMythLinksByTaxonPostgres(kind, value) {
+  const sql = getSqlClient();
+  const v = normalizeInput(value);
+  if (!v) return [];
+
+  let join = "";
+  let where = "";
+  if (kind === "region") {
+    where = "(regions.slug = $1 OR regions.name = $1)";
+  } else if (kind === "community") {
+    where = "(communities.slug = $1 OR communities.name = $1)";
+  } else if (kind === "tag") {
+    join =
+      "JOIN myth_tags ON myth_tags.myth_id = myths.id JOIN tags ON tags.id = myth_tags.tag_id";
+    where = "(tags.slug = $1 OR tags.name = $1)";
+  } else {
+    return [];
+  }
+
+  const result = await sql.query(
+    `
+      SELECT DISTINCT myths.slug AS slug, myths.title AS title
+      FROM myths
+      JOIN regions ON regions.id = myths.region_id
+      LEFT JOIN communities ON communities.id = myths.community_id
+      ${join}
+      WHERE ${where} AND myths.slug IS NOT NULL AND myths.slug != ''
+      ORDER BY myths.title ASC
+    `,
+    [v]
+  );
+
+  return result.rows || [];
+}
+
+const listMythLinksByTaxonCached = unstable_cache(
+  async (kind, value) => {
+    try {
+      if (isPostgres()) {
+        return await listMythLinksByTaxonPostgres(kind, value);
+      }
+      return listMythLinksByTaxonSqlite(kind, value);
+    } catch (error) {
+      console.error("[MYTHS] listMythLinksByTaxon failed:", error);
+      return [];
+    }
+  },
+  ["myth-links-by-taxon"],
+  { revalidate: ONE_HOUR, tags: ["myth"] }
+);
+
+export async function listMythLinksByTaxon(kind, value) {
+  if (!kind || !value) return [];
+  try {
+    return await listMythLinksByTaxonCached(kind, value);
+  } catch (error) {
+    console.error("[MYTHS] listMythLinksByTaxon error:", error);
+    return [];
+  }
+}
+
 function getMythBySlugSqlite(slug) {
   const db = getSqliteDb();
   const slugValue = normalizeInput(slug);
