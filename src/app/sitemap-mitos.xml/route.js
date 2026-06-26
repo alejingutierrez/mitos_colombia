@@ -1,90 +1,17 @@
-import { getSqlClient, getSqliteDb, isPostgres } from "../../lib/db";
-import {
-  buildSitemapXml,
-  buildUrl,
-  encodeSegment,
-  getBaseUrl,
-  ONE_HOUR,
-} from "../../lib/sitemap";
+import { getBaseUrl } from "../../lib/sitemap";
 
 export const runtime = "nodejs";
-export const revalidate = 3600;
+export const dynamic = "force-dynamic";
 
-const MYTHS_PER_SITEMAP = 500;
-
-function clampNumber(value, min, max, fallback) {
-  const parsed = Number.parseInt(value, 10);
-  if (Number.isNaN(parsed)) return fallback;
-  return Math.min(Math.max(parsed, min), max);
-}
-
-async function getMythsPage(limit, offset) {
-  if (isPostgres()) {
-    const sql = getSqlClient();
-    const result = await sql.query(
-      `
-        SELECT slug, title, excerpt, image_url, updated_at
-        FROM myths
-        WHERE slug IS NOT NULL AND slug != ''
-        ORDER BY id ASC
-        LIMIT $1 OFFSET $2
-      `,
-      [limit, offset]
-    );
-    return result.rows || [];
-  }
-
-  const db = getSqliteDb();
-  return db
-    .prepare(
-      `
-      SELECT slug, title, excerpt, image_url, updated_at
-      FROM myths
-      WHERE slug IS NOT NULL AND slug != ''
-      ORDER BY id ASC
-      LIMIT ? OFFSET ?
-    `
-    )
-    .all(limit, offset);
-}
-
+// Legacy query-parameter sitemap (sitemap-mitos.xml?page=N). The myth sitemaps
+// now live at clean path-based URLs (/sitemap-mitos/N), which are the
+// convention Google supports most robustly. Permanently redirect any cached or
+// previously-submitted references so the migration is seamless.
 export async function GET(request) {
   const baseUrl = getBaseUrl(request);
-  const now = new Date();
   const url = new URL(request.url);
-  const page = clampNumber(url.searchParams.get("page"), 1, 9999, 1);
-  const limit = MYTHS_PER_SITEMAP;
-  const offset = (page - 1) * limit;
+  const parsed = Number.parseInt(url.searchParams.get("page"), 10);
+  const page = Number.isFinite(parsed) && parsed > 0 ? parsed : 1;
 
-  let myths = [];
-  try {
-    myths = await getMythsPage(limit, offset);
-  } catch (error) {
-    console.error("[SITEMAP] Myth page load failed:", error);
-  }
-
-  const entries = myths.map((myth) => ({
-    url: buildUrl(baseUrl, `/mitos/${encodeSegment(myth.slug)}`),
-    lastModified: myth.updated_at || now,
-    changeFrequency: "monthly",
-    priority: 0.5,
-    ...(myth.image_url && {
-      images: [
-        {
-          url: myth.image_url,
-          title: myth.title || undefined,
-          caption: myth.excerpt ? String(myth.excerpt).slice(0, 250) : undefined,
-        },
-      ],
-    }),
-  }));
-
-  const xml = buildSitemapXml(entries);
-
-  return new Response(xml, {
-    headers: {
-      "Content-Type": "application/xml",
-      "Cache-Control": `public, s-maxage=${ONE_HOUR}, stale-while-revalidate=${ONE_HOUR}`,
-    },
-  });
+  return Response.redirect(`${baseUrl}/sitemap-mitos/${page}`, 301);
 }
