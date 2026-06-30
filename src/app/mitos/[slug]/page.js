@@ -14,6 +14,7 @@ import { Comments } from "../../../components/Comments";
 import { buildSeoMetadata, getSeoEntry } from "../../../lib/seo";
 import Link from "next/link";
 import ShareBar from "../../../components/ShareBar";
+import { MythProvenance } from "../../../components/MythProvenance";
 import MythLocationMapClient from "../../../components/MythLocationMapClient";
 import { ArticleJsonLd, BreadcrumbJsonLd } from "../../../components/StructuredData";
 import { regionSlugFromName, communitySlugFromName } from "../../../lib/taxonomy-slug";
@@ -235,6 +236,7 @@ export default async function MythDetailPage({ params }) {
               <p className="mt-4 text-sm text-ink-700 md:text-base">
                 {myth.excerpt}
               </p>
+              <MythProvenance region={myth.region} community={myth.community} />
               <ShareBar
                 title={myth.title}
                 excerpt={myth.excerpt}
