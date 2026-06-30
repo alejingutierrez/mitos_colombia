@@ -1091,6 +1091,54 @@ export async function getHomeStats() {
   }
 }
 
+// Most recent myth content change, used as a STABLE <lastmod> for the sitemap
+// index and taxonomy sitemap. Using `new Date()` there made lastmod change on
+// every (hourly) regeneration even when nothing changed, which trains Google to
+// distrust the signal. MAX(updated_at) only moves when a myth is added/edited.
+async function getContentLastModifiedPostgres() {
+  const sql = getSqlClient();
+  const result = await sql.query(
+    "SELECT MAX(updated_at) AS max FROM myths WHERE slug IS NOT NULL AND slug != ''"
+  );
+  return result.rows?.[0]?.max || null;
+}
+
+function getContentLastModifiedSqlite() {
+  const db = getSqliteDb();
+  return (
+    db
+      .prepare(
+        "SELECT MAX(updated_at) AS max FROM myths WHERE slug IS NOT NULL AND slug != ''"
+      )
+      .get()?.max || null
+  );
+}
+
+const getContentLastModifiedCached = unstable_cache(
+  async () => {
+    try {
+      if (isPostgres()) {
+        return await getContentLastModifiedPostgres();
+      }
+      return getContentLastModifiedSqlite();
+    } catch (error) {
+      console.error("[MYTHS] getContentLastModified failed:", error);
+      return null;
+    }
+  },
+  ["content-last-modified"],
+  { revalidate: ONE_HOUR, tags: ["myth"] }
+);
+
+export async function getContentLastModified() {
+  try {
+    return await getContentLastModifiedCached();
+  } catch (error) {
+    console.error("[MYTHS] getContentLastModified error:", error);
+    return null;
+  }
+}
+
 export async function listAllMythSlugs() {
   try {
     if (isPostgres()) {
