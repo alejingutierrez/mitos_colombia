@@ -1,4 +1,5 @@
 import { getSqlClient, getSqliteDb, isPostgres } from "../../lib/db";
+import { getContentLastModified } from "../../lib/myths";
 import { buildSitemapIndexXml, buildUrl, getBaseUrl, ONE_HOUR } from "../../lib/sitemap";
 
 export const runtime = "nodejs";
@@ -27,13 +28,13 @@ async function getMythCount() {
     .get().total;
 }
 
-function buildMythSitemapUrls(baseUrl, totalMyths, now) {
+function buildMythSitemapUrls(baseUrl, totalMyths, stamp) {
   const totalPages = Math.max(1, Math.ceil(totalMyths / MYTHS_PER_SITEMAP));
   const urls = [];
   for (let page = 1; page <= totalPages; page += 1) {
     urls.push({
       url: buildUrl(baseUrl, `${SITEMAP_MYTHS}/${page}`),
-      lastModified: now,
+      lastModified: stamp,
     });
   }
   return urls;
@@ -51,11 +52,14 @@ export async function GET(request) {
       console.error("[SITEMAP] Myth count failed:", error);
     }
 
+    // Stable lastmod = last actual myth change (not regeneration time).
+    const stamp = (await getContentLastModified()) || now;
+
     const entries = [
-      { url: buildUrl(baseUrl, SITEMAP_STATIC), lastModified: now },
-      { url: buildUrl(baseUrl, SITEMAP_ROUTES), lastModified: now },
-      { url: buildUrl(baseUrl, SITEMAP_TAXONOMY), lastModified: now },
-      ...buildMythSitemapUrls(baseUrl, totalMyths, now),
+      { url: buildUrl(baseUrl, SITEMAP_STATIC), lastModified: stamp },
+      { url: buildUrl(baseUrl, SITEMAP_ROUTES), lastModified: stamp },
+      { url: buildUrl(baseUrl, SITEMAP_TAXONOMY), lastModified: stamp },
+      ...buildMythSitemapUrls(baseUrl, totalMyths, stamp),
     ];
 
     const xml = buildSitemapIndexXml(entries);

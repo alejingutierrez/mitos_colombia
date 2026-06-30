@@ -1,5 +1,6 @@
 import { filterAllowedCommunities } from "../../lib/communityFilters";
 import { getSqlClient, getSqliteDb, isPostgres } from "../../lib/db";
+import { getContentLastModified } from "../../lib/myths";
 import {
   buildSitemapXml,
   buildUrl,
@@ -84,6 +85,8 @@ async function loadTaxonomy() {
 export async function GET(request) {
   const baseUrl = getBaseUrl(request);
   const now = new Date();
+  // Stable lastmod = last actual myth change, not regeneration time.
+  const stamp = (await getContentLastModified()) || now;
 
   let regions = [];
   let communities = [];
@@ -114,19 +117,19 @@ export async function GET(request) {
   const entries = [
     ...categories.map((category) => ({
       url: buildUrl(baseUrl, `/categorias/${encodeSegment(category.slug)}`),
-      lastModified: now,
+      lastModified: stamp,
       changeFrequency: "weekly",
       priority: 0.7,
     })),
     ...communities.map((community) => ({
       url: buildUrl(baseUrl, `/comunidades/${encodeSegment(community.slug)}`),
-      lastModified: now,
+      lastModified: stamp,
       changeFrequency: "weekly",
       priority: 0.6,
     })),
     ...regions.map((region) => ({
       url: buildUrl(baseUrl, `/regiones/${encodeSegment(region.slug)}`),
-      lastModified: now,
+      lastModified: stamp,
       changeFrequency: "weekly",
       priority: 0.6,
     })),
