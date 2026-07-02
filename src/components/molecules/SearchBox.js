@@ -7,13 +7,16 @@ import { FIELD_BASE, RING_FIELD, CONTROL_HEIGHTS } from "../atoms/_shared";
 
 /**
  * Molécula · SearchBox
- * Buscador prominente con ícono, botón de limpiar y submit. Controlado
- * internamente; notifica cambios/submit vía callbacks.
+ * Buscador prominente con ícono y botón de limpiar. Por defecto es un formulario
+ * GET nativo que navega a `/mitos?q=…` (funciona sin JS y es rastreable). Si se
+ * pasa `onSearch`, en su lugar se llama ese callback (para búsqueda controlada).
  */
 export function SearchBox({
   placeholder = "Buscar un mito, región o tema…",
   defaultValue = "",
   size = "lg",
+  action = "/mitos",
+  name = "q",
   onSearch,
   onChange,
   className,
@@ -25,12 +28,21 @@ export function SearchBox({
     onChange?.(v);
   }
   function submit(e) {
-    e.preventDefault();
-    onSearch?.(value);
+    // Con onSearch: búsqueda controlada (sin navegar). Sin él: submit GET nativo.
+    if (onSearch) {
+      e.preventDefault();
+      onSearch(value);
+    }
   }
 
   return (
-    <form onSubmit={submit} role="search" className={cn("relative", className)}>
+    <form
+      action={onSearch ? undefined : action}
+      method="get"
+      onSubmit={submit}
+      role="search"
+      className={cn("relative", className)}
+    >
       <Icon
         name="search"
         size={18}
@@ -38,6 +50,7 @@ export function SearchBox({
       />
       <input
         type="search"
+        name={name}
         value={value}
         onChange={(e) => update(e.target.value)}
         placeholder={placeholder}
