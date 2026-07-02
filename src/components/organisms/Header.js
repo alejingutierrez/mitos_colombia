@@ -76,7 +76,7 @@ export function Header({ active }) {
           {/* Acciones derecha */}
           <div className="flex items-center gap-1">
             <div className="hidden md:block">
-              <IconButton icon="search" label="Buscar" href="/buscar" />
+              <IconButton icon="search" label="Buscar" href="/mitos" />
             </div>
             <div className="md:hidden">
               <IconButton
