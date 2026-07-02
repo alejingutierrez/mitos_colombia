@@ -10,6 +10,7 @@
     "db:import": "node scripts/import-mitos.js",
     "db:import:pg": "node scripts/import-mitos-postgres.js",
     "images:optimize:mitos": "node scripts/optimize-blob-mitos-images.js",
+    "icons:generate": "node scripts/generate-motif-icons.js",
     "seo:audit:indexability": "node scripts/seo/indexability-audit.mjs"
   },
   "dependencies": {

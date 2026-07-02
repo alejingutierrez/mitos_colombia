@@ -1,12 +1,6 @@
-import Header from "../../components/Header";
-import { Badge } from "../../components/ui/Badge";
-import { ButtonLink } from "../../components/ui/Button";
-import { GlassCard } from "../../components/ui/GlassCard";
-import { ImageSlot } from "../../components/ui/ImageSlot";
-import { SectionHeader } from "../../components/ui/SectionHeader";
+import { TaxonomyIndexTemplate } from "../../components/templates";
 import { filterAllowedCommunities } from "../../lib/communityFilters";
 import { getTaxonomy, listMythLinksByTaxon } from "../../lib/myths";
-import { TaxonMythLinks } from "../../components/TaxonMythLinks";
 import { buildSeoMetadata, getSeoEntry } from "../../lib/seo";
 
 export const runtime = "nodejs";
@@ -34,142 +28,45 @@ export async function generateMetadata() {
 export default async function ComunidadesPage() {
   const taxonomy = await getTaxonomy();
 
-  // Filtrar comunidades con suficiente cantidad de mitos
-  const communities = filterAllowedCommunities(taxonomy.communities).sort(
+  // Filtrar comunidades con suficiente cantidad de mitos y ordenar por volumen.
+  const allowedCommunities = filterAllowedCommunities(taxonomy.communities).sort(
     (a, b) => b.myth_count - a.myth_count
   );
 
-  const maxPerRegion = 6;
+  const items = allowedCommunities.map((c) => ({
+    title: c.name,
+    href: `/comunidades/${c.slug}`,
+    count: c.myth_count,
+    motif: "condor",
+    imageUrl: c.image_url,
+    description: c.region,
+  }));
 
-  // Agrupar por región y limitar el listado visible
-  const communitiesByRegion = communities.reduce((acc, community) => {
-    const region = community.region || "Varios";
-    if (!acc[region]) {
-      acc[region] = [];
-    }
-    acc[region].push(community);
-    return acc;
-  }, {});
-
-  const communitiesByRegionVisible = Object.fromEntries(
-    Object.entries(communitiesByRegion).map(([region, items]) => [
-      region,
-      items.slice(0, maxPerRegion),
-    ])
+  // Enlaces de mitos representativos de las comunidades con más mitos
+  // (índice rastreable, SEO).
+  const topCommunities = allowedCommunities.slice(0, 9);
+  const links = await Promise.all(
+    topCommunities.map((c) => listMythLinksByTaxon("community", c.slug))
   );
-
-  // A few representative myth links per visible community for the hub cards.
-  const visibleCommunitySlugs = Object.values(communitiesByRegionVisible)
-    .flat()
-    .map((community) => community.slug);
-  const communityMythMap = Object.fromEntries(
-    await Promise.all(
-      visibleCommunitySlugs.map(async (slug) => [
-        slug,
-        await listMythLinksByTaxon("community", slug),
-      ])
-    )
-  );
-
-  const regionOrder = [
-    "Amazonas",
-    "Andina",
-    "Caribe",
-    "Pacífico",
-    "Orinoquía",
-    "Varios",
-    "Otros",
-  ];
-  const sortedRegions = [
-    ...regionOrder.filter((r) => communitiesByRegion[r]),
-    ...Object.keys(communitiesByRegion).filter((r) => !regionOrder.includes(r)),
-  ];
+  const mythIndex = topCommunities
+    .map((c, i) => ({
+      title: c.name,
+      href: `/comunidades/${c.slug}`,
+      myths: (links[i] || []).slice(0, 6),
+    }))
+    .filter((g) => g.myths.length > 0);
 
   return (
-    <main className="relative min-h-screen overflow-hidden pb-24">
-      <Header taxonomy={taxonomy} />
-
-      <section className="container-shell mt-12">
-        <SectionHeader
-          eyebrow="Pueblos indígenas"
-          title="Comunidades que preservan la tradición oral de Colombia."
-          description="Cada pueblo indígena tiene su propia cosmovisión, mitología y forma de entender el mundo. Explora sus narrativas ancestrales."
-        />
-
-        <div className="mt-8 space-y-10">
-          {sortedRegions.map((regionName) => (
-            <div key={regionName}>
-              <div className="mb-4 flex items-center gap-3">
-                <h2 className="font-display text-2xl text-ink-900">{regionName}</h2>
-                <Badge className="border-jungle-500/30 bg-jungle-500/10 text-jungle-600">
-                  {communitiesByRegion[regionName].length}{" "}
-                  {communitiesByRegion[regionName].length === 1
-                    ? "comunidad"
-                    : "comunidades"}
-                </Badge>
-              </div>
-
-              <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                {communitiesByRegionVisible[regionName].map((community) => (
-                  <GlassCard
-                    key={community.slug}
-                    className="group flex flex-col overflow-hidden p-0 transition hover:-translate-y-1 hover:shadow-lift"
-                  >
-                    <div className="relative overflow-hidden">
-                      <ImageSlot
-                        src={community.image_url}
-                        alt={`Ilustracion de la comunidad ${community.name}`}
-                        size="compact"
-                        className="rounded-none transition-transform duration-700 group-hover:scale-110"
-                      />
-                    </div>
-                    <div className="flex flex-col gap-4 p-6">
-                      <div className="flex items-start justify-between">
-                        <div className="flex-1">
-                          <h3 className="font-display text-xl text-ink-900">
-                            {community.name}
-                          </h3>
-                          <p className="mt-1 text-xs uppercase tracking-[0.3em] text-ink-500">
-                            {community.region}
-                          </p>
-                          <p className="mt-2 text-sm text-ink-500">
-                            {community.myth_count}{" "}
-                            {community.myth_count === 1 ? "mito" : "mitos"}
-                          </p>
-                        </div>
-                        <Badge className="border-river-500/30 bg-river-500/10 text-river-600">
-                          {community.myth_count}
-                        </Badge>
-                      </div>
-                      <TaxonMythLinks
-                        myths={communityMythMap[community.slug]}
-                        max={4}
-                      />
-                      <div className="mt-auto">
-                        <ButtonLink
-                          href={`/comunidades/${community.slug}`}
-                          variant="outline"
-                          size="sm"
-                          className="w-full"
-                        >
-                          Explorar comunidad
-                        </ButtonLink>
-                      </div>
-                    </div>
-                  </GlassCard>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
-
-        <div className="mt-12 text-center">
-          <p className="text-sm text-ink-600">
-            Total: {communities.length} comunidades indígenas preservando{" "}
-            {communities.reduce((sum, c) => sum + c.myth_count, 0)} mitos
-          </p>
-        </div>
-      </section>
-    </main>
+    <TaxonomyIndexTemplate
+      eyebrow="Pueblos y comunidades"
+      title="Comunidades que preservan la tradición oral"
+      description="Cada pueblo tiene su propia cosmovisión y mitología. Explora las narrativas ancestrales de las comunidades que sostienen la memoria oral de Colombia."
+      items={items}
+      mythIndex={mythIndex}
+      active="/comunidades"
+      accent="river"
+      heroMotif="condor"
+      columns={3}
+    />
   );
 }

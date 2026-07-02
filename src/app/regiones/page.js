@@ -1,11 +1,5 @@
-import Header from "../../components/Header";
-import { Badge } from "../../components/ui/Badge";
-import { ButtonLink } from "../../components/ui/Button";
-import { GlassCard } from "../../components/ui/GlassCard";
-import { ImageSlot } from "../../components/ui/ImageSlot";
-import { SectionHeader } from "../../components/ui/SectionHeader";
+import { TaxonomyIndexTemplate } from "../../components/templates";
 import { getTaxonomy, listMythLinksByTaxon } from "../../lib/myths";
-import { TaxonMythLinks } from "../../components/TaxonMythLinks";
 import { buildSeoMetadata, getSeoEntry } from "../../lib/seo";
 
 export const runtime = "nodejs";
@@ -25,85 +19,65 @@ export async function generateMetadata() {
   });
 }
 
+const REGION_DESCRIPTIONS = {
+  Amazonas: "Selva, ríos y cosmogonías amazónicas.",
+  Andina: "Páramos, lagunas y seres de la cordillera.",
+  Caribe: "Mar, manglar y relatos de la costa.",
+  Pacífico: "Manglares, ritmo y memoria afro del litoral.",
+  Orinoquía: "Llanos, sabanas y ánimas errantes.",
+  Insular: "Islas del Caribe y su memoria raizal.",
+  Varios: "Historias que cruzan varios territorios.",
+};
+
+const REGION_MOTIFS = {
+  Amazonas: "hoja",
+  Andina: "montana",
+  Caribe: "agua",
+  Pacífico: "delfin",
+  Orinoquía: "luna",
+  Insular: "sol",
+  Varios: "condor",
+};
+
 export default async function RegionesPage() {
   const taxonomy = await getTaxonomy();
-  const regions = [...taxonomy.regions].sort((a, b) =>
+  const regions = [...(taxonomy.regions || [])].sort((a, b) =>
     a.name.localeCompare(b.name)
   );
 
-  // A few representative myth links per region for the hub cards.
+  // Enlaces de mitos representativos por región (índice rastreable, SEO).
   const regionMyths = await Promise.all(
     regions.map((region) => listMythLinksByTaxon("region", region.slug))
   );
 
-  const regionDescriptions = {
-    Amazonas: "La región amazónica colombiana alberga una rica tradición oral de pueblos indígenas como Yukuna, Tanimuka, Uitoto y Desano.",
-    Andina: "Corazón cultural de Colombia, hogar de los Muiscas y heredera de tradiciones mestizas que fusionan lo indígena y lo español.",
-    Caribe: "Territorio costero donde confluyen las tradiciones de pueblos como los Wayuu, Kogui y la rica cultura cartagenera.",
-    Orinoquía: "Región de los llanos orientales con tradiciones ancestrales de pueblos como los Sikuani.",
-    Pacífico: "Costa pacífica colombiana, tierra de los Nasa y comunidades afrodescendientes con profundas raíces mitológicas.",
-    Varios: "Mitos que trascienden fronteras regionales o abarcan múltiples territorios."
-  };
+  const items = regions.map((region) => ({
+    title: region.name,
+    href: `/regiones/${region.slug}`,
+    count: region.myth_count,
+    motif: REGION_MOTIFS[region.name] || "hoja",
+    imageUrl: region.image_url,
+    description:
+      REGION_DESCRIPTIONS[region.name] || "Explora los mitos de esta región.",
+  }));
+
+  const mythIndex = regions
+    .map((region, i) => ({
+      title: region.name,
+      href: `/regiones/${region.slug}`,
+      myths: (regionMyths[i] || []).slice(0, 6),
+    }))
+    .filter((g) => g.myths.length > 0);
 
   return (
-    <main className="relative min-h-screen overflow-hidden pb-24">
-      <Header taxonomy={taxonomy} />
-
-      <section className="container-shell mt-12">
-        <SectionHeader
-          eyebrow="Regiones culturales"
-          title="Descubre los mitos organizados por regiones de Colombia."
-          description="Cada región tiene sus propias tradiciones, pueblos y narrativas que conforman el imaginario colombiano."
-        />
-
-        <div className="mt-8 grid gap-6 lg:grid-cols-2">
-          {regions.map((region, regionIndex) => (
-            <GlassCard
-              key={region.slug}
-              className="group flex flex-col overflow-hidden p-0 transition hover:-translate-y-1 hover:shadow-lift"
-            >
-              <div className="relative overflow-hidden">
-                <ImageSlot
-                  src={region.image_url}
-                  alt={`Ilustracion de la region ${region.name}`}
-                  size="compact"
-                  className="rounded-none transition-transform duration-700 group-hover:scale-110"
-                />
-              </div>
-              <div className="flex flex-col gap-4 p-6">
-                <div className="flex items-start justify-between">
-                  <div className="flex-1">
-                    <h3 className="font-display text-3xl text-ink-900">
-                      {region.name}
-                    </h3>
-                    <p className="mt-3 text-sm text-ink-700 leading-relaxed">
-                      {regionDescriptions[region.name] ||
-                        "Región con rica tradición mitológica."}
-                    </p>
-                  </div>
-                  <Badge className="border-jungle-500/30 bg-jungle-500/10 text-jungle-600 text-base px-3 py-1">
-                    {region.myth_count}
-                  </Badge>
-                </div>
-                <TaxonMythLinks myths={regionMyths[regionIndex]} max={5} />
-                <div className="mt-auto flex items-center justify-between">
-                  <p className="text-xs text-ink-500">
-                    {region.myth_count}{" "}
-                    {region.myth_count === 1 ? "mito" : "mitos"}
-                  </p>
-                  <ButtonLink
-                    href={`/regiones/${region.slug}`}
-                    variant="outline"
-                    size="sm"
-                  >
-                    Explorar región
-                  </ButtonLink>
-                </div>
-              </div>
-            </GlassCard>
-          ))}
-        </div>
-      </section>
-    </main>
+    <TaxonomyIndexTemplate
+      eyebrow="Explora por territorio"
+      title="Regiones culturales de Colombia"
+      description="Cada región tiene sus propias tradiciones, pueblos y narrativas. Recorre los mitos según la geografía de donde provienen, de la selva amazónica al mar Caribe."
+      items={items}
+      mythIndex={mythIndex}
+      active="/regiones"
+      heroMotif="montana"
+      columns={3}
+    />
   );
 }

@@ -5,35 +5,59 @@
 @tailwind utilities;
 
 :root {
-  --ink-900: 18 22 24;
-  --ink-700: 50 62 64;
-  --ink-500: 105 118 116;
-  --mist-50: 248 247 243;
-  --mist-100: 234 240 235;
-  --jungle-500: 30 120 94;
-  --jungle-600: 18 92 72;
-  --river-500: 35 98 158;
-  --river-600: 24 78 132;
+  /* === Rediseño 2026 — sistema minimal editorial ===
+     Valores en tripletas RGB para soportar <alpha-value> en Tailwind.
+     Ver memoria: redesign-design-system. */
+
+  /* Neutrales (texto y superficies) */
+  --paper: 255 255 255;      /* #ffffff — fondo base (blanco puro) */
+  --ink-900: 22 22 17;       /* #161611 — texto principal */
+  --ink-700: 60 59 53;       /* #3c3b35 — texto secundario */
+  --ink-500: 117 116 109;    /* #75746d — texto terciario / muted */
+  --line-300: 201 199 191;   /* #c9c7bf — borde en hover */
+  --line-200: 220 220 216;   /* #dcdcd8 — borde fuerte */
+  --line-100: 236 236 234;   /* #ececea — hairline / divisor */
+  --mist-50: 246 246 244;    /* #f6f6f4 — superficie sutil alterna */
+  --mist-100: 236 236 234;   /* compat: alias de line-100 */
+
+  /* Acento primario — verde selva */
+  --jungle-500: 28 92 63;    /* #1c5c3f */
+  --jungle-600: 22 74 51;    /* #164a33 — hover */
+  --jungle-700: 16 53 36;    /* #103524 — texto sobre tinte */
+  --jungle-tint: 220 236 226;/* #dcece2 — fondo suave chip/badge */
+
+  /* Acento secundario — azul río */
+  --river-500: 31 95 139;    /* #1f5f8b */
+  --river-600: 24 77 112;    /* #184d70 — hover */
+  --river-700: 17 56 82;     /* #113852 — texto sobre tinte */
+  --river-tint: 220 231 239; /* #dce7ef — fondo suave */
+
+  /* Compat con sistema anterior (se retira al migrar todas las páginas) */
   --ember-400: 216 170 98;
   --ember-500: 189 134 66;
 }
 
 body {
-  background-color: #f1ede3;
+  background-color: #ffffff;
   color: rgb(var(--ink-900));
   position: relative;
 }
 
-/* Sitewide ambient paper background — applied via layout.js */
+/* Rediseño 2026: fondo blanco puro. Se conservan los nodos .page-bg del layout
+   pero se neutraliza el ambiente decorativo (blobs + grano) del sistema anterior. */
 .page-bg {
   position: fixed;
   inset: 0;
   z-index: -10;
   pointer-events: none;
   overflow: hidden;
-  background: #f1ede3;
+  background: #ffffff;
 }
-.page-bg-ambient {
+.page-bg-ambient,
+.page-bg-grain {
+  display: none;
+}
+.page-bg-ambient--legacy {
   position: absolute;
   inset: 0;
   pointer-events: none;
@@ -90,7 +114,145 @@ body {
 }
 
 ::selection {
-  background-color: rgba(216, 170, 98, 0.35);
+  background-color: rgba(28, 92, 63, 0.18);
+}
+
+/* ==========================================================================
+   Rediseño 2026 · utilidades de embellecimiento (capa de detalle fino)
+   ========================================================================== */
+
+/* Enlace cuyo subrayado se dibuja de izquierda a derecha */
+.link-underline {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 1.5px;
+  transition: background-size 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  padding-bottom: 1px;
+}
+.link-underline:hover,
+.link-underline:focus-visible {
+  background-size: 100% 1.5px;
+}
+
+/* Skeleton con brillo en movimiento (reemplaza el pulse plano) */
+@keyframes mc-shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+.mc-shimmer {
+  position: relative;
+  overflow: hidden;
+}
+.mc-shimmer::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  transform: translateX(-100%);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.65),
+    transparent
+  );
+  animation: mc-shimmer 1.6s infinite;
+}
+
+/* Flecha que se desliza al hacer hover sobre el grupo (CTA, cards) */
+.group:hover .mc-arrow {
+  transform: translateX(3px);
+}
+.mc-arrow {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Numeral de índice editorial: cifra grande, tenue, con fuente display */
+.mc-index {
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.03em;
+}
+
+/* Banda kinética (marquee) infinita y fluida */
+@keyframes mc-marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+.mc-marquee {
+  overflow: hidden;
+}
+.mc-marquee-track {
+  display: inline-flex;
+  white-space: nowrap;
+  animation: mc-marquee var(--mc-marquee-dur, 32s) linear infinite;
+  will-change: transform;
+}
+.mc-marquee:hover .mc-marquee-track {
+  animation-play-state: paused;
+}
+
+/* Superficie con foco de luz que sigue el cursor (spotlight) */
+.mc-spotlight {
+  position: relative;
+  isolation: isolate;
+}
+.mc-spotlight::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(
+    240px circle at var(--mx, 50%) var(--my, 50%),
+    var(--spot, rgba(28, 92, 63, 0.1)),
+    transparent 70%
+  );
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  pointer-events: none;
+  z-index: 0;
+}
+.mc-spotlight:hover::before {
+  opacity: 1;
+}
+
+/* Punto de estado con latido perpetuo */
+.mc-pulse::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 9999px;
+  background: currentColor;
+  animation: mc-ping 1.9s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+@keyframes mc-ping {
+  0% {
+    transform: scale(1);
+    opacity: 0.55;
+  }
+  75%,
+  100% {
+    transform: scale(2.4);
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .link-underline {
+    transition: none;
+  }
+  .mc-shimmer::after {
+    animation: none;
+  }
+  .mc-arrow {
+    transition: none;
+  }
+  .mc-marquee-track {
+    animation: none;
+  }
+  .mc-pulse::before {
+    animation: none;
+  }
 }
 
 @layer base {
