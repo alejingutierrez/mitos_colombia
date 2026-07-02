@@ -1,14 +1,10 @@
-import Image from "next/image";
 import { notFound } from "next/navigation";
-import Header from "../../../components/Header";
-import { Badge } from "../../../components/ui/Badge";
-import { GlassCard } from "../../../components/ui/GlassCard";
 import { filterAllowedCommunities, MIN_COMMUNITY_MYTHS } from "../../../lib/communityFilters";
 import { getTaxonomy, listMyths, listMythLinksByTaxon } from "../../../lib/myths";
 import { buildSeoMetadata, getSeoEntry } from "../../../lib/seo";
 import { BreadcrumbJsonLd, CollectionPageJsonLd } from "../../../components/StructuredData";
-import { FilterableMythList } from "../../../components/FilterableMythList";
-import { MythIndexList } from "../../../components/MythIndexList";
+import { TaxonomyDetailTemplate } from "../../../components/templates";
+import { FilterableArchive } from "../../../components/organisms";
 
 export const runtime = "nodejs";
 export const revalidate = 300;
@@ -198,27 +194,6 @@ const COMMUNITY_INFO = {
   }
 };
 
-function getParamValue(value) {
-  if (Array.isArray(value)) {
-    return value[0] ?? "";
-  }
-  return value ?? "";
-}
-
-function buildQuery(params, overrides = {}) {
-  const search = new URLSearchParams();
-  const entries = { ...params, ...overrides };
-
-  Object.entries(entries).forEach(([key, value]) => {
-    if (value === undefined || value === null || value === "") {
-      return;
-    }
-    search.set(key, String(value));
-  });
-
-  return search.toString();
-}
-
 export async function generateMetadata({ params }) {
   const taxonomy = await getTaxonomy();
   const community = taxonomy.communities.find(c => c.slug === params.slug);
@@ -281,35 +256,31 @@ export default async function CommunityDetailPage({ params }) {
         ]
       : []),
   ];
+  const intro = longDescriptionBlocks.filter(Boolean).join("\n\n");
 
-  const limit = 24;
+  // Muestra para exploración interactiva (filtrable en cliente, SSR = rastreable).
+  const result = await listMyths({ community: community.slug, limit: 48, offset: 0 });
+  const exploreMyths = (result?.items || []).map((m) => ({
+    slug: m.slug,
+    title: m.title,
+    excerpt: m.excerpt,
+    region: m.region,
+    community: m.community,
+    imageUrl: m.image_url,
+  }));
 
-  // Listado inicial (sin filtros) - se pregenera estáticamente
-  const result = await listMyths({
-    community: community.slug,
-    limit,
-    offset: 0,
-  });
+  // Una comunidad comparte comunidad y (normalmente) región, así que no hay facetas útiles.
+  const filters = [];
 
-  // Tags para filtrar (excluir regiones y "ninguno")
-  const regionNames = taxonomy.regions.map(r => r.name.toLowerCase());
-  const tagOptions = taxonomy.tags
-    .filter(t =>
-      !regionNames.includes(t.name.toLowerCase()) &&
-      t.name.toLowerCase() !== 'ninguno'
-    )
-    .slice(0, 40);
-
-  const collectionItems = (result?.items || []).slice(0, 30).map((m) => ({
+  // Índice completo, crawleable, de todos los mitos de la comunidad.
+  const allMythLinks = await listMythLinksByTaxon("community", community.slug);
+  const collectionItems = allMythLinks.slice(0, 30).map((m) => ({
     url: `${SITE_URL}/mitos/${m.slug}`,
     name: m.title,
   }));
 
-  // Índice completo, crawleable, de todos los mitos de la comunidad.
-  const allMythLinks = await listMythLinksByTaxon("community", community.slug);
-
   return (
-    <main className="relative min-h-screen overflow-hidden pb-24">
+    <>
       {SITE_URL && (
         <>
           <BreadcrumbJsonLd
@@ -327,86 +298,25 @@ export default async function CommunityDetailPage({ params }) {
           />
         </>
       )}
-      <Header taxonomy={taxonomy} />
-
-      {/* Hero Section */}
-      <section className="container-shell mt-12">
-        <GlassCard className="relative min-h-[360px] overflow-hidden p-0 md:min-h-[420px]">
-          {community.image_url ? (
-            <Image
-              src={community.image_url}
-              alt={`Ilustracion de la comunidad ${community.name}`}
-              fill
-              sizes="100vw"
-              className="object-cover"
-            />
-          ) : (
-            <div
-              className="absolute inset-0"
-              style={{
-                backgroundImage:
-                  "radial-gradient(circle at 10% 20%, rgba(30, 120, 94, 0.6), transparent 55%), radial-gradient(circle at 85% 10%, rgba(35, 98, 158, 0.45), transparent 50%), linear-gradient(135deg, rgba(12, 18, 27, 0.95), rgba(12, 18, 27, 0.6))",
-              }}
-            />
-          )}
-          <div className="absolute inset-0 bg-gradient-to-br from-ink-900/80 via-ink-900/45 to-ink-900/10" />
-          <div className="relative z-10 p-8 text-white md:p-12">
-            <div className="flex flex-wrap items-center gap-2">
-              <Badge className="border-white/30 bg-white/20 text-white">
-                Pueblo indígena
-              </Badge>
-              <Badge className="border-white/30 bg-white/20 text-white">
-                {community.region}
-              </Badge>
-            </div>
-            <h1 className="mt-4 font-display text-4xl text-white md:text-5xl lg:text-6xl">
-              {communityInfo.title}
-            </h1>
-            <p className="mt-4 max-w-3xl text-base text-white/90 md:text-lg">
-              {shortDescription}
-            </p>
-            <div className="mt-6 flex items-center gap-4 text-sm text-white/80">
-              <span className="flex items-center gap-2">
-                <Badge className="border-white/30 bg-white/20 text-white">
-                  {community.myth_count}
-                </Badge>
-                {community.myth_count === 1 ? "mito" : "mitos"}
-              </span>
-            </div>
-          </div>
-        </GlassCard>
-      </section>
-
-      {/* Descripción extendida */}
-      <section className="container-shell mt-8">
-        <GlassCard className="p-6 md:p-8">
-          <div className="space-y-4">
-            {longDescriptionBlocks.map((block, idx) => (
-              <p
-                key={`${community.slug}-intro-${idx}`}
-                className="text-sm leading-relaxed text-ink-700 md:text-base"
-              >
-                {block}
-              </p>
-            ))}
-          </div>
-        </GlassCard>
-      </section>
-
-      <FilterableMythList
-        initialItems={result.items}
-        initialTotal={result.total}
-        initialLimit={limit}
-        baseFilter={{ community: community.slug }}
-        basePath="/comunidades"
-        showCommunityFilter={false}
-        tagOptions={tagOptions}
+      <TaxonomyDetailTemplate
+        taxonomy={{
+          name: communityInfo.title || community.name,
+          description: shortDescription,
+          imageUrl: community.image_url,
+          motif: "condor",
+          count: community.myth_count,
+          kind: `Comunidad · ${community.region}`,
+        }}
+        accent="river"
+        breadcrumb={[
+          { label: "Comunidades", href: "/comunidades" },
+          { label: community.name },
+        ]}
+        intro={intro}
+        filterable={<FilterableArchive myths={exploreMyths} filters={filters} />}
+        mythIndex={allMythLinks}
+        indexTitle={`Todos los mitos de la comunidad ${community.name}`}
       />
-
-      <MythIndexList
-        title={`Todos los mitos del pueblo ${community.name}`}
-        myths={allMythLinks}
-      />
-    </main>
+    </>
   );
 }

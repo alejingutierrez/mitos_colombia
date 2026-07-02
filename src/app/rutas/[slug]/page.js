@@ -1,19 +1,24 @@
-import Image from "next/image";
-import Header from "../../../components/Header";
-import Link from "next/link";
-import { Badge } from "../../../components/ui/Badge";
-import { GlassCard } from "../../../components/ui/GlassCard";
-import { ButtonLink } from "../../../components/ui/Button";
+import { notFound } from "next/navigation";
+import {
+  Container,
+  Eyebrow,
+  Heading,
+  Text,
+  Tag,
+  Motif,
+  IndexNumber,
+  ButtonLink,
+  Icon,
+} from "../../../components/atoms";
+import { Header, MythGrid, RouteGrid } from "../../../components/organisms";
 import { buildSeoMetadata, getSeoEntry } from "../../../lib/seo";
 import { BreadcrumbJsonLd } from "../../../components/StructuredData";
 import {
   ROUTES,
-  getAccentStyles,
   getMythsByTitles,
   getRouteBySlug,
   resolveMythsByTitles,
 } from "../../../lib/routes";
-import { notFound } from "next/navigation";
 
 export const runtime = "nodejs";
 export const revalidate = 86400;
@@ -46,75 +51,15 @@ export async function generateMetadata({ params }) {
   });
 }
 
-function HeroTile({ myth, className, sizes, priority = false }) {
-  return (
-    <div className={className}>
-      {myth?.image_url ? (
-        <Image
-          src={myth.image_url}
-          alt={myth.title}
-          fill
-          sizes={sizes}
-          priority={priority}
-          className="object-cover transition duration-700 group-hover:scale-110"
-        />
-      ) : (
-        <div className="h-full w-full bg-gradient-to-br from-jungle-600 via-river-600 to-ember-500" />
-      )}
-      <div className="absolute inset-0 bg-gradient-to-t from-ink-900/70 via-ink-900/20 to-transparent" />
-      <div className="absolute bottom-0 left-0 right-0 p-5">
-        <Badge className="border-white/70 bg-white/90 text-ink-900">
-          {myth?.region || "Territorio"}
-        </Badge>
-        <h3 className="mt-3 font-display text-2xl text-white">
-          {myth?.title || "Ruta en construccion"}
-        </h3>
-      </div>
-    </div>
-  );
-}
-
-function RouteMythCard({ myth, accentText }) {
-  return (
-    <Link
-      href={`/mitos/${myth.slug}`}
-      className="group block"
-      data-analytics-event="select_content"
-      data-analytics-category="route_myth"
-      data-analytics-label={myth.title}
-    >
-      <GlassCard className="relative h-full overflow-hidden p-0 transition hover:-translate-y-2 hover:shadow-2xl">
-        <div className="relative aspect-[3/4] overflow-hidden">
-          {myth.image_url ? (
-            <Image
-              src={myth.image_url}
-              alt={myth.title}
-              fill
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
-              className="object-cover transition duration-700 group-hover:scale-110"
-            />
-          ) : (
-            <div className="h-full w-full bg-gradient-to-br from-ink-800 via-jungle-700 to-ember-500" />
-          )}
-          <div className="absolute inset-0 bg-gradient-to-t from-ink-900/80 via-ink-900/20 to-transparent" />
-          <div className="absolute bottom-0 left-0 right-0 p-5">
-            <Badge className="border-white/70 bg-white/90 text-ink-900">
-              {myth.region}
-            </Badge>
-            <h3 className="mt-3 font-display text-xl text-white">
-              {myth.title}
-            </h3>
-            <p className="mt-2 text-xs uppercase tracking-[0.3em] text-white/70">
-              {myth.community || myth.region}
-            </p>
-            <div className={`mt-4 text-xs uppercase tracking-[0.3em] ${accentText}`}>
-              Leer relato
-            </div>
-          </div>
-        </div>
-      </GlassCard>
-    </Link>
-  );
+function mapMyth(m) {
+  return {
+    slug: m.slug,
+    title: m.title,
+    excerpt: m.excerpt,
+    region: m.region,
+    community: m.community,
+    imageUrl: m.image_url,
+  };
 }
 
 export default async function RutaPage({ params }) {
@@ -132,14 +77,25 @@ export default async function RutaPage({ params }) {
     ? await getMythsByTitles(curatedTitles)
     : [];
   const resolvedMap = resolveMythsByTitles(curatedTitles, curatedMyths);
-  const heroItems = curatedHero
+  const orderedTitles = Array.from(new Set([...curatedHero, ...curatedGallery]));
+  const routeMyths = orderedTitles
     .map((title) => resolvedMap.get(title))
-    .filter(Boolean);
-  const galleryMyths = curatedGallery
-    .map((title) => resolvedMap.get(title))
-    .filter(Boolean);
-  const accent = getAccentStyles(route.accent);
-  const searchQuery = route.keywords[0] || route.title;
+    .filter(Boolean)
+    .map(mapMyth);
+
+  const accent = route.accent === "river" ? "river" : "jungle";
+  const motif = accent === "river" ? "agua" : "hoja";
+  const searchQuery = route.keywords?.[0] || route.title;
+
+  const otherRoutes = ROUTES.filter((item) => item.slug !== route.slug)
+    .slice(0, 4)
+    .map((item) => ({
+      title: item.title,
+      href: `/rutas/${item.slug}`,
+      description: item.detail || item.description,
+      tone: item.accent === "river" ? "river" : "jungle",
+      motif: item.accent === "river" ? "agua" : "hoja",
+    }));
 
   return (
     <>
@@ -152,140 +108,104 @@ export default async function RutaPage({ params }) {
           ]}
         />
       )}
-      <Header />
-      <main className="relative min-h-screen pb-24">
-        <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
-          <div className={`absolute -top-32 left-12 h-72 w-72 rounded-full ${accent.glow} blur-3xl motion-safe:animate-float-slow`} />
-          <div className="absolute right-0 top-6 h-80 w-80 rounded-full bg-ink-500/20 blur-3xl motion-safe:animate-float-slow" />
-        </div>
-
-        <section className="container-shell mt-16">
-          <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
-            <div className="space-y-6">
-              <Badge className={accent.badge}>Ruta tematica</Badge>
-              <h1 className="font-display text-5xl leading-tight text-ink-900 md:text-6xl">
+      <Header active="/rutas" />
+      <main className="min-h-[100dvh] bg-paper">
+        {/* Hero */}
+        <Container size="wide" className="py-12 md:py-16">
+          <div className="grid items-start gap-8 md:grid-cols-[1.4fr_0.6fr] md:gap-12">
+            <div>
+              <Eyebrow tone={accent} withRule className="mb-4">
+                Ruta editorial · {route.tone}
+              </Eyebrow>
+              <Heading level={0} accent={accent}>
                 {route.title}
-              </h1>
-              <p className="section-body max-w-xl text-lg">
+              </Heading>
+              <Text size="lg" className="mt-6 max-w-xl">
                 {route.intro || route.description}
-              </p>
-              <div className="flex flex-wrap gap-2">
-                {route.keywords.slice(0, 5).map((keyword) => (
-                  <Badge key={keyword} className="border-ink-500/20 bg-white/70 text-ink-600">
+              </Text>
+              <div className="mt-6 flex flex-wrap gap-1.5">
+                {(route.keywords || []).slice(0, 6).map((keyword) => (
+                  <Tag key={keyword} variant="outline">
                     {keyword}
-                  </Badge>
+                  </Tag>
                 ))}
               </div>
-              <div className="flex flex-wrap gap-4">
-                <ButtonLink href={`/mitos?q=${encodeURIComponent(searchQuery)}`}>
+              <div className="mt-8 flex flex-wrap gap-3">
+                <ButtonLink
+                  href={`/mitos?q=${encodeURIComponent(searchQuery)}`}
+                  variant="primary"
+                >
                   Explorar relatos
+                  <Icon name="arrow-right" size={18} className="mc-arrow" />
                 </ButtonLink>
-                <ButtonLink href="/" variant="outline">
-                  Volver al inicio
+                <ButtonLink href="/rutas" variant="secondary">
+                  Todas las rutas
                 </ButtonLink>
               </div>
             </div>
-
-            <div className="grid gap-4 sm:grid-cols-2">
-              <GlassCard className="group relative aspect-[4/5] overflow-hidden p-0">
-                <HeroTile
-                  myth={heroItems[0]}
-                  className="absolute inset-0"
-                  sizes="(max-width: 1024px) 100vw, 33vw"
-                  priority
-                />
-              </GlassCard>
-              <div className="grid gap-4">
-                <GlassCard className="group relative aspect-[16/9] overflow-hidden p-0">
-                  <HeroTile
-                    myth={heroItems[1]}
-                    className="absolute inset-0"
-                    sizes="(max-width: 1024px) 100vw, 33vw"
-                  />
-                </GlassCard>
-                <GlassCard className="group relative aspect-[16/9] overflow-hidden p-0">
-                  <HeroTile
-                    myth={heroItems[2]}
-                    className="absolute inset-0"
-                    sizes="(max-width: 1024px) 100vw, 33vw"
-                  />
-                </GlassCard>
-              </div>
+            <div className="hidden justify-end md:flex">
+              <Motif name={motif} size={120} />
             </div>
           </div>
-        </section>
+        </Container>
 
-        <section className="container-shell mt-24">
-          <div className="grid gap-6 md:grid-cols-3">
-            {route.highlights.map((highlight) => (
-              <GlassCard key={highlight.title} className="p-8">
-                <p className={`text-xs font-medium uppercase tracking-[0.3em] ${accent.text}`}>
-                  Itinerario
-                </p>
-                <h3 className="mt-4 font-display text-2xl text-ink-900">
-                  {highlight.title}
-                </h3>
-                <p className="mt-3 text-sm text-ink-600">
-                  {highlight.description}
-                </p>
-              </GlassCard>
-            ))}
-          </div>
-        </section>
-
-        <section className="container-shell mt-24">
-          <div className="flex flex-col items-start justify-between gap-4 md:flex-row md:items-end">
-            <div>
-              <p className="eyebrow">Galeria editorial</p>
-              <h2 className="mt-4 font-display text-4xl text-ink-900 md:text-5xl">
-                Imagenes que ya narran la ruta
-              </h2>
-              <p className="section-body mt-4 max-w-2xl">
-                {route.galleryIntro ||
-                  "Selección visual a partir de los mitos ya ilustrados. Cada pieza aporta textura, tono y contexto para leer esta ruta."}
-              </p>
-            </div>
-            <ButtonLink href={`/mitos?q=${encodeURIComponent(searchQuery)}`} variant="subtle">
-              Ver todos los mitos
-            </ButtonLink>
-          </div>
-
-          <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-            {galleryMyths.map((myth) => (
-              <RouteMythCard key={myth.slug} myth={myth} accentText={accent.text} />
-            ))}
-          </div>
-        </section>
-
-        <section className="container-shell mt-24">
-          <GlassCard className="grid gap-6 p-10 md:grid-cols-[1.5fr_1fr] md:items-center">
-            <div>
-              <p className="eyebrow">Continuar explorando</p>
-              <h2 className="mt-4 font-display text-3xl text-ink-900">
-                Rutas conectadas por territorio y memoria
-              </h2>
-              <p className="section-body mt-4">
-                Cruza a otras rutas para ampliar el mapa de simbolos y personajes.
-              </p>
-            </div>
-            <div className="flex flex-col gap-3">
-              {ROUTES.filter((item) => item.slug !== route.slug)
-                .slice(0, 3)
-                .map((item) => (
-                  <Link
-                    key={item.slug}
-                    href={`/rutas/${item.slug}`}
-                    className="group flex items-center justify-between rounded-2xl border border-white/60 bg-white/70 px-4 py-3 text-sm text-ink-700 transition hover:-translate-y-1 hover:shadow-lg"
-                  >
-                    <span className="font-medium">{item.title}</span>
-                    <span className={`text-xs uppercase tracking-[0.3em] ${accent.text}`}>
-                      Ruta
-                    </span>
-                  </Link>
+        {/* Itinerario / highlights */}
+        {route.highlights?.length ? (
+          <div className="border-t border-line-100">
+            <Container size="wide" className="py-14">
+              <Eyebrow tone={accent} withRule className="mb-8">
+                Itinerario
+              </Eyebrow>
+              <div className="grid gap-8 md:grid-cols-3">
+                {route.highlights.map((h, i) => (
+                  <div key={h.title}>
+                    <div className="flex items-baseline gap-3">
+                      <IndexNumber value={i + 1} size="sm" />
+                      <Heading level={4}>{h.title}</Heading>
+                    </div>
+                    <Text size="sm" tone="muted" className="mt-2">
+                      {h.description}
+                    </Text>
+                  </div>
                 ))}
-            </div>
-          </GlassCard>
-        </section>
+              </div>
+            </Container>
+          </div>
+        ) : null}
+
+        {/* Galería editorial: mitos curados de la ruta */}
+        {routeMyths.length > 0 ? (
+          <div className="border-t border-line-100">
+            <Container size="wide" className="py-14">
+              <MythGrid
+                eyebrow="Galería editorial"
+                title="Relatos que trazan la ruta"
+                description={
+                  route.galleryIntro ||
+                  "Selección curada de mitos que dan forma a este itinerario. Cada relato conecta con su región y comunidad."
+                }
+                action={
+                  <ButtonLink
+                    href={`/mitos?q=${encodeURIComponent(searchQuery)}`}
+                    variant="secondary"
+                  >
+                    Ver todos los mitos
+                  </ButtonLink>
+                }
+                myths={routeMyths}
+              />
+            </Container>
+          </div>
+        ) : null}
+
+        {/* Otras rutas */}
+        <div className="border-t border-line-100 py-14">
+          <RouteGrid
+            eyebrow="Continuar explorando"
+            title="Rutas conectadas por territorio y memoria"
+            routes={otherRoutes}
+          />
+        </div>
       </main>
     </>
   );

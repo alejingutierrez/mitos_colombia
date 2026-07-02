@@ -1,13 +1,7 @@
-import Header from "../../components/Header";
-import { Badge } from "../../components/ui/Badge";
-import { ButtonLink } from "../../components/ui/Button";
-import { GlassCard } from "../../components/ui/GlassCard";
-import { ImageSlot } from "../../components/ui/ImageSlot";
-import { Pagination } from "../../components/ui/Pagination";
-import { SectionHeader } from "../../components/ui/SectionHeader";
+import { TaxonomyIndexTemplate } from "../../components/templates";
+import { Pagination } from "../../components/molecules";
 import { formatCategoryName } from "../../lib/formatters";
 import { getTaxonomy, listMythLinksByTaxon } from "../../lib/myths";
-import { TaxonMythLinks } from "../../components/TaxonMythLinks";
 import { buildSeoMetadata, getSeoEntry } from "../../lib/seo";
 
 export const runtime = "nodejs";
@@ -62,72 +56,40 @@ export default async function CategoriasPage({ searchParams }) {
     )
   );
 
+  const items = paginatedTags.map((tag) => ({
+    title: formatCategoryName(tag.name),
+    href: `/categorias/${tag.slug}`,
+    count: tag.myth_count,
+    motif: "sol",
+    imageUrl: tag.image_url,
+    description: undefined,
+  }));
+
+  // Índice rastreable de mitos representativos por categoría (SEO).
+  const mythIndex = paginatedTags
+    .map((tag) => ({
+      title: formatCategoryName(tag.name),
+      href: `/categorias/${tag.slug}`,
+      myths: (categoryMythMap[tag.slug] || []).slice(0, 6),
+    }))
+    .filter((g) => g.myths.length > 0);
+
+  const totalPages = Math.max(1, Math.ceil(tags.length / limit));
+  const page = Math.floor(offset / limit) + 1;
+  const makeHref = (p) => `/categorias?offset=${(p - 1) * limit}&limit=${limit}`;
+
   return (
-    <main className="relative min-h-screen overflow-hidden pb-24">
-      <Header taxonomy={taxonomy} />
-
-      <section className="container-shell mt-12">
-        <SectionHeader
-          eyebrow="Categorías temáticas"
-          title="Explora los mitos por temas y motivos narrativos."
-          description="Cada tag representa un tema, motivo o característica común entre los mitos."
-        />
-
-        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {paginatedTags.map((tag) => (
-            <GlassCard
-              key={tag.slug}
-              className="group flex flex-col overflow-hidden p-0 transition hover:-translate-y-1 hover:shadow-lift"
-            >
-              <div className="relative overflow-hidden">
-                <ImageSlot
-                  src={tag.image_url}
-                  alt={`Ilustracion de la categoria ${tag.name}`}
-                  size="compact"
-                  className="rounded-none transition-transform duration-700 group-hover:scale-110"
-                />
-              </div>
-              <div className="flex flex-col gap-4 p-6">
-                <div className="flex items-start justify-between">
-                  <div className="flex-1">
-                    <h3 className="font-display text-2xl text-ink-900">
-                      {formatCategoryName(tag.name)}
-                    </h3>
-                    <p className="mt-2 text-sm text-ink-500">
-                      {tag.myth_count} {tag.myth_count === 1 ? "mito" : "mitos"}
-                    </p>
-                  </div>
-                  <Badge className="border-jungle-500/30 bg-jungle-500/10 text-jungle-600">
-                    {tag.myth_count}
-                  </Badge>
-                </div>
-                <TaxonMythLinks myths={categoryMythMap[tag.slug]} max={4} />
-                <div className="mt-auto">
-                  <ButtonLink
-                    href={`/categorias/${tag.slug}`}
-                    variant="outline"
-                    size="sm"
-                    className="w-full"
-                  >
-                    Explorar categoría
-                  </ButtonLink>
-                </div>
-              </div>
-            </GlassCard>
-          ))}
-        </div>
-
-        <div className="mt-10">
-          <Pagination
-            total={tags.length}
-            limit={limit}
-            offset={offset}
-            pathname="/categorias"
-            searchParams={{}}
-            limitOptions={[12, 24, 48]}
-          />
-        </div>
-      </section>
-    </main>
+    <TaxonomyIndexTemplate
+      eyebrow="Categorías temáticas"
+      title="Mitos por tema y motivo narrativo"
+      description="Cada categoría reúne relatos que comparten un tema, un motivo o una característica común: creación, castigo, criaturas, transformación y más."
+      items={items}
+      mythIndex={mythIndex}
+      active="/categorias"
+      accent="jungle"
+      heroMotif="sol"
+      columns={3}
+      footer={<Pagination page={page} totalPages={totalPages} makeHref={makeHref} />}
+    />
   );
 }

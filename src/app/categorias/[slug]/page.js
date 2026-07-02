@@ -1,14 +1,10 @@
-import Image from "next/image";
 import { notFound } from "next/navigation";
-import Header from "../../../components/Header";
-import { Badge } from "../../../components/ui/Badge";
-import { GlassCard } from "../../../components/ui/GlassCard";
 import { formatCategoryName } from "../../../lib/formatters";
 import { getTaxonomy, listMyths, listMythLinksByTaxon } from "../../../lib/myths";
 import { buildSeoMetadata, getSeoEntry } from "../../../lib/seo";
 import { BreadcrumbJsonLd, CollectionPageJsonLd } from "../../../components/StructuredData";
-import { FilterableMythList } from "../../../components/FilterableMythList";
-import { MythIndexList } from "../../../components/MythIndexList";
+import { TaxonomyDetailTemplate } from "../../../components/templates";
+import { FilterableArchive } from "../../../components/organisms";
 
 export const runtime = "nodejs";
 export const revalidate = 300;
@@ -216,27 +212,6 @@ const CATEGORY_INFO = {
   }
 };
 
-function getParamValue(value) {
-  if (Array.isArray(value)) {
-    return value[0] ?? "";
-  }
-  return value ?? "";
-}
-
-function buildQuery(params, overrides = {}) {
-  const search = new URLSearchParams();
-  const entries = { ...params, ...overrides };
-
-  Object.entries(entries).forEach(([key, value]) => {
-    if (value === undefined || value === null || value === "") {
-      return;
-    }
-    search.set(key, String(value));
-  });
-
-  return search.toString();
-}
-
 function buildShortDescription(text) {
   const cleaned = String(text || "").replace(/\s+/g, " ").trim();
   if (!cleaned) {
@@ -324,24 +299,37 @@ export default async function CategoryDetailPage({ params }) {
         ]
       : []),
   ];
+  // Descripción larga (editorial/SEO) como bloques de párrafo separados por saltos.
+  const intro = longDescriptionBlocks
+    .map((block) => String(block || "").trim())
+    .filter(Boolean)
+    .join("\n\n");
 
-  const limit = 24;
-
-  // Listado inicial (sin filtros) - se pregenera estáticamente
+  // Muestra para exploración interactiva (filtrable en cliente, SSR = rastreable).
   const result = await listMyths({
     tag: category.name,
-    limit,
+    limit: 48,
     offset: 0,
   });
+  const exploreMyths = (result?.items || []).map((m) => ({
+    slug: m.slug,
+    title: m.title,
+    excerpt: m.excerpt,
+    region: m.region,
+    community: m.community,
+    imageUrl: m.image_url,
+  }));
 
-  // Tags relacionados (excluir regiones y "ninguno")
-  const relatedTags = taxonomy.tags
-    .filter(t =>
-      t.slug !== params.slug &&
-      !regionNames.includes(t.name.toLowerCase()) &&
-      t.name.toLowerCase() !== 'ninguno'
-    )
-    .slice(0, 30);
+  // Faceta de región: los mitos de una categoría abarcan varias regiones.
+  const regionOptions = Array.from(
+    new Set(exploreMyths.map((m) => m.region).filter(Boolean))
+  )
+    .sort((a, b) => a.localeCompare(b, "es"))
+    .map((region) => ({ value: region, label: region }));
+  const filters =
+    regionOptions.length >= 2
+      ? [{ key: "region", label: "Región", options: regionOptions }]
+      : [];
 
   const collectionItems = (result?.items || []).slice(0, 30).map((m) => ({
     url: `${SITE_URL}/mitos/${m.slug}`,
@@ -352,7 +340,7 @@ export default async function CategoryDetailPage({ params }) {
   const allMythLinks = await listMythLinksByTaxon("tag", category.slug);
 
   return (
-    <main className="relative min-h-screen overflow-hidden pb-24">
+    <>
       {SITE_URL && (
         <>
           <BreadcrumbJsonLd
@@ -370,84 +358,25 @@ export default async function CategoryDetailPage({ params }) {
           />
         </>
       )}
-      <Header taxonomy={taxonomy} />
-
-      {/* Hero Section con imagen */}
-      <section className="container-shell mt-12">
-        <GlassCard className="relative min-h-[360px] overflow-hidden p-0 md:min-h-[420px]">
-          {category.image_url ? (
-            <Image
-              src={category.image_url}
-              alt={`Ilustracion de la categoria ${category.name}`}
-              fill
-              sizes="100vw"
-              className="object-cover"
-            />
-          ) : (
-            <div
-              className="absolute inset-0"
-              style={{
-                backgroundImage:
-                  "radial-gradient(circle at 15% 20%, rgba(30, 120, 94, 0.5), transparent 55%), radial-gradient(circle at 80% 15%, rgba(200, 140, 70, 0.45), transparent 50%), linear-gradient(135deg, rgba(12, 18, 27, 0.95), rgba(12, 18, 27, 0.6))",
-              }}
-            />
-          )}
-          <div className="absolute inset-0 bg-gradient-to-br from-ink-900/80 via-ink-900/45 to-ink-900/10" />
-          <div className="relative z-10 p-8 text-white md:p-12">
-            <Badge className="border-white/30 bg-white/20 text-white">
-              Categoría temática
-            </Badge>
-            <h1 className="mt-4 font-display text-4xl text-white md:text-5xl lg:text-6xl">
-              {categoryInfo.title}
-            </h1>
-            <p className="mt-4 max-w-3xl text-base text-white/90 md:text-lg">
-              {shortDescription}
-            </p>
-            <div className="mt-6 flex items-center gap-4 text-sm text-white/80">
-              <span className="flex items-center gap-2">
-                <Badge className="border-white/30 bg-white/20 text-white">
-                  {category.myth_count}
-                </Badge>
-                {category.myth_count === 1 ? "mito" : "mitos"}
-              </span>
-            </div>
-          </div>
-        </GlassCard>
-      </section>
-
-      {/* Descripción extendida */}
-      <section className="container-shell mt-8">
-        <GlassCard className="p-6 md:p-8">
-          <div className="space-y-4">
-            {longDescriptionBlocks.map((block, idx) => (
-              <p
-                key={`${category.slug}-intro-${idx}`}
-                className="text-sm leading-relaxed text-ink-700 md:text-base"
-              >
-                {block}
-              </p>
-            ))}
-          </div>
-        </GlassCard>
-      </section>
-
-      <FilterableMythList
-        initialItems={result.items}
-        initialTotal={result.total}
-        initialLimit={limit}
-        baseFilter={{ tag: category.name }}
-        basePath="/categorias"
-        showCommunityFilter={false}
-        tagOptions={relatedTags.map((t) => ({
-          slug: t.slug,
-          name: formatCategoryName(t.name),
-        }))}
+      <TaxonomyDetailTemplate
+        taxonomy={{
+          name: formatCategoryName(category.name),
+          description: shortDescription,
+          imageUrl: category.image_url,
+          motif: "sol",
+          count: category.myth_count,
+          kind: "Categoría temática",
+        }}
+        accent="jungle"
+        breadcrumb={[
+          { label: "Categorías", href: "/categorias" },
+          { label: formatCategoryName(category.name) },
+        ]}
+        intro={intro || undefined}
+        filterable={<FilterableArchive myths={exploreMyths} filters={filters} />}
+        mythIndex={allMythLinks}
+        indexTitle={`Todos los mitos de la categoría ${formatCategoryName(category.name)}`}
       />
-
-      <MythIndexList
-        title={`Todos los mitos de la categoría ${formatCategoryName(category.name)}`}
-        myths={allMythLinks}
-      />
-    </main>
+    </>
   );
 }

@@ -1,7 +1,7 @@
 import "./globals.css";
-import { Fraunces, Sora } from "next/font/google";
+import { Manrope, Inter } from "next/font/google";
 import Script from "next/script";
-import Footer from "../components/Footer";
+import { Footer } from "../components/organisms/Footer";
 import Analytics from "../components/Analytics";
 import { GA_MEASUREMENT_ID } from "../lib/analytics";
 import { WebsiteJsonLd } from "../components/StructuredData";
@@ -11,14 +11,14 @@ const RAW_SITE_URL =
   (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "");
 const SITE_URL = RAW_SITE_URL.trim().replace(/\/+$/, "");
 
-const display = Fraunces({
+const display = Manrope({
   subsets: ["latin"],
-  weight: ["600", "700", "800"],
+  weight: ["500", "600", "700", "800"],
   variable: "--font-display",
   display: "swap",
 });
 
-const body = Sora({
+const body = Inter({
   subsets: ["latin"],
   weight: ["400", "500", "600"],
   variable: "--font-body",
