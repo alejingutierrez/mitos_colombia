@@ -6,6 +6,7 @@ const nextConfig = {
   outputFileTracingRoot: path.join(__dirname),
   images: {
     formats: ["image/avif", "image/webp"],
+    qualities: [75, 90],
     remotePatterns: [
       {
         protocol: "https",
