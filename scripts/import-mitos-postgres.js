@@ -1,7 +1,7 @@
 const fs = require("fs");
 const path = require("path");
-const xlsx = require("xlsx");
 const { Client } = require("pg");
+const { readWorkbookRows } = require("./read-workbook-rows");
 
 const rootDir = path.resolve(__dirname, "..");
 const excelPath = path.join(rootDir, "docs", "mitos_seo_actualizados.xlsx");
@@ -29,17 +29,6 @@ if (!fs.existsSync(schemaPath)) {
   console.error(`Missing schema file: ${schemaPath}`);
   process.exit(1);
 }
-
-const workbook = xlsx.readFile(excelPath);
-const sheetName = "Sheet1";
-const sheet = workbook.Sheets[sheetName] || workbook.Sheets[workbook.SheetNames[0]];
-
-if (!sheet) {
-  console.error("No sheets found in the Excel file.");
-  process.exit(1);
-}
-
-const rows = xlsx.utils.sheet_to_json(sheet, { defval: "" });
 
 function slugify(value) {
   return value
@@ -266,6 +255,7 @@ function buildSlug(base, region, community, index) {
 }
 
 async function run() {
+  const rows = await readWorkbookRows(excelPath);
   const client = new Client({ connectionString: postgresUrl });
   await client.connect();
 

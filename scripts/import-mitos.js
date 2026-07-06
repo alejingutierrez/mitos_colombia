@@ -1,7 +1,7 @@
 const fs = require("fs");
 const path = require("path");
-const xlsx = require("xlsx");
 const Database = require("better-sqlite3");
+const { readWorkbookRows } = require("./read-workbook-rows");
 
 const rootDir = path.resolve(__dirname, "..");
 const excelPath = path.join(rootDir, "docs", "mitos_seo_actualizados.xlsx");
@@ -20,16 +20,8 @@ if (!fs.existsSync(schemaPath)) {
 
 fs.mkdirSync(path.dirname(dbPath), { recursive: true });
 
-const workbook = xlsx.readFile(excelPath);
-const sheetName = "Sheet1";
-const sheet = workbook.Sheets[sheetName] || workbook.Sheets[workbook.SheetNames[0]];
-
-if (!sheet) {
-  console.error("No sheets found in the Excel file.");
-  process.exit(1);
-}
-
-const rows = xlsx.utils.sheet_to_json(sheet, { defval: "" });
+async function run() {
+  const rows = await readWorkbookRows(excelPath);
 
 if (fs.existsSync(dbPath)) {
   fs.unlinkSync(dbPath);
@@ -469,8 +461,6 @@ const importRows = db.transaction((dataRows) => {
   });
 });
 
-importRows(rows);
-
 const seedHomeBanners = db.transaction((items) => {
   items.forEach((item) => {
     insertHomeBanner.run(
@@ -487,22 +477,29 @@ const seedHomeBanners = db.transaction((items) => {
   });
 });
 
-seedHomeBanners(HOME_BANNERS);
+  importRows(rows);
+  seedHomeBanners(HOME_BANNERS);
 
-const counts = {
-  myths: db.prepare("SELECT COUNT(*) AS count FROM myths").get().count,
-  regions: db.prepare("SELECT COUNT(*) AS count FROM regions").get().count,
-  communities: db
-    .prepare("SELECT COUNT(*) AS count FROM communities")
-    .get().count,
-  tags: db.prepare("SELECT COUNT(*) AS count FROM tags").get().count,
-  keywords: db
-    .prepare("SELECT COUNT(*) AS count FROM myth_keywords")
-    .get().count,
-  home_banners: db
-    .prepare("SELECT COUNT(*) AS count FROM home_banners")
-    .get().count,
-};
+  const counts = {
+    myths: db.prepare("SELECT COUNT(*) AS count FROM myths").get().count,
+    regions: db.prepare("SELECT COUNT(*) AS count FROM regions").get().count,
+    communities: db
+      .prepare("SELECT COUNT(*) AS count FROM communities")
+      .get().count,
+    tags: db.prepare("SELECT COUNT(*) AS count FROM tags").get().count,
+    keywords: db
+      .prepare("SELECT COUNT(*) AS count FROM myth_keywords")
+      .get().count,
+    home_banners: db
+      .prepare("SELECT COUNT(*) AS count FROM home_banners")
+      .get().count,
+  };
 
-console.log("Import complete.");
-console.log(counts);
+  console.log("Import complete.");
+  console.log(counts);
+}
+
+run().catch((error) => {
+  console.error(error);
+  process.exit(1);
+});
