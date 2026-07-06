@@ -149,7 +149,7 @@ export default function HeaderClient({ initialTaxonomy }) {
       <div className="mx-auto flex w-full max-w-[1480px] items-center justify-between gap-4 px-4 py-3 md:px-10 md:py-4">
         <Link href="/" className="flex items-center gap-3">
           <Image
-            src="/logo_mitos.png"
+            src="/favicon.png"
             alt="Mitos de Colombia"
             width={44}
             height={44}

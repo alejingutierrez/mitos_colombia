@@ -1,5 +1,6 @@
+import Image from "next/image";
 import Link from "next/link";
-import { Container, Motif } from "../atoms";
+import { Container } from "../atoms";
 import { cn } from "../../lib/utils";
 
 /**
@@ -66,10 +67,16 @@ export function Footer({
               href="/"
               className="inline-flex items-center gap-3 transition-opacity duration-200 ease-editorial hover:opacity-90"
             >
-              <span className="inline-flex items-center justify-center rounded bg-white/90 p-1.5">
-                <Motif name="jaguar" size={32} />
+              <span className="inline-flex h-16 w-16 items-center justify-center rounded bg-mist-50/95 p-2 shadow-sm">
+                <Image
+                  src="/favicon.png"
+                  alt=""
+                  width={64}
+                  height={64}
+                  className="h-14 w-14 object-contain"
+                />
               </span>
-              <span className="font-display text-lg font-bold tracking-tight text-mist-50">
+              <span className="font-display text-xl font-bold tracking-tight text-mist-50">
                 Mitos de Colombia
               </span>
             </Link>

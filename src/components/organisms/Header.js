@@ -47,11 +47,11 @@ export function Header({ active }) {
             className="group inline-flex items-center gap-2.5 rounded-sm text-ink-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-jungle-500/40"
           >
             <Image
-              src="/logo_mitos.png"
+              src="/favicon.png"
               alt=""
-              width={36}
-              height={36}
-              className="h-8 w-8 rounded-sm object-contain transition-transform duration-200 group-hover:scale-[1.03] md:h-9 md:w-9"
+              width={40}
+              height={40}
+              className="h-9 w-9 rounded-sm object-contain transition-transform duration-200 group-hover:scale-[1.03] md:h-10 md:w-10"
               priority
             />
             <span className="font-display text-[17px] font-extrabold tracking-tight leading-none">
