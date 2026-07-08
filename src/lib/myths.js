@@ -1,5 +1,6 @@
 import { unstable_cache } from "next/cache";
 import { getSqlClient, getSqliteDb, isPostgres, isQuotaError } from "./db";
+import { isStaticDataBuild, withRetry } from "./db-resilience";
 
 const ONE_HOUR = 60 * 60;
 const ONE_DAY = 60 * 60 * 24;
@@ -237,7 +238,7 @@ async function listMythsPostgres({
 export async function listMyths(params = {}) {
   try {
     if (isPostgres()) {
-      return await listMythsPostgres(params);
+      return await withRetry(() => listMythsPostgres(params));
     }
     return listMythsSqlite(params);
   } catch (error) {
@@ -245,6 +246,9 @@ export async function listMyths(params = {}) {
       console.error("[MYTHS] listMyths quota exceeded:", error);
     } else {
       console.error("[MYTHS] listMyths failed:", error);
+    }
+    if (isStaticDataBuild()) {
+      throw error;
     }
     const limitValue = clampNumber(params.limit, 1, 100, 20);
     const offsetValue = clampNumber(params.offset, 0, 5000, 0);
@@ -339,11 +343,14 @@ export async function listMythLinksByTaxon(kind, value) {
   if (!kind || !value) return [];
   try {
     if (isPostgres()) {
-      return await listMythLinksByTaxonPostgres(kind, value);
+      return await withRetry(() => listMythLinksByTaxonPostgres(kind, value));
     }
     return listMythLinksByTaxonSqlite(kind, value);
   } catch (error) {
     console.error("[MYTHS] listMythLinksByTaxon error:", error);
+    if (isStaticDataBuild()) {
+      throw error;
+    }
     return [];
   }
 }
@@ -469,11 +476,14 @@ const getMythBySlugCached = unstable_cache(
   async (slug) => {
     try {
       if (isPostgres()) {
-        return await getMythBySlugPostgres(slug);
+        return await withRetry(() => getMythBySlugPostgres(slug));
       }
       return getMythBySlugSqlite(slug);
     } catch (error) {
       console.error("[MYTHS] getMythBySlug failed:", error);
+      if (isStaticDataBuild()) {
+        throw error;
+      }
       return null;
     }
   },
@@ -615,11 +625,14 @@ const getTaxonomyCached = unstable_cache(
   async () => {
     try {
       if (isPostgres()) {
-        return await getTaxonomyPostgres();
+        return await withRetry(() => getTaxonomyPostgres());
       }
       return getTaxonomySqlite();
     } catch (error) {
       console.error("[MYTHS] getTaxonomy failed:", error);
+      if (isStaticDataBuild()) {
+        throw error;
+      }
       return { regions: [], communities: [], tags: [] };
     }
   },
@@ -1143,8 +1156,10 @@ export async function listAllMythSlugs() {
   try {
     if (isPostgres()) {
       const sql = getSqlClient();
-      const result = await sql.query(
-        "SELECT slug FROM myths WHERE slug IS NOT NULL AND slug != '' ORDER BY id ASC"
+      const result = await withRetry(() =>
+        sql.query(
+          "SELECT slug FROM myths WHERE slug IS NOT NULL AND slug != '' ORDER BY id ASC"
+        )
       );
       return (result.rows || []).map((row) => row.slug);
     }
@@ -1157,6 +1172,9 @@ export async function listAllMythSlugs() {
       .map((row) => row.slug);
   } catch (error) {
     console.error("Error in listAllMythSlugs:", error);
+    if (isStaticDataBuild()) {
+      throw error;
+    }
     return [];
   }
 }
