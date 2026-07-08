@@ -1,4 +1,11 @@
 import { getSqlClient, getSqliteDb, isPostgres } from "./db";
+import { withRetry } from "./db-resilience";
+import {
+  normalizeSeoDescription,
+  normalizeSeoTitle,
+  pickSeoTitle,
+  shouldRethrowSeoLoadError,
+} from "./seo-metadata";
 
 const RAW_SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL ||
@@ -26,24 +33,26 @@ export async function getSeoEntry(pageType, slug) {
   try {
     if (isPostgres()) {
       const db = getSqlClient();
-      const result = await db`
-        SELECT
-          page_type,
-          slug,
-          meta_title,
-          meta_description,
-          meta_keywords,
-          og_title,
-          og_description,
-          twitter_title,
-          twitter_description,
-          canonical_path,
-          summary,
-          payload
-        FROM seo_pages
-        WHERE page_type = ${pageType} AND slug = ${slug}
-        LIMIT 1
-      `;
+      const result = await withRetry(
+        () => db`
+          SELECT
+            page_type,
+            slug,
+            meta_title,
+            meta_description,
+            meta_keywords,
+            og_title,
+            og_description,
+            twitter_title,
+            twitter_description,
+            canonical_path,
+            summary,
+            payload
+          FROM seo_pages
+          WHERE page_type = ${pageType} AND slug = ${slug}
+          LIMIT 1
+        `
+      );
       return result.rows?.[0] || result[0] || null;
     }
 
@@ -74,6 +83,9 @@ export async function getSeoEntry(pageType, slug) {
     );
   } catch (error) {
     console.error("[SEO] Failed to load SEO entry:", error);
+    if (shouldRethrowSeoLoadError(error)) {
+      throw error;
+    }
     return null;
   }
 }
@@ -84,14 +96,25 @@ export function buildSeoMetadata({
   canonicalPath,
   openGraphType = "website",
   imageUrl,
+  preferFallbackTitle = false,
 }) {
-  const metaTitle = seo?.meta_title || fallback.title;
-  const metaDescription = seo?.meta_description || fallback.description;
+  const metaTitle = normalizeSeoTitle(
+    pickSeoTitle({
+      seoTitle: seo?.meta_title,
+      fallbackTitle: fallback.title,
+      preferFallbackTitle,
+    })
+  );
+  const metaDescription = normalizeSeoDescription(
+    seo?.meta_description || fallback.description
+  );
   const keywords = normalizeKeywords(seo?.meta_keywords || fallback.keywords);
-  const ogTitle = seo?.og_title || metaTitle;
-  const ogDescription = seo?.og_description || metaDescription;
-  const twitterTitle = seo?.twitter_title || ogTitle;
-  const twitterDescription = seo?.twitter_description || ogDescription;
+  const ogTitle = normalizeSeoTitle(seo?.og_title || metaTitle);
+  const ogDescription = normalizeSeoDescription(seo?.og_description || metaDescription);
+  const twitterTitle = normalizeSeoTitle(seo?.twitter_title || ogTitle);
+  const twitterDescription = normalizeSeoDescription(
+    seo?.twitter_description || ogDescription
+  );
   const dbCanonical =
     typeof seo?.canonical_path === "string" ? seo.canonical_path.trim() : "";
   const pageCanonical =

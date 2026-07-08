@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import {
   Container,
   Heading,
@@ -81,9 +82,13 @@ export function TaxonomyDetailTemplate({
         {/* ---------- Cabecero atmosférico (sala oscura) ---------- */}
         <section className="relative overflow-hidden" style={{ background: heroBg }}>
           {imageUrl ? (
-            <img
+            <Image
               src={imageUrl}
               alt=""
+              fill
+              priority
+              sizes="100vw"
+              aria-hidden="true"
               className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-35"
             />
           ) : null}

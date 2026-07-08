@@ -1,25 +1,17 @@
 import { ROUTES } from "../../lib/routes";
 import {
   buildSitemapXml,
-  buildUrl,
-  encodeSegment,
   getBaseUrl,
   ONE_HOUR,
 } from "../../lib/sitemap";
+import { createRouteSitemapEntries } from "../../lib/sitemap-entries";
 
 export const runtime = "nodejs";
 export const revalidate = 3600;
 
 export async function GET(request) {
   const baseUrl = getBaseUrl(request);
-  const now = new Date();
-
-  const entries = ROUTES.map((route) => ({
-    url: buildUrl(baseUrl, `/rutas/${encodeSegment(route.slug)}`),
-    lastModified: now,
-    changeFrequency: "monthly",
-    priority: 0.7,
-  }));
+  const entries = createRouteSitemapEntries(baseUrl, ROUTES);
 
   const xml = buildSitemapXml(entries);
 

@@ -1,6 +1,9 @@
 "use client";
 
+/* eslint-disable react-hooks/exhaustive-deps */
+
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 import AdminLayout from "../../../components/AdminLayout";
 import { GlassCard } from "../../../components/ui/GlassCard";
@@ -312,10 +315,12 @@ export default function CuracionImagenesPage() {
 
                         {item.image_url && (
                           <div className="mb-4 aspect-[16/9] relative bg-ink-100 rounded-xl overflow-hidden">
-                            <img
+                            <Image
                               src={item.image_url}
                               alt={item.name}
-                              className="w-full h-full object-cover"
+                              fill
+                              sizes="(max-width: 768px) 100vw, 420px"
+                              className="object-cover"
                             />
                           </div>
                         )}

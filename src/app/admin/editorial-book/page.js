@@ -1,6 +1,9 @@
 "use client";
 
+/* eslint-disable react-hooks/exhaustive-deps */
+
 import { useEffect, useMemo, useRef, useState } from "react";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 import AdminLayout from "../../../components/AdminLayout";
 import { GlassCard } from "../../../components/ui/GlassCard";
@@ -371,11 +374,12 @@ function PageContent({ page }) {
         <div className="flex h-full flex-col items-center justify-center gap-4">
           <div className="aspect-[9/16] w-full overflow-hidden rounded-[16px] bg-ink-900/10 shadow">
             {page.imageUrl ? (
-              <img
+              <Image
                 src={page.imageUrl}
                 alt={page.title}
-                className="h-full w-full object-cover"
-                loading="lazy"
+                fill
+                sizes="(max-width: 768px) 100vw, 360px"
+                className="object-cover"
               />
             ) : (
               <div className="flex h-full w-full items-center justify-center text-sm text-ink-500">

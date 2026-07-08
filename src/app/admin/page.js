@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import AdminLayout from "../../components/AdminLayout";
 import { GlassCard } from "../../components/ui/GlassCard";
 import { Button } from "../../components/ui/Button";
@@ -429,9 +430,11 @@ export default function AdminPage() {
                             </a>
                             {item.imageUrl && (
                               <div className="mt-4">
-                                <img
+                                <Image
                                   src={item.imageUrl}
                                   alt={item.title}
+                                  width={640}
+                                  height={360}
                                   className="w-full max-w-md rounded-xl shadow-lg border border-white/60"
                                 />
                               </div>

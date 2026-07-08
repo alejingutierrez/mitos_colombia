@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import {
   Container,
   Heading,
@@ -131,7 +132,13 @@ function CartaDelDia({ card }) {
               <span className="relative font-display text-base font-semibold tabular-nums" style={{ color: GOLD }}>{mark}</span>
               <div className="relative flex flex-1 items-center justify-center">
                 {card.image_url ? (
-                  <img src={card.image_url} alt={card.card_name} className="h-full w-full rounded-sm object-cover" />
+                  <Image
+                    src={card.image_url}
+                    alt={card.card_name}
+                    fill
+                    sizes="180px"
+                    className="rounded-sm object-cover"
+                  />
                 ) : (
                   <span className="flex h-20 w-20 items-center justify-center rounded-full" style={{ background: CREAM, boxShadow: `0 0 0 1px ${GOLD}, 0 0 0 7px rgba(189,134,66,0.12)` }}>
                     <Motif name={motif} size={52} />

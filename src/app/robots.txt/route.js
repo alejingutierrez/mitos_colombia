@@ -8,7 +8,6 @@ export async function GET(request) {
   const body = [
     "User-agent: *",
     "Allow: /",
-    "Disallow: /admin",
     "",
     `Sitemap: ${baseUrl}/sitemap.xml`,
     "",

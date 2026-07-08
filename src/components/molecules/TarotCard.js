@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { cn } from "../../lib/utils";
 import { Motif } from "../atoms/Motif";
 import { Icon } from "../atoms/Icon";
@@ -82,10 +83,12 @@ export function TarotCard({ card, tilt = 0, className }) {
         {/* Ilustración: imagen o medallón de crema con el motivo */}
         <div className="relative z-10 flex flex-1 items-center justify-center py-2">
           {image_url ? (
-            <img
+            <Image
               src={image_url}
               alt={card_name || ""}
-              className="h-full w-full rounded-sm object-cover"
+              fill
+              sizes="(max-width: 640px) 50vw, 220px"
+              className="rounded-sm object-cover"
             />
           ) : (
             <span

@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 import AdminLayout from "../../../components/AdminLayout";
 import { GlassCard } from "../../../components/ui/GlassCard";
@@ -294,11 +295,13 @@ export default function HomeBannersAdminPage() {
                       </div>
 
                       {hasImage && (
-                        <div className="mt-4 aspect-[16/9] overflow-hidden rounded-2xl bg-ink-100">
-                          <img
+                        <div className="relative mt-4 aspect-[16/9] overflow-hidden rounded-2xl bg-ink-100">
+                          <Image
                             src={banner.image_url}
                             alt={banner.title}
-                            className="h-full w-full object-cover"
+                            fill
+                            sizes="(max-width: 768px) 100vw, 420px"
+                            className="object-cover"
                           />
                         </div>
                       )}

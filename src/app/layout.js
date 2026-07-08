@@ -41,22 +41,28 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  const gaId = GA_MEASUREMENT_ID.trim();
+
   return (
     <html lang="es" className={`${display.variable} ${body.variable}`}>
       <head>
         <WebsiteJsonLd siteUrl={SITE_URL} />
       </head>
       <body className="font-body text-ink-900 antialiased">
-        <Script
-          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID.trim()}`}
-          strategy="afterInteractive"
-        />
-        <Script id="ga-init" strategy="afterInteractive">
+        {gaId ? (
+          <>
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}
+              strategy="lazyOnload"
+            />
+            <Script id="ga-init" strategy="afterInteractive">
           {`window.dataLayer = window.dataLayer || [];
 window.gtag = function(){dataLayer.push(arguments);};
 window.gtag('js', new Date());
-window.gtag('config', '${GA_MEASUREMENT_ID.trim()}', { send_page_view: false });`}
-        </Script>
+window.gtag('config', '${gaId}', { send_page_view: false });`}
+            </Script>
+          </>
+        ) : null}
         <Analytics />
         <div className="page-bg" aria-hidden="true">
           <div className="page-bg-ambient">

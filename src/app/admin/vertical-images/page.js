@@ -1,6 +1,9 @@
 "use client";
 
+/* eslint-disable react-hooks/exhaustive-deps */
+
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 import AdminLayout from "../../../components/AdminLayout";
 import { GlassCard } from "../../../components/ui/GlassCard";
@@ -569,10 +572,12 @@ export default function VerticalImagesPage() {
                       {/* Image Preview */}
                       {hasVerticalImage && (
                         <div className="mb-4 aspect-[9/16] relative bg-ink-100 rounded-xl overflow-hidden max-h-80">
-                          <img
+                          <Image
                             src={item.vertical_image_url}
                             alt={item.name}
-                            className="w-full h-full object-cover"
+                            fill
+                            sizes="240px"
+                            className="object-cover"
                           />
                         </div>
                       )}

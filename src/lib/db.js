@@ -1,12 +1,8 @@
 import "server-only";
-import fs from "fs";
-import path from "path";
 import Database from "better-sqlite3";
 import { sql } from "@vercel/postgres";
 
-const dbPath =
-  process.env.MITOS_DB_PATH ||
-  path.join(process.cwd(), "data", "mitos.sqlite");
+const dbPath = process.env.MITOS_DB_PATH || "data/mitos.sqlite";
 
 const postgresUrl = process.env.POSTGRES_URL || process.env.DATABASE_URL;
 if (postgresUrl && !process.env.POSTGRES_URL) {
@@ -41,24 +37,26 @@ export function getSqlClient() {
 
 export function getSqliteDb() {
   if (!sqliteDb) {
-    if (!fs.existsSync(dbPath)) {
+    try {
+      sqliteDb = new Database(dbPath, { readonly: true, fileMustExist: true });
+    } catch (error) {
       throw new Error(
         `Database not found at ${dbPath}. Run \"npm run db:import\" first.`
       );
     }
-    sqliteDb = new Database(dbPath, { readonly: true, fileMustExist: true });
   }
   return sqliteDb;
 }
 
 export function getSqliteDbWritable() {
   if (!sqliteDbWritable) {
-    if (!fs.existsSync(dbPath)) {
+    try {
+      sqliteDbWritable = new Database(dbPath, { fileMustExist: true });
+    } catch (error) {
       throw new Error(
         `Database not found at ${dbPath}. Run \"npm run db:import\" first.`
       );
     }
-    sqliteDbWritable = new Database(dbPath, { fileMustExist: true });
   }
   return sqliteDbWritable;
 }

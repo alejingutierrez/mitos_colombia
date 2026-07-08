@@ -184,6 +184,8 @@ function ImmersiveLayout({ myth, accent, breadcrumb, related }) {
             src={myth.imageUrl}
             alt={myth.title}
             ratio="16 / 9"
+            priority
+            sizes="100vw"
             className="rounded-none border-0"
             imgClassName="object-cover"
           />
@@ -242,7 +244,15 @@ function EditorialLayout({ myth, accent, breadcrumb, related }) {
           <div className="relative md:pt-2">
             <Motif name={myth.motif} size={240} className="pointer-events-none absolute -right-8 -top-10 -z-10 opacity-[0.05]" aria-hidden="true" />
             <div className="relative">
-              <ImageFrame src={myth.imageUrl} alt={myth.title} ratio="4 / 5" placeholderMotif={myth.motif} placeholderSize={180} />
+              <ImageFrame
+                src={myth.imageUrl}
+                alt={myth.title}
+                ratio="4 / 5"
+                priority
+                sizes="(max-width: 768px) 100vw, 38vw"
+                placeholderMotif={myth.motif}
+                placeholderSize={180}
+              />
               <CornerTicks accent={accent} />
             </div>
             <CuratorialCaption region={myth.region} community={myth.community} title={myth.title} className="mt-3.5" />
@@ -288,7 +298,15 @@ function FeatureLayout({ myth, accent, breadcrumb, related }) {
         <Container size="wide" className="pt-12">
           <figure className="mx-auto max-w-4xl">
             <div className="relative">
-              <ImageFrame src={myth.imageUrl} alt={myth.title} ratio="16 / 9" placeholderMotif={myth.motif} placeholderSize={180} />
+              <ImageFrame
+                src={myth.imageUrl}
+                alt={myth.title}
+                ratio="16 / 9"
+                priority
+                sizes="(max-width: 768px) 100vw, 900px"
+                placeholderMotif={myth.motif}
+                placeholderSize={180}
+              />
               <CornerTicks accent={accent} />
             </div>
             <figcaption className="mt-4 text-center">

@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 import {
   MapContainer,
@@ -317,12 +318,15 @@ function MythPreviewCard({ myth, onOpen }) {
         }}
       >
         {myth.image_url ? (
-          <img
-            src={myth.image_url}
-            alt={myth.title}
-            className="h-36 w-full object-cover"
-            loading="lazy"
-          />
+          <div className="relative h-36 w-full">
+            <Image
+              src={myth.image_url}
+              alt={myth.title}
+              fill
+              sizes="(max-width: 640px) 100vw, 360px"
+              className="object-cover"
+            />
+          </div>
         ) : (
           <div className="h-36 w-full bg-gradient-to-br from-jungle-600 via-river-600 to-ember-500" />
         )}

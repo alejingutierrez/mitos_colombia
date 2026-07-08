@@ -255,12 +255,16 @@ export async function generateMetadata({ params }) {
 
   return buildSeoMetadata({
     fallback: {
-      title: `${title} | Mitos de Colombia`,
+      title:
+        slug === "rio"
+          ? `${title} en la mitología colombiana`
+          : `${title} | Mitos de Colombia`,
       description,
       keywords: [category.name, "mitos", "Colombia", "folklore", "tradición oral"],
     },
     seo,
     canonicalPath: `/categorias/${slug}`,
+    preferFallbackTitle: slug === "rio",
   });
 }
 

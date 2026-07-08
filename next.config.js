@@ -1,9 +1,19 @@
-const path = require("path");
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  outputFileTracingRoot: path.join(__dirname),
+  async headers() {
+    return [
+      {
+        source: "/admin/:path*",
+        headers: [
+          {
+            key: "X-Robots-Tag",
+            value: "noindex, nofollow, noarchive",
+          },
+        ],
+      },
+    ];
+  },
   images: {
     formats: ["image/avif", "image/webp"],
     qualities: [75, 90],

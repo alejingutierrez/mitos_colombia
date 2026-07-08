@@ -1,4 +1,5 @@
 import { TaxonomyIndexTemplate } from "../../components/templates";
+import { Container, Heading, Text } from "../../components/atoms";
 import { filterAllowedCommunities } from "../../lib/communityFilters";
 import { getTaxonomy, listMythLinksByTaxon } from "../../lib/myths";
 import { buildSeoMetadata, getSeoEntry } from "../../lib/seo";
@@ -67,6 +68,27 @@ export default async function ComunidadesPage() {
       accent="river"
       heroMotif="condor"
       columns={3}
-    />
+    >
+      <Container size="wide" className="border-t border-line-100 py-12">
+        <div className="grid gap-6 lg:grid-cols-[0.8fr_1.2fr]">
+          <Heading level={2}>Voces, linajes y memoria compartida</Heading>
+          <div className="space-y-4">
+            <Text>
+              Explorar por comunidad ayuda a seguir los hilos culturales que
+              sostienen cada relato: nombres propios, territorios, seres tutelares
+              y formas distintas de explicar el origen del mundo. Algunas
+              comunidades concentran ciclos completos de creación; otras conservan
+              relatos de animales, ancestros, castigos o pactos con el agua.
+            </Text>
+            <Text>
+              El archivo presenta estas voces como un punto de partida editorial.
+              Cada página enlaza mitos relacionados para que la lectura pueda
+              avanzar desde una comunidad hacia su región, sus temas y sus
+              personajes recurrentes dentro de la tradición oral colombiana.
+            </Text>
+          </div>
+        </div>
+      </Container>
+    </TaxonomyIndexTemplate>
   );
 }

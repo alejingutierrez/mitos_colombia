@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import {
   Container,
   Eyebrow,
@@ -77,7 +78,7 @@ function SectionSpine({ num, eyebrow, title, description, accent = "jungle", act
           <Eyebrow tone={accent} withRule className="mb-2">
             {eyebrow}
           </Eyebrow>
-          <Heading level={1}>{title}</Heading>
+          <Heading level={1} as="h2">{title}</Heading>
           {description ? (
             <Text className="mt-3 max-w-xl" tone="muted">
               {description}
@@ -132,6 +133,8 @@ function HeroArtwork({ myth }) {
           src={myth.imageUrl}
           alt={myth.title}
           ratio="4 / 5"
+          priority
+          sizes="(max-width: 768px) 100vw, 42vw"
           placeholderMotif={myth.motif}
           placeholderSize={200}
           className="rounded-none border-0"
@@ -227,9 +230,12 @@ function AtlasCard({ region }) {
       style={{ background: "#111712", border: "1px solid rgba(246,233,207,0.12)" }}
     >
       {region.imageUrl ? (
-        <img
+        <Image
           src={region.imageUrl}
           alt=""
+          fill
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+          aria-hidden="true"
           className="absolute inset-0 h-full w-full object-cover opacity-70 transition duration-700 ease-editorial group-hover:scale-105 group-hover:opacity-90"
         />
       ) : (

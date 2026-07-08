@@ -1,4 +1,5 @@
 import { TaxonomyIndexTemplate } from "../../components/templates";
+import { Container, Heading, Text } from "../../components/atoms";
 import { getTaxonomy, listMythLinksByTaxon } from "../../lib/myths";
 import { buildSeoMetadata, getSeoEntry } from "../../lib/seo";
 
@@ -78,6 +79,29 @@ export default async function RegionesPage() {
       active="/regiones"
       heroMotif="montana"
       columns={3}
-    />
+    >
+      <Container size="wide" className="border-t border-line-100 py-12">
+        <div className="grid gap-6 lg:grid-cols-[0.8fr_1.2fr]">
+          <Heading level={2}>Leer el territorio como archivo oral</Heading>
+          <div className="space-y-4">
+            <Text>
+              La organización regional permite reconocer cómo cambian los
+              personajes, los paisajes y las advertencias morales de un relato a
+              otro. En la Amazonía dominan las genealogías del agua y la selva;
+              en los Andes aparecen lagunas, páramos y caminos de montaña; en el
+              Caribe y el Pacífico, la costa, los ríos y la memoria comunitaria
+              abren otras formas de narrar.
+            </Text>
+            <Text>
+              Esta lectura no encierra los mitos en fronteras rígidas. Muchas
+              historias viajan, se mezclan y vuelven con nombres distintos. Por
+              eso cada región funciona como una puerta de entrada: ayuda a
+              encontrar afinidades geográficas sin perder de vista que la
+              tradición oral colombiana es móvil, compartida y cambiante.
+            </Text>
+          </div>
+        </div>
+      </Container>
+    </TaxonomyIndexTemplate>
   );
 }

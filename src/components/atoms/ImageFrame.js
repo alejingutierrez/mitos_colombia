@@ -14,6 +14,7 @@ export function ImageFrame({
   ratio = "4 / 3",
   sizes = "(max-width: 768px) 100vw, 400px",
   priority = false,
+  fetchPriority = priority ? "high" : undefined,
   placeholderMotif = "jaguar",
   placeholderSize = 56,
   className,
@@ -36,6 +37,7 @@ export function ImageFrame({
           fill
           sizes={sizes}
           priority={priority}
+          fetchPriority={fetchPriority}
           className={cn("object-cover", imgClassName)}
         />
       ) : (
