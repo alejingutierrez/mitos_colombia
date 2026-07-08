@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import { formatCategoryName } from "../../../lib/formatters";
 import { getTaxonomy, listMyths, listMythLinksByTaxon } from "../../../lib/myths";
 import { buildSeoMetadata, getSeoEntry } from "../../../lib/seo";
+import { resolveRouteParams } from "../../../lib/next-route-props";
 import { BreadcrumbJsonLd, CollectionPageJsonLd } from "../../../components/StructuredData";
 import { TaxonomyDetailTemplate } from "../../../components/templates";
 import { FilterableArchive } from "../../../components/organisms";
@@ -232,8 +233,9 @@ function buildShortDescription(text) {
 }
 
 export async function generateMetadata({ params }) {
+  const { slug } = await resolveRouteParams(params);
   const taxonomy = await getTaxonomy();
-  const category = taxonomy.tags.find(t => t.slug === params.slug);
+  const category = taxonomy.tags.find(t => t.slug === slug);
 
   if (!category) {
     return {
@@ -242,14 +244,14 @@ export async function generateMetadata({ params }) {
     };
   }
 
-  const categoryInfo = CATEGORY_INFO[params.slug] || {};
+  const categoryInfo = CATEGORY_INFO[slug] || {};
   const title = categoryInfo.title || category.name;
   const storedDescription = String(category.description || "").trim();
   const description =
     storedDescription ||
     categoryInfo.description ||
     `Explora los mitos de la categoría ${category.name}`;
-  const seo = await getSeoEntry("category", params.slug);
+  const seo = await getSeoEntry("category", slug);
 
   return buildSeoMetadata({
     fallback: {
@@ -258,13 +260,14 @@ export async function generateMetadata({ params }) {
       keywords: [category.name, "mitos", "Colombia", "folklore", "tradición oral"],
     },
     seo,
-    canonicalPath: `/categorias/${params.slug}`,
+    canonicalPath: `/categorias/${slug}`,
   });
 }
 
 export default async function CategoryDetailPage({ params }) {
+  const { slug } = await resolveRouteParams(params);
   const taxonomy = await getTaxonomy();
-  const category = taxonomy.tags.find(t => t.slug === params.slug);
+  const category = taxonomy.tags.find(t => t.slug === slug);
 
   const regionNames = taxonomy.regions.map(r => r.name.toLowerCase());
   const categoryName = String(category?.name || "").toLowerCase();
@@ -275,7 +278,7 @@ export default async function CategoryDetailPage({ params }) {
     notFound();
   }
 
-  const categoryInfo = CATEGORY_INFO[params.slug] || {
+  const categoryInfo = CATEGORY_INFO[slug] || {
     title: formatCategoryName(category.name),
     description: `Explora la colección completa de mitos relacionados con ${category.name.toLowerCase()}.`,
     longDescription: `Los mitos de la categoría ${category.name} forman parte del rico patrimonio cultural de Colombia, transmitidos de generación en generación por comunidades que preservan sus tradiciones orales.`,
@@ -347,13 +350,13 @@ export default async function CategoryDetailPage({ params }) {
             items={[
               { name: "Inicio", url: `${SITE_URL}/` },
               { name: "Categorías", url: `${SITE_URL}/categorias` },
-              { name: category.name, url: `${SITE_URL}/categorias/${params.slug}` },
+              { name: category.name, url: `${SITE_URL}/categorias/${slug}` },
             ]}
           />
           <CollectionPageJsonLd
             name={`Mitos de la categoría ${category.name}`}
             description={categoryInfo?.description}
-            url={`${SITE_URL}/categorias/${params.slug}`}
+            url={`${SITE_URL}/categorias/${slug}`}
             items={collectionItems}
           />
         </>

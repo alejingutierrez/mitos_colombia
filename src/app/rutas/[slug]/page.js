@@ -12,6 +12,7 @@ import {
 } from "../../../components/atoms";
 import { Header, MythGrid, RouteGrid } from "../../../components/organisms";
 import { buildSeoMetadata, getSeoEntry } from "../../../lib/seo";
+import { resolveRouteParams } from "../../../lib/next-route-props";
 import { BreadcrumbJsonLd } from "../../../components/StructuredData";
 import {
   ROUTES,
@@ -35,11 +36,12 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }) {
-  const route = getRouteBySlug(params.slug);
+  const { slug } = await resolveRouteParams(params);
+  const route = getRouteBySlug(slug);
   if (!route) {
     return {};
   }
-  const seo = await getSeoEntry("route", params.slug);
+  const seo = await getSeoEntry("route", slug);
   return buildSeoMetadata({
     fallback: {
       title: route.title,
@@ -47,7 +49,7 @@ export async function generateMetadata({ params }) {
       keywords: route.keywords,
     },
     seo,
-    canonicalPath: `/rutas/${params.slug}`,
+    canonicalPath: `/rutas/${slug}`,
   });
 }
 
@@ -63,7 +65,8 @@ function mapMyth(m) {
 }
 
 export default async function RutaPage({ params }) {
-  const route = getRouteBySlug(params.slug);
+  const { slug } = await resolveRouteParams(params);
+  const route = getRouteBySlug(slug);
   if (!route) {
     notFound();
   }
@@ -104,7 +107,7 @@ export default async function RutaPage({ params }) {
           items={[
             { name: "Inicio", url: `${SITE_URL}/` },
             { name: "Rutas", url: `${SITE_URL}/rutas` },
-            { name: route.title, url: `${SITE_URL}/rutas/${params.slug}` },
+            { name: route.title, url: `${SITE_URL}/rutas/${slug}` },
           ]}
         />
       )}

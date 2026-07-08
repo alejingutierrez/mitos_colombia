@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import { filterAllowedCommunities, MIN_COMMUNITY_MYTHS } from "../../../lib/communityFilters";
 import { getTaxonomy, listMyths, listMythLinksByTaxon } from "../../../lib/myths";
 import { buildSeoMetadata, getSeoEntry } from "../../../lib/seo";
+import { resolveRouteParams } from "../../../lib/next-route-props";
 import { BreadcrumbJsonLd, CollectionPageJsonLd } from "../../../components/StructuredData";
 import { TaxonomyDetailTemplate } from "../../../components/templates";
 import { FilterableArchive } from "../../../components/organisms";
@@ -195,8 +196,9 @@ const COMMUNITY_INFO = {
 };
 
 export async function generateMetadata({ params }) {
+  const { slug } = await resolveRouteParams(params);
   const taxonomy = await getTaxonomy();
-  const community = taxonomy.communities.find(c => c.slug === params.slug);
+  const community = taxonomy.communities.find(c => c.slug === slug);
 
   if (!community) {
     return {
@@ -205,10 +207,10 @@ export async function generateMetadata({ params }) {
     };
   }
 
-  const communityInfo = COMMUNITY_INFO[params.slug] || {};
+  const communityInfo = COMMUNITY_INFO[slug] || {};
   const title = communityInfo.title || community.name;
   const description = communityInfo.description || `Explora los mitos del pueblo ${community.name}`;
-  const seo = await getSeoEntry("community", params.slug);
+  const seo = await getSeoEntry("community", slug);
 
   return buildSeoMetadata({
     fallback: {
@@ -217,23 +219,24 @@ export async function generateMetadata({ params }) {
       keywords: [community.name, "pueblo indígena", "Colombia", "mitología", "tradición oral"],
     },
     seo,
-    canonicalPath: `/comunidades/${params.slug}`,
+    canonicalPath: `/comunidades/${slug}`,
   });
 }
 
 export default async function CommunityDetailPage({ params }) {
+  const { slug } = await resolveRouteParams(params);
   const taxonomy = await getTaxonomy();
   const allowedCommunities = filterAllowedCommunities(
     taxonomy.communities,
     MIN_COMMUNITY_MYTHS
   );
-  const community = allowedCommunities.find((c) => c.slug === params.slug);
+  const community = allowedCommunities.find((c) => c.slug === slug);
 
   if (!community) {
     notFound();
   }
 
-  const communityInfo = COMMUNITY_INFO[params.slug] || {
+  const communityInfo = COMMUNITY_INFO[slug] || {
     title: community.name,
     description: `Pueblo indígena de la región ${community.region}.`,
     longDescription: `El pueblo ${community.name} es parte del patrimonio cultural de Colombia, preservando tradiciones ancestrales en la región ${community.region}. Sus mitos transmiten conocimientos, valores y cosmovisiones que han sido heredados de generación en generación.`,

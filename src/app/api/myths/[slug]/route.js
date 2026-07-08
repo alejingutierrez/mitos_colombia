@@ -1,11 +1,13 @@
 import { NextResponse } from "next/server";
 import { getMythBySlug } from "../../../../lib/myths";
+import { resolveRouteParams } from "../../../../lib/next-route-props";
 
 export const runtime = "nodejs";
 
 export async function GET(_request, { params }) {
   try {
-    const myth = await getMythBySlug(params.slug);
+    const { slug } = await resolveRouteParams(params);
+    const myth = await getMythBySlug(slug);
     if (!myth) {
       return NextResponse.json({ error: "Not found" }, { status: 404 });
     }

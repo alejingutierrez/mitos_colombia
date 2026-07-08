@@ -6,6 +6,7 @@ import {
 } from "../../../lib/myths";
 import { Comments } from "../../../components/Comments";
 import { buildSeoMetadata, getSeoEntry } from "../../../lib/seo";
+import { resolveRouteParams } from "../../../lib/next-route-props";
 import MythLocationMapClient from "../../../components/MythLocationMapClient";
 import { ArticleJsonLd, BreadcrumbJsonLd } from "../../../components/StructuredData";
 import { regionSlugFromName, communitySlugFromName } from "../../../lib/taxonomy-slug";
@@ -29,7 +30,8 @@ const SITE_URL = (
 const COLOMBIA_CENTER = { lat: 4.5709, lng: -74.2973 };
 
 export async function generateMetadata({ params }) {
-  const myth = await getMythBySlug(params.slug);
+  const { slug } = await resolveRouteParams(params);
+  const myth = await getMythBySlug(slug);
   if (!myth) {
     return {
       title: "Mito no encontrado | Mitos de Colombia",
@@ -38,7 +40,7 @@ export async function generateMetadata({ params }) {
   }
 
   const keywords = [myth.focus_keyword, ...(myth.keywords || [])].filter(Boolean);
-  const seo = await getSeoEntry("myth", params.slug);
+  const seo = await getSeoEntry("myth", slug);
 
   return buildSeoMetadata({
     fallback: {
@@ -47,7 +49,7 @@ export async function generateMetadata({ params }) {
       keywords,
     },
     seo,
-    canonicalPath: `/mitos/${params.slug}`,
+    canonicalPath: `/mitos/${slug}`,
     openGraphType: "article",
     imageUrl: myth.image_url || undefined,
   });
@@ -61,7 +63,8 @@ function parseCoord(value) {
 }
 
 export default async function MythDetailPage({ params }) {
-  const myth = await getMythBySlug(params.slug);
+  const { slug } = await resolveRouteParams(params);
+  const myth = await getMythBySlug(slug);
   if (!myth) {
     notFound();
   }

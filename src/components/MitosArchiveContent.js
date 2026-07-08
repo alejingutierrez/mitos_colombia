@@ -16,6 +16,7 @@ import {
 import { Header, MythGrid } from "./organisms";
 import { filterAllowedCommunities } from "../lib/communityFilters";
 import { getTaxonomy, listMyths } from "../lib/myths";
+import { resolveSearchParams } from "../lib/next-route-props";
 
 export const DEFAULT_LIMIT = 24;
 
@@ -40,11 +41,15 @@ function buildQueryString(base) {
 }
 
 export async function MitosArchiveContent({ page = 1, searchParams = {} }) {
-  const region = paramValue(searchParams.region);
-  const community = paramValue(searchParams.community);
-  const tag = paramValue(searchParams.tag);
-  const q = paramValue(searchParams.q);
-  const limit = Number.parseInt(paramValue(searchParams.limit) || DEFAULT_LIMIT, 10);
+  const resolvedSearchParams = await resolveSearchParams(searchParams);
+  const region = paramValue(resolvedSearchParams.region);
+  const community = paramValue(resolvedSearchParams.community);
+  const tag = paramValue(resolvedSearchParams.tag);
+  const q = paramValue(resolvedSearchParams.q);
+  const limit = Number.parseInt(
+    paramValue(resolvedSearchParams.limit) || DEFAULT_LIMIT,
+    10
+  );
   const offset = (page - 1) * limit;
 
   const result = await listMyths({ region, community, tag, q, limit, offset });

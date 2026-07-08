@@ -6,6 +6,7 @@ import {
   getBaseUrl,
   ONE_HOUR,
 } from "../../../lib/sitemap";
+import { resolveRouteParams } from "../../../lib/next-route-props";
 
 export const runtime = "nodejs";
 export const revalidate = 3600;
@@ -52,7 +53,8 @@ async function getMythsPage(limit, offset) {
 export async function GET(request, { params }) {
   const baseUrl = getBaseUrl(request);
   const now = new Date();
-  const page = clampNumber(params?.page, 1, 9999, 1);
+  const { page: pageParam } = await resolveRouteParams(params);
+  const page = clampNumber(pageParam, 1, 9999, 1);
   const limit = MYTHS_PER_SITEMAP;
   const offset = (page - 1) * limit;
 

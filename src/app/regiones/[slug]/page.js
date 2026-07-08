@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import { filterAllowedCommunities } from "../../../lib/communityFilters";
 import { getTaxonomy, listMyths, listMythLinksByTaxon } from "../../../lib/myths";
 import { buildSeoMetadata, getSeoEntry } from "../../../lib/seo";
+import { resolveRouteParams } from "../../../lib/next-route-props";
 import { BreadcrumbJsonLd, CollectionPageJsonLd } from "../../../components/StructuredData";
 import { TaxonomyDetailTemplate } from "../../../components/templates";
 import { FilterableArchive } from "../../../components/organisms";
@@ -123,8 +124,9 @@ const REGION_INFO = {
 };
 
 export async function generateMetadata({ params }) {
+  const { slug } = await resolveRouteParams(params);
   const taxonomy = await getTaxonomy();
-  const region = taxonomy.regions.find((r) => r.slug === params.slug);
+  const region = taxonomy.regions.find((r) => r.slug === slug);
 
   if (!region) {
     return {
@@ -133,11 +135,11 @@ export async function generateMetadata({ params }) {
     };
   }
 
-  const regionInfo = REGION_INFO[params.slug] || {};
+  const regionInfo = REGION_INFO[slug] || {};
   const title = regionInfo.title || region.name;
   const description =
     regionInfo.description || `Explora los mitos de la región ${region.name}`;
-  const seo = await getSeoEntry("region", params.slug);
+  const seo = await getSeoEntry("region", slug);
 
   return buildSeoMetadata({
     fallback: {
@@ -146,27 +148,28 @@ export async function generateMetadata({ params }) {
       keywords: [region.name, "región cultural", "Colombia", "mitología", "tradición oral"],
     },
     seo,
-    canonicalPath: `/regiones/${params.slug}`,
+    canonicalPath: `/regiones/${slug}`,
   });
 }
 
 export default async function RegionDetailPage({ params }) {
+  const { slug } = await resolveRouteParams(params);
   const taxonomy = await getTaxonomy();
-  const region = taxonomy.regions.find((r) => r.slug === params.slug);
+  const region = taxonomy.regions.find((r) => r.slug === slug);
 
   if (!region) {
     notFound();
   }
 
-  const regionInfo = REGION_INFO[params.slug] || {
+  const regionInfo = REGION_INFO[slug] || {
     title: region.name,
     description: "Región cultural de Colombia con rica tradición mitológica.",
     longDescription: `La región ${region.name} es una de las áreas culturales de Colombia, hogar de diversos pueblos y tradiciones que han preservado mitos ancestrales sobre el origen del mundo, la naturaleza y la sociedad.`,
     characteristics: [],
   };
 
-  const accent = RIVER_REGIONS.includes(params.slug) ? "river" : "jungle";
-  const motif = REGION_MOTIFS[params.slug] || "hoja";
+  const accent = RIVER_REGIONS.includes(slug) ? "river" : "jungle";
+  const motif = REGION_MOTIFS[slug] || "hoja";
 
   // Muestra para exploración interactiva (filtrable en cliente, SSR = rastreable).
   const result = await listMyths({ region: region.slug, limit: 48, offset: 0 });

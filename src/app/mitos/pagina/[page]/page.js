@@ -6,6 +6,7 @@ import {
 } from "../../../../components/MitosArchiveContent";
 import { listMyths } from "../../../../lib/myths";
 import { buildSeoMetadata, getSeoEntry } from "../../../../lib/seo";
+import { resolveRouteParams } from "../../../../lib/next-route-props";
 
 export const runtime = "nodejs";
 export const revalidate = 300;
@@ -27,7 +28,8 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }) {
-  const page = parsePageParam(params.page);
+  const { page: pageParam } = await resolveRouteParams(params);
+  const page = parsePageParam(pageParam);
   if (page < 2) return null;
 
   const seo = await getSeoEntry("page", "mitos");
@@ -43,7 +45,8 @@ export async function generateMetadata({ params }) {
 }
 
 export default async function MitosPageByPage({ params, searchParams }) {
-  const page = parsePageParam(params.page);
+  const { page: pageParam } = await resolveRouteParams(params);
+  const page = parsePageParam(pageParam);
   if (page < 1) notFound();
   if (page === 1) redirect("/mitos");
 

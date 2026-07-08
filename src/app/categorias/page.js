@@ -3,6 +3,7 @@ import { Pagination } from "../../components/molecules";
 import { formatCategoryName } from "../../lib/formatters";
 import { getTaxonomy, listMythLinksByTaxon } from "../../lib/myths";
 import { buildSeoMetadata, getSeoEntry } from "../../lib/seo";
+import { resolveSearchParams } from "../../lib/next-route-props";
 
 export const runtime = "nodejs";
 export const revalidate = 3600;
@@ -31,6 +32,7 @@ function clampNumber(value, min, max, fallback) {
 }
 
 export default async function CategoriasPage({ searchParams }) {
+  const resolvedSearchParams = await resolveSearchParams(searchParams);
   const taxonomy = await getTaxonomy();
 
   // Filtrar tags excluyendo regiones y "ninguno"
@@ -42,8 +44,8 @@ export default async function CategoriasPage({ searchParams }) {
       tag.name.toLowerCase() !== "ninguno"
   );
 
-  const limit = clampNumber(searchParams?.limit, 12, 48, 24);
-  const offset = clampNumber(searchParams?.offset, 0, 5000, 0);
+  const limit = clampNumber(resolvedSearchParams.limit, 12, 48, 24);
+  const offset = clampNumber(resolvedSearchParams.offset, 0, 5000, 0);
   const paginatedTags = tags.slice(offset, offset + limit);
 
   // A few representative myth links per category for the hub cards.
