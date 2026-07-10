@@ -9,8 +9,6 @@ import {
   Icon,
   ButtonLink,
   Spotlight,
-  Stagger,
-  StaggerItem,
   Callout,
   CountUp,
 } from "../atoms";
@@ -65,13 +63,16 @@ function grouping(cards) {
 const TILTS = [-2, 0, 2, 0];
 function CardGrid({ cards }) {
   return (
-    <Stagger className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5" gap={0.04}>
+    <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
       {cards.map((c, i) => (
-        <StaggerItem key={c.slug || c.myth_slug || c.card_name || i}>
+        <div
+          key={c.slug || c.myth_slug || c.card_name || i}
+          style={{ contentVisibility: "auto", containIntrinsicSize: "320px 480px" }}
+        >
           <TarotCard card={c} tilt={TILTS[i % 4]} className="h-full" />
-        </StaggerItem>
+        </div>
       ))}
-    </Stagger>
+    </div>
   );
 }
 
@@ -84,7 +85,7 @@ function DarkHead({ num, eyebrow, title, gloss, motif }) {
           <Motif name={motif} size={44} />
         </span>
       ) : (
-        <span className="mt-1 font-display text-3xl font-semibold tabular-nums" style={{ color: "rgba(246,233,207,0.22)" }} aria-hidden="true">
+        <span className="mt-1 font-display text-3xl font-semibold tabular-nums" style={{ color: "rgba(246,233,207,0.5)" }} aria-hidden="true">
           {String(num).padStart(2, "0")}
         </span>
       )}
@@ -154,7 +155,9 @@ function CartaDelDia({ card }) {
           <Eyebrow tone="jungle" className="mb-1">
             {card.arcana === "major" ? `Arcano mayor · ${mark}` : `Arcano menor · ${card.suit || ""}`}
           </Eyebrow>
-          <Heading level={3}>{card.card_name}</Heading>
+          <Heading level={2} className="text-lg">
+            {card.card_name}
+          </Heading>
           {card.reading_summary || card.meaning ? (
             <Text size="sm" tone="muted" className="mt-2">
               {card.reading_summary || card.meaning}

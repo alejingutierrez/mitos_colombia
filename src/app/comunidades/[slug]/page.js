@@ -220,6 +220,7 @@ export async function generateMetadata({ params }) {
     },
     seo,
     canonicalPath: `/comunidades/${slug}`,
+    imageUrl: community.image_url || undefined,
   });
 }
 

@@ -51,6 +51,17 @@ export function normalizeSeoTitle(value, maxLength = TITLE_LIMIT) {
   return truncateAtWord(title, maxLength);
 }
 
+export function normalizeBrandedSeoTitle(value, maxLength = TITLE_LIMIT) {
+  const title = cleanText(value);
+  if (!title) return title;
+
+  if (/mitos de colombia/i.test(title)) {
+    return normalizeSeoTitle(title, maxLength);
+  }
+
+  return normalizeSeoTitle(`${title}${BRAND_SUFFIX}`, maxLength);
+}
+
 export function normalizeSeoDescription(value) {
   let description = cleanText(value);
   if (!description) return description;

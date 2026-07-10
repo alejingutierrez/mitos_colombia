@@ -15,6 +15,7 @@ import {
   LeccionBlock,
   SimilitudesBlock,
   ProcedenciaBlock,
+  FuentesBlock,
   TerritorioBlock,
   PalabrasClaveBlock,
   deriveSections,
@@ -119,6 +120,10 @@ function MythBody({ myth, accent, related }) {
                 region={myth.region}
                 community={myth.community}
                 categoryPath={myth.category_path}
+              />
+              <FuentesBlock
+                sources={[...(myth.keySources || []), ...(myth.sources || [])]}
+                updatedAt={myth.editorialUpdatedAt || myth.updatedAt}
               />
               {showTerritorio ? (
                 <TerritorioBlock

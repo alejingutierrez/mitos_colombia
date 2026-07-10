@@ -966,6 +966,50 @@ export async function getMythsByTitles(titles = []) {
   return getMythsByTitlesSqlite(titles);
 }
 
+export async function getRouteOgImage(titles = []) {
+  const patterns = buildTitlePatterns(titles);
+  if (!patterns.length) return null;
+
+  if (isPostgres()) {
+    const sql = getSqlClient();
+    const result = await sql.query(
+      `
+        SELECT image_url
+        FROM myths
+        WHERE image_url IS NOT NULL
+          AND image_url != ''
+          AND (
+            title ILIKE ANY($1) OR
+            tags_raw ILIKE ANY($1) OR
+            focus_keywords_raw ILIKE ANY($1) OR
+            category_path ILIKE ANY($1)
+          )
+        ORDER BY id ASC
+        LIMIT 1
+      `,
+      [patterns.map((pattern) => `%${pattern}%`)]
+    );
+    return result.rows?.[0]?.image_url || null;
+  }
+
+  const db = getSqliteDb();
+  const { whereClause, params } = buildTitleWhereSqlite(patterns);
+  const row = db
+    .prepare(
+      `
+        SELECT myths.image_url
+        FROM myths
+        ${whereClause}
+          AND myths.image_url IS NOT NULL
+          AND myths.image_url != ''
+        ORDER BY myths.id ASC
+        LIMIT 1
+      `
+    )
+    .get(params);
+  return row?.image_url || null;
+}
+
 async function getMythsBySlugsPostgres(slugs = []) {
   if (!slugs.length) {
     return [];

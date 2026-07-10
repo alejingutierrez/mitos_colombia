@@ -138,12 +138,17 @@ export default async function RutasPage() {
             <Eyebrow tone="river" withRule className="mb-8">
               Guía de lectura
             </Eyebrow>
+            <Heading level={2} className="sr-only">
+              Guía de lectura
+            </Heading>
             <div className="grid gap-8 md:grid-cols-3">
               {guideSteps.map((step, i) => (
                 <div key={step.title}>
                   <div className="flex items-baseline gap-3">
                     <IndexNumber value={i + 1} size="sm" />
-                    <Heading level={4}>{step.title}</Heading>
+                    <Heading level={3} className="text-base font-semibold">
+                      {step.title}
+                    </Heading>
                   </div>
                   <Text size="sm" tone="muted" className="mt-2">
                     {step.detail}

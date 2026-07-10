@@ -6,6 +6,7 @@ import {
   createStaticSitemapEntries,
   ROUTE_CONTENT_LASTMOD,
   STATIC_CONTENT_LASTMOD,
+  STATIC_CONTENT_LASTMOD_BY_PATH,
 } from "../../src/lib/sitemap-entries.js";
 
 test("static sitemap entries use a stable content lastmod instead of the current time", () => {
@@ -16,7 +17,17 @@ test("static sitemap entries use a stable content lastmod instead of the current
     first.map((entry) => entry.lastModified),
     second.map((entry) => entry.lastModified)
   );
-  assert.ok(first.every((entry) => entry.lastModified === STATIC_CONTENT_LASTMOD));
+  assert.deepEqual(
+    Object.fromEntries(first.map((entry) => [new URL(entry.url).pathname, entry.lastModified])),
+    STATIC_CONTENT_LASTMOD_BY_PATH
+  );
+  assert.equal(
+    STATIC_CONTENT_LASTMOD,
+    Object.values(STATIC_CONTENT_LASTMOD_BY_PATH).sort(
+      (left, right) => new Date(right) - new Date(left)
+    )[0]
+  );
+  assert.ok(new Set(first.map((entry) => entry.lastModified)).size > 1);
 });
 
 test("route sitemap entries use a stable content lastmod instead of the current time", () => {

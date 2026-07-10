@@ -1,6 +1,10 @@
 import { DocumentTemplate } from "../../components/templates";
 import { TextLink } from "../../components/atoms";
-import { getDiverseMyths, getFeaturedMythsWithImages } from "../../lib/myths";
+import {
+  getDiverseMyths,
+  getFeaturedMythsWithImages,
+  getSourceCoverageStats,
+} from "../../lib/myths";
 import { buildSeoMetadata, getSeoEntry } from "../../lib/seo";
 
 export async function generateMetadata() {
@@ -153,13 +157,11 @@ const sections = [
     body: (
       <>
         <p>
-          Cada mito pasa por un proceso de revisión para asegurar que su
-          información sea coherente con el resto del archivo. Revisamos nombres
-          propios, referencias territoriales y coincidencias con mitos similares.
-          Esta revisión no homogeniza las historias; busca que se presenten con
-          la claridad suficiente para el lector sin borrar su identidad. Si hay
-          dudas sobre un dato, lo registramos como nota editorial y buscamos una
-          segunda fuente.
+          La revisión editorial avanza por etapas. Revisamos nombres propios,
+          referencias territoriales y coincidencias con mitos similares, pero una
+          ficha no se considera bibliográficamente verificada hasta que publica
+          fuentes concretas y consultables. Cuando esas referencias aún no están
+          disponibles, la página lo indica expresamente.
         </p>
         <p>
           También cuidamos la consistencia visual. Si un mito no cuenta con
@@ -205,10 +207,41 @@ const sections = [
 
 export default async function MetodologiaPage() {
   const seed = getDailySeed();
-  const [featuredMyths, diverseMyths] = await Promise.all([
+  const [featuredMyths, diverseMyths, sourceCoverage] = await Promise.all([
     getFeaturedMythsWithImages(6, seed),
     getDiverseMyths(6, seed),
+    getSourceCoverageStats(),
   ]);
+
+  const sourceCoverageSection = {
+    title: "Fuentes, adaptación y estado de verificación",
+    body: (
+      <>
+        <p>
+          El archivo distingue la procedencia cultural de una referencia
+          bibliográfica. Región y comunidad ayudan a situar el relato, pero no
+          reemplazan una fuente documental. En este momento, {sourceCoverage.mythsWithSources}{" "}
+          de {sourceCoverage.totalMyths} fichas públicas cuentan con referencias
+          editoriales enlazadas; las demás muestran de forma visible que su
+          bibliografía está pendiente de publicación.
+        </p>
+        <p>
+          Los textos del sitio son adaptaciones editoriales para lectura digital.
+          Algunas etapas de organización, resumen e ilustración utilizan
+          herramientas de asistencia digital, siempre sujetas a revisión humana.
+          Las fuentes enlazadas permiten volver al documento de origen y no deben
+          confundirse con la adaptación narrativa que presenta el archivo.
+        </p>
+        <p>
+          Si una ficha contiene una atribución incompleta o una versión local que
+          necesita contexto, puedes enviar la referencia desde{" "}
+          <TextLink href="/contacto">Contacto</TextLink>. Priorizamos correcciones
+          provenientes de comunidades, bibliotecas, archivos y publicaciones
+          académicas identificables.
+        </p>
+      </>
+    ),
+  };
 
   // En producción prioriza mitos con imagen; si no hay, cae a una muestra diversa.
   const relatedPool =
@@ -228,7 +261,7 @@ export default async function MetodologiaPage() {
       title="De la memoria oral a un archivo navegable"
       description="Nuestro método combina investigación territorial, diseño editorial y tecnología para que cada relato conserve su profundidad y sea fácil de explorar."
       breadcrumb={[{ label: "Inicio", href: "/" }, { label: "Metodología" }]}
-      sections={sections}
+      sections={[sourceCoverageSection, ...sections]}
       related={related}
       accent="river"
     />

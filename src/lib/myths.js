@@ -13,6 +13,34 @@ function normalizeInput(value) {
   return trimmed.length ? trimmed : null;
 }
 
+function parseJsonArray(value) {
+  if (Array.isArray(value)) return value;
+  if (!value) return [];
+  try {
+    const parsed = JSON.parse(value);
+    return Array.isArray(parsed) ? parsed : [];
+  } catch {
+    return [];
+  }
+}
+
+function normalizeEditorialProvenance(row) {
+  if (!row) {
+    return {
+      sources: [],
+      keySources: [],
+      researchNotes: "",
+      editorialUpdatedAt: null,
+    };
+  }
+  return {
+    sources: parseJsonArray(row.sources_json),
+    keySources: parseJsonArray(row.key_sources_json),
+    researchNotes: String(row.research_notes || "").trim(),
+    editorialUpdatedAt: row.editorial_updated_at || row.updated_at || null,
+  };
+}
+
 function clampNumber(value, min, max, fallback) {
   const parsed = Number.parseInt(value, 10);
   if (Number.isNaN(parsed)) {
@@ -408,10 +436,29 @@ function getMythBySlugSqlite(slug) {
     .all(myth.id)
     .map((row) => row.keyword);
 
+  let provenance = normalizeEditorialProvenance(null);
+  try {
+    const editorial = db
+      .prepare(
+        `
+        SELECT sources_json, key_sources_json, research_notes,
+               updated_at AS editorial_updated_at
+        FROM editorial_myths
+        WHERE source_myth_id = ?
+        LIMIT 1
+      `
+      )
+      .get(myth.id);
+    provenance = normalizeEditorialProvenance(editorial);
+  } catch (error) {
+    console.error("[MYTHS] Editorial provenance unavailable (SQLite):", error);
+  }
+
   return {
     ...myth,
     tags,
     keywords,
+    ...provenance,
   };
 }
 
@@ -429,10 +476,15 @@ async function getMythBySlugPostgres(slug) {
         regions.name AS region,
         regions.slug AS region_slug,
         communities.name AS community,
-        communities.slug AS community_slug
+        communities.slug AS community_slug,
+        editorial_myths.sources_json,
+        editorial_myths.key_sources_json,
+        editorial_myths.research_notes,
+        editorial_myths.updated_at AS editorial_updated_at
       FROM myths
       JOIN regions ON regions.id = myths.region_id
       LEFT JOIN communities ON communities.id = myths.community_id
+      LEFT JOIN editorial_myths ON editorial_myths.source_myth_id = myths.id
       WHERE myths.slug = $1
       LIMIT 1
     `,
@@ -465,10 +517,13 @@ async function getMythBySlugPostgres(slug) {
     [myth.id]
   );
 
+  const provenance = normalizeEditorialProvenance(myth);
+
   return {
     ...myth,
     tags: tagsResult.rows,
     keywords: keywordsResult.rows.map((row) => row.keyword),
+    ...provenance,
   };
 }
 
@@ -1101,6 +1156,68 @@ export async function getHomeStats() {
       myths_with_images: 0,
       total_tags: 0
     };
+  }
+}
+
+async function getSourceCoverageStatsPostgres() {
+  const sql = getSqlClient();
+  const result = await sql.query(`
+    SELECT
+      (SELECT COUNT(*)::int FROM myths) AS total_myths,
+      COUNT(*) FILTER (
+        WHERE NULLIF(TRIM(em.sources_json), '') IS NOT NULL
+          AND em.sources_json NOT IN ('[]', 'null')
+      )::int AS myths_with_sources,
+      COUNT(*) FILTER (
+        WHERE NULLIF(TRIM(em.key_sources_json), '') IS NOT NULL
+          AND em.key_sources_json NOT IN ('[]', 'null')
+      )::int AS myths_with_key_sources
+    FROM editorial_myths em
+  `);
+  return result.rows?.[0] || {};
+}
+
+function getSourceCoverageStatsSqlite() {
+  const db = getSqliteDb();
+  return db
+    .prepare(
+      `
+      SELECT
+        (SELECT COUNT(*) FROM myths) AS total_myths,
+        SUM(
+          CASE WHEN NULLIF(TRIM(sources_json), '') IS NOT NULL
+            AND sources_json NOT IN ('[]', 'null') THEN 1 ELSE 0 END
+        ) AS myths_with_sources,
+        SUM(
+          CASE WHEN NULLIF(TRIM(key_sources_json), '') IS NOT NULL
+            AND key_sources_json NOT IN ('[]', 'null') THEN 1 ELSE 0 END
+        ) AS myths_with_key_sources
+      FROM editorial_myths
+    `
+    )
+    .get();
+}
+
+const getSourceCoverageStatsCached = unstable_cache(
+  async () => {
+    if (isPostgres()) return getSourceCoverageStatsPostgres();
+    return getSourceCoverageStatsSqlite();
+  },
+  ["source-coverage-stats"],
+  { revalidate: ONE_HOUR, tags: ["myth"] }
+);
+
+export async function getSourceCoverageStats() {
+  try {
+    const row = await getSourceCoverageStatsCached();
+    return {
+      totalMyths: Number(row?.total_myths || 0),
+      mythsWithSources: Number(row?.myths_with_sources || 0),
+      mythsWithKeySources: Number(row?.myths_with_key_sources || 0),
+    };
+  } catch (error) {
+    console.error("[MYTHS] Source coverage stats unavailable:", error);
+    return { totalMyths: 0, mythsWithSources: 0, mythsWithKeySources: 0 };
   }
 }
 

@@ -2,6 +2,7 @@ import assert from "node:assert/strict";
 import test from "node:test";
 
 import {
+  normalizeBrandedSeoTitle,
   normalizeSeoDescription,
   normalizeSeoTitle,
   pickSeoTitle,
@@ -15,6 +16,24 @@ test("normalizeSeoTitle keeps long SEO titles within snippet-friendly bounds", (
 
   assert.ok(title.length <= 60, title);
   assert.ok(title.endsWith("| Mitos de Colombia"), title);
+});
+
+test("normalizeBrandedSeoTitle reserves space for the brand in the final title", () => {
+  const title = normalizeBrandedSeoTitle(
+    "Metodología Editorial - Archivo de Mitos Colombianos"
+  );
+
+  assert.ok(title.length <= 60, title);
+  assert.ok(title.endsWith("| Mitos de Colombia"), title);
+});
+
+test("normalizeBrandedSeoTitle does not duplicate an existing brand", () => {
+  const title = normalizeBrandedSeoTitle(
+    "Mitos de Colombia - Explora relatos y narrativas"
+  );
+
+  assert.equal((title.match(/Mitos de Colombia/g) || []).length, 1);
+  assert.ok(title.length <= 60, title);
 });
 
 test("normalizeSeoDescription expands descriptions that are too thin for snippets", () => {

@@ -1,6 +1,7 @@
 import { getSqlClient, getSqliteDb, isPostgres } from "./db";
 import { withRetry } from "./db-resilience";
 import {
+  normalizeBrandedSeoTitle,
   normalizeSeoDescription,
   normalizeSeoTitle,
   pickSeoTitle,
@@ -98,7 +99,7 @@ export function buildSeoMetadata({
   imageUrl,
   preferFallbackTitle = false,
 }) {
-  const metaTitle = normalizeSeoTitle(
+  const metaTitle = normalizeBrandedSeoTitle(
     pickSeoTitle({
       seoTitle: seo?.meta_title,
       fallbackTitle: fallback.title,

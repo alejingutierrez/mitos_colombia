@@ -114,7 +114,7 @@ export function Footer({
           <p className="font-body text-sm text-mist-100/60">
             © {year} Mitos de Colombia
           </p>
-          <p className="font-body text-sm text-mist-100/40">{tagline}</p>
+          <p className="font-body text-sm text-mist-100/70">{tagline}</p>
         </div>
       </Container>
     </footer>

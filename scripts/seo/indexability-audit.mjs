@@ -37,12 +37,38 @@ function normalizeComparableUrl(value) {
   }
 }
 
+function urlsMatchCanonical(canonical, auditedUrl) {
+  try {
+    const canonicalUrl = new URL(canonical);
+    const targetUrl = new URL(auditedUrl);
+    const targetIsLocal = ["localhost", "127.0.0.1", "::1"].includes(
+      targetUrl.hostname
+    );
+    if (!targetIsLocal && canonicalUrl.origin !== targetUrl.origin) return false;
+    return (
+      `${canonicalUrl.pathname.replace(/\/+$/, "")}${canonicalUrl.search}` ===
+      `${targetUrl.pathname.replace(/\/+$/, "")}${targetUrl.search}`
+    );
+  } catch {
+    return normalizeComparableUrl(canonical) === normalizeComparableUrl(auditedUrl);
+  }
+}
+
 function parseJsonLdBlocks(html) {
   return [
     ...String(html || "").matchAll(
       /<script\b[^>]*type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi
     ),
   ].map((match) => match[1].trim());
+}
+
+function visibleText(html) {
+  return String(html || "")
+    .replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, " ")
+    .replace(/<style\b[^>]*>[\s\S]*?<\/style>/gi, " ")
+    .replace(/<[^>]+>/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
 }
 
 const SECTION_LINK_MINIMUMS = {
@@ -87,6 +113,10 @@ export function auditHtml(url, html, headers) {
     html
   );
   const title = extractFirst(/<title[^>]*>([^<]*)<\/title>/i, html);
+  const description = extractFirst(
+    /<meta\b[^>]*name=["']description["'][^>]*content=["']([^"']*)["'][^>]*>/i,
+    html
+  );
   const metaRobots = extractFirst(
     /<meta\b[^>]*name=["']robots["'][^>]*content=["']([^"']+)["'][^>]*>/i,
     html
@@ -105,12 +135,15 @@ export function auditHtml(url, html, headers) {
   const mythLinkCount = countMythLinks(html);
   const linkFloor = expectedMythLinkFloor(url);
   const hasTooFewMythLinks = linkFloor > 0 && mythLinkCount < linkFloor;
+  const hasZeroMetricText = /\b0\s+(?:mitos|arcanos|mayores|menores|palos)\b/i.test(
+    visibleText(html)
+  );
 
   return {
     canonical,
     canonicalSelf:
       Boolean(canonical) &&
-      normalizeComparableUrl(canonical) === normalizeComparableUrl(url),
+      urlsMatchCanonical(canonical, url),
     hasNoindex: /noindex/i.test(`${metaRobots} ${xRobots}`),
     h1Count: (String(html || "").match(/<h1\b/gi) || []).length,
     jsonLdCount: jsonLdBlocks.length,
@@ -119,6 +152,10 @@ export function auditHtml(url, html, headers) {
     mythLinkFloor: linkFloor,
     hasTooFewMythLinks,
     title,
+    titleLength: title.length,
+    description,
+    descriptionLength: description.length,
+    hasZeroMetricText,
   };
 }
 
@@ -145,16 +182,35 @@ function parseArgs(argv) {
 }
 
 async function fetchText(url) {
-  const response = await fetch(url, {
-    headers: { "user-agent": GOOGLEBOT_UA, accept: "text/html,application/xml" },
-  });
-  return {
-    response,
-    text: await response.text(),
-  };
+  let lastError;
+  for (let attempt = 1; attempt <= 3; attempt += 1) {
+    try {
+      const response = await fetch(url, {
+        headers: { "user-agent": GOOGLEBOT_UA, accept: "text/html,application/xml" },
+      });
+      return {
+        response,
+        text: await response.text(),
+      };
+    } catch (error) {
+      lastError = error;
+      if (attempt < 3) {
+        await new Promise((resolve) => setTimeout(resolve, attempt * 200));
+      }
+    }
+  }
+  throw lastError;
 }
 
-async function collectSitemapUrls(sitemapUrl) {
+function useAuditOrigin(url, auditOrigin) {
+  const parsed = new URL(url);
+  return new URL(`${parsed.pathname}${parsed.search}`, auditOrigin).toString();
+}
+
+async function collectSitemapUrls(
+  sitemapUrl,
+  auditOrigin = new URL(sitemapUrl).origin
+) {
   const { response, text } = await fetchText(sitemapUrl);
   if (!response.ok) {
     throw new Error(`Could not fetch sitemap ${sitemapUrl}: HTTP ${response.status}`);
@@ -162,11 +218,13 @@ async function collectSitemapUrls(sitemapUrl) {
 
   const locs = extractLocs(text);
   if (/<sitemapindex\b/i.test(text)) {
-    const nested = await Promise.all(locs.map((loc) => collectSitemapUrls(loc)));
+    const nested = await Promise.all(
+      locs.map((loc) => collectSitemapUrls(useAuditOrigin(loc, auditOrigin), auditOrigin))
+    );
     return nested.flat();
   }
 
-  return locs;
+  return locs.map((loc) => useAuditOrigin(loc, auditOrigin));
 }
 
 async function mapLimit(items, limit, mapper) {
@@ -200,7 +258,17 @@ async function auditUrl(url, sitemapUrls) {
     if (htmlAudit?.hasNoindex) issues.push("noindex");
     if (htmlAudit && !htmlAudit.canonical) issues.push("missing_canonical");
     if (htmlAudit && !htmlAudit.canonicalSelf) issues.push("non_self_canonical");
+    if (htmlAudit && !htmlAudit.title) issues.push("missing_title");
+    if (htmlAudit?.titleLength > 60) {
+      issues.push(`title_too_long:${htmlAudit.titleLength}`);
+    }
+    if (htmlAudit && !htmlAudit.description) issues.push("missing_description");
+    if (htmlAudit && htmlAudit.h1Count !== 1) {
+      issues.push(`h1_count:${htmlAudit.h1Count}`);
+    }
+    if (htmlAudit && htmlAudit.jsonLdCount === 0) issues.push("missing_jsonld");
     if (htmlAudit && !htmlAudit.jsonLdValid) issues.push("invalid_jsonld");
+    if (htmlAudit?.hasZeroMetricText) issues.push("ssr_zero_metric");
     if (htmlAudit?.hasTooFewMythLinks) {
       issues.push(
         `too_few_myth_links:${htmlAudit.mythLinkCount}/${htmlAudit.mythLinkFloor}`
@@ -222,6 +290,22 @@ async function auditUrl(url, sitemapUrls) {
       inSitemap: sitemapUrls.has(url),
       issues: [`fetch_failed:${error.message}`],
     };
+  }
+}
+
+async function auditArchiveVariant(url, canonicalUrl) {
+  try {
+    const { response, text } = await fetchText(url);
+    const htmlAudit = auditHtml(url, text, response.headers);
+    const issues = [];
+    if (response.status !== 200) issues.push(`HTTP ${response.status}`);
+    if (!htmlAudit.hasNoindex) issues.push("missing_noindex");
+    if (!urlsMatchCanonical(htmlAudit.canonical, canonicalUrl)) {
+      issues.push("wrong_canonical");
+    }
+    return { url, status: response.status, issues, ...htmlAudit };
+  } catch (error) {
+    return { url, status: 0, issues: [`fetch_failed:${error.message}`] };
   }
 }
 
@@ -272,6 +356,22 @@ export async function runCli(argv = process.argv.slice(2)) {
   );
   printSummary(sitemapResults, "Sitemap audit");
 
+  const origin = new URL(options.sitemap).origin;
+  const archiveCanonical = `${origin}/mitos`;
+  const archiveVariants = [
+    `${archiveCanonical}?q=agua`,
+    `${archiveCanonical}?region=andina`,
+    `${archiveCanonical}?community=muisca`,
+    `${archiveCanonical}?tag=agua`,
+    `${archiveCanonical}?limit=100`,
+  ];
+  const archiveResults = await mapLimit(
+    archiveVariants,
+    Math.min(options.concurrency, archiveVariants.length),
+    (url) => auditArchiveVariant(url, archiveCanonical)
+  );
+  printSummary(archiveResults, "Archive variant audit");
+
   let inputResults = [];
   if (inputUrls.length) {
     inputResults = await mapLimit(inputUrls, options.concurrency, (url) =>
@@ -280,7 +380,7 @@ export async function runCli(argv = process.argv.slice(2)) {
     printSummary(inputResults, "Input audit");
   }
 
-  const failed = [...sitemapResults, ...inputResults].some(
+  const failed = [...sitemapResults, ...archiveResults, ...inputResults].some(
     (item) => item.issues.length > 0
   );
   return failed ? 1 : 0;

@@ -5,8 +5,12 @@ import {
   parsePageParam,
 } from "../../../../components/MitosArchiveContent";
 import { listMyths } from "../../../../lib/myths";
+import { archiveRobots } from "../../../../lib/archive-seo";
 import { buildSeoMetadata, getSeoEntry } from "../../../../lib/seo";
-import { resolveRouteParams } from "../../../../lib/next-route-props";
+import {
+  resolveRouteParams,
+  resolveSearchParams,
+} from "../../../../lib/next-route-props";
 
 export const runtime = "nodejs";
 export const revalidate = 300;
@@ -27,13 +31,14 @@ export async function generateStaticParams() {
   return params;
 }
 
-export async function generateMetadata({ params }) {
+export async function generateMetadata({ params, searchParams }) {
   const { page: pageParam } = await resolveRouteParams(params);
+  const resolvedSearchParams = await resolveSearchParams(searchParams);
   const page = parsePageParam(pageParam);
   if (page < 2) return null;
 
   const seo = await getSeoEntry("page", "mitos");
-  return buildSeoMetadata({
+  const metadata = buildSeoMetadata({
     fallback: {
       title: `Archivo de mitos — página ${page}`,
       description: `Continuación del archivo de mitos colombianos. Página ${page} de la colección.`,
@@ -42,6 +47,8 @@ export async function generateMetadata({ params }) {
     seo,
     canonicalPath: `/mitos/pagina/${page}`,
   });
+  metadata.robots = archiveRobots(resolvedSearchParams);
+  return metadata;
 }
 
 export default async function MitosPageByPage({ params, searchParams }) {

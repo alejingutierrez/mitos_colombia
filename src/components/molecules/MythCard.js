@@ -45,7 +45,7 @@ export function MythCard({ myth, motif = "jaguar", variant = "default", classNam
           {community ? <Tag variant="neutral">{community}</Tag> : null}
         </div>
       )}
-      <Heading level={4} className="mb-1.5">
+      <Heading level={3} className="mb-1.5 text-base font-semibold">
         {title}
       </Heading>
       {excerpt ? (

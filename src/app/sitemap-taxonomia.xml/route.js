@@ -18,11 +18,20 @@ async function loadTaxonomy() {
   if (isPostgres()) {
     const sql = getSqlClient();
     const regionsResult = await sql.query(
-      "SELECT name, slug FROM regions WHERE slug IS NOT NULL AND slug != '' ORDER BY name ASC"
+      `
+        SELECT r.name, r.slug, COUNT(m.id)::int AS myth_count,
+               MAX(m.updated_at) AS last_modified
+        FROM regions r
+        LEFT JOIN myths m ON m.region_id = r.id
+        WHERE r.slug IS NOT NULL AND r.slug != ''
+        GROUP BY r.id, r.name, r.slug
+        ORDER BY r.name ASC
+      `
     );
     const communitiesResult = await sql.query(
       `
-        SELECT c.slug, c.name, COUNT(m.id)::int AS myth_count
+        SELECT c.slug, c.name, COUNT(m.id)::int AS myth_count,
+               MAX(m.updated_at) AS last_modified
         FROM communities c
         LEFT JOIN myths m ON m.community_id = c.id
         WHERE c.slug IS NOT NULL AND c.slug != ''
@@ -32,9 +41,11 @@ async function loadTaxonomy() {
     );
     const tagsResult = await sql.query(
       `
-        SELECT t.slug, t.name, COUNT(mt.myth_id)::int AS myth_count
+        SELECT t.slug, t.name, COUNT(mt.myth_id)::int AS myth_count,
+               MAX(m.updated_at) AS last_modified
         FROM tags t
         JOIN myth_tags mt ON mt.tag_id = t.id
+        JOIN myths m ON m.id = mt.myth_id
         WHERE t.slug IS NOT NULL AND t.slug != ''
         GROUP BY t.id, t.slug, t.name
         ORDER BY t.name ASC
@@ -51,13 +62,22 @@ async function loadTaxonomy() {
   const db = getSqliteDb();
   const regions = db
     .prepare(
-      "SELECT name, slug FROM regions WHERE slug IS NOT NULL AND slug != '' ORDER BY name COLLATE NOCASE ASC"
+      `
+        SELECT r.name, r.slug, COUNT(m.id) AS myth_count,
+               MAX(m.updated_at) AS last_modified
+        FROM regions r
+        LEFT JOIN myths m ON m.region_id = r.id
+        WHERE r.slug IS NOT NULL AND r.slug != ''
+        GROUP BY r.id
+        ORDER BY r.name COLLATE NOCASE ASC
+      `
     )
     .all();
   const communities = db
     .prepare(
       `
-        SELECT c.slug, c.name, COUNT(m.id) AS myth_count
+        SELECT c.slug, c.name, COUNT(m.id) AS myth_count,
+               MAX(m.updated_at) AS last_modified
         FROM communities c
         LEFT JOIN myths m ON m.community_id = c.id
         WHERE c.slug IS NOT NULL AND c.slug != ''
@@ -69,9 +89,11 @@ async function loadTaxonomy() {
   const tags = db
     .prepare(
       `
-        SELECT t.slug, t.name, COUNT(mt.myth_id) AS myth_count
+        SELECT t.slug, t.name, COUNT(mt.myth_id) AS myth_count,
+               MAX(m.updated_at) AS last_modified
         FROM tags t
         JOIN myth_tags mt ON mt.tag_id = t.id
+        JOIN myths m ON m.id = mt.myth_id
         WHERE t.slug IS NOT NULL AND t.slug != ''
         GROUP BY t.id
         ORDER BY t.name COLLATE NOCASE ASC
@@ -84,9 +106,9 @@ async function loadTaxonomy() {
 
 export async function GET(request) {
   const baseUrl = getBaseUrl(request);
-  const now = new Date();
   // Stable lastmod = last actual myth change, not regeneration time.
-  const stamp = (await getContentLastModified()) || now;
+  const stamp =
+    (await getContentLastModified()) || "2026-01-20T01:11:52.046Z";
 
   let regions = [];
   let communities = [];
@@ -117,19 +139,19 @@ export async function GET(request) {
   const entries = [
     ...categories.map((category) => ({
       url: buildUrl(baseUrl, `/categorias/${encodeSegment(category.slug)}`),
-      lastModified: stamp,
+      lastModified: category.last_modified || stamp,
       changeFrequency: "weekly",
       priority: 0.7,
     })),
     ...communities.map((community) => ({
       url: buildUrl(baseUrl, `/comunidades/${encodeSegment(community.slug)}`),
-      lastModified: stamp,
+      lastModified: community.last_modified || stamp,
       changeFrequency: "weekly",
       priority: 0.6,
     })),
     ...regions.map((region) => ({
       url: buildUrl(baseUrl, `/regiones/${encodeSegment(region.slug)}`),
-      lastModified: stamp,
+      lastModified: region.last_modified || stamp,
       changeFrequency: "weekly",
       priority: 0.6,
     })),

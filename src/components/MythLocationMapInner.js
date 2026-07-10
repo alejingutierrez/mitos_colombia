@@ -47,7 +47,16 @@ export default function MythLocationMapInner({
       className="h-full w-full"
     >
       <TileLayer url={MAP_TILES} attribution={MAP_ATTRIBUTION} />
-      <Marker position={position} icon={icon}>
+      <Marker
+        position={position}
+        icon={icon}
+        eventHandlers={{
+          add: (event) => {
+            const element = event.target.getElement?.();
+            if (element) element.setAttribute("aria-label", `Ubicación de ${title}`);
+          },
+        }}
+      >
         <Popup>
           <div className="p-2">
             <p className="text-sm font-semibold text-ink-900">{title}</p>

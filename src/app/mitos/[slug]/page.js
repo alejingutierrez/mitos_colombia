@@ -62,6 +62,25 @@ function parseCoord(value) {
   return Number.isFinite(parsed) ? parsed : null;
 }
 
+function latestIsoDate(...values) {
+  const validDates = values
+    .filter(Boolean)
+    .map((value) => new Date(value))
+    .filter((date) => !Number.isNaN(date.getTime()));
+  if (!validDates.length) return undefined;
+  return new Date(Math.max(...validDates.map((date) => date.getTime()))).toISOString();
+}
+
+function sourceUrls(myth) {
+  return [
+    ...(myth.keySources || []),
+    ...(myth.sources || []),
+  ]
+    .map((source) => source?.url)
+    .filter(Boolean)
+    .filter((url, index, urls) => urls.indexOf(url) === index);
+}
+
 export default async function MythDetailPage({ params }) {
   const { slug } = await resolveRouteParams(params);
   const myth = await getMythBySlug(slug);
@@ -107,6 +126,10 @@ export default async function MythDetailPage({ params }) {
     leccion: myth.leccion,
     similitudes: myth.similitudes,
     tags: myth.tags,
+    sources: myth.sources,
+    keySources: myth.keySources,
+    editorialUpdatedAt: myth.editorialUpdatedAt,
+    updatedAt: myth.updated_at,
   };
 
   const map = (
@@ -136,7 +159,8 @@ export default async function MythDetailPage({ params }) {
         keywords={myth.keywords?.length ? myth.keywords.join(", ") : undefined}
         siteUrl={SITE_URL}
         datePublished={myth.created_at ? new Date(myth.created_at).toISOString() : undefined}
-        dateModified={myth.updated_at ? new Date(myth.updated_at).toISOString() : undefined}
+        dateModified={latestIsoDate(myth.updated_at, myth.editorialUpdatedAt)}
+        citations={sourceUrls(myth)}
       />
       {SITE_URL && (
         <BreadcrumbJsonLd

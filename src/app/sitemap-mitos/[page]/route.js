@@ -7,6 +7,7 @@ import {
   ONE_HOUR,
 } from "../../../lib/sitemap";
 import { resolveRouteParams } from "../../../lib/next-route-props";
+import { LEGACY_CONTENT_LASTMOD } from "../../../lib/sitemap-entries";
 
 export const runtime = "nodejs";
 export const revalidate = 3600;
@@ -25,10 +26,12 @@ async function getMythsPage(limit, offset) {
     const sql = getSqlClient();
     const result = await sql.query(
       `
-        SELECT slug, title, excerpt, image_url, updated_at
-        FROM myths
-        WHERE slug IS NOT NULL AND slug != ''
-        ORDER BY id ASC
+        SELECT m.slug, m.title, m.excerpt, m.image_url,
+               GREATEST(m.updated_at, em.updated_at) AS updated_at
+        FROM myths m
+        LEFT JOIN editorial_myths em ON em.source_myth_id = m.id
+        WHERE m.slug IS NOT NULL AND m.slug != ''
+        ORDER BY m.id ASC
         LIMIT $1 OFFSET $2
       `,
       [limit, offset]
@@ -40,10 +43,17 @@ async function getMythsPage(limit, offset) {
   return db
     .prepare(
       `
-      SELECT slug, title, excerpt, image_url, updated_at
-      FROM myths
-      WHERE slug IS NOT NULL AND slug != ''
-      ORDER BY id ASC
+      SELECT m.slug, m.title, m.excerpt, m.image_url,
+             CASE
+               WHEN em.updated_at IS NOT NULL
+                 AND (m.updated_at IS NULL OR em.updated_at > m.updated_at)
+                 THEN em.updated_at
+               ELSE m.updated_at
+             END AS updated_at
+      FROM myths m
+      LEFT JOIN editorial_myths em ON em.source_myth_id = m.id
+      WHERE m.slug IS NOT NULL AND m.slug != ''
+      ORDER BY m.id ASC
       LIMIT ? OFFSET ?
     `
     )
@@ -52,7 +62,6 @@ async function getMythsPage(limit, offset) {
 
 export async function GET(request, { params }) {
   const baseUrl = getBaseUrl(request);
-  const now = new Date();
   const { page: pageParam } = await resolveRouteParams(params);
   const page = clampNumber(pageParam, 1, 9999, 1);
   const limit = MYTHS_PER_SITEMAP;
@@ -67,7 +76,7 @@ export async function GET(request, { params }) {
 
   const entries = myths.map((myth) => ({
     url: buildUrl(baseUrl, `/mitos/${encodeSegment(myth.slug)}`),
-    lastModified: myth.updated_at || now,
+    lastModified: myth.updated_at || LEGACY_CONTENT_LASTMOD,
     changeFrequency: "monthly",
     priority: 0.5,
     ...(myth.image_url && {

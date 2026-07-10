@@ -6,6 +6,17 @@ function normalizeUrl(value) {
   return String(value).trim().replace(/\/+$/, "");
 }
 
+function normalizeCitationUrl(value) {
+  try {
+    const url = new URL(String(value || "").trim());
+    return url.protocol === "https:" || url.protocol === "http:"
+      ? url.toString().replace(/\/+$/, "")
+      : "";
+  } catch {
+    return "";
+  }
+}
+
 function JsonLdScript({ data }) {
   if (!data) return null;
   // JSON.stringify is safe for application/ld+json script tags:
@@ -70,9 +81,14 @@ export function ArticleJsonLd({
   datePublished,
   dateModified,
   authorName,
+  citations = [],
 }) {
   const cleanUrl = normalizeUrl(url);
   const cleanSiteUrl = normalizeUrl(siteUrl);
+  const cleanCitations = citations
+    .map(normalizeCitationUrl)
+    .filter(Boolean)
+    .filter((citation, index, all) => all.indexOf(citation) === index);
   return (
     <JsonLdScript
       data={{
@@ -89,9 +105,15 @@ export function ArticleJsonLd({
         }),
         author: {
           "@type": "Organization",
-          name: authorName || "Mitos de Colombia",
+          name: authorName || "Equipo editorial de Mitos de Colombia",
           ...(cleanSiteUrl && { url: cleanSiteUrl }),
         },
+        reviewedBy: {
+          "@type": "Organization",
+          name: "Equipo editorial de Mitos de Colombia",
+          ...(cleanSiteUrl && { url: cleanSiteUrl }),
+        },
+        isAccessibleForFree: true,
         publisher: {
           "@type": "Organization",
           name: "Mitos de Colombia",
@@ -104,6 +126,7 @@ export function ArticleJsonLd({
           }),
         },
         ...(keywords && { keywords }),
+        ...(cleanCitations.length && { citation: cleanCitations }),
       }}
     />
   );

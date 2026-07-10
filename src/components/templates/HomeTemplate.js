@@ -97,7 +97,7 @@ function DarkSpine({ num, eyebrow, title, description }) {
     <div className="mb-12 flex items-start gap-5">
       <span
         className="mt-1 font-display text-[2.75rem] font-semibold leading-none tabular-nums"
-        style={{ color: "rgba(246,233,207,0.22)" }}
+        style={{ color: "rgba(246,233,207,0.5)" }}
         aria-hidden="true"
       >
         {String(num).padStart(2, "0")}
@@ -134,6 +134,7 @@ function HeroArtwork({ myth }) {
           alt={myth.title}
           ratio="4 / 5"
           priority
+          quality={68}
           sizes="(max-width: 768px) 100vw, 42vw"
           placeholderMotif={myth.motif}
           placeholderSize={200}
@@ -211,7 +212,9 @@ function GalleryCard({ myth }) {
           {myth.region}
           {myth.community ? ` · ${myth.community}` : ""}
         </p>
-        <Heading level={4}>{myth.title}</Heading>
+        <Heading level={3} className="text-base font-semibold">
+          {myth.title}
+        </Heading>
         <div className="mt-auto flex items-center justify-between pt-3">
           <span className="text-xs font-medium uppercase tracking-[0.14em] text-ink-500">Leer</span>
           <Icon name="arrow-up-right" size={16} className="mc-arrow text-jungle-600" />

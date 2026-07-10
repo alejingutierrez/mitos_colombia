@@ -264,6 +264,7 @@ export async function generateMetadata({ params }) {
     },
     seo,
     canonicalPath: `/categorias/${slug}`,
+    imageUrl: category.image_url || undefined,
     preferFallbackTitle: slug === "rio",
   });
 }

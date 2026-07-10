@@ -17,7 +17,7 @@ export function IndexNumber({ value, size = "md", className, ...props }) {
   return (
     <span
       className={cn(
-        "mc-index font-display font-semibold tabular-nums text-line-300",
+        "mc-index font-display font-semibold tabular-nums text-ink-700",
         sizes[size],
         className
       )}

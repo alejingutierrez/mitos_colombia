@@ -27,15 +27,12 @@ const body = Inter({
 
 export const metadata = {
   metadataBase: SITE_URL ? new URL(SITE_URL) : undefined,
-  title: {
-    default: "Mitos de Colombia",
-    template: "%s | Mitos de Colombia",
-  },
+  title: "Mitos de Colombia",
   description:
     "Archivo editorial de mitos colombianos, organizado por region, origen y tema.",
   manifest: "/manifest.json",
   icons: {
-    icon: "/favicon.png",
+    icon: "/favicon.svg",
     apple: "/apple-icon.png",
   },
 };

@@ -215,7 +215,7 @@ export function VersionesBlock({ text, accent = "jungle", index }) {
       <ol className="divide-y divide-line-100 border-y border-line-100">
         {ps.map((p, i) => (
           <li key={i} className="flex gap-5 py-5">
-            <span className="shrink-0 font-display text-2xl font-bold tabular-nums text-line-300">
+            <span className="shrink-0 font-display text-2xl font-bold tabular-nums text-ink-500">
               {String(i + 1).padStart(2, "0")}
             </span>
             <p className="font-body text-[1rem] leading-[1.7] text-ink-700">{p}</p>
@@ -291,6 +291,88 @@ export function ProcedenciaBlock({ region, community, categoryPath }) {
           <TextLink href="/metodologia" className="mt-2.5 inline-flex text-sm">
             Cómo documentamos cada relato
           </TextLink>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function normalizeSource(source) {
+  const title = String(source?.title || "").trim();
+  const summary = String(source?.summary || "").trim();
+  let url = "";
+  try {
+    const parsed = new URL(String(source?.url || ""));
+    if (parsed.protocol === "https:" || parsed.protocol === "http:") {
+      url = parsed.toString();
+    }
+  } catch {
+    url = "";
+  }
+  return title && url ? { title, summary, url } : null;
+}
+
+function formatReviewDate(value) {
+  if (!value) return "";
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) return "";
+  return new Intl.DateTimeFormat("es-CO", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+    timeZone: "America/Bogota",
+  }).format(date);
+}
+
+export function FuentesBlock({ sources = [], updatedAt }) {
+  const normalized = sources.map(normalizeSource).filter(Boolean).slice(0, 4);
+  const reviewDate = formatReviewDate(updatedAt);
+
+  return (
+    <div className="rounded border border-line-100 bg-mist-50 p-6">
+      <div className="flex items-start gap-3.5">
+        <Icon name="link" size={20} className="mt-0.5 shrink-0 text-river-600" />
+        <div className="min-w-0 flex-1">
+          <p className="text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-ink-700">
+            Fuentes y revisión editorial
+          </p>
+          {normalized.length ? (
+            <>
+              <p className="mt-2 text-sm leading-relaxed text-ink-700">
+                Esta ficha cuenta con referencias de contraste publicadas. La adaptación
+                narrativa del sitio no sustituye la consulta de las fuentes originales.
+              </p>
+              <ul className="mt-4 space-y-3">
+                {normalized.map((source) => (
+                  <li key={source.url} className="border-l-2 border-river-500/35 pl-4">
+                    <a
+                      href={source.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-display text-sm font-semibold text-river-700 underline decoration-river-500/35 underline-offset-4 hover:decoration-river-600"
+                    >
+                      {source.title}
+                    </a>
+                    {source.summary ? (
+                      <p className="mt-1 text-xs leading-relaxed text-ink-600">
+                        {source.summary}
+                      </p>
+                    ) : null}
+                  </li>
+                ))}
+              </ul>
+            </>
+          ) : (
+            <p className="mt-2 text-sm leading-relaxed text-ink-700">
+              La procedencia cultural está clasificada, pero la referencia bibliográfica
+              primaria aún está pendiente de publicación en esta ficha. No presentamos
+              esa clasificación como si fuera una cita documental.
+            </p>
+          )}
+          <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs text-ink-700">
+            {reviewDate ? <span>Última revisión: {reviewDate}</span> : null}
+            <TextLink href="/contacto">Aportar o corregir una fuente</TextLink>
+          </div>
         </div>
       </div>
     </div>

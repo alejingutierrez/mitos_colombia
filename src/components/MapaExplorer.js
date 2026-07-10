@@ -1,5 +1,6 @@
 "use client";
 
+import "leaflet/dist/leaflet.css";
 import { useEffect, useMemo, useRef, useState } from "react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
@@ -218,6 +219,10 @@ function MythMarker({ myth, onSelect, icon }) {
       icon={icon}
       riseOnHover={true}
       eventHandlers={{
+        add: (event) => {
+          const element = event.target.getElement?.();
+          if (element) element.setAttribute("aria-label", `Abrir mito ${myth.title}`);
+        },
         click: () => onSelect(myth),
       }}
     >
@@ -235,6 +240,15 @@ function GroupMarker({ group, isExpanded, onToggle }) {
       icon={getPinIcon({ count: group.items.length, isActive: isExpanded })}
       riseOnHover={true}
       eventHandlers={{
+        add: (event) => {
+          const element = event.target.getElement?.();
+          if (element) {
+            element.setAttribute(
+              "aria-label",
+              `Mostrar ${group.items.length} mitos en este lugar`
+            );
+          }
+        },
         click: () => onToggle(group.key),
       }}
     >
@@ -286,6 +300,10 @@ function ExpandedGroupMarkers({ group, onSelect }) {
             icon={getPinIcon({ count: 0, isActive: true })}
             riseOnHover={true}
             eventHandlers={{
+              add: (event) => {
+                const element = event.target.getElement?.();
+                if (element) element.setAttribute("aria-label", `Abrir mito ${myth.title}`);
+              },
               click: () => onSelect(myth),
             }}
           >

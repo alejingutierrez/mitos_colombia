@@ -26,6 +26,7 @@ test("audits indexability signals from rendered HTML", () => {
     <html>
       <head>
         <title>El agua</title>
+        <meta name="description" content="Un relato tradicional colombiano sobre el agua y la memoria del territorio." />
         <link rel="canonical" href="https://www.mitosdecolombia.com/mitos/el-agua" />
         <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article"}</script>
       </head>
@@ -49,6 +50,11 @@ test("audits indexability signals from rendered HTML", () => {
       mythLinkFloor: 3,
       hasTooFewMythLinks: false,
       title: "El agua",
+      titleLength: 7,
+      description:
+        "Un relato tradicional colombiano sobre el agua y la memoria del territorio.",
+      descriptionLength: 75,
+      hasZeroMetricText: false,
     }
   );
 });
@@ -110,4 +116,19 @@ test("extracts URLs from Search Console CSV exports and plain URL lists", () => 
     "https://www.mitosdecolombia.com/post/foo",
     "https://www.mitosdecolombia.com/mitos/el-agua",
   ]);
+});
+
+test("detects zero-valued metrics rendered into visible server HTML", () => {
+  const html = `
+    <html><head><title>Archivo</title></head>
+    <body><h1>Archivo</h1><p>0</p><p>Mitos</p></body></html>
+  `;
+
+  const result = auditHtml(
+    "https://www.mitosdecolombia.com/mitos",
+    html,
+    new Headers()
+  );
+
+  assert.equal(result.hasZeroMetricText, true);
 });

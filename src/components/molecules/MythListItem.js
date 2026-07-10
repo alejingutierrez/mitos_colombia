@@ -20,7 +20,7 @@ export function MythListItem({ myth, index, motif = "jaguar", className }) {
       )}
     >
       {index != null ? (
-        <span className="mc-index w-8 shrink-0 text-center font-display text-sm font-semibold tabular-nums text-line-300">
+        <span className="mc-index w-8 shrink-0 text-center font-display text-sm font-semibold tabular-nums text-ink-500">
           {String(index).padStart(2, "0")}
         </span>
       ) : null}
@@ -29,7 +29,7 @@ export function MythListItem({ myth, index, motif = "jaguar", className }) {
         <p className="truncate font-display text-[15px] font-bold text-ink-900">{title}</p>
         {meta ? <p className="truncate text-xs text-ink-500">{meta}</p> : null}
       </div>
-      <Icon name="chevron-right" size={18} className="mc-arrow shrink-0 text-line-300 group-hover:text-jungle-600" />
+      <Icon name="chevron-right" size={18} className="mc-arrow shrink-0 text-ink-500 group-hover:text-jungle-600" />
     </Link>
   );
 }

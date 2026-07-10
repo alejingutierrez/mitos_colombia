@@ -149,6 +149,7 @@ export async function generateMetadata({ params }) {
     },
     seo,
     canonicalPath: `/regiones/${slug}`,
+    imageUrl: region.image_url || undefined,
   });
 }
 

@@ -40,7 +40,7 @@ export function TaxonomyCard({ title, href = "#", count, motif = "hoja", imageUr
         {imageUrl ? <Motif name={motif} size={40} className="shrink-0" /> : null}
         <div className="min-w-0 flex-1">
           <div className="flex items-center gap-2">
-            <Heading level={4} className="truncate">
+            <Heading level={3} className="truncate text-base font-semibold">
               {title}
             </Heading>
             {count != null ? <Count>{count}</Count> : null}
