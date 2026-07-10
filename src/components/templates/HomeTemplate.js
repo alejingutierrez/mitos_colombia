@@ -134,7 +134,6 @@ function HeroArtwork({ myth }) {
           alt={myth.title}
           ratio="4 / 5"
           priority
-          quality={68}
           sizes="(max-width: 768px) 100vw, 42vw"
           placeholderMotif={myth.motif}
           placeholderSize={200}

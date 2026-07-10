@@ -137,7 +137,8 @@ function CartaDelDia({ card }) {
                     src={card.image_url}
                     alt={card.card_name}
                     fill
-                    sizes="180px"
+                    priority
+                    sizes="(max-width: 640px) 116px, 148px"
                     className="rounded-sm object-cover"
                   />
                 ) : (
