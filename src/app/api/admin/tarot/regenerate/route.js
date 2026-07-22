@@ -271,7 +271,7 @@ async function generateImageBuffer(prompt, isRetry = false) {
     const safePrompt = ensurePromptLength(prompt);
     const templateFile = await getTarotTemplateFile();
     const response = await openai.images.edit({
-      model: "gpt-image-1-mini",
+      model: process.env.IMAGE_GENERATION_MODEL || "gpt-image-2",
       image: templateFile,
       prompt: safePrompt,
       n: 1,

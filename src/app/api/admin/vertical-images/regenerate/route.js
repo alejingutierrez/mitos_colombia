@@ -2,7 +2,13 @@ import { NextResponse } from "next/server";
 import OpenAI from "openai";
 import { put, del } from "@vercel/blob";
 import { isPostgres, getSqlClient, getSqliteDb, getSqliteDbWritable } from "../../../../../lib/db.js";
-import { IMAGE_STYLE_GUIDE } from "../../../../../lib/image-guidelines.js";
+import {
+  buildBlobFilename,
+  buildCraftImagePrompt,
+  buildImageGenerationParams,
+  getImageDataBuffer,
+  IMAGE_PRESETS,
+} from "../../../../../lib/image-generation.js";
 
 export const runtime = "nodejs";
 export const maxDuration = 300; // 5 minutes max for image generation
@@ -58,63 +64,33 @@ function checkAuth(request) {
 }
 
 // Generate vertical image
-async function generateVerticalImage(prompt, slug, entityType, isRetry = false) {
+async function generateVerticalImage(prompt, slug, entityType, entity = {}, isRetry = false) {
   try {
     console.log(`[REGENERATE] Generating vertical image for ${slug}...`);
 
-    const enhancedPrompt = `CONTEXTO CULTURAL: Ilustración vertical (9:16) educativa de mitología colombiana con valor histórico y antropológico, destinada a uso editorial en redes sociales y medios digitales.
-
-${prompt}
-
-${IMAGE_STYLE_GUIDE}
-
-ESPECIFICACIONES TÉCNICAS:
-- Formato: Vertical 9:16 (ideal para Instagram Stories, Reels, TikTok)
-- Calidad: Alta resolución para impresión y uso digital
-- Estilo: Artístico, cinematográfico, profesional
-- Contenido: Apropiado para audiencia general, educativo y respetuoso`;
-
-    // Generate image with OpenAI
-    const response = await openai.images.generate({
-      model: "gpt-image-1-mini",
-      prompt: enhancedPrompt,
-      moderation: "low",
-      n: 1,
-      size: "1024x1536", // Vertical format 9:16
-      quality: "high",
+    const enhancedPrompt = buildCraftImagePrompt({
+      entity: {
+        ...entity,
+        type: entityType,
+        slug,
+        prompt,
+      },
+      orientation: "vertical",
     });
 
-    // Extract base64 data or URL
-    const b64Data = response.data?.[0]?.b64_json;
+    // Generate image with OpenAI
+    const response = await openai.images.generate(
+      buildImageGenerationParams({ prompt: enhancedPrompt, preset: "vertical" })
+    );
 
-    if (!b64Data) {
-      const imageUrl = response.data?.[0]?.url;
-      if (imageUrl) {
-        const imageResponse = await fetch(imageUrl);
-        if (!imageResponse.ok) {
-          throw new Error(`Failed to fetch image: ${imageResponse.status}`);
-        }
-        const arrayBuffer = await imageResponse.arrayBuffer();
-        const imageBuffer = Buffer.from(arrayBuffer);
-
-        const filename = `vertical/${entityType}/${slug}-${Date.now()}.png`;
-        const blob = await put(filename, imageBuffer, {
-          access: 'public',
-          contentType: 'image/png',
-        });
-        return blob.url;
-      }
-      throw new Error("No base64 data or URL received from OpenAI");
-    }
-
-    // Convert base64 to buffer
-    const imageBuffer = Buffer.from(b64Data, 'base64');
+    // Convert base64 to buffer. GPT Image models return b64_json by default.
+    const imageBuffer = getImageDataBuffer(response);
 
     // Upload to Vercel Blob Storage
-    const filename = `vertical/${entityType}/${slug}-${Date.now()}.png`;
+    const filename = buildBlobFilename({ preset: "vertical", slug, entityType });
     const blob = await put(filename, imageBuffer, {
       access: 'public',
-      contentType: 'image/png',
+      contentType: IMAGE_PRESETS.vertical.contentType,
     });
 
     return blob.url;
@@ -125,7 +101,7 @@ ESPECIFICACIONES TÉCNICAS:
       try {
         console.log("[REGENERATE] Safety violation detected. Rewriting prompt...");
         const safePrompt = await rewritePromptSafely(prompt);
-        return await generateVerticalImage(safePrompt, slug, entityType, true);
+        return await generateVerticalImage(safePrompt, slug, entityType, entity, true);
       } catch (rewriteError) {
         console.error("[REGENERATE] Safety fallback failed:", rewriteError);
         throw rewriteError;
@@ -243,7 +219,10 @@ export async function POST(request) {
     const newImageUrl = await generateVerticalImage(
       fullPrompt,
       verticalImage.entity_slug,
-      verticalImage.entity_type
+      verticalImage.entity_type,
+      {
+        name: verticalImage.entity_name,
+      }
     );
 
     console.log(`[REGENERATE] New image generated: ${newImageUrl}`);

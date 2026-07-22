@@ -232,15 +232,15 @@ toques artísticos. Composición vertical dramática.
 
 ### Formato de Imagen
 - **Dimensiones**: 1024x1536 pixels (9:16)
-- **Formato**: PNG
+- **Formato**: JPEG
 - **Calidad**: High
-- **Modelo**: gpt-image-1-mini
+- **Modelo**: gpt-image-2
 
 ### Almacenamiento
 - **Servicio**: Vercel Blob Storage
-- **Ruta**: `vertical/{entity_type}/{slug}-{timestamp}.png`
+- **Ruta**: `vertical/{entity_type}/{slug}-{timestamp}.jpg`
 - **Acceso**: Público
-- **Tipo de contenido**: image/png
+- **Tipo de contenido**: image/jpeg
 
 ### Límites y Tiempos
 - **Timeout**: 300 segundos (5 minutos)
