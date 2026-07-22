@@ -2,7 +2,13 @@ import { NextResponse } from "next/server";
 import OpenAI from "openai";
 import { put } from "@vercel/blob";
 import { isPostgres, getSqlClient, getSqliteDbWritable } from "../../../../../lib/db.js";
-import { IMAGE_STYLE_GUIDE } from "../../../../../lib/image-guidelines.js";
+import {
+  buildBlobFilename,
+  buildCraftImagePrompt,
+  buildImageGenerationParams,
+  getImageDataBuffer,
+  IMAGE_PRESETS,
+} from "../../../../../lib/image-generation.js";
 
 export const runtime = "nodejs";
 export const maxDuration = 300;
@@ -59,62 +65,37 @@ function checkAuth(request) {
 
 // Prompts base
 const BASE_PROMPTS = {
-  myth: "Ilustración vertical cinematográfica (9:16) de alta calidad artística para uso editorial. Estilo místico y atmosférico con iluminación dramática. Paleta de colores rica y vibrante inspirada en la naturaleza colombiana. Composición vertical que funciona perfectamente para formato de historia o reel. NO incluir texto, desnudez ni violencia gráfica.",
-  community: "Ilustración vertical (9:16) que representa la cultura y tradiciones de una comunidad indígena colombiana. Elementos culturales auténticos, vestimenta tradicional, y conexión con la naturaleza. Estilo artístico respetuoso y educativo. Composición vertical para formato editorial.",
-  category: "Ilustración vertical conceptual (9:16) que representa una categoría temática de mitología colombiana. Estilo artístico simbólico y místico. Composición vertical con elementos icónicos y memorables.",
-  region: "Paisaje vertical (9:16) que captura la esencia y biodiversidad de una región colombiana. Elementos naturales característicos, flora y fauna endémica. Estilo fotorrealista con toques artísticos. Composición vertical dramática."
+  myth: "Imagen vertical editorial de mito colombiano como fotografia frontal de una pieza fisica de papel artesanal, con geografia, simbolos culturales y escena principal clara. Sin texto, logos, desnudez ni violencia grafica.",
+  community: "Imagen vertical editorial sobre una comunidad o territorio colombiano como trabajo real de paper cut y paper relief fotografiado, con elementos culturales respetuosos y naturaleza local. Sin texto.",
+  category: "Imagen vertical editorial de categoria tematica de mitologia colombiana como tableau artesanal de papel, simbolico, tactil y culturalmente situado. Sin texto.",
+  region: "Imagen vertical editorial de region colombiana como paisaje fisico construido en capas de papel, con biodiversidad, geografia y cultura visual local. Sin texto."
 };
 
 // Generate vertical image
-async function generateVerticalImage(prompt, slug, entityType, isRetry = false) {
+async function generateVerticalImage(prompt, slug, entityType, entity = {}, isRetry = false) {
   try {
     console.log(`[IMG-VERTICAL-SINGLE] Generating image for ${entityType}:${slug}`);
 
-    const enhancedPrompt = `CONTEXTO CULTURAL: Ilustración vertical (9:16) educativa de mitología colombiana con valor histórico y antropológico.
-
-${prompt}
-
-${IMAGE_STYLE_GUIDE}
-
-ESPECIFICACIONES:
-- Formato: Vertical 9:16 para Stories/Reels
-- Calidad: Alta resolución
-- Estilo: Artístico, cinematográfico
-- Apropiado para audiencia general`;
-
-    const response = await openai.images.generate({
-      model: "gpt-image-1-mini",
-      prompt: enhancedPrompt,
-      moderation: "low",
-      n: 1,
-      size: "1024x1536",
-      quality: "high",
+    const enhancedPrompt = buildCraftImagePrompt({
+      entity: {
+        ...entity,
+        type: entityType,
+        name: entity.name,
+        slug,
+        prompt,
+      },
+      orientation: "vertical",
     });
 
-    const b64Data = response.data?.[0]?.b64_json;
+    const response = await openai.images.generate(
+      buildImageGenerationParams({ prompt: enhancedPrompt, preset: "vertical" })
+    );
 
-    if (!b64Data) {
-      const imageUrl = response.data?.[0]?.url;
-      if (imageUrl) {
-        const imageResponse = await fetch(imageUrl);
-        const arrayBuffer = await imageResponse.arrayBuffer();
-        const imageBuffer = Buffer.from(arrayBuffer);
-
-        const filename = `vertical/${entityType}/${slug}-${Date.now()}.png`;
-        const blob = await put(filename, imageBuffer, {
-          access: 'public',
-          contentType: 'image/png',
-        });
-        return blob.url;
-      }
-      throw new Error("No image data received");
-    }
-
-    const imageBuffer = Buffer.from(b64Data, 'base64');
-    const filename = `vertical/${entityType}/${slug}-${Date.now()}.png`;
+    const imageBuffer = getImageDataBuffer(response);
+    const filename = buildBlobFilename({ preset: "vertical", slug, entityType });
     const blob = await put(filename, imageBuffer, {
       access: 'public',
-      contentType: 'image/png',
+      contentType: IMAGE_PRESETS.vertical.contentType,
     });
 
     return blob.url;
@@ -125,7 +106,7 @@ ESPECIFICACIONES:
       try {
         console.log("[IMG-VERTICAL-SINGLE] Safety violation detected. Rewriting prompt...");
         const safePrompt = await rewritePromptSafely(prompt);
-        return await generateVerticalImage(safePrompt, slug, entityType, true);
+        return await generateVerticalImage(safePrompt, slug, entityType, entity, true);
       } catch (rewriteError) {
         console.error("[IMG-VERTICAL-SINGLE] Safety fallback failed:", rewriteError);
         throw rewriteError;
@@ -221,7 +202,16 @@ export async function POST(request) {
     }
 
     const body = await request.json();
-    const { entityType, entityId, entityName, entitySlug, customPrompt } = body;
+    const {
+      entityType,
+      entityId,
+      entityName,
+      entitySlug,
+      customPrompt,
+      region,
+      community,
+      excerpt,
+    } = body;
 
     if (!entityType || !entityId || !entityName || !entitySlug) {
       return NextResponse.json(
@@ -239,7 +229,12 @@ export async function POST(request) {
       : basePrompt;
 
     // Generate image
-    const imageUrl = await generateVerticalImage(fullPrompt, entitySlug, entityType);
+    const imageUrl = await generateVerticalImage(fullPrompt, entitySlug, entityType, {
+      name: entityName,
+      region,
+      community,
+      excerpt,
+    });
     console.log(`[GEN-SINGLE] Image generated: ${imageUrl}`);
 
     // Save to database

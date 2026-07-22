@@ -2,7 +2,13 @@ import { NextResponse } from "next/server";
 import OpenAI from "openai";
 import { put } from "@vercel/blob";
 import { isPostgres, getSqlClient, getSqliteDb, getSqliteDbWritable } from "../../../../lib/db.js";
-import { IMAGE_STYLE_GUIDE } from "../../../../lib/image-guidelines.js";
+import {
+  buildBlobFilename,
+  buildCraftImagePrompt,
+  buildImageGenerationParams,
+  getImageDataBuffer,
+  IMAGE_PRESETS,
+} from "../../../../lib/image-generation.js";
 
 export const runtime = "nodejs";
 export const maxDuration = 300; // 5 minutes max for image generation
@@ -39,23 +45,44 @@ async function getItemsWithoutImages(limit = 10) {
     // Use UNION ALL to get all items in a single query - much faster!
     const result = await db`
       (
-        SELECT id, title as name, slug, image_prompt, 'myth' as type, 1 as priority
+        SELECT
+          myths.id,
+          myths.title as name,
+          myths.slug,
+          myths.image_prompt,
+          myths.excerpt,
+          regions.name as region,
+          COALESCE(communities.name, '') as community,
+          'myth' as type,
+          1 as priority
         FROM myths
-        WHERE image_url IS NULL AND image_prompt IS NOT NULL
-        ORDER BY id
+        JOIN regions ON regions.id = myths.region_id
+        LEFT JOIN communities ON communities.id = myths.community_id
+        WHERE myths.image_url IS NULL AND myths.image_prompt IS NOT NULL
+        ORDER BY myths.id
         LIMIT ${Math.ceil(limit * 0.7)}
       )
       UNION ALL
       (
-        SELECT id, name, slug, image_prompt, 'community' as type, 2 as priority
+        SELECT
+          communities.id,
+          communities.name,
+          communities.slug,
+          communities.image_prompt,
+          NULL as excerpt,
+          regions.name as region,
+          communities.name as community,
+          'community' as type,
+          2 as priority
         FROM communities
-        WHERE image_url IS NULL AND image_prompt IS NOT NULL
-        ORDER BY id
+        JOIN regions ON regions.id = communities.region_id
+        WHERE communities.image_url IS NULL AND communities.image_prompt IS NOT NULL
+        ORDER BY communities.id
         LIMIT ${Math.ceil(limit * 0.15)}
       )
       UNION ALL
       (
-        SELECT id, name, slug, image_prompt, 'category' as type, 3 as priority
+        SELECT id, name, slug, image_prompt, NULL as excerpt, 'Varios' as region, '' as community, 'category' as type, 3 as priority
         FROM tags
         WHERE image_url IS NULL AND image_prompt IS NOT NULL
         ORDER BY id
@@ -63,7 +90,7 @@ async function getItemsWithoutImages(limit = 10) {
       )
       UNION ALL
       (
-        SELECT id, name, slug, image_prompt, 'region' as type, 4 as priority
+        SELECT id, name, slug, image_prompt, NULL as excerpt, name as region, '' as community, 'region' as type, 4 as priority
         FROM regions
         WHERE image_url IS NULL AND image_prompt IS NOT NULL
         ORDER BY id
@@ -80,25 +107,44 @@ async function getItemsWithoutImages(limit = 10) {
 
     // For SQLite, do separate queries (it's fast enough locally)
     const mythsStmt = db.prepare(`
-      SELECT id, title as name, slug, image_prompt, 'myth' as type
+      SELECT
+        myths.id,
+        myths.title as name,
+        myths.slug,
+        myths.image_prompt,
+        myths.excerpt,
+        regions.name as region,
+        COALESCE(communities.name, '') as community,
+        'myth' as type
       FROM myths
-      WHERE image_url IS NULL AND image_prompt IS NOT NULL
-      ORDER BY id
+      JOIN regions ON regions.id = myths.region_id
+      LEFT JOIN communities ON communities.id = myths.community_id
+      WHERE myths.image_url IS NULL AND myths.image_prompt IS NOT NULL
+      ORDER BY myths.id
       LIMIT ?
     `);
     items.push(...mythsStmt.all(Math.ceil(limit * 0.7)));
 
     const communitiesStmt = db.prepare(`
-      SELECT id, name, slug, image_prompt, 'community' as type
+      SELECT
+        communities.id,
+        communities.name,
+        communities.slug,
+        communities.image_prompt,
+        NULL as excerpt,
+        regions.name as region,
+        communities.name as community,
+        'community' as type
       FROM communities
-      WHERE image_url IS NULL AND image_prompt IS NOT NULL
-      ORDER BY id
+      JOIN regions ON regions.id = communities.region_id
+      WHERE communities.image_url IS NULL AND communities.image_prompt IS NOT NULL
+      ORDER BY communities.id
       LIMIT ?
     `);
     items.push(...communitiesStmt.all(Math.ceil(limit * 0.15)));
 
     const categoriesStmt = db.prepare(`
-      SELECT id, name, slug, image_prompt, 'category' as type
+      SELECT id, name, slug, image_prompt, NULL as excerpt, 'Varios' as region, '' as community, 'category' as type
       FROM tags
       WHERE image_url IS NULL AND image_prompt IS NOT NULL
       ORDER BY id
@@ -107,7 +153,7 @@ async function getItemsWithoutImages(limit = 10) {
     items.push(...categoriesStmt.all(Math.ceil(limit * 0.1)));
 
     const regionsStmt = db.prepare(`
-      SELECT id, name, slug, image_prompt, 'region' as type
+      SELECT id, name, slug, image_prompt, NULL as excerpt, name as region, '' as community, 'region' as type
       FROM regions
       WHERE image_url IS NULL AND image_prompt IS NOT NULL
       ORDER BY id
@@ -248,73 +294,43 @@ async function rewritePromptSafely(originalPrompt) {
 }
 
 // Generate image using OpenAI GPT Image and upload to Vercel Blob
-async function generateImage(prompt, mythSlug, isRetry = false) {
+async function generateImage(item, isRetry = false) {
   try {
-    console.log(`[IMG] Generating image with OpenAI for ${mythSlug}... (Retry: ${isRetry})`);
+    console.log(`[IMG] Generating image with OpenAI for ${item.slug}... (Retry: ${isRetry})`);
 
-    // Add cultural context disclaimer to the prompt
-    const enhancedPrompt = `CONTEXTO CULTURAL: Esta es una ilustración educativa de un mito indígena colombiano con valor histórico y antropológico, destinada a un archivo cultural público. Representación artística apropiada para contenido educativo y museístico. NO incluir desnudez, contenido sexual ni violencia gráfica.
-
-${prompt}
-
-${IMAGE_STYLE_GUIDE}`;
-
+    const enhancedPrompt = buildCraftImagePrompt({
+      entity: {
+        type: item.type,
+        name: item.name,
+        slug: item.slug,
+        prompt: item.image_prompt,
+        excerpt: item.excerpt,
+        region: item.region,
+        community: item.community,
+      },
+      orientation: "horizontal",
+    });
     console.log(`[IMG] Enhanced prompt length: ${enhancedPrompt.length} characters`);
 
     // Step 1: Generate image with OpenAI
-    const response = await openai.images.generate({
-      model: "gpt-image-1-mini",
-      prompt: enhancedPrompt,
-      moderation: "low", // Less restrictive filtering for cultural/educational content
-      n: 1,
-      size: "1536x1024", // Landscape format
-      quality: "high",
-    });
+    const response = await openai.images.generate(
+      buildImageGenerationParams({ prompt: enhancedPrompt, preset: "horizontal" })
+    );
 
     console.log(`[IMG] OpenAI response received`);
     console.log(`[IMG] Response keys:`, Object.keys(response.data?.[0] || {}));
 
-    // Step 2: Extract base64 data (gpt-image-1-mini returns b64_json by default)
-    const b64Data = response.data?.[0]?.b64_json;
-
-    if (!b64Data) {
-      // Fallback: check if URL is provided instead
-      const imageUrl = response.data?.[0]?.url;
-      if (imageUrl) {
-        console.log(`[IMG] URL received instead of base64, downloading...`);
-        const imageResponse = await fetch(imageUrl);
-        if (!imageResponse.ok) {
-          throw new Error(`Failed to fetch image: ${imageResponse.status}`);
-        }
-        const arrayBuffer = await imageResponse.arrayBuffer();
-        const imageBuffer = Buffer.from(arrayBuffer);
-        console.log(`[IMG] Image downloaded, size: ${imageBuffer.length} bytes`);
-
-        const filename = `mitos/${mythSlug}-${Date.now()}.png`;
-        console.log(`[IMG] Uploading to Vercel Blob as ${filename}...`);
-        const blob = await put(filename, imageBuffer, {
-          access: 'public',
-          contentType: 'image/png',
-        });
-        console.log(`[IMG] Upload successful! Permanent URL: ${blob.url}`);
-        return blob.url;
-      }
-      throw new Error("No base64 data or URL received from OpenAI");
-    }
-
-    console.log(`[IMG] Base64 data received, length: ${b64Data.length} characters`);
-
-    // Step 3: Convert base64 to buffer
-    const imageBuffer = Buffer.from(b64Data, 'base64');
+    // Step 2: Convert base64 to buffer. GPT Image models return b64_json by default.
+    const imageBuffer = getImageDataBuffer(response);
     console.log(`[IMG] Image decoded, size: ${imageBuffer.length} bytes`);
 
-    // Step 4: Upload to Vercel Blob Storage
-    const filename = `mitos/${mythSlug}-${Date.now()}.png`;
+    // Step 3: Upload to Vercel Blob Storage
+    const filename = buildBlobFilename({ preset: "horizontal", slug: item.slug });
     console.log(`[IMG] Uploading to Vercel Blob as ${filename}...`);
 
     const blob = await put(filename, imageBuffer, {
       access: 'public',
-      contentType: 'image/png',
+      contentType: IMAGE_PRESETS.horizontal.contentType,
     });
 
     console.log(`[IMG] Upload successful! Permanent URL: ${blob.url}`);
@@ -334,11 +350,11 @@ ${IMAGE_STYLE_GUIDE}`;
 
       try {
         // Use GPT to rewrite the prompt safely
-        const safePrompt = await rewritePromptSafely(prompt);
+        const safePrompt = await rewritePromptSafely(item.image_prompt);
 
         // Retry with the rewritten prompt
         console.log("[IMG] 🔄 Retrying image generation with rewritten prompt...");
-        return await generateImage(safePrompt, mythSlug, true);
+        return await generateImage({ ...item, image_prompt: safePrompt }, true);
 
       } catch (rewriteError) {
         console.error("[IMG] ❌ Fallback also failed:", rewriteError.message);
@@ -395,7 +411,7 @@ export async function POST(request) {
         console.log(`[GEN] Starting generation for ${typeLabel} ${item.id}: ${item.name}`);
         console.log(`[GEN] Using prompt: ${item.image_prompt?.substring(0, 100)}...`);
 
-        const imageUrl = await generateImage(item.image_prompt, item.slug);
+        const imageUrl = await generateImage(item);
         console.log(`[GEN] Image generated successfully, URL: ${imageUrl?.substring(0, 50)}...`);
 
         const updateResult = await updateItemImage(item.id, imageUrl, item.type);

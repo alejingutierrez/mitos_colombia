@@ -8,7 +8,12 @@ import {
   getSqliteDb,
   getSqliteDbWritable,
 } from "../../../../../lib/db.js";
-import { IMAGE_STYLE_GUIDE } from "../../../../../lib/image-guidelines.js";
+import {
+  buildBlobFilename,
+  buildCraftImagePrompt,
+  buildImageGenerationParams,
+  getImageDataBuffer,
+} from "../../../../../lib/image-generation.js";
 
 export const runtime = "nodejs";
 export const maxDuration = 300;
@@ -94,36 +99,26 @@ async function optimizeImageBuffer(buffer) {
     .toBuffer();
 }
 
-async function generateImageBuffer(prompt, isRetry = false) {
+async function generateImageBuffer(entity, isRetry = false) {
   try {
-    const enhancedPrompt = `CONTEXTO CULTURAL: Ilustración editorial horizontal (16:9) de mitología colombiana con valor educativo y patrimonial. Sin texto ni logos, sin violencia gráfica ni desnudez.\n\n${prompt}\n\n${IMAGE_STYLE_GUIDE}`;
-
-    const response = await openai.images.generate({
-      model: "gpt-image-1-mini",
-      prompt: enhancedPrompt,
-      moderation: "low",
-      n: 1,
-      size: "1536x1024",
-      quality: "high",
+    const enhancedPrompt = buildCraftImagePrompt({
+      entity: {
+        type: entity.entityType,
+        name: entity.name,
+        slug: entity.slug,
+        prompt: entity.image_prompt,
+        excerpt: entity.excerpt,
+        region: entity.region,
+        community: entity.community,
+      },
+      orientation: "horizontal",
     });
 
-    const b64Data = response.data?.[0]?.b64_json;
+    const response = await openai.images.generate(
+      buildImageGenerationParams({ prompt: enhancedPrompt, preset: "horizontal" })
+    );
 
-    if (b64Data) {
-      return Buffer.from(b64Data, "base64");
-    }
-
-    const imageUrl = response.data?.[0]?.url;
-    if (imageUrl) {
-      const imageResponse = await fetch(imageUrl);
-      if (!imageResponse.ok) {
-        throw new Error(`Failed to fetch image: ${imageResponse.status}`);
-      }
-      const arrayBuffer = await imageResponse.arrayBuffer();
-      return Buffer.from(arrayBuffer);
-    }
-
-    throw new Error("No base64 data or URL received from OpenAI");
+    return getImageDataBuffer(response);
   } catch (error) {
     const isSafetyViolation =
       error.message?.includes("safety") ||
@@ -131,8 +126,8 @@ async function generateImageBuffer(prompt, isRetry = false) {
       error.code === "content_policy_violation";
 
     if (isSafetyViolation && !isRetry) {
-      const safePrompt = await rewritePromptSafely(prompt);
-      return generateImageBuffer(safePrompt, true);
+      const safePrompt = await rewritePromptSafely(entity.image_prompt);
+      return generateImageBuffer({ ...entity, image_prompt: safePrompt }, true);
     }
 
     throw error;
@@ -144,23 +139,42 @@ async function getEntityById(entityType, entityId) {
     const db = getSqlClient();
     if (entityType === "myth") {
       const result = await db`
-        SELECT id, title as name, slug, image_prompt, image_url
+        SELECT
+          myths.id,
+          myths.title as name,
+          myths.slug,
+          myths.image_prompt,
+          myths.image_url,
+          myths.excerpt,
+          regions.name as region,
+          COALESCE(communities.name, '') as community
         FROM myths
-        WHERE id = ${entityId}
+        JOIN regions ON regions.id = myths.region_id
+        LEFT JOIN communities ON communities.id = myths.community_id
+        WHERE myths.id = ${entityId}
       `;
       return (result.rows || result)[0];
     }
     if (entityType === "community") {
       const result = await db`
-        SELECT id, name, slug, image_prompt, image_url
+        SELECT
+          communities.id,
+          communities.name,
+          communities.slug,
+          communities.image_prompt,
+          communities.image_url,
+          NULL as excerpt,
+          regions.name as region,
+          communities.name as community
         FROM communities
-        WHERE id = ${entityId}
+        JOIN regions ON regions.id = communities.region_id
+        WHERE communities.id = ${entityId}
       `;
       return (result.rows || result)[0];
     }
     if (entityType === "category") {
       const result = await db`
-        SELECT id, name, slug, image_prompt, image_url
+        SELECT id, name, slug, image_prompt, image_url, NULL as excerpt, 'Varios' as region, '' as community
         FROM tags
         WHERE id = ${entityId}
       `;
@@ -168,7 +182,7 @@ async function getEntityById(entityType, entityId) {
     }
     if (entityType === "region") {
       const result = await db`
-        SELECT id, name, slug, image_prompt, image_url
+        SELECT id, name, slug, image_prompt, image_url, NULL as excerpt, name as region, '' as community
         FROM regions
         WHERE id = ${entityId}
       `;
@@ -181,28 +195,51 @@ async function getEntityById(entityType, entityId) {
   if (entityType === "myth") {
     return db
       .prepare(
-        `SELECT id, title as name, slug, image_prompt, image_url FROM myths WHERE id = ?`
+        `SELECT
+          myths.id,
+          myths.title as name,
+          myths.slug,
+          myths.image_prompt,
+          myths.image_url,
+          myths.excerpt,
+          regions.name as region,
+          COALESCE(communities.name, '') as community
+        FROM myths
+        JOIN regions ON regions.id = myths.region_id
+        LEFT JOIN communities ON communities.id = myths.community_id
+        WHERE myths.id = ?`
       )
       .get(entityId);
   }
   if (entityType === "community") {
     return db
       .prepare(
-        `SELECT id, name, slug, image_prompt, image_url FROM communities WHERE id = ?`
+        `SELECT
+          communities.id,
+          communities.name,
+          communities.slug,
+          communities.image_prompt,
+          communities.image_url,
+          NULL as excerpt,
+          regions.name as region,
+          communities.name as community
+        FROM communities
+        JOIN regions ON regions.id = communities.region_id
+        WHERE communities.id = ?`
       )
       .get(entityId);
   }
   if (entityType === "category") {
     return db
       .prepare(
-        `SELECT id, name, slug, image_prompt, image_url FROM tags WHERE id = ?`
+        `SELECT id, name, slug, image_prompt, image_url, NULL as excerpt, 'Varios' as region, '' as community FROM tags WHERE id = ?`
       )
       .get(entityId);
   }
   if (entityType === "region") {
     return db
       .prepare(
-        `SELECT id, name, slug, image_prompt, image_url FROM regions WHERE id = ?`
+        `SELECT id, name, slug, image_prompt, image_url, NULL as excerpt, name as region, '' as community FROM regions WHERE id = ?`
       )
       .get(entityId);
   }
@@ -320,10 +357,14 @@ export async function POST(request) {
 
     const basePrompt = entity.image_prompt || getFallbackPrompt(entityType, entity.name);
 
-    const rawBuffer = await generateImageBuffer(basePrompt);
+    const rawBuffer = await generateImageBuffer({
+      ...entity,
+      entityType,
+      image_prompt: basePrompt,
+    });
     const optimizedBuffer = await optimizeImageBuffer(rawBuffer);
 
-    const filename = `mitos/${entity.slug}-${Date.now()}.jpg`;
+    const filename = buildBlobFilename({ preset: "horizontal", slug: entity.slug });
     const blob = await put(filename, optimizedBuffer, {
       access: "public",
       contentType: "image/jpeg",

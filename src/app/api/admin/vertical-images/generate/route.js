@@ -2,7 +2,13 @@ import { NextResponse } from "next/server";
 import OpenAI from "openai";
 import { put } from "@vercel/blob";
 import { isPostgres, getSqlClient, getSqliteDb, getSqliteDbWritable } from "../../../../../lib/db.js";
-import { IMAGE_STYLE_GUIDE } from "../../../../../lib/image-guidelines.js";
+import {
+  buildBlobFilename,
+  buildCraftImagePrompt,
+  buildImageGenerationParams,
+  getImageDataBuffer,
+  IMAGE_PRESETS,
+} from "../../../../../lib/image-generation.js";
 
 export const runtime = "nodejs";
 export const maxDuration = 300; // 5 minutes max for image generation
@@ -59,80 +65,48 @@ function checkAuth(request) {
 
 // Prompt base para imágenes verticales editoriales
 const BASE_PROMPTS = {
-  myth: "Ilustración vertical cinematográfica (9:16) de alta calidad artística para uso editorial. Estilo místico y atmosférico con iluminación dramática. Paleta de colores rica y vibrante inspirada en la naturaleza colombiana. Composición vertical que funciona perfectamente para formato de historia o reel. NO incluir texto, desnudez ni violencia gráfica.",
-  community: "Ilustración vertical (9:16) que representa la cultura y tradiciones de una comunidad indígena colombiana. Elementos culturales auténticos, vestimenta tradicional, y conexión con la naturaleza. Estilo artístico respetuoso y educativo. Composición vertical para formato editorial.",
-  category: "Ilustración vertical conceptual (9:16) que representa una categoría temática de mitología colombiana. Estilo artístico simbólico y místico. Composición vertical con elementos icónicos y memorables.",
-  region: "Paisaje vertical (9:16) que captura la esencia y biodiversidad de una región colombiana. Elementos naturales característicos, flora y fauna endémica. Estilo fotorrealista con toques artísticos. Composición vertical dramática."
+  myth: "Imagen vertical editorial de mito colombiano como fotografia frontal de una pieza fisica de papel artesanal, con geografia, simbolos culturales y escena principal clara. Sin texto, logos, desnudez ni violencia grafica.",
+  community: "Imagen vertical editorial sobre una comunidad o territorio colombiano como trabajo real de paper cut y paper relief fotografiado, con elementos culturales respetuosos y naturaleza local. Sin texto.",
+  category: "Imagen vertical editorial de categoria tematica de mitologia colombiana como tableau artesanal de papel, simbolico, tactil y culturalmente situado. Sin texto.",
+  region: "Imagen vertical editorial de region colombiana como paisaje fisico construido en capas de papel, con biodiversidad, geografia y cultura visual local. Sin texto."
 };
 
 // Generate image using OpenAI and upload to Vercel Blob
-async function generateVerticalImage(prompt, slug, entityType, isRetry = false) {
+async function generateVerticalImage(prompt, slug, entityType, entity = {}, isRetry = false) {
   try {
     console.log(`[IMG-VERTICAL] Generating vertical image for ${slug}...`);
 
-    const enhancedPrompt = `CONTEXTO CULTURAL: Ilustración vertical (9:16) educativa de mitología colombiana con valor histórico y antropológico, destinada a uso editorial en redes sociales y medios digitales.
-
-${prompt}
-
-${IMAGE_STYLE_GUIDE}
-
-ESPECIFICACIONES TÉCNICAS:
-- Formato: Vertical 9:16 (ideal para Instagram Stories, Reels, TikTok)
-- Calidad: Alta resolución para impresión y uso digital
-- Estilo: Artístico, cinematográfico, profesional
-- Contenido: Apropiado para audiencia general, educativo y respetuoso`;
+    const enhancedPrompt = buildCraftImagePrompt({
+      entity: {
+        ...entity,
+        type: entityType,
+        name: entity.name,
+        slug,
+        prompt,
+      },
+      orientation: "vertical",
+    });
 
     console.log(`[IMG-VERTICAL] Enhanced prompt length: ${enhancedPrompt.length} characters`);
 
     // Generate image with OpenAI
-    const response = await openai.images.generate({
-      model: "gpt-image-1-mini",
-      prompt: enhancedPrompt,
-      moderation: "low",
-      n: 1,
-      size: "1024x1536", // Vertical format 9:16
-      quality: "high",
-    });
+    const response = await openai.images.generate(
+      buildImageGenerationParams({ prompt: enhancedPrompt, preset: "vertical" })
+    );
 
     console.log(`[IMG-VERTICAL] OpenAI response received`);
 
-    // Extract base64 data or URL
-    const b64Data = response.data?.[0]?.b64_json;
-
-    if (!b64Data) {
-      const imageUrl = response.data?.[0]?.url;
-      if (imageUrl) {
-        console.log(`[IMG-VERTICAL] URL received, downloading...`);
-        const imageResponse = await fetch(imageUrl);
-        if (!imageResponse.ok) {
-          throw new Error(`Failed to fetch image: ${imageResponse.status}`);
-        }
-        const arrayBuffer = await imageResponse.arrayBuffer();
-        const imageBuffer = Buffer.from(arrayBuffer);
-
-        const filename = `vertical/${entityType}/${slug}-${Date.now()}.png`;
-        console.log(`[IMG-VERTICAL] Uploading to Vercel Blob as ${filename}...`);
-        const blob = await put(filename, imageBuffer, {
-          access: 'public',
-          contentType: 'image/png',
-        });
-        console.log(`[IMG-VERTICAL] Upload successful! URL: ${blob.url}`);
-        return blob.url;
-      }
-      throw new Error("No base64 data or URL received from OpenAI");
-    }
-
-    // Convert base64 to buffer
-    const imageBuffer = Buffer.from(b64Data, 'base64');
+    // Convert base64 to buffer. GPT Image models return b64_json by default.
+    const imageBuffer = getImageDataBuffer(response);
     console.log(`[IMG-VERTICAL] Image decoded, size: ${imageBuffer.length} bytes`);
 
     // Upload to Vercel Blob Storage
-    const filename = `vertical/${entityType}/${slug}-${Date.now()}.png`;
+    const filename = buildBlobFilename({ preset: "vertical", slug, entityType });
     console.log(`[IMG-VERTICAL] Uploading to Vercel Blob as ${filename}...`);
 
     const blob = await put(filename, imageBuffer, {
       access: 'public',
-      contentType: 'image/png',
+      contentType: IMAGE_PRESETS.vertical.contentType,
     });
 
     console.log(`[IMG-VERTICAL] Upload successful! URL: ${blob.url}`);
@@ -144,7 +118,7 @@ ESPECIFICACIONES TÉCNICAS:
       try {
         console.log("[IMG-VERTICAL] Safety violation detected. Rewriting prompt...");
         const safePrompt = await rewritePromptSafely(prompt);
-        return await generateVerticalImage(safePrompt, slug, entityType, true);
+        return await generateVerticalImage(safePrompt, slug, entityType, entity, true);
       } catch (rewriteError) {
         console.error("[IMG-VERTICAL] Safety fallback failed:", rewriteError);
         throw rewriteError;
@@ -168,10 +142,15 @@ async function getEntitiesForVerticalImages(limit = 20) {
           m.title as name,
           m.slug,
           m.image_prompt as prompt,
+          m.excerpt,
+          regions.name as region,
+          COALESCE(communities.name, '') as community,
           'myth' as type,
           vi.id as vertical_image_id,
           vi.image_url as vertical_image_url
         FROM myths m
+        JOIN regions ON regions.id = m.region_id
+        LEFT JOIN communities ON communities.id = m.community_id
         LEFT JOIN vertical_images vi ON vi.entity_type = 'myth' AND vi.entity_id = m.id
         WHERE m.image_prompt IS NOT NULL AND vi.image_url IS NULL
         ORDER BY m.id
@@ -184,10 +163,14 @@ async function getEntitiesForVerticalImages(limit = 20) {
           c.name,
           c.slug,
           c.image_prompt as prompt,
+          NULL as excerpt,
+          regions.name as region,
+          c.name as community,
           'community' as type,
           vi.id as vertical_image_id,
           vi.image_url as vertical_image_url
         FROM communities c
+        JOIN regions ON regions.id = c.region_id
         LEFT JOIN vertical_images vi ON vi.entity_type = 'community' AND vi.entity_id = c.id
         WHERE c.image_prompt IS NOT NULL AND vi.image_url IS NULL
         ORDER BY c.id
@@ -200,6 +183,9 @@ async function getEntitiesForVerticalImages(limit = 20) {
           t.name,
           t.slug,
           t.image_prompt as prompt,
+          NULL as excerpt,
+          'Varios' as region,
+          '' as community,
           'category' as type,
           vi.id as vertical_image_id,
           vi.image_url as vertical_image_url
@@ -216,6 +202,9 @@ async function getEntitiesForVerticalImages(limit = 20) {
           r.name,
           r.slug,
           r.image_prompt as prompt,
+          NULL as excerpt,
+          r.name as region,
+          '' as community,
           'region' as type,
           vi.id as vertical_image_id,
           vi.image_url as vertical_image_url
@@ -241,10 +230,15 @@ async function getEntitiesForVerticalImages(limit = 20) {
         m.title as name,
         m.slug,
         m.image_prompt as prompt,
+        m.excerpt,
+        r.name as region,
+        COALESCE(c.name, '') as community,
         'myth' as type,
         vi.id as vertical_image_id,
         vi.image_url as vertical_image_url
       FROM myths m
+      JOIN regions r ON r.id = m.region_id
+      LEFT JOIN communities c ON c.id = m.community_id
       LEFT JOIN vertical_images vi ON vi.entity_type = 'myth' AND vi.entity_id = m.id
       WHERE m.image_prompt IS NOT NULL AND vi.image_url IS NULL
       ORDER BY m.id
@@ -259,10 +253,14 @@ async function getEntitiesForVerticalImages(limit = 20) {
         c.name,
         c.slug,
         c.image_prompt as prompt,
+        NULL as excerpt,
+        r.name as region,
+        c.name as community,
         'community' as type,
         vi.id as vertical_image_id,
         vi.image_url as vertical_image_url
       FROM communities c
+      JOIN regions r ON r.id = c.region_id
       LEFT JOIN vertical_images vi ON vi.entity_type = 'community' AND vi.entity_id = c.id
       WHERE c.image_prompt IS NOT NULL AND vi.image_url IS NULL
       ORDER BY c.id
@@ -277,6 +275,9 @@ async function getEntitiesForVerticalImages(limit = 20) {
         t.name,
         t.slug,
         t.image_prompt as prompt,
+        NULL as excerpt,
+        'Varios' as region,
+        '' as community,
         'category' as type,
         vi.id as vertical_image_id,
         vi.image_url as vertical_image_url
@@ -295,6 +296,9 @@ async function getEntitiesForVerticalImages(limit = 20) {
         r.name,
         r.slug,
         r.image_prompt as prompt,
+        NULL as excerpt,
+        r.name as region,
+        '' as community,
         'region' as type,
         vi.id as vertical_image_id,
         vi.image_url as vertical_image_url
@@ -346,10 +350,15 @@ async function getEntitiesByOrder(orderedEntities) {
           m.title as name,
           m.slug,
           m.image_prompt as prompt,
+          m.excerpt,
+          r.name as region,
+          COALESCE(c.name, '') as community,
           'myth' as type,
           vi.id as vertical_image_id,
           vi.image_url as vertical_image_url
         FROM myths m
+        JOIN regions r ON r.id = m.region_id
+        LEFT JOIN communities c ON c.id = m.community_id
         LEFT JOIN vertical_images vi ON vi.entity_type = 'myth' AND vi.entity_id = m.id
         WHERE m.id = ANY($1)
       `,
@@ -366,10 +375,14 @@ async function getEntitiesByOrder(orderedEntities) {
           c.name,
           c.slug,
           c.image_prompt as prompt,
+          NULL as excerpt,
+          r.name as region,
+          c.name as community,
           'community' as type,
           vi.id as vertical_image_id,
           vi.image_url as vertical_image_url
         FROM communities c
+        JOIN regions r ON r.id = c.region_id
         LEFT JOIN vertical_images vi ON vi.entity_type = 'community' AND vi.entity_id = c.id
         WHERE c.id = ANY($1)
       `,
@@ -386,6 +399,9 @@ async function getEntitiesByOrder(orderedEntities) {
           t.name,
           t.slug,
           t.image_prompt as prompt,
+          NULL as excerpt,
+          'Varios' as region,
+          '' as community,
           'category' as type,
           vi.id as vertical_image_id,
           vi.image_url as vertical_image_url
@@ -406,6 +422,9 @@ async function getEntitiesByOrder(orderedEntities) {
           r.name,
           r.slug,
           r.image_prompt as prompt,
+          NULL as excerpt,
+          r.name as region,
+          '' as community,
           'region' as type,
           vi.id as vertical_image_id,
           vi.image_url as vertical_image_url
@@ -424,6 +443,53 @@ async function getEntitiesByOrder(orderedEntities) {
       const ids = grouped[type];
       if (!ids.length) return [];
       const placeholders = ids.map(() => "?").join(", ");
+      if (type === "myth") {
+        return db
+          .prepare(
+            `
+            SELECT
+              t.id,
+              t.title as name,
+              t.slug,
+              t.image_prompt as prompt,
+              t.excerpt,
+              r.name as region,
+              COALESCE(c.name, '') as community,
+              'myth' as type,
+              vi.id as vertical_image_id,
+              vi.image_url as vertical_image_url
+            FROM myths t
+            JOIN regions r ON r.id = t.region_id
+            LEFT JOIN communities c ON c.id = t.community_id
+            LEFT JOIN vertical_images vi ON vi.entity_type = 'myth' AND vi.entity_id = t.id
+            WHERE t.id IN (${placeholders})
+          `
+          )
+          .all(...ids);
+      }
+      if (type === "community") {
+        return db
+          .prepare(
+            `
+            SELECT
+              t.id,
+              t.name,
+              t.slug,
+              t.image_prompt as prompt,
+              NULL as excerpt,
+              r.name as region,
+              t.name as community,
+              'community' as type,
+              vi.id as vertical_image_id,
+              vi.image_url as vertical_image_url
+            FROM communities t
+            JOIN regions r ON r.id = t.region_id
+            LEFT JOIN vertical_images vi ON vi.entity_type = 'community' AND vi.entity_id = t.id
+            WHERE t.id IN (${placeholders})
+          `
+          )
+          .all(...ids);
+      }
       return db
         .prepare(
           `
@@ -432,6 +498,9 @@ async function getEntitiesByOrder(orderedEntities) {
             t.${nameField} as name,
             t.slug,
             t.image_prompt as prompt,
+            NULL as excerpt,
+            ${type === "region" ? "t.name" : "'Varios'"} as region,
+            '' as community,
             '${type}' as type,
             vi.id as vertical_image_id,
             vi.image_url as vertical_image_url
@@ -580,7 +649,12 @@ export async function POST(request) {
         const basePrompt = BASE_PROMPTS[entity.type] || BASE_PROMPTS.myth;
         const fullPrompt = `${basePrompt}\n\n${entity.prompt}`;
 
-        const imageUrl = await generateVerticalImage(fullPrompt, entity.slug, entity.type);
+        const imageUrl = await generateVerticalImage(
+          fullPrompt,
+          entity.slug,
+          entity.type,
+          entity
+        );
         console.log(`[GEN-VERTICAL] Image generated successfully`);
 
         // Save to database

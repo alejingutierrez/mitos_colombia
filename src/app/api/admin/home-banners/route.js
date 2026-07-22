@@ -10,7 +10,12 @@ import {
   isPostgres,
 } from "../../../../lib/db.js";
 import { getHomeBannerDefaults } from "../../../../lib/home-banners.js";
-import { IMAGE_STYLE_GUIDE } from "../../../../lib/image-guidelines.js";
+import {
+  buildBlobFilename,
+  buildCraftImagePrompt,
+  buildImageGenerationParams,
+  getImageDataBuffer,
+} from "../../../../lib/image-generation.js";
 
 export const runtime = "nodejs";
 export const maxDuration = 300;
@@ -235,16 +240,16 @@ async function updateHomeBannerPrompt({ slug, prompt }) {
 }
 
 async function generateBannerImage(prompt, slug) {
-  const enhancedPrompt = `Ilustracion horizontal (16:9) de alta calidad editorial, estilo paper quilling + paper cut. Sin texto, sin logos, sin marcas comerciales.
-
-${prompt}
-
-ESPECIFICACIONES TECNICAS:
-- Formato horizontal 16:9 (se recortara a 1536x864)
-- Estilo artesanal, textura de papel visible
-- Paleta inspirada en verde selva, azul rio y dorado tierra
-- Contenido respetuoso, educativo y familiar`;
-  const guidedPrompt = `${enhancedPrompt}\n\n${IMAGE_STYLE_GUIDE}`;
+  const enhancedPrompt = buildCraftImagePrompt({
+    entity: {
+      type: "homeBanner",
+      name: slug,
+      slug,
+      prompt,
+      region: "Varios",
+    },
+    orientation: "homeBanner",
+  });
 
   const optimizeBuffer = async (buffer) =>
     sharp(buffer)
@@ -258,38 +263,12 @@ ESPECIFICACIONES TECNICAS:
       .jpeg({ quality: JPEG_QUALITY, mozjpeg: true })
       .toBuffer();
 
-  const response = await openai.images.generate({
-    model: "gpt-image-1-mini",
-    prompt: guidedPrompt,
-    moderation: "low",
-    n: 1,
-    size: "1536x1024",
-    quality: "high",
-  });
+  const response = await openai.images.generate(
+    buildImageGenerationParams({ prompt: enhancedPrompt, preset: "homeBanner" })
+  );
 
-  const b64Data = response.data?.[0]?.b64_json;
-
-  if (!b64Data) {
-    const imageUrl = response.data?.[0]?.url;
-    if (imageUrl) {
-      const imageResponse = await fetch(imageUrl);
-      if (!imageResponse.ok) {
-        throw new Error(`Failed to fetch image: ${imageResponse.status}`);
-      }
-      const arrayBuffer = await imageResponse.arrayBuffer();
-      const imageBuffer = await optimizeBuffer(Buffer.from(arrayBuffer));
-      const filename = `banners/home/${slug}-${Date.now()}.jpg`;
-      const blob = await put(filename, imageBuffer, {
-        access: "public",
-        contentType: "image/jpeg",
-      });
-      return blob.url;
-    }
-    throw new Error("No base64 data or URL received from OpenAI");
-  }
-
-  const imageBuffer = await optimizeBuffer(Buffer.from(b64Data, "base64"));
-  const filename = `banners/home/${slug}-${Date.now()}.jpg`;
+  const imageBuffer = await optimizeBuffer(getImageDataBuffer(response));
+  const filename = buildBlobFilename({ preset: "homeBanner", slug });
   const blob = await put(filename, imageBuffer, {
     access: "public",
     contentType: "image/jpeg",
