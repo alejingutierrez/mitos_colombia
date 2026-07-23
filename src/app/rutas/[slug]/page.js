@@ -1,16 +1,5 @@
 import { notFound } from "next/navigation";
-import {
-  Container,
-  Eyebrow,
-  Heading,
-  Text,
-  Tag,
-  Motif,
-  IndexNumber,
-  ButtonLink,
-  Icon,
-} from "../../../components/atoms";
-import { Header, MythGrid, RouteGrid } from "../../../components/organisms";
+import { RouteDetailTemplate } from "../../../components/templates/RouteDetailTemplate";
 import { buildSeoMetadata, getSeoEntry } from "../../../lib/seo";
 import { resolveRouteParams } from "../../../lib/next-route-props";
 import {
@@ -104,10 +93,6 @@ export default async function RutaPage({ params }) {
     .filter(Boolean)
     .map(mapMyth);
 
-  const accent = route.accent === "river" ? "river" : "jungle";
-  const motif = accent === "river" ? "agua" : "hoja";
-  const searchQuery = route.keywords?.[0] || route.title;
-
   const otherRoutes = ROUTES.filter((item) => item.slug !== route.slug)
     .slice(0, 4)
     .map((item) => ({
@@ -140,110 +125,11 @@ export default async function RutaPage({ params }) {
           />
         </>
       )}
-      <Header active="/rutas" />
-      <main className="min-h-[100dvh] bg-paper">
-        {/* Hero */}
-        <Container size="wide" className="py-12 md:py-16">
-          <div className="grid items-start gap-8 md:grid-cols-[1.4fr_0.6fr] md:gap-12">
-            <div>
-              <Eyebrow tone={accent} withRule className="mb-4">
-                Ruta editorial · {route.tone}
-              </Eyebrow>
-              <Heading level={0} accent={accent}>
-                {route.title}
-              </Heading>
-              <Text size="lg" className="mt-6 max-w-xl">
-                {route.intro || route.description}
-              </Text>
-              <div className="mt-6 flex flex-wrap gap-1.5">
-                {(route.keywords || []).slice(0, 6).map((keyword) => (
-                  <Tag key={keyword} variant="outline">
-                    {keyword}
-                  </Tag>
-                ))}
-              </div>
-              <div className="mt-8 flex flex-wrap gap-3">
-                <ButtonLink
-                  href={`/mitos?q=${encodeURIComponent(searchQuery)}`}
-                  variant="primary"
-                >
-                  Explorar relatos
-                  <Icon name="arrow-right" size={18} className="mc-arrow" />
-                </ButtonLink>
-                <ButtonLink href="/rutas" variant="secondary">
-                  Todas las rutas
-                </ButtonLink>
-              </div>
-            </div>
-            <div className="hidden justify-end md:flex">
-              <Motif name={motif} size={120} />
-            </div>
-          </div>
-        </Container>
-
-        {/* Itinerario / highlights */}
-        {route.highlights?.length ? (
-          <div className="border-t border-line-100">
-            <Container size="wide" className="py-14">
-              <Eyebrow tone={accent} withRule className="mb-8">
-                Itinerario
-              </Eyebrow>
-              <Heading level={2} className="sr-only">
-                Itinerario de la ruta
-              </Heading>
-              <div className="grid gap-8 md:grid-cols-3">
-                {route.highlights.map((h, i) => (
-                  <div key={h.title}>
-                    <div className="flex items-baseline gap-3">
-                      <IndexNumber value={i + 1} size="sm" />
-                      <Heading level={3} className="text-base font-semibold">
-                        {h.title}
-                      </Heading>
-                    </div>
-                    <Text size="sm" tone="muted" className="mt-2">
-                      {h.description}
-                    </Text>
-                  </div>
-                ))}
-              </div>
-            </Container>
-          </div>
-        ) : null}
-
-        {/* Galería editorial: mitos curados de la ruta */}
-        {routeMyths.length > 0 ? (
-          <div className="border-t border-line-100">
-            <Container size="wide" className="py-14">
-              <MythGrid
-                eyebrow="Galería editorial"
-                title="Relatos que trazan la ruta"
-                description={
-                  route.galleryIntro ||
-                  "Selección curada de mitos que dan forma a este itinerario. Cada relato conecta con su región y comunidad."
-                }
-                action={
-                  <ButtonLink
-                    href={`/mitos?q=${encodeURIComponent(searchQuery)}`}
-                    variant="secondary"
-                  >
-                    Ver todos los mitos
-                  </ButtonLink>
-                }
-                myths={routeMyths}
-              />
-            </Container>
-          </div>
-        ) : null}
-
-        {/* Otras rutas */}
-        <div className="border-t border-line-100 py-14">
-          <RouteGrid
-            eyebrow="Continuar explorando"
-            title="Rutas conectadas por territorio y memoria"
-            routes={otherRoutes}
-          />
-        </div>
-      </main>
+      <RouteDetailTemplate
+        route={route}
+        myths={routeMyths}
+        otherRoutes={otherRoutes}
+      />
     </>
   );
 }

@@ -1,179 +1,115 @@
 "use client";
 
+import Link from "next/link";
 import { useMemo, useState } from "react";
 import { cn } from "../../lib/utils";
-import { Container, Text, Stagger, StaggerItem } from "../atoms";
-import {
-  FilterBar,
-  SegmentedControl,
-  MythCard,
-  MythListItem,
-  EmptyState,
-  Pagination,
-} from "../molecules";
+import { Container, Icon, ImageFrame, Text } from "../atoms";
+import { EmptyState, FilterBar } from "../molecules";
+import { OverlayMythCard } from "../editorial/AtlasEditorial";
 
-/**
- * Organismo · FilterableArchive
- * Archivo filtrable de mitos — el listado de /mitos. CLIENT: mantiene el estado
- * de los filtros (FilterBar) y de la vista grilla/lista (SegmentedControl).
- *
- * Presentacional y props-driven: recibe `myths` y `filters` por props; no toca
- * base de datos. El filtrado es local y simple (coincidencia exacta por faceta:
- * `region` y `theme`). Sin resultados → <EmptyState/>. La paginación es de demo.
- */
+function ResultRow({ myth, index }) {
+  return (
+    <Link
+      href={`/mitos/${myth.slug}`}
+      className="group grid grid-cols-[2.3rem_5.5rem_1fr_auto] items-center gap-4 border-b border-line-100 py-4"
+    >
+      <span className="font-editorial text-2xl text-jungle-700">
+        {String(index + 1).padStart(2, "0")}
+      </span>
+      <ImageFrame
+        src={myth.imageUrl}
+        alt=""
+        ratio="4 / 3"
+        sizes="88px"
+        className="rounded-none border-0"
+        imgClassName="atlas-image-zoom object-cover"
+      />
+      <span className="min-w-0">
+        <span className="block font-editorial text-xl font-semibold leading-none text-ink-900">
+          {myth.title}
+        </span>
+        <span className="atlas-kicker mt-2 block">
+          {[myth.region, myth.community].filter(Boolean).join(" · ")}
+        </span>
+      </span>
+      <Icon name="arrow-right" size={16} className="mc-arrow text-jungle-700" />
+    </Link>
+  );
+}
 
-const DEMO_MYTHS = [
-  {
-    slug: "la-madremonte",
-    title: "La Madremonte",
-    excerpt:
-      "Guardiana de bosques y nacimientos de agua que castiga a quien profana la naturaleza.",
-    region: "Andina",
-    community: "Campesina",
-    theme: "Naturaleza",
-    motif: "hoja",
-  },
-  {
-    slug: "el-mohan",
-    title: "El Mohán",
-    excerpt:
-      "Ser peludo y travieso de los ríos que seduce lavanderas y enreda las atarrayas de los pescadores.",
-    region: "Andina",
-    community: "Ribereña",
-    theme: "Agua",
-    motif: "agua",
-  },
-  {
-    slug: "la-patasola",
-    title: "La Patasola",
-    excerpt:
-      "Espíritu de una sola pierna que acecha en la montaña a cazadores y hombres infieles.",
-    region: "Andina",
-    community: "Campesina",
-    theme: "Advertencia",
-    motif: "montana",
-  },
-  {
-    slug: "el-hombre-caiman",
-    title: "El Hombre Caimán",
-    excerpt:
-      "Un hombre transformado en caimán por espiar a las mujeres del río Magdalena.",
-    region: "Caribe",
-    community: "Ribereña",
-    theme: "Agua",
-    motif: "anaconda",
-  },
-  {
-    slug: "el-dorado",
-    title: "El Dorado",
-    excerpt:
-      "El cacique cubierto de oro que se sumerge en la laguna de Guatavita como ofrenda.",
-    region: "Andina",
-    community: "Muisca",
-    theme: "Origen",
-    motif: "sol",
-  },
-  {
-    slug: "la-bola-de-fuego",
-    title: "La Bola de Fuego",
-    excerpt:
-      "Una esfera ardiente que recorre los llanos en las noches, alma en pena de los caminos.",
-    region: "Orinoquía",
-    community: "Llanera",
-    theme: "Advertencia",
-    motif: "luna",
-  },
-];
+function MixedResults({ myths }) {
+  const [lead, second, third, ...rest] = myths;
+  return (
+    <>
+      <div className="grid gap-3 lg:grid-cols-[1.2fr_0.8fr_0.8fr]">
+        <OverlayMythCard
+          myth={lead}
+          ratio="16 / 10"
+          sizes="(max-width: 1024px) 100vw, 45vw"
+          className="lg:row-span-2"
+          titleClassName="!text-[2.6rem]"
+        />
+        <OverlayMythCard
+          myth={second}
+          ratio="4 / 3"
+          sizes="(max-width: 1024px) 100vw, 27vw"
+          showExcerpt={false}
+          titleClassName="!text-[1.65rem]"
+        />
+        <OverlayMythCard
+          myth={third}
+          ratio="4 / 3"
+          sizes="(max-width: 1024px) 100vw, 27vw"
+          showExcerpt={false}
+          titleClassName="!text-[1.65rem]"
+        />
+        <div className="border-y border-line-100 lg:col-span-2">
+          {rest.slice(0, 4).map((myth, index) => (
+            <ResultRow key={myth.slug} myth={myth} index={index + 3} />
+          ))}
+        </div>
+      </div>
+      {rest.length > 4 ? (
+        <div className="mt-10 grid gap-x-10 sm:grid-cols-2">
+          {rest.slice(4).map((myth, index) => (
+            <ResultRow key={myth.slug} myth={myth} index={index + 7} />
+          ))}
+        </div>
+      ) : null}
+    </>
+  );
+}
 
-const DEMO_FILTERS = [
-  {
-    key: "region",
-    label: "Región",
-    options: [
-      { value: "Andina", label: "Andina" },
-      { value: "Caribe", label: "Caribe" },
-      { value: "Orinoquía", label: "Orinoquía" },
-      { value: "Pacífico", label: "Pacífico" },
-      { value: "Amazonía", label: "Amazonía" },
-    ],
-  },
-  {
-    key: "theme",
-    label: "Tema",
-    options: [
-      { value: "Agua", label: "Agua" },
-      { value: "Naturaleza", label: "Naturaleza" },
-      { value: "Advertencia", label: "Advertencia" },
-      { value: "Origen", label: "Origen" },
-    ],
-  },
-];
-
-const VIEW_OPTIONS = [
-  { value: "grid", label: "Grilla", icon: "menu" },
-  { value: "list", label: "Lista", icon: "filter" },
-];
-
-export function FilterableArchive({
-  myths = DEMO_MYTHS,
-  filters = DEMO_FILTERS,
-  className,
-}) {
-  const [view, setView] = useState("grid");
+export function FilterableArchive({ myths = [], filters = [], className }) {
   const [filterValues, setFilterValues] = useState({});
 
   const results = useMemo(() => {
-    const active = Object.entries(filterValues).filter(([, v]) => v);
+    const active = Object.entries(filterValues).filter(([, value]) => value);
     if (active.length === 0) return myths;
-    return myths.filter((m) =>
-      active.every(([key, value]) => m[key] === value)
+    return myths.filter((myth) =>
+      active.every(([key, value]) => myth[key] === value)
     );
   }, [myths, filterValues]);
 
-  const hasResults = results.length > 0;
-
   return (
-    <Container size="wide" as="section" className={cn("py-6", className)}>
-      <div className="mb-6 flex flex-col gap-4 border-b border-line-100 pb-5 lg:flex-row lg:items-start lg:justify-between">
-        <FilterBar
-          filters={filters}
-          onChange={setFilterValues}
-          className="lg:flex-1"
-        />
-        <div className="flex shrink-0 items-center gap-3">
-          <Text size="sm" tone="muted" as="span">
-            {results.length}{" "}
-            {results.length === 1 ? "mito" : "mitos"}
-          </Text>
-          <SegmentedControl
-            options={VIEW_OPTIONS}
-            defaultValue="grid"
-            onChange={setView}
-          />
+    <Container size="atlas" as="section" className={cn("py-12", className)}>
+      <div className="mb-8 flex flex-col gap-5 border-b border-line-100 pb-6 lg:flex-row lg:items-end lg:justify-between">
+        <div>
+          <h2 className="font-editorial text-4xl font-semibold text-ink-900 md:text-5xl">
+            Relatos para explorar
+          </h2>
+          <span className="atlas-rule" />
         </div>
+        <div className="lg:max-w-3xl lg:flex-1">
+          <FilterBar filters={filters} onChange={setFilterValues} />
+        </div>
+        <Text size="sm" tone="muted" as="span" className="shrink-0">
+          {results.length} {results.length === 1 ? "mito" : "mitos"}
+        </Text>
       </div>
 
-      {hasResults ? (
-        view === "grid" ? (
-          <Stagger className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {results.map((myth) => (
-              <StaggerItem key={myth.slug}>
-                <MythCard myth={myth} motif={myth.motif} className="h-full" />
-              </StaggerItem>
-            ))}
-          </Stagger>
-        ) : (
-          <div className="divide-y divide-line-100 border-y border-line-100">
-            {results.map((myth, i) => (
-              <MythListItem
-                key={myth.slug}
-                myth={myth}
-                index={i + 1}
-                motif={myth.motif}
-              />
-            ))}
-          </div>
-        )
+      {results.length ? (
+        <MixedResults myths={results} />
       ) : (
         <EmptyState
           motif="hoja"
@@ -181,12 +117,6 @@ export function FilterableArchive({
           description="Ajusta o limpia los filtros para explorar más relatos del archivo."
         />
       )}
-
-      {hasResults ? (
-        <div className="mt-10 flex justify-center">
-          <Pagination page={1} totalPages={4} makeHref={() => "#"} />
-        </div>
-      ) : null}
     </Container>
   );
 }

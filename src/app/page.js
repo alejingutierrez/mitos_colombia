@@ -72,8 +72,8 @@ export default async function Home() {
 
   const [featuredMyths, diverseMyths, stats, taxonomy, routePreviews, tarotCards] =
     await Promise.all([
-      getFeaturedMythsWithImages(9, seed),
-      getDiverseMyths(9, seed),
+      getFeaturedMythsWithImages(24, seed),
+      getDiverseMyths(24, seed),
       getHomeStats(),
       getTaxonomy(),
       getRoutePreviews(seed),
@@ -81,12 +81,18 @@ export default async function Home() {
     ]);
 
   // Mito líder para la obra de portada: primero con imagen, si no el primero.
-  const pool = (featuredMyths || []).length >= 6 ? featuredMyths : [...(featuredMyths || []), ...(diverseMyths || [])];
+  const pool = Array.from(
+    new Map(
+      [...(featuredMyths || []), ...(diverseMyths || [])]
+        .filter((myth) => myth?.slug)
+        .map((myth) => [myth.slug, myth])
+    ).values()
+  );
   const leadRaw = pool.find((m) => m.image_url) || pool[0] || diverseMyths[0];
   const lead = leadRaw ? mapMyth(leadRaw) : undefined;
   const featured = pool
     .filter((m) => !lead || m.slug !== lead.slug)
-    .slice(0, 6)
+    .slice(0, 23)
     .map(mapMyth);
 
   const totalMyths = Number(stats.total_myths) || 882;
@@ -109,6 +115,7 @@ export default async function Home() {
     tone: r.accent === "river" ? "river" : "jungle",
     motif: r.accent === "river" ? "agua" : "hoja",
     description: r.detail || r.description,
+    imageUrl: r.preview?.image_url,
   }));
 
   // Tres cartas de tarot para la sala del oráculo (selección diaria).

@@ -38,7 +38,7 @@ export function Header({ active }) {
 
   return (
     <header className="sticky top-0 z-40 border-b border-line-100 bg-paper/90 backdrop-blur supports-[backdrop-filter]:bg-paper/80">
-      <Container size="wide">
+      <Container size="atlas">
         <div className="flex h-16 items-center justify-between gap-4">
           {/* Wordmark */}
           <Link
@@ -107,7 +107,7 @@ export function Header({ active }) {
           open ? "max-h-[520px] border-b opacity-100" : "max-h-0 opacity-0"
         )}
       >
-        <Container size="wide">
+        <Container size="atlas">
           <div className="py-4">
             <SearchBox
               size="md"

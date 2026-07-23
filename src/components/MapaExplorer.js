@@ -1,8 +1,14 @@
 "use client";
 
 import "leaflet/dist/leaflet.css";
-import { useEffect, useMemo, useRef, useState } from "react";
+import {
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import {
   MapContainer,
@@ -14,8 +20,7 @@ import {
   useMapEvents,
 } from "react-leaflet";
 import L from "leaflet";
-import { GlassCard } from "./ui/GlassCard";
-import { SectionHeader } from "./ui/SectionHeader";
+import { Icon } from "./atoms";
 import { trackEvent } from "../lib/analytics";
 
 const COLOMBIA_BOUNDS = [
@@ -321,9 +326,9 @@ function MythPreviewCard({ myth, onOpen }) {
   if (!myth) return null;
 
   return (
-    <div className="pointer-events-none absolute bottom-6 left-6 right-6 z-[600] md:left-6 md:right-auto md:max-w-sm">
-      <GlassCard
-        className="pointer-events-auto overflow-hidden p-0 cursor-pointer transition hover:-translate-y-1 hover:shadow-lift"
+    <div className="pointer-events-none absolute bottom-5 left-5 right-5 z-[600] md:right-auto md:max-w-sm">
+      <div
+        className="pointer-events-auto cursor-pointer overflow-hidden border border-line-200 bg-white shadow-float transition hover:-translate-y-1"
         onClick={() => onOpen(myth)}
         role="button"
         tabIndex={0}
@@ -353,15 +358,17 @@ function MythPreviewCard({ myth, onOpen }) {
             <span>{myth.region}</span>
             {myth.community ? <span>· {myth.community}</span> : null}
           </div>
-          <h3 className="font-display text-lg text-ink-900">{myth.title}</h3>
+          <h3 className="font-editorial text-3xl font-semibold leading-none text-ink-900">
+            {myth.title}
+          </h3>
           <p className="text-xs text-ink-600 leading-relaxed line-clamp-3">
             {myth.excerpt}
           </p>
-          <p className="text-[11px] uppercase tracking-[0.25em] text-ink-500">
-            Click para abrir
+          <p className="inline-flex items-center gap-2 text-sm font-semibold text-jungle-700">
+            Leer este mito <Icon name="arrow-right" size={16} />
           </p>
         </div>
-      </GlassCard>
+      </div>
     </div>
   );
 }
@@ -371,14 +378,59 @@ export default function MapaExplorer() {
   const { data, loading, error } = useMapData();
   const [expandedGroupKey, setExpandedGroupKey] = useState(null);
   const [selectedMyth, setSelectedMyth] = useState(null);
+  const [query, setQuery] = useState("");
+  const [region, setRegion] = useState("");
+  const [community, setCommunity] = useState("");
 
-  const groups = useMemo(() => buildGroups(data), [data]);
+  const options = useMemo(() => {
+    const regions = new Map();
+    const communities = new Map();
+    data.forEach((myth) => {
+      if (myth.region) regions.set(myth.region_slug || myth.region, myth.region);
+      if (myth.community) {
+        communities.set(
+          myth.community_slug || myth.community,
+          myth.community
+        );
+      }
+    });
+    return {
+      regions: Array.from(regions, ([value, label]) => ({ value, label })).sort(
+        (a, b) => a.label.localeCompare(b.label)
+      ),
+      communities: Array.from(
+        communities,
+        ([value, label]) => ({ value, label })
+      ).sort((a, b) => a.label.localeCompare(b.label)),
+    };
+  }, [data]);
+
+  const filteredData = useMemo(() => {
+    const normalizedQuery = query.trim().toLocaleLowerCase("es");
+    return data.filter((myth) => {
+      if (region && (myth.region_slug || myth.region) !== region) return false;
+      if (
+        community &&
+        (myth.community_slug || myth.community) !== community
+      ) {
+        return false;
+      }
+      if (!normalizedQuery) return true;
+      return [myth.title, myth.excerpt, myth.region, myth.community]
+        .filter(Boolean)
+        .some((value) =>
+          String(value).toLocaleLowerCase("es").includes(normalizedQuery)
+        );
+    });
+  }, [community, data, query, region]);
+
+  const groups = useMemo(() => buildGroups(filteredData), [filteredData]);
   const expandedGroup = useMemo(
     () => groups.find((group) => group.key === expandedGroupKey) || null,
     [expandedGroupKey, groups]
   );
 
-  const { groupMarkers, mythMarkers, uniqueLocations } = useMemo(() => {
+  const { groupMarkers, mythMarkers } = useMemo(() => {
     const groupMarkers = [];
     const mythMarkers = [];
 
@@ -399,18 +451,22 @@ export default function MapaExplorer() {
       }
     });
 
-    return { groupMarkers, mythMarkers, uniqueLocations: groups.length };
+    return { groupMarkers, mythMarkers };
   }, [groups, expandedGroupKey]);
 
-  const stats = useMemo(() => {
-    const withImages = data.filter((item) => item.image_url).length;
-    const regions = new Set(data.map((item) => item.region_slug || item.region));
-    return {
-      total: data.length,
-      withImages,
-      regions: regions.size,
-    };
-  }, [data]);
+  const nearbyMyths = useMemo(() => {
+    if (selectedMyth?.region_slug || selectedMyth?.region) {
+      const selectedRegion = selectedMyth.region_slug || selectedMyth.region;
+      return filteredData
+        .filter(
+          (myth) =>
+            (myth.region_slug || myth.region) === selectedRegion &&
+            myth.slug !== selectedMyth.slug
+        )
+        .slice(0, 3);
+    }
+    return filteredData.slice(0, 3);
+  }, [filteredData, selectedMyth]);
 
   useEffect(() => {
     if (!expandedGroupKey) return;
@@ -419,6 +475,13 @@ export default function MapaExplorer() {
       setExpandedGroupKey(null);
     }
   }, [expandedGroupKey, groups]);
+
+  useEffect(() => {
+    if (!selectedMyth) return;
+    if (!filteredData.some((myth) => myth.slug === selectedMyth.slug)) {
+      setSelectedMyth(null);
+    }
+  }, [filteredData, selectedMyth]);
 
   const handleMythClick = (myth) => {
     setSelectedMyth(myth);
@@ -452,51 +515,113 @@ export default function MapaExplorer() {
   };
 
   return (
-    <section className="container-shell mt-12">
-      <div className="grid gap-10 lg:grid-cols-[0.9fr_1.6fr]">
-        <div className="space-y-6">
-          <SectionHeader
-            eyebrow="Mapa vivo"
-            title="Explora mitos ubicados en el territorio colombiano."
-            description="Cartografiar un mito es fijar una huella en el territorio: cada punto es memoria viva que vuelve a contarse."
-          />
+    <section className="grid min-h-[calc(100svh-4rem)] border-b border-line-100 bg-white lg:grid-cols-[27rem_1fr]">
+      <aside className="relative z-10 border-b border-line-100 p-6 lg:border-b-0 lg:border-r lg:p-9">
+        <h1 className="font-editorial text-[3.4rem] font-semibold leading-[0.9] tracking-[-0.035em] text-ink-900">
+          El mapa de los mitos de Colombia
+        </h1>
+        <p className="mt-5 text-sm leading-relaxed text-ink-700">
+          Cada relato anclado a su geografía.
+        </p>
 
-          <div className="grid gap-4 sm:grid-cols-3 lg:grid-cols-1">
-            <GlassCard className="p-5">
-              <p className="text-xs uppercase tracking-[0.3em] text-jungle-600">
-                Mitos ubicados
-              </p>
-              <p className="mt-3 font-display text-3xl text-ink-900">
-                {loading ? "..." : stats.total}
-              </p>
-            </GlassCard>
-            <GlassCard className="p-5">
-              <p className="text-xs uppercase tracking-[0.3em] text-river-600">
-                Ubicaciones unicas
-              </p>
-              <p className="mt-3 font-display text-3xl text-ink-900">
-                {loading ? "..." : uniqueLocations}
-              </p>
-            </GlassCard>
-            <GlassCard className="p-5">
-              <p className="text-xs uppercase tracking-[0.3em] text-ember-500">
-                Regiones
-              </p>
-              <p className="mt-3 font-display text-3xl text-ink-900">
-                {loading ? "..." : stats.regions}
-              </p>
-            </GlassCard>
+        <div className="atlas-map-controls mt-7 space-y-4">
+          <label className="relative block">
+            <span className="sr-only">Buscar mito o lugar</span>
+            <Icon
+              name="search"
+              size={18}
+              className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-ink-500"
+            />
+            <input
+              type="search"
+              value={query}
+              onChange={(event) => setQuery(event.target.value)}
+              placeholder="Buscar mito o lugar…"
+              className="min-h-12 w-full border border-line-200 bg-white pl-11 pr-4 text-sm text-ink-900 placeholder:text-ink-500 focus:border-jungle-600 focus:ring-0"
+            />
+          </label>
+          <div className="grid grid-cols-2 gap-3">
+            <label>
+              <span className="atlas-kicker block">Región</span>
+              <select
+                value={region}
+                onChange={(event) => setRegion(event.target.value)}
+                className="mt-2 min-h-12 w-full border border-line-200 bg-white px-3 text-sm focus:border-jungle-600 focus:ring-0"
+              >
+                <option value="">Todas</option>
+                {options.regions.map((option) => (
+                  <option key={option.value} value={option.value}>
+                    {option.label}
+                  </option>
+                ))}
+              </select>
+            </label>
+            <label>
+              <span className="atlas-kicker block">Comunidad</span>
+              <select
+                value={community}
+                onChange={(event) => setCommunity(event.target.value)}
+                className="mt-2 min-h-12 w-full border border-line-200 bg-white px-3 text-sm focus:border-jungle-600 focus:ring-0"
+              >
+                <option value="">Todas</option>
+                {options.communities.map((option) => (
+                  <option key={option.value} value={option.value}>
+                    {option.label}
+                  </option>
+                ))}
+              </select>
+            </label>
           </div>
-
         </div>
 
-        <GlassCard className="relative w-full overflow-hidden p-0 aspect-[3/4]">
+        <div className="mt-8 border-t border-line-100 pt-7">
+          <div className="flex items-baseline justify-between">
+            <h2 className="font-editorial text-3xl font-semibold">
+              Cerca de este lugar
+            </h2>
+            <span className="text-xs text-ink-500">
+              {filteredData.length} {filteredData.length === 1 ? "mito" : "mitos"}
+            </span>
+          </div>
+          <div className="mt-4 divide-y divide-line-100">
+            {nearbyMyths.map((myth) => (
+              <button
+                key={myth.slug}
+                type="button"
+                onClick={() => handleMythClick(myth)}
+                className="group grid w-full grid-cols-[5.8rem_1fr_auto] items-center gap-4 py-4 text-left"
+              >
+                <span className="relative aspect-[4/3] overflow-hidden bg-mist-50">
+                  {myth.image_url ? (
+                    <Image
+                      src={myth.image_url}
+                      alt=""
+                      fill
+                      sizes="94px"
+                      className="atlas-image-zoom object-cover"
+                    />
+                  ) : null}
+                </span>
+                <span className="font-editorial text-xl font-semibold leading-none">
+                  {myth.title}
+                </span>
+                <Icon name="chevron-right" size={17} className="mc-arrow" />
+              </button>
+            ))}
+          </div>
+          <Link href="/mitos" className="atlas-link mt-6">
+            Ver el archivo completo <Icon name="arrow-right" size={16} />
+          </Link>
+        </div>
+      </aside>
+
+      <div className="relative min-h-[70svh] w-full overflow-hidden lg:min-h-[calc(100svh-4rem)]">
           {loading ? (
-            <div className="flex h-full items-center justify-center bg-white/60">
+            <div className="flex h-full min-h-[70svh] items-center justify-center bg-mist-50">
               <div className="text-sm text-ink-600">Cargando mapa...</div>
             </div>
           ) : error ? (
-            <div className="flex h-full items-center justify-center bg-white/60">
+            <div className="flex h-full min-h-[70svh] items-center justify-center bg-mist-50">
               <div className="text-sm text-ember-600">{error}</div>
             </div>
           ) : (
@@ -544,7 +669,6 @@ export default function MapaExplorer() {
               <MythPreviewCard myth={selectedMyth} onOpen={handleOpenMyth} />
             </div>
           )}
-        </GlassCard>
       </div>
     </section>
   );

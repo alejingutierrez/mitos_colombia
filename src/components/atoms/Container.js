@@ -9,6 +9,7 @@ const widths = {
   narrow: "max-w-3xl",
   default: "max-w-5xl",
   wide: "max-w-6xl",
+  atlas: "max-w-[1460px]",
   full: "max-w-none",
 };
 

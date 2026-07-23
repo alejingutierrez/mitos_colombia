@@ -69,7 +69,7 @@ export default async function ComunidadesPage() {
       heroMotif="condor"
       columns={3}
     >
-      <Container size="wide" className="border-t border-line-100 py-12">
+      <Container size="atlas" className="border-t border-line-100 py-12">
         <div className="grid gap-6 lg:grid-cols-[0.8fr_1.2fr]">
           <Heading level={2}>Voces, linajes y memoria compartida</Heading>
           <div className="space-y-4">

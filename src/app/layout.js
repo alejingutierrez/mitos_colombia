@@ -1,5 +1,5 @@
 import "./globals.css";
-import { Manrope, Inter } from "next/font/google";
+import { Cormorant_Garamond, Manrope, Inter } from "next/font/google";
 import Script from "next/script";
 import { Footer } from "../components/organisms/Footer";
 import Analytics from "../components/Analytics";
@@ -25,6 +25,14 @@ const body = Inter({
   display: "swap",
 });
 
+const editorial = Cormorant_Garamond({
+  subsets: ["latin"],
+  weight: ["500", "600", "700"],
+  style: ["normal", "italic"],
+  variable: "--font-editorial",
+  display: "swap",
+});
+
 export const metadata = {
   metadataBase: SITE_URL ? new URL(SITE_URL) : undefined,
   title: "Mitos de Colombia",
@@ -41,7 +49,10 @@ export default function RootLayout({ children }) {
   const gaId = GA_MEASUREMENT_ID.trim();
 
   return (
-    <html lang="es" className={`${display.variable} ${body.variable}`}>
+    <html
+      lang="es"
+      className={`${display.variable} ${body.variable} ${editorial.variable}`}
+    >
       <head>
         <WebsiteJsonLd siteUrl={SITE_URL} />
       </head>

@@ -1,17 +1,8 @@
-import {
-  Container,
-  Eyebrow,
-  Heading,
-  Text,
-  Prose,
-  TextLink,
-  IndexNumber,
-  Divider,
-  ButtonLink,
-} from "../../components/atoms";
-import { Header, RouteGrid, MythGrid } from "../../components/organisms";
+import Image from "next/image";
+import Link from "next/link";
+import { Container, Icon, Motif } from "../../components/atoms";
+import { Header } from "../../components/organisms";
 import { getRoutePreviews } from "../../lib/routes";
-import { getFeaturedMythsWithImages, getDiverseMyths } from "../../lib/myths";
 import { buildSeoMetadata, getSeoEntry } from "../../lib/seo";
 
 export async function generateMetadata() {
@@ -33,179 +24,178 @@ export const revalidate = 86400;
 function getDailySeed() {
   const now = new Date();
   const startOfYear = new Date(now.getFullYear(), 0, 0);
-  const diff = now - startOfYear;
-  const oneDay = 1000 * 60 * 60 * 24;
-  return Math.floor(diff / oneDay);
+  return Math.floor((now - startOfYear) / (1000 * 60 * 60 * 24));
 }
 
-const guideSteps = [
-  {
-    title: "Lee el territorio como archivo",
-    detail:
-      "Cada ruta agrupa mitos que comparten paisajes, guardianes o tensiones similares. Puedes recorrer el territorio como si fuese una biblioteca viva.",
-  },
-  {
-    title: "Cruza símbolos y resonancias",
-    detail:
-      "Las rutas ayudan a descubrir motivos que se repiten: agua, montes, pactos o apariciones. Es una lectura comparada que revela conexiones.",
-  },
-  {
-    title: "Vuelve al mito original",
-    detail:
-      "Cuando un relato te llama, vuelve a su página completa para profundizar en su origen, su comunidad y su contexto.",
-  },
+function RouteBand({ route, index }) {
+  const dark = index % 3 === 1;
+  const titles = route.curated?.heroTitles || [];
+  return (
+    <Link
+      href={`/rutas/${route.slug}`}
+      className={`group relative block min-h-[24rem] overflow-hidden border border-line-100 ${
+        dark ? "bg-[rgb(var(--atlas-night))] text-white" : "bg-mist-50 text-ink-900"
+      }`}
+    >
+      {route.preview?.image_url ? (
+        <Image
+          src={route.preview.image_url}
+          alt=""
+          fill
+          sizes="(max-width: 768px) 100vw, 1100px"
+          className={`atlas-image-zoom object-cover ${dark ? "opacity-45" : "opacity-32"}`}
+        />
+      ) : (
+        <span className="absolute inset-0 flex items-center justify-start opacity-20">
+          <Motif name={route.accent === "river" ? "agua" : "hoja"} size={280} />
+        </span>
+      )}
+      <span
+        className={`absolute inset-0 ${
+          dark
+            ? "bg-gradient-to-r from-black/88 via-black/48 to-transparent"
+            : "bg-gradient-to-r from-white via-white/82 to-white/15"
+        }`}
+      />
+      <span className="absolute left-[8%] right-[8%] top-[53%] h-px bg-ember-500/90">
+        {[15, 50, 85].map((left) => (
+          <span
+            key={left}
+            className="absolute top-1/2 h-3 w-3 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-ember-500 bg-white"
+            style={{ left: `${left}%` }}
+          />
+        ))}
+      </span>
+      <span className="relative flex min-h-[24rem] flex-col justify-between p-7 md:p-10">
+        <span>
+          <span className="text-xs font-semibold uppercase tracking-[0.18em] opacity-60">
+            Ruta {String(index + 1).padStart(2, "0")}
+          </span>
+          <span className="mt-3 block max-w-2xl font-editorial text-5xl font-semibold leading-none md:text-6xl">
+            {route.title}
+          </span>
+          <span className="mt-4 block max-w-xl text-sm leading-relaxed opacity-75">
+            {route.detail || route.description}
+          </span>
+        </span>
+        <span className="grid grid-cols-3 gap-4 pt-16">
+          {titles.slice(0, 3).map((title) => (
+            <span
+              key={title}
+              className="font-editorial text-lg font-semibold leading-none md:text-xl"
+            >
+              {title}
+            </span>
+          ))}
+        </span>
+        <span className="mt-6 inline-flex w-fit items-center gap-2 border-b border-ember-500 pb-1 text-sm font-semibold">
+          Seguir la ruta <Icon name="arrow-right" size={17} className="mc-arrow" />
+        </span>
+      </span>
+    </Link>
+  );
+}
+
+const GUIDE = [
+  [
+    "Lee el territorio como archivo",
+    "Cada ruta agrupa relatos que comparten paisajes, guardianes o tensiones.",
+  ],
+  [
+    "Cruza símbolos y resonancias",
+    "Agua, monte, pactos y apariciones revelan conexiones entre voces distintas.",
+  ],
+  [
+    "Vuelve al mito original",
+    "Abre cada relato para conocer su comunidad, procedencia y contexto.",
+  ],
 ];
 
 export default async function RutasPage() {
-  const seed = getDailySeed();
-  const [routePreviews, featuredMyths, diverseMyths] = await Promise.all([
-    getRoutePreviews(seed),
-    getFeaturedMythsWithImages(6, seed),
-    getDiverseMyths(6, seed),
-  ]);
-
-  const routes = (routePreviews || []).map((r) => ({
-    title: r.title,
-    href: `/rutas/${r.slug}`,
-    description: r.detail || r.description,
-    tone: r.accent === "river" ? "river" : "jungle",
-    motif: r.accent === "river" ? "agua" : "hoja",
-  }));
-
-  const featuredPool =
-    (featuredMyths || []).length >= 6 ? featuredMyths : diverseMyths;
-  const featured = (featuredPool || []).slice(0, 6).map((m) => ({
-    slug: m.slug,
-    title: m.title,
-    excerpt: m.excerpt,
-    region: m.region,
-    community: m.community,
-    imageUrl: m.image_url,
-  }));
+  const routePreviews = await getRoutePreviews(getDailySeed());
+  const hero = routePreviews[0];
 
   return (
     <>
       <Header active="/rutas" />
-      <main className="min-h-[100dvh] bg-paper">
-        {/* Hero */}
-        <Container size="wide" className="py-12 md:py-16">
-          <div className="max-w-2xl">
-            <Eyebrow tone="jungle" withRule className="mb-4">
-              Rutas editoriales
-            </Eyebrow>
-            <Heading level={0} accent="jungle">
-              Cartografías para leer el mito como territorio
-            </Heading>
-            <Text size="lg" className="mt-5">
-              Colecciones curadas que conectan relatos, paisajes y símbolos para
-              leer la memoria colombiana en secuencia.
-            </Text>
+      <main className="min-h-[100dvh] overflow-x-clip bg-paper">
+        <section className="relative min-h-[calc(100svh-4rem)] overflow-hidden bg-[rgb(var(--atlas-night))] text-white">
+          {hero?.preview?.image_url ? (
+            <Image
+              src={hero.preview.image_url}
+              alt=""
+              fill
+              priority
+              sizes="100vw"
+              className="object-cover"
+            />
+          ) : null}
+          <span className="absolute inset-0 bg-gradient-to-r from-black via-black/40 to-transparent" />
+          <span className="absolute bottom-[16%] left-[52%] right-[8%] h-px bg-ember-500">
+            {[0, 50, 100].map((left) => (
+              <span
+                key={left}
+                className="absolute top-1/2 h-4 w-4 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-ember-500 bg-white"
+                style={{ left: `${left}%` }}
+              />
+            ))}
+          </span>
+          <Container
+            size="atlas"
+            className="relative flex min-h-[calc(100svh-4rem)] items-center py-12"
+          >
+            <div className="max-w-3xl">
+              <h1 className="font-editorial text-[4.2rem] font-semibold leading-[0.88] tracking-[-0.04em] md:text-[6.4rem]">
+                Cartografías para leer el mito como territorio
+              </h1>
+              <p className="mt-7 max-w-lg text-lg leading-relaxed text-white/78">
+                Recorridos curados entre paisajes, guardianes y símbolos.
+              </p>
+              <Link
+                href="#rutas"
+                className="mt-8 inline-flex items-center gap-2 border-b border-ember-500 pb-1 font-semibold text-ember-400"
+              >
+                Elegir una ruta <Icon name="chevron-down" size={18} />
+              </Link>
+            </div>
+          </Container>
+        </section>
+
+        <Container id="rutas" size="atlas" className="scroll-mt-20 py-14 md:py-20">
+          <h2 className="font-editorial text-4xl font-semibold md:text-5xl">
+            Rutas para entrar al archivo
+          </h2>
+          <span className="atlas-rule" />
+          <div className="mt-9 space-y-3">
+            {routePreviews.map((route, index) => (
+              <RouteBand key={route.slug} route={route} index={index} />
+            ))}
           </div>
         </Container>
 
-        {/* Intro editorial */}
-        <Container size="wide" className="pb-6">
-          <div className="mx-auto max-w-2xl">
-            <Prose>
-              <p>
-                Las rutas editoriales nacen de la necesidad de leer los mitos
-                como un tejido. Cada relato existe en un lugar, pero también
-                conversa con otros mitos que comparten guardianes, paisajes y
-                dilemas similares. Las rutas permiten moverse entre esas
-                conexiones sin perder la profundidad de cada historia. Puedes
-                iniciar en una ruta y luego abrir el{" "}
-                <TextLink href="/mapa">Mapa</TextLink> para ubicar esos relatos
-                en el territorio real.
-              </p>
-              <p>
-                Este trabajo se apoya en la{" "}
-                <TextLink href="/metodologia">Metodología</TextLink>, donde
-                explicamos cómo organizamos el archivo. Cuando termines una ruta,
-                puedes seguir explorando en{" "}
-                <TextLink href="/mitos">Mitos</TextLink> o en{" "}
-                <TextLink href="/categorias">Categorías</TextLink>.
-              </p>
-            </Prose>
-          </div>
-        </Container>
-
-        {/* Grilla de rutas */}
-        <RouteGrid routes={routes} eyebrow={null} className="pb-4" />
-
-        {/* Guía de lectura */}
-        <div className="border-t border-line-100">
-          <Container size="wide" className="py-14">
-            <Eyebrow tone="river" withRule className="mb-8">
-              Guía de lectura
-            </Eyebrow>
-            <Heading level={2} className="sr-only">
-              Guía de lectura
-            </Heading>
-            <div className="grid gap-8 md:grid-cols-3">
-              {guideSteps.map((step, i) => (
-                <div key={step.title}>
-                  <div className="flex items-baseline gap-3">
-                    <IndexNumber value={i + 1} size="sm" />
-                    <Heading level={3} className="text-base font-semibold">
-                      {step.title}
-                    </Heading>
-                  </div>
-                  <Text size="sm" tone="muted" className="mt-2">
-                    {step.detail}
-                  </Text>
+        <section className="border-t border-line-100 bg-mist-50">
+          <Container size="atlas" className="py-14 md:py-20">
+            <h2 className="font-editorial text-4xl font-semibold">
+              Cómo seguir una ruta
+            </h2>
+            <span className="atlas-rule" />
+            <div className="mt-10 grid gap-10 md:grid-cols-3">
+              {GUIDE.map(([title, description], index) => (
+                <div key={title}>
+                  <span className="font-editorial text-4xl text-jungle-700">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                  <h3 className="mt-4 font-editorial text-2xl font-semibold">
+                    {title}
+                  </h3>
+                  <p className="mt-3 text-sm leading-relaxed text-ink-700">
+                    {description}
+                  </p>
                 </div>
               ))}
             </div>
           </Container>
-        </div>
-
-        {/* Mitos destacados */}
-        {featured.length > 0 ? (
-          <div className="border-t border-line-100">
-            <Container size="wide" className="py-14">
-              <MythGrid
-                eyebrow="Relatos destacados"
-                title="Historias para iniciar tu ruta"
-                description="Una selección rotativa de mitos con imágenes listas para explorar. Cada tarjeta conecta con su región y comunidad."
-                action={
-                  <ButtonLink href="/mitos" variant="secondary">
-                    Explorar todos los mitos
-                  </ButtonLink>
-                }
-                myths={featured}
-              />
-            </Container>
-          </div>
-        ) : null}
-
-        {/* Cierre: cruce con mapa y comunidades */}
-        <div className="border-t border-line-100">
-          <Container size="wide" className="py-14">
-            <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
-              <div className="max-w-xl">
-                <Eyebrow tone="jungle" className="mb-2">
-                  Sigue explorando
-                </Eyebrow>
-                <Heading level={2}>Cruza rutas, mapa y comunidades</Heading>
-                <Text className="mt-3">
-                  El archivo crece con cada lectura. Recorre el{" "}
-                  <TextLink href="/mapa">Mapa</TextLink> para ubicar los relatos
-                  en su paisaje y visita las{" "}
-                  <TextLink href="/comunidades">Comunidades</TextLink> para
-                  entender las voces que los mantienen vivos.
-                </Text>
-              </div>
-              <div className="flex flex-col gap-3 sm:flex-row">
-                <ButtonLink href="/mapa" variant="primary">
-                  Explorar mapa
-                </ButtonLink>
-                <ButtonLink href="/comunidades" variant="secondary">
-                  Ver comunidades
-                </ButtonLink>
-              </div>
-            </div>
-          </Container>
-        </div>
+        </section>
       </main>
     </>
   );

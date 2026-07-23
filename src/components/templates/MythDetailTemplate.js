@@ -1,174 +1,212 @@
-import {
-  Container,
-  Heading,
-  Text,
-  Eyebrow,
-  Motif,
-  ImageFrame,
-} from "../atoms";
+import Link from "next/link";
+import { Container, Heading, ImageFrame, Motif } from "../atoms";
 import { Breadcrumb, ShareBar } from "../molecules";
-import { Header, MythGrid, CommentThread } from "../organisms";
+import { CommentThread, Header, MythGrid } from "../organisms";
 import {
-  RelatoBlock,
-  HistoriaBlock,
-  VersionesBlock,
-  LeccionBlock,
-  SimilitudesBlock,
-  ProcedenciaBlock,
   FuentesBlock,
-  TerritorioBlock,
+  HistoriaBlock,
+  LeccionBlock,
   PalabrasClaveBlock,
+  ProcedenciaBlock,
+  RelatoBlock,
+  SimilitudesBlock,
+  TerritorioBlock,
+  VersionesBlock,
   deriveSections,
   mythMotif,
   toParagraphs,
-  CornerTicks,
-  CuratorialCaption,
-  CreamMedallion,
-  acc,
-  GOLD,
-  CREAM,
-  NIGHT,
 } from "./MythSections";
 
-/**
- * Template · MythDetailTemplate — sala de museo
- * Abrir un mito se siente como entrar a una sala: la imagen se trata como OBRA
- * (enmarcada, con marcas de esquina y cartela), los motivos a escala, una
- * columna vertebral numerada en la lectura, y un único pico ceremonial oscuro y
- * dorado ("La enseñanza"). Variantes de hero: immersive · editorial · feature.
- */
-
-const VARIANTS = ["immersive", "editorial", "feature"];
 const RIVER_REGIONS = ["Caribe", "Pacífico"];
+const pickAccent = (region) =>
+  RIVER_REGIONS.includes(region) ? "river" : "jungle";
 
-function hashStr(s = "") {
-  let h = 0;
-  for (let i = 0; i < s.length; i++) h = (h * 31 + s.charCodeAt(i)) | 0;
-  return Math.abs(h);
-}
-const pickVariant = (slug) => VARIANTS[hashStr(slug) % VARIANTS.length];
-const pickAccent = (region) => (RIVER_REGIONS.includes(region) ? "river" : "jungle");
-
-const kickerOf = (myth) => [myth.region, myth.community].filter(Boolean).join(" · ");
-
-/* Banda ceremonial de cierre (oscura y dorada) + compartir. */
-function ClosingBand({ myth, accent, shareUrl }) {
-  const dark = acc(accent).dark;
+function ImagePause({ myth, ratio = "16 / 7", caption, className = "" }) {
+  if (!myth.imageUrl) return null;
   return (
-    <section className="relative overflow-hidden" style={{ background: `linear-gradient(135deg, ${NIGHT} 0%, ${dark} 60%, ${NIGHT} 100%)` }}>
-      <Motif name={myth.motif} size={340} className="pointer-events-none absolute -left-16 -bottom-12 opacity-[0.05]" aria-hidden="true" />
-      <Container size="wide" className="relative py-16 text-center md:py-20">
-        <CreamMedallion motif={myth.motif} size={40} className="mx-auto mb-6" />
-        <p className="mx-auto max-w-xl text-balance font-display text-xl font-bold leading-snug md:text-2xl" style={{ color: CREAM }}>
-          {myth.title}
-        </p>
-        <p className="mt-2.5 text-xs uppercase tracking-[0.2em]" style={{ color: GOLD }}>
-          De la tradición oral colombiana
-        </p>
-        <div className="mt-7 inline-flex rounded-full bg-white px-4 py-1.5 shadow-sm">
-          <ShareBar url={shareUrl} title={myth.title} />
-        </div>
-      </Container>
-    </section>
+    <figure className={className}>
+      <ImageFrame
+        src={myth.imageUrl}
+        alt=""
+        ratio={ratio}
+        sizes="(max-width: 768px) 100vw, 1100px"
+        placeholderMotif={myth.motif}
+        placeholderSize={180}
+        className="rounded-none border-0"
+        imgClassName="object-cover"
+      />
+      {caption ? (
+        <figcaption className="mt-3 text-center font-editorial text-lg italic text-ink-500">
+          {caption}
+        </figcaption>
+      ) : null}
+    </figure>
   );
 }
 
-/* Cuerpo completo del mito: lectura → pico ceremonial → origen → cierre → relacionados → comunidad */
-function MythBody({ myth, accent, related }) {
-  const shareUrl = myth.slug ? `https://www.mitosdecolombia.com/mitos/${myth.slug}` : undefined;
-  const hasGeo = myth.latitude != null && myth.longitude != null;
-  const showTerritorio = hasGeo || myth._map || myth.showTerritorio;
+function ReadingIndex({ myth }) {
+  const items = [
+    ["relato", "Relato", Boolean(toParagraphs(myth.mito).length)],
+    ["contexto", "Contexto", Boolean(toParagraphs(myth.historia).length)],
+    ["versiones", "Versiones", Boolean(toParagraphs(myth.versiones).length)],
+    ["ensenanza", "Enseñanza", Boolean(String(myth.leccion || "").trim())],
+    ["fuentes", "Fuentes", true],
+  ].filter(([, , visible]) => visible);
 
-  // Numeración secuencial sólo entre los bloques numerados que existen.
-  const numbered = [];
-  if (toParagraphs(myth.historia).length) numbered.push("historia");
-  if (toParagraphs(myth.versiones).length) numbered.push("versiones");
-  if (toParagraphs(myth.similitudes).length) numbered.push("similitudes");
-  const idx = (k) => {
-    const i = numbered.indexOf(k);
-    return i >= 0 ? i + 1 : null;
-  };
+  return (
+    <aside className="hidden lg:block">
+      <div className="sticky top-24">
+        <p className="atlas-kicker">En esta página</p>
+        <nav className="mt-5 border-l border-line-200" aria-label="Índice del mito">
+          {items.map(([href, label], index) => (
+            <Link
+              key={href}
+              href={`#${href}`}
+              className="group relative block py-3 pl-6 text-sm text-ink-700 hover:text-jungle-700"
+            >
+              <span className="absolute -left-[4.5px] top-[1.05rem] h-2 w-2 rounded-full border border-line-300 bg-white group-hover:border-jungle-600 group-hover:bg-jungle-600" />
+              {label}
+              <span className="ml-2 font-editorial text-ink-500">
+                {String(index + 1).padStart(2, "0")}
+              </span>
+            </Link>
+          ))}
+        </nav>
+        {myth.latitude != null && myth.longitude != null ? (
+          <p className="mt-16 text-xs leading-relaxed text-ink-500">
+            {myth.latitude}° · {myth.longitude}°
+          </p>
+        ) : null}
+      </div>
+    </aside>
+  );
+}
+
+function MythReading({ myth, accent, related }) {
+  const hasGeo = myth.latitude != null && myth.longitude != null;
+  const showTerritory = hasGeo || myth._map || myth.showTerritorio;
+  const shareUrl = myth.slug
+    ? `https://www.mitosdecolombia.com/mitos/${myth.slug}`
+    : undefined;
 
   return (
     <>
-      {/* Lectura protagonista (medida angosta) */}
-      <Container size="wide" className="py-12 md:py-16">
-        <div className="mx-auto max-w-[42rem] space-y-14">
-          <RelatoBlock text={myth.mito} accent={accent} motif={myth.motif} />
-          <HistoriaBlock text={myth.historia} accent={accent} index={idx("historia")} />
-          <VersionesBlock text={myth.versiones} accent={accent} index={idx("versiones")} />
+      <Container size="atlas" className="py-12 md:py-16">
+        <div className="grid gap-12 lg:grid-cols-[10rem_1fr]">
+          <ReadingIndex myth={myth} />
+          <div className="min-w-0">
+            <section
+              id="relato"
+              className="scroll-mt-24 grid items-start gap-10 md:grid-cols-[1fr_0.72fr]"
+            >
+              <RelatoBlock text={myth.mito} accent={accent} motif={myth.motif} />
+              <ImagePause myth={myth} ratio="4 / 5" className="md:sticky md:top-24" />
+            </section>
+
+            <ImagePause
+              myth={myth}
+              ratio="16 / 6"
+              caption={
+                myth.community
+                  ? `${myth.community}, lugar de encuentro y memoria.`
+                  : `${myth.region || "Colombia"}, territorio y memoria.`
+              }
+              className="mt-16"
+            />
+
+            {toParagraphs(myth.historia).length ? (
+              <section
+                id="contexto"
+                className="scroll-mt-24 mt-16 grid items-center gap-10 md:grid-cols-[0.9fr_1.1fr]"
+              >
+                <ImagePause myth={myth} ratio="4 / 3" />
+                <HistoriaBlock
+                  text={myth.historia}
+                  accent={accent}
+                  index={1}
+                  motif={myth.motif}
+                />
+              </section>
+            ) : null}
+
+            {toParagraphs(myth.versiones).length ? (
+              <section
+                id="versiones"
+                className="scroll-mt-24 mt-16 grid items-start gap-10 md:grid-cols-[1fr_0.9fr]"
+              >
+                <VersionesBlock text={myth.versiones} accent={accent} index={2} />
+                <ImagePause myth={myth} ratio="4 / 3" />
+              </section>
+            ) : null}
+
+            {toParagraphs(myth.similitudes).length ? (
+              <section className="mt-16 max-w-3xl">
+                <SimilitudesBlock
+                  text={myth.similitudes}
+                  accent={accent}
+                  index={3}
+                  motif={myth.motif}
+                />
+              </section>
+            ) : null}
+          </div>
         </div>
       </Container>
 
-      {/* Pico ceremonial: la enseñanza (banda oscura a sangre) */}
-      <LeccionBlock text={myth.leccion} accent={accent} motif={myth.motif} />
+      <div id="ensenanza" className="scroll-mt-24">
+        <LeccionBlock text={myth.leccion} accent={accent} motif={myth.motif} />
+      </div>
 
-      {/* Resonancias + origen + palabras clave */}
-      <Container size="wide" className="py-12 md:py-16">
-        <div className="mx-auto max-w-3xl space-y-14">
-          <div className="mx-auto max-w-[42rem]">
-            <SimilitudesBlock text={myth.similitudes} accent={accent} index={idx("similitudes")} />
-          </div>
-
-          {/* De dónde viene: procedencia + territorio como un solo movimiento */}
-          <div>
-            <Eyebrow withRule tone={accent} className="mb-6">
-              De dónde viene
-            </Eyebrow>
-            <div className="grid gap-6">
-              <ProcedenciaBlock
+      <Container size="atlas" className="py-14 md:py-20">
+        <div id="fuentes" className="scroll-mt-24 grid gap-8 lg:grid-cols-2">
+          <ProcedenciaBlock
+            region={myth.region}
+            community={myth.community}
+            categoryPath={myth.category_path}
+          />
+          <FuentesBlock
+            sources={[...(myth.keySources || []), ...(myth.sources || [])]}
+            updatedAt={myth.editorialUpdatedAt || myth.updatedAt}
+          />
+          {showTerritory ? (
+            <div className="lg:col-span-2">
+              <TerritorioBlock
+                latitude={myth.latitude}
+                longitude={myth.longitude}
                 region={myth.region}
                 community={myth.community}
-                categoryPath={myth.category_path}
-              />
-              <FuentesBlock
-                sources={[...(myth.keySources || []), ...(myth.sources || [])]}
-                updatedAt={myth.editorialUpdatedAt || myth.updatedAt}
-              />
-              {showTerritorio ? (
-                <TerritorioBlock
-                  latitude={myth.latitude}
-                  longitude={myth.longitude}
-                  region={myth.region}
-                  community={myth.community}
-                  accent={accent}
-                  motif={myth.motif}
-                >
-                  {myth._map}
-                </TerritorioBlock>
-              ) : null}
+                accent={accent}
+                motif={myth.motif}
+              >
+                {myth._map}
+              </TerritorioBlock>
             </div>
-          </div>
-
-          <div className="mx-auto max-w-[42rem]">
+          ) : null}
+          <div className="lg:col-span-2">
             <PalabrasClaveBlock keywords={myth.keywords} />
           </div>
         </div>
+        <div className="mt-10 flex justify-center">
+          <ShareBar url={shareUrl} title={myth.title} />
+        </div>
       </Container>
 
-      {/* Cierre ceremonial + compartir */}
-      <ClosingBand myth={myth} accent={accent} shareUrl={shareUrl} />
-
-      {/* Sigue explorando (banda tenue con motivo fantasma) */}
-      {related && related.length > 0 ? (
-        <div className="relative overflow-hidden bg-mist-50">
-          <Motif name={myth.motif} size={420} className="pointer-events-none absolute -right-24 top-4 opacity-[0.04]" aria-hidden="true" />
-          <Container size="wide" className="relative py-14">
-            <MythGrid eyebrow="Sigue explorando" title="También te puede interesar" myths={related} />
+      {related.length ? (
+        <section className="border-y border-line-100 bg-mist-50">
+          <Container size="atlas" className="py-14">
+            <MythGrid
+              eyebrow="Sigue explorando"
+              title="También te puede interesar"
+              myths={related}
+            />
           </Container>
-        </div>
+        </section>
       ) : null}
 
-      {/* Voces de la comunidad */}
-      <Container size="wide" className="border-t border-line-100 py-14">
+      <Container size="atlas" className="py-14">
         <div className="mb-8 flex items-center gap-3">
-          <Motif name="condor" size={28} className="shrink-0" />
-          <div>
-            <Eyebrow tone={accent}>Comunidad</Eyebrow>
-            <Heading level={3} className="mt-1">
-              Voces de la comunidad
-            </Heading>
-          </div>
+          <Motif name="condor" size={30} />
+          <Heading level={3}>Voces de la comunidad</Heading>
         </div>
         {myth._comments ? myth._comments : <CommentThread comments={myth.comments} />}
       </Container>
@@ -176,14 +214,10 @@ function MythBody({ myth, accent, related }) {
   );
 }
 
-/* ---------- Variante A · Immersive (imagen-obra a sangre sobre banda oscura) ---------- */
-function ImmersiveLayout({ myth, accent, breadcrumb, related }) {
-  const dark = acc(accent).dark;
-  const scrim = `linear-gradient(to top, ${NIGHT} 2%, rgba(10,15,12,0.55) 32%, transparent 78%)`;
+function MythArticle({ myth, accent, breadcrumb, related }) {
   return (
     <article>
-      <div className="relative overflow-hidden" style={{ background: `linear-gradient(135deg, ${NIGHT} 0%, ${dark} 100%)` }}>
-        <Motif name={myth.motif} size={520} className="pointer-events-none absolute -right-24 -top-16 opacity-[0.07]" aria-hidden="true" />
+      <section className="relative min-h-[calc(100svh-4rem)] overflow-hidden bg-[rgb(var(--atlas-night))]">
         {myth.imageUrl ? (
           <ImageFrame
             src={myth.imageUrl}
@@ -191,156 +225,50 @@ function ImmersiveLayout({ myth, accent, breadcrumb, related }) {
             ratio="16 / 9"
             priority
             sizes="100vw"
-            className="rounded-none border-0"
+            className="absolute inset-0 min-h-full rounded-none border-0 [&]:aspect-auto"
             imgClassName="object-cover"
           />
         ) : (
-          <div className="flex aspect-[16/9] items-center justify-center">
-            <CreamMedallion motif={myth.motif} size={96} />
-          </div>
+          <span className="absolute inset-0 flex items-center justify-center opacity-25">
+            <Motif name={myth.motif} size={320} />
+          </span>
         )}
-        <div className="pointer-events-none absolute inset-0" style={{ background: scrim }} />
-        <div className="absolute inset-x-0 bottom-0">
-          <Container size="wide" className="pb-8 md:pb-12">
-            <div className="max-w-3xl">
-              <p className="text-[0.72rem] uppercase tracking-[0.22em] text-white/75">{kickerOf(myth)}</p>
-              <span className="mt-3 block h-px w-12" style={{ background: GOLD }} aria-hidden="true" />
-              <h1 className="mt-4 text-balance font-display text-[2rem] font-extrabold leading-[1.05] tracking-[-0.02em] text-white md:text-[3.25rem]">
-                {myth.title}
-              </h1>
-            </div>
-          </Container>
-        </div>
-      </div>
-
-      <Container size="wide" className="pt-8">
-        <Breadcrumb items={breadcrumb} />
-        {myth.excerpt ? (
-          <Text size="lg" tone="strong" className="mx-auto mt-6 max-w-2xl font-medium">
-            {myth.excerpt}
-          </Text>
-        ) : null}
-      </Container>
-      <MythBody myth={myth} accent={accent} related={related} />
-    </article>
-  );
-}
-
-/* ---------- Variante B · Editorial (dos columnas, imagen-obra enmarcada) ---------- */
-function EditorialLayout({ myth, accent, breadcrumb, related }) {
-  return (
-    <article>
-      <Container size="wide" className="pt-10 md:pt-14">
-        <Breadcrumb items={breadcrumb} className="mb-8" />
-        <div className="grid items-start gap-8 md:grid-cols-[1.1fr_0.9fr] md:gap-12">
-          <div>
-            <Eyebrow withRule tone={accent} className="mb-4">
-              {kickerOf(myth) || myth.region}
-            </Eyebrow>
-            <Heading level={0} accent={accent}>
+        <span className="absolute inset-0 bg-gradient-to-t from-black via-black/5 to-transparent" />
+        <Container
+          size="atlas"
+          className="relative flex min-h-[calc(100svh-4rem)] items-end pb-10 text-white md:pb-14"
+        >
+          <div className="max-w-3xl">
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-white/75">
+              {[myth.region, myth.community].filter(Boolean).join(" · ")}
+            </p>
+            <h1 className="mt-4 font-editorial text-[4.2rem] font-semibold leading-[0.86] tracking-[-0.04em] md:text-[6.4rem]">
               {myth.title}
-            </Heading>
+            </h1>
             {myth.excerpt ? (
-              <Text size="xl" tone="strong" className="mt-6 max-w-xl font-medium">
+              <p className="mt-5 hidden max-w-2xl text-base leading-relaxed text-white/82 sm:block">
                 {myth.excerpt}
-              </Text>
+              </p>
             ) : null}
+            <Link
+              href="#relato"
+              className="mt-6 inline-flex items-center gap-2 border-b border-ember-500 pb-1 text-sm font-semibold"
+            >
+              Leer este mito
+            </Link>
           </div>
-          <div className="relative md:pt-2">
-            <Motif name={myth.motif} size={240} className="pointer-events-none absolute -right-8 -top-10 -z-10 opacity-[0.05]" aria-hidden="true" />
-            <div className="relative">
-              <ImageFrame
-                src={myth.imageUrl}
-                alt={myth.title}
-                ratio="4 / 5"
-                priority
-                sizes="(max-width: 768px) 100vw, 38vw"
-                placeholderMotif={myth.motif}
-                placeholderSize={180}
-              />
-              <CornerTicks accent={accent} />
-            </div>
-            <CuratorialCaption region={myth.region} community={myth.community} title={myth.title} className="mt-3.5" />
-          </div>
-        </div>
-        <div className="mt-10 h-px w-full bg-line-100" aria-hidden="true" />
+        </Container>
+      </section>
+      <Container size="atlas" className="pt-8">
+        <Breadcrumb items={breadcrumb} />
       </Container>
-      <MythBody myth={myth} accent={accent} related={related} />
+      <MythReading myth={myth} accent={accent} related={related} />
     </article>
   );
 }
-
-/* ---------- Variante C · Feature (tipográfica, imagen como figura editorial) ---------- */
-function FeatureLayout({ myth, accent, breadcrumb, related }) {
-  return (
-    <article>
-      <Container size="wide" className="pt-10 md:pt-16">
-        <Breadcrumb items={breadcrumb} className="mb-10" />
-        <div className="relative mx-auto max-w-3xl text-center">
-          <Motif
-            name={myth.motif}
-            size={260}
-            className="pointer-events-none absolute left-1/2 -top-14 -z-10 -translate-x-1/2 opacity-[0.06]"
-            aria-hidden="true"
-          />
-          <Eyebrow tone={accent} className="justify-center">
-            {kickerOf(myth)}
-          </Eyebrow>
-          <Heading level={0} className="mt-4">
-            {myth.title}
-          </Heading>
-          <span className={`mx-auto mt-5 block h-[3px] w-14 ${acc(accent).bar}`} aria-hidden="true" />
-          {myth.excerpt ? (
-            <Text size="lg" className="mx-auto mt-6 max-w-xl">
-              {myth.excerpt}
-            </Text>
-          ) : null}
-        </div>
-      </Container>
-
-      {/* La imagen no es cabecero: se usa como figura editorial (obra) */}
-      {myth.imageUrl ? (
-        <Container size="wide" className="pt-12">
-          <figure className="mx-auto max-w-4xl">
-            <div className="relative">
-              <ImageFrame
-                src={myth.imageUrl}
-                alt={myth.title}
-                ratio="16 / 9"
-                priority
-                sizes="(max-width: 768px) 100vw, 900px"
-                placeholderMotif={myth.motif}
-                placeholderSize={180}
-              />
-              <CornerTicks accent={accent} />
-            </div>
-            <figcaption className="mt-4 text-center">
-              <CuratorialCaption region={myth.region} community={myth.community} title={myth.title} className="[&>p]:mx-auto" />
-            </figcaption>
-          </figure>
-        </Container>
-      ) : (
-        <Container size="wide" className="pt-8">
-          <div className="mx-auto flex max-w-4xl justify-center">
-            <Motif name={myth.motif} size={150} />
-          </div>
-        </Container>
-      )}
-
-      <MythBody myth={myth} accent={accent} related={related} />
-    </article>
-  );
-}
-
-const LAYOUTS = {
-  immersive: ImmersiveLayout,
-  editorial: EditorialLayout,
-  feature: FeatureLayout,
-};
 
 export function MythDetailTemplate({
   myth: rawMyth,
-  variant,
   accent,
   related = [],
   breadcrumb,
@@ -355,21 +283,34 @@ export function MythDetailTemplate({
     _map: map,
     _comments: commentsSlot,
   };
-  const chosen = variant && LAYOUTS[variant] ? variant : pickVariant(myth?.slug || myth?.title || "");
-  const Layout = LAYOUTS[chosen];
-  const acccent = accent || pickAccent(myth?.region);
-
+  const selectedAccent = accent || pickAccent(myth?.region);
   const crumbs =
     breadcrumb || [
       { label: "Mitos", href: "/mitos" },
       ...(myth?.region
-        ? [{ label: myth.region, href: myth.region_slug ? `/regiones/${myth.region_slug}` : "/regiones" }]
+        ? [
+            {
+              label: myth.region,
+              href: myth.region_slug
+                ? `/regiones/${myth.region_slug}`
+                : "/regiones",
+            },
+          ]
         : []),
       { label: myth?.title },
     ];
-
-  const rel = (related || []).map((r) => ({ ...r, motif: mythMotif(r) }));
-  const article = <Layout myth={myth} accent={acccent} breadcrumb={crumbs} related={rel} />;
+  const mappedRelated = related.map((item) => ({
+    ...item,
+    motif: mythMotif(item),
+  }));
+  const article = (
+    <MythArticle
+      myth={myth}
+      accent={selectedAccent}
+      breadcrumb={crumbs}
+      related={mappedRelated}
+    />
+  );
 
   if (!chrome) return article;
 

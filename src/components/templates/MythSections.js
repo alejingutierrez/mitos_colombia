@@ -235,7 +235,7 @@ export function LeccionBlock({ text, accent = "jungle", motif = "luna" }) {
   return (
     <section className="relative overflow-hidden" style={{ background: `linear-gradient(135deg, ${NIGHT} 0%, ${dark} 55%, ${NIGHT} 100%)` }}>
       <Motif name={motif} size={360} className="pointer-events-none absolute -right-16 -top-10 opacity-[0.06]" aria-hidden="true" />
-      <Container size="wide" className="relative py-16 text-center md:py-20">
+      <Container size="atlas" className="relative py-16 text-center md:py-20">
         <CreamMedallion motif={motif} size={38} className="mx-auto mb-6" />
         <p className="mb-5 text-xs font-semibold uppercase tracking-[0.2em]" style={{ color: GOLD }}>
           La enseñanza

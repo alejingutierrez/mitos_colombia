@@ -1,33 +1,37 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
-import { GlassCard } from "../../components/ui/GlassCard";
 
 function MapPlaceholder({ onLoad }) {
   return (
-    <section className="container-shell mt-12" aria-labelledby="mapa-interactivo">
-      <GlassCard className="overflow-hidden p-0">
-        <div className="grid min-h-[420px] place-items-center bg-[radial-gradient(circle_at_top_left,rgba(28,92,63,0.16),transparent_45%),linear-gradient(135deg,rgba(245,241,232,0.95),rgba(226,235,229,0.95))] p-8 text-center">
-          <div className="max-w-md">
-            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-jungle-600">
-              Exploración geográfica
-            </p>
-            <h2 id="mapa-interactivo" className="mt-3 font-display text-2xl font-bold text-ink-900">
-              Mapa interactivo de los mitos
-            </h2>
-            <p className="mt-3 text-sm leading-relaxed text-ink-600">
-              Carga el mapa cuando quieras explorar relatos por territorio. Así evitamos transferir la cartografía antes de que la necesites.
-            </p>
-            <button
-              type="button"
-              onClick={onLoad}
-              className="mt-6 inline-flex min-h-11 items-center justify-center rounded-full bg-jungle-700 px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-jungle-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-jungle-700"
-            >
-              Cargar mapa interactivo
-            </button>
-          </div>
+    <section
+      className="grid min-h-[calc(100svh-4rem)] border-b border-line-100 lg:grid-cols-[27rem_1fr]"
+      aria-labelledby="mapa-interactivo"
+    >
+      <div className="flex items-center border-b border-line-100 p-7 lg:border-b-0 lg:border-r lg:p-10">
+        <div>
+          <h1
+            id="mapa-interactivo"
+            className="font-editorial text-[3.4rem] font-semibold leading-[0.9] text-ink-900"
+          >
+            El mapa de los mitos de Colombia
+          </h1>
+          <p className="mt-5 text-sm leading-relaxed text-ink-700">
+            Cada relato anclado a su geografía.
+          </p>
+          <button
+            type="button"
+            onClick={onLoad}
+            className="mt-7 inline-flex min-h-11 items-center justify-center bg-jungle-700 px-6 py-3 text-sm font-semibold text-white transition hover:bg-jungle-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-jungle-700"
+          >
+            Cargar mapa interactivo
+          </button>
         </div>
-      </GlassCard>
+      </div>
+      <div className="relative grid min-h-[65svh] place-items-center overflow-hidden bg-river-tint">
+        <span className="absolute inset-0 opacity-40 [background-image:radial-gradient(circle_at_30%_30%,white,transparent_45%)]" />
+        <p className="relative text-sm text-river-700">Preparando la cartografía…</p>
+      </div>
     </section>
   );
 }

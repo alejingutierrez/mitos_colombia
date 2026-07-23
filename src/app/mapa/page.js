@@ -21,23 +21,9 @@ export default function MapaPage() {
   return (
     <>
       <Header active="/mapa" />
-      <main className="min-h-[100dvh] bg-paper">
-        <Container size="wide" className="pt-10 md:pt-14">
-          <div className="max-w-2xl">
-            <Eyebrow tone="river" withRule className="mb-4">
-              Atlas territorial
-            </Eyebrow>
-            <Heading level={1} accent="river">
-              El mapa de los mitos de Colombia
-            </Heading>
-            <Text size="lg" className="mt-4">
-              Cada mito anclado a su geografía. Recorre el país de la selva al
-              mar y descubre qué se cuenta en cada rincón del territorio.
-            </Text>
-          </div>
-        </Container>
+      <main className="min-h-[100dvh] overflow-x-clip bg-paper">
         <MapaPageClient />
-        <Container size="wide" className="border-t border-line-100 py-12 md:py-16">
+        <Container size="atlas" className="border-t border-line-100 py-12 md:py-16">
           <div className="grid gap-8 lg:grid-cols-[0.75fr_1.25fr]">
             <div>
               <Eyebrow tone="river" withRule className="mb-4">

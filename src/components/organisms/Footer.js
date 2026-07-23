@@ -59,7 +59,7 @@ export function Footer({
 }) {
   return (
     <footer className={cn("bg-ink-900 text-mist-100 py-14", className)}>
-      <Container size="wide">
+      <Container size="atlas">
         <div className="grid gap-12 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,2fr)]">
           {/* Bloque de marca */}
           <div className="max-w-sm">

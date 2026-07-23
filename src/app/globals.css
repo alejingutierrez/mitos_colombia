@@ -33,6 +33,10 @@
   /* Compat con sistema anterior (se retira al migrar todas las páginas) */
   --ember-400: 216 170 98;
   --ember-500: 189 134 66;
+
+  /* Atlas vivo: extensión editorial aprobada */
+  --atlas-night: 8 18 20;
+  --atlas-gold: 189 134 66;
 }
 
 body {
@@ -285,6 +289,42 @@ body {
 }
 
 @layer components {
+  .atlas-kicker {
+    @apply font-body text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-ink-500;
+  }
+
+  .atlas-title {
+    @apply font-editorial font-semibold leading-[0.94] tracking-[-0.035em] text-ink-900;
+    text-wrap: balance;
+  }
+
+  .atlas-section-heading {
+    @apply font-display text-2xl font-bold leading-tight tracking-[-0.025em] text-ink-900 md:text-3xl;
+    text-wrap: balance;
+  }
+
+  .atlas-rule {
+    @apply mt-3 block h-0.5 w-14 bg-jungle-500;
+  }
+
+  .atlas-image-zoom {
+    @apply transition-transform duration-700 ease-editorial group-hover:scale-[1.035];
+  }
+
+  .atlas-link {
+    @apply inline-flex items-center gap-2 border-b border-ember-500 pb-1 font-body text-sm font-semibold text-ink-900 transition-colors hover:text-jungle-700;
+  }
+
+  .atlas-feed-section {
+    content-visibility: auto;
+    contain-intrinsic-size: 760px;
+  }
+
+  .atlas-map-controls select,
+  .atlas-map-controls input {
+    font-family: var(--font-body), system-ui, sans-serif;
+  }
+
   .container-shell {
     @apply mx-auto w-full max-w-6xl px-6 md:px-10 lg:px-16;
   }
@@ -463,6 +503,16 @@ body {
 .leaflet-container {
   font-family: var(--font-body), system-ui, sans-serif;
   background: linear-gradient(135deg, rgba(234, 240, 235, 0.85), rgba(248, 247, 243, 0.95));
+}
+
+@media (max-width: 767px) {
+  .atlas-mobile-edge {
+    margin-inline: -1.25rem;
+  }
+
+  .atlas-feed-section {
+    contain-intrinsic-size: 980px;
+  }
 }
 
 .leaflet-control-attribution {

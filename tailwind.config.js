@@ -47,6 +47,7 @@ module.exports = {
       fontFamily: {
         display: ["var(--font-display)", ...defaultTheme.fontFamily.sans],
         body: ["var(--font-body)", ...defaultTheme.fontFamily.sans],
+        editorial: ["var(--font-editorial)", ...defaultTheme.fontFamily.serif],
       },
       borderRadius: {
         // Sistema editorial: esquinas rectas / mínimas

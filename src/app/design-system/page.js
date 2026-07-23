@@ -38,6 +38,7 @@ import {
   Spinner,
   ProgressBar,
 } from "../../components/atoms";
+import { AtlasSectionHeader } from "../../components/editorial/AtlasEditorial";
 import { IntelligentList, TypewriterSearch } from "./_MotionDemos";
 
 export const metadata = {
@@ -221,6 +222,14 @@ export default function DesignSystemPage() {
 
         <Section index={3} title="Tipografía">
           <div className="space-y-3">
+            <p className="font-editorial text-6xl font-semibold leading-none tracking-[-0.035em] text-ink-900">
+              Atlas vivo · voz narrativa
+            </p>
+            <Text size="sm" tone="muted" className="pb-4">
+              Cormorant Garamond se reserva para portadas, títulos de relatos y
+              momentos de lectura. Manrope e Inter conservan la interfaz,
+              navegación y cuerpo.
+            </Text>
             <Heading level={1}>Display · El Mohán</Heading>
             <Heading level={2}>Título · Guardianes del agua</Heading>
             <Heading level={3}>Subtítulo · Región Andina</Heading>
@@ -457,6 +466,51 @@ export default function DesignSystemPage() {
                   </MagneticButton>
                 </div>
               </Spotlight>
+            </div>
+          </div>
+        </Section>
+
+        <Section index={14} title="Capa Atlas vivo">
+          <div className="space-y-10">
+            <AtlasSectionHeader
+              title="Una extensión, no un sistema paralelo"
+              description="Atlas vivo amplía el contrato editorial existente para que las imágenes reales del archivo conduzcan la lectura, sin cambiar el modelo de datos ni sustituir los átomos base."
+            />
+
+            <div className="grid gap-4 md:grid-cols-2">
+              {[
+                {
+                  title: "Ancho editorial",
+                  body: "Container atlas llega hasta 1460 px. Container wide conserva su contrato histórico de 1152 px para evitar regresiones en superficies no migradas.",
+                },
+                {
+                  title: "Jerarquía tipográfica",
+                  body: "font-editorial se usa en títulos narrativos; font-display y font-body siguen resolviendo navegación, interfaz, filtros y texto funcional.",
+                },
+                {
+                  title: "Contrato de contenido",
+                  body: "Las tarjetas reciben title, excerpt, region, community e imageUrl desde la base de datos. Los componentes no inventan imágenes, cifras ni versiones del relato.",
+                },
+                {
+                  title: "Composición responsive",
+                  body: "Desktop mezcla mosaicos, bandas y listas; mobile convierte esas mismas historias en imágenes dominantes, carriles horizontales y lectura lineal.",
+                },
+              ].map((rule) => (
+                <Surface key={rule.title} className="p-6">
+                  <p className="atlas-kicker">{rule.title}</p>
+                  <Text size="sm" className="mt-3">
+                    {rule.body}
+                  </Text>
+                </Surface>
+              ))}
+            </div>
+
+            <div className="flex flex-wrap items-center gap-6 border-y border-line-100 py-6">
+              <span className="atlas-kicker">Metadato editorial</span>
+              <span className="atlas-rule !mt-0" />
+              <span className="atlas-link">
+                Acción de lectura <Icon name="arrow-right" size={17} />
+              </span>
             </div>
           </div>
         </Section>
