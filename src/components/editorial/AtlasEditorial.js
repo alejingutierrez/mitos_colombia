@@ -41,6 +41,7 @@ export function OverlayMythCard({
   myth,
   ratio = "4 / 3",
   priority = false,
+  quality = 75,
   sizes,
   className = "",
   showExcerpt = true,
@@ -58,6 +59,7 @@ export function OverlayMythCard({
         alt={myth.title}
         ratio={ratio}
         priority={priority}
+        quality={quality}
         sizes={sizes}
         placeholderMotif={myth.motif || "jaguar"}
         placeholderSize={160}

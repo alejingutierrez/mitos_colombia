@@ -489,7 +489,7 @@ export default function DesignSystemPage() {
                 },
                 {
                   title: "Contrato de contenido",
-                  body: "Las tarjetas reciben title, excerpt, region, community e imageUrl desde la base de datos. Los componentes no inventan imágenes, cifras ni versiones del relato.",
+                  body: "Las tarjetas reciben title, excerpt, region, community e imageUrl desde la base de datos. La optimización de entrega nunca modifica el archivo fuente ni inventa imágenes, cifras o versiones del relato.",
                 },
                 {
                   title: "Composición responsive",

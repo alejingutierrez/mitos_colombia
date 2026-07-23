@@ -145,6 +145,7 @@ export function HomeTemplate({
             myth={lead}
             ratio="16 / 7.5"
             priority
+            quality={68}
             sizes="100vw"
             className="min-h-[72svh] md:min-h-0 [&>div]:min-h-[72svh] md:[&>div]:min-h-0"
             titleClassName="!text-[3.5rem] md:!text-[4.75rem]"

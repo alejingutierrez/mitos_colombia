@@ -290,7 +290,7 @@ body {
 
 @layer components {
   .atlas-kicker {
-    @apply font-body text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-ink-500;
+    @apply font-body text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-ink-700;
   }
 
   .atlas-title {
@@ -313,11 +313,6 @@ body {
 
   .atlas-link {
     @apply inline-flex items-center gap-2 border-b border-ember-500 pb-1 font-body text-sm font-semibold text-ink-900 transition-colors hover:text-jungle-700;
-  }
-
-  .atlas-feed-section {
-    content-visibility: auto;
-    contain-intrinsic-size: 760px;
   }
 
   .atlas-map-controls select,
@@ -510,9 +505,6 @@ body {
     margin-inline: -1.25rem;
   }
 
-  .atlas-feed-section {
-    contain-intrinsic-size: 980px;
-  }
 }
 
 .leaflet-control-attribution {
