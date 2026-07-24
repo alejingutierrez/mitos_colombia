@@ -13,7 +13,10 @@ import {
   buildBlobFilename,
   buildCraftImagePrompt,
   buildImageGenerationParams,
+  enhanceImageBuffer,
   getImageDataBuffer,
+  IMAGE_POST_BRIGHTNESS,
+  IMAGE_POST_SATURATION,
   IMAGE_PRESETS,
   IMAGE_STYLE_PROFILES,
 } from "../src/lib/image-generation.js";
@@ -480,9 +483,11 @@ async function generateAndUpload(openai, entity) {
     styleProfile,
   });
   const response = await openai.images.generate(
-    buildImageGenerationParams({ prompt, preset })
+    buildImageGenerationParams({ prompt, preset }),
+    { timeout: 150000, maxRetries: 0 }
   );
-  const imageBuffer = getImageDataBuffer(response);
+  const rawBuffer = getImageDataBuffer(response);
+  const imageBuffer = await enhanceImageBuffer(rawBuffer, { preset });
   const filename = buildBlobFilename({
     preset,
     slug: entity.slug,
@@ -500,15 +505,26 @@ async function main() {
 
   const openai = dryRun ? null : new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
   const rows = [];
+  const failures = [];
   const entities = await loadCraftRegenerationEntities();
 
   console.log(
     `[craft] target=${target} limit=${limit} offset=${offset} styleProfile=${styleProfile} force=${force} dryRun=${dryRun}`
   );
+  console.log(
+    `[craft] realce brillo=${IMAGE_POST_BRIGHTNESS} saturacion=${IMAGE_POST_SATURATION} calidad=${process.env.IMAGE_GENERATION_QUALITY || "high"}`
+  );
   console.log(`[craft] entidades: ${entities.length}`);
 
-  for (const entity of entities) {
-    console.log(`[craft] ${entity.type}:${entity.id} ${entity.slug}`);
+  const concurrency = Math.max(
+    1,
+    Number.parseInt(getFlag("--concurrency", "1"), 10) || 1
+  );
+  const maxAttempts = 3;
+  const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+  console.log(`[craft] concurrencia=${concurrency} reintentos=${maxAttempts}`);
+
+  async function processOne(entity) {
     if (dryRun) {
       const preset = getPresetForEntity(entity);
       const prompt = buildCraftImagePrompt({
@@ -522,29 +538,67 @@ async function main() {
         style_profile: styleProfile,
         prompt_preview: prompt.slice(0, 500),
       });
-      continue;
+      return;
     }
 
     const oldUrl = entity.image_url;
-    const generated = await generateAndUpload(openai, entity);
-    await saveGeneratedImageUrl(entity, generated.url);
+    for (let attempt = 1; attempt <= maxAttempts; attempt += 1) {
+      try {
+        const generated = await generateAndUpload(openai, entity);
+        await saveGeneratedImageUrl(entity, generated.url);
 
-    if (deleteOld && oldUrl && oldUrl !== generated.url) {
-      await del(oldUrl).catch((error) => {
-        console.error(`[craft] no se pudo borrar ${oldUrl}: ${error.message}`);
-      });
+        if (deleteOld && oldUrl && oldUrl !== generated.url) {
+          await del(oldUrl).catch((error) => {
+            console.error(`[craft] no se pudo borrar ${oldUrl}: ${error.message}`);
+          });
+        }
+
+        rows.push({
+          id: entity.id,
+          type: entity.type,
+          slug: entity.slug,
+          old_url: oldUrl,
+          new_url: generated.url,
+          style_profile: styleProfile,
+        });
+        console.log(
+          `[craft] ok (${rows.length}/${entities.length}) ${entity.type}:${entity.id} ${entity.slug}`
+        );
+        return;
+      } catch (error) {
+        console.error(
+          `[craft] intento ${attempt}/${maxAttempts} fallo ${entity.type}:${entity.id} ${entity.slug}: ${error.message}`
+        );
+        // No reintentar errores de billing: fallan igual y solo desperdician backoff.
+        const isBilling = /billing hard limit/i.test(error.message || "");
+        if (isBilling || attempt >= maxAttempts) {
+          failures.push({
+            id: entity.id,
+            type: entity.type,
+            slug: entity.slug,
+            error: error.message,
+          });
+          if (isBilling) return;
+        } else {
+          await sleep(attempt * 5000);
+        }
+      }
     }
-
-    rows.push({
-      id: entity.id,
-      type: entity.type,
-      slug: entity.slug,
-      old_url: oldUrl,
-      new_url: generated.url,
-      style_profile: styleProfile,
-    });
-    console.log(`[craft] ok ${generated.url}`);
   }
+
+  let cursor = 0;
+  async function worker() {
+    while (cursor < entities.length) {
+      const entity = entities[cursor];
+      cursor += 1;
+      await processOne(entity);
+    }
+  }
+  await Promise.all(
+    Array.from({ length: Math.min(concurrency, entities.length || 1) }, () =>
+      worker()
+    )
+  );
 
   const outDir = path.join(rootDir, "artifacts", "image-regeneration");
   await fs.mkdir(outDir, { recursive: true });
@@ -552,8 +606,20 @@ async function main() {
     outDir,
     `${new Date().toISOString().replace(/[:.]/g, "-")}-${target}.json`
   );
-  await fs.writeFile(outPath, `${JSON.stringify(rows, null, 2)}\n`);
-  console.log(`[craft] reporte: ${outPath}`);
+  await fs.writeFile(
+    outPath,
+    `${JSON.stringify({ ok: rows.length, fallidos: failures.length, rows, failures }, null, 2)}\n`
+  );
+  console.log(
+    `[craft] listo: ${rows.length} ok, ${failures.length} fallidos -> ${outPath}`
+  );
+  if (failures.length) {
+    console.error(
+      `[craft] fallidos: ${failures
+        .map((f) => `${f.type}:${f.id}`)
+        .join(", ")}`
+    );
+  }
 }
 
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {

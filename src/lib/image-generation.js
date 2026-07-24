@@ -7,6 +7,16 @@ export const IMAGE_GENERATION_QUALITY =
 export const IMAGE_GENERATION_FORMAT =
   process.env.IMAGE_GENERATION_FORMAT || "jpeg";
 
+// Realce editorial uniforme aplicado a TODA imagen generada antes de guardarla
+// (y reutilizable para reprocesar piezas ya existentes) para lograr consistencia
+// de color en todo el catalogo. Multiplicadores estilo sharp.modulate (1 = sin cambio).
+export const IMAGE_POST_BRIGHTNESS = Number(
+  process.env.IMAGE_POST_BRIGHTNESS || "1.05"
+);
+export const IMAGE_POST_SATURATION = Number(
+  process.env.IMAGE_POST_SATURATION || "1.14"
+);
+
 export const IMAGE_STYLE_PROFILES = {
   editorialPaperPhoto: {
     label: "Fotografia editorial de papel",
@@ -52,9 +62,9 @@ export const APPROVED_IMAGE_STYLE_PROFILE =
 
 export const IMAGE_PRESETS = {
   horizontal: {
-    size: "1536x1024",
+    size: "1536x864",
     outputWidth: 1536,
-    outputHeight: 1024,
+    outputHeight: 864,
     blobPrefix: "mitos",
     contentType: "image/jpeg",
     extension: "jpg",
@@ -257,6 +267,28 @@ export function getImageDataBuffer(response) {
     throw new Error("No base64 image data received from OpenAI");
   }
   return Buffer.from(b64Data, "base64");
+}
+
+// Aplica el realce editorial (brillo/saturacion) uniforme a un buffer de imagen
+// antes de subirlo. Reutilizable tanto en generacion nueva como en reproceso de
+// piezas ya existentes, para que TODAS reciban exactamente el mismo tratamiento.
+export async function enhanceImageBuffer(
+  buffer,
+  {
+    preset = "horizontal",
+    brightness = IMAGE_POST_BRIGHTNESS,
+    saturation = IMAGE_POST_SATURATION,
+  } = {}
+) {
+  // Evitar re-encode innecesario si no hay ajuste real.
+  if (brightness === 1 && saturation === 1) return buffer;
+  const { default: sharp } = await import("sharp");
+  const selected = IMAGE_PRESETS[preset] || IMAGE_PRESETS.horizontal;
+  const pipeline = sharp(buffer).modulate({ brightness, saturation });
+  if (selected.contentType === "image/png") {
+    return pipeline.png().toBuffer();
+  }
+  return pipeline.jpeg({ quality: 90 }).toBuffer();
 }
 
 export function buildBlobFilename({ preset = "horizontal", slug, entityType }) {
