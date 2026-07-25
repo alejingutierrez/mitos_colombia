@@ -11,16 +11,17 @@ export async function generateMetadata() {
   const seo = await getSeoEntry("page", "metodologia");
   return buildSeoMetadata({
     fallback: {
-      title: "Metodología editorial en prueba",
+      title: "Metodología editorial",
       description:
-        "Conoce el método piloto para investigar, contrastar y reescribir mitos colombianos con fuentes visibles, contexto cultural y una prosa más clara.",
+        "Así investigamos, contrastamos, reescribimos y publicamos cada mito colombiano: fuentes, antropología, narrativa, SEO y verificación pública.",
       keywords: [
         "metodología editorial",
         "investigación de mitos",
         "fuentes",
         "antropología",
-        "reescritura",
-        "Bachué",
+        "reescritura literaria",
+        "SEO",
+        "mitos de Colombia",
       ],
     },
     seo,
@@ -40,126 +41,321 @@ function getDailySeed() {
 
 const sections = [
   {
-    title: "Una metodología en prueba, no una fórmula cerrada",
+    title: "Estado y unidad de trabajo",
     body: (
       <>
         <p>
-          Estamos validando este método con un solo caso:{" "}
-          <TextLink href="/mitos/bachue">Bachué</TextLink>. No lo aplicaremos
-          en serie hasta comprobar que la investigación, la voz y la extensión
-          funcionan juntas. El objetivo es sencillo de decir y difícil de
-          cumplir: narrar con claridad y emoción sin inventar certezas ni
-          convertir una comunidad en una etiqueta.
+          Esta es la metodología completa de Mitos de Colombia. Bachué sigue
+          siendo su primer caso de validación: no la aplicaremos en serie hasta
+          que su resultado literario y editorial reciba aprobación.
         </p>
         <p>
-          La prueba también es pública: la ficha muestra sus fuentes, fecha de
-          revisión, versiones y dudas. Si el resultado no convence, se corrige
-          el método antes de ampliar el archivo.
+          La unidad de trabajo es un mito completo. Revisamos Relato, Historia,
+          Versiones, Lección y Similitudes, pero también fuentes, comunidad,
+          taxonomía, imagen, mapa, SEO, datos y publicación. Antes de cambiar
+          nada conservamos una copia del registro vigente y medimos su estado
+          inicial.
         </p>
       </>
     ),
   },
   {
-    title: "1. Al menos cinco fuentes con funciones distintas",
+    title: "Definir el universo antes de investigar",
     body: (
       <>
         <p>
-          Cinco enlaces que repiten la misma crónica no son cinco fuentes
-          suficientes. Cada investigación busca cubrir cinco funciones: una voz
-          comunitaria o memoria viva; una fuente primaria histórica; estudios
-          académicos recientes; una fuente territorial o institucional; y
-          referencias directas para la comparación con otras mitologías.
+          La ficha de alcance identifica el núcleo narrativo, el pueblo o las
+          comunidades atribuidas, los periodos históricos, el territorio, las
+          prácticas y objetos relacionados, la cosmogonía, las versiones
+          conocidas y los posibles paralelos de otras mitologías.
         </p>
         <p>
-          Las fuentes coloniales se leen con especial cautela: pueden conservar
-          un relato y deformarlo al mismo tiempo. Las voces comunitarias
-          contemporáneas explican continuidad y sentido actual, pero no se
-          proyectan automáticamente al pasado. Cada una responde una pregunta
-          diferente.
+          Así evitamos medir la investigación sobre un universo cambiante y
+          confundir una región actual, una familia lingüística, una categoría
+          colonial y una comunidad viva como si fueran la misma cosa.
         </p>
       </>
     ),
   },
   {
-    title: "2. Separar hecho, variante, memoria e interpretación",
+    title: "Cinco fuentes útiles, no cinco enlaces repetidos",
     body: (
       <>
         <p>
-          Antes de escribir construimos una matriz. Un dato puede ser núcleo
-          documentado, variante atribuida, memoria contemporánea, interpretación
-          académica, lectura editorial o duda. Estas categorías no se mezclan.
-          Si un nombre aparece en una versión tardía, se presenta allí; no se
-          introduce en el relato principal como si siempre hubiera estado.
+          Cada dossier reúne al menos cinco fuentes consultables, distintas y
+          útiles. Siempre que existan, deben cubrir cinco funciones: voz
+          comunitaria o memoria viva; fuente primaria o versión histórica
+          temprana; investigación académica reciente; fuente territorial o
+          institucional; y referencia directa para cada comparación universal.
         </p>
         <p>
-          La duda no es un defecto que deba ocultarse. Es una señal editorial.
-          Preferimos decir que una fuente no permite decidir antes que completar
-          el vacío con una explicación atractiva.
+          Cada fuente conserva título, autor o institución, fecha, enlace,
+          tipo, función, resumen de lo que respalda y limitaciones. Cinco páginas
+          que copian una misma crónica no forman cinco evidencias. Si no se
+          alcanza un respaldo creíble, el mito queda pendiente: no rellenamos el
+          expediente con fuentes débiles.
         </p>
       </>
     ),
   },
   {
-    title: "3. Preguntas antropológicas, no diagnósticos sobre una gente",
+    title: "Matriz de evidencia y tratamiento de la duda",
     body: (
       <>
         <p>
-          Buscamos qué necesidad humana organiza el relato: origen, cuidado,
-          duelo, justicia, alimento, territorio, peligro o continuidad. También
-          observamos cómo relaciona personas, antepasados, animales, paisaje y
-          fuerzas no humanas; y qué permite pensar sobre parentesco, autoridad,
-          trabajo o convivencia.
+          Antes de redactar, cada afirmación se clasifica como núcleo
+          documentado, variante identificada, memoria contemporánea, hipótesis
+          académica, lectura editorial o duda. La matriz indica qué fuente
+          sostiene cada decisión y qué contradicciones permanecen.
         </p>
         <p>
-          Esa lectura no autoriza frases totales como “los muiscas pensaban”.
-          Distinguimos periodos, comunidades y tipos de evidencia. También
-          usamos con precisión conceptos como matrilinealidad, que no equivale
-          por sí sola a matriarcado.
+          Las categorías no se mezclan. Una voz actual no se proyecta
+          automáticamente al pasado; una hipótesis conserva el grado de certeza
+          de sus autores; una versión tardía se atribuye. Cuando dos versiones
+          no pueden conciliarse, se presentan por separado.
         </p>
       </>
     ),
   },
   {
-    title: "4. El relato es literatura; la investigación lo sostiene",
+    title: "Lectura antropológica sin convertir a una gente en fórmula",
     body: (
       <>
         <p>
-          En la sección Relato solo ocurre la historia. No aparecen cronistas,
-          fuentes, diferencias entre versiones ni explicaciones sobre cómo debe
-          interpretarse. Todo ese trabajo sostiene la narración desde fuera y
-          queda disponible en Contexto, Versiones y Fuentes.
+          Preguntamos qué necesidad humana organiza el relato y cómo relaciona
+          personas, antepasados, animales, paisaje y fuerzas no humanas. También
+          observamos parentesco, autoridad, trabajo, intercambio, convivencia,
+          ecología, muerte y continuidad.
         </p>
         <p>
-          La prosa usa escenas concretas, ritmo y detalles sensoriales capaces de
-          convocar la imaginación de un niño y de un adulto. La fantasía procede
-          de las acciones extraordinarias del mito; el territorio, el clima, los
-          materiales y los gestos cotidianos la anclan en la realidad. La emoción
-          nace de lo que sucede, no de fórmulas solemnes ni de acumular adjetivos.
+          Distinguimos comunidad, pueblo, territorio y periodo. Una crónica
+          colonial puede conservar un relato y deformarlo al mismo tiempo. Los
+          conceptos se usan con precisión: matrilinealidad, por ejemplo, no
+          demuestra por sí sola un matriarcado.
+        </p>
+        <p>
+          La enseñanza profunda se ofrece como posibilidad de pensamiento, no
+          como doctrina total de una comunidad ni como moraleja para obedecer.
         </p>
       </>
     ),
   },
   {
-    title: "5. Publicar significa dejar evidencia y posibilidad de corrección",
+    title: "El contrato de la narración literaria",
     body: (
       <>
         <p>
-          Antes de publicar verificamos que los cinco campos coincidan con el
-          contenido completo, que haya al menos cinco fuentes únicas, que los
-          nombres tengan respaldo, que el texto reduzca redundancias y que exista
-          una copia recuperable del registro anterior. La ficha pública debe
-          mostrar fuentes, fecha de revisión y citas en sus datos estructurados.
+          En Relato solo ocurre la historia. No aparecen cronistas, citas,
+          fechas, hipótesis ni discusiones entre versiones. La investigación la
+          sostiene desde fuera y queda visible en las demás capas.
         </p>
         <p>
-          Clasificación, etiquetas, coordenadas, imagen y SEO también se revisan.
-          Solo se reutilizan taxonomías que ya existen en el archivo; una revisión
-          editorial no puede crear categorías improvisadas para un solo caso.
+          La voz es seria, clara e imaginativa. Un niño puede seguir la acción y
+          un adulto encontrar profundidad, sin que el texto infantilice a
+          ninguno. La fantasía procede de hechos extraordinarios respaldados; el
+          paisaje, el clima, los materiales, los cuerpos y el trabajo la anclan
+          en la realidad.
         </p>
         <p>
-          Ninguna revisión es definitiva. Si tienes una fuente, perteneces a la
-          comunidad vinculada o identificas un error, puedes escribir desde{" "}
-          <TextLink href="/contacto">Contacto</TextLink>. La corrección
-          documentada tiene prioridad sobre la consistencia aparente del archivo.
+          Usamos escenas, verbos precisos, detalles sensoriales necesarios,
+          ritmo y silencio. La emoción nace de decisiones, pérdidas, cuidados y
+          despedidas. Evitamos grandilocuencia, adjetivos acumulados, metáforas
+          repetidas y fórmulas intercambiables como “misterio ancestral”.
+        </p>
+      </>
+    ),
+  },
+  {
+    title: "Libertad literaria y límites",
+    body: (
+      <>
+        <p>
+          La reescritura puede ordenar escenas, comprimir el tiempo, construir
+          transiciones y añadir detalles sensoriales compatibles con el entorno.
+          No puede inventar nombres tradicionales, símbolos culturales,
+          vestuarios ceremoniales, parentescos, doctrinas, objetos sagrados ni
+          certezas históricas.
+        </p>
+        <p>
+          La extensión orientativa es de 300 a 650 palabras, aunque manda la
+          respiración de la historia. El borrador pasa por continuidad,
+          precisión y economía, y lectura en voz alta. Una frase solemne que no
+          aporta imagen, acción o emoción se elimina.
+        </p>
+      </>
+    ),
+  },
+  {
+    title: "Historia, Versiones, Lección y Similitudes",
+    body: (
+      <>
+        <p>
+          Historia sitúa transmisión, territorio y contexto social. Versiones
+          atribuye las diferencias sin fundirlas. Lección propone una idea
+          abierta, no una orden moral. Similitudes presenta al menos dos
+          paralelos documentados cuando sean pertinentes y explica tanto la
+          resonancia como la diferencia.
+        </p>
+        <p>
+          Una semejanza nunca prueba copia o influencia directa por sí sola. El
+          contenido compuesto de la base de datos debe coincidir exactamente con
+          los cinco campos editoriales.
+        </p>
+      </>
+    ),
+  },
+  {
+    title: "Clasificación y etiquetas existentes",
+    body: (
+      <>
+        <p>
+          Podemos corregir categorías y etiquetas equivocadas, pero únicamente
+          reutilizamos las que ya existen. No creamos taxonomías para resolver
+          un caso aislado.
+        </p>
+        <p>
+          La decisión sigue el territorio narrado, la atribución cultural y el
+          tipo de relato. Si ninguna opción es exacta, elegimos la más cercana
+          sin deformar el mito y registramos la limitación. Los campos antiguos
+          y las tablas normalizadas deben quedar sincronizados.
+        </p>
+      </>
+    ),
+  },
+  {
+    title: "El punto geográfico pertenece a la historia",
+    body: (
+      <>
+        <p>
+          Verificamos las coordenadas con una fuente oficial, territorial o
+          cartográfica confiable. El punto debe representar la laguna, cerro,
+          río, piedra, cueva o asentamiento del relato, no la cabecera municipal
+          ni el acceso turístico más cercano.
+        </p>
+        <p>
+          Si la localización solo puede ser aproximada, se declara. Muchos
+          decimales no deben fingir una precisión histórica que las fuentes no
+          permiten.
+        </p>
+      </>
+    ),
+  },
+  {
+    title: "La imagen debe contar el mismo mito",
+    body: (
+      <>
+        <p>
+          Primero inspeccionamos la imagen existente y la conservamos si es
+          pertinente, respetuosa y funciona en todos sus recortes. Solo se
+          regenera si falta, es genérica o contradice la historia.
+        </p>
+        <p>
+          Una nueva imagen sigue el sistema visual aprobado de maqueta
+          artesanal y papel trabajado. Su prompt nace de la evidencia: paisaje
+          real, acción central y materiales justificables. Evita coronas, oro
+          ornamental, símbolos mesoamericanos, vestuarios inventados y
+          exotización.
+        </p>
+        <p>
+          Revisamos relevancia, recortes horizontal y vertical, móvil, peso,
+          formato, texto alternativo y uso en Open Graph.
+        </p>
+      </>
+    ),
+  },
+  {
+    title: "SEO profesional y específico",
+    body: (
+      <>
+        <p>
+          Cada página define una intención de búsqueda principal. El título SEO
+          nombra el mito y su rasgo distintivo; el H1 puede ser más literario sin
+          ocultar la identidad. La descripción cuenta qué encontrará el lector,
+          sin clickbait ni promesas genéricas de misterio.
+        </p>
+        <p>
+          Verificamos título con marca, descripción de aproximadamente 120 a 160
+          caracteres, canonical único, palabras clave, Open Graph, Twitter,
+          imagen social, datos estructurados de artículo y migas de pan, fecha
+          de revisión y citas. Los nombres alternativos solo se usan si están
+          documentados.
+        </p>
+      </>
+    ),
+  },
+  {
+    title: "Respaldo y escritura atómica",
+    body: (
+      <>
+        <p>
+          La publicación empieza con un ensayo sin escritura. El validador
+          comprueba fuentes y URLs, campos obligatorios, extensión, límites SEO,
+          contenido compuesto, taxonomía y coordenadas.
+        </p>
+        <p>
+          Antes de modificar la base de datos guardamos una copia durable del
+          mito, expediente, fuentes, palabras clave, etiquetas y SEO. Una sola
+          transacción actualiza todas las capas; si algo falla, la ficha no queda
+          a medias. El respaldo y el registro de decisiones permiten restaurar
+          la versión anterior.
+        </p>
+      </>
+    ),
+  },
+  {
+    title: "Pruebas locales y verdad de producción",
+    body: (
+      <>
+        <p>
+          El expediente debe superar pruebas automáticas, lint, compilación de
+          producción, reconstrucción del contenedor y lectura de las rutas
+          locales. Después registramos commit y despliegue y esperamos el estado
+          exitoso del proveedor.
+        </p>
+        <p>
+          Finalmente abrimos la URL canónica en un navegador real. Allí
+          revisamos texto, fuentes y enlaces, imagen, etiquetas, mapa,
+          metadatos, datos estructurados, consola y errores de ejecución. Código
+          correcto en el repositorio no equivale a contenido publicado
+          correctamente.
+        </p>
+      </>
+    ),
+  },
+  {
+    title: "Rúbrica, bloqueos y entregables",
+    body: (
+      <>
+        <p>
+          Cada mito aprueba cinco dimensiones: Evidencia, Narrativa, Lectura
+          cultural, Edición y descubrimiento, y Operación. Son bloqueos: respaldo
+          insuficiente, nombres o doctrinas inventados, variantes convertidas en
+          una falsa certeza, taxonomías nuevas, campos desincronizados, ausencia
+          de copia recuperable, escritura parcial o falta de verificación
+          pública.
+        </p>
+        <p>
+          El cierre deja dossier, matriz, cinco textos, fuentes, decisiones de
+          clasificación, imagen, geografía y SEO, respaldo, informe de pruebas,
+          URL pública, commit, despliegue, fecha de revisión y dudas pendientes.
+        </p>
+      </>
+    ),
+  },
+  {
+    title: "Aprobación antes de escalar",
+    body: (
+      <>
+        <p>
+          El flujo es: alcance, investigación, matriz, borrador literario, capas
+          editoriales, taxonomía, imagen, geografía y SEO, ensayo, respaldo,
+          transacción, validación local, producción y aprobación.
+        </p>
+        <p>
+          <TextLink href="/mitos/bachue">Bachué</TextLink> valida el método y,
+          sobre todo, su voz. Si el piloto convence, esta metodología se
+          convierte en plantilla. Si no, corregimos tono, extensión o criterios
+          antes de tocar los demás mitos.
         </p>
       </>
     ),
@@ -175,53 +371,50 @@ export default async function MetodologiaPage() {
   ]);
 
   const sourceCoverageSection = {
-    title: "Fuentes, adaptación y estado de verificación",
+    title: "Fuentes, adaptación y estado del archivo",
     body: (
       <>
         <p>
-          El archivo distingue la procedencia cultural de una referencia
-          bibliográfica. Región y comunidad ayudan a situar el relato, pero no
-          reemplazan una fuente documental. En este momento, {sourceCoverage.mythsWithSources}{" "}
-          de {sourceCoverage.totalMyths} fichas públicas cuentan con referencias
-          editoriales enlazadas; las demás muestran de forma visible que su
-          bibliografía está pendiente de publicación.
+          Región y comunidad sitúan un relato, pero no reemplazan una referencia
+          documental. Hoy, {sourceCoverage.mythsWithSources} de{" "}
+          {sourceCoverage.totalMyths} fichas públicas tienen fuentes editoriales
+          enlazadas; las demás indican que su bibliografía está pendiente.
         </p>
         <p>
-          Los textos del sitio son adaptaciones editoriales para lectura digital.
-          Algunas etapas de organización, resumen e ilustración utilizan
-          herramientas de asistencia digital, siempre sujetas a revisión humana.
-          Las fuentes enlazadas permiten volver al documento de origen y no deben
-          confundirse con la adaptación narrativa que presenta el archivo.
+          Los textos son adaptaciones editoriales para lectura digital. Algunas
+          tareas de organización, resumen e ilustración usan asistencia digital
+          bajo revisión humana. Las fuentes permiten regresar a los documentos
+          y no deben confundirse con nuestra narración.
         </p>
         <p>
-          Si una ficha contiene una atribución incompleta o una versión local que
-          necesita contexto, puedes enviar la referencia desde{" "}
-          <TextLink href="/contacto">Contacto</TextLink>. Priorizamos correcciones
-          provenientes de comunidades, bibliotecas, archivos y publicaciones
-          académicas identificables.
+          Si perteneces a una comunidad vinculada, conservas una versión local o
+          encuentras un error, puedes enviar la referencia desde{" "}
+          <TextLink href="/contacto">Contacto</TextLink>. Una corrección
+          documentada tiene prioridad sobre la consistencia aparente del
+          archivo.
         </p>
       </>
     ),
   };
 
-  // En producción prioriza mitos con imagen; si no hay, cae a una muestra diversa.
   const relatedPool =
     (featuredMyths || []).length >= 6 ? featuredMyths : diverseMyths;
-  const related = (relatedPool || []).slice(0, 6).map((m) => ({
-    slug: m.slug,
-    title: m.title,
-    excerpt: m.excerpt,
-    region: m.region,
-    community: m.community,
-    imageUrl: m.image_url,
+  const related = (relatedPool || []).slice(0, 6).map((myth) => ({
+    slug: myth.slug,
+    title: myth.title,
+    excerpt: myth.excerpt,
+    region: myth.region,
+    community: myth.community,
+    imageUrl: myth.image_url,
   }));
 
   return (
     <DocumentTemplate
-      eyebrow="Metodología editorial · piloto"
+      eyebrow="Metodología editorial · versión 1.0"
       title="Investigar antes de volver a contar"
-      description="Un método en prueba para distinguir fuentes, versiones y lecturas; escribir con claridad; y publicar cada mito con evidencia visible."
+      description="El estándar completo para documentar, narrar y publicar cada mito con imaginación, respeto cultural y evidencia verificable."
       breadcrumb={[{ label: "Inicio", href: "/" }, { label: "Metodología" }]}
+      updated="25 de julio de 2026"
       sections={[sourceCoverageSection, ...sections]}
       related={related}
       accent="river"

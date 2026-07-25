@@ -188,17 +188,17 @@ const editorialMyth = {
     canonical_path: "/mitos/bachue",
   },
   methodologySeo: {
-    meta_title: "Metodología editorial en prueba",
+    meta_title: "Metodología editorial",
     meta_description:
-      "Conoce el método piloto para investigar, contrastar y reescribir mitos colombianos con fuentes visibles, contexto cultural y una prosa más clara.",
+      "Así investigamos, contrastamos, reescribimos y publicamos cada mito colombiano: fuentes, antropología, narrativa, SEO y verificación pública.",
     meta_keywords:
-      "metodología editorial, investigación de mitos, fuentes, antropología, reescritura, Bachué",
-    og_title: "Investigar antes de volver a contar",
+      "metodología editorial, investigación de mitos, fuentes, antropología, reescritura literaria, SEO, mitos de Colombia",
+    og_title: "Cómo investigamos y reescribimos cada mito",
     og_description:
-      "Un método editorial en prueba para separar fuentes, versiones e interpretaciones y narrar los mitos de Colombia con claridad y evidencia.",
-    twitter_title: "Investigar antes de volver a contar",
+      "El estándar de Mitos de Colombia para investigar fuentes, distinguir versiones, narrar con imaginación y comprobar cada publicación.",
+    twitter_title: "Metodología editorial de Mitos de Colombia",
     twitter_description:
-      "Así funciona el piloto editorial de Mitos de Colombia: investigación, matriz de evidencia, reescritura y verificación pública.",
+      "Fuentes, matriz de evidencia, reescritura literaria, contexto cultural, SEO y prueba en producción para cada mito.",
     canonical_path: "/metodologia",
   },
   focus_keyword: "mito de Bachué",
