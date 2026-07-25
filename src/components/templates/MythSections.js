@@ -325,7 +325,7 @@ function formatReviewDate(value) {
 }
 
 export function FuentesBlock({ sources = [], updatedAt }) {
-  const normalized = sources.map(normalizeSource).filter(Boolean).slice(0, 4);
+  const normalized = sources.map(normalizeSource).filter(Boolean).slice(0, 8);
   const reviewDate = formatReviewDate(updatedAt);
 
   return (
