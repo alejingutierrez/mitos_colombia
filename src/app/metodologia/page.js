@@ -120,21 +120,21 @@ const sections = [
     ),
   },
   {
-    title: "4. Una narración más limpia y más fácil de imaginar",
+    title: "4. El relato es literatura; la investigación lo sostiene",
     body: (
       <>
         <p>
-          El relato usa escenas concretas, verbos claros y una imagen sensorial
-          útil por momento. La emoción nace de una aparición, una decisión, una
-          pérdida o una despedida; no de acumular adjetivos. El tono puede
-          acercarse a la claridad de un relato oído en voz alta sin hablarle al
-          lector como a un niño.
+          En la sección Relato solo ocurre la historia. No aparecen cronistas,
+          fuentes, diferencias entre versiones ni explicaciones sobre cómo debe
+          interpretarse. Todo ese trabajo sostiene la narración desde fuera y
+          queda disponible en Contexto, Versiones y Fuentes.
         </p>
         <p>
-          Después, historia, versiones, enseñanza y similitudes hacen el trabajo
-          analítico. La narración no necesita cargar toda la explicación. Los
-          paralelos universales señalan tanto diferencias como parecidos y nunca
-          se presentan como prueba de copia o influencia.
+          La prosa usa escenas concretas, ritmo y detalles sensoriales capaces de
+          convocar la imaginación de un niño y de un adulto. La fantasía procede
+          de las acciones extraordinarias del mito; el territorio, el clima, los
+          materiales y los gestos cotidianos la anclan en la realidad. La emoción
+          nace de lo que sucede, no de fórmulas solemnes ni de acumular adjetivos.
         </p>
       </>
     ),
@@ -149,6 +149,11 @@ const sections = [
           nombres tengan respaldo, que el texto reduzca redundancias y que exista
           una copia recuperable del registro anterior. La ficha pública debe
           mostrar fuentes, fecha de revisión y citas en sus datos estructurados.
+        </p>
+        <p>
+          Clasificación, etiquetas, coordenadas, imagen y SEO también se revisan.
+          Solo se reutilizan taxonomías que ya existen en el archivo; una revisión
+          editorial no puede crear categorías improvisadas para un solo caso.
         </p>
         <p>
           Ninguna revisión es definitiva. Si tienes una fuente, perteneces a la

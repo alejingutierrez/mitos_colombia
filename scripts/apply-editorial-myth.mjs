@@ -95,6 +95,34 @@ function validateSeo(label, seo) {
   }
 }
 
+function validateTaxonomy(data) {
+  if (!String(data.category_path || "").trim()) {
+    throw new Error("Falta category_path.");
+  }
+  if (!Array.isArray(data.tags) || data.tags.length < 3) {
+    throw new Error("tags debe contener al menos tres etiquetas existentes.");
+  }
+  const normalizedTags = data.tags.map((tag) => String(tag || "").trim());
+  if (normalizedTags.some((tag) => !tag)) {
+    throw new Error("tags no puede contener etiquetas vacías.");
+  }
+  if (new Set(normalizedTags).size !== normalizedTags.length) {
+    throw new Error("tags contiene etiquetas duplicadas.");
+  }
+  return normalizedTags.length;
+}
+
+function validateCoordinates(data) {
+  const latitude = Number(data.latitude);
+  const longitude = Number(data.longitude);
+  if (!Number.isFinite(latitude) || !Number.isFinite(longitude)) {
+    throw new Error("latitude y longitude deben ser números.");
+  }
+  if (latitude < -5 || latitude > 14 || longitude < -82 || longitude > -66) {
+    throw new Error("Las coordenadas quedan fuera del territorio colombiano.");
+  }
+}
+
 function validate(data) {
   const required = [
     "slug",
@@ -143,7 +171,9 @@ function validate(data) {
     versiones: assertRange("versiones", data.versiones, 170, 550),
     similitudes: assertRange("similitudes", data.similitudes, 150, 450),
     sources: validateSources(data),
+    tags: validateTaxonomy(data),
   };
+  validateCoordinates(data);
   validateSeo("seo", data.seo);
   validateSeo("methodologySeo", data.methodologySeo);
 
@@ -160,14 +190,14 @@ function validate(data) {
   return counts;
 }
 
-async function saveBackup(data, myth, editorial, seoEntries) {
+async function saveBackup(data, myth, editorial, seoEntries, mythTags) {
   const backupDir = path.resolve("artifacts", "editorial-backups");
   await fs.mkdir(backupDir, { recursive: true });
   const timestamp = new Date().toISOString().replace(/[:.]/g, "-");
   const backupPath = path.join(backupDir, `${data.slug}-${timestamp}.json`);
   await fs.writeFile(
     backupPath,
-    `${JSON.stringify({ myth, editorial, seoEntries }, null, 2)}\n`,
+    `${JSON.stringify({ myth, editorial, seoEntries, mythTags }, null, 2)}\n`,
     "utf8"
   );
   return backupPath;
@@ -253,6 +283,41 @@ async function run() {
       [data.slug]
     );
     const currentSeoEntries = seoResult.rows;
+    const currentTagResult = await client.query(
+      `SELECT t.id, t.name, t.slug
+       FROM tags t
+       JOIN myth_tags mt ON mt.tag_id = t.id
+       WHERE mt.myth_id = $1
+       ORDER BY t.name`,
+      [current.id]
+    );
+    const categoryResult = await client.query(
+      `SELECT 1
+       FROM myths
+       WHERE category_path = $1
+       LIMIT 1`,
+      [data.category_path]
+    );
+    if (!categoryResult.rowCount) {
+      throw new Error(
+        `La categoría no existe y no se puede crear: ${data.category_path}`
+      );
+    }
+
+    const tagResult = await client.query(
+      `SELECT id, name, slug
+       FROM tags
+       WHERE name = ANY($1::text[])`,
+      [data.tags]
+    );
+    const tagsByName = new Map(tagResult.rows.map((tag) => [tag.name, tag]));
+    const missingTags = data.tags.filter((tag) => !tagsByName.has(tag));
+    if (missingTags.length) {
+      throw new Error(
+        `Estas etiquetas no existen y no se pueden crear: ${missingTags.join(", ")}`
+      );
+    }
+    const selectedTagIds = data.tags.map((tag) => tagsByName.get(tag).id);
 
     console.log(
       JSON.stringify(
@@ -268,11 +333,19 @@ async function run() {
             contentCharacters: String(current.content || "").length,
             mitoCharacters: String(current.mito || "").length,
             hasEditorialRecord: Boolean(currentEditorial),
+            categoryPath: current.category_path,
+            tags: currentTagResult.rows.map((tag) => tag.name),
+            coordinates: [current.latitude, current.longitude],
+            hasImage: Boolean(current.image_url),
           },
           after: {
             contentCharacters: data.content.length,
             mitoCharacters: data.mito.length,
             sourceCount: counts.sources,
+            categoryPath: data.category_path,
+            tags: data.tags,
+            coordinates: [data.latitude, data.longitude],
+            preservesImage: Boolean(current.image_url),
           },
         },
         null,
@@ -289,7 +362,8 @@ async function run() {
       data,
       current,
       currentEditorial,
-      currentSeoEntries
+      currentSeoEntries,
+      currentTagResult.rows
     );
     await client.query("BEGIN");
     try {
@@ -308,6 +382,10 @@ async function run() {
              focus_keyword = $12,
              focus_keywords_raw = $13,
              image_prompt = $14,
+             category_path = $15,
+             tags_raw = $16,
+             latitude = $17,
+             longitude = $18,
              content_formatted = TRUE,
              updated_at = NOW()
          WHERE id = $1`,
@@ -326,6 +404,10 @@ async function run() {
           data.focus_keyword,
           data.focus_keywords.join("|"),
           data.image_prompt,
+          data.category_path,
+          data.tags.join(", "),
+          data.latitude,
+          data.longitude,
         ]
       );
 
@@ -385,8 +467,8 @@ async function run() {
           current.slug,
           current.region_id,
           current.community_id,
-          current.category_path,
-          current.tags_raw,
+          data.category_path,
+          data.tags.join(", "),
           data.mito,
           data.historia,
           data.versiones,
@@ -402,8 +484,8 @@ async function run() {
           data.image_prompt_horizontal || null,
           data.image_prompt_vertical || null,
           current.image_url,
-          current.latitude,
-          current.longitude,
+          data.latitude,
+          data.longitude,
           current.source_row,
           JSON.stringify(data.sources),
           JSON.stringify(data.keySources),
@@ -411,6 +493,16 @@ async function run() {
         ]
       );
       const editorialId = editorialUpsert.rows[0].id;
+
+      await client.query("DELETE FROM myth_tags WHERE myth_id = $1", [
+        current.id,
+      ]);
+      await client.query(
+        `INSERT INTO myth_tags (myth_id, tag_id)
+         SELECT $1, tag_id
+         FROM unnest($2::int[]) AS tag_id`,
+        [current.id, selectedTagIds]
+      );
 
       await client.query("DELETE FROM myth_keywords WHERE myth_id = $1", [
         current.id,

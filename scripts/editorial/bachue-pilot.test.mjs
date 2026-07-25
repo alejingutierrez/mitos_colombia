@@ -24,7 +24,7 @@ test("el piloto publica más de cinco fuentes únicas", () => {
   const sources = [...bachue.keySources, ...bachue.sources];
   const urls = new Set(sources.map((source) => source.url));
 
-  assert.equal(sources.length, 10);
+  assert.equal(sources.length, 11);
   assert.equal(urls.size, sources.length);
   for (const source of sources) {
     assert.ok(source.title);
@@ -33,11 +33,17 @@ test("el piloto publica más de cinco fuentes únicas", () => {
   }
 });
 
-test("la narración reduce la extensión y elimina el nombre no sustentado", () => {
-  assert.ok(wordCount(bachue.mito) >= 300);
-  assert.ok(wordCount(bachue.mito) <= 400);
+test("la narración desarrolla una historia literaria de extensión controlada", () => {
+  assert.ok(wordCount(bachue.mito) >= 450);
+  assert.ok(wordCount(bachue.mito) <= 600);
   assert.ok(wordCount(bachue.mito) < 673);
   assert.doesNotMatch(bachue.mito, /Labaque/i);
+  assert.doesNotMatch(
+    bachue.mito,
+    /fuente|cr[oó]nica|relato|versi[oó]n|Pedro Sim[oó]n|Alonso de Zamora|hip[oó]tesis|matrilineal/i
+  );
+  assert.match(bachue.mito, /frailejones/i);
+  assert.match(bachue.mito, /dos grandes serpientes/i);
 });
 
 test("la metodología no presenta matrilinealidad como matriarcado", () => {
@@ -57,4 +63,23 @@ test("los metadatos cumplen los límites editoriales", () => {
   assert.equal(bachue.seo.meta_description, bachue.seo_description);
   assert.equal(bachue.seo.canonical_path, "/mitos/bachue");
   assert.equal(bachue.methodologySeo.canonical_path, "/metodologia");
+  assert.match(bachue.seo_title, /^Mito de Bachué:/);
+});
+
+test("clasificación, etiquetas y ubicación se declaran sin crear taxonomías", () => {
+  assert.equal(bachue.category_path, "Andina > Varios > Muiscas");
+  assert.deepEqual(bachue.tags, [
+    "Bachué",
+    "agua",
+    "cosmogonía",
+    "creación",
+    "laguna",
+    "muiscas",
+    "origen del hombre",
+    "serpiente",
+    "transformación",
+  ]);
+  assert.doesNotMatch(bachue.tags.join("|"), /fertilidad/i);
+  assert.equal(bachue.latitude, 5.68728);
+  assert.equal(bachue.longitude, -73.43681);
 });

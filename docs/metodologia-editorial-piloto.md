@@ -18,7 +18,7 @@ Antes de buscar, se define qué se está investigando:
 - los paralelos de otras mitologías, siempre con sus diferencias.
 
 El mínimo es cinco fuentes consultables y no cinco enlaces equivalentes. El
-piloto de Bachué usa diez.
+piloto de Bachué usa once.
 
 ## 2. Jerarquía y mezcla de fuentes
 
@@ -75,13 +75,17 @@ El texto se redacta en dos pasadas:
 
 ### Relato
 
+- El relato contiene únicamente la historia. No menciona fuentes, cronistas,
+  versiones, hipótesis ni historia de transmisión.
 - Escenas concretas y verbos claros.
 - Una imagen sensorial útil por momento, no una cadena de metáforas.
 - Emoción construida por decisiones, pérdidas, hallazgos y despedidas.
 - Tono serio y accesible: puede ser leído en voz alta sin hablarle al lector
   como a un niño.
-- Ningún adorno visual, nombre propio o acción se inventa para “mejorar” una
-  fuente.
+- La fantasía nace de las acciones extraordinarias que sostienen las fuentes;
+  el paisaje, los materiales y los gestos cotidianos la anclan en la realidad.
+- La libertad literaria permite escena, ritmo y detalle sensorial, pero no
+  inventa nombres, símbolos culturales ni explicaciones doctrinales.
 - Objetivo orientativo: 300 a 650 palabras.
 
 ### Capas editoriales
@@ -101,6 +105,9 @@ El cambio no se considera terminado hasta comprobar:
 - al menos cinco fuentes únicas con título, enlace y utilidad explicada;
 - coincidencia exacta entre los cinco campos y el campo compuesto `content`;
 - sincronización de los metadatos del mito con la capa SEO que publica el sitio;
+- uso exclusivo de categorías y etiquetas ya existentes;
+- revisión del punto geográfico contra una fuente territorial;
+- presencia y pertinencia de la imagen publicada;
 - nombres y variantes respaldados;
 - reducción de redundancia frente al texto anterior;
 - palabras y metadatos dentro de límites editoriales;
@@ -118,12 +125,15 @@ convence.
 
 ## Resultado medible del piloto Bachué
 
-- Fuentes investigadas y guardadas: 10.
+- Fuentes investigadas y guardadas: 11.
 - Relato anterior: 673 palabras.
-- Relato nuevo: 372 palabras.
+- Primera reescritura: 372 palabras.
+- Segunda reescritura literaria: 557 palabras.
 - Contenido editorial anterior: 1.205 palabras.
-- Contenido editorial nuevo: 1.089 palabras aproximadamente.
-- Correcciones principales: retiro de “Labaque” por falta de respaldo;
+- Correcciones principales: relato separado por completo de su aparato
+  documental; aclaración de “Labaque” como nombre atribuido a la mujer en una
+  síntesis posterior y no al compañero; incorporación de Alonso de Zamora;
   distinción entre matrilinealidad y matriarcado; separación de la crónica de
-  Simón, versiones posteriores, memoria muisca contemporánea e hipótesis
-  arqueoastronómica.
+  Simón, la de Zamora, versiones posteriores, memoria muisca contemporánea e
+  hipótesis arqueoastronómica; corrección del punto de Iguaque y revisión de
+  etiquetas sin crear taxonomías.
