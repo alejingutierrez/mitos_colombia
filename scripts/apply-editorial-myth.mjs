@@ -123,6 +123,16 @@ function validateCoordinates(data) {
   }
 }
 
+function validateImageUrl(data) {
+  if (!data.image_url) {
+    return;
+  }
+  const parsed = new URL(data.image_url);
+  if (parsed.protocol !== "https:") {
+    throw new Error("image_url debe usar HTTPS.");
+  }
+}
+
 function validate(data) {
   const required = [
     "slug",
@@ -174,6 +184,7 @@ function validate(data) {
     tags: validateTaxonomy(data),
   };
   validateCoordinates(data);
+  validateImageUrl(data);
   validateSeo("seo", data.seo);
   validateSeo("methodologySeo", data.methodologySeo);
 
@@ -345,7 +356,8 @@ async function run() {
             categoryPath: data.category_path,
             tags: data.tags,
             coordinates: [data.latitude, data.longitude],
-            preservesImage: Boolean(current.image_url),
+            imageAction: data.image_url ? "replace" : "preserve",
+            imageUrl: data.image_url || current.image_url || null,
           },
         },
         null,
@@ -386,6 +398,7 @@ async function run() {
              tags_raw = $16,
              latitude = $17,
              longitude = $18,
+             image_url = $19,
              content_formatted = TRUE,
              updated_at = NOW()
          WHERE id = $1`,
@@ -408,6 +421,7 @@ async function run() {
           data.tags.join(", "),
           data.latitude,
           data.longitude,
+          data.image_url || current.image_url || null,
         ]
       );
 
@@ -483,7 +497,7 @@ async function run() {
           data.image_prompt,
           data.image_prompt_horizontal || null,
           data.image_prompt_vertical || null,
-          current.image_url,
+          data.image_url || current.image_url || null,
           data.latitude,
           data.longitude,
           current.source_row,
