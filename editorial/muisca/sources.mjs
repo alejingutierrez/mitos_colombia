@@ -376,6 +376,17 @@ export const muiscaSources = {
     limitation:
       "Nencatacoa no es un Dioniso andino; la comparación se limita a fiesta, bebida y suspensión temporal de la rutina.",
   }),
+  anansi: source({
+    title: "The exception who proves the rules: Ananse the Akan trickster",
+    author: "Christopher Vecsey, Smithsonian Libraries and Archives",
+    year: 1981,
+    type: "estudio comparativo de folclor akan",
+    url: "https://www.si.edu/object/siris_sil_599217",
+    summary:
+      "Registra un estudio sobre Ananse como figura embaucadora capaz de quebrar y hacer visibles las reglas.",
+    limitation:
+      "Fu no es Ananse ni hay relación histórica demostrada; se contrasta la ambigüedad del personaje cómico que produce consecuencias útiles.",
+  }),
   cassandra: source({
     title: "Agamemnon, lines 1202–1330",
     author: "Esquilo, Perseus Digital Library",
