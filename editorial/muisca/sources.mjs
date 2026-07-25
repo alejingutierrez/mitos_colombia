@@ -334,6 +334,26 @@ export const muiscaSources = {
     limitation:
       "La prueba heroica griega no equivale a los pactos matrimoniales ni a la integración política del altiplano.",
   }),
+  eteocles: source({
+    title: "Eteocles and Polyneikes in combat",
+    author: "The British Museum",
+    type: "catálogo arqueológico comparativo",
+    url: "https://www.britishmuseum.org/collection/object/G_1894-0516-1",
+    summary:
+      "Documenta una representación antigua de dos hermanos del ciclo tebano enfrentados por una sucesión disputada.",
+    limitation:
+      "Es una tradición mediterránea sin relación histórica con Hunsa; solo permite contrastar ambición, legitimidad y guerra interna.",
+  }),
+  atalanta: source({
+    title: "Hippomenes and Atalanta",
+    author: "Museo Nacional del Prado",
+    type: "estudio y mediación de mitología clásica",
+    url: "https://www.museodelprado.es/en/whats-on/multimedia/hippomenes-and-atalanta-guido-reni/248b84e8-6291-5420-0725-18e34d0efe65",
+    summary:
+      "Explica la carrera en la que Atalanta condiciona su matrimonio a ser vencida por un pretendiente.",
+    limitation:
+      "La competencia griega decide un matrimonio mediante engaño y peligro; no debe proyectarse sobre las prácticas muiscas.",
+  }),
   kingsEgypt: source({
     title: "Kings and Queens of Egypt",
     author: "Susan Allen, The Metropolitan Museum of Art",
