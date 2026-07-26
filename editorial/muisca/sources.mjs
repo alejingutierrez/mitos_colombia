@@ -142,6 +142,16 @@ export const muiscaSources = {
     limitation:
       "Es un documento general e institucional, no una edición crítica de mitos ni una voz comunitaria única.",
   }),
+  banrepMuisca: source({
+    title: "Muisca",
+    author: "Enciclopedia del Banco de la República",
+    type: "síntesis histórica y cultural institucional",
+    url: "https://enciclopedia.banrepcultural.org/index.php?title=Muisca",
+    summary:
+      "Resume territorio, organización, economía, orfebrería, textiles y transformaciones históricas de los muiscas.",
+    limitation:
+      "Es una síntesis general; no sustituye la lectura crítica de la crónica que nombra a un personaje.",
+  }),
   garcia: source({
     title: "Érase una vez entre los chibchas",
     author: "Alfredo García Giraldo",
@@ -281,6 +291,16 @@ export const muiscaSources = {
       "Registra la relación cultural contemporánea entre el tejo, el altiplano y una memoria de origen muisca.",
     limitation:
       "La continuidad del juego no prueba los detalles sobrenaturales del cuento moderno de Fu.",
+  }),
+  pacanchiqueRetelling: source({
+    title: "Pacanchique y la bella Azay",
+    author: "Javier Ocampo López, reproducción de Tunja Tesoros Escondidos",
+    type: "recreación folclórica moderna",
+    url: "https://www.tunjatesorosescondidos.com/index.php/mitos/180-pacanchique-y-la-bella-azay",
+    summary:
+      "Ofrece la versión moderna localizable del amor, rescate, castigo y venganza de Pacanchique.",
+    limitation:
+      "Es una reelaboración tardía y no una fuente colonial; no demuestra que la trama completa circulara antes de la conquista.",
   }),
   quetzalcoatl: source({
     title: "Quetzalcóatl",
