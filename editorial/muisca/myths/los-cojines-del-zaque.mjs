@@ -48,13 +48,13 @@ const editorialMyth = {
   "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/editorial/los-cojines-del-zaque-18f10e4fb5f8.jpg",
   "keySources": [
     {
-      "title": "Experiencia de conservación y recuperación del espacio muisca Los Cojines del Zaque de Tunja",
-      "author": "José Ángel Villabona Juez, Universidad Pedagógica y Tecnológica de Colombia",
-      "year": 2009,
-      "type": "investigación territorial y patrimonial",
-      "url": "https://www.uptc.edu.co/export/sites/default/direccion_investigaciones/publicaciones/resenas/doc/tesis16.pdf",
-      "limitation": "Estudia el sitio, su conservación y su alineación solar; no confirma todas las ceremonias atribuidas por autores anteriores.",
-      "summary": "Documenta los dos discos, la conservación del sitio y la observación de su alineación solar."
+      "title": "Arqueoastronomía en los Cojines del Zaque Tunja, Colombia",
+      "author": "Julio Bonilla Romero, Carlos Rodríguez Rojas y Edier Hernán Bustos",
+      "year": 2019,
+      "type": "artículo académico de arqueoastronomía",
+      "url": "https://dialnet.unirioja.es/servlet/articulo?codigo=7021323",
+      "limitation": "Estudia la forma, orientación y posible función solar del sitio; no permite reconstruir una liturgia completa ni confirmar todas las ceremonias atribuidas después.",
+      "summary": "Describe los dos discos tallados sobre una misma roca y reúne la investigación arqueoastronómica sobre su relación con la observación solar."
     },
     {
       "title": "Mitos y leyendas de Colombia, vol. III: Mitos prehispánicos muiscas",
@@ -123,7 +123,7 @@ const editorialMyth = {
       "summary": "Sustenta el contraste limitado con la relación egipcia entre realeza, orden y divinidad solar."
     }
   ],
-  "researchNotes": "ESTADO: revisión integral y retiro de violencia no comprobada.\n\nNÚCLEO DOCUMENTADO: dos discos tallados en roca; ubicación occidental de Tunja; asociación con el zaque, culto solar y observación del amanecer.\n\nVARIANTES: adoratorio, observatorio, ofrendas y ceremonias; el detalle de sacrificios en el sitio no está suficientemente demostrado.\n\nMEMORIA CONTEMPORÁNEA: investigación y conservación de la UPTC; el lugar sigue siendo referente patrimonial de Tunja.\n\nHIPÓTESIS ACADÉMICA: alineación cercana al amanecer del solsticio de diciembre y función calendárica o agrícola.\n\nLECTURA EDITORIAL: niña testigo, aprendizaje y regreso adulto son invención responsable.\n\nDUDA: no puede reconstruirse una liturgia completa a partir de la forma y la alineación.\n\nGEOGRAFÍA: coordenadas corregidas al parque arqueológico de los Cojines del Zaque.\n\nIMAGEN: amanecer real visto entre los dos discos de roca, con comunidad pequeña y zaque sin trono; sin sangre, sacrificio, templo mesoamericano, sol con rostro ni símbolos inventados."
+  "researchNotes": "ESTADO: revisión integral y retiro de violencia no comprobada.\n\nNÚCLEO DOCUMENTADO: dos discos tallados en roca; ubicación occidental de Tunja; asociación con el zaque, culto solar y observación del amanecer.\n\nVARIANTES: adoratorio, observatorio, ofrendas y ceremonias; el detalle de sacrificios en el sitio no está suficientemente demostrado.\n\nMEMORIA CONTEMPORÁNEA: la investigación arqueoastronómica y el cuidado patrimonial mantienen el lugar como referente de Tunja.\n\nHIPÓTESIS ACADÉMICA: alineación cercana al amanecer del solsticio de diciembre y función calendárica o agrícola.\n\nLECTURA EDITORIAL: niña testigo, aprendizaje y regreso adulto son invención responsable.\n\nDUDA: no puede reconstruirse una liturgia completa a partir de la forma y la alineación.\n\nGEOGRAFÍA: coordenadas corregidas al parque arqueológico de los Cojines del Zaque.\n\nIMAGEN: amanecer real visto entre los dos discos de roca, con comunidad pequeña y zaque sin trono; sin sangre, sacrificio, templo mesoamericano, sol con rostro ni símbolos inventados."
 },
   methodologySeo: bachue.methodologySeo,
 };

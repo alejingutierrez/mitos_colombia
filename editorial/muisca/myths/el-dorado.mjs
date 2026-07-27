@@ -62,7 +62,7 @@ const editorialMyth = {
       "author": "Juan Rodríguez Freyle",
       "year": 1636,
       "type": "crónica colonial",
-      "url": "https://biblioteca.clacso.edu.ar/clacso/se/20190905100823/El_carnero_Juan_Rodriguez_Freyle.pdf",
+      "url": "https://siise.bibliotecanacional.gov.co/BBCC/Documents/Doc/274?AspxAutoDetectCookieSupport=1",
       "limitation": "Mezcla memoria, noticia histórica y recursos literarios; su relato de Guatavita fue escrito un siglo después de la conquista y no es una voz indígena directa.",
       "summary": "Describe la investidura en balsa que domina la versión literaria y visual posterior."
     },

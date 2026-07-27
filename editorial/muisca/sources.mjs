@@ -273,14 +273,14 @@ export const muiscaSources = {
       "Describe una práctica contemporánea y sus narrativas de memoria; no acredita por sí sola una trama prehispánica exacta.",
   }),
   cocinas: source({
-    title: "Biblioteca básica de cocinas tradicionales de Colombia, tomo 2",
-    author: "Ministerio de Cultura de Colombia",
-    type: "historia y patrimonio alimentario",
-    url: "https://mng.mincultura.gov.co/Sitios/patrimonio/bibliotecas-de-cocinas/tomos/tomo02.pdf",
+    title: "Los muiscas y su organización social",
+    author: "Museo del Oro, Banco de la República",
+    type: "cartilla museológica y educativa",
+    url: "https://admin.banrepcultural.org/sites/default/files/adjunto-minisitios/maleta-didactica-muisca-banrepcultural.pdf",
     summary:
-      "Sitúa el maíz dentro de prácticas alimentarias, técnicas y continuidades culturales colombianas.",
+      "Documenta el cultivo de distintas variedades de maíz, sus preparaciones, el trabajo agrícola y su función en la provisión comunitaria muisca.",
     limitation:
-      "No documenta como antigua la trama de Piracá ni la transformación de mantas en oro.",
+      "Es una reconstrucción educativa basada en colecciones e investigación, no una voz muisca prehispánica ni una fuente para la trama de Piracá.",
   }),
   tejo: source({
     title: "Tejo: tradición que viene de los muiscas",

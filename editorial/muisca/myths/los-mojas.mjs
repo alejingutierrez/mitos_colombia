@@ -52,7 +52,7 @@ const editorialMyth = {
       "author": "Autor anónimo, atribuido históricamente a Gonzalo Jiménez de Quesada",
       "originalYear": 1548,
       "type": "relación colonial temprana",
-      "url": "https://revistas.javeriana.edu.co/index.php/univhumanistica/article/view/9569",
+      "url": "https://pares.mcu.es/ParesBusquedas20/catalogo/description/1339244",
       "limitation": "La autoría y fecha exacta han sido discutidas; describe prácticas muiscas desde la perspectiva de los conquistadores.",
       "summary": "Noticia colonial temprana sobre moxas procedentes de la Casa del Sol y su posición ritual."
     },
