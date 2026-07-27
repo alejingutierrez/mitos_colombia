@@ -127,6 +127,16 @@ test("presets keep horizontal, banner and vertical dimensions valid for gpt-imag
   assert.equal(IMAGE_PRESETS.horizontal.size, "1536x1024");
   assert.equal(IMAGE_PRESETS.homeBanner.size, "1536x864");
   assert.equal(IMAGE_PRESETS.vertical.size, "1024x1536");
+  assert.equal(
+    IMAGE_PRESETS.horizontal.outputWidth /
+      IMAGE_PRESETS.horizontal.outputHeight,
+    16 / 9
+  );
+  assert.equal(
+    IMAGE_PRESETS.vertical.outputWidth /
+      IMAGE_PRESETS.vertical.outputHeight,
+    9 / 16
+  );
 
   for (const preset of Object.values(IMAGE_PRESETS)) {
     const [width, height] = preset.size.split("x").map(Number);

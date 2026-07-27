@@ -7,6 +7,7 @@ import { del, put } from "@vercel/blob";
 import dotenv from "dotenv";
 import OpenAI from "openai";
 import pg from "pg";
+import sharp from "sharp";
 
 import {
   APPROVED_IMAGE_STYLE_PROFILE,
@@ -260,13 +261,14 @@ async function fetchEntities(client) {
         m.title as name,
         m.slug,
         m.excerpt,
-        m.image_prompt,
+        COALESCE(e.image_prompt_horizontal, e.image_prompt, m.image_prompt) AS image_prompt,
         m.image_url,
         r.name as region,
         COALESCE(c.name, '') as community
       FROM myths m
       JOIN regions r ON r.id = m.region_id
       LEFT JOIN communities c ON c.id = m.community_id
+      LEFT JOIN editorial_myths e ON e.source_myth_id = m.id
       WHERE m.image_prompt IS NOT NULL
         AND ($1::boolean OR m.image_url IS NULL)
         ${idFilterClause("m")}
@@ -356,7 +358,7 @@ async function fetchEntities(client) {
       m.title as name,
       m.slug,
       m.excerpt,
-      m.image_prompt,
+      COALESCE(e.image_prompt_vertical, e.image_prompt_horizontal, e.image_prompt, m.image_prompt) AS image_prompt,
       r.name as region,
       COALESCE(c.name, '') as community,
       vi.id as vertical_image_id,
@@ -366,13 +368,15 @@ async function fetchEntities(client) {
     FROM myths m
     JOIN regions r ON r.id = m.region_id
     LEFT JOIN communities c ON c.id = m.community_id
+    LEFT JOIN editorial_myths e ON e.source_myth_id = m.id
     LEFT JOIN vertical_images vi ON vi.entity_type = 'myth' AND vi.entity_id = m.id
     WHERE m.image_prompt IS NOT NULL
       AND ($1::boolean OR vi.image_url IS NULL)
+      ${idFilterClause("m")}
     ORDER BY m.id
     LIMIT $2 OFFSET $3
     `,
-    [force, limit, offset]
+    entityFetchParams()
   );
   return result.rows.map((row) => rowToEntity(row, "myth"));
 }
@@ -399,10 +403,21 @@ async function saveImageUrl(client, entity, imageUrl) {
     return;
   }
   if (entity.type === "myth" && target !== "vertical") {
-    await client.query(
-      "UPDATE myths SET image_url = $1, updated_at = NOW() WHERE id = $2",
-      [imageUrl, entity.id]
-    );
+    await client.query("BEGIN");
+    try {
+      await client.query(
+        "UPDATE myths SET image_url = $1, updated_at = NOW() WHERE id = $2",
+        [imageUrl, entity.id]
+      );
+      await client.query(
+        "UPDATE editorial_myths SET image_url = $1, updated_at = NOW() WHERE source_myth_id = $2",
+        [imageUrl, entity.id]
+      );
+      await client.query("COMMIT");
+    } catch (error) {
+      await client.query("ROLLBACK");
+      throw error;
+    }
     return;
   }
   if (entity.type === "community") {
@@ -482,7 +497,16 @@ async function generateAndUpload(openai, entity) {
   const response = await openai.images.generate(
     buildImageGenerationParams({ prompt, preset })
   );
-  const imageBuffer = getImageDataBuffer(response);
+  const sourceBuffer = getImageDataBuffer(response);
+  const selectedPreset = IMAGE_PRESETS[preset];
+  const imageBuffer = await sharp(sourceBuffer)
+    .rotate()
+    .resize(selectedPreset.outputWidth, selectedPreset.outputHeight, {
+      fit: "cover",
+      position: "centre",
+    })
+    .jpeg({ quality: 91, mozjpeg: true })
+    .toBuffer();
   const filename = buildBlobFilename({
     preset,
     slug: entity.slug,
@@ -506,6 +530,27 @@ async function main() {
     `[craft] target=${target} limit=${limit} offset=${offset} styleProfile=${styleProfile} force=${force} dryRun=${dryRun}`
   );
   console.log(`[craft] entidades: ${entities.length}`);
+
+  const outDir = path.join(rootDir, "artifacts", "image-regeneration");
+  await fs.mkdir(outDir, { recursive: true });
+  const runId = new Date().toISOString().replace(/[:.]/g, "-");
+  const outPath = path.join(outDir, `${runId}-${target}.json`);
+  const backupPath = path.join(outDir, `${runId}-${target}-before.json`);
+  await fs.writeFile(
+    backupPath,
+    `${JSON.stringify(
+      entities.map((entity) => ({
+        id: entity.id,
+        type: entity.type,
+        slug: entity.slug,
+        previous_url: entity.image_url,
+        vertical_image_id: entity.vertical_image_id,
+      })),
+      null,
+      2
+    )}\n`
+  );
+  console.log(`[craft] respaldo: ${backupPath}`);
 
   for (const entity of entities) {
     console.log(`[craft] ${entity.type}:${entity.id} ${entity.slug}`);
@@ -543,15 +588,10 @@ async function main() {
       new_url: generated.url,
       style_profile: styleProfile,
     });
+    await fs.writeFile(outPath, `${JSON.stringify(rows, null, 2)}\n`);
     console.log(`[craft] ok ${generated.url}`);
   }
 
-  const outDir = path.join(rootDir, "artifacts", "image-regeneration");
-  await fs.mkdir(outDir, { recursive: true });
-  const outPath = path.join(
-    outDir,
-    `${new Date().toISOString().replace(/[:.]/g, "-")}-${target}.json`
-  );
   await fs.writeFile(outPath, `${JSON.stringify(rows, null, 2)}\n`);
   console.log(`[craft] reporte: ${outPath}`);
 }
