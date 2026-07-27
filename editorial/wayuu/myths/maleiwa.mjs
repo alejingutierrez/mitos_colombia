@@ -1,0 +1,96 @@
+import { defineWayuuMyth } from "../define-editorial-myth.mjs";
+
+const mito = `Mareiwa no apareció siempre del mismo modo.
+
+Unos contaban que nació bajo un olivo que conservaba sus hojas durante los veranos más fuertes. Otros decían que su llegada estaba unida a una tormenta. También había quienes lo conocían como el ser que encontraba la península cubierta por el mar y buscaba cómo hacerla habitable.
+
+Mareiwa subió a una altura, tensó su honda y lanzó una piedra. El agua retrocedió. En los huecos quedaron pozos salados, y sobre la tierra recién descubierta no había todavía alimento suficiente.
+
+Reunió entonces a las aves.
+
+—Vuelen lejos. Coman los frutos que encuentren y regresen sobre esta tierra.
+
+Las pavas, los turpiales y las palomas cruzaron el cielo. Donde dejaban caer semillas nacían cardones, tunas, iguarayas y otros frutos. El verde no cubrió toda la península; apareció en manchas, esperando la lluvia.
+
+Mareiwa llamó después a los seres humanos. Los reunió cerca de las piedras y dio nombre a los clanes. Entregó animales, territorios y marcas para distinguir los rebaños. No hizo a todos iguales ni los dejó aislados: cada grupo debía recordar a quién pertenecía y cómo responder cuando un daño atravesara las relaciones entre familias.
+
+Con el tiempo llegaron largas sequías. Los pastos se secaron, los animales buscaron sombra y el agua quedó en el fondo de los pozos. Los piaches cantaban para llamar a los espíritus protectores. A Mareiwa lo invocaban con un nombre de canto relacionado con la lluvia.
+
+Entonces se formaban nubes sobre las serranías. El agua tocaba primero los cerros, corría por cauces breves y hacía brotar plantas que parecían muertas. Nadie podía retener aquella abundancia para siempre. Juyá continuaba su viaje y el verano regresaba.
+
+Por eso las historias no describen a Mareiwa con una sola vida. A veces crea; a veces transforma lo que ya existe. Puede ordenar, castigar o propiciar la lluvia. Su nombre cambia al pasar por la voz de los mayores, los piaches, los escritores y los misioneros.
+
+Lo constante no es una figura inmóvil. Es la tarea de volver habitable un mundo donde el agua llega, se aleja y obliga a recordar los acuerdos.`;
+
+const historia = `Mareiwa, Mareigua o Maleiwa aparece en fuentes del siglo XX con funciones que no siempre coinciden. Chaves lo presenta retirando el mar, distribuyendo plantas, nombrando clanes y castigando transgresiones. Pineda Giraldo lo estudia como espíritu propiciador de la lluvia y registra varias explicaciones de su nacimiento. Paz Ipuana lo llama máxima deidad y lo integra a ciclos de origen; Perrin recoge versiones en las que uno de los mellizos transformadores es identificado como Maleiwa.
+
+Las diferencias importan. Pineda observó que hablantes en contacto con el cristianismo utilizaban Mareiwa para nombrar a Dios o Jesucristo. También criticó la oposición rígida “dios bueno versus demonio malo”, aunque mantuvo vocabulario evolucionista propio de su época. Finol, varias décadas después, comparó las versiones como sistemas narrativos y no como un catecismo homogéneo.
+
+La ficha anterior describía un “dios creador” único, vengativo y comparable directamente con Zeus. Esa fórmula reducía la variación documentada y proyectaba una jerarquía grecorromana. Esta revisión conserva acciones respaldadas y presenta la diversidad como parte de la historia de transmisión.
+
+El agua ofrece una clave territorial. En la Alta Guajira, la Macuira reúne manantiales, bosque nublado y áreas de recarga dentro de un entorno árido. Pineda relacionó la posición de Mareiwa con la lluvia, las cosechas y, después de la introducción ganadera, con los pastos. Su hipótesis histórica es sugerente, no definitiva.
+
+Mareiwa sigue siendo una figura de tradición viva; esta página no intenta fijar qué “creen todos los Wayuu”.`;
+
+const versiones = `En Chaves, Mareiwa actúa como organizador de la península: aparta el mar, procura alimento y distribuye clanes. En el relato de Worunka rompe los dientes de la vagina, modifica el nacimiento y establece otras prácticas; esos pasajes deben leerse con cautela por su contenido sexual y por el sesgo masculino del registro.
+
+Pineda recoge por lo menos tres nacimientos: unión de olas y nubes en un lugar Pülowi, embarazo producido por el temor durante una tormenta y nacimiento bajo un olivo resistente a la sequía. También señala que Fumayule es el nombre de un canto con que los piaches invocan a Mareiwa; no es necesariamente otra deidad.
+
+Paz Ipuana presenta a Maleiwa como máxima figura creadora, mientras las versiones comparadas por Finol y Perrin lo acercan a los mellizos transformadores o a genealogías donde Juyá y Pülowi ocupan funciones propias. Ninguna versión cancela a las demás.
+
+Esta página no se fusiona con “Creación Wayuu”. La primera organiza las contradicciones y funciones de una figura; la segunda ofrece una narración de comienzos. Tampoco absorbe “Serranías de La Guajira”, cuyo valor reside en nombres y lugares concretos. Conservamos los enlaces entre las tres para que el lector pueda seguir el ciclo sin aceptar una falsa versión total.`;
+
+const leccion =
+  "La vida común depende menos de un poder inmóvil que de aprender a responder cuando el agua cambia.";
+
+const similitudes = `Mareiwa comparte con Juyá una relación con lluvia y abundancia, pero las fuentes no los hacen idénticos. Juyá es lluvia móvil, visitante y esposo de Pülowi en numerosos relatos; Mareiwa crea, transforma, nombra y en ciertas prácticas propicia el agua. “Serranías de La Guajira” muestra esas funciones actuando sobre cerros, plantas y clanes.
+
+El Popol Vuh contiene seres creadores y generaciones de transformadores que ensayan distintas formas de vida. La comparación ayuda a observar que una cosmogonía puede distribuir la creación entre varias figuras y momentos. No permite llamar “dios supremo” a cada agente ni supone parentesco histórico entre el mundo k’iche’ y el Wayuu.
+
+Las Metamorfosis de Ovidio también reúnen a una figura divina capaz de cambiar cuerpos y paisajes, pero su orden mitológico está articulado por genealogías del Mediterráneo clásico y por el poder de varios dioses. Mareiwa no es un “Zeus de La Guajira”. Esa etiqueta borra la centralidad de la lluvia, el territorio clanil y la historia de contacto cristiano. La semejanza más útil no es una equivalencia de personajes, sino una pregunta: cómo una tradición narra que el mundo visible conserva las decisiones de fuerzas no humanas.`;
+
+export default defineWayuuMyth({
+  slug: "maleiwa",
+  title: "Mareiwa",
+  mito,
+  historia,
+  versiones,
+  leccion,
+  similitudes,
+  excerpt:
+    "Mareiwa crea, transforma y propicia la lluvia en versiones distintas que explican la vida, los clanes y los cambios de la península.",
+  seoTitle: "Mareiwa: creador y transformador Wayuu",
+  seoDescription:
+    "Conoce a Mareiwa en la tradición Wayuu: sus versiones como creador, transformador y propiciador de lluvia, con contexto y fuentes comparadas.",
+  focusKeywords: [
+    "Mareiwa",
+    "Maleiwa",
+    "mito de Mareiwa",
+    "deidad Wayuu",
+    "mitología Wayuu",
+    "Mareiwa y la lluvia",
+  ],
+  tags: ["Maleiwa", "Wayúu", "transformación", "venganza"],
+  sourceKeys: [
+    "pineda1950",
+    "finol2007",
+    "pazIpuana",
+    "perrin1980",
+    "chaves1946",
+    "macuira",
+    "onicWayuu",
+    "popolVuh",
+    "ovidMetamorphoses",
+  ],
+  researchNotes: `CORRECCIÓN DE IDENTIDAD: el título visible cambia de Maleiwa a Mareiwa, forma dominante en el corpus colombiano de Chaves y Pineda; el slug se conserva para no romper la URL.
+
+EVIDENCIA: funciones de creador, transformador, organizador de clanes y propiciador de lluvia aparecen en fuentes distintas; no se funden como biografía única.
+
+CAUTELA: las equivalencias Mareiwa=Dios y Wanurü=demonio reflejan contacto y traducción cristiana.
+
+DECISIÓN DE FUSIÓN: no se fusiona con Creación Wayuu ni con Serranías. Se enlazan como parte de un ciclo.
+
+IMAGEN: se conserva la existente sin regeneración.
+
+GEOGRAFÍA: punto aproximado en Macuira; una figura cosmogónica no corresponde a un lugar físico único.`,
+});

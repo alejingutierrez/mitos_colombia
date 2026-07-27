@@ -1,0 +1,92 @@
+import { defineWayuuMyth } from "../define-editorial-myth.mjs";
+
+const mito = `Cerca de Puró había una cueva de la que se hablaba en voz baja. Algunos hombres decían haber visto allí a una majayura de extraordinaria belleza. Aparecía al final de la tarde, cuando la luz confundía los caminos, y esperaba sin acercarse a las rancherías.
+
+Un joven la siguió. La muchacha caminó hacia las piedras y entró en la abertura. Él avanzó detrás de ella, convencido de que había recibido una invitación.
+
+Dentro encontró un lugar distinto de la llanura. Había agua, objetos valiosos y conocimientos que no se mostraban a cualquiera. La majayura le indicó que debía guardar silencio. Si regresaba con otros o revelaba lo visto, no encontraría otra vez la salida.
+
+El joven volvió a su casa, pero la curiosidad de sus compañeros fue más fuerte que su promesa. Les habló de la mujer, de la cueva y de los bienes ocultos. Varios decidieron acompañarlo.
+
+Al llegar a Puró, la majayura apareció de nuevo. Los condujo entre las rocas. Unos entraron de inmediato; otros esperaron afuera. La abertura pareció cerrarse sobre quienes habían cruzado. Los que quedaron en la llanura escucharon voces, pero no pudieron distinguir de dónde venían.
+
+Pasaron las horas. Nadie regresó.
+
+Después hubo más hombres que buscaron la cueva. Algunos creían que la muchacha entregaría secretos; otros querían recuperar a sus parientes. La majayura los hacía desviarse. Quienes insistían terminaban perdidos, enfermos o muertos.
+
+Un sabedor llamado Papach conocía el peligro. Advirtió que aquel lugar no era una casa común ni la joven una persona disponible para ser tomada. La cueva tenía dueño y límite. Entrar sin comprenderlos era poner el cuerpo en un mundo cuyas reglas no se podían exigir.
+
+Con el tiempo, la presencia quedó asociada con una piedra blanca que se adentraba en el mar. Los viajeros aprendieron a reconocer el sitio y a no confundir belleza con permiso.
+
+La majayura no salió de Puró para conquistar hombres. Ellos llegaron buscando algo que creían suyo: una mujer, una riqueza o un secreto. El relato conserva su desaparición y también una pregunta sobre la mirada que los condujo hasta allí.`;
+
+const historia = `La narración fue publicada por Milcíades Chaves en 1946 y reeditada por Eugenia Villa Posse. El título histórico —“La majayura que pierde a los hombres”— pone toda la causalidad sobre una joven seductora. Sin embargo, la secuencia también muestra hombres que siguen, revelan secretos, regresan en grupo e intentan entrar en un lugar peligroso.
+
+“Majayura” designa a una joven en una etapa social específica y no es el nombre propio del personaje. Traducirla simplemente como “sirena” o “bruja” reemplaza categorías Wayuu por figuras europeas. El relato la relaciona con Puró, una cueva, conocimientos ocultos, desaparición y una formación pétrea costera. Papach aparece como quien reconoce los límites del lugar.
+
+Las fuentes sobre Pülowi ayudan a entender que ciertos sitios de tierra o mar pueden considerarse peligrosos, abundantes y capaces de atraer a cazadores o viajeros. No afirmamos que la majayura de Puró sea idéntica a toda Pülowi; la comparación ofrece un marco para el vínculo entre presencia femenina, lugar y apropiación de recursos.
+
+La revisión retira un tono de “mujer fatal” que convertía a los hombres en víctimas pasivas y a la joven en tentación moral. Mantiene el peligro y las desapariciones, pero devuelve agencia a quienes desobedecen advertencias y límites. Tampoco identifica la cueva ni la piedra como coordenadas turísticas verificadas.
+
+Esta cautela protege tanto el sentido territorial del relato como lugares que no deben exponerse mediante una ubicación inventada.`;
+
+const versiones = `Solo se localizó una cadena narrativa directa: el texto de Chaves y su reedición por Villa Posse. La segunda fuente permite rastrear circulación editorial, no independencia oral. No contamos con grabación, texto wayuunaiki ni versión comunitaria contemporánea publicada que confirme cada diálogo.
+
+Algunas reescrituras posteriores acercan a la majayura a Pülowi, mujer y lugar peligroso relacionado con mar, caza y desaparición. Perrin documenta varias Pülowi, no una sola diosa con biografía uniforme. Por eso esta página conserva el nombre funcional de la joven y presenta la afinidad como contexto, no como identidad cerrada.
+
+El desenlace de piedra blanca y mar puede aparecer abreviado o separado de la cueva. La edición revisada lo mantiene como memoria territorial sin afirmar una transformación física comprobable.
+
+No fusionamos esta página con “La Chama”. Las dos fueron descritas como mujeres que atraen hombres, pero la primera está unida a Puró, cueva, secreto y desaparición; la segunda pertenece a registros de prácticas mágicas, enfermedad y metamorfosis. Unificarlas reforzaría un estereotipo y borraría sus contextos documentales propios.`;
+
+const leccion =
+  "La belleza nunca sustituye el consentimiento ni vuelve apropiables los lugares, saberes o cuerpos de otra persona.";
+
+const similitudes = `La imagen de una presencia femenina que atrae a hombres hacia el peligro recuerda sirenas mediterráneas y relatos americanos de dueñas de agua. El parecido está en la atracción y la frontera; no autoriza a llamar “sirena Wayuu” a la majayura ni a derivar una tradición de otra.
+
+Pülowi ofrece un paralelo interno más preciso. Fuentes de Perrin describen lugares y seres femeninos asociados con abundancia, caza, pesca y riesgo de desaparición. Un cazador exitoso puede creer que domina los animales cuando en realidad ha entrado en una relación peligrosa con su dueña. La cueva de Puró trabaja una lógica semejante de acceso y límite.
+
+“La Chama” también fue narrada por recopiladores varones como figura seductora. Leer ambas fichas de manera crítica permite detectar una operación editorial frecuente: convertir la acción y el deseo masculinos en poder irresistible de una mujer. Las revisiones no niegan el carácter amenazante de los personajes; distribuyen mejor las decisiones.
+
+En “El viaje del más allá”, entrar a otro dominio exige cumplir condiciones y callar lo visto. La majayura de Puró impone un límite parecido, pero el destino, los parentescos y la cosmología de Jepira pertenecen a otro ciclo.`;
+
+export default defineWayuuMyth({
+  slug: "la-majayura-que-pierde-a-los-hombres",
+  title: "La majayura de Puró",
+  mito,
+  historia,
+  versiones,
+  leccion,
+  similitudes,
+  excerpt:
+    "Una majayura conduce a varios hombres hacia la cueva de Puró, donde belleza, secreto y deseo chocan con los límites de un lugar peligroso.",
+  seoTitle: "La majayura de Puró: relato Wayuu",
+  seoDescription:
+    "Lee el relato Wayuu de la majayura de Puró y su cueva, con contexto crítico sobre deseo, límites, lugares peligrosos y transmisión oral.",
+  focusKeywords: [
+    "majayura de Puró",
+    "mito de la majayura",
+    "cueva de Puró",
+    "mitología Wayuu",
+    "Pülowi",
+    "relatos de La Guajira",
+  ],
+  tags: ["Wayúu", "conocimiento", "majayura", "tentación", "transformación"],
+  sourceKeys: [
+    "chaves1946",
+    "villa1993",
+    "perrin1980",
+    "pineda1950",
+    "geografiasMiticas",
+    "regimenMacuira",
+    "minculturaWayuu",
+  ],
+  researchNotes: `NÚCLEO: majayura, cueva de Puró, secreto, hombres que entran o regresan, desaparición y piedra blanca costera; Papach reconoce el peligro.
+
+CORRECCIÓN: el título visible evita atribuir toda la causalidad a una “mujer que pierde”; majayura es una categoría social, no nombre propio.
+
+FUSIÓN DESCARTADA: La Chama tiene otro contexto ritual y documental.
+
+IMAGEN: se conserva la imagen actual; no se generaron activos.
+
+GEOGRAFÍA: punto aproximado en la Alta Guajira; no se publica la cueva como localización turística confirmada.`,
+});
