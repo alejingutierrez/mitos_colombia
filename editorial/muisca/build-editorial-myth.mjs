@@ -1,4 +1,5 @@
 import bachue from "../myths/bachue.mjs";
+import { withMuiscaImagePrompts } from "./image-prompts.mjs";
 
 function composeContent({ mito, historia, versiones, leccion, similitudes }) {
   return [
@@ -40,7 +41,7 @@ export function buildMuiscaEditorialMyth(input) {
     categoryPath = "Andina > Varios > Muiscas",
   } = input;
 
-  return {
+  return withMuiscaImagePrompts({
     slug,
     title,
     category_path: categoryPath,
@@ -76,5 +77,5 @@ export function buildMuiscaEditorialMyth(input) {
     keySources,
     sources,
     researchNotes,
-  };
+  });
 }

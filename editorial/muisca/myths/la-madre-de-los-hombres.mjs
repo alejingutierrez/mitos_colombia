@@ -1,4 +1,5 @@
 import bachue from "../../myths/bachue.mjs";
+import { withMuiscaImagePrompts } from "../image-prompts.mjs";
 
 const editorialMyth = {
   ...{
@@ -136,4 +137,4 @@ const editorialMyth = {
   methodologySeo: bachue.methodologySeo,
 };
 
-export default editorialMyth;
+export default withMuiscaImagePrompts(editorialMyth);

@@ -1,3 +1,5 @@
+import { withMuiscaImagePrompts } from "../muisca/image-prompts.mjs";
+
 const keySources = [
   {
     title:
@@ -238,4 +240,4 @@ DECISIONES DE DATOS: se conserva la categoría existente Andina > Varios > Muisc
 GEOGRAFÍA: la coordenada se corrige al punto oficial publicado por Parques Nacionales para la laguna: 5°41'14.2"N, 73°26'12.5"W, expresado como 5.68728, -73.43681. La imagen horizontal ya existe y se conserva.`,
 };
 
-export default editorialMyth;
+export default withMuiscaImagePrompts(editorialMyth);

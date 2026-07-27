@@ -4,6 +4,7 @@ import process from "node:process";
 import dotenv from "dotenv";
 import pg from "pg";
 import sharp from "sharp";
+import { muiscaImageDecisions } from "../../editorial/muisca/image-decisions.mjs";
 import { canonicalMuiscaSlugs } from "../../editorial/muisca/universe.mjs";
 
 const { Client } = pg;
@@ -56,6 +57,7 @@ async function loadEditorialDecisions() {
 function reviewCard(item) {
   const decision = item.decision;
   const recommendation = decision?.recommendation || "PENDIENTE";
+  const selectedDecision = item.approvedDecision || recommendation;
   const rationale =
     decision?.rationale ||
     "Esta pareja todavía no tiene una evaluación editorial.";
@@ -64,7 +66,7 @@ function reviewCard(item) {
   const label = `${String(item.index + 1).padStart(2, "0")} · ${item.title}`;
 
   return `
-    <article class="card" data-recommendation="${escapeHtml(recommendation)}">
+    <article class="card" data-recommendation="${escapeHtml(recommendation)}" data-selection="${escapeHtml(selectedDecision)}">
       <header>
         <div>
           <p class="slug">${escapeHtml(label)}</p>
@@ -102,10 +104,10 @@ function reviewCard(item) {
       <label class="decision">
         Tu decisión
         <select data-slug="${escapeHtml(item.slug)}" data-number="${item.index + 1}">
-          <option value="RECORTAR" ${recommendation === "RECORTAR" ? "selected" : ""}>Conservar escenas y adaptar vertical a 9:16</option>
-          <option value="VERTICAL" ${recommendation === "VERTICAL" ? "selected" : ""}>Conservar principal y rehacer segunda escena</option>
-          <option value="PAREJA" ${recommendation === "PAREJA" ? "selected" : ""}>Rehacer la pareja completa</option>
-          <option value="CONSERVAR">Conservar ambas sin cambios</option>
+          <option value="RECORTAR" ${selectedDecision === "RECORTAR" ? "selected" : ""}>Conservar escenas y adaptar vertical a 9:16</option>
+          <option value="VERTICAL" ${selectedDecision === "VERTICAL" ? "selected" : ""}>Conservar principal y rehacer segunda escena</option>
+          <option value="PAREJA" ${selectedDecision === "PAREJA" ? "selected" : ""}>Rehacer la pareja completa</option>
+          <option value="CONSERVAR" ${selectedDecision === "CONSERVAR" ? "selected" : ""}>Conservar ambas sin cambios</option>
           <option value="PENDIENTE">Dejar pendiente</option>
         </select>
       </label>
@@ -503,6 +505,7 @@ async function run() {
       horizontal,
       vertical,
       decision: decisions.get(row.slug) || null,
+      approvedDecision: muiscaImageDecisions[row.slug] || null,
     });
   }
 
