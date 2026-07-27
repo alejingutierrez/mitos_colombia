@@ -22,6 +22,17 @@ Fecha de revisión: 27 de julio de 2026.
 - `RECORTAR`: conservar ambas escenas y convertir la vertical existente de 2:3 a 9:16 sin una nueva generación.
 - `VERTICAL`: conservar la principal 16:9 y generar solo una segunda escena 9:16.
 - `PAREJA`: rehacer la principal 16:9 y generar una segunda escena 9:16 coherente con ella.
+- `CONSERVAR`: conservar editorialmente las dos imágenes publicadas. La decisión sobre adaptar su vertical 2:3 a 9:16 se mantiene separada para no interpretar una respuesta que el usuario todavía no ha dado.
+
+## Decisiones aprobadas por el usuario
+
+La auditoría interactiva quedó respondida por completo el 27 de julio de 2026: 41 de 41 mitos, sin pendientes.
+
+- `CONSERVAR` (20): `bachue`, `campos-eliseos`, `chiminigagua`, `creacion-muiscas`, `el-bermejo-aspira-a-ser-rey`, `el-castigo-de-chaquen`, `el-dorado`, `el-origen-del-lago-tota`, `el-sol-y-la-luna`, `en-el-principio-fue-el-maiz`, `fu-el-dios-de-la-torpeza`, `huitaca`, `la-cacica-de-guatavita`, `la-competencia`, `la-herencia`, `la-historia-del-bermejo`, `los-mojas`, `meicuchuca`, `nencatacoa`, `pacanchique`.
+- `VERTICAL` (8): `chaquon`, `chia`, `chibchacum`, `los-cojines-del-zaque`, `los-dioses-civilizadores`, `nompanem`, `popon`, `toquecha-y-toquilla`.
+- `PAREJA` (13): `bochica`, `cuchavira`, `el-hijo-del-sol-goranchacha`, `el-pozo-de-hunzahua`, `el-primero-de-los-reyes`, `el-tequendama`, `hunzahua`, `idacanzas`, `la-aparicion-del-hombre`, `la-madre-de-los-hombres`, `nemequene`, `tomagata`, `veneracion-a-los-soberanos`.
+
+La ejecución aprobada implica 34 generaciones nuevas: 8 verticales y 13 parejas. No se ejecutará hasta resolver si las 20 verticales del grupo `CONSERVAR`, actualmente 2:3, deben adaptarse a 9:16 o permanecer literalmente sin cambios.
 
 ## Revisión mito por mito
 
