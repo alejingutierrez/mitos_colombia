@@ -22,7 +22,7 @@ Fecha de revisión: 27 de julio de 2026.
 - `RECORTAR`: conservar ambas escenas y convertir la vertical existente de 2:3 a 9:16 sin una nueva generación.
 - `VERTICAL`: conservar la principal 16:9 y generar solo una segunda escena 9:16.
 - `PAREJA`: rehacer la principal 16:9 y generar una segunda escena 9:16 coherente con ella.
-- `CONSERVAR`: conservar editorialmente las dos imágenes publicadas. La decisión sobre adaptar su vertical 2:3 a 9:16 se mantiene separada para no interpretar una respuesta que el usuario todavía no ha dado.
+- `CONSERVAR`: conservar literalmente las dos imágenes publicadas, incluida la vertical 2:3. Esta excepción de formato fue aprobada expresamente por el usuario el 27 de julio de 2026.
 
 ## Decisiones aprobadas por el usuario
 
@@ -32,7 +32,15 @@ La auditoría interactiva quedó respondida por completo el 27 de julio de 2026:
 - `VERTICAL` (8): `chaquon`, `chia`, `chibchacum`, `los-cojines-del-zaque`, `los-dioses-civilizadores`, `nompanem`, `popon`, `toquecha-y-toquilla`.
 - `PAREJA` (13): `bochica`, `cuchavira`, `el-hijo-del-sol-goranchacha`, `el-pozo-de-hunzahua`, `el-primero-de-los-reyes`, `el-tequendama`, `hunzahua`, `idacanzas`, `la-aparicion-del-hombre`, `la-madre-de-los-hombres`, `nemequene`, `tomagata`, `veneracion-a-los-soberanos`.
 
-La ejecución aprobada implica 34 generaciones nuevas: 8 verticales y 13 parejas. No se ejecutará hasta resolver si las 20 verticales del grupo `CONSERVAR`, actualmente 2:3, deben adaptarse a 9:16 o permanecer literalmente sin cambios.
+La ejecución aprobada implica 34 generaciones nuevas: 8 verticales y 13 parejas. Las 20 verticales del grupo `CONSERVAR` permanecen literalmente en 2:3 y quedan fuera de cualquier escritura o regeneración.
+
+## Resultado de la ejecución
+
+- El ensayo previo resolvió las 34 operaciones previstas sin tocar las 20 parejas protegidas.
+- La ejecución real completó 13 principales 16:9 y 21 segundas escenas 9:16, sin fallos y con las 20 parejas `CONSERVAR` sin cambios.
+- La revisión de las once hojas de contacto detectó una sola repetición narrativa: la vertical de `cuchavira`. Se sustituyó únicamente esa imagen por una escena posterior de siembra y reparación del terreno.
+- El inventario final contiene 41 principales de 1536 × 864, 21 segundas escenas de 864 × 1536 y las 20 verticales conservadas literalmente en 1024 × 1536.
+- La revisión final no encontró imágenes ausentes ni errores de descarga.
 
 ## Revisión mito por mito
 

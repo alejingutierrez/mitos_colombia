@@ -62,9 +62,9 @@ export const muiscaVerticalImageScenes = {
   },
   cuchavira: {
     scene:
-      "el agua empieza a retirarse de la sabana; bajo un arco iris natural y tenue, una mujer embarazada, una persona que recupera fuerzas y otras familias descienden de las lomas para reconocer los caminos",
+      "varios días después de la inundación, una mujer embarazada siembra las primeras semillas en una parcela ya drenada, la persona que recuperó sus fuerzas lleva agua y otras familias reparan un paso entre los juncos; en un charco queda apenas el reflejo pálido del arco iris",
     avoid:
-      "figura humana dentro del arco, alas griegas, arco iris con rostro o saturación infantil",
+      "arco iris dominante, figura humana dentro del arco, alas griegas, arco iris con rostro o saturación infantil",
   },
   "el-bermejo-aspira-a-ser-rey": {
     scene:

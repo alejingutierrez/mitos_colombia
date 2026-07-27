@@ -98,7 +98,7 @@ Ambas memorias muestran una necesidad humana: vincular el orden con una figura c
   imagePromptVertical:
     "Fotografía editorial vertical 4:5 de una maqueta de papel cortado: Nemequene sentado al mismo nivel que dos personas en disputa, una línea trazada en tierra continúa hacia un camino lejano con guerreros apenas sugeridos. Altiplano, fibras y micro-sombras. Sin corona, violencia explícita, texto ni CGI.",
   imageUrl:
-    "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/nemequene-1784765793719.jpg",
+    "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/nemequene-1785172414821.jpg",
   sourceKeys: [
     "simon",
     "piedrahita",
