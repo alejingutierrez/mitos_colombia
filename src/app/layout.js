@@ -1,3 +1,4 @@
+import "leaflet/dist/leaflet.css";
 import "./globals.css";
 import { Cormorant_Garamond, Manrope, Inter } from "next/font/google";
 import Script from "next/script";

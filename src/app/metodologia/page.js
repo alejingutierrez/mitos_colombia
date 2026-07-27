@@ -45,9 +45,10 @@ const sections = [
     body: (
       <>
         <p>
-          Esta es la metodología completa de Mitos de Colombia. Bachué sigue
-          siendo su primer caso de validación: no la aplicaremos en serie hasta
-          que su resultado literario y editorial reciba aprobación.
+          Esta es la metodología completa de Mitos de Colombia. Bachué abrió la
+          validación y la colección de 41 mitos muiscas permitió probar el
+          método en serie, medir sus costos y corregir las reglas que todavía no
+          funcionaban en la página pública.
         </p>
         <p>
           La unidad de trabajo es un mito completo. Revisamos Relato, Historia,
@@ -136,6 +137,9 @@ const sections = [
         <p>
           La enseñanza profunda se ofrece como posibilidad de pensamiento, no
           como doctrina total de una comunidad ni como moraleja para obedecer.
+          Se escribe en una sola frase filosófica de 8 a 22 palabras,
+          comprensible fuera del argumento y sin nombres propios ni resumen de
+          la trama.
         </p>
       </>
     ),
@@ -191,10 +195,11 @@ const sections = [
       <>
         <p>
           Historia sitúa transmisión, territorio y contexto social. Versiones
-          atribuye las diferencias sin fundirlas. Lección propone una idea
-          abierta, no una orden moral. Similitudes presenta al menos dos
-          paralelos documentados cuando sean pertinentes y explica tanto la
-          resonancia como la diferencia.
+          atribuye las diferencias sin fundirlas. Lección propone, en una sola
+          frase breve, una tensión humana que pueda pensarse más allá del
+          argumento; no resume escenas, nombra personajes ni da una orden moral.
+          Similitudes presenta al menos dos paralelos documentados cuando sean
+          pertinentes y explica tanto la resonancia como la diferencia.
         </p>
         <p>
           Una semejanza nunca prueba copia o influencia directa por sí sola. El
@@ -237,6 +242,12 @@ const sections = [
           decimales no deben fingir una precisión histórica que las fuentes no
           permiten.
         </p>
+        <p>
+          Una coordenada correcta no basta si el mapa no se renderiza. La prueba
+          en navegador confirma que carguen las teselas y los estilos
+          cartográficos globales, y que marcador, controles y atribución queden
+          bien posicionados en escritorio y móvil.
+        </p>
       </>
     ),
   },
@@ -245,20 +256,25 @@ const sections = [
     body: (
       <>
         <p>
-          Primero inspeccionamos la imagen existente y la conservamos si es
-          pertinente, respetuosa y funciona en todos sus recortes. Solo se
-          regenera si falta, es genérica o contradice la historia.
+          El enriquecimiento editorial no regenera imágenes por defecto.
+          Primero inventariamos lo que ya existe y revisamos pertinencia,
+          consistencia, proporción y uso público. Solo las imágenes ausentes o
+          expresamente desaprobadas entran en una lista de generación
+          autorizada.
         </p>
         <p>
-          Una nueva imagen sigue el sistema visual aprobado de maqueta
-          artesanal y papel trabajado. Su prompt nace de la evidencia: paisaje
-          real, acción central y materiales justificables. Evita coronas, oro
-          ornamental, símbolos mesoamericanos, vestuarios inventados y
-          exotización.
+          La horizontal 16:9 es la portada, la imagen social y la representación
+          en listados. La vertical es una segunda escena narrativa y aparece una
+          sola vez dentro de Relato; nunca es una repetición de la portada. Las
+          verticales aprobadas en 2:3 se muestran completas, sin recorte, y la
+          horizontal no se reutiliza para rellenar el interior.
         </p>
         <p>
-          Revisamos relevancia, recortes horizontal y vertical, móvil, peso,
-          formato, texto alternativo y uso en Open Graph.
+          Antes de gastar en reemplazos auditamos las parejas existentes en
+          hojas de contacto. Si una imagen debe cambiar, generamos únicamente el
+          mito y la orientación aprobados dentro del sistema visual de maqueta
+          artesanal y papel trabajado. Revisamos diferencia entre escenas,
+          móvil, peso, formato, texto alternativo y Open Graph.
         </p>
       </>
     ),
@@ -289,8 +305,9 @@ const sections = [
       <>
         <p>
           La publicación empieza con un ensayo sin escritura. El validador
-          comprueba fuentes y URLs, campos obligatorios, extensión, límites SEO,
-          contenido compuesto, taxonomía y coordenadas.
+          comprueba fuentes y URLs, campos obligatorios, extensión, enseñanza de
+          una sola frase y 8 a 22 palabras, límites SEO, contenido compuesto,
+          taxonomía y coordenadas.
         </p>
         <p>
           Antes de modificar la base de datos guardamos una copia durable del
@@ -314,10 +331,10 @@ const sections = [
         </p>
         <p>
           Finalmente abrimos la URL canónica en un navegador real. Allí
-          revisamos texto, fuentes y enlaces, imagen, etiquetas, mapa,
-          metadatos, datos estructurados, consola y errores de ejecución. Código
-          correcto en el repositorio no equivale a contenido publicado
-          correctamente.
+          revisamos texto, fuentes y enlaces, portada horizontal, vertical única
+          dentro del Relato, etiquetas, mapa completo, metadatos, datos
+          estructurados, consola y errores de ejecución. Código correcto en el
+          repositorio no equivale a contenido publicado correctamente.
         </p>
       </>
     ),
@@ -343,19 +360,22 @@ const sections = [
     ),
   },
   {
-    title: "Aprobación antes de escalar",
+    title: "Aprendizajes del piloto y escala",
     body: (
       <>
         <p>
-          El flujo es: alcance, investigación, matriz, borrador literario, capas
-          editoriales, taxonomía, imagen, geografía y SEO, ensayo, respaldo,
-          transacción, validación local, producción y aprobación.
+          El piloto muisca confirmó que primero debemos definir el universo
+          canónico, investigar y editar; la generación visual es un flujo
+          posterior y optativo. También dejó reglas durables: una función por
+          orientación, enseñanza filosófica breve, sincronía exacta entre
+          campos y contenido, y revisión real de mapas, imágenes y consola.
         </p>
         <p>
-          <TextLink href="/mitos/bachue">Bachué</TextLink> valida el método y,
-          sobre todo, su voz. Si el piloto convence, esta metodología se
-          convierte en plantilla. Si no, corregimos tono, extensión o criterios
-          antes de tocar los demás mitos.
+          La colección entregó 41 expedientes documentados, 41 enseñanzas
+          breves y una pareja visual por mito. Veinte verticales se conservaron
+          literalmente en 2:3 por decisión editorial. Las correcciones se hacen
+          por lotes auditables y orientaciones puntuales: no se repite un lote
+          completo para resolver un fallo aislado.
         </p>
       </>
     ),
@@ -410,11 +430,11 @@ export default async function MetodologiaPage() {
 
   return (
     <DocumentTemplate
-      eyebrow="Metodología editorial · versión 1.0"
+      eyebrow="Metodología editorial · versión 1.1"
       title="Investigar antes de volver a contar"
       description="El estándar completo para documentar, narrar y publicar cada mito con imaginación, respeto cultural y evidencia verificable."
       breadcrumb={[{ label: "Inicio", href: "/" }, { label: "Metodología" }]}
-      updated="25 de julio de 2026"
+      updated="27 de julio de 2026"
       sections={[sourceCoverageSection, ...sections]}
       related={related}
       accent="river"

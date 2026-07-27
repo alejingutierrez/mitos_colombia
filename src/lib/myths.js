@@ -437,6 +437,7 @@ function getMythBySlugSqlite(slug) {
     .map((row) => row.keyword);
 
   let provenance = normalizeEditorialProvenance(null);
+  let verticalImageUrl = null;
   try {
     const editorial = db
       .prepare(
@@ -453,9 +454,26 @@ function getMythBySlugSqlite(slug) {
   } catch (error) {
     console.error("[MYTHS] Editorial provenance unavailable (SQLite):", error);
   }
+  try {
+    verticalImageUrl =
+      db
+        .prepare(
+          `
+          SELECT image_url
+          FROM vertical_images
+          WHERE entity_type = 'myth' AND entity_id = ?
+          ORDER BY updated_at DESC, id DESC
+          LIMIT 1
+        `
+        )
+        .get(myth.id)?.image_url || null;
+  } catch (error) {
+    console.error("[MYTHS] Vertical image unavailable (SQLite):", error);
+  }
 
   return {
     ...myth,
+    vertical_image_url: verticalImageUrl,
     tags,
     keywords,
     ...provenance,
@@ -496,31 +514,43 @@ async function getMythBySlugPostgres(slug) {
     return null;
   }
 
-  const tagsResult = await sql.query(
-    `
-      SELECT tags.name, tags.slug
-      FROM tags
-      JOIN myth_tags ON myth_tags.tag_id = tags.id
-      WHERE myth_tags.myth_id = $1
-      ORDER BY tags.name ASC
-    `,
-    [myth.id]
-  );
-
-  const keywordsResult = await sql.query(
-    `
-      SELECT keyword
-      FROM myth_keywords
-      WHERE myth_id = $1
-      ORDER BY keyword ASC
-    `,
-    [myth.id]
-  );
+  const [tagsResult, keywordsResult, verticalImageResult] = await Promise.all([
+    sql.query(
+      `
+        SELECT tags.name, tags.slug
+        FROM tags
+        JOIN myth_tags ON myth_tags.tag_id = tags.id
+        WHERE myth_tags.myth_id = $1
+        ORDER BY tags.name ASC
+      `,
+      [myth.id]
+    ),
+    sql.query(
+      `
+        SELECT keyword
+        FROM myth_keywords
+        WHERE myth_id = $1
+        ORDER BY keyword ASC
+      `,
+      [myth.id]
+    ),
+    sql.query(
+      `
+        SELECT image_url
+        FROM vertical_images
+        WHERE entity_type = 'myth' AND entity_id = $1
+        ORDER BY updated_at DESC, id DESC
+        LIMIT 1
+      `,
+      [myth.id]
+    ),
+  ]);
 
   const provenance = normalizeEditorialProvenance(myth);
 
   return {
     ...myth,
+    vertical_image_url: verticalImageResult.rows[0]?.image_url || null,
     tags: tagsResult.rows,
     keywords: keywordsResult.rows.map((row) => row.keyword),
     ...provenance,
