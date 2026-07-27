@@ -1,11 +1,13 @@
-# Metodología editorial de Mitos de Colombia
+# Metodología interna de revisión y enriquecimiento de mitos
 
-**Versión 1.1 · 27 de julio de 2026**
+**Versión 1.2 · 27 de julio de 2026**
 
-Esta es la metodología completa para investigar, reescribir, clasificar y
-publicar cada mito del archivo. Bachué abrió la validación y la colección de 41
-mitos muiscas permitió probar el método en serie, detectar sus costos reales y
-corregir las reglas que no funcionaban todavía en la página pública.
+Este es el documento canónico del proyecto para investigar, revisar,
+reescribir, clasificar y publicar cada mito del archivo. Define el trabajo
+interno, los criterios de aceptación, los bloqueos y las pruebas necesarias.
+Bachué abrió la validación y la colección de 41 mitos muiscas permitió probar
+el método en serie, detectar sus costos reales y corregir las reglas que no
+funcionaban todavía en la página pública.
 
 Su propósito es sostener al mismo tiempo cuatro compromisos: una investigación
 honesta, una lectura cultural que no reduzca a las comunidades, un relato
@@ -373,3 +375,73 @@ pública; solo después se inicia la siguiente colección.
   no forma parte automática del enriquecimiento.
 - Cierre: sincronización exacta, pruebas, despliegue y verificación pública de
   las 41 rutas.
+
+## 17. Checklist de cierre por mito
+
+Este checklist no sustituye el juicio editorial. Sirve para impedir que una
+ficha avance con una capa terminada y otra todavía incoherente.
+
+### Preflight
+
+- [ ] El mito pertenece al universo de trabajo definido.
+- [ ] Existe una copia recuperable de la versión publicada.
+- [ ] Se registraron el estado del texto, las fuentes, la clasificación, las
+      imágenes, el mapa y el SEO antes de editar.
+- [ ] Las categorías y etiquetas disponibles fueron inventariadas.
+
+### Investigación
+
+- [ ] Hay por lo menos cinco fuentes útiles y no cinco reproducciones de una
+      misma cadena documental.
+- [ ] Cada afirmación central tiene respaldo identificable.
+- [ ] Las variantes conservan su atribución.
+- [ ] Las crónicas coloniales se leen con fecha, autor, propósito y distancia
+      respecto de las voces indígenas.
+- [ ] La voz contemporánea de la comunidad se distingue de las reconstrucciones
+      históricas.
+- [ ] Cada comparación universal tiene una referencia directa y explica también
+      la diferencia.
+
+### Escritura y lectura cultural
+
+- [ ] Relato contiene solo la historia.
+- [ ] La acción puede seguirse sin notas explicativas.
+- [ ] El paisaje y la vida material corresponden al territorio documentado.
+- [ ] No se inventaron nombres tradicionales, parentescos, ceremonias,
+      vestuarios, doctrinas ni símbolos.
+- [ ] Historia, Versiones, Lección y Similitudes cumplen funciones distintas.
+- [ ] La enseñanza es una sola frase filosófica de 8 a 22 palabras.
+- [ ] La lectura cultural propone preguntas sin definir a una comunidad mediante
+      una fórmula total.
+
+### Edición, imagen y descubrimiento
+
+- [ ] Los cinco campos editoriales coinciden con el contenido compuesto.
+- [ ] La clasificación reutiliza únicamente categorías y etiquetas existentes.
+- [ ] El punto geográfico representa el lugar de la historia o declara que es
+      aproximado.
+- [ ] La horizontal se usa como portada y la vertical como segunda escena dentro
+      del Relato.
+- [ ] Una vertical aprobada en 2:3 se muestra completa, sin recorte.
+- [ ] Título, descripción, canonical, imagen social, datos estructurados y texto
+      alternativo describen la ficha real.
+- [ ] Las fuentes visibles tienen enlaces válidos.
+
+### Publicación y prueba
+
+- [ ] El ensayo sin escritura supera todas las validaciones.
+- [ ] La actualización se aplica de forma atómica y deja un registro de cambio.
+- [ ] Pruebas, lint y compilación terminan sin errores.
+- [ ] El contenedor local se reconstruye y las rutas relevantes responden.
+- [ ] La URL pública se abre en un navegador real.
+- [ ] Portada, vertical, mapa, enlaces, metadatos y consola se revisan en
+      escritorio y móvil.
+- [ ] El despliegue y la integración al repositorio se verifican por separado.
+
+### Criterios para reabrir una ficha
+
+Una ficha vuelve a revisión si aparece una fuente primaria no considerada, una
+corrección documentada de la comunidad, una atribución cultural equivocada, una
+variante presentada como certeza, un cambio territorial relevante, un enlace
+roto que deja sin sustento una afirmación o una regresión pública en texto,
+imagen, mapa, accesibilidad o SEO.

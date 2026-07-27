@@ -260,12 +260,11 @@ const sections = [
           en nuestras bases internas y se usan sólo con fines editoriales.
         </p>
         <p>
-          Si en el futuro integramos herramientas de análisis avanzadas o
-          sistemas de apoyo editorial basados en inteligencia artificial,
-          informaremos explícitamente y describiremos qué datos se utilizan.
-          Nuestro compromiso es mantener la transparencia y solicitar
-          consentimiento cuando sea necesario. Esta política se actualizará para
-          reflejar cualquier cambio relevante.
+          Si en el futuro integramos nuevas herramientas externas de análisis o
+          apoyo editorial, informaremos explícitamente y describiremos qué datos
+          se utilizan. Nuestro compromiso es mantener la transparencia y
+          solicitar consentimiento cuando sea necesario. Esta política se
+          actualizará para reflejar cualquier cambio relevante.
         </p>
         <p>
           Puedes conocer más sobre la visión tecnológica del proyecto en{" "}
