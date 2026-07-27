@@ -113,6 +113,7 @@ export default async function MythDetailPage({ params }) {
     community: myth.community,
     excerpt: myth.excerpt,
     imageUrl: myth.image_url,
+    verticalImageUrl: myth.vertical_image_url,
     content: myth.content,
     category_path: myth.category_path,
     keywords: myth.keywords,

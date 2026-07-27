@@ -21,25 +21,21 @@ const RIVER_REGIONS = ["Caribe", "Pacífico"];
 const pickAccent = (region) =>
   RIVER_REGIONS.includes(region) ? "river" : "jungle";
 
-function ImagePause({ myth, ratio = "16 / 7", caption, className = "" }) {
-  if (!myth.imageUrl) return null;
+function InlineStoryImage({ myth, className = "" }) {
+  if (!myth.verticalImageUrl) return null;
   return (
     <figure className={className}>
       <ImageFrame
-        src={myth.imageUrl}
-        alt=""
-        ratio={ratio}
-        sizes="(max-width: 768px) 100vw, 1100px"
+        src={myth.verticalImageUrl}
+        alt={`${myth.title}: segunda escena del relato`}
+        ratio="9 / 16"
+        sizes="(max-width: 768px) 100vw, 440px"
         placeholderMotif={myth.motif}
         placeholderSize={180}
-        className="rounded-none border-0"
-        imgClassName="object-cover"
+        className="rounded border border-line-100 bg-[rgb(var(--atlas-night))]"
+        imgClassName="object-contain"
+        data-image-role="inline-scene"
       />
-      {caption ? (
-        <figcaption className="mt-3 text-center font-editorial text-lg italic text-ink-500">
-          {caption}
-        </figcaption>
-      ) : null}
     </figure>
   );
 }
@@ -97,29 +93,24 @@ function MythReading({ myth, accent, related }) {
           <div className="min-w-0">
             <section
               id="relato"
-              className="scroll-mt-24 grid items-start gap-10 md:grid-cols-[1fr_0.72fr]"
+              className={`scroll-mt-24 grid items-start gap-10 ${
+                myth.verticalImageUrl
+                  ? "md:grid-cols-[1fr_0.72fr]"
+                  : "max-w-3xl"
+              }`}
             >
               <RelatoBlock text={myth.mito} accent={accent} motif={myth.motif} />
-              <ImagePause myth={myth} ratio="4 / 5" className="md:sticky md:top-24" />
+              <InlineStoryImage
+                myth={myth}
+                className="md:sticky md:top-24"
+              />
             </section>
-
-            <ImagePause
-              myth={myth}
-              ratio="16 / 6"
-              caption={
-                myth.community
-                  ? `${myth.community}, lugar de encuentro y memoria.`
-                  : `${myth.region || "Colombia"}, territorio y memoria.`
-              }
-              className="mt-16"
-            />
 
             {toParagraphs(myth.historia).length ? (
               <section
                 id="contexto"
-                className="scroll-mt-24 mt-16 grid items-center gap-10 md:grid-cols-[0.9fr_1.1fr]"
+                className="scroll-mt-24 mt-16 max-w-4xl"
               >
-                <ImagePause myth={myth} ratio="4 / 3" />
                 <HistoriaBlock
                   text={myth.historia}
                   accent={accent}
@@ -132,10 +123,9 @@ function MythReading({ myth, accent, related }) {
             {toParagraphs(myth.versiones).length ? (
               <section
                 id="versiones"
-                className="scroll-mt-24 mt-16 grid items-start gap-10 md:grid-cols-[1fr_0.9fr]"
+                className="scroll-mt-24 mt-16 max-w-4xl"
               >
                 <VersionesBlock text={myth.versiones} accent={accent} index={2} />
-                <ImagePause myth={myth} ratio="4 / 3" />
               </section>
             ) : null}
 
@@ -227,6 +217,7 @@ function MythArticle({ myth, accent, breadcrumb, related }) {
             sizes="100vw"
             className="absolute inset-0 min-h-full rounded-none border-0 [&]:aspect-auto"
             imgClassName="object-cover"
+            data-image-role="cover"
           />
         ) : (
           <span className="absolute inset-0 flex items-center justify-center opacity-25">

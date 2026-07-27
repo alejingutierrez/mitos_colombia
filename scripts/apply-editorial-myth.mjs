@@ -50,6 +50,26 @@ function assertRange(label, value, min, max) {
   return count;
 }
 
+function validateLesson(value) {
+  const lesson = String(value || "").trim();
+  const count = words(lesson);
+  const terminalMarks = lesson.match(/[.!?…](?=\s|$)/g) || [];
+
+  if (lesson.includes("\n")) {
+    throw new Error("Lección debe ser una sola frase, sin párrafos.");
+  }
+  if (count < 8 || count > 22) {
+    throw new Error(
+      `Lección: ${count} palabras; se esperaban 8-22 para una frase breve.`,
+    );
+  }
+  if (terminalMarks.length !== 1 || !/[.!?…]$/.test(lesson)) {
+    throw new Error("Lección debe contener exactamente una oración completa.");
+  }
+
+  return count;
+}
+
 function validateSources(data) {
   const combined = [...(data.keySources || []), ...(data.sources || [])];
   if (combined.length < 5) {
@@ -179,6 +199,7 @@ function validate(data) {
     mito: assertRange("mito", data.mito, 300, 650),
     historia: assertRange("historia", data.historia, 220, 600),
     versiones: assertRange("versiones", data.versiones, 170, 550),
+    leccion: validateLesson(data.leccion),
     similitudes: assertRange("similitudes", data.similitudes, 150, 450),
     sources: validateSources(data),
     tags: validateTaxonomy(data),

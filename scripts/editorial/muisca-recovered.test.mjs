@@ -49,6 +49,12 @@ test("los 41 expedientes muiscas son módulos editoriales completos", async () =
       true,
       file
     );
+    assert.equal(
+      words(myth.leccion) >= 8 && words(myth.leccion) <= 22,
+      true,
+      file
+    );
+    assert.equal((myth.leccion.match(/[.!?…]+/g) || []).length, 1, file);
     assert.equal(sources.length >= 5, true, file);
     assert.equal(new Set(sources.map(({ url }) => url)).size, sources.length, file);
     assert.equal(

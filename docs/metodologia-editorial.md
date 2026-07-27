@@ -1,11 +1,11 @@
 # Metodología editorial de Mitos de Colombia
 
-**Versión 1.0 · 25 de julio de 2026**
+**Versión 1.1 · 27 de julio de 2026**
 
 Esta es la metodología completa para investigar, reescribir, clasificar y
-publicar cada mito del archivo. Bachué es su primer caso de validación. El
-método no se aplicará en serie hasta que el resultado literario y editorial
-reciba aprobación.
+publicar cada mito del archivo. Bachué abrió la validación y la colección de 41
+mitos muiscas permitió probar el método en serie, detectar sus costos reales y
+corregir las reglas que no funcionaban todavía en la página pública.
 
 Su propósito es sostener al mismo tiempo cuatro compromisos: una investigación
 honesta, una lectura cultural que no reduzca a las comunidades, un relato
@@ -22,7 +22,8 @@ revisión incluye:
 - pueblo, comunidad, periodo y territorio;
 - fuentes y dossier de investigación;
 - categorías, etiquetas y palabras clave;
-- imagen, texto alternativo y prompts de regeneración;
+- inventario de imágenes, función editorial, texto alternativo y, solo cuando
+  se apruebe, prompts de regeneración;
 - coordenadas y grado de precisión geográfica;
 - resumen, título, metadatos sociales, canonical y datos estructurados;
 - respaldo, escritura en base de datos, validación local y prueba pública.
@@ -121,8 +122,10 @@ conceptos técnicos se usan con precisión: matrilinealidad, por ejemplo, no
 prueba por sí sola la existencia de un matriarcado.
 
 La enseñanza profunda se escribe como una posibilidad de pensamiento, no como
-una doctrina total de la comunidad. Debe abrir preguntas al lector y mostrar
-las condiciones humanas y sociales del relato sin domesticarlo en una moraleja.
+una doctrina total de la comunidad. Debe ser **una sola frase filosófica de 8 a
+22 palabras**, comprensible fuera del argumento y sin nombres propios,
+explicaciones de la trama ni órdenes morales. Su brevedad deja resonar la
+historia en vez de volver a resumirla.
 
 ## 6. Contrato de la reescritura literaria
 
@@ -170,8 +173,9 @@ El aparato documental vive fuera del relato y cumple funciones distintas:
   Señala las cautelas de las fuentes coloniales o tardías.
 - **Versiones:** atribuye cada diferencia y evita fundir nombres, episodios o
   desenlaces incompatibles.
-- **Lección:** propone una lectura abierta sobre una necesidad humana. No da
-  una orden moral ni reduce el mito a una sola explicación.
+- **Lección:** formula en una sola frase breve una tensión humana que puede
+  pensarse más allá del argumento. No resume escenas, nombra personajes, da una
+  orden moral ni reduce el mito a una explicación.
 - **Similitudes:** presenta por lo menos dos paralelos bien documentados cuando
   sean pertinentes. Explica tanto la resonancia como la diferencia y nunca
   usa una semejanza para afirmar copia o influencia sin evidencia.
@@ -206,11 +210,25 @@ precisión técnica de seis decimales no debe fingir una precisión histórica q
 las fuentes no ofrecen. También se revisan nombre del lugar, municipio,
 departamento, región y coherencia visual en el mapa público.
 
+La coordenada correcta no basta si el mapa no se renderiza. La prueba en
+navegador verifica que el contenedor tenga altura, que carguen las teselas, que
+los estilos cartográficos sean globales y que teselas, marcador, controles y
+atribución ocupen su posición correcta tanto en escritorio como en móvil.
+
 ## 10. Imagen y sistema visual
 
-Primero se inspecciona la imagen existente. No se regenera por rutina: se
-conserva si narra bien el mito, respeta a la comunidad, funciona en los recortes
-y cumple los requisitos técnicos.
+El enriquecimiento editorial **no regenera imágenes por defecto**. Primero
+levanta un inventario de lo que ya existe, revisa pertinencia, consistencia,
+proporción y uso público, y separa la decisión visual de la edición del texto.
+Solo las imágenes ausentes o expresamente desaprobadas entran en una lista de
+generación autorizada.
+
+Cada imagen tiene una función estable. La horizontal 16:9 es la portada, la
+imagen social y la representación en listados. La vertical es una segunda escena
+narrativa y aparece una sola vez dentro del Relato; no es un recorte ni una
+repetición de la portada. Si una vertical aprobada conserva otra proporción,
+como 2:3, se muestra completa sin recortarla. La página nunca reutiliza la
+horizontal para rellenar los espacios interiores.
 
 Si falta, es genérica o contradice el relato, se crea dentro del sistema visual
 aprobado de maqueta artesanal y papel trabajado. El prompt se deriva de la
@@ -218,10 +236,12 @@ matriz de evidencia: paisaje real, acción central, personajes y materiales
 justificables. Evita coronas, oro ornamental, símbolos mesoamericanos,
 vestuarios inventados y exotización.
 
-La revisión comprueba relevancia narrativa, legibilidad, proporción horizontal
-y vertical, recorte móvil, peso, formato, texto alternativo, crédito cuando
-aplique y uso correcto en Open Graph. La imagen no es decoración: debe contar
-la misma historia que el texto.
+Antes de generar se revisan las parejas existentes en hojas de contacto y se
+regeneran únicamente los mitos y orientaciones aprobados. Después se comprueban
+relevancia narrativa, diferencia entre escenas, legibilidad, proporción, móvil,
+peso, formato, texto alternativo, crédito y Open Graph. Una corrección de
+calidad vuelve a generar solo la orientación fallida. La imagen no es
+decoración, pero tampoco debe multiplicarse para llenar la página.
 
 ## 11. SEO profesional
 
@@ -248,8 +268,9 @@ encontrar la tradición y están documentados, no para acumular palabras clave.
 ## 12. Escritura segura en la base de datos
 
 La publicación empieza con un ensayo sin escritura. El validador revisa
-fuentes, URLs únicas, campos obligatorios, extensión narrativa, límites SEO,
-coincidencia del contenido compuesto, clasificación permitida y coordenadas.
+fuentes, URLs únicas, campos obligatorios, extensión narrativa, enseñanza de una
+sola frase y 8 a 22 palabras, límites SEO, coincidencia del contenido compuesto,
+clasificación permitida y coordenadas.
 
 Antes de modificar datos se genera un respaldo durable del mito, el expediente
 editorial, las fuentes, palabras clave, etiquetas y SEO anteriores. Después se
@@ -276,10 +297,10 @@ Un cambio completo debe superar:
 9. apertura de la URL canónica en un navegador real.
 
 En la página pública se revisan relato, capas editoriales, fuentes y enlaces,
-imagen, etiquetas, mapa, título, descripción, canonical, datos estructurados y
-consola del navegador. También se inspeccionan los errores de ejecución del
-despliegue. Código correcto en el repositorio no equivale a contenido publicado
-correctamente.
+portada horizontal, vertical única dentro del Relato, etiquetas, mapa completo,
+título, descripción, canonical, datos estructurados y consola del navegador.
+También se inspeccionan los errores de ejecución del despliegue. Código correcto
+en el repositorio no equivale a contenido publicado correctamente.
 
 ## 14. Rúbrica y bloqueos
 
@@ -320,23 +341,35 @@ El flujo completo es:
 editoriales → taxonomía, imagen, geografía y SEO → ensayo → respaldo y
 transacción → validación local → producción → aprobación`.
 
-## 16. Aprobación y escala
+## 16. Aprendizajes del piloto y escala
 
-Bachué valida la metodología y, sobre todo, su voz literaria. Si el piloto se
-aprueba, este documento se convierte en plantilla para los siguientes mitos. Si
-no se aprueba, se corrigen primero el tono, la extensión o los criterios que
-hayan fallado. No se escala una voz editorial que todavía no convence.
+La colección muisca valida la estructura general, pero también deja reglas
+operativas para la siguiente comunidad:
 
-## Resultado medible del piloto Bachué
+- definir el universo canónico antes de medir cobertura;
+- investigar y editar primero; la generación de imágenes es un flujo posterior
+  y optativo;
+- auditar todas las imágenes existentes antes de gastar en reemplazos;
+- asignar una función única a cada orientación y comprobarla en la página real;
+- escribir la enseñanza como una sola frase filosófica, no como otro ensayo;
+- mantener módulos, campos normalizados y `content` en sincronía exacta;
+- revisar mapas, imágenes y consola en navegador, no solo datos y build;
+- escalar por lotes auditables, con respaldos, decisiones explícitas y
+  correcciones puntuales en vez de repetir el lote completo.
 
-- Fuentes investigadas y guardadas: 11.
-- Relato anterior: 673 palabras.
-- Primera reescritura: 372 palabras.
-- Segunda reescritura literaria: 557 palabras.
-- Contenido editorial anterior: 1.205 palabras.
-- Correcciones principales: separación completa del relato y su aparato
-  documental; atribución precisa del nombre Labaque; incorporación de Alonso de
-  Zamora; distinción entre matrilinealidad y matriarcado; separación de
-  crónicas, versiones posteriores, memoria muisca contemporánea e hipótesis
-  académicas; corrección del punto de Iguaque; revisión de etiquetas sin crear
-  taxonomías; SEO específico y verificación pública.
+No se escala automáticamente aquello que todavía no convence. Los hallazgos de
+un piloto corrigen primero la metodología, sus validadores y la plantilla
+pública; solo después se inicia la siguiente colección.
+
+## Resultado medible del piloto muisca
+
+- Universo canónico: 41 mitos.
+- Fuentes editoriales publicadas: al menos cinco por expediente.
+- Relatos separados de Historia, Versiones, Lección y Similitudes.
+- Enseñanzas finales: 41 frases breves y filosóficas.
+- Sistema visual: una portada horizontal y una segunda escena vertical por
+  mito; 20 verticales se conservaron literalmente en 2:3 por decisión editorial.
+- Regeneración: limitada a las orientaciones aprobadas después de una auditoría;
+  no forma parte automática del enriquecimiento.
+- Cierre: sincronización exacta, pruebas, despliegue y verificación pública de
+  las 41 rutas.

@@ -1,3 +1,5 @@
+import { withMuiscaLesson } from "./lessons.mjs";
+
 const SHARED_CRAFT_DIRECTION =
   "Estilo studioPaperMaquette aprobado: maqueta física hecha a mano con papel cortado, cartón y fibras naturales, fotografiada de frente; relieve bajo, bordes visibles, pequeñas imperfecciones humanas, micro-sombras reales e iluminación sobria. Fantasía anclada en el paisaje del altiplano cundiboyacense";
 
@@ -360,10 +362,10 @@ export function withMuiscaImagePrompts(myth) {
     throw new Error(`${myth.slug}: falta el prompt horizontal principal.`);
   }
 
-  return {
+  return withMuiscaLesson({
     ...myth,
     image_prompt: horizontal,
     image_prompt_horizontal: horizontal,
     image_prompt_vertical: verticalPrompt(vertical.scene, vertical.avoid),
-  };
+  });
 }
