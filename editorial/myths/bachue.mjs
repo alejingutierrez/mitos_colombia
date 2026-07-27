@@ -217,6 +217,8 @@ const editorialMyth = {
   image_prompt: `Fotografía editorial horizontal 16:9 de una maqueta artesanal hecha a mano con papel cortado, fibras y cartón, no una ilustración digital. Laguna de Iguaque entre páramo frío, montañas y neblina; Bachué, mujer adulta, emerge del agua y lleva de la mano a un niño pequeño. Vestuario sobrio de fibras tejidas, sin coronas ni fantasía europea. Dos formas de serpiente apenas insinuadas bajo el agua anticipan el retorno final. Composición frontal de un solo tableau, relieve bajo, bordes de papel visibles, pequeñas imperfecciones humanas, luz de estudio suave, verde páramo, azul profundo y tierra húmeda. Tratamiento respetuoso del pueblo muisca. Sin texto, sin logos, sin oro ornamental inventado, sin símbolos aztecas o mayas, sin aspecto CGI ni 3D renderizado.`,
   image_prompt_horizontal: `Maqueta horizontal 16:9 de papel artesanal fotografiada de frente: la laguna de Iguaque, páramo con neblina, Bachué emergiendo del agua y tomando de la mano a un niño. Dos serpientes acuáticas muy sutiles bajo la superficie conectan origen y retorno. Paleta verde páramo, azul profundo y tierra. Relieve bajo, fibras visibles, luz natural suave. Sin texto, coronas, iconografía mesoamericana ni apariencia CGI.`,
   image_prompt_vertical: `Maqueta vertical 2:3 de papel artesanal fotografiada de frente: Bachué adulta sale de la laguna de Iguaque con un niño de la mano; el agua ocupa el primer plano y el páramo nublado se eleva detrás. Una curva serpentina discreta aparece bajo la superficie. Texturas manuales, sobriedad, respeto cultural, sin texto, sin joyería inventada y sin aspecto de render digital.`,
+  image_url:
+    "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/bachue-1784765776300.jpg",
   keySources,
   sources,
   researchNotes: `ESTADO: segunda revisión del piloto editorial, con relato literario separado de la discusión documental y con revisión histórica, académica, territorial, comparativa y de memoria comunitaria.
@@ -231,7 +233,9 @@ LECTURA EDITORIAL: el agua funciona como origen, parentesco, sustento territoria
 
 CRITERIO LITERARIO: el campo mito contiene solo la historia y no menciona fuentes, versiones, hipótesis ni historia de transmisión. Usa escenas concretas, verbos claros, detalles sensoriales propios del páramo y espacio para que el lector complete la emoción. La fantasía se concentra en la salida del agua, la fecundidad extraordinaria y la transformación final; la realidad que la sostiene es Iguaque, su clima, el descenso, la casa, los fogones y la convivencia.
 
-DECISIONES DE DATOS: se conserva la categoría existente Andina > Varios > Muiscas porque no existe una categoría Boyacá > Muiscas y no se crearán taxonomías nuevas. Se reemplaza la etiqueta fertilidad por etiquetas existentes más precisas: cosmogonía, laguna, muiscas, serpiente y transformación. La coordenada se corrige al punto oficial publicado por Parques Nacionales para la laguna: 5°41'14.2"N, 73°26'12.5"W, expresado como 5.68728, -73.43681. La imagen horizontal ya existe y se conserva; los prompts quedan preparados para una futura regeneración más sobria.`,
+DECISIONES DE DATOS: se conserva la categoría existente Andina > Varios > Muiscas porque no existe una categoría Boyacá > Muiscas y no se crearán taxonomías nuevas. Se reemplaza la etiqueta fertilidad por etiquetas existentes más precisas: cosmogonía, laguna, muiscas, serpiente y transformación.
+
+GEOGRAFÍA: la coordenada se corrige al punto oficial publicado por Parques Nacionales para la laguna: 5°41'14.2"N, 73°26'12.5"W, expresado como 5.68728, -73.43681. La imagen horizontal ya existe y se conserva.`,
 };
 
 export default editorialMyth;

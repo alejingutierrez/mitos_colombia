@@ -54,7 +54,7 @@ export const IMAGE_PRESETS = {
   horizontal: {
     size: "1536x1024",
     outputWidth: 1536,
-    outputHeight: 1024,
+    outputHeight: 864,
     blobPrefix: "mitos",
     contentType: "image/jpeg",
     extension: "jpg",
@@ -69,7 +69,7 @@ export const IMAGE_PRESETS = {
   },
   vertical: {
     size: "1024x1536",
-    outputWidth: 1024,
+    outputWidth: 864,
     outputHeight: 1536,
     blobPrefix: "vertical",
     contentType: "image/jpeg",
@@ -170,12 +170,12 @@ function getEntityLabel(entity = {}) {
 
 function getOrientationLine(orientation) {
   if (orientation === "vertical") {
-    return "Formato vertical 9:16, composicion frontal y estable, llena de borde a borde para uso editorial movil.";
+    return "Formato vertical 9:16, composicion frontal y estable, llena de borde a borde para uso editorial movil; mantener rostros, manos y objetos esenciales lejos de los extremos laterales para el recorte tecnico final.";
   }
   if (orientation === "homeBanner") {
     return "Formato horizontal panoramico para home, composicion frontal y estable, llena de borde a borde sin zonas vacias.";
   }
-  return "Formato horizontal 16:9, composicion frontal y estable, llena de borde a borde.";
+  return "Formato horizontal 16:9, composicion frontal y estable, llena de borde a borde; mantener rostros, manos y objetos esenciales lejos de los extremos superior e inferior para el recorte tecnico final.";
 }
 
 function getStyleProfileLines(styleProfile) {
