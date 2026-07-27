@@ -8,6 +8,7 @@ import {
   existingWayuuSlugs,
   newWayuuSlugs,
 } from "../../editorial/wayuu/universe.mjs";
+import { wayuuVerticalMedia } from "../../editorial/wayuu/media.mjs";
 
 const { Client } = pg;
 
@@ -66,9 +67,17 @@ async function run() {
               m.latitude, m.longitude,
               e.id AS editorial_id, e.mito, e.historia, e.versiones,
               e.leccion, e.similitudes, e.content,
-              e.sources_json, e.key_sources_json, e.research_notes
+              e.sources_json, e.key_sources_json, e.research_notes,
+              e.image_prompt_horizontal, e.image_prompt_vertical,
+              vertical.vertical_count, vertical.vertical_image_url
        FROM myths m
        LEFT JOIN editorial_myths e ON e.source_myth_id = m.id
+       LEFT JOIN LATERAL (
+         SELECT COUNT(*)::int AS vertical_count,
+                MAX(vi.image_url) AS vertical_image_url
+         FROM vertical_images vi
+         WHERE vi.entity_type = 'myth' AND vi.entity_id = m.id
+       ) vertical ON TRUE
        WHERE m.category_path = $1
        ORDER BY m.slug`,
       [WAYUU_CATEGORY_PATH],
@@ -83,7 +92,10 @@ async function run() {
     let withAtLeastFiveSources = 0;
     let withFiveSections = 0;
     let withCoordinates = 0;
-    let withImage = 0;
+    let withHorizontalImage = 0;
+    let withVerticalImage = 0;
+    let withVisualInventorySynced = 0;
+    let newWithDistinctScenePrompts = 0;
 
     for (const slug of canonicalWayuuSlugs) {
       const row = rowsBySlug.get(slug);
@@ -98,27 +110,73 @@ async function run() {
       const coordinates =
         Number.isFinite(Number(row.latitude)) &&
         Number.isFinite(Number(row.longitude));
+      const horizontalImage = Boolean(row.image_url);
+      const verticalImage = Boolean(
+        Number(row.vertical_count) === 1 && row.vertical_image_url,
+      );
+      const inventorySynced =
+        verticalImage && row.vertical_image_url === wayuuVerticalMedia[slug];
+      const distinctScenePrompts =
+        !newWayuuSlugs.includes(slug) ||
+        Boolean(
+          row.image_prompt_horizontal &&
+            row.image_prompt_vertical &&
+            row.image_prompt_horizontal !== row.image_prompt_vertical,
+        );
       if (dossier) withEditorialDossier += 1;
       if (sourceCount >= 5) withAtLeastFiveSources += 1;
       if (fiveSections) withFiveSections += 1;
       if (coordinates) withCoordinates += 1;
-      if (row.image_url) withImage += 1;
-      if (!dossier || sourceCount < 5 || !fiveSections || !coordinates) {
+      if (horizontalImage) withHorizontalImage += 1;
+      if (verticalImage) withVerticalImage += 1;
+      if (inventorySynced) withVisualInventorySynced += 1;
+      if (newWayuuSlugs.includes(slug) && distinctScenePrompts) {
+        newWithDistinctScenePrompts += 1;
+      }
+      if (
+        !dossier ||
+        sourceCount < 5 ||
+        !fiveSections ||
+        !coordinates ||
+        !horizontalImage ||
+        !verticalImage ||
+        !inventorySynced ||
+        !distinctScenePrompts
+      ) {
         pending.push({
           slug,
           dossier,
           sourceCount,
           fiveSections,
           coordinates,
+          horizontalImage,
+          verticalImage,
+          inventorySynced,
+          distinctScenePrompts,
         });
       }
     }
 
-    const imageExceptions = newWayuuSlugs.filter(
-      (slug) => rowsBySlug.get(slug)?.image_url,
+    const missingHorizontalImages = canonicalWayuuSlugs.filter(
+      (slug) => !rowsBySlug.get(slug)?.image_url,
     );
-    const missingPreservedImages = existingWayuuSlugs.filter(
-      (slug) => rowsBySlug.has(slug) && !rowsBySlug.get(slug).image_url,
+    const missingVerticalImages = canonicalWayuuSlugs.filter((slug) => {
+      const row = rowsBySlug.get(slug);
+      return !row || Number(row.vertical_count) !== 1 || !row.vertical_image_url;
+    });
+    const verticalInventoryMismatches = canonicalWayuuSlugs.filter(
+      (slug) =>
+        rowsBySlug.get(slug)?.vertical_image_url !== wayuuVerticalMedia[slug],
+    );
+    const newMythsWithoutDistinctPrompts = newWayuuSlugs.filter(
+      (slug) => {
+        const row = rowsBySlug.get(slug);
+        return (
+          !row?.image_prompt_horizontal ||
+          !row?.image_prompt_vertical ||
+          row.image_prompt_horizontal === row.image_prompt_vertical
+        );
+      },
     );
     const report = {
       universe: {
@@ -133,22 +191,28 @@ async function run() {
         withAtLeastFiveSources,
         withFiveSections,
         withCoordinates,
-        withImage,
-        withoutImageByDecision: newWayuuSlugs.length,
+        withHorizontalImage,
+        withVerticalImage,
+        withVisualInventorySynced,
+        newWithDistinctScenePrompts,
       },
       missing,
       unexpected,
       pending,
-      imageExceptions,
-      missingPreservedImages,
+      missingHorizontalImages,
+      missingVerticalImages,
+      verticalInventoryMismatches,
+      newMythsWithoutDistinctPrompts,
     };
     console.log(JSON.stringify(report, null, 2));
     if (
       missing.length ||
       unexpected.length ||
       pending.length ||
-      imageExceptions.length ||
-      missingPreservedImages.length
+      missingHorizontalImages.length ||
+      missingVerticalImages.length ||
+      verticalInventoryMismatches.length ||
+      newMythsWithoutDistinctPrompts.length
     ) {
       throw new Error("La auditoría Wayuu encontró diferencias pendientes.");
     }

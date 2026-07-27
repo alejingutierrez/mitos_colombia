@@ -80,6 +80,13 @@ async function run() {
        ORDER BY myth_id, keyword`,
       [ids],
     );
+    const verticalImages = await client.query(
+      `SELECT *
+       FROM vertical_images
+       WHERE entity_type = 'myth' AND entity_id = ANY($1::int[])
+       ORDER BY entity_id, id`,
+      [ids],
+    );
 
     const missing = existingWayuuSlugs.filter(
       (slug) => !myths.rows.some((row) => row.slug === slug),
@@ -112,6 +119,7 @@ async function run() {
           seo: seo.rows,
           tags: tags.rows,
           keywords: keywords.rows,
+          verticalImages: verticalImages.rows,
         },
         null,
         2,
@@ -128,6 +136,7 @@ async function run() {
           seoEntries: seo.rowCount,
           tagLinks: tags.rowCount,
           keywords: keywords.rowCount,
+          verticalImages: verticalImages.rowCount,
         },
         null,
         2,

@@ -19,9 +19,13 @@ export function buildWayuuEditorialMyth(input) {
     throw new Error(`Falta inventario de imagen y mapa para ${input.slug}.`);
   }
   const [imageUrl, defaultLatitude, defaultLongitude] = media;
-  const imagePrompt =
+  const defaultImagePrompt =
     input.imagePrompt ||
     `No regenerar en esta revisión. Preservar la imagen publicada de ${input.title} hasta una auditoría visual autorizada.`;
+  const imagePromptHorizontal =
+    input.imagePromptHorizontal || defaultImagePrompt;
+  const imagePromptVertical =
+    input.imagePromptVertical || defaultImagePrompt;
 
   return {
     slug: input.slug,
@@ -43,9 +47,9 @@ export function buildWayuuEditorialMyth(input) {
     methodologySeo: bachue.methodologySeo,
     focus_keyword: input.focusKeywords[0],
     focus_keywords: input.focusKeywords,
-    image_prompt: imagePrompt,
-    image_prompt_horizontal: imagePrompt,
-    image_prompt_vertical: imagePrompt,
+    image_prompt: imagePromptHorizontal,
+    image_prompt_horizontal: imagePromptHorizontal,
+    image_prompt_vertical: imagePromptVertical,
     image_url: imageUrl,
     keySources: input.keySources,
     sources: input.sources,

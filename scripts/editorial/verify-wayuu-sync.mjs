@@ -3,7 +3,11 @@ import process from "node:process";
 import { pathToFileURL } from "node:url";
 import dotenv from "dotenv";
 import pg from "pg";
-import { canonicalWayuuSlugs } from "../../editorial/wayuu/universe.mjs";
+import {
+  canonicalWayuuSlugs,
+  newWayuuSlugs,
+} from "../../editorial/wayuu/universe.mjs";
+import { wayuuVerticalMedia } from "../../editorial/wayuu/media.mjs";
 
 const { Client } = pg;
 
@@ -109,11 +113,21 @@ async function run() {
               e.image_prompt_vertical,
               e.image_url AS editorial_image_url,
               e.key_sources_json, e.sources_json, e.research_notes,
+              vertical.vertical_count,
+              vertical.vertical_image_url,
+              vertical.vertical_custom_prompt,
               s.meta_title, s.meta_description, s.meta_keywords,
               s.og_title, s.og_description,
               s.twitter_title, s.twitter_description, s.canonical_path
        FROM myths m
        LEFT JOIN editorial_myths e ON e.source_myth_id = m.id
+       LEFT JOIN LATERAL (
+         SELECT COUNT(*)::int AS vertical_count,
+                MAX(vi.image_url) AS vertical_image_url,
+                MAX(vi.custom_prompt) AS vertical_custom_prompt
+         FROM vertical_images vi
+         WHERE vi.entity_type = 'myth' AND vi.entity_id = m.id
+       ) vertical ON TRUE
        LEFT JOIN seo_pages s ON s.page_type = 'myth' AND s.slug = m.slug
        WHERE m.slug = ANY($1::text[])
        ORDER BY m.slug`,
@@ -217,6 +231,29 @@ async function run() {
         data.image_prompt_vertical,
         mismatches,
       );
+      compare(
+        slug,
+        "vertical_image_count",
+        Number(row.vertical_count),
+        1,
+        mismatches,
+      );
+      compare(
+        slug,
+        "vertical_image_url",
+        row.vertical_image_url,
+        wayuuVerticalMedia[slug],
+        mismatches,
+      );
+      if (newWayuuSlugs.includes(slug)) {
+        compare(
+          slug,
+          "vertical_custom_prompt",
+          row.vertical_custom_prompt,
+          data.image_prompt_vertical,
+          mismatches,
+        );
+      }
       compare(
         slug,
         "key_sources_json",

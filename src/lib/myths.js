@@ -938,6 +938,80 @@ export async function getFeaturedMythsWithImages(limit = 12, seed = 0) {
   }
 }
 
+async function getLatestMythsWithImagesPostgres(limit = 2) {
+  const sql = getSqlClient();
+  const result = await sql.query(
+    `
+    SELECT
+      myths.id,
+      myths.title,
+      myths.slug,
+      myths.excerpt,
+      myths.image_url,
+      myths.category_path,
+      regions.name AS region,
+      regions.slug AS region_slug,
+      communities.name AS community,
+      communities.slug AS community_slug
+    FROM myths
+    JOIN regions ON regions.id = myths.region_id
+    LEFT JOIN communities ON communities.id = myths.community_id
+    WHERE myths.image_url IS NOT NULL
+    ORDER BY myths.id DESC
+    LIMIT $1
+    `,
+    [limit],
+  );
+  return result.rows;
+}
+
+function getLatestMythsWithImagesSqlite(limit = 2) {
+  const db = getSqliteDb();
+  return db
+    .prepare(
+      `
+      SELECT
+        myths.id,
+        myths.title,
+        myths.slug,
+        myths.excerpt,
+        myths.image_url,
+        myths.category_path,
+        regions.name AS region,
+        regions.slug AS region_slug,
+        communities.name AS community,
+        communities.slug AS community_slug
+      FROM myths
+      JOIN regions ON regions.id = myths.region_id
+      LEFT JOIN communities ON communities.id = myths.community_id
+      WHERE myths.image_url IS NOT NULL
+      ORDER BY myths.id DESC
+      LIMIT ?
+      `,
+    )
+    .all(limit);
+}
+
+const getLatestMythsWithImagesCached = unstable_cache(
+  async (limit = 2) => {
+    if (isPostgres()) {
+      return await getLatestMythsWithImagesPostgres(limit);
+    }
+    return getLatestMythsWithImagesSqlite(limit);
+  },
+  ["latest-myths-with-images"],
+  { revalidate: ONE_HOUR },
+);
+
+export async function getLatestMythsWithImages(limit = 2) {
+  try {
+    return await getLatestMythsWithImagesCached(limit);
+  } catch (error) {
+    console.error("Error in getLatestMythsWithImages:", error);
+    return [];
+  }
+}
+
 // Get myths by region for home page
 async function getMythsByRegionPostgres(regionSlug, limit = 6, seed = 0) {
   const sql = getSqlClient();

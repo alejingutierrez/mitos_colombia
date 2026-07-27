@@ -32,7 +32,7 @@ La versión de Irunúu contiene rechazo por diferencia corporal, secreto, promes
 
 El tejido Wayuu es práctica viva, económica y estética. No se presenta como fósil ni como labor femenina obligatoria. Las fuentes contemporáneas muestran aprendizaje familiar y comunitario, pero también cambios de materiales, mercados y educación.
 
-La página se publica sin imagen nueva. El motivo gráfico de reserva evita apropiarse de una fotografía de artesana o reutilizar una ilustración de otro mito.
+La página incorpora una pareja visual propia sin apropiarse de fotografías de artesanas. La portada representa el tejido nocturno secreto; la escena vertical muestra transformación y transmisión entre generaciones. Las figuras son recortes de papel, no retratos de personas reales.
 
 La incorporación también equilibra un inventario que narraba muchas figuras masculinas y de combate, pero omitía un ciclo central de creación, trabajo y transmisión femenina entre distintas generaciones Wayuu vivas.`;
 
@@ -48,6 +48,10 @@ La página usa “Waleker” en el título por reconocimiento y conserva formas 
 
 const leccion =
   "Un saber permanece cuando el don se convierte en práctica paciente, memoria compartida y enseñanza entre generaciones.";
+
+const imagePromptHorizontal = `Portada horizontal 16:9 de “Waleker, el origen del tejido”. Maqueta física de papel fotografiada de frente dentro de una ranchería Wayuu nocturna: Waleker, con manta sobria, teje en un telar sencillo mientras hilos finos de colores pasan delicadamente de su boca y sus manos hacia una faja; Irunúu aparece solo como silueta discreta en el umbral y una araña pequeña queda junto al telar. StudioPaperMaquette, fibras e hilos reales, luz de luna y lámpara suave, sin exotización, texto, logos ni CGI.`;
+
+const imagePromptVertical = `Segunda escena vertical 9:16 de “Waleker, el origen del tejido”, distinta de la portada. En el patio de una ranchería al amanecer, una araña serena de papel asciende por un hilo y una telaraña delicada; abajo, tres figuras femeninas estilizadas de distintas edades observan una faja y practican juntas en un telar, pasando el hilo de una mano a otra. Maqueta física de papel fotografiada de frente, relieve bajo, cardones, arena, índigo y acentos textiles controlados. Sin retratos reales, texto, logos ni fantasía genérica.`;
 
 const similitudes = `Aracne, en la tradición griega, es una tejedora convertida en araña después de competir con una diosa. Waleker también une tejido y araña, pero no es castigada por orgullo: deja un conocimiento después de traición, pérdida o maltrato.
 
@@ -79,6 +83,8 @@ export default defineWayuuMyth({
     "tejedoras Wayuu",
   ],
   tags: ["Wayúu", "conocimiento", "sabiduría", "transformación"],
+  imagePromptHorizontal,
+  imagePromptVertical,
   sourceKeys: [
     "pazIpuana",
     "dictionaryWayuu",
@@ -94,7 +100,7 @@ NÚCLEO PRINCIPAL: Irunúu/Wokoloonat, tejido nocturno, secreto, revelación ant
 
 VARIANTE: niña huérfana maltratada por tías, padre que descubre el tejido y enseñanza durante el encierro; se mantiene separada en Versiones.
 
-IMAGEN: página nueva sin image_url; no se generó ni reutilizó una portada.
+IMAGEN: pareja nueva aprobada. La horizontal 16:9 muestra el tejido nocturno secreto; la vertical 9:16 enlaza la transformación en araña con la enseñanza entre generaciones. No son recortes de una misma escena.
 
 GEOGRAFÍA: punto aproximado en territorio Wayuu; el origen del tejido no corresponde a un taller o ranchería única.`,
 });

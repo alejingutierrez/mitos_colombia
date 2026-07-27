@@ -8,6 +8,7 @@ import {
   WAYUU_CATEGORY_PATH,
   newWayuuSlugs,
 } from "../../editorial/wayuu/universe.mjs";
+import { wayuuVerticalMedia } from "../../editorial/wayuu/media.mjs";
 
 const { Client } = pg;
 
@@ -57,8 +58,18 @@ function validate(data) {
   if (data.category_path !== WAYUU_CATEGORY_PATH) {
     throw new Error(`${data.slug}: categoría Wayuu inesperada.`);
   }
-  if (data.image_url) {
-    throw new Error(`${data.slug}: la incorporación no debe crear imagen.`);
+  if (!/^https:\/\//.test(data.image_url || "")) {
+    throw new Error(`${data.slug}: falta la portada horizontal aprobada.`);
+  }
+  if (!/^https:\/\//.test(wayuuVerticalMedia[data.slug] || "")) {
+    throw new Error(`${data.slug}: falta la segunda escena vertical aprobada.`);
+  }
+  if (
+    !data.image_prompt_horizontal ||
+    !data.image_prompt_vertical ||
+    data.image_prompt_horizontal === data.image_prompt_vertical
+  ) {
+    throw new Error(`${data.slug}: la pareja visual requiere prompts distintos.`);
   }
 }
 
@@ -133,8 +144,8 @@ async function insertMyth(client, data, regionId, communityId, tagIds) {
        $1, $2, $3, $4, $5, $6,
        $7, $8, $9, $10, $11, $12, $13,
        $14, $15, $16, $17,
-       $18, NULL, $19, $20, TRUE,
-       $21, NOW()
+       $18, $19, $20, $21, TRUE,
+       $22, NOW()
      )
      RETURNING id`,
     [
@@ -156,6 +167,7 @@ async function insertMyth(client, data, regionId, communityId, tagIds) {
       data.focus_keyword,
       data.focus_keywords.join("|"),
       data.image_prompt,
+      data.image_url,
       data.latitude,
       data.longitude,
       sourceRow,
@@ -178,9 +190,9 @@ async function insertMyth(client, data, regionId, communityId, tagIds) {
        $6, $7, $8, $9, $10, $11,
        $12, $13, $14, $15, $16,
        $17, $18, $19,
-       $20, $21, NULL,
-       $22, $23, TRUE, $24,
-       $25, $26, $27, NOW()
+       $20, $21, $22,
+       $23, $24, TRUE, $25,
+       $26, $27, $28, NOW()
      )
      RETURNING id`,
     [
@@ -205,6 +217,7 @@ async function insertMyth(client, data, regionId, communityId, tagIds) {
       data.image_prompt,
       data.image_prompt_horizontal,
       data.image_prompt_vertical,
+      data.image_url,
       data.latitude,
       data.longitude,
       sourceRow,
@@ -214,6 +227,22 @@ async function insertMyth(client, data, regionId, communityId, tagIds) {
     ],
   );
   const editorialId = editorialResult.rows[0].id;
+
+  await client.query(
+    `INSERT INTO vertical_images (
+       entity_type, entity_id, entity_name, entity_slug,
+       base_prompt, custom_prompt, image_url
+     )
+     VALUES ('myth', $1, $2, $3, $4, $5, $6)`,
+    [
+      mythId,
+      data.title,
+      data.slug,
+      "Segunda escena vertical 9:16 de un mito Wayuu como fotografía frontal de una maqueta física de papel artesanal.",
+      data.image_prompt_vertical,
+      wayuuVerticalMedia[data.slug],
+    ],
+  );
 
   await client.query(
     `INSERT INTO myth_tags (myth_id, tag_id)
@@ -338,7 +367,7 @@ async function run() {
             title: data.title,
             tags: data.tags,
             sources: data.keySources.length + data.sources.length,
-            imageAction: "none",
+            imageAction: "create-horizontal-and-vertical",
           })),
         },
         null,

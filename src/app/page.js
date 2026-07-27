@@ -6,6 +6,7 @@ import {
   getFeaturedMythsWithImages,
   getDiverseMyths,
   getHomeStats,
+  getLatestMythsWithImages,
   getTaxonomy,
 } from "../lib/myths";
 import { getTarotCards, getDailyTarotSelection } from "../lib/tarot";
@@ -70,8 +71,16 @@ function mapMyth(m) {
 export default async function Home() {
   const seed = getDailySeed();
 
-  const [featuredMyths, diverseMyths, stats, taxonomy, routePreviews, tarotCards] =
-    await Promise.all([
+  const [
+    latestMyths,
+    featuredMyths,
+    diverseMyths,
+    stats,
+    taxonomy,
+    routePreviews,
+    tarotCards,
+  ] = await Promise.all([
+      getLatestMythsWithImages(2),
       getFeaturedMythsWithImages(24, seed),
       getDiverseMyths(24, seed),
       getHomeStats(),
@@ -83,7 +92,11 @@ export default async function Home() {
   // Mito líder para la obra de portada: primero con imagen, si no el primero.
   const pool = Array.from(
     new Map(
-      [...(featuredMyths || []), ...(diverseMyths || [])]
+      [
+        ...(latestMyths || []),
+        ...(featuredMyths || []),
+        ...(diverseMyths || []),
+      ]
         .filter((myth) => myth?.slug)
         .map((myth) => [myth.slug, myth])
     ).values()

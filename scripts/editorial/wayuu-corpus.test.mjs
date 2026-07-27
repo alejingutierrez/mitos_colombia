@@ -9,6 +9,7 @@ import {
   existingWayuuSlugs,
   newWayuuSlugs,
 } from "../../editorial/wayuu/universe.mjs";
+import { wayuuVerticalMedia } from "../../editorial/wayuu/media.mjs";
 
 const MYTH_DIR = path.resolve("editorial", "wayuu", "myths");
 
@@ -118,14 +119,32 @@ test("cada dossier publica al menos cinco URLs únicas y tres dominios", async (
   }
 });
 
-test("las imágenes existentes se preservan y las incorporaciones no inventan portada", async () => {
+test("los 27 mitos tienen portada horizontal y segunda escena vertical", async () => {
   const corpus = new Map((await loadCorpus()).map((data) => [data.slug, data]));
-  for (const slug of existingWayuuSlugs) {
+  assert.deepEqual(Object.keys(wayuuVerticalMedia).sort(), canonicalWayuuSlugs);
+  for (const slug of canonicalWayuuSlugs) {
     assert.match(corpus.get(slug).image_url, /^https:\/\//, slug);
+    assert.match(wayuuVerticalMedia[slug], /^https:\/\//, slug);
+  }
+  for (const slug of existingWayuuSlugs) {
+    assert.match(
+      corpus.get(slug).researchNotes,
+      /conserva|preserv|mantiene/i,
+      slug,
+    );
   }
   for (const slug of newWayuuSlugs) {
-    assert.equal(corpus.get(slug).image_url, null, slug);
-    assert.match(corpus.get(slug).researchNotes, /sin image_url|sin imagen/i, slug);
+    const data = corpus.get(slug);
+    assert.notEqual(
+      data.image_prompt_horizontal,
+      data.image_prompt_vertical,
+      slug,
+    );
+    assert.match(
+      data.researchNotes,
+      /pareja nueva.*horizontal.*vertical/is,
+      slug,
+    );
   }
 });
 

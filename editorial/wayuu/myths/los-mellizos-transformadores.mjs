@@ -32,7 +32,7 @@ El relato contiene fecundación sin consentimiento claro, huida, antropofagia, c
 
 Kalamantuunay se relaciona con Chama en glosarios, aunque la versión tiene funciones y familia propias. No fusionamos esta página con “La Chama”: una es ciclo cosmogónico de Manna y los mellizos; la otra desarrolla una relación y una familia en otro relato.
 
-La incorporación no requiere imagen nueva. El diseño público ya ofrece un motivo gráfico cuando image_url es nulo, por lo que se publica sin reutilizar una portada engañosa.
+La incorporación exige una pareja visual propia. La portada muestra la huida y la transformación en nube; la escena vertical se concentra en la revelación de Aáner. Ambas se construyen dentro del sistema de maqueta artesanal y evitan representar la violencia contra Manna.
 
 Incluir el ciclo corrige además una desproporción del corpus: hasta ahora existía una ficha de Maleiwa sin la narración que documenta su relación con uno de los transformadores.`;
 
@@ -48,6 +48,10 @@ La versión de Wolunka con mellizos se trata dentro de “La India Worunka”; c
 
 const leccion =
   "Transformar el mundo no elimina el daño de origen ni vuelve simple la frontera entre protección y venganza.";
+
+const imagePromptHorizontal = `Portada horizontal 16:9 de “Los mellizos transformadores”. Maqueta física de papel fotografiada de frente en la Alta Guajira nocturna: Tumaju’le y Peeliyuu avanzan juntos entre arena, cardones, Macuira y mar lejano; uno empieza a transformarse en una nube baja de capas blancas y grises. Presencias felinas oscuras quedan como siluetas remotas y ambiguas. Tratamiento studioPaperMaquette, fibras y bordes visibles, relieve bajo, índigo, ocre y verde cardón. Sin violencia explícita, disfraces inventados, texto, logos ni fantasía genérica.`;
+
+const imagePromptVertical = `Segunda escena vertical 9:16 de “Los mellizos transformadores”, distinta de la portada. En un desfiladero de la Alta Guajira, Tumaju’le y Peeliyuu observan a la paloma Aáner posada sobre un cardón; huellas y pequeños fragmentos en la arena sugieren la revelación de su origen. Composición ascendente hacia la luna y una nube fina como presagio. Maqueta física de papel fotografiada de frente, relieve bajo, fibras visibles y paleta índigo, arena y piedra. Sin violencia, máscaras, texto, logos ni render 3D.`;
 
 const similitudes = `El Popol Vuh contiene gemelos que enfrentan a seres del inframundo mediante astucia, mueren o cambian de forma y reorganizan el cosmos. El paralelo es fuerte como estructura, pero no existe evidencia de derivación directa y los nombres, parentescos y paisajes son distintos.
 
@@ -79,6 +83,8 @@ export default defineWayuuMyth({
     "mitología Wayuu",
   ],
   tags: ["Wayúu", "creación", "sobrenatural", "transformación"],
+  imagePromptHorizontal,
+  imagePromptVertical,
   sourceKeys: [
     "finol2007",
     "pazIpuana",
@@ -94,7 +100,7 @@ CADENA PRINCIPAL: Nicanor González (Uliana, Walerpa'a) -> Ramón Paz Ipuana -> 
 
 NÚCLEO: Manna, huida, Kalamantuunay/hombres-tigre, supervivencia y crianza de mellizos, revelación, venganza, transformaciones y vínculo con Wanurü/Maleiwa.
 
-IMAGEN: nueva página sin image_url; no se generó ni reutilizó una imagen engañosa.
+IMAGEN: pareja nueva aprobada. La horizontal 16:9 representa huida y transformación en nube; la vertical 9:16 muestra la revelación de Aáner. Son escenas distintas dentro de studioPaperMaquette.
 
 GEOGRAFÍA: punto aproximado en Macuira/Alta Guajira por la procedencia del ciclo; no representa cada lugar sobrenatural.`,
 });
