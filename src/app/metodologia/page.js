@@ -57,6 +57,12 @@ const sections = [
           nada conservamos una copia del registro vigente y medimos su estado
           inicial.
         </p>
+        <p>
+          El proceso avanza por etapas: alcance, investigación, matriz de
+          evidencia, reescritura, capas documentales, clasificación, geografía,
+          imagen, SEO y prueba pública. Una etapa no se considera cerrada si
+          deja una contradicción importante para que la resuelva la siguiente.
+        </p>
       </>
     ),
   },
@@ -74,6 +80,12 @@ const sections = [
           Así evitamos medir la investigación sobre un universo cambiante y
           confundir una región actual, una familia lingüística, una categoría
           colonial y una comunidad viva como si fueran la misma cosa.
+        </p>
+        <p>
+          También registramos nombres alternativos, cambios de grafía y lugares
+          homónimos. Una coincidencia de palabras no basta para atribuir un
+          relato a un pueblo: la clasificación debe sostenerse en territorio,
+          transmisión y fuentes identificables.
         </p>
       </>
     ),
@@ -96,6 +108,39 @@ const sections = [
           alcanza un respaldo creíble, el mito queda pendiente: no rellenamos el
           expediente con fuentes débiles.
         </p>
+        <p>
+          No todas las fuentes cumplen la misma función. Una crónica puede
+          conservar la versión temprana; un estudio lingüístico puede aclarar
+          un nombre; una autoridad ambiental puede precisar el paisaje; y una
+          voz comunitaria puede mostrar el sentido que el relato conserva hoy.
+          Las usamos juntas sin fingir que dicen lo mismo.
+        </p>
+      </>
+    ),
+  },
+  {
+    title: "Cómo leemos las crónicas coloniales",
+    body: (
+      <>
+        <p>
+          Muchas narraciones indígenas llegaron a la escritura mediante
+          cronistas, religiosos y funcionarios coloniales. Sus textos son
+          indispensables, pero no transparentes: fueron redactados después de
+          la invasión, desde lenguas, intereses y categorías ajenas a quienes
+          contaban las historias.
+        </p>
+        <p>
+          Por eso registramos quién escribió, cuándo, con qué propósito, qué
+          palabras tradujo y qué episodios interpretó desde su propia religión.
+          Conservamos lo que la fuente permite conocer y señalamos sus límites.
+          No convertimos la fecha del libro en la fecha de origen del mito.
+        </p>
+        <p>
+          Cuando una fuente posterior repite a otra, no la contamos como
+          evidencia independiente. Cuando corrige, amplía o contradice el
+          registro temprano, indicamos esa relación para que el lector pueda
+          seguir la historia de la versión.
+        </p>
       </>
     ),
   },
@@ -115,6 +160,12 @@ const sections = [
           de sus autores; una versión tardía se atribuye. Cuando dos versiones
           no pueden conciliarse, se presentan por separado.
         </p>
+        <p>
+          La duda no es un defecto que deba ocultarse. Si desconocemos el nombre
+          de un personaje, la fecha de una variante o el significado exacto de
+          un objeto, lo decimos o lo omitimos. La fluidez del relato nunca
+          justifica convertir una posibilidad en tradición confirmada.
+        </p>
       </>
     ),
   },
@@ -133,6 +184,12 @@ const sections = [
           colonial puede conservar un relato y deformarlo al mismo tiempo. Los
           conceptos se usan con precisión: matrilinealidad, por ejemplo, no
           demuestra por sí sola un matriarcado.
+        </p>
+        <p>
+          Un mito puede iluminar necesidades de origen, alimento, duelo,
+          autoridad, cuidado o pertenencia, pero no resume una sociedad entera.
+          Separamos lo que ocurre en el relato, lo que sabemos de su contexto y
+          la interpretación filosófica que proponemos al lector.
         </p>
         <p>
           La enseñanza profunda se ofrece como posibilidad de pensamiento, no
@@ -166,6 +223,12 @@ const sections = [
           despedidas. Evitamos grandilocuencia, adjetivos acumulados, metáforas
           repetidas y fórmulas intercambiables como “misterio ancestral”.
         </p>
+        <p>
+          Antes de redactar ordenamos acciones, espacios, cambios y silencios.
+          Cada párrafo debe ayudar a ver, escuchar o comprender una decisión. La
+          explicación histórica no entra al Relato; aparece después, donde el
+          lector puede distinguir con claridad narración y documentación.
+        </p>
       </>
     ),
   },
@@ -185,6 +248,37 @@ const sections = [
           respiración de la historia. El borrador pasa por continuidad,
           precisión y economía, y lectura en voz alta. Una frase solemne que no
           aporta imagen, acción o emoción se elimina.
+        </p>
+        <p>
+          Podemos construir una transición o escoger el punto de vista más claro,
+          pero no fabricar un episodio central para completar una ficha débil.
+          Cuando la fuente solo conserva un motivo o una descripción ritual, la
+          adaptación declara sus elementos literarios en Historia.
+        </p>
+      </>
+    ),
+  },
+  {
+    title: "Comparar sin borrar las diferencias",
+    body: (
+      <>
+        <p>
+          Las similitudes con otras mitologías ayudan a situar preguntas humanas
+          recurrentes: el origen desde el agua, el descenso al mundo de los
+          muertos, el fuego obtenido con riesgo o la transformación de una
+          persona en paisaje. La comparación parte de fuentes directas para cada
+          tradición.
+        </p>
+        <p>
+          Junto a la semejanza explicamos la diferencia. Dos relatos pueden
+          compartir una pareja fundadora y responder a territorios, relaciones
+          sociales y desenlaces completamente distintos. Sin evidencia
+          histórica no afirmamos préstamo, copia ni contacto entre culturas.
+        </p>
+        <p>
+          El paralelo universal no reemplaza la especificidad colombiana. Su
+          función es ampliar la lectura y devolver después la atención a aquello
+          que solo este mito, en este lugar, puede decir.
         </p>
       </>
     ),
@@ -224,6 +318,12 @@ const sections = [
           sin deformar el mito y registramos la limitación. Los campos antiguos
           y las tablas normalizadas deben quedar sincronizados.
         </p>
+        <p>
+          Una etiqueta sirve para encontrar relatos relacionados; no certifica
+          por sí sola una identidad histórica. Por eso revisamos el conjunto
+          antes de mover una ficha y dejamos constancia cuando una categoría
+          existente es apenas la aproximación menos imprecisa.
+        </p>
       </>
     ),
   },
@@ -247,6 +347,12 @@ const sections = [
           en navegador confirma que carguen las teselas y los estilos
           cartográficos globales, y que marcador, controles y atribución queden
           bien posicionados en escritorio y móvil.
+        </p>
+        <p>
+          El mapa orienta, no reemplaza la complejidad territorial. Cuando un
+          relato pertenece a una cuenca, una sierra o un territorio amplio,
+          evitamos fijarlo artificialmente en un edificio o punto turístico
+          moderno.
         </p>
       </>
     ),
@@ -276,6 +382,12 @@ const sections = [
           artesanal y papel trabajado. Revisamos diferencia entre escenas,
           móvil, peso, formato, texto alternativo y Open Graph.
         </p>
+        <p>
+          La imagen debe respetar paisaje, escala, materiales y acción. No
+          añadimos coronas, ornamentos, templos o símbolos tomados de otras
+          culturas para hacerla parecer más “mítica”. El texto alternativo
+          describe la escena sin convertir la ilustración en prueba histórica.
+        </p>
       </>
     ),
   },
@@ -296,11 +408,17 @@ const sections = [
           de revisión y citas. Los nombres alternativos solo se usan si están
           documentados.
         </p>
+        <p>
+          Las palabras clave nacen del contenido investigado. No repetimos
+          términos de búsqueda de forma artificial ni prometemos versiones
+          “secretas” o “definitivas”. Una página fácil de encontrar debe seguir
+          siendo fiel a lo que sus fuentes permiten afirmar.
+        </p>
       </>
     ),
   },
   {
-    title: "Respaldo y escritura atómica",
+    title: "Integridad del registro y posibilidad de corregir",
     body: (
       <>
         <p>
@@ -315,6 +433,31 @@ const sections = [
           transacción actualiza todas las capas; si algo falla, la ficha no queda
           a medias. El respaldo y el registro de decisiones permiten restaurar
           la versión anterior.
+        </p>
+      </>
+    ),
+  },
+  {
+    title: "Correcciones, comunidad y derecho de respuesta",
+    body: (
+      <>
+        <p>
+          El archivo está abierto a correcciones documentadas. Una persona o
+          comunidad vinculada puede señalar una atribución equivocada, aportar
+          una versión local, pedir mayor precisión o advertir que una imagen,
+          nombre o explicación resulta inadecuada.
+        </p>
+        <p>
+          La corrección se registra, contrasta y responde. No exigimos que una
+          memoria viva coincida con una crónica para reconocer su valor, pero
+          tampoco mezclamos ambas épocas como si fueran un único testimonio. Si
+          el cambio afecta la interpretación central, la ficha vuelve a revisión
+          completa.
+        </p>
+        <p>
+          Una versión consistente del archivo nunca tiene prioridad sobre una
+          evidencia mejor. La revisión permanece abierta porque las fuentes, las
+          comunidades y nuestra propia comprensión pueden cambiar.
         </p>
       </>
     ),
@@ -335,6 +478,12 @@ const sections = [
           dentro del Relato, etiquetas, mapa completo, metadatos, datos
           estructurados, consola y errores de ejecución. Código correcto en el
           repositorio no equivale a contenido publicado correctamente.
+        </p>
+        <p>
+          También comprobamos lectura en móvil, enlaces externos, texto
+          alternativo, recortes, ubicación del marcador y ausencia de errores
+          visibles. Publicar no es el final: una regresión técnica o una fuente
+          rota puede reabrir una ficha ya aprobada.
         </p>
       </>
     ),
@@ -401,10 +550,11 @@ export default async function MetodologiaPage() {
           enlazadas; las demás indican que su bibliografía está pendiente.
         </p>
         <p>
-          Los textos son adaptaciones editoriales para lectura digital. Algunas
-          tareas de organización, resumen e ilustración usan asistencia digital
-          bajo revisión humana. Las fuentes permiten regresar a los documentos
-          y no deben confundirse con nuestra narración.
+          Los textos son adaptaciones editoriales para lectura digital. Cada
+          ficha separa la narración de su contexto, atribuye sus versiones,
+          registra las decisiones de clasificación y conserva enlaces que
+          permiten regresar a los documentos. Las fuentes no deben confundirse
+          con nuestra narración.
         </p>
         <p>
           Si perteneces a una comunidad vinculada, conservas una versión local o
@@ -430,7 +580,7 @@ export default async function MetodologiaPage() {
 
   return (
     <DocumentTemplate
-      eyebrow="Metodología editorial · versión 1.1"
+      eyebrow="Metodología editorial · versión 1.2"
       title="Investigar antes de volver a contar"
       description="El estándar completo para documentar, narrar y publicar cada mito con imaginación, respeto cultural y evidencia verificable."
       breadcrumb={[{ label: "Inicio", href: "/" }, { label: "Metodología" }]}
