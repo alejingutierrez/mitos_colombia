@@ -90,6 +90,8 @@ const REGION_CRAFT = {
     "paramo altoandino, laguna sagrada, frailejones, piedra gris humeda, niebla fria, oro mate y geometria muisca sobria cuando aplique",
   Catatumbo:
     "selva humeda tropical del Catatumbo, piedemonte de la Serrania del Perija, rios caudalosos, bejucos, dosel denso y bohios; sin paramo, frailejones ni geometria muisca",
+  "Territorio U'wa":
+    "Sierra Nevada del Cocuy, lagunas altas, bosque nublado, piedemonte, rios, caminos entre pisos termicos y casas ceremoniales; sin geometria muisca ni postal generica de paramo",
   Caribe:
     "luz de luna o sol costero, caminos de arena, cardones, salinas, mar lejano, arquitectura costera y patrones textiles caribenos o Wayuu cuando aplique",
   Amazonas:
@@ -123,6 +125,8 @@ const COMMUNITY_CRAFT = {
     "lenguaje visual Sikuani: sabana, vivienda tradicional, maraca, fauna de llanura y transformacion ritual sugerida",
   Barí:
     "lenguaje visual Bari: Ishtana y selva del Catatumbo, bohio comunal, rios, bejucos, canastos y fauna local; sin tocados panindigenas, coronas, halos, cosmogramas ni ornamentos inventados",
+  "U'wa":
+    "lenguaje visual Uwa: territorio vertical de la Sierra Nevada del Cocuy, lagunas, rios, bosque y mochilas de fique; animales, caracola, tambor o corona ceremonial solo cuando la escena los documente, sin tocados panindigenas ni ornamentos inventados",
   Tumaco:
     "lenguaje visual del Pacifico narinense: manglar, madera, marea, canoas, lluvia y brillo marino contenido",
 };

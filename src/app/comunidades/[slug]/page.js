@@ -16,6 +16,7 @@ import { awaCommunityPage } from "../../../../editorial/awa/community.mjs";
 import { pananCommunityPage } from "../../../../editorial/panan/community.mjs";
 import { misakCommunityPage } from "../../../../editorial/misak/community.mjs";
 import { bariCommunityPage } from "../../../../editorial/bari/community.mjs";
+import { uwaCommunityPage } from "../../../../editorial/uwa/community.mjs";
 
 export const runtime = "nodejs";
 export const revalidate = 300;
@@ -91,6 +92,9 @@ const COMMUNITY_INFO = {
   },
   "motilon-bari": {
     ...bariCommunityPage,
+  },
+  "u-wa": {
+    ...uwaCommunityPage,
   },
   "tanimuka": {
     title: "Tanimuka",
