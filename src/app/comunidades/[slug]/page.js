@@ -26,6 +26,7 @@ import { chimilaCommunityPage } from "../../../../editorial/chimila/community.mj
 import { koguiCommunityPage } from "../../../../editorial/kogui/community.mjs";
 import { makaguanCommunityPage } from "../../../../editorial/makaguan/community.mjs";
 import { kuivaCommunityPage } from "../../../../editorial/kuiva/community.mjs";
+import { sikuaniCommunityPage } from "../../../../editorial/sikuani/community.mjs";
 
 export const runtime = "nodejs";
 export const revalidate = 300;
@@ -147,6 +148,9 @@ const COMMUNITY_INFO = {
   "kuibas": {
     ...kuivaCommunityPage,
   },
+  "guahibo-sikuani": {
+    ...sikuaniCommunityPage,
+  },
   "nasa": {
     title: "Nasa",
     description: "Pueblo indígena del Cauca y Huila, con una tradición de resistencia y rica mitología andino-amazónica.",
@@ -175,10 +179,7 @@ const COMMUNITY_INFO = {
     imagePrompt: "Barasana sacred ceremony, yurupary instruments, maloca rituals, Vaupés mythology"
   },
   "sikuani": {
-    title: "Sikuani",
-    description: "Pueblo de los Llanos Orientales con mitos sobre héroes culturales y la transformación del paisaje.",
-    longDescription: "Los Sikuani habitan los Llanos Orientales de Colombia y Venezuela. Su mitología incluye relatos sobre Kuwai y otros héroes culturales que transformaron el paisaje llanero, crearon ríos y establecieron prácticas culturales. Los mitos sikuani explican el origen de animales de la sabana, la importancia de las ceremonias de rezo, y las relaciones entre humanos y espíritus de la naturaleza en el ecosistema llanero. Su tradición oral transmite conocimientos sobre navegación, pesca y vida en las sabanas inundables.",
-    imagePrompt: "Sikuani plains landscape, cultural heroes, savanna spirits, Orinoco region"
+    ...sikuaniCommunityPage,
   },
   "macuna": {
     title: "Macuna",
