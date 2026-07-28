@@ -29,6 +29,7 @@ import { kuivaCommunityPage } from "../../../../editorial/kuiva/community.mjs";
 import { sikuaniCommunityPage } from "../../../../editorial/sikuani/community.mjs";
 import { andoqueCommunityPage } from "../../../../editorial/andoque/community.mjs";
 import { barasanaCommunityPage } from "../../../../editorial/barasana/community.mjs";
+import { desanaCommunityPage } from "../../../../editorial/desana/community.mjs";
 
 export const runtime = "nodejs";
 export const revalidate = 300;
@@ -167,6 +168,9 @@ const COMMUNITY_INFO = {
     description: "Pueblo amazónico del Vaupés con elaborados mitos sobre anacondas ancestrales y canoas de transformación.",
     longDescription: "Los Desano habitan la región del Vaupés en la Amazonía colombiana. Su mitología es particularmente rica en simbolismo asociado con anacondas ancestrales que transportaron a los primeros humanos por los ríos amazónicos. Los mitos desano incluyen relatos sobre canoas de transformación, casas ceremoniales (malocas) y la organización del cosmos en múltiples niveles. Sus narraciones preservan conocimientos sobre parentesco, territorialidad y la relación sagrada con los ríos y la selva.",
     imagePrompt: "Desano anaconda mythology, sacred canoe, Vaupés rivers, Amazon cosmic order"
+  },
+  "desana": {
+    ...desanaCommunityPage,
   },
   "andoque": {
     ...andoqueCommunityPage,
