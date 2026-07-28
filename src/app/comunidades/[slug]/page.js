@@ -22,6 +22,7 @@ import { cuycuyesCommunityPage } from "../../../../editorial/cuycuyes/community.
 import { pirsaCommunityPage } from "../../../../editorial/pirsa/community.mjs";
 import { quimbayaCommunityPage } from "../../../../editorial/quimbaya/community.mjs";
 import { umbraCommunityPage } from "../../../../editorial/umbra/community.mjs";
+import { chimilaCommunityPage } from "../../../../editorial/chimila/community.mjs";
 
 export const runtime = "nodejs";
 export const revalidate = 300;
@@ -84,10 +85,7 @@ const COMMUNITY_INFO = {
     ...awaCommunityPage,
   },
   "chimila": {
-    title: "Chimila",
-    description: "Pueblo indígena del Caribe colombiano, herederos de relatos sobre la creación, los primeros pobladores y las guerras ancestrales.",
-    longDescription: "Los Chimila, originalmente conocidos como Paretare, son un pueblo indígena de la región Caribe colombiana, habitantes ancestrales del departamento del Cesar y áreas cercanas a la Sierra Nevada de Santa Marta. Su mitología preserva relatos fundamentales sobre la creación del mundo por Papá Grande, quien formó la tierra y los primeros pueblos, guiando a los Chimila con flechas de caña maná que marcaron lugares sagrados como San Ángel y Cartagena. Los mitos chimila narran el origen del sol y la luna en una danza cósmica que refleja la interacción entre lo divino y lo natural, personificando al sol con fragilidad y fuerza simultáneas. La tradición oral chimila también incluye relatos sobre encuentros con caníbales que exploran el miedo y los conflictos comunitarios, así como las primeras guerras entre Aruacos, Chimilas y Karíbi, mostrando una historia de tensiones y reconciliaciones en un contexto de cambio sociocultural. Estos mitos transmiten enseñanzas sobre la importancia del territorio, la defensa de la identidad cultural y el mantenimiento de la memoria ancestral.",
-    imagePrompt: "Chimila people in Caribbean lowlands, Papá Grande creation myth, sacred arrows marking territory, ancestral gatherings"
+    ...chimilaCommunityPage,
   },
   "pananes": {
     ...pananCommunityPage,
