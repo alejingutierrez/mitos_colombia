@@ -20,6 +20,7 @@ import { uwaCommunityPage } from "../../../../editorial/uwa/community.mjs";
 import { ansermasCommunityPage } from "../../../../editorial/ansermas/community.mjs";
 import { cuycuyesCommunityPage } from "../../../../editorial/cuycuyes/community.mjs";
 import { pirsaCommunityPage } from "../../../../editorial/pirsa/community.mjs";
+import { quimbayaCommunityPage } from "../../../../editorial/quimbaya/community.mjs";
 
 export const runtime = "nodejs";
 export const revalidate = 300;
@@ -107,6 +108,9 @@ const COMMUNITY_INFO = {
   },
   "pirsa": {
     ...pirsaCommunityPage,
+  },
+  "quimbaya": {
+    ...quimbayaCommunityPage,
   },
   "tanimuka": {
     title: "Tanimuka",
