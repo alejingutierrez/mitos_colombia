@@ -6,6 +6,10 @@ import { pathToFileURL } from "node:url";
 
 import { nasaMedia } from "../../editorial/nasa/media.mjs";
 import {
+  nasaCommunityPage,
+  nasaCommunitySeo,
+} from "../../editorial/nasa/community.mjs";
+import {
   canonicalNasaSlugs,
   excludedFromNasa,
   existingNasaSlugs,
@@ -138,4 +142,16 @@ test("cada mito Nasa tiene pareja visual distinta y Juan Tama dos escenas", asyn
   );
   assert.match(juanTama.image_prompt_horizontal, /laguna/i);
   assert.match(juanTama.image_prompt_vertical, /camina|cresta|límite/i);
+});
+
+test("la landing Nasa no conserva la atribución obsoleta de Cumanday", () => {
+  const landing = JSON.stringify({
+    page: nasaCommunityPage,
+    seo: nasaCommunitySeo,
+  }).toLowerCase();
+  assert.doesNotMatch(landing, /cumanday/);
+  assert.match(nasaCommunityPage.longDescription, /Segundo Bernal Villa/);
+  assert.equal(nasaCommunitySeo.canonical_path, "/comunidades/nasa-paeces");
+  assert.ok(nasaCommunitySeo.meta_title.length <= 60);
+  assert.ok(nasaCommunitySeo.meta_description.length <= 165);
 });

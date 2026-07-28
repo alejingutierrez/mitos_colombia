@@ -6,6 +6,7 @@ import { resolveRouteParams } from "../../../lib/next-route-props";
 import { BreadcrumbJsonLd, CollectionPageJsonLd } from "../../../components/StructuredData";
 import { TaxonomyDetailTemplate } from "../../../components/templates";
 import { FilterableArchive } from "../../../components/organisms";
+import { nasaCommunityPage } from "../../../../editorial/nasa/community.mjs";
 
 export const runtime = "nodejs";
 export const revalidate = 300;
@@ -110,10 +111,7 @@ const COMMUNITY_INFO = {
     imagePrompt: "Nasa people in Cauca mountains, resistance symbols, cultural heroes, sacred territories"
   },
   "nasa-paeces": {
-    title: "Nasa - Páez",
-    description: "Pueblo indígena del Cauca y Huila, conocido por su resistencia cultural y profunda conexión con la tierra ancestral.",
-    longDescription: "Los Nasa o Páez son uno de los pueblos indígenas más emblemáticos de Colombia, habitantes ancestrales del departamento del Cauca y sur del Huila en la región Pacífica. Su mitología es rica en relatos de resistencia, transformación y conexión con la naturaleza. Los mitos nasa narran historias de héroes culturales que enfrentan adversidades, la importancia de mantener el equilibrio con la Pachamama (madre tierra), y enseñanzas sobre la defensa del territorio. Su tradición oral ha sido fundamental para preservar su identidad cultural a través de siglos de colonización y conflictos. Los relatos nasa transmiten valores de unidad comunitaria, lucha por la autonomía, respeto a los mayores y armonía con los ciclos naturales.",
-    imagePrompt: "Nasa people in Cauca mountains, traditional clothing, resistance symbols, sacred territory protection"
+    ...nasaCommunityPage,
   },
   "desano": {
     title: "Desano",

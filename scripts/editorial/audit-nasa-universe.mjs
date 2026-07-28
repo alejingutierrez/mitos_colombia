@@ -4,6 +4,7 @@ import process from "node:process";
 import dotenv from "dotenv";
 import pg from "pg";
 
+import { nasaCommunitySeo } from "../../editorial/nasa/community.mjs";
 import { nasaMedia } from "../../editorial/nasa/media.mjs";
 import {
   NASA_CATEGORY_PATH,
@@ -87,6 +88,15 @@ async function run() {
        WHERE c.slug = 'nasa-paeces'
        ORDER BY m.slug`,
     );
+    const communitySeoResult = await client.query(
+      `SELECT meta_title, meta_description, meta_keywords,
+              og_title, og_description,
+              twitter_title, twitter_description,
+              canonical_path, summary, payload
+       FROM seo_pages
+       WHERE page_type = 'community' AND slug = 'nasa-paeces'
+       LIMIT 1`,
+    );
 
     const rowsBySlug = new Map(result.rows.map((row) => [row.slug, row]));
     const actualSlugs = [...rowsBySlug.keys()].sort();
@@ -98,6 +108,34 @@ async function run() {
     if (missing.length) issues.push({ type: "missing", slugs: missing });
     if (unexpected.length) {
       issues.push({ type: "unexpected", slugs: unexpected });
+    }
+    const communitySeo = communitySeoResult.rows[0];
+    if (!communitySeo) {
+      issues.push({ type: "community_seo_missing" });
+    } else {
+      for (const field of [
+        "meta_title",
+        "meta_description",
+        "meta_keywords",
+        "og_title",
+        "og_description",
+        "twitter_title",
+        "twitter_description",
+        "canonical_path",
+        "summary",
+      ]) {
+        if (communitySeo[field] !== nasaCommunitySeo[field]) {
+          issues.push({
+            type: "community_seo_mismatch",
+            field,
+            actual: communitySeo[field],
+            expected: nasaCommunitySeo[field],
+          });
+        }
+      }
+      if (JSON.stringify(communitySeo).toLowerCase().includes("cumanday")) {
+        issues.push({ type: "community_seo_stale_cumanday" });
+      }
     }
 
     for (const slug of canonicalNasaSlugs) {
@@ -187,6 +225,7 @@ async function run() {
       verticalImages: result.rows.filter(
         ({ vertical_image_url }) => vertical_image_url,
       ).length,
+      communitySeo: Boolean(communitySeo),
       missing,
       unexpected,
       issues,
