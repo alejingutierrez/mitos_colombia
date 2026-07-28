@@ -30,6 +30,26 @@ test("conserva la landing Wounaan revisada con sus cinco expedientes", () => {
   );
 });
 
+test("conserva la landing Eperara revisada con sus dos expedientes", () => {
+  assert.deepEqual(
+    filterAllowedCommunities([
+      {
+        slug: "eperara-siapidara",
+        name: "Eperara Siapidara",
+        myth_count: 2,
+      },
+      { slug: "sin-revisar", name: "Sin revisar", myth_count: 2 },
+    ]),
+    [
+      {
+        slug: "eperara-siapidara",
+        name: "Eperara Siapidara",
+        myth_count: 2,
+      },
+    ],
+  );
+});
+
 test("la excepción Emberá no permite una fila duplicada sin mitos", () => {
   const allowed = filterAllowedCommunities([
     { name: "Embera", slug: "embera", myth_count: 0 },

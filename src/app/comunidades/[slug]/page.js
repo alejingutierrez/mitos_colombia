@@ -11,6 +11,7 @@ import { emberaCommunityPage } from "../../../../editorial/embera/community.mjs"
 import { chamiCommunityPage } from "../../../../editorial/chami/community.mjs";
 import { katioCommunityPage } from "../../../../editorial/katio/community.mjs";
 import { wounaanCommunityPage } from "../../../../editorial/wounaan/community.mjs";
+import { eperaraCommunityPage } from "../../../../editorial/eperara/community.mjs";
 
 export const runtime = "nodejs";
 export const revalidate = 300;
@@ -65,6 +66,9 @@ const COMMUNITY_INFO = {
   },
   "wounaan": {
     ...wounaanCommunityPage,
+  },
+  "eperara-siapidara": {
+    ...eperaraCommunityPage,
   },
   "chimila": {
     title: "Chimila",

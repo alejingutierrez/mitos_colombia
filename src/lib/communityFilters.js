@@ -1,5 +1,9 @@
 export const MIN_COMMUNITY_MYTHS = 6;
-const REVIEWED_SMALL_COMMUNITIES = new Set(["embera", "wounaan"]);
+const REVIEWED_SMALL_COMMUNITIES = new Set([
+  "embera",
+  "wounaan",
+  "eperara-siapidara",
+]);
 const COMMUNITY_EXCLUDED_TOKENS = new Set([
   "mestizo",
   "mestiza",
