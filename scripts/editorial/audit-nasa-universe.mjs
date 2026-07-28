@@ -97,6 +97,26 @@ async function run() {
        WHERE page_type = 'community' AND slug = 'nasa-paeces'
        LIMIT 1`,
     );
+    const cumandayResult = await client.query(
+      `SELECT m.category_path, m.focus_keywords_raw,
+              c.slug AS community_slug,
+              EXISTS (
+                SELECT 1
+                FROM myth_keywords mk
+                WHERE mk.myth_id = m.id
+                  AND mk.keyword = 'Nasa - Paeces'
+              ) AS has_stale_nasa_keyword,
+              EXISTS (
+                SELECT 1
+                FROM myth_keywords mk
+                WHERE mk.myth_id = m.id
+                  AND mk.keyword = 'Mestizo'
+              ) AS has_mestizo_keyword
+       FROM myths m
+       JOIN communities c ON c.id = m.community_id
+       WHERE m.slug = 'el-cacique-cumanday'
+       LIMIT 1`,
+    );
 
     const rowsBySlug = new Map(result.rows.map((row) => [row.slug, row]));
     const actualSlugs = [...rowsBySlug.keys()].sort();
@@ -136,6 +156,20 @@ async function run() {
       if (JSON.stringify(communitySeo).toLowerCase().includes("cumanday")) {
         issues.push({ type: "community_seo_stale_cumanday" });
       }
+    }
+    const cumanday = cumandayResult.rows[0];
+    if (
+      !cumanday ||
+      cumanday.community_slug !== "mestizo" ||
+      cumanday.category_path !== "Andina > Caldas > Mestizo" ||
+      String(cumanday.focus_keywords_raw || "").includes("Nasa - Paeces") ||
+      cumanday.has_stale_nasa_keyword ||
+      !cumanday.has_mestizo_keyword
+    ) {
+      issues.push({
+        type: "cumanday_boundary",
+        actual: cumanday || null,
+      });
     }
 
     for (const slug of canonicalNasaSlugs) {
@@ -226,6 +260,7 @@ async function run() {
         ({ vertical_image_url }) => vertical_image_url,
       ).length,
       communitySeo: Boolean(communitySeo),
+      cumandayBoundary: Boolean(cumanday),
       missing,
       unexpected,
       issues,

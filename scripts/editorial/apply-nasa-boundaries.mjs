@@ -8,6 +8,8 @@ import pg from "pg";
 const { Client } = pg;
 const envDefault = ".env";
 const confirmationPhrase = "move-cumanday-from-nasa-to-caldas-mestizo";
+const staleKeyword = "Nasa - Paeces";
+const replacementKeyword = "Mestizo";
 
 function parseArgs(argv) {
   const options = { apply: false, confirmation: "", envFile: envDefault };
@@ -75,6 +77,14 @@ async function run() {
       throw new Error("No existe el-cacique-cumanday.");
     }
     const current = currentResult.rows[0];
+    const currentKeywordResult = await client.query(
+      `SELECT keyword
+       FROM myth_keywords
+       WHERE myth_id = $1
+       ORDER BY keyword`,
+      [current.id],
+    );
+    const currentKeywords = currentKeywordResult.rows.map(({ keyword }) => keyword);
 
     const destinationResult = await client.query(
       `SELECT r.id AS region_id, r.name AS region,
@@ -92,18 +102,38 @@ async function run() {
       ...destinationResult.rows[0],
       category_path: "Andina > Caldas > Mestizo",
     };
-    const alreadyApplied =
+    const taxonomyAlreadyApplied =
       Number(current.region_id) === Number(destination.region_id) &&
       Number(current.community_id) === Number(destination.community_id) &&
       current.category_path === destination.category_path;
+    const focusKeywords = String(current.focus_keywords_raw || "")
+      .split("|")
+      .map((keyword) => keyword.trim())
+      .filter(Boolean);
+    const nextFocusKeywords = [
+      ...focusKeywords.filter((keyword) => keyword !== staleKeyword),
+      replacementKeyword,
+    ].filter((keyword, index, values) => values.indexOf(keyword) === index);
+    const keywordBoundaryAlreadyApplied =
+      !focusKeywords.includes(staleKeyword) &&
+      !currentKeywords.includes(staleKeyword) &&
+      focusKeywords.includes(replacementKeyword) &&
+      currentKeywords.includes(replacementKeyword);
+    const alreadyApplied =
+      taxonomyAlreadyApplied && keywordBoundaryAlreadyApplied;
 
     const backupPath = await saveBackup({
       createdAt: new Date().toISOString(),
       action: "reclassify_without_unpublishing",
       reason:
         "La adscripción Nasa depende de una inferencia tardía; el relato pertenece al complejo regional de Caldas y queda para revisión mestiza.",
-      before: current,
-      after: destination,
+      before: { myth: current, keywords: currentKeywords },
+      after: {
+        ...destination,
+        focus_keywords_raw: nextFocusKeywords.join("|"),
+        removeKeyword: staleKeyword,
+        addKeyword: replacementKeyword,
+      },
     });
     console.log(
       JSON.stringify(
@@ -116,6 +146,13 @@ async function run() {
             category_path: current.category_path,
           },
           after: destination,
+          keywords: {
+            before: currentKeywords,
+            remove: staleKeyword,
+            add: replacementKeyword,
+          },
+          taxonomyAlreadyApplied,
+          keywordBoundaryAlreadyApplied,
           alreadyApplied,
           backupPath,
         },
@@ -142,34 +179,97 @@ async function run() {
 
     await client.query("BEGIN");
     try {
-      const updateResult = await client.query(
+      if (!taxonomyAlreadyApplied) {
+        const taxonomyUpdate = await client.query(
+          `UPDATE myths
+           SET region_id = $1,
+               community_id = $2,
+               category_path = $3,
+               updated_at = NOW()
+           WHERE id = $4
+             AND region_id = $5
+             AND community_id = $6
+             AND category_path = $7
+           RETURNING id`,
+          [
+            destination.region_id,
+            destination.community_id,
+            destination.category_path,
+            current.id,
+            current.region_id,
+            current.community_id,
+            current.category_path,
+          ],
+        );
+        if (taxonomyUpdate.rowCount !== 1) {
+          throw new Error("La fila cambió desde el preflight; no se aplicó.");
+        }
+      }
+
+      await client.query(
         `UPDATE myths
+         SET focus_keywords_raw = $1,
+             updated_at = NOW()
+         WHERE id = $2`,
+        [
+          nextFocusKeywords.join("|"),
+          current.id,
+        ],
+      );
+      await client.query(
+        `DELETE FROM myth_keywords
+         WHERE myth_id = $1 AND keyword = $2`,
+        [current.id, staleKeyword],
+      );
+      await client.query(
+        `INSERT INTO myth_keywords (myth_id, keyword)
+         VALUES ($1, $2)
+         ON CONFLICT (myth_id, keyword) DO NOTHING`,
+        [current.id, replacementKeyword],
+      );
+      await client.query(
+        `UPDATE editorial_myths
          SET region_id = $1,
              community_id = $2,
              category_path = $3,
+             focus_keywords_raw = $4,
              updated_at = NOW()
-         WHERE id = $4
-           AND region_id = $5
-           AND community_id = $6
-           AND category_path = $7
-         RETURNING id, slug, region_id, community_id, category_path`,
+         WHERE source_myth_id = $5`,
         [
           destination.region_id,
           destination.community_id,
           destination.category_path,
+          nextFocusKeywords.join("|"),
           current.id,
-          current.region_id,
-          current.community_id,
-          current.category_path,
         ],
       );
-      if (updateResult.rowCount !== 1) {
-        throw new Error("La fila cambió desde el preflight; no se aplicó.");
-      }
+      await client.query(
+        `DELETE FROM editorial_myth_keywords
+         WHERE editorial_myth_id IN (
+           SELECT id FROM editorial_myths WHERE source_myth_id = $1
+         )
+           AND keyword = $2`,
+        [current.id, staleKeyword],
+      );
+      await client.query(
+        `INSERT INTO editorial_myth_keywords (editorial_myth_id, keyword)
+         SELECT id, $2
+         FROM editorial_myths
+         WHERE source_myth_id = $1
+         ON CONFLICT (editorial_myth_id, keyword) DO NOTHING`,
+        [current.id, replacementKeyword],
+      );
+      const finalResult = await client.query(
+        `SELECT id, slug, region_id, community_id, category_path,
+                focus_keywords_raw
+         FROM myths
+         WHERE id = $1`,
+        [current.id],
+      );
       await client.query("COMMIT");
       console.log(
         JSON.stringify(
-          { status: "applied", row: updateResult.rows[0], backupPath },
+          { status: "applied", row: finalResult.rows[0], backupPath },
           null,
           2,
         ),
