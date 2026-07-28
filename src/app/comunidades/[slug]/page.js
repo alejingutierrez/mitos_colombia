@@ -23,6 +23,7 @@ import { pirsaCommunityPage } from "../../../../editorial/pirsa/community.mjs";
 import { quimbayaCommunityPage } from "../../../../editorial/quimbaya/community.mjs";
 import { umbraCommunityPage } from "../../../../editorial/umbra/community.mjs";
 import { chimilaCommunityPage } from "../../../../editorial/chimila/community.mjs";
+import { koguiCommunityPage } from "../../../../editorial/kogui/community.mjs";
 
 export const runtime = "nodejs";
 export const revalidate = 300;
@@ -133,16 +134,10 @@ const COMMUNITY_INFO = {
     imagePrompt: "Huitoto ceremonial maloca, sacred tobacco and yuca, Amazon creation mythology, spiritual renewal"
   },
   "kogui": {
-    title: "Kogui",
-    description: "Pueblo de la Sierra Nevada de Santa Marta, guardianes de conocimiento ancestral y equilibrio ecológico.",
-    longDescription: "Los Kogui habitan la Sierra Nevada de Santa Marta, considerada por ellos el 'Corazón del Mundo'. Su mitología está profundamente arraigada en la concepción de que la Sierra es el centro del universo y que ellos son sus guardianes. Los mitos kogui hablan sobre la creación del mundo por la Madre Universal, la importancia del equilibrio entre fuerzas opuestas, y el rol de los Mamos (líderes espirituales) como intermediarios entre el mundo material y espiritual. Sus relatos enfatizan la responsabilidad humana en mantener el equilibrio ecológico.",
-    imagePrompt: "Kogui people in Sierra Nevada, sacred mountains, Mother Universal, spiritual guardianship"
+    ...koguiCommunityPage,
   },
   "koguis": {
-    title: "Koguis",
-    description: "Guardianes ancestrales de la Sierra Nevada de Santa Marta, el corazón del mundo y centro del equilibrio cósmico.",
-    longDescription: "Los Koguis son uno de los cuatro pueblos indígenas que habitan la Sierra Nevada de Santa Marta en la región Caribe, considerada por ellos como el 'Corazón del Mundo' y centro del universo. Su mitología cosmogónica narra la creación del mundo a través de nueve mundos previos, cada uno habitado por seres espirituales que evolucionaron hasta formar la humanidad actual. Los mitos koguis hablan de la Madre Wastora (Haba-Naowa) quien creó la diversidad étnica de la humanidad a partir de transformaciones corporales y espirituales. El relato de Kimaku y otros héroes culturales explica el origen del sol y la luna, los rituales necesarios para mantener su luz, y la importancia del primer hombre y la primera mujer en establecer el orden social. Los Mamos (líderes espirituales) son depositarios de este conocimiento sagrado y actúan como intermediarios entre lo material y lo espiritual, guiando a su pueblo en el cuidado del equilibrio ecológico del planeta.",
-    imagePrompt: "Kogui mamos in Sierra Nevada, sacred mountain peaks, Mother Universal creation, cosmic balance guardianship"
+    ...koguiCommunityPage,
   },
   "nasa": {
     title: "Nasa",
