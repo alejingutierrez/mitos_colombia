@@ -20,6 +20,16 @@ test("conserva la landing Emberá revisada aunque el corpus genérico quede pequ
   );
 });
 
+test("conserva la landing Wounaan revisada con sus cinco expedientes", () => {
+  assert.deepEqual(
+    filterAllowedCommunities([
+      { slug: "wounaan", name: "Wounaan", myth_count: 5 },
+      { slug: "sin-revisar", name: "Sin revisar", myth_count: 5 },
+    ]),
+    [{ slug: "wounaan", name: "Wounaan", myth_count: 5 }],
+  );
+});
+
 test("la excepción Emberá no permite una fila duplicada sin mitos", () => {
   const allowed = filterAllowedCommunities([
     { name: "Embera", slug: "embera", myth_count: 0 },

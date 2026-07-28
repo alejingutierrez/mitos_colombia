@@ -10,6 +10,7 @@ import { nasaCommunityPage } from "../../../../editorial/nasa/community.mjs";
 import { emberaCommunityPage } from "../../../../editorial/embera/community.mjs";
 import { chamiCommunityPage } from "../../../../editorial/chami/community.mjs";
 import { katioCommunityPage } from "../../../../editorial/katio/community.mjs";
+import { wounaanCommunityPage } from "../../../../editorial/wounaan/community.mjs";
 
 export const runtime = "nodejs";
 export const revalidate = 300;
@@ -61,6 +62,9 @@ const COMMUNITY_INFO = {
   },
   "embera": {
     ...emberaCommunityPage,
+  },
+  "wounaan": {
+    ...wounaanCommunityPage,
   },
   "chimila": {
     title: "Chimila",
