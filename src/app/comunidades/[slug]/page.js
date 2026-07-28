@@ -25,6 +25,7 @@ import { umbraCommunityPage } from "../../../../editorial/umbra/community.mjs";
 import { chimilaCommunityPage } from "../../../../editorial/chimila/community.mjs";
 import { koguiCommunityPage } from "../../../../editorial/kogui/community.mjs";
 import { makaguanCommunityPage } from "../../../../editorial/makaguan/community.mjs";
+import { kuivaCommunityPage } from "../../../../editorial/kuiva/community.mjs";
 
 export const runtime = "nodejs";
 export const revalidate = 300;
@@ -143,6 +144,9 @@ const COMMUNITY_INFO = {
   "makawanes": {
     ...makaguanCommunityPage,
   },
+  "kuibas": {
+    ...kuivaCommunityPage,
+  },
   "nasa": {
     title: "Nasa",
     description: "Pueblo indígena del Cauca y Huila, con una tradición de resistencia y rica mitología andino-amazónica.",
@@ -201,10 +205,7 @@ const COMMUNITY_INFO = {
     imagePrompt: "Nukak nomadic life, Amazon forest paths, hunting spirits, traditional mobility"
   },
   "kuiva": {
-    title: "Kuiva",
-    description: "Pueblo de los Llanos Orientales con tradiciones sobre la vida en las sabanas.",
-    longDescription: "Los Kuiva habitan los Llanos Orientales de Colombia. Su mitología refleja la vida en las extensas sabanas llaneras e incluye relatos sobre el origen de animales característicos de la región, la importancia de los ríos y caños, y ceremonias relacionadas con los ciclos naturales de lluvia y sequía. Los mitos kuiva transmiten conocimientos sobre navegación por las sabanas inundables y la relación armónica con el ecosistema llanero.",
-    imagePrompt: "Kuiva savanna life, llanos plains, river spirits, seasonal cycles"
+    ...kuivaCommunityPage,
   },
   "kurripaco": {
     title: "Kurripaco",
