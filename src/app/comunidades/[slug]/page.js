@@ -27,6 +27,7 @@ import { koguiCommunityPage } from "../../../../editorial/kogui/community.mjs";
 import { makaguanCommunityPage } from "../../../../editorial/makaguan/community.mjs";
 import { kuivaCommunityPage } from "../../../../editorial/kuiva/community.mjs";
 import { sikuaniCommunityPage } from "../../../../editorial/sikuani/community.mjs";
+import { andoqueCommunityPage } from "../../../../editorial/andoque/community.mjs";
 
 export const runtime = "nodejs";
 export const revalidate = 300;
@@ -167,10 +168,7 @@ const COMMUNITY_INFO = {
     imagePrompt: "Desano anaconda mythology, sacred canoe, Vaupés rivers, Amazon cosmic order"
   },
   "andoque": {
-    title: "Andoque",
-    description: "Pueblo amazónico con tradiciones sobre la creación y el manejo de recursos naturales.",
-    longDescription: "Los Andoque habitan la región amazónica colombiana, principalmente en el departamento del Caquetá. Su tradición oral incluye mitos sobre la creación del mundo, el origen de los cultivos y animales, y prácticas ceremoniales relacionadas con la yuca y otros alimentos fundamentales. Los relatos andoque transmiten profundos conocimientos sobre agricultura de selva, manejo sostenible de recursos y la importancia de mantener relaciones armónicas con los espíritus de la naturaleza.",
-    imagePrompt: "Andoque village in Caquetá, sacred yuca cultivation, forest spirits, Amazon traditions"
+    ...andoqueCommunityPage,
   },
   "barasana": {
     title: "Barasana",
