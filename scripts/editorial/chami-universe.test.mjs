@@ -10,17 +10,17 @@ import {
   sourceChamiSlugs,
 } from "../../editorial/chami/universe.mjs";
 
-test("el universo Chamí conserva exactamente sus 21 URL", () => {
+test("el universo Chamí conserva exactamente sus 22 URL", () => {
   assert.deepEqual(assertChamiUniverse(), {
-    source: 21,
-    canonical: 21,
+    source: 22,
+    canonical: 22,
     rioFrio: 14,
-    regionalOrCycles: 7,
+    regionalOrCycles: 8,
   });
   assert.deepEqual(canonicalChamiSlugs, sourceChamiSlugs);
 });
 
-test("distingue catorce relatos primarios y siete expedientes regionales", () => {
+test("distingue catorce relatos primarios y ocho expedientes regionales", () => {
   assert.equal(rioFrioPrimarySlugs.length, 14);
   assert.equal(chamiEditorialDecisions.jinopotabar.kind, "cycle");
   assert.equal(
@@ -33,7 +33,7 @@ test("distingue catorce relatos primarios y siete expedientes regionales", () =>
   );
 });
 
-test("localiza 15 páginas en Valle, 4 en Risaralda y 2 en Caldas", () => {
+test("localiza 15 páginas en Valle, 4 en Risaralda y 3 en Caldas", () => {
   const counts = Object.values(chamiCategoryBySlug).reduce(
     (result, category) => {
       result[category] = (result[category] || 0) + 1;
@@ -43,7 +43,7 @@ test("localiza 15 páginas en Valle, 4 en Risaralda y 2 en Caldas", () => {
   );
   assert.deepEqual(counts, {
     "Andina > Valle del Cauca > Chamí": 15,
-    "Andina > Caldas > Chamí": 2,
+    "Andina > Caldas > Chamí": 3,
     "Andina > Risaralda > Chamí": 4,
   });
 });

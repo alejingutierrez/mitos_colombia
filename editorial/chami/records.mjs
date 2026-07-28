@@ -1275,6 +1275,73 @@ DECISIÓN: retirar Yaveranas Katío y la narrativa inventada de venganza.
 MEDIACIÓN: versión explícitamente cristianizada; narrador original no acreditado.
 IMÁGENES: reemplazo obligatorio; el par anterior mostraba Jenené y raíces, una escena ajena.`,
   }),
+  defineChamiMyth({
+    slug: "el-gusano-gigante",
+    title: "Surranabe, el gusano gigante",
+    sourceKeys: [
+      "chaves1945",
+      "reichel1953",
+      "redAprendeMetadata",
+      "cardona2026",
+      "onicChami",
+      "procuraduriaChami",
+      "minInteriorPlan",
+    ],
+    mito: `Surranabe era un gusano de tamaño extraordinario. Se movía por el territorio devorando a las personas y a los animales que encontraba. Su hambre no distinguía entre quienes caminaban por el monte, quienes vivían cerca ni los demás seres: la presencia del gusano hacía imposible sostener la vida sin miedo.
+
+La gente no encontraba una manera de detenerlo. El cuerpo enorme de Surranabe parecía resistir los ataques y cada nueva pérdida aumentaba la urgencia. Entonces cuatro mellizos decidieron enfrentarlo. La fuente no conserva sus nombres ni una genealogía detallada; los presenta como un grupo capaz de actuar de manera coordinada.
+
+Los cuatro prepararon una lanza. No la cubrieron con un veneno especial ni buscaron un arma distinta para cada parte del cuerpo. Esperaron el momento en que podían alcanzar al gusano y lo hirieron con aquella lanza hasta matarlo.
+
+La muerte de Surranabe cambió el lugar. Donde había quedado su cuerpo se formó una gran laguna. El agua ocupó el espacio de la criatura y conservó en el paisaje la memoria del enfrentamiento. La laguna no aparece como premio ni como castigo añadido: es la transformación que sigue a la caída del gusano.
+
+El relato dice que los mellizos eran “como gente de médico”. La comparación sugiere una capacidad de intervenir frente a una amenaza que consumía cuerpos y animales, pero la fuente no los llama jaibanás ni describe una curación ceremonial. Esta edición conserva la expresión y no la convierte en un sistema de poderes inventado.
+
+La ficha anterior había agregado neará en las puntas de las lanzas, nombres propios, espíritus convocados y una batalla extensa. Nada de eso pertenece al episodio atribuido por Milcíades Chaves. La narración documentada es más concentrada: un ser devorador, cuatro mellizos, una lanza, la muerte y una laguna.
+
+Esa brevedad no vuelve menor la historia. El grupo vence donde una sola persona no podía, y el cuerpo peligroso no desaparece sin huella: se vuelve agua. Surranabe deja de comer la vida del territorio, pero permanece inscrito en una forma del paisaje que la gente puede señalar y recordar.`,
+    historia: composeRegionalHistory({
+      sourceFocus:
+        "Milcíades Chaves publicó el episodio de Surranabe en 1945 y lo atribuyó expresamente a los Chamí del occidente de Caldas. La compilación de 1993 mantiene esa frontera, aunque lo ubicó después de un capítulo Katío y facilitó la clasificación errónea del sitio.",
+      evidenceChain:
+        "Chaves es la fuente narrativa de control. Reichel-Dolmatoff y su ficha archivística permiten distinguir el corpus Chamí de Río Frío, mientras ONIC, Procuraduría y el diagnóstico del Ministerio aportan contexto territorial. Cardona ayuda a leer la transformación sin añadir una moraleja universal.",
+      editorialDecision:
+        "La revisión traslada la página de Katío a Chamí sin despublicarla, elimina neará, nombres y espíritus no acreditados, y conserva el par de imágenes porque ya representa un gusano en full paper cut.",
+    }),
+    versiones: composeRegionalVersions({
+      versionDetail:
+        "La versión localizada es muy breve: Surranabe devora personas y animales; cuatro mellizos lo matan con una lanza; una gran laguna se forma y los mellizos son comparados con gente de médico.",
+      boundaryDetail:
+        "No se encontró una segunda versión independiente que autorice a añadir el veneno neará, asignar nombres a los mellizos o convertirlos en cuatro espíritus. Esos elementos se retiran en vez de presentarse como tradición oral.",
+      editorialRelation:
+        "La culebra de siete cabezas también transforma el agua y el relieve en el occidente de Caldas, pero procede de La Montaña y conserva otros personajes, recorrido y desenlace.",
+    }),
+    leccion:
+      "La acción coordinada puede detener una amenaza y transformar su huella en paisaje.",
+    similitudes: composeSimilarities({
+      internalComparison:
+        "Surranabe dialoga con la culebra de siete cabezas porque un ser enorme queda unido al origen o movimiento de una masa de agua en Caldas.",
+      broaderComparison:
+        "Seres serpentinos o vermiformes vencidos por grupos heroicos aparecen en numerosos relatos, pero la laguna, los cuatro mellizos y la expresión gente de médico pertenecen a esta versión Chamí.",
+    }),
+    excerpt:
+      "Cuatro mellizos matan con una lanza al gusano Surranabe y una gran laguna se forma donde cae su cuerpo.",
+    seoTitle: "Surranabe, el gusano gigante Chamí",
+    seoDescription:
+      "Lee el relato Chamí de Surranabe, el gusano devorador vencido por cuatro mellizos, y la laguna formada tras su muerte.",
+    focusKeywords: [
+      "Surranabe",
+      "gusano gigante Chamí",
+      "cuatro mellizos",
+      "mitos de Caldas",
+      "laguna de Surranabe",
+    ],
+    tags: ["Surranabe", "bestias", "transformación", "agua"],
+    researchNotes: `FRONTERA: transferido de Katío a Chamí por atribución explícita de Chaves 1945.
+CORRECCIÓN: retirar neará, nombres y espíritus añadidos.
+IMÁGENES: par existente reutilizado; ya cumple full paper cut.
+${commonResearch}`,
+  }),
 ];
 
 export const chamiMyths = records;

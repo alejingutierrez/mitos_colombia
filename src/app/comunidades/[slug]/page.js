@@ -8,6 +8,8 @@ import { TaxonomyDetailTemplate } from "../../../components/templates";
 import { FilterableArchive } from "../../../components/organisms";
 import { nasaCommunityPage } from "../../../../editorial/nasa/community.mjs";
 import { emberaCommunityPage } from "../../../../editorial/embera/community.mjs";
+import { chamiCommunityPage } from "../../../../editorial/chami/community.mjs";
+import { katioCommunityPage } from "../../../../editorial/katio/community.mjs";
 
 export const runtime = "nodejs";
 export const revalidate = 300;
@@ -52,10 +54,10 @@ const COMMUNITY_INFO = {
     imagePrompt: "Catío village in tropical mountains, sacred forest, river spirits, traditional dwellings"
   },
   "katios": {
-    title: "Katíos",
-    description: "Pueblo emberá de la región andina, guardianes de relatos sobre la creación del mundo y la resistencia cultural.",
-    longDescription: "Los Katíos son parte de la familia lingüística emberá y habitan regiones del occidente colombiano, principalmente en Antioquia y Chocó, en la zona de transición entre los Andes y el Pacífico. Su mitología es rica en relatos cosmogónicos centrados en Caragabí, el creador que organizó el mundo y estableció el orden natural y social. Los mitos katíos narran la creación del universo, la aparición de figuras míticas como los Aribamias (seres transformados después de la muerte), y episodios de resistencia indígena como la liderada por Ambeu contra los conquistadores españoles. La tradición oral katía también incluye relatos sobre el origen de alimentos como el ñame, la intervención de la serpiente desafiando la autoridad divina, y enseñanzas sobre el respeto a los espíritus de la selva y los ríos. Sus mitos preservan profundos conocimientos sobre plantas medicinales, técnicas de caza sostenible, y la importancia de mantener el equilibrio entre lo humano y lo natural.",
-    imagePrompt: "Katío village in Andean-Pacific transition, Caragabí creation myth, resistance warriors, sacred forest spirits"
+    ...katioCommunityPage,
+  },
+  "chami": {
+    ...chamiCommunityPage,
   },
   "embera": {
     ...emberaCommunityPage,

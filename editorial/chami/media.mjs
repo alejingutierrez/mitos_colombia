@@ -1,4 +1,13 @@
 export const chamiMedia = {
+  "el-gusano-gigante": {
+    horizontal:
+      "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/el-gusano-gigante-1784765640516.jpg",
+    vertical:
+      "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/el-gusano-gigante-1784813235197.jpg",
+    latitude: 5.45389,
+    longitude: -75.7419,
+    imageAction: "reused-after-boundary-correction",
+  },
   "creacion-embera": {
     horizontal:
       "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/creacion-embera-1784768077858.jpg",

@@ -36,9 +36,9 @@ async function loadModules() {
   return modules;
 }
 
-test("los 21 expedientes cumplen estructura, rangos y fuentes", async () => {
+test("los 22 expedientes cumplen estructura, rangos y fuentes", async () => {
   const modules = await loadModules();
-  assert.equal(modules.length, 21);
+  assert.equal(modules.length, 22);
   assert.deepEqual(
     modules.map(({ dossier }) => dossier.slug).sort(),
     canonicalChamiSlugs,
@@ -130,7 +130,7 @@ test("las páginas sintéticas declaran su condición editorial", async () => {
 });
 
 test("la landing presenta procedencias y fronteras culturales", () => {
-  assert.match(chamiCommunityPage.longDescription, /veintiuna páginas/i);
+  assert.match(chamiCommunityPage.longDescription, /veintidós páginas/i);
   assert.match(chamiCommunityPage.longDescription, /Río Frío/i);
   assert.match(chamiCommunityPage.longDescription, /Katío y Dóbida/i);
   assert.equal(chamiCommunitySeo.canonical_path, "/comunidades/chami");

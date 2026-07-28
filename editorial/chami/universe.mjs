@@ -10,6 +10,7 @@ export const sourceChamiSlugs = [
   "el-hombre-que-atrapo-al-sol-y-a-la-luna",
   "el-origen-de-los-animales",
   "el-origen-del-agua",
+  "el-gusano-gigante",
   "el-universo",
   "hentsera-y-el-agua",
   "himo-la-iguana-y-la-candela",
@@ -80,6 +81,7 @@ export const chamiCategoryBySlug = Object.fromEntries(
   sourceChamiSlugs.map((slug) => {
     if (
       [
+        "el-gusano-gigante",
         "la-culebra-de-las-siete-cabezas",
         "los-guardianes-vengadores-de-la-naturaleza",
       ].includes(slug)
@@ -103,9 +105,9 @@ export const chamiCategoryBySlug = Object.fromEntries(
 export const canonicalChamiSlugs = [...sourceChamiSlugs];
 
 export function assertChamiUniverse() {
-  if (sourceChamiSlugs.length !== 21) {
+  if (sourceChamiSlugs.length !== 22) {
     throw new Error(
-      `El universo Chamí cambió: se esperaban 21 registros y hay ${sourceChamiSlugs.length}.`,
+      `El universo Chamí cambió: se esperaban 22 registros y hay ${sourceChamiSlugs.length}.`,
     );
   }
   if (new Set(sourceChamiSlugs).size !== sourceChamiSlugs.length) {

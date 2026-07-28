@@ -4,9 +4,12 @@ import process from "node:process";
 import dotenv from "dotenv";
 import pg from "pg";
 
-import { chamiMedia } from "../../editorial/chami/media.mjs";
-import { chamiMythsBySlug } from "../../editorial/chami/records.mjs";
-import { canonicalChamiSlugs } from "../../editorial/chami/universe.mjs";
+import { katioMedia } from "../../editorial/katio/media.mjs";
+import { katioMythsBySlug } from "../../editorial/katio/records.mjs";
+import {
+  canonicalKatioSlugs,
+  katioReviewedSlugs,
+} from "../../editorial/katio/universe.mjs";
 
 const { Client } = pg;
 
@@ -57,6 +60,7 @@ async function run() {
          m.latitude,
          m.longitude,
          m.content_formatted,
+         c.slug AS community_slug,
          e.id AS editorial_id,
          e.title AS editorial_title,
          e.category_path AS editorial_category_path,
@@ -69,6 +73,8 @@ async function run() {
          COALESCE(keyword_counts.count, 0)::int AS keyword_count,
          COALESCE(vertical_counts.count, 0)::int AS vertical_count,
          vertical_counts.image_url AS vertical_image_url,
+         vertical_counts.base_prompt AS vertical_base_prompt,
+         vertical_counts.custom_prompt AS vertical_custom_prompt,
          COALESCE(seo_counts.count, 0)::int AS seo_count
        FROM myths m
        JOIN communities c ON c.id = m.community_id
@@ -82,7 +88,11 @@ async function run() {
          WHERE mk.myth_id = m.id
        ) keyword_counts ON TRUE
        LEFT JOIN LATERAL (
-         SELECT COUNT(*) AS count, MIN(v.image_url) AS image_url
+         SELECT
+           COUNT(*) AS count,
+           MIN(v.image_url) AS image_url,
+           MIN(v.base_prompt) AS base_prompt,
+           MIN(v.custom_prompt) AS custom_prompt
          FROM vertical_images v
          WHERE v.entity_type = 'myth' AND v.entity_id = m.id
        ) vertical_counts ON TRUE
@@ -91,20 +101,21 @@ async function run() {
          FROM seo_pages s
          WHERE s.page_type = 'myth' AND s.slug = m.slug
        ) seo_counts ON TRUE
-       WHERE c.slug = 'chami'
+       WHERE m.slug = ANY($1::text[])
        ORDER BY m.slug`,
+      [katioReviewedSlugs],
     );
     const slugs = result.rows.map(({ slug }) => slug);
     assert(
-      JSON.stringify(slugs) === JSON.stringify(canonicalChamiSlugs),
-      `Universo DB distinto: ${slugs.length} filas.`,
+      JSON.stringify(slugs) === JSON.stringify(katioReviewedSlugs),
+      `Universo revisado DB distinto: ${slugs.length} filas.`,
     );
 
-    const categoryCounts = {};
     const sourceCounts = [];
+    const categoryCounts = {};
     for (const row of result.rows) {
-      const dossier = chamiMythsBySlug[row.slug];
-      const media = chamiMedia[row.slug];
+      const dossier = katioMythsBySlug[row.slug];
+      const media = katioMedia[row.slug];
       assert(dossier, `${row.slug}: falta dossier.`);
       assert(media, `${row.slug}: falta media.`);
       assert(row.title === dossier.title, `${row.slug}: título desincronizado.`);
@@ -120,7 +131,10 @@ async function run() {
       assert(row.content_formatted === true, `${row.slug}: contenido sin formato.`);
       assert(row.editorial_id, `${row.slug}: falta editorial_myths.`);
       assert(row.tag_count === 4, `${row.slug}: ${row.tag_count} etiquetas.`);
-      assert(row.keyword_count === 5, `${row.slug}: ${row.keyword_count} keywords.`);
+      assert(
+        row.keyword_count === 5,
+        `${row.slug}: ${row.keyword_count} palabras clave.`,
+      );
       assert(row.seo_count === 1, `${row.slug}: ${row.seo_count} filas SEO.`);
       assert(
         row.vertical_count === 1,
@@ -136,9 +150,17 @@ async function run() {
         `${row.slug}: vertical desincronizada.`,
       );
       assert(
-        row.image_prompt_horizontal === dossier.image_prompt_horizontal &&
-          row.image_prompt_vertical === dossier.image_prompt_vertical,
+        row.image_prompt === dossier.image_prompt_horizontal &&
+          row.image_prompt_horizontal === dossier.image_prompt_horizontal &&
+          row.image_prompt_vertical === dossier.image_prompt_vertical &&
+          row.vertical_custom_prompt === dossier.image_prompt_vertical,
         `${row.slug}: prompts desincronizados.`,
+      );
+      assert(
+        /full paper cut/i.test(row.vertical_base_prompt) &&
+          /sin fotograf[ií]a/i.test(row.vertical_base_prompt) &&
+          /maqueta|maquette/i.test(row.vertical_base_prompt),
+        `${row.slug}: base vertical fuera de dirección visual.`,
       );
       assert(
         Number(row.latitude) === dossier.latitude &&
@@ -152,36 +174,76 @@ async function run() {
       categoryCounts[row.category_path] =
         (categoryCounts[row.category_path] || 0) + 1;
     }
-    const expectedCategoryCounts = {
-      "Andina > Valle del Cauca > Chamí": 15,
-      "Andina > Risaralda > Chamí": 4,
-      "Andina > Caldas > Chamí": 3,
-    };
     assert(
-      Object.entries(expectedCategoryCounts).every(
-        ([category, count]) => categoryCounts[category] === count,
-      ) &&
-        Object.keys(categoryCounts).length ===
-          Object.keys(expectedCategoryCounts).length,
+      JSON.stringify(categoryCounts) ===
+        JSON.stringify({
+          "Andina > Varios > Katíos": 17,
+          "Andina > Chocó > Katíos": 2,
+          "Andina > Antioquia > Mixto": 2,
+        }),
       `Distribución inesperada: ${JSON.stringify(categoryCounts)}.`,
     );
+
+    const canonical = result.rows
+      .filter(({ community_slug }) => community_slug === "katios")
+      .map(({ slug }) => slug);
+    assert(
+      JSON.stringify(canonical) === JSON.stringify(canonicalKatioSlugs),
+      `Universo Katío canónico distinto: ${canonical.length}.`,
+    );
+    const boundaryCommunities = Object.fromEntries(
+      result.rows
+        .filter(({ slug }) => ["dobaida", "el-tesoro-de-dabeiba"].includes(slug))
+        .map(({ slug, community_slug }) => [slug, community_slug]),
+    );
+    assert(
+      boundaryCommunities.dobaida === "mixto" &&
+        boundaryCommunities["el-tesoro-de-dabeiba"] === "mixto",
+      `Frontera Dobaida incorrecta: ${JSON.stringify(boundaryCommunities)}.`,
+    );
+
+    const surranabe = await client.query(
+      `SELECT m.category_path, c.slug AS community_slug
+       FROM myths m
+       JOIN communities c ON c.id = m.community_id
+       WHERE m.slug = 'el-gusano-gigante'
+       LIMIT 1`,
+    );
+    assert(surranabe.rowCount === 1, "Falta Surranabe.");
+    assert(
+      surranabe.rows[0].community_slug === "chami" &&
+        surranabe.rows[0].category_path === "Andina > Caldas > Chamí",
+      "Surranabe no quedó en Chamí / Caldas.",
+    );
+
+    const chamiCount = await client.query(
+      `SELECT COUNT(*)::int AS count
+       FROM myths m
+       JOIN communities c ON c.id = m.community_id
+       WHERE c.slug = 'chami'`,
+    );
+    assert(chamiCount.rows[0].count === 22, "El universo Chamí no quedó en 22.");
 
     const communitySeo = await client.query(
       `SELECT meta_title, canonical_path
        FROM seo_pages
-       WHERE page_type = 'community' AND slug = 'chami'
+       WHERE page_type = 'community' AND slug = 'katios'
        LIMIT 1`,
     );
-    assert(communitySeo.rowCount === 1, "Falta SEO de la landing Chamí.");
+    assert(communitySeo.rowCount === 1, "Falta SEO de la landing Katío.");
     assert(
-      communitySeo.rows[0].canonical_path === "/comunidades/chami",
-      "Canonical de landing incorrecto.",
+      communitySeo.rows[0].canonical_path === "/comunidades/katios",
+      "Canonical de landing Katío incorrecto.",
     );
+
     console.log(
       JSON.stringify(
         {
           status: "verified",
-          myths: result.rowCount,
+          canonicalKatioMyths: canonical.length,
+          reviewedDossiers: result.rowCount,
+          boundaryPages: boundaryCommunities,
+          chamiMyths: chamiCount.rows[0].count,
           editorialDossiers: result.rows.filter(({ editorial_id }) => editorial_id)
             .length,
           seoRows: result.rows.reduce((sum, row) => sum + row.seo_count, 0),
