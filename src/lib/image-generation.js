@@ -135,6 +135,8 @@ const COMMUNITY_CRAFT = {
     "lenguaje visual historicamente cauto para Guacuma: cerros, rio Mapura, cultivos, cascadas y huellas en roca; sin inventar vestuario o regalia, sin tocados panindigenas ni simbolos aztecas, mayas o muiscas",
   Cuycuyes:
     "lenguaje visual historicamente cauto para Cuy-Cuy o Arma: casas redondas, esteras, vasijas, flores, resinas, caminos y paisaje del norte de Caldas; sin demonios, regalia inventada, tocados panindigenas ni simbolos aztecas, mayas o muiscas",
+  Pirsa:
+    "lenguaje visual historicamente cauto para Pirsa o Pirza: montanas del occidente de Caldas, caminos hacia Anserma, casas de paja, aves auras y una iglesia humilde; sin demonios literales, Diablo del Carnaval, regalia inventada, tocados panindigenas ni simbolos aztecas, mayas o muiscas",
   Tumaco:
     "lenguaje visual del Pacifico narinense: manglar, madera, marea, canoas, lluvia y brillo marino contenido",
 };

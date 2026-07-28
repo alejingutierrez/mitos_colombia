@@ -80,6 +80,16 @@ test("conserva la landing Cuycuyes revisada con sus dos expedientes", () => {
   );
 });
 
+test("conserva la landing Pirsa revisada con su único expediente", () => {
+  assert.deepEqual(
+    filterAllowedCommunities([
+      { slug: "pirsa", name: "Pirsa", myth_count: 1 },
+      { slug: "sin-revisar", name: "Sin revisar", myth_count: 1 },
+    ]),
+    [{ slug: "pirsa", name: "Pirsa", myth_count: 1 }],
+  );
+});
+
 test("la excepción Emberá no permite una fila duplicada sin mitos", () => {
   const allowed = filterAllowedCommunities([
     { name: "Embera", slug: "embera", myth_count: 0 },
