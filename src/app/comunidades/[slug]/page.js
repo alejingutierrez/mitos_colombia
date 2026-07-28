@@ -7,6 +7,7 @@ import { BreadcrumbJsonLd, CollectionPageJsonLd } from "../../../components/Stru
 import { TaxonomyDetailTemplate } from "../../../components/templates";
 import { FilterableArchive } from "../../../components/organisms";
 import { nasaCommunityPage } from "../../../../editorial/nasa/community.mjs";
+import { emberaCommunityPage } from "../../../../editorial/embera/community.mjs";
 
 export const runtime = "nodejs";
 export const revalidate = 300;
@@ -57,10 +58,7 @@ const COMMUNITY_INFO = {
     imagePrompt: "Katío village in Andean-Pacific transition, Caragabí creation myth, resistance warriors, sacred forest spirits"
   },
   "embera": {
-    title: "Emberá",
-    description: "Pueblo indígena del Pacífico colombiano, con rica tradición oral sobre la naturaleza, espíritus del bosque y ceremonias ancestrales.",
-    longDescription: "Los Emberá son uno de los pueblos indígenas más importantes de la región Pacífica colombiana, habitando los departamentos de Chocó, Valle del Cauca y Risaralda. Su mitología está profundamente conectada con la selva húmeda tropical, los ríos caudalosos y la extraordinaria biodiversidad de su territorio. Los mitos emberá incluyen relatos sobre la creación del mundo, espíritus guardianes de la selva, transformaciones entre humanos y animales, y la importancia de mantener el equilibrio con la naturaleza. Su tradición oral transmite conocimientos sobre el uso sostenible de recursos naturales, plantas medicinales, técnicas de pesca y navegación fluvial. Los Emberá han preservado su identidad cultural a pesar de presiones externas, manteniendo vivas ceremonias tradicionales, el uso de la lengua emberá, y prácticas artesanales como la cestería y la elaboración de tallas en tagua. Sus mitos enfatizan valores comunitarios, respeto a los mayores, y la responsabilidad de cuidar la selva para las futuras generaciones.",
-    imagePrompt: "Emberá village on Pacific river, traditional palafitos, rainforest spirits, ceremonial gathering, artisan crafts"
+    ...emberaCommunityPage,
   },
   "chimila": {
     title: "Chimila",

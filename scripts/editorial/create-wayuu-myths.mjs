@@ -238,7 +238,7 @@ async function insertMyth(client, data, regionId, communityId, tagIds) {
       mythId,
       data.title,
       data.slug,
-      "Segunda escena vertical 9:16 de un mito Wayuu como fotografía frontal de una maqueta física de papel artesanal.",
+      "Segunda escena vertical 9:16 de un mito Wayuu como ilustración full paper cut y paper quilling; no fotografía, maqueta física ni diorama.",
       data.image_prompt_vertical,
       wayuuVerticalMedia[data.slug],
     ],

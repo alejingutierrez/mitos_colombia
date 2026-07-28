@@ -53,31 +53,27 @@ export const STYLE_REVIEW_PRODUCTION_BATCH = {
 };
 
 export const STYLE_REVIEW_CRITERIA = [
-  "Papel real fotografiado, no ilustracion plana.",
-  "Composicion frontal, directa y llena de borde a borde.",
-  "Volumen bajo por capas fisicas, sin render 3D ni perspectiva rara.",
+  "Ilustracion full paper cut y paper quilling, no fotografia de una maqueta.",
+  "Composicion directa, completa y llena de borde a borde.",
+  "Profundidad grafica por capas y sombras suaves, sin diorama ni render 3D.",
   "Identidad visual especifica por region, cultura y geografia.",
-  "Escena editorial adulta, tactil y hecha por humanos.",
+  "Escena editorial adulta, tactil y visualmente construida con recortes.",
 ];
 
-export const APPROVED_STYLE_PROFILE = "studioPaperMaquette";
+export const APPROVED_STYLE_PROFILE = "fullPaperCutIllustration";
 
 export const STYLE_PROFILE_OPTIONS = [
   {
-    value: "editorialPaperPhoto",
-    label: "Base editorial",
+    value: "fullPaperCutIllustration",
+    label: "Full paper cut",
   },
   {
     value: "documentaryPaperArtifact",
-    label: "Artefacto documental",
-  },
-  {
-    value: "studioPaperMaquette",
-    label: "Maqueta fisica de estudio",
+    label: "Paper cut documental",
   },
   {
     value: "cinematicPaperRelief",
-    label: "Relieve dramatico",
+    label: "Paper cut dramatico",
   },
   {
     value: "culturalTextilePaper",

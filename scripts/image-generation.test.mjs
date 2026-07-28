@@ -45,24 +45,25 @@ test("uses gpt-image-2 and GPT image parameters for production generation", () =
   assert.equal(params.n, 1);
 });
 
-test("approved production style defaults to studio paper maquette", () => {
-  assert.equal(APPROVED_IMAGE_STYLE_PROFILE, "studioPaperMaquette");
-  assert.equal(APPROVED_STYLE_PROFILE, "studioPaperMaquette");
+test("approved production style defaults to full paper cut illustration", () => {
+  assert.equal(APPROVED_IMAGE_STYLE_PROFILE, "fullPaperCutIllustration");
+  assert.equal(APPROVED_STYLE_PROFILE, "fullPaperCutIllustration");
 
   const prompt = buildCraftImagePrompt({ entity: mythEntity });
 
-  assert.match(prompt, /Maqueta|maqueta|taller/i);
-  assert.match(prompt, /recortes o volumenes de papel/i);
+  assert.match(prompt, /full paper cut/i);
+  assert.match(prompt, /paper quilling/i);
+  assert.doesNotMatch(prompt, /fotografia de un trabajo real/i);
 });
 
-test("craft prompt asks for photographed handmade paper instead of flat illustration", () => {
+test("craft prompt asks for a complete paper cut illustration, not a photographed object", () => {
   const prompt = buildCraftImagePrompt({
     entity: mythEntity,
     orientation: "horizontal",
   });
 
-  assert.match(prompt, /fotografia de un trabajo real de papel artesanal/i);
-  assert.match(prompt, /no ilustracion digital plana/i);
+  assert.match(prompt, /ilustracion digital completa/i);
+  assert.match(prompt, /no fotografia ni reproduccion de un objeto fisico/i);
   assert.match(prompt, /composicion frontal/i);
   assert.match(prompt, /de borde a borde/i);
   assert.match(prompt, /sin texto/i);
@@ -70,13 +71,13 @@ test("craft prompt asks for photographed handmade paper instead of flat illustra
   assert.match(prompt, /Muiscas/);
 });
 
-test("craft prompt reduces overloaded source prompts into one primary tableau", () => {
+test("craft prompt reduces overloaded source prompts into one primary composition", () => {
   const prompt = buildCraftImagePrompt({
     entity: mythEntity,
     orientation: "horizontal",
   });
 
-  assert.match(prompt, /un solo tableau artesanal/i);
+  assert.match(prompt, /una sola composicion ilustrada/i);
   assert.match(prompt, /escena principal/i);
   assert.match(prompt, /simbolos culturales/i);
 });
@@ -111,16 +112,29 @@ Aqui viene un relato largo que no debe entrar al prompt final.`;
   assert.match(softened, /Presencia humana sugerida/i);
 });
 
-test("studio maquette profile asks for calmer paper-diorama figures", () => {
+test("legacy maquette profile is normalized to paper cut illustration", () => {
   const prompt = buildCraftImagePrompt({
     entity: mythEntity,
     orientation: "horizontal",
     styleProfile: "studioPaperMaquette",
   });
 
-  assert.match(prompt, /recortes o volumenes de papel/i);
+  assert.match(prompt, /full paper cut ilustrado/i);
   assert.match(prompt, /evitar drama facial hiperrealista/i);
   assert.match(prompt, /no como instruccion de ilustracion literal/i);
+  assert.doesNotMatch(prompt, /fotografiada frontalmente/i);
+});
+
+test("legacy physical-maquette wording is removed before generation", () => {
+  const softened = softenLegacyImagePrompt(
+    "Maqueta física de papel fotografiada de frente, papel físico, fibras reales y luz de estudio.",
+  );
+
+  assert.match(softened, /ilustración full paper cut/i);
+  assert.doesNotMatch(
+    softened,
+    /fotografiada|papel físico|fibras reales|luz de estudio/i,
+  );
 });
 
 test("presets keep horizontal, banner and vertical dimensions valid for gpt-image-2", () => {

@@ -444,7 +444,7 @@ async function saveImageUrl(client, entity, imageUrl) {
 
   const basePrompt =
     entity.base_prompt ||
-    "Imagen vertical editorial de mito colombiano como fotografia frontal de una pieza fisica de papel artesanal.";
+    "Ilustración vertical editorial full paper cut y paper quilling de un mito colombiano; no fotografía, maqueta física ni diorama.";
   const customPrompt = entity.custom_prompt || entity.prompt;
 
   if (entity.vertical_image_id) {

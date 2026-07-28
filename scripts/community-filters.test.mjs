@@ -1,0 +1,28 @@
+import assert from "node:assert/strict";
+import test from "node:test";
+
+import {
+  filterAllowedCommunities,
+  MIN_COMMUNITY_MYTHS,
+} from "../src/lib/communityFilters.js";
+
+test("conserva la landing Emberá revisada aunque el corpus genérico quede pequeño", () => {
+  const allowed = filterAllowedCommunities([
+    { name: "Embera", slug: "embera", myth_count: 1 },
+    { name: "Vacía", slug: "vacia", myth_count: 0 },
+    { name: "Pequeña", slug: "pequena", myth_count: MIN_COMMUNITY_MYTHS - 1 },
+    { name: "Amplia", slug: "amplia", myth_count: MIN_COMMUNITY_MYTHS },
+  ]);
+
+  assert.deepEqual(
+    allowed.map(({ slug }) => slug),
+    ["embera", "amplia"],
+  );
+});
+
+test("la excepción Emberá no permite una fila duplicada sin mitos", () => {
+  const allowed = filterAllowedCommunities([
+    { name: "Embera", slug: "embera", myth_count: 0 },
+  ]);
+  assert.deepEqual(allowed, []);
+});

@@ -1,4 +1,5 @@
 export const MIN_COMMUNITY_MYTHS = 6;
+const REVIEWED_SMALL_COMMUNITIES = new Set(["embera"]);
 const COMMUNITY_EXCLUDED_TOKENS = new Set([
   "mestizo",
   "mestiza",
@@ -36,7 +37,10 @@ function hasExcludedToken(value) {
 export function filterAllowedCommunities(communities = [], minMyths = MIN_COMMUNITY_MYTHS) {
   return communities.filter((community) => {
     const mythCount = Number(community?.myth_count || 0);
-    if (mythCount < minMyths) {
+    const slug = normalizeValue(community?.slug);
+    const isReviewedSmallCommunity =
+      mythCount > 0 && REVIEWED_SMALL_COMMUNITIES.has(slug);
+    if (mythCount < minMyths && !isReviewedSmallCommunity) {
       return false;
     }
     return !hasExcludedToken(community?.slug) && !hasExcludedToken(community?.name);

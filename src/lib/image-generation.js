@@ -8,34 +8,42 @@ export const IMAGE_GENERATION_FORMAT =
   process.env.IMAGE_GENERATION_FORMAT || "jpeg";
 
 export const IMAGE_STYLE_PROFILES = {
-  editorialPaperPhoto: {
-    label: "Fotografia editorial de papel",
+  fullPaperCutIllustration: {
+    label: "Ilustración full paper cut",
     lines: [
-      "Lenguaje base: pieza artesanal fotografiada como obra editorial cultural, sobria, tactil y precisa.",
-      "Balancear mito, territorio y materialidad; la imagen debe parecer hecha por manos humanas antes que por software.",
+      "Ilustración editorial completa en paper cut y paper quilling: siluetas recortadas, capas limpias, bordes de papel visibles, tiras enrolladas selectivas y profundidad gráfica.",
+      "La materialidad del papel pertenece al lenguaje de la ilustración; no mostrar mesa, marco, pegamento, pedestal, taller, maqueta física ni iluminación fotográfica de estudio.",
+      "Acabado adulto, preciso y culturalmente situado; evitar fotorrealismo, diorama, render plástico, collage escolar y caricatura infantil.",
+    ],
+  },
+  editorialPaperPhoto: {
+    label: "Compatibilidad: ilustración paper cut editorial",
+    lines: [
+      "Ilustración editorial full paper cut, sobria, táctil y precisa, con profundidad gráfica por capas.",
+      "Balancear mito, territorio y materialidad sin convertir la escena en una fotografía de una pieza física.",
     ],
   },
   documentaryPaperArtifact: {
-    label: "Artefacto documental",
+    label: "Ilustración paper cut documental",
     lines: [
-      "Tratamiento mas documental: pieza fisica sobre mesa de estudio o fondo material, con imperfecciones finas, fibras visibles y huella humana.",
-      "Menos fantasia, menos brillo, mas cercania a archivo cultural, maqueta artesanal y objeto fotografiado.",
+      "Tratamiento ilustrado más documental: composición paper cut serena, detalles territoriales verificables y huella gráfica artesanal.",
+      "Menos fantasía y brillo; más cercanía a archivo cultural, sin mesa de estudio, artefacto físico ni objeto fotografiado.",
     ],
   },
   studioPaperMaquette: {
-    label: "Maqueta fisica de estudio",
+    label: "Compatibilidad: ilustración full paper cut",
     lines: [
-      "Tratamiento de taller: maqueta artesanal fotografiada frontalmente sobre fondo mate, con cortes visibles, pegante sutil, bordes imperfectos y capas de papel reconocibles.",
-      "Menos epica, menos pintura, menos fantasia; mas objeto fisico, mesa de trabajo, relieve bajo, sombras reales y factura humana.",
-      "La escena debe parecer fotografiada despues de construirla con cartulinas, fibras, papeles texturados y pequenas piezas recortadas, no render ni ilustracion pulida.",
-      "Personajes como recortes o volumenes de papel integrados al diorama, con gesto sobrio; evitar drama facial hiperrealista, mascaras sobredimensionadas, violencia explicita y fantasia teatral.",
+      "Tratamiento full paper cut ilustrado: recortes, bordes, capas y tiras de quilling claramente visibles dentro de la imagen, no fuera de ella.",
+      "Menos épica y fantasía genérica; más composición gráfica, territorio y textura de papel ilustrada.",
+      "La escena debe leerse como ilustración acabada, nunca como maqueta física, diorama, mesa de trabajo, fotografía ni render plástico.",
+      "Personajes estilizados como formas recortadas dentro de la composición; evitar drama facial hiperrealista, máscaras sobredimensionadas, violencia explícita y fantasía teatral.",
     ],
   },
   cinematicPaperRelief: {
-    label: "Relieve dramatico",
+    label: "Ilustración paper cut dramática",
     lines: [
-      "Tratamiento mas dramatico: contraste fotografico controlado, sombras profundas de papel y una escena central impactante.",
-      "Mantener camara frontal y volumen bajo; no convertirlo en render cinematografico ni maqueta 3D.",
+      "Tratamiento ilustrado más dramático: contraste cromático controlado, sombras entre capas de papel y una escena central impactante.",
+      "Mantener lectura gráfica frontal; no convertirlo en render cinematográfico, fotografía ni maqueta 3D.",
     ],
   },
   culturalTextilePaper: {
@@ -48,7 +56,7 @@ export const IMAGE_STYLE_PROFILES = {
 };
 
 export const APPROVED_IMAGE_STYLE_PROFILE =
-  process.env.IMAGE_STYLE_PROFILE || "studioPaperMaquette";
+  process.env.IMAGE_STYLE_PROFILE || "fullPaperCutIllustration";
 
 export const IMAGE_PRESETS = {
   horizontal: {
@@ -139,6 +147,22 @@ export function softenLegacyImagePrompt(value) {
     .replace(/\bEscena principal:\s*/gi, "Motivo central: ")
     .replace(/\bLa escena principal muestra\b/gi, "Motivo central sugerido:")
     .replace(/\bPersonaje:\s*/gi, "Presencia humana sugerida: ")
+    .replace(
+      /\bmaqueta\s+f[ií]sica\s+de\s+papel\s+fotografiada\s+de\s+frente\b/gi,
+      "ilustración full paper cut en composición frontal",
+    )
+    .replace(
+      /\b(?:fotograf[ií]a|foto)\s+(?:editorial\s+)?(?:frontal\s+)?(?:de\s+)?(?:una\s+)?(?:maqueta|pieza|trabajo|objeto)[^.]*\.?/gi,
+      "Ilustración editorial full paper cut. ",
+    )
+    .replace(/\bmaqueta\s+(?:artesanal|f[ií]sica)\b/gi, "ilustración paper cut")
+    .replace(/\bpieza\s+f[ií]sica\b/gi, "escena ilustrada")
+    .replace(/\bpapel\s+f[ií]sico\b/gi, "capas ilustradas de papel")
+    .replace(/\b(?:fibras|hilos)\s+reales\b/gi, "texturas ilustradas de fibras")
+    .replace(/\bmicro-?sombras\s+reales\b/gi, "sombras suaves entre capas")
+    .replace(/\bluz\s+de\s+estudio\b/gi, "luz integrada en la ilustración")
+    .replace(/\bfotografiad[oa]\s+(?:en\s+estudio|de\s+frente)\b/gi, "")
+    .replace(/\bno\s+una?\s+ilustraci[oó]n\s+digital(?:\s+plana)?\b/gi, "")
     .replace(/\bdeath\b/gi, "mystery")
     .replace(/\bdeadly\b/gi, "haunting")
     .replace(/\bdoomed?\b/gi, "lost to legend")
@@ -182,7 +206,7 @@ function getStyleProfileLines(styleProfile) {
   const profile =
     IMAGE_STYLE_PROFILES[styleProfile] ||
     IMAGE_STYLE_PROFILES[APPROVED_IMAGE_STYLE_PROFILE] ||
-    IMAGE_STYLE_PROFILES.studioPaperMaquette;
+    IMAGE_STYLE_PROFILES.fullPaperCutIllustration;
   return profile.lines;
 }
 
@@ -203,10 +227,10 @@ export function buildCraftImagePrompt({
     `Direccion de arte para una imagen editorial de ${getEntityLabel(entity)} colombiano.`,
     "",
     "Tecnica central:",
-    "- Fotografia de un trabajo real de papel artesanal, no ilustracion digital plana.",
-    "- Paper cut, paper relief y paper quilling hechos a mano: capas fisicas, bordes de papel visibles, fibras, micro-sombras, dobleces finos, cortes precisos y volumen bajo.",
-    "- Debe sentirse como una pieza construida manualmente por artistas, fotografiada en estudio con luz suave y controlada.",
-    "- Profundidad real por capas de papel, pero sin verse como render 3D, sin plastico, sin glossy CGI, sin animacion, sin camara inclinada y sin figuras flotando en perspectivas raras.",
+    "- Ilustracion digital completa en estilo full paper cut y paper quilling, no fotografia ni reproduccion de un objeto fisico.",
+    "- Capas graficas recortadas, bordes de papel visibles, tiras enrolladas selectivas, fibras ilustradas, dobleces finos, cortes precisos y sombras suaves entre niveles.",
+    "- La escena debe sentirse concebida como ilustracion editorial de papel de borde a borde, no como maqueta, diorama, collage sobre una mesa o pieza fotografiada.",
+    "- Profundidad por capas dentro de la ilustracion, sin fotorrealismo, plastico, glossy CGI, render 3D, marco, pedestal, camara de estudio ni perspectivas raras.",
     `- ${getOrientationLine(orientation)}`,
     "- Sin texto, sin letras, sin logos, sin marcas de agua, sin marco, sin borde decorativo.",
     "",
@@ -228,11 +252,11 @@ export function buildCraftImagePrompt({
       : null,
     "",
     "Composicion deseada:",
-    "- Un solo tableau artesanal, limpio y poderoso, con jerarquia clara entre escena principal, geografia y simbolos culturales.",
+    "- Una sola composicion ilustrada, limpia y poderosa, con jerarquia clara entre escena principal, geografia y simbolos culturales.",
     "- Priorizar geografia, objetos, fauna/flora, arquitectura y simbolos del territorio sobre retratos genericos.",
     "- Si hay personajes, deben ser respetuosos, estilizados, secundarios a la escena material y sin disfraces anacronicos.",
-    "- Iluminacion fotografica lateral suave, sombras naturales de papel, textura tactil, acabado editorial de revista cultural.",
-    "- Evitar aspecto infantil, caricatura, fantasy generico, pintura digital, poster plano, render 3D, plastico, neones y saturacion excesiva.",
+    "- Luz ilustrada suave, sombras entre recortes, textura tactil de papel y acabado editorial de revista cultural.",
+    "- Evitar aspecto infantil, caricatura, fantasy generico, fotorrealismo, fotografia de maqueta, poster plano, render 3D, plastico, neones y saturacion excesiva.",
   ]
     .filter(Boolean)
     .join("\n");

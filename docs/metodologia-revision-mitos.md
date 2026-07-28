@@ -1,6 +1,6 @@
 # Metodología interna de revisión y enriquecimiento de mitos
 
-**Versión 1.2 · 27 de julio de 2026**
+**Versión 1.3 · 27 de julio de 2026**
 
 Este es el documento canónico del proyecto para investigar, revisar,
 reescribir, clasificar y publicar cada mito del archivo. Define el trabajo
@@ -233,10 +233,14 @@ como 2:3, se muestra completa sin recortarla. La página nunca reutiliza la
 horizontal para rellenar los espacios interiores.
 
 Si falta, es genérica o contradice el relato, se crea dentro del sistema visual
-aprobado de maqueta artesanal y papel trabajado. El prompt se deriva de la
-matriz de evidencia: paisaje real, acción central, personajes y materiales
-justificables. Evita coronas, oro ornamental, símbolos mesoamericanos,
-vestuarios inventados y exotización.
+aprobado de **ilustración full paper cut con recursos de paper quilling**. Es una
+ilustración completa construida visualmente con recortes, capas, bordes y tiras
+enrolladas de papel; no una fotografía de una maqueta, un diorama, una pieza
+física ni una mesa de estudio. Puede tener profundidad y sombras suaves entre
+capas, pero no debe parecer un objeto fotografiado, un render plástico o una
+escena fotorrealista. El prompt se deriva de la matriz de evidencia: paisaje
+real, acción central, personajes y materiales justificables. Evita coronas, oro
+ornamental, símbolos mesoamericanos, vestuarios inventados y exotización.
 
 Antes de generar se revisan las parejas existentes en hojas de contacto y se
 regeneran únicamente los mitos y orientaciones aprobados. Después se comprueban
