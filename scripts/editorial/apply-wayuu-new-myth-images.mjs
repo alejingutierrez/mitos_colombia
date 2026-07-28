@@ -260,7 +260,7 @@ async function writeDatabase(client, before, uploaded) {
 
       const currentVertical = verticalByMythId.get(row.id);
       const basePrompt =
-        "Segunda escena vertical 9:16 de un mito Wayuu como fotografía frontal de una maqueta física de papel artesanal.";
+        "Segunda escena vertical 9:16 de un mito Wayuu como ilustración editorial completa full paper cut y paper quilling; sin fotografía, maqueta física, diorama ni render 3D.";
       if (currentVertical) {
         await client.query(
           `

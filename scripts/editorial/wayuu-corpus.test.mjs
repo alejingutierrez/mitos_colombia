@@ -145,6 +145,20 @@ test("los 27 mitos tienen portada horizontal y segunda escena vertical", async (
       /pareja nueva.*horizontal.*vertical/is,
       slug,
     );
+    for (const prompt of [
+      data.image_prompt_horizontal,
+      data.image_prompt_vertical,
+    ]) {
+      assert.match(prompt, /ilustración editorial completa full paper cut/i, slug);
+      assert.match(prompt, /paper quilling/i, slug);
+      assert.match(prompt, /nunca fotografía, maqueta física, diorama/i, slug);
+      assert.doesNotMatch(prompt, /StudioPaperMaquette/i, slug);
+      assert.doesNotMatch(
+        prompt,
+        /maqueta física de papel fotografiada/i,
+        slug,
+      );
+    }
   }
 });
 

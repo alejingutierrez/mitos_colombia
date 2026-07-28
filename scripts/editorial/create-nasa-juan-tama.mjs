@@ -318,7 +318,7 @@ async function insertJuanTama(client, taxonomy, tagIds, uploaded) {
       mythId,
       juanTama.title,
       juanTama.slug,
-      "Segunda escena vertical 9:16 de un mito Nasa como fotografía frontal de una maqueta física de papel artesanal.",
+      "Segunda escena vertical 9:16 de un mito Nasa como ilustración editorial completa full paper cut y paper quilling; sin fotografía, maqueta física, diorama ni render 3D.",
       juanTama.image_prompt_vertical,
       vertical.url,
     ],

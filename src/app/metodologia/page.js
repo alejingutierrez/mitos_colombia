@@ -378,9 +378,11 @@ const sections = [
         <p>
           Antes de gastar en reemplazos auditamos las parejas existentes en
           hojas de contacto. Si una imagen debe cambiar, generamos únicamente el
-          mito y la orientación aprobados dentro del sistema visual de maqueta
-          artesanal y papel trabajado. Revisamos diferencia entre escenas,
-          móvil, peso, formato, texto alternativo y Open Graph.
+          mito y la orientación aprobados como ilustración completa full paper
+          cut y paper quilling. Nunca debe parecer una fotografía de una
+          maqueta, un diorama, un objeto físico ni un render 3D. Revisamos
+          diferencia entre escenas, móvil, peso, formato, texto alternativo y
+          Open Graph.
         </p>
         <p>
           La imagen debe respetar paisaje, escala, materiales y acción. No

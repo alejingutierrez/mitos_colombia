@@ -115,6 +115,7 @@ async function run() {
               e.key_sources_json, e.sources_json, e.research_notes,
               vertical.vertical_count,
               vertical.vertical_image_url,
+              vertical.vertical_base_prompt,
               vertical.vertical_custom_prompt,
               s.meta_title, s.meta_description, s.meta_keywords,
               s.og_title, s.og_description,
@@ -124,6 +125,7 @@ async function run() {
        LEFT JOIN LATERAL (
          SELECT COUNT(*)::int AS vertical_count,
                 MAX(vi.image_url) AS vertical_image_url,
+                MAX(vi.base_prompt) AS vertical_base_prompt,
                 MAX(vi.custom_prompt) AS vertical_custom_prompt
          FROM vertical_images vi
          WHERE vi.entity_type = 'myth' AND vi.entity_id = m.id
@@ -246,6 +248,13 @@ async function run() {
         mismatches,
       );
       if (newWayuuSlugs.includes(slug)) {
+        compare(
+          slug,
+          "vertical_base_prompt",
+          row.vertical_base_prompt,
+          "Segunda escena vertical 9:16 de un mito Wayuu como ilustración editorial completa full paper cut y paper quilling; sin fotografía, maqueta física, diorama ni render 3D.",
+          mismatches,
+        );
         compare(
           slug,
           "vertical_custom_prompt",

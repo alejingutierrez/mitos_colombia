@@ -57,6 +57,8 @@ test("la página pública expone las reglas críticas", async () => {
   assert.match(page, /no regenera imágenes por defecto/i);
   assert.match(page, /horizontal 16:9 es la portada/i);
   assert.match(page, /vertical\s+es una segunda escena\s+narrativa/i);
+  assert.match(page, /ilustración completa full paper\s+cut/i);
+  assert.match(page, /Nunca debe parecer una fotografía de una\s+maqueta/i);
   assert.match(page, /una sola frase filosófica de 8 a\s+22 palabras/i);
   assert.match(page, /Cómo leemos las crónicas coloniales/i);
   assert.match(page, /Comparar sin borrar las diferencias/i);

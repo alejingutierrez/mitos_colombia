@@ -59,7 +59,7 @@ const roundId = String(getFlag("--round-id", `round-${Date.now()}`));
 const note = String(
   getFlag(
     "--note",
-    "Taller local: fotografia frontal de maqueta artesanal en papel, mas fisica y menos ilustrativa."
+    "Taller local: ilustración completa full paper cut y paper quilling, gráfica, territorial y sin apariencia de maqueta fotografiada."
   )
 );
 const ids = String(getFlag("--ids", "") || "")

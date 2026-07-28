@@ -65,10 +65,10 @@ function checkAuth(request) {
 
 // Prompts base
 const BASE_PROMPTS = {
-  myth: "Imagen vertical editorial de mito colombiano como fotografia frontal de una pieza fisica de papel artesanal, con geografia, simbolos culturales y escena principal clara. Sin texto, logos, desnudez ni violencia grafica.",
-  community: "Imagen vertical editorial sobre una comunidad o territorio colombiano como trabajo real de paper cut y paper relief fotografiado, con elementos culturales respetuosos y naturaleza local. Sin texto.",
-  category: "Imagen vertical editorial de categoria tematica de mitologia colombiana como tableau artesanal de papel, simbolico, tactil y culturalmente situado. Sin texto.",
-  region: "Imagen vertical editorial de region colombiana como paisaje fisico construido en capas de papel, con biodiversidad, geografia y cultura visual local. Sin texto."
+  myth: "Ilustracion vertical editorial completa full paper cut y paper quilling de un mito colombiano, con geografia, simbolos culturales y escena principal clara. Nunca fotografia, maqueta fisica, diorama ni render 3D. Sin texto, logos, desnudez ni violencia grafica.",
+  community: "Ilustracion vertical editorial completa full paper cut y paper quilling sobre una comunidad o territorio colombiano, con elementos culturales respetuosos y naturaleza local. Nunca fotografia, maqueta fisica, diorama ni render 3D. Sin texto.",
+  category: "Ilustracion vertical editorial completa full paper cut y paper quilling de una categoria tematica de mitologia colombiana, simbolica y culturalmente situada. Nunca fotografia, maqueta fisica, diorama ni render 3D. Sin texto.",
+  region: "Ilustracion vertical editorial completa full paper cut y paper quilling de una region colombiana, con biodiversidad, geografia y cultura visual local. Nunca fotografia, maqueta fisica, diorama ni render 3D. Sin texto."
 };
 
 // Generate vertical image

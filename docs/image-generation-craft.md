@@ -2,7 +2,12 @@
 
 ## Direccion
 
-El generador usa `gpt-image-2` y prompts de fotografia frontal de piezas reales de papel artesanal. La intencion es evitar ilustracion digital plana, render 3D, animacion o encuadres oblicuos. Cada imagen debe sentirse como un tableau fisico de paper cut, paper relief y paper quilling, fotografiado en estudio y lleno de borde a borde.
+El generador usa `gpt-image-2` y prompts de **ilustración completa full paper cut
+y paper quilling**. La imagen se construye visualmente con siluetas recortadas,
+capas limpias, bordes de papel visibles, filigrana selectiva y sombras suaves
+entre planos. Debe llenar el encuadre de borde a borde y nunca parecer una
+fotografía, una maqueta física, un diorama, un objeto sobre una mesa ni un
+render 3D.
 
 ## Helper compartido
 
@@ -20,9 +25,10 @@ El helper construye prompts con region, comunidad, excerpt y prompt original cua
 
 El helper tambien soporta perfiles de ronda:
 
-- `editorialPaperPhoto`: base editorial de papel fotografiado.
-- `documentaryPaperArtifact`: objeto fisico mas documental, con huella manual.
-- `cinematicPaperRelief`: escena mas dramatica, con sombras de papel controladas.
+- `fullPaperCutIllustration`: dirección aprobada por defecto.
+- `editorialPaperPhoto`: alias heredado que se normaliza a ilustración paper cut.
+- `documentaryPaperArtifact`: variante documental ilustrada, sin objeto físico.
+- `cinematicPaperRelief`: escena ilustrada más dramática, sin render ni fotografía.
 - `culturalTextilePaper`: mas enfasis en fibras, textiles y simbolos locales.
 
 ## Rondas visuales locales
