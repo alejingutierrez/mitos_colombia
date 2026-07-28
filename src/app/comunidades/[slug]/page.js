@@ -28,6 +28,7 @@ import { makaguanCommunityPage } from "../../../../editorial/makaguan/community.
 import { kuivaCommunityPage } from "../../../../editorial/kuiva/community.mjs";
 import { sikuaniCommunityPage } from "../../../../editorial/sikuani/community.mjs";
 import { andoqueCommunityPage } from "../../../../editorial/andoque/community.mjs";
+import { barasanaCommunityPage } from "../../../../editorial/barasana/community.mjs";
 
 export const runtime = "nodejs";
 export const revalidate = 300;
@@ -171,10 +172,7 @@ const COMMUNITY_INFO = {
     ...andoqueCommunityPage,
   },
   "barasana": {
-    title: "Barasana",
-    description: "Pueblo del Vaupés con mitos sobre instrumentos sagrados y ceremonias de yurupary.",
-    longDescription: "Los Barasana habitan la región del Vaupés en la Amazonía colombiana. Su mitología está fuertemente vinculada a ceremonias de yurupary (instrumentos sagrados) y prácticas rituales masculinas. Los mitos barasana incluyen relatos sobre el origen de estos instrumentos sagrados, la organización social basada en clanes, y transformaciones míticas que establecieron el orden cultural. Su tradición oral preserva conocimientos sobre ceremonias de iniciación, uso de plantas sagradas y la estructura del cosmos.",
-    imagePrompt: "Barasana sacred ceremony, yurupary instruments, maloca rituals, Vaupés mythology"
+    ...barasanaCommunityPage,
   },
   "sikuani": {
     ...sikuaniCommunityPage,
