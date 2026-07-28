@@ -146,4 +146,7 @@ test("la ruta pública consume el perfil editorial U’wa", () => {
   );
   assert.match(route, /import \{ uwaCommunityPage \}/);
   assert.match(route, /"u-wa": \{\s+\.\.\.uwaCommunityPage,/);
+  assert.equal((route.match(/"u-wa":\s*\{/g) || []).length, 1);
+  assert.equal((route.match(/\.\.\.uwaCommunityPage/g) || []).length, 1);
+  assert.doesNotMatch(route, /sangre de la tierra/i);
 });

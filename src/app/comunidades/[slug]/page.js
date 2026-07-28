@@ -17,6 +17,7 @@ import { pananCommunityPage } from "../../../../editorial/panan/community.mjs";
 import { misakCommunityPage } from "../../../../editorial/misak/community.mjs";
 import { bariCommunityPage } from "../../../../editorial/bari/community.mjs";
 import { uwaCommunityPage } from "../../../../editorial/uwa/community.mjs";
+import { ansermasCommunityPage } from "../../../../editorial/ansermas/community.mjs";
 
 export const runtime = "nodejs";
 export const revalidate = 300;
@@ -95,6 +96,9 @@ const COMMUNITY_INFO = {
   },
   "u-wa": {
     ...uwaCommunityPage,
+  },
+  "ansermas": {
+    ...ansermasCommunityPage,
   },
   "tanimuka": {
     title: "Tanimuka",
@@ -182,12 +186,6 @@ const COMMUNITY_INFO = {
     description: "Pueblo nómada amazónico con tradiciones sobre movilidad y conocimiento de la selva.",
     longDescription: "Los Nukak son un pueblo de tradición nómada que habita la región amazónica entre el Guaviare y el Vaupés. Su mitología refleja su estilo de vida móvil y profundo conocimiento de la selva. Los mitos nukak incluyen relatos sobre los caminos ancestrales, la relación con espíritus de animales y plantas, y prácticas de caza y recolección sostenibles. Su tradición oral preserva un extraordinario conocimiento ecológico sobre la selva amazónica.",
     imagePrompt: "Nukak nomadic life, Amazon forest paths, hunting spirits, traditional mobility"
-  },
-  "u-wa": {
-    title: "U'wa",
-    description: "Pueblo de la Sierra Nevada del Cocuy con profunda conexión espiritual con el petróleo y el equilibrio terrestre.",
-    longDescription: "Los U'wa habitan la Sierra Nevada del Cocuy en la región andina. Su mitología enfatiza la profunda responsabilidad de mantener el equilibrio de la tierra. Los U'wa consideran el petróleo como la 'sangre de la tierra' y tienen mitos que advierten sobre las consecuencias de su extracción. Sus relatos incluyen enseñanzas sobre el origen del mundo, la importancia de las lagunas sagradas en los páramos, y el rol de los humanos como cuidadores del planeta.",
-    imagePrompt: "U'wa Sierra Nevada del Cocuy, sacred petroleum, earth balance, páramo spirituality"
   },
   "kuiva": {
     title: "Kuiva",

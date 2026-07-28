@@ -92,6 +92,8 @@ const REGION_CRAFT = {
     "selva humeda tropical del Catatumbo, piedemonte de la Serrania del Perija, rios caudalosos, bejucos, dosel denso y bohios; sin paramo, frailejones ni geometria muisca",
   "Territorio U'wa":
     "Sierra Nevada del Cocuy, lagunas altas, bosque nublado, piedemonte, rios, caminos entre pisos termicos y casas ceremoniales; sin geometria muisca ni postal generica de paramo",
+  "Territorio Anserma":
+    "Guacuma y montanas de Quinchia: cerros Karamba o Batero y Opirama, rio Mapura, rocas con huellas, cascadas, maiz, chontaduro y niebla; sin paramo, frailejones, piramides ni geometria muisca",
   Caribe:
     "luz de luna o sol costero, caminos de arena, cardones, salinas, mar lejano, arquitectura costera y patrones textiles caribenos o Wayuu cuando aplique",
   Amazonas:
@@ -127,6 +129,8 @@ const COMMUNITY_CRAFT = {
     "lenguaje visual Bari: Ishtana y selva del Catatumbo, bohio comunal, rios, bejucos, canastos y fauna local; sin tocados panindigenas, coronas, halos, cosmogramas ni ornamentos inventados",
   "U'wa":
     "lenguaje visual Uwa: territorio vertical de la Sierra Nevada del Cocuy, lagunas, rios, bosque y mochilas de fique; animales, caracola, tambor o corona ceremonial solo cuando la escena los documente, sin tocados panindigenas ni ornamentos inventados",
+  Ansermas:
+    "lenguaje visual historicamente cauto para Guacuma: cerros, rio Mapura, cultivos, cascadas y huellas en roca; sin inventar vestuario o regalia, sin tocados panindigenas ni simbolos aztecas, mayas o muiscas",
   Tumaco:
     "lenguaje visual del Pacifico narinense: manglar, madera, marea, canoas, lluvia y brillo marino contenido",
 };
