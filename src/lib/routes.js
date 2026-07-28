@@ -132,7 +132,7 @@ export const ROUTES = [
         "La niña que se volvió serpiente",
         "Yepá castiaga a los animales",
         "Aribamias",
-        "Tasime (El Incesto)",
+        "Tasime: el tigre y el incesto",
         "La vieja colmillona",
       ],
     },

@@ -21,6 +21,7 @@ import { ansermasCommunityPage } from "../../../../editorial/ansermas/community.
 import { cuycuyesCommunityPage } from "../../../../editorial/cuycuyes/community.mjs";
 import { pirsaCommunityPage } from "../../../../editorial/pirsa/community.mjs";
 import { quimbayaCommunityPage } from "../../../../editorial/quimbaya/community.mjs";
+import { umbraCommunityPage } from "../../../../editorial/umbra/community.mjs";
 
 export const runtime = "nodejs";
 export const revalidate = 300;
@@ -111,6 +112,9 @@ const COMMUNITY_INFO = {
   },
   "quimbaya": {
     ...quimbayaCommunityPage,
+  },
+  "umbra": {
+    ...umbraCommunityPage,
   },
   "tanimuka": {
     title: "Tanimuka",

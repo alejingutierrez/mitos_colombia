@@ -98,6 +98,8 @@ const REGION_CRAFT = {
     "montanas entre Sonsón, Aguadas y Pacora, cañon del rio Cauca, casas redondas de paja, caminos de piedra, cascadas, flores pequenas, vasijas de barro y niebla; sin paramo, frailejones, piramides ni geometria muisca",
   "Cauca Medio Quimbaya":
     "valles y laderas del Cauca medio, guaduales, casas de hojas de cana, fuentes salobres, rios, caminos hacia los nevados, tambores y plazas; sin piramides, palacios, estetica azteca, maya o muisca",
+  "Territorio Umbra":
+    "Guacuma y Quinchia: cerro Batero, montanas con niebla, bosque, quebradas, rio Cauca, caminos discretos, sal y oro como oficios; sin paramo, frailejones, piramides ni geometria muisca",
   Caribe:
     "luz de luna o sol costero, caminos de arena, cardones, salinas, mar lejano, arquitectura costera y patrones textiles caribenos o Wayuu cuando aplique",
   Amazonas:
@@ -141,6 +143,8 @@ const COMMUNITY_CRAFT = {
     "lenguaje visual historicamente cauto para Pirsa o Pirza: montanas del occidente de Caldas, caminos hacia Anserma, casas de paja, aves auras y una iglesia humilde; sin demonios literales, Diablo del Carnaval, regalia inventada, tocados panindigenas ni simbolos aztecas, mayas o muiscas",
   Quimbaya:
     "lenguaje visual historicamente cauto para la provincia Quimbaya del siglo XVI y el Cauca medio: guaduales, casas de hojas de cana, caminos, rios, fuentes de sal, plazas, tambores y nevados cuando la escena los documente; sin reducir la identidad al oro, sin regalia inventada, tocados panindigenas, palacios ni simbolos aztecas, mayas o muiscas",
+  Umbra:
+    "lenguaje visual historicamente cauto para Guacuma y Quinchia: cerro Batero, niebla, casas sobrias, caminos, rio Cauca, sal, pigmento bee y lengua protegida solo cuando la escena los documente; sin regalia inventada, tocados panindigenas, palacios ni simbolos aztecas, mayas o muiscas",
   Tumaco:
     "lenguaje visual del Pacifico narinense: manglar, madera, marea, canoas, lluvia y brillo marino contenido",
 };

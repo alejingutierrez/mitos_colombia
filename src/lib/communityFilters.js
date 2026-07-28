@@ -8,6 +8,7 @@ const REVIEWED_SMALL_COMMUNITIES = new Set([
   "cuycuyes",
   "pirsa",
   "quimbaya",
+  "umbra",
 ]);
 const COMMUNITY_EXCLUDED_TOKENS = new Set([
   "mestizo",
