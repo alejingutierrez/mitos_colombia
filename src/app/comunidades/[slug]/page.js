@@ -18,6 +18,7 @@ import { misakCommunityPage } from "../../../../editorial/misak/community.mjs";
 import { bariCommunityPage } from "../../../../editorial/bari/community.mjs";
 import { uwaCommunityPage } from "../../../../editorial/uwa/community.mjs";
 import { ansermasCommunityPage } from "../../../../editorial/ansermas/community.mjs";
+import { cuycuyesCommunityPage } from "../../../../editorial/cuycuyes/community.mjs";
 
 export const runtime = "nodejs";
 export const revalidate = 300;
@@ -99,6 +100,9 @@ const COMMUNITY_INFO = {
   },
   "ansermas": {
     ...ansermasCommunityPage,
+  },
+  "cuycuyes": {
+    ...cuycuyesCommunityPage,
   },
   "tanimuka": {
     title: "Tanimuka",

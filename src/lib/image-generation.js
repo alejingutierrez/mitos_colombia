@@ -94,6 +94,8 @@ const REGION_CRAFT = {
     "Sierra Nevada del Cocuy, lagunas altas, bosque nublado, piedemonte, rios, caminos entre pisos termicos y casas ceremoniales; sin geometria muisca ni postal generica de paramo",
   "Territorio Anserma":
     "Guacuma y montanas de Quinchia: cerros Karamba o Batero y Opirama, rio Mapura, rocas con huellas, cascadas, maiz, chontaduro y niebla; sin paramo, frailejones, piramides ni geometria muisca",
+  "Territorio Cuy-Cuy/Arma":
+    "montanas entre Sonsón, Aguadas y Pacora, cañon del rio Cauca, casas redondas de paja, caminos de piedra, cascadas, flores pequenas, vasijas de barro y niebla; sin paramo, frailejones, piramides ni geometria muisca",
   Caribe:
     "luz de luna o sol costero, caminos de arena, cardones, salinas, mar lejano, arquitectura costera y patrones textiles caribenos o Wayuu cuando aplique",
   Amazonas:
@@ -131,6 +133,8 @@ const COMMUNITY_CRAFT = {
     "lenguaje visual Uwa: territorio vertical de la Sierra Nevada del Cocuy, lagunas, rios, bosque y mochilas de fique; animales, caracola, tambor o corona ceremonial solo cuando la escena los documente, sin tocados panindigenas ni ornamentos inventados",
   Ansermas:
     "lenguaje visual historicamente cauto para Guacuma: cerros, rio Mapura, cultivos, cascadas y huellas en roca; sin inventar vestuario o regalia, sin tocados panindigenas ni simbolos aztecas, mayas o muiscas",
+  Cuycuyes:
+    "lenguaje visual historicamente cauto para Cuy-Cuy o Arma: casas redondas, esteras, vasijas, flores, resinas, caminos y paisaje del norte de Caldas; sin demonios, regalia inventada, tocados panindigenas ni simbolos aztecas, mayas o muiscas",
   Tumaco:
     "lenguaje visual del Pacifico narinense: manglar, madera, marea, canoas, lluvia y brillo marino contenido",
 };
