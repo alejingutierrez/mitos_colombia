@@ -3,6 +3,7 @@ const REVIEWED_SMALL_COMMUNITIES = new Set([
   "embera",
   "wounaan",
   "eperara-siapidara",
+  "awa",
 ]);
 const COMMUNITY_EXCLUDED_TOKENS = new Set([
   "mestizo",
