@@ -24,6 +24,7 @@ import { quimbayaCommunityPage } from "../../../../editorial/quimbaya/community.
 import { umbraCommunityPage } from "../../../../editorial/umbra/community.mjs";
 import { chimilaCommunityPage } from "../../../../editorial/chimila/community.mjs";
 import { koguiCommunityPage } from "../../../../editorial/kogui/community.mjs";
+import { makaguanCommunityPage } from "../../../../editorial/makaguan/community.mjs";
 
 export const runtime = "nodejs";
 export const revalidate = 300;
@@ -138,6 +139,9 @@ const COMMUNITY_INFO = {
   },
   "koguis": {
     ...koguiCommunityPage,
+  },
+  "makawanes": {
+    ...makaguanCommunityPage,
   },
   "nasa": {
     title: "Nasa",
