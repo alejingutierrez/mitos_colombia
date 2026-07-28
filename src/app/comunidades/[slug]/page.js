@@ -13,6 +13,7 @@ import { katioCommunityPage } from "../../../../editorial/katio/community.mjs";
 import { wounaanCommunityPage } from "../../../../editorial/wounaan/community.mjs";
 import { eperaraCommunityPage } from "../../../../editorial/eperara/community.mjs";
 import { awaCommunityPage } from "../../../../editorial/awa/community.mjs";
+import { pananCommunityPage } from "../../../../editorial/panan/community.mjs";
 
 export const runtime = "nodejs";
 export const revalidate = 300;
@@ -81,10 +82,7 @@ const COMMUNITY_INFO = {
     imagePrompt: "Chimila people in Caribbean lowlands, Papá Grande creation myth, sacred arrows marking territory, ancestral gatherings"
   },
   "pananes": {
-    title: "Pananes",
-    description: "Comuneros de Panán, guardianes de tradiciones mestizas sobre lugares sagrados, espíritus de agua y sincretismo cultural.",
-    longDescription: "Los Pananes o comuneros de Panán son habitantes de la región andina que han preservado una rica tradición oral que fusiona elementos indígenas prehispánicos con influencias católicas coloniales, creando un sincretismo cultural único. Su mitología está profundamente conectada con la geografía sagrada de su territorio, incluyendo lugares como el Ojo de Agua, la Laguna de María Panana, y la Chorrera del Duende. Los mitos pananes narran el origen de su estirpe en La Tuta, donde la dualidad entre luz y sombra forjó una comunidad inmortal. El Cucho de Cuaichala representa el sincretismo cultural donde música y danza expresan la evolución espiritual del pueblo. Los relatos sobre el Cualchio y la Olla del Granizo explican fenómenos naturales como la precipitación, mientras que la Laguna de María Panana es venerada como lugar sagrado de encantos y purificación. La tradición oral de Panán preserva historias sobre el duende de la Cangagua, entrelazando misterio y realidad en narrativas que mantienen viva la conexión entre los comuneros y su territorio ancestral.",
-    imagePrompt: "Pananes highland community, sacred lagoons and water springs, Catholic-indigenous syncretism, mystical fog-covered landscapes"
+    ...pananCommunityPage,
   },
   "tanimuka": {
     title: "Tanimuka",
@@ -301,11 +299,14 @@ export default async function CommunityDetailPage({ params }) {
             items={[
               { name: "Inicio", url: `${SITE_URL}/` },
               { name: "Comunidades", url: `${SITE_URL}/comunidades` },
-              { name: community.name, url: `${SITE_URL}/comunidades/${community.slug}` },
+              {
+                name: communityInfo.title || community.name,
+                url: `${SITE_URL}/comunidades/${community.slug}`,
+              },
             ]}
           />
           <CollectionPageJsonLd
-            name={`Mitos de la comunidad ${community.name}`}
+            name={`Mitos de la comunidad ${communityInfo.title || community.name}`}
             description={communityInfo?.description}
             url={`${SITE_URL}/comunidades/${community.slug}`}
             items={collectionItems}
@@ -324,12 +325,14 @@ export default async function CommunityDetailPage({ params }) {
         accent="river"
         breadcrumb={[
           { label: "Comunidades", href: "/comunidades" },
-          { label: community.name },
+          { label: communityInfo.title || community.name },
         ]}
         intro={intro}
         filterable={<FilterableArchive myths={exploreMyths} filters={filters} />}
         mythIndex={allMythLinks}
-        indexTitle={`Todos los mitos de la comunidad ${community.name}`}
+        indexTitle={`Todos los mitos de la comunidad ${
+          communityInfo.title || community.name
+        }`}
       />
     </>
   );
