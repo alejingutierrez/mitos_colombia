@@ -14,6 +14,7 @@ import { wounaanCommunityPage } from "../../../../editorial/wounaan/community.mj
 import { eperaraCommunityPage } from "../../../../editorial/eperara/community.mjs";
 import { awaCommunityPage } from "../../../../editorial/awa/community.mjs";
 import { pananCommunityPage } from "../../../../editorial/panan/community.mjs";
+import { misakCommunityPage } from "../../../../editorial/misak/community.mjs";
 
 export const runtime = "nodejs";
 export const revalidate = 300;
@@ -83,6 +84,9 @@ const COMMUNITY_INFO = {
   },
   "pananes": {
     ...pananCommunityPage,
+  },
+  "misak-guambianos": {
+    ...misakCommunityPage,
   },
   "tanimuka": {
     title: "Tanimuka",
