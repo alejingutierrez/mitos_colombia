@@ -440,11 +440,11 @@ body {
   .atlas-scrim {
     background: linear-gradient(
       to top,
-      rgba(8, 18, 20, 0.96) 0%,
-      rgba(8, 18, 20, 0.93) 30%,
-      rgba(8, 18, 20, 0.86) 55%,
-      rgba(8, 18, 20, 0.66) 72%,
-      rgba(8, 18, 20, 0.3) 88%,
+      rgba(8, 18, 20, 0.88) 0%,
+      rgba(8, 18, 20, 0.78) 28%,
+      rgba(8, 18, 20, 0.56) 52%,
+      rgba(8, 18, 20, 0.28) 72%,
+      rgba(8, 18, 20, 0.07) 88%,
       rgba(8, 18, 20, 0) 100%
     );
   }
@@ -452,10 +452,10 @@ body {
   .atlas-scrim-deep {
     background: linear-gradient(
       to top,
-      rgba(8, 18, 20, 0.95) 0%,
-      rgba(8, 18, 20, 0.9) 28%,
-      rgba(8, 18, 20, 0.72) 48%,
-      rgba(8, 18, 20, 0.34) 70%,
+      rgba(8, 18, 20, 0.9) 0%,
+      rgba(8, 18, 20, 0.78) 28%,
+      rgba(8, 18, 20, 0.54) 48%,
+      rgba(8, 18, 20, 0.24) 70%,
       rgba(8, 18, 20, 0) 100%
     );
   }
@@ -463,12 +463,12 @@ body {
   .atlas-scrim-cover {
     background: linear-gradient(
       to top,
-      rgba(8, 18, 20, 0.95) 0%,
-      rgba(8, 18, 20, 0.92) 32%,
-      rgba(8, 18, 20, 0.85) 55%,
-      rgba(8, 18, 20, 0.62) 72%,
-      rgba(8, 18, 20, 0.3) 88%,
-      rgba(8, 18, 20, 0.16) 100%
+      rgba(8, 18, 20, 0.88) 0%,
+      rgba(8, 18, 20, 0.76) 30%,
+      rgba(8, 18, 20, 0.54) 55%,
+      rgba(8, 18, 20, 0.32) 75%,
+      rgba(8, 18, 20, 0.12) 92%,
+      rgba(8, 18, 20, 0.06) 100%
     );
   }
   @media (min-width: 900px) {
@@ -479,20 +479,40 @@ body {
       background:
         linear-gradient(
           to right,
-          rgba(8, 18, 20, 0.9) 0%,
-          rgba(8, 18, 20, 0.78) 45%,
-          rgba(8, 18, 20, 0.45) 75%,
-          rgba(8, 18, 20, 0.3) 100%
+          rgba(8, 18, 20, 0.8) 0%,
+          rgba(8, 18, 20, 0.58) 42%,
+          rgba(8, 18, 20, 0.22) 72%,
+          rgba(8, 18, 20, 0.08) 100%
         ),
         linear-gradient(
           to top,
-          rgba(8, 18, 20, 0.8) 0%,
-          rgba(8, 18, 20, 0.66) 30%,
-          rgba(8, 18, 20, 0.34) 58%,
-          rgba(8, 18, 20, 0.12) 82%,
-          rgba(8, 18, 20, 0.25) 100%
+          rgba(8, 18, 20, 0.52) 0%,
+          rgba(8, 18, 20, 0.36) 30%,
+          rgba(8, 18, 20, 0.14) 60%,
+          rgba(8, 18, 20, 0.04) 85%,
+          rgba(8, 18, 20, 0.12) 100%
         );
     }
+  }
+
+  /* Texto sobre imagen: halo oscuro pegado al glifo. Sube el contraste justo
+     donde hace falta, así el scrim puede ser mucho más suave y la obra se ve. */
+  .atlas-on-image {
+    text-shadow:
+      0 1px 2px rgba(8, 18, 20, 0.55),
+      0 2px 10px rgba(8, 18, 20, 0.75),
+      0 0 28px rgba(8, 18, 20, 0.5);
+  }
+  /* El texto pequeño es el que se pierde primero (necesita 4,5:1 frente al
+     3:1 de los titulares). Un halo más denso y compacto no se percibe como
+     sombra a 13px pero sube mucho el contraste local. */
+  .atlas-on-image :is(.atlas-kicker, .atlas-title-sm) {
+    text-shadow:
+      0 0 3px rgba(8, 18, 20, 0.95),
+      0 0 3px rgba(8, 18, 20, 0.95),
+      0 1px 4px rgba(8, 18, 20, 0.95),
+      0 0 10px rgba(8, 18, 20, 0.9),
+      0 0 22px rgba(8, 18, 20, 0.75);
   }
 
   /* Carrusel horizontal en móvil: sangra a los bordes de la pantalla y

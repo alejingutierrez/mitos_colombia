@@ -112,12 +112,12 @@ export function OverlayMythCard({
       />
       <div
         className={cn(
-          "absolute inset-x-0 bottom-0 p-5 text-white md:p-7",
+          "atlas-on-image absolute inset-x-0 bottom-0 p-5 text-white md:p-7",
           contentClassName
         )}
       >
         {meta ? (
-          <span className="atlas-kicker block !text-white/90">{meta}</span>
+          <span className="atlas-kicker block !text-white">{meta}</span>
         ) : null}
         <Heading className={cn(titleClass, "mt-2 !text-white")}>
           {myth.title}
@@ -405,15 +405,15 @@ export function TerritoryStrip({ regions = [] }) {
           />
           {/* items-end alinea ambos bloques por su base: la cifra dejó de
               flotar por encima del nombre de la región. */}
-          <div className="absolute inset-x-0 bottom-0 flex items-end justify-between gap-4 p-6 text-white">
+          <div className="atlas-on-image absolute inset-x-0 bottom-0 flex items-end justify-between gap-4 p-6 text-white">
             <span className="min-w-0">
-              <span className="atlas-kicker block !text-white/90">
+              <span className="atlas-kicker block !text-white">
                 Territorio
               </span>
               <h3 className="atlas-title-lg mt-1 !text-white">{region.title}</h3>
             </span>
             {region.count != null ? (
-              <span className="atlas-kicker atlas-figure shrink-0 !text-white/90">
+              <span className="atlas-kicker atlas-figure shrink-0 !text-white">
                 {region.count} mitos
               </span>
             ) : null}

@@ -68,10 +68,10 @@ function CoverSection({ hero, lead }) {
         size="atlas"
         // Más alta en móvil: con 36rem el bloque de texto llegaba al 88% de la
         // sección y el rótulo superior caía donde el scrim ya es débil.
-        className="relative flex min-h-[42rem] flex-col justify-end pb-10 pt-24 md:min-h-[40rem] md:pb-12 md:pt-32 lg:min-h-[44rem]"
+        className="atlas-on-image relative flex min-h-[42rem] flex-col justify-end pb-10 pt-24 md:min-h-[40rem] md:pb-12 md:pt-32 lg:min-h-[44rem]"
       >
         <div className="max-w-3xl">
-          <p className="atlas-kicker !text-white/90">
+          <p className="atlas-kicker !text-white">
             Archivo vivo de la tradición oral
           </p>
           <h1 className="atlas-h1 mt-4 !text-white">
@@ -98,7 +98,7 @@ function CoverSection({ hero, lead }) {
               href={`/mitos/${lead.slug}`}
               className="group shrink-0 text-left md:text-right"
             >
-              <span className="atlas-kicker block !text-white/80">
+              <span className="atlas-kicker block !text-white">
                 Portada de hoy
               </span>
               <span className="atlas-title-sm mt-1 block !text-white transition-colors group-hover:text-ember-400">
@@ -110,7 +110,7 @@ function CoverSection({ hero, lead }) {
                 />
               </span>
               {[lead.region, lead.community].filter(Boolean).length ? (
-                <span className="atlas-kicker mt-1 block !text-white/80">
+                <span className="atlas-kicker mt-1 block !text-white">
                   {[lead.region, lead.community].filter(Boolean).join(" · ")}
                 </span>
               ) : null}
@@ -156,9 +156,9 @@ function RouteFeature({ route, fallbackMyth }) {
       />
       <Container
         size="atlas"
-        className="relative flex min-h-[26rem] flex-col justify-end py-14 text-white md:min-h-[32rem] md:py-20"
+        className="atlas-on-image relative flex min-h-[26rem] flex-col justify-end py-14 text-white md:min-h-[32rem] md:py-20"
       >
-        <span className="atlas-kicker !text-white/90">
+        <span className="atlas-kicker !text-white">
           Historias unidas por un mismo paisaje
         </span>
         <h2 className="atlas-title-xl mt-4 max-w-3xl !text-white">
