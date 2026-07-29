@@ -30,6 +30,7 @@ import { sikuaniCommunityPage } from "../../../../editorial/sikuani/community.mj
 import { andoqueCommunityPage } from "../../../../editorial/andoque/community.mjs";
 import { barasanaCommunityPage } from "../../../../editorial/barasana/community.mjs";
 import { desanaCommunityPage } from "../../../../editorial/desana/community.mjs";
+import { huitotoCommunityPage } from "../../../../editorial/huitoto/community.mjs";
 
 export const runtime = "nodejs";
 export const revalidate = 300;
@@ -134,10 +135,7 @@ const COMMUNITY_INFO = {
     imagePrompt: "Uitoto ceremonial gathering, sacred word and knowledge, Amazon shamanic tradition, maloca"
   },
   "huitotos": {
-    title: "Huitotos",
-    description: "Pueblo amazónico guardián de una rica tradición sobre la creación, la palabra sagrada y los ciclos de renovación.",
-    longDescription: "Los Huitotos son un pueblo indígena de la región amazónica que ha preservado una de las mitologías más complejas y filosóficas de Colombia. Sus relatos cosmogónicos narran cómo Nofïdeño (la Madre) y Uuikï (el Padre) ordenaron el caos primordial y crearon el mundo a través de la palabra sagrada. Los mitos huitotos exploran temas de creación y restauración, transformación espiritual, y el profundo conocimiento sobre plantas sagradas como el tabaco y la yuca. Historias como la de Jirayauma revelan astucia y supervivencia, mientras que los relatos de Jitoma y Fïboi exploran la traición y las consecuencias de romper el equilibrio natural. La tradición oral huitoto enfatiza la importancia de las ceremonias en maloca, el mambeadero como espacio de transmisión de conocimiento, y la relación sagrada entre pensamiento, palabra y creación del cosmos.",
-    imagePrompt: "Huitoto ceremonial maloca, sacred tobacco and yuca, Amazon creation mythology, spiritual renewal"
+    ...huitotoCommunityPage,
   },
   "kogui": {
     ...koguiCommunityPage,
