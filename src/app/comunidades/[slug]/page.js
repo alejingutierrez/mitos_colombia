@@ -31,6 +31,7 @@ import { andoqueCommunityPage } from "../../../../editorial/andoque/community.mj
 import { barasanaCommunityPage } from "../../../../editorial/barasana/community.mjs";
 import { desanaCommunityPage } from "../../../../editorial/desana/community.mjs";
 import { huitotoCommunityPage } from "../../../../editorial/huitoto/community.mjs";
+import { nukakCommunityPage } from "../../../../editorial/nukak/community.mjs";
 
 export const runtime = "nodejs";
 export const revalidate = 300;
@@ -136,6 +137,9 @@ const COMMUNITY_INFO = {
   },
   "huitotos": {
     ...huitotoCommunityPage,
+  },
+  "nukak-maku": {
+    ...nukakCommunityPage,
   },
   "kogui": {
     ...koguiCommunityPage,

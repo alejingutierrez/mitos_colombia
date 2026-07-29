@@ -1,6 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  experimental: {
+    // El prerender consulta Neon para cientos de rutas; una concurrencia alta
+    // puede agotar la memoria de la base durante builds locales y remotos.
+    cpus: 2,
+  },
   async headers() {
     return [
       {
