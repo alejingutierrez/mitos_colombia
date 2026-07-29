@@ -33,6 +33,7 @@ import { desanaCommunityPage } from "../../../../editorial/desana/community.mjs"
 import { huitotoCommunityPage } from "../../../../editorial/huitoto/community.mjs";
 import { nukakCommunityPage } from "../../../../editorial/nukak/community.mjs";
 import { ticunaCommunityPage } from "../../../../editorial/ticuna/community.mjs";
+import { tucanoCommunityPage } from "../../../../editorial/tucano/community.mjs";
 
 export const runtime = "nodejs";
 export const revalidate = 300;
@@ -224,10 +225,7 @@ const COMMUNITY_INFO = {
     imagePrompt: "Yanacona Macizo Colombiano, cultural resistance, mountain spirituality, ancestral recovery"
   },
   "tucano": {
-    title: "Tucano",
-    description: "Pueblo del Vaupés con complejos mitos sobre anacondas ancestrales y organización social.",
-    longDescription: "Los Tucano habitan la región del Vaupés en la Amazonía colombiana y brasileña. Su mitología es extremadamente elaborada e incluye ciclos narrativos sobre anacondas ancestrales que transportaron a los primeros humanos por los ríos amazónicos hasta sus territorios actuales. Los mitos tucano explican el origen de los clanes, la organización social basada en descendencia patrilineal, ceremonias de maloca y el uso de plantas sagradas. Su tradición oral preserva profundos conocimientos sobre territorialidad, parentesco y cosmología amazónica.",
-    imagePrompt: "Tucano anaconda ancestry, Vaupés rivers, maloca ceremonies, clan origins"
+    ...tucanoCommunityPage,
   }
 };
 

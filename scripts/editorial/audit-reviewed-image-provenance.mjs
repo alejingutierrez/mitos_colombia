@@ -10,7 +10,7 @@ const highQualityNonSquareImageCostUsd = 0.165;
 
 const reviewedCommunityIds = [
   26, 28, 36, 40, 16, 25, 49, 47, 46, 45, 39, 23, 24, 14, 15, 17, 20, 21,
-  22, 29, 30, 32, 33, 34, 1, 9, 10, 3, 7, 4,
+  22, 29, 30, 32, 33, 34, 1, 9, 10, 3, 7, 4, 11,
 ];
 
 function connectionString() {
