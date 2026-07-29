@@ -32,6 +32,7 @@ import { barasanaCommunityPage } from "../../../../editorial/barasana/community.
 import { desanaCommunityPage } from "../../../../editorial/desana/community.mjs";
 import { huitotoCommunityPage } from "../../../../editorial/huitoto/community.mjs";
 import { nukakCommunityPage } from "../../../../editorial/nukak/community.mjs";
+import { ticunaCommunityPage } from "../../../../editorial/ticuna/community.mjs";
 
 export const runtime = "nodejs";
 export const revalidate = 300;
@@ -195,11 +196,11 @@ const COMMUNITY_INFO = {
     longDescription: "Los Guambianos, también conocidos como Misak, habitan el departamento del Cauca en la región andina. Su mitología está profundamente conectada con el agua, considerada sagrada y fundamental para la vida. Los mitos guambianos incluyen relatos sobre el origen de lagunas, ríos y la importancia de mantener el equilibrio hídrico. Su tradición oral enfatiza la conexión espiritual con el territorio ancestral, particularmente con las altas montañas y páramos que habitan.",
     imagePrompt: "Guambianos water ceremony, Cauca páramo, sacred lagoons, Misak traditions"
   },
+  "ticuna": {
+    ...ticunaCommunityPage,
+  },
   "tikunas": {
-    title: "Tikunas",
-    description: "Pueblo amazónico de la triple frontera con elaborados mitos de creación y transformación.",
-    longDescription: "Los Tikunas habitan la región amazónica en la frontera entre Colombia, Brasil y Perú. Su mitología es extremadamente rica e incluye elaborados ciclos narrativos sobre la creación del mundo, el origen de los clanes, y transformaciones míticas. Los mitos tikuna presentan complejas cosmologías con múltiples niveles del universo, relatos sobre héroes gemelos, y enseñanzas sobre organización social. Su tradición oral es una de las más extensas de la Amazonía.",
-    imagePrompt: "Tikuna creation myths, Amazon triple frontier, clan origins, cosmic levels"
+    ...ticunaCommunityPage,
   },
   "nukak": {
     title: "Nukak",

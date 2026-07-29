@@ -39,7 +39,10 @@ test("el documento canónico cubre el flujo editorial completo", async () => {
   assert.match(document, /no se crea una taxonomía nueva/i);
   assert.match(document, /transacción atómica/i);
   assert.match(document, /navegador real/i);
-  assert.match(document, /no regenera imágenes por defecto/i);
+  assert.match(document, /modelo de\s+imagen de OpenAI aprobado/i);
+  assert.match(document, /actualmente `gpt-image-2`/i);
+  assert.match(document, /nunca cuenta como\s+cierre editorial/i);
+  assert.match(document, /registro durable/i);
   assert.match(document, /horizontal 16:9 es la portada/i);
   assert.match(document, /vertical\s+es una segunda escena\s+narrativa/i);
   assert.match(document, /una sola frase filosófica de 8 a\s+22 palabras/i);
@@ -54,7 +57,8 @@ test("la página pública expone las reglas críticas", async () => {
   assert.match(page, /no creamos taxonomías/i);
   assert.match(page, /Integridad del registro y posibilidad de corregir/i);
   assert.match(page, /verdad de producción/i);
-  assert.match(page, /no regenera imágenes por defecto/i);
+  assert.match(page, /Cada mito cerrado necesita una pareja visual propia/i);
+  assert.match(page, /Ninguna imagen\s+se reutiliza entre mitos/i);
   assert.match(page, /horizontal 16:9 es la portada/i);
   assert.match(page, /vertical\s+es una segunda escena\s+narrativa/i);
   assert.match(page, /ilustración completa full paper\s+cut/i);
@@ -63,7 +67,7 @@ test("la página pública expone las reglas críticas", async () => {
   assert.match(page, /Cómo leemos las crónicas coloniales/i);
   assert.match(page, /Comparar sin borrar las diferencias/i);
   assert.match(page, /Correcciones, comunidad y derecho de respuesta/i);
-  assert.match(page, /updated="27 de julio de 2026"/i);
+  assert.match(page, /updated="29 de julio de 2026"/i);
 });
 
 test("las páginas editoriales públicas no atribuyen el trabajo a IA", async () => {

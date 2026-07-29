@@ -1,6 +1,6 @@
 # Metodología interna de revisión y enriquecimiento de mitos
 
-**Versión 1.3 · 27 de julio de 2026**
+**Versión 1.4 · 28 de julio de 2026**
 
 Este es el documento canónico del proyecto para investigar, revisar,
 reescribir, clasificar y publicar cada mito del archivo. Define el trabajo
@@ -24,8 +24,8 @@ revisión incluye:
 - pueblo, comunidad, periodo y territorio;
 - fuentes y dossier de investigación;
 - categorías, etiquetas y palabras clave;
-- inventario de imágenes, función editorial, texto alternativo y, solo cuando
-  se apruebe, prompts de regeneración;
+- inventario de imágenes, función editorial, texto alternativo, procedencia,
+  prompts de investigación y registro de generación;
 - coordenadas y grado de precisión geográfica;
 - resumen, título, metadatos sociales, canonical y datos estructurados;
 - respaldo, escritura en base de datos, validación local y prueba pública.
@@ -219,11 +219,17 @@ atribución ocupen su posición correcta tanto en escritorio como en móvil.
 
 ## 10. Imagen y sistema visual
 
-El enriquecimiento editorial **no regenera imágenes por defecto**. Primero
-levanta un inventario de lo que ya existe, revisa pertinencia, consistencia,
-proporción y uso público, y separa la decisión visual de la edición del texto.
-Solo las imágenes ausentes o expresamente desaprobadas entran en una lista de
-generación autorizada.
+Cada mito cerrado debe tener una pareja visual propia generada con el modelo de
+imagen de OpenAI aprobado para producción, actualmente `gpt-image-2`. Una imagen
+heredada solo puede conservarse si existe evidencia durable de que fue creada
+para ese mismo mito con esta metodología, el modelo aprobado y el dossier
+vigente. La ausencia de esa trazabilidad obliga a regenerarla.
+
+La reutilización de una imagen entre dos mitos, aunque los motivos se parezcan,
+puede servir como estado transitorio de migración, pero **nunca cuenta como
+cierre editorial**. El validador debe rechazar una URL horizontal o vertical
+asignada a más de un slug canónico. Dos relatos sobre árboles, lunas, diluvios o
+ancestros siguen necesitando escenas propias derivadas de sus fuentes.
 
 Cada imagen tiene una función estable. La horizontal 16:9 es la portada, la
 imagen social y la representación en listados. La vertical es una segunda escena
@@ -238,12 +244,21 @@ ilustración completa construida visualmente con recortes, capas, bordes y tiras
 enrolladas de papel; no una fotografía de una maqueta, un diorama, una pieza
 física ni una mesa de estudio. Puede tener profundidad y sombras suaves entre
 capas, pero no debe parecer un objeto fotografiado, un render plástico o una
-escena fotorrealista. El prompt se deriva de la matriz de evidencia: paisaje
-real, acción central, personajes y materiales justificables. Evita coronas, oro
-ornamental, símbolos mesoamericanos, vestuarios inventados y exotización.
+escena fotorrealista. El prompt se deriva de la matriz de evidencia y cita el
+expediente del que procede: paisaje real, acción central, personajes y
+materiales justificables. Evita coronas, oro ornamental, símbolos
+mesoamericanos, vestuarios inventados y exotización. La horizontal y la
+vertical parten de dos escenas distintas del mismo relato; no se improvisan
+desde el título ni desde una imagen de otra comunidad.
 
-Antes de generar se revisan las parejas existentes en hojas de contacto y se
-regeneran únicamente los mitos y orientaciones aprobados. Después se comprueban
+Cada orientación deja un registro durable con: slug, orientación, proveedor
+`openai`, modelo, fecha, prompt final, huella del prompt, fuentes de
+investigación usadas, URL resultante, dimensiones, formato, resultado de la
+revisión visual y número de intento. Sin ese registro la procedencia se
+considera desconocida.
+
+Antes de generar se revisan los dos prompts y, después de cada lote, sus
+resultados en hojas de contacto. Se comprueban
 relevancia narrativa, diferencia entre escenas, legibilidad, proporción, móvil,
 peso, formato, texto alternativo, crédito y Open Graph. Una corrección de
 calidad vuelve a generar solo la orientación fallida. La imagen no es
@@ -354,8 +369,10 @@ operativas para la siguiente comunidad:
 
 - definir el universo canónico antes de medir cobertura;
 - investigar y editar primero; la generación de imágenes es un flujo posterior
-  y optativo;
-- auditar todas las imágenes existentes antes de gastar en reemplazos;
+  pero obligatorio antes del cierre de cada mito;
+- auditar todas las imágenes existentes y regenerar las que no tengan
+  trazabilidad completa del flujo de investigación y OpenAI;
+- no reutilizar una pareja entre slugs para cerrar más rápido;
 - asignar una función única a cada orientación y comprobarla en la página real;
 - escribir la enseñanza como una sola frase filosófica, no como otro ensayo;
 - mantener módulos, campos normalizados y `content` en sincronía exacta;
@@ -373,10 +390,11 @@ pública; solo después se inicia la siguiente colección.
 - Fuentes editoriales publicadas: al menos cinco por expediente.
 - Relatos separados de Historia, Versiones, Lección y Similitudes.
 - Enseñanzas finales: 41 frases breves y filosóficas.
-- Sistema visual: una portada horizontal y una segunda escena vertical por
-  mito; 20 verticales se conservaron literalmente en 2:3 por decisión editorial.
-- Regeneración: limitada a las orientaciones aprobadas después de una auditoría;
-  no forma parte automática del enriquecimiento.
+- Sistema visual histórico: una portada horizontal y una segunda escena
+  vertical por mito; 20 verticales se conservaron literalmente en 2:3 durante
+  el piloto.
+- Reapertura visual en la versión 1.4: cualquier activo conservado sin
+  trazabilidad completa de investigación y generación OpenAI vuelve a la cola.
 - Cierre: sincronización exacta, pruebas, despliegue y verificación pública de
   las 41 rutas.
 
@@ -426,6 +444,11 @@ ficha avance con una capa terminada y otra todavía incoherente.
       aproximado.
 - [ ] La horizontal se usa como portada y la vertical como segunda escena dentro
       del Relato.
+- [ ] Ambas orientaciones fueron generadas específicamente para este slug con
+      `gpt-image-2` a partir del dossier vigente.
+- [ ] Ninguna URL horizontal o vertical se reutiliza en otro mito canónico.
+- [ ] El registro de procedencia conserva modelo, prompt, huella, fuentes,
+      fecha, dimensiones, intento y revisión visual.
 - [ ] Una vertical aprobada en 2:3 se muestra completa, sin recorte.
 - [ ] Título, descripción, canonical, imagen social, datos estructurados y texto
       alternativo describen la ficha real.

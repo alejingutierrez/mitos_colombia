@@ -362,18 +362,20 @@ const sections = [
     body: (
       <>
         <p>
-          El enriquecimiento editorial no regenera imágenes por defecto.
-          Primero inventariamos lo que ya existe y revisamos pertinencia,
-          consistencia, proporción y uso público. Solo las imágenes ausentes o
-          expresamente desaprobadas entran en una lista de generación
-          autorizada.
+          Cada mito cerrado necesita una pareja visual propia, investigada
+          desde su dossier. Primero inventariamos lo que ya existe y revisamos
+          pertinencia, consistencia, proporción, procedencia y uso público. Una
+          imagen heredada solo se conserva cuando su registro demuestra que fue
+          creada para ese mismo mito con el método vigente; sin esa
+          trazabilidad se renueva.
         </p>
         <p>
           La horizontal 16:9 es la portada, la imagen social y la representación
           en listados. La vertical es una segunda escena narrativa y aparece una
           sola vez dentro de Relato; nunca es una repetición de la portada. Las
           verticales aprobadas en 2:3 se muestran completas, sin recorte, y la
-          horizontal no se reutiliza para rellenar el interior.
+          horizontal no se reutiliza para rellenar el interior. Ninguna imagen
+          se reutiliza entre mitos para declarar una ficha terminada.
         </p>
         <p>
           Antes de gastar en reemplazos auditamos las parejas existentes en
@@ -582,11 +584,11 @@ export default async function MetodologiaPage() {
 
   return (
     <DocumentTemplate
-      eyebrow="Metodología editorial · versión 1.2"
+      eyebrow="Metodología editorial · versión 1.4"
       title="Investigar antes de volver a contar"
       description="El estándar completo para documentar, narrar y publicar cada mito con imaginación, respeto cultural y evidencia verificable."
       breadcrumb={[{ label: "Inicio", href: "/" }, { label: "Metodología" }]}
-      updated="27 de julio de 2026"
+      updated="29 de julio de 2026"
       sections={[sourceCoverageSection, ...sections]}
       related={related}
       accent="river"
