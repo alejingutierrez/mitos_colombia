@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+import { createHash } from "node:crypto";
 import fs from "node:fs/promises";
 import path from "node:path";
 import test from "node:test";
@@ -9,9 +10,22 @@ import {
   existingWayuuSlugs,
   newWayuuSlugs,
 } from "../../editorial/wayuu/universe.mjs";
-import { wayuuVerticalMedia } from "../../editorial/wayuu/media.mjs";
+import {
+  wayuuMedia,
+  wayuuVerticalMedia,
+} from "../../editorial/wayuu/media.mjs";
 
 const MYTH_DIR = path.resolve("editorial", "wayuu", "myths");
+const provenance = JSON.parse(
+  await fs.readFile(
+    new URL("../../editorial/wayuu/provenance.json", import.meta.url),
+    "utf8",
+  ),
+);
+
+function digest(value) {
+  return createHash("sha256").update(value).digest("hex");
+}
 
 function words(value) {
   return String(value || "")
@@ -149,9 +163,14 @@ test("los 27 mitos tienen portada horizontal y segunda escena vertical", async (
       data.image_prompt_horizontal,
       data.image_prompt_vertical,
     ]) {
-      assert.match(prompt, /ilustración editorial completa full paper cut/i, slug);
+      assert.match(prompt, /digital 2D full paper cut/i, slug);
       assert.match(prompt, /paper quilling/i, slug);
-      assert.match(prompt, /nunca fotografía, maqueta física, diorama/i, slug);
+      assert.match(prompt, /acabado gráfico plano/i, slug);
+      assert.match(prompt, /nunca fotografía/i, slug);
+      assert.match(prompt, /objeto físico/i, slug);
+      assert.match(prompt, /maqueta/i, slug);
+      assert.match(prompt, /diorama/i, slug);
+      assert.match(prompt, /CGI|render 3D/i, slug);
       assert.doesNotMatch(prompt, /StudioPaperMaquette/i, slug);
       assert.doesNotMatch(
         prompt,
@@ -160,6 +179,60 @@ test("los 27 mitos tienen portada horizontal y segunda escena vertical", async (
       );
     }
   }
+});
+
+test("los dos mitos nuevos tienen parejas OpenAI trazables y aprobadas", async () => {
+  const corpus = new Map((await loadCorpus()).map((data) => [data.slug, data]));
+  assert.equal(provenance.provider, "openai");
+  assert.equal(provenance.model, "gpt-image-2");
+  assert.equal(provenance.quality, "high");
+  assert.equal(provenance.visualQa.status, "approved");
+  assert.equal(provenance.visualQa.finalImages, 4);
+  assert.equal(provenance.visualQa.generationAttempts, 6);
+  assert.equal(provenance.visualQa.rejectedAttempts, 2);
+  assert.equal(provenance.visualQa.estimatedOutputCostUsd, 0.99);
+  assert.equal(Object.keys(provenance.items).length, 4);
+
+  const urls = new Set();
+  for (const slug of newWayuuSlugs) {
+    const data = corpus.get(slug);
+    const media = {
+      horizontal: wayuuMedia[slug][0],
+      vertical: wayuuVerticalMedia[slug],
+    };
+    for (const orientation of ["horizontal", "vertical"]) {
+      const key = `${slug}:${orientation}`;
+      const item = provenance.items[key];
+      const editorialPrompt =
+        orientation === "horizontal"
+          ? data.image_prompt_horizontal
+          : data.image_prompt_vertical;
+      const dimensions =
+        orientation === "horizontal"
+          ? { width: 1536, height: 864 }
+          : { width: 864, height: 1536 };
+      assert.equal(item.slug, slug);
+      assert.equal(item.orientation, orientation);
+      assert.equal(item.provider, "openai");
+      assert.equal(item.model, "gpt-image-2");
+      assert.equal(item.quality, "high");
+      assert.equal(item.visualQa, "approved");
+      assert.ok(item.visualReviewNote);
+      assert.equal(item.editorialPrompt, editorialPrompt);
+      assert.equal(digest(item.editorialPrompt), item.editorialPromptSha256);
+      assert.equal(digest(item.generationPrompt), item.generationPromptSha256);
+      assert.deepEqual(item.outputDimensions, dimensions);
+      assert.equal(item.outputFormat, "jpeg");
+      assert.equal(item.url, media[orientation]);
+      assert.match(item.url, /-wayuu-openai-/);
+      assert.equal(item.sourceUrls.length, 7);
+      assert.equal(new Set(item.sourceUrls).size, 7);
+      assert.equal(item.uploadSha256, item.sha256);
+      assert.ok(!urls.has(item.url), `${key}: URL repetida`);
+      urls.add(item.url);
+    }
+  }
+  assert.equal(urls.size, 4);
 });
 
 test("las correcciones y relaciones editoriales críticas quedan explícitas", async () => {

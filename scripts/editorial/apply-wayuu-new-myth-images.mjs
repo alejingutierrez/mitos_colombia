@@ -18,6 +18,19 @@ const rootDir = path.resolve(
   "../..",
 );
 const confirmationPhrase = "wayuu-new-myths-four-images";
+const manifestPath = path.join(
+  rootDir,
+  "artifacts",
+  "generated-images",
+  "wayuu-new-myths",
+  "provenance-manifest.json",
+);
+const provenancePath = path.join(
+  rootDir,
+  "editorial",
+  "wayuu",
+  "provenance.json",
+);
 
 const assets = [
   {
@@ -58,6 +71,10 @@ const dossiers = new Map([
   [mellizos.slug, mellizos],
   [waleker.slug, waleker],
 ]);
+
+function digest(value) {
+  return createHash("sha256").update(value).digest("hex");
+}
 
 function parseArgs(argv) {
   const options = {
@@ -131,6 +148,56 @@ async function validateAssets() {
   return validated;
 }
 
+async function loadApprovedManifest(validated) {
+  const manifest = JSON.parse(await fs.readFile(manifestPath, "utf8"));
+  if (
+    manifest.provider !== "openai" ||
+    manifest.model !== "gpt-image-2" ||
+    manifest.quality !== "high" ||
+    manifest.visualQa?.status !== "approved"
+  ) {
+    throw new Error(
+      "El manifiesto Wayuu no tiene proveedor, modelo, calidad y QA aprobados.",
+    );
+  }
+  const expectedKeys = assets
+    .map(({ slug, orientation }) => `${slug}:${orientation}`)
+    .sort();
+  const actualKeys = Object.keys(manifest.items || {}).sort();
+  if (JSON.stringify(expectedKeys) !== JSON.stringify(actualKeys)) {
+    throw new Error("El manifiesto Wayuu no contiene exactamente cuatro imágenes.");
+  }
+
+  for (const asset of validated) {
+    const key = `${asset.slug}:${asset.orientation}`;
+    const item = manifest.items[key];
+    const dossier = dossiers.get(asset.slug);
+    const editorialPrompt =
+      asset.orientation === "horizontal"
+        ? dossier.image_prompt_horizontal
+        : dossier.image_prompt_vertical;
+    if (
+      item.provider !== "openai" ||
+      item.model !== "gpt-image-2" ||
+      item.quality !== "high" ||
+      item.visualQa !== "approved" ||
+      item.sha256 !== asset.sha256 ||
+      path.resolve(item.localPath) !== asset.absolutePath ||
+      item.editorialPrompt !== editorialPrompt ||
+      item.editorialPromptSha256 !== digest(editorialPrompt) ||
+      item.generationPromptSha256 !== digest(item.generationPrompt) ||
+      item.outputDimensions?.width !== asset.width ||
+      item.outputDimensions?.height !== asset.height ||
+      item.outputFormat !== "jpeg" ||
+      item.sourceUrls?.length !== 7 ||
+      new Set(item.sourceUrls).size !== 7
+    ) {
+      throw new Error(`${key}: el manifiesto aprobado no coincide con el activo.`);
+    }
+  }
+  return manifest;
+}
+
 async function loadBefore(client) {
   const slugs = [...dossiers.keys()];
   const mythsResult = await client.query(
@@ -188,7 +255,7 @@ async function loadBefore(client) {
 function blobPath(asset, runEpoch) {
   const folder =
     asset.orientation === "horizontal" ? "mitos" : "vertical/myth";
-  return `${folder}/${asset.slug}-${runEpoch}.jpg`;
+  return `${folder}/${asset.slug}-wayuu-openai-${runEpoch}.jpg`;
 }
 
 async function uploadAssets(validated, runEpoch) {
@@ -309,6 +376,25 @@ async function writeDatabase(client, before, uploaded) {
   }
 }
 
+async function writeDurableProvenance(manifest, uploaded) {
+  const completedAt = new Date().toISOString();
+  for (const asset of uploaded) {
+    const key = `${asset.slug}:${asset.orientation}`;
+    const item = manifest.items[key];
+    item.url = asset.url;
+    item.uploadedAt = completedAt;
+    item.uploadBytes = asset.bytes;
+    item.uploadSha256 = asset.sha256;
+  }
+  manifest.appliedAt = completedAt;
+  manifest.updatedAt = completedAt;
+  await fs.writeFile(manifestPath, `${JSON.stringify(manifest, null, 2)}\n`);
+
+  const durable = structuredClone(manifest);
+  for (const item of Object.values(durable.items)) delete item.localPath;
+  await fs.writeFile(provenancePath, `${JSON.stringify(durable, null, 2)}\n`);
+}
+
 async function run() {
   const options = parseArgs(process.argv.slice(2));
   dotenv.config({ path: path.resolve(options.envFile), quiet: true });
@@ -326,6 +412,7 @@ async function run() {
   }
 
   const validated = await validateAssets();
+  const manifest = await loadApprovedManifest(validated);
   const client = new Client({
     connectionString: postgresUrl,
     ssl: { rejectUnauthorized: false },
@@ -353,6 +440,11 @@ async function run() {
         assets: assets.length,
         horizontal: 2,
         vertical: 2,
+        provider: "openai",
+        model: "gpt-image-2",
+        quality: "high",
+        generationAttempts: manifest.visualQa.generationAttempts,
+        estimatedOutputCostUsd: manifest.visualQa.estimatedOutputCostUsd,
       },
       before,
       assets: validated.map(
@@ -375,6 +467,7 @@ async function run() {
       );
       report.completedAt = new Date().toISOString();
       await fs.writeFile(reportPath, `${JSON.stringify(report, null, 2)}\n`);
+      await writeDurableProvenance(manifest, uploaded);
     }
 
     console.log(

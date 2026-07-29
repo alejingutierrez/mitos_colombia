@@ -20,12 +20,12 @@ export const wayuuMedia = {
   "las-wanulus-y-el-valle-de-la-muerte": ["https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/las-wanulus-y-el-valle-de-la-muerte-1784766879736.jpg", 11.775, -72.225],
   "los-dominios-de-juya": ["https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/los-dominios-de-juya-1784766689970.jpg", 12.207, -72.185],
   "los-dos-hermanos": ["https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/los-dos-hermanos-1784766807166.jpg", 11.775, -72.225],
-  "los-mellizos-transformadores": ["https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/los-mellizos-transformadores-1785223206982.jpg", 12.1333, -71.5333],
+  "los-mellizos-transformadores": ["https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/los-mellizos-transformadores-wayuu-openai-1785348646785.jpg", 12.1333, -71.5333],
   maleiwa: ["https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/maleiwa-1784766688593.jpg", 12.1333, -71.5333],
   "serranias-de-la-guajira": ["https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/serranias-de-la-guajira-1784766728133.jpg", 12.1333, -71.5333],
   ulepala: ["https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/ulepala-1784766685417.jpg", 12.207, -72.185],
   umarala: ["https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/umarala-1784766858801.jpg", 12.1333, -71.5333],
-  "waleker-el-origen-del-tejido": ["https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/waleker-el-origen-del-tejido-1785223206982.jpg", 11.775, -72.225],
+  "waleker-el-origen-del-tejido": ["https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/waleker-el-origen-del-tejido-wayuu-openai-1785348646785.jpg", 11.775, -72.225],
 };
 
 export const wayuuVerticalMedia = {
@@ -50,10 +50,10 @@ export const wayuuVerticalMedia = {
   "las-wanulus-y-el-valle-de-la-muerte": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/las-wanulus-y-el-valle-de-la-muerte-1784911179682.jpg",
   "los-dominios-de-juya": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/los-dominios-de-juya-1784910936930.jpg",
   "los-dos-hermanos": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/los-dos-hermanos-1784911105499.jpg",
-  "los-mellizos-transformadores": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/los-mellizos-transformadores-1785223206982.jpg",
+  "los-mellizos-transformadores": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/los-mellizos-transformadores-wayuu-openai-1785348646785.jpg",
   maleiwa: "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/maleiwa-1784910923746.jpg",
   "serranias-de-la-guajira": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/serranias-de-la-guajira-1784910987242.jpg",
   ulepala: "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/ulepala-1784910920233.jpg",
   umarala: "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/umarala-1784911153687.jpg",
-  "waleker-el-origen-del-tejido": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/waleker-el-origen-del-tejido-1785223206982.jpg",
+  "waleker-el-origen-del-tejido": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/waleker-el-origen-del-tejido-wayuu-openai-1785348646785.jpg",
 };

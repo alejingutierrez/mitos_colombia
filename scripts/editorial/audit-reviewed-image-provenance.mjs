@@ -106,9 +106,9 @@ try {
   const strictPromptPairs = rows.filter(
     ({ image_prompt_horizontal: horizontal, image_prompt_vertical: vertical }) =>
       matches(horizontal, /2D full paper cut/i) &&
-      matches(horizontal, /sin fotograf/i) &&
+      matches(horizontal, /(?:sin|nunca) fotograf/i) &&
       matches(vertical, /2D full paper cut/i) &&
-      matches(vertical, /sin fotograf/i),
+      matches(vertical, /(?:sin|nunca) fotograf/i),
   );
   const byCommunity = new Map();
   for (const row of rows) {
