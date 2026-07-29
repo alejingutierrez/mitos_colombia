@@ -37,7 +37,9 @@ export function Header({ active }) {
   }
 
   return (
-    <header className="sticky top-0 z-40 border-b border-line-100 bg-paper/90 backdrop-blur supports-[backdrop-filter]:bg-paper/80">
+    // Fondo opaco: con `bg-paper/80 + blur(8px)` el contenido se veía cruzar
+    // el header sobre las imágenes de alto contraste del archivo.
+    <header className="sticky top-0 z-40 border-b border-line-100 bg-paper">
       <Container size="atlas">
         <div className="flex h-16 items-center justify-between gap-4">
           {/* Wordmark */}
@@ -62,15 +64,17 @@ export function Header({ active }) {
           {/* Navegación desktop */}
           <nav
             aria-label="Navegación principal"
-            className="hidden items-center gap-7 md:flex"
+            className="hidden items-center gap-1 md:flex"
           >
             {NAV_LINKS.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
                 aria-current={isActive(item.href) ? "page" : undefined}
+                // h-11 (44px) para cumplir el objetivo táctil; el gap pasa de
+                // 7 a 1 porque ahora el área clicable vive en el padding.
                 className={cn(
-                  "link-underline text-sm font-medium transition-colors",
+                  "inline-flex h-11 items-center rounded-sm px-3 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-jungle-500/40",
                   isActive(item.href)
                     ? "text-jungle-700"
                     : "text-ink-700 hover:text-ink-900"

@@ -325,7 +325,16 @@ function formatReviewDate(value) {
 }
 
 export function FuentesBlock({ sources = [], updatedAt }) {
-  const normalized = sources.map(normalizeSource).filter(Boolean).slice(0, 12);
+  // Deduplicar por URL: varias fichas traen la misma referencia repetida y se
+  // listaba dos veces (además de romper las keys de React).
+  const normalized = Array.from(
+    new Map(
+      sources
+        .map(normalizeSource)
+        .filter(Boolean)
+        .map((source) => [source.url, source])
+    ).values()
+  ).slice(0, 12);
   const reviewDate = formatReviewDate(updatedAt);
 
   return (

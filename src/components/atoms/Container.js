@@ -16,7 +16,9 @@ const widths = {
 export function Container({ as: Tag = "div", size = "default", className, children, ...props }) {
   return (
     <Tag
-      className={cn("mx-auto w-full px-5 sm:px-6 lg:px-8", widths[size], className)}
+      // `atlas-gutter` usa --gutter (20 → 56px fluido). Los 32px fijos que
+      // había antes dejaban un canal de solo 2,2% en un contenedor de 1460px.
+      className={cn("atlas-gutter mx-auto w-full", widths[size], className)}
       {...props}
     >
       {children}

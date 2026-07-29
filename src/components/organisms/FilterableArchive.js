@@ -47,21 +47,21 @@ function MixedResults({ myths }) {
           ratio="16 / 10"
           sizes="(max-width: 1024px) 100vw, 45vw"
           className="lg:row-span-2"
-          titleClassName="!text-[2.6rem]"
+          titleClass="atlas-title-xl"
         />
         <OverlayMythCard
           myth={second}
           ratio="4 / 3"
           sizes="(max-width: 1024px) 100vw, 27vw"
           showExcerpt={false}
-          titleClassName="!text-[1.65rem]"
+          titleClass="atlas-title-md"
         />
         <OverlayMythCard
           myth={third}
           ratio="4 / 3"
           sizes="(max-width: 1024px) 100vw, 27vw"
           showExcerpt={false}
-          titleClassName="!text-[1.65rem]"
+          titleClass="atlas-title-md"
         />
         <div className="border-y border-line-100 lg:col-span-2">
           {rest.slice(0, 4).map((myth, index) => (

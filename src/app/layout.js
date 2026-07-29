@@ -73,6 +73,9 @@ window.gtag('config', '${gaId}', { send_page_view: false });`}
           </>
         ) : null}
         <Analytics />
+        <a href="#contenido" className="skip-link">
+          Saltar al contenido
+        </a>
         <div className="page-bg" aria-hidden="true">
           <div className="page-bg-ambient">
             <span className="page-bg-b1" />

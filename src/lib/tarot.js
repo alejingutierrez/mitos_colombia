@@ -565,12 +565,37 @@ export async function getTarotCards() {
   return getTarotCardsCached();
 }
 
+function gcd(a, b) {
+  return b ? gcd(b, a % b) : a;
+}
+
+/**
+ * Selección diaria del oráculo.
+ *
+ * Antes recorría el mazo con paso 1 desde `seed % n`; como las cartas vienen
+ * ordenadas por arcano y orden, el home mostraba siempre tres consecutivas del
+ * mismo palo ("Cuatro / Cinco / Seis de Espadas"). Ahora avanza con un paso
+ * co-primo con el tamaño del mazo, que reparte la tirada por todo el conjunto
+ * y sigue siendo determinista para el mismo `seed` (la página es estática con
+ * revalidación diaria, así que la selección debe ser reproducible).
+ */
 export function getDailyTarotSelection(cards, count, seed) {
   if (!cards?.length || count <= 0) return [];
-  const startIndex = seed % cards.length;
+  const n = cards.length;
+  const take = Math.min(count, n);
+
+  let stride = Math.max(1, Math.floor(n / take));
+  for (let i = 0; i < n && gcd(stride, n) !== 1; i += 1) stride += 1;
+  if (gcd(stride, n) !== 1) stride = 1;
+
+  const start = ((seed % n) + n) % n;
+  const seen = new Set();
   const selection = [];
-  for (let i = 0; i < count; i += 1) {
-    selection.push(cards[(startIndex + i) % cards.length]);
+  for (let i = 0; selection.length < take && i < n * 2; i += 1) {
+    const index = (start + i * stride) % n;
+    if (seen.has(index)) continue;
+    seen.add(index);
+    selection.push(cards[index]);
   }
   return selection;
 }

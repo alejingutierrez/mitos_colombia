@@ -40,11 +40,6 @@ function getDailySeed() {
   return Math.floor(diff / oneDay);
 }
 
-const MAJOR_ROMAN = [
-  "0", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X",
-  "XI", "XII", "XIII", "XIV", "XV", "XVI", "XVII", "XVIII", "XIX", "XX", "XXI",
-];
-
 const regionMotifs = {
   Amazonas: "hoja",
   Andina: "montana",
@@ -97,8 +92,12 @@ export default async function Home() {
 
   const totalMyths = Number(stats.total_myths) || 882;
 
+  // "Varios" es la bolsa de los mitos sin región asignada: es una etiqueta
+  // interna del importador, no un territorio que se pueda recorrer.
+  const GENERIC_REGIONS = new Set(["varios", "otros", "sin region", "sin región"]);
+
   const regions = (taxonomy.regions || [])
-    .slice()
+    .filter((r) => r?.name && !GENERIC_REGIONS.has(r.name.trim().toLowerCase()))
     .sort((a, b) => Number(b.myth_count || 0) - Number(a.myth_count || 0))
     .slice(0, 6)
     .map((r) => ({
@@ -115,17 +114,25 @@ export default async function Home() {
     tone: r.accent === "river" ? "river" : "jungle",
     motif: r.accent === "river" ? "agua" : "hoja",
     description: r.detail || r.description,
-    imageUrl: r.preview?.image_url,
+    // Las consultas de rutas anteponen la obra vertical (las plantillas de
+    // /rutas son en retrato). La banda del home es a sangre y apaisada, así que
+    // prefiere la horizontal: con la vertical la fuente medía 768px de ancho
+    // para una caja de 1440 y se ampliaba 1,88x.
+    imageUrl: r.preview?.wide_image_url || r.preview?.image_url,
   }));
 
   // Tres cartas de tarot para la sala del oráculo (selección diaria).
+  // Se priorizan las que tienen obra: la sala muestra la ilustración de la
+  // carta, no un medallón genérico.
   const tarotSource = (tarotCards || []).filter((c) => c.card_name);
-  const tarot = getDailyTarotSelection(tarotSource, 3, seed).map((c) => ({
+  const tarotWithArt = tarotSource.filter((c) => c.image_url);
+  const tarot = getDailyTarotSelection(
+    tarotWithArt.length >= 3 ? tarotWithArt : tarotSource,
+    3,
+    seed
+  ).map((c) => ({
     card_name: c.card_name,
-    roman:
-      c.arcana === "major" && typeof c.order_index === "number"
-        ? MAJOR_ROMAN[c.order_index] || ""
-        : "",
+    imageUrl: c.image_url || "",
     myth_slug: c.myth_slug || "",
     motif: mythMotif({ slug: c.myth_slug || c.slug, title: c.card_name }),
   }));
@@ -148,6 +155,7 @@ export default async function Home() {
       regions={regions}
       routes={routes}
       tarot={tarot.length ? tarot : undefined}
+      totalMyths={totalMyths}
       quote={{
         text: "Cada mito existe porque alguien lo escuchó, lo contó, y lo sostuvo en el tiempo.",
         cite: "Tradición oral colombiana",

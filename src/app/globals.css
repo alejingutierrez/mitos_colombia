@@ -37,6 +37,30 @@
   /* Atlas vivo: extensión editorial aprobada */
   --atlas-night: 8 18 20;
   --atlas-gold: 189 134 66;
+
+  /* === Escala tipográfica única (fluida, ref. 390 → 1440px) ===
+     Una sola escala para todo el sitio. La familia comunica el ROL,
+     el paso comunica la JERARQUÍA. Ver .atlas-* más abajo.
+
+       font-display  (Manrope)   → el sitio que organiza: H1, secciones, nav, CTA
+       font-editorial (Cormorant) → el objeto de la colección: mitos, rutas, cifras
+       font-body     (Inter)      → párrafos, kickers, metadatos
+
+     Regla: serif = contenido del archivo · sans = interfaz del archivo. */
+  --step--1: clamp(0.8125rem, 0.79rem + 0.11vw, 0.875rem); /* 13 → 14 */
+  --step-0: clamp(0.9375rem, 0.91rem + 0.14vw, 1rem); /*  15 → 16 */
+  --step-1: clamp(1.125rem, 1.07rem + 0.27vw, 1.25rem); /*  18 → 20 */
+  --step-2: clamp(1.375rem, 1.28rem + 0.45vw, 1.625rem); /*  22 → 26 */
+  --step-3: clamp(1.625rem, 1.45rem + 0.9vw, 2.125rem); /*  26 → 34 */
+  --step-4: clamp(2rem, 1.7rem + 1.5vw, 2.875rem); /*  32 → 46 */
+  --step-5: clamp(2.5rem, 1.9rem + 3vw, 4rem); /*  40 → 64 */
+  --step-6: clamp(2.75rem, 2rem + 3.8vw, 5rem); /*  44 → 80 */
+
+  /* === Retícula y ritmo (base 8pt) ===
+     Un solo canal de aire horizontal y dos de aire vertical. */
+  --gutter: clamp(1.25rem, 0.6rem + 2.6vw, 3.5rem); /* 20 → 56 */
+  --space-section: clamp(4rem, 3rem + 3vw, 7rem); /* 64 → 112 */
+  --space-section-tight: clamp(2.5rem, 2rem + 1.6vw, 4rem); /* 40 → 64 */
 }
 
 body {
@@ -289,18 +313,79 @@ body {
 }
 
 @layer components {
-  .atlas-kicker {
-    @apply font-body text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-ink-700;
+  /* ---------- Retícula ---------- */
+  .atlas-gutter {
+    padding-inline: var(--gutter);
+  }
+  .atlas-section-y {
+    padding-block: var(--space-section);
+  }
+  .atlas-section-y-tight {
+    padding-block: var(--space-section-tight);
   }
 
+  /* ---------- Tipografía del sistema ---------- */
+  .atlas-kicker {
+    @apply font-body font-semibold uppercase tracking-[0.16em] text-ink-700;
+    font-size: var(--step--1);
+    font-variant-numeric: lining-nums tabular-nums;
+  }
+
+  /* Cifras: siempre figuras de caja alta y ancho fijo. Cormorant sirve
+     numerales old-style por defecto y "157" se leía "ı57", "11" como "II". */
+  .atlas-figure {
+    font-variant-numeric: lining-nums tabular-nums;
+    font-feature-settings: "lnum" 1, "tnum" 1, "onum" 0;
+  }
+
+  /* Jerarquía completa, de mayor a menor (390 → 1440px):
+       atlas-h1              44 → 80   el sitio hablando, uno por página
+       atlas-title-xl        40 → 64   pieza destacada a sangre completa
+       atlas-title-lg        32 → 46   líder de una sección contenida
+       atlas-section-heading 26 → 34   rótulo de sección (sans)
+       atlas-title-md        22 → 26   tarjeta de galería
+       atlas-title-sm        18 → 20   ítem de lista
+     El rótulo de sección va por debajo del contenido que presenta: sirve al
+     archivo, no compite con él. Lo que lo distingue no es el tamaño sino la
+     familia — sans es la interfaz, serif es la colección. */
+
+  /* H1 — el sitio hablando. Único por página. */
+  .atlas-h1 {
+    @apply font-display font-extrabold leading-[1.02] tracking-[-0.035em] text-ink-900;
+    font-size: var(--step-6);
+    text-wrap: balance;
+  }
+
+  /* H2 — rótulo de sección. */
+  .atlas-section-heading {
+    @apply font-display font-bold leading-[1.1] tracking-[-0.03em] text-ink-900;
+    font-size: var(--step-3);
+    text-wrap: balance;
+  }
+
+  /* Títulos de contenido del archivo (serif). */
   .atlas-title {
     @apply font-editorial font-semibold leading-[0.94] tracking-[-0.035em] text-ink-900;
     text-wrap: balance;
   }
-
-  .atlas-section-heading {
-    @apply font-display text-2xl font-bold leading-tight tracking-[-0.025em] text-ink-900 md:text-3xl;
-    text-wrap: balance;
+  .atlas-title-xl {
+    @apply atlas-title;
+    font-size: var(--step-5);
+  }
+  .atlas-title-lg {
+    @apply atlas-title;
+    font-size: var(--step-4);
+    line-height: 0.98;
+  }
+  .atlas-title-md {
+    @apply atlas-title;
+    font-size: var(--step-2);
+    line-height: 1.02;
+  }
+  .atlas-title-sm {
+    @apply atlas-title;
+    font-size: var(--step-1);
+    line-height: 1.08;
   }
 
   .atlas-rule {
@@ -311,8 +396,124 @@ body {
     @apply transition-transform duration-700 ease-editorial group-hover:scale-[1.035];
   }
 
+  /* Marco que conserva su proporción hasta lg y a partir de ahí llena la
+     celda. Sólo en lg la retícula del mosaico tiene filas con altura propia;
+     por debajo, si el marco no aportara proporción, todas las celdas serían
+     `h-full` a la vez y el mosaico colapsaría a 0px de alto.
+     El ratio viaja como custom property para que el media query pueda
+     ganarle — un `style={{aspectRatio}}` en línea no se puede sobrescribir. */
+  .atlas-frame-fill-md,
+  .atlas-frame-fill-lg {
+    aspect-ratio: var(--atlas-ratio, 4 / 3);
+  }
+  @media (min-width: 768px) {
+    .atlas-frame-fill-md {
+      aspect-ratio: auto;
+      height: 100%;
+      width: 100%;
+    }
+  }
+  @media (min-width: 1024px) {
+    .atlas-frame-fill-lg {
+      aspect-ratio: auto;
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  /* CTA de sección. `w-fit`+`self-start` evitan que el contenedor flex-col
+     lo estire y dibuje la regla dorada de borde a borde. */
   .atlas-link {
-    @apply inline-flex items-center gap-2 border-b border-ember-500 pb-1 font-body text-sm font-semibold text-ink-900 transition-colors hover:text-jungle-700;
+    @apply inline-flex w-fit shrink-0 items-center gap-2 self-start border-b border-ember-500 pb-1.5 pt-1.5 font-body text-sm font-semibold text-ink-900 transition-colors hover:text-jungle-700;
+    min-height: 2.75rem;
+    align-items: center;
+  }
+  /* Misma pieza sobre superficies oscuras (el hover verde selva no se ve). */
+  .atlas-link-invert {
+    @apply atlas-link text-white hover:text-ember-400;
+  }
+
+  /* ---------- Scrim de legibilidad sobre imagen ----------
+     El gradiente anterior (from-black via-black/5) caía a transparente
+     demasiado pronto: se midió 1,03:1 de contraste sobre zonas claras.
+     Estos stops garantizan ≥68% de tinta en la banda donde vive el texto. */
+  .atlas-scrim {
+    background: linear-gradient(
+      to top,
+      rgba(8, 18, 20, 0.96) 0%,
+      rgba(8, 18, 20, 0.93) 30%,
+      rgba(8, 18, 20, 0.86) 55%,
+      rgba(8, 18, 20, 0.66) 72%,
+      rgba(8, 18, 20, 0.3) 88%,
+      rgba(8, 18, 20, 0) 100%
+    );
+  }
+  /* Variante para piezas altas donde el texto ocupa poca proporción. */
+  .atlas-scrim-deep {
+    background: linear-gradient(
+      to top,
+      rgba(8, 18, 20, 0.95) 0%,
+      rgba(8, 18, 20, 0.9) 28%,
+      rgba(8, 18, 20, 0.72) 48%,
+      rgba(8, 18, 20, 0.34) 70%,
+      rgba(8, 18, 20, 0) 100%
+    );
+  }
+  /* Portada: scrim vertical + refuerzo lateral en pantallas anchas. */
+  .atlas-scrim-cover {
+    background: linear-gradient(
+      to top,
+      rgba(8, 18, 20, 0.95) 0%,
+      rgba(8, 18, 20, 0.92) 32%,
+      rgba(8, 18, 20, 0.85) 55%,
+      rgba(8, 18, 20, 0.62) 72%,
+      rgba(8, 18, 20, 0.3) 88%,
+      rgba(8, 18, 20, 0.16) 100%
+    );
+  }
+  @media (min-width: 900px) {
+    /* En ancho, el texto ocupa la banda izquierda y el crédito de la obra la
+       esquina inferior derecha: el refuerzo lateral se abre por la izquierda
+       pero el vertical sube lo suficiente para sostener también el crédito. */
+    .atlas-scrim-cover {
+      background:
+        linear-gradient(
+          to right,
+          rgba(8, 18, 20, 0.9) 0%,
+          rgba(8, 18, 20, 0.78) 45%,
+          rgba(8, 18, 20, 0.45) 75%,
+          rgba(8, 18, 20, 0.3) 100%
+        ),
+        linear-gradient(
+          to top,
+          rgba(8, 18, 20, 0.8) 0%,
+          rgba(8, 18, 20, 0.66) 30%,
+          rgba(8, 18, 20, 0.34) 58%,
+          rgba(8, 18, 20, 0.12) 82%,
+          rgba(8, 18, 20, 0.25) 100%
+        );
+    }
+  }
+
+  /* Carrusel horizontal en móvil: sangra a los bordes de la pantalla y
+     reserva el gutter como scroll-padding para que el snap no pegue las
+     tarjetas al bisel. */
+  .atlas-rail {
+    scroll-padding-inline: var(--gutter);
+  }
+  @media (max-width: 1023px) {
+    .atlas-rail {
+      margin-inline: calc(var(--gutter) * -1);
+      padding-inline: var(--gutter);
+    }
+  }
+
+  /* Enlace de salto para teclado / lector de pantalla. */
+  .skip-link {
+    @apply fixed left-4 top-4 z-[100] -translate-y-24 rounded bg-ink-900 px-4 py-3 text-sm font-semibold text-white transition-transform duration-200;
+  }
+  .skip-link:focus-visible {
+    @apply translate-y-0;
   }
 
   .atlas-map-controls select,

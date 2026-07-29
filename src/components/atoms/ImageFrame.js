@@ -12,6 +12,11 @@ export function ImageFrame({
   src,
   alt = "",
   ratio = "4 / 3",
+  // "md" | "lg": conserva `ratio` hasta ese punto y a partir de ahí llena la
+  // celda. Lo usan las piezas cuya altura la fija la retícula. Siempre debe
+  // quedar al menos una celda de la fila con proporción propia — es la que
+  // aporta la altura de referencia.
+  fillFrom = null,
   sizes = "(max-width: 768px) 100vw, 400px",
   priority = false,
   quality = 75,
@@ -26,9 +31,18 @@ export function ImageFrame({
     <div
       className={cn(
         "relative overflow-hidden rounded border border-line-100 bg-mist-50",
+        fillFrom === "md" && "atlas-frame-fill-md",
+        fillFrom === "lg" && "atlas-frame-fill-lg",
+        !fillFrom && !ratio && "h-full w-full",
         className
       )}
-      style={{ aspectRatio: ratio }}
+      style={
+        fillFrom
+          ? { "--atlas-ratio": ratio }
+          : ratio
+            ? { aspectRatio: ratio }
+            : undefined
+      }
       {...props}
     >
       {src ? (

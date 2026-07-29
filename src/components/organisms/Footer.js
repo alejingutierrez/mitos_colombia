@@ -85,28 +85,41 @@ export function Footer({
             </p>
           </div>
 
-          {/* Columnas de enlaces */}
-          <nav aria-label="Pie de página" className="grid grid-cols-2 gap-8 md:grid-cols-4">
-            {columns.map((column) => (
-              <div key={column.title}>
-                <h2 className="mb-3 text-xs font-semibold uppercase tracking-[0.14em] text-mist-100/50">
-                  {column.title}
-                </h2>
-                <ul className="space-y-2">
-                  {column.links.map((link) => (
-                    <li key={link.href}>
-                      <Link
-                        href={link.href}
-                        className="font-body text-sm text-mist-100/80 transition-colors duration-200 ease-editorial hover:text-white"
-                      >
-                        {link.label}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </nav>
+          {/* Columnas de enlaces.
+              Cada grupo es su propio landmark rotulado por su título. Antes los
+              títulos eran <h2> de 12px, al mismo nivel del esquema que los
+              encabezados de sección de la página. */}
+          <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
+            {columns.map((column) => {
+              const headingId = `footer-${column.title
+                .toLowerCase()
+                .normalize("NFD")
+                .replace(/[\u0300-\u036f]/g, "")
+                .replace(/[^a-z0-9]+/g, "-")}`;
+              return (
+                <nav key={column.title} aria-labelledby={headingId}>
+                  <p
+                    id={headingId}
+                    className="mb-2 text-xs font-semibold uppercase tracking-[0.14em] text-mist-100/50"
+                  >
+                    {column.title}
+                  </p>
+                  <ul>
+                    {column.links.map((link) => (
+                      <li key={link.href}>
+                        <Link
+                          href={link.href}
+                          className="inline-flex min-h-[2.25rem] items-center font-body text-sm text-mist-100/80 transition-colors duration-200 ease-editorial hover:text-white"
+                        >
+                          {link.label}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </nav>
+              );
+            })}
+          </div>
         </div>
 
         {/* Barra inferior */}

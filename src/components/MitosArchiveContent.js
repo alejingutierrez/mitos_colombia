@@ -82,7 +82,7 @@ function ArchiveFeed({ myths = [] }) {
           ratio="4 / 3"
           priority
           sizes="(max-width: 1024px) 100vw, 40vw"
-          titleClassName="!text-[2.8rem]"
+          titleClass="atlas-title-xl"
         />
         <div className="grid gap-3">
           <OverlayMythCard
@@ -90,14 +90,14 @@ function ArchiveFeed({ myths = [] }) {
             ratio="16 / 9"
             sizes="(max-width: 1024px) 100vw, 28vw"
             showExcerpt={false}
-            titleClassName="!text-[1.7rem]"
+            titleClass="atlas-title-md"
           />
           <OverlayMythCard
             myth={third}
             ratio="16 / 9"
             sizes="(max-width: 1024px) 100vw, 28vw"
             showExcerpt={false}
-            titleClassName="!text-[1.7rem]"
+            titleClass="atlas-title-md"
           />
         </div>
         <div className="border-y border-line-100">
@@ -186,7 +186,7 @@ export async function MitosArchiveContent({ page = 1, searchParams = {} }) {
             priority
             sizes="(max-width: 1024px) 100vw, 66vw"
             className="min-h-[27rem] lg:min-h-0"
-            titleClassName="!text-[3.2rem]"
+            titleClass="atlas-title-xl"
           />
         </section>
 

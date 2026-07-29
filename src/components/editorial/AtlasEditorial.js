@@ -1,9 +1,27 @@
 import Image from "next/image";
 import Link from "next/link";
+import { cn } from "../../lib/utils";
 import { Container, Icon, ImageFrame, Motif } from "../atoms";
+
+/**
+ * Piezas editoriales del "Atlas vivo".
+ *
+ * Reglas del sistema que aplican a todo este archivo:
+ *  · Familias por rol — serif (font-editorial) = contenido del archivo;
+ *    sans (font-display) = interfaz que lo organiza.
+ *  · Tallas por token — .atlas-title-{xl,lg,md,sm} y .atlas-section-heading.
+ *    Nada de tamaños sueltos: la jerarquía vive en la escala, no en la pieza.
+ *  · Texto sobre imagen — siempre .atlas-scrim*, nunca un gradiente ad hoc.
+ *  · Los títulos de mito son <h3>: son el contenido real de la página y
+ *    antes viajaban como <span> (invisibles para SEO y lectores de pantalla).
+ */
 
 function mythHref(myth) {
   return myth?.slug ? `/mitos/${myth.slug}` : "/mitos";
+}
+
+function mythMeta(myth) {
+  return [myth?.region, myth?.community].filter(Boolean).join(" · ");
 }
 
 export function AtlasSectionHeader({
@@ -12,23 +30,29 @@ export function AtlasSectionHeader({
   actionHref,
   actionLabel,
   align = "start",
+  id,
   className = "",
 }) {
   return (
     <div
-      className={`mb-8 flex flex-col gap-5 md:flex-row md:items-end md:justify-between ${className}`}
+      className={cn(
+        "mb-8 flex flex-col gap-5 md:mb-10 md:flex-row md:items-end md:justify-between md:gap-10",
+        className
+      )}
     >
-      <div className={align === "center" ? "mx-auto text-center" : ""}>
-        <h2 className="atlas-section-heading">{title}</h2>
+      <div className={align === "center" ? "mx-auto text-center" : "max-w-2xl"}>
+        <h2 id={id} className="atlas-section-heading">
+          {title}
+        </h2>
         <span className={`atlas-rule ${align === "center" ? "mx-auto" : ""}`} />
         {description ? (
-          <p className="mt-4 max-w-2xl text-sm leading-relaxed text-ink-700 md:text-base">
+          <p className="mt-4 text-base leading-relaxed text-ink-700">
             {description}
           </p>
         ) : null}
       </div>
       {actionHref && actionLabel ? (
-        <Link href={actionHref} className="atlas-link group shrink-0">
+        <Link href={actionHref} className="atlas-link group">
           {actionLabel}
           <Icon name="arrow-right" size={17} className="mc-arrow" />
         </Link>
@@ -37,27 +61,43 @@ export function AtlasSectionHeader({
   );
 }
 
+/**
+ * Tarjeta con la imagen a sangre y el texto encima.
+ * `fill` ("md" | "lg") deja que la celda de la retícula mande sobre la altura
+ * a partir de ese punto. En cada fila tiene que quedar al menos una pieza con
+ * proporción propia: es la que fija la altura de referencia.
+ */
 export function OverlayMythCard({
   myth,
   ratio = "4 / 3",
+  fill = null,
   priority = false,
   quality = 75,
   sizes,
   className = "",
   showExcerpt = true,
-  titleClassName = "",
+  titleClass = "atlas-title-lg",
+  scrimClass = "atlas-scrim",
   contentClassName = "",
+  headingLevel: Heading = "h3",
 }) {
   if (!myth) return null;
+  const meta = mythMeta(myth);
   return (
     <Link
       href={mythHref(myth)}
-      className={`group relative block overflow-hidden bg-[rgb(var(--atlas-night))] ${className}`}
+      className={cn(
+        "group relative block overflow-hidden bg-[rgb(var(--atlas-night))]",
+        fill === "md" && "md:h-full",
+        fill === "lg" && "lg:h-full",
+        className
+      )}
     >
       <ImageFrame
         src={myth.imageUrl}
-        alt={myth.title}
+        alt=""
         ratio={ratio}
+        fillFrom={fill}
         priority={priority}
         quality={quality}
         sizes={sizes}
@@ -67,230 +107,317 @@ export function OverlayMythCard({
         imgClassName="atlas-image-zoom object-cover"
       />
       <span
-        className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black via-black/5 to-transparent"
+        className={cn("pointer-events-none absolute inset-0", scrimClass)}
         aria-hidden="true"
       />
-      <span
-        className={`absolute inset-x-0 bottom-0 block p-5 text-white md:p-6 ${contentClassName}`}
+      <div
+        className={cn(
+          "absolute inset-x-0 bottom-0 p-5 text-white md:p-7",
+          contentClassName
+        )}
       >
-        <span className="block text-[0.67rem] font-medium uppercase tracking-[0.16em] text-white/78">
-          {[myth.region, myth.community].filter(Boolean).join(" · ")}
-        </span>
-        <span
-          className={`mt-2 block font-editorial text-[2rem] font-semibold leading-[0.92] tracking-[-0.025em] md:text-[2.35rem] ${titleClassName}`}
-        >
+        {meta ? (
+          <span className="atlas-kicker block !text-white/90">{meta}</span>
+        ) : null}
+        <Heading className={cn(titleClass, "mt-2 !text-white")}>
           {myth.title}
-        </span>
+        </Heading>
         {showExcerpt && myth.excerpt ? (
-          <span className="mt-3 hidden max-w-xl text-sm leading-relaxed text-white/88 sm:block">
+          <p className="mt-3 max-w-xl text-sm leading-relaxed text-white/85">
             {myth.excerpt}
-          </span>
+          </p>
         ) : null}
         <span className="mt-4 inline-flex items-center gap-2 text-sm font-semibold">
-          Leer este mito <Icon name="arrow-right" size={17} className="mc-arrow" />
+          Leer este mito
+          <Icon name="arrow-right" size={17} className="mc-arrow" />
         </span>
+      </div>
+    </Link>
+  );
+}
+
+/**
+ * Tarjeta compacta imagen + título.
+ *
+ * La celda de imagen es una caja de ancho fijo con la foto en `fill`. Antes
+ * usaba un ImageFrame con `ratio="1 / 1"` y `h-full`: el aspect-ratio derivaba
+ * el ANCHO de la altura de la fila, así que la imagen crecía hasta 174px dentro
+ * de una columna de 112px y tapaba el título.
+ */
+export function CompactMythLink({ myth, imageSide = "left", className = "" }) {
+  if (!myth) return null;
+  const reversed = imageSide === "right";
+  const meta = mythMeta(myth);
+  return (
+    <Link
+      href={mythHref(myth)}
+      className={cn(
+        "group grid min-h-[7.5rem] items-stretch border border-line-100 bg-white transition-colors hover:border-line-300",
+        reversed ? "grid-cols-[1fr_7rem]" : "grid-cols-[7rem_1fr]",
+        className
+      )}
+    >
+      <span
+        className={cn(
+          "relative block overflow-hidden bg-mist-50",
+          reversed && "order-2"
+        )}
+      >
+        {myth.imageUrl ? (
+          <Image
+            src={myth.imageUrl}
+            alt=""
+            fill
+            sizes="300px"
+            className="atlas-image-zoom object-cover"
+          />
+        ) : (
+          <span className="absolute inset-0 flex items-center justify-center">
+            <Motif
+              name={myth.motif || "jaguar"}
+              size={40}
+              className="opacity-25"
+            />
+          </span>
+        )}
+      </span>
+      <span className="flex min-w-0 flex-col justify-center gap-1.5 p-4">
+        {meta ? <span className="atlas-kicker block">{meta}</span> : null}
+        <h3 className="atlas-title-sm transition-colors group-hover:text-jungle-700">
+          {myth.title}
+        </h3>
       </span>
     </Link>
   );
 }
 
-export function CompactMythLink({ myth, imageSide = "left", className = "" }) {
-  if (!myth) return null;
-  return (
-    <Link
-      href={mythHref(myth)}
-      className={`group grid min-h-28 grid-cols-[7rem_1fr] border border-line-100 bg-white transition-colors hover:border-line-300 ${imageSide === "right" ? "grid-cols-[1fr_7rem]" : ""} ${className}`}
-    >
-      <div className={imageSide === "right" ? "order-2" : ""}>
-        <ImageFrame
-          src={myth.imageUrl}
-          alt={myth.title}
-          ratio="1 / 1"
-          sizes="112px"
-          placeholderMotif={myth.motif || "jaguar"}
-          className="h-full rounded-none border-0"
-          imgClassName="atlas-image-zoom object-cover"
-        />
-      </div>
-      <div className="flex min-w-0 flex-col justify-center p-4">
-        <span className="atlas-kicker">
-          {[myth.region, myth.community].filter(Boolean).join(" · ")}
-        </span>
-        <span className="mt-2 font-editorial text-[1.35rem] font-semibold leading-[1] text-ink-900">
-          {myth.title}
-        </span>
-        <Icon
-          name="arrow-right"
-          size={17}
-          className="mc-arrow mt-3 text-jungle-700"
-        />
-      </div>
-    </Link>
-  );
-}
-
+/**
+ * Mosaico de portada de sección.
+ * Colocación explícita en lg para que las cuatro piezas cierren en dos filas
+ * exactas; en md baja a un 6-columnas y solo debajo de 768px se apila.
+ */
 export function SelectionMosaic({ myths = [] }) {
   const [lead, second, third, ...rail] = myths;
   if (!lead) return null;
   return (
-    <div className="grid gap-3 lg:grid-cols-12 lg:grid-rows-2">
+    <div className="grid gap-3 md:grid-cols-6 lg:grid-cols-12 lg:grid-rows-[minmax(0,1fr)_minmax(0,1fr)]">
       <OverlayMythCard
         myth={lead}
         ratio="4 / 5"
+        fill="lg"
         priority
-        sizes="(max-width: 1024px) 100vw, 42vw"
-        className="lg:col-span-5 lg:row-span-2"
+        quality={70}
+        sizes="(max-width: 768px) 190vw, (max-width: 1024px) 100vw, 67vw"
+        className="md:col-span-3 md:row-span-2 lg:col-start-1 lg:col-end-6 lg:row-start-1 lg:row-end-3"
+        titleClass="atlas-title-lg"
       />
       <OverlayMythCard
         myth={second}
         ratio="16 / 9"
-        sizes="(max-width: 1024px) 100vw, 34vw"
-        className="lg:col-span-4"
-        titleClassName="!text-[1.85rem]"
+        fill="md"
+        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 34vw"
+        className="md:col-span-3 lg:col-start-6 lg:col-end-10 lg:row-start-1"
+        titleClass="atlas-title-md"
+        showExcerpt={false}
       />
-      <div className="grid gap-3 sm:grid-cols-2 lg:col-span-3 lg:row-span-2 lg:grid-cols-1">
+      <OverlayMythCard
+        myth={third}
+        ratio="16 / 9"
+        fill="md"
+        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 34vw"
+        className="md:col-span-3 lg:col-start-6 lg:col-end-10 lg:row-start-2"
+        titleClass="atlas-title-md"
+        showExcerpt={false}
+      />
+      <div className="grid gap-3 sm:grid-cols-2 md:col-span-6 lg:col-start-10 lg:col-end-13 lg:row-start-1 lg:row-end-3 lg:auto-rows-fr lg:grid-cols-1">
         {rail.slice(0, 4).map((myth) => (
           <CompactMythLink key={myth.slug} myth={myth} />
         ))}
       </div>
-      <OverlayMythCard
-        myth={third}
-        ratio="16 / 9"
-        sizes="(max-width: 1024px) 100vw, 34vw"
-        className="lg:col-span-4"
-        titleClassName="!text-[1.85rem]"
-      />
     </div>
   );
 }
 
+/**
+ * Pieza destacada + índice numerado.
+ * `reverse` intercambia lado Y proporción. Antes se emitían las dos clases
+ * `lg:grid-cols-[...]` a la vez y ganaba la del CSS, no la del atributo: la
+ * lista ocupaba la columna ancha y la imagen protagonista la estrecha.
+ */
 export function EditorialMythRow({ myths = [], reverse = false }) {
   const [lead, ...rest] = myths;
   if (!lead) return null;
+  const items = rest.slice(0, 4);
   return (
     <div
-      className={`grid items-stretch gap-6 lg:grid-cols-[1.2fr_0.8fr] ${
-        reverse ? "lg:grid-cols-[0.8fr_1.2fr]" : ""
-      }`}
+      className={cn(
+        "grid items-stretch gap-6 md:gap-8",
+        reverse
+          ? "lg:grid-cols-[minmax(0,0.82fr)_minmax(0,1.18fr)]"
+          : "lg:grid-cols-[minmax(0,1.18fr)_minmax(0,0.82fr)]"
+      )}
     >
       <OverlayMythCard
         myth={lead}
-        ratio="16 / 10"
+        // 4/3 y no 16/10: en móvil esta pieza lleva kicker + título + extracto
+        // + CTA, y sobre una caja tan baja el bloque llegaba al 88% de la
+        // altura, justo donde el scrim ya no sostiene el texto.
+        ratio="4 / 3"
+        fill="lg"
         sizes="(max-width: 1024px) 100vw, 58vw"
-        className={reverse ? "lg:order-2" : ""}
+        className={reverse ? "lg:order-2" : undefined}
       />
-      <div
-        className={`divide-y divide-line-100 border-y border-line-100 ${
-          reverse ? "lg:order-1" : ""
-        }`}
+      <ol
+        className={cn(
+          "grid auto-rows-fr divide-y divide-line-100 border-y border-line-100",
+          reverse && "lg:order-1"
+        )}
       >
-        {rest.slice(0, 4).map((myth, index) => (
-          <Link
-            key={myth.slug}
-            href={mythHref(myth)}
-            className="group grid grid-cols-[4.5rem_1fr_auto] items-center gap-4 py-4"
-          >
-            <span className="relative aspect-square overflow-hidden">
-              {myth.imageUrl ? (
-                <Image
-                  src={myth.imageUrl}
-                  alt=""
-                  fill
-                  sizes="72px"
-                  className="atlas-image-zoom object-cover"
-                />
-              ) : (
-                <span className="absolute inset-0 flex items-center justify-center bg-mist-50">
-                  <Motif name={myth.motif || "hoja"} size={32} />
-                </span>
-              )}
-            </span>
-            <span className="min-w-0">
-              <span className="atlas-kicker block">
-                {[myth.region, myth.community].filter(Boolean).join(" · ")}
+        {items.map((myth, index) => (
+          <li key={myth.slug}>
+            <Link
+              href={mythHref(myth)}
+              className="group grid h-full grid-cols-[4.5rem_1fr_auto] items-center gap-4 py-4"
+            >
+              <span className="relative block aspect-square overflow-hidden bg-mist-50">
+                {myth.imageUrl ? (
+                  <Image
+                    src={myth.imageUrl}
+                    alt=""
+                    fill
+                    sizes="144px"
+                    className="atlas-image-zoom object-cover"
+                  />
+                ) : (
+                  <span className="absolute inset-0 flex items-center justify-center">
+                    <Motif
+                      name={myth.motif || "hoja"}
+                      size={32}
+                      className="opacity-25"
+                    />
+                  </span>
+                )}
               </span>
-              <span className="mt-1 block font-editorial text-xl font-semibold leading-none text-ink-900">
-                {myth.title}
+              <span className="min-w-0">
+                <span className="atlas-kicker block">{mythMeta(myth)}</span>
+                <h3 className="atlas-title-sm mt-1 transition-colors group-hover:text-jungle-700">
+                  {myth.title}
+                </h3>
               </span>
-            </span>
-            <span className="font-editorial text-lg text-ink-500">
-              {String(index + 1).padStart(2, "0")}
-            </span>
-          </Link>
+              <span
+                aria-hidden="true"
+                className="atlas-figure font-editorial text-lg text-ink-500"
+              >
+                {String(index + 1).padStart(2, "0")}
+              </span>
+            </Link>
+          </li>
         ))}
-      </div>
+      </ol>
     </div>
   );
 }
 
-export function PortraitRail({ myths = [], className = "" }) {
+/**
+ * Carrusel de retratos. En móvil/tablet sangra a los bordes de la pantalla
+ * (`atlas-rail`) para que el recorte de la tarjeta siguiente lea como "hay
+ * más" en vez de como un corte accidental, y reserva el gutter como
+ * scroll-padding para que el snap no pegue las tarjetas al bisel.
+ */
+export function PortraitRail({ myths = [], label, className = "" }) {
+  const items = myths.slice(0, 8);
+  if (!items.length) return null;
   return (
     <div
-      className={`grid snap-x snap-mandatory grid-flow-col auto-cols-[78%] gap-4 overflow-x-auto pb-3 sm:auto-cols-[45%] lg:grid-flow-row lg:grid-cols-4 lg:overflow-visible ${className}`}
+      className={cn(
+        "atlas-rail grid snap-x snap-mandatory auto-cols-[72%] grid-flow-col gap-4 overflow-x-auto pb-3 sm:auto-cols-[42%] lg:grid-flow-row lg:grid-cols-4 lg:gap-6 lg:overflow-visible",
+        "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-jungle-500/40",
+        className
+      )}
+      tabIndex={0}
+      role="group"
+      aria-label={label || "Galería desplazable de mitos"}
     >
-      {myths.slice(0, 8).map((myth) => (
-        <Link
-          key={myth.slug}
-          href={mythHref(myth)}
-          className="group snap-start"
-        >
+      {items.map((myth) => (
+        <Link key={myth.slug} href={mythHref(myth)} className="group snap-start">
           <ImageFrame
             src={myth.imageUrl}
-            alt={myth.title}
+            alt=""
             ratio="3 / 4"
-            sizes="(max-width: 640px) 78vw, (max-width: 1024px) 45vw, 25vw"
+            sizes="(max-width: 640px) 150vw, (max-width: 1024px) 100vw, 52vw"
             placeholderMotif={myth.motif || "condor"}
             placeholderSize={120}
             className="rounded-none border-0"
             imgClassName="atlas-image-zoom object-cover"
           />
-          <span className="atlas-kicker mt-4 block">
-            {[myth.region, myth.community].filter(Boolean).join(" · ")}
-          </span>
-          <span className="mt-1 block font-editorial text-[1.55rem] font-semibold leading-none text-ink-900">
+          <span className="atlas-kicker mt-4 block">{mythMeta(myth)}</span>
+          <h3 className="atlas-title-md mt-1 transition-colors group-hover:text-jungle-700">
             {myth.title}
-          </span>
+          </h3>
         </Link>
       ))}
     </div>
   );
 }
 
+// Reparte N tarjetas en filas de `perRow` sobre una retícula de 6 columnas y
+// estira la última fila para que nunca quede una celda vacía: con 5 regiones,
+// la fila final son dos piezas a media página en vez de dos piezas y un hueco.
+const SM_SPAN = { 1: "sm:col-span-6", 2: "sm:col-span-3" };
+const LG_SPAN = { 1: "lg:col-span-6", 2: "lg:col-span-3", 3: "lg:col-span-2" };
+
+function rowSpan(index, total, perRow) {
+  const rowStart = Math.floor(index / perRow) * perRow;
+  return Math.min(perRow, total - rowStart);
+}
+
 export function TerritoryStrip({ regions = [] }) {
+  const items = regions.slice(0, 6);
+  if (!items.length) return null;
   return (
-    <div className="grid gap-px overflow-hidden bg-line-100 md:grid-cols-3">
-      {regions.slice(0, 6).map((region) => (
+    <div className="grid gap-px overflow-hidden bg-line-100 sm:grid-cols-6">
+      {items.map((region, index) => (
         <Link
           key={region.href}
           href={region.href}
-          className="group relative min-h-[22rem] overflow-hidden bg-[rgb(var(--atlas-night))]"
+          className={cn(
+            "group relative block min-h-[18rem] overflow-hidden bg-[rgb(var(--atlas-night))] md:min-h-[20rem]",
+            SM_SPAN[rowSpan(index, items.length, 2)],
+            LG_SPAN[rowSpan(index, items.length, 3)]
+          )}
         >
           {region.imageUrl ? (
             <Image
               src={region.imageUrl}
               alt=""
               fill
-              sizes="(max-width: 768px) 100vw, 34vw"
-              className="atlas-image-zoom object-cover opacity-85"
+              sizes="(max-width: 640px) 140vw, (max-width: 1024px) 100vw, 45vw"
+              className="atlas-image-zoom object-cover"
             />
           ) : (
-            <span className="absolute inset-0 flex items-center justify-center opacity-30">
+            <span className="absolute inset-0 flex items-center justify-center opacity-25">
               <Motif name={region.motif || "montana"} size={180} />
             </span>
           )}
-          <span className="absolute inset-0 bg-gradient-to-t from-black via-black/5 to-transparent" />
-          <span className="absolute inset-x-0 bottom-0 flex items-end justify-between p-6 text-white">
-            <span>
-              <span className="atlas-kicker !text-white/70">Territorio</span>
-              <span className="mt-1 block font-editorial text-4xl font-semibold leading-none">
-                {region.title}
+          <span
+            className="atlas-scrim pointer-events-none absolute inset-0"
+            aria-hidden="true"
+          />
+          {/* items-end alinea ambos bloques por su base: la cifra dejó de
+              flotar por encima del nombre de la región. */}
+          <div className="absolute inset-x-0 bottom-0 flex items-end justify-between gap-4 p-6 text-white">
+            <span className="min-w-0">
+              <span className="atlas-kicker block !text-white/90">
+                Territorio
               </span>
+              <h3 className="atlas-title-lg mt-1 !text-white">{region.title}</h3>
             </span>
-            <span className="text-right">
-              <span className="block font-editorial text-3xl">{region.count}</span>
-              <span className="atlas-kicker !text-white/60">mitos</span>
-            </span>
-          </span>
+            {region.count != null ? (
+              <span className="atlas-kicker atlas-figure shrink-0 !text-white/90">
+                {region.count} mitos
+              </span>
+            ) : null}
+          </div>
         </Link>
       ))}
     </div>
@@ -299,10 +426,10 @@ export function TerritoryStrip({ regions = [] }) {
 
 export function AtlasPageIntro({ title, description, count, children }) {
   return (
-    <Container size="atlas" className="py-12 md:py-20">
+    <Container size="atlas" className="atlas-section-y-tight">
       <div className="grid gap-8 md:grid-cols-[1fr_0.9fr] md:items-end">
         <div>
-          <h1 className="atlas-title text-[3.5rem] md:text-[5.6rem]">{title}</h1>
+          <h1 className="atlas-title atlas-title-xl">{title}</h1>
           {description ? (
             <p className="mt-6 max-w-2xl text-base leading-relaxed text-ink-700 md:text-lg">
               {description}
@@ -311,7 +438,7 @@ export function AtlasPageIntro({ title, description, count, children }) {
         </div>
         <div className="md:justify-self-end">
           {count != null ? (
-            <p className="font-editorial text-6xl font-semibold leading-none text-jungle-700 md:text-8xl">
+            <p className="atlas-figure font-editorial text-6xl font-semibold leading-none text-jungle-700 md:text-8xl">
               {count}
             </p>
           ) : null}
