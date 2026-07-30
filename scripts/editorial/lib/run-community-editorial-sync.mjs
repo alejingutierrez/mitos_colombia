@@ -49,6 +49,27 @@ function sameSet(left, right) {
   );
 }
 
+function reviewedSlugs(config) {
+  return config.reviewedSlugs || config.canonicalSlugs;
+}
+
+function expectedSourceCount(config, slug) {
+  return Number(
+    config.expectedSourceCountsBySlug?.[slug] ??
+      config.expectedSourceCount ??
+      0,
+  );
+}
+
+function targetTaxonomySpec(config, slug) {
+  return (
+    config.targetTaxonomyBySlug?.[slug] || {
+      regionSlug: config.communityRegionSlug || "",
+      communitySlug: config.communitySlug,
+    }
+  );
+}
+
 function connectionString() {
   return (
     process.env.POSTGRES_URL_NON_POOLING ||
@@ -74,8 +95,16 @@ function assertConfig(config) {
       throw new Error(`Falta configuración de sincronización: ${key}.`);
     }
   }
-  if (config.records.length !== config.canonicalSlugs.length) {
-    throw new Error("Expedientes y universo canónico no coinciden.");
+  if (config.records.length !== reviewedSlugs(config).length) {
+    throw new Error("Expedientes y lista de trabajo no coinciden.");
+  }
+  if (
+    !sameSet(
+      config.records.map(({ slug }) => slug),
+      reviewedSlugs(config),
+    )
+  ) {
+    throw new Error("Los expedientes no cubren la lista de trabajo.");
   }
 }
 
@@ -117,7 +146,7 @@ function validateRecords(config, provenance, requireVisuals) {
       throw new Error(`${record.slug}: taxonomía o palabras clave inválidas.`);
     }
     const sources = [...record.keySources, ...record.sources];
-    const expectedSources = Number(config.expectedSourceCount || 0);
+    const expectedSources = expectedSourceCount(config, record.slug);
     if (
       sources.length < 5 ||
       (expectedSources > 0 && sources.length !== expectedSources) ||
@@ -189,7 +218,7 @@ async function saveBackup(client, config, community, mythRows) {
   const slugs = [
     ...new Set([
       ...mythRows.map(({ slug }) => slug),
-      ...config.canonicalSlugs,
+      ...reviewedSlugs(config),
     ]),
   ];
   const safeIds = mythIds.length ? mythIds : [-1];
@@ -373,22 +402,25 @@ async function createMyth(client, record, taxonomy, sourceRow) {
   return result.rows[0];
 }
 
-async function updateMyth(client, current, record) {
+async function updateMyth(client, current, record, taxonomy) {
   const result = await client.query(
     `UPDATE myths
-     SET title = $2, category_path = $3, tags_raw = $4,
-         mito = $5, historia = $6, versiones = $7, leccion = $8,
-         similitudes = $9, content = $10, excerpt = $11,
-         seo_title = $12, seo_description = $13,
-         focus_keyword = $14, focus_keywords_raw = $15,
-         image_prompt = $16, image_url = $17,
-         latitude = $18, longitude = $19,
+     SET title = $2, region_id = $3, community_id = $4,
+         category_path = $5, tags_raw = $6,
+         mito = $7, historia = $8, versiones = $9, leccion = $10,
+         similitudes = $11, content = $12, excerpt = $13,
+         seo_title = $14, seo_description = $15,
+         focus_keyword = $16, focus_keywords_raw = $17,
+         image_prompt = $18, image_url = $19,
+         latitude = $20, longitude = $21,
          content_formatted = TRUE, updated_at = NOW()
      WHERE id = $1
      RETURNING *`,
     [
       current.id,
       record.title,
+      taxonomy.regionId,
+      taxonomy.communityId,
       record.category_path,
       record.tags.join(", "),
       record.mito,
@@ -591,8 +623,9 @@ export async function runCommunityEditorialSync(
        FROM communities c
        JOIN regions r ON r.id = c.region_id
        WHERE c.slug = $1
+         AND ($2::text = '' OR r.slug = $2)
        LIMIT 1`,
-      [config.communitySlug],
+      [config.communitySlug, config.communityRegionSlug || ""],
     );
     if (communityResult.rowCount !== 1) {
       throw new Error(`No existe la comunidad ${config.communitySlug}.`);
@@ -612,9 +645,59 @@ export async function runCommunityEditorialSync(
           currentSlugs.join(", "),
       );
     }
-    const currentBySlug = new Map(
-      mythResult.rows.map((row) => [row.slug, row]),
+    const reviewedResult = await client.query(
+      `SELECT m.*, c.slug AS current_community_slug,
+              r.slug AS current_region_slug
+       FROM myths m
+       JOIN regions r ON r.id = m.region_id
+       LEFT JOIN communities c ON c.id = m.community_id
+       WHERE m.slug = ANY($1::text[])
+       ORDER BY m.source_row, m.slug`,
+      [reviewedSlugs(config)],
     );
+    const currentBySlug = new Map(
+      reviewedResult.rows.map((row) => [row.slug, row]),
+    );
+    const taxonomySpecs = [
+      ...new Map(
+        config.records.map((record) => {
+          const spec = targetTaxonomySpec(config, record.slug);
+          return [
+            `${spec.regionSlug}|${spec.communitySlug}`,
+            spec,
+          ];
+        }),
+      ).values(),
+    ];
+    const taxonomies = new Map();
+    for (const spec of taxonomySpecs) {
+      const targetResult = await client.query(
+        `SELECT c.id AS community_id, c.slug AS community_slug,
+                r.id AS region_id, r.slug AS region_slug
+         FROM communities c
+         JOIN regions r ON r.id = c.region_id
+         WHERE c.slug = $1
+           AND ($2::text = '' OR r.slug = $2)
+         ORDER BY r.slug
+         LIMIT 2`,
+        [spec.communitySlug, spec.regionSlug || ""],
+      );
+      if (targetResult.rowCount !== 1) {
+        throw new Error(
+          `Taxonomía ambigua o ausente: ${spec.regionSlug || "*"} > ` +
+            `${spec.communitySlug}.`,
+        );
+      }
+      taxonomies.set(
+        `${spec.regionSlug}|${spec.communitySlug}`,
+        {
+          regionId: Number(targetResult.rows[0].region_id),
+          communityId: Number(targetResult.rows[0].community_id),
+          regionSlug: targetResult.rows[0].region_slug,
+          communitySlug: targetResult.rows[0].community_slug,
+        },
+      );
+    }
     const tagNames = [
       ...new Set(config.records.flatMap(({ tags }) => tags)),
     ];
@@ -635,17 +718,20 @@ export async function runCommunityEditorialSync(
         record.image_url,
         record.vertical_image_url,
       ]);
+      const reviewedIds = reviewedResult.rows.map(({ id }) => Number(id));
       imageCollisions = await client.query(
         `SELECT 'horizontal' AS orientation, m.slug, m.image_url
          FROM myths m
-         WHERE m.community_id <> $1 AND m.image_url = ANY($2::text[])
+         WHERE NOT (m.id = ANY($1::int[]))
+           AND m.image_url = ANY($2::text[])
          UNION ALL
          SELECT 'vertical' AS orientation, m.slug, vi.image_url
          FROM vertical_images vi
          JOIN myths m
            ON vi.entity_type = 'myth' AND vi.entity_id = m.id
-         WHERE m.community_id <> $1 AND vi.image_url = ANY($2::text[])`,
-        [community.id, imageUrls],
+         WHERE NOT (m.id = ANY($1::int[]))
+           AND vi.image_url = ANY($2::text[])`,
+        [reviewedIds.length ? reviewedIds : [-1], imageUrls],
       );
       if (imageCollisions.rowCount) {
         throw new Error(
@@ -654,6 +740,13 @@ export async function runCommunityEditorialSync(
         );
       }
     }
+    const configuredSourceCounts = [
+      ...new Set(
+        config.records.map((record) =>
+          expectedSourceCount(config, record.slug),
+        ),
+      ),
+    ].filter(Boolean);
     const summary = {
       mode: options.apply ? "apply" : "dry-run",
       community: {
@@ -665,17 +758,34 @@ export async function runCommunityEditorialSync(
         current: currentSlugs.length,
         inherited: config.inheritedSlugs.length,
         canonical: config.canonicalSlugs.length,
-        toCreate: config.canonicalSlugs.filter(
+        reviewed: reviewedSlugs(config).length,
+        toCreate: reviewedSlugs(config).filter(
           (slug) => !currentBySlug.has(slug),
         ),
-        toUpdate: config.canonicalSlugs.filter((slug) =>
+        toUpdate: reviewedSlugs(config).filter((slug) =>
           currentBySlug.has(slug),
         ).length,
+        toTransfer: config.records
+          .filter((record) => {
+            const current = currentBySlug.get(record.slug);
+            if (!current) return false;
+            const target = targetTaxonomySpec(config, record.slug);
+            return (
+              current.current_community_slug !==
+                target.communitySlug ||
+              (target.regionSlug &&
+                current.current_region_slug !== target.regionSlug)
+            );
+          })
+          .map(({ slug }) => slug),
         toDelete: [],
       },
       dossiers: config.records.length,
       imagePairs: config.records.length,
-      sourcesPerMyth: Number(config.expectedSourceCount || 0),
+      sourcesPerMyth:
+        configuredSourceCounts.length === 1
+          ? configuredSourceCounts[0]
+          : configuredSourceCounts,
       tags: {
         requested: tagNames.length,
         existing: tagNames.length,
@@ -691,7 +801,7 @@ export async function runCommunityEditorialSync(
       client,
       config,
       community,
-      mythResult.rows,
+      reviewedResult.rows,
     );
     await client.query("BEGIN");
     try {
@@ -714,15 +824,19 @@ export async function runCommunityEditorialSync(
       const synced = [];
       for (const record of config.records) {
         const current = currentBySlug.get(record.slug);
+        const spec = targetTaxonomySpec(config, record.slug);
+        const taxonomy = taxonomies.get(
+          `${spec.regionSlug}|${spec.communitySlug}`,
+        );
+        if (!taxonomy) {
+          throw new Error(`${record.slug}: taxonomía de destino ausente.`);
+        }
         const myth = current
-          ? await updateMyth(client, current, record)
+          ? await updateMyth(client, current, record, taxonomy)
           : await createMyth(
               client,
               record,
-              {
-                regionId: Number(community.region_id),
-                communityId: Number(community.id),
-              },
+              taxonomy,
               nextSourceRow++,
             );
         const editorialId = await upsertEditorial(client, myth, record);
@@ -738,6 +852,7 @@ export async function runCommunityEditorialSync(
         synced.push({
           slug: record.slug,
           action: current ? "updated" : "created",
+          taxonomy: `${taxonomy.regionSlug}/${taxonomy.communitySlug}`,
           mythId: Number(myth.id),
           editorialId,
         });

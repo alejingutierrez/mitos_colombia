@@ -132,8 +132,12 @@ function selectedDefinitions(config, options) {
             slug: record.slug,
             prompt: editorialPrompt,
             excerpt: record.excerpt,
-            region: config.regionName,
-            community: config.communityName,
+            region:
+              config.regionNameBySlug?.[record.slug] ||
+              config.regionName,
+            community:
+              config.communityNameBySlug?.[record.slug] ||
+              config.communityName,
           },
           orientation,
           styleProfile: "fullPaperCutIllustration",

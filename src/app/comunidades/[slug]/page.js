@@ -38,6 +38,7 @@ import { ufainaCommunityPage } from "../../../../editorial/ufaina/community.mjs"
 import { yaguaCommunityPage } from "../../../../editorial/yagua/community.mjs";
 import { yucunaCommunityPage } from "../../../../editorial/yucuna/community.mjs";
 import { yukpaCommunityPage } from "../../../../editorial/yukpa/community.mjs";
+import { zenuCommunityPage } from "../../../../editorial/zenu/community.mjs";
 
 export const runtime = "nodejs";
 export const revalidate = 300;
@@ -71,6 +72,9 @@ const COMMUNITY_INFO = {
   },
   "yukpa": {
     ...yukpaCommunityPage,
+  },
+  "zenu": {
+    ...zenuCommunityPage,
   },
   "wayuu": {
     title: "Wayúu",

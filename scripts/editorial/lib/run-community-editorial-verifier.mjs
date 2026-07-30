@@ -31,6 +31,19 @@ function sameSet(left, right) {
   );
 }
 
+function reviewedSlugs(config) {
+  return config.reviewedSlugs || config.canonicalSlugs;
+}
+
+function targetTaxonomySpec(config, slug) {
+  return (
+    config.targetTaxonomyBySlug?.[slug] || {
+      regionSlug: config.communityRegionSlug || "",
+      communitySlug: config.communitySlug,
+    }
+  );
+}
+
 function digest(value) {
   return createHash("sha256").update(value).digest("hex");
 }
@@ -139,12 +152,13 @@ export async function runCommunityEditorialVerifier(
   await client.connect();
   try {
     const communityResult = await client.query(
-      `SELECT c.*, r.name AS region_name
+      `SELECT c.*, r.name AS region_name, r.slug AS region_slug
        FROM communities c
        JOIN regions r ON r.id = c.region_id
        WHERE c.slug = $1
+         AND ($2::text = '' OR r.slug = $2)
        LIMIT 1`,
-      [config.communitySlug],
+      [config.communitySlug, config.communityRegionSlug || ""],
     );
     assert(
       communityResult.rowCount === 1,
@@ -166,6 +180,18 @@ export async function runCommunityEditorialVerifier(
       `Universo inesperado: ${currentSlugs.join(", ")}.`,
     );
     if (!isCanonical) {
+      const placementResult = await client.query(
+        `SELECT m.slug, c.slug AS community_slug, r.slug AS region_slug
+         FROM myths m
+         JOIN regions r ON r.id = m.region_id
+         LEFT JOIN communities c ON c.id = m.community_id
+         WHERE m.slug = ANY($1::text[])
+         ORDER BY m.slug`,
+        [reviewedSlugs(config)],
+      );
+      const placementBySlug = new Map(
+        placementResult.rows.map((row) => [row.slug, row]),
+      );
       const pending = {
         status: "pending-sync",
         community: config.communitySlug,
@@ -174,6 +200,16 @@ export async function runCommunityEditorialVerifier(
         missing: config.canonicalSlugs.filter(
           (slug) => !currentSlugs.includes(slug),
         ),
+        pendingTransfers: reviewedSlugs(config).filter((slug) => {
+          const current = placementBySlug.get(slug);
+          if (!current) return false;
+          const target = targetTaxonomySpec(config, slug);
+          return (
+            current.community_slug !== target.communitySlug ||
+            (target.regionSlug &&
+              current.region_slug !== target.regionSlug)
+          );
+        }),
         imageProvenance: provenance?.visualQa || { status: "pending" },
       };
       if (options.strict) {
@@ -191,7 +227,7 @@ export async function runCommunityEditorialVerifier(
               m.historia, m.versiones, m.leccion, m.similitudes,
               m.excerpt, m.seo_title, m.seo_description,
               m.image_url, m.image_prompt, m.latitude, m.longitude,
-              c.slug AS community_slug,
+              c.slug AS community_slug, r.slug AS region_slug,
               e.id AS editorial_id, e.content AS editorial_content,
               e.image_url AS editorial_image_url,
               e.image_prompt_horizontal, e.image_prompt_vertical,
@@ -210,6 +246,7 @@ export async function runCommunityEditorialVerifier(
               v.custom_prompt AS vertical_custom_prompt
        FROM myths m
        JOIN communities c ON c.id = m.community_id
+       JOIN regions r ON r.id = m.region_id
        LEFT JOIN editorial_myths e ON e.source_myth_id = m.id
        LEFT JOIN LATERAL (
          SELECT vi.*
@@ -220,20 +257,22 @@ export async function runCommunityEditorialVerifier(
        ) v ON TRUE
        WHERE m.slug = ANY($1::text[])
        ORDER BY m.slug`,
-      [config.canonicalSlugs],
+      [reviewedSlugs(config)],
     );
     assert(
-      result.rowCount === config.canonicalSlugs.length,
-      `Se esperaban ${config.canonicalSlugs.length} expedientes.`,
+      result.rowCount === reviewedSlugs(config).length,
+      `Se esperaban ${reviewedSlugs(config).length} expedientes.`,
     );
     const allImages = new Set();
     const sourceCounts = [];
     for (const row of result.rows) {
       const record = config.recordsBySlug[row.slug];
       assert(record, `${row.slug}: expediente ausente.`);
+      const target = targetTaxonomySpec(config, row.slug);
       assert(
-        row.community_slug === config.communitySlug,
-        `${row.slug}: comunidad incorrecta.`,
+        row.community_slug === target.communitySlug &&
+          (!target.regionSlug || row.region_slug === target.regionSlug),
+        `${row.slug}: taxonomía incorrecta.`,
       );
       assert(row.title === record.title, `${row.slug}: título desincronizado.`);
       assert(
