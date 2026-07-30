@@ -35,6 +35,20 @@ function reviewedSlugs(config) {
   return config.reviewedSlugs || config.canonicalSlugs;
 }
 
+function canonicalUniverseAlternatives(config) {
+  const preserved = config.preservedAdditionalSlugs || [];
+  return preserved.length
+    ? [config.canonicalSlugs, [...config.canonicalSlugs, ...preserved]]
+    : [config.canonicalSlugs];
+}
+
+function inheritedUniverseAlternatives(config) {
+  const preserved = config.preservedAdditionalSlugs || [];
+  return preserved.length
+    ? [config.inheritedSlugs, [...config.inheritedSlugs, ...preserved]]
+    : [config.inheritedSlugs];
+}
+
 function targetTaxonomySpec(config, slug) {
   return (
     config.targetTaxonomyBySlug?.[slug] || {
@@ -186,8 +200,12 @@ export async function runCommunityEditorialVerifier(
       [community.id],
     );
     const currentSlugs = universeResult.rows.map(({ slug }) => slug);
-    const isInherited = sameSet(currentSlugs, config.inheritedSlugs);
-    const isCanonical = sameSet(currentSlugs, config.canonicalSlugs);
+    const isInherited = inheritedUniverseAlternatives(config).some(
+      (slugs) => sameSet(currentSlugs, slugs),
+    );
+    const isCanonical = canonicalUniverseAlternatives(config).some(
+      (slugs) => sameSet(currentSlugs, slugs),
+    );
     assert(
       isInherited || isCanonical,
       `Universo inesperado: ${currentSlugs.join(", ")}.`,
@@ -386,7 +404,7 @@ export async function runCommunityEditorialVerifier(
       );
       assert(
         String(row.research_notes || "").includes(
-          `editorial/${config.communitySlug}/provenance.json`,
+          config.provenancePath,
         ),
         `${row.slug}: falta trazabilidad visual.`,
       );
@@ -395,25 +413,27 @@ export async function runCommunityEditorialVerifier(
       allImages.size === config.records.length * 2,
       "No hay una pareja visual única por mito.",
     );
-    assert(
-      community.name === config.communityPage.title &&
-        community.image_url === config.communityImageUrl &&
-        strictPaperCut(community.image_prompt),
-      "Perfil de comunidad desincronizado.",
-    );
-    const communitySeoResult = await client.query(
-      `SELECT * FROM seo_pages
-       WHERE page_type = 'community' AND slug = $1`,
-      [config.communitySlug],
-    );
-    assert(
-      communitySeoResult.rowCount === 1 &&
-        communitySeoResult.rows[0].meta_title ===
-          config.communitySeo.meta_title &&
-        communitySeoResult.rows[0].canonical_path ===
-          config.communitySeo.canonical_path,
-      "SEO de comunidad desincronizado.",
-    );
+    if (!config.skipCommunityProfile) {
+      assert(
+        community.name === config.communityPage.title &&
+          community.image_url === config.communityImageUrl &&
+          strictPaperCut(community.image_prompt),
+        "Perfil de comunidad desincronizado.",
+      );
+      const communitySeoResult = await client.query(
+        `SELECT * FROM seo_pages
+         WHERE page_type = 'community' AND slug = $1`,
+        [config.communitySlug],
+      );
+      assert(
+        communitySeoResult.rowCount === 1 &&
+          communitySeoResult.rows[0].meta_title ===
+            config.communitySeo.meta_title &&
+          communitySeoResult.rows[0].canonical_path ===
+            config.communitySeo.canonical_path,
+        "SEO de comunidad desincronizado.",
+      );
+    }
     const verified = {
       status: "verified",
       community: config.communitySlug,

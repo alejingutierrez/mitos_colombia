@@ -4,6 +4,8 @@ import test from "node:test";
 import {
   addedQuillacingaSlugs,
   canonicalQuillacingaSlugs,
+  expandedQuillacingaSlugs,
+  externallyReviewedQuillacingaSlugs,
   inheritedQuillacingaSlugs,
   quillacingaCategoryBySlug,
 } from "../../editorial/quillacingas/universe.mjs";
@@ -23,6 +25,12 @@ test("conserva dos URLs heredadas y añade cuatro relatos documentados", () => {
     ...inheritedQuillacingaSlugs,
     ...addedQuillacingaSlugs,
   ]);
+  assert.deepEqual(externallyReviewedQuillacingaSlugs, [
+    "guagua-rayo",
+    "la-totuma-de-la-cocha",
+    "taita-galeras",
+  ]);
+  assert.equal(expandedQuillacingaSlugs.length, 9);
 });
 
 test("usa solamente la categoría Quillacingas ya existente", () => {

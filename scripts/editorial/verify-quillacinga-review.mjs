@@ -9,6 +9,8 @@ import { quillacingaMythsBySlug } from "../../editorial/quillacingas/records.mjs
 import {
   addedQuillacingaSlugs,
   canonicalQuillacingaSlugs,
+  expandedQuillacingaSlugs,
+  externallyReviewedQuillacingaSlugs,
   quillacingaCategoryBySlug,
 } from "../../editorial/quillacingas/universe.mjs";
 
@@ -143,8 +145,14 @@ async function run() {
        ORDER BY m.slug`,
     );
     assert(
-      JSON.stringify(community.rows.map(({ slug }) => slug)) ===
-        JSON.stringify([...canonicalQuillacingaSlugs].sort()),
+      [
+        canonicalQuillacingaSlugs,
+        expandedQuillacingaSlugs,
+      ].some(
+        (allowed) =>
+          JSON.stringify(community.rows.map(({ slug }) => slug)) ===
+          JSON.stringify([...allowed].sort()),
+      ),
       `Universo Quillacinga distinto: ${community.rowCount}.`,
     );
     const communitySeo = await client.query(
@@ -162,7 +170,13 @@ async function run() {
       JSON.stringify(
         {
           status: "verified",
-          canonicalQuillacingaMyths: community.rowCount,
+          canonicalQuillacingaMyths: result.rowCount,
+          communityMyths: community.rowCount,
+          externallyReviewed: community.rows
+            .map(({ slug }) => slug)
+            .filter((slug) =>
+              externallyReviewedQuillacingaSlugs.includes(slug),
+            ),
           editorialDossiers: result.rows.filter(({ editorial_id }) => editorial_id)
             .length,
           seoRows: result.rows.reduce((sum, row) => sum + row.seo_count, 0),

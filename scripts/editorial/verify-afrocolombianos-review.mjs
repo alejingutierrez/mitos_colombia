@@ -25,6 +25,7 @@ runCommunityEditorialVerifier({
   media: afrocolombianMedia,
   inheritedSlugs: inheritedAfrocolombianSlugs,
   canonicalSlugs: canonicalAfrocolombianSlugs,
+  preservedAdditionalSlugs: ["el-padre-mera"],
   reviewedSlugs: reviewedAfrocolombianWorklistSlugs,
   obsoleteCommunities: [
     {

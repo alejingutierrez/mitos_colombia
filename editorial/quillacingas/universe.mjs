@@ -15,6 +15,17 @@ export const canonicalQuillacingaSlugs = [
   ...addedQuillacingaSlugs,
 ];
 
+export const externallyReviewedQuillacingaSlugs = [
+  "guagua-rayo",
+  "la-totuma-de-la-cocha",
+  "taita-galeras",
+];
+
+export const expandedQuillacingaSlugs = [
+  ...canonicalQuillacingaSlugs,
+  ...externallyReviewedQuillacingaSlugs,
+];
+
 export const quillacingaCategoryBySlug = Object.fromEntries(
   canonicalQuillacingaSlugs.map((slug) => [
     slug,

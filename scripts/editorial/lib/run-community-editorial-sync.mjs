@@ -53,6 +53,20 @@ function reviewedSlugs(config) {
   return config.reviewedSlugs || config.canonicalSlugs;
 }
 
+function canonicalUniverseAlternatives(config) {
+  const preserved = config.preservedAdditionalSlugs || [];
+  return preserved.length
+    ? [config.canonicalSlugs, [...config.canonicalSlugs, ...preserved]]
+    : [config.canonicalSlugs];
+}
+
+function inheritedUniverseAlternatives(config) {
+  const preserved = config.preservedAdditionalSlugs || [];
+  return preserved.length
+    ? [config.inheritedSlugs, [...config.inheritedSlugs, ...preserved]]
+    : [config.inheritedSlugs];
+}
+
 function expectedSourceCount(config, slug) {
   return Number(
     config.expectedSourceCountsBySlug?.[slug] ??
@@ -665,8 +679,12 @@ export async function runCommunityEditorialSync(
     );
     const currentSlugs = mythResult.rows.map(({ slug }) => slug).sort();
     if (
-      !sameSet(currentSlugs, config.inheritedSlugs) &&
-      !sameSet(currentSlugs, config.canonicalSlugs)
+      !inheritedUniverseAlternatives(config).some((slugs) =>
+        sameSet(currentSlugs, slugs),
+      ) &&
+      !canonicalUniverseAlternatives(config).some((slugs) =>
+        sameSet(currentSlugs, slugs),
+      )
     ) {
       throw new Error(
         `El universo ${config.communitySlug} no es heredado ni canónico: ` +
@@ -815,12 +833,16 @@ export async function runCommunityEditorialSync(
       community: {
         id: Number(community.id),
         before: community.name,
-        after: config.communityPage.title,
+        after: config.skipCommunityProfile
+          ? community.name
+          : config.communityPage.title,
+        profileUpdate: !config.skipCommunityProfile,
       },
       universe: {
         current: currentSlugs.length,
         inherited: config.inheritedSlugs.length,
         canonical: config.canonicalSlugs.length,
+        preservedAdditional: config.preservedAdditionalSlugs || [],
         reviewed: reviewedSlugs(config).length,
         toCreate: reviewedSlugs(config).filter(
           (slug) => !currentBySlug.has(slug),
@@ -954,27 +976,29 @@ export async function runCommunityEditorialSync(
           regionSlug: obsolete.regionSlug,
         });
       }
-      await client.query(
-        `UPDATE communities
-         SET name = $2, image_prompt = $3, image_url = $4
-         WHERE id = $1`,
-        [
-          community.id,
-          config.communityPage.title,
-          config.communityPage.imagePrompt,
-          config.communityImageUrl,
-        ],
-      );
-      await upsertSeo(
-        client,
-        "community",
-        config.communitySlug,
-        config.communitySeo,
-        {
-          summary: config.communitySeo.summary,
-          payload: config.communitySeoPayload(),
-        },
-      );
+      if (!config.skipCommunityProfile) {
+        await client.query(
+          `UPDATE communities
+           SET name = $2, image_prompt = $3, image_url = $4
+           WHERE id = $1`,
+          [
+            community.id,
+            config.communityPage.title,
+            config.communityPage.imagePrompt,
+            config.communityImageUrl,
+          ],
+        );
+        await upsertSeo(
+          client,
+          "community",
+          config.communitySlug,
+          config.communitySeo,
+          {
+            summary: config.communitySeo.summary,
+            payload: config.communitySeoPayload(),
+          },
+        );
+      }
       await upsertSeo(
         client,
         "page",
