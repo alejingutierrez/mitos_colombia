@@ -13,6 +13,7 @@ import {
   getRouteBySlug,
   resolveMythsByTitles,
 } from "../../../lib/routes";
+import { withMythImageVariants } from "../../../lib/myth-images";
 
 export const runtime = "nodejs";
 export const revalidate = 86400;
@@ -63,14 +64,15 @@ export async function generateMetadata({ params }) {
 }
 
 function mapMyth(m) {
-  return {
+  return withMythImageVariants({
     slug: m.slug,
     title: m.title,
     excerpt: m.excerpt,
     region: m.region,
     community: m.community,
-    imageUrl: m.image_url,
-  };
+    image_url: m.image_url,
+    vertical_image_url: m.vertical_image_url,
+  });
 }
 
 export default async function RutaPage({ params }) {

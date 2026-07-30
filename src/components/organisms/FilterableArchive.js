@@ -3,9 +3,14 @@
 import Link from "next/link";
 import { useMemo, useState } from "react";
 import { cn } from "../../lib/utils";
-import { Container, Icon, ImageFrame, Text } from "../atoms";
-import { EmptyState, FilterBar } from "../molecules";
+import { Container } from "../atoms/Container";
+import { Icon } from "../atoms/Icon";
+import { ImageFrame } from "../atoms/ImageFrame";
+import { Text } from "../atoms/Text";
+import { EmptyState } from "../molecules/EmptyState";
+import { FilterBar } from "../molecules/FilterBar";
 import { OverlayMythCard } from "../editorial/AtlasEditorial";
+import { getMythImage } from "../../lib/myth-images";
 
 function ResultRow({ myth, index }) {
   return (
@@ -17,7 +22,7 @@ function ResultRow({ myth, index }) {
         {String(index + 1).padStart(2, "0")}
       </span>
       <ImageFrame
-        src={myth.imageUrl}
+        src={getMythImage(myth, "landscape")}
         alt=""
         ratio="4 / 3"
         sizes="88px"
@@ -80,8 +85,14 @@ function MixedResults({ myths }) {
   );
 }
 
-export function FilterableArchive({ myths = [], filters = [], className }) {
+export function FilterableArchive({
+  myths = [],
+  filters = [],
+  totalCount,
+  className,
+}) {
   const [filterValues, setFilterValues] = useState({});
+  const hasActiveFilters = Object.values(filterValues).some(Boolean);
 
   const results = useMemo(() => {
     const active = Object.entries(filterValues).filter(([, value]) => value);
@@ -104,7 +115,9 @@ export function FilterableArchive({ myths = [], filters = [], className }) {
           <FilterBar filters={filters} onChange={setFilterValues} />
         </div>
         <Text size="sm" tone="muted" as="span" className="shrink-0">
-          {results.length} {results.length === 1 ? "mito" : "mitos"}
+          {!hasActiveFilters && totalCount > results.length
+            ? `${results.length} seleccionados de ${totalCount}`
+            : `${results.length} ${results.length === 1 ? "mito" : "mitos"}`}
         </Text>
       </div>
 

@@ -3,6 +3,7 @@ import { filterAllowedCommunities, MIN_COMMUNITY_MYTHS } from "../../../lib/comm
 import { getTaxonomy, listMyths, listMythLinksByTaxon } from "../../../lib/myths";
 import { buildSeoMetadata, getSeoEntry } from "../../../lib/seo";
 import { resolveRouteParams } from "../../../lib/next-route-props";
+import { withMythImageVariants } from "../../../lib/myth-images";
 import { BreadcrumbJsonLd, CollectionPageJsonLd } from "../../../components/StructuredData";
 import { TaxonomyDetailTemplate } from "../../../components/templates";
 import { FilterableArchive } from "../../../components/organisms";
@@ -263,15 +264,18 @@ export default async function CommunityDetailPage({ params }) {
   const intro = longDescriptionBlocks.filter(Boolean).join("\n\n");
 
   // Muestra para exploración interactiva (filtrable en cliente, SSR = rastreable).
-  const result = await listMyths({ community: community.slug, limit: 48, offset: 0 });
-  const exploreMyths = (result?.items || []).map((m) => ({
-    slug: m.slug,
-    title: m.title,
-    excerpt: m.excerpt,
-    region: m.region,
-    community: m.community,
-    imageUrl: m.image_url,
-  }));
+  const result = await listMyths({ community: community.slug, limit: 24, offset: 0 });
+  const exploreMyths = (result?.items || []).map((m) =>
+    withMythImageVariants({
+      slug: m.slug,
+      title: m.title,
+      excerpt: m.excerpt,
+      region: m.region,
+      community: m.community,
+      image_url: m.image_url,
+      vertical_image_url: m.vertical_image_url,
+    })
+  );
 
   // Una comunidad comparte comunidad y (normalmente) región, así que no hay facetas útiles.
   const filters = [];
@@ -317,7 +321,13 @@ export default async function CommunityDetailPage({ params }) {
           { label: community.name },
         ]}
         intro={intro}
-        filterable={<FilterableArchive myths={exploreMyths} filters={filters} />}
+        filterable={
+          <FilterableArchive
+            myths={exploreMyths}
+            filters={filters}
+            totalCount={community.myth_count}
+          />
+        }
         mythIndex={allMythLinks}
         indexTitle={`Todos los mitos de la comunidad ${community.name}`}
       />

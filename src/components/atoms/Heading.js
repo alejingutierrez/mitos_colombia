@@ -2,7 +2,7 @@ import { cn } from "../../lib/utils";
 
 /**
  * Atom · Heading
- * Titulares en Manrope (font-display). `level` controla tamaño/peso; nivel 0
+ * Titulares en Metamorphous (font-display). `level` controla tamaño; nivel 0
  * es el registro hero (grande, apretado). `accent` añade un subrayado corto
  * de acento bajo el título.
  */

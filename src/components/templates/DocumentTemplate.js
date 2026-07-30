@@ -63,7 +63,11 @@ export function DocumentTemplate({
             <Eyebrow tone={accent} withRule className="mb-4">
               {eyebrow}
             </Eyebrow>
-            <Heading level={1} accent={accent}>
+            <Heading
+              level={1}
+              accent={accent}
+              className="font-editorial text-[3.25rem] font-semibold leading-[0.94] tracking-[-0.035em] md:text-[4.6rem]"
+            >
               {title}
             </Heading>
             {description ? (

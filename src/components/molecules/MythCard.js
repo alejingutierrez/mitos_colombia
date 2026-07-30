@@ -5,6 +5,7 @@ import { Heading } from "../atoms/Heading";
 import { Text } from "../atoms/Text";
 import { Tag } from "../atoms/Tag";
 import { Icon } from "../atoms/Icon";
+import { getMythImage } from "../../lib/myth-images";
 
 /**
  * Molécula · MythCard
@@ -19,12 +20,12 @@ const cardBase =
   "group flex overflow-hidden rounded border border-line-100 bg-white transition duration-300 ease-editorial hover:-translate-y-0.5 hover:border-line-200 hover:shadow-float focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-jungle-500/40 focus-visible:ring-offset-2 focus-visible:ring-offset-paper";
 
 export function MythCard({ myth, motif = "jaguar", variant = "default", className }) {
-  const { slug, title, excerpt, region, community, imageUrl } = myth || {};
+  const { slug, title, excerpt, region, community } = myth || {};
   const horizontal = variant === "horizontal";
 
   const image = (
     <ImageFrame
-      src={imageUrl}
+      src={getMythImage(myth, horizontal ? "square" : "landscape")}
       alt={title || ""}
       ratio={horizontal ? "1 / 1" : "4 / 3"}
       placeholderMotif={motif}

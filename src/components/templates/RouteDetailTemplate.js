@@ -2,18 +2,20 @@ import Image from "next/image";
 import Link from "next/link";
 import { Container, Icon, ImageFrame, Motif } from "../atoms";
 import { Header } from "../organisms";
+import { getMythImage } from "../../lib/myth-images";
 
 export function RouteDetailTemplate({ route, myths = [], otherRoutes = [] }) {
-  const heroMyth = myths.find((myth) => myth.imageUrl) || myths[0];
+  const heroMyth =
+    myths.find((myth) => getMythImage(myth, "landscape")) || myths[0];
 
   return (
     <>
       <Header active="/rutas" />
       <main className="min-h-[100dvh] overflow-x-clip bg-paper">
         <section className="relative min-h-[calc(100svh-4rem)] overflow-hidden bg-[rgb(var(--atlas-night))] text-white">
-          {heroMyth?.imageUrl ? (
+          {getMythImage(heroMyth, "landscape") ? (
             <Image
-              src={heroMyth.imageUrl}
+              src={getMythImage(heroMyth, "landscape")}
               alt=""
               fill
               priority
@@ -105,7 +107,7 @@ export function RouteDetailTemplate({ route, myths = [], otherRoutes = [] }) {
                       className="group relative snap-start"
                     >
                       <ImageFrame
-                        src={myth.imageUrl}
+                        src={getMythImage(myth, "landscape")}
                         alt={myth.title}
                         ratio="4 / 3"
                         sizes="(max-width: 640px) 78vw, (max-width: 768px) 45vw, 34vw"

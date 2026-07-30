@@ -226,9 +226,9 @@ export default function DesignSystemPage() {
               Atlas vivo · voz narrativa
             </p>
             <Text size="sm" tone="muted" className="pb-4">
-              Cormorant Garamond se reserva para portadas, títulos de relatos y
-              momentos de lectura. Manrope e Inter conservan la interfaz,
-              navegación y cuerpo.
+              Metamorphous construye la voz de portadas, títulos de relatos y
+              momentos narrativos. Readex Pro conserva la claridad de la
+              interfaz, la navegación y el cuerpo de lectura.
             </Text>
             <Heading level={1}>Display · El Mohán</Heading>
             <Heading level={2}>Título · Guardianes del agua</Heading>

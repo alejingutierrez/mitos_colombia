@@ -23,7 +23,7 @@ const variants = {
   primary: "bg-jungle-500 text-white hover:bg-jungle-600 active:bg-jungle-700",
 };
 
-const sizes = { sm: "h-8 w-8", md: "h-9 w-9", lg: "h-11 w-11" };
+const sizes = { sm: "h-9 w-9", md: "h-11 w-11", lg: "h-12 w-12" };
 const iconSizes = { sm: 16, md: 18, lg: 20 };
 
 export function IconButton({

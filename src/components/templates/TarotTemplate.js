@@ -63,10 +63,17 @@ function grouping(cards) {
 const TILTS = [-2, 0, 2, 0];
 function CardGrid({ cards }) {
   return (
-    <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
+    <div
+      className="grid snap-x snap-mandatory grid-flow-col auto-cols-[72%] gap-4 overflow-x-auto overscroll-x-contain pb-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden sm:grid-flow-row sm:auto-cols-auto sm:grid-cols-3 sm:overflow-visible sm:pb-0 lg:grid-cols-5"
+      role="list"
+    >
       {cards.map((c, i) => (
         <div
-          key={c.slug || c.myth_slug || c.card_name || i}
+          key={`${c.slug || c.myth_slug || c.card_name || "card"}-${
+            c.order_index ?? c.rank_label ?? c.card_name ?? i
+          }-${i}`}
+          className="snap-start"
+          role="listitem"
           style={{ contentVisibility: "auto", containIntrinsicSize: "320px 480px" }}
         >
           <TarotCard card={c} tilt={TILTS[i % 4]} className="h-full" />
@@ -114,6 +121,7 @@ function CartaDelDia({ card }) {
   if (!card) return null;
   const mark = romanOf(card) || card.rank_label || "·";
   const motif = { Bastos: "sol", Copas: "agua", Espadas: "condor", Oros: "montana" }[card.suit] || "luna";
+  const imageUrl = card.display_image_url || card.image_url || card.myth_image_url;
   return (
     <div>
       <p className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-jungle-600">
@@ -132,9 +140,9 @@ function CartaDelDia({ card }) {
               <span className="pointer-events-none absolute inset-2 rounded-sm" style={{ border: "1px solid rgba(189,134,66,0.4)" }} aria-hidden="true" />
               <span className="relative font-display text-base font-semibold tabular-nums" style={{ color: GOLD }}>{mark}</span>
               <div className="relative flex flex-1 items-center justify-center">
-                {card.image_url ? (
+                {imageUrl ? (
                   <Image
-                    src={card.image_url}
+                    src={imageUrl}
                     alt={card.card_name}
                     fill
                     priority

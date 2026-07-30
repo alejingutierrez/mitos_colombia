@@ -291,6 +291,11 @@ body {
   }
 }
 
+.font-display,
+.font-editorial {
+  font-synthesis: none;
+}
+
 @keyframes float-slow {
   0%,
   100% {
@@ -440,11 +445,11 @@ body {
   .atlas-scrim {
     background: linear-gradient(
       to top,
-      rgba(8, 18, 20, 0.88) 0%,
-      rgba(8, 18, 20, 0.78) 28%,
-      rgba(8, 18, 20, 0.56) 52%,
-      rgba(8, 18, 20, 0.28) 72%,
-      rgba(8, 18, 20, 0.07) 88%,
+      rgba(8, 18, 20, 0.9) 0%,
+      rgba(8, 18, 20, 0.82) 28%,
+      rgba(8, 18, 20, 0.7) 52%,
+      rgba(8, 18, 20, 0.4) 72%,
+      rgba(8, 18, 20, 0.09) 88%,
       rgba(8, 18, 20, 0) 100%
     );
   }
@@ -463,12 +468,12 @@ body {
   .atlas-scrim-cover {
     background: linear-gradient(
       to top,
-      rgba(8, 18, 20, 0.88) 0%,
-      rgba(8, 18, 20, 0.76) 30%,
-      rgba(8, 18, 20, 0.54) 55%,
-      rgba(8, 18, 20, 0.32) 75%,
-      rgba(8, 18, 20, 0.12) 92%,
-      rgba(8, 18, 20, 0.06) 100%
+      rgba(8, 18, 20, 0.9) 0%,
+      rgba(8, 18, 20, 0.8) 30%,
+      rgba(8, 18, 20, 0.68) 55%,
+      rgba(8, 18, 20, 0.44) 75%,
+      rgba(8, 18, 20, 0.14) 92%,
+      rgba(8, 18, 20, 0.08) 100%
     );
   }
   @media (min-width: 900px) {
@@ -760,6 +765,8 @@ body {
 
 .map-pin {
   position: relative;
+  top: 4px;
+  left: 8px;
   height: 38px;
   width: 28px;
 }

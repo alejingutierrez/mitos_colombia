@@ -67,7 +67,7 @@ export function SearchBox({
           type="button"
           onClick={() => update("")}
           aria-label="Limpiar búsqueda"
-          className="absolute right-2 top-1/2 inline-flex h-7 w-7 -translate-y-1/2 items-center justify-center rounded text-ink-500 transition-colors hover:bg-mist-50 hover:text-ink-900"
+          className="absolute right-0 top-1/2 inline-flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded text-ink-700 transition-colors hover:bg-mist-50 hover:text-ink-900"
         >
           <Icon name="x" size={16} />
         </button>

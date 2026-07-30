@@ -3,6 +3,7 @@ import { formatCategoryName } from "../../../lib/formatters";
 import { getTaxonomy, listMyths, listMythLinksByTaxon } from "../../../lib/myths";
 import { buildSeoMetadata, getSeoEntry } from "../../../lib/seo";
 import { resolveRouteParams } from "../../../lib/next-route-props";
+import { withMythImageVariants } from "../../../lib/myth-images";
 import { BreadcrumbJsonLd, CollectionPageJsonLd } from "../../../components/StructuredData";
 import { TaxonomyDetailTemplate } from "../../../components/templates";
 import { FilterableArchive } from "../../../components/organisms";
@@ -316,17 +317,20 @@ export default async function CategoryDetailPage({ params }) {
   // Muestra para exploración interactiva (filtrable en cliente, SSR = rastreable).
   const result = await listMyths({
     tag: category.name,
-    limit: 48,
+    limit: 24,
     offset: 0,
   });
-  const exploreMyths = (result?.items || []).map((m) => ({
-    slug: m.slug,
-    title: m.title,
-    excerpt: m.excerpt,
-    region: m.region,
-    community: m.community,
-    imageUrl: m.image_url,
-  }));
+  const exploreMyths = (result?.items || []).map((m) =>
+    withMythImageVariants({
+      slug: m.slug,
+      title: m.title,
+      excerpt: m.excerpt,
+      region: m.region,
+      community: m.community,
+      image_url: m.image_url,
+      vertical_image_url: m.vertical_image_url,
+    })
+  );
 
   // Faceta de región: los mitos de una categoría abarcan varias regiones.
   const regionOptions = Array.from(
@@ -381,7 +385,13 @@ export default async function CategoryDetailPage({ params }) {
           { label: formatCategoryName(category.name) },
         ]}
         intro={intro || undefined}
-        filterable={<FilterableArchive myths={exploreMyths} filters={filters} />}
+        filterable={
+          <FilterableArchive
+            myths={exploreMyths}
+            filters={filters}
+            totalCount={category.myth_count}
+          />
+        }
         mythIndex={allMythLinks}
         indexTitle={`Todos los mitos de la categoría ${formatCategoryName(category.name)}`}
       />

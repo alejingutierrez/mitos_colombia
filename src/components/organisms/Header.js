@@ -1,10 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "../../lib/utils";
+import { BRAND_MARK, SITE_NAME } from "../../lib/brand";
 import { Container, IconButton } from "../atoms";
 import { SearchBox } from "../molecules";
 
@@ -46,18 +46,16 @@ export function Header({ active }) {
           <Link
             href="/"
             onClick={() => setOpen(false)}
-            className="group inline-flex items-center gap-2.5 rounded-sm text-ink-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-jungle-500/40"
+            className="group inline-flex min-h-11 items-center gap-2.5 rounded-sm text-ink-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-jungle-500/40"
           >
-            <Image
-              src="/favicon.png"
-              alt=""
-              width={40}
-              height={40}
-              className="h-9 w-9 rounded-sm object-contain transition-transform duration-200 group-hover:scale-[1.03] md:h-10 md:w-10"
-              priority
-            />
-            <span className="font-display text-[17px] font-extrabold tracking-tight leading-none">
-              Mitos de Colombia
+            <span
+              aria-hidden="true"
+              className="font-display text-[2rem] font-normal leading-none text-jungle-700 transition-transform duration-200 group-hover:scale-[1.03]"
+            >
+              {BRAND_MARK}
+            </span>
+            <span className="font-display text-[1.2rem] font-normal leading-none tracking-[-0.015em] md:text-[1.3rem]">
+              {SITE_NAME}
             </span>
           </Link>
 

@@ -525,7 +525,9 @@ async function listAllTarotCards() {
       const result = await sql.query(
         `SELECT
           t.*,
-          m.slug as myth_slug
+          m.slug as myth_slug,
+          m.image_url as myth_image_url,
+          COALESCE(NULLIF(t.image_url, ''), NULLIF(m.image_url, '')) as display_image_url
         FROM tarot_cards t
         LEFT JOIN myths m ON TRIM(m.title) = TRIM(t.myth_title)
         ORDER BY t.order_index ASC, t.id ASC`
@@ -538,7 +540,9 @@ async function listAllTarotCards() {
       .prepare(
         `SELECT
           t.*,
-          m.slug as myth_slug
+          m.slug as myth_slug,
+          m.image_url as myth_image_url,
+          COALESCE(NULLIF(t.image_url, ''), NULLIF(m.image_url, '')) as display_image_url
         FROM tarot_cards t
         LEFT JOIN myths m ON trim(m.title) = trim(t.myth_title)
         ORDER BY t.order_index ASC, t.id ASC`

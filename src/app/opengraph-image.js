@@ -1,4 +1,5 @@
 import { ImageResponse } from "next/og";
+import { BRAND_MARK, SITE_NAME } from "../lib/brand";
 
 export const runtime = "edge";
 export const alt = "Mitos de Colombia – Archivo editorial de mitos colombianos";
@@ -17,7 +18,7 @@ export default function Image() {
           alignItems: "center",
           justifyContent: "center",
           background: "linear-gradient(135deg, #0a1f1a 0%, #132e25 40%, #1a3d33 100%)",
-          fontFamily: "sans-serif",
+          fontFamily: "serif",
         }}
       >
         <div
@@ -30,15 +31,33 @@ export default function Image() {
         >
           <div
             style={{
+              width: 104,
+              height: 104,
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              border: "2px solid rgba(232, 240, 233, 0.5)",
+              borderRadius: 12,
+              fontSize: 76,
+              fontWeight: 400,
+              lineHeight: 1,
+              color: "#e8f0e9",
+              marginBottom: 8,
+            }}
+          >
+            {BRAND_MARK}
+          </div>
+          <div
+            style={{
               fontSize: 72,
-              fontWeight: 800,
+              fontWeight: 400,
               color: "#e8f0e9",
               letterSpacing: "-2px",
               lineHeight: 1.1,
               textAlign: "center",
             }}
           >
-            Mitos de Colombia
+            {SITE_NAME}
           </div>
           <div
             style={{

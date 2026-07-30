@@ -9,6 +9,7 @@ import {
   getTaxonomy,
 } from "../lib/myths";
 import { getTarotCards, getDailyTarotSelection } from "../lib/tarot";
+import { hasMythImageRoles, withMythImageVariants } from "../lib/myth-images";
 
 export const revalidate = 86400;
 
@@ -51,15 +52,16 @@ const regionMotifs = {
 };
 
 function mapMyth(m) {
-  return {
+  return withMythImageVariants({
     slug: m.slug,
     title: m.title,
     excerpt: m.excerpt,
     region: m.region,
     community: m.community,
-    imageUrl: m.image_url,
+    image_url: m.image_url,
+    vertical_image_url: m.vertical_image_url,
     motif: mythMotif(m),
-  };
+  });
 }
 
 export default async function Home() {
@@ -83,7 +85,11 @@ export default async function Home() {
         .map((myth) => [myth.slug, myth])
     ).values()
   );
-  const leadRaw = pool.find((m) => m.image_url) || pool[0] || diverseMyths[0];
+  const leadRaw =
+    pool.find((myth) => hasMythImageRoles(myth, ["landscape", "portrait"])) ||
+    pool.find((myth) => hasMythImageRoles(myth, ["landscape"])) ||
+    pool[0] ||
+    diverseMyths[0];
   const lead = leadRaw ? mapMyth(leadRaw) : undefined;
   const featured = pool
     .filter((m) => !lead || m.slug !== lead.slug)
@@ -114,11 +120,8 @@ export default async function Home() {
     tone: r.accent === "river" ? "river" : "jungle",
     motif: r.accent === "river" ? "agua" : "hoja",
     description: r.detail || r.description,
-    // Las consultas de rutas anteponen la obra vertical (las plantillas de
-    // /rutas son en retrato). La banda del home es a sangre y apaisada, así que
-    // prefiere la horizontal: con la vertical la fuente medía 768px de ancho
-    // para una caja de 1440 y se ampliaba 1,88x.
-    imageUrl: r.preview?.wide_image_url || r.preview?.image_url,
+    imageUrl: r.preview?.image_url,
+    portraitImageUrl: r.preview?.vertical_image_url,
   }));
 
   // Tres cartas de tarot para la sala del oráculo (selección diaria).
@@ -132,7 +135,7 @@ export default async function Home() {
     seed
   ).map((c) => ({
     card_name: c.card_name,
-    imageUrl: c.image_url || "",
+    imageUrl: c.display_image_url || c.image_url || c.myth_image_url || "",
     myth_slug: c.myth_slug || "",
     motif: mythMotif({ slug: c.myth_slug || c.slug, title: c.card_name }),
   }));

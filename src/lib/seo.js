@@ -1,5 +1,6 @@
 import { getSqlClient, getSqliteDb, isPostgres } from "./db";
 import { withRetry } from "./db-resilience";
+import { SITE_NAME } from "./brand";
 import {
   normalizeBrandedSeoTitle,
   normalizeSeoDescription,
@@ -137,6 +138,7 @@ export function buildSeoMetadata({
       title: ogTitle,
       description: ogDescription,
       type: openGraphType,
+      siteName: SITE_NAME,
       ...(ogImage && { images: [{ url: ogImage, width: 1200, height: 630, alt: ogTitle }] }),
     },
     twitter: {

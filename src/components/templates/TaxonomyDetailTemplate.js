@@ -13,6 +13,36 @@ function introParagraphs(intro) {
     .filter(Boolean);
 }
 
+const INDEX_PREVIEW_SIZE = 36;
+
+function MythIndexList({ myths, startIndex = 0 }) {
+  return (
+    <ul className="columns-1 gap-10 sm:columns-2 lg:columns-3">
+      {myths.map((myth, index) => (
+        <li
+          key={myth.slug}
+          className="break-inside-avoid border-b border-line-100"
+        >
+          <Link
+            href={`/mitos/${myth.slug}`}
+            className="group flex min-h-11 items-baseline gap-3 py-3 text-sm leading-relaxed text-ink-700 hover:text-jungle-700"
+          >
+            <span className="font-editorial text-lg text-ink-700">
+              {String(startIndex + index + 1).padStart(2, "0")}
+            </span>
+            <span>{myth.title}</span>
+            <Icon
+              name="arrow-right"
+              size={14}
+              className="mc-arrow ml-auto shrink-0"
+            />
+          </Link>
+        </li>
+      ))}
+    </ul>
+  );
+}
+
 export function TaxonomyDetailTemplate({
   taxonomy = {},
   intro,
@@ -36,6 +66,8 @@ export function TaxonomyDetailTemplate({
   const hasCharacteristics =
     Array.isArray(characteristics) && characteristics.length > 0;
   const hasIndex = Array.isArray(mythIndex) && mythIndex.length > 0;
+  const visibleIndex = hasIndex ? mythIndex.slice(0, INDEX_PREVIEW_SIZE) : [];
+  const remainingIndex = hasIndex ? mythIndex.slice(INDEX_PREVIEW_SIZE) : [];
 
   return (
     <>
@@ -49,6 +81,7 @@ export function TaxonomyDetailTemplate({
               fill
               priority
               sizes="100vw"
+              quality={68}
               className="object-cover"
             />
           ) : (
@@ -59,13 +92,13 @@ export function TaxonomyDetailTemplate({
           <span className="absolute inset-0 bg-gradient-to-t from-black via-black/5 to-transparent" />
           <Container
             size="atlas"
-            className="relative flex min-h-[32rem] items-end pb-10 text-white md:min-h-[38rem] md:pb-14"
+            className="relative flex min-h-[32rem] min-w-0 items-end pb-10 text-white md:min-h-[38rem] md:pb-14"
           >
-            <div className="max-w-3xl">
+            <div className="w-full min-w-0 max-w-3xl">
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-white/68">
                 {kind || "Archivo territorial"}
               </p>
-              <h1 className="mt-4 font-editorial text-[4.2rem] font-semibold leading-[0.88] tracking-[-0.035em] md:text-[6.2rem]">
+              <h1 className="mt-4 max-w-full text-balance font-editorial text-[clamp(3rem,15vw,4.2rem)] font-semibold leading-[0.9] tracking-[-0.035em] [overflow-wrap:anywhere] md:text-[6.2rem] md:leading-[0.88]">
                 {name}
               </h1>
               {count != null ? (
@@ -174,29 +207,25 @@ export function TaxonomyDetailTemplate({
                   mythIndex.length === 1 ? "mito" : "mitos"
                 }`}
               />
-              <ul className="columns-1 gap-10 sm:columns-2 lg:columns-3">
-                {mythIndex.map((myth, index) => (
-                  <li
-                    key={myth.slug}
-                    className="break-inside-avoid border-b border-line-100 py-3"
-                  >
-                    <Link
-                      href={`/mitos/${myth.slug}`}
-                      className="group flex items-baseline gap-3 text-sm leading-relaxed text-ink-700 hover:text-jungle-700"
-                    >
-                      <span className="font-editorial text-lg text-ink-500">
-                        {String(index + 1).padStart(2, "0")}
-                      </span>
-                      <span>{myth.title}</span>
-                      <Icon
-                        name="arrow-right"
-                        size={14}
-                        className="mc-arrow ml-auto shrink-0"
-                      />
-                    </Link>
-                  </li>
-                ))}
-              </ul>
+              <MythIndexList myths={visibleIndex} />
+              {remainingIndex.length ? (
+                <details className="group mt-8 border-y border-line-200">
+                  <summary className="flex min-h-12 cursor-pointer list-none items-center justify-between gap-4 py-3 text-sm font-semibold text-ink-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-jungle-500/35 [&::-webkit-details-marker]:hidden">
+                    <span>Mostrar {remainingIndex.length} mitos más</span>
+                    <Icon
+                      name="chevron-right"
+                      size={18}
+                      className="transition-transform duration-200 group-open:rotate-90"
+                    />
+                  </summary>
+                  <div className="border-t border-line-100 pb-4 pt-2">
+                    <MythIndexList
+                      myths={remainingIndex}
+                      startIndex={INDEX_PREVIEW_SIZE}
+                    />
+                  </div>
+                </details>
+              ) : null}
             </Container>
           </section>
         ) : null}

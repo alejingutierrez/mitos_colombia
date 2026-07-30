@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Container, Icon, Motif } from "../atoms";
+import { Container, Icon, ImageFrame, Motif } from "../atoms";
 import { SearchBox } from "../molecules";
 import { Header } from "../organisms";
 import {
@@ -10,6 +10,7 @@ import {
   SelectionMosaic,
   TerritoryStrip,
 } from "../editorial/AtlasEditorial";
+import { getMythImage } from "../../lib/myth-images";
 
 /**
  * Home · plantilla.
@@ -45,18 +46,21 @@ const DEFAULT_LEAD = {
 function CoverSection({ hero, lead }) {
   return (
     <section className="relative isolate overflow-hidden bg-[rgb(var(--atlas-night))] text-white">
-      {lead?.imageUrl ? (
-        <Image
-          src={lead.imageUrl}
+      {getMythImage(lead, "landscape") ? (
+        <ImageFrame
+          src={getMythImage(lead, "landscape")}
+          // Por debajo de 768px se sirve la obra vertical, no un recorte de la
+          // apaisada: en una caja de 390x672 el recorte perdía el sujeto y
+          // obligaba a pedir una fuente 2,6x más grande de lo necesario.
+          mobileSrc={getMythImage(lead, "portrait", { fallback: false })}
           alt=""
-          fill
-          // Relación variable: el recorte lo decide `object-position`, no un
-          // aspect-ratio fijo que en móvil comía el 70% del ancho de la obra.
-          sizes="(max-width: 900px) 140vh, 100vw"
+          ratio={null}
+          sizes="(max-width: 1023px) 1200px, 100vw"
+          mobileSizes="100vw"
           quality={72}
           priority
-          fetchPriority="high"
-          className="object-cover object-[50%_35%]"
+          className="absolute inset-0 h-full w-full rounded-none border-0"
+          imgClassName="object-cover object-[50%_35%]"
         />
       ) : null}
       <span
@@ -129,21 +133,25 @@ function CoverSection({ hero, lead }) {
  */
 function RouteFeature({ route, fallbackMyth }) {
   if (!route) return null;
-  const imageUrl = route.imageUrl || fallbackMyth?.imageUrl;
+  const imageUrl = route.imageUrl || getMythImage(fallbackMyth, "landscape");
+  const portraitUrl =
+    route.portraitImageUrl ||
+    getMythImage(fallbackMyth, "portrait", { fallback: false });
   return (
     <Link
       href={route.href}
       className="group relative block overflow-hidden bg-[rgb(var(--atlas-night))]"
     >
       {imageUrl ? (
-        <Image
+        <ImageFrame
           src={imageUrl}
+          mobileSrc={portraitUrl}
           alt=""
-          fill
-          // En móvil la banda mide 390x416: con `100vw` Next servía una fuente
-          // de 390x219 y object-cover la ampliaba 1,9x para cubrir el alto.
-          sizes="(max-width: 900px) 190vw, 100vw"
-          className="atlas-image-zoom object-cover"
+          ratio={null}
+          sizes="(max-width: 767px) 780px, 100vw"
+          mobileSizes="100vw"
+          className="absolute inset-0 h-full w-full rounded-none border-0"
+          imgClassName="atlas-image-zoom object-cover"
         />
       ) : (
         <span className="absolute inset-0 flex items-center justify-center opacity-25">
@@ -185,12 +193,12 @@ function MapFeature({ myth }) {
       className="group grid overflow-hidden bg-[rgb(var(--atlas-night))] lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)]"
     >
       <span className="relative block min-h-[16rem] lg:min-h-[24rem]">
-        {myth?.imageUrl ? (
+        {getMythImage(myth, "landscape") ? (
           <Image
-            src={myth.imageUrl}
+            src={getMythImage(myth, "landscape")}
             alt=""
             fill
-            sizes="(max-width: 1024px) 100vw, 55vw"
+            sizes="(max-width: 1024px) 720px, 55vw"
             className="atlas-image-zoom object-cover"
           />
         ) : (
@@ -261,12 +269,12 @@ function OracleSection({ tarot = [] }) {
         {/* El rótulo va DEBAJO de la carta: varias ilustraciones ya llevan el
             nombre impreso y el sobreimpreso lo duplicaba encima. Sin scrim,
             además, la obra se ve completa. */}
-        <ul className="grid grid-cols-3 gap-3 sm:gap-5">
+        <ul className="grid snap-x snap-mandatory auto-cols-[62%] grid-flow-col gap-4 overflow-x-auto overscroll-x-contain pb-4 [scrollbar-width:none] sm:auto-cols-[42%] md:auto-cols-auto md:grid-flow-row md:grid-cols-3 md:gap-5 md:overflow-visible md:pb-0 [&::-webkit-scrollbar]:hidden">
           {tarot.slice(0, 3).map((card) => (
             <li key={card.card_name}>
               <Link
                 href={card.myth_slug ? `/mitos/${card.myth_slug}` : "/tarot"}
-                className="group block transition-transform duration-500 ease-editorial hover:-translate-y-1.5"
+                className="group block snap-start transition-transform duration-500 ease-editorial hover:-translate-y-1.5"
               >
                 <span className="relative block aspect-[2/3] overflow-hidden border border-ember-500/45 bg-black/40">
                   {card.imageUrl ? (
@@ -274,7 +282,7 @@ function OracleSection({ tarot = [] }) {
                       src={card.imageUrl}
                       alt=""
                       fill
-                      sizes="(max-width: 640px) 30vw, (max-width: 1024px) 28vw, 16vw"
+                      sizes="(max-width: 640px) 66vw, (max-width: 1024px) 46vw, 16vw"
                       className="atlas-image-zoom object-cover"
                     />
                   ) : (

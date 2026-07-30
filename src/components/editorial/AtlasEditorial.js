@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { cn } from "../../lib/utils";
 import { Container, Icon, ImageFrame, Motif } from "../atoms";
+import { getMythImage } from "../../lib/myth-images";
 
 /**
  * Piezas editoriales del "Atlas vivo".
@@ -71,6 +72,12 @@ export function OverlayMythCard({
   myth,
   ratio = "4 / 3",
   fill = null,
+  // Rol de la obra según la forma real del hueco: `landscape` para bandas y
+  // tarjetas anchas, `portrait` para 3:4 y 4:5. Con `mobileImageRole` se sirve
+  // otra obra por debajo de 768px en vez de recortar la misma.
+  imageRole = "landscape",
+  mobileImageRole,
+  strictImageRole = false,
   priority = false,
   quality = 75,
   sizes,
@@ -83,6 +90,10 @@ export function OverlayMythCard({
 }) {
   if (!myth) return null;
   const meta = mythMeta(myth);
+  const imageSrc = getMythImage(myth, imageRole, { fallback: !strictImageRole });
+  const mobileImageSrc = mobileImageRole
+    ? getMythImage(myth, mobileImageRole, { fallback: false })
+    : null;
   return (
     <Link
       href={mythHref(myth)}
@@ -94,7 +105,8 @@ export function OverlayMythCard({
       )}
     >
       <ImageFrame
-        src={myth.imageUrl}
+        src={imageSrc}
+        mobileSrc={mobileImageSrc}
         alt=""
         ratio={ratio}
         fillFrom={fill}
@@ -163,9 +175,9 @@ export function CompactMythLink({ myth, imageSide = "left", className = "" }) {
           reversed && "order-2"
         )}
       >
-        {myth.imageUrl ? (
+        {getMythImage(myth, "square") ? (
           <Image
-            src={myth.imageUrl}
+            src={getMythImage(myth, "square")}
             alt=""
             fill
             sizes="300px"
@@ -183,7 +195,7 @@ export function CompactMythLink({ myth, imageSide = "left", className = "" }) {
       </span>
       <span className="flex min-w-0 flex-col justify-center gap-1.5 p-4">
         {meta ? <span className="atlas-kicker block">{meta}</span> : null}
-        <h3 className="atlas-title-sm transition-colors group-hover:text-jungle-700">
+        <h3 className="atlas-title-sm line-clamp-2 transition-colors group-hover:text-jungle-700">
           {myth.title}
         </h3>
       </span>
@@ -205,9 +217,11 @@ export function SelectionMosaic({ myths = [] }) {
         myth={lead}
         ratio="4 / 5"
         fill="lg"
+        imageRole="portrait"
+        strictImageRole
         priority
         quality={70}
-        sizes="(max-width: 768px) 190vw, (max-width: 1024px) 100vw, 67vw"
+        sizes="(max-width: 767px) 800px, (max-width: 1024px) 900px, 67vw"
         className="md:col-span-3 md:row-span-2 lg:col-start-1 lg:col-end-6 lg:row-start-1 lg:row-end-3"
         titleClass="atlas-title-lg"
       />
@@ -264,7 +278,7 @@ export function EditorialMythRow({ myths = [], reverse = false }) {
         // altura, justo donde el scrim ya no sostiene el texto.
         ratio="4 / 3"
         fill="lg"
-        sizes="(max-width: 1024px) 100vw, 58vw"
+        sizes="(max-width: 767px) 520px, (max-width: 1024px) 100vw, 58vw"
         className={reverse ? "lg:order-2" : undefined}
       />
       <ol
@@ -280,9 +294,9 @@ export function EditorialMythRow({ myths = [], reverse = false }) {
               className="group grid h-full grid-cols-[4.5rem_1fr_auto] items-center gap-4 py-4"
             >
               <span className="relative block aspect-square overflow-hidden bg-mist-50">
-                {myth.imageUrl ? (
+                {getMythImage(myth, "square") ? (
                   <Image
-                    src={myth.imageUrl}
+                    src={getMythImage(myth, "square")}
                     alt=""
                     fill
                     sizes="144px"
@@ -325,7 +339,9 @@ export function EditorialMythRow({ myths = [], reverse = false }) {
  * scroll-padding para que el snap no pegue las tarjetas al bisel.
  */
 export function PortraitRail({ myths = [], label, className = "" }) {
-  const items = myths.slice(0, 8);
+  const items = myths
+    .filter((myth) => getMythImage(myth, "portrait", { fallback: false }))
+    .slice(0, 8);
   if (!items.length) return null;
   return (
     <div
@@ -341,10 +357,10 @@ export function PortraitRail({ myths = [], label, className = "" }) {
       {items.map((myth) => (
         <Link key={myth.slug} href={mythHref(myth)} className="group snap-start">
           <ImageFrame
-            src={myth.imageUrl}
+            src={getMythImage(myth, "portrait", { fallback: false })}
             alt=""
             ratio="3 / 4"
-            sizes="(max-width: 640px) 150vw, (max-width: 1024px) 100vw, 52vw"
+            sizes="(max-width: 640px) 72vw, (max-width: 1024px) 42vw, 24vw"
             placeholderMotif={myth.motif || "condor"}
             placeholderSize={120}
             className="rounded-none border-0"
@@ -391,7 +407,7 @@ export function TerritoryStrip({ regions = [] }) {
               src={region.imageUrl}
               alt=""
               fill
-              sizes="(max-width: 640px) 140vw, (max-width: 1024px) 100vw, 45vw"
+              sizes="(max-width: 1023px) 100vw, 720px"
               className="atlas-image-zoom object-cover"
             />
           ) : (
