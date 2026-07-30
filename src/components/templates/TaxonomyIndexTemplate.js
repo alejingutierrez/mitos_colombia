@@ -4,12 +4,18 @@ import { Container, Icon, ImageFrame, Motif } from "../atoms";
 import { Header, RouteGrid } from "../organisms";
 import { AtlasSectionHeader } from "../editorial/AtlasEditorial";
 
-function ItemImage({ item, sizes, className = "", priority = false }) {
+function ItemImage({
+  item,
+  sizes,
+  ratio = "4 / 3",
+  className = "",
+  priority = false,
+}) {
   return (
     <ImageFrame
       src={item?.imageUrl}
       alt={item?.title || ""}
-      ratio="4 / 3"
+      ratio={ratio}
       priority={priority}
       sizes={sizes}
       placeholderMotif={item?.motif || "hoja"}
@@ -20,7 +26,14 @@ function ItemImage({ item, sizes, className = "", priority = false }) {
   );
 }
 
-function ItemOverlay({ item, ratio = "4 / 3", className = "", priority = false }) {
+function ItemOverlay({
+  item,
+  ratio = "4 / 3",
+  fillImage = false,
+  compact = false,
+  className = "",
+  priority = false,
+}) {
   if (!item) return null;
   return (
     <Link
@@ -30,21 +43,31 @@ function ItemOverlay({ item, ratio = "4 / 3", className = "", priority = false }
       <ImageFrame
         src={item.imageUrl}
         alt={item.title}
-        ratio={ratio}
+        ratio={fillImage ? null : ratio}
         priority={priority}
         sizes="(max-width: 768px) 100vw, 50vw"
         placeholderMotif={item.motif || "hoja"}
         placeholderSize={160}
-        className="rounded-none border-0"
+        className={`rounded-none border-0 ${
+          fillImage ? "absolute inset-0 h-full w-full" : ""
+        }`}
         imgClassName="atlas-image-zoom object-cover"
       />
       <span className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent" />
-      <span className="absolute inset-x-0 bottom-0 flex items-end justify-between gap-4 p-5 text-white md:p-6">
-        <span>
-          <span className="block font-editorial text-3xl font-semibold leading-none md:text-4xl">
+      <span
+        className={`absolute inset-x-0 bottom-0 flex items-end justify-between gap-4 text-white ${
+          compact ? "p-4 md:p-5" : "p-5 md:p-6"
+        }`}
+      >
+        <span className="min-w-0">
+          <span
+            className={`block text-balance font-editorial font-semibold leading-none ${
+              compact ? "text-2xl md:text-[2rem]" : "text-3xl md:text-4xl"
+            }`}
+          >
             {item.title}
           </span>
-          {item.description ? (
+          {item.description && !compact ? (
             <span className="mt-2 hidden max-w-md text-sm text-white/75 sm:block">
               {item.description}
             </span>
@@ -109,7 +132,13 @@ function IndexHero({ mode, title, description, items, heroMotif }) {
         <div className="grid min-h-[28rem] grid-cols-3 gap-px bg-white">
           {[lead, ...support].filter(Boolean).map((item) => (
             <div key={item.href} className="group">
-              <ItemImage item={item} sizes="34vw" className="h-full [&]:aspect-auto" priority />
+              <ItemImage
+                item={item}
+                sizes="34vw"
+                ratio={null}
+                className="h-full w-full"
+                priority
+              />
             </div>
           ))}
         </div>
@@ -119,19 +148,23 @@ function IndexHero({ mode, title, description, items, heroMotif }) {
 
   return (
     <section className="overflow-hidden border-b border-line-100">
-      <Container size="atlas" className="grid min-h-[31rem] gap-8 py-10 md:grid-cols-[0.65fr_1.35fr] md:items-center md:py-0">
-        <div>
+      <Container
+        size="atlas"
+        className="grid min-h-[31rem] min-w-0 gap-8 py-10 md:grid-cols-[0.65fr_1.35fr] md:items-center md:py-0"
+      >
+        <div className="min-w-0">
           <h1 className="atlas-title text-[3.6rem] md:text-[5.3rem]">{title}</h1>
           <p className="mt-6 max-w-md text-base leading-relaxed text-ink-700">
             {description}
           </p>
         </div>
-        <div className="group atlas-mobile-edge md:mr-[calc((100vw-72rem)/-2)] md:h-full">
+        <div className="group atlas-mobile-edge min-w-0 md:mr-[calc((100vw-72rem)/-2)] md:h-full">
           <ItemImage
             item={lead}
             sizes="(max-width: 768px) 100vw, 64vw"
+            ratio={null}
             priority
-            className="h-full min-h-[25rem] [&]:aspect-auto"
+            className="h-full min-h-[25rem] w-full"
           />
         </div>
       </Container>
@@ -141,27 +174,65 @@ function IndexHero({ mode, title, description, items, heroMotif }) {
 
 function CommunityComposition({ items }) {
   const [lead, ...rest] = items;
+  const featured = rest.slice(0, 3);
+  const archive = rest.slice(3);
+
   return (
     <>
-      <div className="grid gap-2 lg:grid-cols-[1.2fr_0.55fr_0.32fr_0.28fr]">
-        <ItemOverlay item={lead} ratio="16 / 9" priority />
-        {rest.slice(0, 3).map((item) => (
-          <ItemOverlay key={item.href} item={item} ratio="3 / 4" />
+      <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-12 lg:grid-rows-2">
+        <ItemOverlay
+          item={lead}
+          fillImage
+          priority
+          className="min-h-[28rem] sm:col-span-2 lg:col-span-6 lg:row-span-2 lg:min-h-[34rem]"
+        />
+        {featured.map((item, index) => (
+          <ItemOverlay
+            key={item.href}
+            item={item}
+            fillImage
+            compact={index > 0}
+            className={
+              index === 0
+                ? "min-h-[24rem] lg:col-span-3 lg:row-span-2 lg:min-h-[34rem]"
+                : index === 2
+                  ? "min-h-[20rem] sm:col-span-2 lg:col-span-3 lg:min-h-0"
+                : "min-h-[20rem] lg:col-span-3 lg:min-h-0"
+            }
+          />
         ))}
       </div>
-      <div className="mt-10 grid snap-x grid-flow-col auto-cols-[72%] gap-6 overflow-x-auto pb-3 sm:auto-cols-[40%] lg:grid-flow-row lg:grid-cols-5 lg:overflow-visible">
-        {rest.slice(3, 13).map((item) => (
-          <Link key={item.href} href={item.href} className="group grid grid-cols-[5rem_1fr] gap-4">
-            <ItemImage item={item} sizes="80px" className="h-28 [&]:aspect-auto" />
-            <span className="flex min-w-0 flex-col justify-center">
-              <span className="font-editorial text-2xl font-semibold leading-none text-ink-900">
-                {item.title}
+      <div className="mt-12 grid snap-x snap-mandatory grid-flow-col auto-cols-[82%] gap-x-5 gap-y-10 overflow-x-auto pb-3 sm:grid-flow-row sm:auto-cols-auto sm:grid-cols-2 sm:overflow-visible lg:grid-cols-4">
+        {archive.map((item) => (
+          <Link
+            key={item.href}
+            href={item.href}
+            className="group min-w-0 snap-start"
+          >
+            <ItemImage
+              item={item}
+              sizes="(max-width: 640px) 82vw, (max-width: 1024px) 50vw, 25vw"
+              ratio="4 / 3"
+              className="w-full"
+            />
+            <span className="mt-4 flex min-w-0 items-start justify-between gap-4 border-t border-line-100 pt-4">
+              <span className="min-w-0">
+                <span className="block text-balance font-editorial text-2xl font-semibold leading-none text-ink-900">
+                  {item.title}
+                </span>
+                {item.description ? (
+                  <span className="mt-2 block text-xs uppercase tracking-[0.12em] text-ink-500">
+                    {item.description}
+                  </span>
+                ) : null}
               </span>
-              {item.description ? (
-                <span className="mt-2 text-xs text-ink-500">{item.description}</span>
-              ) : null}
-              <span className="mt-1 text-xs font-semibold text-jungle-700">
-                {item.count} relatos
+              <span className="shrink-0 text-right">
+                <span className="block font-editorial text-2xl leading-none text-ink-900">
+                  {item.count}
+                </span>
+                <span className="mt-1 block text-[0.62rem] uppercase tracking-[0.14em] text-ink-500">
+                  relatos
+                </span>
               </span>
             </span>
           </Link>

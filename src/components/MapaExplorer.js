@@ -20,7 +20,7 @@ import {
   useMapEvents,
 } from "react-leaflet";
 import L from "leaflet";
-import { Icon } from "./atoms";
+import { Icon } from "./atoms/Icon";
 import { trackEvent } from "../lib/analytics";
 
 const COLOMBIA_BOUNDS = [
@@ -34,8 +34,8 @@ const MAP_TILES =
 const MAP_ATTRIBUTION =
   '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>';
 
-const PIN_WIDTH = 28;
-const PIN_HEIGHT = 38;
+const PIN_WIDTH = 44;
+const PIN_HEIGHT = 44;
 
 const PIN_SVG = `
   <svg viewBox="0 0 40 52" aria-hidden="true" focusable="false">

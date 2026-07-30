@@ -16,20 +16,34 @@ import {
   mythMotif,
   toParagraphs,
 } from "./MythSections";
+import {
+  getMythImage,
+  getMythImageVariants,
+  withMythImageVariants,
+} from "../../lib/myth-images";
 
 const RIVER_REGIONS = ["Caribe", "Pacífico"];
 const pickAccent = (region) =>
   RIVER_REGIONS.includes(region) ? "river" : "jungle";
 
-function ImagePause({ myth, ratio = "16 / 7", caption, className = "" }) {
-  if (!myth.imageUrl) return null;
+function ImagePause({
+  src,
+  myth,
+  role = "landscape",
+  ratio = "16 / 7",
+  sizes = "(max-width: 768px) 100vw, 1100px",
+  caption,
+  className = "",
+}) {
+  const imageUrl = src || getMythImage(myth, role);
+  if (!imageUrl) return null;
   return (
-    <figure className={className}>
+    <figure className={className} data-image-role={role}>
       <ImageFrame
-        src={myth.imageUrl}
+        src={imageUrl}
         alt=""
         ratio={ratio}
-        sizes="(max-width: 768px) 100vw, 1100px"
+        sizes={sizes}
         placeholderMotif={myth.motif}
         placeholderSize={180}
         className="rounded-none border-0"
@@ -88,6 +102,16 @@ function MythReading({ myth, accent, related }) {
   const shareUrl = myth.slug
     ? `https://www.mitosdecolombia.com/mitos/${myth.slug}`
     : undefined;
+  const imageVariants = getMythImageVariants(myth);
+  const portraitImage =
+    imageVariants.portrait !== imageVariants.landscape
+      ? imageVariants.portrait
+      : null;
+  const editorialImage =
+    imageVariants.editorial &&
+    ![imageVariants.landscape, portraitImage].includes(imageVariants.editorial)
+      ? imageVariants.editorial
+      : null;
 
   return (
     <>
@@ -97,29 +121,50 @@ function MythReading({ myth, accent, related }) {
           <div className="min-w-0">
             <section
               id="relato"
-              className="scroll-mt-24 grid items-start gap-10 md:grid-cols-[1fr_0.72fr]"
+              className={`scroll-mt-24 grid items-start gap-10 ${
+                portraitImage
+                  ? "md:grid-cols-[minmax(0,1fr)_minmax(16rem,0.64fr)]"
+                  : ""
+              }`}
             >
               <RelatoBlock text={myth.mito} accent={accent} motif={myth.motif} />
-              <ImagePause myth={myth} ratio="4 / 5" className="md:sticky md:top-24" />
+              {portraitImage ? (
+                <ImagePause
+                  myth={myth}
+                  src={portraitImage}
+                  role="portrait"
+                  ratio="2 / 3"
+                  sizes="(max-width: 768px) 100vw, 32vw"
+                  caption={
+                    myth.community
+                      ? `Una escena del relato en la memoria de ${myth.community}.`
+                      : "Una escena del relato y su memoria territorial."
+                  }
+                  className="md:sticky md:top-24"
+                />
+              ) : null}
             </section>
 
-            <ImagePause
-              myth={myth}
-              ratio="16 / 6"
-              caption={
-                myth.community
-                  ? `${myth.community}, lugar de encuentro y memoria.`
-                  : `${myth.region || "Colombia"}, territorio y memoria.`
-              }
-              className="mt-16"
-            />
+            {editorialImage ? (
+              <ImagePause
+                myth={myth}
+                src={editorialImage}
+                role="editorial"
+                ratio="16 / 9"
+                caption={
+                  myth.community
+                    ? `${myth.community}, lugar de encuentro y memoria.`
+                    : `${myth.region || "Colombia"}, territorio y memoria.`
+                }
+                className="mt-16"
+              />
+            ) : null}
 
             {toParagraphs(myth.historia).length ? (
               <section
                 id="contexto"
-                className="scroll-mt-24 mt-16 grid items-center gap-10 md:grid-cols-[0.9fr_1.1fr]"
+                className="scroll-mt-24 mt-16 max-w-4xl"
               >
-                <ImagePause myth={myth} ratio="4 / 3" />
                 <HistoriaBlock
                   text={myth.historia}
                   accent={accent}
@@ -132,10 +177,9 @@ function MythReading({ myth, accent, related }) {
             {toParagraphs(myth.versiones).length ? (
               <section
                 id="versiones"
-                className="scroll-mt-24 mt-16 grid items-start gap-10 md:grid-cols-[1fr_0.9fr]"
+                className="scroll-mt-24 mt-16 max-w-4xl md:ml-auto"
               >
                 <VersionesBlock text={myth.versiones} accent={accent} index={2} />
-                <ImagePause myth={myth} ratio="4 / 3" />
               </section>
             ) : null}
 
@@ -218,15 +262,17 @@ function MythArticle({ myth, accent, breadcrumb, related }) {
   return (
     <article>
       <section className="relative min-h-[calc(100svh-4rem)] overflow-hidden bg-[rgb(var(--atlas-night))]">
-        {myth.imageUrl ? (
+        {getMythImage(myth, "landscape") ? (
           <ImageFrame
-            src={myth.imageUrl}
+            src={getMythImage(myth, "landscape")}
             alt={myth.title}
-            ratio="16 / 9"
+            ratio={null}
             priority
+            quality={68}
             sizes="100vw"
-            className="absolute inset-0 min-h-full rounded-none border-0 [&]:aspect-auto"
+            className="absolute inset-0 h-full w-full rounded-none border-0"
             imgClassName="object-cover"
+            data-image-role="landscape"
           />
         ) : (
           <span className="absolute inset-0 flex items-center justify-center opacity-25">
@@ -277,7 +323,7 @@ export function MythDetailTemplate({
   commentsSlot,
 }) {
   const myth = {
-    ...rawMyth,
+    ...withMythImageVariants(rawMyth),
     motif: mythMotif(rawMyth),
     ...deriveSections(rawMyth),
     _map: map,
@@ -300,7 +346,7 @@ export function MythDetailTemplate({
       { label: myth?.title },
     ];
   const mappedRelated = related.map((item) => ({
-    ...item,
+    ...withMythImageVariants(item),
     motif: mythMotif(item),
   }));
   const article = (

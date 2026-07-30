@@ -1,8 +1,8 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { BRAND_MARK, SITE_NAME } from "../lib/brand";
 import { filterAllowedCommunities } from "../lib/communityFilters";
 import { formatCategoryName } from "../lib/formatters";
 
@@ -148,25 +148,23 @@ export default function HeaderClient({ initialTaxonomy }) {
     >
       <div className="mx-auto flex w-full max-w-[1480px] items-center justify-between gap-4 px-4 py-3 md:px-10 md:py-4">
         <Link href="/" className="flex items-center gap-3">
-          <Image
-            src="/favicon.png"
-            alt="Mitos de Colombia"
-            width={44}
-            height={44}
-            className="h-10 w-10 md:h-11 md:w-11"
-            priority
-          />
+          <span
+            aria-hidden="true"
+            className="font-display text-[2.2rem] font-normal leading-none text-jungle-700 md:text-[2.5rem]"
+          >
+            {BRAND_MARK}
+          </span>
           <span className="hidden flex-col leading-tight md:flex">
-            <span className="font-display text-[17px] font-semibold tracking-tight text-ink-900">
-              Mitos de Colombia
+            <span className="font-display text-[1.2rem] font-normal tracking-[-0.015em] text-ink-900">
+              {SITE_NAME}
             </span>
             <span className="mt-0.5 text-[10px] uppercase tracking-[0.3em] text-ink-500">
               Archivo vivo
             </span>
           </span>
           <span className="flex flex-col leading-tight md:hidden">
-            <span className="font-display text-base font-semibold tracking-tight text-ink-900">
-              Mitos de Colombia
+            <span className="font-display text-lg font-normal tracking-[-0.015em] text-ink-900">
+              {SITE_NAME}
             </span>
           </span>
         </Link>

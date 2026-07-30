@@ -672,7 +672,8 @@ async function getRouteMythsPostgres({ keywords = [], limit = 12, seed = 0 }) {
           myths.slug,
           myths.excerpt,
           myths.category_path,
-          COALESCE(vi.image_url, myths.image_url) AS image_url,
+          myths.image_url,
+          vi.image_url AS vertical_image_url,
           regions.name AS region,
           regions.slug AS region_slug,
           communities.name AS community,
@@ -684,6 +685,8 @@ async function getRouteMythsPostgres({ keywords = [], limit = 12, seed = 0 }) {
           SELECT image_url
           FROM vertical_images
           WHERE entity_type = 'myth' AND entity_id = myths.id
+            AND COALESCE(updated_at, created_at) >=
+              COALESCE(myths.updated_at, updated_at, created_at)
           ORDER BY updated_at DESC NULLS LAST, created_at DESC NULLS LAST
           LIMIT 1
         ) vi ON true
@@ -743,16 +746,16 @@ function getRouteMythsSqlite({ keywords = [], limit = 12, seed = 0 }) {
         myths.slug,
         myths.excerpt,
         myths.category_path,
-        COALESCE(
-          (
-            SELECT image_url
-            FROM vertical_images vi
-            WHERE vi.entity_type = 'myth' AND vi.entity_id = myths.id
-            ORDER BY vi.updated_at DESC, vi.created_at DESC
-            LIMIT 1
-          ),
-          myths.image_url
-        ) AS image_url,
+        myths.image_url,
+        (
+          SELECT image_url
+          FROM vertical_images vi
+          WHERE vi.entity_type = 'myth' AND vi.entity_id = myths.id
+            AND datetime(COALESCE(vi.updated_at, vi.created_at)) >=
+              datetime(COALESCE(myths.updated_at, vi.updated_at, vi.created_at))
+          ORDER BY vi.updated_at DESC, vi.created_at DESC
+          LIMIT 1
+        ) AS vertical_image_url,
         regions.name AS region,
         regions.slug AS region_slug,
         communities.name AS community,
@@ -846,7 +849,8 @@ async function getMythsByTitlesPostgres(titles = []) {
           myths.slug,
           myths.excerpt,
           myths.category_path,
-          COALESCE(vi.image_url, myths.image_url) AS image_url,
+          myths.image_url,
+          vi.image_url AS vertical_image_url,
           regions.name AS region,
           regions.slug AS region_slug,
           communities.name AS community,
@@ -858,6 +862,8 @@ async function getMythsByTitlesPostgres(titles = []) {
           SELECT image_url
           FROM vertical_images
           WHERE entity_type = 'myth' AND entity_id = myths.id
+            AND COALESCE(updated_at, created_at) >=
+              COALESCE(myths.updated_at, updated_at, created_at)
           ORDER BY updated_at DESC NULLS LAST, created_at DESC NULLS LAST
           LIMIT 1
         ) vi ON true
@@ -916,16 +922,16 @@ function getMythsByTitlesSqlite(titles = []) {
         myths.slug,
         myths.excerpt,
         myths.category_path,
-        COALESCE(
-          (
-            SELECT image_url
-            FROM vertical_images vi
-            WHERE vi.entity_type = 'myth' AND vi.entity_id = myths.id
-            ORDER BY vi.updated_at DESC, vi.created_at DESC
-            LIMIT 1
-          ),
-          myths.image_url
-        ) AS image_url,
+        myths.image_url,
+        (
+          SELECT image_url
+          FROM vertical_images vi
+          WHERE vi.entity_type = 'myth' AND vi.entity_id = myths.id
+            AND datetime(COALESCE(vi.updated_at, vi.created_at)) >=
+              datetime(COALESCE(myths.updated_at, vi.updated_at, vi.created_at))
+          ORDER BY vi.updated_at DESC, vi.created_at DESC
+          LIMIT 1
+        ) AS vertical_image_url,
         regions.name AS region,
         regions.slug AS region_slug,
         communities.name AS community,
@@ -1025,7 +1031,8 @@ async function getMythsBySlugsPostgres(slugs = []) {
           myths.slug,
           myths.excerpt,
           myths.category_path,
-          COALESCE(vi.image_url, myths.image_url) AS image_url,
+          myths.image_url,
+          vi.image_url AS vertical_image_url,
           regions.name AS region,
           regions.slug AS region_slug,
           communities.name AS community,
@@ -1037,6 +1044,8 @@ async function getMythsBySlugsPostgres(slugs = []) {
           SELECT image_url
           FROM vertical_images
           WHERE entity_type = 'myth' AND entity_id = myths.id
+            AND COALESCE(updated_at, created_at) >=
+              COALESCE(myths.updated_at, updated_at, created_at)
           ORDER BY updated_at DESC NULLS LAST, created_at DESC NULLS LAST
           LIMIT 1
         ) vi ON true
@@ -1092,16 +1101,16 @@ function getMythsBySlugsSqlite(slugs = []) {
         myths.slug,
         myths.excerpt,
         myths.category_path,
-        COALESCE(
-          (
-            SELECT image_url
-            FROM vertical_images vi
-            WHERE vi.entity_type = 'myth' AND vi.entity_id = myths.id
-            ORDER BY vi.updated_at DESC, vi.created_at DESC
-            LIMIT 1
-          ),
-          myths.image_url
-        ) AS image_url,
+        myths.image_url,
+        (
+          SELECT image_url
+          FROM vertical_images vi
+          WHERE vi.entity_type = 'myth' AND vi.entity_id = myths.id
+            AND datetime(COALESCE(vi.updated_at, vi.created_at)) >=
+              datetime(COALESCE(myths.updated_at, vi.updated_at, vi.created_at))
+          ORDER BY vi.updated_at DESC, vi.created_at DESC
+          LIMIT 1
+        ) AS vertical_image_url,
         regions.name AS region,
         regions.slug AS region_slug,
         communities.name AS community,

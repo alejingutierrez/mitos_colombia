@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Container, Icon, Motif } from "../atoms";
+import { Container, Icon, ImageFrame, Motif } from "../atoms";
 import { SearchBox } from "../molecules";
 import { Header } from "../organisms";
 import {
@@ -11,6 +11,7 @@ import {
   SelectionMosaic,
   TerritoryStrip,
 } from "../editorial/AtlasEditorial";
+import { getMythImage } from "../../lib/myth-images";
 
 const DEFAULT_LEAD = {
   slug: "la-madre-de-agua",
@@ -25,18 +26,27 @@ const DEFAULT_LEAD = {
 
 function RouteFeature({ route, myth }) {
   if (!route) return null;
+  const landscapeImage =
+    route.imageUrl || getMythImage(myth, "landscape");
+  const portraitImage =
+    route.portraitImageUrl ||
+    getMythImage(myth, "portrait", { fallback: false });
+
   return (
     <Link
       href={route.href}
       className="group relative block min-h-[31rem] overflow-hidden bg-[rgb(var(--atlas-night))] md:min-h-[37rem]"
     >
-      {route.imageUrl || myth?.imageUrl ? (
-        <Image
-          src={route.imageUrl || myth.imageUrl}
+      {landscapeImage ? (
+        <ImageFrame
+          src={landscapeImage}
+          mobileSrc={portraitImage}
           alt=""
-          fill
           sizes="100vw"
-          className="atlas-image-zoom object-cover"
+          mobileSizes="100vw"
+          ratio={null}
+          className="absolute inset-0 h-full w-full rounded-none border-0"
+          imgClassName="atlas-image-zoom object-cover"
         />
       ) : (
         <span className="absolute inset-0 flex items-center justify-center opacity-30">
@@ -95,22 +105,45 @@ function OracleSection({ tarot = [] }) {
             <Icon name="arrow-right" size={18} />
           </Link>
         </div>
-        <div className="grid grid-cols-3 gap-3">
+        <div className="grid snap-x snap-mandatory grid-flow-col auto-cols-[72%] gap-4 overflow-x-auto overscroll-x-contain pb-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden md:grid-flow-row md:auto-cols-auto md:grid-cols-3 md:overflow-visible md:pb-0">
           {tarot.slice(0, 3).map((card, index) => (
             <Link
               key={card.card_name}
               href={card.myth_slug ? `/mitos/${card.myth_slug}` : "/tarot"}
-              className="group flex aspect-[2/3] flex-col items-center justify-between border border-ember-500/70 bg-black/25 p-4 text-center transition-transform duration-500 hover:-translate-y-2"
-              style={{ transform: `rotate(${[-3, 0, 3][index]}deg)` }}
+              className="group relative block aspect-[2/3] snap-start overflow-hidden border border-ember-500/70 bg-black/25 text-center transition-transform duration-500 hover:-translate-y-2"
+              style={{ rotate: `${[-3, 0, 3][index]}deg` }}
             >
-              <span className="font-editorial text-lg text-ember-400">
-                {card.roman || "·"}
-              </span>
-              <span className="flex h-16 w-16 items-center justify-center rounded-full bg-[#f6e9cf] text-ink-900">
-                <Motif name={card.motif || "luna"} size={42} />
-              </span>
-              <span className="font-editorial text-lg font-semibold leading-none">
-                {card.card_name}
+              {card.imageUrl ? (
+                <Image
+                  src={card.imageUrl}
+                  alt={card.card_name}
+                  fill
+                  sizes="(max-width: 767px) 72vw, 15vw"
+                  className="object-cover transition-transform duration-700 ease-editorial group-hover:scale-[1.035]"
+                />
+              ) : null}
+              <span
+                className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/35 via-transparent to-black/90"
+                aria-hidden="true"
+              />
+              <span className="relative z-10 flex h-full flex-col items-center justify-between p-4">
+                <span className="font-editorial text-lg text-ember-400">
+                  {card.roman || "·"}
+                </span>
+                {!card.imageUrl ? (
+                  <span className="flex h-16 w-16 items-center justify-center rounded-full bg-[#f6e9cf] text-ink-900">
+                    <Motif name={card.motif || "luna"} size={42} />
+                  </span>
+                ) : (
+                  <span aria-hidden="true" />
+                )}
+                {card.imageUrl ? (
+                  <span className="sr-only">{card.card_name}</span>
+                ) : (
+                  <span className="text-balance font-editorial text-lg font-semibold leading-none drop-shadow-sm">
+                    {card.card_name}
+                  </span>
+                )}
               </span>
             </Link>
           ))}
@@ -144,10 +177,12 @@ export function HomeTemplate({
           <OverlayMythCard
             myth={lead}
             ratio="16 / 7.5"
+            fillImage
+            mobileImageRole="portrait"
             priority
             quality={68}
             sizes="100vw"
-            className="min-h-[72svh] md:min-h-0 [&>div]:min-h-[72svh] md:[&>div]:min-h-0"
+            className="min-h-[72svh] md:min-h-0 md:aspect-[16/7.5]"
             titleClassName="!text-[3.5rem] md:!text-[4.75rem]"
             contentClassName="md:!px-14 md:!pb-12"
           />
@@ -243,13 +278,18 @@ export function HomeTemplate({
             className="group grid min-h-[28rem] overflow-hidden bg-[rgb(var(--atlas-night))] md:grid-cols-[1.15fr_0.85fr]"
           >
             <div className="relative min-h-[22rem]">
-              {feed[2]?.imageUrl ? (
-                <Image
-                  src={feed[2].imageUrl}
+              {getMythImage(feed[2], "landscape") ? (
+                <ImageFrame
+                  src={getMythImage(feed[2], "landscape")}
+                  mobileSrc={getMythImage(feed[2], "portrait", {
+                    fallback: false,
+                  })}
                   alt=""
-                  fill
                   sizes="(max-width: 768px) 100vw, 60vw"
-                  className="atlas-image-zoom object-cover"
+                  mobileSizes="100vw"
+                  ratio={null}
+                  className="absolute inset-0 h-full w-full rounded-none border-0"
+                  imgClassName="atlas-image-zoom object-cover"
                 />
               ) : null}
               <span className="absolute inset-0 bg-gradient-to-t from-black/55 to-transparent" />

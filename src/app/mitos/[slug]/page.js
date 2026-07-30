@@ -11,6 +11,7 @@ import MythLocationMapClient from "../../../components/MythLocationMapClient";
 import { ArticleJsonLd, BreadcrumbJsonLd } from "../../../components/StructuredData";
 import { regionSlugFromName, communitySlugFromName } from "../../../lib/taxonomy-slug";
 import { MythDetailTemplate } from "../../../components/templates";
+import { withMythImageVariants } from "../../../lib/myth-images";
 
 export const runtime = "nodejs";
 export const revalidate = 3600;
@@ -89,14 +90,17 @@ export default async function MythDetailPage({ params }) {
   }
 
   const recommended = await getRecommendedMyths(myth, 6);
-  const related = recommended.map((r) => ({
-    slug: r.slug,
-    title: r.title,
-    excerpt: r.excerpt,
-    region: r.region,
-    community: r.community,
-    imageUrl: r.image_url,
-  }));
+  const related = recommended.map((r) =>
+    withMythImageVariants({
+      slug: r.slug,
+      title: r.title,
+      excerpt: r.excerpt,
+      region: r.region,
+      community: r.community,
+      image_url: r.image_url,
+      vertical_image_url: r.vertical_image_url,
+    })
+  );
 
   const lat = parseCoord(myth.latitude);
   const lng = parseCoord(myth.longitude);
@@ -113,6 +117,9 @@ export default async function MythDetailPage({ params }) {
     community: myth.community,
     excerpt: myth.excerpt,
     imageUrl: myth.image_url,
+    landscapeImageUrl: myth.landscape_image_url || myth.image_url,
+    portraitImageUrl: myth.vertical_image_url,
+    editorialImageUrl: myth.editorial_image_url,
     content: myth.content,
     category_path: myth.category_path,
     keywords: myth.keywords,

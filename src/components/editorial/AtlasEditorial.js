@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Container, Icon, ImageFrame, Motif } from "../atoms";
+import { getMythImage } from "../../lib/myth-images";
 
 function mythHref(myth) {
   return myth?.slug ? `/mitos/${myth.slug}` : "/mitos";
@@ -40,6 +41,7 @@ export function AtlasSectionHeader({
 export function OverlayMythCard({
   myth,
   ratio = "4 / 3",
+  fillImage = false,
   priority = false,
   quality = 75,
   sizes,
@@ -47,23 +49,36 @@ export function OverlayMythCard({
   showExcerpt = true,
   titleClassName = "",
   contentClassName = "",
+  imageRole = "landscape",
+  mobileImageRole,
+  strictImageRole = false,
 }) {
   if (!myth) return null;
+  const imageSrc = getMythImage(myth, imageRole, {
+    fallback: !strictImageRole,
+  });
+  const mobileImageSrc = mobileImageRole
+    ? getMythImage(myth, mobileImageRole)
+    : null;
+
   return (
     <Link
       href={mythHref(myth)}
       className={`group relative block overflow-hidden bg-[rgb(var(--atlas-night))] ${className}`}
     >
       <ImageFrame
-        src={myth.imageUrl}
+        src={imageSrc}
+        mobileSrc={mobileImageSrc}
         alt={myth.title}
-        ratio={ratio}
+        ratio={fillImage ? null : ratio}
         priority={priority}
         quality={quality}
         sizes={sizes}
         placeholderMotif={myth.motif || "jaguar"}
         placeholderSize={160}
-        className="rounded-none border-0"
+        className={`rounded-none border-0 ${
+          fillImage ? "absolute inset-0 h-full w-full" : ""
+        }`}
         imgClassName="atlas-image-zoom object-cover"
       />
       <span
@@ -99,24 +114,24 @@ export function CompactMythLink({ myth, imageSide = "left", className = "" }) {
   return (
     <Link
       href={mythHref(myth)}
-      className={`group grid min-h-28 grid-cols-[7rem_1fr] border border-line-100 bg-white transition-colors hover:border-line-300 ${imageSide === "right" ? "grid-cols-[1fr_7rem]" : ""} ${className}`}
+      className={`group grid min-h-28 min-w-0 grid-cols-[7rem_minmax(0,1fr)] overflow-hidden border border-line-100 bg-white transition-colors hover:border-line-300 ${imageSide === "right" ? "grid-cols-[minmax(0,1fr)_7rem]" : ""} ${className}`}
     >
-      <div className={imageSide === "right" ? "order-2" : ""}>
+      <div className={`min-w-0 ${imageSide === "right" ? "order-2" : ""}`}>
         <ImageFrame
-          src={myth.imageUrl}
+          src={getMythImage(myth, "square")}
           alt={myth.title}
-          ratio="1 / 1"
+          ratio={null}
           sizes="112px"
           placeholderMotif={myth.motif || "jaguar"}
-          className="h-full rounded-none border-0"
+          className="h-full w-full rounded-none border-0"
           imgClassName="atlas-image-zoom object-cover"
         />
       </div>
       <div className="flex min-w-0 flex-col justify-center p-4">
-        <span className="atlas-kicker">
+        <span className="atlas-kicker truncate">
           {[myth.region, myth.community].filter(Boolean).join(" · ")}
         </span>
-        <span className="mt-2 font-editorial text-[1.35rem] font-semibold leading-[1] text-ink-900">
+        <span className="mt-2 line-clamp-2 font-editorial text-[1.35rem] font-semibold leading-[1] text-ink-900">
           {myth.title}
         </span>
         <Icon
@@ -137,6 +152,8 @@ export function SelectionMosaic({ myths = [] }) {
       <OverlayMythCard
         myth={lead}
         ratio="4 / 5"
+        imageRole="portrait"
+        strictImageRole
         priority
         sizes="(max-width: 1024px) 100vw, 42vw"
         className="lg:col-span-5 lg:row-span-2"
@@ -148,7 +165,7 @@ export function SelectionMosaic({ myths = [] }) {
         className="lg:col-span-4"
         titleClassName="!text-[1.85rem]"
       />
-      <div className="grid gap-3 sm:grid-cols-2 lg:col-span-3 lg:row-span-2 lg:grid-cols-1">
+      <div className="grid min-w-0 gap-3 sm:grid-cols-2 lg:col-span-3 lg:row-span-2 lg:grid-cols-1">
         {rail.slice(0, 4).map((myth) => (
           <CompactMythLink key={myth.slug} myth={myth} />
         ))}
@@ -191,9 +208,9 @@ export function EditorialMythRow({ myths = [], reverse = false }) {
             className="group grid grid-cols-[4.5rem_1fr_auto] items-center gap-4 py-4"
           >
             <span className="relative aspect-square overflow-hidden">
-              {myth.imageUrl ? (
+              {getMythImage(myth, "square") ? (
                 <Image
-                  src={myth.imageUrl}
+                  src={getMythImage(myth, "square")}
                   alt=""
                   fill
                   sizes="72px"
@@ -224,18 +241,22 @@ export function EditorialMythRow({ myths = [], reverse = false }) {
 }
 
 export function PortraitRail({ myths = [], className = "" }) {
+  const portraitMyths = myths.filter((myth) =>
+    getMythImage(myth, "portrait", { fallback: false })
+  );
+
   return (
     <div
       className={`grid snap-x snap-mandatory grid-flow-col auto-cols-[78%] gap-4 overflow-x-auto pb-3 sm:auto-cols-[45%] lg:grid-flow-row lg:grid-cols-4 lg:overflow-visible ${className}`}
     >
-      {myths.slice(0, 8).map((myth) => (
+      {portraitMyths.slice(0, 8).map((myth) => (
         <Link
           key={myth.slug}
           href={mythHref(myth)}
           className="group snap-start"
         >
           <ImageFrame
-            src={myth.imageUrl}
+            src={getMythImage(myth, "portrait", { fallback: false })}
             alt={myth.title}
             ratio="3 / 4"
             sizes="(max-width: 640px) 78vw, (max-width: 1024px) 45vw, 25vw"

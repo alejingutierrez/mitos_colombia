@@ -6,6 +6,7 @@ import { filterAllowedCommunities } from "../lib/communityFilters";
 import { getTaxonomy, listMyths } from "../lib/myths";
 import { resolveSearchParams } from "../lib/next-route-props";
 import { OverlayMythCard } from "./editorial/AtlasEditorial";
+import { getMythImage, withMythImageVariants } from "../lib/myth-images";
 
 export const DEFAULT_LIMIT = 24;
 
@@ -39,7 +40,7 @@ function ArchiveListItem({ myth, index }) {
         {String(index + 1).padStart(2, "0")}
       </span>
       <ImageFrame
-        src={myth.imageUrl}
+        src={getMythImage(myth, "landscape")}
         alt=""
         ratio="4 / 3"
         sizes="104px"
@@ -143,14 +144,17 @@ export async function MitosArchiveContent({ page = 1, searchParams = {} }) {
       ? `/mitos${queryString}`
       : `/mitos/pagina/${nextPage}${queryString}`;
 
-  const myths = (result.items || []).map((myth) => ({
-    slug: myth.slug,
-    title: myth.title,
-    excerpt: myth.excerpt,
-    region: myth.region,
-    community: myth.community,
-    imageUrl: myth.image_url,
-  }));
+  const myths = (result.items || []).map((myth) =>
+    withMythImageVariants({
+      slug: myth.slug,
+      title: myth.title,
+      excerpt: myth.excerpt,
+      region: myth.region,
+      community: myth.community,
+      image_url: myth.image_url,
+      vertical_image_url: myth.vertical_image_url,
+    })
+  );
   const heroMyth = myths[0];
 
   return (

@@ -22,29 +22,40 @@ function pageRange(current, total) {
 }
 
 const arrowCls =
-  "inline-flex h-9 items-center gap-1 rounded px-2.5 text-sm text-ink-700 transition-colors hover:bg-mist-50";
-const disabledArrowCls = "inline-flex h-9 items-center gap-1 rounded px-2.5 text-sm text-line-300 pointer-events-none";
+  "inline-flex h-11 min-w-11 items-center justify-center gap-1 rounded px-2 text-sm text-ink-700 transition-colors hover:bg-mist-50 sm:px-2.5";
+const disabledArrowCls =
+  "pointer-events-none inline-flex h-11 min-w-11 items-center justify-center gap-1 rounded px-2 text-sm text-ink-700 sm:px-2.5";
 
 export function Pagination({ page = 1, totalPages = 1, makeHref = () => "#", className }) {
   if (totalPages <= 1) return null;
   const pages = pageRange(page, totalPages);
 
   return (
-    <nav aria-label="Paginación" className={cn("flex items-center gap-1", className)}>
+    <nav
+      aria-label="Paginación"
+      className={cn("flex w-full max-w-full items-center justify-center gap-1", className)}
+    >
       {page > 1 ? (
-        <Link href={makeHref(page - 1)} className={arrowCls} rel="prev">
-          <Icon name="chevron-left" size={16} /> Anterior
+        <Link
+          href={makeHref(page - 1)}
+          className={arrowCls}
+          rel="prev"
+          aria-label="Ir a la página anterior"
+        >
+          <Icon name="chevron-left" size={16} />
+          <span className="hidden sm:inline">Anterior</span>
         </Link>
       ) : (
-        <span className={disabledArrowCls} aria-hidden="true">
-          <Icon name="chevron-left" size={16} /> Anterior
+        <span className={disabledArrowCls} aria-disabled="true">
+          <Icon name="chevron-left" size={16} />
+          <span className="hidden sm:inline">Anterior</span>
         </span>
       )}
 
-      <div className="mx-1 flex items-center gap-1">
+      <div className="flex items-center gap-1 sm:mx-1">
         {pages.map((p, i) =>
           p === "…" ? (
-            <span key={`e${i}`} className="px-1.5 text-sm text-ink-500">
+            <span key={`e${i}`} className="px-1 text-sm text-ink-700 sm:px-1.5">
               …
             </span>
           ) : (
@@ -53,7 +64,7 @@ export function Pagination({ page = 1, totalPages = 1, makeHref = () => "#", cla
               href={makeHref(p)}
               aria-current={p === page ? "page" : undefined}
               className={cn(
-                "inline-flex h-9 min-w-9 items-center justify-center rounded px-2 text-sm tabular-nums transition-colors",
+                "inline-flex h-11 min-w-11 items-center justify-center rounded px-2 text-sm tabular-nums transition-colors",
                 p === page ? "bg-jungle-500 text-white" : "text-ink-700 hover:bg-mist-50"
               )}
             >
@@ -64,12 +75,19 @@ export function Pagination({ page = 1, totalPages = 1, makeHref = () => "#", cla
       </div>
 
       {page < totalPages ? (
-        <Link href={makeHref(page + 1)} className={arrowCls} rel="next">
-          Siguiente <Icon name="chevron-right" size={16} />
+        <Link
+          href={makeHref(page + 1)}
+          className={arrowCls}
+          rel="next"
+          aria-label="Ir a la página siguiente"
+        >
+          <span className="hidden sm:inline">Siguiente</span>
+          <Icon name="chevron-right" size={16} />
         </Link>
       ) : (
-        <span className={disabledArrowCls} aria-hidden="true">
-          Siguiente <Icon name="chevron-right" size={16} />
+        <span className={disabledArrowCls} aria-disabled="true">
+          <span className="hidden sm:inline">Siguiente</span>
+          <Icon name="chevron-right" size={16} />
         </span>
       )}
     </nav>

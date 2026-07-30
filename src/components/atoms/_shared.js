@@ -5,7 +5,7 @@
  */
 
 /** Alturas de control alineadas: un Button, Input, Select e IconButton "md" comparten baseline. */
-export const CONTROL_HEIGHTS = { sm: "h-8", md: "h-9", lg: "h-11" };
+export const CONTROL_HEIGHTS = { sm: "h-9", md: "h-11", lg: "h-12" };
 
 /** Anillo de foco para elementos accionables (botones, enlaces-botón). */
 export const RING_BUTTON =

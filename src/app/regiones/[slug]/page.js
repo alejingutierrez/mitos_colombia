@@ -3,6 +3,7 @@ import { filterAllowedCommunities } from "../../../lib/communityFilters";
 import { getTaxonomy, listMyths, listMythLinksByTaxon } from "../../../lib/myths";
 import { buildSeoMetadata, getSeoEntry } from "../../../lib/seo";
 import { resolveRouteParams } from "../../../lib/next-route-props";
+import { withMythImageVariants } from "../../../lib/myth-images";
 import { BreadcrumbJsonLd, CollectionPageJsonLd } from "../../../components/StructuredData";
 import { TaxonomyDetailTemplate } from "../../../components/templates";
 import { FilterableArchive } from "../../../components/organisms";
@@ -173,15 +174,18 @@ export default async function RegionDetailPage({ params }) {
   const motif = REGION_MOTIFS[slug] || "hoja";
 
   // Muestra para exploración interactiva (filtrable en cliente, SSR = rastreable).
-  const result = await listMyths({ region: region.slug, limit: 48, offset: 0 });
-  const exploreMyths = (result?.items || []).map((m) => ({
-    slug: m.slug,
-    title: m.title,
-    excerpt: m.excerpt,
-    region: m.region,
-    community: m.community,
-    imageUrl: m.image_url,
-  }));
+  const result = await listMyths({ region: region.slug, limit: 24, offset: 0 });
+  const exploreMyths = (result?.items || []).map((m) =>
+    withMythImageVariants({
+      slug: m.slug,
+      title: m.title,
+      excerpt: m.excerpt,
+      region: m.region,
+      community: m.community,
+      image_url: m.image_url,
+      vertical_image_url: m.vertical_image_url,
+    })
+  );
 
   // Comunidades de esta región → facetas de filtro.
   const regionCommunities = filterAllowedCommunities(taxonomy.communities).filter(
@@ -236,7 +240,13 @@ export default async function RegionDetailPage({ params }) {
         ]}
         intro={regionInfo.longDescription}
         characteristics={regionInfo.characteristics}
-        filterable={<FilterableArchive myths={exploreMyths} filters={filters} />}
+        filterable={
+          <FilterableArchive
+            myths={exploreMyths}
+            filters={filters}
+            totalCount={region.myth_count}
+          />
+        }
         mythIndex={allMythLinks}
         indexTitle={`Todos los mitos de la región ${region.name}`}
       />

@@ -1,6 +1,14 @@
 // Server component — renders JSON-LD as a static <script> in <head>
 // No hydration needed since these are inert data scripts
 
+import {
+  BRAND_LOGO_PATH,
+  BRAND_LOGO_SIZE,
+  SITE_ALTERNATE_NAMES,
+  SITE_DESCRIPTION,
+  SITE_NAME,
+} from "../lib/brand";
+
 function normalizeUrl(value) {
   if (!value) return "";
   return String(value).trim().replace(/\/+$/, "");
@@ -32,17 +40,21 @@ function JsonLdScript({ data }) {
 
 export function WebsiteJsonLd({ siteUrl }) {
   const url = normalizeUrl(siteUrl) || "https://www.mitosdecolombia.com";
+  const organizationId = `${url}/#organization`;
+  const logoUrl = `${url}${BRAND_LOGO_PATH}`;
+
   return (
     <>
       <JsonLdScript
         data={{
           "@context": "https://schema.org",
           "@type": "WebSite",
-          name: "Mitos de Colombia",
+          "@id": `${url}/#website`,
+          name: SITE_NAME,
+          alternateName: SITE_ALTERNATE_NAMES,
           url,
-          description:
-            "Archivo editorial de mitos colombianos, organizado por región, origen y tema.",
-          inLanguage: "es",
+          description: SITE_DESCRIPTION,
+          inLanguage: "es-CO",
           potentialAction: {
             "@type": "SearchAction",
             target: {
@@ -53,8 +65,7 @@ export function WebsiteJsonLd({ siteUrl }) {
           },
           publisher: {
             "@type": "Organization",
-            name: "Mitos de Colombia",
-            url,
+            "@id": organizationId,
           },
         }}
       />
@@ -62,9 +73,19 @@ export function WebsiteJsonLd({ siteUrl }) {
         data={{
           "@context": "https://schema.org",
           "@type": "Organization",
-          name: "Mitos de Colombia",
+          "@id": organizationId,
+          name: SITE_NAME,
           url,
-          logo: `${url}/logo_mitos.png`,
+          description: SITE_DESCRIPTION,
+          logo: {
+            "@type": "ImageObject",
+            "@id": `${url}/#logo`,
+            url: logoUrl,
+            contentUrl: logoUrl,
+            width: BRAND_LOGO_SIZE,
+            height: BRAND_LOGO_SIZE,
+            caption: SITE_NAME,
+          },
         }}
       />
     </>
@@ -105,23 +126,29 @@ export function ArticleJsonLd({
         }),
         author: {
           "@type": "Organization",
-          name: authorName || "Equipo editorial de Mitos de Colombia",
+          name: authorName || `Equipo editorial de ${SITE_NAME}`,
           ...(cleanSiteUrl && { url: cleanSiteUrl }),
         },
         reviewedBy: {
           "@type": "Organization",
-          name: "Equipo editorial de Mitos de Colombia",
+          name: `Equipo editorial de ${SITE_NAME}`,
           ...(cleanSiteUrl && { url: cleanSiteUrl }),
         },
         isAccessibleForFree: true,
         publisher: {
           "@type": "Organization",
-          name: "Mitos de Colombia",
+          ...(cleanSiteUrl && { "@id": `${cleanSiteUrl}/#organization` }),
+          name: SITE_NAME,
           ...(cleanSiteUrl && { url: cleanSiteUrl }),
           ...(cleanSiteUrl && {
             logo: {
               "@type": "ImageObject",
-              url: `${cleanSiteUrl}/logo_mitos.png`,
+              "@id": `${cleanSiteUrl}/#logo`,
+              url: `${cleanSiteUrl}${BRAND_LOGO_PATH}`,
+              contentUrl: `${cleanSiteUrl}${BRAND_LOGO_PATH}`,
+              width: BRAND_LOGO_SIZE,
+              height: BRAND_LOGO_SIZE,
+              caption: SITE_NAME,
             },
           }),
         },

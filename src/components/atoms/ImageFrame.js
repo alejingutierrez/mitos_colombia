@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image, { getImageProps } from "next/image";
 import { cn } from "../../lib/utils";
 import { Motif } from "./Motif";
 
@@ -10,9 +10,11 @@ import { Motif } from "./Motif";
 
 export function ImageFrame({
   src,
+  mobileSrc,
   alt = "",
   ratio = "4 / 3",
   sizes = "(max-width: 768px) 100vw, 400px",
+  mobileSizes = "100vw",
   priority = false,
   quality = 75,
   fetchPriority = priority ? "high" : undefined,
@@ -22,26 +24,47 @@ export function ImageFrame({
   imgClassName,
   ...props
 }) {
+  const ratioStyle = ratio ? { aspectRatio: ratio } : undefined;
+  const hasMobileArtDirection = Boolean(mobileSrc && mobileSrc !== src);
+  const mobileSource = hasMobileArtDirection
+    ? getImageProps({
+        src: mobileSrc,
+        alt,
+        fill: true,
+        sizes: mobileSizes,
+        quality,
+      }).props
+    : null;
+
   return (
     <div
       className={cn(
         "relative overflow-hidden rounded border border-line-100 bg-mist-50",
         className
       )}
-      style={{ aspectRatio: ratio }}
+      style={ratioStyle}
       {...props}
     >
       {src ? (
-        <Image
-          src={src}
-          alt={alt}
-          fill
-          sizes={sizes}
-          priority={priority}
-          quality={quality}
-          fetchPriority={fetchPriority}
-          className={cn("object-cover", imgClassName)}
-        />
+        <picture className="absolute inset-0 block h-full w-full">
+          {mobileSource ? (
+            <source
+              media="(max-width: 767px)"
+              srcSet={mobileSource.srcSet || mobileSource.src}
+              sizes={mobileSource.sizes || mobileSizes}
+            />
+          ) : null}
+          <Image
+            src={src}
+            alt={alt}
+            fill
+            sizes={sizes}
+            priority={priority && !hasMobileArtDirection}
+            quality={quality}
+            fetchPriority={fetchPriority}
+            className={cn("object-cover", imgClassName)}
+          />
+        </picture>
       ) : (
         <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-mist-50 to-mist-100">
           <Motif

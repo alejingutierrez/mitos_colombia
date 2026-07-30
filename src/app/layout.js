@@ -1,9 +1,16 @@
 import "./globals.css";
-import { Cormorant_Garamond, Manrope, Inter } from "next/font/google";
+import { Metamorphous, Readex_Pro } from "next/font/google";
 import Script from "next/script";
 import { Footer } from "../components/organisms/Footer";
 import Analytics from "../components/Analytics";
 import { GA_MEASUREMENT_ID } from "../lib/analytics";
+import {
+  APPLE_ICON_PATH,
+  FAVICON_PNG_PATH,
+  FAVICON_SVG_PATH,
+  SITE_DESCRIPTION,
+  SITE_NAME,
+} from "../lib/brand";
 import { WebsiteJsonLd } from "../components/StructuredData";
 
 const RAW_SITE_URL =
@@ -11,37 +18,44 @@ const RAW_SITE_URL =
   (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "");
 const SITE_URL = RAW_SITE_URL.trim().replace(/\/+$/, "");
 
-const display = Manrope({
+const display = Metamorphous({
   subsets: ["latin"],
-  weight: ["500", "600", "700", "800"],
+  weight: "400",
   variable: "--font-display",
   display: "swap",
 });
 
-const body = Inter({
+const body = Readex_Pro({
   subsets: ["latin"],
-  weight: ["400", "500", "600"],
+  weight: ["400", "500", "600", "700"],
   variable: "--font-body",
-  display: "swap",
-});
-
-const editorial = Cormorant_Garamond({
-  subsets: ["latin"],
-  weight: ["500", "600", "700"],
-  style: ["normal", "italic"],
-  variable: "--font-editorial",
   display: "swap",
 });
 
 export const metadata = {
   metadataBase: SITE_URL ? new URL(SITE_URL) : undefined,
-  title: "Mitos de Colombia",
-  description:
-    "Archivo editorial de mitos colombianos, organizado por region, origen y tema.",
+  applicationName: SITE_NAME,
+  title: SITE_NAME,
+  description: SITE_DESCRIPTION,
+  creator: SITE_NAME,
+  publisher: SITE_NAME,
   manifest: "/manifest.json",
+  openGraph: {
+    type: "website",
+    locale: "es_CO",
+    siteName: SITE_NAME,
+    title: SITE_NAME,
+    description: SITE_DESCRIPTION,
+  },
   icons: {
-    icon: "/favicon.svg",
-    apple: "/apple-icon.png",
+    icon: [
+      { url: FAVICON_SVG_PATH, type: "image/svg+xml" },
+      { url: FAVICON_PNG_PATH, type: "image/png", sizes: "48x48" },
+    ],
+    shortcut: [{ url: FAVICON_PNG_PATH, type: "image/png", sizes: "48x48" }],
+    apple: [
+      { url: APPLE_ICON_PATH, type: "image/png", sizes: "180x180" },
+    ],
   },
 };
 
@@ -51,7 +65,8 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="es"
-      className={`${display.variable} ${body.variable} ${editorial.variable}`}
+      className={`${display.variable} ${body.variable}`}
+      data-scroll-behavior="smooth"
     >
       <head>
         <WebsiteJsonLd siteUrl={SITE_URL} />

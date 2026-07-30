@@ -1,6 +1,6 @@
-import Image from "next/image";
 import Link from "next/link";
 import { Container } from "../atoms";
+import { BRAND_MARK, SITE_NAME } from "../../lib/brand";
 import { cn } from "../../lib/utils";
 
 /**
@@ -67,17 +67,14 @@ export function Footer({
               href="/"
               className="inline-flex items-center gap-3 transition-opacity duration-200 ease-editorial hover:opacity-90"
             >
-              <span className="inline-flex h-16 w-16 items-center justify-center rounded bg-mist-50/95 p-2 shadow-sm">
-                <Image
-                  src="/favicon.png"
-                  alt=""
-                  width={64}
-                  height={64}
-                  className="h-14 w-14 object-contain"
-                />
+              <span
+                aria-hidden="true"
+                className="inline-flex h-16 w-16 items-center justify-center rounded-sm border border-mist-50/20 font-display text-5xl font-normal leading-none text-mist-50"
+              >
+                {BRAND_MARK}
               </span>
-              <span className="font-display text-xl font-bold tracking-tight text-mist-50">
-                Mitos de Colombia
+              <span className="font-display text-2xl font-normal leading-none tracking-[-0.015em] text-mist-50">
+                {SITE_NAME}
               </span>
             </Link>
             <p className="mt-4 font-body text-sm leading-relaxed text-mist-100/70">
@@ -92,12 +89,12 @@ export function Footer({
                 <h2 className="mb-3 text-xs font-semibold uppercase tracking-[0.14em] text-mist-100/50">
                   {column.title}
                 </h2>
-                <ul className="space-y-2">
+                <ul>
                   {column.links.map((link) => (
                     <li key={link.href}>
                       <Link
                         href={link.href}
-                        className="font-body text-sm text-mist-100/80 transition-colors duration-200 ease-editorial hover:text-white"
+                        className="inline-flex min-h-11 items-center font-body text-sm text-mist-100/80 transition-colors duration-200 ease-editorial hover:text-white"
                       >
                         {link.label}
                       </Link>
@@ -112,7 +109,7 @@ export function Footer({
         {/* Barra inferior */}
         <div className="mt-12 flex flex-col gap-3 border-t border-white/10 pt-6 sm:flex-row sm:items-center sm:justify-between">
           <p className="font-body text-sm text-mist-100/60">
-            © {year} Mitos de Colombia
+            © {year} {SITE_NAME}
           </p>
           <p className="font-body text-sm text-mist-100/70">{tagline}</p>
         </div>

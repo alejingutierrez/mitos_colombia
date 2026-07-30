@@ -9,6 +9,10 @@ import {
   getTaxonomy,
 } from "../lib/myths";
 import { getTarotCards, getDailyTarotSelection } from "../lib/tarot";
+import {
+  hasMythImageRoles,
+  withMythImageVariants,
+} from "../lib/myth-images";
 
 export const revalidate = 86400;
 
@@ -56,15 +60,16 @@ const regionMotifs = {
 };
 
 function mapMyth(m) {
-  return {
+  return withMythImageVariants({
     slug: m.slug,
     title: m.title,
     excerpt: m.excerpt,
     region: m.region,
     community: m.community,
-    imageUrl: m.image_url,
+    image_url: m.image_url,
+    vertical_image_url: m.vertical_image_url,
     motif: mythMotif(m),
-  };
+  });
 }
 
 export default async function Home() {
@@ -80,7 +85,8 @@ export default async function Home() {
       getTarotCards(),
     ]);
 
-  // Mito líder para la obra de portada: primero con imagen, si no el primero.
+  // El líder cubre dos roles distintos: hero panorámico y tarjeta 4:5.
+  // No aceptar una horizontal como sustituto silencioso de la vertical.
   const pool = Array.from(
     new Map(
       [...(featuredMyths || []), ...(diverseMyths || [])]
@@ -88,7 +94,13 @@ export default async function Home() {
         .map((myth) => [myth.slug, myth])
     ).values()
   );
-  const leadRaw = pool.find((m) => m.image_url) || pool[0] || diverseMyths[0];
+  const leadRaw =
+    pool.find((myth) =>
+      hasMythImageRoles(myth, ["landscape", "portrait"])
+    ) ||
+    pool.find((myth) => hasMythImageRoles(myth, ["landscape"])) ||
+    pool[0] ||
+    diverseMyths[0];
   const lead = leadRaw ? mapMyth(leadRaw) : undefined;
   const featured = pool
     .filter((m) => !lead || m.slug !== lead.slug)
@@ -116,6 +128,7 @@ export default async function Home() {
     motif: r.accent === "river" ? "agua" : "hoja",
     description: r.detail || r.description,
     imageUrl: r.preview?.image_url,
+    portraitImageUrl: r.preview?.vertical_image_url,
   }));
 
   // Tres cartas de tarot para la sala del oráculo (selección diaria).
@@ -128,6 +141,8 @@ export default async function Home() {
         : "",
     myth_slug: c.myth_slug || "",
     motif: mythMotif({ slug: c.myth_slug || c.slug, title: c.card_name }),
+    imageUrl:
+      c.display_image_url || c.image_url || c.myth_image_url || "",
   }));
 
   const taxonomyWords = [

@@ -1,6 +1,7 @@
 import { unstable_cache } from "next/cache";
 import { getSqlClient, getSqliteDb, isPostgres, isQuotaError } from "./db";
 import { isStaticDataBuild, withRetry } from "./db-resilience";
+import { attachMythImageVariants } from "./myth-image-data";
 
 const ONE_HOUR = 60 * 60;
 const ONE_DAY = 60 * 60 * 24;
@@ -265,10 +266,13 @@ async function listMythsPostgres({
 
 export async function listMyths(params = {}) {
   try {
-    if (isPostgres()) {
-      return await withRetry(() => listMythsPostgres(params));
-    }
-    return listMythsSqlite(params);
+    const result = isPostgres()
+      ? await withRetry(() => listMythsPostgres(params))
+      : listMythsSqlite(params);
+    return {
+      ...result,
+      items: await attachMythImageVariants(result.items),
+    };
   } catch (error) {
     if (isQuotaError(error)) {
       console.error("[MYTHS] listMyths quota exceeded:", error);
@@ -437,11 +441,13 @@ function getMythBySlugSqlite(slug) {
     .map((row) => row.keyword);
 
   let provenance = normalizeEditorialProvenance(null);
+  let editorialImageUrl = null;
   try {
     const editorial = db
       .prepare(
         `
-        SELECT sources_json, key_sources_json, research_notes,
+        SELECT image_url AS editorial_image_url,
+               sources_json, key_sources_json, research_notes,
                updated_at AS editorial_updated_at
         FROM editorial_myths
         WHERE source_myth_id = ?
@@ -450,6 +456,7 @@ function getMythBySlugSqlite(slug) {
       )
       .get(myth.id);
     provenance = normalizeEditorialProvenance(editorial);
+    editorialImageUrl = editorial?.editorial_image_url || null;
   } catch (error) {
     console.error("[MYTHS] Editorial provenance unavailable (SQLite):", error);
   }
@@ -458,6 +465,7 @@ function getMythBySlugSqlite(slug) {
     ...myth,
     tags,
     keywords,
+    editorial_image_url: editorialImageUrl,
     ...provenance,
   };
 }
@@ -477,6 +485,7 @@ async function getMythBySlugPostgres(slug) {
         regions.slug AS region_slug,
         communities.name AS community,
         communities.slug AS community_slug,
+        editorial_myths.image_url AS editorial_image_url,
         editorial_myths.sources_json,
         editorial_myths.key_sources_json,
         editorial_myths.research_notes,
@@ -531,9 +540,11 @@ const getMythBySlugCached = unstable_cache(
   async (slug) => {
     try {
       if (isPostgres()) {
-        return await withRetry(() => getMythBySlugPostgres(slug));
+        const myth = await withRetry(() => getMythBySlugPostgres(slug));
+        return (await attachMythImageVariants(myth ? [myth] : []))[0] || null;
       }
-      return getMythBySlugSqlite(slug);
+      const myth = getMythBySlugSqlite(slug);
+      return (await attachMythImageVariants(myth ? [myth] : []))[0] || null;
     } catch (error) {
       console.error("[MYTHS] getMythBySlug failed:", error);
       if (isStaticDataBuild()) {
@@ -809,12 +820,13 @@ export async function getRecommendedMyths(myth, limit = 8) {
   }
 
   try {
-    return await getRecommendedMythsCached(
+    const rows = await getRecommendedMythsCached(
       myth.id,
       myth.region_id,
       myth.community_id,
       limit
     );
+    return await attachMythImageVariants(rows);
   } catch (error) {
     console.error("Error in getRecommendedMyths:", error);
     return [];
@@ -901,7 +913,8 @@ const getFeaturedMythsWithImagesCached = unstable_cache(
 
 export async function getFeaturedMythsWithImages(limit = 12, seed = 0) {
   try {
-    return await getFeaturedMythsWithImagesCached(limit, seed);
+    const rows = await getFeaturedMythsWithImagesCached(limit, seed);
+    return await attachMythImageVariants(rows);
   } catch (error) {
     console.error("Error in getFeaturedMythsWithImages:", error);
     return [];
@@ -976,10 +989,10 @@ function getMythsByRegionSqlite(regionSlug, limit = 6, seed = 0) {
 
 export async function getMythsByRegion(regionSlug, limit = 6, seed = 0) {
   try {
-    if (isPostgres()) {
-      return await getMythsByRegionPostgres(regionSlug, limit, seed);
-    }
-    return getMythsByRegionSqlite(regionSlug, limit, seed);
+    const rows = isPostgres()
+      ? await getMythsByRegionPostgres(regionSlug, limit, seed)
+      : getMythsByRegionSqlite(regionSlug, limit, seed);
+    return await attachMythImageVariants(rows);
   } catch (error) {
     console.error("Error in getMythsByRegion:", error);
     return [];
@@ -1074,7 +1087,8 @@ const getDiverseMythsCached = unstable_cache(
 
 export async function getDiverseMyths(limit = 9, seed = 0) {
   try {
-    return await getDiverseMythsCached(limit, seed);
+    const rows = await getDiverseMythsCached(limit, seed);
+    return await attachMythImageVariants(rows);
   } catch (error) {
     console.error("Error in getDiverseMyths:", error);
     return [];

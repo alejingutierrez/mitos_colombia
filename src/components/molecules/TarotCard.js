@@ -47,10 +47,22 @@ function cardMotif(card) {
 }
 
 export function TarotCard({ card, tilt = 0, className }) {
-  const { card_name, arcana, suit, reading_summary, meaning, myth_title, myth_slug, image_url } = card || {};
+  const {
+    card_name,
+    arcana,
+    suit,
+    reading_summary,
+    meaning,
+    myth_title,
+    myth_slug,
+    image_url,
+    myth_image_url,
+    display_image_url,
+  } = card || {};
   const mark = cardMark(card || {});
   const motif = cardMotif(card || {});
   const desc = reading_summary || meaning;
+  const imageUrl = display_image_url || image_url || myth_image_url;
 
   return (
     <Link
@@ -82,9 +94,9 @@ export function TarotCard({ card, tilt = 0, className }) {
 
         {/* Ilustración: imagen o medallón de crema con el motivo */}
         <div className="relative z-10 flex flex-1 items-center justify-center py-2">
-          {image_url ? (
+          {imageUrl ? (
             <Image
-              src={image_url}
+              src={imageUrl}
               alt={card_name || ""}
               fill
               sizes="(max-width: 640px) 50vw, 220px"
@@ -106,7 +118,10 @@ export function TarotCard({ card, tilt = 0, className }) {
             {card_name}
           </p>
           {myth_title ? (
-            <p className="mt-0.5 truncate text-[0.65rem] uppercase tracking-[0.14em]" style={{ color: "rgba(246,233,207,0.5)" }}>
+            <p
+              className="mt-1 line-clamp-2 min-h-[2.25rem] text-xs uppercase leading-[1.15] tracking-[0.12em]"
+              style={{ color: "rgba(246,233,207,0.65)" }}
+            >
               {myth_title}
             </p>
           ) : null}
@@ -114,7 +129,7 @@ export function TarotCard({ card, tilt = 0, className }) {
 
         {/* Pie ceremonial */}
         <div className="relative z-10 mt-3 flex items-center justify-between border-t pt-2.5" style={{ borderColor: "rgba(246,233,207,0.12)" }}>
-          <span className="text-[0.62rem] font-medium uppercase tracking-[0.16em]" style={{ color: "rgba(246,233,207,0.55)" }}>
+          <span className="text-xs font-medium uppercase tracking-[0.14em]" style={{ color: "rgba(246,233,207,0.68)" }}>
             Descubrir
           </span>
           <Icon name="arrow-up-right" size={15} className="mc-arrow" style={{ color: GOLD }} />

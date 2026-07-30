@@ -259,12 +259,18 @@ body {
 
 @layer base {
   html {
+    --font-editorial: var(--font-display);
     scroll-behavior: smooth;
   }
 
   body {
     font-feature-settings: \"ss01\" on, \"ss02\" on;
   }
+}
+
+.font-display,
+.font-editorial {
+  font-synthesis: none;
 }
 
 @keyframes float-slow {
@@ -312,7 +318,7 @@ body {
   }
 
   .atlas-link {
-    @apply inline-flex items-center gap-2 border-b border-ember-500 pb-1 font-body text-sm font-semibold text-ink-900 transition-colors hover:text-jungle-700;
+    @apply inline-flex min-h-11 items-center gap-2 border-b border-ember-500 py-1 font-body text-sm font-semibold text-ink-900 transition-colors hover:text-jungle-700;
   }
 
   .atlas-map-controls select,
@@ -539,6 +545,8 @@ body {
 
 .map-pin {
   position: relative;
+  top: 4px;
+  left: 8px;
   height: 38px;
   width: 28px;
 }
