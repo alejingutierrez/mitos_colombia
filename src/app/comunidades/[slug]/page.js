@@ -34,6 +34,7 @@ import { huitotoCommunityPage } from "../../../../editorial/huitoto/community.mj
 import { nukakCommunityPage } from "../../../../editorial/nukak/community.mjs";
 import { ticunaCommunityPage } from "../../../../editorial/ticuna/community.mjs";
 import { tucanoCommunityPage } from "../../../../editorial/tucano/community.mjs";
+import { ufainaCommunityPage } from "../../../../editorial/ufaina/community.mjs";
 
 export const runtime = "nodejs";
 export const revalidate = 300;
@@ -226,6 +227,9 @@ const COMMUNITY_INFO = {
   },
   "tucano": {
     ...tucanoCommunityPage,
+  },
+  "ufaina": {
+    ...ufainaCommunityPage,
   }
 };
 
