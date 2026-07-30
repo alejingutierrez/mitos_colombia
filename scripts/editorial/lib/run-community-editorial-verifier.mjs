@@ -35,6 +35,10 @@ function reviewedSlugs(config) {
   return config.reviewedSlugs || config.canonicalSlugs;
 }
 
+function universeScopeSlugs(config) {
+  return config.universeScopeSlugs || [];
+}
+
 function canonicalUniverseAlternatives(config) {
   const preserved = config.preservedAdditionalSlugs || [];
   return preserved.length
@@ -192,12 +196,17 @@ export async function runCommunityEditorialVerifier(
       `No existe la comunidad ${config.communitySlug}.`,
     );
     const community = communityResult.rows[0];
+    const scopedUniverse = universeScopeSlugs(config);
     const universeResult = await client.query(
       `SELECT m.slug
        FROM myths m
        WHERE m.community_id = $1
+         AND (
+           cardinality($2::text[]) = 0
+           OR m.slug = ANY($2::text[])
+         )
        ORDER BY m.slug`,
-      [community.id],
+      [community.id, scopedUniverse],
     );
     const currentSlugs = universeResult.rows.map(({ slug }) => slug);
     const isInherited = inheritedUniverseAlternatives(config).some(
@@ -241,6 +250,32 @@ export async function runCommunityEditorialVerifier(
               current.region_slug !== target.regionSlug)
           );
         }),
+        imageProvenance: provenance?.visualQa || { status: "pending" },
+      };
+      if (options.strict) {
+        throw new Error(
+          `La comunidad todavía no está sincronizada: ${JSON.stringify(pending)}.`,
+        );
+      }
+      console.log(JSON.stringify(pending, null, 2));
+      return pending;
+    }
+
+    const visualPending =
+      !provenance ||
+      provenance.provider !== "openai" ||
+      provenance.model !== "gpt-image-2" ||
+      provenance.quality !== "high" ||
+      provenance.visualQa?.status !== "approved" ||
+      provenance.visualQa?.finalImages !== config.records.length * 2;
+    if (visualPending && config.allowPendingVisuals) {
+      const pending = {
+        status: "pending-sync",
+        community: config.communitySlug,
+        current: currentSlugs.length,
+        canonical: config.canonicalSlugs.length,
+        missing: [],
+        pendingTransfers: [],
         imageProvenance: provenance?.visualQa || { status: "pending" },
       };
       if (options.strict) {

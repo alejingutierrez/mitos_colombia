@@ -53,6 +53,10 @@ function reviewedSlugs(config) {
   return config.reviewedSlugs || config.canonicalSlugs;
 }
 
+function universeScopeSlugs(config) {
+  return config.universeScopeSlugs || [];
+}
+
 function canonicalUniverseAlternatives(config) {
   const preserved = config.preservedAdditionalSlugs || [];
   return preserved.length
@@ -673,9 +677,17 @@ export async function runCommunityEditorialSync(
       throw new Error(`No existe la comunidad ${config.communitySlug}.`);
     }
     const community = communityResult.rows[0];
+    const scopedUniverse = universeScopeSlugs(config);
     const mythResult = await client.query(
-      "SELECT * FROM myths WHERE community_id = $1 ORDER BY source_row, slug",
-      [community.id],
+      `SELECT *
+       FROM myths
+       WHERE community_id = $1
+         AND (
+           cardinality($2::text[]) = 0
+           OR slug = ANY($2::text[])
+         )
+       ORDER BY source_row, slug`,
+      [community.id, scopedUniverse],
     );
     const currentSlugs = mythResult.rows.map(({ slug }) => slug).sort();
     if (
