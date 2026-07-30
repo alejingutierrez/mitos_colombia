@@ -44,6 +44,19 @@ function targetTaxonomySpec(config, slug) {
   );
 }
 
+function obsoleteCommunitySpecs(config) {
+  return (config.obsoleteCommunities || []).map((value) =>
+    typeof value === "string"
+      ? { slug: value, regionSlug: config.communityRegionSlug || "" }
+      : {
+          slug: String(value?.slug || ""),
+          regionSlug: String(
+            value?.regionSlug || config.communityRegionSlug || "",
+          ),
+        },
+  );
+}
+
 function digest(value) {
   return createHash("sha256").update(value).digest("hex");
 }
@@ -222,6 +235,20 @@ export async function runCommunityEditorialVerifier(
     }
 
     verifyProvenance(config, provenance);
+    for (const obsolete of obsoleteCommunitySpecs(config)) {
+      const obsoleteResult = await client.query(
+        `SELECT c.id
+         FROM communities c
+         JOIN regions r ON r.id = c.region_id
+         WHERE c.slug = $1
+           AND ($2::text = '' OR r.slug = $2)`,
+        [obsolete.slug, obsolete.regionSlug],
+      );
+      assert(
+        obsoleteResult.rowCount === 0,
+        `Persiste la comunidad obsoleta ${obsolete.regionSlug}/${obsolete.slug}.`,
+      );
+    }
     const result = await client.query(
       `SELECT m.id, m.slug, m.title, m.category_path, m.content, m.mito,
               m.historia, m.versiones, m.leccion, m.similitudes,

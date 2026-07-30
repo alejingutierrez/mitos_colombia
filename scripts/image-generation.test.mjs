@@ -144,6 +144,17 @@ test("legacy physical-maquette wording is removed before generation", () => {
 });
 
 test("editorial generators resume safely after billing or visual QA stops", () => {
+  const sharedGenerator = fs.readFileSync(
+    new URL(
+      "./editorial/lib/run-community-image-generation.mjs",
+      import.meta.url,
+    ),
+    "utf8",
+  );
+  assert.match(sharedGenerator, /existing\?\.visualQa === "pending"/);
+  assert.match(sharedGenerator, /awaiting-qa/);
+  assert.match(sharedGenerator, /existing\?\.visualQa === "rejected"/);
+
   for (const community of ["ticuna", "tucano", "ufaina", "yagua"]) {
     const source = fs.readFileSync(
       new URL(
@@ -152,9 +163,16 @@ test("editorial generators resume safely after billing or visual QA stops", () =
       ),
       "utf8",
     );
-    assert.match(source, /existing\?\.visualQa === "pending"/);
-    assert.match(source, /awaiting-qa/);
-    assert.match(source, /existing\?\.visualQa === "rejected"/);
+    if (/runCommunityImageGeneration/.test(source)) {
+      assert.match(
+        source,
+        /\.\/lib\/run-community-image-generation\.mjs/,
+      );
+    } else {
+      assert.match(source, /existing\?\.visualQa === "pending"/);
+      assert.match(source, /awaiting-qa/);
+      assert.match(source, /existing\?\.visualQa === "rejected"/);
+    }
   }
 });
 

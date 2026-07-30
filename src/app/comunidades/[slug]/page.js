@@ -39,6 +39,7 @@ import { yaguaCommunityPage } from "../../../../editorial/yagua/community.mjs";
 import { yucunaCommunityPage } from "../../../../editorial/yucuna/community.mjs";
 import { yukpaCommunityPage } from "../../../../editorial/yukpa/community.mjs";
 import { zenuCommunityPage } from "../../../../editorial/zenu/community.mjs";
+import { afrocolombianCommunityPage } from "../../../../editorial/afrocolombianos/community.mjs";
 
 export const runtime = "nodejs";
 export const revalidate = 300;
@@ -56,7 +57,7 @@ export async function generateStaticParams() {
     .map((community) => ({ slug: community.slug }));
 }
 
-// Información específica sobre cada comunidad indígena
+// Información editorial específica sobre cada comunidad
 const COMMUNITY_INFO = {
   "muiscas": {
     title: "Muiscas",
@@ -75,6 +76,9 @@ const COMMUNITY_INFO = {
   },
   "zenu": {
     ...zenuCommunityPage,
+  },
+  "afrocolombianos": {
+    ...afrocolombianCommunityPage,
   },
   "wayuu": {
     title: "Wayúu",
@@ -261,13 +265,20 @@ export async function generateMetadata({ params }) {
   const communityInfo = COMMUNITY_INFO[slug] || {};
   const title = communityInfo.title || community.name;
   const description = communityInfo.description || `Explora los mitos del pueblo ${community.name}`;
+  const keywords = communityInfo.searchTerms || [
+    community.name,
+    "pueblo indígena",
+    "Colombia",
+    "mitología",
+    "tradición oral",
+  ];
   const seo = await getSeoEntry("community", slug);
 
   return buildSeoMetadata({
     fallback: {
       title: `Mitos ${title} | Mitos de Colombia`,
       description,
-      keywords: [community.name, "pueblo indígena", "Colombia", "mitología", "tradición oral"],
+      keywords,
     },
     seo,
     canonicalPath: `/comunidades/${slug}`,

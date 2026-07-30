@@ -24,4 +24,5 @@ export const yaguaMedia = {
   "los-mellizos-de-avispa-yagua": pendingMedia(
     "los-mellizos-de-avispa-yagua",
   ),
+  chimbilaco: pendingMedia("chimbilaco"),
 };

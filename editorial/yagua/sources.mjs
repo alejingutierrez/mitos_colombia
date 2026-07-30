@@ -112,6 +112,32 @@ export const yaguaSources = {
     limitation:
       "No se usa para traducir ni completar los argumentos históricos de Powlison; su función es documentar continuidad lingüística y editorial.",
   }),
+  gallego2011: source({
+    title:
+      "¿Cultura para consumir? Los yagua y el turismo cultural en el Trapecio Amazónico",
+    author: "Lina Marcela Gallego Acevedo",
+    year: 2011,
+    type:
+      "etnografía contemporánea en la comunidad Yagua de La Libertad",
+    url: "https://revistas.icanh.gov.co/index.php/rca/article/download/927/711/2405",
+    summary:
+      "Registra que habitantes Yagua de La Libertad asociaban embarcaciones turísticas nocturnas con el chimbilaco o cortacabezas, descrito como figura humana con alas de ave que sobrevuela ríos y quebradas y amenaza a pescadores.",
+    limitation:
+      "La autora lo define como relato contemporáneo ampliamente regional, no como ciclo ancestral exclusivo del pueblo Yagua. La edición conserva esa frontera y evita representar violencia gráfica.",
+  }),
+  cure2005: source({
+    title:
+      "Cuidado te mochan la cabeza: circulación y construcción de un rumor en la frontera amazónica de Colombia, Perú y Brasil",
+    author: "Salima Cure Valdivieso",
+    year: 2005,
+    type:
+      "tesis antropológica sobre un rumor contemporáneo transfronterizo",
+    url: "https://redcol.minciencias.gov.co/Record/UNACIONAL2_4796137d269143f8705e236e5ad526ea/Details",
+    summary:
+      "Estudia la circulación de rumores sobre cortacabezas entre pobladores indígenas y mestizos de la triple frontera y su relación con luces, máquinas, extranjeros, extracción y desigualdad.",
+    limitation:
+      "El corpus reúne interlocutores de varias pertenencias, con énfasis en material Ticuna. Sirve para explicar el rumor regional, no para adjudicar todos sus episodios a los Yagua.",
+  }),
 };
 
 export function pickYaguaSources() {
@@ -129,6 +155,25 @@ export function pickYaguaSources() {
   return keys.map((key) => {
     const selected = yaguaSources[key];
     if (!selected) throw new Error(`Fuente Yagua desconocida: ${key}`);
+    return selected;
+  });
+}
+
+export function pickChimbilacoSources() {
+  const keys = [
+    "gallego2011",
+    "cure2005",
+    "ramos2021",
+    "minCulturaColombia",
+    "bdpi",
+    "gobiernoMayor",
+    "chaumeil1994",
+  ];
+  return keys.map((key) => {
+    const selected = yaguaSources[key];
+    if (!selected) {
+      throw new Error(`Fuente de Chimbilaco desconocida: ${key}`);
+    }
     return selected;
   });
 }

@@ -6,6 +6,7 @@ import {
   assertYaguaUniverse,
   canonicalYaguaSlugs,
   inheritedYaguaSlugs,
+  transferredYaguaSlugs,
   yaguaCategoryBySlug,
   yaguaContextOnlyNarratives,
   yaguaEditorialDecisions,
@@ -16,7 +17,8 @@ test("corrige el universo Yagua sin fragmentar episodios ni despublicar", () => 
     inherited: 1,
     corrected: 1,
     added: 5,
-    canonical: 6,
+    transferredFromPacific: 1,
+    canonical: 7,
     contextualized: 3,
     inheritedConflationsRemoved: 5,
   });
@@ -28,16 +30,17 @@ test("corrige el universo Yagua sin fragmentar episodios ni despublicar", () => 
     "luna-y-sol-yagua",
     "tortuga-y-jaguar-yagua",
   ]);
-  assert.equal(canonicalYaguaSlugs.length, 6);
+  assert.deepEqual(transferredYaguaSlugs, ["chimbilaco"]);
+  assert.equal(canonicalYaguaSlugs.length, 7);
   assert.equal(yaguaContextOnlyNarratives.length, 3);
   assert.equal(
     yaguaEditorialDecisions.media.action,
-    "generate-twelve-new-openai-images-with-provenance",
+    "generate-fourteen-new-openai-images-with-provenance",
   );
 });
 
 test("mantiene una taxonomía Yagua única", () => {
-  assert.equal(new Set(canonicalYaguaSlugs).size, 6);
+  assert.equal(new Set(canonicalYaguaSlugs).size, 7);
   assert.deepEqual(
     new Set(Object.values(yaguaCategoryBySlug)),
     new Set(["Amazonía > Amazonas > Yaguas"]),

@@ -1,4 +1,7 @@
-import { defineYaguaMyth } from "./define-editorial-myth.mjs";
+import {
+  defineChimbilacoMyth,
+  defineYaguaMyth,
+} from "./define-editorial-myth.mjs";
 
 const records = [
   defineYaguaMyth({
@@ -285,6 +288,50 @@ Esa noche los mellizos hicieron una nueva choza. Esta vez buscaron hojas y mirar
       "ciclo Yagua de pruebas",
       "mitología Ñihamwo",
       "relato Yagua de la avispa",
+    ],
+  }),
+  defineChimbilacoMyth({
+    slug: "chimbilaco",
+    title: "Chimbilaco, el rumor sobre el río",
+    excerpt:
+      "Una silueta humana con alas de ave cruza de noche ríos y quebradas; su aparición obliga a los pescadores a regresar.",
+    tags: ["noche", "río", "pescador", "peligro"],
+    mito: `Cuando oscurece sobre el Amazonas, las canoas pequeñas dejan de distinguirse desde la orilla. Cada luz se aleja hasta parecer suspendida sobre el agua. Los pescadores que todavía siguen en el río miran el curso, las quebradas y el cielo bajo antes de decidir si continúan.
+
+En esas noches puede aparecer el chimbilaco. Tiene figura humana y alas de ave. No llega caminando por una playa ni se anuncia desde una casa. Vuela sobre ríos y quebradas, allí donde la oscuridad junta el agua con las copas de los árboles.
+
+Su presencia significa peligro para quien pesca solo. El relato no lo presenta como un animal que pueda confundirse con cualquier pájaro. La forma humana debajo de las alas permite reconocer que algo extraño acompaña el vuelo. Si se acerca a una canoa, la amenaza puede ser mortal.
+
+Por eso, al advertir una silueta sobre el cauce, el pescador no intenta seguirla ni comprobar de dónde viene. Recoge lo que puede, orienta la proa hacia el regreso y busca la orilla conocida. El río continúa siendo camino y alimento, pero la noche ha cambiado la manera de recorrerlo.
+
+Desde algunas comunidades también se ven pasar embarcaciones grandes. Sus luces recorren la distancia y desaparecen después de una curva. La llegada de visitantes puede traer compras y dinero; su paso nocturno puede despertar temor. En el relato, esa ambigüedad toma la figura del chimbilaco: algo deseado se mueve junto a algo que amenaza.
+
+No todos explican de la misma forma la relación. Para algunas personas, el cortacabezas pertenece a quienes viajan en los grandes botes. Para otras, los viajeros mismos pueden ocupar ese lugar inquietante. La historia no obliga a escoger una identidad única. Conserva el miedo que nace cuando una presencia externa atraviesa el territorio sin que quienes viven allí puedan saber qué busca.
+
+La canoa pequeña alcanza la orilla. Quienes esperan reconocen primero el golpe suave contra la ribera y luego la figura del pescador. Sobre el agua ya no se ve la silueta alada. Queda la advertencia de regresar y la pregunta que vuelve cada vez que una luz desconocida cruza el río de noche.`,
+    historyCore:
+      "La ruta se transfiere desde una comunidad llamada Africano, donde había sido convertida en un guardián afropacífico inventado. La evidencia verificable la sitúa en el Trapecio Amazónico y registra una asociación concreta hecha por habitantes Yagua de La Libertad.",
+    versionCore:
+      "Gallego conserva una descripción breve del chimbilaco alado y la relación Yagua entre turismo nocturno y cortacabezas. Cure documenta un rumor transfronterizo mucho más amplio. La adaptación usa el primer núcleo y reserva el segundo para explicar circulación y cambio.",
+    similarityCore:
+      "El chimbilaco se relaciona con otros rumores amazónicos de cortacabezas porque todos convierten una amenaza externa difícil de identificar en luces, máquinas o figuras que recorren la noche. Cure muestra que esas narraciones circulan entre pueblos y fronteras; no forman un mito único. El pishtaco andino también representa extracción y desigualdad, pero su historia, territorio y apariencia no se trasladan aquí. Dentro del corpus Yagua, Calvito y los mellizos afrontan seres de la selva en ciclos antiguos; Chimbilaco se distingue por ser una memoria contemporánea sobre botes, turismo y temor en el río.",
+    leccion:
+      "El miedo también interpreta relaciones desiguales cuando una presencia externa atraviesa el territorio sin explicarse.",
+    sceneHorizontal:
+      "una canoa de pesca pequeña gira hacia la ribera mientras una silueta humana alada cruza muy arriba sobre el río nocturno y, al fondo, pasa un barco grande con luces discretas",
+    sceneVertical:
+      "un pescador adulto ya en la orilla observa una única luz alejarse tras la curva del río mientras la sombra alada se disuelve entre las copas, sin violencia ni cuerpos heridos",
+    researchNotes:
+      "TRANSFERENCIA Y REESCRITURA TOTAL: elimina el guardián afropacífico, la alianza con árboles y animales y la misión de castigar la tala. Conserva la descripción de Gallego y declara que se trata de un rumor contemporáneo regional.",
+    seoTitle: "Chimbilaco o cortacabezas | Relato Yagua",
+    seoDescription:
+      "Relato contemporáneo asociado por habitantes Yagua de La Libertad con una figura humana alada, pescadores y botes nocturnos del Amazonas.",
+    focusKeywords: [
+      "Chimbilaco",
+      "cortacabezas Yagua",
+      "relato de La Libertad Amazonas",
+      "rumor amazónico contemporáneo",
+      "pescadores del río Amazonas",
     ],
   }),
 ];

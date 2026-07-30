@@ -1,18 +1,19 @@
 import { buildYaguaEditorialMyth } from "./build-editorial-myth.mjs";
-import { pickYaguaSources } from "./sources.mjs";
+import {
+  pickChimbilacoSources,
+  pickYaguaSources,
+} from "./sources.mjs";
 
-export function defineYaguaMyth({
-  seoTitle,
-  seoDescription,
-  focusKeywords,
-  ...input
-}) {
-  const selectedSources = pickYaguaSources();
+function defineWithSources(
+  { seoTitle, seoDescription, focusKeywords, ...input },
+  selectedSources,
+) {
   if (
-    selectedSources.length !== 9 ||
-    new Set(selectedSources.map(({ url }) => url)).size !== 9
+    selectedSources.length < 5 ||
+    new Set(selectedSources.map(({ url }) => url)).size !==
+      selectedSources.length
   ) {
-    throw new Error(`${input.slug}: se esperaban nueve fuentes únicas.`);
+    throw new Error(`${input.slug}: se esperaban al menos cinco fuentes únicas.`);
   }
   return buildYaguaEditorialMyth({
     ...input,
@@ -32,4 +33,15 @@ export function defineYaguaMyth({
       canonical_path: `/mitos/${input.slug}`,
     },
   });
+}
+
+export function defineYaguaMyth(input) {
+  return defineWithSources(input, pickYaguaSources());
+}
+
+export function defineChimbilacoMyth(input) {
+  return defineWithSources(
+    { ...input, scope: "contemporary" },
+    pickChimbilacoSources(),
+  );
 }

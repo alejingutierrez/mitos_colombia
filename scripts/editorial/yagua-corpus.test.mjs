@@ -7,6 +7,10 @@ import {
   yaguaCommunityImageUrl,
   yaguaCommunityPage,
 } from "../../editorial/yagua/community.mjs";
+import {
+  assertYaguaEvidenceMatrix,
+  yaguaEvidenceMatrix,
+} from "../../editorial/yagua/evidence.mjs";
 import { yaguaMedia } from "../../editorial/yagua/media.mjs";
 import records from "../../editorial/yagua/records.mjs";
 import { canonicalYaguaSlugs } from "../../editorial/yagua/universe.mjs";
@@ -27,8 +31,8 @@ function digest(value) {
   return createHash("sha256").update(value).digest("hex");
 }
 
-test("los seis expedientes Yagua cumplen la metodología editorial", () => {
-  assert.equal(records.length, 6);
+test("los siete expedientes Yagua cumplen la metodología editorial", () => {
+  assert.equal(records.length, 7);
   assert.deepEqual(
     new Set(records.map(({ slug }) => slug)),
     new Set(canonicalYaguaSlugs),
@@ -62,13 +66,14 @@ test("los seis expedientes Yagua cumplen la metodología editorial", () => {
     );
     assert.equal(record.tags.length, 4);
     assert.equal(record.focus_keywords.length, 5);
-    assert.equal(record.keySources.length + record.sources.length, 9);
+    const sourceCount = record.keySources.length + record.sources.length;
+    assert.ok(sourceCount >= 5);
     const urls = [...record.keySources, ...record.sources].map(({ url }) => url);
-    assert.equal(new Set(urls).size, 9);
+    assert.equal(new Set(urls).size, sourceCount);
   }
 });
 
-test("corrige la ficha sintética sin fabricar una séptima narración", () => {
+test("corrige la ficha sintética y delimita Chimbilaco como relato contemporáneo", () => {
   const bySlug = new Map(records.map((record) => [record.slug, record]));
   assert.equal(
     bySlug.get("yagua").title,
@@ -79,6 +84,19 @@ test("corrige la ficha sintética sin fabricar una séptima narración", () => {
     /Petita|Sairango|Yuané|Asento|pureza racial|caníbales boras/i,
   );
   assert.match(bySlug.get("yagua").researchNotes, /Nawanchi\/Há/i);
+  assert.match(bySlug.get("chimbilaco").researchNotes, /contemporáneo/i);
+  assert.doesNotMatch(
+    bySlug.get("chimbilaco").mito,
+    /guardián de todos los ríos|pacto con los árboles|castiga la tala/i,
+  );
+});
+
+test("la matriz de evidencia cubre los siete expedientes Yagua", () => {
+  assert.equal(assertYaguaEvidenceMatrix(), true);
+  assert.deepEqual(
+    new Set(Object.keys(yaguaEvidenceMatrix)),
+    new Set(canonicalYaguaSlugs),
+  );
 });
 
 test(
@@ -90,8 +108,8 @@ test(
     assert.equal(provenance.model, "gpt-image-2");
     assert.equal(provenance.quality, "high");
     assert.equal(provenance.visualQa.status, "approved");
-    assert.equal(provenance.visualQa.finalImages, 12);
-    assert.equal(Object.keys(provenance.items).length, 12);
+    assert.equal(provenance.visualQa.finalImages, 14);
+    assert.equal(Object.keys(provenance.items).length, 14);
 
     const allUrls = new Set();
     for (const record of records) {
@@ -121,10 +139,13 @@ test(
         assert.equal(digest(editorialPrompt), item.editorialPromptSha256);
         assert.equal(digest(item.generationPrompt), item.generationPromptSha256);
         assert.equal(item.url, media[orientation]);
-        assert.equal(item.sourceUrls.length, 9);
+        assert.equal(
+          item.sourceUrls.length,
+          record.keySources.length + record.sources.length,
+        );
       }
     }
-    assert.equal(allUrls.size, 12);
+    assert.equal(allUrls.size, 14);
   },
 );
 

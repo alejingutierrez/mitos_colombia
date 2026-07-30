@@ -1,5 +1,7 @@
 export const inheritedYaguaSlugs = ["yagua"];
 
+export const transferredYaguaSlugs = ["chimbilaco"];
+
 export const addedYaguaSlugs = [
   "luna-y-sol-yagua",
   "tortuga-y-jaguar-yagua",
@@ -11,6 +13,7 @@ export const addedYaguaSlugs = [
 export const canonicalYaguaSlugs = [
   ...inheritedYaguaSlugs,
   ...addedYaguaSlugs,
+  ...transferredYaguaSlugs,
 ].sort();
 
 export const yaguaCategoryBySlug = Object.fromEntries(
@@ -27,9 +30,9 @@ export const yaguaEditorialDecisions = {
       "La ficha heredada mezclaba el origen desde Há, personajes de una recreación literaria, un rito de pubertad, guerras, Luna y Sol y lenguaje de pureza racial. La URL se conserva para el ciclo de Ndanu, Mêna y el árbol del agua, sostenido por múltiples versiones.",
   },
   canonicalUniverse: {
-    action: "publish-six-documented-cycles",
+    action: "publish-six-documented-cycles-and-one-contemporary-route",
     reason:
-      "Powlison comparó numerosas versiones y delimitó seis conjuntos estables: Luna y Sol, Tortuga y Jaguar, Mellizos, Huérfano, Calvito y Mellizos de Avispa. La edición crea una página por ciclo, no una por episodio.",
+      "Powlison comparó numerosas versiones y delimitó seis conjuntos estables: Luna y Sol, Tortuga y Jaguar, Mellizos, Huérfano, Calvito y Mellizos de Avispa. Chimbilaco se suma como relato contemporáneo regional asociado por habitantes Yagua de La Libertad, claramente separado de los ciclos ancestrales.",
   },
   colombianOriginSummary: {
     action: "contextualize-not-fragment",
@@ -47,9 +50,14 @@ export const yaguaEditorialDecisions = {
       "Se eliminan pureza racial, linaje inmortal y rótulos étnicos degradantes de la ficha heredada. Los términos históricos de traducción se explican sin convertirlos en voz editorial.",
   },
   media: {
-    action: "generate-twelve-new-openai-images-with-provenance",
+    action: "generate-fourteen-new-openai-images-with-provenance",
     reason:
-      "Las dos imágenes heredadas carecen de trazabilidad y parten de la conflación descartada. Cada uno de los seis ciclos recibe una portada y una segunda escena propias con gpt-image-2.",
+      "Las imágenes heredadas carecen de trazabilidad y parten de relatos sintéticos. Los seis ciclos y la ficha contemporánea de Chimbilaco reciben portada y segunda escena propias con gpt-image-2.",
+  },
+  chimbilacoTransfer: {
+    action: "transfer-from-africano-to-yagua-with-contemporary-boundary",
+    reason:
+      "La versión heredada inventó un guardián afropacífico. Gallego registra el nombre en La Libertad y la asociación Yagua con botes turísticos nocturnos, dentro de un rumor indígena regional contemporáneo.",
   },
 };
 
@@ -75,8 +83,10 @@ export function assertYaguaUniverse() {
   if (inheritedYaguaSlugs.length !== 1) {
     throw new Error("El universo heredado Yagua debe contener una ficha.");
   }
-  if (canonicalYaguaSlugs.length !== 6) {
-    throw new Error("El universo canónico Yagua debe contener seis ciclos.");
+  if (canonicalYaguaSlugs.length !== 7) {
+    throw new Error(
+      "El universo canónico Yagua debe contener seis ciclos y una ficha contemporánea.",
+    );
   }
   if (new Set(canonicalYaguaSlugs).size !== canonicalYaguaSlugs.length) {
     throw new Error("El universo Yagua contiene slugs duplicados.");
@@ -85,7 +95,8 @@ export function assertYaguaUniverse() {
     inherited: 1,
     corrected: 1,
     added: 5,
-    canonical: 6,
+    transferredFromPacific: 1,
+    canonical: 7,
     contextualized: yaguaContextOnlyNarratives.length,
     inheritedConflationsRemoved: 5,
   };

@@ -70,6 +70,19 @@ function targetTaxonomySpec(config, slug) {
   );
 }
 
+function obsoleteCommunitySpecs(config) {
+  return (config.obsoleteCommunities || []).map((value) =>
+    typeof value === "string"
+      ? { slug: value, regionSlug: config.communityRegionSlug || "" }
+      : {
+          slug: String(value?.slug || ""),
+          regionSlug: String(
+            value?.regionSlug || config.communityRegionSlug || "",
+          ),
+        },
+  );
+}
+
 function connectionString() {
   return (
     process.env.POSTGRES_URL_NON_POOLING ||
@@ -105,6 +118,14 @@ function assertConfig(config) {
     )
   ) {
     throw new Error("Los expedientes no cubren la lista de trabajo.");
+  }
+  for (const spec of obsoleteCommunitySpecs(config)) {
+    if (!spec.slug) {
+      throw new Error("Hay una comunidad obsoleta sin slug.");
+    }
+    if (spec.slug === config.communitySlug) {
+      throw new Error("La comunidad canónica no puede marcarse como obsoleta.");
+    }
   }
 }
 
@@ -213,7 +234,13 @@ async function readProvenance(config) {
   }
 }
 
-async function saveBackup(client, config, community, mythRows) {
+async function saveBackup(
+  client,
+  config,
+  community,
+  mythRows,
+  obsoleteCommunities = [],
+) {
   const mythIds = mythRows.map(({ id }) => id);
   const slugs = [
     ...new Set([
@@ -285,6 +312,7 @@ async function saveBackup(client, config, community, mythRows) {
       {
         createdAt: new Date().toISOString(),
         community,
+        obsoleteCommunities,
         myths: mythRows,
         editorial: editorial.rows,
         vertical: vertical.rows,
@@ -658,6 +686,41 @@ export async function runCommunityEditorialSync(
     const currentBySlug = new Map(
       reviewedResult.rows.map((row) => [row.slug, row]),
     );
+    const obsoleteCommunities = [];
+    for (const spec of obsoleteCommunitySpecs(config)) {
+      const obsoleteResult = await client.query(
+        `SELECT c.*, r.slug AS region_slug,
+                COUNT(m.id)::int AS myth_count
+         FROM communities c
+         JOIN regions r ON r.id = c.region_id
+         LEFT JOIN myths m ON m.community_id = c.id
+         WHERE c.slug = $1
+           AND ($2::text = '' OR r.slug = $2)
+         GROUP BY c.id, r.slug
+         ORDER BY r.slug`,
+        [spec.slug, spec.regionSlug],
+      );
+      if (obsoleteResult.rowCount > 1) {
+        throw new Error(
+          `Comunidad obsoleta ambigua: ${spec.regionSlug || "*"} > ${spec.slug}.`,
+        );
+      }
+      obsoleteCommunities.push(
+        obsoleteResult.rowCount
+          ? {
+              id: Number(obsoleteResult.rows[0].id),
+              slug: obsoleteResult.rows[0].slug,
+              regionSlug: obsoleteResult.rows[0].region_slug,
+              mythCount: Number(obsoleteResult.rows[0].myth_count),
+            }
+          : {
+              id: null,
+              slug: spec.slug,
+              regionSlug: spec.regionSlug,
+              mythCount: 0,
+            },
+      );
+    }
     const taxonomySpecs = [
       ...new Map(
         config.records.map((record) => {
@@ -793,6 +856,7 @@ export async function runCommunityEditorialSync(
       },
       imageProvenance: provenance?.visualQa || { status: "pending" },
       externalImageCollisions: imageCollisions.rows,
+      obsoleteCommunities,
     };
     console.log(JSON.stringify(summary, null, 2));
     if (!options.apply) return summary;
@@ -802,6 +866,7 @@ export async function runCommunityEditorialSync(
       config,
       community,
       reviewedResult.rows,
+      obsoleteCommunities,
     );
     await client.query("BEGIN");
     try {
@@ -857,6 +922,38 @@ export async function runCommunityEditorialSync(
           editorialId,
         });
       }
+      const removedCommunities = [];
+      for (const obsolete of obsoleteCommunities) {
+        if (!obsolete.id) continue;
+        const remaining = await client.query(
+          "SELECT COUNT(*)::int AS count FROM myths WHERE community_id = $1",
+          [obsolete.id],
+        );
+        const remainingCount = Number(remaining.rows[0].count);
+        if (remainingCount > 0) {
+          throw new Error(
+            `No se puede retirar ${obsolete.regionSlug}/${obsolete.slug}: ` +
+              `todavía contiene ${remainingCount} mitos.`,
+          );
+        }
+        await client.query(
+          `DELETE FROM vertical_images
+           WHERE entity_type = 'community' AND entity_id = $1`,
+          [obsolete.id],
+        );
+        await client.query(
+          `DELETE FROM seo_pages
+           WHERE page_type = 'community' AND slug = $1`,
+          [obsolete.slug],
+        );
+        await client.query("DELETE FROM communities WHERE id = $1", [
+          obsolete.id,
+        ]);
+        removedCommunities.push({
+          slug: obsolete.slug,
+          regionSlug: obsolete.regionSlug,
+        });
+      }
       await client.query(
         `UPDATE communities
          SET name = $2, image_prompt = $3, image_url = $4
@@ -889,6 +986,7 @@ export async function runCommunityEditorialSync(
         status: "applied",
         backupPath,
         synced,
+        removedCommunities,
         tagsCreated: 0,
         imageProvenance: provenance.visualQa,
       };
