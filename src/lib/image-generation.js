@@ -11,9 +11,10 @@ export const IMAGE_STYLE_PROFILES = {
   fullPaperCutIllustration: {
     label: "Ilustración full paper cut",
     lines: [
-      "Ilustración editorial completa en paper cut y paper quilling: siluetas recortadas, capas limpias, bordes de papel visibles, tiras enrolladas selectivas y profundidad gráfica.",
-      "La materialidad del papel pertenece al lenguaje de la ilustración; no mostrar mesa, marco, pegamento, pedestal, taller, maqueta física ni iluminación fotográfica de estudio.",
-      "Acabado adulto, preciso y culturalmente situado; evitar fotorrealismo, diorama, render plástico, collage escolar y caricatura infantil.",
+      "Ilustración editorial digital 2D de borde a borde: siluetas planas recortadas, capas gráficas limpias y filigrana paper quilling dibujada como formas vectoriales.",
+      "Usar superficies de color mate uniforme, contornos nítidos y separación gráfica mínima entre planos; no simular fibras, dobleces, volumen físico, relieve material ni sombras proyectadas reales.",
+      "Debe leerse inmediatamente como ilustración digital plana, nunca como papel real fotografiado, maqueta física, diorama, collage artesanal, CGI o render 3D.",
+      "Acabado adulto, preciso y culturalmente situado; evitar caricatura infantil, fantasía genérica y ornamentos culturales inventados.",
     ],
   },
   editorialPaperPhoto: {
@@ -253,10 +254,11 @@ export function buildCraftImagePrompt({
     `Direccion de arte para una imagen editorial de ${getEntityLabel(entity)} colombiano.`,
     "",
     "Tecnica central:",
-    "- Ilustracion digital completa en estilo full paper cut y paper quilling, no fotografia ni reproduccion de un objeto fisico.",
-    "- Capas graficas recortadas, bordes de papel visibles, tiras enrolladas selectivas, fibras ilustradas, dobleces finos, cortes precisos y sombras suaves entre niveles.",
-    "- La escena debe sentirse concebida como ilustracion editorial de papel de borde a borde, no como maqueta, diorama, collage sobre una mesa o pieza fotografiada.",
-    "- Profundidad por capas dentro de la ilustracion, sin fotorrealismo, plastico, glossy CGI, render 3D, marco, pedestal, camara de estudio ni perspectivas raras.",
+    "- Ilustracion digital completa 2D en estilo full paper cut y paper quilling grafico, no fotografia ni reproduccion de un objeto fisico.",
+    "- Construir la escena con formas planas recortadas, color mate uniforme, bordes vectoriales nitidos y espirales de quilling dibujadas; la tecnica debe ser visual, no material.",
+    "- Prohibido simular fibras de papel, dobleces, grosor, relieve fisico, sombras proyectadas reales, pegamento, textura fotografica o iluminacion de estudio.",
+    "- La escena debe sentirse como una ilustracion editorial plana de borde a borde, nunca como maqueta, diorama, collage artesanal, tableau, objeto fotografiado, CGI o render 3D.",
+    "- Profundidad solo por superposicion grafica y cambios de escala, con separaciones suaves y uniformes entre planos; sin perspectiva de camara sobre una pieza fisica.",
     `- ${getOrientationLine(orientation)}`,
     "- Sin texto, sin letras, sin logos, sin marcas de agua, sin marco, sin borde decorativo.",
     "",
@@ -269,7 +271,7 @@ export function buildCraftImagePrompt({
     community ? `- Comunidad / territorio: ${community}.` : null,
     `- Refuerzo visual regional: ${getRegionCraft(region)}.`,
     communityCraft ? `- Refuerzo cultural: ${communityCraft}.` : null,
-    "- Paleta editorial: verde selva, azul rio, dorado tierra, ocres minerales, piedra, fibras naturales y sombras organicas; usar acentos regionales, no una bandera literal.",
+    "- Paleta editorial: verde selva, azul rio, dorado tierra y ocres minerales en tintas planas mate; usar acentos regionales, no una bandera literal.",
     "",
     "Contenido narrativo:",
     excerpt ? `- Resumen: ${excerpt}.` : null,
@@ -281,8 +283,8 @@ export function buildCraftImagePrompt({
     "- Una sola composicion ilustrada, limpia y poderosa, con jerarquia clara entre escena principal, geografia y simbolos culturales.",
     "- Priorizar geografia, objetos, fauna/flora, arquitectura y simbolos del territorio sobre retratos genericos.",
     "- Si hay personajes, deben ser respetuosos, estilizados, secundarios a la escena material y sin disfraces anacronicos.",
-    "- Luz ilustrada suave, sombras entre recortes, textura tactil de papel y acabado editorial de revista cultural.",
-    "- Evitar aspecto infantil, caricatura, fantasy generico, fotorrealismo, fotografia de maqueta, poster plano, render 3D, plastico, neones y saturacion excesiva.",
+    "- Acabado gráfico plano de revista cultural, con luz sugerida por bloques de color y sin volumen fotográfico.",
+    "- Evitar aspecto infantil, caricatura, fantasy generico, fotorrealismo, fotografia de maqueta, papel fisico, textura tactil, render 3D, plastico, neones y saturacion excesiva.",
   ]
     .filter(Boolean)
     .join("\n");

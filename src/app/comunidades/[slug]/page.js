@@ -35,6 +35,8 @@ import { nukakCommunityPage } from "../../../../editorial/nukak/community.mjs";
 import { ticunaCommunityPage } from "../../../../editorial/ticuna/community.mjs";
 import { tucanoCommunityPage } from "../../../../editorial/tucano/community.mjs";
 import { ufainaCommunityPage } from "../../../../editorial/ufaina/community.mjs";
+import { yaguaCommunityPage } from "../../../../editorial/yagua/community.mjs";
+import { yucunaCommunityPage } from "../../../../editorial/yucuna/community.mjs";
 
 export const runtime = "nodejs";
 export const revalidate = 300;
@@ -61,10 +63,10 @@ const COMMUNITY_INFO = {
     imagePrompt: "Muisca golden ceremony at Guatavita lagoon, Bochica civilizer, Andean mountains, sacred offerings, El Dorado ritual"
   },
   "yukuna": {
-    title: "Yukuna",
-    description: "Pueblo amazónico del grupo lingüístico arawak, con una rica tradición de mitos cosmogónicos y relatos sobre la creación.",
-    longDescription: "Los Yukuna habitan la región amazónica colombiana en el departamento del Amazonas. Pertenecen al grupo lingüístico arawak y han preservado una extensa tradición oral que incluye mitos sobre el origen del mundo, la creación de los seres humanos, y las transformaciones de héroes culturales. Su mitología está profundamente conectada con la selva, los ríos y los espíritus que habitan estos espacios. Los relatos yukuna transmiten conocimientos sobre la naturaleza, normas sociales y la relación entre humanos y el mundo sobrenatural.",
-    imagePrompt: "Yukuna village in Amazon rainforest, sacred river, tropical mythology, ancestral spirits"
+    ...yucunaCommunityPage,
+  },
+  "yucuna": {
+    ...yucunaCommunityPage,
   },
   "wayuu": {
     title: "Wayúu",
@@ -230,6 +232,9 @@ const COMMUNITY_INFO = {
   },
   "ufaina": {
     ...ufainaCommunityPage,
+  },
+  "yaguas": {
+    ...yaguaCommunityPage,
   }
 };
 

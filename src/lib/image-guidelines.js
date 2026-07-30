@@ -7,4 +7,4 @@ export const IMAGE_STYLE_GUIDE = `GUIA DE FIDELIDAD Y ESTILO:
   * Orinoquia: amarillos sabana, verdes oliva, cielo azul claro, tonos arcilla.
   * Amazonas/Amazonia: verdes profundos, tierra humeda, marrones organicos, azul rio oscuro.
   * Varios: paleta balanceada verde selva, azul rio y dorados tierra.
-- Estilo paper quilling + paper cut: capas de papel en relieve, tiras enrolladas visibles, bordes limpios, textura artesanal, sombras suaves y profundidad por capas. Evitar aspecto fotorealista.`;
+- Estilo full paper cut + paper quilling como ilustracion digital 2D: formas planas recortadas, color mate uniforme, bordes nitidos y filigrana dibujada. Profundidad solo por superposicion grafica; prohibidos papel fisico fotografiado, fibras, dobleces, relieve material, sombras reales, maqueta, diorama, CGI y render 3D.`;

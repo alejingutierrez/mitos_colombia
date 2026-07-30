@@ -55,9 +55,9 @@ export const STYLE_REVIEW_PRODUCTION_BATCH = {
 export const STYLE_REVIEW_CRITERIA = [
   "Ilustracion full paper cut y paper quilling, no fotografia de una maqueta.",
   "Composicion directa, completa y llena de borde a borde.",
-  "Profundidad grafica por capas y sombras suaves, sin diorama ni render 3D.",
+  "Profundidad solo por superposicion grafica, sin relieve fisico, sombras reales, diorama ni render 3D.",
   "Identidad visual especifica por region, cultura y geografia.",
-  "Escena editorial adulta, tactil y visualmente construida con recortes.",
+  "Escena editorial digital 2D adulta, construida con recortes planos y filigrana dibujada.",
 ];
 
 export const APPROVED_STYLE_PROFILE = "fullPaperCutIllustration";

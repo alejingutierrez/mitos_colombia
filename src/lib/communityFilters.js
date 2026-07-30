@@ -13,6 +13,7 @@ const REVIEWED_SMALL_COMMUNITIES = new Set([
   "kuibas",
   "nukak-maku",
   "ufaina",
+  "yucuna",
 ]);
 const COMMUNITY_EXCLUDED_TOKENS = new Set([
   "mestizo",

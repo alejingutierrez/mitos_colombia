@@ -260,11 +260,26 @@ async function run() {
       );
       continue;
     }
+    if (
+      !options.force &&
+      existing?.url &&
+      existing?.visualQa === "pending" &&
+      (await localIsValid(definition))
+    ) {
+      console.log(
+        `[ticuna-images] ${index + 1}/${selected.length} awaiting-qa ${definition.key}`,
+      );
+      continue;
+    }
     const attempt = Number(existing?.attempt || 0) + 1;
     console.log(
       `[ticuna-images] ${index + 1}/${selected.length} generate ${definition.key} attempt ${attempt}`,
     );
-    if (options.force || !(await localIsValid(definition))) {
+    if (
+      options.force ||
+      existing?.visualQa === "rejected" ||
+      !(await localIsValid(definition))
+    ) {
       await generateLocal(openai, definition);
     }
     const url = await uploadLocal(definition, attempt);

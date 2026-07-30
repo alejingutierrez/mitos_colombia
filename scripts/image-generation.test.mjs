@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+import fs from "node:fs";
 import test from "node:test";
 
 import {
@@ -53,6 +54,11 @@ test("approved production style defaults to full paper cut illustration", () => 
 
   assert.match(prompt, /full paper cut/i);
   assert.match(prompt, /paper quilling/i);
+  assert.match(prompt, /formas planas recortadas/i);
+  assert.match(prompt, /color mate uniforme/i);
+  assert.match(prompt, /profundidad solo por superposicion grafica/i);
+  assert.match(prompt, /prohibido simular fibras de papel/i);
+  assert.match(prompt, /sin volumen fotográfico/i);
   assert.doesNotMatch(prompt, /fotografia de un trabajo real/i);
 });
 
@@ -135,6 +141,21 @@ test("legacy physical-maquette wording is removed before generation", () => {
     softened,
     /fotografiada|papel físico|fibras reales|luz de estudio/i,
   );
+});
+
+test("editorial generators resume safely after billing or visual QA stops", () => {
+  for (const community of ["ticuna", "tucano", "ufaina", "yagua"]) {
+    const source = fs.readFileSync(
+      new URL(
+        `./editorial/generate-${community}-images.mjs`,
+        import.meta.url,
+      ),
+      "utf8",
+    );
+    assert.match(source, /existing\?\.visualQa === "pending"/);
+    assert.match(source, /awaiting-qa/);
+    assert.match(source, /existing\?\.visualQa === "rejected"/);
+  }
 });
 
 test("presets keep horizontal, banner and vertical dimensions valid for gpt-image-2", () => {

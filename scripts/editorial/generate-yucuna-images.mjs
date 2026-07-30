@@ -8,7 +8,7 @@ import dotenv from "dotenv";
 import OpenAI from "openai";
 import sharp from "sharp";
 
-import tucanoDefinitions from "../../editorial/tucano/definitions.mjs";
+import yucunaDefinitions from "../../editorial/yucuna/definitions.mjs";
 import {
   buildCraftImagePrompt,
   buildImageGenerationParams,
@@ -18,8 +18,8 @@ import {
   IMAGE_PRESETS,
 } from "../../src/lib/image-generation.js";
 
-const confirmationPhrase = "generate-fourteen-tucano-openai-images";
-const outputDir = path.resolve("artifacts", "generated-images", "tucano");
+const confirmationPhrase = "generate-eight-yucuna-openai-images";
+const outputDir = path.resolve("artifacts", "generated-images", "yucuna");
 const manifestPath = path.join(outputDir, "provenance-manifest.json");
 
 function parseArgs(argv) {
@@ -68,7 +68,7 @@ async function readManifest() {
       model: "gpt-image-2",
       quality: "high",
       style:
-        "digital 2D full paper cut and paper quilling illustration; no photography, physical object, maquette, diorama, CGI or 3D render",
+        "flat digital 2D full paper cut and drawn paper quilling illustration; no photography, real fibres, folds, thickness, physical object, maquette, diorama, CGI or 3D render",
       items: {},
     };
   }
@@ -81,7 +81,7 @@ async function writeManifest(manifest) {
 }
 
 function definitions(options) {
-  return tucanoDefinitions.flatMap((record) =>
+  return yucunaDefinitions.flatMap((record) =>
     ["horizontal", "vertical"]
       .filter(
         (orientation) =>
@@ -95,6 +95,8 @@ function definitions(options) {
           orientation === "horizontal"
             ? record.image_prompt_horizontal
             : record.image_prompt_vertical;
+        const transferred =
+          record.editorial_scope === "abundance-transfer";
         const generationPrompt = buildCraftImagePrompt({
           entity: {
             type: "myth",
@@ -102,8 +104,10 @@ function definitions(options) {
             slug: record.slug,
             prompt: editorialPrompt,
             excerpt: record.excerpt,
-            region: "Vaupés",
-            community: "Tucano / Yepá-mahsã",
+            region: transferred ? "Putumayo" : "Mirití-Paraná, Amazonas",
+            community: transferred
+              ? "Huitoto / Murui-Muina, versión Muinane"
+              : "Yucuna / Yukuna y Matapí",
           },
           orientation,
           styleProfile: "fullPaperCutIllustration",
@@ -135,8 +139,10 @@ function validateDefinition(definition) {
     /2D full paper cut/i,
     /paper quilling/i,
     /acabado gr[aá]fico plano/i,
+    /formas mate|sin volumen físico/i,
     /sin fotograf[ií]a/i,
-    /objeto f[ií]sico/i,
+    /fibras reales/i,
+    /objeto físico/i,
     /maqueta/i,
     /diorama/i,
     /CGI|render 3D/i,
@@ -148,10 +154,12 @@ function validateDefinition(definition) {
     }
   }
   if (
-    definition.sourceUrls.length !== 7 ||
-    new Set(definition.sourceUrls).size !== 7
+    definition.sourceUrls.length < 5 ||
+    new Set(definition.sourceUrls).size !== definition.sourceUrls.length
   ) {
-    throw new Error(`${definition.key}: se requieren siete fuentes únicas.`);
+    throw new Error(
+      `${definition.key}: se requieren al menos cinco fuentes únicas.`,
+    );
   }
 }
 
@@ -200,7 +208,7 @@ async function uploadLocal(definition, attempt) {
   const body = await fs.readFile(definition.localPath);
   const prefix =
     definition.orientation === "horizontal" ? "mitos" : "vertical/myth";
-  const filename = `${prefix}/${definition.slug}-tucano-openai-v${attempt}-${Date.now()}.jpg`;
+  const filename = `${prefix}/${definition.slug}-yucuna-review-openai-v${attempt}-${Date.now()}.jpg`;
   const result = await put(filename, body, {
     access: "public",
     contentType: "image/jpeg",
@@ -216,7 +224,7 @@ async function makeContactSheet(manifest, orientation) {
   const thumbWidth = orientation === "horizontal" ? 480 : 270;
   const thumbHeight = orientation === "horizontal" ? 270 : 480;
   const gap = 20;
-  const columns = orientation === "horizontal" ? 2 : 4;
+  const columns = 2;
   const rows = Math.ceil(selected.length / columns);
   const width = columns * thumbWidth + (columns + 1) * gap;
   const height = rows * thumbHeight + (rows + 1) * gap;
@@ -287,7 +295,7 @@ async function run() {
       (await localIsValid(definition))
     ) {
       console.log(
-        `[tucano-images] ${index + 1}/${selected.length} approved ${definition.key}`,
+        `[yucuna-images] ${index + 1}/${selected.length} approved ${definition.key}`,
       );
       continue;
     }
@@ -298,13 +306,13 @@ async function run() {
       (await localIsValid(definition))
     ) {
       console.log(
-        `[tucano-images] ${index + 1}/${selected.length} awaiting-qa ${definition.key}`,
+        `[yucuna-images] ${index + 1}/${selected.length} awaiting-qa ${definition.key}`,
       );
       continue;
     }
     const attempt = Number(existing?.attempt || 0) + 1;
     console.log(
-      `[tucano-images] ${index + 1}/${selected.length} generate ${definition.key} attempt ${attempt}`,
+      `[yucuna-images] ${index + 1}/${selected.length} generate ${definition.key} attempt ${attempt}`,
     );
     if (
       options.force ||
@@ -340,7 +348,7 @@ async function run() {
     };
     await writeManifest(manifest);
     await makeContactSheet(manifest, definition.orientation);
-    console.log(`[tucano-images] ok ${definition.key}`);
+    console.log(`[yucuna-images] ok ${definition.key}`);
   }
   await makeContactSheet(manifest, "horizontal");
   await makeContactSheet(manifest, "vertical");

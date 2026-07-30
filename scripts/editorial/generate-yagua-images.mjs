@@ -8,7 +8,7 @@ import dotenv from "dotenv";
 import OpenAI from "openai";
 import sharp from "sharp";
 
-import tucanoDefinitions from "../../editorial/tucano/definitions.mjs";
+import yaguaDefinitions from "../../editorial/yagua/definitions.mjs";
 import {
   buildCraftImagePrompt,
   buildImageGenerationParams,
@@ -18,8 +18,8 @@ import {
   IMAGE_PRESETS,
 } from "../../src/lib/image-generation.js";
 
-const confirmationPhrase = "generate-fourteen-tucano-openai-images";
-const outputDir = path.resolve("artifacts", "generated-images", "tucano");
+const confirmationPhrase = "generate-twelve-yagua-openai-images";
+const outputDir = path.resolve("artifacts", "generated-images", "yagua");
 const manifestPath = path.join(outputDir, "provenance-manifest.json");
 
 function parseArgs(argv) {
@@ -81,7 +81,7 @@ async function writeManifest(manifest) {
 }
 
 function definitions(options) {
-  return tucanoDefinitions.flatMap((record) =>
+  return yaguaDefinitions.flatMap((record) =>
     ["horizontal", "vertical"]
       .filter(
         (orientation) =>
@@ -102,8 +102,8 @@ function definitions(options) {
             slug: record.slug,
             prompt: editorialPrompt,
             excerpt: record.excerpt,
-            region: "Vaupés",
-            community: "Tucano / Yepá-mahsã",
+            region: "Trapecio Amazónico",
+            community: "Yagua / Ñihamwo",
           },
           orientation,
           styleProfile: "fullPaperCutIllustration",
@@ -148,10 +148,10 @@ function validateDefinition(definition) {
     }
   }
   if (
-    definition.sourceUrls.length !== 7 ||
-    new Set(definition.sourceUrls).size !== 7
+    definition.sourceUrls.length !== 9 ||
+    new Set(definition.sourceUrls).size !== 9
   ) {
-    throw new Error(`${definition.key}: se requieren siete fuentes únicas.`);
+    throw new Error(`${definition.key}: se requieren nueve fuentes únicas.`);
   }
 }
 
@@ -200,7 +200,7 @@ async function uploadLocal(definition, attempt) {
   const body = await fs.readFile(definition.localPath);
   const prefix =
     definition.orientation === "horizontal" ? "mitos" : "vertical/myth";
-  const filename = `${prefix}/${definition.slug}-tucano-openai-v${attempt}-${Date.now()}.jpg`;
+  const filename = `${prefix}/${definition.slug}-yagua-openai-v${attempt}-${Date.now()}.jpg`;
   const result = await put(filename, body, {
     access: "public",
     contentType: "image/jpeg",
@@ -216,7 +216,7 @@ async function makeContactSheet(manifest, orientation) {
   const thumbWidth = orientation === "horizontal" ? 480 : 270;
   const thumbHeight = orientation === "horizontal" ? 270 : 480;
   const gap = 20;
-  const columns = orientation === "horizontal" ? 2 : 4;
+  const columns = orientation === "horizontal" ? 2 : 3;
   const rows = Math.ceil(selected.length / columns);
   const width = columns * thumbWidth + (columns + 1) * gap;
   const height = rows * thumbHeight + (rows + 1) * gap;
@@ -287,7 +287,7 @@ async function run() {
       (await localIsValid(definition))
     ) {
       console.log(
-        `[tucano-images] ${index + 1}/${selected.length} approved ${definition.key}`,
+        `[yagua-images] ${index + 1}/${selected.length} approved ${definition.key}`,
       );
       continue;
     }
@@ -298,13 +298,13 @@ async function run() {
       (await localIsValid(definition))
     ) {
       console.log(
-        `[tucano-images] ${index + 1}/${selected.length} awaiting-qa ${definition.key}`,
+        `[yagua-images] ${index + 1}/${selected.length} awaiting-qa ${definition.key}`,
       );
       continue;
     }
     const attempt = Number(existing?.attempt || 0) + 1;
     console.log(
-      `[tucano-images] ${index + 1}/${selected.length} generate ${definition.key} attempt ${attempt}`,
+      `[yagua-images] ${index + 1}/${selected.length} generate ${definition.key} attempt ${attempt}`,
     );
     if (
       options.force ||
@@ -340,7 +340,7 @@ async function run() {
     };
     await writeManifest(manifest);
     await makeContactSheet(manifest, definition.orientation);
-    console.log(`[tucano-images] ok ${definition.key}`);
+    console.log(`[yagua-images] ok ${definition.key}`);
   }
   await makeContactSheet(manifest, "horizontal");
   await makeContactSheet(manifest, "vertical");

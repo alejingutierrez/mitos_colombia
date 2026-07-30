@@ -110,6 +110,16 @@ test("conserva la landing Umbra revisada con sus dos expedientes", () => {
   );
 });
 
+test("conserva la landing Yucuna revisada con sus tres expedientes", () => {
+  assert.deepEqual(
+    filterAllowedCommunities([
+      { slug: "yucuna", name: "Yucuna", myth_count: 3 },
+      { slug: "sin-revisar", name: "Sin revisar", myth_count: 3 },
+    ]),
+    [{ slug: "yucuna", name: "Yucuna", myth_count: 3 }],
+  );
+});
+
 test("la excepción Emberá no permite una fila duplicada sin mitos", () => {
   const allowed = filterAllowedCommunities([
     { name: "Embera", slug: "embera", myth_count: 0 },
