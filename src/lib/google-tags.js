@@ -18,7 +18,7 @@ export const GTM_CONTAINER_ID = normalizeGtmContainerId(
   process.env.NEXT_PUBLIC_GTM_ID
 );
 
-function publicAnalyticsBootstrap() {
+function publicAnalyticsBootstrap(measurementId) {
   return `if (w.location.pathname.indexOf('/admin') === 0) return;
 w.dataLayer = w.dataLayer || [];
 w.gtag = w.gtag || function(){w.dataLayer.push(arguments);};
@@ -31,6 +31,7 @@ if (!w.__mitosAnalyticsClickTracking) {
     if (!target || !target.dataset.analyticsEvent) return;
     var value = target.dataset.analyticsValue;
     w.gtag('event', target.dataset.analyticsEvent, {
+      send_to: ${JSON.stringify(measurementId)},
       event_category: target.dataset.analyticsCategory || undefined,
       event_label: target.dataset.analyticsLabel || undefined,
       value: value ? Number(value) : undefined
@@ -44,7 +45,7 @@ export function buildDirectGaBootstrap(measurementId) {
   if (!gaId) return "";
 
   return `(function(w,d){
-${publicAnalyticsBootstrap()}
+${publicAnalyticsBootstrap(gaId)}
 var j=d.createElement('script'),f=d.getElementsByTagName('script')[0];
 j.async=true;j.src='https://www.googletagmanager.com/gtag/js?id='+${JSON.stringify(gaId)};
 f.parentNode.insertBefore(j,f);
@@ -58,7 +59,7 @@ export function buildGtmBootstrap(containerId) {
   if (!gtmId) return "";
 
   return `(function(w,d,s,l,i){
-${publicAnalyticsBootstrap()}
+${publicAnalyticsBootstrap(GA_MEASUREMENT_ID)}
 w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
 var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
 j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;

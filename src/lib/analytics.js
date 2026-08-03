@@ -1,4 +1,6 @@
-export { GA_MEASUREMENT_ID } from "./google-tags.js";
+import { GA_MEASUREMENT_ID } from "./google-tags.js";
+
+export { GA_MEASUREMENT_ID };
 
 function getGtag() {
   if (typeof window === "undefined") return null;
@@ -18,6 +20,7 @@ export function trackEvent({ action, category, label, value, ...params }) {
   if (!gtag) return;
 
   gtag("event", action, {
+    send_to: GA_MEASUREMENT_ID,
     event_category: category,
     event_label: label,
     value,

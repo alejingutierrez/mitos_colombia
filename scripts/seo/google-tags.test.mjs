@@ -24,9 +24,11 @@ test("builds executable direct GA4 and GTM bootstraps", () => {
   assert.doesNotMatch(direct, /send_page_view/);
   assert.match(direct, /G-TSQYRJVCDJ/);
   assert.match(direct, /data-analytics-event/);
+  assert.match(direct, /send_to: "G-TSQYRJVCDJ"/);
   assert.match(manager, /gtm\.start/);
   assert.match(manager, /GTM-ABC123/);
   assert.match(manager, /w\.gtag/);
+  assert.match(manager, /send_to: "G-TSQYRJVCDJ"/);
 });
 
 test("queues custom events before the Google library is ready", () => {
@@ -46,7 +48,9 @@ test("queues custom events before the Google library is ready", () => {
     });
 
     assert.equal(window.dataLayer.length, 1);
-    assert.equal(Array.from(window.dataLayer[0])[1], "archive_filter");
+    const [, eventName, eventParams] = Array.from(window.dataLayer[0]);
+    assert.equal(eventName, "archive_filter");
+    assert.equal(eventParams.send_to, "G-TSQYRJVCDJ");
   } finally {
     globalThis.window = previousWindow;
     globalThis.document = previousDocument;
