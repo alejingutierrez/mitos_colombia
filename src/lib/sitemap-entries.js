@@ -3,18 +3,18 @@ export const LEGACY_CONTENT_LASTMOD = "2026-01-20T01:11:52.046Z";
 export const ROUTE_CONTENT_LASTMOD = SEO_RELEASE_LASTMOD;
 
 export const STATIC_CONTENT_LASTMOD_BY_PATH = {
-  "/": SEO_RELEASE_LASTMOD,
+  "/": "2026-07-30T00:29:07.000Z",
   "/mitos": SEO_RELEASE_LASTMOD,
   "/categorias": "2026-07-08T18:43:54.000Z",
-  "/comunidades": "2026-07-08T20:48:00.000Z",
-  "/regiones": "2026-07-08T20:48:00.000Z",
-  "/rutas": "2026-07-02T20:51:43.000Z",
-  "/mapa": SEO_RELEASE_LASTMOD,
+  "/comunidades": "2026-07-23T17:41:55.000Z",
+  "/regiones": "2026-07-23T17:41:55.000Z",
+  "/rutas": "2026-07-23T17:41:55.000Z",
+  "/mapa": "2026-07-23T17:41:55.000Z",
   "/tarot": SEO_RELEASE_LASTMOD,
-  "/metodologia": SEO_RELEASE_LASTMOD,
+  "/metodologia": "2026-07-27T19:07:42.000Z",
   "/sobre-el-proyecto": "2026-07-02T20:51:43.000Z",
   "/contacto": "2026-07-02T20:51:43.000Z",
-  "/privacidad": "2026-07-02T20:51:43.000Z",
+  "/privacidad": "2026-08-03T15:45:00.000Z",
   "/terminos": "2026-07-02T20:51:43.000Z",
 };
 

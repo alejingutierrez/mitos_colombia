@@ -120,14 +120,27 @@ const sections = [
   {
     title: "Cookies y analítica",
     body: (
-      <p>
-        Usamos cookies esenciales para el funcionamiento básico del sitio.
-        Algunas métricas de navegación se registran de manera anónima para
-        entender cómo se exploran las secciones de{" "}
-        <TextLink href="/regiones">Regiones</TextLink> y{" "}
-        <TextLink href="/categorias">Categorías</TextLink>. No rastreamos
-        actividades fuera del sitio ni vendemos información.
-      </p>
+      <>
+        <p>
+          Usamos cookies esenciales para el funcionamiento básico del sitio y
+          Google Analytics 4 para medir, de forma agregada, cómo se exploran
+          secciones como <TextLink href="/regiones">Regiones</TextLink> y{" "}
+          <TextLink href="/categorias">Categorías</TextLink>. Google Tag
+          Manager administra la carga de la etiqueta de analítica. En este sitio
+          no se utiliza para publicidad ni crea por sí solo perfiles de
+          visitantes.
+        </p>
+        <p>
+          La medición puede registrar páginas visitadas, dispositivo, navegador,
+          país aproximado e interacciones como búsquedas, desplazamientos o
+          clics de salida. No enviamos nombres, correos ni el contenido de los
+          formularios a Google Analytics. Puedes limitar o eliminar estas
+          cookies desde la configuración de tu navegador. Consulta también la{" "}
+          <TextLink href="https://policies.google.com/privacy" external>
+            política de privacidad de Google
+          </TextLink>.
+        </p>
+      </>
     ),
   },
   {
@@ -260,11 +273,12 @@ const sections = [
           en nuestras bases internas y se usan sólo con fines editoriales.
         </p>
         <p>
-          Si en el futuro integramos nuevas herramientas externas de análisis o
-          apoyo editorial, informaremos explícitamente y describiremos qué datos
-          se utilizan. Nuestro compromiso es mantener la transparencia y
-          solicitar consentimiento cuando sea necesario. Esta política se
-          actualizará para reflejar cualquier cambio relevante.
+          Para la medición de uso utilizamos actualmente Google Analytics 4 y
+          Google Tag Manager. Si integramos nuevas herramientas externas de
+          análisis o apoyo editorial, informaremos explícitamente y
+          describiremos qué datos se utilizan. Nuestro compromiso es mantener la
+          transparencia y solicitar consentimiento cuando sea necesario. Esta
+          política se actualizará para reflejar cualquier cambio relevante.
         </p>
         <p>
           Puedes conocer más sobre la visión tecnológica del proyecto en{" "}

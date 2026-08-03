@@ -1,10 +1,13 @@
 import "leaflet/dist/leaflet.css";
 import "./globals.css";
 import { Cormorant_Garamond, Manrope, Inter } from "next/font/google";
-import Script from "next/script";
 import { Footer } from "../components/organisms/Footer";
-import Analytics from "../components/Analytics";
-import { GA_MEASUREMENT_ID } from "../lib/analytics";
+import {
+  buildDirectGaBootstrap,
+  buildGtmBootstrap,
+  GA_MEASUREMENT_ID,
+  GTM_CONTAINER_ID,
+} from "../lib/google-tags";
 import { WebsiteJsonLd } from "../components/StructuredData";
 
 const RAW_SITE_URL =
@@ -47,7 +50,11 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-  const gaId = GA_MEASUREMENT_ID.trim();
+  const gaId = GA_MEASUREMENT_ID;
+  const gtmId = GTM_CONTAINER_ID;
+  const tagBootstrap = gtmId
+    ? buildGtmBootstrap(gtmId)
+    : buildDirectGaBootstrap(gaId);
 
   return (
     <html
@@ -56,23 +63,25 @@ export default function RootLayout({ children }) {
     >
       <head>
         <WebsiteJsonLd siteUrl={SITE_URL} />
+        {tagBootstrap ? (
+          <script
+            id={gtmId ? "google-tag-manager" : "google-analytics"}
+            dangerouslySetInnerHTML={{ __html: tagBootstrap }}
+          />
+        ) : null}
       </head>
       <body className="font-body text-ink-900 antialiased">
-        {gaId ? (
-          <>
-            <Script
-              src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}
-              strategy="lazyOnload"
+        {gtmId ? (
+          <noscript>
+            <iframe
+              src={`https://www.googletagmanager.com/ns.html?id=${gtmId}`}
+              height="0"
+              width="0"
+              className="hidden invisible"
+              title="Google Tag Manager"
             />
-            <Script id="ga-init" strategy="afterInteractive">
-          {`window.dataLayer = window.dataLayer || [];
-window.gtag = function(){dataLayer.push(arguments);};
-window.gtag('js', new Date());
-window.gtag('config', '${gaId}', { send_page_view: false });`}
-            </Script>
-          </>
+          </noscript>
         ) : null}
-        <Analytics />
         <a href="#contenido" className="skip-link">
           Saltar al contenido
         </a>

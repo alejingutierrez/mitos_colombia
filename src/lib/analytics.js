@@ -1,19 +1,23 @@
-export const GA_MEASUREMENT_ID = (
-  process.env.NEXT_PUBLIC_GA_ID || "G-TSQYRJVCDJ"
-).trim();
+export { GA_MEASUREMENT_ID } from "./google-tags.js";
 
-export function pageview(url) {
-  if (typeof window === "undefined" || !window.gtag) return;
-  window.gtag("event", "page_view", {
-    page_path: url,
-    page_location: window.location.href,
-    page_title: document.title,
-  });
+function getGtag() {
+  if (typeof window === "undefined") return null;
+
+  window.dataLayer = window.dataLayer || [];
+  window.gtag =
+    window.gtag ||
+    function gtag() {
+      window.dataLayer.push(arguments);
+    };
+
+  return window.gtag;
 }
 
 export function trackEvent({ action, category, label, value, ...params }) {
-  if (typeof window === "undefined" || !window.gtag) return;
-  window.gtag("event", action, {
+  const gtag = getGtag();
+  if (!gtag) return;
+
+  gtag("event", action, {
     event_category: category,
     event_label: label,
     value,
