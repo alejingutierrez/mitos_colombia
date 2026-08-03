@@ -46,7 +46,7 @@ export default async function NotFound() {
   return (
     <>
       <Header />
-      <main className="min-h-[100dvh] overflow-x-clip bg-paper">
+      <main id="contenido" className="min-h-[100dvh] overflow-x-clip bg-paper">
         <section className="relative overflow-hidden border-b border-line-100">
           <Motif
             name="hoja"

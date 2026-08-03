@@ -300,7 +300,7 @@ export function TaxonomyIndexTemplate({
   return (
     <>
       <Header active={active} />
-      <main className="min-h-[100dvh] overflow-x-clip bg-paper">
+      <main id="contenido" className="min-h-[100dvh] overflow-x-clip bg-paper">
         <IndexHero
           mode={mode}
           title={title}

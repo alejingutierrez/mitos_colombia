@@ -308,7 +308,7 @@ export function MythDetailTemplate({
   return (
     <>
       <Header active="/mitos" />
-      <main className="min-h-[100dvh] overflow-x-clip bg-paper">{article}</main>
+      <main id="contenido" className="min-h-[100dvh] overflow-x-clip bg-paper">{article}</main>
     </>
   );
 }

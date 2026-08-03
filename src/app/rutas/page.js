@@ -118,7 +118,7 @@ export default async function RutasPage() {
   return (
     <>
       <Header active="/rutas" />
-      <main className="min-h-[100dvh] overflow-x-clip bg-paper">
+      <main id="contenido" className="min-h-[100dvh] overflow-x-clip bg-paper">
         <section className="relative min-h-[calc(100svh-4rem)] overflow-hidden bg-[rgb(var(--atlas-night))] text-white">
           {hero?.preview?.image_url ? (
             <Image

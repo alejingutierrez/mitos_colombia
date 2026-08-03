@@ -84,14 +84,14 @@ export default async function InstagramStyleStudyPage({ searchParams }) {
 
   if (cover && EXPORT_COVERS[cover]) {
     return (
-      <main className={styles.exportPage}>
+      <main id="contenido" className={styles.exportPage}>
         <div className={styles.exportCover}>{EXPORT_COVERS[cover]}</div>
       </main>
     );
   }
 
   return (
-    <main className={styles.page}>
+    <main id="contenido" className={styles.page}>
       <header className={styles.header}>
         <p className={styles.kicker}>Dirección de arte · exploración 01</p>
         <h1>La imagen primero.</h1>

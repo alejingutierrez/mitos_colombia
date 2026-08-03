@@ -21,7 +21,7 @@ export default function MapaPage() {
   return (
     <>
       <Header active="/mapa" />
-      <main className="min-h-[100dvh] overflow-x-clip bg-paper">
+      <main id="contenido" className="min-h-[100dvh] overflow-x-clip bg-paper">
         <MapaPageClient />
         <Container size="atlas" className="border-t border-line-100 py-12 md:py-16">
           <div className="grid gap-8 lg:grid-cols-[0.75fr_1.25fr]">

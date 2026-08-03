@@ -100,7 +100,7 @@ function Section({ index, title, children }) {
 
 export default function MoleculasPage() {
   return (
-    <main className="min-h-[100dvh] bg-paper">
+    <main id="contenido" className="min-h-[100dvh] bg-paper">
       <Container size="wide" className="py-16 md:py-24">
         <Reveal as="header" className="pb-6">
           <Breadcrumb

@@ -108,7 +108,7 @@ const UI_ICONS = [
 
 export default function DesignSystemPage() {
   return (
-    <main className="min-h-[100dvh] bg-paper">
+    <main id="contenido" className="min-h-[100dvh] bg-paper">
       <Container size="wide" className="py-16 md:py-24">
         {/* Hero editorial asimétrico */}
         <Reveal

@@ -31,7 +31,7 @@ export function MapTemplate({
   return (
     <>
       <Header active="/mapa" />
-      <main className="min-h-[100dvh] bg-paper">
+      <main id="contenido" className="min-h-[100dvh] bg-paper">
         <Container size="wide" className="py-10 md:py-14">
           <div className="grid gap-8 lg:grid-cols-[0.85fr_1.7fr] lg:gap-10">
             {/* Intro + stats */}

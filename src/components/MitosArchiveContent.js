@@ -160,7 +160,7 @@ export async function MitosArchiveContent({ page = 1, searchParams = {} }) {
   return (
     <>
       <Header active="/mitos" />
-      <main className="min-h-[100dvh] overflow-x-clip bg-paper">
+      <main id="contenido" className="min-h-[100dvh] overflow-x-clip bg-paper">
         <section className="grid min-h-[31rem] border-b border-line-100 lg:grid-cols-[0.7fr_1.3fr]">
           <div className="flex items-center p-7 md:p-12 lg:p-14">
             <div className="w-full max-w-xl">
@@ -186,6 +186,7 @@ export async function MitosArchiveContent({ page = 1, searchParams = {} }) {
           </div>
           <OverlayMythCard
             myth={heroMyth}
+            headingLevel="h2"
             ratio="16 / 8.4"
             priority
             sizes="(max-width: 1024px) 100vw, 66vw"

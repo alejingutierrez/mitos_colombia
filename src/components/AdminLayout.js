@@ -244,7 +244,7 @@ export default function AdminLayout({ children, onLogout }) {
           </aside>
 
           {/* Main content */}
-          <main className="flex-1 min-w-0">
+          <main id="contenido" className="flex-1 min-w-0">
             {children}
           </main>
         </div>

@@ -72,7 +72,7 @@ export function TaxonomyDetailTemplate({
   return (
     <>
       <Header />
-      <main className="min-h-[100dvh] overflow-x-clip bg-paper">
+      <main id="contenido" className="min-h-[100dvh] overflow-x-clip bg-paper">
         <section className="relative min-h-[32rem] overflow-hidden bg-[rgb(var(--atlas-night))] md:min-h-[38rem]">
           {imageUrl ? (
             <Image

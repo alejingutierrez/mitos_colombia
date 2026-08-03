@@ -33,7 +33,7 @@ const REGIONS = [
 
 export default function OrganismosPage() {
   return (
-    <main className="min-h-[100dvh] bg-paper">
+    <main id="contenido" className="min-h-[100dvh] bg-paper">
       {/* Header global (sticky) */}
       <Header active="/mitos" />
 

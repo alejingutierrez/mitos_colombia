@@ -55,7 +55,7 @@ export function DocumentTemplate({
   return (
     <>
       <Header />
-      <main className="min-h-[100dvh] bg-paper">
+      <main id="contenido" className="min-h-[100dvh] bg-paper">
         {/* Hero del documento */}
         <Container size="wide" className="pt-10 md:pt-14">
           <Breadcrumb items={crumbs} className="mb-8" />

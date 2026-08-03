@@ -45,7 +45,7 @@ export default async function InstagramLibraryPage({ searchParams }) {
 
   if (compositionSlide && compositionTemplate) {
     return (
-      <main className={styles.exportPage}>
+      <main id="contenido" className={styles.exportPage}>
         <div className={styles.exportCanvas}>
           <InstagramTemplateCanvas
             assets={composition.assets}
@@ -65,7 +65,7 @@ export default async function InstagramLibraryPage({ searchParams }) {
 
   if (composition) {
     return (
-      <main className={styles.page}>
+      <main id="contenido" className={styles.page}>
         <header className={styles.header}>
           <p>Carrusel resuelto · semilla {composition.seed}</p>
           <h1>
@@ -116,7 +116,7 @@ export default async function InstagramLibraryPage({ searchParams }) {
 
   if (template) {
     return (
-      <main className={styles.exportPage}>
+      <main id="contenido" className={styles.exportPage}>
         <div className={styles.exportCanvas}>
           <InstagramTemplateCanvas template={template} />
         </div>
@@ -137,7 +137,7 @@ export default async function InstagramLibraryPage({ searchParams }) {
       : familyTemplates.filter((item) => item.textDensity === density);
 
   return (
-    <main className={styles.page}>
+    <main id="contenido" className={styles.page}>
       <header className={styles.header}>
         <p>Biblioteca editorial · {family}</p>
         <h1>{templates.length} plantillas aprobadas</h1>

@@ -202,7 +202,7 @@ export function TarotTemplate({
   return (
     <>
       <Header active="/tarot" />
-      <main className="min-h-[100dvh] bg-paper">
+      <main id="contenido" className="min-h-[100dvh] bg-paper">
         {/* ---------- HERO (blanco editorial) ---------- */}
         <Container size="wide" className="py-14 md:py-20">
           <div className="grid items-start gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:gap-14">
