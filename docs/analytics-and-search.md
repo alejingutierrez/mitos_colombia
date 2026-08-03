@@ -1,5 +1,18 @@
 # Analítica, Tag Manager y Search Console
 
+## Estado operativo actual
+
+- Flujo web GA4: `G-TSQYRJVCDJ`.
+- Contenedor web GTM: `GTM-P8Z7MCV3` (`Mitos de Colombia` /
+  `www.mitosdecolombia.com`).
+- Versión GTM publicada: `2 - GA4 base measurement`, con una única etiqueta de
+  Google en `Initialization - All Pages`.
+- Propiedad de Search Console:
+  `https://www.mitosdecolombia.com/`, vinculada al flujo GA4.
+- El `3 de agosto de 2026` se reenvió `sitemap.xml`, se solicitó la indexación
+  de una URL de control y se inició una nueva validación del grupo
+  `Rastreada: actualmente sin indexar`.
+
 ## Arquitectura
 
 - `NEXT_PUBLIC_GA_ID` identifica el flujo web de GA4.
