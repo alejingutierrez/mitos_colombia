@@ -125,9 +125,9 @@ const sections = [
           Usamos cookies esenciales para el funcionamiento básico del sitio y
           Google Analytics 4 para medir, de forma agregada, cómo se exploran
           secciones como <TextLink href="/regiones">Regiones</TextLink> y{" "}
-          <TextLink href="/categorias">Categorías</TextLink>. Google Tag
-          Manager administra la carga de la etiqueta de analítica. En este sitio
-          no se utiliza para publicidad ni crea por sí solo perfiles de
+          <TextLink href="/categorias">Categorías</TextLink>. La etiqueta de
+          analítica puede administrarse mediante Google Tag Manager. En este
+          sitio no se utiliza para publicidad ni crea por sí solo perfiles de
           visitantes.
         </p>
         <p>
@@ -273,12 +273,13 @@ const sections = [
           en nuestras bases internas y se usan sólo con fines editoriales.
         </p>
         <p>
-          Para la medición de uso utilizamos actualmente Google Analytics 4 y
-          Google Tag Manager. Si integramos nuevas herramientas externas de
-          análisis o apoyo editorial, informaremos explícitamente y
-          describiremos qué datos se utilizan. Nuestro compromiso es mantener la
-          transparencia y solicitar consentimiento cuando sea necesario. Esta
-          política se actualizará para reflejar cualquier cambio relevante.
+          Para la medición de uso utilizamos Google Analytics 4 y, cuando está
+          configurado, Google Tag Manager para administrar su etiqueta. Si
+          integramos nuevas herramientas externas de análisis o apoyo editorial,
+          informaremos explícitamente y describiremos qué datos se utilizan.
+          Nuestro compromiso es mantener la transparencia y solicitar
+          consentimiento cuando sea necesario. Esta política se actualizará para
+          reflejar cualquier cambio relevante.
         </p>
         <p>
           Puedes conocer más sobre la visión tecnológica del proyecto en{" "}
