@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { SITE_NAME } from "../../lib/brand";
 import { cn } from "../../lib/utils";
 import { Container, IconButton } from "../atoms";
 import { SearchBox } from "../molecules";
@@ -18,7 +19,6 @@ import { SearchBox } from "../molecules";
  */
 
 const NAV_LINKS = [
-  { href: "/", label: "Inicio" },
   { href: "/mitos", label: "Mitos" },
   { href: "/regiones", label: "Regiones" },
   { href: "/comunidades", label: "Comunidades" },
@@ -45,15 +45,16 @@ export function Header({ active }) {
           <Link
             href="/"
             onClick={() => setOpen(false)}
-            className="inline-flex min-h-11 items-center rounded-sm font-body text-sm font-semibold text-ink-700 transition-colors hover:text-jungle-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-jungle-500/40 md:hidden"
+            aria-label={`${SITE_NAME}, inicio`}
+            className="inline-flex min-h-11 shrink-0 items-center rounded-sm font-display text-[1.2rem] font-normal leading-none tracking-[-0.02em] text-jungle-700 transition-colors hover:text-jungle-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-jungle-500/40 lg:text-[1.35rem]"
           >
-            Inicio
+            {SITE_NAME}
           </Link>
 
           {/* Navegación desktop */}
           <nav
             aria-label="Navegación principal"
-            className="hidden items-center gap-1 md:flex"
+            className="hidden items-center gap-1 lg:flex"
           >
             {NAV_LINKS.map((item) => (
               <Link
@@ -76,10 +77,10 @@ export function Header({ active }) {
 
           {/* Acciones derecha */}
           <div className="flex items-center gap-1">
-            <div className="hidden md:block">
+            <div className="hidden lg:block">
               <IconButton icon="search" label="Buscar" href="/mitos" />
             </div>
-            <div className="md:hidden">
+            <div className="lg:hidden">
               <IconButton
                 icon={open ? "x" : "menu"}
                 label={open ? "Cerrar menú" : "Abrir menú"}
@@ -96,7 +97,7 @@ export function Header({ active }) {
       <div
         id="mobile-menu"
         className={cn(
-          "overflow-hidden border-line-100 bg-paper transition-[max-height,opacity] duration-300 ease-editorial md:hidden",
+          "overflow-hidden border-line-100 bg-paper transition-[max-height,opacity] duration-300 ease-editorial lg:hidden",
           open ? "max-h-[520px] border-b opacity-100" : "max-h-0 opacity-0"
         )}
       >

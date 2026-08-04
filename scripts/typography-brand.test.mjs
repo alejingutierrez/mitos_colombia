@@ -16,13 +16,18 @@ test("the root layout loads the approved heading and body fonts", async () => {
   assert.doesNotMatch(layout, /Manrope|Inter|Cormorant_Garamond/);
 });
 
-test("header and footer do not render a logo lockup", async () => {
+test("header and footer render the approved typographic wordmarks", async () => {
   const [header, footer] = await Promise.all([
     read("src/components/organisms/Header.js"),
     read("src/components/organisms/Footer.js"),
   ]);
 
-  assert.doesNotMatch(header, /BRAND_MARK|Mitos de Colombia/);
+  assert.match(header, /font-display[^\n]+text-jungle-700/);
+  assert.match(header, /\{SITE_NAME\}/);
+  assert.doesNotMatch(header, /BRAND_MARK|label: "Inicio"/);
+  assert.match(footer, /font-display[^\n]+text-white/);
+  assert.match(footer, /<span aria-hidden="true">Mitos de<\/span>/);
+  assert.match(footer, /<span aria-hidden="true">Colombia<\/span>/);
   assert.doesNotMatch(footer, /BRAND_MARK/);
 });
 

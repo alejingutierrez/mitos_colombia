@@ -61,9 +61,17 @@ export function Footer({
     <footer className={cn("bg-ink-900 text-mist-100 py-14", className)}>
       <Container size="atlas">
         <div className="grid gap-12 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,2fr)]">
-          {/* Contexto editorial sin logotipo. */}
+          {/* Wordmark tipográfico y contexto editorial. */}
           <div className="max-w-sm">
-            <p className="max-w-xs font-body text-base leading-relaxed text-mist-100/80">
+            <Link
+              href="/"
+              aria-label={`${SITE_NAME}, inicio`}
+              className="inline-flex flex-col rounded-sm font-display text-[2.4rem] font-normal leading-[0.9] tracking-[-0.025em] text-white transition-colors hover:text-mist-100/80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-mist-100/50 md:text-[2.75rem]"
+            >
+              <span aria-hidden="true">Mitos de</span>
+              <span aria-hidden="true">Colombia</span>
+            </Link>
+            <p className="mt-5 max-w-xs font-body text-base leading-relaxed text-mist-100/80">
               {description}
             </p>
           </div>
