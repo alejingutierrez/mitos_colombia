@@ -233,7 +233,7 @@ function MythArticle({ myth, accent, breadcrumb, related }) {
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-white/75">
               {[myth.region, myth.community].filter(Boolean).join(" · ")}
             </p>
-            <h1 className="mt-4 font-editorial text-[4.2rem] font-semibold leading-[0.86] tracking-[-0.04em] md:text-[6.4rem]">
+            <h1 className="mt-4 font-editorial text-[4.2rem] font-semibold leading-[0.86] tracking-[-0.04em] !text-white md:text-[6.4rem]">
               {myth.title}
             </h1>
             {myth.excerpt ? (

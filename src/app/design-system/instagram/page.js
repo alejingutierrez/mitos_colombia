@@ -97,7 +97,7 @@ export default async function InstagramStyleStudyPage({ searchParams }) {
         <h1>La imagen primero.</h1>
         <p>
           Tres portadas 4:5 construidas únicamente con la imagen vertical
-          canónica, Metamorphous y Readex Pro.
+          canónica, Asimovian y Noto Sans Display.
         </p>
       </header>
 

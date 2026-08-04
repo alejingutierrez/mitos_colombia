@@ -222,12 +222,12 @@ export default function DesignSystemPage() {
 
         <Section index={3} title="Tipografía">
           <div className="space-y-3">
-            <p className="font-editorial text-6xl font-semibold leading-none tracking-[-0.035em] text-ink-900">
+            <p className="font-editorial text-6xl leading-none tracking-[-0.012em] text-jungle-700">
               Atlas vivo · voz narrativa
             </p>
             <Text size="sm" tone="muted" className="pb-4">
-              Metamorphous construye la voz de portadas, títulos de relatos y
-              momentos narrativos. Readex Pro conserva la claridad de la
+              Asimovian construye la voz de portadas, títulos de relatos y
+              momentos narrativos. Noto Sans Display conserva la claridad de la
               interfaz, la navegación y el cuerpo de lectura.
             </Text>
             <Heading level={1}>Display · El Mohán</Heading>
@@ -485,7 +485,7 @@ export default function DesignSystemPage() {
                 },
                 {
                   title: "Jerarquía tipográfica",
-                  body: "font-editorial se usa en títulos narrativos; font-display y font-body siguen resolviendo navegación, interfaz, filtros y texto funcional.",
+                  body: "font-editorial y font-display usan Asimovian en títulos; font-body usa Noto Sans Display para navegación, filtros y texto funcional.",
                 },
                 {
                   title: "Contrato de contenido",

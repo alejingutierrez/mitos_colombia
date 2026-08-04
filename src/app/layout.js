@@ -1,6 +1,6 @@
 import "leaflet/dist/leaflet.css";
 import "./globals.css";
-import { Cormorant_Garamond, Manrope, Inter } from "next/font/google";
+import { Asimovian, Noto_Sans_Display } from "next/font/google";
 import { Footer } from "../components/organisms/Footer";
 import {
   buildDirectGaBootstrap,
@@ -15,25 +15,21 @@ const RAW_SITE_URL =
   (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "");
 const SITE_URL = RAW_SITE_URL.trim().replace(/\/+$/, "");
 
-const display = Manrope({
+const display = Asimovian({
   subsets: ["latin"],
-  weight: ["500", "600", "700", "800"],
+  weight: "400",
+  style: "normal",
   variable: "--font-display",
   display: "swap",
+  adjustFontFallback: false,
 });
 
-const body = Inter({
+const body = Noto_Sans_Display({
   subsets: ["latin"],
-  weight: ["400", "500", "600"],
-  variable: "--font-body",
-  display: "swap",
-});
-
-const editorial = Cormorant_Garamond({
-  subsets: ["latin"],
-  weight: ["500", "600", "700"],
+  weight: "variable",
   style: ["normal", "italic"],
-  variable: "--font-editorial",
+  axes: ["wdth"],
+  variable: "--font-body",
   display: "swap",
 });
 
@@ -59,7 +55,7 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="es"
-      className={`${display.variable} ${body.variable} ${editorial.variable}`}
+      className={`${display.variable} ${body.variable}`}
     >
       <head>
         <WebsiteJsonLd siteUrl={SITE_URL} />

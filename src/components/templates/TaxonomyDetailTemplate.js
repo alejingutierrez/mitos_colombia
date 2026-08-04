@@ -98,7 +98,7 @@ export function TaxonomyDetailTemplate({
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-white/68">
                 {kind || "Archivo territorial"}
               </p>
-              <h1 className="mt-4 max-w-full text-balance font-editorial text-[clamp(3rem,15vw,4.2rem)] font-semibold leading-[0.9] tracking-[-0.035em] [overflow-wrap:anywhere] md:text-[6.2rem] md:leading-[0.88]">
+              <h1 className="mt-4 max-w-full text-balance font-editorial text-[clamp(3rem,15vw,4.2rem)] font-semibold leading-[0.9] tracking-[-0.035em] !text-white [overflow-wrap:anywhere] md:text-[6.2rem] md:leading-[0.88]">
                 {name}
               </h1>
               {count != null ? (

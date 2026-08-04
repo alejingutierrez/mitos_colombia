@@ -145,7 +145,7 @@ export default async function RutasPage() {
             className="relative flex min-h-[calc(100svh-4rem)] items-center py-12"
           >
             <div className="max-w-3xl">
-              <h1 className="font-editorial text-[4.2rem] font-semibold leading-[0.88] tracking-[-0.04em] md:text-[6.4rem]">
+              <h1 className="font-editorial text-[4.2rem] font-semibold leading-[0.88] tracking-[-0.04em] !text-white md:text-[6.4rem]">
                 Cartografías para leer el mito como territorio
               </h1>
               <p className="mt-7 max-w-lg text-lg leading-relaxed text-white/78">

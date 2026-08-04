@@ -2,7 +2,7 @@
 
 ## Resultado esperado
 
-Cada mito produce un carrusel de 8 a 14 láminas verticales de 1080 × 1350 px. La publicación conserva la identidad de Mitos de Colombia —Metamorphous para voz editorial, Readex Pro para lectura— pero su secuencia, ritmo, color y composición cambian entre mitos.
+Cada mito produce un carrusel de 8 a 14 láminas verticales de 1080 × 1350 px. La publicación conserva la identidad de Mitos de Colombia —Asimovian para títulos, Noto Sans Display para lectura— pero su secuencia, ritmo, color y composición cambian entre mitos.
 
 La variedad no depende de improvisar cada post desde cero. El sistema separa tres decisiones:
 

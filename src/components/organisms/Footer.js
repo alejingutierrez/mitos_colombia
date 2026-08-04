@@ -1,12 +1,12 @@
 import Link from "next/link";
 import { Container } from "../atoms";
-import { BRAND_MARK, SITE_NAME } from "../../lib/brand";
+import { SITE_NAME } from "../../lib/brand";
 import { cn } from "../../lib/utils";
 
 /**
  * Organism · Footer
  * Pie de página global del sitio (server component, presentacional).
- * Fondo oscuro elegante (ink-900) con la marca, columnas de navegación y barra legal.
+ * Fondo oscuro elegante (ink-900) con contexto editorial, navegación y barra legal.
  *
  * Props:
  * - columns: grupos de enlaces [{ title, links: [{ label, href }] }].
@@ -61,23 +61,9 @@ export function Footer({
     <footer className={cn("bg-ink-900 text-mist-100 py-14", className)}>
       <Container size="atlas">
         <div className="grid gap-12 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,2fr)]">
-          {/* Bloque de marca */}
+          {/* Contexto editorial sin logotipo. */}
           <div className="max-w-sm">
-            <Link
-              href="/"
-              className="inline-flex items-center gap-3 transition-opacity duration-200 ease-editorial hover:opacity-90"
-            >
-              <span
-                aria-hidden="true"
-                className="inline-flex h-16 w-16 items-center justify-center rounded-sm border border-mist-50/20 font-display text-5xl font-normal leading-none text-mist-50"
-              >
-                {BRAND_MARK}
-              </span>
-              <span className="font-display text-2xl font-normal leading-none tracking-[-0.015em] text-mist-50">
-                {SITE_NAME}
-              </span>
-            </Link>
-            <p className="mt-4 font-body text-sm leading-relaxed text-mist-100/70">
+            <p className="max-w-xs font-body text-base leading-relaxed text-mist-100/80">
               {description}
             </p>
           </div>

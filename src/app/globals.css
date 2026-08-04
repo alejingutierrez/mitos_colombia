@@ -42,19 +42,19 @@
      Una sola escala para todo el sitio. La familia comunica el ROL,
      el paso comunica la JERARQUÍA. Ver .atlas-* más abajo.
 
-       font-display  (Manrope)   → el sitio que organiza: H1, secciones, nav, CTA
-       font-editorial (Cormorant) → el objeto de la colección: mitos, rutas, cifras
-       font-body     (Inter)      → párrafos, kickers, metadatos
+       font-display/editorial (Asimovian 400) → todos los títulos
+       font-body (Noto Sans Display variable) → párrafos, UI y metadatos
 
-     Regla: serif = contenido del archivo · sans = interfaz del archivo. */
+     La jerarquía de títulos depende de escala, ritmo y contraste; Asimovian no
+     usa negritas sintéticas. */
   --step--1: clamp(0.8125rem, 0.79rem + 0.11vw, 0.875rem); /* 13 → 14 */
   --step-0: clamp(0.9375rem, 0.91rem + 0.14vw, 1rem); /*  15 → 16 */
-  --step-1: clamp(1.125rem, 1.07rem + 0.27vw, 1.25rem); /*  18 → 20 */
-  --step-2: clamp(1.375rem, 1.28rem + 0.45vw, 1.625rem); /*  22 → 26 */
-  --step-3: clamp(1.625rem, 1.45rem + 0.9vw, 2.125rem); /*  26 → 34 */
-  --step-4: clamp(2rem, 1.7rem + 1.5vw, 2.875rem); /*  32 → 46 */
-  --step-5: clamp(2.5rem, 1.9rem + 3vw, 4rem); /*  40 → 64 */
-  --step-6: clamp(2.75rem, 2rem + 3.8vw, 5rem); /*  44 → 80 */
+  --step-1: clamp(1.0625rem, 1.035rem + 0.13vw, 1.1875rem); /* 17 → 19 */
+  --step-2: clamp(1.25rem, 1.19rem + 0.3vw, 1.5rem); /* 20 → 24 */
+  --step-3: clamp(1.5rem, 1.38rem + 0.6vw, 2rem); /* 24 → 32 */
+  --step-4: clamp(1.875rem, 1.65rem + 1.1vw, 2.75rem); /* 30 → 44 */
+  --step-5: clamp(2.25rem, 1.78rem + 2.35vw, 3.5rem); /* 36 → 56 */
+  --step-6: clamp(2.5rem, 1.9rem + 3.05vw, 4.5rem); /* 40 → 72 */
 
   /* === Retícula y ritmo (base 8pt) ===
      Un solo canal de aire horizontal y dos de aire vertical. */
@@ -287,13 +287,43 @@ body {
   }
 
   body {
-    font-feature-settings: \"ss01\" on, \"ss02\" on;
+    font-optical-sizing: auto;
+    font-variation-settings: "wdth" 100;
   }
 }
 
 .font-display,
 .font-editorial {
   font-synthesis: none;
+  font-style: normal !important;
+  font-weight: 400 !important;
+}
+
+.font-body {
+  font-optical-sizing: auto;
+  font-variation-settings: "wdth" 100;
+}
+
+/* Asimovian sólo tiene peso 400: la jerarquía se resuelve con tamaño y ritmo.
+   Verde sobre superficies claras; blanco o el color declarado cuando el
+   componente vive sobre fotografía o una superficie oscura. */
+:where(h1, h2, h3, h4, h5, h6) {
+  font-family: var(--font-display), ui-sans-serif, system-ui, sans-serif;
+  font-synthesis: none;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  color: rgb(var(--jungle-700));
+}
+
+:where(h1, h2, h3, h4, h5, h6)[class*="text-white"],
+:where(h1, h2, h3, h4, h5, h6)[class*="text-mist"] {
+  color: inherit;
+}
+
+h1.font-editorial {
+  font-size: clamp(2.75rem, 1.9rem + 4vw, 5.25rem);
+  line-height: 0.96;
+  letter-spacing: -0.015em;
 }
 
 @keyframes float-slow {
@@ -336,41 +366,39 @@ body {
     font-variant-numeric: lining-nums tabular-nums;
   }
 
-  /* Cifras: siempre figuras de caja alta y ancho fijo. Cormorant sirve
-     numerales old-style por defecto y "157" se leía "ı57", "11" como "II". */
+  /* Cifras de caja alta y ancho fijo para conteos y folios editoriales. */
   .atlas-figure {
     font-variant-numeric: lining-nums tabular-nums;
     font-feature-settings: "lnum" 1, "tnum" 1, "onum" 0;
   }
 
   /* Jerarquía completa, de mayor a menor (390 → 1440px):
-       atlas-h1              44 → 80   el sitio hablando, uno por página
-       atlas-title-xl        40 → 64   pieza destacada a sangre completa
-       atlas-title-lg        32 → 46   líder de una sección contenida
-       atlas-section-heading 26 → 34   rótulo de sección (sans)
-       atlas-title-md        22 → 26   tarjeta de galería
-       atlas-title-sm        18 → 20   ítem de lista
+       atlas-h1              40 → 72   el sitio hablando, uno por página
+       atlas-title-xl        36 → 56   pieza destacada a sangre completa
+       atlas-title-lg        30 → 44   líder de una sección contenida
+       atlas-section-heading 24 → 32   rótulo de sección
+       atlas-title-md        20 → 24   tarjeta de galería
+       atlas-title-sm        17 → 19   ítem de lista
      El rótulo de sección va por debajo del contenido que presenta: sirve al
-     archivo, no compite con él. Lo que lo distingue no es el tamaño sino la
-     familia — sans es la interfaz, serif es la colección. */
+     archivo y no compite con él. */
 
   /* H1 — el sitio hablando. Único por página. */
   .atlas-h1 {
-    @apply font-display font-extrabold leading-[1.02] tracking-[-0.035em] text-ink-900;
+    @apply font-display leading-[1.02] tracking-[-0.018em] text-jungle-700;
     font-size: var(--step-6);
     text-wrap: balance;
   }
 
   /* H2 — rótulo de sección. */
   .atlas-section-heading {
-    @apply font-display font-bold leading-[1.1] tracking-[-0.03em] text-ink-900;
+    @apply font-display leading-[1.08] tracking-[-0.012em] text-jungle-700;
     font-size: var(--step-3);
     text-wrap: balance;
   }
 
-  /* Títulos de contenido del archivo (serif). */
+  /* Títulos de contenido del archivo. */
   .atlas-title {
-    @apply font-editorial font-semibold leading-[0.94] tracking-[-0.035em] text-ink-900;
+    @apply font-editorial leading-[0.98] tracking-[-0.012em] text-jungle-700;
     text-wrap: balance;
   }
   .atlas-title-xl {
@@ -570,7 +598,7 @@ body {
   }
 
   .section-title {
-    @apply font-display text-3xl font-bold leading-[1.05] tracking-[-0.025em] text-ink-900 md:text-4xl lg:text-5xl;
+    @apply font-display text-3xl leading-[1.05] tracking-[-0.012em] text-jungle-700 md:text-4xl lg:text-5xl;
   }
 
   .section-body {

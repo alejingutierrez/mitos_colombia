@@ -39,7 +39,7 @@ export function RouteDetailTemplate({ route, myths = [], otherRoutes = [] }) {
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-ember-400">
                 Ruta editorial · {route.tone}
               </p>
-              <h1 className="mt-5 font-editorial text-[4.3rem] font-semibold leading-[0.86] tracking-[-0.04em] md:text-[6.8rem]">
+              <h1 className="mt-5 font-editorial text-[4.3rem] font-semibold leading-[0.86] tracking-[-0.04em] !text-white md:text-[6.8rem]">
                 {route.title}
               </h1>
               <p className="mt-7 max-w-2xl text-base leading-relaxed text-white/78 md:text-lg">

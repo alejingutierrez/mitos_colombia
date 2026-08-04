@@ -4,7 +4,6 @@ import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "../../lib/utils";
-import { BRAND_MARK, SITE_NAME } from "../../lib/brand";
 import { Container, IconButton } from "../atoms";
 import { SearchBox } from "../molecules";
 
@@ -19,6 +18,7 @@ import { SearchBox } from "../molecules";
  */
 
 const NAV_LINKS = [
+  { href: "/", label: "Inicio" },
   { href: "/mitos", label: "Mitos" },
   { href: "/regiones", label: "Regiones" },
   { href: "/comunidades", label: "Comunidades" },
@@ -42,21 +42,12 @@ export function Header({ active }) {
     <header className="sticky top-0 z-40 border-b border-line-100 bg-paper">
       <Container size="atlas">
         <div className="flex h-16 items-center justify-between gap-4">
-          {/* Wordmark */}
           <Link
             href="/"
             onClick={() => setOpen(false)}
-            className="group inline-flex min-h-11 items-center gap-2.5 rounded-sm text-ink-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-jungle-500/40"
+            className="inline-flex min-h-11 items-center rounded-sm font-body text-sm font-semibold text-ink-700 transition-colors hover:text-jungle-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-jungle-500/40 md:hidden"
           >
-            <span
-              aria-hidden="true"
-              className="font-display text-[2rem] font-normal leading-none text-jungle-700 transition-transform duration-200 group-hover:scale-[1.03]"
-            >
-              {BRAND_MARK}
-            </span>
-            <span className="font-display text-[1.2rem] font-normal leading-none tracking-[-0.015em] md:text-[1.3rem]">
-              {SITE_NAME}
-            </span>
+            Inicio
           </Link>
 
           {/* Navegación desktop */}

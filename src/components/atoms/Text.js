@@ -2,7 +2,7 @@ import { cn } from "../../lib/utils";
 
 /**
  * Atom · Text
- * Texto de cuerpo en Readex Pro (font-body). `size` y `tone` controlan escala y color.
+ * Texto de cuerpo en Noto Sans Display (font-body). `size` y `tone` controlan escala y color.
  */
 
 const sizes = {

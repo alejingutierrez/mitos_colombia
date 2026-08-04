@@ -8,8 +8,8 @@ import { getMythImage } from "../../lib/myth-images";
  * Piezas editoriales del "Atlas vivo".
  *
  * Reglas del sistema que aplican a todo este archivo:
- *  · Familias por rol — serif (font-editorial) = contenido del archivo;
- *    sans (font-display) = interfaz que lo organiza.
+ *  · Asimovian (font-editorial/font-display) construye toda la jerarquía de
+ *    títulos; Noto Sans Display resuelve lectura e interfaz.
  *  · Tallas por token — .atlas-title-{xl,lg,md,sm} y .atlas-section-heading.
  *    Nada de tamaños sueltos: la jerarquía vive en la escala, no en la pieza.
  *  · Texto sobre imagen — siempre .atlas-scrim*, nunca un gradiente ad hoc.

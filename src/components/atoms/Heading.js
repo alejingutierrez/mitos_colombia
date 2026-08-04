@@ -2,17 +2,17 @@ import { cn } from "../../lib/utils";
 
 /**
  * Atom · Heading
- * Titulares en Metamorphous (font-display). `level` controla tamaño; nivel 0
+ * Titulares en Asimovian (font-display). `level` controla tamaño; nivel 0
  * es el registro hero (grande, apretado). `accent` añade un subrayado corto
  * de acento bajo el título.
  */
 
 const levels = {
-  0: "text-[2.6rem] leading-[1.02] md:text-[4rem] font-extrabold tracking-[-0.03em]",
-  1: "text-[2rem] leading-[1.08] md:text-[2.75rem] font-extrabold tracking-[-0.02em]",
-  2: "text-2xl leading-tight font-bold tracking-[-0.015em]",
-  3: "text-lg leading-snug font-bold tracking-[-0.01em]",
-  4: "text-base leading-snug font-semibold tracking-[-0.005em]",
+  0: "text-[2.5rem] leading-[1.02] md:text-[4.5rem] tracking-[-0.018em]",
+  1: "text-[2rem] leading-[1.06] md:text-[2.75rem] tracking-[-0.014em]",
+  2: "text-2xl leading-[1.1] tracking-[-0.01em]",
+  3: "text-lg leading-[1.14] tracking-[-0.008em]",
+  4: "text-base leading-[1.18] tracking-[-0.005em]",
 };
 
 const accentTones = {
@@ -24,7 +24,7 @@ export function Heading({ level = 2, as, accent, className, children, ...props }
   const Tag = as || (level === 0 ? "h1" : `h${level}`);
   return (
     <Tag
-      className={cn("font-display text-balance text-ink-900", levels[level], className)}
+      className={cn("font-display text-balance text-jungle-700", levels[level], className)}
       {...props}
     >
       {children}
