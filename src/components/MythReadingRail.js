@@ -23,7 +23,9 @@ export function MythReadingRail({ items = [] }) {
       const end = document.getElementById("reading-end");
       if (!start || !end) return;
 
-      const readingCursor = window.scrollY + Math.min(180, window.innerHeight * 0.28);
+      const readingCursor =
+        window.scrollY +
+        Math.min(240, Math.max(180, window.innerHeight * 0.34));
       let currentSection = sections[0].id;
       sections.forEach((section) => {
         const sectionY = section.getBoundingClientRect().top + window.scrollY;
