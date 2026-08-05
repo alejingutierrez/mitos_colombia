@@ -207,10 +207,10 @@ function MythArticle({ myth, accent, breadcrumb, related }) {
             <Motif name={myth.motif} size={320} />
           </span>
         )}
-        <span className="atlas-scrim-cover pointer-events-none absolute inset-0 hidden md:block" />
+        <span className="atlas-scrim-myth pointer-events-none absolute inset-0 hidden md:block" />
         <Container
           size="atlas"
-          className="relative py-8 md:flex md:min-h-[calc(100svh-4rem)] md:items-end md:pb-14 md:pt-24 md:text-white"
+          className="atlas-on-image relative py-8 md:flex md:min-h-[calc(100svh-4rem)] md:items-end md:pb-14 md:pt-24 md:text-white"
         >
           <div className="max-w-3xl">
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-ink-500 md:text-white/75">

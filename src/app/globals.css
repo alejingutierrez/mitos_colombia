@@ -528,6 +528,16 @@ h1.font-editorial {
     }
   }
 
+  /* Detalle del mito: preservar la obra con un velo que nunca supera 15%. */
+  .atlas-scrim-myth {
+    background: linear-gradient(
+      to top,
+      rgba(8, 18, 20, 0.15) 0%,
+      rgba(8, 18, 20, 0.08) 42%,
+      rgba(8, 18, 20, 0) 76%
+    );
+  }
+
   /* Texto sobre imagen: halo oscuro pegado al glifo. Sube el contraste justo
      donde hace falta, así el scrim puede ser mucho más suave y la obra se ve. */
   .atlas-on-image {
