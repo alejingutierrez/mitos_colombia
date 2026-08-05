@@ -5,11 +5,11 @@ import {
   Eyebrow,
   Prose,
   Icon,
-  TagLink,
   TextLink,
   IndexNumber,
   StatusDot,
 } from "../atoms";
+import { VersionsDisclosure } from "../VersionsDisclosure";
 
 /**
  * Bloques de sección editorial de un mito + chrome compartido (sala de museo).
@@ -166,6 +166,10 @@ export function RelatoBlock({ text, accent = "jungle", motif = "jaguar" }) {
         className="pointer-events-none absolute -right-28 -top-12 -z-10 hidden opacity-[0.05] lg:block"
         aria-hidden="true"
       />
+      <div className="mb-8 md:mb-10">
+        <h2 className="atlas-section-heading">El relato</h2>
+        <span className={cn("atlas-rule", accent === "river" && "bg-river-500")} aria-hidden="true" />
+      </div>
       <Prose className="prose-p:text-[1.14rem] prose-p:leading-[1.72] prose-p:text-pretty md:prose-p:text-[1.2rem] [&_p+p]:mt-[1.3em]">
         <p
           className={cn(
@@ -192,10 +196,13 @@ export function HistoriaBlock({ text, accent = "jungle", index, motif = "montana
   if (ps.length === 0) return null;
   return (
     <div>
-      <SectionSpine index={index} eyebrow="Contexto histórico" accent={accent} />
-      <div className={cn("relative overflow-hidden border-l-2 pl-6", accent === "river" ? "border-river-500/40" : "border-jungle-500/40")}>
+      <div className="mb-7">
+        <h2 className="atlas-section-heading">Contexto histórico</h2>
+        <span className={cn("atlas-rule", accent === "river" && "bg-river-500")} aria-hidden="true" />
+      </div>
+      <div className={cn("relative overflow-hidden border-l-2 pl-5 sm:pl-7", accent === "river" ? "border-river-500/40" : "border-jungle-500/40")}>
         <Motif name={motif} size={150} className="pointer-events-none absolute -right-6 -top-4 opacity-[0.06]" aria-hidden="true" />
-        <Prose className="relative">
+        <Prose className="relative prose-p:text-[1.03rem] prose-p:leading-[1.78]">
           {ps.map((p, i) => (
             <p key={i}>{p}</p>
           ))}
@@ -211,17 +218,14 @@ export function VersionesBlock({ text, accent = "jungle", index }) {
   if (ps.length === 0) return null;
   return (
     <div>
-      <SectionSpine index={index} eyebrow="Otras versiones del relato" accent={accent} />
-      <ol className="divide-y divide-line-100 border-y border-line-100">
-        {ps.map((p, i) => (
-          <li key={i} className="flex gap-5 py-5">
-            <span className="shrink-0 font-display text-2xl font-bold tabular-nums text-ink-500">
-              {String(i + 1).padStart(2, "0")}
-            </span>
-            <p className="font-body text-[1rem] leading-[1.7] text-ink-700">{p}</p>
-          </li>
-        ))}
-      </ol>
+      <div className="mb-6">
+        <h2 className="atlas-section-heading">Otras versiones y matices</h2>
+        <span className={cn("atlas-rule", accent === "river" && "bg-river-500")} aria-hidden="true" />
+        <p className="mt-4 max-w-2xl text-sm leading-relaxed text-ink-500">
+          Variaciones, precisiones y límites documentales para quien quiera profundizar.
+        </p>
+      </div>
+      <VersionsDisclosure paragraphs={ps} />
     </div>
   );
 }
@@ -237,9 +241,9 @@ export function LeccionBlock({ text, accent = "jungle", motif = "luna" }) {
       <Motif name={motif} size={360} className="pointer-events-none absolute -right-16 -top-10 opacity-[0.06]" aria-hidden="true" />
       <Container size="atlas" className="relative py-16 text-center md:py-20">
         <CreamMedallion motif={motif} size={38} className="mx-auto mb-6" />
-        <p className="mb-5 text-xs font-semibold uppercase tracking-[0.2em]" style={{ color: GOLD }}>
+        <h2 className="mb-5 text-xs font-semibold uppercase tracking-[0.2em]" style={{ color: GOLD }}>
           La enseñanza
-        </p>
+        </h2>
         <blockquote className="mx-auto max-w-2xl text-balance font-display text-2xl font-bold leading-snug tracking-tight md:text-[2rem]" style={{ color: CREAM }}>
           <span style={{ color: GOLD }}>“</span>
           {clean}
@@ -255,21 +259,20 @@ export function SimilitudesBlock({ text, accent = "jungle", index, motif = "anac
   const ps = toParagraphs(text);
   if (ps.length === 0) return null;
   return (
-    <div className="relative overflow-hidden rounded border border-line-100">
-      <div className={cn("flex items-center gap-3 border-b border-line-100 px-6 py-3", acc(accent).tint)}>
-        {index != null ? <IndexNumber value={index} size="sm" /> : null}
-        <Icon name="arrow-right" size={16} className={acc(accent).text} />
-        <Eyebrow tone={accent}>Resonancias con otros mitos</Eyebrow>
+    <aside className="relative overflow-hidden border-y border-line-100 py-8 md:py-10">
+      <div className="mb-6 flex items-center gap-3">
+        <Icon name="arrow-right" size={18} className={acc(accent).text} />
+        <h2 className="atlas-section-heading">Resonancias con otros mitos</h2>
       </div>
       <Motif name={motif} size={220} className="pointer-events-none absolute -bottom-6 -right-8 opacity-[0.05]" aria-hidden="true" />
-      <div className="relative px-6 py-5">
-        <Prose>
+      <div className="relative">
+        <Prose className="prose-p:text-[1rem] prose-p:leading-[1.75]">
           {ps.map((p, i) => (
             <p key={i}>{p}</p>
           ))}
         </Prose>
       </div>
-    </div>
+    </aside>
   );
 }
 
@@ -277,13 +280,11 @@ export function SimilitudesBlock({ text, accent = "jungle", index, motif = "anac
 export function ProcedenciaBlock({ region, community, categoryPath }) {
   const origin = [community, region].filter(Boolean).join(", ");
   return (
-    <div className="relative overflow-hidden rounded border border-line-100 bg-white p-6">
-      <span className="pointer-events-none absolute inset-x-0 top-0 h-px" style={{ background: `linear-gradient(90deg, transparent, ${GOLD}, transparent)` }} aria-hidden="true" />
-      <span className="pointer-events-none absolute inset-1.5 rounded-sm" style={{ border: "1px solid rgba(189,134,66,0.28)" }} aria-hidden="true" />
-      <div className="relative flex items-start gap-3.5">
+    <div className="border-t border-line-200 pt-6 lg:border-t-0 lg:pt-0">
+      <div className="flex items-start gap-3.5">
         <Icon name="map-pin" size={20} className="mt-0.5 shrink-0" style={{ color: GOLD }} />
         <div>
-          <p className="text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-ink-500">Procedencia</p>
+          <h3 className="font-display text-xl text-jungle-700">Procedencia</h3>
           <p className="mt-1.5 font-display text-sm tracking-wide text-ink-900">
             Recopilado de la tradición oral{origin ? ` de ${origin}` : ""}
             {categoryPath ? ` · ${categoryPath}` : ""}.
@@ -338,13 +339,13 @@ export function FuentesBlock({ sources = [], updatedAt }) {
   const reviewDate = formatReviewDate(updatedAt);
 
   return (
-    <div className="rounded border border-line-100 bg-mist-50 p-6">
+    <div className="border-t border-line-200 pt-6 lg:border-l lg:border-t-0 lg:pl-8 lg:pt-0">
       <div className="flex items-start gap-3.5">
         <Icon name="link" size={20} className="mt-0.5 shrink-0 text-river-600" />
         <div className="min-w-0 flex-1">
-          <p className="text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-ink-700">
+          <h3 className="font-display text-xl text-jungle-700">
             Fuentes y revisión editorial
-          </p>
+          </h3>
           {normalized.length ? (
             <>
               <p className="mt-2 text-sm leading-relaxed text-ink-700">
@@ -394,31 +395,59 @@ export function TerritorioBlock({ latitude, longitude, region, community, accent
   const caption = [region, community].filter(Boolean).join(" · ") || "Colombia";
   return (
     <div>
-      <div className="mb-4 flex items-center gap-2.5">
-        <Motif name={motif} size={26} />
-        <Eyebrow withRule tone={accent}>
-          Territorio
-        </Eyebrow>
+      <div className="mb-7 md:mb-9">
+        <h2 className="atlas-section-heading">Territorio</h2>
+        <span className={cn("atlas-rule", accent === "river" && "bg-river-500")} aria-hidden="true" />
       </div>
-      <figure className="overflow-hidden rounded border border-line-100">
-        {children ? (
-          children
-        ) : (
-          <div className="relative flex aspect-[16/9] flex-col items-center justify-center gap-2 bg-mist-50 text-ink-500">
-            <Motif name={motif} size={180} className="pointer-events-none absolute opacity-[0.06]" aria-hidden="true" />
-            <Icon name="map-pin" size={26} className={`relative ${acc(accent).text}`} />
-            <p className="relative font-body text-sm">Territorio aproximado{region ? ` · ${region}` : ""}</p>
+      <div className="grid gap-7 lg:grid-cols-[minmax(0,1.45fr)_minmax(18rem,0.55fr)] lg:items-stretch">
+        <figure className="overflow-hidden rounded border border-line-100">
+          {children ? (
+            children
+          ) : (
+            <div className="relative flex aspect-[16/9] flex-col items-center justify-center gap-2 bg-mist-50 text-ink-500">
+              <Motif name={motif} size={180} className="pointer-events-none absolute opacity-[0.06]" aria-hidden="true" />
+              <Icon name="map-pin" size={26} className={`relative ${acc(accent).text}`} />
+              <p className="relative font-body text-sm">Territorio aproximado{region ? ` · ${region}` : ""}</p>
+            </div>
+          )}
+          <figcaption className="flex items-center justify-between gap-3 border-t border-line-100 bg-white px-4 py-2.5 text-xs text-ink-500">
+            <span className="uppercase tracking-[0.12em]">{caption}</span>
+            {approx ? (
+              <span className="inline-flex items-center gap-1.5">
+                <StatusDot tone={accent} size={6} /> Ubicación aproximada
+              </span>
+            ) : null}
+          </figcaption>
+        </figure>
+        <div className="flex flex-col justify-between border-t border-line-200 pt-6 lg:border-l lg:border-t-0 lg:pl-8 lg:pt-0">
+          <div>
+            <p className="font-display text-2xl leading-tight text-jungle-700">{caption}</p>
+            <p className="mt-4 max-w-sm text-base leading-relaxed text-ink-700">
+              El territorio sitúa la memoria del relato y permite leerla en relación con su comunidad de origen.
+            </p>
           </div>
-        )}
-        <figcaption className="flex items-center justify-between gap-3 border-t border-line-100 bg-white px-4 py-2.5 text-xs text-ink-500">
-          <span className="uppercase tracking-[0.12em]">{caption}</span>
-          {approx ? (
-            <span className="inline-flex items-center gap-1.5">
-              <StatusDot tone={accent} size={6} /> Ubicación aproximada
-            </span>
-          ) : null}
-        </figcaption>
-      </figure>
+          <dl className="mt-8 divide-y divide-line-100 border-y border-line-100 text-sm">
+            {region ? (
+              <div className="flex items-baseline justify-between gap-5 py-3">
+                <dt className="text-ink-500">Región</dt>
+                <dd className="text-right font-medium text-ink-900">{region}</dd>
+              </div>
+            ) : null}
+            {community ? (
+              <div className="flex items-baseline justify-between gap-5 py-3">
+                <dt className="text-ink-500">Comunidad</dt>
+                <dd className="text-right font-medium text-ink-900">{community}</dd>
+              </div>
+            ) : null}
+            {!approx ? (
+              <div className="flex items-baseline justify-between gap-5 py-3">
+                <dt className="text-ink-500">Referencia</dt>
+                <dd className="text-right font-medium text-ink-900">{latitude}° · {longitude}°</dd>
+              </div>
+            ) : null}
+          </dl>
+        </div>
+      </div>
     </div>
   );
 }
@@ -427,16 +456,16 @@ export function TerritorioBlock({ latitude, longitude, region, community, accent
 export function PalabrasClaveBlock({ keywords = [] }) {
   if (!keywords.length) return null;
   return (
-    <div className="border-t border-line-100 pt-6">
+    <div>
       <div className="mb-3 flex items-center gap-2.5">
         <Motif name="hoja" size={22} />
-        <Eyebrow>Palabras clave</Eyebrow>
+        <h3 className="font-display text-xl text-jungle-700">Palabras clave</h3>
       </div>
-      <div className="flex flex-wrap gap-2">
+      <div className="flex flex-wrap gap-x-5 gap-y-2">
         {keywords.slice(0, 20).map((k, i) => (
-          <TagLink key={`${k}-${i}`} href={`/mitos?q=${encodeURIComponent(k)}`} variant="neutral">
+          <TextLink key={`${k}-${i}`} href={`/mitos?q=${encodeURIComponent(k)}`} className="text-sm">
             {k}
-          </TagLink>
+          </TextLink>
         ))}
       </div>
     </div>

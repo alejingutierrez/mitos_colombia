@@ -134,7 +134,7 @@ export default async function MythDetailPage({ params }) {
   };
 
   const map = (
-    <div className="h-[360px] overflow-hidden rounded border border-line-100 md:h-[440px]">
+    <div className="h-[320px] overflow-hidden md:h-[440px]">
       <MythLocationMapClient
         title={myth.title}
         latitude={hasGeo ? lat : COLOMBIA_CENTER.lat}

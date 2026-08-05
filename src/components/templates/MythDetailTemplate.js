@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Container, Heading, ImageFrame, Motif } from "../atoms";
 import { Breadcrumb, ShareBar } from "../molecules";
 import { CommentThread, Header, MythGrid } from "../organisms";
+import { MythReadingRail } from "../MythReadingRail";
 import {
   FuentesBlock,
   HistoriaBlock,
@@ -40,115 +41,105 @@ function InlineStoryImage({ myth, className = "" }) {
   );
 }
 
-function ReadingIndex({ myth }) {
-  const items = [
-    ["relato", "Relato", Boolean(toParagraphs(myth.mito).length)],
-    ["contexto", "Contexto", Boolean(toParagraphs(myth.historia).length)],
-    ["versiones", "Versiones", Boolean(toParagraphs(myth.versiones).length)],
-    ["ensenanza", "Enseñanza", Boolean(String(myth.leccion || "").trim())],
-    ["fuentes", "Fuentes", true],
-  ].filter(([, , visible]) => visible);
-
-  return (
-    <aside className="hidden lg:block">
-      <div className="sticky top-24">
-        <p className="atlas-kicker">En esta página</p>
-        <nav className="mt-5 border-l border-line-200" aria-label="Índice del mito">
-          {items.map(([href, label], index) => (
-            <Link
-              key={href}
-              href={`#${href}`}
-              className="group relative block py-3 pl-6 text-sm text-ink-700 hover:text-jungle-700"
-            >
-              <span className="absolute -left-[4.5px] top-[1.05rem] h-2 w-2 rounded-full border border-line-300 bg-white group-hover:border-jungle-600 group-hover:bg-jungle-600" />
-              {label}
-              <span className="ml-2 font-editorial text-ink-500">
-                {String(index + 1).padStart(2, "0")}
-              </span>
-            </Link>
-          ))}
-        </nav>
-        {myth.latitude != null && myth.longitude != null ? (
-          <p className="mt-16 text-xs leading-relaxed text-ink-500">
-            {myth.latitude}° · {myth.longitude}°
-          </p>
-        ) : null}
-      </div>
-    </aside>
-  );
-}
-
 function MythReading({ myth, accent, related }) {
   const hasGeo = myth.latitude != null && myth.longitude != null;
   const showTerritory = hasGeo || myth._map || myth.showTerritorio;
+  const hasContext = Boolean(
+    toParagraphs(myth.historia).length || toParagraphs(myth.similitudes).length
+  );
+  const hasVersions = Boolean(toParagraphs(myth.versiones).length);
+  const hasTeaching = Boolean(String(myth.leccion || "").trim());
+  const readingItems = [
+    { href: "relato", label: "Relato", visible: Boolean(toParagraphs(myth.mito).length) },
+    { href: "ensenanza", label: "Enseñanza", visible: hasTeaching },
+    { href: "territorio", label: "Territorio", visible: showTerritory },
+    { href: "contexto", label: "Contexto", visible: hasContext },
+    { href: "versiones", label: "Versiones", visible: hasVersions },
+    { href: "fuentes", label: "Fuentes", visible: true },
+  ].filter((item) => item.visible);
   const shareUrl = myth.slug
     ? `https://www.mitosdecolombia.com/mitos/${myth.slug}`
     : undefined;
 
   return (
     <>
-      <Container size="atlas" className="py-12 md:py-16">
-        <div className="grid gap-12 lg:grid-cols-[10rem_1fr]">
-          <ReadingIndex myth={myth} />
-          <div className="min-w-0">
-            <section
-              id="relato"
-              className={`scroll-mt-24 grid items-start gap-10 ${
-                myth.verticalImageUrl
-                  ? "md:grid-cols-[1fr_0.72fr]"
-                  : "max-w-3xl"
-              }`}
-            >
-              <RelatoBlock text={myth.mito} accent={accent} motif={myth.motif} />
-              <InlineStoryImage
-                myth={myth}
-                className="md:sticky md:top-24"
-              />
-            </section>
+      <MythReadingRail items={readingItems} />
 
-            {toParagraphs(myth.historia).length ? (
-              <section
-                id="contexto"
-                className="scroll-mt-24 mt-16 max-w-4xl"
-              >
-                <HistoriaBlock
-                  text={myth.historia}
-                  accent={accent}
-                  index={1}
-                  motif={myth.motif}
-                />
-              </section>
-            ) : null}
-
-            {toParagraphs(myth.versiones).length ? (
-              <section
-                id="versiones"
-                className="scroll-mt-24 mt-16 max-w-4xl"
-              >
-                <VersionesBlock text={myth.versiones} accent={accent} index={2} />
-              </section>
-            ) : null}
-
-            {toParagraphs(myth.similitudes).length ? (
-              <section className="mt-16 max-w-3xl">
-                <SimilitudesBlock
-                  text={myth.similitudes}
-                  accent={accent}
-                  index={3}
-                  motif={myth.motif}
-                />
-              </section>
-            ) : null}
-          </div>
-        </div>
+      <Container size="atlas" className="py-14 md:py-20">
+        <section
+          id="relato"
+          className={`scroll-mt-36 mx-auto grid max-w-[1120px] items-start gap-10 md:gap-14 ${
+            myth.verticalImageUrl
+              ? "md:grid-cols-[minmax(0,1fr)_minmax(18rem,0.68fr)]"
+              : "max-w-3xl"
+          }`}
+        >
+          <RelatoBlock text={myth.mito} accent={accent} motif={myth.motif} />
+          <InlineStoryImage
+            myth={myth}
+            className="hidden md:sticky md:top-36 md:block"
+          />
+        </section>
       </Container>
 
-      <div id="ensenanza" className="scroll-mt-24">
+      <div id="ensenanza" className="scroll-mt-36">
         <LeccionBlock text={myth.leccion} accent={accent} motif={myth.motif} />
       </div>
 
-      <Container size="atlas" className="py-14 md:py-20">
-        <div id="fuentes" className="scroll-mt-24 grid gap-8 lg:grid-cols-2">
+      {showTerritory ? (
+        <section id="territorio" className="scroll-mt-36">
+          <Container size="atlas" className="py-16 md:py-24">
+            <TerritorioBlock
+              latitude={myth.latitude}
+              longitude={myth.longitude}
+              region={myth.region}
+              community={myth.community}
+              accent={accent}
+              motif={myth.motif}
+            >
+              {myth._map}
+            </TerritorioBlock>
+          </Container>
+        </section>
+      ) : null}
+
+      {hasContext ? (
+        <Container size="narrow" className="py-14 md:py-20">
+          <section id="contexto" className="scroll-mt-36">
+            {toParagraphs(myth.historia).length ? (
+              <HistoriaBlock
+                text={myth.historia}
+                accent={accent}
+                motif={myth.motif}
+              />
+            ) : null}
+            {toParagraphs(myth.similitudes).length ? (
+              <div className="mt-14 md:mt-20">
+                <SimilitudesBlock
+                  text={myth.similitudes}
+                  accent={accent}
+                  motif={myth.motif}
+                />
+              </div>
+            ) : null}
+          </section>
+          {hasVersions ? (
+            <section id="versiones" className="scroll-mt-36 mt-14 [overflow-anchor:none] md:mt-20">
+              <VersionesBlock text={myth.versiones} accent={accent} />
+            </section>
+          ) : null}
+        </Container>
+      ) : hasVersions ? (
+        <Container size="narrow" className="py-14 md:py-20">
+          <section id="versiones" className="scroll-mt-36 [overflow-anchor:none]">
+            <VersionesBlock text={myth.versiones} accent={accent} />
+          </section>
+        </Container>
+      ) : null}
+
+      <section id="fuentes" className="scroll-mt-36 border-y border-line-100 bg-mist-50/55">
+        <Container size="atlas" className="py-14 md:py-20">
+          <div className="grid gap-10 lg:grid-cols-2 lg:gap-0">
           <ProcedenciaBlock
             region={myth.region}
             community={myth.community}
@@ -158,28 +149,15 @@ function MythReading({ myth, accent, related }) {
             sources={[...(myth.keySources || []), ...(myth.sources || [])]}
             updatedAt={myth.editorialUpdatedAt || myth.updatedAt}
           />
-          {showTerritory ? (
-            <div className="lg:col-span-2">
-              <TerritorioBlock
-                latitude={myth.latitude}
-                longitude={myth.longitude}
-                region={myth.region}
-                community={myth.community}
-                accent={accent}
-                motif={myth.motif}
-              >
-                {myth._map}
-              </TerritorioBlock>
-            </div>
-          ) : null}
-          <div className="lg:col-span-2">
-            <PalabrasClaveBlock keywords={myth.keywords} />
           </div>
-        </div>
-        <div className="mt-10 flex justify-center">
-          <ShareBar url={shareUrl} title={myth.title} />
-        </div>
-      </Container>
+          <div className="mt-10 grid gap-8 border-t border-line-200 pt-8 lg:grid-cols-[1fr_auto] lg:items-start">
+            <PalabrasClaveBlock keywords={myth.keywords} />
+            <ShareBar url={shareUrl} title={myth.title} />
+          </div>
+        </Container>
+      </section>
+
+      <div id="reading-end" aria-hidden="true" />
 
       {related.length ? (
         <section className="border-y border-line-100 bg-mist-50">
@@ -205,17 +183,22 @@ function MythReading({ myth, accent, related }) {
 }
 
 function MythArticle({ myth, accent, breadcrumb, related }) {
+  const heroSrc = myth.imageUrl || myth.verticalImageUrl;
+  const mobileHeroSrc = myth.verticalImageUrl || myth.imageUrl;
   return (
     <article>
-      <section className="relative min-h-[calc(100svh-4rem)] overflow-hidden bg-[rgb(var(--atlas-night))]">
-        {myth.imageUrl ? (
+      <section className="relative overflow-hidden bg-paper md:min-h-[calc(100svh-4rem)] md:bg-[rgb(var(--atlas-night))]">
+        {heroSrc ? (
           <ImageFrame
-            src={myth.imageUrl}
+            src={heroSrc}
+            mobileSrc={mobileHeroSrc}
             alt={myth.title}
-            ratio="16 / 9"
+            ratio="1 / 1"
+            fillFrom="md"
             priority
             sizes="100vw"
-            className="absolute inset-0 min-h-full rounded-none border-0 [&]:aspect-auto"
+            mobileSizes="100vw"
+            className="w-full rounded-none border-0 md:absolute md:inset-0 md:min-h-full"
             imgClassName="object-cover"
             data-image-role="cover"
           />
@@ -224,28 +207,28 @@ function MythArticle({ myth, accent, breadcrumb, related }) {
             <Motif name={myth.motif} size={320} />
           </span>
         )}
-        <span className="absolute inset-0 bg-gradient-to-t from-black via-black/5 to-transparent" />
+        <span className="atlas-scrim-cover pointer-events-none absolute inset-0 hidden md:block" />
         <Container
           size="atlas"
-          className="relative flex min-h-[calc(100svh-4rem)] items-end pb-10 text-white md:pb-14"
+          className="relative py-8 md:flex md:min-h-[calc(100svh-4rem)] md:items-end md:pb-14 md:pt-24 md:text-white"
         >
           <div className="max-w-3xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-white/75">
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-ink-500 md:text-white/75">
               {[myth.region, myth.community].filter(Boolean).join(" · ")}
             </p>
-            <h1 className="mt-4 font-editorial text-[4.2rem] font-semibold leading-[0.86] tracking-[-0.04em] !text-white md:text-[6.4rem]">
+            <h1 className="mt-4 font-editorial text-[2.75rem] font-semibold leading-[0.92] tracking-[-0.035em] !text-jungle-700 sm:text-[3.5rem] md:text-[6.4rem] md:!text-white">
               {myth.title}
             </h1>
             {myth.excerpt ? (
-              <p className="mt-5 hidden max-w-2xl text-base leading-relaxed text-white/82 sm:block">
+              <p className="mt-5 max-w-2xl text-base leading-relaxed text-ink-700 md:text-white/85">
                 {myth.excerpt}
               </p>
             ) : null}
             <Link
               href="#relato"
-              className="mt-6 inline-flex items-center gap-2 border-b border-ember-500 pb-1 text-sm font-semibold"
+              className="mt-6 inline-flex min-h-11 items-center gap-2 border-b border-ember-500 text-sm font-semibold text-jungle-700 md:text-white"
             >
-              Leer este mito
+              Leer el relato
             </Link>
           </div>
         </Container>

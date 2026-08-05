@@ -77,6 +77,7 @@ export function ImageFrame({
             fill
             sizes={sizes}
             priority={priority && !hasMobileArtDirection}
+            loading={priority && hasMobileArtDirection ? "eager" : undefined}
             quality={quality}
             fetchPriority={fetchPriority}
             className={cn("object-cover", imgClassName)}
