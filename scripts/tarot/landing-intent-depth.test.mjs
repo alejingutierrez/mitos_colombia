@@ -30,7 +30,6 @@ test("each landing declares enough proof for its purchase intent", () => {
     assert.ok(variant.actionDetails?.length >= 3, `${variant.path} necesita una ruta de uso`);
     assert.equal(variant.sectionOrder?.length, 8, `${variant.path} necesita una secuencia editorial completa`);
     assert.equal(new Set(variant.sectionOrder).size, 8, `${variant.path} no debe repetir secciones`);
-    assert.equal(variant.navigation?.length, 4, `${variant.path} necesita navegación propia`);
     assert.equal(variant.heroPanel?.items.length, 3, `${variant.path} necesita un artefacto editorial propio`);
   }
 
@@ -71,7 +70,9 @@ test("the rendered experience implements examples, provenance and accessible zoo
   assert.match(experienceSource, /data-landing-intent=\{variant\.id\}/);
   assert.match(experienceSource, /data-architecture=\{variant\.architecture\}/);
   assert.match(experienceSource, /variant\.sectionOrder\.map\(renderJourneySection\)/);
-  assert.match(experienceSource, /variant\.navigation\.map/);
+  assert.match(experienceSource, /import \{ Header \} from "\.\.\/organisms\/Header"/);
+  assert.match(experienceSource, /active="\/tarot"/);
+  assert.doesNotMatch(experienceSource, /variant\.navigation\.map/);
   assert.match(experienceSource, /variant\.heroPanel\.items\.map/);
   assert.match(landingSource, /variant\.galleryCount/);
   assert.match(landingSource, /arcana: card\.arcana/);

@@ -58,6 +58,13 @@ async function initializePostgres() {
       city TEXT NOT NULL,
       address_line_1 TEXT NOT NULL,
       address_line_2 TEXT,
+      user_id TEXT,
+      fulfillment_status TEXT NOT NULL DEFAULT 'PENDING',
+      tracking_carrier TEXT,
+      tracking_code TEXT,
+      tracking_url TEXT,
+      shipped_at TIMESTAMPTZ,
+      delivered_at TIMESTAMPTZ,
       campaign_json TEXT NOT NULL DEFAULT '{}',
       analytics_json TEXT NOT NULL DEFAULT '{}',
       payment_provider TEXT NOT NULL DEFAULT 'BOLD',
@@ -95,6 +102,14 @@ async function initializePostgres() {
     ALTER TABLE tarot_orders
     ADD COLUMN IF NOT EXISTS payment_transaction_id TEXT UNIQUE
   `;
+  await db`ALTER TABLE tarot_orders ADD COLUMN IF NOT EXISTS user_id TEXT`;
+  await db`ALTER TABLE tarot_orders ADD COLUMN IF NOT EXISTS fulfillment_status TEXT NOT NULL DEFAULT 'PENDING'`;
+  await db`ALTER TABLE tarot_orders ADD COLUMN IF NOT EXISTS tracking_carrier TEXT`;
+  await db`ALTER TABLE tarot_orders ADD COLUMN IF NOT EXISTS tracking_code TEXT`;
+  await db`ALTER TABLE tarot_orders ADD COLUMN IF NOT EXISTS tracking_url TEXT`;
+  await db`ALTER TABLE tarot_orders ADD COLUMN IF NOT EXISTS shipped_at TIMESTAMPTZ`;
+  await db`ALTER TABLE tarot_orders ADD COLUMN IF NOT EXISTS delivered_at TIMESTAMPTZ`;
+  await db`CREATE INDEX IF NOT EXISTS idx_tarot_orders_user ON tarot_orders(user_id, created_at DESC)`;
 }
 
 function initializeSqlite() {
@@ -116,6 +131,13 @@ function initializeSqlite() {
       city TEXT NOT NULL,
       address_line_1 TEXT NOT NULL,
       address_line_2 TEXT,
+      user_id TEXT,
+      fulfillment_status TEXT NOT NULL DEFAULT 'PENDING',
+      tracking_carrier TEXT,
+      tracking_code TEXT,
+      tracking_url TEXT,
+      shipped_at TEXT,
+      delivered_at TEXT,
       campaign_json TEXT NOT NULL DEFAULT '{}',
       analytics_json TEXT NOT NULL DEFAULT '{}',
       payment_provider TEXT NOT NULL DEFAULT 'BOLD',
@@ -140,12 +162,20 @@ function initializeSqlite() {
     ["analytics_purchase_last_error", "TEXT"],
     ["payment_provider", "TEXT NOT NULL DEFAULT 'BOLD'"],
     ["payment_transaction_id", "TEXT"],
+    ["user_id", "TEXT"],
+    ["fulfillment_status", "TEXT NOT NULL DEFAULT 'PENDING'"],
+    ["tracking_carrier", "TEXT"],
+    ["tracking_code", "TEXT"],
+    ["tracking_url", "TEXT"],
+    ["shipped_at", "TEXT"],
+    ["delivered_at", "TEXT"],
   ];
   missingColumns.forEach(([name, definition]) => {
     if (!columns.has(name)) {
       db.exec(`ALTER TABLE tarot_orders ADD COLUMN ${name} ${definition}`);
     }
   });
+  db.exec("CREATE INDEX IF NOT EXISTS idx_tarot_orders_user ON tarot_orders(user_id, created_at DESC)");
 }
 
 export async function ensureTarotOrdersTable() {
@@ -177,6 +207,7 @@ export async function createTarotOrder({
   addressLine2,
   campaign,
   analytics,
+  userId,
 }) {
   await ensureTarotOrdersTable();
   const reference = createReference();
@@ -190,11 +221,11 @@ export async function createTarotOrder({
       INSERT INTO tarot_orders (
         reference, status_token, status, sku, quantity, unit_price_cop,
         amount_in_cents, currency, email, full_name, phone, region, city,
-        address_line_1, address_line_2, campaign_json, analytics_json
+        address_line_1, address_line_2, user_id, campaign_json, analytics_json
       ) VALUES (
         ${reference}, ${statusToken}, 'CREATED', ${sku}, ${quantity},
         ${unitPriceCop}, ${amountInCents}, ${currency}, ${email}, ${fullName},
-        ${phone}, ${region}, ${city}, ${addressLine1}, ${addressLine2 || null},
+        ${phone}, ${region}, ${city}, ${addressLine1}, ${addressLine2 || null}, ${userId || null},
         ${campaignJson}, ${analyticsJson}
       )
       RETURNING reference, status_token, status, sku, quantity,
@@ -208,8 +239,8 @@ export async function createTarotOrder({
     `INSERT INTO tarot_orders (
       reference, status_token, status, sku, quantity, unit_price_cop,
       amount_in_cents, currency, email, full_name, phone, region, city,
-      address_line_1, address_line_2, campaign_json, analytics_json
-    ) VALUES (?, ?, 'CREATED', ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`
+      address_line_1, address_line_2, user_id, campaign_json, analytics_json
+    ) VALUES (?, ?, 'CREATED', ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`
   ).run(
     reference,
     statusToken,
@@ -225,6 +256,7 @@ export async function createTarotOrder({
     city,
     addressLine1,
     addressLine2 || null,
+    userId || null,
     campaignJson,
     analyticsJson
   );
@@ -251,7 +283,9 @@ export async function findTarotOrderByStatusToken(statusToken) {
     const result = await db`
       SELECT reference, status_token, status, sku, quantity, unit_price_cop,
         amount_in_cents, currency, payment_provider, payment_transaction_id,
-        payment_method_type, campaign_json, created_at, updated_at, approved_at
+        payment_method_type, fulfillment_status, tracking_carrier, tracking_code,
+        tracking_url, shipped_at, delivered_at, campaign_json, created_at,
+        updated_at, approved_at
       FROM tarot_orders
       WHERE status_token = ${statusToken}
       LIMIT 1
@@ -264,7 +298,9 @@ export async function findTarotOrderByStatusToken(statusToken) {
       .prepare(
         `SELECT reference, status_token, status, sku, quantity, unit_price_cop,
           amount_in_cents, currency, payment_provider, payment_transaction_id,
-          payment_method_type, campaign_json, created_at, updated_at, approved_at
+          payment_method_type, fulfillment_status, tracking_carrier, tracking_code,
+          tracking_url, shipped_at, delivered_at, campaign_json, created_at,
+          updated_at, approved_at
         FROM tarot_orders WHERE status_token = ? LIMIT 1`
       )
       .get(statusToken) || null
@@ -603,9 +639,136 @@ export function toPublicTarotOrder(order) {
     createdAt: order.created_at,
     updatedAt: order.updated_at,
     approvedAt,
+    fulfillmentStatus: order.fulfillment_status || "PENDING",
+    trackingCarrier: order.tracking_carrier || null,
+    trackingCode: order.tracking_code || null,
+    trackingUrl: safeTrackingUrl(order.tracking_url),
+    shippedAt: order.shipped_at || null,
+    deliveredAt: order.delivered_at || null,
     attribution: cleanTarotCampaign(parseJsonObject(order.campaign_json)),
     paymentConfirmed: Boolean(
       order.status === "APPROVED" && transactionId && approvedAt
     ),
   };
+}
+
+function safeTrackingUrl(value) {
+  try {
+    const parsed = new URL(String(value || ""));
+    return ["http:", "https:"].includes(parsed.protocol) ? parsed.toString() : null;
+  } catch {
+    return null;
+  }
+}
+
+export function toAccountTarotOrder(order) {
+  if (!order) return null;
+  return {
+    reference: order.reference,
+    status: order.status,
+    sku: order.sku,
+    quantity: Number(order.quantity),
+    unitPriceCop: Number(order.unit_price_cop),
+    amountInCents: Number(order.amount_in_cents),
+    currency: order.currency,
+    paymentProvider: order.payment_provider || null,
+    paymentMethodType: order.payment_method_type || null,
+    fulfillmentStatus: order.fulfillment_status || "PENDING",
+    trackingCarrier: order.tracking_carrier || null,
+    trackingCode: order.tracking_code || null,
+    trackingUrl: safeTrackingUrl(order.tracking_url),
+    region: order.region || null,
+    city: order.city || null,
+    createdAt: order.created_at,
+    updatedAt: order.updated_at,
+    approvedAt: order.approved_at || null,
+    shippedAt: order.shipped_at || null,
+    deliveredAt: order.delivered_at || null,
+  };
+}
+
+const ACCOUNT_ORDER_COLUMNS = `
+  reference, status, sku, quantity, unit_price_cop, amount_in_cents,
+  currency, payment_provider, payment_method_type, fulfillment_status,
+  tracking_carrier, tracking_code, tracking_url, region, city,
+  created_at, updated_at, approved_at, shipped_at, delivered_at
+`;
+
+export async function listTarotOrdersForAccount(userId) {
+  await ensureTarotOrdersTable();
+  const value = String(userId || "").trim();
+  if (!value) return [];
+  if (isPostgres()) {
+    const result = await getSqlClient()`
+      SELECT reference, status, sku, quantity, unit_price_cop, amount_in_cents,
+        currency, payment_provider, payment_method_type, fulfillment_status,
+        tracking_carrier, tracking_code, tracking_url, region, city,
+        created_at, updated_at, approved_at, shipped_at, delivered_at
+      FROM tarot_orders
+      WHERE user_id = ${value}
+      ORDER BY created_at DESC
+    `;
+    return rows(result).map(toAccountTarotOrder);
+  }
+  return getSqliteDbWritable()
+    .prepare(`SELECT ${ACCOUNT_ORDER_COLUMNS} FROM tarot_orders WHERE user_id = ? ORDER BY created_at DESC`)
+    .all(value)
+    .map(toAccountTarotOrder);
+}
+
+export async function findTarotOrderForAccount(userId, reference) {
+  await ensureTarotOrdersTable();
+  const accountId = String(userId || "").trim();
+  const orderReference = String(reference || "").trim();
+  if (!accountId || !orderReference) return null;
+  if (isPostgres()) {
+    const result = await getSqlClient()`
+      SELECT reference, status, sku, quantity, unit_price_cop, amount_in_cents,
+        currency, payment_provider, payment_method_type, fulfillment_status,
+        tracking_carrier, tracking_code, tracking_url, region, city,
+        created_at, updated_at, approved_at, shipped_at, delivered_at
+      FROM tarot_orders
+      WHERE user_id = ${accountId} AND reference = ${orderReference}
+      LIMIT 1
+    `;
+    return toAccountTarotOrder(rows(result)[0]);
+  }
+  return toAccountTarotOrder(
+    getSqliteDbWritable()
+      .prepare(`SELECT ${ACCOUNT_ORDER_COLUMNS} FROM tarot_orders WHERE user_id = ? AND reference = ? LIMIT 1`)
+      .get(accountId, orderReference)
+  );
+}
+
+export async function claimTarotOrderForAccount({ userId, email, statusToken }) {
+  await ensureTarotOrdersTable();
+  const accountId = String(userId || "").trim();
+  const normalizedEmail = String(email || "").trim().toLowerCase();
+  const token = String(statusToken || "").trim();
+  if (!accountId || !normalizedEmail || !token) {
+    return { claimed: false, reason: "missing_claim_fields" };
+  }
+  if (isPostgres()) {
+    const result = await getSqlClient()`
+      UPDATE tarot_orders
+      SET user_id = ${accountId}, updated_at = NOW()
+      WHERE status_token = ${token}
+        AND LOWER(email) = ${normalizedEmail}
+        AND (user_id IS NULL OR user_id = ${accountId})
+      RETURNING reference
+    `;
+    const reference = rows(result)[0]?.reference;
+    return reference
+      ? { claimed: true, order: await findTarotOrderForAccount(accountId, reference) }
+      : { claimed: false, reason: "order_not_claimable" };
+  }
+  const result = getSqliteDbWritable()
+    .prepare(`
+      UPDATE tarot_orders SET user_id = ?, updated_at = datetime('now')
+      WHERE status_token = ? AND LOWER(email) = ? AND (user_id IS NULL OR user_id = ?)
+    `)
+    .run(accountId, token, normalizedEmail, accountId);
+  if (result.changes !== 1) return { claimed: false, reason: "order_not_claimable" };
+  const row = getSqliteDbWritable().prepare("SELECT reference FROM tarot_orders WHERE status_token = ? LIMIT 1").get(token);
+  return { claimed: true, order: await findTarotOrderForAccount(accountId, row.reference) };
 }

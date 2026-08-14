@@ -13,6 +13,7 @@ import {
   getConfirmedTarotPurchase,
 } from "../../lib/tarot-purchase";
 import { getTarotCheckoutIntent } from "../../lib/tarot-commerce";
+import { Header } from "../organisms/Header";
 import styles from "./TarotCheckout.module.css";
 
 const CART_KEY = "mitos_tarot_cart_v1";
@@ -126,17 +127,33 @@ function followBoldNextAction(checkout) {
 }
 
 function StoreHeader({ quantity }) {
+  return <Header active="/tarot" commerce={{ quantity, cartHref: "/tarot/carrito" }} />;
+}
+
+function CheckoutAccount({ account }) {
   return (
-    <header className={styles.header}>
-      <Link href="/" className={styles.brand}><span>M</span>Mitos de Colombia</Link>
-      <Link
-        href="/tarot/carrito"
-        className={styles.headerCart}
-        aria-label={`Ver carrito, ${quantity} ${quantity === 1 ? "producto" : "productos"}`}
-      >
-        <Icon name="cart" /><span aria-live="polite" aria-atomic="true">{quantity}</span>
-      </Link>
-    </header>
+    <section className={styles.accountPanel} aria-labelledby="checkout-account-title">
+      <span className={styles.accountIcon} aria-hidden="true">{account ? "✓" : "01"}</span>
+      <div>
+        <p className={styles.sectionEyebrow}>Cuenta y seguimiento</p>
+        <h2 id="checkout-account-title">
+          {account ? `Compras como ${account.fullName}` : "Guarda este pedido en tu cuenta"}
+        </h2>
+        <p>
+          {account
+            ? `El pedido quedará vinculado a ${account.email} y aparecerá en tu panel de seguimiento.`
+            : "Puedes comprar como invitado o ingresar para consultar después pago, preparación, guía y entrega."}
+        </p>
+      </div>
+      {account ? (
+        <Link href="/cuenta">Ver mi cuenta</Link>
+      ) : (
+        <span className={styles.accountActions}>
+          <Link href="/cuenta/ingresar?next=/tarot/checkout">Ingresar</Link>
+          <Link href="/cuenta/crear?next=/tarot/checkout">Crear cuenta</Link>
+        </span>
+      )}
+    </section>
   );
 }
 
@@ -333,7 +350,10 @@ export function TarotCartPage({ product }) {
             </div>
             <div>
               <OrderSummary product={product} quantity={quantity} intent={intent} />
-              {product.checkoutReady ? <Link href="/tarot/checkout" className={styles.primaryLink}>Continuar al checkout <Icon name="arrow" /></Link> : <button className={styles.disabledButton} type="button" disabled>Compra disponible al completar las condiciones de lanzamiento</button>}
+              <Link href="/tarot/checkout" className={styles.primaryLink}>
+                {product.checkoutReady ? "Continuar al checkout" : "Revisar el checkout preparado"}
+                <Icon name="arrow" />
+              </Link>
               <p className={styles.trustLine}><Icon name="lock" size={18} />No cobraremos nada sin mostrarte antes el total y la entrega.</p>
             </div>
           </div>
@@ -350,7 +370,7 @@ export function TarotCartPage({ product }) {
   );
 }
 
-export function TarotCheckoutPage({ product }) {
+export function TarotCheckoutPage({ product, account = null }) {
   const [quantity, setQuantity] = useState(0);
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState("");
@@ -481,28 +501,29 @@ export function TarotCheckoutPage({ product }) {
         <p className={styles.checkoutLead}>{intent.checkoutCopy}</p>
         <ol className={styles.steps} aria-label="Progreso del checkout">
           <li className={styles.completedStep}>Pedido</li>
-          <li className={styles.activeStep} aria-current="step">Datos y entrega</li>
+          <li className={account ? styles.completedStep : styles.activeStep} aria-current={account ? undefined : "step"}>Cuenta</li>
+          <li className={account ? styles.activeStep : undefined} aria-current={account ? "step" : undefined}>Entrega</li>
           <li>Pago seguro</li>
-          <li>Confirmación</li>
         </ol>
         {quantity > 0 ? (
           <div className={styles.checkoutGrid}>
             <form className={styles.checkoutForm} onSubmit={handleSubmit} aria-busy={submitting ? "true" : "false"}>
+              <CheckoutAccount account={account} />
               {!product.checkoutReady ? (
                 <div className={styles.formGate} role="status">
                   <Icon name="info" />
                   <span>
-                    <strong>Este formulario aún no recibe datos.</strong>
-                    Los campos se habilitarán cuando producto, entrega, vendedor y pago estén confirmados.
+                    <strong>Checkout preparado en modo de revisión.</strong>
+                    Puedes revisar contacto y entrega; nada se enviará ni se cobrará. Los campos sensibles y el botón de pago se habilitarán al confirmar producto, vendedor y Bold.
                   </span>
                 </div>
               ) : null}
               <section>
                 <h2>Contacto</h2>
-                <label>Correo electrónico<input name="email" type="email" autoComplete="email" placeholder="tu@correo.com" required maxLength={160} disabled={!product.checkoutReady || submitting} /></label>
+                <label>Correo electrónico<input name="email" type="email" autoComplete="email" placeholder="tu@correo.com" required maxLength={160} defaultValue={account?.email || ""} readOnly={Boolean(account)} disabled={submitting} /></label>
                 <div className={styles.fieldGrid}>
-                  <label>Tipo de documento<select name="documentType" defaultValue="CEDULA" required disabled={!product.checkoutReady || submitting}><option value="CEDULA">Cédula de ciudadanía</option><option value="CEDULA_EXTRANJERIA">Cédula de extranjería</option><option value="PASAPORTE">Pasaporte</option><option value="NIT">NIT</option></select></label>
-                  <label>Número de documento<input name="documentNumber" type="text" inputMode="text" required minLength={5} maxLength={30} disabled={!product.checkoutReady || submitting} /></label>
+                  <label>Tipo de documento<select name="documentType" defaultValue="CEDULA" required disabled={submitting}><option value="CEDULA">Cédula de ciudadanía</option><option value="CEDULA_EXTRANJERIA">Cédula de extranjería</option><option value="PASAPORTE">Pasaporte</option><option value="NIT">NIT</option></select></label>
+                  <label>Número de documento<input name="documentNumber" type="text" inputMode="text" required minLength={5} maxLength={30} disabled={submitting} /></label>
                 </div>
               </section>
               <section>
@@ -513,13 +534,13 @@ export function TarotCheckoutPage({ product }) {
                     : "La cobertura y el envío incluido deben estar confirmados antes de habilitar estos campos."}
                 </p>
                 <div className={styles.fieldGrid}>
-                  <label className={styles.fullField}>Nombre completo<input name="fullName" type="text" autoComplete="name" required minLength={3} maxLength={120} disabled={!product.checkoutReady || submitting} /></label>
-                  <label>Teléfono<input name="phone" type="tel" autoComplete="tel-national" inputMode="numeric" pattern="[0-9]{10}" maxLength={10} placeholder="3001234567" required disabled={!product.checkoutReady || submitting} /></label>
+                  <label className={styles.fullField}>Nombre completo<input name="fullName" type="text" autoComplete="name" required minLength={3} maxLength={120} defaultValue={account?.fullName || ""} disabled={submitting} /></label>
+                  <label>Teléfono<input name="phone" type="tel" autoComplete="tel-national" inputMode="numeric" pattern="[0-9]{10}" maxLength={10} placeholder="3001234567" required disabled={submitting} /></label>
                   <label>Departamento<select name="region" autoComplete="address-level1" defaultValue="" required disabled={!product.checkoutReady || !product.shippingRegionsReady || submitting}><option value="" disabled>{product.shippingRegionsReady ? "Selecciona" : "Cobertura por confirmar"}</option>{product.shippingRegions.map((region) => <option key={region} value={region}>{region}</option>)}</select></label>
-                  <label>Ciudad o municipio<input name="city" type="text" autoComplete="address-level2" required maxLength={100} disabled={!product.checkoutReady || submitting} /></label>
-                  <label>Código postal<input name="postalCode" type="text" autoComplete="postal-code" required minLength={4} maxLength={12} disabled={!product.checkoutReady || submitting} /></label>
-                  <label className={styles.fullField}>Dirección de entrega<input name="addressLine1" type="text" autoComplete="address-line1" required minLength={5} maxLength={180} disabled={!product.checkoutReady || submitting} /></label>
-                  <label className={styles.fullField}>Apartamento, torre o referencia opcional<input name="addressLine2" type="text" autoComplete="address-line2" maxLength={180} disabled={!product.checkoutReady || submitting} /></label>
+                  <label>Ciudad o municipio<input name="city" type="text" autoComplete="address-level2" required maxLength={100} disabled={submitting} /></label>
+                  <label>Código postal<input name="postalCode" type="text" autoComplete="postal-code" required minLength={4} maxLength={12} disabled={submitting} /></label>
+                  <label className={styles.fullField}>Dirección de entrega<input name="addressLine1" type="text" autoComplete="address-line1" required minLength={5} maxLength={180} disabled={submitting} /></label>
+                  <label className={styles.fullField}>Apartamento, torre o referencia opcional<input name="addressLine2" type="text" autoComplete="address-line2" maxLength={180} disabled={submitting} /></label>
                 </div>
               </section>
               <section>
@@ -528,7 +549,7 @@ export function TarotCheckoutPage({ product }) {
                 <div className={styles.paymentChoice} role="radiogroup" aria-label="Medio de pago">
                   {product.paymentMethods.map((method) => (
                     <label key={method.id} data-selected={paymentMethod === method.id ? "true" : "false"}>
-                      <input type="radio" name="paymentMethodChoice" value={method.id} checked={paymentMethod === method.id} onChange={() => setPaymentMethod(method.id)} disabled={!product.checkoutReady || !method.confirmed || submitting} />
+                      <input type="radio" name="paymentMethodChoice" value={method.id} checked={paymentMethod === method.id} onChange={() => setPaymentMethod(method.id)} disabled={submitting} />
                       <span className={styles.paymentMark} aria-hidden="true">{method.mark}</span>
                       <span><strong>{method.label}</strong><small>{method.detail}</small></span>
                     </label>
@@ -561,7 +582,7 @@ export function TarotCheckoutPage({ product }) {
               </section>
               {error ? <p ref={errorRef} className={styles.formError} role="alert" tabIndex={-1}>{error}</p> : null}
               <label className={styles.legalConsent}>
-                <input name="privacyAccepted" type="checkbox" value="yes" required disabled={!product.checkoutReady || submitting} />
+                <input name="privacyAccepted" type="checkbox" value="yes" required disabled={submitting} />
                 <span>He leído los <Link href="/terminos">términos de compra</Link> y autorizo el tratamiento de mis datos para crear, pagar y entregar este pedido según la <Link href="/privacidad">política de privacidad</Link>.</span>
               </label>
               <button type="submit" className={product.checkoutReady ? styles.paymentButton : styles.disabledButton} disabled={!product.checkoutReady || submitting || Boolean(paymentAction)}>
@@ -669,12 +690,14 @@ function publicPaymentStatus(status) {
   }[status] || "Estado por confirmar";
 }
 
-export function TarotOrderResultPage({ token, product }) {
+export function TarotOrderResultPage({ token, product, account = null }) {
   const [order, setOrder] = useState(null);
   const [cartQuantity, setCartQuantity] = useState(0);
   const [loading, setLoading] = useState(Boolean(token));
   const [error, setError] = useState(token ? "" : "Falta el identificador seguro de la orden.");
   const [refreshKey, setRefreshKey] = useState(0);
+  const [claimingOrder, setClaimingOrder] = useState(false);
+  const [claimMessage, setClaimMessage] = useState("");
   const purchaseTracked = useRef(false);
   const storedIntent = useCheckoutIntent();
 
@@ -750,6 +773,26 @@ export function TarotOrderResultPage({ token, product }) {
     setRefreshKey((current) => current + 1);
   }
 
+  async function claimOrder() {
+    if (!token || claimingOrder) return;
+    setClaimingOrder(true);
+    setClaimMessage("");
+    try {
+      const response = await fetch("/api/tarot/account/orders/claim", {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({ orderToken: token }),
+      });
+      const result = await response.json();
+      if (!response.ok) throw new Error(result.message || "No pudimos guardar este pedido.");
+      setClaimMessage("Pedido guardado. Ya puedes seguirlo desde tu cuenta.");
+    } catch (claimError) {
+      setClaimMessage(claimError.message || "No pudimos guardar este pedido.");
+    } finally {
+      setClaimingOrder(false);
+    }
+  }
+
   const content = resultContent(order, loading, error);
   const intent = getTarotCheckoutIntent(
     order?.attribution?.landing_intent || storedIntent.id
@@ -784,6 +827,17 @@ export function TarotOrderResultPage({ token, product }) {
           <div className={styles.resultActions}>
             {error && token ? <button type="button" className={styles.primaryAction} onClick={retryStatus}>Consultar de nuevo <Icon name="clock" /></button> : null}
             {order && ["DECLINED", "VOIDED", "ERROR"].includes(order.status) ? <Link href="/tarot/checkout" className={styles.primaryLink}>Volver al checkout <Icon name="arrow" /></Link> : null}
+            {order && token && account ? (
+              <button type="button" className={styles.primaryAction} onClick={claimOrder} disabled={claimingOrder}>
+                {claimingOrder ? "Guardando pedido…" : "Guardar en mi cuenta"}
+              </button>
+            ) : null}
+            {order && token && !account ? (
+              <Link href={`/cuenta/crear?order=${encodeURIComponent(token)}`} className={styles.primaryLink}>Crear cuenta y guardar pedido <Icon name="arrow" /></Link>
+            ) : null}
+            {claimMessage ? <p className={styles.claimMessage} role="status">{claimMessage}</p> : null}
+            {order && token && !account ? <Link href={`/cuenta/ingresar?order=${encodeURIComponent(token)}`} className={styles.secondaryLink}>Ya tengo cuenta</Link> : null}
+            {account ? <Link href="/cuenta" className={styles.secondaryLink}>Ir a mis pedidos</Link> : null}
             {order || error ? <Link href={returnIntent.path} className={styles.secondaryLink}>Volver a tu experiencia</Link> : null}
           </div>
         </section>

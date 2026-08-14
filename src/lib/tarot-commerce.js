@@ -427,12 +427,6 @@ export const TAROT_LANDING_VARIANTS = {
     campaignContent: "ag01_compra_directa",
     architecture: "product-sheet",
     sectionOrder: ["reasons", "signature", "gallery", "story", "reflection", "facts", "questions", "close"],
-    navigation: [
-      ["#baraja", "Qué incluye"],
-      ["#intent-route", "Cómo elegir"],
-      ["#arcanos", "Cartas"],
-      ["#ficha", "Ficha"],
-    ],
     heroPanel: {
       label: "Ficha de compra · Edición 01",
       title: "Una baraja completa, explicada antes de pagar",
@@ -501,12 +495,6 @@ export const TAROT_LANDING_VARIANTS = {
     campaignContent: "ag02_regalo_directo",
     architecture: "gift-note",
     sectionOrder: ["signature", "story", "reasons", "gallery", "reflection", "facts", "questions", "close"],
-    navigation: [
-      ["#intent-route", "Para quién"],
-      ["#historia", "La intención"],
-      ["#arcanos", "Cartas"],
-      ["#ficha", "Entrega"],
-    ],
     heroPanel: {
       label: "Una nota para quien lo recibe",
       title: "No regalas una creencia. Regalas 78 historias para compartir.",
@@ -577,12 +565,6 @@ export const TAROT_LANDING_VARIANTS = {
     campaignContent: "ag03_souvenir_directo",
     architecture: "travel-log",
     sectionOrder: ["gallery", "signature", "story", "reflection", "reasons", "facts", "questions", "close"],
-    navigation: [
-      ["#arcanos", "Ruta visual"],
-      ["#intent-route", "Territorios"],
-      ["#historia", "Bitácora"],
-      ["#ficha", "Para llevar"],
-    ],
     heroPanel: {
       label: "Bitácora · Colombia",
       title: "Un viaje que continúa cuando abres otra carta",
@@ -650,12 +632,6 @@ export const TAROT_LANDING_VARIANTS = {
     campaignContent: "ag04_reflexion",
     architecture: "open-journal",
     sectionOrder: ["signature", "reflection", "story", "gallery", "reasons", "facts", "questions", "close"],
-    navigation: [
-      ["#intent-route", "Ejemplo"],
-      ["#reflection", "Práctica"],
-      ["#historia", "Relato"],
-      ["#preguntas", "Alcance"],
-    ],
     heroPanel: {
       label: "Cuaderno abierto · Sin respuestas cerradas",
       title: "Mira. Relaciona. Formula una pregunta mejor.",
@@ -728,12 +704,6 @@ export const TAROT_LANDING_VARIANTS = {
     campaignContent: "ag05_arte",
     architecture: "exhibition",
     sectionOrder: ["gallery", "signature", "reasons", "story", "reflection", "facts", "questions", "close"],
-    navigation: [
-      ["#arcanos", "Sala"],
-      ["#intent-route", "Detalle"],
-      ["#baraja", "Serie"],
-      ["#ficha", "Pieza física"],
-    ],
     heroPanel: {
       label: "Sala 01 · Serie Tarot de Mitos",
       title: "Setenta y ocho piezas dentro de un mismo sistema visual",
@@ -801,12 +771,6 @@ export const TAROT_LANDING_VARIANTS = {
     campaignContent: "ag06_mitos",
     architecture: "archive-file",
     sectionOrder: ["story", "signature", "gallery", "reasons", "reflection", "facts", "questions", "close"],
-    navigation: [
-      ["#historia", "Archivo"],
-      ["#intent-route", "Método"],
-      ["#arcanos", "Relatos"],
-      ["#preguntas", "Contexto"],
-    ],
     heroPanel: {
       label: "Expediente editorial · Corpus vivo",
       title: "Del relato documentado a una carta que invita a volver",

@@ -1,0 +1,166 @@
+.accountPage {
+  --account-ink: #111a15;
+  --account-green: #143f2c;
+  --account-gold: #9a642c;
+  --account-paper: #f4efe5;
+  background: var(--account-paper);
+  color: #17211b;
+  min-height: 100vh;
+}
+
+.accountShell {
+  margin-inline: auto;
+  max-width: 1240px;
+  padding: clamp(3rem, 7vw, 7rem) clamp(1.25rem, 4vw, 4rem) 8rem;
+}
+
+.authLayout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(360px, 0.75fr);
+  margin-inline: auto;
+  max-width: 1120px;
+  min-height: 690px;
+}
+
+.authStory {
+  background: var(--account-ink);
+  color: #f7ead2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  padding: clamp(2.3rem, 5vw, 5rem);
+  position: relative;
+}
+
+.authStory::after {
+  border: 1px solid rgba(191, 141, 77, 0.45);
+  content: "";
+  height: 340px;
+  position: absolute;
+  right: -150px;
+  rotate: 45deg;
+  top: -120px;
+  width: 340px;
+}
+
+.authStory > span,
+.authHeading > span,
+.dashboardEyebrow,
+.orderEyebrow {
+  color: #9a642c;
+  font-size: 0.7rem;
+  font-weight: 750;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.authStory > span { color: #d5a76b; }
+.authStory h2 {
+  font-family: var(--font-display), sans-serif;
+  font-size: clamp(3.1rem, 6vw, 6.4rem);
+  font-weight: 400;
+  letter-spacing: -0.045em;
+  line-height: 0.95;
+  margin: 1.5rem 0;
+  max-width: 640px;
+}
+.authStory > div > p { color: rgba(247, 234, 210, 0.78); line-height: 1.7; max-width: 540px; }
+.authBenefits { border-top: 1px solid rgba(213, 167, 107, 0.35); display: grid; list-style: none; margin: 3rem 0 0; padding: 0; }
+.authBenefits li { border-bottom: 1px solid rgba(247, 234, 210, 0.13); display: grid; gap: 0.75rem; grid-template-columns: 34px 1fr; padding: 1.1rem 0; }
+.authBenefits span { color: #d5a76b; font-size: 0.7rem; }
+.authBenefits strong { color: #f7ead2; font-size: 0.88rem; }
+.authBenefits p { color: rgba(247, 234, 210, 0.7); font-size: 0.78rem; grid-column: 2; line-height: 1.5; margin: 0; }
+
+.authPanel { background: #fff; display: flex; padding: clamp(2rem, 5vw, 4.5rem); }
+.authForm { align-self: center; display: grid; gap: 1.15rem; width: 100%; }
+.authHeading { margin-bottom: 0.8rem; }
+.authHeading h1 { color: var(--account-green); font-family: var(--font-display), sans-serif; font-size: clamp(2.7rem, 5vw, 4.7rem); font-weight: 400; letter-spacing: -0.045em; line-height: 0.98; margin: 0.8rem 0 1rem; }
+.authHeading p { color: #5d615d; line-height: 1.6; margin: 0; }
+.authForm label { color: #3f4842; display: grid; font-size: 0.78rem; font-weight: 650; gap: 0.45rem; }
+.authForm input { background: #fff; border: 1px solid #a9aaa4; border-radius: 4px; color: #111a15; font: inherit; font-size: 0.95rem; min-height: 54px; padding: 0.75rem 0.85rem; width: 100%; }
+.authForm input:focus { border-color: var(--account-green); box-shadow: 0 0 0 3px rgba(20, 63, 44, 0.14); outline: none; }
+.authForm label small { color: #686d68; font-size: 0.7rem; font-weight: 400; line-height: 1.45; }
+.passwordField { display: grid; grid-template-columns: 1fr auto; }
+.passwordField input { border-radius: 4px 0 0 4px; }
+.passwordField button { background: #eef1ed; border: 1px solid #a9aaa4; border-left: 0; border-radius: 0 4px 4px 0; color: var(--account-green); font: inherit; font-size: 0.74rem; font-weight: 700; padding: 0 0.9rem; }
+.orderClaimNotice { background: #e8f0ea; border-left: 3px solid var(--account-green); color: #30493a; font-size: 0.78rem; line-height: 1.5; margin: 0; padding: 0.85rem 1rem; }
+.authError { background: #fff0ed; border-left: 3px solid #97382e; color: #782c25; font-size: 0.8rem; line-height: 1.5; margin: 0; padding: 0.85rem 1rem; }
+.authSubmit { background: var(--account-green); border: 1px solid #b57c3d; border-radius: 4px; color: #fff4de; font: inherit; font-size: 0.88rem; font-weight: 750; min-height: 56px; padding: 0.8rem 1rem; }
+.authSubmit:disabled { cursor: wait; opacity: 0.72; }
+.authAlternate { color: #636862; font-size: 0.78rem; margin: 0.25rem 0 0; text-align: center; }
+.authAlternate a { color: var(--account-green); font-weight: 750; text-underline-offset: 4px; }
+
+.dashboardHeader { align-items: end; border-bottom: 1px solid #cfc8ba; display: flex; gap: 2rem; justify-content: space-between; padding-bottom: 2.5rem; }
+.dashboardHeader h1 { color: var(--account-green); font-family: var(--font-display), sans-serif; font-size: clamp(3.2rem, 7vw, 6.6rem); font-weight: 400; letter-spacing: -0.05em; line-height: 0.92; margin: 1rem 0 0; }
+.dashboardHeader p { color: #5c625d; line-height: 1.6; margin: 1rem 0 0; }
+.logoutButton { background: transparent; border: 1px solid #716f68; border-radius: 4px; color: #27342c; font: inherit; font-size: 0.78rem; min-height: 44px; padding: 0.6rem 1rem; white-space: nowrap; }
+.ordersSection { margin-top: 3.5rem; }
+.ordersHeader { align-items: baseline; display: flex; justify-content: space-between; }
+.ordersHeader h2 { color: var(--account-green); font-family: var(--font-display), sans-serif; font-size: clamp(2rem, 4vw, 3.5rem); font-weight: 400; margin: 0; }
+.ordersHeader span { color: #62665f; font-size: 0.78rem; }
+.ordersList { display: grid; gap: 1rem; margin-top: 1.5rem; }
+.orderCard { align-items: center; background: #fff; border: 1px solid #d4cdbf; color: inherit; display: grid; gap: 1.4rem; grid-template-columns: minmax(160px, 0.9fr) minmax(190px, 1.2fr) minmax(130px, 0.65fr) auto; padding: 1.35rem; text-decoration: none; transition: border-color 180ms ease, translate 180ms ease; }
+.orderCard:hover { border-color: #9a642c; translate: 0 -2px; }
+.orderReference { display: grid; gap: 0.35rem; }
+.orderReference span { color: #777a74; font-size: 0.66rem; letter-spacing: 0.08em; text-transform: uppercase; }
+.orderReference strong { color: var(--account-green); font-size: 0.86rem; overflow-wrap: anywhere; }
+.orderProduct { display: grid; gap: 0.3rem; }
+.orderProduct strong { color: #1d2821; font-size: 0.9rem; }
+.orderProduct span { color: #6c706b; font-size: 0.75rem; }
+.orderAmount { display: grid; gap: 0.3rem; }
+.orderAmount strong { color: #7a4d1f; }
+.orderAmount span { color: #6c706b; font-size: 0.7rem; }
+.statusBadge { background: #f4eee3; border: 1px solid #b89467; color: #6f461e; font-size: 0.68rem; font-weight: 750; letter-spacing: 0.06em; padding: 0.55rem 0.7rem; text-align: center; text-transform: uppercase; }
+.statusBadge[data-tone="success"] { background: #e7f2e9; border-color: #759581; color: #245339; }
+.statusBadge[data-tone="attention"] { background: #fff0ed; border-color: #bd7a72; color: #7d3028; }
+.emptyOrders { background: #fff; border: 1px solid #d4cdbf; margin-top: 1.5rem; padding: clamp(2rem, 5vw, 4rem); }
+.emptyOrders h3 { color: var(--account-green); font-family: var(--font-display), sans-serif; font-size: 2.5rem; font-weight: 400; margin: 0; }
+.emptyOrders p { color: #60655f; line-height: 1.6; max-width: 600px; }
+.primaryLink { background: var(--account-green); border: 1px solid #b57c3d; border-radius: 4px; color: #fff4de; display: inline-flex; font-size: 0.82rem; font-weight: 750; margin-top: 0.6rem; min-height: 48px; padding: 0.75rem 1rem; text-decoration: none; }
+
+.orderBack { color: var(--account-green); font-size: 0.8rem; font-weight: 650; text-underline-offset: 4px; }
+.orderHero { align-items: end; border-bottom: 1px solid #cfc8ba; display: flex; gap: 2rem; justify-content: space-between; margin-top: 2rem; padding-bottom: 2.5rem; }
+.orderHero h1 { color: var(--account-green); font-family: var(--font-display), sans-serif; font-size: clamp(3rem, 6vw, 5.8rem); font-weight: 400; letter-spacing: -0.045em; line-height: 0.95; margin: 0.9rem 0 0; }
+.orderHero p { color: #5f645e; margin: 0.8rem 0 0; }
+.orderGrid { align-items: start; display: grid; gap: 3rem; grid-template-columns: minmax(0, 1.25fr) minmax(290px, 0.75fr); margin-top: 3rem; }
+.timeline { background: #fff; border: 1px solid #d4cdbf; padding: clamp(1.5rem, 4vw, 3rem); }
+.timeline h2, .orderSummary h2 { color: var(--account-green); font-family: var(--font-display), sans-serif; font-size: 2.4rem; font-weight: 400; margin: 0 0 1.5rem; }
+.timeline ol { list-style: none; margin: 0; padding: 0; }
+.timeline li { display: grid; gap: 0.9rem; grid-template-columns: 30px 1fr; min-height: 94px; position: relative; }
+.timeline li::after { background: #c9c8c1; content: ""; height: calc(100% - 30px); left: 14px; position: absolute; top: 28px; width: 1px; }
+.timeline li:last-child::after { display: none; }
+.timelineMark { align-items: center; background: #fff; border: 1px solid #8a8d86; border-radius: 50%; color: #71766f; display: flex; font-size: 0.64rem; height: 29px; justify-content: center; position: relative; width: 29px; z-index: 1; }
+.timeline li[data-state="complete"] .timelineMark { background: var(--account-green); border-color: var(--account-green); color: #fff4de; }
+.timeline li[data-state="current"] .timelineMark { background: #c38945; border-color: #7e501f; color: #fff; }
+.timeline li[data-state="attention"] .timelineMark { background: #8b352d; border-color: #6f2923; color: #fff; }
+.timelineCopy { display: grid; gap: 0.35rem; padding-bottom: 1.4rem; }
+.timelineCopy strong { color: #26352c; font-size: 0.9rem; }
+.timelineCopy p { color: #666b65; font-size: 0.78rem; line-height: 1.5; margin: 0; }
+.orderSummary { background: var(--account-ink); color: #f7ead2; padding: 2rem; }
+.orderSummary h2 { color: #f7ead2; }
+.orderSummary dl { margin: 0; }
+.orderSummary dl div { border-top: 1px solid rgba(247, 234, 210, 0.16); display: flex; gap: 1rem; justify-content: space-between; padding: 0.9rem 0; }
+.orderSummary dt { color: rgba(247, 234, 210, 0.68); font-size: 0.75rem; }
+.orderSummary dd { color: #f7ead2; font-size: 0.78rem; font-weight: 650; margin: 0; text-align: right; }
+.trackingBox { background: #fff; border: 1px solid #d4cdbf; margin-top: 1rem; padding: 1.2rem; }
+.trackingBox strong { color: var(--account-green); display: block; }
+.trackingBox p { color: #636861; font-size: 0.78rem; line-height: 1.5; }
+.trackingBox a { color: var(--account-green); font-size: 0.78rem; font-weight: 750; text-underline-offset: 4px; }
+
+@media (max-width: 880px) {
+  .authLayout, .orderGrid { grid-template-columns: 1fr; }
+  .authPanel { order: -1; }
+  .authStory { min-height: 540px; }
+  .orderCard { grid-template-columns: 1fr 1fr; }
+  .dashboardHeader, .orderHero { align-items: flex-start; flex-direction: column; }
+}
+
+@media (max-width: 560px) {
+  .accountShell { padding-top: 2rem; }
+  .authLayout { margin-inline: -1.25rem; }
+  .authStory { min-height: 0; padding: 2.5rem 1.25rem; }
+  .authStory h2 { font-size: 2.75rem; }
+  .authPanel { padding: 2.5rem 1.25rem; }
+  .orderCard { grid-template-columns: 1fr; }
+}
