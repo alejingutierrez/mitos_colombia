@@ -29,13 +29,16 @@ test("the transactional journey preserves all six purchase motivations", () => {
   assert.match(checkoutSource, /order\?\.attribution\?\.landing_intent/);
 });
 
-test("checkout proves fulfillment and payment readiness before collecting data", () => {
+test("checkout proves fulfillment and payment readiness before sending data", () => {
   assert.match(checkoutSource, /function FulfillmentProof/);
   assert.match(checkoutSource, /function PaymentPreview/);
   assert.match(checkoutSource, /No abriremos el pago hasta poder demostrar el envío incluido/);
   assert.match(checkoutSource, /aria-busy=\{submitting \? "true" : "false"\}/);
-  assert.match(checkoutSource, /aria-current="step"/);
+  assert.match(checkoutSource, /aria-current=\{account \?/);
   assert.match(checkoutSource, /ref=\{errorRef\}/);
+  assert.match(checkoutSource, /Checkout preparado en modo de revisión/);
+  assert.match(checkoutSource, /function CheckoutAccount/);
+  assert.match(checkoutSource, /Revisar el checkout preparado/);
 });
 
 test("the public order supports recovery without exposing customer PII", () => {

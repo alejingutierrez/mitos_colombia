@@ -18,6 +18,7 @@ import {
 } from "../../../../lib/tarot-commerce";
 import { cleanTarotCampaign } from "../../../../lib/tarot-attribution";
 import { cleanGa4AnalyticsContext } from "../../../../lib/ga4-measurement";
+import { getTarotAccountFromRequest } from "../../../../lib/tarot-auth";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -101,12 +102,16 @@ export async function POST(request) {
   const campaign = cleanTarotCampaign(body?.campaign);
   const analytics = cleanGa4AnalyticsContext(body?.analytics);
   const privacyAccepted = body?.privacyAccepted === true;
+  const account = await getTarotAccountFromRequest(request);
 
   if (body?.sku !== product.sku || !Number.isInteger(quantity) || quantity < 1 || quantity > 8) {
     return validationError("El producto o la cantidad no son válidos.");
   }
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
     return validationError("Ingresa un correo electrónico válido.");
+  }
+  if (account && email !== account.email) {
+    return validationError(`Usa el correo de tu cuenta: ${account.email}.`);
   }
   if (fullName.length < 3 || phone.length !== 10) {
     return validationError("Completa un nombre y teléfono colombiano válidos.");
@@ -159,6 +164,7 @@ export async function POST(request) {
     addressLine2,
     campaign,
     analytics,
+    userId: account?.id || null,
   });
 
   const siteUrl = String(process.env.NEXT_PUBLIC_SITE_URL || "").trim().replace(/\/+$/, "");

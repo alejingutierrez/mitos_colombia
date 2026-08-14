@@ -5,7 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { SITE_NAME } from "../../lib/brand";
 import { cn } from "../../lib/utils";
-import { Container, IconButton } from "../atoms";
+import { Container, Icon, IconButton } from "../atoms";
 import { SearchBox } from "../molecules";
 
 /**
@@ -27,7 +27,7 @@ const NAV_LINKS = [
   { href: "/mapa", label: "Mapa" },
 ];
 
-export function Header({ active }) {
+export function Header({ active, commerce }) {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
   const current = active ?? pathname;
@@ -80,6 +80,35 @@ export function Header({ active }) {
             <div className="hidden lg:block">
               <IconButton icon="search" label="Buscar" href="/mitos" />
             </div>
+            <div className="hidden lg:block">
+              <IconButton icon="user" label="Mi cuenta" href="/cuenta" />
+            </div>
+            {commerce ? (
+              commerce.onCart ? (
+                <button
+                  type="button"
+                  onClick={commerce.onCart}
+                  aria-label={`Abrir carrito, ${commerce.quantity || 0} ${commerce.quantity === 1 ? "producto" : "productos"}`}
+                  className="inline-flex h-11 min-w-11 items-center justify-center gap-1 rounded-sm border border-line-200 bg-white px-2 text-ink-900 transition-colors hover:bg-mist-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-jungle-500/40"
+                >
+                  <Icon name="cart" size={18} />
+                  <span className="min-w-4 text-center text-xs font-semibold" aria-live="polite">
+                    {commerce.quantity || 0}
+                  </span>
+                </button>
+              ) : (
+                <Link
+                  href={commerce.cartHref || "/tarot/carrito"}
+                  aria-label={`Ver carrito, ${commerce.quantity || 0} ${commerce.quantity === 1 ? "producto" : "productos"}`}
+                  className="inline-flex h-11 min-w-11 items-center justify-center gap-1 rounded-sm border border-line-200 bg-white px-2 text-ink-900 transition-colors hover:bg-mist-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-jungle-500/40"
+                >
+                  <Icon name="cart" size={18} />
+                  <span className="min-w-4 text-center text-xs font-semibold" aria-live="polite">
+                    {commerce.quantity || 0}
+                  </span>
+                </Link>
+              )
+            ) : null}
             <div className="lg:hidden">
               <IconButton
                 icon={open ? "x" : "menu"}
@@ -124,6 +153,13 @@ export function Header({ active }) {
                   {item.label}
                 </Link>
               ))}
+              <Link
+                href="/cuenta"
+                onClick={() => setOpen(false)}
+                className="block border-b border-line-100 py-3 text-base font-medium text-ink-700 transition-colors hover:text-ink-900"
+              >
+                Mi cuenta y pedidos
+              </Link>
             </nav>
           </div>
         </Container>

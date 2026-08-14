@@ -6,6 +6,7 @@ import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { trackEvent } from "../../lib/analytics";
 import { captureTarotAttribution } from "../../lib/tarot-attribution";
+import { Header } from "../organisms/Header";
 import styles from "./TarotCommerce.module.css";
 
 const CART_KEY = "mitos_tarot_cart_v1";
@@ -147,33 +148,6 @@ function ProductStatus({ product, inverse = false }) {
         </span>
       </div>
     </div>
-  );
-}
-
-function CommerceHeader({ quantity, onCart, variant }) {
-  return (
-    <header className={styles.header} data-architecture={variant.architecture}>
-      <div className={styles.headerInner}>
-        <Link href="/" className={styles.brand} aria-label="Mitos de Colombia, inicio">
-          <span className={styles.brandMark}>M</span>
-          <span>Mitos de Colombia</span>
-        </Link>
-        <nav className={styles.nav} aria-label="Navegación de la tienda">
-          {variant.navigation.map(([href, label]) => (
-            <a href={href} key={href}>{label}</a>
-          ))}
-        </nav>
-        <button
-          className={styles.cartButton}
-          type="button"
-          onClick={onCart}
-          aria-label={`Abrir carrito, ${quantity} ${quantity === 1 ? "producto" : "productos"}`}
-        >
-          <CommerceIcon name="cart" />
-          <span aria-live="polite" aria-atomic="true">{quantity}</span>
-        </button>
-      </div>
-    </header>
   );
 }
 
@@ -991,10 +965,13 @@ function CartDrawer({ open, onClose, product, quantity, onQuantity, variant }) {
               </div>
             </div>
             <div className={styles.drawerActions}>
-              {product.checkoutReady && quantity > 0 ? (
-                <Link href="/tarot/checkout" className={styles.checkoutLink}>Continuar al checkout <CommerceIcon name="arrow" /></Link>
+              {quantity > 0 ? (
+                <Link href="/tarot/checkout" className={styles.checkoutLink}>
+                  {product.checkoutReady ? "Continuar al checkout" : "Revisar el checkout preparado"}
+                  <CommerceIcon name="arrow" />
+                </Link>
               ) : (
-                <button type="button" disabled>Compra disponible al completar las condiciones de lanzamiento</button>
+                <button type="button" disabled>Agrega una baraja para continuar</button>
               )}
               <Link href="/tarot/carrito" onClick={onClose}>Revisar pedido y condiciones</Link>
             </div>
@@ -1213,7 +1190,10 @@ export function TarotCommerceExperience({ variant, product, cards }) {
       data-landing-intent={variant.id}
       data-architecture={variant.architecture}
     >
-      <CommerceHeader quantity={quantity} onCart={() => setCartOpen(true)} variant={variant} />
+      <Header
+        active="/tarot"
+        commerce={{ quantity, onCart: () => setCartOpen(true) }}
+      />
       <main id="contenido">
         <Hero variant={variant} product={product} onAction={handleAction} />
         {variant.sectionOrder.map(renderJourneySection)}

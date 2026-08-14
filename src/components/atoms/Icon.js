@@ -35,6 +35,19 @@ const ICONS = {
   plus: <path d="M12 5v14M5 12h14" />,
   minus: <path d="M5 12h14" />,
   filter: <path d="M3 5h18l-7 8v5l-4 2v-7z" />,
+  cart: (
+    <>
+      <path d="M3.5 5.5h2.2l1.7 9.1h10.1l2-6.2H7" />
+      <circle cx="9.5" cy="18.5" r="1" />
+      <circle cx="17" cy="18.5" r="1" />
+    </>
+  ),
+  user: (
+    <>
+      <circle cx="12" cy="8" r="3.5" />
+      <path d="M5 20c.7-4 3-6 7-6s6.3 2 7 6" />
+    </>
+  ),
 };
 
 export function Icon({
