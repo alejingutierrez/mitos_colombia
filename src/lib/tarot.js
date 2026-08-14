@@ -527,9 +527,14 @@ async function listAllTarotCards() {
           t.*,
           m.slug as myth_slug,
           m.image_url as myth_image_url,
+          m.excerpt as myth_excerpt,
+          regions.name as myth_region,
+          communities.name as myth_community,
           COALESCE(NULLIF(t.image_url, ''), NULLIF(m.image_url, '')) as display_image_url
         FROM tarot_cards t
         LEFT JOIN myths m ON TRIM(m.title) = TRIM(t.myth_title)
+        LEFT JOIN regions ON regions.id = m.region_id
+        LEFT JOIN communities ON communities.id = m.community_id
         ORDER BY t.order_index ASC, t.id ASC`
       );
       return result.rows || result;
@@ -542,9 +547,14 @@ async function listAllTarotCards() {
           t.*,
           m.slug as myth_slug,
           m.image_url as myth_image_url,
+          m.excerpt as myth_excerpt,
+          regions.name as myth_region,
+          communities.name as myth_community,
           COALESCE(NULLIF(t.image_url, ''), NULLIF(m.image_url, '')) as display_image_url
         FROM tarot_cards t
         LEFT JOIN myths m ON trim(m.title) = trim(t.myth_title)
+        LEFT JOIN regions ON regions.id = m.region_id
+        LEFT JOIN communities ON communities.id = m.community_id
         ORDER BY t.order_index ASC, t.id ASC`
       )
       .all();

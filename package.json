@@ -24,6 +24,8 @@
     "instagram:package:community": "node scripts/instagram/package-community-carousels.mjs",
     "instagram:qa": "node scripts/instagram/qa-carousel.mjs",
     "instagram:test": "node --test scripts/instagram/*.test.mjs",
+    "tarot:audit": "node scripts/tarot/launch-audit.mjs",
+    "tarot:test": "node --test scripts/tarot/*.test.mjs",
     "seo:audit:indexability": "node scripts/seo/indexability-audit.mjs"
   },
   "dependencies": {
@@ -51,7 +53,7 @@
     "pg": "^8.13.1",
     "postcss": "^8.5.16",
     "read-excel-file": "^9.2.0",
-    "sharp": "^0.33.5",
+    "sharp": "^0.35.3",
     "tailwindcss": "^3.4.15"
   },
   "overrides": {

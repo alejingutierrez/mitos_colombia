@@ -20,6 +20,32 @@ export const revalidate = 86400;
 
 const sections = [
   {
+    title: "Condiciones de compra y entrega",
+    body: (
+      <>
+        <p>
+          La venta del Tarot de Mitos Colombianos sólo se habilitará cuando la
+          página de producto muestre el precio total en pesos colombianos, los
+          impuestos aplicables, el contenido y las características físicas
+          confirmadas, la modalidad y plazo de despacho, la cobertura del envío
+          incluido, la política de cambios y devoluciones y la identidad y los
+          canales de contacto del vendedor. La información visible al confirmar
+          el pedido forma parte de la transacción.
+        </p>
+        <p>
+          Antes del pago podrás revisar cantidad, total y dirección de entrega.
+          Bold presentará los medios efectivamente habilitados para la
+          transacción. Una redirección al sitio no constituye por sí sola
+          confirmación de compra: el pedido se aprueba cuando el sistema recibe
+          y verifica el estado final del procesador. Los derechos de retracto,
+          reversión, garantía y demás protecciones aplicables se informarán y
+          atenderán conforme a la normativa colombiana y a las condiciones
+          específicas publicadas antes de pagar.
+        </p>
+      </>
+    ),
+  },
+  {
     title: "Propósito del sitio",
     body: (
       <>

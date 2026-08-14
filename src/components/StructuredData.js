@@ -27,13 +27,12 @@ function normalizeCitationUrl(value) {
 
 function JsonLdScript({ data }) {
   if (!data) return null;
-  // JSON.stringify is safe for application/ld+json script tags:
-  // the browser does not execute these scripts, and JSON.stringify
-  // escapes all string content properly
   return (
     <script
       type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify(data).replace(/</g, "\\u003c"),
+      }}
     />
   );
 }
@@ -172,6 +171,102 @@ export function BreadcrumbJsonLd({ items }) {
           name: item.name,
           ...(item.url && { item: normalizeUrl(item.url) }),
         })),
+      }}
+    />
+  );
+}
+
+export function ProductJsonLd({ product, variant, siteUrl }) {
+  if (!product || !variant) return null;
+
+  const baseUrl = normalizeUrl(siteUrl) || "https://www.mitosdecolombia.com";
+  const pageUrl = `${baseUrl}${variant.path}`;
+  const imageUrl =
+    product.imageStatus === "final" && product.image
+      ? new URL(product.image, `${baseUrl}/`).toString()
+      : "";
+  const offerReady = Boolean(
+    product.checkoutReady &&
+      Number.isFinite(product.priceCop) &&
+      product.priceCop > 0 &&
+      product.sellerReady
+  );
+
+  return (
+    <JsonLdScript
+      data={{
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "@id": `${pageUrl}#product`,
+        name: product.name,
+        description: variant.subtitle || product.description,
+        sku: product.sku,
+        url: pageUrl,
+        category: "Baraja editorial ilustrada",
+        inLanguage: "es-CO",
+        brand: {
+          "@type": "Brand",
+          name: SITE_NAME,
+        },
+        ...(imageUrl && { image: [imageUrl] }),
+        additionalProperty: [
+          {
+            "@type": "PropertyValue",
+            name: "Número de cartas",
+            value: product.composition?.total,
+          },
+          {
+            "@type": "PropertyValue",
+            name: "Composición",
+            value: `${product.composition?.major} arcanos mayores y ${product.composition?.minor} arcanos menores`,
+          },
+          {
+            "@type": "PropertyValue",
+            name: "Idioma",
+            value: product.composition?.language,
+          },
+        ],
+        ...(offerReady && {
+          offers: {
+            "@type": "Offer",
+            url: pageUrl,
+            priceCurrency: product.currency,
+            price: product.priceCop,
+            availability:
+              product.status === "preorder"
+                ? "https://schema.org/PreOrder"
+                : "https://schema.org/InStock",
+            itemCondition: "https://schema.org/NewCondition",
+            seller: {
+              "@type": "Organization",
+              name: product.seller.legalName,
+              taxID: product.seller.legalId,
+              email: product.seller.email,
+              telephone: product.seller.phone,
+              address: {
+                "@type": "PostalAddress",
+                streetAddress: product.seller.address,
+                addressCountry: "CO",
+              },
+            },
+            ...(product.shippingIncluded &&
+              product.shippingRegionsReady && {
+                shippingDetails: {
+                  "@type": "OfferShippingDetails",
+                  shippingRate: {
+                    "@type": "MonetaryAmount",
+                    value: 0,
+                    currency: product.currency,
+                  },
+                  shippingDestination: {
+                    "@type": "DefinedRegion",
+                    addressCountry: "CO",
+                    addressRegion: product.shippingRegions,
+                  },
+                },
+              }),
+          },
+        }),
       }}
     />
   );

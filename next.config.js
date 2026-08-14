@@ -2,6 +2,10 @@
 const nextConfig = {
   reactStrictMode: true,
   devIndicators: false,
+  experimental: {
+    cpus: 1,
+    staticGenerationMaxConcurrency: 1,
+  },
   async headers() {
     return [
       {
