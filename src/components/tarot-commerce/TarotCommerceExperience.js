@@ -150,19 +150,18 @@ function ProductStatus({ product, inverse = false }) {
   );
 }
 
-function CommerceHeader({ quantity, onCart }) {
+function CommerceHeader({ quantity, onCart, variant }) {
   return (
-    <header className={styles.header}>
+    <header className={styles.header} data-architecture={variant.architecture}>
       <div className={styles.headerInner}>
         <Link href="/" className={styles.brand} aria-label="Mitos de Colombia, inicio">
           <span className={styles.brandMark}>M</span>
           <span>Mitos de Colombia</span>
         </Link>
         <nav className={styles.nav} aria-label="Navegación de la tienda">
-          <a href="#baraja">La baraja</a>
-          <a href="#historia">Historia</a>
-          <a href="#arcanos">Arcanos</a>
-          <a href="#preguntas">Preguntas</a>
+          {variant.navigation.map(([href, label]) => (
+            <a href={href} key={href}>{label}</a>
+          ))}
         </nav>
         <button
           className={styles.cartButton}
@@ -301,7 +300,12 @@ function Hero({ variant, product, onAction }) {
   };
 
   return (
-    <section className={styles.hero} aria-labelledby="landing-title" data-landing-intent={variant.id}>
+    <section
+      className={styles.hero}
+      aria-labelledby="landing-title"
+      data-landing-intent={variant.id}
+      data-architecture={variant.architecture}
+    >
       <div
         className={styles.heroMedia}
         data-visual-intent={variant.id}
@@ -336,6 +340,13 @@ function Hero({ variant, product, onAction }) {
           </div>
           <ProductStatus product={product} inverse />
         </motion.div>
+        <aside className={styles.heroArtifact} aria-label={variant.heroPanel.label}>
+          <span>{variant.heroPanel.label}</span>
+          <p>{variant.heroPanel.title}</p>
+          <ul>
+            {variant.heroPanel.items.map((item) => <li key={item}>{item}</li>)}
+          </ul>
+        </aside>
         {heroVisual.status === "provisional" ? (
           <p className={styles.provisionalLabel}>Escena editorial provisional · fotografía final pendiente</p>
         ) : null}
@@ -355,11 +366,11 @@ function SectionHeading({ index, children, inverse = false }) {
   );
 }
 
-function StorySection({ variant, featured }) {
+function StorySection({ variant, featured, index }) {
   return (
     <section id="historia" data-commerce-section="story" className={styles.storySection}>
       <div className={styles.lightInner}>
-        <SectionHeading index={1}>{variant.nextHeading}</SectionHeading>
+        <SectionHeading index={index}>{variant.nextHeading}</SectionHeading>
         <div className={styles.storyGrid}>
           <div className={styles.storyLead}>
             <p>{variant.intro}</p>
@@ -393,11 +404,11 @@ function StorySection({ variant, featured }) {
   );
 }
 
-function ReasonsSection({ variant }) {
+function ReasonsSection({ variant, index }) {
   return (
     <section id="baraja" data-commerce-section="reasons" className={styles.reasonsSection}>
       <div className={styles.lightInner}>
-        <SectionHeading index={2}>{variant.reasonsTitle}</SectionHeading>
+        <SectionHeading index={index}>{variant.reasonsTitle}</SectionHeading>
         <div className={styles.reasonsRail}>
           {variant.reasons.map(([title, body], index) => (
             <motion.article
@@ -419,7 +430,7 @@ function ReasonsSection({ variant }) {
   );
 }
 
-function IntentSignatureSection({ variant, cards, onCart, onDiagnostic }) {
+function IntentSignatureSection({ variant, cards, onCart, onDiagnostic, index }) {
   const { signature } = variant;
   const featured = cards[0] || null;
   const [activeItem, setActiveItem] = useState(null);
@@ -446,7 +457,7 @@ function IntentSignatureSection({ variant, cards, onCart, onDiagnostic }) {
       data-signature-mode={signature.mode}
     >
       <div className={styles.lightInner}>
-        <SectionHeading index={3}>{signature.title}</SectionHeading>
+        <SectionHeading index={index}>{signature.title}</SectionHeading>
         <p className={styles.signatureIntro}>{signature.intro}</p>
 
         {signature.mode === "regions" ? (
@@ -626,7 +637,7 @@ function IntentSignatureSection({ variant, cards, onCart, onDiagnostic }) {
   );
 }
 
-function GallerySection({ variant, cards, onDiagnostic }) {
+function GallerySection({ variant, cards, onDiagnostic, index }) {
   const [selectedCard, setSelectedCard] = useState(null);
   const [zoomedCard, setZoomedCard] = useState(null);
   const closeZoom = useCallback(() => setZoomedCard(null), []);
@@ -643,7 +654,7 @@ function GallerySection({ variant, cards, onDiagnostic }) {
     <>
       <section id="arcanos" data-commerce-section="gallery" className={styles.gallerySection}>
         <div className={styles.darkInner}>
-        <SectionHeading index={4} inverse>{variant.galleryTitle}</SectionHeading>
+        <SectionHeading index={index} inverse>{variant.galleryTitle}</SectionHeading>
         <div className={styles.galleryIntro}>
           <p>{variant.galleryBody}</p>
           <Link href="/tarot" className={styles.goldLink}>Ver la baraja editorial <CommerceIcon name="arrow" size={18} /></Link>
@@ -730,11 +741,11 @@ function GallerySection({ variant, cards, onDiagnostic }) {
   );
 }
 
-function ReflectionSection({ variant }) {
+function ReflectionSection({ variant, index }) {
   return (
     <section id="reflection" data-commerce-section="reflection" className={styles.reflectionSection}>
       <div className={styles.lightInner}>
-        <SectionHeading index={5}>{variant.reflectionTitle}</SectionHeading>
+        <SectionHeading index={index}>{variant.reflectionTitle}</SectionHeading>
         <p className={styles.reflectionLead}>{variant.reflectionBody}</p>
         <div className={styles.actionsRail}>
           {variant.actions.map((action, index) => (
@@ -753,7 +764,7 @@ function ReflectionSection({ variant }) {
   );
 }
 
-function FactsSection({ product, onCart }) {
+function FactsSection({ product, onCart, index }) {
   const shipping = product.shippingIncluded
     ? (product.shipping || "Incluido en el precio")
     : null;
@@ -761,7 +772,7 @@ function FactsSection({ product, onCart }) {
   return (
     <section id="ficha" data-commerce-section="facts" className={styles.factsSection}>
       <div className={styles.darkInner}>
-        <SectionHeading index={6} inverse>Todo lo que debes saber antes de comprar</SectionHeading>
+        <SectionHeading index={index} inverse>Todo lo que debes saber antes de comprar</SectionHeading>
         <div className={styles.factsGrid}>
           <div className={styles.compositionBlock}>
             <div><strong>78</strong><span>cartas</span></div>
@@ -796,7 +807,7 @@ function Fact({ label, value }) {
   );
 }
 
-function Questions({ product, variant }) {
+function Questions({ product, variant, index }) {
   const shippingAnswer = product.shippingIncluded && product.shipping
     ? `${product.shipping} No se agregará un cobro de transporte después del precio anunciado.`
     : "Publicaremos la cobertura del envío incluido antes de habilitar el pago.";
@@ -811,7 +822,7 @@ function Questions({ product, variant }) {
   return (
     <section id="preguntas" data-commerce-section="questions" className={styles.questionsSection}>
       <div className={styles.lightInner}>
-        <SectionHeading index={7}>Preguntas antes de elegir</SectionHeading>
+        <SectionHeading index={index}>Preguntas antes de elegir</SectionHeading>
         <div className={styles.questionsList}>
           {questions.map(([question, answer], index) => (
             <details key={question} open={index === 0}>
@@ -1172,19 +1183,40 @@ export function TarotCommerceExperience({ variant, product, cards }) {
     document.getElementById(target)?.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "start" });
   }
 
+  function renderJourneySection(section, sectionIndex) {
+    const index = sectionIndex + 1;
+    if (section === "story") return <StorySection key={section} variant={variant} featured={featured} index={index} />;
+    if (section === "reasons") return <ReasonsSection key={section} variant={variant} index={index} />;
+    if (section === "signature") {
+      return (
+        <IntentSignatureSection
+          key={section}
+          variant={variant}
+          cards={cards}
+          onCart={addToCart}
+          onDiagnostic={trackDiagnostic}
+          index={index}
+        />
+      );
+    }
+    if (section === "gallery") return <GallerySection key={section} variant={variant} cards={cards} onDiagnostic={trackDiagnostic} index={index} />;
+    if (section === "reflection") return <ReflectionSection key={section} variant={variant} index={index} />;
+    if (section === "facts") return <FactsSection key={section} product={product} onCart={addToCart} index={index} />;
+    if (section === "questions") return <Questions key={section} product={product} variant={variant} index={index} />;
+    if (section === "close") return <CloseSection key={section} variant={variant} product={product} onCart={addToCart} />;
+    return null;
+  }
+
   return (
-    <div className={styles.commercePage} data-landing-intent={variant.id}>
-      <CommerceHeader quantity={quantity} onCart={() => setCartOpen(true)} />
+    <div
+      className={styles.commercePage}
+      data-landing-intent={variant.id}
+      data-architecture={variant.architecture}
+    >
+      <CommerceHeader quantity={quantity} onCart={() => setCartOpen(true)} variant={variant} />
       <main id="contenido">
         <Hero variant={variant} product={product} onAction={handleAction} />
-        <StorySection variant={variant} featured={featured} />
-        <ReasonsSection variant={variant} />
-        <IntentSignatureSection variant={variant} cards={cards} onCart={addToCart} onDiagnostic={trackDiagnostic} />
-        <GallerySection variant={variant} cards={cards} onDiagnostic={trackDiagnostic} />
-        <ReflectionSection variant={variant} />
-        <FactsSection product={product} onCart={addToCart} />
-        <Questions product={product} variant={variant} />
-        <CloseSection variant={variant} product={product} onCart={addToCart} />
+        {variant.sectionOrder.map(renderJourneySection)}
       </main>
       <FloatingPurchase
         visible={floatingVisible}
@@ -1192,7 +1224,7 @@ export function TarotCommerceExperience({ variant, product, cards }) {
         product={product}
         onCart={addToCart}
         step={journeyStep}
-        totalSteps={8}
+        totalSteps={variant.sectionOrder.length}
         reduceMotion={reduceMotion}
       />
       <CartDrawer open={cartOpen} onClose={() => setCartOpen(false)} product={product} quantity={quantity} onQuantity={persistQuantity} variant={variant} />
