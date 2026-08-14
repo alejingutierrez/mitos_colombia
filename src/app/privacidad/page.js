@@ -21,6 +21,33 @@ export const revalidate = 86400;
 
 const sections = [
   {
+    title: "Datos necesarios para compras y entregas",
+    body: (
+      <>
+        <p>
+          Cuando habilitemos la venta del Tarot de Mitos Colombianos,
+          solicitaremos correo electrónico, nombre, teléfono, departamento,
+          ciudad y dirección de entrega. Estos datos se usarán para crear y
+          gestionar el pedido, coordinar la entrega, atender solicitudes
+          relacionadas con la compra y cumplir las obligaciones aplicables a la
+          transacción. No se usarán para enviar publicidad sin una autorización
+          independiente.
+        </p>
+        <p>
+          La información necesaria para preparar el pago y la entrega se envía
+          a Bold cuando decides continuar al pago. Bold procesa el medio de
+          pago y puede presentar sus propios términos y autorizaciones. Mitos de
+          Colombia guarda la referencia, el estado, el valor y los datos
+          operativos del pedido. Cuando eliges tarjeta, el número y el código de
+          seguridad atraviesan cifrados el servidor durante la solicitud a Bold,
+          pero no se persisten en la orden, la base de datos ni los registros.
+          Las credenciales de cuentas bancarias se ingresan únicamente en la
+          experiencia de la entidad correspondiente.
+        </p>
+      </>
+    ),
+  },
+  {
     title: "Información que recopilamos",
     body: (
       <>
@@ -54,7 +81,9 @@ const sections = [
           alguien comparte un mito o una corrección, usamos el correo para
           solicitar aclaraciones o confirmar la publicación. No usamos la
           información con fines publicitarios ni la compartimos con terceros sin
-          autorización.
+          autorización, salvo con proveedores necesarios para procesar una
+          compra, prestar la infraestructura o coordinar una entrega, bajo
+          finalidades limitadas a esos servicios.
         </p>
         <p>
           También usamos algunos datos para entender qué secciones del sitio son
@@ -97,9 +126,11 @@ const sections = [
           administrada en infraestructura segura. Esta infraestructura cumple
           estándares de disponibilidad y respaldo. Aunque los datos pueden
           alojarse en servicios en la nube, el acceso está restringido al equipo
-          editorial. No compartimos la información con terceros ni la vendemos.
-          Si una integración futura requiriera compartir datos, solicitaremos
-          consentimiento explícito.
+          editorial. No vendemos la información. Cuando exista una compra,
+          compartiremos con el procesador de pagos y los proveedores de entrega
+          únicamente la información necesaria para completar la transacción y
+          entregar el pedido, de acuerdo con esta política y las autorizaciones
+          aplicables.
         </p>
         <p>
           Nuestro objetivo es mantener el archivo disponible y protegido. Por
@@ -133,8 +164,12 @@ const sections = [
         <p>
           La medición puede registrar páginas visitadas, dispositivo, navegador,
           país aproximado e interacciones como búsquedas, desplazamientos o
-          clics de salida. No enviamos nombres, correos ni el contenido de los
-          formularios a Google Analytics. Puedes limitar o eliminar estas
+          clics de salida. Cuando una compra queda aprobada, enviamos desde el
+          servidor su referencia de transacción, valor, moneda, producto y los
+          identificadores pseudónimos de la sesión para que la conversión no
+          dependa de que la persona regrese a la página de confirmación. No
+          enviamos nombres, correos, teléfonos, direcciones ni el contenido de
+          los formularios a Google Analytics. Puedes limitar o eliminar estas
           cookies desde la configuración de tu navegador. Consulta también la{" "}
           <TextLink href="https://policies.google.com/privacy" external>
             política de privacidad de Google
@@ -187,9 +222,10 @@ const sections = [
           información salga de contexto.
         </p>
         <p>
-          ¿Quién puede acceder a mis datos? Sólo el equipo editorial tiene
-          acceso a los mensajes, y lo utiliza para responder, verificar y
-          organizar la información. No utilizamos estos datos para campañas de
+          ¿Quién puede acceder a mis datos? El equipo autorizado accede a los
+          mensajes y pedidos según la tarea que deba realizar. Los proveedores
+          de pago, infraestructura o entrega reciben sólo los datos necesarios
+          para prestar su servicio. No utilizamos estos datos para campañas de
           marketing ni para envío de correos masivos. Si en el futuro
           habilitamos un boletín, solicitaremos tu consentimiento explícito.
         </p>
@@ -218,8 +254,9 @@ const sections = [
         <p>
           ¿Puedo navegar sin enviar datos? Sí. Puedes recorrer el archivo sin
           enviar información personal. Sólo solicitamos datos cuando decides
-          escribirnos o comentar. Si prefieres mantenerte anónimo, puedes
-          explorar libremente todas las secciones del sitio sin registrarte.
+          escribirnos, comentar o completar una compra. Si prefieres mantenerte
+          anónimo, puedes explorar libremente todas las secciones del sitio sin
+          registrarte.
         </p>
       </>
     ),
@@ -268,9 +305,11 @@ const sections = [
           El sitio puede utilizar servicios de infraestructura para alojar
           contenido, almacenar bases de datos y procesar imágenes. Estos
           proveedores cumplen estándares de seguridad y permiten que el archivo
-          sea estable. Sin embargo, eso no implica que compartamos datos
-          personales con terceros. Los datos enviados en formularios permanecen
-          en nuestras bases internas y se usan sólo con fines editoriales.
+          sea estable. Los datos de formularios editoriales se usan sólo para
+          gestionar esos aportes; los datos de pedidos se conservan y comparten
+          en la medida necesaria para procesar el pago, administrar la compra y
+          entregar el producto. Ningún proveedor queda autorizado por esta
+          política para usar la información con fines propios de publicidad.
         </p>
         <p>
           Para la medición de uso utilizamos Google Analytics 4 y, cuando está
