@@ -9,6 +9,7 @@ services:
     volumes:
       - .:/app
       - /app/node_modules
+      - /app/.next
     env_file:
       - path: .env
         required: false
@@ -16,4 +17,4 @@ services:
         required: false
     environment:
       NODE_ENV: development
-    command: sh -c "rm -rf .next && npm install && npm run dev -- -H 0.0.0.0 -p 3000"
+    command: sh -c "npm install && npm run dev -- -H 0.0.0.0 -p 3000"

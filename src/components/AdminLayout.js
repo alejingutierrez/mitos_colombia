@@ -31,6 +31,16 @@ const adminMenuItems = [
     ),
   },
   {
+    label: "Auditoría de mitos",
+    href: "/admin/myth-image-audit",
+    icon: (
+      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 5h16v14H4z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 9h4M7 13h7M17 8v7" />
+      </svg>
+    ),
+  },
+  {
     label: "Imágenes Verticales",
     href: "/admin/vertical-images",
     icon: (
@@ -204,7 +214,7 @@ export default function AdminLayout({ children, onLogout }) {
                 {adminMenuItems
                   .filter(
                     (item) =>
-                      item.href !== "/admin/image-style-review" ||
+                      !["/admin/image-style-review", "/admin/myth-image-audit"].includes(item.href) ||
                       showLocalImageStyleReview
                   )
                   .map((item) => {
