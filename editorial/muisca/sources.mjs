@@ -437,6 +437,56 @@ export const muiscaSources = {
     limitation:
       "Popón no comparte el origen, la maldición ni el marco trágico griego de Casandra; solo se compara la advertencia incómoda.",
   }),
+  viracocha: source({
+    title: "Huiracocha (dios): el diluvio y la nueva humanidad",
+    author: "Crónicas de Sarmiento de Gamboa y Juan de Betanzos, resumidas en referencia enciclopédica",
+    type: "referencia comparativa andina",
+    url: "https://es.wikipedia.org/wiki/Huiracocha_(dios)",
+    summary:
+      "Registra cómo Viracocha destruye con un diluvio a los gigantes que no lo reconocieron, enseña a la nueva humanidad y desaparece caminando sobre el mar; Manco Cápac y Mama Ocllo portan un bastón de oro.",
+    limitation:
+      "Es una síntesis enciclopédica; sirve para comparar la función de héroe civilizador y castigo por ofensa, sin probar contacto con Bochica.",
+  }),
+  chalchiuhtlicue: source({
+    title: "Chalchiuhtlicue y la edad del sol de agua (Atonatiuh)",
+    author: "Tradiciones recogidas por Fernando de Alva Ixtlilxóchitl, referencia enciclopédica",
+    type: "referencia comparativa mesoamericana",
+    url: "https://es.wikipedia.org/wiki/Chalchitlicue",
+    summary:
+      "Conserva el relato del desborde de las aguas que cierra una edad del mundo, entendido en Mesoamérica como crecida de ríos y no solo como lluvia del cielo.",
+    limitation:
+      "El diluvio nahua clausura una era completa del cosmos; no debe presentarse como equivalente del desagüe de una región.",
+  }),
+  trentren: source({
+    title: "Trentren Vilu y Caicai Vilu",
+    author: "Tradición oral mapuche, referencia enciclopédica",
+    type: "referencia comparativa mapuche",
+    url: "https://es.wikipedia.org/wiki/Trentren_Vilu_y_Caicai_Vilu",
+    summary:
+      "Cuenta el diluvio en que la serpiente Caicai hace subir el mar y Trentren eleva el cerro donde se refugian; los alcanzados por el agua se vuelven peces.",
+    limitation:
+      "La retirada de las aguas depende del desenlace del combate entre las serpientes, sin un tercer ser que abra un cauce.",
+  }),
+  atrahasis: source({
+    title: "Atrahasis: el poema acadio del diluvio",
+    author: "Epica mesopotámica, referencia enciclopédica",
+    type: "referencia comparativa mesopotámica",
+    url: "https://es.wikipedia.org/wiki/Atrahasis",
+    summary:
+      "Narra cómo un dios decide el diluvio para castigar a una humanidad que lo molesta y una familia advertida logra sobrevivir en una barca.",
+    limitation:
+      "A diferencia del Génesis, en Atrahasis y en Gilgamesh el arco iris no aparece como señal de pacto.",
+  }),
+  atlas: source({
+    title: "Atlas: el titán que sostiene los cielos",
+    author: "Mitología griega, referencia enciclopédica",
+    type: "referencia comparativa clásica",
+    url: "https://es.wikipedia.org/wiki/Atlas_(mitología)",
+    summary:
+      "Documenta al titán condenado a sostener la bóveda celeste tras la guerra de los Titanes; Villa Posse llama a Chibchacum 'el Atlas de los muiscas'.",
+    limitation:
+      "El castigo de Atlas es cósmico y posterior a una derrota de dioses; el de Chibchacum explica los temblores de una tierra concreta.",
+  }),
 };
 
 export function pickSources(...keys) {

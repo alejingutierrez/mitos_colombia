@@ -34,7 +34,7 @@ export const muiscaLessons = {
   "el-sol-y-la-luna":
     "Dos luces distintas pueden sostener juntas un mismo mundo.",
   "el-tequendama":
-    "Resolver una urgencia sin destruir el mañana es una forma profunda de sabiduría.",
+    "La fuerza que inunda y la que alimenta son la misma; solo cambia el cauce que se le abre.",
   "en-el-principio-fue-el-maiz":
     "La riqueza que alimenta exige más paciencia que la riqueza que deslumbra.",
   "fu-el-dios-de-la-torpeza":
