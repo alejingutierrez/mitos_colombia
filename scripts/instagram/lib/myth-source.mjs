@@ -1,4 +1,5 @@
 import Database from "better-sqlite3";
+import fs from "node:fs/promises";
 import pg from "pg";
 
 function parseJson(value, fallback = []) {
@@ -72,6 +73,70 @@ async function loadFromPostgres(slug, env) {
       [myth.id]
     );
     return normalizeMyth(myth, verticalResult.rows[0]?.image_url || null);
+  } finally {
+    await client.end().catch(() => {});
+  }
+}
+
+export async function loadCommunityMythsForInstagram(
+  community,
+  { env = process.env } = {}
+) {
+  const url = connectionString(env);
+  if (!url) {
+    throw new Error(
+      "La instantánea comunitaria requiere una conexión PostgreSQL configurada."
+    );
+  }
+  const client = new pg.Client({
+    connectionString: url,
+    ssl: /localhost|127\.0\.0\.1/.test(url)
+      ? undefined
+      : { rejectUnauthorized: false },
+    connectionTimeoutMillis: 20_000,
+  });
+  try {
+    await client.connect();
+    const result = await client.query(
+      `
+        SELECT
+          m.id,
+          m.title,
+          m.slug,
+          m.excerpt,
+          m.content,
+          m.image_prompt,
+          m.image_url,
+          m.latitude,
+          m.longitude,
+          m.updated_at,
+          r.name AS region,
+          c.name AS community,
+          em.image_url AS editorial_image_url,
+          em.sources_json,
+          em.key_sources_json,
+          vertical.image_url AS portrait_image_url
+        FROM myths m
+        JOIN regions r ON r.id = m.region_id
+        JOIN communities c ON c.id = m.community_id
+        LEFT JOIN editorial_myths em ON em.source_myth_id = m.id
+        LEFT JOIN LATERAL (
+          SELECT vi.image_url
+          FROM vertical_images vi
+          WHERE vi.entity_type = 'myth'
+            AND vi.entity_id = m.id
+            AND NULLIF(TRIM(vi.image_url), '') IS NOT NULL
+          ORDER BY vi.updated_at DESC NULLS LAST, vi.created_at DESC NULLS LAST
+          LIMIT 1
+        ) vertical ON true
+        WHERE lower(c.name) = lower($1)
+        ORDER BY m.slug
+      `,
+      [community]
+    );
+    return result.rows.map((myth) =>
+      normalizeMyth(myth, myth.portrait_image_url || null)
+    );
   } finally {
     await client.end().catch(() => {});
   }
@@ -163,6 +228,26 @@ export async function loadMythForInstagram(
   if (!myth.images.landscape || !myth.images.portrait) {
     throw new Error(
       `El mito "${slug}" no tiene todavía las dos imágenes canónicas requeridas.`
+    );
+  }
+  return myth;
+}
+
+export async function loadMythSnapshot(snapshotPath, expectedSlug) {
+  const document = JSON.parse(await fs.readFile(snapshotPath, "utf8"));
+  const myths = Array.isArray(document) ? document : document.myths;
+  if (!Array.isArray(myths)) {
+    throw new Error(`La instantánea ${snapshotPath} no contiene una lista de mitos.`);
+  }
+  const myth = myths.find((item) => item.slug === expectedSlug);
+  if (!myth) {
+    throw new Error(
+      `La instantánea ${snapshotPath} no contiene el mito "${expectedSlug}".`
+    );
+  }
+  if (!myth.images?.landscape || !myth.images?.portrait) {
+    throw new Error(
+      `El mito "${expectedSlug}" no tiene las dos imágenes canónicas en la instantánea.`
     );
   }
   return myth;

@@ -9,7 +9,7 @@ export const TEXT_DENSITY_WORD_LIMITS = Object.freeze({
   medium: 54,
   narrative: 78,
 });
-export const MIN_IMAGE_SEQUENCE_GAP = 4;
+export const MIN_IMAGE_SEQUENCE_GAP = 3;
 
 export const CAROUSEL_PLAN_SCHEMA = Object.freeze({
   type: "object",
@@ -33,11 +33,39 @@ export const CAROUSEL_PLAN_SCHEMA = Object.freeze({
     generated_image: {
       type: "object",
       additionalProperties: false,
-      required: ["needed", "narrative_gap", "brief", "avoid"],
+      required: [
+        "needed",
+        "narrative_gap",
+        "brief",
+        "art_direction",
+        "avoid",
+      ],
       properties: {
         needed: { type: "boolean" },
         narrative_gap: { type: "string", maxLength: 320 },
         brief: { type: "string", maxLength: 1200 },
+        art_direction: {
+          type: "object",
+          additionalProperties: false,
+          required: [
+            "moment",
+            "subject",
+            "action",
+            "setting",
+            "framing",
+            "continuity",
+            "differentiation",
+          ],
+          properties: {
+            moment: { type: "string", maxLength: 240 },
+            subject: { type: "string", maxLength: 240 },
+            action: { type: "string", maxLength: 240 },
+            setting: { type: "string", maxLength: 240 },
+            framing: { type: "string", maxLength: 240 },
+            continuity: { type: "string", maxLength: 320 },
+            differentiation: { type: "string", maxLength: 320 },
+          },
+        },
         avoid: {
           type: "array",
           maxItems: 12,
@@ -81,6 +109,7 @@ export const CAROUSEL_PLAN_SCHEMA = Object.freeze({
               "climax",
               "meaning",
               "closing",
+              "overview",
             ],
           },
           design_role: {
@@ -102,7 +131,7 @@ export const CAROUSEL_PLAN_SCHEMA = Object.freeze({
             type: "string",
             enum: ["short", "medium", "narrative"],
           },
-          headline: { type: "string", maxLength: 90 },
+          headline: { type: "string", maxLength: 64 },
           body: { type: "string", maxLength: 420 },
           asset_id: {
             type: "string",
@@ -178,6 +207,9 @@ export function validateCarouselPlan(
   ) {
     errors.push("last_slide_not_closing");
   }
+  if (wordCount(`${slides.at(-1)?.headline} ${slides.at(-1)?.body}`) > 32) {
+    errors.push("closing_slide_too_wordy_for_cta");
+  }
 
   const usedAssets = slides
     .map((slide) => slide.asset_id)
@@ -197,6 +229,29 @@ export function validateCarouselPlan(
   }
   if (needsGenerated !== usedAssets.includes("generated_third")) {
     errors.push("generated_image_contract_mismatch");
+  }
+  if (needsGenerated) {
+    const direction = plan?.generated_image?.art_direction;
+    const requiredDirectionFields = [
+      "moment",
+      "subject",
+      "action",
+      "setting",
+      "framing",
+      "continuity",
+      "differentiation",
+    ];
+    if (!String(plan?.generated_image?.brief || "").trim()) {
+      errors.push("generated_image_brief_missing");
+    }
+    if (
+      !direction ||
+      requiredDirectionFields.some(
+        (field) => !String(direction?.[field] || "").trim()
+      )
+    ) {
+      errors.push("generated_image_art_direction_incomplete");
+    }
   }
   if (usedAssets.length < 2 || usedAssets.length > 3) {
     errors.push("image_budget_out_of_range");
@@ -226,7 +281,7 @@ export function validateCarouselPlan(
   }
   if (
     landscapeSlide &&
-    (landscapeSlide.sequence < 5 ||
+    (landscapeSlide.sequence < 4 ||
       landscapeSlide.sequence > Math.ceil(slides.length * 0.55))
   ) {
     errors.push("landscape_image_out_of_rhythm");
@@ -245,10 +300,15 @@ export function validateCarouselPlan(
   const locationSlides = slides.filter((slide) => slide.kind === "location");
   if (
     locationSlides.some((locationSlide) =>
-      assetSlides.some(
-        (assetSlide) =>
-          Math.abs(locationSlide.sequence - assetSlide.sequence) <= 1
-      )
+      assetSlides.some((assetSlide) => {
+        const isTerritoryToSceneTransition =
+          assetSlide.asset_id === "existing_landscape" &&
+          assetSlide.sequence === locationSlide.sequence + 1;
+        return (
+          Math.abs(locationSlide.sequence - assetSlide.sequence) <= 1 &&
+          !isTerritoryToSceneTransition
+        );
+      })
     )
   ) {
     errors.push("map_adjacent_to_image");

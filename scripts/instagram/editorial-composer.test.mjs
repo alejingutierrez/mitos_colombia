@@ -47,6 +47,102 @@ test("la selección es aleatoria pero reproducible mediante semilla", () => {
   assert.notDeepEqual(ids(first), ids(different));
 });
 
+test("el historial rota los gráficos sin alterar la plantilla", () => {
+  const first = composeEditorialCarousel({ plan, seed: "bachue-rotation" });
+  const history = [
+    {
+      graphic_ids: first.slides
+        .flatMap((slide) => [
+          slide.graphic_motif?.id,
+          slide.graphic_decoration?.id,
+        ])
+        .filter(Boolean),
+    },
+  ];
+  const rotated = composeEditorialCarousel({
+    plan,
+    seed: "bachue-rotation",
+    history,
+  });
+  const graphics = (composition) =>
+    composition.slides
+      .flatMap((slide) => [
+        slide.graphic_motif?.id,
+        slide.graphic_decoration?.id,
+      ])
+      .filter(Boolean);
+
+  assert.deepEqual(
+    first.slides.map((slide) => slide.template_id),
+    rotated.slides.map((slide) => slide.template_id)
+  );
+  assert.notDeepEqual(graphics(first), graphics(rotated));
+});
+
+test("la última ficha integra el CTA de lectura sin sumar una lámina", () => {
+  const composition = composeEditorialCarousel({
+    plan,
+    seed: "bachue-quality",
+  });
+  const finalSlide = composition.slides.at(-1);
+
+  assert.equal(composition.slides.length, plan.sequence_count);
+  assert.equal(finalSlide.kind, "closing");
+  assert.deepEqual(finalSlide.copy.cta, {
+    eyebrow: "El relato continúa",
+    body: "Lee la historia completa, sus fuentes y otras versiones en",
+    label: "mitosdecolombia.com",
+    href: "https://mitosdecolombia.com/mitos/bachue",
+  });
+  assert.equal(
+    composition.slides.slice(0, -1).some((slide) => slide.copy.cta),
+    false
+  );
+
+  const missingCta = structuredClone(composition);
+  delete missingCta.slides.at(-1).copy.cta;
+  assert.ok(
+    validateEditorialComposition(missingCta).includes(
+      "final_slide_missing_read_more_cta"
+    )
+  );
+});
+
+test("la introducción usa portada comunitaria y CTA hacia la colección", () => {
+  const communityPlan = {
+    ...plan,
+    myth: {
+      ...plan.myth,
+      slug: "muiscas-introduccion",
+      kind: "community",
+      ctaHref: "https://mitosdecolombia.com/comunidades/muiscas",
+    },
+    slides: plan.slides.map((slide, index) =>
+      index === 0 ? { ...slide, design_role: "overview" } : slide
+    ),
+  };
+  const composition = composeEditorialCarousel({
+    plan: communityPlan,
+    seed: "muiscas-introduccion",
+  });
+
+  assert.equal(composition.slides[0].template_id, "cover-07-high-horizon");
+  assert.equal(
+    composition.slides.at(-1).copy.cta.href,
+    "https://mitosdecolombia.com/comunidades/muiscas"
+  );
+  assert.equal(
+    composition.slides.at(-1).copy.cta.body,
+    "Explora la colección completa y elige tu próxima historia en"
+  );
+
+  const mythComposition = composeEditorialCarousel({
+    plan,
+    seed: "muiscas-introduccion",
+  });
+  assert.notEqual(mythComposition.slides[0].template_id, "cover-07-high-horizon");
+});
+
 test("el compositor sólo usa plantillas aprobadas, compatibles y no repetidas", () => {
   const composition = composeEditorialCarousel({
     plan,
@@ -68,6 +164,17 @@ test("el compositor sólo usa plantillas aprobadas, compatibles y no repetidas",
         slide.template_brand_mode !==
           composition.slides[index - 1].template_brand_mode
     )
+  );
+  assert.ok(
+    composition.slides.every((slide) => {
+      const graphicCount = [
+        slide.graphic_motif,
+        slide.graphic_decoration,
+      ].filter(Boolean).length;
+      return slide.template_family === "typographic"
+        ? graphicCount === 1
+        : graphicCount === 0;
+    })
   );
 });
 

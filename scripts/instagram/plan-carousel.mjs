@@ -12,6 +12,7 @@ import {
 import {
   fetchVisualAsset,
   loadMythForInstagram,
+  loadMythSnapshot,
 } from "./lib/myth-source.mjs";
 
 dotenv.config({ path: path.resolve(process.cwd(), ".env") });
@@ -41,6 +42,11 @@ const slug = arg("--slug");
 const requireThirdImage = process.argv.includes("--require-third");
 const allowOpenAIFallback = process.argv.includes("--allow-openai-fallback");
 const provider = arg("--provider", "bedrock");
+const snapshotPath = arg("--snapshot", "");
+const feedIndexArgument = arg("--feed-index", "");
+const feedIndex = /^\d+$/.test(feedIndexArgument)
+  ? Number(feedIndexArgument)
+  : undefined;
 if (!slug) {
   throw new Error(
     "Uso: npm run instagram:plan -- --slug <slug> [--require-third] [--provider bedrock|local] [--allow-openai-fallback]"
@@ -56,12 +62,14 @@ const outputPath = path.resolve(
 const historyPath = path.resolve(
   arg(
     "--history",
-    path.join(process.cwd(), "content/instagram/history.jsonl")
+    path.join(process.cwd(), "content/instagram/template-history.jsonl")
   )
 );
 
 const [myth, history] = await Promise.all([
-  loadMythForInstagram(slug),
+  snapshotPath
+    ? loadMythSnapshot(path.resolve(snapshotPath), slug)
+    : loadMythForInstagram(slug),
   readHistory(historyPath),
 ]);
 const templates = eligibleTemplates(history).map((item) => ({
@@ -98,6 +106,7 @@ if (provider === "local") {
     myth,
     templates,
     requireThirdImage,
+    feedIndex,
   });
 } else {
   try {
@@ -144,6 +153,8 @@ const payload = {
   },
   production_policy: {
     require_third_image: requireThirdImage,
+    source_snapshot: snapshotPath ? path.resolve(snapshotPath) : null,
+    feed_design: result.feed_design || null,
   },
   plan: { ...result.plan, slides: resolvedSlides },
 };

@@ -1,6 +1,8 @@
 import Image from "next/image";
 import { INSTAGRAM_EDITORIAL_PALETTES } from "../../lib/instagram-editorial-library.js";
 import styles from "./InstagramTemplateCanvas.module.css";
+import v9Styles from "./InstagramTemplateCanvasV9.module.css";
+import { MotifMask } from "../atoms/Motif";
 
 const ASSETS = Object.freeze({
   cover: "/design-system/instagram/bachue-vertical.jpg",
@@ -10,23 +12,6 @@ const ASSETS = Object.freeze({
 
 const STORY_STRIP_INDEXES = Object.freeze([0, 1, 2]);
 const MAP_TILE_SIZE_CQW = (256 / 1080) * 100;
-
-const ROLE_LABELS = Object.freeze({
-  hook: "Umbral",
-  setting: "Territorio",
-  context: "Memoria",
-  identity: "Nombre",
-  testimony: "Voz",
-  sequence: "Relato",
-  development: "Desarrollo",
-  inciting_event: "Aparición",
-  pause: "Pausa",
-  symbol: "Símbolo",
-  turn: "Giro",
-  climax: "Transformación",
-  meaning: "Permanencia",
-  closing: "Pregunta",
-});
 
 const DEFAULT_META_BY_FAMILY = Object.freeze({
   cover: { sequence: 1, total: 12 },
@@ -115,6 +100,13 @@ function formatFolio(value) {
   return String(value || 1).padStart(2, "0");
 }
 
+function titleLength(value) {
+  const length = String(value || "").trim().length;
+  if (length > 52) return "long";
+  if (length > 38) return "medium";
+  return "short";
+}
+
 function splitEditorialBody(body, density) {
   const value = String(body || "").trim();
   if (density !== "narrative") {
@@ -147,43 +139,27 @@ function OriginSeal() {
   );
 }
 
-function EditorialChrome({ template, meta }) {
+function EditorialChrome({ meta }) {
   const sequence = formatFolio(meta.sequence);
-  const total = formatFolio(meta.total);
-  const role = ROLE_LABELS[meta.role] || ROLE_LABELS[template.role] || "Relato";
+  const territory = [meta.community, meta.region].filter(Boolean).join(" · ");
 
   return (
-    <div aria-hidden="true" className={styles.brandChrome}>
-      <div className={styles.brandRail}>
-        <span
-          className={styles.folioNumber}
-          data-editorial-slot="chrome-folio"
-        >
-          {sequence}
-        </span>
+    <div
+      aria-hidden="true"
+      className={`${styles.brandChrome} ${v9Styles.chrome}`}
+    >
+      <header className={v9Styles.chromeHeader}>
+        <span data-editorial-slot="chrome-publication">Mitos de Colombia</span>
+        <small data-editorial-slot="chrome-territory">{territory}</small>
+      </header>
+      <div className={v9Styles.chromeSeal}>
         <OriginSeal />
-        <span
-          className={styles.brandVertical}
-          data-editorial-slot="chrome-signature"
-        >
-          {meta.mythTitle} · {total} secuencias
-        </span>
-        <span className={styles.brandRole} data-editorial-slot="chrome-role">
-          {role}
-        </span>
       </div>
-      <span
-        className={styles.registrationMark}
-        data-editorial-slot="chrome-registration"
-      />
-      <span
-        className={styles.sequenceCount}
-        data-editorial-slot="chrome-sequence"
-      >
-        {sequence}
+      <footer className={v9Styles.chromeFooter}>
         <i />
-        {total}
-      </span>
+        <span data-editorial-slot="chrome-folio">{sequence}</span>
+        <i />
+      </footer>
     </div>
   );
 }
@@ -191,6 +167,7 @@ function EditorialChrome({ template, meta }) {
 function templateClassName(template, ...classNames) {
   return [
     styles.canvas,
+    v9Styles.system,
     ...classNames,
     styles[template.layout],
     styles[`brand_${template.brandMode}`],
@@ -207,12 +184,13 @@ function CoverCanvas({ template, copy, meta, assets }) {
       data-brand-mode={template.brandMode}
       data-family={template.family}
       data-instagram-template={template.id}
+      data-layout={template.layout}
       data-revision={template.designRevision}
       data-sequence={meta.sequence}
       data-source-quality="native"
       style={paletteStyle(template.palette)}
     >
-      <div className={styles.coverMedia}>
+      <div className={styles.coverMedia} data-editorial-slot="media-primary">
         <Image
           alt={copy.altText || `${meta.mythTitle}, imagen vertical del mito.`}
           className={styles.coverImage}
@@ -223,8 +201,8 @@ function CoverCanvas({ template, copy, meta, assets }) {
           unoptimized
         />
       </div>
-      <div className={styles.coverShade} />
-      <div className={styles.coverFrame} />
+      <div className={styles.coverShade} data-editorial-slot="media-shade" />
+      <div className={styles.coverFrame} data-editorial-slot="media-frame" />
       <p
         className={styles.coverCommunity}
         data-editorial-slot="content-kicker"
@@ -235,12 +213,18 @@ function CoverCanvas({ template, copy, meta, assets }) {
         {copy.title}
       </h2>
       <span aria-hidden="true" className={styles.surfaceTexture} />
-      <EditorialChrome meta={meta} template={template} />
+      <EditorialChrome meta={meta} />
     </article>
   );
 }
 
-function TypographicCanvas({ template, copy, meta }) {
+function TypographicCanvas({
+  template,
+  copy,
+  meta,
+  graphicMotif,
+  graphicDecoration,
+}) {
   const body = splitEditorialBody(copy.body, template.textDensity);
   return (
     <article
@@ -253,23 +237,77 @@ function TypographicCanvas({ template, copy, meta }) {
       data-density={template.textDensity}
       data-family={template.family}
       data-instagram-template={template.id}
+      data-layout={template.layout}
+      data-has-cta={copy.cta ? "true" : "false"}
       data-revision={template.designRevision}
       data-sequence={meta.sequence}
       style={paletteStyle(template.palette)}
     >
-      <div aria-hidden="true" className={styles.typeDevice} />
+      <div
+        aria-hidden="true"
+        className={styles.typeDevice}
+        data-editorial-slot="decorative-device"
+      />
       <p className={styles.typeKicker} data-editorial-slot="content-kicker">
         {copy.kicker}
       </p>
       <h2 className={styles.typeTitle} data-editorial-slot="content-title">
         {copy.title}
       </h2>
-      <p className={styles.typeBody} data-editorial-slot="content-body">
-        {body.lead ? (
-          <span className={styles.typeBodyLead}>{body.lead}</span>
-        ) : null}
-        <span className={styles.typeBodyRest}>{body.rest}</span>
-      </p>
+      {copy.body ? (
+        <p className={styles.typeBody} data-editorial-slot="content-body">
+          {body.lead ? (
+            <span className={styles.typeBodyLead}>{body.lead}</span>
+          ) : null}
+          <span className={styles.typeBodyRest}>{body.rest}</span>
+        </p>
+      ) : null}
+      {copy.cta ? (
+        <aside
+          className={v9Styles.closingCta}
+          data-editorial-slot="closing-cta"
+        >
+          <span className={v9Styles.closingCtaEyebrow}>
+            {copy.cta.eyebrow}
+          </span>
+          <strong className={v9Styles.closingCtaDomain}>
+            {copy.cta.label}
+          </strong>
+          <p className={v9Styles.closingCtaBody}>{copy.cta.body}</p>
+        </aside>
+      ) : null}
+      {template.designRevision === "v9" && graphicMotif ? (
+        <MotifMask
+          className={v9Styles.graphicMotif}
+          data-editorial-slot="graphic-motif"
+          data-motif-group={graphicMotif.group}
+          data-motif-id={graphicMotif.id}
+          data-motif-kind={graphicMotif.kind}
+          src={graphicMotif.src}
+        />
+      ) : null}
+      {template.designRevision === "v9" &&
+      graphicDecoration &&
+      !graphicMotif ? (
+        <MotifMask
+          className={v9Styles.graphicDecoration}
+          data-decoration-group={graphicDecoration.group}
+          data-decoration-id={graphicDecoration.id}
+          data-decoration-kind={graphicDecoration.kind}
+          data-editorial-slot="graphic-decoration"
+          src={graphicDecoration.src}
+          style={
+            graphicDecoration.kind === "pattern"
+              ? {
+                  maskRepeat: "repeat",
+                  maskSize: "18cqw",
+                  WebkitMaskRepeat: "repeat",
+                  WebkitMaskSize: "18cqw",
+                }
+              : undefined
+          }
+        />
+      ) : null}
       <p
         aria-hidden="true"
         className={styles.typeInitial}
@@ -318,13 +356,14 @@ function TypographicCanvas({ template, copy, meta }) {
         01
       </span>
       <span aria-hidden="true" className={styles.surfaceTexture} />
-      <EditorialChrome meta={meta} template={template} />
+      <EditorialChrome meta={meta} />
     </article>
   );
 }
 
 function StoryImageCanvas({ template, copy, meta, assets }) {
   const asset = assets?.[template.family] || ASSETS[template.family];
+  const isV9 = template.designRevision === "v9";
   const alt =
     copy.altText ||
     (template.family === "secondary"
@@ -340,35 +379,27 @@ function StoryImageCanvas({ template, copy, meta, assets }) {
       data-brand-mode={template.brandMode}
       data-family={template.family}
       data-instagram-template={template.id}
+      data-layout={template.layout}
       data-revision={template.designRevision}
       data-sequence={meta.sequence}
       data-source-quality="native"
+      data-title-length={titleLength(copy.title)}
       style={paletteStyle(template.palette)}
     >
-      <div className={styles.storyMedia}>
+      <div className={styles.storyMedia} data-editorial-slot="media-primary">
         <Image
           alt={alt}
           className={styles.storyImageAsset}
           fill
+          priority
           sizes="1080px"
           src={asset}
           unoptimized
         />
       </div>
-      <div className={styles.storyDetail}>
-        <Image
-          alt=""
-          aria-hidden="true"
-          className={styles.storyImageAsset}
-          fill
-          sizes="1080px"
-          src={asset}
-          unoptimized
-        />
-      </div>
-      <div className={styles.storyStrips}>
-        {STORY_STRIP_INDEXES.map((index) => (
-          <div key={index}>
+      {!isV9 ? (
+        <>
+          <div className={styles.storyDetail} data-editorial-slot="media-detail">
             <Image
               alt=""
               aria-hidden="true"
@@ -379,10 +410,33 @@ function StoryImageCanvas({ template, copy, meta, assets }) {
               unoptimized
             />
           </div>
-        ))}
-      </div>
-      <div aria-hidden="true" className={styles.storyShade} />
-      <div aria-hidden="true" className={styles.storyFrame} />
+          <div className={styles.storyStrips} data-editorial-slot="media-strips">
+            {STORY_STRIP_INDEXES.map((index) => (
+              <div key={index}>
+                <Image
+                  alt=""
+                  aria-hidden="true"
+                  className={styles.storyImageAsset}
+                  fill
+                  sizes="1080px"
+                  src={asset}
+                  unoptimized
+                />
+              </div>
+            ))}
+          </div>
+          <div
+            aria-hidden="true"
+            className={styles.storyShade}
+            data-editorial-slot="media-shade"
+          />
+          <div
+            aria-hidden="true"
+            className={styles.storyFrame}
+            data-editorial-slot="media-frame"
+          />
+        </>
+      ) : null}
       <p className={styles.storyKicker} data-editorial-slot="content-kicker">
         {copy.kicker}
       </p>
@@ -405,7 +459,7 @@ function StoryImageCanvas({ template, copy, meta, assets }) {
         02
       </span>
       <span aria-hidden="true" className={styles.surfaceTexture} />
-      <EditorialChrome meta={meta} template={template} />
+      <EditorialChrome meta={meta} />
     </article>
   );
 }
@@ -480,6 +534,7 @@ function MapTiles({
 function MapCanvas({ template, copy, meta }) {
   const isLocator = template.layout === "map_locator";
   const isTopographic = template.layout === "map_topographic";
+  const usesFocusedV9Map = isLocator && template.designRevision === "v9";
   const detailZoom = template.layout === "map_coordinates" ? 12 : 11;
 
   return (
@@ -488,22 +543,27 @@ function MapCanvas({ template, copy, meta }) {
       data-brand-mode={template.brandMode}
       data-family={template.family}
       data-instagram-template={template.id}
+      data-layout={template.layout}
       data-map-provider={isTopographic ? "opentopomap" : "openstreetmap"}
       data-revision={template.designRevision}
       data-sequence={meta.sequence}
       style={paletteStyle(template.palette)}
     >
-      <div className={styles.mapMain}>
+      <div className={styles.mapMain} data-editorial-slot="map-primary">
         <MapTiles
-          latitude={isLocator ? 4.4 : copy.latitude}
-          longitude={isLocator ? -73.8 : copy.longitude}
-          tileRadius={isLocator || template.layout === "map_route" ? 3 : 2}
+          latitude={isLocator && !usesFocusedV9Map ? 4.4 : copy.latitude}
+          longitude={isLocator && !usesFocusedV9Map ? -73.8 : copy.longitude}
+          tileRadius={
+            (isLocator && !usesFocusedV9Map) || template.layout === "map_route"
+              ? 3
+              : 2
+          }
           topographic={isTopographic}
-          zoom={isLocator ? 5 : detailZoom}
+          zoom={isLocator ? (usesFocusedV9Map ? 13 : 5) : detailZoom}
         />
       </div>
       {isLocator ? (
-        <div className={styles.mapInset}>
+        <div className={styles.mapInset} data-editorial-slot="map-inset">
           <MapTiles
             latitude={copy.latitude}
             longitude={copy.longitude}
@@ -513,9 +573,21 @@ function MapCanvas({ template, copy, meta }) {
           <span className={styles.mapInsetMarker} />
         </div>
       ) : null}
-      <div aria-hidden="true" className={styles.mapTint} />
-      <div aria-hidden="true" className={styles.mapGrid} />
-      <span aria-hidden="true" className={styles.mapMarker}>
+      <div
+        aria-hidden="true"
+        className={styles.mapTint}
+        data-editorial-slot="map-tint"
+      />
+      <div
+        aria-hidden="true"
+        className={styles.mapGrid}
+        data-editorial-slot="map-grid"
+      />
+      <span
+        aria-hidden="true"
+        className={styles.mapMarker}
+        data-editorial-slot="map-marker"
+      >
         <i />
       </span>
       {template.layout === "map_route" ? (
@@ -558,7 +630,7 @@ function MapCanvas({ template, copy, meta }) {
           : "© OpenStreetMap"}
       </small>
       <span aria-hidden="true" className={styles.surfaceTexture} />
-      <EditorialChrome meta={meta} template={template} />
+      <EditorialChrome meta={meta} />
     </article>
   );
 }
@@ -582,6 +654,8 @@ export function InstagramTemplateCanvas({
   copy,
   meta,
   assets,
+  graphicMotif,
+  graphicDecoration,
 }) {
   const defaultCopy =
     template.family === "typographic"
@@ -593,6 +667,8 @@ export function InstagramTemplateCanvas({
   };
   const resolvedMeta = {
     mythTitle: "Bachué",
+    community: "Muiscas",
+    region: "Región Andina",
     role: template.role,
     ...DEFAULT_META_BY_FAMILY[template.family],
     ...meta,
@@ -611,6 +687,8 @@ export function InstagramTemplateCanvas({
     return (
       <TypographicCanvas
         copy={resolvedCopy}
+        graphicDecoration={graphicDecoration}
+        graphicMotif={graphicMotif}
         meta={resolvedMeta}
         template={template}
       />

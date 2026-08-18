@@ -56,6 +56,7 @@ export default function RootLayout({ children }) {
     <html
       lang="es"
       className={`${display.variable} ${body.variable}`}
+      data-scroll-behavior="smooth"
     >
       <head>
         <WebsiteJsonLd siteUrl={SITE_URL} />

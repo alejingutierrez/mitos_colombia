@@ -2,6 +2,7 @@ import fs from "node:fs/promises";
 import path from "node:path";
 import { composeEditorialCarousel } from "./lib/editorial-composer.mjs";
 import { validateCarouselPlan } from "./lib/plan-schema.mjs";
+import { getTemplate } from "./lib/templates.mjs";
 
 function argument(name, fallback = "") {
   const index = process.argv.indexOf(`--${name}`);
@@ -52,27 +53,68 @@ try {
   if (error.code !== "ENOENT") throw error;
 }
 
-const composition = composeEditorialCarousel({
-  plan,
-  seed,
-  history,
-  copyBySequence,
-  assets: assetsDocument.web || {},
-});
-await fs.mkdir(path.dirname(outputPath), { recursive: true });
-await fs.writeFile(outputPath, `${JSON.stringify(composition, null, 2)}\n`);
-
-if (record) {
-  await fs.mkdir(path.dirname(historyPath), { recursive: true });
-  await fs.appendFile(
-    historyPath,
-    `${JSON.stringify({
-      composed_at: composition.composed_at,
-      myth_slug: composition.myth?.slug || null,
-      seed: composition.seed,
-      template_ids: composition.slides.map((slide) => slide.template_id),
-    })}\n`
+const existingComposition = record
+  ? await fs
+      .readFile(outputPath, "utf8")
+      .then(JSON.parse)
+      .catch((error) => {
+        if (error.code === "ENOENT") return null;
+        throw error;
+      })
+  : null;
+if (
+  existingComposition &&
+  (existingComposition.seed !== seed ||
+    existingComposition.myth?.slug !== (plan.myth?.slug || null) ||
+    existingComposition.slides?.length !== plan.sequence_count)
+) {
+  throw new Error(
+    "La composición existente no coincide con el mito, la semilla o la cantidad de láminas aprobadas. Usa otra edición de salida."
   );
+}
+const composition =
+  existingComposition ||
+  composeEditorialCarousel({
+    plan,
+    seed,
+    history,
+    copyBySequence,
+    assets: assetsDocument.web || {},
+  });
+await fs.mkdir(path.dirname(outputPath), { recursive: true });
+if (!existingComposition) {
+  await fs.writeFile(outputPath, `${JSON.stringify(composition, null, 2)}\n`);
+}
+
+let recorded = false;
+if (record) {
+  const narrativeTemplate = getTemplate(plan.template_id);
+  const historyEntry = {
+    composed_at: composition.composed_at,
+    myth_slug: composition.myth?.slug || null,
+    seed: composition.seed,
+    narrative_template_id: plan.template_id || null,
+    narrative_motif: narrativeTemplate?.motif || null,
+    template_ids: composition.slides.map((slide) => slide.template_id),
+    graphic_ids: composition.slides
+      .flatMap((slide) => [
+        slide.graphic_motif?.id,
+        slide.graphic_decoration?.id,
+      ])
+      .filter(Boolean),
+  };
+  const alreadyRecorded = history.some(
+    (entry) =>
+      entry.myth_slug === historyEntry.myth_slug &&
+      entry.seed === historyEntry.seed &&
+      JSON.stringify(entry.template_ids || []) ===
+        JSON.stringify(historyEntry.template_ids)
+  );
+  await fs.mkdir(path.dirname(historyPath), { recursive: true });
+  if (!alreadyRecorded) {
+    await fs.appendFile(historyPath, `${JSON.stringify(historyEntry)}\n`);
+    recorded = true;
+  }
 }
 
 console.log(
@@ -82,7 +124,7 @@ console.log(
       seed: composition.seed,
       slides: composition.slides.length,
       template_ids: composition.slides.map((slide) => slide.template_id),
-      recorded: record,
+      recorded,
     },
     null,
     2
