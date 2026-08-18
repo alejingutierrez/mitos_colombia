@@ -1,6 +1,7 @@
 node_modules
 .next
 .superpowers
+.worktrees/
 artifacts/
 .env
 .env.*
@@ -22,3 +23,16 @@ myths.db
 # Las capturas de referencia de las plantillas viven en public/design-system/.
 .playwright-cli/
 output/playwright/
+
+# Volcados crudos de la investigación de keywords: los regeneran los scripts
+# de scripts/ads/. Sí se versionan los análisis (.md) y los payloads de
+# Google Ads (.txt), que son el entregable.
+docs/keyword-research/*.json
+docs/keyword-research/*.csv
+
+# Salida del pipeline de carruseles de Instagram, no fuente.
+public/instagram/
+
+# Edición v1 de la iconografía: la sustituyó v2, que es la que sirve la app.
+# Regenerable con scripts/instagram/generate-iconography.mjs.
+public/motifs/carousel/v1/
