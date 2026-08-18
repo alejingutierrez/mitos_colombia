@@ -1,141 +1,97 @@
-import bachue from "../../myths/bachue.mjs";
-import { withMuiscaImagePrompts } from "../image-prompts.mjs";
+import { defineMuiscaMyth } from "../define-editorial-myth.mjs";
 
-const editorialMyth = {
-  ...{
-  "slug": "el-tequendama",
-  "title": "El Salto del Tequendama",
-  "category_path": "Andina > Varios > Muiscas",
-  "tags": [
-    "diluvio",
-    "Bochica",
-    "castigo divino",
-    "redención",
-    "muiscas"
-  ],
-  "latitude": 4.586111,
-  "longitude": -74.3,
-  "mito": "Llovió sobre la sabana de Bacatá durante tantos días que la gente dejó de contar.\n\nPrimero crecieron los ríos. Después el agua cruzó los sembrados y entró en las casas. Las familias cargaron semillas, mantas y alimentos hacia las lomas, pero la lluvia siguió cayendo. Desde arriba vieron desaparecer los caminos bajo una sola extensión oscura.\n\nNo quedaba dónde sembrar. Cada mañana el agua alcanzaba una piedra más alta.\n\nLos habitantes de la sabana pidieron ayuda a Bochica. Sus voces viajaron entre el ruido de la lluvia y el viento. Durante un tiempo no recibieron respuesta.\n\nUna tarde, las nubes comenzaron a abrirse por el lado de Soacha. El sol tocó el aire mojado y apareció un arco de luz sobre la llanura inundada. En lo alto estaba Bochica con una vara en la mano.\n\nLlamó a los caciques y a la gente que esperaba en los cerros.\n\n—Los ríos no desaparecerán —dijo—. En los tiempos secos serán necesarios. Pero el agua tendrá por dónde salir.\n\nBochica miró hacia la roca que cerraba la sabana. Luego lanzó la vara.\n\nEl golpe resonó dentro de la montaña.\n\nLa piedra se abrió.\n\nAl principio salió un hilo de agua. Enseguida la corriente encontró el corte y empujó con toda su fuerza. Troncos, espuma y barro corrieron hacia la abertura. La sabana entera pareció inclinarse.\n\nEl agua cayó al otro lado de la roca con un estruendo que hizo temblar las lomas. Día tras día, descendió de los campos. Reaparecieron los techos, los senderos y los límites de las parcelas. Sobre la tierra quedó una capa de barro fértil.\n\nLas familias bajaron con cuidado. Limpiaron las casas y separaron las semillas que aún podían sembrarse. Los ríos siguieron atravesando la sabana, pero ahora encontraron una salida.\n\nEn la peña abierta permaneció el Salto del Tequendama. El agua no dejó de caer allí. Su ruido recordaba la inundación, la ayuda recibida y una decisión importante: salvar la tierra no consistió en borrar sus ríos, sino en devolverles camino.",
-  "historia": "Pedro Simón registró a comienzos del siglo XVII la versión colonial más influyente de la inundación de la sabana de Bogotá. En ella, Chibchacum hace crecer los ríos Sopó y Tivitó; las aguas cubren los campos y la población pide ayuda a Bochica. El salvador aparece sobre un arco luminoso y abre con una vara las peñas por donde desagua el río Funza, formando el Salto del Tequendama.\n\nLa ficha heredada amplificaba cadáveres, terror y castigo divino a partir de reelaboraciones republicanas y del siglo XX. Esta revisión conserva el peligro material —pérdida de casas, alimentos y siembras— sin recrearse en la catástrofe. El núcleo narrativo es una solución hidrológica: los ríos no se eliminan porque serán útiles en la sequía; se abre un desagüe.\n\nLucas Fernández de Piedrahíta y Alonso de Zamora transmitieron otras formulaciones del ciclo, también filtradas por vocabulario cristiano. La compilación de Eugenia Villa Posse permite comparar cómo el episodio se convirtió en explicación total del paisaje.\n\nLa geología no confirma una apertura instantánea de la roca por una vara. El salto y la cuenca tienen una historia natural extensa, muy anterior a cualquier relato conservado hasta hoy. El valor antropológico del mito está en otra parte: convierte una topografía reconocible en memoria sobre exceso de agua, subsistencia agrícola y responsabilidad de quien interviene el territorio.",
-  "versiones": "En Pedro Simón, la gente se reúne en clamores, ayunos y ofrendas; Bochica aparece una tarde en la clave de un arco formado por el sol y el aire húmedo. Promete dejar los dos ríos y abrir una sierra para que las aguas salgan. El golpe de la vara crea el paso del Funza.\n\nVersiones posteriores describen a Bochica bajando personalmente hasta la peña, multiplican el dramatismo del diluvio o afirman que el barro dejado por la inundación volvió fértiles los campos. Otras hacen de Cuchavira, el arco iris, un personaje separado que sostiene o anuncia la aparición.\n\nEl episodio se confunde con frecuencia con la historia del civilizador que viaja enseñando a hilar y tejer. Las crónicas no son consistentes sobre si Bochica, Nemterequeteba, Chimizapagua y Sadigua designan a una misma figura. Esta ficha no resuelve esa discusión: llama Bochica al ser que interviene en la inundación porque ese es el nombre usado en el núcleo del Tequendama conservado por Simón y repetido después. El viajero civilizador conserva su propia página y su propia discusión documental.",
-  "leccion": "Bochica no seca la sabana ni hace desaparecer los ríos. Comprende que el agua peligrosa durante una inundación será necesaria cuando llegue la sequía. La solución no destruye la fuerza natural: le devuelve cauce.\n\nEl mito expresa una necesidad social concreta. Sin tierra para sembrar, la comunidad enfrenta hambre; salvar el territorio significa restaurar las condiciones de la vida compartida. El salto queda como memoria visible de que toda intervención debe pensar tanto en la urgencia presente como en el tiempo que viene.",
-  "similitudes": "En el relato bíblico de Noé, una inundación cubre el mundo y la aparición posterior del arco iris establece una alianza que impide repetir la destrucción. El arco también aparece en Tequendama, pero no funciona como firma de un pacto universal: es el lugar luminoso desde el que Bochica escucha y actúa.\n\nEl Popol Vuh cuenta una inundación que destruye a los seres de madera después de que fracasan como humanidad. En el mito muisca, la población no es reemplazada. Sobrevive, regresa a sus campos y debe reconstruir.\n\nEl Atrahasis mesopotámico y otras tradiciones de la región narran diluvios decididos por dioses enfrentados y la salvación de una familia advertida. Tequendama cambia el centro de la escena: no hay arca ni refugio secreto. Una comunidad entera busca ayuda y la respuesta consiste en modificar el paso del agua dentro de un paisaje real que todavía puede recorrerse y escucharse hoy.",
-  "content": "Mito\nLlovió sobre la sabana de Bacatá durante tantos días que la gente dejó de contar.\n\nPrimero crecieron los ríos. Después el agua cruzó los sembrados y entró en las casas. Las familias cargaron semillas, mantas y alimentos hacia las lomas, pero la lluvia siguió cayendo. Desde arriba vieron desaparecer los caminos bajo una sola extensión oscura.\n\nNo quedaba dónde sembrar. Cada mañana el agua alcanzaba una piedra más alta.\n\nLos habitantes de la sabana pidieron ayuda a Bochica. Sus voces viajaron entre el ruido de la lluvia y el viento. Durante un tiempo no recibieron respuesta.\n\nUna tarde, las nubes comenzaron a abrirse por el lado de Soacha. El sol tocó el aire mojado y apareció un arco de luz sobre la llanura inundada. En lo alto estaba Bochica con una vara en la mano.\n\nLlamó a los caciques y a la gente que esperaba en los cerros.\n\n—Los ríos no desaparecerán —dijo—. En los tiempos secos serán necesarios. Pero el agua tendrá por dónde salir.\n\nBochica miró hacia la roca que cerraba la sabana. Luego lanzó la vara.\n\nEl golpe resonó dentro de la montaña.\n\nLa piedra se abrió.\n\nAl principio salió un hilo de agua. Enseguida la corriente encontró el corte y empujó con toda su fuerza. Troncos, espuma y barro corrieron hacia la abertura. La sabana entera pareció inclinarse.\n\nEl agua cayó al otro lado de la roca con un estruendo que hizo temblar las lomas. Día tras día, descendió de los campos. Reaparecieron los techos, los senderos y los límites de las parcelas. Sobre la tierra quedó una capa de barro fértil.\n\nLas familias bajaron con cuidado. Limpiaron las casas y separaron las semillas que aún podían sembrarse. Los ríos siguieron atravesando la sabana, pero ahora encontraron una salida.\n\nEn la peña abierta permaneció el Salto del Tequendama. El agua no dejó de caer allí. Su ruido recordaba la inundación, la ayuda recibida y una decisión importante: salvar la tierra no consistió en borrar sus ríos, sino en devolverles camino.\n\nHistoria\nPedro Simón registró a comienzos del siglo XVII la versión colonial más influyente de la inundación de la sabana de Bogotá. En ella, Chibchacum hace crecer los ríos Sopó y Tivitó; las aguas cubren los campos y la población pide ayuda a Bochica. El salvador aparece sobre un arco luminoso y abre con una vara las peñas por donde desagua el río Funza, formando el Salto del Tequendama.\n\nLa ficha heredada amplificaba cadáveres, terror y castigo divino a partir de reelaboraciones republicanas y del siglo XX. Esta revisión conserva el peligro material —pérdida de casas, alimentos y siembras— sin recrearse en la catástrofe. El núcleo narrativo es una solución hidrológica: los ríos no se eliminan porque serán útiles en la sequía; se abre un desagüe.\n\nLucas Fernández de Piedrahíta y Alonso de Zamora transmitieron otras formulaciones del ciclo, también filtradas por vocabulario cristiano. La compilación de Eugenia Villa Posse permite comparar cómo el episodio se convirtió en explicación total del paisaje.\n\nLa geología no confirma una apertura instantánea de la roca por una vara. El salto y la cuenca tienen una historia natural extensa, muy anterior a cualquier relato conservado hasta hoy. El valor antropológico del mito está en otra parte: convierte una topografía reconocible en memoria sobre exceso de agua, subsistencia agrícola y responsabilidad de quien interviene el territorio.\n\nVersiones\nEn Pedro Simón, la gente se reúne en clamores, ayunos y ofrendas; Bochica aparece una tarde en la clave de un arco formado por el sol y el aire húmedo. Promete dejar los dos ríos y abrir una sierra para que las aguas salgan. El golpe de la vara crea el paso del Funza.\n\nVersiones posteriores describen a Bochica bajando personalmente hasta la peña, multiplican el dramatismo del diluvio o afirman que el barro dejado por la inundación volvió fértiles los campos. Otras hacen de Cuchavira, el arco iris, un personaje separado que sostiene o anuncia la aparición.\n\nEl episodio se confunde con frecuencia con la historia del civilizador que viaja enseñando a hilar y tejer. Las crónicas no son consistentes sobre si Bochica, Nemterequeteba, Chimizapagua y Sadigua designan a una misma figura. Esta ficha no resuelve esa discusión: llama Bochica al ser que interviene en la inundación porque ese es el nombre usado en el núcleo del Tequendama conservado por Simón y repetido después. El viajero civilizador conserva su propia página y su propia discusión documental.\n\nLección\nBochica no seca la sabana ni hace desaparecer los ríos. Comprende que el agua peligrosa durante una inundación será necesaria cuando llegue la sequía. La solución no destruye la fuerza natural: le devuelve cauce.\n\nEl mito expresa una necesidad social concreta. Sin tierra para sembrar, la comunidad enfrenta hambre; salvar el territorio significa restaurar las condiciones de la vida compartida. El salto queda como memoria visible de que toda intervención debe pensar tanto en la urgencia presente como en el tiempo que viene.\n\nSimilitudes\nEn el relato bíblico de Noé, una inundación cubre el mundo y la aparición posterior del arco iris establece una alianza que impide repetir la destrucción. El arco también aparece en Tequendama, pero no funciona como firma de un pacto universal: es el lugar luminoso desde el que Bochica escucha y actúa.\n\nEl Popol Vuh cuenta una inundación que destruye a los seres de madera después de que fracasan como humanidad. En el mito muisca, la población no es reemplazada. Sobrevive, regresa a sus campos y debe reconstruir.\n\nEl Atrahasis mesopotámico y otras tradiciones de la región narran diluvios decididos por dioses enfrentados y la salvación de una familia advertida. Tequendama cambia el centro de la escena: no hay arca ni refugio secreto. Una comunidad entera busca ayuda y la respuesta consiste en modificar el paso del agua dentro de un paisaje real que todavía puede recorrerse y escucharse hoy.",
-  "excerpt": "Cuando la sabana quedó bajo el agua, Bochica abrió la roca para devolverle un cauce al río Funza.",
-  "seo_title": "Salto del Tequendama: mito muisca de Bochica",
-  "seo_description": "Lee el mito muisca del Salto del Tequendama: la inundación de la sabana y la roca que Bochica abrió para dar salida al río Funza.",
-  "seo": {
-    "meta_title": "Salto del Tequendama: mito muisca de Bochica",
-    "meta_description": "Lee el mito muisca del Salto del Tequendama: la inundación de la sabana y la roca que Bochica abrió para dar salida al río Funza.",
-    "meta_keywords": "mito del Salto del Tequendama, Bochica y Tequendama, inundación de la sabana de Bogotá, río Funza, Chibchacum, mitología muisca, leyenda del Tequendama",
-    "og_title": "Tequendama: cuando el río encontró salida",
-    "og_description": "Una narración literaria del mito muisca que explica el Salto del Tequendama y la recuperación de la sabana.",
-    "twitter_title": "Salto del Tequendama: mito muisca de Bochica",
-    "twitter_description": "Lee el mito muisca del Salto del Tequendama: la inundación de la sabana y la roca que Bochica abrió para dar salida al río Funza.",
-    "canonical_path": "/mitos/el-tequendama"
-  },
-  "focus_keyword": "mito del Salto del Tequendama",
-  "focus_keywords": [
+export default defineMuiscaMyth({
+  slug: "el-tequendama",
+  title: "El Salto del Tequendama",
+  tags: ["diluvio", "Bochica", "Chibchacum", "castigo divino", "muiscas"],
+  latitude: 4.586111,
+  longitude: -74.3,
+  mito: `Antes del salto, la sabana era una vasija cerrada.
+
+Todos sus ríos bajaban hacia el suroeste, hacia dos peñas que no terminaban de apartarse. Cuando el invierno apretaba, las aguas se devolvían sobre sus propios pasos y cubrían los campos de Bosa y de Bogotá, sin resolverse nunca del todo.
+
+Chibchacum era el dios de los labradores y de los mercaderes. Vivía entre los surcos y los trueques, cerca de la gente. Pero los hombres se vieron prósperos, murmuraron de él, regatearon sus ofrendas y dejaron de nombrarlo en las fiestas.
+
+El dios sintió el desprecio como se siente el hielo en los huesos. Y en su ira sacó de tierras lejanas dos ríos, uno por Sopó y otro por Tivitó, y los soltó sobre el valle.
+
+El agua creció hasta los techos. Se tragó los sembrados, los bohíos, los caminos. La gente subió a las lomas con lo que cabía en las manos, y desde allí vio desaparecer su propia tierra.
+
+Entonces levantó sus ruegos hacia Bochica, el señor de los caciques. Llenó su templo de ayunos, de ofrendas y de voces que subían con el humo.
+
+Una tarde, el sol encendió el aire húmedo contra la sierra de Bogotá, y un arco de luz se tendió de extremo a extremo sobre la llanura inundada: Cuchavira, el arco del cielo, a quien invocaban las mujeres de parto y los enfermos de calenturas. En su cumbre apareció Bochica, resplandeciente, con una vara de oro en la mano.
+
+Llamó a los caciques y a sus gentes.
+
+—Escuché sus ruegos —dijo—. No les quitaré esos dos ríos. La sierra se abrirá para que las aguas salgan y la tierra vuelva a sembrarse.
+
+Arrojó la vara de oro hacia Tequendama.
+
+El metal atravesó el aire con un destello breve y mordió la peña. La piedra se abrió, y el agua huyó por la herida con un estruendo que hizo temblar las lomas. Día tras día la sabana fue vaciándose: reaparecieron los techos, los límites de las parcelas, las semillas que el barro había guardado.
+
+Pero la vara era delgada, y la abertura quedó angosta. Por eso las aguas nunca aprendieron a irse del todo: cada invierno regresan despacio a los campos bajos, como si la tierra quisiera volver a llenarse de recuerdo.
+
+Y Chibchacum no quedó libre. Bochica cargó sobre sus hombros toda la tierra, que antes reposaba sobre las raíces de unos guayacanes gigantes, y le ordenó sostenerla para siempre. Cuando el dios la cambia de hombro, el suelo se estremece: así nació el temblor.
+
+En la peña quedó el salto. El río Funza cae allí desde entonces, con un rumor que nunca cesa, y cuando el sol toca el aire mojado un arco vuelve a tenderse sobre el valle. Quien lo contempla no sabe si es un puente por el que pasó la ayuda, o una puerta que el cielo no ha terminado de cerrar.`,
+  historia: `El núcleo —ira de Chibchacum por la ofensa de su pueblo, clamor y ayunos, aparición en la clave del arco, vara de oro, rebalse por vara delgada, castigo de cargar la tierra— está registrado por Pedro Simón en 1627 (Noticia 4, cap. 4). Simón escribe desde una mirada evangelizadora: llama demonio a la figura luminosa del arco y lee el episodio como engaño del diablo, lectura que esta ficha no hereda. El mito explica paisajes reales del altiplano: los anegadizos de invierno y los temblores (Simón), y el ruido que se oye a siete leguas y la niebla de la caída (Piedrahíta). Lucas Fernández de Piedrahíta transmitió otra formulación del ciclo, en la que interviene Huytháca y Bochica abre la peña con el bordón. La compilación de Eugenia Villa Posse permite comparar cómo el episodio se convirtió en explicación total del paisaje y reúne a Cuchavira como dios del arco, abogado de parturientas y enfermos. La geología no confirma la apertura instantánea de la roca por una vara: el salto y la cuenca tienen una historia natural extensa. El valor antropológico del mito está en convertir una topografía reconocible en memoria sobre el exceso de agua, la subsistencia agrícola y la responsabilidad de quien interviene el territorio. El paisaje sigue recorriéndose y escuchándose hoy: el salto cae bajo los cerros de Soacha, y comunidades muiscas contemporáneas como la de Bosa mantienen una relación viva con la sabana y el agua, sin que esa continuidad autorice a atribuirles una única versión antigua del episodio.`,
+  versiones: `En Simón, la inundación la desata Chibchacum ofendido por la murmuración de su pueblo; la gente clama con ayunos y ofrendas, y Bochica aparece una tarde en la clave del arco, arroja la vara de oro hacia Tequendama y abre las peñas por donde pasa el río. La vara, dice Simón, era delgada, y por eso la abertura quedó angosta y la sabana todavía rebalsa en invierno. En Piedrahíta (1688), el agua sube por "el arte de Huytháca" y Bochica hiere la serranía con el bordón; el salto se forma por el ímpetu de las aguas represadas, que rompen las peñas con un ruido que se oye a siete leguas. Las versiones modernas difundidas representan a Bochica con túnica y barbas blancas y dramatizan la catástrofe; otras hacen de Cuchavira un personaje separado que corona el salto. Esta ficha sigue el núcleo de Simón —la fuente temprana que fija la escena completa— y mantiene la variante de Huytháca y el bordón en este apartado, sin fusionarla en el relato. Las crónicas tampoco son consistentes sobre si Bochica, Nemterequeteba, Chimizapagua y Sadigua designan a una misma figura; esta página llama Bochica al ser que interviene en la inundación porque ese es el nombre del núcleo conservado por Simón, y deja la discusión documental fuera de la narración.`,
+  leccion:
+    "La fuerza que inunda y la que alimenta son la misma; solo cambia el cauce que se le abre.",
+  similitudes: `En Colombia. El origen del lago de Tota (Lilia Montaña, 1970) comparte el golpe que abre el paso al agua: dos mujeres enfrentan en una cuenca seca a la serpiente de fuego Busiraco, el agua brota y el ser queda imaginado bajo el lago. La diferencia es de signo: allí el agua nace; aquí se retira. Bachué sale de la laguna de Iguaque y vuelve a ella convertida en serpiente: en el altiplano el agua es matriz de origen y destino, mientras que en Tequendama el castigado queda bajo la tierra.
+
+En América Latina. Viracocha (Andes centrales) destruye con un diluvio a los gigantes que no lo reconocieron, enseña y desaparece caminando sobre el mar; Villa Posse lo emparenta con Bochica. Coinciden el castigo por ofensa y la vara o bastón, pero Viracocha reinicia la humanidad y Bochica solo encauza un río. El diluvio nahua de Chalchiuhtlicue (edad Atonatiuh), como el de la sabana, es un desborde de aguas; solo que cierra una era del mundo. En el Popol Vuh, la inundación destruye a la humanidad de madera; la muisca sobrevive. Entre los mapuche, Trentren eleva el cerro donde se refugian mientras Caicai hace subir el mar: comparten el refugio en la altura, pero la retirada de las aguas depende del combate de las serpientes, no de un dios que abra cauce.
+
+En el mundo. En Atrahasis y en Gilgamesh, el diluvio castiga a la humanidad; en el Génesis, el arco iris sella la promesa de no repetirlo. En Tequendama no hay arca ni elegidos, y el arco es el lugar de la aparición, no un pacto. El castigo de cargar la tierra acerca a Chibchacum al Atlas griego (así lo llama Villa Posse), aunque el titán carga los cielos y el muisca carga la tierra por el daño hecho a los hombres. En el relato védico de Indra y Vritra, el golpe libera las aguas retenidas, como la vara abre la peña.`,
+  excerpt:
+    "Cuando la ira de Chibchacum inundó la sabana, Bochica abrió con su vara de oro la peña del Tequendama para devolverle cauce al agua.",
+  seoTitle: "Salto del Tequendama: mito muisca de Bochica y Chibchacum",
+  seoDescription:
+    "Lee el mito muisca del Salto del Tequendama: la inundación de la sabana por la ira de Chibchacum, la vara de oro de Bochica y el origen de los temblores.",
+  ogTitle: "Tequendama: cuando el agua encontró salida",
+  ogDescription:
+    "Una narración del mito muisca que explica el salto, los anegadizos de invierno y los temblores de la tierra.",
+  focusKeywords: [
     "mito del Salto del Tequendama",
     "Bochica y Tequendama",
+    "Chibchacum",
     "inundación de la sabana de Bogotá",
     "río Funza",
-    "Chibchacum",
+    "vara de oro de Bochica",
     "mitología muisca",
-    "leyenda del Tequendama"
   ],
-  "image_prompt": "Fotografía editorial horizontal 16:9 de una maqueta artesanal de papel cortado. La sabana de Bacatá está inundada y una comunidad espera en lomas altas; sobre el aire húmedo aparece un arco de color sobrio, y una vara lanzada por una figura pequeña de Bochica abre una peña por donde el río cae con fuerza, formando el Tequendama. Relieve físico, fibras, micro-sombras, agua azul gris, roca, niebla y luz contenida. Sin arca bíblica, Moisés, cadáveres, templo, gigante europeo, símbolos inventados, texto ni CGI.",
-  "image_prompt_horizontal": "Fotografía editorial horizontal 16:9 de una maqueta artesanal de papel cortado. La sabana de Bacatá está inundada y una comunidad espera en lomas altas; sobre el aire húmedo aparece un arco de color sobrio, y una vara lanzada por una figura pequeña de Bochica abre una peña por donde el río cae con fuerza, formando el Tequendama. Relieve físico, fibras, micro-sombras, agua azul gris, roca, niebla y luz contenida. Sin arca bíblica, Moisés, cadáveres, templo, gigante europeo, símbolos inventados, texto ni CGI.",
-  "image_prompt_vertical": "Fotografía editorial horizontal 16:9 de una maqueta artesanal de papel cortado. La sabana de Bacatá está inundada y una comunidad espera en lomas altas; sobre el aire húmedo aparece un arco de color sobrio, y una vara lanzada por una figura pequeña de Bochica abre una peña por donde el río cae con fuerza, formando el Tequendama. Relieve físico, fibras, micro-sombras, agua azul gris, roca, niebla y luz contenida. Sin arca bíblica, Moisés, cadáveres, templo, gigante europeo, símbolos inventados, texto ni CGI.",
-  "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/el-tequendama-1785170686989.jpg",
-  "keySources": [
-    {
-      "title": "Noticias historiales de las conquistas de Tierra Firme en las Indias occidentales, tomo II",
-      "author": "Fray Pedro Simón",
-      "year": 1892,
-      "originalYear": 1627,
-      "type": "crónica colonial",
-      "url": "https://archive.org/details/tierrafirmeindias02simbrich",
-      "limitation": "Conserva testimonios tempranos, pero los interpreta desde una mirada evangelizadora y colonial.",
-      "summary": "Conserva el núcleo temprano de la inundación, la petición colectiva, el arco y la apertura del desagüe del Funza."
-    },
-    {
-      "title": "Historia general de las conquistas del Nuevo Reino de Granada",
-      "author": "Lucas Fernández de Piedrahíta",
-      "year": 1688,
-      "type": "crónica colonial",
-      "url": "https://www.cervantesvirtual.com/obra/historia-general-de-las-conquistas-del-nuevo-reino-de-granada-a-las-s-c-r-m-de-d-carlos-segundo-rey-de-las-espanas-y-de-las-indias-1166129/",
-      "limitation": "Es una síntesis tardía del siglo XVII y debe contrastarse con testimonios anteriores y documentos de archivo.",
-      "summary": "Aporta una versión colonial alternativa del ciclo y permite contrastar nombres y acciones atribuidas a Bochica."
-    },
-    {
-      "title": "Mitos y leyendas de Colombia, vol. III: Mitos prehispánicos muiscas",
-      "author": "Eugenia Villa Posse, compiladora",
-      "year": 1993,
-      "type": "compilación editorial",
-      "url": "https://www.flacso.edu.ec/biblio/catalog/resGet.php?resId=44622",
-      "limitation": "Reúne versiones de autores de los siglos XIX y XX; no es una transcripción directa de tradición oral.",
-      "summary": "Muestra cómo las síntesis posteriores ampliaron el peligro, la fertilización de la sabana y la imagen de la vara."
-    }
+  imagePrompt:
+    "Fotografía editorial horizontal 16:9 de una maqueta artesanal de papel cortado. La sabana de Bacatá está inundada y una comunidad espera en lomas altas; sobre el aire húmedo aparece un arco de color sobrio, y una vara lanzada por una figura pequeña de Bochica abre una peña por donde el río cae con fuerza, formando el Tequendama. Relieve físico, fibras, micro-sombras, agua azul gris, roca, niebla y luz contenida. Sin arca bíblica, Moisés, cadáveres, templo, gigante europeo, símbolos inventados, texto ni CGI.",
+  imageUrl:
+    "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/el-tequendama-1785170686989.jpg",
+  sourceKeys: [
+    "simon",
+    "piedrahita",
+    "villa",
+    "correa",
+    "gamboaArqueologiaHistoria",
+    "planBosa",
+    "popolVuh",
+    "viracocha",
+    "chalchiuhtlicue",
+    "trentren",
+    "atrahasis",
+    "atlas",
   ],
-  "sources": [
-    {
-      "title": "El sol del poder: simbología y política entre los muiscas",
-      "author": "François Correa Rubio",
-      "year": 2004,
-      "type": "investigación antropológica",
-      "url": "https://books.google.com/books/about/El_sol_del_poder.html?id=OCyF3XmjprAC",
-      "limitation": "Interpreta el corpus documental disponible; no convierte las crónicas coloniales en una voz muisca transparente.",
-      "summary": "Sitúa el episodio dentro de relaciones entre territorio, autoridad, agua y subsistencia."
-    },
-    {
-      "title": "Los muiscas en los siglos XVI y XVII: miradas desde la arqueología y la historia",
-      "author": "Jorge Augusto Gamboa Mendoza, compilador",
-      "year": 2008,
-      "type": "investigación histórica y arqueológica",
-      "url": "https://ediciones.uniandes.edu.co/gpd-los-muiscas-en-los-siglos-xvi-y-xvii-miradas-desde-la-arqueologia-y-la-historia-9789586953481-67f86154e57c4.html",
-      "limitation": "Aporta contexto social e histórico y cuestiona modelos homogéneos; no es un catálogo de mitos.",
-      "summary": "Aporta contexto histórico para no presentar el relato como crónica literal de una nación homogénea."
-    },
-    {
-      "title": "Plan de vida de la comunidad indígena Muisca de Bosa",
-      "author": "Cabildo Indígena Muisca de Bosa",
-      "year": 2019,
-      "type": "memoria y planeación comunitaria",
-      "url": "https://historico.gobiernobogota.gov.co/sites/gobiernobogota.gov.co/files/control/plan_de_vida_muisca-transparencia.pdf",
-      "limitation": "Expresa una construcción comunitaria contemporánea; no debe proyectarse automáticamente al periodo prehispánico.",
-      "summary": "Incorpora una voz comunitaria contemporánea sobre la sabana, el territorio y la continuidad de la vida muisca."
-    },
-    {
-      "title": "Génesis 1: la luz y los cuerpos celestes",
-      "author": "Biblia hebrea, traducciones modernas",
-      "type": "texto mítico y religioso comparativo",
-      "url": "https://www.biblegateway.com/passage/?search=Genesis%201%3A1-19&version=NRSVUE",
-      "limitation": "Se usa como paralelo estructural y no como fuente del mito muisca ni como medida para interpretarlo.",
-      "summary": "Sustenta la referencia bíblica a la organización de aguas y luminares, complementada en la comparación con el ciclo del diluvio."
-    },
-    {
-      "title": "Popol Vuh: Sacred Book of the Quiché Maya People",
-      "author": "Allen J. Christenson, traducción y notas",
-      "year": 2007,
-      "type": "texto mítico comparativo",
-      "url": "https://www.mesoweb.com/publications/Christenson/PopolVuh.pdf",
-      "limitation": "La comparación muestra una pregunta cosmogónica compartida; no implica contacto ni origen común con el relato muisca.",
-      "summary": "Documenta el diluvio de la humanidad de madera y permite precisar la diferencia con una comunidad que sobrevive."
-    },
-    {
-      "title": "Mesopotamian Creation Myths",
-      "author": "Ira Spar, The Metropolitan Museum of Art",
-      "year": 2009,
-      "type": "estudio comparativo de mitología",
-      "url": "https://www.metmuseum.org/essays/epic-of-creation-mesopotamia",
-      "limitation": "Resume varios textos mesopotámicos distintos; sus motivos no deben fundirse en una sola versión.",
-      "summary": "Aporta el contexto comparativo de relatos mesopotámicos de inundación, conflicto divino y orden del mundo."
-    }
-  ],
-  "researchNotes": "ESTADO: revisión integral.\n\nNÚCLEO DOCUMENTADO: inundación de la sabana; pérdida de tierras de cultivo; petición colectiva; aparición de Bochica en el arco; vara; apertura de la peña; salida del Funza; conservación de los ríos.\n\nVARIANTES: fertilización por sedimentos, magnitud de la tragedia y papel autónomo de Cuchavira varían en elaboraciones posteriores.\n\nMEMORIA CONTEMPORÁNEA: el Plan de Vida de Bosa aporta relación viva con la sabana y el agua, no testimonio literal del episodio.\n\nHIPÓTESIS ACADÉMICA: el mito organiza una memoria territorial e hidrológica; no se afirma que describa un evento geológico único.\n\nLECTURA EDITORIAL: la decisión sabia es abrir cauce sin borrar los ríos.\n\nDUDA: no conocemos narradores, fecha ni extensión regional de la versión registrada por Simón.\n\nGEOGRAFÍA: 4.586111, -74.3 corresponde al Salto del Tequendama y se mantiene.\n\nIMAGEN: debe mostrar sabana inundada, comunidad en las lomas, arco y peña abierta, sin Moisés, arca, templo clásico ni matanza explícita."
-},
-  methodologySeo: bachue.methodologySeo,
-};
+  researchNotes: `ESTADO: reescritura literaria aplicada; verificada por agente de contraste documental y agente de revisión en tres pasadas.
 
-export default withMuiscaImagePrompts(editorialMyth);
+NÚCLEO DOCUMENTADO: ofensa a Chibchacum; ríos Sopó y Tivitó; clamor y ayunos; aparición en la clave del arco; vara de oro; vara delgada y rebalse; guayacanes; castigo de cargar la tierra y temblores; Cuchavira como arco del cielo.
+
+VARIANTES: "el arte de Huytháca" y el bordón (Piedrahíta, 1688); dramatizaciones modernas con Bochica anciano de barba y túnica.
+
+MEMORIA CONTEMPORÁNEA: el Plan de Vida de Bosa aporta relación viva con la sabana y el agua, no testimonio literal del episodio.
+
+HIPÓTESIS ACADÉMICA: el mito organiza memoria territorial e hidrológica; no se afirma que describa un evento geológico único.
+
+LECTURA EDITORIAL: la decisión sabia es abrir cauce sin borrar los ríos; la lección no se declara dentro del relato.
+
+DUDA: narradores, fecha y extensión regional de la versión registrada por Simón; la imagen de Bochica anciano pertenece a reelaboraciones modernas.
+
+GEOGRAFÍA: 4.586111, -74.3, Salto del Tequendama.
+
+REGISTRO LINGÜÍSTICO: español colombiano contemporáneo; sin arcaísmos peninsulares; diálogo con "ustedes".`,
+});
