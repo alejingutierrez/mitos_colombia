@@ -36,3 +36,41 @@ export function Motif({ name = "jaguar", size = 56, alt = "", className, style, 
     />
   );
 }
+
+/**
+ * Usa un PNG monocromático como máscara para que el motivo herede `currentColor`.
+ * Permite reutilizar un solo asset transparente sobre todas las paletas editoriales.
+ */
+export function MotifMask({
+  src,
+  width,
+  height = width,
+  alt = "",
+  className,
+  style,
+  ...props
+}) {
+  if (!src) return null;
+  return (
+    <span
+      aria-label={alt || undefined}
+      aria-hidden={alt ? undefined : true}
+      className={cn("inline-block shrink-0 select-none", className)}
+      role={alt ? "img" : undefined}
+      style={{
+        ...(width ? { width, height } : {}),
+        backgroundColor: "currentColor",
+        maskImage: `url("${src}")`,
+        maskPosition: "center",
+        maskRepeat: "no-repeat",
+        maskSize: "contain",
+        WebkitMaskImage: `url("${src}")`,
+        WebkitMaskPosition: "center",
+        WebkitMaskRepeat: "no-repeat",
+        WebkitMaskSize: "contain",
+        ...style,
+      }}
+      {...props}
+    />
+  );
+}

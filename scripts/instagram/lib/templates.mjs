@@ -356,13 +356,13 @@ export function eligibleTemplates(history = [], { minSlides = 8, maxSlides = 14 
   const recentTemplateIds = new Set(
     history
       .slice(-20)
-      .map((entry) => entry?.template_id)
+      .map((entry) => entry?.narrative_template_id || entry?.template_id)
       .filter(Boolean)
   );
   const recentMotifs = new Set(
     history
       .slice(-3)
-      .map((entry) => entry?.motif)
+      .map((entry) => entry?.narrative_motif || entry?.motif)
       .filter(Boolean)
   );
   const strict = INSTAGRAM_TEMPLATES.filter(

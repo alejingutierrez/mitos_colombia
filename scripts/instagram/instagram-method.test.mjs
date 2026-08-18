@@ -7,6 +7,23 @@ import {
   resolveSlideLayout,
 } from "./lib/templates.mjs";
 import { validateCarouselPlan } from "./lib/plan-schema.mjs";
+import { planCarouselLocally } from "./lib/local-planner.mjs";
+
+const COMPLETE_GENERATED_IMAGE = Object.freeze({
+  needed: true,
+  narrative_gap: "La transformación final todavía no está representada.",
+  brief: "Mostrar la transformación final en el territorio documentado.",
+  art_direction: {
+    moment: "El momento final del relato.",
+    subject: "Los protagonistas documentados.",
+    action: "La transformación ocurre dentro del agua.",
+    setting: "El territorio de origen.",
+    framing: "Plano general vertical 4:5.",
+    continuity: "Conservar materiales y paleta de las referencias.",
+    differentiation: "No repetir pose, distancia ni composición.",
+  },
+  avoid: ["texto", "símbolos inventados"],
+});
 
 test("la biblioteca contiene al menos 20 plantillas realmente identificables", () => {
   assert.equal(INSTAGRAM_TEMPLATES.length, 20);
@@ -40,6 +57,145 @@ test("la rotación excluye plantillas usadas en los últimos 20 posts", () => {
   for (const item of INSTAGRAM_TEMPLATES.slice(0, 5)) {
     assert.equal(eligibleIds.has(item.id), false);
   }
+});
+
+test("la rotación reconoce el formato canónico del historial aprobado", () => {
+  const used = INSTAGRAM_TEMPLATES[0];
+  const eligibleIds = new Set(
+    eligibleTemplates([
+      {
+        narrative_template_id: used.id,
+        narrative_motif: used.motif,
+        template_ids: ["cover-01-immersive"],
+        graphic_ids: ["water-current"],
+      },
+    ]).map((item) => item.id)
+  );
+
+  assert.equal(eligibleIds.has(used.id), false);
+});
+
+test("el plan local usa dos imágenes salvo que el brief exija una tercera", () => {
+  const myth = {
+    title: "Relato de prueba",
+    slug: "relato-de-prueba",
+    excerpt:
+      "Una persona recorre el territorio y comparte una enseñanza con su comunidad.",
+    content: `Mito
+Antes de comenzar el viaje, el territorio permanecía cubierto por la niebla.
+Una persona llegó desde el oriente y escuchó a quienes vivían junto al agua.
+Después recorrió los caminos y aprendió los nombres conservados por las familias.
+En cada casa compartió una enseñanza y recibió otra forma de comprender el lugar.
+Con el tiempo la noticia atravesó los valles y reunió a muchas personas.
+Entonces comprendieron que el conocimiento sólo permanece cuando puede compartirse.
+Al final del recorrido regresó al punto donde había comenzado la historia.
+Historia
+Las fuentes distinguen el núcleo del relato de sus interpretaciones posteriores.
+Lección
+Compartir la memoria también exige cuidar el territorio que la sostiene.`,
+    community: "Muiscas",
+    region: "Andina",
+    latitude: 4.7,
+    longitude: -74.1,
+  };
+  const templates = INSTAGRAM_TEMPLATES;
+  const optional = planCarouselLocally({
+    myth,
+    templates,
+    requireThirdImage: false,
+  }).plan;
+  const required = planCarouselLocally({
+    myth,
+    templates,
+    requireThirdImage: true,
+  }).plan;
+
+  assert.equal(optional.generated_image.needed, false);
+  assert.equal(optional.sequence_count, 9);
+  assert.ok(optional.slides.at(-1).headline.length <= 64);
+  assert.match(optional.slides.at(-1).headline, /memoria|territorio/iu);
+  const alternate = planCarouselLocally({
+    myth: {
+      ...myth,
+      slug: "relato-del-poder",
+      content: myth.content.replace(
+        "Compartir la memoria también exige cuidar el territorio que la sostiene.",
+        "Todo poder debe responder por sus actos ante la comunidad."
+      ),
+    },
+    templates,
+    requireThirdImage: false,
+  }).plan;
+  assert.notEqual(
+    alternate.slides.at(-1).headline,
+    optional.slides.at(-1).headline
+  );
+  assert.equal(
+    optional.slides.some((slide) => slide.asset_id === "generated_third"),
+    false
+  );
+  assert.equal(required.generated_image.needed, true);
+  assert.equal(required.sequence_count, 10);
+  assert.equal(
+    required.slides.filter((slide) => slide.asset_id === "generated_third")
+      .length,
+    1
+  );
+});
+
+test("el sistema de feed alterna seis órdenes y secuencias cromáticas", () => {
+  const myth = {
+    title: "Relato de feed",
+    slug: "relato-de-feed",
+    excerpt:
+      "Una viajera escucha al territorio y aprende por qué la memoria debe compartirse.",
+    content: `Mito
+Antes del viaje, el valle permanecía cubierto por la niebla y nadie cruzaba el río.
+Una viajera llegó desde el oriente y escuchó a las familias que vivían junto al agua.
+Después recorrió los caminos y aprendió los nombres conservados por la comunidad.
+En cada casa compartió una enseñanza y recibió otra forma de comprender el lugar.
+Con el tiempo la noticia atravesó los valles y reunió a muchas personas alrededor del fuego.
+Entonces comprendieron que el conocimiento permanece cuando puede compartirse sin convertirse en propiedad.
+Al final del recorrido regresó al punto donde había comenzado la historia y dejó abierto el camino.
+Historia
+Las fuentes distinguen el núcleo del relato de sus interpretaciones posteriores.
+Lección
+Compartir la memoria también exige cuidar el territorio que la sostiene.`,
+    community: "Muiscas",
+    region: "Andina",
+    latitude: 4.7,
+    longitude: -74.1,
+  };
+  const familyOrder = (plan) =>
+    plan.slides
+      .map((slide, index) => {
+        if (index === 0) return "cover";
+        if (slide.kind === "location") return "map";
+        if (slide.asset_id === "existing_landscape") return "secondary";
+        return "typographic";
+      })
+      .join(">");
+  const plans = Array.from({ length: 6 }, (_, feedIndex) =>
+    planCarouselLocally({
+      myth: { ...myth, slug: `${myth.slug}-${feedIndex}` },
+      templates: INSTAGRAM_TEMPLATES,
+      feedIndex,
+    }).plan
+  );
+
+  assert.equal(new Set(plans.map(familyOrder)).size, 6);
+  assert.equal(
+    new Set(
+      plans.map((plan) =>
+        plan.slides.map((slide) => slide.palette_id).join(">")
+      )
+    ).size,
+    6
+  );
+  assert.equal(
+    new Set(plans.map((plan) => plan.slides[0].palette_id)).size,
+    6
+  );
 });
 
 test("un plan válido narra con densidad y separa las tres imágenes", () => {
@@ -80,7 +236,7 @@ test("un plan válido narra con densidad y separa las tres imágenes", () => {
   const plan = {
     template_id: "umbral_de_agua",
     sequence_count: slides.length,
-    generated_image: { needed: true },
+    generated_image: COMPLETE_GENERATED_IMAGE,
     slides,
   };
   assert.deepEqual(validateCarouselPlan(plan), []);
@@ -139,7 +295,7 @@ test("la validación bloquea una galería de imágenes amontonada al inicio", ()
   const errors = validateCarouselPlan({
     template_id: "umbral_de_agua",
     sequence_count: crowded.length,
-    generated_image: { needed: true },
+    generated_image: COMPLETE_GENERATED_IMAGE,
     slides: crowded,
   });
 

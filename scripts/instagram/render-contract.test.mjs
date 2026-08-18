@@ -16,6 +16,17 @@ const canvasStyles = await fs.readFile(
   ),
   "utf8"
 );
+const canvasV9Styles = await fs.readFile(
+  new URL(
+    "../../src/components/instagram/InstagramTemplateCanvasV9.module.css",
+    import.meta.url
+  ),
+  "utf8"
+);
+const motifSource = await fs.readFile(
+  new URL("../../src/components/atoms/Motif.js", import.meta.url),
+  "utf8"
+);
 
 test("las imágenes editoriales se sirven desde el archivo nativo", () => {
   const imageComponents = canvasSource.match(/<Image\b/g) || [];
@@ -79,5 +90,57 @@ test("la capa v8 declara una retícula compartida y slots auditables", () => {
   assert.match(
     revision,
     /\.tertiary_close \.storyTitle \{\s*top: 81cqw;/
+  );
+});
+
+test("la capa v9 estandariza tipografía, retícula y cuatro arquetipos", () => {
+  assert.match(canvasSource, /InstagramTemplateCanvasV9\.module\.css/);
+  assert.match(canvasV9Styles, /--ig-safe-x: 6\.67cqw/);
+  assert.match(
+    canvasV9Styles,
+    /font-family: var\(--font-display\), ui-sans-serif, sans-serif/
+  );
+  assert.match(
+    canvasV9Styles,
+    /font-family: var\(--font-body\), ui-sans-serif, sans-serif/
+  );
+  assert.match(canvasV9Styles, /data-family="typographic"/);
+  assert.match(canvasV9Styles, /data-family="secondary"/);
+  assert.match(canvasV9Styles, /data-family="tertiary"/);
+  assert.match(canvasV9Styles, /data-family="map"/);
+  assert.match(canvasSource, /data-editorial-slot="media-primary"/);
+  assert.match(canvasSource, /data-editorial-slot="chrome-publication"/);
+});
+
+test("la capa v9 integra iconografía PNG como máscara semántica", () => {
+  assert.match(canvasSource, /<MotifMask/);
+  assert.match(canvasSource, /data-editorial-slot="graphic-motif"/);
+  assert.match(canvasSource, /data-motif-id=\{graphicMotif\.id\}/);
+  assert.match(
+    canvasSource,
+    /data-decoration-id=\{graphicDecoration\.id\}/
+  );
+  assert.match(canvasSource, /data-editorial-slot="graphic-decoration"/);
+  assert.match(canvasSource, /graphicDecoration\s*&&\s*!graphicMotif/);
+  assert.match(canvasSource, /usesFocusedV9Map \? 13 : 5/);
+  assert.match(motifSource, /maskImage: `url\("\$\{src\}"\)`/);
+  assert.match(motifSource, /backgroundColor: "currentColor"/);
+  assert.match(canvasV9Styles, /\.graphicMotif\s*\{/);
+  assert.match(canvasV9Styles, /\.graphicDecoration\s*\{/);
+  assert.match(canvasV9Styles, /color: var\(--ig-accent\)/);
+  assert.match(
+    canvasV9Styles,
+    /data-family="secondary"[\s\S]*right: 0;[\s\S]*left: 0;[\s\S]*height: 56\.25cqw/
+  );
+});
+
+test("la última ficha reserva un cierre editorial para mitosdecolombia.com", () => {
+  assert.match(canvasSource, /data-editorial-slot="closing-cta"/);
+  assert.match(canvasSource, /data-has-cta=\{copy\.cta \? "true" : "false"\}/);
+  assert.match(canvasV9Styles, /\.closingCta\s*\{/);
+  assert.match(canvasV9Styles, /grid-template-areas:[\s\S]*"eyebrow domain"/);
+  assert.match(
+    canvasV9Styles,
+    /data-has-cta="true"[\s\S]*content-body[\s\S]*bottom: 34cqw !important/
   );
 });

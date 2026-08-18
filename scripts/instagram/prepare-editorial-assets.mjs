@@ -45,21 +45,26 @@ async function downloadCanonical({ url, outputDirectory, name }) {
 function thirdImagePrompt(payload, references) {
   const myth = payload.myth || {};
   const generated = payload.plan?.generated_image || {};
+  const direction = generated.art_direction || {};
   const avoid = Array.isArray(generated.avoid) ? generated.avoid : [];
   return [
     "Use case: illustration-story",
     "Asset type: tercera escena de un carrusel editorial de Instagram 4:5",
     `Primary request: crear una escena nueva y exclusiva para el mito colombiano “${myth.title}”.`,
     `Input images: Image 1 es la referencia vertical canónica de identidad y protagonista; Image 2 es la referencia horizontal canónica de materiales, territorio y paleta. No copiar sus encuadres.`,
-    `Scene/backdrop: ${generated.brief || generated.narrative_gap || "una escena esencial todavía ausente del relato"}`,
-    `Narrative gap: ${generated.narrative_gap || "mostrar un momento diferente de las dos escenas canónicas"}`,
+    `Narrative moment: ${direction.moment || generated.narrative_gap || "mostrar un momento diferente de las dos escenas canónicas"}`,
+    `Subject: ${direction.subject || "los protagonistas documentados por el relato"}`,
+    `Action: ${direction.action || generated.brief || "representar la transformación central con claridad"}`,
+    `Scene/backdrop: ${direction.setting || `${myth.region || "territorio colombiano"}, integrado al relato`}`,
     "Style/medium: fotografía frontal de una maqueta física artesanal hecha con paper cut, paper relief y paper quilling; capas reales de cartulina, fibras visibles, cortes precisos, pequeños dobleces y sombras naturales de estudio.",
-    "Composition/framing: vertical 4:5, escena completa de borde a borde, jerarquía clara, protagonista y acción legibles incluso en pantalla móvil; encuadre radicalmente distinto de las dos referencias.",
+    `Composition/framing: ${direction.framing || "vertical 4:5, escena completa de borde a borde, jerarquía clara y acción legible incluso en pantalla móvil"}`,
     "Lighting/mood: luz lateral suave de estudio, sobria y táctil; profundidad baja de papel, nunca render 3D.",
     "Color palette: conservar la familia cromática, los dorados mate, azules de agua, verdes andinos, ocres minerales y papel de las referencias sin clonarlas.",
     "Materials/textures: papel hecho a mano, cartulina mate, fibras naturales, micro-sombras, bordes cortados y pegante apenas perceptible.",
     `Cultural context: comunidad ${myth.community || "Muisca"}, región ${myth.region || "Andina"}; tratamiento respetuoso, sin anacronismos ni símbolos genéricos inventados.`,
-    "Constraints: una sola escena nueva; mantener la identidad visual de ambas referencias; sin reutilizar la pose, el fondo o la composición de ninguna; sin texto, letras, números, logos, marcos ni marcas de agua.",
+    `Continuity: ${direction.continuity || "mantener la identidad material, territorial y cromática de las dos referencias"}`,
+    `Differentiation: ${direction.differentiation || "no reutilizar pose, fondo ni composición de las referencias"}`,
+    "Constraints: una sola escena nueva; mantener la identidad visual de ambas referencias; sin texto, letras, números, logos, marcos ni marcas de agua.",
     `Avoid: ${[
       "ilustración digital plana",
       "pintura",

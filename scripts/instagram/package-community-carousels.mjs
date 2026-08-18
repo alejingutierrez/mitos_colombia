@@ -113,7 +113,6 @@ for (const directoryEntry of directoryEntries.sort((left, right) =>
     mythDirectory,
     `${slug}-instagram-editorial-${edition}.zip`
   );
-  const thirdImagePath = await locateThirdImage(mythDirectory);
   const sourceDirectory = path.join(mythDirectory, "sources");
   const sourceFiles = (await fs.readdir(sourceDirectory)).filter((file) =>
     /\.(?:avif|jpe?g|png|webp)$/i.test(file)
@@ -124,12 +123,23 @@ for (const directoryEntry of directoryEntries.sort((left, right) =>
   const generatedSlides = composition.slides.filter(
     (slide) => slide.asset_id === "generated_third"
   );
+  const thirdImagePath = generatedSlides.length
+    ? await locateThirdImage(mythDirectory)
+    : null;
 
   if (sourceFiles.length < 2) {
     throw new Error(`${slug}: se esperaban dos imágenes canónicas locales.`);
   }
-  if (assetSlides.length !== 3 || generatedSlides.length !== 1) {
-    throw new Error(`${slug}: el contrato de tres imágenes no se cumple.`);
+  if (
+    assetSlides.length !== 2 + generatedSlides.length ||
+    generatedSlides.length > 1
+  ) {
+    throw new Error(`${slug}: el presupuesto de imágenes no se cumple.`);
+  }
+  if (
+    composition.slides.at(-1)?.copy?.cta?.label !== "mitosdecolombia.com"
+  ) {
+    throw new Error(`${slug}: la ficha final no contiene el CTA obligatorio.`);
   }
   if (renderManifest.slides.length !== composition.slides.length) {
     throw new Error(`${slug}: manifiesto y composición no coinciden.`);
@@ -162,16 +172,18 @@ for (const directoryEntry of directoryEntries.sort((left, right) =>
       );
     }
   }
-  const thirdMetadata = await sharp(thirdImagePath).metadata();
-  const thirdRatio = thirdMetadata.width / thirdMetadata.height;
-  if (
-    thirdMetadata.width < 1080 ||
-    thirdMetadata.height < 1350 ||
-    Math.abs(thirdRatio - 4 / 5) > 0.01
-  ) {
-    throw new Error(
-      `${slug}: la tercera imagen no alcanza 1080x1350 en proporción 4:5 (${thirdMetadata.width}x${thirdMetadata.height}).`
-    );
+  if (thirdImagePath) {
+    const thirdMetadata = await sharp(thirdImagePath).metadata();
+    const thirdRatio = thirdMetadata.width / thirdMetadata.height;
+    if (
+      thirdMetadata.width < 1080 ||
+      thirdMetadata.height < 1350 ||
+      Math.abs(thirdRatio - 4 / 5) > 0.01
+    ) {
+      throw new Error(
+        `${slug}: la tercera imagen no alcanza 1080x1350 en proporción 4:5 (${thirdMetadata.width}x${thirdMetadata.height}).`
+      );
+    }
   }
 
   const expectedZipEntries = [
@@ -193,12 +205,18 @@ for (const directoryEntry of directoryEntries.sort((left, right) =>
   posts.push({
     slug,
     title: composition.myth?.title,
+    post_type:
+      composition.myth?.kind === "community"
+        ? "community_introduction"
+        : "myth",
     sequences: composition.slides.length,
     zip: path.relative(artifactRoot, zipPath),
     zip_bytes: (await fs.stat(zipPath)).size,
     zip_sha256: await sha256(zipPath),
-    third_image: path.relative(artifactRoot, thirdImagePath),
-    third_image_sha256: await sha256(thirdImagePath),
+    third_image: thirdImagePath
+      ? path.relative(artifactRoot, thirdImagePath)
+      : null,
+    third_image_sha256: thirdImagePath ? await sha256(thirdImagePath) : null,
     templates: composition.slides.map((slide) => slide.template_id),
   });
 }
@@ -223,7 +241,9 @@ const batchManifest = {
   canvas: { width: 1080, height: 1350, aspect_ratio: "4:5" },
   policy: {
     canonical_images_per_post: 2,
-    generated_third_image_required: true,
+    generated_third_image_required: false,
+    generated_third_image_allowed_for_documented_gap: true,
+    final_read_more_cta_required: true,
     unique_templates_inside_post: true,
     publish_zip_contains: [
       "ordered PNG slides",
@@ -235,6 +255,10 @@ const batchManifest = {
   },
   totals: {
     posts: posts.length,
+    introductions: posts.filter(
+      (post) => post.post_type === "community_introduction"
+    ).length,
+    myths: posts.filter((post) => post.post_type === "myth").length,
     slides: posts.reduce((total, post) => total + post.sequences, 0),
     sequences_by_length: sequencesByLength,
     unique_templates: templateIds.size,
@@ -256,9 +280,10 @@ const readme = `# Carruseles editoriales de Instagram · ${community}
 
 Edición: ${edition}
 
-- ${posts.length} publicaciones listas para publicar.
+- ${posts.length} paquetes técnicos listos para revisión editorial (${batchManifest.totals.introductions} introducción y ${batchManifest.totals.myths} mitos).
 - ${batchManifest.totals.slides} láminas en formato 4:5, 1080 × 1350 px.
-- Cada publicación usa dos imágenes canónicas y una tercera escena nueva.
+- Cada publicación usa las dos imágenes canónicas; una tercera escena aparece sólo cuando el plan documenta un vacío narrativo real.
+- La última ficha conserva el cierre del relato e invita a continuar en mitosdecolombia.com.
 - Longitud variable: ${Object.entries(sequencesByLength)
   .map(([length, count]) => `${count} carruseles de ${length}`)
   .join(", ")}.

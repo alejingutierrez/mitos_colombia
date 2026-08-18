@@ -40,7 +40,7 @@ export { Count } from "./Count";
 export { Avatar } from "./Avatar";
 
 // Media / decoración
-export { Motif } from "./Motif";
+export { Motif, MotifMask } from "./Motif";
 export { Icon } from "./Icon";
 export { ImageFrame } from "./ImageFrame";
 

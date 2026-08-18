@@ -93,6 +93,77 @@ const BRAND_MODES = Object.freeze([
   "register",
 ]);
 
+const MAX_TITLE_CHARS_BY_LAYOUT = Object.freeze({
+  type_monument: 64,
+  type_quote: 72,
+  type_margin: 88,
+  type_triptych: 64,
+  type_stair: 64,
+  type_whisper: 72,
+  type_manifesto: 80,
+  type_vocabulary: 64,
+  type_initial: 64,
+  type_columns: 50,
+  type_ledger: 72,
+  type_long_line: 72,
+  type_thesis: 80,
+  type_three_beats: 64,
+  type_parenthetical: 72,
+  type_blocks: 64,
+  type_archive_note: 84,
+  type_question: 90,
+  secondary_cinema: 64,
+  secondary_postcard: 64,
+  secondary_bottom: 64,
+  secondary_split_left: 44,
+  secondary_split_right: 44,
+  secondary_title_band: 38,
+  secondary_double_mat: 64,
+});
+
+const PRODUCTION_TEMPLATE_IDS = new Set([
+  "cover-01-immersive",
+  "cover-02-living-archive",
+  "cover-05-lagoon-threshold",
+  "cover-06-museum-label",
+  "cover-07-high-horizon",
+  "type-01-monument",
+  "type-03-oral-quote",
+  "type-05-field-margin",
+  "type-06-principles-triptych",
+  "type-08-staircase",
+  "type-09-centered-whisper",
+  "type-10-dark-manifesto",
+  "type-12-vocabulary-card",
+  "type-13-oversized-initial",
+  "type-14-double-column",
+  "type-15-ledger",
+  "type-20-long-line",
+  "type-22-underlined-thesis",
+  "type-24-three-beats",
+  "type-25-parenthetical",
+  "type-28-stepped-blocks",
+  "type-29-archive-note",
+  "type-30-closing-question",
+  "secondary-01-cinema",
+  "secondary-03-postcard",
+  "secondary-05-bottom-panorama",
+  "secondary-06-left-split",
+  "secondary-07-right-split",
+  "secondary-16-title-band",
+  "secondary-19-double-mat",
+  "tertiary-01-clean-climax",
+  "tertiary-02-letterbox",
+  "tertiary-05-top-label",
+  "tertiary-06-bottom-label",
+  "tertiary-07-gallery-inset",
+  "tertiary-17-paper-border",
+  "tertiary-19-dark-frame",
+  "map-01-territorial-atlas",
+  "map-03-colombia-locator",
+  "map-05-topographic-window",
+]);
+
 function brandModeForTemplate(family, id) {
   const familyOffset = {
     cover: 0,
@@ -107,6 +178,9 @@ function brandModeForTemplate(family, id) {
 
 function entry(family, id, name, layout, palette, role, extra = {}) {
   const brandMode = extra.brandMode || brandModeForTemplate(family, id);
+  const productionReady = PRODUCTION_TEMPLATE_IDS.has(id);
+  const maxTitleChars =
+    extra.maxTitleChars ?? MAX_TITLE_CHARS_BY_LAYOUT[layout] ?? null;
   return Object.freeze({
     id,
     family,
@@ -115,9 +189,11 @@ function entry(family, id, name, layout, palette, role, extra = {}) {
     palette,
     role,
     approval: "approved",
-    designRevision: "v8",
+    designRevision: productionReady ? "v9" : "v8",
+    productionReady,
     brandMode,
     qa: TEMPLATE_QA_CONTRACT,
+    ...(maxTitleChars ? { maxTitleChars } : {}),
     ...extra,
   });
 }
@@ -129,7 +205,7 @@ export const COVER_TEMPLATES = Object.freeze([
   entry("cover", "cover-04-right-spine", "Lomo derecho", "cover_folio_right", "carbon", "hook", { imageTreatment: "near_full", shortKicker: "Muisca", maxTitleChars: 18 }),
   entry("cover", "cover-05-lagoon-threshold", "Umbral de laguna", "cover_threshold", "agua", "hook", { imageTreatment: "full_bleed" }),
   entry("cover", "cover-06-museum-label", "Cartela de museo", "cover_museum", "hueso", "hook", { imageTreatment: "contained" }),
-  entry("cover", "cover-07-high-horizon", "Horizonte alto", "cover_horizon", "noche", "hook", { imageTreatment: "full_bleed" }),
+  entry("cover", "cover-07-high-horizon", "Horizonte comunitario", "cover_horizon", "noche", "overview", { imageTreatment: "landscape_band", introOnly: true }),
   entry("cover", "cover-08-bottom-folio", "Folio inferior", "cover_bottom_folio", "paramo", "hook", { imageTreatment: "near_full" }),
   entry("cover", "cover-09-offset-window", "Ventana desplazada", "cover_offset", "arcilla", "hook", { imageTreatment: "contained" }),
   entry("cover", "cover-10-quiet-monument", "Monumento silencioso", "cover_monument", "musgo", "hook", { imageTreatment: "full_bleed" }),
@@ -305,4 +381,10 @@ export function getEditorialTemplate(id) {
 
 export function getEditorialTemplatesByFamily(family) {
   return INSTAGRAM_EDITORIAL_LIBRARY[family] || [];
+}
+
+export function getProductionEditorialTemplatesByFamily(family) {
+  return getEditorialTemplatesByFamily(family).filter(
+    (template) => template.productionReady
+  );
 }

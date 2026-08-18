@@ -30,7 +30,11 @@ test("cada plantilla declara composición, paleta, función y aprobación final"
     assert.ok(template.palette);
     assert.ok(template.role);
     assert.equal(template.approval, "approved");
-    assert.equal(template.designRevision, "v8");
+    assert.ok(["v8", "v9"].includes(template.designRevision));
+    assert.equal(
+      template.productionReady,
+      template.designRevision === "v9"
+    );
     assert.ok(
       ["rail_left", "corner", "rail_right", "baseline", "register"].includes(
         template.brandMode
@@ -49,6 +53,23 @@ test("cada plantilla declara composición, paleta, función y aprobación final"
       collisionSafe: true,
       bodyBaseline: true,
     });
+  }
+});
+
+test("la producción v9 usa un repertorio curado y suficiente", () => {
+  const production = INSTAGRAM_EDITORIAL_TEMPLATES.filter(
+    (template) => template.productionReady
+  );
+  assert.equal(production.length, 40);
+  assert.deepEqual(
+    new Set(production.map((template) => template.family)),
+    new Set(["cover", "typographic", "secondary", "tertiary", "map"])
+  );
+  for (const density of ["short", "medium", "narrative"]) {
+    assert.ok(
+      production.filter((template) => template.textDensity === density)
+        .length >= 6
+    );
   }
 });
 

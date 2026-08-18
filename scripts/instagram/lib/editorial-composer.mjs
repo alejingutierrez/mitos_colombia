@@ -1,12 +1,26 @@
 import {
-  getEditorialTemplatesByFamily,
+  getProductionEditorialTemplatesByFamily,
   INSTAGRAM_EDITORIAL_TEMPLATES,
 } from "../../../src/lib/instagram-editorial-library.js";
 import { MIN_IMAGE_SEQUENCE_GAP } from "./plan-schema.mjs";
+import {
+  selectInstagramGraphicMotif,
+  selectInstagramSupportDecoration,
+} from "../../../src/lib/instagram-iconography.js";
 
 const FAMILY_BY_ASSET = Object.freeze({
   existing_landscape: "secondary",
   generated_third: "tertiary",
+});
+
+const EDITORIAL_PALETTE_BY_PLAN = Object.freeze({
+  laguna: "laguna",
+  paramo: "paramo",
+  tierra: "arcilla",
+  oro: "oro_palido",
+  selva: "musgo",
+  noche: "noche",
+  arcilla: "arcilla",
 });
 
 const GRAPHIC_TYPE_LAYOUTS = new Set([
@@ -31,6 +45,16 @@ const GRAPHIC_TYPE_LAYOUTS = new Set([
   "type_question",
 ]);
 
+const STRUCTURAL_GRAPHIC_LAYOUTS = new Set([
+  "type_archive_note",
+  "type_blocks",
+  "type_columns",
+  "type_ledger",
+  "type_thesis",
+  "type_triptych",
+  "type_vocabulary",
+]);
+
 const KICKER_BY_ROLE = Object.freeze({
   hook: "El umbral",
   setting: "El territorio",
@@ -46,6 +70,7 @@ const KICKER_BY_ROLE = Object.freeze({
   pause: "La pausa",
   symbol: "El símbolo",
   sequence: "El relato",
+  overview: "La colección",
 });
 
 const KEYWORD_STOPWORDS = new Set([
@@ -177,7 +202,24 @@ function removeRepeatedOpening(title, body) {
     return normalizedBody;
   }
   const remainder = normalizedBody.slice(firstSentenceMatch[0].length).trim();
-  return wordCount(remainder) >= 5 ? remainder : normalizedBody;
+  return remainder;
+}
+
+function closingCallToAction(myth) {
+  const slug = String(myth?.slug || "").trim();
+  const isCommunity = myth?.kind === "community";
+  return {
+    eyebrow: "El relato continúa",
+    body: isCommunity
+      ? "Explora la colección completa y elige tu próxima historia en"
+      : "Lee la historia completa, sus fuentes y otras versiones en",
+    label: "mitosdecolombia.com",
+    href:
+      myth?.ctaHref ||
+      (slug
+        ? `https://mitosdecolombia.com/mitos/${slug}`
+        : "https://mitosdecolombia.com"),
+  };
 }
 
 function fallbackCopy(slide, myth) {
@@ -185,10 +227,13 @@ function fallbackCopy(slide, myth) {
   const body = removeRepeatedOpening(title, slide.body || "");
   const words = displayWords(title);
   const keywords = keywordsFor(`${title} ${body}`);
+  const territory = [myth?.community, myth?.region].filter(Boolean).join(" · ");
   const kicker =
-    KICKER_BY_ROLE[slide.design_role] ||
-    KICKER_BY_ROLE[slide.narrative_role] ||
-    "El relato";
+    slide.asset_id === "existing_portrait"
+      ? territory
+      : KICKER_BY_ROLE[slide.design_role] ||
+        KICKER_BY_ROLE[slide.narrative_role] ||
+        "El relato";
   const latitude = Number(myth?.latitude);
   const longitude = Number(myth?.longitude);
   if (slide.kind === "location") {
@@ -230,6 +275,16 @@ function templateUsage(history) {
   return usage;
 }
 
+function graphicUsage(history) {
+  const usage = new Map();
+  for (const entry of history) {
+    for (const graphicId of entry.graphic_ids || []) {
+      usage.set(graphicId, (usage.get(graphicId) || 0) + 1);
+    }
+  }
+  return usage;
+}
+
 function weightedPick(candidates, usage, random) {
   const weighted = candidates.map((template) => ({
     template,
@@ -248,15 +303,15 @@ function candidatesForSlide({
   family,
   narrativeRole,
   selectedIds,
-  lastPalettes,
   previousTemplate,
   titleLength,
   copyWords,
   preferredDensity,
 }) {
-  const approved = getEditorialTemplatesByFamily(family).filter(
+  const approved = getProductionEditorialTemplatesByFamily(family).filter(
     (template) =>
       template.approval === "approved" &&
+      (!template.introOnly || narrativeRole === "overview") &&
       !selectedIds.has(template.id) &&
       (!template.maxTitleChars || titleLength <= template.maxTitleChars) &&
       (!template.maxWords || copyWords <= template.maxWords)
@@ -280,19 +335,10 @@ function candidatesForSlide({
     (template) => template.brandMode !== previousTemplate?.brandMode
   );
   const branded = brandSafe.length ? brandSafe : densityEligible;
-  const paletteSafe = branded.filter(
-    (template) =>
-      !(
-        lastPalettes.length >= 2 &&
-        lastPalettes.at(-1) === template.palette &&
-        lastPalettes.at(-2) === template.palette
-      )
-  );
-  const designSafe = paletteSafe.length ? paletteSafe : branded;
-  const roleMatches = designSafe.filter(
+  const roleMatches = branded.filter(
     (template) => template.role === narrativeRole
   );
-  const primary = roleMatches.length >= 2 ? roleMatches : designSafe;
+  const primary = roleMatches.length ? roleMatches : branded;
   const previousWasQuietType =
     previousTemplate?.family === "typographic" &&
     !GRAPHIC_TYPE_LAYOUTS.has(previousTemplate.layout);
@@ -362,8 +408,15 @@ export function validateEditorialComposition(composition) {
       (slide) =>
         slide.template_family === "map" &&
         imageSlides.some(
-          (imageSlide) =>
-            Math.abs(slide.sequence - imageSlide.sequence) <= 1
+          (imageSlide) => {
+            const isTerritoryToSceneTransition =
+              imageSlide.asset_id === "existing_landscape" &&
+              imageSlide.sequence === slide.sequence + 1;
+            return (
+              Math.abs(slide.sequence - imageSlide.sequence) <= 1 &&
+              !isTerritoryToSceneTransition
+            );
+          }
         )
     )
   ) {
@@ -389,6 +442,16 @@ export function validateEditorialComposition(composition) {
     errors.push("unapproved_template_selected");
   }
   if (
+    slides.some((slide) => {
+      const template = INSTAGRAM_EDITORIAL_TEMPLATES.find(
+        (item) => item.id === slide.template_id
+      );
+      return template?.productionReady !== true;
+    })
+  ) {
+    errors.push("non_production_template_selected");
+  }
+  if (
     slides.some(
       (slide, index) =>
         slide.template_text_density === "narrative" &&
@@ -407,6 +470,20 @@ export function validateEditorialComposition(composition) {
   ) {
     errors.push("brand_mode_repeated");
   }
+  const finalSlide = slides.at(-1);
+  if (
+    finalSlide?.copy?.cta?.eyebrow !== "El relato continúa" ||
+    finalSlide?.copy?.cta?.label !== "mitosdecolombia.com" ||
+    !String(finalSlide?.copy?.cta?.body || "").trim() ||
+    !String(finalSlide?.copy?.cta?.href || "").startsWith(
+      "https://mitosdecolombia.com"
+    )
+  ) {
+    errors.push("final_slide_missing_read_more_cta");
+  }
+  if (slides.slice(0, -1).some((slide) => slide.copy?.cta)) {
+    errors.push("read_more_cta_outside_final_slide");
+  }
 
   return [...new Set(errors)];
 }
@@ -421,14 +498,20 @@ export function composeEditorialCarousel({
   const slides = plan?.slides || [];
   const random = randomFromSeed(seed);
   const usage = templateUsage(history);
+  const graphicUsageById = graphicUsage(history);
   const selectedIds = new Set();
-  const lastPalettes = [];
+  const usedGraphicMotifIds = new Set();
+  const usedGraphicDecorationIds = new Set();
   let previousTemplate = null;
 
   const resolvedSlides = slides.map((slide, index) => {
     const family = familyForSlide(slide, index);
-    const copy =
+    const suppliedCopy =
       copyBySequence[slide.sequence] || fallbackCopy(slide, plan.myth);
+    const copy =
+      slide.kind === "closing" || slide.narrative_role === "closing"
+        ? { ...suppliedCopy, cta: closingCallToAction(plan.myth) }
+        : suppliedCopy;
     const title = copy.title || slide.headline || "";
     const body = copy.body || slide.body || "";
     const candidates = candidatesForSlide({
@@ -436,7 +519,6 @@ export function composeEditorialCarousel({
       narrativeRole:
         slide.design_role || copy.templateRole || slide.narrative_role,
       selectedIds,
-      lastPalettes,
       previousTemplate,
       titleLength: String(title).length,
       copyWords: wordCount(`${title} ${body}`),
@@ -447,26 +529,89 @@ export function composeEditorialCarousel({
         `No hay plantilla aprobada disponible para ${family}/${slide.narrative_role}.`
       );
     }
-    const template = weightedPick(candidates, usage, random);
+    const recentlyUsedAtPosition = new Set(
+      history
+        .slice(-4)
+        .map((entry) => entry.template_ids?.[index])
+        .filter(Boolean)
+    );
+    const positionSafeCandidates = candidates.filter(
+      (candidate) => !recentlyUsedAtPosition.has(candidate.id)
+    );
+    const template = weightedPick(
+      positionSafeCandidates.length ? positionSafeCandidates : candidates,
+      usage,
+      random
+    );
+    const selectedPalette =
+      EDITORIAL_PALETTE_BY_PLAN[slide.palette_id] || template.palette;
     selectedIds.add(template.id);
-    lastPalettes.push(template.palette);
     previousTemplate = template;
 
-    return {
+    const resolvedSlide = {
       ...slide,
       template_id: template.id,
       template_family: template.family,
       template_name: template.name,
       template_layout: template.layout,
-      template_palette: template.palette,
+      template_palette: selectedPalette,
       template_text_density: template.textDensity || null,
       template_brand_mode: template.brandMode,
       copy,
     };
+    const graphicMotif = selectInstagramGraphicMotif({
+      slide: resolvedSlide,
+      copy,
+      myth: plan.myth,
+      excludedIds: usedGraphicMotifIds,
+      usageById: graphicUsageById,
+    });
+    const graphicDecoration = selectInstagramSupportDecoration({
+      slide: resolvedSlide,
+      copy,
+      primaryMotif: graphicMotif,
+      excludedIds: usedGraphicDecorationIds,
+      usageById: graphicUsageById,
+    });
+    const primaryUsage = graphicMotif
+      ? graphicUsageById.get(graphicMotif.id) || 0
+      : Number.POSITIVE_INFINITY;
+    const decorationUsage = graphicDecoration
+      ? graphicUsageById.get(graphicDecoration.id) || 0
+      : Number.POSITIVE_INFINITY;
+    const usesStructuralGraphic =
+      Boolean(graphicDecoration) &&
+      (!graphicMotif ||
+        decorationUsage < primaryUsage ||
+        (decorationUsage === primaryUsage &&
+          STRUCTURAL_GRAPHIC_LAYOUTS.has(resolvedSlide.template_layout)));
+    const resolvedGraphicMotif = usesStructuralGraphic ? null : graphicMotif;
+    const resolvedGraphicDecoration = usesStructuralGraphic
+      ? graphicDecoration
+      : null;
+    if (resolvedGraphicMotif?.id) {
+      usedGraphicMotifIds.add(resolvedGraphicMotif.id);
+      graphicUsageById.set(
+        resolvedGraphicMotif.id,
+        (graphicUsageById.get(resolvedGraphicMotif.id) || 0) + 1
+      );
+    }
+    if (resolvedGraphicDecoration?.id) {
+      usedGraphicDecorationIds.add(resolvedGraphicDecoration.id);
+      graphicUsageById.set(
+        resolvedGraphicDecoration.id,
+        (graphicUsageById.get(resolvedGraphicDecoration.id) || 0) + 1
+      );
+    }
+    return {
+      ...resolvedSlide,
+      graphic_motif: resolvedGraphicMotif,
+      graphic_decoration: resolvedGraphicDecoration,
+    };
   });
 
   const composition = {
-    schema_version: 4,
+    schema_version: 7,
     composed_at: new Date().toISOString(),
     seed: String(seed),
     myth: plan.myth || null,
@@ -483,6 +628,7 @@ export function composeEditorialCarousel({
     assets,
     selection_policy: {
       approved_only: true,
+      production_ready_only: true,
       unique_inside_carousel: true,
       seed_reproducible: true,
       recent_usage_weighted: true,
@@ -492,6 +638,14 @@ export function composeEditorialCarousel({
       adjacent_brand_mode_repeated: false,
       minimum_image_sequence_gap: MIN_IMAGE_SEQUENCE_GAP,
       story_text_cards_required: true,
+      semantic_iconography: true,
+      standardized_decoration_system: "v2",
+      max_primary_motif_per_slide: 1,
+      max_support_decoration_per_slide: 1,
+      max_graphic_elements_per_slide: 1,
+      overlapping_graphic_elements_allowed: false,
+      least_used_graphic_weighted: true,
+      graphic_usage_tracking_enabled: true,
     },
     slides: resolvedSlides,
   };

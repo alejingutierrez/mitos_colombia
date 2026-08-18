@@ -13,7 +13,7 @@ export const metadata = {
   robots: { index: false, follow: false },
 };
 
-async function readComposition(slug, edition = "v8") {
+async function readComposition(slug, edition = "v9") {
   if (!/^[a-z0-9-]+$/.test(slug || "")) return null;
   if (!/^v[0-9]+$/.test(edition)) return null;
   try {
@@ -32,7 +32,7 @@ async function readComposition(slug, edition = "v8") {
 
 export default async function InstagramLibraryPage({ searchParams }) {
   const query = await searchParams;
-  const edition = query.edition || "v8";
+  const edition = query.edition || "v9";
   const composition = query.composition
     ? await readComposition(query.composition, edition)
     : null;
@@ -50,13 +50,22 @@ export default async function InstagramLibraryPage({ searchParams }) {
           <InstagramTemplateCanvas
             assets={composition.assets}
             copy={compositionSlide.copy}
+            graphicMotif={compositionSlide.graphic_motif}
+            graphicDecoration={compositionSlide.graphic_decoration}
             meta={{
               mythTitle: composition.myth?.title,
+              community: composition.myth?.community,
+              region: composition.myth?.region,
               role: compositionSlide.narrative_role,
               sequence: compositionSlide.sequence,
               total: composition.slides.length,
             }}
-            template={compositionTemplate}
+            template={{
+              ...compositionTemplate,
+              palette:
+                compositionSlide.template_palette ||
+                compositionTemplate.palette,
+            }}
           />
         </div>
       </main>
@@ -87,13 +96,20 @@ export default async function InstagramLibraryPage({ searchParams }) {
                 <InstagramTemplateCanvas
                   assets={composition.assets}
                   copy={slide.copy}
+                  graphicMotif={slide.graphic_motif}
+                  graphicDecoration={slide.graphic_decoration}
                   meta={{
                     mythTitle: composition.myth?.title,
+                    community: composition.myth?.community,
+                    region: composition.myth?.region,
                     role: slide.narrative_role,
                     sequence: slide.sequence,
                     total: composition.slides.length,
                   }}
-                  template={item}
+                  template={{
+                    ...item,
+                    palette: slide.template_palette || item.palette,
+                  }}
                 />
                 <div className={styles.meta}>
                   <span>{String(slide.sequence).padStart(2, "0")}</span>
