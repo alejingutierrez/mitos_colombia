@@ -1,8 +1,8 @@
-import Link from "next/link";
 import { Container, Heading, ImageFrame, Motif } from "../atoms";
 import { Breadcrumb, ShareBar } from "../molecules";
 import { CommentThread, Header, MythGrid } from "../organisms";
 import { MythReadingRail } from "../MythReadingRail";
+import { MythHero, MythIntroMobile } from "./MythHero";
 import {
   FuentesBlock,
   HistoriaBlock,
@@ -183,57 +183,11 @@ function MythReading({ myth, accent, related }) {
 }
 
 function MythArticle({ myth, accent, breadcrumb, related }) {
-  const heroSrc = myth.imageUrl || myth.verticalImageUrl;
-  const mobileHeroSrc = myth.verticalImageUrl || myth.imageUrl;
   return (
     <article>
-      <section className="relative overflow-hidden bg-paper md:min-h-[calc(100svh-4rem)] md:bg-[rgb(var(--atlas-night))]">
-        {heroSrc ? (
-          <ImageFrame
-            src={heroSrc}
-            mobileSrc={mobileHeroSrc}
-            alt={myth.title}
-            ratio="1 / 1"
-            fillFrom="md"
-            priority
-            sizes="100vw"
-            mobileSizes="100vw"
-            className="w-full rounded-none border-0 md:absolute md:inset-0 md:min-h-full"
-            imgClassName="object-cover"
-            data-image-role="cover"
-          />
-        ) : (
-          <span className="absolute inset-0 flex items-center justify-center opacity-25">
-            <Motif name={myth.motif} size={320} />
-          </span>
-        )}
-        <span className="atlas-scrim-myth pointer-events-none absolute inset-0 hidden md:block" />
-        <Container
-          size="atlas"
-          className="atlas-on-image relative py-8 md:flex md:min-h-[calc(100svh-4rem)] md:items-end md:pb-14 md:pt-24 md:text-white"
-        >
-          <div className="max-w-3xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-ink-500 md:text-white/75">
-              {[myth.region, myth.community].filter(Boolean).join(" · ")}
-            </p>
-            <h1 className="mt-4 font-editorial text-[2.75rem] font-semibold leading-[0.92] tracking-[-0.035em] !text-jungle-700 sm:text-[3.5rem] md:text-[6.4rem] md:!text-white">
-              {myth.title}
-            </h1>
-            {myth.excerpt ? (
-              <p className="mt-5 max-w-2xl text-base leading-relaxed text-ink-700 md:text-white/85">
-                {myth.excerpt}
-              </p>
-            ) : null}
-            <Link
-              href="#relato"
-              className="mt-6 inline-flex min-h-11 items-center gap-2 border-b border-ember-500 text-sm font-semibold text-jungle-700 md:text-white"
-            >
-              Leer el relato
-            </Link>
-          </div>
-        </Container>
-      </section>
-      <Container size="atlas" className="pt-8">
+      <MythHero myth={myth} />
+      <MythIntroMobile myth={myth} />
+      <Container size="atlas" className="pt-6 md:pt-8">
         <Breadcrumb items={breadcrumb} />
       </Container>
       <MythReading myth={myth} accent={accent} related={related} />
