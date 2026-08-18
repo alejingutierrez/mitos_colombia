@@ -41,13 +41,14 @@ test("favicon is an uppercase black M over light green", async () => {
 
 test("photographic hero titles opt into white for contrast", async () => {
   const heroFiles = await Promise.all([
-    read("src/components/templates/MythDetailTemplate.js"),
+    read("src/components/templates/MythHero.js"),
     read("src/components/templates/RouteDetailTemplate.js"),
     read("src/components/templates/TaxonomyDetailTemplate.js"),
     read("src/app/rutas/page.js"),
   ]);
 
   for (const source of heroFiles) {
-    assert.match(source, /<h1 className="[^"]*!text-white[^"]*"/);
+    // El className puede venir como cadena o como template literal.
+    assert.match(source, /<h1\s[^>]*!text-white/);
   }
 });
