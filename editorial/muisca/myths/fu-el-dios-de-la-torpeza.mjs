@@ -6,89 +6,72 @@ export default defineMuiscaMyth({
   tags: ["Fu", "torpeza", "juego", "laguna", "humor"],
   latitude: 5.4671,
   longitude: -73.7383,
-  mito: `Fu dormía durante el día bajo las aguas de Fúquene.
+  mito: `Fu, el dios de la torpeza, vivía bajo las aguas de Fúquene y solo salía de noche.
 
-No era un sueño tranquilo. Los peces le rozaban la nariz, las raíces se enredaban en sus tobillos y, si se daba vuelta, levantaba burbujas que asustaban a las aves de la orilla. Pero el Sol le había ordenado no salir antes de la noche.
+De día dormía entre raíces y peces, porque la luz lo confundía y todo lo que tocaba a plena luz se le caía de las manos. Una tarde, sin embargo, los ruidos de la orilla no lo dejaron cerrar el ojo. Voces, pasos, golpes de madera: habían llegado gentes de varios poblados, y todas hablaban del mismo peligro. Por el boquerón de Tausa podía pasar una guerra y quedarse con los caminos del altiplano.
 
-Una tarde oyó voces sobre la laguna.
+—Fu —lo llamaron desde la orilla—, tú que mueves las piedras. Cierra el paso antes del amanecer.
 
-Desde varias poblaciones habían llegado personas preocupadas. Un grupo enemigo avanzaba hacia el boquerón de Tausa. Si cruzaba el paso, encontraría abiertos los caminos del altiplano.
+Fu sintió que el encargo le quedaba grande. Se levantó del fondo, sacudió el agua y salió a buscar una roca. Encontró una que apenas le cabía en los brazos y la cargó sobre los hombros.
 
-En el agua cayeron pequeñas ofrendas. Fu abrió un ojo.
+Caminó toda la noche por el frío del altiplano.
 
-—Necesitamos que cierres el boquerón —le pidieron.
+En un trecho del camino pisó una piedra redonda. Salió disparada, golpeó otra y las dos rodaron hasta detenerse con un sonido seco. Fu se detuvo. Bajó la roca grande al suelo y se agachó a recoger una piedra plana.
 
-Fu esperó hasta que el último borde del Sol desapareció. Entonces salió de la laguna, sacudiéndose el agua, y buscó una roca capaz de obstruir el paso. Encontró una tan grande que tuvo que cargarla sobre ambos hombros.
+La lanzó hacia un círculo que marcó en la tierra. Cayó en el centro.
 
-Avanzó durante la noche.
+Lo intentó de nuevo. La segunda rebotó, la tercera se fue de largo, la cuarta chocó contra una laja y de allí saltó una chispa diminuta que se apagó en el pasto seco. Fu se quedó mirando el punto donde había nacido el fuego. Volvió a lanzar. Pronto había olvidado el boquerón, la roca y la guerra.
 
-En el camino pisó una piedra redonda. La piedra salió disparada, golpeó otra y produjo un sonido limpio.
+Detrás de las montañas empezó a clarear.
 
-Fu dejó la roca grande en el suelo.
+Fu se sobresaltó, levantó la piedra y corrió. Llegó al paso con el aliento corto y empujó la roca con lo que le quedaba de fuerza. Quedó atravesada, pero la abertura siguió abierta por un costado.
 
-Probó de nuevo. Escogió una piedra plana, la sostuvo entre los dedos y la lanzó hacia un círculo de tierra. Cayó exactamente en el centro.
+Se sentó a esperar el regaño.
 
-—Una vez más —se dijo.
+La gente miró el paso, luego la roca, luego las piedras planas que Fu todavía tenía entre los dedos.
 
-La segunda piedra rebotó. La tercera pasó de largo. La cuarta chocó contra una laja y soltó una chispa diminuta.
-
-Fu acomodó el círculo, cambió la distancia y volvió a lanzar. Pronto había olvidado el boquerón, la roca y el ejército. Solo existían el peso en la mano, el vuelo breve y el instante anterior al golpe.
-
-Un resplandor apareció detrás de las montañas.
-
-Fu miró el cielo.
-
-El amanecer.
-
-Levantó la gran roca y corrió. Llegó al paso cuando ya se oían movimientos al otro lado. Sin tiempo para medir, empujó la piedra. Quedó atravesada, pero no cerró por completo el camino.
-
-Fu esperó un regaño. También esperaba que se rieran.
-
-Las personas observaron la abertura, luego las piedras planas que él todavía llevaba en la mano.
-
-—No hiciste lo que te pedimos —dijo una mujer.
+—No cerraste el boquerón —dijo una anciana.
 
 —No —admitió Fu.
 
-—Pero eso que inventaste… enséñanos.
+—Pero ¿qué es eso que hiciste con las piedras? Enséñanos.
 
-Al caer la siguiente tarde, marcaron un círculo en la tierra. Fu mostró cómo sostener la piedra, calcular la fuerza y aceptar que un buen lanzamiento no vuelve bueno el siguiente.
+Al anochecer marcaron un círculo en la tierra. Fu mostró cómo sostener la piedra, cómo medir el esfuerzo y cómo un acierto no garantiza el siguiente. Las piedras volaban, chocaban contra la laja y de cada choque saltaba una chispa que se apagaba en el pasto. El juego se repitió noche tras noche.
 
-El boquerón tuvo que protegerse con vigilancia y trabajo humano. Ningún juego reemplazó esa tarea.
+El boquerón se protegió con gente que hacía turnos y con fogatas. Ningún juego reemplazó esa tarea.
 
-Pero, desde entonces, después del esfuerzo llegaba la competencia. Las piedras volaban, chocaban y hacían reír incluso a quien acababa de fallar.
+Pero cuando el trabajo terminaba, las piedras volaban contra el círculo, y hasta quien acababa de perder reía.
 
 Fu nunca aprendió a no distraerse.
 
-Aprendió algo más difícil: regresar y responder por lo que había dejado a medias.`,
-  historia: `La trama detallada de Fu —ser nocturno de Fúquene, roca para cerrar el boquerón de Tausa, distracción con piedras y nacimiento del tejo— procede de *Érase una vez entre los chibchas*, obra juvenil de Alfredo García Giraldo. La página anterior la presentaba como mito antiguo en dos versiones y llamaba a Fu “demonio amistoso”. La investigación no sostiene esa seguridad. El registro bibliográfico identifica el libro como literatura juvenil, y la revisión crítica de Diego Gómez Aldana demuestra que varios de sus cuentos circularon luego bajo atribuciones indígenas falsas.
+Aprendió a regresar a tiempo y a responder por lo que había dejado a medias. Cada noche, antes de volver al agua, se quedaba en la orilla mirando el círculo, las piedras quietas y la chispa que nacía del choque: una luz pequeña que nadie había pedido y que todos esperaban.`,
+  historia: `El cuento de Fu y el primer tejo no procede de una crónica colonial ni de una tradición oral documentada: nace de Érase una vez entre los chibchas, obra juvenil de Alfredo García Giraldo, que presenta a Fu como un ser cómico de Fúquene, encargado de bloquear el boquerón de Tausa y distraído por el golpe de las piedras. El registro bibliográfico del libro y la revisión crítica de Diego Gómez Aldana —que rastrea pasajes atribuidos a los muiscas hasta su antecedente literal en esa obra— obligan a tratarlo como relato moderno, no como mito antiguo.
 
-Eugenia Villa Posse menciona de manera breve nombres como Fu, asociado a Fúquene, y Fo, usado para Nencatacoa, pero no ofrece allí esta aventura completa. La semejanza de los nombres no basta para convertir el cuento de García Giraldo en tradición prehispánica. “Demonio” pertenece, además, a un vocabulario colonial cristiano que deforma cualquier posible entidad local.
+Eugenia Villa Posse registra de manera breve nombres como Fu, asociado a Fúquene, y Fo, usado para Nencatacoa, pero no ofrece esta aventura. La semejanza de los nombres no basta para convertir la escena en tradición prehispánica, y el rótulo de "demonio amistoso" heredado de páginas anteriores pertenece al vocabulario colonial cristiano.
 
-El tejo es una práctica colombiana viva con una fuerte memoria de origen en el altiplano y una asociación popular con los muiscas. Las fuentes patrimoniales respaldan esa continuidad cultural general, no la escena sobrenatural de la roca. La nueva narración conserva el humor y el accidente creador, pero retira caricaturas sobre pueblos enemigos, órdenes de Chiminigagua que la fuente crítica no confirma y una salvación divina completa.
+El ancla cultural verificable es el tejo. El Ministerio de Cultura lo documenta como práctica viva con memoria de origen en el altiplano y asociación popular con los muiscas. Esa continuidad respalda la relación general entre el juego y la región, no la escena sobrenatural.
 
-El cierre, donde Fu asume lo inacabado y la comunidad protege el paso por sí misma, es una decisión editorial. Permite disfrutar la fantasía sin hacer de la torpeza una excusa ni del juego un sustituto de la responsabilidad.`,
-  versiones: `García Giraldo construye a Fu como un personaje cómico que solo puede salir de noche, recibe la tarea de bloquear un paso y se distrae lanzando piedras. El fracaso parcial produce, de manera etiológica, un juego que la narración relaciona con el tejo.
+La lectura del error creador sostiene la narración: Fu no triunfa al acertar, sino al tropezar y repetir el gesto; el valor que otros encuentran en su descuido nace de mirar de otro modo algo que salió distinto. La reescritura conserva el humor y el accidente que produce lo valioso, retira caricaturas sobre pueblos enemigos, órdenes de Chiminigagua que la fuente no confirma y una salvación divina completa, y cierra con Fu asumiendo lo inacabado mientras la comunidad protege el paso por sí misma.`,
+  versiones: `García Giraldo crea a Fu como personaje cómico: nocturno, encargado de bloquear un paso, distraído por el sonido de las piedras; su versión atribuye al accidente el origen narrativo del tejo. El núcleo —un dios torpe cuyo descuido produce algo valioso— se conserva en la reescritura sin convertir la torpeza en virtud ni en vicio.
 
-Reescrituras posteriores duplicaron esta única fuente literaria como si fueran “dos versiones”: en una Fu era dios; en otra, diablo; unas añadían alas, un regaño de Chiminigagua o una derrota milagrosa del enemigo. Esas diferencias parecen derivar de adaptaciones modernas, no de dos testimonios independientes. La página deja de contarlas como prueba de tradición oral.
+Reescrituras posteriores presentaron ese mismo cuento como "dos versiones": en una Fu era dios, en otra demonio; unas añadían alas, un regaño de Chiminigagua o la derrota milagrosa del enemigo. Esas diferencias nacen de adaptaciones modernas y no de testimonios independientes; la ficha deja de contarlas como prueba de tradición oral.
 
-La asociación general entre Fúquene, un ser llamado Fu y el tejo requiere más evidencia. Villa permite reconocer una huella nominal, y el Ministerio de Cultura documenta la memoria contemporánea del juego, pero ninguno confirma toda la aventura. El título conserva “Fu” y “tejo” porque identifican el cuento de García Giraldo. Sustituye “dios de la torpeza” por una formulación narrativa menos esencialista, sin negar que ese nombre siga siendo una búsqueda frecuente.`,
-  leccion: `Una equivocación puede revelar una posibilidad, pero no borra la tarea que quedó pendiente. Fu merece la risa compartida porque reconoce su fallo y regresa; no porque el daño carezca de importancia.
+La asociación entre Fúquene, un ser llamado Fu y el tejo exige cautela: Villa deja ver una huella nominal y el Ministerio de Cultura documenta la memoria contemporánea del juego, pero ninguna fuente confirma la aventura completa. El título conserva "Fu" y "tejo" porque identifican el cuento de García Giraldo, y sustituye "dios de la torpeza" por una formulación menos esencialista sin negar que ese nombre siga siendo una búsqueda frecuente.`,
+  leccion:
+    "Del paso en falso nace una chispa, y el mundo se ordena de nuevo en lo que no se planeó.",
+  similitudes: `Dentro del mismo corpus muisca, Nencatacoa —a quien algunos textos llaman también Fo— es una divinidad de gesto festivo y torpe, protectora de los tejedores, amiga de la fiesta y de la bebida; su torpeza no lo degrada, lo acerca a la gente. Fu resuena con él: ninguno encarna el orden ni la destreza, y ambos hacen del error o del exceso un lugar habitable. Difieren en la tarea: Nencatacoa acompaña un oficio de mano precisa, tejer, mientras Fu funda un juego por descuido. El tejo mismo es el paralelo más cercano en forma: una piedra lanzada a un círculo, un estallido en su versión moderna y una memoria de origen altiplánico; pero la práctica real se transmite como costumbre y competencia, sin depender del relato de Fu.
 
-El juego nace cuando la comunidad observa de otro modo un gesto inútil. La creatividad no siempre consiste en acertar a la primera: a veces consiste en mirar con atención aquello que salió distinto.`,
-  similitudes: `Ananse, figura embaucadora de las tradiciones akan, puede romper reglas, producir desorden y dejar al descubierto cómo funciona una comunidad. Fu comparte esa ambigüedad cómica: no es modelo de obediencia, pero su distracción abre un espacio nuevo para el juego. No comparte con Ananse identidad, forma, historias ni contexto religioso.
+En América el embaucador suele ser astuto y voraz —el conejo de la tradición popular colombiana y venezolana, el zorro andino, el coyote del norte—, mientras los dioses civilizadores crean con propósito: Viracocha ordena el mundo y enseña a la nueva humanidad. Fu no cabe en ninguno de los dos moldes: no engaña como el conejo ni ordena como Viracocha; desordena sin querer y, del desorden, brota el juego. Si el trickster americano gana saltándose la regla, Fu gana sin proponérselo, y esa diferencia vuelve su historia singular.
 
-Los relatos de tricksters suelen oscilar entre inteligencia y torpeza. Un personaje puede resolver un problema en una historia y agravarlo en la siguiente. Esa movilidad explica por qué resultan útiles para pensar errores sin convertirlos en sermones.
-
-Fu se distingue porque su invención no nace de una gran victoria ni de un robo astuto, sino de escuchar el golpe de una piedra y repetirlo. El resultado tampoco salva por sí solo a nadie. La comunidad debe atender el boquerón y, además, decide conservar el juego. No hay evidencia de contacto o genealogía narrativa con Ananse. El paralelo sirve para ubicar una necesidad humana compartida: reírse de la insuficiencia propia, descubrir valor en el accidente y exigir todavía que quien falla vuelva a hacerse cargo.`,
+En las mitologías del mundo el fuego suele llegar por robo o por victoria —Prometeo lo arrebata a los dioses—, y el artesano divino Hefesto, cojo y motivo de risa en el Olimpo, forja objetos que sobreviven a cualquier héroe. Fu condensa ambas imágenes en una: no roba el fuego ni lo conquista, lo hace nacer por accidente del choque de dos piedras. Ananse, el embaucador akan, también produce consecuencias provechosas al quebrar las reglas, pero su desorden es calculado y el de Fu, involuntario. El paralelo universal es la idea de que lo valioso puede brotar de la insuficiencia: el dios que tropieza y, en el tropiezo, enciende algo que nadie había pedido.`,
   excerpt:
-    "Fu debe cerrar el boquerón de Tausa, pero el sonido de una piedra lo distrae y abre, por accidente, la posibilidad de un juego.",
-  seoTitle: "Fu y el primer tejo: origen y fuentes del cuento",
+    "Fu debe cerrar el boquerón de Tausa, pero el sonido de una piedra lo distrae: del tropiezo nace una chispa y, sin buscarlo, el primer tejo.",
+  seoTitle: "Fu y el primer tejo: el dios torpe que inventó un juego",
   seoDescription:
-    "Lee Fu y el primer tejo: el cuento de Fúquene y el boquerón de Tausa, su origen literario, significado, versiones y fuentes verificadas.",
-  ogTitle: "Fu y el primer tejo: un error que encontró otro camino",
+    "Lee el cuento de Fu, el dios torpe de Fúquene: cómo una piedra lo distrae del boquerón de Tausa y, por accidente, nace el tejo.",
+  ogTitle: "Fu y el primer tejo: cuando el dios torpe encendió un juego",
   ogDescription:
-    "Fu debía mover una roca enorme. Una piedra pequeña, un rebote y una chispa bastaron para distraerlo e inventar un juego.",
+    "Una piedra que rebota, un paso que queda abierto y una chispa que nadie pidió: del tropiezo de Fu nace el tejo.",
   focusKeywords: [
     "Fu dios de la torpeza",
     "Fu y el tejo",
@@ -98,33 +81,21 @@ Fu se distingue porque su invención no nace de una gran victoria ni de un robo 
     "Érase una vez entre los chibchas",
   ],
   imagePrompt:
-    "Fotografía editorial horizontal 16:9 de una maqueta artesanal de papel cortado: paisaje nocturno realista entre la laguna de Fúquene y el boquerón de Tausa, Fu como personaje humano fantástico y simpático sin cuernos sostiene una roca grande mientras mira una piedra plana que acaba de rebotar y producir una chispa mínima; fibras, capas, micro-sombras, humor sobrio. Sin demonio rojo, alas, explosiones de pólvora modernas, texto ni CGI.",
-  imagePromptVertical:
-    "Fotografía editorial vertical 4:5 de una maqueta de papel cortado: Fu carga una gran roca sobre el hombro y observa fascinado una piedra plana en vuelo hacia un círculo de tierra; noche fría de Fúquene, primeras luces del amanecer. Papel físico, fibras y micro-sombras. Sin demonio, pólvora, texto ni CGI.",
+    "Fotografía editorial horizontal exacta 16:9. Escena principal: entre Fúquene y el boquerón de Tausa, Fu aparece como personaje humano fantástico y simpático intentando mover una roca demasiado grande durante la noche; su esfuerzo es torpe pero no ridículo. Estilo studioPaperMaquette aprobado: maqueta física hecha a mano con papel cortado, cartón y fibras naturales, fotografiada de frente; relieve bajo, bordes visibles, pequeñas imperfecciones humanas, micro-sombras reales e iluminación sobria. Fantasía anclada en el paisaje del altiplano cundiboyacense. Composición panorámica de un solo tableau; los personajes y objetos esenciales permanecen dentro del 80 % central. Sin texto ni logotipos; sin CGI, render digital ni apariencia de 3D sintético; sin coronas, tronos o templos europeos; sin pirámides, penachos ni iconografía mesoamericana; sin símbolos espirituales inventados; sin ídolo gigante, demonio, cuerpo musculoso, explosión, pólvora o martillo.",
   imageUrl:
     "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/fu-el-dios-de-la-torpeza-1784765870803.jpg",
-  sourceKeys: [
-    "garcia",
-    "gomezAldana",
-    "villa",
-    "garciaCatalog",
-    "tejo",
-    "planSesquile",
-    "anansi",
-  ],
-  researchNotes: `ESTADO: cuento juvenil moderno con motivos culturales; no se presenta como mito oral antiguo demostrado.
+  sourceKeys: ["garcia", "garciaCatalog", "gomezAldana", "villa", "tejo", "anansi", "dionysus", "viracocha"],
+  researchNotes: `ESTADO: relato moderno de autor (García Giraldo) con motivos culturales; no se presenta como mito oral antiguo demostrado.
 
-NÚCLEO DOCUMENTADO EN LA FUENTE LITERARIA: Fu; salida nocturna; laguna de Fúquene; amenaza en el boquerón de Tausa; gran roca; distracción con piedras; origen narrativo del tejo.
+NÚCLEO DOCUMENTADO EN LA FUENTE LITERARIA: Fu; salida nocturna; laguna de Fúquene; amenaza en el boquerón de Tausa; gran roca; distracción con piedras; chispa accidental; origen narrativo del tejo.
 
-VARIANTES: Fu como dios o demonio; alas; intervención de Chiminigagua; cierre total o parcial del paso; diferencias nacidas de adaptaciones modernas sin independencia probada.
+VARIANTES: Fu como dios o demonio; alas; regaño de Chiminigagua; cierre total o parcial del paso; diferencias nacidas de adaptaciones modernas sin independencia probada; la ficha no las cuenta como testimonios de tradición oral.
 
-MEMORIA VIVA: el tejo conserva una asociación cultural fuerte con los muiscas y el altiplano, pero la práctica contemporánea no verifica el cuento sobrenatural.
+LICENCIA EDITORIAL: la anciana que interpela a Fu, el aprendizaje de regresar, la chispa como fuego que nace del choque y la defensa humana del paso son invenciones nuevas; se retiran la caricatura de pueblos enemigos y la salvación divina completa.
 
-HIPÓTESIS ACADÉMICA: Villa registra de modo breve a Fu/Fo; la crítica de Gómez Aldana obliga a tratar con cautela las atribuciones derivadas de García Giraldo.
+DUDA: no se ha hallado fuente colonial o etnográfica independiente con esta secuencia completa; la huella nominal de Fu/Fo en Villa no basta.
 
-LECTURA EDITORIAL: la mujer que confronta a Fu, el aprendizaje de regresar y la defensa humana del paso son invenciones nuevas.
+GEOGRAFÍA: laguna de Fúquene y corredor hacia el boquerón de Tausa; punto principal en la laguna (5.4671, -73.7383).
 
-DUDA: no se ha hallado una fuente colonial o etnográfica independiente con esta secuencia completa.
-
-GEOGRAFÍA: laguna de Fúquene y corredor hacia el boquerón de Tausa; punto principal en la laguna.`,
+REGISTRO LINGÜÍSTICO: español colombiano contemporáneo, tono mítico serio con chispa cómica leve; sin arcaísmos peninsulares ni sermón moral.`,
 });

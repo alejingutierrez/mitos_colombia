@@ -14,7 +14,7 @@ export const muiscaLessons = {
   chiminigagua:
     "Toda claridad viaja dentro de lo que parece oscuridad, porque la noche es su envoltura, no su contrario.",
   "creacion-muiscas":
-    "Habitar el mundo no es poseerlo, sino aprender a continuarlo.",
+    "El mundo se vuelve visible para ser habitado, y todo lo que emerge de las aguas regresa a ellas.",
   cuchavira:
     "El arco no abre el cielo: enseña el punto exacto donde la tormenta termina.",
   "el-bermejo-aspira-a-ser-rey":
@@ -36,9 +36,9 @@ export const muiscaLessons = {
   "el-tequendama":
     "La fuerza que inunda y la que alimenta son la misma; solo cambia el cauce que se le abre.",
   "en-el-principio-fue-el-maiz":
-    "La riqueza que alimenta exige más paciencia que la riqueza que deslumbra.",
+    "La riqueza que se oculta bajo la tierra no se pierde: cambia de forma y regresa multiplicada.",
   "fu-el-dios-de-la-torpeza":
-    "Equivocarse puede abrir una posibilidad, pero no cancela la responsabilidad.",
+    "Del paso en falso nace una chispa, y el mundo se ordena de nuevo en lo que no se planeó.",
   huitaca:
     "Todo orden guarda lo que la fiesta derrama, y toda fiesta celebra lo que el orden protege.",
   hunzahua:
@@ -46,17 +46,17 @@ export const muiscaLessons = {
   idacanzas:
     "Prever solo importa cuando transforma la manera en que cuidamos lo posible.",
   "la-aparicion-del-hombre":
-    "La humanidad comienza cuando alguien responde a la presencia de otro.",
+    "Toda humanidad comienza no al ser formada, sino al escuchar y responder a otra voz.",
   "la-cacica-de-guatavita":
     "La memoria permanece viva cuando puede corregirse sin perder sus raíces.",
   "la-competencia":
-    "Medir una capacidad nunca equivale a medir el valor de una persona.",
+    "Quien corre con el cuerpo de otro en la memoria llega a una meta que nadie ve.",
   "la-herencia":
-    "Heredar no es recibir el pasado intacto, sino decidir qué futuro permite.",
+    "Nadie hereda solo; lo que se reparte vuelve a unir lo que la posesión quiso dividir.",
   "la-historia-del-bermejo":
     "Pertenecer no exige dejar de ser, sino aprender a responder por otros.",
   "la-madre-de-los-hombres":
-    "Quien verdaderamente enseña prepara a los demás para continuar sin su presencia.",
+    "Quien reúne a su gente termina por entregarle el camino que abrió.",
   "los-cojines-del-zaque":
     "Observar es reconocer un orden que ninguna autoridad ha creado.",
   "los-dioses-civilizadores":
