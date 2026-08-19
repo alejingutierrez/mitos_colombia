@@ -1,132 +1,102 @@
-import bachue from "../../myths/bachue.mjs";
-import { withMuiscaImagePrompts } from "../image-prompts.mjs";
+import { defineMuiscaMyth } from "../define-editorial-myth.mjs";
 
-const editorialMyth = {
-  ...{
-  "slug": "los-cojines-del-zaque",
-  "title": "Los Cojines del Zaque",
-  "category_path": "Andina > Varios > Muiscas",
-  "tags": [
-    "rituales",
-    "Sue",
-    "devoción",
-    "piedra"
-  ],
-  "latitude": 5.53821,
-  "longitude": -73.36951,
-  "mito": "Antes del amanecer, el zaque salió de Hunza.\n\nNo iba solo. Lo acompañaban sacerdotes, músicos y personas de distintas parcialidades. Subieron por la ladera occidental mientras la ciudad permanecía oscura. Nadie necesitaba una antorcha: conocían el camino por la inclinación de la tierra y el sonido de los pasos.\n\nEn lo alto esperaban dos discos tallados sobre una misma roca.\n\nParecían cojines, pero eran duros y fríos. El zaque se detuvo frente a ellos. Más allá se extendía el valle; detrás, la noche comenzaba a perder color.\n\nUna niña que acompañaba a su familia miró el espacio estrecho entre las dos piedras. Había subido otras veces, pero nunca había entendido por qué todos llegaban tan temprano.\n\nLos músicos guardaron silencio.\n\nDurante unos instantes no ocurrió nada. El viento pasó sobre las mantas y la hierba. Luego apareció una claridad entre los cerros. El primer borde del sol se levantó exactamente por la abertura que la niña estaba mirando.\n\nLa piedra no produjo la luz. La recibió.\n\nEl zaque inclinó la cabeza. Las demás personas hicieron lo mismo. Después comenzaron los sonidos: una flauta larga, un tambor profundo, voces que saludaban el regreso del día.\n\nLa niña observó la sombra de los discos. Era larga al principio y se acortaba mientras el sol subía. Comprendió que aquel lugar no servía para que el gobernante se sentara por encima de todos. Los “cojines” ayudaban a mirar algo que también estaba por encima de él.\n\nCuando terminó la ceremonia, la gente descendió hacia los sembrados y el mercado. El zaque volvió a su cercado. El sol no lo siguió de manera especial; cayó por igual sobre techos, caminos y campos.\n\nLa niña permaneció un momento junto a la roca. Puso la mano sobre uno de los discos y sintió que ya estaba tibio.\n\nAños después regresó con otros niños antes del alba. No les prometió que las piedras hablarían ni les contó que guardaban poderes secretos. Les pidió esperar.\n\nCuando el sol volvió a aparecer entre los discos, uno de ellos respiró sorprendido.\n\nEntonces la mujer supo que la ceremonia continuaba. No porque cada detalle hubiera permanecido idéntico, sino porque todavía había personas dispuestas a subir en la oscuridad, mirar con atención y recordar que incluso quienes gobiernan deben orientar sus días con algo que no les pertenece.",
-  "historia": "Los Cojines del Zaque son dos discos tallados en una laja de la ladera occidental de Tunja. Las crónicas y síntesis regionales los relacionan con ceremonias solares realizadas por el zaque y su comunidad antes del amanecer. Investigaciones patrimoniales han observado una coincidencia entre el espacio de las piedras y la salida del sol alrededor del solsticio de diciembre, por lo que se ha propuesto una función de observación astronómica.\n\nLa ficha anterior presentaba como certeza una ceremonia gráfica de sacrificio infantil sobre las piedras. Las noticias coloniales sobre sacrificios muiscas son complejas, están moralizadas y no demuestran que esa ejecución específica ocurriera en los Cojines del Zaque con el procedimiento descrito. La investigación reciente del sitio destaca roca, orientación, observación solar y uso ritual. Por responsabilidad editorial se elimina la escena violenta.\n\nLa niña, su aprendizaje y el regreso como adulta son invenciones literarias. El ascenso comunitario, la presencia del zaque y el amanecer se construyen a partir de la función ceremonial atribuida al lugar, sin pretender reproducir un rito completo.\n\nEsta ficha está en el límite entre mito y patrimonio. No conserva una aventura sobrenatural autónoma; cuenta cómo un lugar organiza la relación entre paisaje, tiempo y autoridad. El relato propone que la observación compartida limita simbólicamente al gobernante: el sol no es propiedad del zaque. Esa conclusión es una lectura editorial y no una frase documentada del ritual.",
-  "versiones": "Las descripciones más conocidas llaman al sitio adoratorio solar y afirman que el zaque acudía allí con sacerdotes y comunidad. Algunas añaden música, ofrendas o sacrificios. Otras se concentran en las dos formas circulares, su orientación y la posibilidad de observar el curso del sol en fechas importantes para el calendario agrícola.\n\nLa palabra “cojines” es una comparación por la forma de los discos, no prueba que sirvieran como asientos. El nombre “Cojines del Diablo”, difundido después de la conquista, traduce el lugar mediante una condena cristiana y no se adopta como título.\n\nLos estudios patrimoniales recientes han medido el sitio y observado la salida solar entre las piedras cerca del solsticio de diciembre. Esa coincidencia apoya una función astronómica, pero no reconstruye por sí sola cada gesto de las ceremonias prehispánicas.\n\nEsta versión combina la subida antes del alba con la observación solar y omite cualquier sacrificio humano no suficientemente comprobado para el lugar. La continuidad entre la niña y la mujer es literaria: permite mostrar que un sitio patrimonial no es solo una ruina, sino una práctica de atención transmitida. Las secciones documentales conservan la incertidumbre que el relato no necesita interrumpir.",
-  "leccion": "Las piedras no fabrican el amanecer. Enseñan a esperarlo, observarlo y reconocer un ritmo que ninguna autoridad controla.\n\nEl conocimiento del cielo también puede ser colectivo. La niña aprende junto a toda la comunidad y más tarde comparte la experiencia sin fingir que posee secretos absolutos. Cuidar un lugar es mantener abierta esa posibilidad de mirar.",
-  "similitudes": "Muchos centros ceremoniales del mundo se orientan hacia salidas o puestas del sol en momentos del año. Stonehenge es el ejemplo más citado, pero su arquitectura, fechas, sociedad y usos no son equivalentes a los Cojines del Zaque. La comparación solo muestra que observar el horizonte puede organizar calendario y ceremonia.\n\nLa realeza egipcia también vinculó autoridad, orden y culto solar. Allí existieron templos, imágenes y una ideología estatal de miles de años distinta de los cacicazgos muiscas. El zaque frente al amanecer no debe convertirse en un faraón andino.\n\nLa singularidad del sitio de Hunza es su escala: dos discos tallados en la roca y una abertura desde la cual el horizonte adquiere sentido. No necesita una pirámide ni una figura monumental. El vínculo entre gobernante y sol se produce mediante una acción compartida de observar. Esa sobriedad material hace que la comparación universal sea útil solo si devuelve la mirada al lugar concreto y a su conservación presente.",
-  "content": "Mito\nAntes del amanecer, el zaque salió de Hunza.\n\nNo iba solo. Lo acompañaban sacerdotes, músicos y personas de distintas parcialidades. Subieron por la ladera occidental mientras la ciudad permanecía oscura. Nadie necesitaba una antorcha: conocían el camino por la inclinación de la tierra y el sonido de los pasos.\n\nEn lo alto esperaban dos discos tallados sobre una misma roca.\n\nParecían cojines, pero eran duros y fríos. El zaque se detuvo frente a ellos. Más allá se extendía el valle; detrás, la noche comenzaba a perder color.\n\nUna niña que acompañaba a su familia miró el espacio estrecho entre las dos piedras. Había subido otras veces, pero nunca había entendido por qué todos llegaban tan temprano.\n\nLos músicos guardaron silencio.\n\nDurante unos instantes no ocurrió nada. El viento pasó sobre las mantas y la hierba. Luego apareció una claridad entre los cerros. El primer borde del sol se levantó exactamente por la abertura que la niña estaba mirando.\n\nLa piedra no produjo la luz. La recibió.\n\nEl zaque inclinó la cabeza. Las demás personas hicieron lo mismo. Después comenzaron los sonidos: una flauta larga, un tambor profundo, voces que saludaban el regreso del día.\n\nLa niña observó la sombra de los discos. Era larga al principio y se acortaba mientras el sol subía. Comprendió que aquel lugar no servía para que el gobernante se sentara por encima de todos. Los “cojines” ayudaban a mirar algo que también estaba por encima de él.\n\nCuando terminó la ceremonia, la gente descendió hacia los sembrados y el mercado. El zaque volvió a su cercado. El sol no lo siguió de manera especial; cayó por igual sobre techos, caminos y campos.\n\nLa niña permaneció un momento junto a la roca. Puso la mano sobre uno de los discos y sintió que ya estaba tibio.\n\nAños después regresó con otros niños antes del alba. No les prometió que las piedras hablarían ni les contó que guardaban poderes secretos. Les pidió esperar.\n\nCuando el sol volvió a aparecer entre los discos, uno de ellos respiró sorprendido.\n\nEntonces la mujer supo que la ceremonia continuaba. No porque cada detalle hubiera permanecido idéntico, sino porque todavía había personas dispuestas a subir en la oscuridad, mirar con atención y recordar que incluso quienes gobiernan deben orientar sus días con algo que no les pertenece.\n\nHistoria\nLos Cojines del Zaque son dos discos tallados en una laja de la ladera occidental de Tunja. Las crónicas y síntesis regionales los relacionan con ceremonias solares realizadas por el zaque y su comunidad antes del amanecer. Investigaciones patrimoniales han observado una coincidencia entre el espacio de las piedras y la salida del sol alrededor del solsticio de diciembre, por lo que se ha propuesto una función de observación astronómica.\n\nLa ficha anterior presentaba como certeza una ceremonia gráfica de sacrificio infantil sobre las piedras. Las noticias coloniales sobre sacrificios muiscas son complejas, están moralizadas y no demuestran que esa ejecución específica ocurriera en los Cojines del Zaque con el procedimiento descrito. La investigación reciente del sitio destaca roca, orientación, observación solar y uso ritual. Por responsabilidad editorial se elimina la escena violenta.\n\nLa niña, su aprendizaje y el regreso como adulta son invenciones literarias. El ascenso comunitario, la presencia del zaque y el amanecer se construyen a partir de la función ceremonial atribuida al lugar, sin pretender reproducir un rito completo.\n\nEsta ficha está en el límite entre mito y patrimonio. No conserva una aventura sobrenatural autónoma; cuenta cómo un lugar organiza la relación entre paisaje, tiempo y autoridad. El relato propone que la observación compartida limita simbólicamente al gobernante: el sol no es propiedad del zaque. Esa conclusión es una lectura editorial y no una frase documentada del ritual.\n\nVersiones\nLas descripciones más conocidas llaman al sitio adoratorio solar y afirman que el zaque acudía allí con sacerdotes y comunidad. Algunas añaden música, ofrendas o sacrificios. Otras se concentran en las dos formas circulares, su orientación y la posibilidad de observar el curso del sol en fechas importantes para el calendario agrícola.\n\nLa palabra “cojines” es una comparación por la forma de los discos, no prueba que sirvieran como asientos. El nombre “Cojines del Diablo”, difundido después de la conquista, traduce el lugar mediante una condena cristiana y no se adopta como título.\n\nLos estudios patrimoniales recientes han medido el sitio y observado la salida solar entre las piedras cerca del solsticio de diciembre. Esa coincidencia apoya una función astronómica, pero no reconstruye por sí sola cada gesto de las ceremonias prehispánicas.\n\nEsta versión combina la subida antes del alba con la observación solar y omite cualquier sacrificio humano no suficientemente comprobado para el lugar. La continuidad entre la niña y la mujer es literaria: permite mostrar que un sitio patrimonial no es solo una ruina, sino una práctica de atención transmitida. Las secciones documentales conservan la incertidumbre que el relato no necesita interrumpir.\n\nLección\nLas piedras no fabrican el amanecer. Enseñan a esperarlo, observarlo y reconocer un ritmo que ninguna autoridad controla.\n\nEl conocimiento del cielo también puede ser colectivo. La niña aprende junto a toda la comunidad y más tarde comparte la experiencia sin fingir que posee secretos absolutos. Cuidar un lugar es mantener abierta esa posibilidad de mirar.\n\nSimilitudes\nMuchos centros ceremoniales del mundo se orientan hacia salidas o puestas del sol en momentos del año. Stonehenge es el ejemplo más citado, pero su arquitectura, fechas, sociedad y usos no son equivalentes a los Cojines del Zaque. La comparación solo muestra que observar el horizonte puede organizar calendario y ceremonia.\n\nLa realeza egipcia también vinculó autoridad, orden y culto solar. Allí existieron templos, imágenes y una ideología estatal de miles de años distinta de los cacicazgos muiscas. El zaque frente al amanecer no debe convertirse en un faraón andino.\n\nLa singularidad del sitio de Hunza es su escala: dos discos tallados en la roca y una abertura desde la cual el horizonte adquiere sentido. No necesita una pirámide ni una figura monumental. El vínculo entre gobernante y sol se produce mediante una acción compartida de observar. Esa sobriedad material hace que la comparación universal sea útil solo si devuelve la mirada al lugar concreto y a su conservación presente.",
-  "excerpt": "Una niña sube antes del alba a los Cojines del Zaque y descubre por qué dos discos de piedra enseñan a mirar el sol.",
-  "seo_title": "Cojines del Zaque: mito y sitio muisca de Tunja",
-  "seo_description": "Conoce los Cojines del Zaque de Tunja: relato literario, culto solar, posible alineación astronómica, historia, versiones y fuentes.",
-  "seo": {
-    "meta_title": "Cojines del Zaque: mito y sitio muisca de Tunja",
-    "meta_description": "Conoce los Cojines del Zaque de Tunja: relato literario, culto solar, posible alineación astronómica, historia, versiones y fuentes.",
-    "meta_keywords": "Cojines del Zaque, Cojines del Zaque Tunja, observatorio solar muisca, adoratorio muisca de Tunja, zaque de Hunza, sitios arqueológicos muiscas, mitología muisca",
-    "og_title": "Los Cojines del Zaque: esperar el amanecer",
-    "og_description": "Dos discos de piedra, una comunidad en silencio y una niña que descubre que el cielo no pertenece a quien gobierna.",
-    "twitter_title": "Cojines del Zaque: mito y sitio muisca de Tunja",
-    "twitter_description": "Conoce los Cojines del Zaque de Tunja: relato literario, culto solar, posible alineación astronómica, historia, versiones y fuentes.",
-    "canonical_path": "/mitos/los-cojines-del-zaque"
-  },
-  "focus_keyword": "Cojines del Zaque",
-  "focus_keywords": [
+export default defineMuiscaMyth({
+  slug: "los-cojines-del-zaque",
+  title: "Los Cojines del Zaque",
+  tags: ["rituales", "Sue", "devoción", "piedra"],
+  latitude: 5.53821,
+  longitude: -73.36951,
+  mito: `Antes del amanecer, el zaque salió de Hunza.
+
+No iba solo. Lo acompañaban sacerdotes, músicos y gente de las parcialidades vecinas. Subieron por la ladera occidental mientras la ciudad seguía oscura. Nadie encendió antorcha: conocían el camino por la inclinación de la tierra y por el sonido de los pasos.
+
+En lo alto esperaban dos discos tallados sobre una misma roca. Parecían cojines, pero eran duros y fríos, y llevaban siglos de sol y lluvia en el lomo. El zaque se detuvo frente a ellos. Más allá se extendía el valle; detrás, la noche comenzaba a perder color.
+
+Una niña que acompañaba a su familia miró el espacio estrecho entre las dos piedras. Había subido otras veces, pero nunca había entendido por qué todos llegaban tan temprano.
+
+—¿La piedra hace salir el sol? —preguntó.
+
+—No —dijo el zaque sin volverse—. La piedra solo sabe cuándo esperarlo.
+
+Los músicos guardaron silencio. Durante un instante no ocurrió nada: el viento pasó sobre las mantas y la hierba. Luego apareció una claridad entre los cerros, y el primer borde del sol se levantó exactamente por la abertura que la niña estaba mirando.
+
+La piedra no produjo la luz. La recibió.
+
+El zaque inclinó la cabeza. Todos hicieron lo mismo. Después comenzaron los sonidos: una flauta larga, un tambor profundo, voces que saludaban el regreso del día.
+
+La niña observó la sombra de los discos. Era larga al principio y se acortaba mientras el sol subía. Comprendió que aquel lugar no servía para que el gobernante se sentara por encima de todos: los cojines ayudaban a mirar algo que también estaba por encima de él.
+
+Cuando terminó la ceremonia, la gente descendió hacia los sembrados y el mercado. El zaque volvió a su cercado. El sol no lo siguió de manera especial; cayó por igual sobre techos, caminos y campos.
+
+La niña permaneció un momento junto a la roca. Puso la mano sobre uno de los discos y sintió que ya estaba tibio.
+
+Años después regresó con otros niños antes del alba. No les prometió que las piedras hablarían ni les contó que guardaban poderes secretos. Les pidió esperar.
+
+Y cuando el primer borde del sol volvió a levantarse entre los discos, uno de los niños respiró sorprendido. La mujer no dijo nada: la ceremonia no había terminado, la luz seguía naciendo entre dos piedras.`,
+  historia: `Los Cojines del Zaque son dos discos circulares tallados sobre una misma roca en la ladera occidental de Tunja: poco más de un metro de diámetro, unos treinta centímetros de altura y once centímetros de separación entre sí (Bonilla, Rodríguez y Bustos, 2019). Las crónicas del siglo XVII no los nombran con este nombre. Simón (1627) documenta en Tunja el culto al sol del zaque Goranchacha, que hizo edificar un templo a su padre el Sol y hacía allí sus estaciones en ciertos días del año, en procesión con mantas finas tendidas por el camino. Esa noticia muestra la centralidad del sol para la autoridad de Hunza, pero no menciona los monolitos.
+
+La identificación del sitio con la espera del amanecer aparece en el siglo XIX. Manuel Vélez (1847) describe dos piedras sobre una colina de la ciudad que gobernaba el Zaque: arrodillado sobre ellas se domina la llanura de Tunja hacia el oriente, y conjetura que sus habitantes adorarían al sol al levantarse. Villa Posse (1993) sistematiza la tradición: los hunzas dedicaron los Cojines del Zaque al sol y, en la madrugada, el zaque con los sacerdotes y el pueblo se reunía a adorarlo y a esperar su salida por el oriente; el zaque oraba de rodillas sobre las piedras junto a los jeques.
+
+La lectura del amanecer como rito de autoridad se apoya en Correa (2004): el sol no es solo divinidad, sino fuente de legitimación política; quien se coloca frente a la salida del astro, a la vista de su gente, reafirma un orden. Leído así, el sitio convierte la observación del cielo en ejercicio del poder y, a la vez, en un límite para él.
+
+Cautelas: el nombre cojines es una comparación por la forma y no prueba que las piedras fueran asientos; el apodo Cojines del Diablo, difundido tras la conquista, traduce el lugar como condena cristiana; las noticias sobre sacrificios de niños (moxas) en el sitio son tardías, moralizadas y no están suficientemente comprobadas para este lugar, por lo que el relato las omite; y la alineación arqueoastronómica cercana al solsticio de diciembre apoya una función de observación solar y calendárica, pero no reconstruye una liturgia completa.`,
+  versiones: `Las versiones sobre los Cojines del Zaque se reparten en varias líneas que no deben fusionarse. La primera, recogida por Villa Posse (1993), afirma que el zaque acudía cada madrugada con sacerdotes y comunidad a adorar al sol, se arrodillaba en las piedras y oraba junto a los jeques, con canto y danza; la misma obra asocia el sitio al mito de Hunzahúa, quien bajó de los Cojines de Tunja tras la ceremonia matinal del sol antes de descubrir el incesto de su hermana. Una variante de esta línea añade que en ocasiones se ofrecían sacrificios de niños de doce años, los moxas; otras tradiciones omiten ese detalle y el canon editorial no lo adopta para este lugar.
+
+La segunda línea es descriptiva y proviene de visitantes del siglo XIX: Manuel Vélez (1847) registra dos piedras en la colina de la ciudad del Zaque, la vista al oriente de la llanura y la hipótesis de que allí se adorara al sol al levantarse. Es una lectura prudente: describe el sitio y conjetura su uso sin fijar un rito.
+
+La tercera línea es arqueoastronómica: Bonilla, Rodríguez y Bustos (2019) miden los monolitos y proponen el lugar como observatorio solar, con coincidencia entre el espacio entre las piedras y la salida del sol cerca del solsticio de diciembre; lo leen como calendario agrícola o ceremonial, sin reconstruir cada gesto de las ceremonias.
+
+La cuarta línea es colonial y peyorativa: el nombre Cojines del Diablo, difundido tras la conquista, traduce el sitio como objeto de idolatría y no se adopta como título. Simón (1627) documenta el culto solar del zaque en Tunja, el templo a su padre el Sol y sus estaciones anuales, pero sin nombrar las piedras, lo que obliga a distinguir el templo del sol del sitio de los monolitos.`,
+  leccion:
+    "El poder no posee el amanecer: solo puede arrodillarse ante lo que no controla.",
+  similitudes: `Dentro del corpus muisca, el culto al sol acompaña a otras figuras: el relato del Sol y la Luna explica el origen de los astros, y el Templo del Sol de Sogamoso era el adoratorio más célebre de la región, con peregrinaciones y riquezas ofrendadas. Los Cojines comparten esa reverencia por el astro, pero se distinguen por su escala mínima: no guardan una imagen ni levantan un templo; solo dos discos en una roca donde se espera un acontecimiento. En ambos casos, el recorrido del astro sobre el altiplano se leía como un orden que amparaba la tierra, pero los Cojines lo dicen sin edificios: la roca basta.
+
+En los Andes y en Mesoamérica el sol también fundó la autoridad: el Inti de los incas, con su templo del Coricancha, legitimaba al soberano como descendiente del astro, y el Templo Mayor de Tenochtitlan orientaba la vida ritual hacia el recorrido solar. Ambos son cultos de estado con sacerdocios, oro y arquitectura monumental; los Cojines, en cambio, no muestran riqueza ni imágenes. Su potencia está en la abertura entre dos piedras y en el instante exacto del alba: la misma idea de un sol que ordena el poder, en un cuerpo material casi desnudo, sin necesidad de un imperio que lo respalde.
+
+En el mundo, los observatorios y piedras de orientación solar, desde Stonehenge hasta otros alineamientos prehistóricos, muestran que marcar el horizonte organiza calendario, cosecha y ceremonia. Allí la escala es otra: grandes bloques dispuestos en círculo, levantados por sociedades distintas de los cacicazgos muiscas. La comparación solo es útil si devuelve la mirada al lugar concreto: la sobriedad de los Cojines —dos discos tallados y once centímetros de luz posible— hace innecesaria cualquier pirámide o piedra monumental. Lo común a todos estos sitios es que observar el amanecer fue a la vez un saber del cielo y una forma de ordenar la vida de quienes se reunían a mirarlo.`,
+  excerpt:
+    "Antes del alba, el zaque y su pueblo suben a dos discos de piedra de Tunja a esperar la salida del sol; una niña aprende por qué el amanecer no pertenece a quien gobierna.",
+  seoTitle: "Cojines del Zaque: culto solar muisca en Tunja",
+  seoDescription:
+    "Los Cojines del Zaque de Tunja: dos piedras talladas desde donde los hunzas esperaban la salida del sol, con su mito, su historia y su posible función astronómica.",
+  ogTitle: "Los Cojines del Zaque: esperar el amanecer",
+  ogDescription:
+    "Antes del alba, el zaque de Hunza se arrodilla sobre dos discos de roca mientras el primer borde del sol aparece entre ellos.",
+  focusKeywords: [
     "Cojines del Zaque",
     "Cojines del Zaque Tunja",
     "observatorio solar muisca",
     "adoratorio muisca de Tunja",
     "zaque de Hunza",
     "sitios arqueológicos muiscas",
-    "mitología muisca"
+    "mitología muisca",
   ],
-  "image_prompt": "Fotografía editorial horizontal 16:9 de una maqueta artesanal de papel cortado. Antes del amanecer en la ladera occidental de Tunja, el primer borde natural del sol aparece exactamente entre dos discos bajos tallados sobre una misma roca; una niña, un zaque y una pequeña comunidad observan en silencio. Las piedras son el centro, no un trono. Papel físico, roca texturizada, fibras y micro-sombras, azul frío, ocre y luz dorada. Sin sangre, sacrificio, sol con rostro, templo, pirámide, corona, texto, símbolos inventados ni CGI.",
-  "image_prompt_horizontal": "Fotografía editorial horizontal 16:9 de una maqueta artesanal de papel cortado. Antes del amanecer en la ladera occidental de Tunja, el primer borde natural del sol aparece exactamente entre dos discos bajos tallados sobre una misma roca; una niña, un zaque y una pequeña comunidad observan en silencio. Las piedras son el centro, no un trono. Papel físico, roca texturizada, fibras y micro-sombras, azul frío, ocre y luz dorada. Sin sangre, sacrificio, sol con rostro, templo, pirámide, corona, texto, símbolos inventados ni CGI.",
-  "image_prompt_vertical": "Fotografía editorial horizontal 16:9 de una maqueta artesanal de papel cortado. Antes del amanecer en la ladera occidental de Tunja, el primer borde natural del sol aparece exactamente entre dos discos bajos tallados sobre una misma roca; una niña, un zaque y una pequeña comunidad observan en silencio. Las piedras son el centro, no un trono. Papel físico, roca texturizada, fibras y micro-sombras, azul frío, ocre y luz dorada. Sin sangre, sacrificio, sol con rostro, templo, pirámide, corona, texto, símbolos inventados ni CGI.",
-  "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/editorial/los-cojines-del-zaque-18f10e4fb5f8.jpg",
-  "keySources": [
-    {
-      "title": "Arqueoastronomía en los Cojines del Zaque Tunja, Colombia",
-      "author": "Julio Bonilla Romero, Carlos Rodríguez Rojas y Edier Hernán Bustos",
-      "year": 2019,
-      "type": "artículo académico de arqueoastronomía",
-      "url": "https://dialnet.unirioja.es/servlet/articulo?codigo=7021323",
-      "limitation": "Estudia la forma, orientación y posible función solar del sitio; no permite reconstruir una liturgia completa ni confirmar todas las ceremonias atribuidas después.",
-      "summary": "Describe los dos discos tallados sobre una misma roca y reúne la investigación arqueoastronómica sobre su relación con la observación solar."
-    },
-    {
-      "title": "Mitos y leyendas de Colombia, vol. III: Mitos prehispánicos muiscas",
-      "author": "Eugenia Villa Posse, compiladora",
-      "year": 1993,
-      "type": "compilación editorial",
-      "url": "https://www.flacso.edu.ec/biblio/catalog/resGet.php?resId=44622",
-      "limitation": "Reúne versiones de autores de los siglos XIX y XX; no es una transcripción directa de tradición oral.",
-      "summary": "Relaciona los Cojines con el culto solar de Hunza y el ciclo de los zaques."
-    },
-    {
-      "title": "Noticias historiales de las conquistas de Tierra Firme en las Indias occidentales, tomo II",
-      "author": "Fray Pedro Simón",
-      "year": 1892,
-      "originalYear": 1627,
-      "type": "crónica colonial",
-      "url": "https://archive.org/details/tierrafirmeindias02simbrich",
-      "limitation": "Conserva testimonios tempranos, pero los interpreta desde una mirada evangelizadora y colonial.",
-      "summary": "Aporta el marco colonial sobre ceremonias, autoridades y culto solar que luego se asoció al sitio."
-    }
+  imagePrompt:
+    "Fotografía editorial horizontal 16:9 de una maqueta artesanal de papel cortado. Antes del amanecer en la ladera occidental de Tunja, el primer borde natural del sol aparece exactamente entre dos discos bajos tallados sobre una misma roca; una niña, un zaque y una pequeña comunidad observan en silencio. Las piedras son el centro, no un trono. Papel físico, roca texturizada, fibras y micro-sombras, azul frío, ocre y luz dorada. Sin sangre, sacrificio, sol con rostro, templo, pirámide, corona, texto, símbolos inventados ni CGI.",
+  imageUrl:
+    "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/editorial/los-cojines-del-zaque-18f10e4fb5f8.jpg",
+  sourceKeys: [
+    "simon",
+    "villa",
+    "correa",
+    "gamboaArqueologiaHistoria",
+    "cobo",
+    "banrepMuisca",
+    "planSesquile",
+    "viracocha",
+    "popolVuh",
   ],
-  "sources": [
-    {
-      "title": "El sol del poder: simbología y política entre los muiscas",
-      "author": "François Correa Rubio",
-      "year": 2004,
-      "type": "investigación antropológica",
-      "url": "https://books.google.com/books/about/El_sol_del_poder.html?id=OCyF3XmjprAC",
-      "limitation": "Interpreta el corpus documental disponible; no convierte las crónicas coloniales en una voz muisca transparente.",
-      "summary": "Permite analizar la relación entre sol, territorio y legitimación política."
-    },
-    {
-      "title": "Los muiscas en los siglos XVI y XVII: miradas desde la arqueología y la historia",
-      "author": "Jorge Augusto Gamboa Mendoza, compilador",
-      "year": 2008,
-      "type": "investigación histórica y arqueológica",
-      "url": "https://ediciones.uniandes.edu.co/gpd-los-muiscas-en-los-siglos-xvi-y-xvii-miradas-desde-la-arqueologia-y-la-historia-9789586953481-67f86154e57c4.html",
-      "limitation": "Aporta contexto social e histórico y cuestiona modelos homogéneos; no es un catálogo de mitos.",
-      "summary": "Ayuda a evitar la imagen de un imperio uniforme y a distinguir cacicazgo, rito y reconstrucción posterior."
-    },
-    {
-      "title": "Las historias y las técnicas detrás de las ofrendas muiscas",
-      "author": "Museo del Oro, Banco de la República",
-      "year": 2016,
-      "type": "investigación museológica y arqueológica",
-      "url": "https://www.banrepcultural.org/noticias/nueva-exposicion-las-historias-y-las-tecnicas-detras-de-las-ofrendas-muiscas",
-      "limitation": "Se concentra en objetos votivos y prácticas de ofrenda; no reconstruye por sí sola una narración completa.",
-      "summary": "Aporta contexto arqueológico para hablar de ofrendas sin inventar una ceremonia específica."
-    },
-    {
-      "title": "Plan de vida de la comunidad indígena Muisca de Bosa",
-      "author": "Cabildo Indígena Muisca de Bosa",
-      "year": 2019,
-      "type": "memoria y planeación comunitaria",
-      "url": "https://historico.gobiernobogota.gov.co/sites/gobiernobogota.gov.co/files/control/plan_de_vida_muisca-transparencia.pdf",
-      "limitation": "Expresa una construcción comunitaria contemporánea; no debe proyectarse automáticamente al periodo prehispánico.",
-      "summary": "Ofrece una mirada comunitaria contemporánea sobre memoria territorial y transmisión cultural."
-    },
-    {
-      "title": "Kings and Queens of Egypt",
-      "author": "Susan Allen, The Metropolitan Museum of Art",
-      "year": 2004,
-      "type": "estudio comparativo de realeza sagrada",
-      "url": "https://www.metmuseum.org/essays/kings-and-queens-of-egypt",
-      "limitation": "Explica una institución egipcia de larga duración; se usa como contraste y no como modelo del poder muisca.",
-      "summary": "Sustenta el contraste limitado con la relación egipcia entre realeza, orden y divinidad solar."
-    }
-  ],
-  "researchNotes": "ESTADO: revisión integral y retiro de violencia no comprobada.\n\nNÚCLEO DOCUMENTADO: dos discos tallados en roca; ubicación occidental de Tunja; asociación con el zaque, culto solar y observación del amanecer.\n\nVARIANTES: adoratorio, observatorio, ofrendas y ceremonias; el detalle de sacrificios en el sitio no está suficientemente demostrado.\n\nMEMORIA CONTEMPORÁNEA: la investigación arqueoastronómica y el cuidado patrimonial mantienen el lugar como referente de Tunja.\n\nHIPÓTESIS ACADÉMICA: alineación cercana al amanecer del solsticio de diciembre y función calendárica o agrícola.\n\nLECTURA EDITORIAL: niña testigo, aprendizaje y regreso adulto son invención responsable.\n\nDUDA: no puede reconstruirse una liturgia completa a partir de la forma y la alineación.\n\nGEOGRAFÍA: coordenadas corregidas al parque arqueológico de los Cojines del Zaque.\n\nIMAGEN: amanecer real visto entre los dos discos de roca, con comunidad pequeña y zaque sin trono; sin sangre, sacrificio, templo mesoamericano, sol con rostro ni símbolos inventados."
-},
-  methodologySeo: bachue.methodologySeo,
-};
+  researchNotes: `ESTADO: reescritura de la ficha sobre el núcleo solar documentado; se retira cualquier detalle de sacrificio no comprobado para el sitio.
 
-export default withMuiscaImagePrompts(editorialMyth);
+NÚCLEO DOCUMENTADO: dos discos circulares tallados sobre una misma roca en la ladera occidental de Tunja; medidas de 1,14 m de diámetro, 28 cm de alto y 11 cm de separación (Bonilla et al., 2019); asociación con el zaque, el culto al sol y la espera de la salida del astro por el oriente; alineación arqueoastronómica cercana al solsticio de diciembre; culto solar del zaque en Tunja documentado por Simón (1627) sin nombrar los monolitos.
+
+VARIANTES: adoratorio matinal diario con oración del zaque y los jeques (Villa Posse, 1993); descripción e hipótesis de culto al alba (Vélez, 1847); observatorio solar y calendárico (Bonilla et al., 2019); nombre peyorativo Cojines del Diablo, posterior a la conquista; atribución de sacrificios de moxas no suficientemente demostrada para el lugar.
+
+LICENCIA EDITORIAL: la niña testigo, el breve diálogo oracular y el regreso adulto son invención literaria; no se inventan nombres, ceremonias ni símbolos; los materiales narrados (los dos discos de piedra, el amanecer, el sol, Tunja) son reales.
+
+DUDA: la forma y la alineación no permiten reconstruir una liturgia completa; el nombre cojines es comparación por la forma, no prueba de asientos; no puede afirmarse si la adoración era diaria o en fechas fijas del año.
+
+GEOGRAFÍA: coordenadas del parque arqueológico de los Cojines del Zaque, ladera occidental de Tunja (5.53821, -73.36951).
+
+REGISTRO LINGÜÍSTICO: español colombiano contemporáneo, tono de relato sagrado sin arcaísmos peninsulares; vocabulario sobrio y concreto; cojines se usa como comparación formal y no como nombre ceremonial.`,
+});

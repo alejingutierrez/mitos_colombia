@@ -1,131 +1,110 @@
-import bachue from "../../myths/bachue.mjs";
-import { withMuiscaImagePrompts } from "../image-prompts.mjs";
+import { defineMuiscaMyth } from "../define-editorial-myth.mjs";
 
-const editorialMyth = {
-  ...{
-  "slug": "hunzahua",
-  "title": "Hunzahúa",
-  "category_path": "Andina > Varios > Muiscas",
-  "tags": [
-    "Hunzahúa",
-    "amor prohibido",
-    "transformación",
-    "muiscas"
-  ],
-  "latitude": 5.544642,
-  "longitude": -73.357557,
-  "mito": "Hunzahúa gobernaba en Hunza, pero no podía gobernar lo que sentía.\n\nSe había enamorado de su hermana. Sabía que aquella unión estaba prohibida y que su madre no la permitiría. En lugar de aceptar el límite, preparó un viaje a Chipatá para buscar algodón y pidió que su hermana lo acompañara.\n\nRegresaron unidos en secreto.\n\nLa madre comprendió lo ocurrido. Mientras preparaba chicha, tomó la sana con que removía la bebida y corrió hacia su hija. La joven se ocultó detrás de la gran vasija. El golpe cayó sobre el barro.\n\nLa vasija se quebró.\n\nLa chicha se derramó por el suelo, pero la tierra no la absorbió. El líquido llenó una hondonada y siguió creciendo hasta formar un pozo. La familia quedó a un lado del agua; al otro quedaron las palabras que ya no podían retirar.\n\nCuando Hunzahúa volvió de la ceremonia del amanecer, encontró a la gente reunida frente a su cercado. Nadie celebraba al zaque. Las miradas le recordaron que tener poder no lo ponía por encima de las reglas que ordenaban el parentesco.\n\nHunzahúa llamó a su hermana con el sonido de una trompeta de madera. Juntos subieron al alto que dominaba la ciudad. Desde allí él maldijo el valle, como si la tierra fuera culpable de su vergüenza.\n\nDespués huyeron.\n\nHunzahúa lanzó una flecha al aire y siguió el sonido de su cascabel. La flecha los condujo hasta Susa. Allí nació su hijo y quedó convertido en piedra. Los dos comprendieron que el camino no les ofrecía un lugar donde esconder las consecuencias.\n\nContinuaron hacia el sur. Cruzaron tierras que no conocían y llegaron al río cerca del Salto del Tequendama. Estaban cansados. El agua corría con tanta fuerza que parecía borrar todas las huellas, pero al poner los pies en ella sintieron que sus cuerpos se volvían pesados.\n\nHunzahúa miró a su hermana.\n\nNo hubo tiempo para otra huida. Ambos quedaron convertidos en piedras en medio de la corriente.\n\nEl río siguió pasando entre ellos.\n\nEn Hunza permaneció el pozo nacido de la vasija rota; en Susa, la memoria del hijo; junto al Tequendama, dos rocas. El viaje de Hunzahúa no borró su falta: la repartió por el territorio para que cada lugar contara una parte y ninguna persona confundiera autoridad con permiso para ignorar a los demás.",
-  "historia": "Pedro Simón registra a Hunzahúa como primer cacique de Tunja y Ramiriquí y cuenta su unión con una hermana cuyo nombre no consigna. El viaje a Chipatá por algodón, el descubrimiento de la madre, la vasija de chicha rota, la salida de Hunza, la flecha que guía el recorrido, el niño convertido en piedra y la transformación final en el río forman el núcleo colonial del relato.\n\nLas versiones modernas llaman Nonzetá a la hermana y Faravita a la madre. Esos nombres no aparecen en el pasaje de Simón citado por la compilación de Villa Posse, por lo que esta narración no los presenta como dato seguro. Tampoco convierte la relación en un romance ejemplar. Hay una diferencia de poder evidente entre un gobernante y una hermana vigilada por la familia, aunque las fuentes coloniales no permiten reconstruir su consentimiento con precisión.\n\nLa ficha anterior añadía una intervención salvadora de Bochica, una ley atribuida conjuntamente a Nemequene y Bochica y una celebración pública específica que no pertenecen al pasaje base. Se retiran para limpiar el relato.\n\nEl mito enlaza una transgresión familiar con accidentes del paisaje de Tunja, Susa y el río Bogotá. Funciona como memoria territorial y como explicación moral: ni siquiera el zaque queda fuera de la norma. La última frase, que distingue autoridad de permiso, es una lectura editorial contemporánea. No sustituye la complejidad histórica de parentesco y poder entre distintas comunidades muiscas.",
-  "versiones": "Simón cuenta que Hunzahúa planea el viaje a Chipatá, regresa con su hermana embarazada y huye después del golpe de la madre contra la vasija. Su flecha con cascabel los guía hasta Susa y luego hacia el territorio de Bogotá, donde ambos deciden convertirse en piedras en el río.\n\nVilla Posse resume el relato con una protesta colectiva en Hunza y una maldición pronunciada desde la Loma de los Ahorcados. Otras recreaciones nombran a la hermana Nonzetá y a la madre Faravita, describen el final en el Salto del Tequendama y presentan las piedras como castigo directo de una divinidad. Esos detalles tienen amplia circulación regional, pero no todos aparecen juntos en la noticia más temprana consultada.\n\nTambién cambia la valoración del vínculo. Las fuentes coloniales lo condenan como incesto y algunas adaptaciones modernas lo convierten en “amor desafiante”. Esta versión evita los dos extremos de una escena morbosa o una idealización romántica. Mantiene la prohibición y las consecuencias sin atribuir a la hermana deseos que el archivo no deja oír.\n\nEl pozo, la maldición y la fuga reciben páginas independientes en la tradición local. Aquí permanecen unidos porque forman la cadena narrativa de Hunzahúa; las otras fichas se concentrarán en la memoria posterior de cada sitio.",
-  "leccion": "El poder no vuelve justa cualquier decisión. Hunzahúa puede ordenar a otros, pero no puede convertir su deseo en una regla aceptable solo porque sea zaque.\n\nSu maldición contra la ciudad muestra otra forma de evasión: culpar al territorio por las consecuencias propias. El relato conserva una pregunta difícil sobre responsabilidad, silencio y autoridad sin reducirla a una consigna sobre el amor.",
-  "similitudes": "Edipo pertenece a una tragedia griega sobre una unión incestuosa que los personajes centrales desconocen al comienzo. Hunzahúa, en cambio, conoce el parentesco y organiza el viaje que hace posible la relación. La semejanza está en que la transgresión familiar desordena gobierno, casa y territorio; la diferencia moral es decisiva.\n\nEn relatos de transformación pétrea de muchas culturas, la piedra vuelve visible una acción que ya no puede corregirse. El episodio muisca multiplica esa marca: pozo, hijo de piedra y pareja detenida en el río. No es una simple copia de las metamorfosis mediterráneas.\n\nLa particularidad de Hunzahúa reside también en su geografía. El recorrido une la capital del zaque, una ruta de intercambio de algodón, Susa y el río cercano al Tequendama. La norma social queda inscrita en lugares reconocibles. El paisaje no sirve de decoración fantástica: conserva la disputa sobre quién responde cuando una autoridad transgrede los límites de su propia comunidad.",
-  "content": "Mito\nHunzahúa gobernaba en Hunza, pero no podía gobernar lo que sentía.\n\nSe había enamorado de su hermana. Sabía que aquella unión estaba prohibida y que su madre no la permitiría. En lugar de aceptar el límite, preparó un viaje a Chipatá para buscar algodón y pidió que su hermana lo acompañara.\n\nRegresaron unidos en secreto.\n\nLa madre comprendió lo ocurrido. Mientras preparaba chicha, tomó la sana con que removía la bebida y corrió hacia su hija. La joven se ocultó detrás de la gran vasija. El golpe cayó sobre el barro.\n\nLa vasija se quebró.\n\nLa chicha se derramó por el suelo, pero la tierra no la absorbió. El líquido llenó una hondonada y siguió creciendo hasta formar un pozo. La familia quedó a un lado del agua; al otro quedaron las palabras que ya no podían retirar.\n\nCuando Hunzahúa volvió de la ceremonia del amanecer, encontró a la gente reunida frente a su cercado. Nadie celebraba al zaque. Las miradas le recordaron que tener poder no lo ponía por encima de las reglas que ordenaban el parentesco.\n\nHunzahúa llamó a su hermana con el sonido de una trompeta de madera. Juntos subieron al alto que dominaba la ciudad. Desde allí él maldijo el valle, como si la tierra fuera culpable de su vergüenza.\n\nDespués huyeron.\n\nHunzahúa lanzó una flecha al aire y siguió el sonido de su cascabel. La flecha los condujo hasta Susa. Allí nació su hijo y quedó convertido en piedra. Los dos comprendieron que el camino no les ofrecía un lugar donde esconder las consecuencias.\n\nContinuaron hacia el sur. Cruzaron tierras que no conocían y llegaron al río cerca del Salto del Tequendama. Estaban cansados. El agua corría con tanta fuerza que parecía borrar todas las huellas, pero al poner los pies en ella sintieron que sus cuerpos se volvían pesados.\n\nHunzahúa miró a su hermana.\n\nNo hubo tiempo para otra huida. Ambos quedaron convertidos en piedras en medio de la corriente.\n\nEl río siguió pasando entre ellos.\n\nEn Hunza permaneció el pozo nacido de la vasija rota; en Susa, la memoria del hijo; junto al Tequendama, dos rocas. El viaje de Hunzahúa no borró su falta: la repartió por el territorio para que cada lugar contara una parte y ninguna persona confundiera autoridad con permiso para ignorar a los demás.\n\nHistoria\nPedro Simón registra a Hunzahúa como primer cacique de Tunja y Ramiriquí y cuenta su unión con una hermana cuyo nombre no consigna. El viaje a Chipatá por algodón, el descubrimiento de la madre, la vasija de chicha rota, la salida de Hunza, la flecha que guía el recorrido, el niño convertido en piedra y la transformación final en el río forman el núcleo colonial del relato.\n\nLas versiones modernas llaman Nonzetá a la hermana y Faravita a la madre. Esos nombres no aparecen en el pasaje de Simón citado por la compilación de Villa Posse, por lo que esta narración no los presenta como dato seguro. Tampoco convierte la relación en un romance ejemplar. Hay una diferencia de poder evidente entre un gobernante y una hermana vigilada por la familia, aunque las fuentes coloniales no permiten reconstruir su consentimiento con precisión.\n\nLa ficha anterior añadía una intervención salvadora de Bochica, una ley atribuida conjuntamente a Nemequene y Bochica y una celebración pública específica que no pertenecen al pasaje base. Se retiran para limpiar el relato.\n\nEl mito enlaza una transgresión familiar con accidentes del paisaje de Tunja, Susa y el río Bogotá. Funciona como memoria territorial y como explicación moral: ni siquiera el zaque queda fuera de la norma. La última frase, que distingue autoridad de permiso, es una lectura editorial contemporánea. No sustituye la complejidad histórica de parentesco y poder entre distintas comunidades muiscas.\n\nVersiones\nSimón cuenta que Hunzahúa planea el viaje a Chipatá, regresa con su hermana embarazada y huye después del golpe de la madre contra la vasija. Su flecha con cascabel los guía hasta Susa y luego hacia el territorio de Bogotá, donde ambos deciden convertirse en piedras en el río.\n\nVilla Posse resume el relato con una protesta colectiva en Hunza y una maldición pronunciada desde la Loma de los Ahorcados. Otras recreaciones nombran a la hermana Nonzetá y a la madre Faravita, describen el final en el Salto del Tequendama y presentan las piedras como castigo directo de una divinidad. Esos detalles tienen amplia circulación regional, pero no todos aparecen juntos en la noticia más temprana consultada.\n\nTambién cambia la valoración del vínculo. Las fuentes coloniales lo condenan como incesto y algunas adaptaciones modernas lo convierten en “amor desafiante”. Esta versión evita los dos extremos de una escena morbosa o una idealización romántica. Mantiene la prohibición y las consecuencias sin atribuir a la hermana deseos que el archivo no deja oír.\n\nEl pozo, la maldición y la fuga reciben páginas independientes en la tradición local. Aquí permanecen unidos porque forman la cadena narrativa de Hunzahúa; las otras fichas se concentrarán en la memoria posterior de cada sitio.\n\nLección\nEl poder no vuelve justa cualquier decisión. Hunzahúa puede ordenar a otros, pero no puede convertir su deseo en una regla aceptable solo porque sea zaque.\n\nSu maldición contra la ciudad muestra otra forma de evasión: culpar al territorio por las consecuencias propias. El relato conserva una pregunta difícil sobre responsabilidad, silencio y autoridad sin reducirla a una consigna sobre el amor.\n\nSimilitudes\nEdipo pertenece a una tragedia griega sobre una unión incestuosa que los personajes centrales desconocen al comienzo. Hunzahúa, en cambio, conoce el parentesco y organiza el viaje que hace posible la relación. La semejanza está en que la transgresión familiar desordena gobierno, casa y territorio; la diferencia moral es decisiva.\n\nEn relatos de transformación pétrea de muchas culturas, la piedra vuelve visible una acción que ya no puede corregirse. El episodio muisca multiplica esa marca: pozo, hijo de piedra y pareja detenida en el río. No es una simple copia de las metamorfosis mediterráneas.\n\nLa particularidad de Hunzahúa reside también en su geografía. El recorrido une la capital del zaque, una ruta de intercambio de algodón, Susa y el río cercano al Tequendama. La norma social queda inscrita en lugares reconocibles. El paisaje no sirve de decoración fantástica: conserva la disputa sobre quién responde cuando una autoridad transgrede los límites de su propia comunidad.",
-  "excerpt": "Hunzahúa huye de Hunza con su hermana, pero el pozo y las piedras convierten su transgresión en memoria del territorio.",
-  "seo_title": "Hunzahúa: mito muisca del zaque de Tunja",
-  "seo_description": "Lee el mito de Hunzahúa, el zaque que huyó de Hunza con su hermana: el pozo, la flecha, las piedras, sus versiones y fuentes históricas.",
-  "seo": {
-    "meta_title": "Hunzahúa: mito muisca del zaque de Tunja",
-    "meta_description": "Lee el mito de Hunzahúa, el zaque que huyó de Hunza con su hermana: el pozo, la flecha, las piedras, sus versiones y fuentes históricas.",
-    "meta_keywords": "mito de Hunzahúa, Hunzahúa y su hermana, primer zaque de Tunja, Pozo de Hunzahúa, piedras del Tequendama, leyenda de Hunza, mitología muisca",
-    "og_title": "Hunzahúa: la huida que dejó marcas en la tierra",
-    "og_description": "Un zaque intenta escapar de las consecuencias de su decisión, pero el territorio conserva cada parte del camino.",
-    "twitter_title": "Hunzahúa: mito muisca del zaque de Tunja",
-    "twitter_description": "Lee el mito de Hunzahúa, el zaque que huyó de Hunza con su hermana: el pozo, la flecha, las piedras, sus versiones y fuentes históricas.",
-    "canonical_path": "/mitos/hunzahua"
-  },
-  "focus_keyword": "mito de Hunzahúa",
-  "focus_keywords": [
+export default defineMuiscaMyth({
+  slug: "hunzahua",
+  title: "Hunzahúa",
+  tags: ["Hunzahúa", "incesto", "transformación", "muiscas"],
+  latitude: 5.544642,
+  longitude: -73.357557,
+  mito: `Hunzahúa fue el primer zaque de Hunza, la ciudad que hoy se llama Tunja. Mandaba sobre el valle, pero había una puerta en su propia casa que ni su palabra ni su poder podían abrir: la del aposento de su hermana, a quien la madre vigilaba de cerca.
+
+Se enamoró de ella. Sabía que entre hermanos no había camino de esposos, y que la madre, guardiana de la ley de la casa, no la cedería. Inventó entonces un viaje a la provincia de los Chipataes, tierra abundante en algodón, y pidió que su hermana lo acompañara a comprarlo. La madre dio permiso.
+
+Volvieron juntos. A los pocos días, la madre vio el vientre y los pechos de la hija y entendió lo que nadie había dicho en voz alta.
+
+Estaban haciendo chicha. La madre tomó la sana, el palo con que se remueve la bebida, y fue contra la muchacha. Ella giró en torno a la gran vasija donde se prepara la gacha. El golpe cayó sobre el barro.
+
+La vasija se quebró.
+
+La chicha corrió por la tierra, y la tierra no la detuvo: se abrió y la recibió entera. Donde cayó el líquido quedó un pozo redondo, y el agua que aún lo llena es aquella misma, convertida. Por eso lleva el nombre de pozo de Donato: así quedó en la memoria lo que nació de aquella tarde.
+
+—Que la tierra guarde lo que la casa ya no puede contener —dijo la madre.
+
+Antes del amanecer, Hunzahúa subía a los cojines de piedra donde la ciudad adoraba al sol. Aquella mañana bajó y encontró el cercado en silencio: la gente reunida, sin fiesta, sin miradas de zaque.
+
+Subió al alto que domina el valle por el oeste. Desde allí maldijo la tierra, y el valle se quedó estéril, batido por vientos fuertes, sin fuerza para dar cosechas.
+
+Llamó a su hermana con la tata, la trompeta de palo. Ella dejó la casa de la madre y lo siguió.
+
+No sabían por dónde partir. Hunzahúa lanzó al aire una tiradera que sonaba con un cascabel, y el rumor del viaje los fue guiando hasta Susa. Allí le dieron a ella los dolores del parto. El niño nació, y los dos, sin atreverse a cargar con él, lo dejaron convertido en piedra dentro de una cueva.
+
+Siguieron con la misma guía hasta las tierras de Bogotá, cerca del pueblo de Ciénega, por bajo del Salto del Tequendama. Al cruzar el río sintieron el peso de todo el camino y de la tierra ajena. Se miraron y decidieron convertirse en dos piedras.
+
+Hoy están en la mitad de la corriente.
+
+En Tunja el pozo sigue abierto, el viento del valle no descansa, y el río pasa y pasa entre las dos piedras, que esperan sin apuro lo que el agua venga a decirles.`,
+  historia: `Pedro Simón lo registra como el primer cacique de Tunja y Ramiriquí, y deriva el nombre de la ciudad del suyo: Hunza, de Hunzahua, perdida la sílaba final. En su noticia, la madre guarda a la hermana, el viaje a los Chipataes por algodón sirve de pretexto, el embarazo delata el vínculo y el golpe con la sana quebró la gacha y abrió la tierra hasta formar el pozo que hoy llaman de Donato. La secuencia es la base de toda versión posterior.
+
+El relato se sostiene sobre el tabú del incesto, que el propio Simón presenta con ambigüedad: la madre lo impide, la casa lo condena, y sin embargo el cronista añade que de este cacique tomaron los muiscas atrevimiento para casarse con sus hermanas. La leyenda no es una prohibición simple: enseña al mismo tiempo que el zaque no está fuera de la norma y que la norma pudo tener grietas. Villa Posse recuerda que en los dominios del zipa el matrimonio entre parientes estaba vedado hasta el segundo grado y que el código atribuido a Nemequene castigaba el incesto con la muerte; la cautela consiste en no convertir ese código en lectura única de un relato que también circuló como precedente.
+
+La maldición tiene función territorial. Tunja es un valle frío, de vientos fuertes y tierra difícil; el mito explica esa esterilidad como consecuencia de la ira del fundador. El paisaje conserva la disputa: el pozo de Donato, al norte de la ciudad, y los cojines de Tunja, las dos piedras talladas donde el zaque adoraba al sol antes del amanecer, fijan el episodio en el sitio.
+
+El pozo pertenece además a una página propia del corpus, donde la memoria del lugar se cruza con el tesoro de Quemuenchatocha. Aquí se mantiene unido al ciclo de Hunzahúa porque forma su desencadenante; las otras páginas desarrollan la vida posterior del sitio.`,
+  versiones: `En Simón, Hunzahúa no anuncia su intención: inventa el viaje a los Chipataes, consigue que la madre deje ir a la hija y el embarazo descubre el vínculo al volver. En la versión narrativa que recoge Villa Posse, en cambio, el zaque comunica a la madre su decisión, es rechazado y huye a Chipatae robando a la hermana de la tutela materna; la unión es pública antes de la fuga. Son dos maneras distintas de situar el conocimiento y la culpa.
+
+Los nombres varían. Las adaptaciones modernas llaman Nonzetá o Noncetá a la hermana y Faravita a la madre; Simón no los consigna. El lugar del algodón se escribe Chipataes, Chipatae o Chipatá, y algunas versiones añaden que buscaban también arcilla para cerámica. La vasija es gacha en la crónica, tinaja o moya en las reescrituras.
+
+La aparición del pozo tiene matices: en la crónica la tierra se abre y recibe la chicha convertida en agua, y queda un pozo de olla; en las reescrituras la chicha se riega y forma la laguna; la memoria local posterior suma el tesoro de Quemuenchatocha, que pertenece a otra página del corpus.
+
+El desenlace difiere. Simón dice que la pareja, cansada y en tierra ajena, determinó convertirse en dos piedras en la mitad del río; versiones posteriores la sitúan al borde del Salto o la convierten en castigo impuesto desde el cielo. El hijo, dejado como piedra en una cueva de Susa, aparece en todas las ramas, aunque unas lo leen como señal y otras como condena.
+
+La maldición también se localiza distinto: la crónica dice la loma que está sobre el pueblo, a la parte del oeste; Villa Posse identifica ese alto con la Loma de los Ahorcados o Alto de San Lázaro, y añade la protesta de la muchedumbre tras la ceremonia en los Cojines. Esa escena no está en Simón.
+
+La valoración del vínculo cambia según la época: las fuentes coloniales lo condenan como incesto y algunas adaptaciones modernas lo vuelven amor desafiante. Esta ficha evita los dos extremos: conserva la prohibición y sus consecuencias sin atribuir a la hermana un deseo que el archivo no deja oír.`,
+  leccion:
+    "El deseo que cruza un límite no borra la marca: la deja flotando en el agua y en el viento.",
+  similitudes: `El mismo corpus muisca guarda el pozo como página aparte: la ficha de El pozo de Hunzahúa conserva el sitio y su memoria posterior, ligada al tesoro de Quemuenchatocha, que no pertenece a este episodio. Los cojines de Tunja, donde la tradición sitúa la adoración del sol antes del amanecer, enmarcan la mañana del descubrimiento. La maldición también tiene parientes cercanos: como el Tequendama o la laguna de Tota, Hunza explica una condición del territorio —el frío, el viento, la tierra estéril— contando una decisión humana. La diferencia es que aquí la marca no nace de un dios sino de un gobernante que echa la culpa sobre el valle.
+
+En los Andes del sur, Manco Cápac y Mama Ocllo, hermanos e hijos del Sol, fundan Cuzco como pareja: la unión de sangre inaugura y ordena el linaje real. Hunzahúa comparte el motivo de los hermanos fundadores, pero invertido: lo que allí consagra una dinastía, aquí rompe la casa y expulsa a los dos. En Mesoamérica el incesto aparece en las genealogías divinas y reales como medio para conservar la pureza del linaje; el relato muisca lo muestra como lo contrario, un acto que ninguna autoridad puede volver regla, ni siquiera la del primer zaque.
+
+Edipo, sin saberlo, se casa con su madre y la peste cae sobre Tebas; la transgresión desordena el territorio entero aunque el culpable no la eligió. Hunzahúa conoce el parentesco, lo prepara y huye, y la maldición la pronuncia él mismo sobre el valle: la culpa cambia de dirección y el paisaje queda cargado. La huida que deja una marca en el camino recuerda a Níobe o a la mujer de Lot, detenidas en piedra o sal como testimonio; la diferencia es que las piedras de Hunzahúa nacen de una decisión compartida ante el cansancio, no de una mirada prohibida.`,
+  excerpt:
+    "El primer zaque de Tunja se enamora de su hermana; la chicha derramada forma el pozo de Donato, y su huida deja un valle maldecido y dos piedras en el río.",
+  seoTitle: "Hunzahúa, el primer zaque de Tunja: mito del incesto",
+  seoDescription:
+    "El mito muisca de Hunzahúa: el amor entre hermanos, la gacha de chicha, el pozo de Donato, la maldición del valle y las piedras del Tequendama.",
+  ogTitle: "Hunzahúa: la maldición que dejó un pozo y dos piedras en el río",
+  ogDescription:
+    "El primer zaque cruza el límite de su casa; la chicha se vuelve pozo, el valle se queda estéril y el agua guarda a los dos.",
+  focusKeywords: [
     "mito de Hunzahúa",
-    "Hunzahúa y su hermana",
     "primer zaque de Tunja",
-    "Pozo de Hunzahúa",
+    "Hunzahúa y su hermana",
+    "Pozo de Donato",
+    "maldición de Tunja",
     "piedras del Tequendama",
+    "incesto en la mitología muisca",
     "leyenda de Hunza",
-    "mitología muisca"
   ],
-  "image_prompt": "Fotografía editorial horizontal 16:9 de una maqueta artesanal de papel cortado. Dos hermanos muiscas adultos abandonan la antigua Hunza al amanecer; detrás queda un pozo de agua junto a una vasija de barro rota y delante una flecha con pequeño cascabel señala un camino andino. Distancia emocional, no romance. Papel físico, fibras, capas y micro-sombras, ocre frío, verde apagado y azul. Sin erotización, boda, niño de piedra, dios castigador, texto, símbolos inventados ni CGI.",
-  "image_prompt_horizontal": "Fotografía editorial horizontal 16:9 de una maqueta artesanal de papel cortado. Dos hermanos muiscas adultos abandonan la antigua Hunza al amanecer; detrás queda un pozo de agua junto a una vasija de barro rota y delante una flecha con pequeño cascabel señala un camino andino. Distancia emocional, no romance. Papel físico, fibras, capas y micro-sombras, ocre frío, verde apagado y azul. Sin erotización, boda, niño de piedra, dios castigador, texto, símbolos inventados ni CGI.",
-  "image_prompt_vertical": "Fotografía editorial horizontal 16:9 de una maqueta artesanal de papel cortado. Dos hermanos muiscas adultos abandonan la antigua Hunza al amanecer; detrás queda un pozo de agua junto a una vasija de barro rota y delante una flecha con pequeño cascabel señala un camino andino. Distancia emocional, no romance. Papel físico, fibras, capas y micro-sombras, ocre frío, verde apagado y azul. Sin erotización, boda, niño de piedra, dios castigador, texto, símbolos inventados ni CGI.",
-  "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/hunzahua-1785170986060.jpg",
-  "keySources": [
-    {
-      "title": "Noticias historiales de las conquistas de Tierra Firme en las Indias occidentales, tomo II",
-      "author": "Fray Pedro Simón",
-      "year": 1892,
-      "originalYear": 1627,
-      "type": "crónica colonial",
-      "url": "https://archive.org/details/tierrafirmeindias02simbrich",
-      "limitation": "Conserva testimonios tempranos, pero los interpreta desde una mirada evangelizadora y colonial.",
-      "summary": "Fuente primaria del viaje a Chipatá, la vasija rota, la flecha guía y la transformación final."
-    },
-    {
-      "title": "Mitos y leyendas de Colombia, vol. III: Mitos prehispánicos muiscas",
-      "author": "Eugenia Villa Posse, compiladora",
-      "year": 1993,
-      "type": "compilación editorial",
-      "url": "https://www.flacso.edu.ec/biblio/catalog/resGet.php?resId=44622",
-      "limitation": "Reúne versiones de autores de los siglos XIX y XX; no es una transcripción directa de tradición oral.",
-      "summary": "Reúne las variantes regionales, los lugares asociados y la lectura del relato como norma contra el incesto."
-    },
-    {
-      "title": "Historia general de las conquistas del Nuevo Reino de Granada",
-      "author": "Lucas Fernández de Piedrahíta",
-      "year": 1688,
-      "type": "crónica colonial",
-      "url": "https://www.cervantesvirtual.com/obra/historia-general-de-las-conquistas-del-nuevo-reino-de-granada-a-las-s-c-r-m-de-d-carlos-segundo-rey-de-las-espanas-y-de-las-indias-1166129/",
-      "limitation": "Es una síntesis tardía del siglo XVII y debe contrastarse con testimonios anteriores y documentos de archivo.",
-      "summary": "Aporta contexto sobre los primeros gobernantes de Tunja y las divergencias de sus genealogías."
-    }
+  imagePrompt:
+    "Fotografía editorial horizontal 16:9 de una maqueta artesanal de papel cortado. Dos hermanos muiscas adultos abandonan la antigua Hunza al amanecer; detrás queda un pozo de agua junto a una vasija de barro rota y delante una flecha con pequeño cascabel señala un camino andino. Distancia emocional, no romance. Papel físico, fibras, capas y micro-sombras, ocre frío, verde apagado y azul. Sin erotización, boda, niño de piedra, dios castigador, texto, símbolos inventados ni CGI.",
+  imageUrl:
+    "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/hunzahua-1785170986060.jpg",
+  sourceKeys: [
+    "simon",
+    "villa",
+    "piedrahita",
+    "gamboaSenores",
+    "correa",
+    "garcia",
+    "garciaCatalog",
+    "gomezAldana",
+    "planBosa",
+    "viracocha",
+    "popolVuh",
+    "ovidio",
   ],
-  "sources": [
-    {
-      "title": "Los muiscas en los siglos XVI y XVII: miradas desde la arqueología y la historia",
-      "author": "Jorge Augusto Gamboa Mendoza, compilador",
-      "year": 2008,
-      "type": "investigación histórica y arqueológica",
-      "url": "https://ediciones.uniandes.edu.co/gpd-los-muiscas-en-los-siglos-xvi-y-xvii-miradas-desde-la-arqueologia-y-la-historia-9789586953481-67f86154e57c4.html",
-      "limitation": "Aporta contexto social e histórico y cuestiona modelos homogéneos; no es un catálogo de mitos.",
-      "summary": "Permite leer el poder de los caciques y el parentesco sin proyectar una monarquía homogénea."
-    },
-    {
-      "title": "El sol del poder: simbología y política entre los muiscas",
-      "author": "François Correa Rubio",
-      "year": 2004,
-      "type": "investigación antropológica",
-      "url": "https://books.google.com/books/about/El_sol_del_poder.html?id=OCyF3XmjprAC",
-      "limitation": "Interpreta el corpus documental disponible; no convierte las crónicas coloniales en una voz muisca transparente.",
-      "summary": "Aporta herramientas para relacionar autoridad, norma y territorio en el corpus muisca."
-    },
-    {
-      "title": "El pozo de Hunzahúa",
-      "author": "Sistema de Información Turística de Boyacá",
-      "type": "memoria territorial institucional",
-      "url": "https://situr.boyaca.gov.co/monumentos-2/hunzahua/",
-      "limitation": "Presenta la memoria turística y popular actual del lugar; no prueba por sí sola la antigüedad de cada detalle de la leyenda.",
-      "summary": "Documenta la memoria territorial actual del pozo en Tunja y su doble nombre."
-    },
-    {
-      "title": "Érase una vez entre los chibchas",
-      "author": "Alfredo García Giraldo",
-      "year": 1984,
-      "type": "adaptación literaria juvenil",
-      "url": "https://books.google.com.co/books/about/Erase_una_vez_entre_los_chibchas.html?id=nKtsAAAAMAAJ",
-      "limitation": "Es una recreación literaria moderna, no una fuente colonial ni una transcripción directa de tradición oral; sus escenas deben identificarse como adaptación.",
-      "summary": "Permite identificar nombres y escenas difundidos por la adaptación juvenil moderna, sin confundirlos con la crónica."
-    },
-    {
-      "title": "Plan de vida de la comunidad indígena Muisca de Bosa",
-      "author": "Cabildo Indígena Muisca de Bosa",
-      "year": 2019,
-      "type": "memoria y planeación comunitaria",
-      "url": "https://historico.gobiernobogota.gov.co/sites/gobiernobogota.gov.co/files/control/plan_de_vida_muisca-transparencia.pdf",
-      "limitation": "Expresa una construcción comunitaria contemporánea; no debe proyectarse automáticamente al periodo prehispánico.",
-      "summary": "Ofrece un marco comunitario contemporáneo de familia y territorio, usado sin atribuirle esta versión."
-    }
-  ],
-  "researchNotes": "ESTADO: revisión integral.\n\nNÚCLEO DOCUMENTADO: Hunzahúa, unión con su hermana, viaje a Chipatá, madre y vasija rota, pozo, fuga, flecha guía, hijo y pareja convertidos en piedra.\n\nVARIANTES: nombres Nonzetá y Faravita; protesta pública; maldición de Hunza; final en el Salto o en el río cercano; transformación decidida o impuesta.\n\nMEMORIA CONTEMPORÁNEA: Tunja conserva el pozo y otros lugares vinculados al recorrido; el Plan de Vida no se usa como versión del episodio.\n\nHIPÓTESIS ACADÉMICA: el mito limita simbólicamente la autoridad del zaque mediante una norma de parentesco.\n\nLECTURA EDITORIAL: se evita romantizar el incesto y se pone el foco en responsabilidad y abuso de posición.\n\nDUDA: la crónica base no da voz propia a la hermana ni confirma los nombres modernos.\n\nGEOGRAFÍA: punto en la antigua Hunza, actual Tunja; el relato completo recorre varios lugares.\n\nIMAGEN: hermanos adultos abandonando Hunza junto al pozo y una flecha sonora que señala el camino; sin erotización, boda romántica, niño petrificado visible ni castigo divino personificado."
-},
-  methodologySeo: bachue.methodologySeo,
-};
+  researchNotes: `ESTADO: ficha reescrita sobre el núcleo de Simón y la lectura crítica de Villa Posse.
 
-export default withMuiscaImagePrompts(editorialMyth);
+NÚCLEO DOCUMENTADO: Hunzahúa, primer cacique de Tunja y Ramiriquí; unión con su hermana vigilada por la madre; viaje a la provincia de los Chipataes por algodón; embarazo descubierto; golpe con la sana contra la gacha; chicha derramada y pozo de Donato; maldición del valle desde el alto del oeste; llamada con la tata; huida guiada por la tiradera con cascabel hasta Susa; hijo dejado como piedra en una cueva; conversión de la pareja en dos piedras en el río bajo el Salto del Tequendama.
+
+VARIANTES: nombres modernos Nonzetá/Noncetá (hermana) y Faravita (madre); destino del viaje como Chipatá, Chipatae o Chipataes; motivo del viaje con o sin arcilla para cerámica; descubrimiento por anuncio previo o por el embarazo; protesta de la muchedumbre tras la ceremonia en los Cojines; sitio de la maldición identificado como Loma de los Ahorcados o Alto de San Lázaro; desenlace decidido o impuesto, en el medio del río o al borde del salto.
+
+LICENCIA EDITORIAL: tono de cuento sagrado; la frase oracular de la madre; la escena de los cojines al amanecer y el silencio del cercado (base en Villa Posse, puesta en escena propia); el cierre en imagen. No se añaden nombres, ceremonias ni símbolos.
+
+DUDA: la crónica no da voz propia a la hermana ni nombre a la madre; el consentimiento es irrecuperable; los nombres modernos no están en Simón.
+
+GEOGRAFÍA: Hunza, actual Tunja (5.544642, -73.357557); el recorrido pasa por Chipatá, Susa y el río Bogotá bajo el Salto del Tequendama.
+
+REGISTRO LINGÜÍSTICO: español colombiano contemporáneo, sobrio y ceremonial; se evitan arcaísmos peninsulares, sermón moral y romance idealizado; términos conservados de la fuente: sana, gacha, tata, tiradera, zaque, cojines.`,
+});

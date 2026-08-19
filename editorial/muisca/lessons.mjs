@@ -22,15 +22,15 @@ export const muiscaLessons = {
   "el-castigo-de-chaquen":
     "Todo límite cruzado deja en el paisaje la memoria de un orden que ya no vuelve a juntarse.",
   "el-dorado":
-    "Lo que entregamos puede revelar mejor nuestra riqueza que aquello que acumulamos.",
+    "El gobernante que se desprende del oro vuelve a la orilla más entero que cuando brillaba.",
   "el-hijo-del-sol-goranchacha":
-    "Ningún origen extraordinario absuelve la responsabilidad de una vida ordinaria.",
+    "Un origen de luz no garantiza que el camino vuelva a ser luz.",
   "el-origen-del-lago-tota":
     "El agua que da de beber no se vence: se aprende a convivir con lo que descansa bajo la superficie.",
   "el-pozo-de-hunzahua":
-    "El valor de algo no depende de que pueda extraerse, venderse o poseerse.",
+    "Lo que nace de una falta no se agota en manos de quien solo busca llenarlas.",
   "el-primero-de-los-reyes":
-    "La autoridad también está hecha de relatos, y todo relato puede ser examinado.",
+    "El origen anuncia el mando; el mando respira solo en quien interpreta la señal.",
   "el-sol-y-la-luna":
     "La noche no es el fracaso del día, sino la otra mitad de la misma luz.",
   "el-tequendama":
@@ -42,13 +42,13 @@ export const muiscaLessons = {
   huitaca:
     "Todo orden guarda lo que la fiesta derrama, y toda fiesta celebra lo que el orden protege.",
   hunzahua:
-    "El deseo no se vuelve justo por venir acompañado de poder.",
+    "El deseo que cruza un límite no borra la marca: la deja flotando en el agua y en el viento.",
   idacanzas:
     "Prever solo importa cuando transforma la manera en que cuidamos lo posible.",
   "la-aparicion-del-hombre":
     "Toda humanidad comienza no al ser formada, sino al escuchar y responder a otra voz.",
   "la-cacica-de-guatavita":
-    "La memoria permanece viva cuando puede corregirse sin perder sus raíces.",
+    "El agua guarda a quien se atreve a entregarlo todo, y de esa entrega nace la luz que otros persiguen.",
   "la-competencia":
     "Quien corre con el cuerpo de otro en la memoria llega a una meta que nadie ve.",
   "la-herencia":
@@ -58,7 +58,7 @@ export const muiscaLessons = {
   "la-madre-de-los-hombres":
     "Quien reúne a su gente termina por entregarle el camino que abrió.",
   "los-cojines-del-zaque":
-    "Observar es reconocer un orden que ninguna autoridad ha creado.",
+    "El poder no posee el amanecer: solo puede arrodillarse ante lo que no controla.",
   "los-dioses-civilizadores":
     "Enseñar es entrar en conversación con lo que ya existe, y lo que se comparte permanece solo si muchas manos lo continúan.",
   "los-mojas":
