@@ -3,79 +3,61 @@ import { defineMuiscaMyth } from "../define-editorial-myth.mjs";
 export default defineMuiscaMyth({
   slug: "el-castigo-de-chaquen",
   title: "El castigo de Chaquén",
-  categoryPath: "Andina > Varios > Muiscas",
   tags: ["Chaquén", "transformación", "amor", "transgresión", "tristeza"],
   latitude: 5.6126,
   longitude: -72.9793,
-  mito: `Tintoba y Súnuba aprendieron a reconocerse sin buscarse.
+  mito: `Tintoba y Súnuba se conocieron sin querer en la orilla del lago de Tota, y desde entonces supieron que toda su vida anterior había sido una espera.
 
-En los días de trabajo, bastaba el sonido de una vasija apoyada en el suelo o el roce de una manta contra una puerta. En las celebraciones, cuando todos miraban las carreras y los juegos, ellos descubrían el mismo punto del horizonte.
+Los dos llevaban promesas hechas por otros: unos matrimonios acordados en las casas, una palabra de tierra y linaje que sus familias habían sembrado antes de que ellos nacieran. Lo sabían. Durante meses convirtieron ese saber en distancia: él atendía su parcela, ella su tejido, y ninguno se acercaba al otro. Pero la distancia, en vez de apagar la falta, la hacía más visible, como el frío que delata una grieta en la pared.
 
-Los dos tenían compromisos que no podían deshacer sin herir a otras personas. Lo sabían. Durante meses hicieron de ese conocimiento una distancia. Pero la distancia también crecía.
+Una tarde, en lugar de volver a sus casas, tomaron los caminos que salen del pueblo en direcciones opuestas y se encontraron en la junta de los juncos, donde la tierra se parte en dos. Ella llevaba una manta pequeña. Él, un puñado de maíz tostado. No huían hacia ninguna parte: caminaban hacia el punto donde pudieran decir en voz alta lo que callaban.
 
-Una tarde salieron del poblado por caminos distintos y se encontraron junto a los juncos. Súnuba llevaba una manta pequeña. Tintoba, un puñado de maíz tostado. No habían preparado un gran viaje; solo querían alcanzar un lugar donde pudieran decidir qué hacer sin tantas voces alrededor.
+Caminaron hacia las tierras altas que rodean el lago. A un lado del sendero, la hierba seca del lindero crujía bajo los pies y marcaba hasta dónde llegaba cada sementera. Al otro lado, la quebrada bajaba entre piedras oscuras, buscando el agua grande.
 
-Caminaron hacia las tierras frías. A un lado del sendero, el suelo estaba seco y la hierba crujía. Al otro, el agua descendía entre piedras oscuras.
+Antes de la noche oyeron pasos que no eran de animal ni de hombre cansado. Era Chaquén, el que cuida los linderos y los puestos de las fiestas. Iba con los pies polvorientos y una vara al hombro, sin prisa. No levantó la voz.
 
-Antes de la noche escucharon pasos.
+—Rompieron una palabra —dijo, mirando las dos huellas que venían de rumbos distintos y se unían en una sola.
 
-No era una patrulla. Era Chaquén.
+—También nos la impusieron —dijo Súnuba.
 
-El protector de los límites apareció con los pies cubiertos de polvo y una vara apoyada en el hombro. No levantó la voz. Miró a Tintoba, después a Súnuba, y luego las dos huellas que llegaban desde direcciones opuestas.
+Chaquén no respondió. El viento, que venía moviendo los pastos, se detuvo como quien deja de escuchar.
 
-—Han roto una palabra —dijo.
+Tintoba quiso decir que volver no reparaba nada, que el miedo no vuelve cierta una promesa. Pero las palabras se le rompieron en la boca: sintió los pies hundirse en la tierra, la espalda doblarse, los dedos adelgazarse en tallos ásperos. En el tiempo de una respiración fue hierba seca, de la que crece en los linderos y sabe cuándo termina un terreno.
 
-—También nos la impusieron —respondió Súnuba.
+Súnuba corrió hacia el agua. Chaquén tocó el suelo con la vara y las piernas de ella echaron raíces en la orilla. El cabello se le hizo largo y verde, y quedó convertida en fijiza, la planta que busca la humedad y se inclina sobre la corriente.
 
-Chaquén guardó silencio. A su alrededor, el viento dejó de mover las hojas.
+Chaquén siguió su camino sin volverse.
 
-Tintoba quiso explicar que regresar ya no repararía nada. Quiso decir que el miedo no vuelve verdadero un pacto. Las palabras apenas habían salido cuando sintió los pies hundirse en la tierra.
+Cayó la noche sobre el lago. La hierba del lindero oyó correr el agua sin poder acercarse; la planta de la orilla sintió el olor del campo seco sin poder cruzarlo. Y así se quedaron: a la distancia que una vara mide, oyéndose, viéndose, sin tocarse.
 
-Súnuba trató de sujetarlo.
+Desde entonces, cuando el viento del páramo dobla la hierba hacia la quebrada y la fijiza responde desde el agua, quien camina por el sendero ve a dos plantas hablar. No se alcanzan. Pero tampoco han dejado de decirse lo que no se dijeron.`,
+  historia: `El episodio de Tintoba y Súnuba pertenece al ciclo que la folcloróloga Lilia Montaña de Silva Célis recogió y reelaboró sobre el lago de Tota, publicado en 1970 como Mitos, leyendas y tradiciones del folclor del Lago de Tota (Tunja, Ediciones La Rana y El Águila). El trabajo se apoya en tradiciones campesinas de Aquitania, Tota, Iza, Firavitoba y Sogamoso, y las integra en una prosa de autor intensamente elaborada: esta ficha trata ese texto como memoria regional viva, no como transcripción literal del periodo colonial.
 
-La mano de Tintoba se volvió delgada. Sus dedos se abrieron en hojas ásperas. Su espalda se inclinó hasta ser un manojo de hierba seca, de esa que crece en los linderos y marca dónde termina un terreno.
+La compilación de Eugenia Villa Posse (Mitos y leyendas de Colombia, vol. III: región Andina, 1993) contextualiza al personaje: Chaquén velaba los linderos de las sementeras, recibía los adornos de la borrachera y la plumería, y presidía las fiestas agrícolas que se celebraban en los límites de los sembrados, con carreras, corros y cantos. Esa base coincide con la noticia de fray Pedro Simón (1627), para quien Chaquén era el dios de los 'términos y puestos' de las fiestas; pero ni Simón ni Villa Posse narran por sí solos la escena de los fugitivos: el desenlace vegetal pertenece a la capa regional de Montaña.
 
-Súnuba gritó su nombre. Corrió hacia el agua, pero Chaquén tocó el suelo con la vara.
+El escenario es verosímil. El lago de Tota, en la provincia de Sugamuxi (Boyacá), es el mayor cuerpo de agua dulce del país, rodeado de páramo y de tierra de papa y cebolla. La arqueología reciente lee ese paisaje como profundamente humano: la caracterización del ICANH (2025) en la bahía de Aquitania propone estudiar agua, orillas y ocupaciones como una sola red, y un estudio paleoambiental publicado en The Holocene (2024) documenta milenios de presencia humana y ritualización del entorno lacustre. Nada de eso prueba la trama, pero explica por qué una historia de límites y agua pudo echar raíces donde los linderos separan las parcelas y el lago delimita el horizonte.`,
+  versiones: `En la versión extensa de Lilia Montaña (1970), Tintoba y Súnuba abandonan a sus respectivas parejas y el castigo de Chaquén forma parte de una secuencia más larga de desorden social y calamidad alrededor del lago. La metamorfosis materializa una separación definitiva en dos ecologías: la hierba seca del lindero y la planta verde de la orilla.
 
-Sus piernas echaron raíces en la orilla. El cabello se le hizo largo y verde. En pocos instantes quedó convertida en fijiza, la planta que busca la humedad y se inclina sobre las corrientes.
+Los resúmenes de divulgación posteriores condensan la historia en 'amor prohibido' y 'castigo divino', deforman el nombre masculino como Tintoa y omiten los compromisos previos: la pareja queda convertida en ejemplo de adulterio. Esa lectura recorta la pregunta que la versión regional conserva: quién impuso las uniones que se rompieron y qué autoridad puede fijar el límite.
 
-Chaquén continuó su camino.
+La figura de Chaquén aporta la capa documental más antigua. Fray Pedro Simón (1627) lo describe como dios de los 'términos y puestos' que señalaban los linderos en las fiestas y carreras, con la plumería y los adornos de la borrachera; Villa Posse (1993) reproduce esa noticia y lo define como protector de los lindes de las sementeras. Ninguna crónica colonial narra la escena de los fugitivos: el episodio es una extensión regional de la figura, probablemente tardía, no un pasaje registrado en el siglo XVII.
 
-Llegó la noche. La hierba del límite oyó el agua sin poder acercarse. La planta de la orilla sintió el viento del campo sin poder cruzarlo.
+El ciclo del lago aporta otras capas que no deben fundirse con esta. Villa Posse recoge la tradición del gran pez negro que habitaría Tota como espíritu del mal, y el propio libro de Montaña conserva los relatos de origen del lago, con Toquechá y Toquilla. El castigo de Chaquén convive con ellos en el mismo paisaje, pero su núcleo —la pareja y las dos plantas— se mantiene independiente de la explicación de por qué existe el lago.`,
+  leccion:
+    "Todo límite cruzado deja en el paisaje la memoria de un orden que ya no vuelve a juntarse.",
+  similitudes: `La ficha de Chaquén comparte corpus con esta: el mismo dios de los linderos y los puestos de las fiestas, documentado por Simón y repetido por Villa Posse; aquí el acento cae sobre la escena del castigo y sus dos plantas, no sobre el ritual festivo. El origen del lago de Tota transcurre en el mismo paisaje y explica el agua grande; este relato explica la orilla: no por qué existe el lago, sino por qué dos especies crecen separadas por un sendero. Uno es mito de génesis; el otro, mito de la memoria del límite.
 
-Desde entonces, cuando una ráfaga dobla el sune hacia la quebrada y la fijiza responde moviéndose sobre el agua, parece que Tintoba y Súnuba intentaran tocarse.
+En los Andes, los linderos reciben trato ritual: los mojones y las lindes de las sementeras se marcan, se respetan y su violación atrae desgracias; Chaquén es la expresión muisca de ese orden y este relato lo personifica sin condenar. En Mesoamérica, varias tradiciones castigan transgresiones —alimentarias, de ayuno, del cuerpo— con la pérdida de la forma humana; la misma lógica de la metamorfosis como sanción aparece en Tota, pero la falta aquí no es del cuerpo sino del pacto, y la sentencia no es monstruosa: es vegetal, mínima, cotidiana. El diluvio de Viracocha, que borra a los gigantes que no lo reconocieron, muestra el contraste: el castigo de Chaquén no destruye, delimita.
 
-No lo consiguen.
-
-Pero tampoco han dejado de hablar.`,
-  historia: `El relato extenso conocido como “El castigo de Chaquén” aparece en la recopilación que Lilia Montaña publicó en 1970 sobre el folclor del lago de Tota. La obra se apoya en tradiciones campesinas de la región y las integra en una prosa intensamente elaborada. La antología de mitos andinos de Eugenia Villa Posse reproduce y contextualiza ese material, a la vez que permite distinguirlo de las noticias coloniales más breves sobre Chaquén.
-
-Fray Pedro Simón describe a Chaquén como una figura vinculada con términos, carreras, juegos y el castigo de ciertas transgresiones sexuales. Esa noticia temprana sustenta el campo de acción del personaje, pero no confirma por sí sola la historia completa de Tintoba y Súnuba, sus diálogos ni cada planta del desenlace. Tampoco autoriza a considerar la moral colonial del cronista como traducción transparente de normas muiscas.
-
-La edición literaria conserva la fuga, la aparición de Chaquén y la metamorfosis vegetal porque forman el núcleo de la versión regional. Corrige el nombre Tintoba —deformado como Tintoa en algunos resúmenes— y evita convertir a la pareja en simples culpables. La respuesta de Súnuba sobre un compromiso impuesto y el silencio de Chaquén son decisiones nuevas. Abren la tensión que el relato contiene: una comunidad necesita acuerdos, pero el poder de fijar sus límites también puede volverse cruel.
-
-La ubicación se aproxima a Iza y al entorno de Tota, donde la recopilación sitúa el ciclo. Las identificaciones botánicas “sune” y “fijiza” se conservan como nombres narrativos regionales; no se publican como taxonomía científica comprobada.`,
-  versiones: `En la narración de Montaña, Tintoba y Súnuba abandonan a sus respectivas parejas y el castigo de Chaquén se inserta en una secuencia mucho más larga de desorden social y calamidad. La transformación en plantas materializa una separación permanente: una especie ocupa tierras secas y linderos; la otra permanece junto al agua.
-
-Resúmenes posteriores reducen la historia a “amor prohibido” y “castigo divino”. Algunos cambian Tintoba por Tintoa, omiten las relaciones previas o añaden consecuencias que pertenecen a otros episodios. Esa condensación borra la pregunta más difícil: quién puede imponer una unión y qué reparación corresponde cuando se rompe.
-
-Las crónicas coloniales documentan a Chaquén y su relación con fronteras, competencias y sanciones, pero no ofrecen esta escena con el detalle de la obra de 1970. Por eso no se afirma que Tintoba y Súnuba fueran personajes de una versión registrada en el siglo XVII. El relato publicado es una recreación contemporánea de la capa regional, no una combinación artificial de todas las variantes ni una defensa de su castigo.`,
-  leccion: `Una promesa importa porque otras personas confían en ella; romperla puede causar daño. Pero una norma no se vuelve justa solo por ser antigua, y el castigo no repara cuando elimina para siempre la voz de quienes fallaron.
-
-El sune y la fijiza guardan dos necesidades sociales en tensión: delimitar para convivir y dejar espacio para elegir. El cuento no resuelve esa tensión. La deja sonar entre la hierba seca y el agua.`,
-  similitudes: `Las *Metamorfosis* de Ovidio reúnen numerosos relatos donde un conflicto humano termina inscrito en una planta. En el libro X, Cipariso se convierte en ciprés después de matar por accidente a un ciervo querido y no poder abandonar su dolor. Tintoba y Súnuba también permanecen en el paisaje, pero su cambio es impuesto desde fuera y conserva una distancia entre ambos.
-
-En otras historias grecorromanas, la metamorfosis puede salvar a una persona de una persecución, castigarla o explicar una especie. El mismo recurso narrativo admite, por tanto, juicios opuestos. Compararlo ayuda a no leer toda transformación como una recompensa o una condena evidente.
-
-La singularidad del cuento boyacense está en colocar a cada amante en una ecología distinta: sequedad y agua, lindero y orilla. El paisaje no decora la pena; la vuelve audible cada vez que el viento mueve las dos plantas. No hay base para afirmar una influencia de Ovidio sobre la tradición regional. La semejanza muestra una solución imaginativa universal —hacer que la pérdida dure en la naturaleza— mientras las preguntas sobre compromiso, autoridad y elección pertenecen a contextos sociales diferentes.`,
+Las Metamorfosis de Ovidio, y en particular el libro X, inscriben la pérdida en la naturaleza: Cipariso se vuelve ciprés, Dafne laurel, Níobe piedra que llora. La forma vegetal conserva la emoción del personaje: huida que no termina, duelo que no cesa. Aquí la transformación también fija un instante en el paisaje, pero no es el dolor el que se vuelve planta: es una sentencia la que deja a dos personas a la vista una de la otra, separadas por un sendero. Níobe y Dafne pierden su forma por duelo o por huida; Tintoba y Súnuba la pierden por el límite, y el paisaje queda contando su conversación inacabada.`,
   excerpt:
-    "Tintoba y Súnuba huyen juntos, pero Chaquén los convierte en dos plantas separadas por el límite entre la tierra seca y el agua.",
-  seoTitle: "El castigo de Chaquén: mito de Tintoba y Súnuba",
+    "Tintoba y Súnuba huyen de compromisos impuestos y Chaquén, el dios de los linderos, los convierte en hierba seca y planta de orilla: dos vegetales que se oyen sin tocarse.",
+  seoTitle: "El castigo de Chaquén: Tintoba y Súnuba en el lago de Tota",
   seoDescription:
-    "Lee el mito de Tintoba y Súnuba: el castigo de Chaquén, su transformación en plantas, versiones, significado y fuentes documentadas.",
-  ogTitle: "Tintoba y Súnuba: dos voces a cada lado del agua",
+    "Chaquén, dios de los linderos, convierte a la pareja fugitiva Tintoba y Súnuba en hierba seca y planta de orilla: historia, versiones, lección y similitudes.",
+  ogTitle: "Tintoba y Súnuba: dos plantas que se hablan a través del sendero",
   ogDescription:
-    "Chaquén convierte a una pareja fugitiva en dos plantas que pueden oírse, pero nunca volver a tocarse.",
+    "Chaquén cruza el sendero junto al lago de Tota y una pareja queda convertida en hierba seca y planta de orilla: separadas, sin dejar de oírse.",
   focusKeywords: [
     "castigo de Chaquén",
     "Tintoba y Súnuba",
@@ -83,35 +65,33 @@ La singularidad del cuento boyacense está en colocar a cada amante en una ecolo
     "leyenda muisca de Boyacá",
     "transformación en plantas",
     "mitos del lago de Tota",
+    "dios de los linderos",
   ],
   imagePrompt:
-    "Fotografía editorial horizontal 16:9 de una maqueta artesanal de papel cortado: sendero frío de Boyacá entre un lindero seco y una quebrada, Tintoba y Súnuba humanos en el instante sobrio en que sus pies empiezan a convertirse respectivamente en hierba seca y planta verde de orilla; Chaquén a distancia con vara sencilla, sin gesto violento. Papel físico, fibras, capas, micro-sombras, niebla andina. Sin alas, rayos, templo, erotización, texto ni CGI.",
-  imagePromptVertical:
-    "Fotografía editorial vertical 4:5 de una maqueta de papel cortado: a la izquierda Tintoba se transforma en hierba seca de lindero; a la derecha Súnuba en planta verde junto a una quebrada; entre ambos un estrecho sendero y Chaquén al fondo. Paisaje boyacense realista, fibras visibles y micro-sombras. Sin espectáculo mágico, texto ni CGI.",
+    "Fotografía editorial horizontal exacta 16:9. Escena principal: junto a una quebrada de Boyacá, Tintoba y Súnuba comprenden que sus pies empiezan a convertirse respectivamente en hierba seca de lindero y planta verde de orilla; Chaquén permanece lejos y no los ataca. Estilo studioPaperMaquette aprobado: maqueta física hecha a mano con papel cortado, cartón y fibras naturales, fotografiada de frente; relieve bajo, bordes visibles, pequeñas imperfecciones humanas, micro-sombras reales e iluminación sobria. Fantasía anclada en el paisaje del altiplano cundiboyacense. Composición panorámica de un solo tableau; los personajes y objetos esenciales permanecen dentro del 80 % central. Sin texto ni logotipos; sin CGI, render digital ni apariencia de 3D sintético; sin coronas, tronos o templos europeos; sin pirámides, penachos ni iconografía mesoamericana; sin símbolos espirituales inventados; sin pareja real romántica, alas, rayos, erotización o cuerpos atrapados.",
   imageUrl:
     "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/el-castigo-de-chaquen-1784764796852.jpg",
   sourceKeys: [
     "montana",
-    "simon",
     "villa",
-    "montanaCatalog",
+    "simon",
+    "icanhTota",
+    "lakeTotaRecent",
     "planBosa",
     "siturTota",
     "ovidio",
   ],
-  researchNotes: `ESTADO: tradición regional de Tota con elaboración literaria del siglo XX.
+  researchNotes: `ESTADO: tradición regional del lago de Tota con elaboración literaria del siglo XX; la figura de Chaquén tiene sustento colonial, la escena completa no.
 
-NÚCLEO DOCUMENTADO: Tintoba y Súnuba; fuga de una pareja vinculada a otras uniones; intervención de Chaquén; transformación en sune de tierra seca y fijiza de orilla.
+NÚCLEO DOCUMENTADO: Tintoba y Súnuba; fuga de una pareja con compromisos previos; aparición de Chaquén; transformación en hierba seca de lindero (sune) y planta verde de orilla (fijiza).
 
-VARIANTES: Tintoba aparece deformado como Tintoa; resúmenes reducen la trama a amor prohibido o agregan calamidades de la secuencia extensa.
+VARIANTES: Tintoba deformado como Tintoa; resúmenes reducen la trama a adulterio y castigo; la versión extensa de Montaña la inserta en una secuencia mayor de calamidades.
 
-MEMORIA VIVA: se relaciona con un paisaje campesino concreto y con debates contemporáneos sobre territorio y continuidad, sin atribuir una voz única a todas las comunidades muiscas.
+LICENCIA EDITORIAL: la réplica de Súnuba ('también nos la impusieron'), el silencio de Chaquén y el cierre dialogado por el viento son invenciones editoriales marcadas como tales.
 
-HIPÓTESIS ACADÉMICA: Simón sustenta funciones generales de Chaquén, no la escena completa; Montaña conserva y recrea el ciclo regional.
+DUDA: no hay registro colonial de la escena; se desconoce la especie botánica correspondiente a sune y fijiza y la antigüedad de esos nombres.
 
-LECTURA EDITORIAL: la réplica de Súnuba, el silencio de Chaquén y el cierre dialogado por el viento son invenciones responsables.
+GEOGRAFÍA: orillas del lago de Tota y sus quebradas, provincia de Sugamuxi, Boyacá; entorno de Aquitania, Tota e Iza.
 
-DUDA: no se ha determinado la especie botánica moderna correspondiente a sune y fijiza ni la antigüedad exacta de esos nombres.
-
-GEOGRAFÍA: entorno de Iza y el lago de Tota, Boyacá.`,
+REGISTRO LINGÜÍSTICO: español colombiano contemporáneo, tono de cuento sagrado sin arcaísmos; los nombres sune y fijiza se conservan como voces regionales.`,
 });
