@@ -1,132 +1,88 @@
-import bachue from "../../myths/bachue.mjs";
-import { withMuiscaImagePrompts } from "../image-prompts.mjs";
+import { defineMuiscaMyth } from "../define-editorial-myth.mjs";
 
-const editorialMyth = {
-  ...{
-  "slug": "bochica",
-  "title": "Bochica, el viajero que enseñaba",
-  "category_path": "Andina > Varios > Muiscas",
-  "tags": [
-    "héroicos",
-    "Bochica",
-    "civilización",
-    "redención",
-    "diluvio"
-  ],
-  "latitude": 4.5981,
-  "longitude": -74.2159,
-  "mito": "El viajero llegó por el oriente, desde el lado donde nace la mañana. Era mayor, llevaba el cabello largo sujeto con una cinta y caminaba sin calzado. Nadie sabía de qué pueblo venía.\n\nEn Pasca se detuvo a escuchar. Luego siguió hacia Bosa.\n\nEncontró a la gente trabajando con algodón. Las fibras protegían del frío, pero tejerlas resultaba difícil. El viajero tomó unos hilos, mostró cómo tensarlos y cruzarlos, y dejó la forma de un telar dibujada sobre una piedra lisa para que pudiera recordarse.\n\nAlgunos lo llamaron Chimizapagua. Otros, Nemterequeteba. Con el tiempo muchos pronunciaron el nombre Bochica.\n\nDe Bosa pasó a Fontibón, luego a Funza y a Cota. En cada lugar hablaba en palabras que la gente comprendía. No llegaba con una casa propia ni pedía que abandonaran las suyas. Enseñaba, dormía donde encontraba refugio y retomaba el camino.\n\nEn Cota se reunieron tantas personas para escucharlo que tuvieron que dejar un espacio amplio alrededor de la loma. Por la noche, Bochica descansaba en una cueva. Al amanecer salía de nuevo.\n\nViajó hacia la provincia de Guane y después volvió al altiplano por Tunja. Las mantas comenzaron a mostrar tejidos más firmes. Los caminos que recorría se volvieron rutas conocidas entre pueblos.\n\nBochica no hacía el trabajo por los demás. Ponía las manos sobre el telar una vez y luego se apartaba para que otra persona continuara. Si un hilo se rompía, no lo ocultaba: enseñaba a anudarlo sin que toda la trama se perdiera.\n\nSu último recorrido lo llevó a Sogamoso. Allí habló sobre el cuidado de la vida común y dejó personas encargadas de mantener lo aprendido.\n\nUna mañana ya no estaba.\n\nBuscaron sus huellas fuera del poblado, pero el sendero terminaba entre la niebla. Algunos dijeron que había subido al cielo. Otros, que simplemente había seguido hacia un lugar cuyo nombre no conocían.\n\nQuedaron los telares, las piedras dibujadas y los caminos.\n\nDesde entonces, cuando alguien aprende un oficio y después lo enseña sin guardarlo para sí, la historia de aquel viajero vuelve a comenzar.",
-  "historia": "Bochica reúne uno de los problemas documentales más complejos del corpus muisca. Juan de Castellanos, Pedro Simón, Lucas Fernández de Piedrahíta y Alonso de Zamora registran nombres como Bochica, Nemterequeteba, Chimizapagua, Xué, Sadigua, Sugamónxe y Sugansua. No coinciden en si designan a una figura, a varias personas de épocas distintas o a títulos regionales.\n\nPedro Simón distingue en algunos pasajes al Bochica relacionado con el diluvio de la sabana del predicador viajero que entra por Pasca, enseña a hilar y tejer y desaparece en Sogamoso. Otros cronistas y la tradición editorial posterior los funden en un solo “dios civilizador”. Además, la descripción de un anciano barbado y las hipótesis coloniales que lo identificaron con un apóstol cristiano revelan el deseo europeo de reconocer su propia religión en las memorias indígenas.\n\nEsta ficha toma una decisión explícita: narra al viajero y maestro de tejidos, mientras la página del Tequendama cuenta la intervención en la inundación. Lo llama Bochica porque es la forma de búsqueda más establecida y porque varios registros la usan, pero conserva los otros nombres en el contexto.\n\nLa investigación reciente recuerda que enseñar un oficio no significa encontrar una sociedad “bárbara” y crearla desde cero. La arqueología muestra tecnologías, agricultura, intercambio y organización anteriores al registro colonial. Por eso el relato presenta transmisión y encuentro, no la invención unilateral de toda la cultura muisca.",
-  "versiones": "Castellanos afirma que Bochica, Nemterequeteba y Xué podían ser un solo personaje o tres viajeros. Simón distingue nombres usados en el valle de Bogotá de otros atribuidos a Tunja y Sogamoso, e incluso ofrece cronologías incompatibles. Piedrahíta prefiere una figura única que finalmente asciende al cielo; Zamora sigue de cerca el marco evangelizador.\n\nEn la versión viajera, entra por Pasca, pasa por Bosa, Fontibón, Funza y Cota, sigue hacia Guane y termina en Sogamoso. Enseña a hilar y tejer, deja telares representados en piedras y pronuncia normas de convivencia. Detalles como un animal exótico, cruces o una identidad apostólica pueden ser interpolaciones coloniales y no se incorporan al relato.\n\nEn el ciclo del Tequendama, Bochica no recorre poblados: aparece en un arco, escucha a la comunidad inundada y abre la peña. Esta revisión mantiene ambas tradiciones conectadas por el nombre, pero no las obliga a formar la biografía coherente de un único individuo histórico. La duda se conserva como parte central del archivo y se explica fuera del relato literario.",
-  "leccion": "El conocimiento crece cuando puede pasar de unas manos a otras. Bochica no entrega una pieza terminada para ser admirada; muestra un procedimiento y deja a la comunidad capaz de continuarlo.\n\nEl relato también enseña a desconfiar de la figura del “civilizador” que supuestamente crea por sí solo una sociedad. Ningún viajero inventa un pueblo. Lo valioso de su paso es el intercambio: escuchar, compartir una técnica, abrir un camino y saber desaparecer antes de convertir la enseñanza en dominio.",
-  "similitudes": "Quetzalcóatl reúne en tradiciones mesoamericanas funciones de deidad, héroe cultural, gobernante legendario y patrono del conocimiento. La comparación ayuda a entender por qué una misma figura puede acumular identidades, pero sus símbolos, ciudades y relatos no deben trasladarse a Bochica.\n\nEn el Popol Vuh, las entidades creadoras enseñan, ordenan y buscan seres capaces de recordar. Bochica actúa después de que la sociedad existe: circula entre comunidades y comparte oficios. No crea a la humanidad ni necesita vencer monstruos para enseñar.\n\nPrometeo, en la tradición griega, entrega a los humanos una técnica decisiva —el fuego— y entra en conflicto con Zeus. Bochica ofrece conocimientos de tejido y convivencia sin que la fuente temprana narre un robo celestial. Su rasgo propio es itinerante: el saber queda repartido a lo largo de un mapa de pueblos, cuevas, piedras y caminos. Tampoco recibe un tormento final; su destino permanece abierto en el acto de desaparecer.",
-  "content": "Mito\nEl viajero llegó por el oriente, desde el lado donde nace la mañana. Era mayor, llevaba el cabello largo sujeto con una cinta y caminaba sin calzado. Nadie sabía de qué pueblo venía.\n\nEn Pasca se detuvo a escuchar. Luego siguió hacia Bosa.\n\nEncontró a la gente trabajando con algodón. Las fibras protegían del frío, pero tejerlas resultaba difícil. El viajero tomó unos hilos, mostró cómo tensarlos y cruzarlos, y dejó la forma de un telar dibujada sobre una piedra lisa para que pudiera recordarse.\n\nAlgunos lo llamaron Chimizapagua. Otros, Nemterequeteba. Con el tiempo muchos pronunciaron el nombre Bochica.\n\nDe Bosa pasó a Fontibón, luego a Funza y a Cota. En cada lugar hablaba en palabras que la gente comprendía. No llegaba con una casa propia ni pedía que abandonaran las suyas. Enseñaba, dormía donde encontraba refugio y retomaba el camino.\n\nEn Cota se reunieron tantas personas para escucharlo que tuvieron que dejar un espacio amplio alrededor de la loma. Por la noche, Bochica descansaba en una cueva. Al amanecer salía de nuevo.\n\nViajó hacia la provincia de Guane y después volvió al altiplano por Tunja. Las mantas comenzaron a mostrar tejidos más firmes. Los caminos que recorría se volvieron rutas conocidas entre pueblos.\n\nBochica no hacía el trabajo por los demás. Ponía las manos sobre el telar una vez y luego se apartaba para que otra persona continuara. Si un hilo se rompía, no lo ocultaba: enseñaba a anudarlo sin que toda la trama se perdiera.\n\nSu último recorrido lo llevó a Sogamoso. Allí habló sobre el cuidado de la vida común y dejó personas encargadas de mantener lo aprendido.\n\nUna mañana ya no estaba.\n\nBuscaron sus huellas fuera del poblado, pero el sendero terminaba entre la niebla. Algunos dijeron que había subido al cielo. Otros, que simplemente había seguido hacia un lugar cuyo nombre no conocían.\n\nQuedaron los telares, las piedras dibujadas y los caminos.\n\nDesde entonces, cuando alguien aprende un oficio y después lo enseña sin guardarlo para sí, la historia de aquel viajero vuelve a comenzar.\n\nHistoria\nBochica reúne uno de los problemas documentales más complejos del corpus muisca. Juan de Castellanos, Pedro Simón, Lucas Fernández de Piedrahíta y Alonso de Zamora registran nombres como Bochica, Nemterequeteba, Chimizapagua, Xué, Sadigua, Sugamónxe y Sugansua. No coinciden en si designan a una figura, a varias personas de épocas distintas o a títulos regionales.\n\nPedro Simón distingue en algunos pasajes al Bochica relacionado con el diluvio de la sabana del predicador viajero que entra por Pasca, enseña a hilar y tejer y desaparece en Sogamoso. Otros cronistas y la tradición editorial posterior los funden en un solo “dios civilizador”. Además, la descripción de un anciano barbado y las hipótesis coloniales que lo identificaron con un apóstol cristiano revelan el deseo europeo de reconocer su propia religión en las memorias indígenas.\n\nEsta ficha toma una decisión explícita: narra al viajero y maestro de tejidos, mientras la página del Tequendama cuenta la intervención en la inundación. Lo llama Bochica porque es la forma de búsqueda más establecida y porque varios registros la usan, pero conserva los otros nombres en el contexto.\n\nLa investigación reciente recuerda que enseñar un oficio no significa encontrar una sociedad “bárbara” y crearla desde cero. La arqueología muestra tecnologías, agricultura, intercambio y organización anteriores al registro colonial. Por eso el relato presenta transmisión y encuentro, no la invención unilateral de toda la cultura muisca.\n\nVersiones\nCastellanos afirma que Bochica, Nemterequeteba y Xué podían ser un solo personaje o tres viajeros. Simón distingue nombres usados en el valle de Bogotá de otros atribuidos a Tunja y Sogamoso, e incluso ofrece cronologías incompatibles. Piedrahíta prefiere una figura única que finalmente asciende al cielo; Zamora sigue de cerca el marco evangelizador.\n\nEn la versión viajera, entra por Pasca, pasa por Bosa, Fontibón, Funza y Cota, sigue hacia Guane y termina en Sogamoso. Enseña a hilar y tejer, deja telares representados en piedras y pronuncia normas de convivencia. Detalles como un animal exótico, cruces o una identidad apostólica pueden ser interpolaciones coloniales y no se incorporan al relato.\n\nEn el ciclo del Tequendama, Bochica no recorre poblados: aparece en un arco, escucha a la comunidad inundada y abre la peña. Esta revisión mantiene ambas tradiciones conectadas por el nombre, pero no las obliga a formar la biografía coherente de un único individuo histórico. La duda se conserva como parte central del archivo y se explica fuera del relato literario.\n\nLección\nEl conocimiento crece cuando puede pasar de unas manos a otras. Bochica no entrega una pieza terminada para ser admirada; muestra un procedimiento y deja a la comunidad capaz de continuarlo.\n\nEl relato también enseña a desconfiar de la figura del “civilizador” que supuestamente crea por sí solo una sociedad. Ningún viajero inventa un pueblo. Lo valioso de su paso es el intercambio: escuchar, compartir una técnica, abrir un camino y saber desaparecer antes de convertir la enseñanza en dominio.\n\nSimilitudes\nQuetzalcóatl reúne en tradiciones mesoamericanas funciones de deidad, héroe cultural, gobernante legendario y patrono del conocimiento. La comparación ayuda a entender por qué una misma figura puede acumular identidades, pero sus símbolos, ciudades y relatos no deben trasladarse a Bochica.\n\nEn el Popol Vuh, las entidades creadoras enseñan, ordenan y buscan seres capaces de recordar. Bochica actúa después de que la sociedad existe: circula entre comunidades y comparte oficios. No crea a la humanidad ni necesita vencer monstruos para enseñar.\n\nPrometeo, en la tradición griega, entrega a los humanos una técnica decisiva —el fuego— y entra en conflicto con Zeus. Bochica ofrece conocimientos de tejido y convivencia sin que la fuente temprana narre un robo celestial. Su rasgo propio es itinerante: el saber queda repartido a lo largo de un mapa de pueblos, cuevas, piedras y caminos. Tampoco recibe un tormento final; su destino permanece abierto en el acto de desaparecer.",
-  "excerpt": "Un viajero cruzó el altiplano enseñando a hilar y tejer. Después desapareció, pero dejó caminos y telares.",
-  "seo_title": "Bochica: mito muisca del viajero y maestro",
-  "seo_description": "Lee el mito de Bochica como viajero y maestro del tejido: su ruta por el altiplano, sus nombres, significado, versiones y fuentes.",
-  "seo": {
-    "meta_title": "Bochica: mito muisca del viajero y maestro",
-    "meta_description": "Lee el mito de Bochica como viajero y maestro del tejido: su ruta por el altiplano, sus nombres, significado, versiones y fuentes.",
-    "meta_keywords": "mito de Bochica, Bochica, Nemterequeteba, Chimizapagua, dios civilizador muisca, mitología muisca, Bochica y el tejido",
-    "og_title": "Bochica: el conocimiento que sigue caminando",
-    "og_description": "Una versión literaria y crítica del viajero muisca asociado con el tejido, los caminos y múltiples nombres.",
-    "twitter_title": "Bochica: mito muisca del viajero y maestro",
-    "twitter_description": "Lee el mito de Bochica como viajero y maestro del tejido: su ruta por el altiplano, sus nombres, significado, versiones y fuentes.",
-    "canonical_path": "/mitos/bochica"
-  },
-  "focus_keyword": "mito de Bochica",
-  "focus_keywords": [
+export default defineMuiscaMyth({
+  slug: "bochica",
+  title: "Bochica, el viajero que enseñaba",
+  tags: ["héroicos", "Bochica", "civilización", "redención", "diluvio"],
+  latitude: 4.5981,
+  longitude: -74.2159,
+  mito: `Vino del oriente, por los llanos donde nace la luz, y entró al reino por Pasca. Nadie lo conocía. Era un hombre mayor, de barba larga que le caía hasta la cintura y cabellos sujetos con una cinta, como se los sujetarían después quienes lo vieron. Andaba descalzo, con una manta atada por sus dos puntas sobre el hombro derecho y una túnica sin cuello.
+
+No traía casa ni anunciaba ejércitos. Hablaba la lengua de cada pueblo, y en Bosa la gente tardó en decidir qué nombre darle: unos lo llamaron Chimizapagua, mensajero del dios supremo; otros, Nemterequeteba; otros, Xué. El que caminaba respondía a todos los nombres y seguía caminando.
+
+Antes de su llegada, la gente se cubría del frío con planchas de algodón en rama, atadas unas con otras con cordeles de fique: un abrigo mal unido que el trabajo deshacía. El viajero tomó el algodón, mostró cómo hilarlo y enseñó a tejer mantas. Cuando salía de un pueblo dejaba la figura de un telar pintada sobre una piedra lisa y bruñida, para que el olvido no pudiera con lo aprendido.
+
+Recorrió Fontibón, Funza, Zipacón y giró hacia el norte por las faldas de la sierra, abriendo caminos donde antes solo había monte. En Cota se juntó tanta gente de los pueblos vecinos para oírlo que le hicieron un foso de más de dos mil pasos alrededor del sitio alto desde donde predicaba, para que la multitud no lo atropellara. Por la noche se recogía a una cueva en la falda de la sierra, y al amanecer seguía.
+
+De ahí entró a la provincia de Guane, donde lo retrataron en las piedras, a lo tosco, para que quedara memoria. Volvió hacia el oriente, pasó por la provincia de Tunja y llegó al valle de Sogamoso. Allí habló de la vida común: que las almas no se acaban con el cuerpo y que el trato entre gentes debe ser justo. Al cacique del valle le mostró la forma de gobernar con suavidad.
+
+Una mañana, en Sogamoso, ya no estaba.
+
+Buscaron y no hallaron rastro que seguir: la tierra conservó su huella en una piedra de Iza, el pie estampado como señal de su paso, y el resto fue silencio. Unos dijeron que había subido al cielo; otros, que el camino ancho que abrió desde los llanos se lo llevó de vuelta a la luz.
+
+Quedaron las mantas tejidas, los telares pintados en las piedras, el camino que cruza el reino y el gesto de anudar la manta sobre el hombro, que siguen usando los que andan descalzos.`,
+  historia: `Simón, en sus Noticias historiales (1627), conserva el retrato más detallado del viajero: hombre mayor, barba hasta la cintura, cabello recogido con una cinta, descalzo, manta anudada sobre el hombro derecho, que entra por Pasca y se desaparece en el valle de Sogamoso. Antes de él, Juan de Castellanos, en sus Elegías, le daba tres nombres —Bochica, Nemterequeteba y Xué— y recogía la duda de si fueron uno o tres. Piedrahíta (1688) acepta como "lo más común y recibido" que fue uno solo con varios epítetos y cierra el ciclo con la muerte y el traslado al cielo. Zamora (1701) sigue a Simón con ligeros cambios de nombre.
+
+El problema documental es que cada cronista distribuye esos nombres de manera distinta: Bochica, Nemterequeteba, Chimizapagua, Xué, Sadigua, Sugamónxe, Sugansua. Villa Posse los lee como títulos honoríficos —"mensajero del dios supremo", "el sol", "nuestro pariente y padre", "el que se hace invisible", "el que desaparece"— y concluye que Bochica, Nemterequeteba y Sadigua no fueron el mismo personaje. Ninguna fuente resuelve la cuestión, y esta ficha no la resuelve: trata los nombres como variantes de una memoria, no como biografía verificable.
+
+La cautela es doble. Primero, evangelizadora: Simón sospecha que el viajero fue un cristiano antiguo y le atribuye cruces y sermones; Piedrahíta llega a identificarlo con el apóstol San Bartolomé, y el camello muerto en Bosa pertenece a ese mismo vocabulario. Segundo, historiográfica: la lectura antropológica, con Correa y la propia Villa Posse, reconoce en él un héroe civilizador del tipo continental y advierte que enseñar un oficio no implica haber creado una sociedad desde cero: la arqueología documenta textilería, cultivos y cacicazgos anteriores a la conquista.
+
+En este corpus, el episodio del Tequendama pertenece al mismo nombre pero a otro registro: allí Bochica no camina ni enseña, sino que aparece en el arco del cielo y rompe las peñas con su vara de oro o su bordón. Las dos tradiciones conviven bajo un solo nombre sin fundirse, y el lector las encuentra separadas.`,
+  versiones: `Castellanos afirma que los nombres Bochica, Nemterequeteba y Xué pudieron designar a un solo hombre o a tres predicadores de tiempos distintos. Piedrahíta prefiere lo primero —uno solo con tres epítetos— y añade que unos pueblos usaban Nemqueteba, otros Bochica y otros Zuhé. Simón reparte la nomenclatura por regiones: en el valle de Bogotá, Chimizapagua, Nemterequeteba y Xué; en la provincia de Tunja y Sogamoso, Sadigua, Sugamónxe y Sugansua, con cronologías incompatibles (veinte edades de setenta años frente a cuatro períodos de setenta). Villa Posse ordena estos nombres como títulos honoríficos —"mensajero del dios supremo", "el sol", "nuestro pariente y padre", "el que se hace invisible", "el que desaparece"— y concluye que Bochica, Nemterequeteba y Sadigua no fueron el mismo personaje.
+
+Los recorridos tampoco coinciden. Para Simón, la ruta entra por Pasca, sigue por Bosa, Fontibón, Bogotá, Funza (Serrezuela) y Zipacón, da la vuelta al norte por la falda de la sierra, llega a Cota —donde le abren un foso de más de dos mil pasos y duerme en una cueva—, pasa por Guane, Tunja y el valle de Sogamoso, donde se desaparece. En la tradición de Tunja, el predicador enseña a tejer y desaparece en Iza, dejando el pie estampado en una piedra. Triana, vía Villa Posse, lo hace venir desde el páramo de Chingazá y pasar por Muequetá (Funza) y Cota.
+
+Sobre el final hay dos desenlaces: Castellanos y Piedrahíta dicen que murió en Sogamoso y fue trasladado al cielo tras dejar al cacique de la provincia como heredero de su santidad; Simón dice que simplemente se desapareció. La huella del pie en Iza pertenece a esta última línea.`,
+  leccion:
+    "Todo maestro termina por desaparecer, pero la huella de lo aprendido sigue abriendo camino.",
+  similitudes: `En el propio corpus muisca, Goranchacha cumple un papel vecino: hijo del sol que baja a los valles de Tunja y Sogamoso, predica y deja fundada una autoridad sagrada antes de que su ciclo se cierre. La resonancia está en el maestro que desciende de otro plano y entrega saber; la diferencia, en que Goranchacha es hijo de la divinidad y funda un linaje, mientras el viajero de esta página es un desconocido que no reclama ascendencia ni deja herederos. El mismo nombre convive aquí con su otro rostro, el Bochica del Tequendama, que no enseña sino que rompe la sierra: dos gestos del mismo nombre, uno en los telares y otro en las aguas.
+
+Villa Posse inscribe a Bochica en la mitología americana comparada junto a Quetzalcóatl en México, Viracocha en el Perú y Pay Zumé en Brasil y Paraguay: héroes civilizadores barbados que enseñan artes y desaparecen hacia otro lado. Quetzalcóatl entrega el maíz y los oficios y parte hacia el oriente, pero su regreso es un tema político de la tradición mesoamericana; Viracocha crea y castiga con diluvio antes de retirarse caminando sobre el mar; Bochica ni crea ni castiga: circula entre pueblos que ya existen, deja una técnica y se va sin prometer vuelta.
+
+En el plano del relato clásico, Prometeo enseña a los mortales las artes del fuego y paga su gesto con un castigo eterno. La diferencia es de culpa: el maestro muisca no roba nada a los dioses ni recibe tormento; su enseñanza es don sin deuda, y su único precio es la desaparición. El patrón del héroe cultural que enseña a sembrar, tejer o encender fuego cruza varias tradiciones, y Bochica es su variante andina sin armas ni epopeya: su herramienta es el hilo y su escenario, el camino.`,
+  excerpt:
+    "Un viajero llegó del oriente a enseñar a hilar algodón y tejer mantas. Después desapareció, pero dejó caminos, telares y nombres.",
+  seoTitle: "Bochica: mito muisca del viajero y maestro",
+  seoDescription:
+    "Lee el mito de Bochica como viajero y maestro del tejido: su ruta por el altiplano, sus nombres, su significado, versiones y fuentes.",
+  ogTitle: "Bochica: el maestro que desaparece y deja camino",
+  ogDescription:
+    "Enseñó a hilar y a tejer, abrió senderos y se marchó sin dejar rastro; el altiplano guarda sus telares pintados en la piedra.",
+  focusKeywords: [
     "mito de Bochica",
     "Bochica",
     "Nemterequeteba",
     "Chimizapagua",
     "dios civilizador muisca",
     "mitología muisca",
-    "Bochica y el tejido"
+    "Bochica y el tejido",
   ],
-  "image_prompt": "Fotografía editorial horizontal 16:9 de una maqueta artesanal de papel y fibras. Un viajero muisca mayor, de cabello largo sujeto con cinta y ropa tejida sobria, camina descalzo por varios pueblos del altiplano; en primer plano muestra a una comunidad cómo cruzar hilos en un telar, y al fondo quedan una piedra con un esquema simple de telar y caminos entre montes. Relieve bajo, textura manual, algodón, ocres y verde frío. Sin piel blanca enfatizada, barba de apóstol, cruz, camello, vara de oro, templo, aureola, texto ni CGI.",
-  "image_prompt_horizontal": "Fotografía editorial horizontal 16:9 de una maqueta artesanal de papel y fibras. Un viajero muisca mayor, de cabello largo sujeto con cinta y ropa tejida sobria, camina descalzo por varios pueblos del altiplano; en primer plano muestra a una comunidad cómo cruzar hilos en un telar, y al fondo quedan una piedra con un esquema simple de telar y caminos entre montes. Relieve bajo, textura manual, algodón, ocres y verde frío. Sin piel blanca enfatizada, barba de apóstol, cruz, camello, vara de oro, templo, aureola, texto ni CGI.",
-  "image_prompt_vertical": "Fotografía editorial horizontal 16:9 de una maqueta artesanal de papel y fibras. Un viajero muisca mayor, de cabello largo sujeto con cinta y ropa tejida sobria, camina descalzo por varios pueblos del altiplano; en primer plano muestra a una comunidad cómo cruzar hilos en un telar, y al fondo quedan una piedra con un esquema simple de telar y caminos entre montes. Relieve bajo, textura manual, algodón, ocres y verde frío. Sin piel blanca enfatizada, barba de apóstol, cruz, camello, vara de oro, templo, aureola, texto ni CGI.",
-  "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/bochica-1785168751611.jpg",
-  "keySources": [
-    {
-      "title": "Noticias historiales de las conquistas de Tierra Firme en las Indias occidentales, tomo II",
-      "author": "Fray Pedro Simón",
-      "year": 1892,
-      "originalYear": 1627,
-      "type": "crónica colonial",
-      "url": "https://archive.org/details/tierrafirmeindias02simbrich",
-      "limitation": "Conserva testimonios tempranos, pero los interpreta desde una mirada evangelizadora y colonial.",
-      "summary": "Conserva el itinerario más detallado del viajero, la enseñanza del tejido y la pluralidad regional de nombres."
-    },
-    {
-      "title": "Historia general de las conquistas del Nuevo Reino de Granada",
-      "author": "Lucas Fernández de Piedrahíta",
-      "year": 1688,
-      "type": "crónica colonial",
-      "url": "https://www.cervantesvirtual.com/obra/historia-general-de-las-conquistas-del-nuevo-reino-de-granada-a-las-s-c-r-m-de-d-carlos-segundo-rey-de-las-espanas-y-de-las-indias-1166129/",
-      "limitation": "Es una síntesis tardía del siglo XVII y debe contrastarse con testimonios anteriores y documentos de archivo.",
-      "summary": "Documenta la tendencia colonial a unificar nombres y convertir la desaparición final en ascenso celeste."
-    },
-    {
-      "title": "Mitos y leyendas de Colombia, vol. III: Mitos prehispánicos muiscas",
-      "author": "Eugenia Villa Posse, compiladora",
-      "year": 1993,
-      "type": "compilación editorial",
-      "url": "https://www.flacso.edu.ec/biblio/catalog/resGet.php?resId=44622",
-      "limitation": "Reúne versiones de autores de los siglos XIX y XX; no es una transcripción directa de tradición oral.",
-      "summary": "Reúne el debate moderno sobre Bochica, Nemterequeteba y Sadigua y permite separar dos ciclos superpuestos."
-    }
+  imagePrompt:
+    "Fotografía editorial horizontal 16:9 de una maqueta artesanal de papel y fibras. Un viajero muisca mayor, de cabello largo sujeto con cinta y ropa tejida sobria, camina descalzo por varios pueblos del altiplano; en primer plano muestra a una comunidad cómo cruzar hilos en un telar, y al fondo quedan una piedra con un esquema simple de telar y caminos entre montes. Relieve bajo, textura manual, algodón, ocres y verde frío. Sin piel blanca enfatizada, barba de apóstol, cruz, camello, vara de oro, templo, aureola, texto ni CGI.",
+  imageUrl:
+    "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/bochica-1785168751611.jpg",
+  sourceKeys: [
+    "simon",
+    "piedrahita",
+    "villa",
+    "correa",
+    "gamboaArqueologiaHistoria",
+    "mantas",
+    "quetzalcoatl",
+    "viracocha",
+    "popolVuh",
   ],
-  "sources": [
-    {
-      "title": "Historia de la provincia de San Antonino del Nuevo Reino de Granada",
-      "author": "Alonso de Zamora",
-      "year": 1701,
-      "type": "crónica colonial",
-      "url": "https://babel.banrepcultural.org/digital/collection/p17054coll6/id/22/",
-      "limitation": "Su propósito principal es narrar la historia dominica; su vocabulario religioso traduce y juzga las creencias indígenas.",
-      "summary": "Aporta otra versión colonial y evidencia el marco apostólico con el que se reinterpretó al viajero."
-    },
-    {
-      "title": "El sol del poder: simbología y política entre los muiscas",
-      "author": "François Correa Rubio",
-      "year": 2004,
-      "type": "investigación antropológica",
-      "url": "https://books.google.com/books/about/El_sol_del_poder.html?id=OCyF3XmjprAC",
-      "limitation": "Interpreta el corpus documental disponible; no convierte las crónicas coloniales en una voz muisca transparente.",
-      "summary": "Ayuda a situar conocimiento, autoridad y circulación territorial sin reducirlos al héroe civilizador."
-    },
-    {
-      "title": "Los muiscas en los siglos XVI y XVII: miradas desde la arqueología y la historia",
-      "author": "Jorge Augusto Gamboa Mendoza, compilador",
-      "year": 2008,
-      "type": "investigación histórica y arqueológica",
-      "url": "https://ediciones.uniandes.edu.co/gpd-los-muiscas-en-los-siglos-xvi-y-xvii-miradas-desde-la-arqueologia-y-la-historia-9789586953481-67f86154e57c4.html",
-      "limitation": "Aporta contexto social e histórico y cuestiona modelos homogéneos; no es un catálogo de mitos.",
-      "summary": "Aporta evidencia histórica y arqueológica contra la idea de una sociedad sin tecnología anterior a Bochica."
-    },
-    {
-      "title": "Caminos narrados: oralidades y memoria muysca raizal en Suba",
-      "author": "Cabildo Indígena Muisca de Suba y BibloRed",
-      "year": 2025,
-      "type": "memoria oral comunitaria",
-      "url": "https://www.bibliotecadigitaldebogota.gov.co/resources/4159796/",
-      "limitation": "Documenta memoria territorial contemporánea de Suba, no una versión única para todas las comunidades muiscas.",
-      "summary": "Incorpora memoria muysca contemporánea sobre caminos y territorio, sin atribuirle una versión literal del viajero."
-    },
-    {
-      "title": "Quetzalcoatl: deity, culture hero, and legendary ruler",
-      "author": "Encyclopedia of Religion / Encyclopedia.com",
-      "type": "estudio comparativo de religión mesoamericana",
-      "url": "https://www.encyclopedia.com/people/history/mesoamerican-indigenous-peoples-biographies/quetzalcoatl",
-      "limitation": "Agrupa tradiciones mesoamericanas de lugares y épocas diferentes; no prueba contacto con el ciclo muisca de Bochica.",
-      "summary": "Sustenta el paralelo controlado con otra figura americana que reúne deidad, héroe cultural y gobernante."
-    }
-  ],
-  "researchNotes": "ESTADO: revisión integral y separación de ciclos.\n\nNÚCLEO DOCUMENTADO: viajero oriental; edad avanzada; itinerario por Pasca, Bosa, Fontibón, Funza, Cota, Guane, Tunja y Sogamoso; enseñanza de hilar y tejer; desaparición.\n\nVARIANTES: múltiples nombres, cronologías, barba, animal acompañante, cruces, normas y ascenso al cielo.\n\nMEMORIA CONTEMPORÁNEA: Caminos narrados aporta territorialidad viva, no testimonio literal de Bochica.\n\nHIPÓTESIS ACADÉMICA: pueden existir figuras o ciclos superpuestos; se evita decidir que todo nombre es una sola biografía.\n\nLECTURA EDITORIAL: el viajero enseña procedimientos y no “inventa” a la sociedad.\n\nDUDA: la identidad apostólica y los rasgos europeos son productos posibles de traducción colonial.\n\nGEOGRAFÍA: se mantiene Soacha como punto del ciclo más conocido, aunque el relato viajero recorre un territorio amplio.\n\nIMAGEN: debe ser un maestro itinerante pequeño entre comunidades y telares; sin piel blanca enfatizada, apóstol cristiano, cruz, camello, báculo de oro ni estética de conquistador."
-},
-  methodologySeo: bachue.methodologySeo,
-};
+  researchNotes: `ESTADO: revisión integral y separación de ciclos.
 
-export default withMuiscaImagePrompts(editorialMyth);
+NÚCLEO DOCUMENTADO: llegada desde el oriente (llanos de Venezuela, según Simón) por Pasca; hombre mayor, barbado hasta la cintura, cabellos largos sujetos con cinta, descalzo, manta anudada sobre el hombro derecho y túnica sin cuello; enseñanza de hilar algodón y tejer mantas; telares pintados en piedra lisa; itinerario por Bosa, Fontibón, Funza, Zipacón, Cota (foso de dos mil pasos, cueva), Guane, Tunja y Sogamoso; desaparición en Sogamoso; huella del pie en Iza.
+
+VARIANTES: nombres y epítetos regionales (Chimizapagua, Nemterequeteba, Xué, Sadigua, Sugamónxe, Sugansua); uno o tres predicadores; cronologías divergentes (1400 frente a 280 años antes de la conquista); muerte y ascenso en Sogamoso frente a desaparición sin rastro; camello y cruces como interpolaciones coloniales.
+
+LICENCIA EDITORIAL: el relato narra al viajero-maestro y conserva el nombre Bochica por ser la forma de búsqueda establecida; el episodio del Tequendama se trata en su página propia, sin fundir ambos registros en una biografía.
+
+DUDA: la identidad apostólica (San Bartolomé), el camello y los sermones cristianos son productos probables de la traducción evangelizadora y no se incorporan al relato.
+
+GEOGRAFÍA: el viajero circula entre la sabana de Bogotá (Pasca, Bosa, Fontibón, Funza, Zipacón, Cota), Guane y el valle de Sogamoso; el mito del Tequendama se ancla en Soacha.
+
+REGISTRO LINGÜÍSTICO: español colombiano contemporáneo, tono de cuento sagrado sin arcaísmos peninsulares ni moralización; sin símbolos ni vestuarios inventados.`,
+});

@@ -1,133 +1,93 @@
-import bachue from "../../myths/bachue.mjs";
-import { withMuiscaImagePrompts } from "../image-prompts.mjs";
+import { defineMuiscaMyth } from "../define-editorial-myth.mjs";
 
-const editorialMyth = {
-  ...{
-  "slug": "chiminigagua",
-  "title": "Chiminigagua",
-  "category_path": "Andina > Varios > Muiscas",
-  "tags": [
-    "Chiminigagua",
-    "aves negras",
-    "cosmos",
-    "creación",
-    "luz",
-    "muiscas"
-  ],
-  "latitude": 5.5,
-  "longitude": -73.5,
-  "mito": "Antes de la primera mañana no había estrellas ni fogones. Tampoco se distinguían las montañas, porque todavía no existía una forma contra la cual pudiera comenzar el cielo. Todo era noche.\n\nPero la oscuridad no estaba vacía.\n\nEn su interior permanecía Chiminigagua. La luz se encontraba recogida dentro de aquella presencia inmensa, guardada como el calor en una brasa que aún no ha recibido aire. Nada la veía. No había ojos. Nada la esperaba. No había tiempo para esperar.\n\nEntonces Chiminigagua empezó a abrirse.\n\nNo ocurrió de golpe. Primero apareció una claridad tenue, semejante a la que llega antes del amanecer y permite separar la piedra del agua. La luz creció desde adentro. A medida que avanzaba, la noche dejó de ocuparlo todo.\n\nChiminigagua creó unas aves grandes y negras. Sus plumas tenían el color de la oscuridad de la que acababan de salir. Eran las primeras criaturas capaces de atravesar aquel espacio sin caminos.\n\nLas aves levantaron vuelo.\n\nAl principio solo se escuchó el movimiento de sus alas. Después, de sus picos comenzó a salir un aliento luminoso. No era fuego ni humo. Era un aire claro que permanecía allí por donde pasaban.\n\nVolaron en todas las direcciones. Una cruzó el lugar donde más tarde se levantarían los montes. Otra descendió sobre las aguas aún sin nombre. Las demás siguieron hasta los extremos del mundo. Cada batir de alas apartaba un poco la sombra; cada respiración dejaba una franja encendida.\n\nDesde lejos, las aves negras parecían agujas cosiendo la claridad sobre la noche.\n\nCuando terminaron su recorrido, ya era posible ver. Aparecieron los bordes de las lagunas, las lomas frías y la tierra húmeda. El agua recibió el resplandor y lo devolvió. Las primeras hojas encontraron hacia dónde crecer.\n\nMucho después llegaron el sol y la luna para señalar los días, las noches y el paso de los meses. La luz, sin embargo, era más antigua que ambos. Había estado dentro de Chiminigagua antes de que existiera un cielo donde pudiera salir el sol.\n\nLas aves siguieron volando hasta confundirse con la distancia. Negras contra un mundo iluminado, llevaron en el cuerpo el recuerdo de la noche y en el aliento la primera mañana.",
-  "historia": "La versión explícita más temprana conocida aparece en la cuarta noticia de Pedro Simón, publicada en 1627. El cronista escribe que, cuando “era noche” y todavía no había mundo, la luz estaba contenida en una “cosa grande” llamada Chiminigagua. De allí salieron grandes aves negras que recorrieron el mundo expulsando por sus picos un aire luminoso. Simón equipara inmediatamente esa presencia con el Dios cristiano y descalifica aspectos de la narración; su registro conserva el núcleo, pero también muestra el filtro evangelizador con el que fue escrito.\n\nLa ficha heredada del sitio procedía de la compilación de Eugenia Villa Posse de 1993, que reproduce una elaboración publicada por Mariano Izquierdo Gallo en 1956. Esa versión añade explicaciones cristianas, comparaciones filosóficas y una seguridad doctrinal que no pertenecen al breve pasaje colonial. Esta revisión vuelve al movimiento esencial del mito: luz contenida, aves negras, aliento resplandeciente y formación de un mundo visible.\n\nFrançois Correa estudia este ciclo dentro de una simbología donde luz, sol, autoridad y orden social se relacionan sin ser términos idénticos. La investigación histórica contemporánea también advierte que “los muiscas” no formaban un imperio homogéneo. No conservamos una transcripción en lengua muisca ni el nombre de quienes comunicaron esta versión al cronista. Por eso hablamos de un relato documentado en el altiplano y no de un catecismo único compartido sin variación por todas las comunidades.",
-  "versiones": "En Pedro Simón, Chiminigagua es el nombre de la gran entidad que contiene la luz antes del amanecer del mundo. Las primeras criaturas son aves negras; el aire que arrojan por los picos es luminoso y deja todo iluminado. El cronista añade que Chiminigagua creó lo demás, pero intenta traducirlo de inmediato a su propia teología.\n\nLas reelaboraciones del siglo XX suelen llamar a Chiminigagua “dios supremo”, describirlo como una divinidad incorpórea o identificarlo con el resplandor mismo. Algunas convierten a las aves en servidores simbólicos y desarrollan una doctrina completa sobre un bien que vence al mal. Esas lecturas pueden ser sugerentes, pero van más allá del pasaje temprano.\n\nOtro ciclo, atribuido a Sogamoso y Ramiriquí, cuenta que dos caciques hicieron figuras humanas y después se transformaron en sol y luna. No es una continuación automática de Chiminigagua. Esta ficha conserva separados el origen de la luz, la creación de los seres humanos y el origen de los dos luminares. Las grafías Chiminigagua y Chiminichagua aparecen en fuentes posteriores; aquí se mantiene la forma usada por Simón y por el título publicado.",
-  "leccion": "La primera claridad no borra la oscuridad: viaja llevándola en las plumas. Esa imagen permite pensar la creación no como una victoria que elimina lo anterior, sino como una transformación en la que cada comienzo conserva memoria de aquello de donde salió.\n\nEl relato también separa la luz del sol. Antes de que existan los astros y los calendarios, ya existe la posibilidad de ver. Para una sociedad atenta a ciclos agrícolas, lagunas, amaneceres y movimientos celestes, esa distinción abre una pregunta profunda: ¿el mundo comienza cuando aparece o cuando alguien puede reconocerlo?\n\nLas aves no iluminan quedándose junto a Chiminigagua. Deben recorrer el espacio. La claridad se vuelve mundo mediante movimiento y distribución, una imagen que puede leerse —sin convertirla en doctrina— como vínculo entre creación, tarea y responsabilidad compartida.",
-  "similitudes": "El Popol Vuh k’iche’ comienza también en oscuridad y noche. Sus entidades creadoras deliberan y conciben la luz antes de que aparezca la humanidad. La resonancia está en un mundo pensado antes del amanecer; la diferencia es decisiva: allí la creación surge de la palabra y el acuerdo entre varias potencias, mientras que en Chiminigagua la claridad se dispersa mediante aves y aliento.\n\nEl primer capítulo del Génesis separa la aparición de la luz de la creación posterior del sol, la luna y las estrellas. Esa secuencia recuerda la antigüedad de la luz en el relato muisca. Sin embargo, Génesis organiza la creación en días y órdenes verbales; Chiminigagua la vuelve vuelo, respiración y recorrido.\n\nAlgunos relatos mesopotámicos conservados parten asimismo de un estado sin luz solar ni lunar, pero hacen surgir el orden mediante separaciones, genealogías o combates entre dioses. El mito muisca no necesita una batalla: su gesto propio consiste en que criaturas del color de la noche sean precisamente quienes llevan la claridad.",
-  "content": "Mito\nAntes de la primera mañana no había estrellas ni fogones. Tampoco se distinguían las montañas, porque todavía no existía una forma contra la cual pudiera comenzar el cielo. Todo era noche.\n\nPero la oscuridad no estaba vacía.\n\nEn su interior permanecía Chiminigagua. La luz se encontraba recogida dentro de aquella presencia inmensa, guardada como el calor en una brasa que aún no ha recibido aire. Nada la veía. No había ojos. Nada la esperaba. No había tiempo para esperar.\n\nEntonces Chiminigagua empezó a abrirse.\n\nNo ocurrió de golpe. Primero apareció una claridad tenue, semejante a la que llega antes del amanecer y permite separar la piedra del agua. La luz creció desde adentro. A medida que avanzaba, la noche dejó de ocuparlo todo.\n\nChiminigagua creó unas aves grandes y negras. Sus plumas tenían el color de la oscuridad de la que acababan de salir. Eran las primeras criaturas capaces de atravesar aquel espacio sin caminos.\n\nLas aves levantaron vuelo.\n\nAl principio solo se escuchó el movimiento de sus alas. Después, de sus picos comenzó a salir un aliento luminoso. No era fuego ni humo. Era un aire claro que permanecía allí por donde pasaban.\n\nVolaron en todas las direcciones. Una cruzó el lugar donde más tarde se levantarían los montes. Otra descendió sobre las aguas aún sin nombre. Las demás siguieron hasta los extremos del mundo. Cada batir de alas apartaba un poco la sombra; cada respiración dejaba una franja encendida.\n\nDesde lejos, las aves negras parecían agujas cosiendo la claridad sobre la noche.\n\nCuando terminaron su recorrido, ya era posible ver. Aparecieron los bordes de las lagunas, las lomas frías y la tierra húmeda. El agua recibió el resplandor y lo devolvió. Las primeras hojas encontraron hacia dónde crecer.\n\nMucho después llegaron el sol y la luna para señalar los días, las noches y el paso de los meses. La luz, sin embargo, era más antigua que ambos. Había estado dentro de Chiminigagua antes de que existiera un cielo donde pudiera salir el sol.\n\nLas aves siguieron volando hasta confundirse con la distancia. Negras contra un mundo iluminado, llevaron en el cuerpo el recuerdo de la noche y en el aliento la primera mañana.\n\nHistoria\nLa versión explícita más temprana conocida aparece en la cuarta noticia de Pedro Simón, publicada en 1627. El cronista escribe que, cuando “era noche” y todavía no había mundo, la luz estaba contenida en una “cosa grande” llamada Chiminigagua. De allí salieron grandes aves negras que recorrieron el mundo expulsando por sus picos un aire luminoso. Simón equipara inmediatamente esa presencia con el Dios cristiano y descalifica aspectos de la narración; su registro conserva el núcleo, pero también muestra el filtro evangelizador con el que fue escrito.\n\nLa ficha heredada del sitio procedía de la compilación de Eugenia Villa Posse de 1993, que reproduce una elaboración publicada por Mariano Izquierdo Gallo en 1956. Esa versión añade explicaciones cristianas, comparaciones filosóficas y una seguridad doctrinal que no pertenecen al breve pasaje colonial. Esta revisión vuelve al movimiento esencial del mito: luz contenida, aves negras, aliento resplandeciente y formación de un mundo visible.\n\nFrançois Correa estudia este ciclo dentro de una simbología donde luz, sol, autoridad y orden social se relacionan sin ser términos idénticos. La investigación histórica contemporánea también advierte que “los muiscas” no formaban un imperio homogéneo. No conservamos una transcripción en lengua muisca ni el nombre de quienes comunicaron esta versión al cronista. Por eso hablamos de un relato documentado en el altiplano y no de un catecismo único compartido sin variación por todas las comunidades.\n\nVersiones\nEn Pedro Simón, Chiminigagua es el nombre de la gran entidad que contiene la luz antes del amanecer del mundo. Las primeras criaturas son aves negras; el aire que arrojan por los picos es luminoso y deja todo iluminado. El cronista añade que Chiminigagua creó lo demás, pero intenta traducirlo de inmediato a su propia teología.\n\nLas reelaboraciones del siglo XX suelen llamar a Chiminigagua “dios supremo”, describirlo como una divinidad incorpórea o identificarlo con el resplandor mismo. Algunas convierten a las aves en servidores simbólicos y desarrollan una doctrina completa sobre un bien que vence al mal. Esas lecturas pueden ser sugerentes, pero van más allá del pasaje temprano.\n\nOtro ciclo, atribuido a Sogamoso y Ramiriquí, cuenta que dos caciques hicieron figuras humanas y después se transformaron en sol y luna. No es una continuación automática de Chiminigagua. Esta ficha conserva separados el origen de la luz, la creación de los seres humanos y el origen de los dos luminares. Las grafías Chiminigagua y Chiminichagua aparecen en fuentes posteriores; aquí se mantiene la forma usada por Simón y por el título publicado.\n\nLección\nLa primera claridad no borra la oscuridad: viaja llevándola en las plumas. Esa imagen permite pensar la creación no como una victoria que elimina lo anterior, sino como una transformación en la que cada comienzo conserva memoria de aquello de donde salió.\n\nEl relato también separa la luz del sol. Antes de que existan los astros y los calendarios, ya existe la posibilidad de ver. Para una sociedad atenta a ciclos agrícolas, lagunas, amaneceres y movimientos celestes, esa distinción abre una pregunta profunda: ¿el mundo comienza cuando aparece o cuando alguien puede reconocerlo?\n\nLas aves no iluminan quedándose junto a Chiminigagua. Deben recorrer el espacio. La claridad se vuelve mundo mediante movimiento y distribución, una imagen que puede leerse —sin convertirla en doctrina— como vínculo entre creación, tarea y responsabilidad compartida.\n\nSimilitudes\nEl Popol Vuh k’iche’ comienza también en oscuridad y noche. Sus entidades creadoras deliberan y conciben la luz antes de que aparezca la humanidad. La resonancia está en un mundo pensado antes del amanecer; la diferencia es decisiva: allí la creación surge de la palabra y el acuerdo entre varias potencias, mientras que en Chiminigagua la claridad se dispersa mediante aves y aliento.\n\nEl primer capítulo del Génesis separa la aparición de la luz de la creación posterior del sol, la luna y las estrellas. Esa secuencia recuerda la antigüedad de la luz en el relato muisca. Sin embargo, Génesis organiza la creación en días y órdenes verbales; Chiminigagua la vuelve vuelo, respiración y recorrido.\n\nAlgunos relatos mesopotámicos conservados parten asimismo de un estado sin luz solar ni lunar, pero hacen surgir el orden mediante separaciones, genealogías o combates entre dioses. El mito muisca no necesita una batalla: su gesto propio consiste en que criaturas del color de la noche sean precisamente quienes llevan la claridad.",
-  "excerpt": "Antes del sol, la luz dormía en Chiminigagua. Unas aves negras la llevaron por el mundo en su aliento.",
-  "seo_title": "Chiminigagua: mito muisca de la luz",
-  "seo_description": "Lee el mito de Chiminigagua y las aves negras que llevaron la primera luz al mundo. Conoce sus versiones, significado y fuentes muiscas.",
-  "seo": {
-    "meta_title": "Chiminigagua: mito muisca de la luz",
-    "meta_description": "Lee el mito de Chiminigagua y las aves negras que llevaron la primera luz al mundo. Conoce sus versiones, significado y fuentes muiscas.",
-    "meta_keywords": "mito de Chiminigagua, Chiminigagua, mitología muisca, origen de la luz, aves negras, cosmogonía muisca, creación del mundo muisca",
-    "og_title": "Chiminigagua y las aves de la primera luz",
-    "og_description": "Una narración literaria del origen muisca de la luz, acompañada de contexto, variantes y ocho fuentes consultables.",
-    "twitter_title": "Chiminigagua: mito muisca de la luz",
-    "twitter_description": "Lee el mito de Chiminigagua y las aves negras que llevaron la primera luz al mundo. Conoce sus versiones, significado y fuentes muiscas.",
-    "canonical_path": "/mitos/chiminigagua"
-  },
-  "focus_keyword": "mito de Chiminigagua",
-  "focus_keywords": [
+export default defineMuiscaMyth({
+  slug: "chiminigagua",
+  title: "Chiminigagua",
+  tags: ["Chiminigagua", "aves negras", "cosmos", "creación", "luz"],
+  latitude: 5.5,
+  longitude: -73.5,
+  mito: `Antes de que hubiera mundo solo había noche, y dentro de la noche estaba encerrada la luz. La cosa que la guardaba era demasiado grande para ser vista y demasiado antigua para ser pensada; no se podía representar bajo ninguna forma sensible. Solo tenía nombre, porque todo lo que existe ha de tener uno: Chiminigagua.
+
+Adentro, la luz esperaba sin saber que esperaba. Nada la llamaba todavía: no había cielo que encender, ni agua que reflejarla, ni ojo que pudiera recibirla.
+
+Entonces Chiminigagua comenzó a amanecer. La luz no salió como sale el fuego de una hoguera ni como el agua de un manantial; se fue abriendo desde adentro, despacio, como se abre la claridad en la sierra antes del sol, cuando la piedra empieza a distinguirse del musgo. El mundo seguía siendo noche, pero la noche ya no estaba sola.
+
+En aquella primera luz, lo primero que Chiminigagua creó fueron unas aves grandes y negras. Eran negras porque estaban hechas de la noche que aún no terminaba, y grandes porque el mundo era inmenso y faltaba todo por recorrer. Les mandó que fueran por todas partes echando por el pico el aliento que llevaban dentro.
+
+Las aves se levantaron. Al inicio no se veía nada de ellas, porque el color de sus plumas era el color de todo lo que existía. Pero al abrir los picos les salió un aire que no era fuego ni humo: un aliento lúcido y resplandeciente que se quedaba flotando por donde pasaban. Una cruzó por donde más tarde se levantarían los montes. Otra bajó sobre las aguas que aún no tenían nombre. Las demás se repartieron el resto del mundo.
+
+Cada aliento dejaba una franja de claridad. El agua aprendió a devolverla. Las hojas aprendieron a buscarla. Las aves negras, del color de la noche, cosían la luz sobre lo oscuro, y lo oscuro se volvía piedra, montaña, laguna, pajonal.
+
+Cuando terminaron su recorrido, el mundo quedó claro e iluminado, como está ahora.
+
+Después Chiminigagua creó todo lo demás: las aguas, los vientos, las semillas, las bestias y las gentes que vendrían a habitarlo. Y de entre todas sus obras, las más hermosas fueron el sol y la luna, que subieron a lo alto para señalar los días, las noches y el paso de los meses. Pero la luz es más antigua que los dos: había estado dentro de Chiminigagua antes de que existiera un cielo que encender.
+
+Las aves negras no se fueron del mundo. En las madrugadas del altiplano, cuando todo es todavía silueta, se ve su vuelo pasar sobre las lagunas, y el aliento que van dejando franja a franja es el mismo que sacaron de su interior la primera vez.`,
+  historia: `La versión más temprana conocida está en la cuarta noticia de las Noticias historiales de fray Pedro Simón, publicada en 1627. En su capítulo segundo, el fraile recoge que los muiscas del Nuevo Reino, conservando sus memorias de gente en gente, decían que cuando era noche, antes de que hubiera nada del mundo, la luz estaba metida en una cosa grande llamada Chiminigagua; que aquella cosa comenzó a amanecer y mostrar la luz que en sí tenía; que lo primero creado fueron unas aves negras grandes, enviadas por todo el mundo a echar aliento o aire por los picos, lúcido y resplandeciente, hasta que todo quedó claro e iluminado como está ahora. Simón reconoce a este ser como omnipotente señor universal de todas las cosas y siempre bueno, pero corrige enseguida: sin advertir, dice, que es el sol el que da esa luz. Esa corrección muestra el doble valor del texto: conserva el núcleo mítico y registra el filtro evangelizador con el que fue escrito, que traduce la entidad a Dios y la enmarca en una discusión de monoteísmo.
+
+Simón anota que a Chiminigagua lo conocían por principio de la luz y de las demás cosas, y que gagua en su lengua era el sol por la luz que tiene. También testifica que no se le daba representación: los ídolos muiscas eran siempre macho y hembra, y solo a Chiminigagua se le nombraba solo, sin figura ni culto propio, porque siendo el sol y la luna las criaturas más lúcidas y hermosas, merecían más adoración.
+
+La compilación de Eugenia Villa Posse (1993) reproduce el pasaje y aclara su linaje editorial: la versión que circuló en el siglo XX procede de una reelaboración de Mariano Izquierdo Gallo (1956) que añade explicaciones doctrinales y comparaciones filosóficas ajenas al pasaje colonial. Villa Posse separa además dos áreas del altiplano: en la zona de Bacatá predomina el mito de Chiminigagua y las aves negras, y en la de Tunja el de los dos caciques que crean el sol y la luna.
+
+La lectura antropológica de François Correa (2004) estudia la relación entre luz, sol, ancestros y autoridad en la simbología muisca: el sol no es un término aislado sino parte de un lenguaje de poder y orden que los caciques invocaban. Por último, documentos contemporáneos como el Plan de vida del Cabildo Muisca de Bosa (2019) mantienen viva la cosmogonía y el vínculo con el territorio; esta ficha no les atribuye, sin embargo, una versión literal del episodio.`,
+  versiones: `El pasaje de Simón (1627) no fija el número de aves: habla de unas aves negras grandes enviadas a todo el mundo. La síntesis de Villa Posse (1993) convierte ese plural en dos grandes aves negras, y la divulgación institucional posterior repite la pareja. El relato de dos aves portadoras de la luz es la variante más extendida hoy, pero la fuente más temprana es deliberadamente indefinida.
+
+La salida de la luz también se cuenta de maneras distintas. En Simón la luz amanecía desde dentro de Chiminigagua y solo después nacen las aves que la reparten. Otras versiones condensan esa luz en los astros: el sol, la luna y el arco iris. El papel de sol y luna varía: en la crónica aparecen como las criaturas más hermosas y objeto de adoración; en el área de Tunja, el ciclo de los caciques de Sogamoso y Ramiriquí los hace surgir de dos hombres que ascienden al cielo.
+
+Chimizapagua es a veces un nombre de Bochica y a veces una entidad distinta. Simón dice que en el valle de Bogotá llamaban así al mensajero del Chiminigagua, aquel supremo dios a quien conocían por principio de la luz y de las demás cosas, porque gagua significa el sol por su luz. Por eso algunas tradiciones identifican a Chimizapagua con Bochica, el maestro que enseña a tejer, mientras otras lo leen como un intermediario del creador.
+
+Las grafías fluctúan en las fuentes: Chiminigagua, Chiminichagua, Chimizagagua, y Remichinchagagua para la proyección solar venerada en el Templo del Sol de Sogamoso, que Piedrahíta relaciona con el creador. Esta ficha conserva la forma de Simón y mantiene separados, sin fusionarlos, el origen de la luz, la creación de los humanos y el origen de los dos luminares.`,
+  leccion:
+    "Toda claridad viaja dentro de lo que parece oscuridad, porque la noche es su envoltura, no su contrario.",
+  similitudes: `El mismo corpus muisca conserva otro origen de la luz: en la zona de Tunja, los caciques de Sogamoso y Ramiriquí modelan humanos de arcilla y luego ascienden al cielo, donde el sobrino queda convertido en sol y su tío en luna (Villa Posse, 1993). La resonancia es clara: ambos relatos hacen nacer la claridad en el altiplano y la entienden como orden del mundo. La diferencia es de forma y de genealogía: allí la luz llega por dos varones que suben, emparentada con el poder de los cacicazgos; aquí viaja como aliento de aves, sin cuerpos humanos ni linaje. Villa Posse advierte además que, mientras los demás dioses muiscas se representaban siempre macho y hembra, Chiminigagua se nombra solo; algunas lecturas contemporáneas lo emparejan con un principio femenino, pero la fuente temprana no lo hace.
+
+En los Andes centrales, Viracocha emerge del lago Titicaca, crea el sol, la luna y las estrellas y ordena el mundo sin necesidad de combate (crónicas de Betanzos y Sarmiento de Gamboa). Resuena con Chiminigagua en un creador supremo asociado a la luz y al sol, como ya notaba Villa Posse al comparar el culto solar de muiscas, incas y aztecas; pero Viracocha camina, enseña y desaparece sobre el mar, con figura y viaje propios, mientras el creador muisca permanece inmóvil y sin forma, actuando solo por sus aves.
+
+El Popol Vuh k'iche' también comienza en oscuridad y silencio: el Corazón del Cielo delibera y la luz es pensada antes de que exista la humanidad (edición de Christenson, 2007). La diferencia es decisiva: allí se crea por la palabra y el acuerdo entre varias potencias; en Chiminigagua, por un aliento que se reparte volando.
+
+El Génesis abre con hágase la luz y separa la luz primera de la creación del sol, la luna y las estrellas, como hace el relato muisca al volver la luz más antigua que los astros. La diferencia: la luz bíblica nace de un mandato y se organiza en días; la muisca es materia que se distribuye en el vuelo.`,
+  excerpt:
+    "Antes del sol y la luna, la luz dormía encerrada en Chiminigagua y unas aves negras la llevaron por el mundo en su aliento.",
+  seoTitle: "Chiminigagua: el mito muisca del origen de la luz",
+  seoDescription:
+    "Antes del sol existía la luz dentro de Chiminigagua. Las aves negras la repartieron por el mundo. Historia, versiones y fuentes del mito muisca.",
+  ogTitle: "Chiminigagua, la luz que amaneció desde adentro",
+  ogDescription:
+    "La noche guardaba la luz en una cosa grande, y unas aves negras la repartieron por el mundo, aliento a aliento, antes del sol y de la luna.",
+  focusKeywords: [
     "mito de Chiminigagua",
     "Chiminigagua",
     "mitología muisca",
     "origen de la luz",
     "aves negras",
     "cosmogonía muisca",
-    "creación del mundo muisca"
+    "creación del mundo muisca",
   ],
-  "image_prompt": "Fotografía editorial horizontal 16:9 de una maqueta artesanal de papel cortado y fibras. Antes del amanecer, un paisaje del altiplano cundiboyacense emerge desde la oscuridad: lagunas, lomas frías y vegetación baja empiezan a recibir luz. Grandes aves negras vuelan desde una presencia luminosa sin forma humana; de sus picos sale un aire claro que ilumina el mundo en franjas suaves. Un solo tableau, relieve bajo, bordes de papel visibles, pequeñas imperfecciones manuales, negro profundo, azul nocturno y luz cálida contenida. Sin texto, sin figura de anciano europeo, sin coronas, templos inventados, oro ornamental, iconografía mesoamericana ni apariencia CGI.",
-  "image_prompt_horizontal": "Fotografía editorial horizontal 16:9 de una maqueta artesanal de papel cortado y fibras. Antes del amanecer, un paisaje del altiplano cundiboyacense emerge desde la oscuridad: lagunas, lomas frías y vegetación baja empiezan a recibir luz. Grandes aves negras vuelan desde una presencia luminosa sin forma humana; de sus picos sale un aire claro que ilumina el mundo en franjas suaves. Un solo tableau, relieve bajo, bordes de papel visibles, pequeñas imperfecciones manuales, negro profundo, azul nocturno y luz cálida contenida. Sin texto, sin figura de anciano europeo, sin coronas, templos inventados, oro ornamental, iconografía mesoamericana ni apariencia CGI.",
-  "image_prompt_vertical": "Fotografía editorial horizontal 16:9 de una maqueta artesanal de papel cortado y fibras. Antes del amanecer, un paisaje del altiplano cundiboyacense emerge desde la oscuridad: lagunas, lomas frías y vegetación baja empiezan a recibir luz. Grandes aves negras vuelan desde una presencia luminosa sin forma humana; de sus picos sale un aire claro que ilumina el mundo en franjas suaves. Un solo tableau, relieve bajo, bordes de papel visibles, pequeñas imperfecciones manuales, negro profundo, azul nocturno y luz cálida contenida. Sin texto, sin figura de anciano europeo, sin coronas, templos inventados, oro ornamental, iconografía mesoamericana ni apariencia CGI.",
-  "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/editorial/chiminigagua-73fd6d7b0b27.jpg",
-  "keySources": [
-    {
-      "title": "Noticias historiales de las conquistas de Tierra Firme en las Indias occidentales, tomo II",
-      "author": "Fray Pedro Simón",
-      "year": 1892,
-      "originalYear": 1627,
-      "type": "crónica colonial",
-      "url": "https://archive.org/details/tierrafirmeindias02simbrich",
-      "limitation": "Conserva testimonios tempranos, pero los interpreta desde una mirada evangelizadora y colonial.",
-      "summary": "Fija el núcleo temprano: luz contenida en Chiminigagua, creación de aves negras y aliento luminoso que recorre el mundo."
-    },
-    {
-      "title": "Mitos y leyendas de Colombia, vol. III: Mitos prehispánicos muiscas",
-      "author": "Eugenia Villa Posse, compiladora",
-      "year": 1993,
-      "type": "compilación editorial",
-      "url": "https://www.flacso.edu.ec/biblio/catalog/resGet.php?resId=44622",
-      "limitation": "Reúne versiones de autores de los siglos XIX y XX; no es una transcripción directa de tradición oral.",
-      "summary": "Identifica la versión original de la ficha heredada y permite separar la compilación de 1956 de la crónica de Simón."
-    },
-    {
-      "title": "El sol del poder: simbología y política entre los muiscas",
-      "author": "François Correa Rubio",
-      "year": 2004,
-      "type": "investigación antropológica",
-      "url": "https://books.google.com/books/about/El_sol_del_poder.html?id=OCyF3XmjprAC",
-      "limitation": "Interpreta el corpus documental disponible; no convierte las crónicas coloniales en una voz muisca transparente.",
-      "summary": "Sitúa luz, sol, ancestros y poder dentro de la simbología muisca sin reducirlos a equivalencias simples."
-    }
+  imagePrompt:
+    "Fotografía editorial horizontal 16:9 de una maqueta artesanal de papel cortado y fibras. Antes del amanecer, un paisaje del altiplano cundiboyacense emerge desde la oscuridad: lagunas, lomas frías y vegetación baja empiezan a recibir luz. Grandes aves negras vuelan desde una presencia luminosa sin forma humana; de sus picos sale un aire claro que ilumina el mundo en franjas suaves. Un solo tableau, relieve bajo, bordes de papel visibles, pequeñas imperfecciones manuales, negro profundo, azul nocturno y luz cálida contenida. Sin texto, sin figura de anciano europeo, sin coronas, templos inventados, oro ornamental, iconografía mesoamericana ni apariencia CGI.",
+  imageUrl:
+    "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/editorial/chiminigagua-73fd6d7b0b27.jpg",
+  sourceKeys: [
+    "simon",
+    "villa",
+    "correa",
+    "viracocha",
+    "popolVuh",
+    "piedrahita",
+    "planBosa",
+    "gamboaArqueologiaHistoria",
   ],
-  "sources": [
-    {
-      "title": "Los muiscas en los siglos XVI y XVII: miradas desde la arqueología y la historia",
-      "author": "Jorge Augusto Gamboa Mendoza, compilador",
-      "year": 2008,
-      "type": "investigación histórica y arqueológica",
-      "url": "https://ediciones.uniandes.edu.co/gpd-los-muiscas-en-los-siglos-xvi-y-xvii-miradas-desde-la-arqueologia-y-la-historia-9789586953481-67f86154e57c4.html",
-      "limitation": "Aporta contexto social e histórico y cuestiona modelos homogéneos; no es un catálogo de mitos.",
-      "summary": "Aporta el marco histórico y arqueológico para evitar presentar a las sociedades muiscas como un imperio uniforme."
-    },
-    {
-      "title": "Plan de vida de la comunidad indígena Muisca de Bosa",
-      "author": "Cabildo Indígena Muisca de Bosa",
-      "year": 2019,
-      "type": "memoria y planeación comunitaria",
-      "url": "https://historico.gobiernobogota.gov.co/sites/gobiernobogota.gov.co/files/control/plan_de_vida_muisca-transparencia.pdf",
-      "limitation": "Expresa una construcción comunitaria contemporánea; no debe proyectarse automáticamente al periodo prehispánico.",
-      "summary": "Incorpora una voz comunitaria contemporánea sobre cosmogonía, territorio y continuidad cultural."
-    },
-    {
-      "title": "Popol Vuh: Sacred Book of the Quiché Maya People",
-      "author": "Allen J. Christenson, traducción y notas",
-      "year": 2007,
-      "type": "texto mítico comparativo",
-      "url": "https://www.mesoweb.com/publications/Christenson/PopolVuh.pdf",
-      "limitation": "La comparación muestra una pregunta cosmogónica compartida; no implica contacto ni origen común con el relato muisca.",
-      "summary": "Documenta el paralelo k’iche’ de creación en la oscuridad y permite precisar sus diferencias con el vuelo luminoso."
-    },
-    {
-      "title": "Génesis 1: la luz y los cuerpos celestes",
-      "author": "Biblia hebrea, traducciones modernas",
-      "type": "texto mítico y religioso comparativo",
-      "url": "https://www.biblegateway.com/passage/?search=Genesis%201%3A1-19&version=NRSVUE",
-      "limitation": "Se usa como paralelo estructural y no como fuente del mito muisca ni como medida para interpretarlo.",
-      "summary": "Sustenta la comparación estructural entre una luz primordial y la aparición posterior de sol y luna."
-    },
-    {
-      "title": "Mesopotamian Creation Myths",
-      "author": "Ira Spar, The Metropolitan Museum of Art",
-      "year": 2009,
-      "type": "estudio comparativo de mitología",
-      "url": "https://www.metmuseum.org/essays/epic-of-creation-mesopotamia",
-      "limitation": "Resume varios textos mesopotámicos distintos; sus motivos no deben fundirse en una sola versión.",
-      "summary": "Contrasta el motivo de la oscuridad inicial con relatos mesopotámicos de separación y orden cósmico."
-    }
-  ],
-  "researchNotes": "ESTADO: primera revisión integral dentro del programa de mitos muiscas.\n\nUNIVERSO: mito cosmogónico sobre el origen de la luz. Se mantiene separado del ciclo antropogónico de Bachué, de la creación humana en Sogamoso y del origen del sol y la luna.\n\nNÚCLEO DOCUMENTADO: oscuridad anterior al mundo; luz contenida en Chiminigagua; aves grandes y negras; vuelo por el mundo; aliento o aire luminoso que sale de sus picos; iluminación general. Fuente principal: Pedro Simón, cuarta noticia, capítulo II.\n\nVARIANTES: las descripciones de Chiminigagua como “dios supremo”, entidad incorpórea o principio moral proceden de síntesis posteriores. Se conservan fuera del relato cuando no son necesarias para la acción.\n\nMEMORIA CONTEMPORÁNEA: el Plan de Vida de Bosa sustenta la vigencia de cosmogonía, territorio y transmisión comunitaria, pero no se usa para atribuirle una versión literal de este episodio.\n\nLECTURA EDITORIAL: la luz viaja en aves que conservan el color de la noche. La interpretación sobre memoria, distribución y responsabilidad es nuestra y no se presenta como doctrina muisca.\n\nDECISIÓN LITERARIA: relato autónomo, sin cronistas ni explicación de versiones. Se permiten paisaje frío, lagunas, montes y hojas como anclaje territorial compatible; no se añaden nombres, ceremonias ni discursos.\n\nGEOGRAFÍA: el mito no identifica un lugar único. Se conserva el punto heredado 5.5, -73.5 como referencia aproximada del altiplano cundiboyacense; no debe leerse como coordenada exacta de la creación.\n\nIMAGEN: la imagen publicada se conserva hasta inspección visual comparada. El nuevo prompt evita representar a Chiminigagua como un anciano europeo y concentra la escena en luz, aves y paisaje."
-},
-  methodologySeo: bachue.methodologySeo,
-};
+  researchNotes: `ESTADO: ficha reescrita dentro del programa editorial de mitos muiscas; núcleo verificado contra Simón (1627) y Villa Posse (1993).
 
-export default withMuiscaImagePrompts(editorialMyth);
+NÚCLEO DOCUMENTADO: Simón, cuarta noticia, capítulo II: cuando era noche, antes de que hubiera nada del mundo, la luz estaba metida en una cosa grande llamada Chiminigagua, que comenzó a amanecer y mostrar la luz que en sí tenía; lo primero creado fueron unas aves negras grandes que fueron por todo el mundo echando aliento o aire por los picos, lúcido y resplandeciente, y el mundo quedó claro e iluminado como está ahora. Luego creó todo lo demás; el sol y la luna, las criaturas más lúcidas y hermosas, merecían más adoración (Simón; Villa Posse).
+
+VARIANTES: número de aves indefinido en Simón, dos aves en la síntesis de Villa Posse y en la divulgación moderna; grafías Chiminigagua, Chiminichagua, Chimizagagua y Remichinchagagua (Sogamoso); Chimizapagua como mensajero, identificado a veces con Bochica; en el área de Tunja el ciclo de los dos caciques, mantenido separado.
+
+LICENCIA EDITORIAL: relato autónomo, sin cronistas ni teología comparada; paisaje del altiplano (lagunas, montes, pajonal) como anclaje territorial compatible; no se inventan nombres, ceremonias ni símbolos; el cierre, con las aves volando al amanecer, es imagen poética y no doctrina.
+
+DUDA: no hay transcripción en lengua muisca ni nombres de informantes; la crónica no declara si Chiminigagua creó a los primeros humanos; el monoteísmo atribuido a los muiscas es lectura de cronistas y compiladores, no dato étnico verificable.
+
+GEOGRAFÍA: el mito no identifica un lugar único; se conserva el punto 5.5, -73.5 como referencia aproximada del altiplano cundiboyacense, no como coordenada del suceso.
+
+REGISTRO LINGÜÍSTICO: español común contemporáneo de Colombia, sin arcaísmos peninsulares; narración en pasado de relato con presente de imagen, tono mítico por ritmo e imagen.`,
+});

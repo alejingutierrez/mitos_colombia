@@ -78,64 +78,50 @@ const sources = [
   },
 ];
 
-const mito = `Antes de que hubiera caminos en el altiplano, la laguna de Iguaque ya tenía orillas. Los frailejones recogían gotas en sus hojas, los venados doblaban la hierba al pasar y el viento bajaba frío entre las piedras. No se oían todavía voces humanas.
+const mito = `Antes del primer bohío, la laguna de Iguaque guardaba un silencio de agua fría. Los frailejones empapaban la niebla, el viento bajaba por la sierra y nadie había hollado aún los caminos del altiplano.
 
-Al amanecer, la superficie de la laguna se movió desde el centro. Primero apareció una mano. Luego, una mujer de cabello oscuro salió del agua con un niño sujeto a sus dedos. Él tendría unos tres años y apoyó los pies desnudos en la orilla como si acabara de aprender el peso de la tierra.
+Un amanecer, la superficie se abrió desde el centro. Salió una mujer de cabello oscuro, y de la mano traía a un niño de unos tres años, que apoyó los pies desnudos en la orilla como quien aprende a sostener el peso de la tierra. La llamaban Bachué, y también Farachogua, la mujer buena.
 
-La mujer se llamaba Bachué. También la llamaban Farachogua, la Mujer Buena.
+Bajaron juntos hasta el llano. Donde el frío aflojaba, levantaron una casa de barro y paja; encendieron fuego y el humo subió por primera vez sobre aquellos montes. El niño creció junto a ella. Cuando su voz se hizo grave, unieron sus vidas, y la casa se fue llenando.
 
-Los dos descendieron por la montaña. Caminaban despacio: el niño porque sus piernas eran cortas; Bachué porque miraba con atención el lugar al que habían llegado. En la parte menos fría de Iguaque levantaron una casa. Encendieron un fuego. El humo que salió del techo fue la primera señal humana sobre aquellos montes.
+Nacían cuatro hijos de un parto; en otro, seis. Dormían arropados en mantas, corrían tras el fuego, aprendían a escuchar el agua contra el barro. Y cuando la casa quedó chica, los padres tomaron el camino con la descendencia. Por laderas, valles y sabanas iban dejando familias y fogones. Los hijos tuvieron hijos; los senderos se encontraron; la tierra se llenó de nombres.
 
-Pasaron muchas lluvias. El niño creció, su voz se hizo grave y sus pasos alcanzaron los de Bachué. Cuando fue adulto, unieron sus vidas. La casa, que durante años había guardado solo dos respiraciones, empezó a llenarse.
+Bachué enseñaba a su gente que convivir cuesta más que construir. Medió disputas, sembró el consejo, recordó que nadie guarda el agua solo para sí. Pero no hay precepto que detenga la vejez. Un día el cabello de Bachué perdió el color y su compañero necesitó un bastón para subir la cuesta.
 
-Nacieron cuatro hijos en un parto; en otro, seis. Dormían donde hubiera un rincón tibio. Gateaban bajo las mantas, se perseguían alrededor del fuego y aprendían a reconocer el sonido del agua contra el barro. Después llegaron más.
+Reunieron a los hijos, a los hijos de los hijos y a todos los nacidos después. La multitud subió con ellos hasta Iguaque, y el camino de vuelta fue más lento que el primero. Junto al agua, Bachué se detuvo. Pidió paz, pidió memoria, pidió que cuidaran las leyes y el fuego de cada casa. —El agua es de todos —dijo—, como la memoria.
 
-Cuando ya no cupieron en una sola casa, Bachué y su compañero emprendieron camino con ellos. Cruzaron laderas, valles y sabanas. En cada lugar quedaba una familia y se encendía un fogón. Los hijos tuvieron hijos; los senderos se encontraron unos con otros; la tierra comenzó a llenarse de nombres.
+Entonces se despidió.
 
-Bachué enseñó a su descendencia que vivir juntos requería algo más difícil que construir casas. Escuchó disputas, puso límites y dejó preceptos para conservar la paz. Les recordó que una familia no prospera destruyendo la casa vecina y que nadie puede guardar el agua solo para sí.
+Lloraron los dos viejos y lloró la multitud. Bachué tomó la mano de su compañero y entraron al agua. El cuerpo se alargó en silencio; los brazos se recogieron; dos grandes serpientes nadaron una vuelta alrededor de la laguna y se hundieron. El agua se cerró detrás de ellas.
 
-Los años también alcanzaron a los primeros padres. El cabello de Bachué perdió su color y su compañero necesitó un bastón para subir las pendientes. Cuando comprendieron que su trabajo estaba cumplido, llamaron a sus hijos, a los hijos de sus hijos y a quienes habían nacido después.
+Nadie se movió de la orilla por un largo rato.
 
-La multitud los siguió hasta Iguaque. El camino de regreso fue más lento que el primero. Al llegar, Bachué se detuvo frente a la laguna. Pidió a todos que conservaran la paz, respetaran las leyes recibidas y cuidaran aquello que hacía posible la vida en común.
+Desde entonces, cuando la gente muisca mira a Iguaque, a veces ve una línea que cruza el agua sin que sople el viento. Dicen que es Bachué que vuelve a mirar a los suyos. Y quien lo sabe calla, porque la laguna no devuelve las palabras: guarda el primer nombre y el último silencio.`;
 
-Luego se despidió.
+const historia = `Las dos crónicas que conservan el relato son las Noticias historiales de Fray Pedro Simón, escritas en 1627, y la Historia de la provincia de San Antonino del Nuevo Reino de Granada, de Alonso de Zamora, publicada en 1701. Ambas sitúan la laguna en las sierras de Iguaque, a unas cuatro leguas de Tunja, un territorio frío y neblinoso de páramo que hoy corresponde al santuario de fauna y flora administrado por Parques Nacionales Naturales. Coinciden en la secuencia esencial: la mujer sale del agua con un niño de la mano, la casa, el crecimiento, la descendencia, la exhortación final y el regreso como serpientes.
 
-Lloraron quienes iban a quedarse y lloraron los dos ancianos. Bachué tomó la mano de su compañero y entraron juntos en el agua. El cambio ocurrió en silencio: sus cuerpos se alargaron, sus brazos se recogieron y sobre la superficie aparecieron dos grandes serpientes. Nadaron una vez alrededor de la laguna y se hundieron.
+Ninguna de las dos es una transcripción neutral. Simón y Zamora escriben décadas después de la invasión y desde una mirada evangelizadora: llaman "engaño" al relato, atribuyen al demonio las ofrendas y traducen categorías muiscas a términos de idolatría. La ficha los trata como fuentes históricas necesarias, no como autoridades únicas. Eugenia Villa Posse, en su compilación crítica de 1993, ordena el material, advierte cuándo una figura no constituye propiamente un mito y registra los cuatro nombres dados a la madre en las crónicas (Bachué, Furachogua, Labaque, Bacuche), mientras el consorte queda sin nombre.
 
-El agua se cerró detrás de ellos. Durante un largo rato, nadie se movió de la orilla.
+Sobre esa asimetría, Villa Posse propone una lectura de matriarcado. La investigación reciente invita a la cautela: la evidencia documental muestra grupos de parentesco con rasgos matrilineales, herencias y sucesiones que corren por línea materna, pero la matrilinealidad no equivale a un gobierno de mujeres ni a un "matriarcado" como sistema político. La centralidad de Bachué puede dialogar con el linaje materno sin explicar por sí sola toda la sociedad.
 
-Desde entonces se dice que Bachué puede aparecer donde su gente necesita recordarla. A veces no se ve una mujer ni una serpiente: solo una línea que cruza el agua cuando no sopla el viento. Quienes la reconocen miran hacia Iguaque y saben que allí no termina el camino. Allí comenzó la primera casa.`;
+Queda una voz contemporánea. Para la Comunidad Muisca de Bosa, madre Bachué sigue vinculada a la ley de origen y al cuidado del ser, la familia, la comunidad y el territorio. Esa memoria viva impide tratar el relato como una reliquia sin descendientes.`;
 
-const historia = `Las dos crónicas coloniales contrastadas son las Noticias historiales de Fray Pedro Simón, publicadas en 1627, y la Historia de la provincia de San Antonino de Alonso de Zamora, publicada en 1701. Coinciden en la secuencia esencial, pero fueron escritas mucho después de la invasión española y desde proyectos evangelizadores. Conservan nombres, lugares y acciones; no registran una voz muisca de manera neutral. Son fuentes históricas necesarias, no autoridades únicas.
+const versiones = `Simón narra el núcleo: la mujer que él llama Bachué o Farachogua, "mujer buena", saca del agua a un niño de unos tres años, bajan al llano, edifican casa, ella se une a él al llegar a la edad adulta, de cada parto nacen cuatro o seis hijos y la pareja recorre muchas partes dejando descendencia. Al final, vieja, exhorta a la paz y a la guarda de preceptos y leyes, se despide entre lágrimas y entra como culebra a la laguna. El mismo Simón añade que luego fue contada entre sus dioses y que fue amparo de las legumbres, con ofrendas de moque y resinas.
 
-La investigación reciente también corrige dos fórmulas comunes. Los pueblos que hoy agrupamos bajo el nombre muisca no formaban un imperio uniforme. Eran comunidades diversas, organizadas en grupos de parentesco y unidades políticas compuestas. Había transmisión matrilineal de pertenencias y cargos —a menudo de un hombre al hijo de su hermana—, pero eso no prueba un “matriarcado”. La centralidad de Bachué puede dialogar con el linaje materno sin explicar por sí sola toda la sociedad.
+Zamora, en 1701, la llama Bacuche, con el mismo sentido de "mujer buena". Mantiene el niño de tres años, los partos de cuatro o seis hijos, la plática a los descendientes y la entrada como culebras. También en su versión el compañero queda sin nombre.
 
-Iguaque aporta otra clave. La laguna está a 3.599 metros, en un territorio de páramo y bosque altoandino que regula y distribuye agua hacia poblaciones vecinas. El paisaje hace visible una necesidad material y social: la vida del altiplano depende del agua. El mito convierte esa dependencia en parentesco. La comunidad no solo bebe de la laguna; dice que viene de ella.
+Villa Posse agrupa las denominaciones de las crónicas en cuatro: Bachué o Bachúe, Furachogua, Labaque y Bacuche, todas aplicadas a la mujer. Advierte además que no consta que Bachué fuera madre del niño al sacarlo del agua. En las reelaboraciones literarias del siglo XIX y XX, la figura se amplía: Bachué enseña a tejer, a construir bohíos, a labrar la tierra, a trabajar el barro y los metales, y dicta preceptos morales y religiosos. Esas capas no aparecen en el núcleo de Simón o Zamora y se conservan como reelaboraciones identificadas, no como una versión única del mito.`;
 
-Desde una lectura antropológica, Bachué responde varias preguntas: de dónde venimos, qué debemos a los antepasados y cómo convivir en un territorio frágil. El regreso como serpientes enlaza nacimiento, muerte y renovación. Para la Comunidad Muisca de Bosa, Bachué sigue vinculada a la ley de origen y al cuidado del ser, la familia, la comunidad y el territorio. Esa voz contemporánea impide tratar el relato como una reliquia sin descendientes.`;
+const similitudes = `Dentro del mismo corpus muisca, el agua trabaja en dos direcciones. En Iguaque es origen; en la laguna de Guatavita es destino de ofrendas, como registra el propio Simón al describir sacrificios y ofrendas de oro en las aguas del altiplano. La resonancia es el agua como umbral entre lo humano y lo sagrado; la diferencia es de dirección: en Guatavita la gente entrega al agua, en Iguaque el agua entrega a la gente.
 
-const versiones = `En el núcleo narrado por Fray Pedro Simón, Bachué también recibe el nombre Farachogua, “mujer buena”. Sale de Iguaque con un niño de unos tres años; el pasaje no le asigna nombre. La pareja puebla la tierra, vuelve anciana a la laguna, exhorta a la paz y se transforma en dos grandes serpientes.
+En el Popol Vuh, la abuela Xmucané muele maíz para formar a los primeros seres y aconseja a los héroes k'iche'. Resuena con Bachué como figura femenina que da origen a la gente y le enseña a vivir. La diferencia: Xmucané trabaja materia, maíz y masa, dentro de una cosmogonía mesoamericana; Bachué no fabrica a los primeros hombres sino que los procrea, y emerge del agua para luego regresar a ella.
 
-Alonso de Zamora la llama Bacuche, con el mismo sentido de “mujer buena”. Escribe que ella sacó al niño de las aguas, lo crió y tuvo cuatro o seis hijos en cada parto. Al final, los dos reúnen a su descendencia, se despiden entre lágrimas y entran como serpientes en la laguna. Tampoco da nombre al compañero.
+También en los Andes, Viracocha aparece ligado al agua del Titicaca, ordena la creación, enseña y desaparece caminando sobre el mar. Comparte con Bachué el ciclo de aparecer, enseñar y partir, con el agua como escenario. Se separa en que Viracocha es un creador único que piensa y manda, mientras Bachué no crea el mundo: lo puebla y lo aconseja.
 
-Relatos posteriores amplían su papel: Bachué enseña a tejer, levantar casas, trabajar el barro, cultivar y transformar metales. Algunas versiones llaman al compañero Iguaque o Sugunsua. La Comunidad Muisca de Bosa la integra a una ley de origen centrada en el cuidado. Conservamos estas variantes como capas identificadas; no fingimos que todas aparecen en las dos crónicas.
-
-“Labaque” aparece en una síntesis del siglo XX entre los nombres atribuidos a la mujer, no como nombre del niño o del compañero. Los pasajes coloniales revisados directamente usan Bachué, Farachogua o Bacuche. Por eso retiramos “Labaque” del papel que ocupaba en la versión anterior de esta página.
-
-Una investigación arqueoastronómica de 2024 relaciona el mito con Iguaque, El Infiernito, la Vía Láctea, el Sol, las Pléyades y vasijas muiscas con serpientes. Es una hipótesis contemporánea, no una “versión secreta” ni un hecho demostrado.`;
-
-const similitudes = `Bachué pertenece a una familia amplia de relatos sobre parejas fundadoras. Comparar no significa afirmar que una cultura copió a otra.
-
-En la tradición inca narrada por el Inca Garcilaso, Manco Cápac y Mama Ocllo salen del lago Titicaca y fundan un orden social. También aquí una pareja aparece desde agua sagrada. Pero Bachué explica la descendencia del pueblo y regresa a la laguna; la pareja inca funda una ciudad y una dinastía entre poblaciones existentes.
-
-En las Metamorfosis de Ovidio, Deucalión y Pirra restauran la humanidad después de un diluvio: las piedras que arrojan se vuelven personas. La pareja garantiza la continuidad humana, pero el relato griego habla de supervivencia después de un castigo; Bachué habla de un comienzo.
-
-Izanagi e Izanami, en la tradición japonesa del Kojiki, forman las islas y engendran deidades. Comparten la imagen de una pareja primordial que une genealogía y geografía. Su historia organiza el archipiélago y el linaje divino japonés; Iguaque ancla el parentesco muisca en una laguna andina concreta.
-
-Las comparaciones muestran una pregunta humana recurrente: imaginar el origen como relación y no como acto solitario. Lo propio de Bachué es la forma de esa relación: agua de páramo, descendencia común, consejo de convivencia y retorno serpentino.`;
+En el Génesis, Eva recibe el título de "madre de todos los vivientes". La resonancia es la madre primordial como origen de un linaje entero. La diferencia es el marco: en el texto bíblico una divinidad forma a la pareja y el relato se ordena en torno al mandato y la falta; Bachué no recibe el ser de nadie y su despedida no es castigo sino regreso. Villa Posse apunta además el motivo de la mujer-serpiente madre de todos los hombres, que asoma en varias tradiciones del mundo; en Bachué la serpiente no tienta ni amenaza: es la forma del retorno, cuna y sepulcro a la vez.`;
 
 const leccion =
-  "Venimos de un mundo que nos sostiene: pertenecer exige cuidar el agua, la comunidad y la continuidad de la vida.";
+  "Lo que nace del agua vuelve al agua, y entre un abrazo y otro queda la vida entera.";
 
 const content = [
   ["Mito", mito],
@@ -151,17 +137,7 @@ const editorialMyth = {
   slug: "bachue",
   title: "Bachué",
   category_path: "Andina > Varios > Muiscas",
-  tags: [
-    "Bachué",
-    "agua",
-    "cosmogonía",
-    "creación",
-    "laguna",
-    "muiscas",
-    "origen del hombre",
-    "serpiente",
-    "transformación",
-  ],
+  tags: ["Bachué", "agua", "laguna", "muiscas", "serpiente"],
   latitude: 5.68728,
   longitude: -73.43681,
   mito,
@@ -171,22 +147,22 @@ const editorialMyth = {
   similitudes,
   content,
   excerpt:
-    "Una mujer y un niño salen de la laguna de Iguaque. Su descendencia llena el altiplano y ambos regresan al agua transformados en serpientes.",
-  seo_title: "Mito de Bachué: origen en Iguaque",
+    "Una mujer y un niño salen de la laguna de Iguaque, pueblan el altiplano y regresan al agua convertidos en serpientes.",
+  seo_title: "Mito de Bachué: madre del pueblo muisca",
   seo_description:
-    "Lee el mito de Bachué, madre del pueblo muisca: su aparición en la laguna de Iguaque, su descendencia y el regreso al agua como serpiente.",
+    "Bachué emerge de la laguna de Iguaque con un niño de la mano, enseña a su descendencia y vuelve al agua como serpiente. El origen del pueblo muisca.",
   seo: {
-    meta_title: "Mito de Bachué: origen en Iguaque",
+    meta_title: "Mito de Bachué: madre del pueblo muisca",
     meta_description:
-      "Lee el mito de Bachué, madre del pueblo muisca: su aparición en la laguna de Iguaque, su descendencia y el regreso al agua como serpiente.",
+      "Bachué emerge de la laguna de Iguaque con un niño de la mano, enseña a su descendencia y vuelve al agua como serpiente. El origen del pueblo muisca.",
     meta_keywords:
-      "mito de Bachué, leyenda de Bachué, Bachué, laguna de Iguaque, origen muisca, mitología muisca, pueblo muisca",
-    og_title: "Bachué: el relato del origen muisca",
+      "mito de Bachué, Bachué, laguna de Iguaque, leyenda de Bachué, origen del pueblo muisca, mitología muisca, madre Bachué, serpientes de Iguaque",
+    og_title: "Bachué, la madre que salió de la laguna",
     og_description:
-      "Bachué sale de la laguna de Iguaque, puebla el mundo muisca y regresa al agua como serpiente. Lee el relato y consulta sus fuentes.",
-    twitter_title: "Mito de Bachué: origen en Iguaque",
+      "Del agua nace la primera familia muisca; al agua vuelve convertida en serpiente. El relato, sus versiones y sus fuentes.",
+    twitter_title: "Mito de Bachué: madre del pueblo muisca",
     twitter_description:
-      "Una narración literaria del origen muisca, acompañada de contexto, versiones históricas y once fuentes consultables.",
+      "Bachué emerge de la laguna de Iguaque con un niño de la mano, enseña a su descendencia y vuelve al agua como serpiente.",
     canonical_path: "/mitos/bachue",
   },
   methodologySeo: {
@@ -211,9 +187,7 @@ const editorialMyth = {
     "leyenda de Bachué",
     "origen del pueblo muisca",
     "mitología muisca",
-    "pueblo muisca",
     "madre Bachué",
-    "Boyacá",
     "serpientes de Iguaque",
   ],
   image_prompt: `Fotografía editorial horizontal 16:9 de una maqueta artesanal hecha a mano con papel cortado, fibras y cartón, no una ilustración digital. Laguna de Iguaque entre páramo frío, montañas y neblina; Bachué, mujer adulta, emerge del agua y lleva de la mano a un niño pequeño. Vestuario sobrio de fibras tejidas, sin coronas ni fantasía europea. Dos formas de serpiente apenas insinuadas bajo el agua anticipan el retorno final. Composición frontal de un solo tableau, relieve bajo, bordes de papel visibles, pequeñas imperfecciones humanas, luz de estudio suave, verde páramo, azul profundo y tierra húmeda. Tratamiento respetuoso del pueblo muisca. Sin texto, sin logos, sin oro ornamental inventado, sin símbolos aztecas o mayas, sin aspecto CGI ni 3D renderizado.`,
@@ -223,21 +197,19 @@ const editorialMyth = {
     "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/bachue-1784765776300.jpg",
   keySources,
   sources,
-  researchNotes: `ESTADO: segunda revisión del piloto editorial, con relato literario separado de la discusión documental y con revisión histórica, académica, territorial, comparativa y de memoria comunitaria.
+  researchNotes: `ESTADO: tercera revisión del expediente de Bachué. Relato literario separado de la discusión documental; fuentes coloniales contrastadas con síntesis histórica, evidencia social, memoria comunitaria y comparaciones verificables.
 
-NÚCLEO DE ALTA CONFIANZA: Iguaque; Bachué/Farachogua o Bacuche; niño de unos tres años sin nombre en Simón ni Zamora; unión al llegar él a la adultez; descendencia múltiple; recorrido para poblar; regreso en la vejez; exhortación a paz y leyes; transformación de ambos en serpientes. Este núcleo coincide en Pedro Simón (1627) y Alonso de Zamora (1701).
+NÚCLEO DOCUMENTADO: salida de la laguna de Iguaque de una mujer (Bachué/Farachogua o Bacuche) con un niño de unos tres años de la mano; descenso al llano; casa; unión al llegar él a la adultez; partos de cuatro o seis hijos; recorrido poblando la tierra; regreso en la vejez; plática de paz y leyes; transformación de ambos en grandes serpientes que entran a la laguna. Coincide en Simón (1627) y Zamora (1701).
 
-CAPAS QUE NO SE FUSIONAN: la enseñanza detallada de tejido, bohíos, barro, agricultura y metales aparece en reelaboraciones posteriores y memoria comunitaria, no en el núcleo citado de Simón o Zamora. Los nombres Iguaque y Sugunsua pertenecen a versiones posteriores o contemporáneas. “Labaque” aparece en una síntesis del siglo XX como posible nombre de la mujer, pero no respalda el uso anterior como nombre del compañero.
+VARIANTES: Simón añade Farachogua ("mujer buena"), la aparición posterior entre sus dioses, el amparo de las legumbres y las ofrendas de moque y resinas. Zamora la llama Bacuche con el mismo sentido. Villa Posse agrupa cuatro denominaciones (Bachué, Furachogua, Labaque, Bacuche), advierte que no consta que Bachué fuera madre del niño y propone una lectura de matriarcado que la investigación reciente modera hacia rasgos matrilineales. Las enseñanzas de tejer, construir, cultivar y trabajar metales provienen de reelaboraciones posteriores, no del núcleo citado.
 
-CAUTELAS: Pedro Simón escribe desde una mirada colonial y evangelizadora. No describir al conjunto muisca como un imperio homogéneo. No convertir matrilinealidad en matriarcado. No presentar la propuesta arqueoastronómica de 2024 como hecho establecido.
+LICENCIA EDITORIAL: se usa la fecundidad múltiple y la enseñanza de convivencia como desarrollo literario compatible con el núcleo de Simón y Zamora, sin fusionar las variantes como una versión única. El agua se lee como origen, parentesco y retorno; es interpretación declarada, no doctrina muisca única. No se afirma matriarcado ni se presenta hipótesis arqueoastronómicas como hecho establecido.
 
-LECTURA EDITORIAL: el agua funciona como origen, parentesco, sustento territorial y lugar de retorno. La serpiente permite hablar de continuidad y transformación. Esta es una interpretación declarada, no una traducción literal de una doctrina muisca única.
+DUDA: el nombre del consorte no aparece en las crónicas; "Labaque" designa a la madre en Simón y en la síntesis de Villa Posse, no al compañero. No consta que Bachué fuera madre del niño al emerger.
 
-CRITERIO LITERARIO: el campo mito contiene solo la historia y no menciona fuentes, versiones, hipótesis ni historia de transmisión. Usa escenas concretas, verbos claros, detalles sensoriales propios del páramo y espacio para que el lector complete la emoción. La fantasía se concentra en la salida del agua, la fecundidad extraordinaria y la transformación final; la realidad que la sostiene es Iguaque, su clima, el descenso, la casa, los fogones y la convivencia.
+GEOGRAFÍA: laguna de Iguaque, serranías al noreste de Tunja, Boyacá; coordenadas oficiales de Parques Nacionales Naturales: 5.68728, -73.43681.
 
-DECISIONES DE DATOS: se conserva la categoría existente Andina > Varios > Muiscas porque no existe una categoría Boyacá > Muiscas y no se crearán taxonomías nuevas. Se reemplaza la etiqueta fertilidad por etiquetas existentes más precisas: cosmogonía, laguna, muiscas, serpiente y transformación.
-
-GEOGRAFÍA: la coordenada se corrige al punto oficial publicado por Parques Nacionales para la laguna: 5°41'14.2"N, 73°26'12.5"W, expresado como 5.68728, -73.43681. La imagen horizontal ya existe y se conserva.`,
+REGISTRO LINGÜÍSTICO: español contemporáneo neutro para Colombia; sin arcaísmos de crónica del XVII; léxico del altiplano (bohío, laguna, niebla, mantas) solo donde la fuente lo respalda; el campo mito mantiene la narración pura, sin fuentes ni fechas.`,
 };
 
 export default withMuiscaImagePrompts(editorialMyth);
