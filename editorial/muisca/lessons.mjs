@@ -1,8 +1,8 @@
 export const muiscaLessons = {
   bachue:
-    "Quien da origen a una comunidad también debe aprender a dejarla continuar sin su presencia.",
+    "Lo que nace del agua vuelve al agua, y entre un abrazo y otro queda la vida entera.",
   bochica:
-    "El saber solo se vuelve fecundo cuando puede dejar de pertenecer a quien lo enseña.",
+    "Todo maestro termina por desaparecer, pero la huella de lo aprendido sigue abriendo camino.",
   "campos-eliseos":
     "La muerte cambia la forma de los vínculos, no necesariamente su peso.",
   chaquon:
@@ -10,9 +10,9 @@ export const muiscaLessons = {
   chia:
     "Madurar también consiste en saber cuándo ocupar espacio y cuándo devolverlo.",
   chibchacum:
-    "Todo poder termina cargando, de un modo u otro, el peso de sus actos.",
+    "Todo poder termina cargando el peso de sus actos, y hasta los hombros divinos se cansan de sostener lo que provocaron.",
   chiminigagua:
-    "La claridad no elimina la sombra: aprende a viajar con ella.",
+    "Toda claridad viaja dentro de lo que parece oscuridad, porque la noche es su envoltura, no su contrario.",
   "creacion-muiscas":
     "Habitar el mundo no es poseerlo, sino aprender a continuarlo.",
   cuchavira:
@@ -32,7 +32,7 @@ export const muiscaLessons = {
   "el-primero-de-los-reyes":
     "La autoridad también está hecha de relatos, y todo relato puede ser examinado.",
   "el-sol-y-la-luna":
-    "Dos luces distintas pueden sostener juntas un mismo mundo.",
+    "La noche no es el fracaso del día, sino la otra mitad de la misma luz.",
   "el-tequendama":
     "La fuerza que inunda y la que alimenta son la misma; solo cambia el cauce que se le abre.",
   "en-el-principio-fue-el-maiz":
@@ -40,7 +40,7 @@ export const muiscaLessons = {
   "fu-el-dios-de-la-torpeza":
     "Equivocarse puede abrir una posibilidad, pero no cancela la responsabilidad.",
   huitaca:
-    "Una vida sin alegría también puede ser una forma de desorden.",
+    "Todo orden guarda lo que la fiesta derrama, y toda fiesta celebra lo que el orden protege.",
   hunzahua:
     "El deseo no se vuelve justo por venir acompañado de poder.",
   idacanzas:
