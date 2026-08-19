@@ -1,131 +1,89 @@
-import bachue from "../../myths/bachue.mjs";
-import { withMuiscaImagePrompts } from "../image-prompts.mjs";
+import { defineMuiscaMyth } from "../define-editorial-myth.mjs";
 
-const editorialMyth = {
-  ...{
-  "slug": "cuchavira",
-  "title": "Cuchavira, el aire resplandeciente",
-  "category_path": "Andina > Varios > Muiscas",
-  "tags": [
-    "diluvio",
-    "cuchavira",
-    "renovación",
-    "protección",
-    "muiscas"
-  ],
-  "latitude": 4.570868,
-  "longitude": -74.297333,
-  "mito": "Después de la gran inundación, la lluvia dejó de golpear los techos de la sabana.\n\nLas nubes se abrieron despacio. Una franja de sol atravesó el aire todavía lleno de gotas y, sobre las tierras anegadas, apareció un arco de colores.\n\nEra Cuchavira.\n\nLa gente salió de los refugios en las lomas. Nadie sabía aún cuánto había sobrevivido. Desde arriba, el arco unía dos puntos lejanos de la sabana y se reflejaba en el agua que comenzaba a retirarse.\n\nUna mujer que esperaba un hijo se detuvo a mirarlo. Había pasado la noche escuchando crecer los ríos y temiendo que el camino de regreso desapareciera. A su lado, un hombre con fiebre levantó la cabeza después de varios días sin fuerzas.\n\nNo vieron un rostro ni escucharon una voz. Cuchavira era el aire resplandeciente: luz y agua ocupando por un momento el mismo lugar.\n\nAlgunas personas ofrecieron pequeñas piedras verdes y cuentas. Otras guardaron silencio. El arco no permaneció. Sus colores se hicieron cada vez más tenues hasta confundirse con el cielo.\n\nPero mientras estuvo allí, permitió mirar la sabana de otra manera. El agua seguía cubriendo los campos, aunque ya no subía. La peña del Tequendama estaba abierta y el río corría hacia ella. Había casas destruidas, pero también semillas secas dentro de una vasija. Había cansancio, pero la mujer seguía esperando a su hijo y el enfermo pudo ponerse en pie.\n\nLos habitantes bajaron cuando el terreno fue seguro. Volvieron a marcar caminos y a limpiar los surcos.\n\nDesde entonces, cada vez que la lluvia y el sol se encuentran sobre la sabana, Cuchavira aparece sin quedarse. Quienes levantan la vista recuerdan que la claridad puede nacer del mismo aire que hace un momento estaba oscuro, y que una señal breve basta a veces para comenzar el regreso.",
-  "historia": "Pedro Simón define a Cuchavira como “aire resplandeciente” o arco del cielo. Lo vincula con el episodio del Tequendama: cuando la sabana está inundada, Bochica aparece en la clave de un arco formado por el sol y la humedad. El mismo cronista registra ofrendas y temor asociados a la aparición del fenómeno.\n\nAutores posteriores presentan a Cuchavira como deidad protectora de mujeres en parto y personas con calentura. Esos atributos se conservaron en la ficha heredada, pero no constituyen una narración completa. La nueva versión construye una escena mínima después de la inundación para unir, sin convertirlos en hechos históricos, los tres elementos documentados: arco, parto y fiebre.\n\nLa historia evita personificar el arco como un hombre coronado o una figura con poderes hablados. La formulación “aire resplandeciente” permite una fantasía anclada en la realidad física del altiplano: sol, lluvia y punto de observación producen una presencia visible que dura poco.\n\nEl Museo del Oro documenta que las ofrendas muiscas materializaban relaciones con fuerzas y lugares, no simples pagos comerciales a “dioses”. Esa perspectiva ayuda a entender las piedras y cuentas sin inventar una ceremonia específica ni un significado único para cada objeto. El Plan de Vida de Bosa aporta continuidad territorial contemporánea, pero no se usa como testimonio de este rito colonialmente registrado. La distancia entre ambas épocas queda explícita.",
-  "versiones": "En la crónica de Pedro Simón, Cuchavira puede nombrar el arco mismo o el aire luminoso. Su aparición después de la inundación provoca ofrendas, pero también miedo porque Chibchacum habría anunciado muertes cuando se mostrara el arco.\n\nLas síntesis de los siglos XIX y XX suavizan el temor y destacan a Cuchavira como protector de parturientas y enfermos con fiebre. Algunas lo convierten en mensajero de Bochica o en símbolo inequívoco de reconciliación. Esas funciones no deben fundirse como si provinieran de un solo discurso.\n\nEsta versión conserva la ambivalencia mediante una escena de recuperación: el arco no promete que todo estará bien ni habla desde el cielo. Su presencia permite reconocer simultáneamente daño y posibilidad. La mujer embarazada y el enfermo representan atributos registrados; no son personajes transmitidos por las fuentes ni portadores de nombres inventados.\n\nTampoco se identifica automáticamente a Cuchavira con Bochica. En unas síntesis el arco funciona como manifestación o soporte de la aparición de Bochica; en otras, recibe nombre, atributos y ofrendas propios. Mantener esa distancia evita transformar una ambigüedad documental en una genealogía segura.",
-  "leccion": "Cuchavira dura poco. Su valor no está en detener el tiempo, sino en aparecer justo cuando lluvia y luz coinciden. El mito enseña a reconocer señales sin exigirles que resuelvan por sí solas el peligro.\n\nDespués del arco, la comunidad debe bajar, limpiar y sembrar. La esperanza no sustituye el trabajo; lo vuelve imaginable. También recuerda que una misma aparición puede producir consuelo y temor, porque los seres humanos leen el cielo desde necesidades distintas.",
-  "similitudes": "Iris personifica el arco iris en la tradición griega y sirve como mensajera entre dioses y seres humanos. Cuchavira comparte el fenómeno visible, pero en las fuentes muiscas no necesita llevar un mensaje verbal: puede ser el propio aire resplandeciente y recibir ofrendas ligadas a salud, parto y temor.\n\nEl arco posterior al diluvio bíblico funciona como señal duradera de una alianza. En Tequendama, el arco acompaña la intervención de Bochica y aparece sobre una geografía concreta; no promete que nunca volverá a llover ni establece un pacto universal.\n\nEn muchas cosmogonías, los fenómenos celestes se convierten en figuras estables con genealogías y cuerpos. Cuchavira resiste esa fijación. Su rasgo singular es la fugacidad: solo existe a la vista cuando agua, luz y observador se alinean. La comparación permite comprender por qué este mito puede ser profundamente fantástico sin separarse del clima cotidiano de la sabana ni de la experiencia de quien lo mira.",
-  "content": "Mito\nDespués de la gran inundación, la lluvia dejó de golpear los techos de la sabana.\n\nLas nubes se abrieron despacio. Una franja de sol atravesó el aire todavía lleno de gotas y, sobre las tierras anegadas, apareció un arco de colores.\n\nEra Cuchavira.\n\nLa gente salió de los refugios en las lomas. Nadie sabía aún cuánto había sobrevivido. Desde arriba, el arco unía dos puntos lejanos de la sabana y se reflejaba en el agua que comenzaba a retirarse.\n\nUna mujer que esperaba un hijo se detuvo a mirarlo. Había pasado la noche escuchando crecer los ríos y temiendo que el camino de regreso desapareciera. A su lado, un hombre con fiebre levantó la cabeza después de varios días sin fuerzas.\n\nNo vieron un rostro ni escucharon una voz. Cuchavira era el aire resplandeciente: luz y agua ocupando por un momento el mismo lugar.\n\nAlgunas personas ofrecieron pequeñas piedras verdes y cuentas. Otras guardaron silencio. El arco no permaneció. Sus colores se hicieron cada vez más tenues hasta confundirse con el cielo.\n\nPero mientras estuvo allí, permitió mirar la sabana de otra manera. El agua seguía cubriendo los campos, aunque ya no subía. La peña del Tequendama estaba abierta y el río corría hacia ella. Había casas destruidas, pero también semillas secas dentro de una vasija. Había cansancio, pero la mujer seguía esperando a su hijo y el enfermo pudo ponerse en pie.\n\nLos habitantes bajaron cuando el terreno fue seguro. Volvieron a marcar caminos y a limpiar los surcos.\n\nDesde entonces, cada vez que la lluvia y el sol se encuentran sobre la sabana, Cuchavira aparece sin quedarse. Quienes levantan la vista recuerdan que la claridad puede nacer del mismo aire que hace un momento estaba oscuro, y que una señal breve basta a veces para comenzar el regreso.\n\nHistoria\nPedro Simón define a Cuchavira como “aire resplandeciente” o arco del cielo. Lo vincula con el episodio del Tequendama: cuando la sabana está inundada, Bochica aparece en la clave de un arco formado por el sol y la humedad. El mismo cronista registra ofrendas y temor asociados a la aparición del fenómeno.\n\nAutores posteriores presentan a Cuchavira como deidad protectora de mujeres en parto y personas con calentura. Esos atributos se conservaron en la ficha heredada, pero no constituyen una narración completa. La nueva versión construye una escena mínima después de la inundación para unir, sin convertirlos en hechos históricos, los tres elementos documentados: arco, parto y fiebre.\n\nLa historia evita personificar el arco como un hombre coronado o una figura con poderes hablados. La formulación “aire resplandeciente” permite una fantasía anclada en la realidad física del altiplano: sol, lluvia y punto de observación producen una presencia visible que dura poco.\n\nEl Museo del Oro documenta que las ofrendas muiscas materializaban relaciones con fuerzas y lugares, no simples pagos comerciales a “dioses”. Esa perspectiva ayuda a entender las piedras y cuentas sin inventar una ceremonia específica ni un significado único para cada objeto. El Plan de Vida de Bosa aporta continuidad territorial contemporánea, pero no se usa como testimonio de este rito colonialmente registrado. La distancia entre ambas épocas queda explícita.\n\nVersiones\nEn la crónica de Pedro Simón, Cuchavira puede nombrar el arco mismo o el aire luminoso. Su aparición después de la inundación provoca ofrendas, pero también miedo porque Chibchacum habría anunciado muertes cuando se mostrara el arco.\n\nLas síntesis de los siglos XIX y XX suavizan el temor y destacan a Cuchavira como protector de parturientas y enfermos con fiebre. Algunas lo convierten en mensajero de Bochica o en símbolo inequívoco de reconciliación. Esas funciones no deben fundirse como si provinieran de un solo discurso.\n\nEsta versión conserva la ambivalencia mediante una escena de recuperación: el arco no promete que todo estará bien ni habla desde el cielo. Su presencia permite reconocer simultáneamente daño y posibilidad. La mujer embarazada y el enfermo representan atributos registrados; no son personajes transmitidos por las fuentes ni portadores de nombres inventados.\n\nTampoco se identifica automáticamente a Cuchavira con Bochica. En unas síntesis el arco funciona como manifestación o soporte de la aparición de Bochica; en otras, recibe nombre, atributos y ofrendas propios. Mantener esa distancia evita transformar una ambigüedad documental en una genealogía segura.\n\nLección\nCuchavira dura poco. Su valor no está en detener el tiempo, sino en aparecer justo cuando lluvia y luz coinciden. El mito enseña a reconocer señales sin exigirles que resuelvan por sí solas el peligro.\n\nDespués del arco, la comunidad debe bajar, limpiar y sembrar. La esperanza no sustituye el trabajo; lo vuelve imaginable. También recuerda que una misma aparición puede producir consuelo y temor, porque los seres humanos leen el cielo desde necesidades distintas.\n\nSimilitudes\nIris personifica el arco iris en la tradición griega y sirve como mensajera entre dioses y seres humanos. Cuchavira comparte el fenómeno visible, pero en las fuentes muiscas no necesita llevar un mensaje verbal: puede ser el propio aire resplandeciente y recibir ofrendas ligadas a salud, parto y temor.\n\nEl arco posterior al diluvio bíblico funciona como señal duradera de una alianza. En Tequendama, el arco acompaña la intervención de Bochica y aparece sobre una geografía concreta; no promete que nunca volverá a llover ni establece un pacto universal.\n\nEn muchas cosmogonías, los fenómenos celestes se convierten en figuras estables con genealogías y cuerpos. Cuchavira resiste esa fijación. Su rasgo singular es la fugacidad: solo existe a la vista cuando agua, luz y observador se alinean. La comparación permite comprender por qué este mito puede ser profundamente fantástico sin separarse del clima cotidiano de la sabana ni de la experiencia de quien lo mira.",
-  "excerpt": "Tras la inundación, un arco apareció sobre la sabana. Cuchavira duró poco, pero hizo imaginable el regreso.",
-  "seo_title": "Cuchavira: mito muisca del arco iris",
-  "seo_description": "Conoce a Cuchavira, el aire resplandeciente de la tradición muisca: su relación con Tequendama, el parto, la salud y las ofrendas.",
-  "seo": {
-    "meta_title": "Cuchavira: mito muisca del arco iris",
-    "meta_description": "Conoce a Cuchavira, el aire resplandeciente de la tradición muisca: su relación con Tequendama, el parto, la salud y las ofrendas.",
-    "meta_keywords": "mito de Cuchavira, Cuchavira, arco iris muisca, mitología muisca, Tequendama, aire resplandeciente, dios muisca del arco iris",
-    "og_title": "Cuchavira: una señal breve sobre la sabana",
-    "og_description": "El mito muisca del arco iris contado como una aparición fugaz entre la lluvia, la luz y el regreso.",
-    "twitter_title": "Cuchavira: mito muisca del arco iris",
-    "twitter_description": "Conoce a Cuchavira, el aire resplandeciente de la tradición muisca: su relación con Tequendama, el parto, la salud y las ofrendas.",
-    "canonical_path": "/mitos/cuchavira"
-  },
-  "focus_keyword": "mito de Cuchavira",
-  "focus_keywords": [
+export default defineMuiscaMyth({
+  slug: "cuchavira",
+  title: "Cuchavira, el aire resplandeciente",
+  tags: ["diluvio", "cuchavira", "arco iris", "protección", "muiscas"],
+  latitude: 4.570868,
+  longitude: -74.297333,
+  mito: `Cuando la sabana se llenó de agua, nadie supo cuánto iba a durar. Los ríos de Sopó y de Chocontá crecieron, las lagunas se juntaron con ellos y el valle dejó de tener caminos. El agua no hallaba salida: por el suroeste las peñas la encerraban, y cada invierno la devolvían hacia adentro, sobre los sembrados y los bohíos. La gente subió a las lomas y miró crecer el agua.
+
+Una tarde, la lluvia aflojó. El sol reverberó en el aire cargado de gotas y, sobre el valle anegado, se tendió un arco de colores, como suelen hacerse cuando el agua y la luz se encuentran. Desde lo más alto del arco vino una voz. Dijo que había oído los ruegos, que no quitaría los ríos porque en los tiempos secos los habrían menester, y que abriría la sierra por donde salieran las aguas. Arrojó una vara de oro hacia el Tequendama, la vara partió las peñas y el agua bajó con un estruendo que se oyó hasta las lomas más lejanas.
+
+La tierra quedó libre para sembrar.
+
+Desde entonces, el arco del cielo, el aire resplandeciente, quedó como abogado de las mujeres de parto y de los enfermos de calenturas. Las preñadas le ofrecían sus cintillos y figuras de oro bajo para tener buen parto. Otros le ofrecían cuentas traídas de la costa y esmeraldinas de los cerros. No todos se alegraban al verlo: hubo quien bajó la vista, porque un arco también puede anunciar desgracia.
+
+Cerca del agua que aún se retiraba, una mujer que iba a parir apretó en la mano una esmeraldina y levantó los ojos. A su lado, un hombre con calenturas que no le daban reposo pidió por el arco, como piden los enfermos a quien no puede quedarse. No vieron un rostro. El arco no tiene rostro: es el aire mismo volviéndose luz mientras dura el agua en el aire. Pero al verlo, la mujer respiró despacio y el enfermo supo que su fiebre tenía un final, aunque no supiera cuándo.
+
+El arco no se queda. Sus colores se van apagando, uno tras otro, hasta que solo queda el valle mojado y el sol que vuelve. Y cada vez que la lluvia termina y la luz la atraviesa, la señal se repite sobre la sabana: breve, entera, en el punto exacto donde el agua se despide.`,
+  historia: `Pedro Simón (1627, tomo II, noticia cuarta) es la fuente inicial. Registra "otro dios que llamaban Cucha viva, que decían era el aire resplandeciente o, como mejor interpretan otros, el arco del cielo": un ser del panteón, universal, pero tenido "más en particular por abogado de las mujeres de parto y enfermos de calenturas". Las preñadas le ofrecían cintillos y figuras de oro bajo para tener buen parto; lo ordinario eran esmeraldinas y cuentas de Santa Marta. El arco no compite con Chibchachum ni con Bochica, que respondían oráculos y exigían oro: es un ser fenoménico, ligado a la salud y al parto, y se le ofrenda metal bajo y piedras pequeñas.
+
+El episodio del Tequendama lo fija en el paisaje. Ofendido, Chibchachum creó los ríos de Sopó y Tivitó e inundó la sabana; el pueblo acudió a Bochica. Una tarde, "reverberando el sol en el aire", se hizo un arco y en su clave se apareció Bochica con una vara de oro, que arrojó hacia el Tequendama y abrió las peñas. Quedó instituido que, en apareciendo el arco, se debía adorar y sacrificar, aunque "llenos de temores": Chibchacum amenazó con que morirían muchos en apareciéndose.
+
+La cautela es obligatoria: Simón interpreta la escena como obra del demonio, "mona de Dios", parodia del pacto de Noé. Esa lente evangelizadora conserva detalles con desprecio; el testimonio es indirecto y teológico, y sin embargo es todo el registro temprano.
+
+Lectura cultural: en el altiplano el arco nace del invierno mismo —los anegadizos de Bosa, Hontibón y Bogotá— y aparece cuando las aguas empiezan a ceder. Es el signo de tránsito entre la tormenta y la bonanza: por eso la adoración "en apareciendo el arco". Villa Posse (1993) mantiene la lectura: dios y abogado a la vez, con los colores coronando el Salto de Tequendama.`,
+  versiones: `La transmisión arranca en Simón, que escribe el nombre en dos formas: "Cucha viva" y "Cuchaviva". Las síntesis modernas fijan "Cuchavira"; algunas tradiciones de divulgación transcriben "Cuhuzafiba". No circula un relato autónomo con trama: lo que llega es un haz de atributos y una escena del Tequendama.
+
+Variante 1 — dios universal o abogado: Simón lo da como dios universal con abogacía particular de parturientas y enfermos de calenturas; Villa Posse refuerza la doble condición ("no solamente el dios del arco iris, sino también el abogado"). Algunas síntesis posteriores lo reducen a protector de partos y fiebres, y otras lo elevan a mensajero de Bochica, atribución que las fuentes tempranas no sostienen.
+
+Variante 2 — el temor: Chibchacum, vencido, "les puso" que habían de morir muchos en apareciéndose el arco, lo que explica las ofrendas obligadas y los temores. Varias versiones modernas borran la amenaza y vuelven el arco señal de reconciliación.
+
+Variante 3 — la corona del salto: Villa Posse sitúa a Bochica "en lo más alto del arco iris, cuyos colores coronaron el Salto de Tequendama", localización plástica de la escena que Simón describe como arco sobre la sierra con la aparición en su clave.
+
+Esta ficha no fusiona: mantiene la distancia entre el arco como ser propio (abogacía y ofrendas) y el arco como soporte de la aparición de Bochica, y conserva la ambivalencia entre consuelo y amenaza que las fuentes registran.`,
+  leccion:
+    "El arco no abre el cielo: enseña el punto exacto donde la tormenta termina.",
+  similitudes: `En el mismo corpus muisca, el arco pertenece al desagüe del Tequendama: Bochica aparece en su clave y arroja la vara de oro que parte las peñas, y el culto queda "en apareciendo el arco". La relación agua-arco es de origen: los anegadizos de la sabana (Bosa, Hontibón, Bogotá) producen el fenómeno que anuncia la salida del agua. A diferencia de otras figuras del panteón muisca, Cuchavira no tiene cuerpo, templo propio ni descendencia: es el clima del altiplano vuelto abogado.
+
+Simón mismo anota, citando a Acosta, que en el Perú el arco era insignia imperial del Inca, con dos culebras que se tocaban las cabezas en el centro: allí es emblema de soberanía, no protector de parturientas. En los Andes quechuas y aymaras el arco (kuychi) se trata después con cautela, pues su luz puede dañar o marcar: un eco del temor que Chibchacum sembró sobre el arco muisca. En Mesoamérica, en cambio, el agua y la lluvia tienen deidades estables con nombres y funciones fijas (Tláloc, Chalchiuhtlicue), mientras Cuchavira no personifica una fuerza: existe solo mientras duran el agua y el sol.
+
+El arco del Génesis es señal de pacto y promete que el diluvio no volverá; el de Cuchavira no pacta: acompaña la salida del agua y puede a la vez anunciar muerte. Es el arco bíblico invertido: no garantiza, transita. El puente Bifröst nórdico une los mundos para que los dioses crucen; el arco muisca une dos momentos del año —la tormenta y la siembra— para que la gente del valle regrese. Cada paralelo ilumina lo propio: el arco muisca no habla por sí mismo, no pacta y no se queda; solo señala.`,
+  excerpt:
+    "Cuchavira, el aire resplandeciente: el dios muisca del arco iris, abogado de las mujeres de parto y los enfermos de calenturas, ligado a la apertura del Tequendama.",
+  seoTitle: "Cuchavira: el dios muisca del arco iris y el parto",
+  seoDescription:
+    "Cuchavira, el aire resplandeciente: el dios muisca del arco del cielo, abogado de parturientas y enfermos de calenturas, y su vínculo con el Tequendama.",
+  ogTitle: "Cuchavira: la luz que tiende un arco entre la lluvia y el regreso",
+  ogDescription:
+    "El mito muisca del arco del cielo: mujeres de parto, calenturas, esmeraldinas y un arco que aparece cuando el agua se va.",
+  focusKeywords: [
     "mito de Cuchavira",
     "Cuchavira",
     "arco iris muisca",
     "mitología muisca",
-    "Tequendama",
-    "aire resplandeciente",
-    "dios muisca del arco iris"
+    "dios del arco iris muisca",
+    "mujeres de parto en la mitología muisca",
+    "Bochica y el Tequendama",
   ],
-  "image_prompt": "Fotografía editorial horizontal 16:9 de una maqueta artesanal de papel cortado. Sobre la sabana húmeda después de la inundación aparece un arco de color tenue hecho con capas translúcidas; abajo, una comunidad pequeña comienza a bajar de las lomas, con una mujer embarazada y una persona que se apoya para levantarse. Luz real, agua, niebla, fibras visibles y micro-sombras. Sin figura humana dentro del arco, alas griegas, saturación infantil, ídolos, texto ni CGI.",
-  "image_prompt_horizontal": "Fotografía editorial horizontal 16:9 de una maqueta artesanal de papel cortado. Sobre la sabana húmeda después de la inundación aparece un arco de color tenue hecho con capas translúcidas; abajo, una comunidad pequeña comienza a bajar de las lomas, con una mujer embarazada y una persona que se apoya para levantarse. Luz real, agua, niebla, fibras visibles y micro-sombras. Sin figura humana dentro del arco, alas griegas, saturación infantil, ídolos, texto ni CGI.",
-  "image_prompt_vertical": "Fotografía editorial horizontal 16:9 de una maqueta artesanal de papel cortado. Sobre la sabana húmeda después de la inundación aparece un arco de color tenue hecho con capas translúcidas; abajo, una comunidad pequeña comienza a bajar de las lomas, con una mujer embarazada y una persona que se apoya para levantarse. Luz real, agua, niebla, fibras visibles y micro-sombras. Sin figura humana dentro del arco, alas griegas, saturación infantil, ídolos, texto ni CGI.",
-  "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/cuchavira-1785169498438.jpg",
-  "keySources": [
-    {
-      "title": "Noticias historiales de las conquistas de Tierra Firme en las Indias occidentales, tomo II",
-      "author": "Fray Pedro Simón",
-      "year": 1892,
-      "originalYear": 1627,
-      "type": "crónica colonial",
-      "url": "https://archive.org/details/tierrafirmeindias02simbrich",
-      "limitation": "Conserva testimonios tempranos, pero los interpreta desde una mirada evangelizadora y colonial.",
-      "summary": "Define a Cuchavira como aire resplandeciente o arco del cielo y registra ofrendas, temor y relación con Tequendama."
-    },
-    {
-      "title": "Mitos y leyendas de Colombia, vol. III: Mitos prehispánicos muiscas",
-      "author": "Eugenia Villa Posse, compiladora",
-      "year": 1993,
-      "type": "compilación editorial",
-      "url": "https://www.flacso.edu.ec/biblio/catalog/resGet.php?resId=44622",
-      "limitation": "Reúne versiones de autores de los siglos XIX y XX; no es una transcripción directa de tradición oral.",
-      "summary": "Reúne los atributos posteriores de protección a parturientas y personas con fiebre."
-    },
-    {
-      "title": "El sol del poder: simbología y política entre los muiscas",
-      "author": "François Correa Rubio",
-      "year": 2004,
-      "type": "investigación antropológica",
-      "url": "https://books.google.com/books/about/El_sol_del_poder.html?id=OCyF3XmjprAC",
-      "limitation": "Interpreta el corpus documental disponible; no convierte las crónicas coloniales en una voz muisca transparente.",
-      "summary": "Aporta el marco para leer fenómenos, territorio y acción ritual como relaciones, no como un panteón fijo."
-    }
+  imagePrompt:
+    "Fotografía editorial horizontal 16:9 de una maqueta artesanal de papel cortado. Sobre la sabana húmeda después de la inundación aparece un arco de color tenue hecho con capas translúcidas; abajo, una comunidad pequeña comienza a bajar de las lomas, con una mujer embarazada y una persona que se apoya para levantarse. Luz real, agua, niebla, fibras visibles y micro-sombras. Sin figura humana dentro del arco, alas griegas, saturación infantil, ídolos, texto ni CGI.",
+  imageUrl:
+    "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/cuchavira-1785169498438.jpg",
+  sourceKeys: [
+    "simon",
+    "villa",
+    "correa",
+    "banrepMuisca",
+    "gamboaArqueologiaHistoria",
+    "planBosa",
+    "atlas",
+    "viracocha",
+    "atrahasis",
+    "chalchiuhtlicue",
   ],
-  "sources": [
-    {
-      "title": "Las historias y las técnicas detrás de las ofrendas muiscas",
-      "author": "Museo del Oro, Banco de la República",
-      "year": 2016,
-      "type": "investigación museológica y arqueológica",
-      "url": "https://www.banrepcultural.org/noticias/nueva-exposicion-las-historias-y-las-tecnicas-detras-de-las-ofrendas-muiscas",
-      "limitation": "Se concentra en objetos votivos y prácticas de ofrenda; no reconstruye por sí sola una narración completa.",
-      "summary": "Ayuda a contextualizar ofrendas pequeñas como mediaciones materiales con fuerzas y lugares."
-    },
-    {
-      "title": "Los muiscas en los siglos XVI y XVII: miradas desde la arqueología y la historia",
-      "author": "Jorge Augusto Gamboa Mendoza, compilador",
-      "year": 2008,
-      "type": "investigación histórica y arqueológica",
-      "url": "https://ediciones.uniandes.edu.co/gpd-los-muiscas-en-los-siglos-xvi-y-xvii-miradas-desde-la-arqueologia-y-la-historia-9789586953481-67f86154e57c4.html",
-      "limitation": "Aporta contexto social e histórico y cuestiona modelos homogéneos; no es un catálogo de mitos.",
-      "summary": "Sustenta cautela histórica frente a la extensión uniforme de atributos rituales."
-    },
-    {
-      "title": "Plan de vida de la comunidad indígena Muisca de Bosa",
-      "author": "Cabildo Indígena Muisca de Bosa",
-      "year": 2019,
-      "type": "memoria y planeación comunitaria",
-      "url": "https://historico.gobiernobogota.gov.co/sites/gobiernobogota.gov.co/files/control/plan_de_vida_muisca-transparencia.pdf",
-      "limitation": "Expresa una construcción comunitaria contemporánea; no debe proyectarse automáticamente al periodo prehispánico.",
-      "summary": "Incorpora relación comunitaria contemporánea con la sabana y su clima sin atribuirle esta escena."
-    },
-    {
-      "title": "Iris, personificación griega del arco iris",
-      "author": "The British Museum",
-      "type": "catálogo mitológico y museológico",
-      "url": "https://www.britishmuseum.org/collection/term/BIOG58866",
-      "limitation": "La ficha resume atributos de Iris y sus representaciones; no reconstruye todos los usos rituales del arco iris en Grecia.",
-      "summary": "Documenta el paralelo griego de Iris como personificación del arco y mensajera."
-    },
-    {
-      "title": "Génesis 1: la luz y los cuerpos celestes",
-      "author": "Biblia hebrea, traducciones modernas",
-      "type": "texto mítico y religioso comparativo",
-      "url": "https://www.biblegateway.com/passage/?search=Genesis%201%3A1-19&version=NRSVUE",
-      "limitation": "Se usa como paralelo estructural y no como fuente del mito muisca ni como medida para interpretarlo.",
-      "summary": "Aporta el marco de luz, agua y orden celeste utilizado para delimitar la comparación bíblica."
-    }
-  ],
-  "researchNotes": "ESTADO: revisión integral de una ficha sin trama heredada clara.\n\nNÚCLEO DOCUMENTADO: aire resplandeciente o arco; aparición en el ciclo del Tequendama; ofrendas; temor; asociación posterior con parto y fiebre.\n\nVARIANTES: protector, mensajero, señal favorable o anuncio temido según autores.\n\nMEMORIA CONTEMPORÁNEA: se usa para el marco territorial, no para atribuir un rito actual.\n\nHIPÓTESIS ACADÉMICA: la ofrenda se lee como relación material siguiendo al Museo del Oro, no como intercambio simple.\n\nLECTURA EDITORIAL: escena inventada y declarada como tal alrededor de una embarazada y un enfermo anónimos; no altera el núcleo.\n\nDUDA: no se conserva un relato autónomo de Cuchavira con protagonistas y secuencia.\n\nGEOGRAFÍA: se mantiene el Tequendama porque allí aparece en el ciclo mejor documentado.\n\nIMAGEN: arco realista de papel sobre sabana húmeda, comunidad pequeña y recuperación; sin deidad antropomorfa, alas griegas ni paleta infantil saturada."
-},
-  methodologySeo: bachue.methodologySeo,
-};
+  researchNotes: `ESTADO: ficha reescrita sobre núcleo documentado; no existe una trama heredada autónoma que reproducir.
 
-export default withMuiscaImagePrompts(editorialMyth);
+NÚCLEO DOCUMENTADO: "Cucha viva" = aire resplandeciente o arco del cielo (Simón, noticia cuarta); dios universal con abogacía particular de mujeres de parto y enfermos de calenturas; ofrendas de oro bajo, cuentas de Santa Marta y esmeraldinas; cintillos y figuras de oro bajo de las preñadas para buen parto; arco como clave donde se aparece Bochica en el desagüe del Tequendama; adoración y sacrificios "en apareciendo el arco"; temor por la amenaza de Chibchacum; "colores que coronaron el Salto" (Villa Posse).
+
+VARIANTES: grafías Cucha viva / Cuchaviva (Simón), Cuchavira (síntesis), Cuhuzafiba (divulgación); dios universal vs abogado particular; señal temida vs señal de reconciliación; aparición "en la clave" del arco (Simón) vs "corona del Salto" (Villa Posse).
+
+LICENCIA EDITORIAL: la escena de parto y fiebre se construye con ofrendas documentadas; el diálogo oracular retoma la frase registrada por Simón; no se inventan ceremonias, símbolos ni nombres; Cuchavira no se fusiona con Bochica.
+
+DUDA: no se conserva un relato autónomo con protagonistas y secuencia; la lectura demonológica de Simón impide tomar la aparición como testimonio directo de creencia muisca.
+
+GEOGRAFÍA: Tequendama y sabana de Bogotá (Bosa, Hontibón, Sopó, Chocontá); coordenadas conservadas sobre el salto.
+
+REGISTRO LINGÜÍSTICO: español contemporáneo de Colombia, tono de relato sagrado sin arcaísmos ni didactismo; pasado narrativo con cierre en presente de la señal que se repite.`,
+});

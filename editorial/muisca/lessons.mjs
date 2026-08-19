@@ -6,7 +6,7 @@ export const muiscaLessons = {
   "campos-eliseos":
     "La muerte cambia la forma de los vínculos, no necesariamente su peso.",
   chaquon:
-    "La libertad pierde sentido cuando sus huellas destruyen el mundo compartido.",
+    "El límite no separa: nombra lo que la tierra guarda para todos.",
   chia:
     "Madurar también consiste en saber cuándo ocupar espacio y cuándo devolverlo.",
   chibchacum:
@@ -16,17 +16,17 @@ export const muiscaLessons = {
   "creacion-muiscas":
     "Habitar el mundo no es poseerlo, sino aprender a continuarlo.",
   cuchavira:
-    "La esperanza no resuelve el peligro: abre un lugar interior desde el cual actuar.",
+    "El arco no abre el cielo: enseña el punto exacto donde la tormenta termina.",
   "el-bermejo-aspira-a-ser-rey":
     "Una causa justa se corrompe cuando convierte a los demás en instrumentos.",
   "el-castigo-de-chaquen":
-    "Ninguna norma es justa si necesita borrar la voz de quien la quebranta.",
+    "Todo límite cruzado deja en el paisaje la memoria de un orden que ya no vuelve a juntarse.",
   "el-dorado":
     "Lo que entregamos puede revelar mejor nuestra riqueza que aquello que acumulamos.",
   "el-hijo-del-sol-goranchacha":
     "Ningún origen extraordinario absuelve la responsabilidad de una vida ordinaria.",
   "el-origen-del-lago-tota":
-    "Cuidar un lugar comienza por aceptar que nunca nos pertenece por completo.",
+    "El agua que da de beber no se vence: se aprende a convivir con lo que descansa bajo la superficie.",
   "el-pozo-de-hunzahua":
     "El valor de algo no depende de que pueda extraerse, venderse o poseerse.",
   "el-primero-de-los-reyes":
@@ -60,7 +60,7 @@ export const muiscaLessons = {
   "los-cojines-del-zaque":
     "Observar es reconocer un orden que ninguna autoridad ha creado.",
   "los-dioses-civilizadores":
-    "Enseñar empieza por reconocer que ningún lugar está vacío de saber.",
+    "Enseñar es entrar en conversación con lo que ya existe, y lo que se comparte permanece solo si muchas manos lo continúan.",
   "los-mojas":
     "El honor deja de serlo cuando exige renunciar a la propia voz.",
   meicuchuca:
@@ -68,7 +68,7 @@ export const muiscaLessons = {
   nemequene:
     "Una ley pierde legitimidad cuando quien la impone se declara excepción.",
   nencatacoa:
-    "La alegría compartida no interrumpe el trabajo: también lo sostiene.",
+    "La alegría que celebra lo terminado es la misma fuerza que arrastra lo que todavía pesa.",
   nompanem:
     "Gobernar bien exige recordar que la inteligencia siempre está distribuida.",
   pacanchique:
@@ -78,7 +78,7 @@ export const muiscaLessons = {
   tomagata:
     "El miedo completa por dentro el poder que apenas se insinúa afuera.",
   "toquecha-y-toquilla":
-    "Toda creación nos vuelve responsables de aquello que hacemos posible.",
+    "Lo que se modela con paciencia puede arrebatarse en un instante y no volver jamás.",
   "veneracion-a-los-soberanos":
     "La autoridad se vuelve más humana cuando puede soportar una mirada.",
 };
