@@ -6,125 +6,100 @@ export default defineMuiscaMyth({
   tags: ["Popón", "profecía", "sueños", "poder", "historia"],
   latitude: 4.9787,
   longitude: -73.7746,
-  mito: `El zipa soñó que entraba en una corriente de agua clara.
+  mito: `En Bacatá el zipa soñó que se bañaba en el agua clara de su casa de Tena. El baño era fresco al principio. Después, alrededor de sus brazos, el agua empezó a oscurecerse, y cuando quiso salir toda la corriente era sangre.
 
-Al principio el baño era fresco. Después, alrededor de sus brazos, el agua empezó a oscurecerse. Cuando quiso salir, toda la corriente era sangre.
-
-Despertó antes del amanecer y llamó a sus intérpretes.
-
-Se preparaba una guerra contra Hunsa. Los primeros hombres que escucharon el sueño dijeron que anunciaba victoria: la sangre sería la del enemigo y el zipa saldría limpio.
-
-El gobernante quiso creerles.
+Despertó antes del amanecer y llamó a los jeques de su tierra para que le soltaran el sueño. Se preparaba una guerra contra Hunsa, y los primeros en hablar dijeron lo que el gobernante quería oír: la sangre sería del enemigo, y el zipa saldría limpio. El gobernante los premió con mantas y favores.
 
 Faltaba Popón.
 
-El jeque vivía lejos del ruido del cercado y no acudía con rapidez cuando lo llamaban. Al llegar, pidió oír el sueño sin las explicaciones anteriores. Cerró los ojos. Durante largo rato nadie habló.
+El jeque vivía en el valle de Ubaque y no acudía con prisa a los llamados del cercado. Cuando por fin llegó, pidió oír el sueño sin las explicaciones de los otros. Cerró los ojos y calló largo rato.
 
-—No es la sangre de Hunsa —dijo al fin.
+—No es la sangre de Hunsa —dijo.
 
-El salón quedó inmóvil.
+El salón se quedó inmóvil.
 
-—¿De quién es?
+—¿De quién es, entonces?
 
 Popón miró al zipa.
 
-—Tuya. Vienen hombres que aún no conoces. No entrarán en esta tierra para obedecerte.
+—Tuya. Unos hombres de otras tierras se acercan ya a esta. Ellos te han de matar.
 
-Algunos consejeros bajaron la cabeza. Otros exigieron que retirara sus palabras. El zipa no ordenó detenerlo, pero Popón vio el miedo detrás de su silencio. Sabía que una verdad desagradable puede volverse culpa de quien la pronuncia.
+Algunos consejeros bajaron la cabeza. Otros pidieron que retirara sus palabras. El zipa no ordenó detenerlo, pero Popón leyó el miedo en su silencio y supo que una verdad incómoda puede volverse culpa de quien la pronuncia. Esa misma noche salió de Bacatá y tomó el camino de su tierra.
 
-Esa noche abandonó el lugar.
+En el sendero encontró a dos o tres hombres del servicio del zipa y les encargó la señal:
 
-En el camino encontró mensajeros que viajaban hacia Guatavita. Les pidió transmitir una señal:
+—Digan a su señor que envíe gente a la laguna de Guatavita. Si de noche el agua echa llamas, sabrá que no hablé para ofenderlo.
 
-—Al caer la noche, miren la laguna. Si ven fuego sobre el agua, sabrán que no hablé para ofender.
+Los hombres siguieron su camino. Popón buscó dónde esconderse.
 
-Los hombres continuaron.
+Los del zipa llegaron a Guatavita y al atardecer miraron el agua. La primera noche no vieron nada, y el gobernante, al saberlo, ardió de cólera contra el jeque. Pero ordenó esperar una noche más. En lo más oscuro de la laguna, sin quemar los juncos ni dejar humo, subieron del agua unas llamas bajas que se movieron sobre la superficie y se apagaron. Los exploradores volvieron a Bacatá con la noticia.
 
-Popón tomó otro sendero.
+El zipa se dio por condenado. Pudo cambiar la guerra, enviar exploradores o preguntar por los hombres de otras tierras. No sabemos qué pensó primero.
 
-Cuando llegaron a Guatavita, el cielo estaba despejado. Esperaron junto al borde. Durante horas solo vieron oscuridad. Después, en el centro de la laguna, apareció un resplandor. No quemó los juncos ni dejó humo. Varias luces breves se movieron sobre la superficie y desaparecieron.
+Los extranjeros llegaron con caballos, metal y hambre de oro. El zipa no quiso verles la cara ni que se la vieran, y con esa terquedad lo encontró la muerte, bañado en su propia sangre, como lo había anunciado el sueño.
 
-Los mensajeros regresaron al cercado.
+Muchos años después, los religiosos buscaron a Popón en el valle de Ubaque. Unos dijeron que hablaba con el diablo; otros, que voló por los aires hasta Santa Marta y vio la luna más grande que desde la tierra. Pero en la memoria quedó otro Popón: el que se negó a convertir el miedo del poderoso en una mentira tranquilizadora.
 
-El zipa escuchó la noticia y volvió a pensar en el sueño. Pudo suspender la guerra, enviar exploradores o reunir a quienes conocían los caminos del norte. También pudo decidir que ningún presagio cambiaba una orden ya dada.
+La laguna no detuvo lo que venía. Solo encendió, por un instante, una advertencia sobre el agua.`,
+  historia: `El episodio llega por fray Pedro Simón, en las Noticias historiales (1627), dentro de la noticia sobre la evangelización del valle de Ubaque. Simón presenta a Popón como el famoso jeque de toda la tierra del Bogotá, adversario tenaz de la doctrina cristiana, y cuenta que tras su bautismo él mismo declaró su trato con el demonio, incluido un vuelo nocturno a Santa Marta. Eugenia Villa Posse (1993) transcribe el pasaje y advierte que Popón no es un personaje mítico sino histórico, y que su relato permite ver cómo puede empezar a encubarse un mito.
 
-No sabemos qué pensamiento eligió primero.
+El presagio: el zipa sueña que se baña en su casa de placer de Tena y el agua se le convierte en sangre. Simón sitúa el sueño años antes de la entrada española y lo ata a la guerra que el Bogotá preparaba contra Tunja. Los jeques interpretan a la medida del gusto del gobernante —sangre del enemigo— y son premiados con mantas, joyas y favores. Popón disiente, desaparece la noche antes de declarar el sueño y, por boca de mensajeros, anuncia que el gobernante morirá a manos de hombres de otras tierras que van llegándose ya a esta; da como señal las llamas nocturnas de Guatavita. Simón, que quería mostrar que también en este reino hubo presagios de la conquista, como los hubo en Nueva España y en el Perú, cierra con el zipa que, al ver a los españoles, no quiso verles la cara ni que se la vieran, y con ese tesón murió.
 
-Los extranjeros llegaron.
+Cautelas. Simón escribe más de un siglo después de los hechos y desde una estrategia evangelizadora: el demonio explica toda adivinación, y la conversión final del jeque —bautizado como Antón, sacristán— ordena el relato. La profecía, puesta en boca de Popón y confirmada por un prodigio lacustre, pudo ser una memoria retrospectiva del desastre: la lectura del sueño solo cobra exactitud porque se cuenta después de la muerte del zipa. La historiografía actual (Gamboa, Cobo) lee estos pasajes como construcción narrativa colonial, no como registro transparente de una espiritualidad muisca, y el fuego sobre Guatavita pertenece a esa lógica, sin afirmación científica sobre llamas acuáticas.`,
+  versiones: `Simón (1627) es la fuente base: el sueño se baña en la casa de placer de Tena; los jeques más viejos interpretan sangre del zaque de Tunja; Popón se desaparece, envía su lectura con dos o tres indios principales y ofrece la señal de Guatavita; el zipa, primero enojado porque el agua no ardía, ordena esperar la noche siguiente y las llamas aparecen. El mismo Simón integra después el episodio en el ciclo de la conversión: vuelo a Santa Marta, tesoro traído de Vélez, captura en el buhío de Iteacha y bautismo como Antón.
 
-Traían caballos, metal, hambre de oro y alianzas que el zipa no controlaba. La sangre que siguió no perteneció a una sola persona ni a un solo pueblo. Ningún intérprete había alcanzado a verla completa.
+Villa Posse (1993) transcribe el mismo núcleo bajo el título Popón y lo presenta como historia, no como mito: llama a Ponpón el viejo más ladino y marrullero de la nación chibcha, conserva el sueño, la interpretación en favor del zipa, la huida y las llamas, y lo separa de la serie de dioses y héroes. Restrepo, en Los chibchas antes de la conquista española, identifica al soñador con Tisquesusa y cierra el ciclo con su muerte en Facatativá, herido por la ballesta de un soldado que no lo conocía: murió bañado en su sangre, como se lo había anunciado el jeque Popón. Esa atribución fija el nombre del zipa, que Simón deja anónimo.
 
-Popón sobrevivió en relatos que otros escribieron después. Algunos dijeron que hablaba con demonios. Otros, que terminó aceptando la religión de los conquistadores. Pero en la memoria del sueño quedó distinto:
+Las compilaciones modernas tienden a heroízar al profeta o a fusionarlo con el hechicero convertido sin marcar el molde colonial. Esta ficha atribuye cada variante a su fuente, mantiene anónimo al gobernante dentro del relato y deja a Popón como jeque, no como dios.`,
+  leccion:
+    "La advertencia no cambia el destino; solo enciende un instante de luz sobre el agua.",
+  similitudes: `En el corpus muisca, Popón comparte el presagio con Goranchacha, el hijo del Sol que convoca a su gente y anuncia una gente fuerte y feroz que los ha de afligir, y luego se va. Ambos cuentan la conquista como profecía cumplida. La diferencia está en el lugar del anuncio: Goranchacha, ya señor de Hunza, habla como soberano ante todo su pueblo; Popón habla como subordinado ante un gobernante que premia a los intérpretes que le dicen lo que quiere oír. Uno se despide desde el poder; el otro se esconde del poder.
 
-un hombre que se negó a convertir el miedo del poderoso en una mentira tranquilizadora.
+En Mesoamérica, las crónicas de la conquista de México reunieron los presagios que rodearon a Moctezuma —cometas, incendios, lamentos— como señales de la llegada de los españoles. El paralelo está en una corte que registra prodigios y no logra actuar a tiempo. La diferencia: la cadena de presagios de Moctezuma es colectiva y rodea a un soberano que vacila entre dios y hombre, mientras la señal de Popón es una sola, privada, dicha a un rey que primero se enoja y solo teme cuando el agua se la confirma. En los Andes del sur, Viracocha parte prometiendo regresar, y la llegada de los barbados se leyó como retorno de dioses; Popón nunca confunde a los extranjeros con dioses, solo los anuncia como hombres de otras tierras que vienen a matar.
 
-La laguna no impidió lo que venía.
-
-Solo encendió, por un instante, una advertencia sobre el agua.`,
-  historia: `Eugenia Villa Posse advierte expresamente que Popón no es un dios ni un mito en sentido estricto, sino un jeque histórico recordado por su capacidad de adivinación. Pedro Simón lo presenta como figura influyente en tiempos de la llegada española y conserva el episodio del sueño: el zipa se baña en agua convertida en sangre, otros intérpretes ofrecen una lectura favorable y Popón anuncia extranjeros y muerte. La señal de fuego en Guatavita confirma narrativamente su advertencia.
-
-Simón cuenta también, desde una estructura de conversión cristiana, que Popón trataba con el demonio, voló hasta Santa Marta y terminó confesando esos hechos después del bautismo. Ese material dice tanto sobre la estrategia evangelizadora del cronista como sobre el personaje. La nueva versión no lo usa para presentar las creencias muiscas como oscuridad vencida por una fe superior.
-
-La historia general de la conquista impide leer la profecía como explicación suficiente. La entrada española, las alianzas, las guerras existentes, las epidemias y la extracción transformaron el altiplano mediante procesos que ningún sueño resume por completo.
-
-La narración conserva el núcleo del sueño, la interpretación incómoda, la huida y la señal lacustre. Añade la deliberación del zipa, el carácter incompleto de toda visión y la descripción final de los invasores. No afirma que el fuego haya ocurrido físicamente ni que Popón predijera con precisión documental el futuro. El punto geográfico se traslada a Guatavita, paisaje central de la señal, en lugar de una coordenada genérica.`,
-  versiones: `En Simón, los jeques cercanos al zipa acomodan el sueño a la guerra contra Hunsa. Popón contradice esa lectura, anuncia la llegada de extranjeros y se marcha para evitar el peligro. Las llamas sobre Guatavita funcionan como prueba del pronóstico. La narración se integra después en un relato cristiano sobre demonios y conversión.
-
-Compilaciones modernas separan al profeta valiente del “hechicero convertido” o mezclan ambos perfiles sin examinar la voz colonial. Algunas convierten el sueño en predicción exacta de la muerte de Tisquesusa; otras no identifican al zipa. La cronología y los nombres exigen cautela.
-
-La edición actual mantiene anónimo al gobernante dentro del relato y presenta a Popón como jeque, no como dios. La señal de la laguna pertenece a la lógica narrativa, no a una afirmación científica sobre fuego acuático. También se niega a llamar inevitable al destino: una advertencia ofrece posibilidad de actuar, aunque no garantice que el poder escuche ni que una persona pueda detener una invasión. Los relatos de vuelo y demonios quedan fuera del núcleo por su fuerte molde evangelizador.`,
-  leccion: `Decir al poder lo que desea escuchar puede proteger al intérprete y dejar indefensa a la comunidad. Popón acepta el riesgo de una respuesta que no tranquiliza.
-
-Pero una verdad pronunciada no basta. Quien gobierna debe convertir la advertencia en preguntas, preparación y cuidado. El futuro no se vuelve inevitable porque alguien lo haya visto; también depende de cómo se responde.`,
-  similitudes: `Casandra, en la tragedia griega, conoce la destrucción que se acerca y habla sin conseguir que su conocimiento la evite. Popón también pronuncia una advertencia ante una autoridad amenazada. Sin embargo, Casandra carga una maldición que impide que le crean; Popón ofrece una señal, es tomado en serio y decide huir del riesgo político.
-
-La diferencia revela dos modos de la profecía. Una puede ser verdad condenada a la incredulidad; la otra, verdad incómoda que aun siendo creída no produce la acción necesaria. En ambos casos, saber no equivale a controlar.
-
-No existe conexión histórica entre la tragedia de Esquilo y el relato del altiplano. El paralelo ayuda a situar una necesidad social amplia: crear una figura capaz de decir lo que consejeros y gobernantes callan. Lo singular de Popón está en la inminencia de una conquista real, la tensión entre Bacatá y Hunsa y el fuego sobre Guatavita. Su relato no habla solo de destino; habla de información, miedo y de la fragilidad de quien interpreta un sueño dentro de una estructura de poder.`,
+En el mundo, la figura es Casandra: la que conoce la ruina y no consigue que la crean. La resonancia es la advertencia incómoda que se pronuncia y no se escucha. La diferencia define a Popón: su señal sí es creída —las llamas de Guatavita lo acreditan—, y aun así el conocimiento no basta para detener la invasión. En los tres horizontes, la profecía no es destino sino advertencia; la diferencia está en quién la escucha. Saber no es gobernar.`,
   excerpt:
-    "Popón rechaza la interpretación que tranquiliza al zipa y anuncia la llegada de extranjeros; una luz sobre Guatavita acompaña su advertencia.",
-  seoTitle: "Popón y el sueño del zipa: historia y profecía",
+    "Popón, jeque de Ubaque, desmiente a los intérpretes que adulan al zipa y anuncia en la laguna de Guatavita la llegada de hombres extraños.",
+  seoTitle: "Popón y el sueño del zipa: la profecía de Guatavita",
   seoDescription:
-    "Lee la historia de Popón: el sueño de agua y sangre, la advertencia al zipa, las luces de Guatavita, versiones coloniales y fuentes críticas.",
-  ogTitle: "Popón y el sueño del zipa: la verdad que no tranquiliza",
+    "Lee el relato de Popón, el jeque muisca que interpretó el sueño de sangre del zipa, anunció la conquista y encendió una advertencia en la laguna de Guatavita.",
+  ogTitle: "Popón: la verdad que el poder no quiere oír",
   ogDescription:
-    "Mientras otros intérpretes prometen una victoria, Popón ve extranjeros y sangre en el agua del sueño del gobernante.",
+    "Mientras los jeques prometen la sangre del enemigo, un hombre del valle de Ubaque ve otra cosa en el agua del sueño del gobernante.",
   focusKeywords: [
     "Popón muisca",
     "sueño del zipa",
     "profecía de Popón",
+    "jeque de Ubaque",
     "Popón y Guatavita",
-    "jeque muisca Popón",
+    "presagios de la conquista muisca",
     "leyenda muisca de la conquista",
   ],
   imagePrompt:
-    "Fotografía editorial horizontal 16:9 de una maqueta artesanal de papel cortado: Popón como jeque mayor y humano habla ante el zipa en un cercado sobrio; entre ambos una pequeña vasija refleja agua que se vuelve rojo oscuro de forma simbólica, al fondo la laguna de Guatavita con luces mínimas sobre la superficie. Fibras, capas, micro-sombras. Sin demonios, vuelo, cruz, sangre explícita, texto ni CGI.",
-  imagePromptVertical:
-    "Fotografía editorial vertical 4:5 de una maqueta de papel cortado: Popón mira con firmeza al gobernante mientras una vasija de agua refleja un tono rojo; arriba, como recuerdo distante, Guatavita con dos luces sobre el agua. Papel físico y micro-sombras. Sin demonios, conquistadores heroicos, texto ni CGI.",
+    "Fotografía editorial horizontal exacta 16:9. Escena principal: Popón habla con firmeza ante el zipa en un cercado sobrio; entre ambos, una pequeña vasija refleja agua que se oscurece como imagen del sueño y obliga al gobernante a escuchar una advertencia. Estilo studioPaperMaquette aprobado: maqueta física hecha a mano con papel cortado, cartón y fibras naturales, fotografiada de frente; relieve bajo, bordes visibles, pequeñas imperfecciones humanas, micro-sombras reales e iluminación sobria. Fantasía anclada en el paisaje del altiplano cundiboyacense. Composición panorámica de un solo tableau; los personajes y objetos esenciales permanecen dentro del 80 % central. Sin texto ni logotipos; sin CGI, render digital ni apariencia de 3D sintético; sin coronas, tronos o templos europeos; sin pirámides, penachos ni iconografía mesoamericana; sin símbolos espirituales inventados; sin profeta europeo, cruz, vuelo, demonios, conquistadores heroicos o sangre explícita.",
   imageUrl:
     "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/popon-1784765953794.jpg",
   sourceKeys: [
     "simon",
     "villa",
-    "piedrahita",
     "gamboaSenores",
     "cobo",
-    "planBosa",
+    "planSesquile",
     "cassandra",
+    "viracocha",
+    "quetzalcoatl",
   ],
-  researchNotes: `ESTADO: jeque posiblemente histórico con relato profético; no se clasifica como dios.
+  researchNotes: `ESTADO: jeque de Ubaque posiblemente histórico; el episodio profético es tradición de crónica colonial, no un dios ni un mito en sentido estricto.
 
-NÚCLEO DOCUMENTADO: sueño del zipa con agua convertida en sangre; interpretaciones favorables; lectura adversa de Popón; llegada de extranjeros; huida; señal de llamas en Guatavita.
+NÚCLEO DOCUMENTADO: sueño del zipa en Tena con el agua convertida en sangre; interpretación favorable de los jeques premiados; lectura adversa de Popón (muerte propia a manos de hombres de otras tierras); huida; señal de llamas nocturnas en Guatavita; muerte del zipa bañado en su sangre.
 
-VARIANTES: identidad del zipa; precisión de la profecía; relatos de vuelo, demonio y conversión; Popón/Popan.
+VARIANTES: Simón deja anónimo al zipa (el Bogotá); Restrepo lo identifica con Tisquesusa y data su muerte por ballesta en Facatativá; Villa Posse lo llama Ponpón/Popan y lo trata como historia; compilaciones modernas lo heroízan o lo convierten en hechicero convertido.
 
-MEMORIA VIVA: Guatavita es territorio de memoria y cuidado para comunidades actuales; no se presenta la señal como versión comunitaria contemporánea única.
+LICENCIA EDITORIAL: el cierre en imagen, la deliberación del zipa, la escena de los mensajeros al borde de la laguna y la descripción de los extranjeros son invención; se mantiene anónimo al gobernante dentro del relato y se omite el vuelo y el demonio como acceso a la espiritualidad muisca.
 
-HIPÓTESIS ACADÉMICA: demonización y conversión forman parte del molde evangelizador de Simón y no son acceso transparente a la espiritualidad muisca.
+DUDA: historicidad física de las llamas; fecha exacta del sueño; grado de elaboración de Simón y de la identificación del zipa con Tisquesusa.
 
-LECTURA EDITORIAL: deliberación del zipa, límites de toda profecía, descripción de la invasión y cierre sobre la advertencia son invenciones.
+GEOGRAFÍA: laguna de Guatavita (Sesquilé) como lugar de la señal; casa de placer de Tena y valle de Ubaque como escenarios del presagio.
 
-DUDA: identidad precisa del gobernante, historicidad física de las llamas y grado de elaboración del cronista.
-
-GEOGRAFÍA: laguna del Cacique Guatavita, Sesquilé, como lugar de la señal.`,
+REGISTRO LINGÜÍSTICO: español colombiano contemporáneo, tono de relato sagrado, sin arcaísmos peninsulares, sin moralización ni grandilocuencia.`,
 });

@@ -44,7 +44,7 @@ export const muiscaLessons = {
   hunzahua:
     "El deseo que cruza un límite no borra la marca: la deja flotando en el agua y en el viento.",
   idacanzas:
-    "Prever solo importa cuando transforma la manera en que cuidamos lo posible.",
+    "Quien aprende a leer el cielo comprende que la verdadera mirada no pide obediencia, sino cuidado.",
   "la-aparicion-del-hombre":
     "Toda humanidad comienza no al ser formada, sino al escuchar y responder a otra voz.",
   "la-cacica-de-guatavita":
@@ -62,21 +62,21 @@ export const muiscaLessons = {
   "los-dioses-civilizadores":
     "Enseñar es entrar en conversación con lo que ya existe, y lo que se comparte permanece solo si muchas manos lo continúan.",
   "los-mojas":
-    "El honor deja de serlo cuando exige renunciar a la propia voz.",
+    "Quien llama sagrada una voz puede estar callando, sin saberlo, a quien la pronuncia.",
   meicuchuca:
     "Amar a alguien no concede el derecho de definirlo por completo.",
   nemequene:
-    "Una ley pierde legitimidad cuando quien la impone se declara excepción.",
+    "La norma termina en el cuerpo de quien la dicta, y hasta el poder más alto aprende a herirse.",
   nencatacoa:
     "La alegría que celebra lo terminado es la misma fuerza que arrastra lo que todavía pesa.",
   nompanem:
-    "Gobernar bien exige recordar que la inteligencia siempre está distribuida.",
+    "El poder que se entrega para aprender regresa a manos que ya saben soltarlo.",
   pacanchique:
-    "El dolor explica nuestros actos, pero no los vuelve inocentes.",
+    "Quien atraviesa la muerte por amor regresa dueño de una fuerza que no elige dónde se detiene.",
   popon:
-    "La verdad necesita coraje para decirse y responsabilidad para ser escuchada.",
+    "La advertencia no cambia el destino; solo enciende un instante de luz sobre el agua.",
   tomagata:
-    "El miedo completa por dentro el poder que apenas se insinúa afuera.",
+    "El poder se sostiene menos en lo que el soberano hace y más en lo que todos imaginan que podría hacer.",
   "toquecha-y-toquilla":
     "Lo que se modela con paciencia puede arrebatarse en un instante y no volver jamás.",
   "veneracion-a-los-soberanos":

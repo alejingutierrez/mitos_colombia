@@ -69,9 +69,8 @@ La narración se concentra en la tensión entre juez y conquistador. Conserva la
 Relatos escolares separan dos imágenes: el sabio autor de un código y el conquistador capaz de unificar a los muiscas. Ambas simplifican. Las “leyes” llegan mediante cronistas coloniales y el supuesto imperio homogéneo ha sido revisado por la historia y la arqueología.
 
 La antigua página añadía espionaje mediante orfebres, enemigos descritos de forma deshumanizante, sacrificios de moxas y un entierro con mujeres. Algunos elementos pueden aparecer en crónicas o compilaciones, pero no se publican aquí como certeza sin una evaluación específica. La versión literaria no intenta limpiar a Nemequene ni condenarlo con categorías actuales. Coloca juntos juicio, coerción y mortalidad. Así el personaje conserva densidad: una autoridad puede producir orden para unos y pérdida para otros, y la memoria posterior puede llamar ley a decisiones que nunca formaron un código único.`,
-  leccion: `Las normas pueden contener la violencia cotidiana, pero se vuelven peligrosas cuando quien las impone queda fuera de toda pregunta. Gobernar no significa ser la excepción permanente de las reglas.
-
-Nemequene descubre demasiado tarde que el territorio trazado en un mapa contiene vidas. La eficacia y la valentía no bastan para medir un liderazgo; también importan el daño producido y la posibilidad de ponerle límites.`,
+  leccion:
+    "La norma termina en el cuerpo de quien la dicta, y hasta el poder más alto aprende a herirse.",
   similitudes: `La estela de Hammurabi reúne decisiones jurídicas mesopotámicas bajo la autoridad de un rey y durante siglos fue llamada “código”. El Louvre advierte que no funciona como un código moderno exhaustivo. El paralelo ayuda a leer con cautela el “Código de Nemequene”: el nombre posterior puede dar apariencia unitaria a normas, memoria política y representación del gobernante.
 
 Las diferencias son profundas. Hammurabi dejó una inscripción material de su época; no existe una estela comparable de Nemequene, y las disposiciones muiscas conocidas pasan por cronistas coloniales. Tampoco sus sociedades compartían Estado, escritura jurídica o instituciones.
