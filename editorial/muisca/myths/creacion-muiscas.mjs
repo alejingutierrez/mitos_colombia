@@ -1,141 +1,96 @@
-import bachue from "../../myths/bachue.mjs";
-import { withMuiscaImagePrompts } from "../image-prompts.mjs";
+import { defineMuiscaMyth } from "../define-editorial-myth.mjs";
 
-const editorialMyth = {
-  ...{
-  "slug": "creacion-muiscas",
-  "title": "La creación muisca",
-  "category_path": "Andina > Varios > Muiscas",
-  "tags": [
-    "creación",
-    "Chiminigagua",
-    "ritual",
-    "luz",
-    "muiscas"
-  ],
-  "latitude": 5.396,
-  "longitude": -73.25,
-  "mito": "Antes de que hubiera caminos, la luz permanecía recogida dentro de Chiminigagua. Afuera no se veía montaña, agua ni hoja. Era una noche tan completa que nada proyectaba sombra.\n\nChiminigagua comenzó a mostrar la claridad que guardaba. De aquella primera abertura salieron aves grandes y negras. Apenas tuvieron alas, recibieron una tarea: recorrer el mundo.\n\nVolaron sobre una tierra que todavía no podía mirarse. De sus picos soltaron un aliento resplandeciente. Cada ave dejó una franja de luz a su paso, y en esa claridad aparecieron los filos de los montes, el brillo de las lagunas y el suelo húmedo de los valles. Cuando regresó el silencio, el mundo ya tenía forma y color.\n\nSin embargo, nadie caminaba por él.\n\nEn las sierras frías de Iguaque, una laguna permanecía escondida entre la neblina. Una mañana, su superficie se abrió. De las aguas salió Bachué llevando de la mano a un niño pequeño. Bajaron juntos desde el páramo hasta las tierras más amables y construyeron una casa.\n\nEl niño creció. Cuando fue adulto, él y Bachué formaron una familia. Tuvieron hijos, y sus hijos tuvieron otros hijos. La pareja viajó por llanos, montañas y orillas de lagunas, dejando familias que aprendieron a cultivar, levantar viviendas y vivir unas junto a otras.\n\nPasaron muchos años. Donde antes solo se escuchaba el viento, comenzaron a oírse herramientas, pasos y conversaciones. El humo de los fogones subió por primera vez. Los campos cambiaron con las siembras. Los caminos unieron poblados que todavía no tenían nombres.\n\nCuando la tierra estuvo habitada y ellos ya eran viejos, Bachué y su compañero regresaron a Iguaque. Muchas personas los siguieron hasta la laguna. Allí, Bachué pidió a sus descendientes que conservaran la paz, cuidaran las normas recibidas y no olvidaran las aguas de las que había comenzado su historia.\n\nDespués se despidieron.\n\nAl entrar en la laguna, sus cuerpos se volvieron dos grandes serpientes. Nadaron un instante sobre la superficie y desaparecieron en la profundidad.\n\nLa gente volvió a sus casas. Sobre ellos continuaban cruzando las aves; delante de ellos se abrían los caminos; detrás quedaba el agua oscura de Iguaque. Así, en un mundo que primero tuvo que aprender a ser visible, comenzó la vida de los seres humanos.",
-  "historia": "La ficha heredada reunía en una sola narración a Chiminigagua, Bachué, los caciques de Sogamoso y Ramiriquí y la ceremonia de El Dorado. Esa acumulación procedía de una síntesis moderna, no de un episodio continuo documentado de esa manera. La presente versión limita el ciclo a dos momentos que Pedro Simón enlaza en su cuarta noticia: la aparición de la luz y, cuando ya existen las demás cosas, la llegada de Bachué desde Iguaque.\n\nSimón escribió su obra en el siglo XVII y tradujo a Chiminigagua mediante categorías cristianas. Alonso de Zamora conservó otra formulación del episodio de Bachué, también atravesada por el lenguaje evangelizador. Ambas fuentes son tempranas, pero ninguna registra los nombres de las personas muiscas que narraron estos relatos ni ofrece una transcripción en muysccubun.\n\nLa compilación de Eugenia Villa Posse permite seguir cómo autores posteriores convirtieron esos pasajes breves en una cosmogonía total. François Correa, en cambio, invita a leer el corpus como un sistema de relaciones entre territorio, ancestros, astros y autoridad, no como una lista estable de “dioses” equivalente a los panteones clásicos.\n\nEsta página funciona como puerta de entrada al ciclo de creación. Las fichas de Chiminigagua, Bachué, la aparición de los primeros seres humanos y el Sol y la Luna conservan por separado sus escenas, variantes y problemas documentales. Esa separación es deliberada.",
-  "versiones": "La tradición de Bogotá atribuida a Pedro Simón comienza con la luz contenida en Chiminigagua y continúa con las aves negras que iluminan el mundo. Después desplaza la acción hacia Iguaque: Bachué y un niño salen de la laguna, pueblan la tierra y regresan convertidos en serpientes.\n\nLa tradición vinculada con Sogamoso y Ramiriquí ofrece otra respuesta al origen humano. Allí dos caciques modelan a los hombres con tierra amarilla y a las mujeres con tallos altos y huecos; más tarde se convierten en los dos luminares. No es necesario insertar ese episodio dentro del recorrido de Bachué para que ambos relatos pertenezcan al mismo horizonte cultural.\n\nLas síntesis del siglo XX añadieron a veces El Dorado como conclusión de la creación y presentaron los episodios como una historia única. Aquí se retira esa ceremonia: El Dorado posee su propia ficha y su propio contexto político y ritual. La convivencia de relatos distintos no se corrige buscando una doctrina uniforme; se muestra como parte de un archivo fragmentario transmitido por regiones, tiempos y autores diferentes.",
-  "leccion": "Crear no es una sola acción. Primero el mundo debe poder verse; después debe ser recorrido, habitado y cuidado. La historia enlaza esas tareas sin convertirlas en una carrera por dominar la tierra.\n\nLa humanidad no aparece en un palacio ni recibe el territorio terminado. Comienza con una casa, viajes, cultivos y acuerdos de convivencia. El regreso final al agua recuerda que poblar no equivale a poseer: las generaciones pasan, mientras las lagunas y los montes permanecen como origen y límite.",
-  "similitudes": "El Popol Vuh k’iche’ también organiza la creación en intentos y momentos: primero se dispone el mundo, después se buscan seres capaces de habitarlo y sostener la memoria. La diferencia está en la materia narrativa. El texto k’iche’ presenta deliberación, palabra y sucesivas humanidades; el ciclo muisca enlaza luz viajera, una laguna de origen y una pareja que recorre el territorio.\n\nEn Génesis, la luz aparece antes que los seres humanos y la creación avanza mediante una secuencia ordenada. El parecido es estructural, no una prueba de dependencia: en el relato muisca la claridad se distribuye con aves y la humanidad surge del agua, no de una orden verbal culminante.\n\nVarios relatos mesopotámicos separan cielo, tierra y aguas antes de organizar la vida social. Sus conflictos entre generaciones divinas contrastan con este ciclo: aquí no hay combate creador. Los gestos decisivos son abrir la luz, volar, salir de una laguna, construir una casa y despedirse.",
-  "content": "Mito\nAntes de que hubiera caminos, la luz permanecía recogida dentro de Chiminigagua. Afuera no se veía montaña, agua ni hoja. Era una noche tan completa que nada proyectaba sombra.\n\nChiminigagua comenzó a mostrar la claridad que guardaba. De aquella primera abertura salieron aves grandes y negras. Apenas tuvieron alas, recibieron una tarea: recorrer el mundo.\n\nVolaron sobre una tierra que todavía no podía mirarse. De sus picos soltaron un aliento resplandeciente. Cada ave dejó una franja de luz a su paso, y en esa claridad aparecieron los filos de los montes, el brillo de las lagunas y el suelo húmedo de los valles. Cuando regresó el silencio, el mundo ya tenía forma y color.\n\nSin embargo, nadie caminaba por él.\n\nEn las sierras frías de Iguaque, una laguna permanecía escondida entre la neblina. Una mañana, su superficie se abrió. De las aguas salió Bachué llevando de la mano a un niño pequeño. Bajaron juntos desde el páramo hasta las tierras más amables y construyeron una casa.\n\nEl niño creció. Cuando fue adulto, él y Bachué formaron una familia. Tuvieron hijos, y sus hijos tuvieron otros hijos. La pareja viajó por llanos, montañas y orillas de lagunas, dejando familias que aprendieron a cultivar, levantar viviendas y vivir unas junto a otras.\n\nPasaron muchos años. Donde antes solo se escuchaba el viento, comenzaron a oírse herramientas, pasos y conversaciones. El humo de los fogones subió por primera vez. Los campos cambiaron con las siembras. Los caminos unieron poblados que todavía no tenían nombres.\n\nCuando la tierra estuvo habitada y ellos ya eran viejos, Bachué y su compañero regresaron a Iguaque. Muchas personas los siguieron hasta la laguna. Allí, Bachué pidió a sus descendientes que conservaran la paz, cuidaran las normas recibidas y no olvidaran las aguas de las que había comenzado su historia.\n\nDespués se despidieron.\n\nAl entrar en la laguna, sus cuerpos se volvieron dos grandes serpientes. Nadaron un instante sobre la superficie y desaparecieron en la profundidad.\n\nLa gente volvió a sus casas. Sobre ellos continuaban cruzando las aves; delante de ellos se abrían los caminos; detrás quedaba el agua oscura de Iguaque. Así, en un mundo que primero tuvo que aprender a ser visible, comenzó la vida de los seres humanos.\n\nHistoria\nLa ficha heredada reunía en una sola narración a Chiminigagua, Bachué, los caciques de Sogamoso y Ramiriquí y la ceremonia de El Dorado. Esa acumulación procedía de una síntesis moderna, no de un episodio continuo documentado de esa manera. La presente versión limita el ciclo a dos momentos que Pedro Simón enlaza en su cuarta noticia: la aparición de la luz y, cuando ya existen las demás cosas, la llegada de Bachué desde Iguaque.\n\nSimón escribió su obra en el siglo XVII y tradujo a Chiminigagua mediante categorías cristianas. Alonso de Zamora conservó otra formulación del episodio de Bachué, también atravesada por el lenguaje evangelizador. Ambas fuentes son tempranas, pero ninguna registra los nombres de las personas muiscas que narraron estos relatos ni ofrece una transcripción en muysccubun.\n\nLa compilación de Eugenia Villa Posse permite seguir cómo autores posteriores convirtieron esos pasajes breves en una cosmogonía total. François Correa, en cambio, invita a leer el corpus como un sistema de relaciones entre territorio, ancestros, astros y autoridad, no como una lista estable de “dioses” equivalente a los panteones clásicos.\n\nEsta página funciona como puerta de entrada al ciclo de creación. Las fichas de Chiminigagua, Bachué, la aparición de los primeros seres humanos y el Sol y la Luna conservan por separado sus escenas, variantes y problemas documentales. Esa separación es deliberada.\n\nVersiones\nLa tradición de Bogotá atribuida a Pedro Simón comienza con la luz contenida en Chiminigagua y continúa con las aves negras que iluminan el mundo. Después desplaza la acción hacia Iguaque: Bachué y un niño salen de la laguna, pueblan la tierra y regresan convertidos en serpientes.\n\nLa tradición vinculada con Sogamoso y Ramiriquí ofrece otra respuesta al origen humano. Allí dos caciques modelan a los hombres con tierra amarilla y a las mujeres con tallos altos y huecos; más tarde se convierten en los dos luminares. No es necesario insertar ese episodio dentro del recorrido de Bachué para que ambos relatos pertenezcan al mismo horizonte cultural.\n\nLas síntesis del siglo XX añadieron a veces El Dorado como conclusión de la creación y presentaron los episodios como una historia única. Aquí se retira esa ceremonia: El Dorado posee su propia ficha y su propio contexto político y ritual. La convivencia de relatos distintos no se corrige buscando una doctrina uniforme; se muestra como parte de un archivo fragmentario transmitido por regiones, tiempos y autores diferentes.\n\nLección\nCrear no es una sola acción. Primero el mundo debe poder verse; después debe ser recorrido, habitado y cuidado. La historia enlaza esas tareas sin convertirlas en una carrera por dominar la tierra.\n\nLa humanidad no aparece en un palacio ni recibe el territorio terminado. Comienza con una casa, viajes, cultivos y acuerdos de convivencia. El regreso final al agua recuerda que poblar no equivale a poseer: las generaciones pasan, mientras las lagunas y los montes permanecen como origen y límite.\n\nSimilitudes\nEl Popol Vuh k’iche’ también organiza la creación en intentos y momentos: primero se dispone el mundo, después se buscan seres capaces de habitarlo y sostener la memoria. La diferencia está en la materia narrativa. El texto k’iche’ presenta deliberación, palabra y sucesivas humanidades; el ciclo muisca enlaza luz viajera, una laguna de origen y una pareja que recorre el territorio.\n\nEn Génesis, la luz aparece antes que los seres humanos y la creación avanza mediante una secuencia ordenada. El parecido es estructural, no una prueba de dependencia: en el relato muisca la claridad se distribuye con aves y la humanidad surge del agua, no de una orden verbal culminante.\n\nVarios relatos mesopotámicos separan cielo, tierra y aguas antes de organizar la vida social. Sus conflictos entre generaciones divinas contrastan con este ciclo: aquí no hay combate creador. Los gestos decisivos son abrir la luz, volar, salir de una laguna, construir una casa y despedirse.",
-  "excerpt": "La luz recorrió el mundo en aves negras; después, Bachué salió de Iguaque y comenzaron los caminos humanos.",
-  "seo_title": "La creación muisca: luz, agua y humanidad",
-  "seo_description": "Lee el ciclo muisca de la creación: Chiminigagua ilumina el mundo y Bachué sale de Iguaque para poblarlo. Relato, contexto y fuentes.",
-  "seo": {
-    "meta_title": "La creación muisca: luz, agua y humanidad",
-    "meta_description": "Lee el ciclo muisca de la creación: Chiminigagua ilumina el mundo y Bachué sale de Iguaque para poblarlo. Relato, contexto y fuentes.",
-    "meta_keywords": "mito de la creación muisca, creación muisca, Chiminigagua, Bachué, laguna de Iguaque, origen del mundo muisca, cosmogonía muisca",
-    "og_title": "La creación muisca: cuando el mundo pudo verse",
-    "og_description": "Un relato literario sobre la primera luz y la llegada de Bachué, con contexto crítico y nueve fuentes.",
-    "twitter_title": "La creación muisca: luz, agua y humanidad",
-    "twitter_description": "Lee el ciclo muisca de la creación: Chiminigagua ilumina el mundo y Bachué sale de Iguaque para poblarlo. Relato, contexto y fuentes.",
-    "canonical_path": "/mitos/creacion-muiscas"
-  },
-  "focus_keyword": "mito de la creación muisca",
-  "focus_keywords": [
+export default defineMuiscaMyth({
+  slug: "creacion-muiscas",
+  title: "La creación muisca",
+  tags: ["creación", "Chiminigagua", "Bachué", "luz", "muiscas"],
+  latitude: 5.396,
+  longitude: -73.25,
+  mito: `Antes de que hubiera caminos, la luz permanecía guardada dentro de Chiminigagua. Afuera no se veía montaña, agua ni hoja. Era una noche tan completa que nada proyectaba sombra.
+
+Chiminigagua comenzó a mostrar la claridad que contenía. De aquella primera abertura salieron unas aves grandes y negras. Apenas tuvieron ser, recibieron la tarea de recorrer el mundo.
+
+Volaron sobre una tierra que todavía no podía mirarse. Por los picos soltaron un aliento resplandeciente, y cada ave dejó a su paso una franja de luz. En esa claridad aparecieron los filos de los montes, el brillo de las lagunas y el barro húmedo de los valles. Cuando regresó el silencio, el mundo ya tenía forma y color.
+
+Pero nadie caminaba por él.
+
+En las sierras frías de Iguaque, entre neblinas que casi nunca se levantan, una laguna permanecía escondida. Una mañana, su superficie se abrió. De las aguas salió Bachué llevando de la mano a un niño pequeño. Bajaron juntos desde el páramo hasta el llano donde hoy se levanta el pueblo de Iguaque y construyeron una casa de barro y paja.
+
+El niño creció. Cuando fue hombre, él y Bachué formaron una familia. Tuvieron hijos, y los hijos tuvieron otros hijos, y anduvieron por llanos, montañas y orillas de lagunas dejando familias que aprendieron a labrar la tierra, levantar viviendas y vivir unas junto a otras.
+
+Pasaron muchos años. Donde antes solo se escuchaba el viento, comenzaron a oírse herramientas, pasos y conversaciones. El humo de los fogones subió por primera vez. Los campos cambiaron con las siembras. Los caminos unieron poblados que todavía no tenían nombre.
+
+Cuando la tierra estuvo habitada y ellos ya eran viejos, Bachué y su compañero regresaron a Iguaque. Mucha gente los siguió hasta la laguna. Allí, junto al agua, Bachué habló a sus descendientes:
+
+—Conserven la paz, guarden las leyes que les di y no olviden el agua de donde salí.
+
+Después se despidieron. Al entrar en la laguna, sus cuerpos se volvieron dos grandes serpientes. Nadaron un instante sobre la superficie y desaparecieron en la profundidad.
+
+La gente volvió a sus casas. Sobre sus cabezas seguían cruzando las aves; delante se abrían los caminos; detrás quedaba el agua oscura de Iguaque, entera, como si nada hubiera salido de ella.`,
+  historia: `La tradición muisca sobre el origen del mundo no llegó como un texto único. Llegó como un archivo de voces: frailes del siglo XVII que preguntaban, traducían y juzgaban lo que oían, y comunidades que respondían con sus propios relatos. Fray Pedro Simón recogió en su cuarta noticia el ciclo que esta página narra: la luz guardada en Chiminigagua, las aves negras que la reparten y, ya creadas las demás cosas, la salida de Bachué desde la laguna de Iguaque. Alonso de Zamora conservó otra formulación del episodio, con nombres y detalles propios. Ninguno de los dos registra a los narradores indígenas ni transcribió una palabra en muysccubun.
+
+Los relatos no se repartían de forma uniforme. El área de Bogotá conservó preferentemente el ciclo de la luz y de Bachué; el área de Tunja y Sogamoso, la cosmogonía de los dos caciques que modelan a la humanidad con tierra amarilla y tallos huecos y luego se vuelven los dos luminares. No es una sola doctrina: son respuestas regionales a las mismas preguntas.
+
+Eugenia Villa Posse reunió en 1993 esas crónicas con comentarios y advirtió cuándo un episodio no constituye propiamente un mito. Su lectura permite seguir cómo las síntesis del siglo XX convirtieron pasajes breves en una cosmogonía total, con añadidos modernos como El Dorado. François Correa invita, en cambio, a leer el corpus como un sistema de relaciones entre territorio, ancestros, astros y autoridad, no como un panteón fijo.
+
+Esta página funciona como puerta de entrada del ciclo de creación. Chiminigagua, Bachué, los primeros seres humanos y el Sol y la Luna conservan fichas propias con sus escenas y problemas documentales. Esa separación es deliberada: la convivencia de relatos distintos no se corrige unificándolos, se muestra como archivo fragmentario.`,
+  versiones: `La tradición de Bogotá, que sigue la noticia de Simón, comienza con la luz encerrada en Chiminigagua y las aves negras que la esparcen por el mundo; después desplaza la acción a Iguaque, donde Bachué y un niño salen de la laguna, pueblan la tierra y regresan convertidos en serpientes.
+
+La variante de Zamora llama Bacuche a la mujer («mujer buena»), indica que sacó de las aguas un niño de tres años, fija los partos de cuatro o seis hijos y ubica la despedida en los cerros que miran a Iguaque. Simón añade el segundo nombre Furachogua y subraya que Bachué siguió apareciéndose y fue contada entre los dioses. Ninguna versión da nombre al varón.
+
+La tradición del norte, de Tunja y Sogamoso, propone otra antropogonía: cuando amaneció ya había cielo y tierra, pero sin sol ni luna; en la oscuridad quedaban solo el cacique de Sogamoso y su sobrino el de Ramiriquí, que hicieron a los hombres de tierra amarilla y a las mujeres de tallos altos y huecos, y después se subieron al cielo para volverse, uno, el sol, y el otro, la luna. Esa cosmogonía no forma parte del recorrido de Bachué; pertenece al mismo horizonte cultural sin fundirse con él.
+
+Las síntesis del siglo XX añadieron a veces El Dorado como conclusión de la creación y presentaron los episodios como una historia única. Aquí se retira esa ceremonia: El Dorado tiene ficha y contexto propios. La diferencia regional no es un error que corregir, sino parte del archivo.`,
+  leccion:
+    "El mundo se vuelve visible para ser habitado, y todo lo que emerge de las aguas regresa a ellas.",
+  similitudes: `Dentro del mismo corpus muisca conviven antropogonías distintas. En el ciclo de Sogamoso y Ramiriquí la humanidad se forma de tierra amarilla y tallos huecos y los creadores se vuelven los luminares; aquí la humanidad nace del agua y de una pareja que recorre el territorio. Ambos responden a las mismas preguntas con materiales propios del altiplano. También en el corpus el sol y la luna se adoraban como deidades macho y hembra, jamás una sola, mientras en este ciclo la claridad llega sin astros: la reparten aves. Las comunidades muiscas contemporáneas, como las de Bosa, mantienen viva esa relación entre agua, territorio y memoria de origen.
+
+En los Andes, Viracocha crea, enseña a la humanidad y desaparece caminando sobre el mar; la pareja muisca se hunde en la laguna de la que salió. La diferencia está en el gesto: el creador andino parte hacia afuera, los progenitores muiscas regresan al agua como a un vientre. El Popol Vuh k'iche' organiza la creación en momentos y busca sucesivas humanidades con deliberación y palabra; el ciclo muisca enlaza luz viajera, laguna de origen y pareja que puebla sin asamblea de dioses.
+
+En Génesis la luz aparece antes que los seres humanos y la creación avanza en secuencia ordenada. El parecido es estructural, no una prueba de contacto: aquí la claridad se reparte con aliento de aves y la humanidad surge del agua, no de una orden verbal culminante. Los relatos mesopotámicos separan cielo, tierra y aguas mediante combates entre generaciones divinas; en este ciclo no hay lucha creadora. Los gestos decisivos son abrir la luz, volar, salir de una laguna, construir una casa y despedirse.`,
+  excerpt:
+    "La luz recorrió el mundo en aves negras; después, Bachué salió de Iguaque y comenzaron los caminos humanos.",
+  seoTitle: "La creación muisca: luz, agua y humanidad",
+  seoDescription:
+    "Lee el ciclo muisca de la creación: Chiminigagua ilumina el mundo y Bachué sale de Iguaque para poblarlo. Relato, contexto y fuentes.",
+  ogTitle: "La creación muisca: cuando el mundo pudo verse",
+  ogDescription:
+    "Un relato sobre la primera luz en aves negras y la salida de Bachué de la laguna de Iguaque, con contexto crítico y fuentes documentadas.",
+  focusKeywords: [
     "mito de la creación muisca",
     "creación muisca",
     "Chiminigagua",
     "Bachué",
     "laguna de Iguaque",
     "origen del mundo muisca",
-    "cosmogonía muisca"
+    "cosmogonía muisca",
   ],
-  "image_prompt": "Fotografía editorial horizontal 16:9 de una maqueta artesanal de papel cortado. Un paisaje oscuro del altiplano se vuelve visible por el aliento luminoso de aves negras; al fondo, sin competir con la escena principal, una mujer y un niño salen de una laguna entre niebla de páramo. Capas físicas, fibras visibles, relieve bajo, negro, azul de agua, verde frío y luz cálida. Sin balsa de El Dorado, ánfora, templos, estatuas, oro ornamental, texto ni apariencia CGI.",
-  "image_prompt_horizontal": "Fotografía editorial horizontal 16:9 de una maqueta artesanal de papel cortado. Un paisaje oscuro del altiplano se vuelve visible por el aliento luminoso de aves negras; al fondo, sin competir con la escena principal, una mujer y un niño salen de una laguna entre niebla de páramo. Capas físicas, fibras visibles, relieve bajo, negro, azul de agua, verde frío y luz cálida. Sin balsa de El Dorado, ánfora, templos, estatuas, oro ornamental, texto ni apariencia CGI.",
-  "image_prompt_vertical": "Fotografía editorial horizontal 16:9 de una maqueta artesanal de papel cortado. Un paisaje oscuro del altiplano se vuelve visible por el aliento luminoso de aves negras; al fondo, sin competir con la escena principal, una mujer y un niño salen de una laguna entre niebla de páramo. Capas físicas, fibras visibles, relieve bajo, negro, azul de agua, verde frío y luz cálida. Sin balsa de El Dorado, ánfora, templos, estatuas, oro ornamental, texto ni apariencia CGI.",
-  "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/editorial/creacion-muiscas-37f452a1002b.jpg",
-  "keySources": [
-    {
-      "title": "Noticias historiales de las conquistas de Tierra Firme en las Indias occidentales, tomo II",
-      "author": "Fray Pedro Simón",
-      "year": 1892,
-      "originalYear": 1627,
-      "type": "crónica colonial",
-      "url": "https://archive.org/details/tierrafirmeindias02simbrich",
-      "limitation": "Conserva testimonios tempranos, pero los interpreta desde una mirada evangelizadora y colonial.",
-      "summary": "Conserva la secuencia temprana que enlaza la luz de Chiminigagua con la salida de Bachué después de creadas las demás cosas."
-    },
-    {
-      "title": "Historia de la provincia de San Antonino del Nuevo Reino de Granada",
-      "author": "Alonso de Zamora",
-      "year": 1701,
-      "type": "crónica colonial",
-      "url": "https://babel.banrepcultural.org/digital/collection/p17054coll6/id/22/",
-      "limitation": "Su propósito principal es narrar la historia dominica; su vocabulario religioso traduce y juzga las creencias indígenas.",
-      "summary": "Aporta una formulación alternativa de Bachué, su descendencia y el retorno de la pareja a la laguna."
-    },
-    {
-      "title": "Mitos y leyendas de Colombia, vol. III: Mitos prehispánicos muiscas",
-      "author": "Eugenia Villa Posse, compiladora",
-      "year": 1993,
-      "type": "compilación editorial",
-      "url": "https://www.flacso.edu.ec/biblio/catalog/resGet.php?resId=44622",
-      "limitation": "Reúne versiones de autores de los siglos XIX y XX; no es una transcripción directa de tradición oral.",
-      "summary": "Permite identificar el origen de la síntesis heredada y separar sus añadidos modernos de los núcleos coloniales."
-    }
+  imagePrompt:
+    "Fotografía editorial horizontal 16:9 de una maqueta artesanal de papel cortado. Un paisaje oscuro del altiplano se vuelve visible por el aliento luminoso de aves negras; al fondo, sin competir con la escena principal, una mujer y un niño salen de una laguna entre niebla de páramo. Capas físicas, fibras visibles, relieve bajo, negro, azul de agua, verde frío y luz cálida. Sin balsa de El Dorado, ánfora, templos, estatuas, oro ornamental, texto ni apariencia CGI.",
+  imageUrl:
+    "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/editorial/creacion-muiscas-37f452a1002b.jpg",
+  sourceKeys: [
+    "simon",
+    "villa",
+    "piedrahita",
+    "correa",
+    "gamboaArqueologiaHistoria",
+    "planBosa",
+    "popolVuh",
+    "viracocha",
+    "atrahasis",
   ],
-  "sources": [
-    {
-      "title": "El sol del poder: simbología y política entre los muiscas",
-      "author": "François Correa Rubio",
-      "year": 2004,
-      "type": "investigación antropológica",
-      "url": "https://books.google.com/books/about/El_sol_del_poder.html?id=OCyF3XmjprAC",
-      "limitation": "Interpreta el corpus documental disponible; no convierte las crónicas coloniales en una voz muisca transparente.",
-      "summary": "Ofrece un marco antropológico para leer creación, ancestros, astros y orden social como relaciones y no como un catecismo fijo."
-    },
-    {
-      "title": "Los muiscas en los siglos XVI y XVII: miradas desde la arqueología y la historia",
-      "author": "Jorge Augusto Gamboa Mendoza, compilador",
-      "year": 2008,
-      "type": "investigación histórica y arqueológica",
-      "url": "https://ediciones.uniandes.edu.co/gpd-los-muiscas-en-los-siglos-xvi-y-xvii-miradas-desde-la-arqueologia-y-la-historia-9789586953481-67f86154e57c4.html",
-      "limitation": "Aporta contexto social e histórico y cuestiona modelos homogéneos; no es un catálogo de mitos.",
-      "summary": "Ayuda a evitar la imagen de una nación muisca homogénea y a situar los relatos en sociedades regionalmente diversas."
-    },
-    {
-      "title": "Plan de vida de la comunidad indígena Muisca de Bosa",
-      "author": "Cabildo Indígena Muisca de Bosa",
-      "year": 2019,
-      "type": "memoria y planeación comunitaria",
-      "url": "https://historico.gobiernobogota.gov.co/sites/gobiernobogota.gov.co/files/control/plan_de_vida_muisca-transparencia.pdf",
-      "limitation": "Expresa una construcción comunitaria contemporánea; no debe proyectarse automáticamente al periodo prehispánico.",
-      "summary": "Sustenta la continuidad contemporánea de territorio, memoria y cosmogonía sin atribuir a Bosa una versión literal del ciclo."
-    },
-    {
-      "title": "Popol Vuh: Sacred Book of the Quiché Maya People",
-      "author": "Allen J. Christenson, traducción y notas",
-      "year": 2007,
-      "type": "texto mítico comparativo",
-      "url": "https://www.mesoweb.com/publications/Christenson/PopolVuh.pdf",
-      "limitation": "La comparación muestra una pregunta cosmogónica compartida; no implica contacto ni origen común con el relato muisca.",
-      "summary": "Documenta la comparación con una creación mesoamericana organizada en momentos y búsquedas sucesivas de humanidad."
-    },
-    {
-      "title": "Génesis 1: la luz y los cuerpos celestes",
-      "author": "Biblia hebrea, traducciones modernas",
-      "type": "texto mítico y religioso comparativo",
-      "url": "https://www.biblegateway.com/passage/?search=Genesis%201%3A1-19&version=NRSVUE",
-      "limitation": "Se usa como paralelo estructural y no como fuente del mito muisca ni como medida para interpretarlo.",
-      "summary": "Permite contrastar la prioridad de la luz y una creación secuenciada, sin proponer filiación entre los relatos."
-    },
-    {
-      "title": "Mesopotamian Creation Myths",
-      "author": "Ira Spar, The Metropolitan Museum of Art",
-      "year": 2009,
-      "type": "estudio comparativo de mitología",
-      "url": "https://www.metmuseum.org/essays/epic-of-creation-mesopotamia",
-      "limitation": "Resume varios textos mesopotámicos distintos; sus motivos no deben fundirse en una sola versión.",
-      "summary": "Aporta un tercer contraste cosmogónico basado en separaciones y genealogías divinas."
-    }
-  ],
-  "researchNotes": "ESTADO: revisión integral.\n\nNÚCLEO DOCUMENTADO: luz contenida en Chiminigagua; aves negras que reparten claridad; mundo ya creado; salida de Bachué y el niño desde Iguaque; poblamiento; retorno de la pareja convertida en serpientes.\n\nVARIANTE: la creación humana con tierra amarilla y tallos huecos pertenece al ciclo de Sogamoso y Ramiriquí y se trata en páginas separadas.\n\nMEMORIA CONTEMPORÁNEA: el Plan de Vida de Bosa se usa para reconocer continuidad cultural y territorial, no para reconstruir palabras prehispánicas.\n\nHIPÓTESIS ACADÉMICA: las relaciones entre luz, ancestros y orden político se apoyan en Correa; no se presentan como explicación única.\n\nLECTURA EDITORIAL: se compone un ciclo literario con dos episodios que Simón ubica en secuencia. Se elimina El Dorado de la narración.\n\nDUDA: no conocemos los narradores indígenas ni el alcance territorial de la secuencia tal como quedó escrita.\n\nGEOGRAFÍA: el punto heredado funciona como referencia amplia del altiplano. Iguaque tiene su localización precisa en la ficha de Bachué.\n\nIMAGEN: debe mostrar un ciclo legible de oscuridad, aves, laguna y primeros caminos, sin balsa de El Dorado, ánfora europea ni panteón inventado."
-},
-  methodologySeo: bachue.methodologySeo,
-};
+  researchNotes: `ESTADO: revisión integral sobre el núcleo ya definido (luz de Chiminigagua + Bachué), sin fusionar el ciclo de los dos caciques.
 
-export default withMuiscaImagePrompts(editorialMyth);
+NÚCLEO DOCUMENTADO: luz guardada en Chiminigagua; aves negras grandes que esparcen aliento lúcido por los picos y dejan el mundo iluminado; mundo ya creado; salida de Bachué (también Furachogua, Bacuche) con un niño de tres años desde la laguna de Iguaque; casa en el llano de Iguaque; matrimonio del niño al crecer; partos de cuatro o seis hijos; poblamiento; regreso de la pareja vieja; plática junto a la laguna; conversión en dos serpientes y desaparición en el agua.
+
+VARIANTES: Zamora (Bacuche, despedida en los cerros que miran a Iguaque); Simón (Furachogua, apariciones posteriores, conteo de Bachué entre los dioses); el varón sin nombre en todas las versiones. El ciclo de los dos caciques (tierra amarilla y tallos huecos; sol y luna) es cosmogonía del área de Tunja y se trata en fichas aparte.
+
+LICENCIA EDITORIAL: se compone un relato literario con los dos episodios que Simón enlaza en secuencia; se retira El Dorado; la plática de despedida se condensa como diálogo oracular breve; los materiales (barro, paja, fogones, siembras, caminos) se toman de la vida material documentada.
+
+DUDA: no conocemos los narradores indígenas, ni el alcance territorial de la secuencia, ni el nombre del compañero de Bachué.
+
+GEOGRAFÍA: el punto heredado (5.396, -73.25) sirve como referencia amplia del altiplano; la laguna de Iguaque tiene localización precisa en la ficha de Bachué.
+
+REGISTRO LINGÜÍSTICO: español colombiano contemporáneo; se evitan arcaísmos peninsulares y categorías evangelizadoras de las crónicas; los nombres propios se conservan en su forma documentada.`,
+});

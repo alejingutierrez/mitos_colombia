@@ -8,17 +8,11 @@ export default defineMuiscaMyth({
   longitude: -73.8914,
   mito: `Tausa salió de Chía sin despedirse.
 
-Su hermano, el cacique, lo había acusado de robar una pieza guardada en el cercado. Tausa negó el robo, pero comprendió que un juicio dirigido por quien ya desconfiaba de él no le dejaría espacio para defenderse.
+Su hermano, el cacique, lo había acusado de robar una pieza guardada en el cercado. Tausa negó el robo, pero comprendió que un juicio dirigido por quien ya desconfiaba de él no le dejaría espacio para defenderse. Caminó hasta las tierras de Bacatá.
 
-Caminó hasta las tierras de Bacatá.
+Allí el zipa preparaba una campaña contra quienes rechazaban sus órdenes. Tausa pidió un lugar entre los guerreros. No contó su historia completa; dijo que sabía organizar grupos, leer el terreno y esperar antes de atacar. El zipa lo puso a prueba. Durante las primeras jornadas no buscó la posición más visible: revisó senderos, repartió turnos y evitó que una columna entrara en un paso inundado. La campaña terminó y su trabajo fue reconocido.
 
-Allí el zipa preparaba una campaña contra poblaciones que rechazaban sus órdenes. Tausa pidió un lugar entre los guerreros. No contó su historia completa. Dijo que sabía organizar grupos, leer el terreno y esperar antes de atacar.
-
-El zipa lo puso a prueba.
-
-Durante las primeras jornadas, Tausa no buscó la posición más visible. Revisó senderos, repartió turnos y evitó que una columna entrara en un paso inundado. La campaña terminó, y su trabajo fue reconocido.
-
-Con los años se volvió consejero. No dejó de pensar en Chía ni en la acusación. Pero aprendió que gobernar no era ganar una discusión para siempre: cada decisión regresaba en la vida de otras personas.
+Con los años se volvió consejero. No dejó de pensar en Chía ni en la acusación, pero aprendió que gobernar no era ganar una discusión para siempre: cada decisión regresaba en la vida de otras personas.
 
 Cuando el zipa enfermó, reunió a quienes sostenían su autoridad.
 
@@ -38,45 +32,34 @@ La hermana colocó una manta entre los tres.
 
 Tausa aceptó encontrarse con su hermano. Hablaron durante horas. No resolvieron quién había robado la pieza; ya no quedaban testigos ni una verdad que pudiera imponerse sin duda. Pero acordaron que la sucesión futura no dependería de la elección desesperada de un gobernante enfermo.
 
-Miraron a la hermana mayor.
-
-Sus hijos pertenecían al mismo linaje que ambos hermanos. El siguiente heredero se escogería entre ellos, de acuerdo con responsabilidades y vínculos reconocidos por la familia.
+Miraron a la hermana mayor. Sus hijos pertenecían al mismo linaje que ambos hermanos. El siguiente heredero se escogería entre ellos, según responsabilidades y vínculos reconocidos por la familia.
 
 —No soy un puente por el que ustedes pasan —advirtió ella—. Si mis hijos tendrán obligaciones, yo participaré en las decisiones que los afecten.
 
-Los hermanos aceptaron.
+Los hermanos aceptaron, y entonces el reparto se volvió visible: la autoridad ganada en Bacatá quedaría donde estaba; la de Chía pasaría por la línea de la hermana; las casas, las sementeras y los nombres de cada familia quedaron distribuidos sobre la manta, como se reparte el agua de un canal en la seca, en partes que no matan a nadie.
 
 El acuerdo no inventó el parentesco ni acabó con todas las disputas. Dio una forma a la continuidad y distribuyó el poder entre más de una casa.
 
-Tausa regresó a Bacatá sin sentirse vencedor.
+Tausa regresó a Bacatá sin sentirse vencedor. Había obtenido un gobierno por mérito y fortuna, y su tarea más difícil fue admitir que no podía legarlo como una propiedad. La herencia no sería solamente un puesto: sería una red de obligaciones que nadie sostenía solo, y cada hilo de esa red seguía apuntando hacia la manta.`,
+  historia: `"La herencia" proviene de *Érase una vez entre los chibchas* (1984), obra juvenil de Alfredo García Giraldo enmarcada en Sesquilé y Chypuy. No transcribe tradición oral antigua: presenta a Tausa, acusado por su hermano de Chía, refugiado junto al zipa de Bacatá, reconocido por su desempeño militar, escogido como sucesor y reconciliado con su familia al acordar que el heredero saldrá de los hijos de la hermana mayor. Gómez Aldana rastreó pasajes presentados como tradición muisca hasta su antecedente literal en esta obra, lo que confirma el origen literario del relato y descarta atribuirlo a la transmisión prehispánica.
 
-Había obtenido un gobierno por mérito y fortuna. Su tarea más difícil fue admitir que no podía legarlo como una propiedad.
+La historicidad está en el trasfondo. Los testamentos indígenas de Santafé de los siglos XVI y XVII estudiados por Turbay muestran legados hacia hijos de hermanas y persistencias matrilineales en la sucesión de algunos cacicazgos, junto a profundas transformaciones bajo el orden colonial. Matrilinealidad significa que ciertos vínculos y derechos se trazan por la línea materna; no equivale a matriarcado ni prueba que las mujeres controlaran el poder. La historiografía sobre cacicazgos (Gamboa) descarta además una corona única y estable: los nombramientos mezclaban linaje, reconocimiento local, negociación colonial y disputa.
 
-La herencia no sería solamente un puesto.
+Tres cautelas: el cuento no documenta el origen de la sucesión muisca, solo dramatiza una lógica documentada; la matrilinealidad documental coexiste con cambios y excepciones, así que no cabe proyectar una regla uniforme sobre todas las comunidades; y esta reescritura conserva la estructura de García Giraldo —acusación, exilio, servicio, sucesión, reconciliación— pero pone la voz de la hermana en el centro de la negociación y deja el robo sin resolver, porque la historia no necesita esa certeza para ser comprensible.`,
+  versiones: `En García Giraldo, Tausa huye por una acusación de robo, demuestra capacidad militar al servicio del zipa, recibe el gobierno y, tras reconciliarse con su hermano, establece que el primogénito de la hermana mayor heredará. El cuento funciona como explicación pedagógica de una práctica matrilineal.
 
-Sería una red de obligaciones que nadie sostenía solo.`,
-  historia: `“La herencia” forma parte de *Érase una vez entre los chibchas*, de Alfredo García Giraldo. Su argumento presenta a Tausa, acusado por su hermano de Chía, refugiado junto al zipa de Bacatá, reconocido por su desempeño militar y escogido como sucesor. Después de reconciliarse con su familia, establece que el futuro heredero será un hijo de la hermana mayor. No hay evidencia suficiente para afirmar que un gobernante individual inventó así la sucesión muisca.
+Resúmenes y adaptaciones posteriores transformaron esa explicación en historia institucional comprobada: hablaron de trono y reino, y atribuyeron a Tausa la fundación de la sucesión para todos los muiscas. Esa generalización no cuenta con una fuente independiente. La misma cadena de reelaboraciones confundió matrilinealidad con matriarcado, categorías que describen relaciones distintas: la primera ordena la filiación de derechos, la segunda supone control femenino del poder.
 
-La historia social sí documenta rasgos matrilineales. Sandra Turbay, a partir de testamentos indígenas de los siglos XVI y XVII, encuentra legados hacia hijos de hermanas y persistencia de filiación matrilineal en sucesiones de cacicazgos, aunque también profundas transformaciones coloniales. Matrilineal significa que ciertos vínculos y derechos se trazan por la línea materna; no equivale a matriarcado ni demuestra que las mujeres controlaran automáticamente el poder.
+Los documentos coloniales revisados por Turbay aportan la variante documental: hijos de hermanas podían ocupar posiciones relevantes y recibir legados, pero las mismas escrituras revelan excepciones, cambios y conflictos. No hay una sola versión colonial de la regla. La versión actual no presenta el cuento como origen de esa estructura; lo lee como ficción que vuelve comprensible una lógica de parentesco real y deja abierta su diversidad histórica. La hermana habla porque la línea materna no debe narrarse como un acuerdo exclusivo entre hombres sobre el futuro de sus hijos.`,
+  leccion:
+    "Nadie hereda solo; lo que se reparte vuelve a unir lo que la posesión quiso dividir.",
+  similitudes: `Los testamentos indígenas estudiados por Turbay registran legados hacia hijos de hermanas y persistencias matrilineales en la sucesión de cacicazgos del Nuevo Reino. El relato resuena con esa lógica: la línea que hereda no es la del padre sino la que cruza por la hermana. La diferencia es que la documentación muestra excepciones, cambios y disputas bajo el orden colonial, y el cuento convierte esa diversidad en un acuerdo limpio entre dos hermanos.
 
-La historiografía sobre cacicazgos muiscas también cuestiona la idea de una corona única y estable. Los nombramientos involucraban linaje, reconocimiento local, negociación colonial y disputas. El cuento de García Giraldo convierte esa complejidad en una explicación de origen protagonizada por Tausa.
+En los Andes, la herencia de autoridad rara vez pasaba por un heredero único; los grupos de parentesco y las casas sucesoras se repartían bienes, prestigio y responsabilidades. En el mundo incaico cada gobernante fundaba una casa para sus descendientes mientras el reino pasaba a un hijo elegido: partición y continuidad convivían. La resonancia está en que el reparto no extingue la autoridad, la redistribuye entre más de una casa. La diferencia es que en esa tradición la partición tiende a multiplicar las casas y a alimentar la competencia, mientras el acuerdo de Chía y Bacatá busca que la división ate a las familias en una misma red de obligaciones.
 
-La reescritura conserva acusación, exilio, servicio, sucesión y reconciliación. Añade la voz de la hermana, rechaza que sus hijos sean simples conductos masculinos y evita celebrar campañas de sometimiento. Los diálogos y la imposibilidad de probar el robo son invenciones literarias. La ubicación se corrige hacia Chía, punto decisivo de la relación familiar, en vez de un centro genérico del altiplano.`,
-  versiones: `En García Giraldo, Tausa huye por una acusación de robo, demuestra capacidad militar al servicio del zipa y recibe el gobierno. La reconciliación con su hermano conduce a una regla sucesoria: heredará el primogénito de la hermana mayor. El cuento funciona como explicación clara y pedagógica de una práctica matrilineal.
-
-Resúmenes posteriores transformaron esa explicación en historia institucional comprobada, hablaron de “trono” y “reino” y concluyeron que Tausa fundó el sistema para todos los muiscas. Esa generalización no está respaldada por una fuente independiente. También se confundió matrilinealidad con matriarcado, categorías que describen relaciones distintas.
-
-Los documentos coloniales estudiados por Turbay muestran que hijos de hermanas podían ocupar posiciones relevantes y recibir legados, pero revelan a la vez cambios, excepciones y conflictos. La versión actual no usa el cuento para originar esa estructura. Lo presenta como ficción que vuelve comprensible una lógica de parentesco real, mientras deja abierta su diversidad histórica. La hermana habla porque la línea materna no debe narrarse como un acuerdo exclusivo entre hombres sobre el futuro de sus hijos.`,
-  leccion: `El poder no es un objeto que una persona pueda guardar o entregar sin consultar a quienes quedarán vinculados por la decisión. Toda herencia distribuye responsabilidades, no solo privilegios.
-
-Reconciliarse tampoco exige inventar una certeza sobre el pasado. Tausa y su hermano no resuelven el robo; deciden impedir que la herida gobierne el futuro. Eso es más modesto y más difícil que declararse vencedor.`,
-  similitudes: `La realeza del antiguo Egipto también vinculó autoridad, parentesco y continuidad dinástica, pero sus reglas cambiaron durante milenios y no pueden reducirse a una fórmula simple. Compararla con Tausa muestra que ninguna sucesión es solo biología: requiere reconocimiento, instituciones y relatos que vuelvan legítimo a quien sigue.
-
-La diferencia es decisiva. El faraón ocupaba una monarquía estatal y religiosa muy distinta de los cacicazgos del altiplano. Llamar “faraón muisca” al zipa o buscar la misma regla en ambos casos borraría sus estructuras.
-
-Muchas historias universales convierten una crisis familiar en origen de una ley. “La herencia” usa ese recurso para explicar la línea de la hermana mediante las decisiones de dos hermanos. La documentación histórica obliga a leerlo al revés: la matrilinealidad no nace del héroe; el autor moderno construye un héroe para dramatizarla. La singularidad del relato está en esa negociación entre Chía y Bacatá, y la reescritura contemporánea desplaza a la hermana desde el margen hasta la conversación donde su linaje está en juego.`,
+El motivo de los hermanos que dividen una herencia recorre el folclor universal. En el ciclo tebano, Eteocles y Polinices reparten el gobierno de Tebas y el reparto los lleva a matarse; en Egipto, la sucesión unía autoridad, parentesco y continuidad dinástica durante milenios, con reglas que cambiaron sin cesar. La resonancia es el núcleo común: dividir lo que parecía indivisible redefine el vínculo entre herederos. La diferencia es decisiva: en Tebas la división destruye el vínculo; en la herencia de Tausa, el reparto es lo único que permite que ambos hermanos y su linaje sigan compartiendo un territorio y una responsabilidad.`,
   excerpt:
-    "Tausa pasa del exilio al gobierno de Bacatá y debe decidir si convierte una vieja herida familiar en la regla que heredarán los demás.",
+    "Tausa pasa del exilio al gobierno de Bacatá y debe repartir una herencia que vuelve a unir lo que la acusación había dividido.",
   seoTitle: "La herencia de Tausa: sucesión muisca y fuentes",
   seoDescription:
     "Lee La herencia de Tausa: un cuento sobre Chía, Bacatá y sucesión matrilineal, con origen literario, contexto histórico y fuentes.",
@@ -92,33 +75,29 @@ Muchas historias universales convierten una crisis familiar en origen de una ley
     "Érase una vez entre los chibchas",
   ],
   imagePrompt:
-    "Fotografía editorial horizontal 16:9 de una maqueta artesanal de papel cortado: reunión familiar sobria en Chía, Tausa y su hermano sentados a lados opuestos mientras su hermana mayor extiende una manta tejida entre ambos y participa en la decisión; cerro de Chía al fondo, fibras, capas, micro-sombras. Sin trono, corona, batalla, sumisión femenina, texto ni CGI.",
-  imagePromptVertical:
-    "Fotografía editorial vertical 4:5 de una maqueta de papel cortado: una mujer extiende una manta entre sus dos hermanos, Tausa y el cacique de Chía; tres figuras al mismo nivel, cercado y montaña al fondo. Fibras visibles, luz fría, micro-sombras. Sin corona, cetro, texto ni CGI.",
+    "Fotografía editorial horizontal exacta 16:9. Escena principal: en una reunión familiar sobria de Chía, la hermana mayor extiende una manta entre Tausa y su hermano cacique y participa en la decisión; las tres personas están sentadas al mismo nivel. Estilo studioPaperMaquette aprobado: maqueta física hecha a mano con papel cortado, cartón y fibras naturales, fotografiada de frente; relieve bajo, bordes visibles, pequeñas imperfecciones humanas, micro-sombras reales e iluminación sobria. Fantasía anclada en el paisaje del altiplano cundiboyacense. Composición panorámica de un solo tableau; los personajes y objetos esenciales permanecen dentro del 80 % central. Sin texto ni logotipos; sin CGI, render digital ni apariencia de 3D sintético; sin coronas, tronos o templos europeos; sin pirámides, penachos ni iconografía mesoamericana; sin símbolos espirituales inventados; sin ejército, trono, corona, palacio, sumisión femenina o ceremonia dinástica.",
   imageUrl:
     "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/la-herencia-1784765870391.jpg",
   sourceKeys: [
     "garcia",
-    "turbay",
-    "gamboaSenores",
     "garciaCatalog",
     "gomezAldana",
+    "turbay",
+    "gamboaSenores",
     "planBosa",
     "kingsEgypt",
+    "viracocha",
+    "eteocles",
   ],
-  researchNotes: `ESTADO: cuento literario moderno que dramatiza una práctica histórica real sin demostrar su origen.
+  researchNotes: `ESTADO: cuento literario moderno (García Giraldo) que dramatiza una práctica histórica real sin demostrar su origen.
 
-NÚCLEO DOCUMENTADO EN GARCÍA GIRALDO: Tausa acusado por su hermano de Chía; exilio; servicio al zipa; reconocimiento; sucesión; reconciliación; heredero por la línea de la hermana.
+NÚCLEO DOCUMENTADO EN GARCÍA GIRALDO: Tausa acusado por su hermano de Chía; exilio; servicio al zipa; sucesión; reconciliación; heredero por la línea de la hermana mayor.
 
-VARIANTES: adaptaciones que lo convierten en fundador histórico de una ley universal, hablan de trono y confunden matrilinealidad con matriarcado.
+VARIANTES: adaptaciones que lo convierten en fundador histórico de una ley universal, hablan de trono y confunden matrilinealidad con matriarcado; los testamentos coloniales (Turbay) muestran legados a hijos de hermanas y cambios bajo el orden colonial.
 
-MEMORIA VIVA: familia, linaje y continuidad se leen junto a procesos comunitarios actuales, sin proyectar una regla uniforme sobre todas las comunidades.
+LICENCIA EDITORIAL: el reparto visible sobre la manta, la voz de la hermana, el robo irresuelto y el cierre sobre la red de obligaciones son invenciones literarias; la estructura de García Giraldo se conserva sin atribuirle historicidad a la regla sucesoria.
 
-HIPÓTESIS ACADÉMICA: testamentos coloniales muestran persistencias matrilineales y cambios; los cacicazgos tuvieron procedimientos diversos y disputados.
+GEOGRAFÍA: Chía, Cundinamarca, con desplazamiento narrativo hacia Bacatá.
 
-LECTURA EDITORIAL: voz de la hermana, robo irresuelto, manta como espacio de negociación y cierre sobre obligaciones son invenciones.
-
-DUDA: no se ha localizado una fuente independiente para Tausa como fundador de la sucesión.
-
-GEOGRAFÍA: Chía, Cundinamarca, con desplazamiento narrativo hacia Bacatá.`,
+REGISTRO LINGÜÍSTICO: español colombiano contemporáneo, sin arcaísmos peninsulares ni moralismo.`,
 });
