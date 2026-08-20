@@ -727,6 +727,123 @@ h1.font-editorial {
   .v3-btn-subtle:hover {
     background: rgba(255, 255, 255, 0.92);
   }
+
+  /* ==========================================================================
+     Home · piezas de la portada rediseñada
+     La retícula, la escala y el halo salen de los tokens .atlas-*; aquí sólo
+     vive lo que Tailwind no expresa bien: los velos calibrados, la banda del
+     carril y el abanico de cartas.
+     ========================================================================== */
+
+  /* Velo de portada. Mucho más liviano que .atlas-scrim-cover: en el home la
+     obra es el argumento de la página, así que el texto se sostiene con el halo
+     de .atlas-on-image y no con tinta encima de la ilustración. */
+  .home-cover-scrim {
+    background: linear-gradient(
+      to top,
+      rgba(8, 18, 20, 0.86) 0%,
+      rgba(8, 18, 20, 0.6) 26%,
+      rgba(8, 18, 20, 0.34) 48%,
+      rgba(8, 18, 20, 0.14) 70%,
+      rgba(8, 18, 20, 0.02) 92%,
+      rgba(8, 18, 20, 0) 100%
+    );
+  }
+  @media (min-width: 900px) {
+    /* En ancho el texto ocupa la banda izquierda: el refuerzo se abre por ahí
+       y el vertical sólo sostiene el pie. */
+    .home-cover-scrim {
+      background:
+        linear-gradient(
+          to right,
+          rgba(8, 18, 20, 0.6) 0%,
+          rgba(8, 18, 20, 0.36) 32%,
+          rgba(8, 18, 20, 0.12) 60%,
+          rgba(8, 18, 20, 0) 86%
+        ),
+        linear-gradient(
+          to top,
+          rgba(8, 18, 20, 0.62) 0%,
+          rgba(8, 18, 20, 0.26) 22%,
+          rgba(8, 18, 20, 0.06) 46%,
+          rgba(8, 18, 20, 0) 100%
+        );
+    }
+  }
+
+  /* Banda propia bajo la tira de contactos. Al aligerar el velo de portada los
+     rótulos de las miniaturas inactivas se perdían sobre las zonas claras de la
+     obra; esta banda devuelve tinta sólo donde vive ese texto. */
+  .home-rail-veil {
+    background: linear-gradient(
+      to top,
+      rgba(8, 18, 20, 0.94) 0%,
+      rgba(8, 18, 20, 0.82) 46%,
+      rgba(8, 18, 20, 0.42) 80%,
+      rgba(8, 18, 20, 0) 100%
+    );
+  }
+  @media (min-width: 900px) {
+    .home-rail-veil {
+      background: linear-gradient(
+        to top,
+        rgba(8, 18, 20, 0.72) 0%,
+        rgba(8, 18, 20, 0.6) 46%,
+        rgba(8, 18, 20, 0.34) 78%,
+        rgba(8, 18, 20, 0) 100%
+      );
+    }
+  }
+
+  /* Titular de portada: --step-4 en vez del --step-6 del resto de páginas.
+     Un H1 de 72px sobre la obra tapaba media ilustración. */
+  .home-cover-title {
+    @apply font-display leading-[1.06] tracking-[-0.012em] text-white;
+    font-size: var(--step-4);
+    text-wrap: balance;
+  }
+
+  /* Línea de oro que cruza el borde superior de la portada y marca el ciclo de
+     rotación. Decorativa: el estado real lo llevan las miniaturas. */
+  .home-rot-fill {
+    transform-origin: left;
+    animation: home-rot 7s linear infinite;
+  }
+  @keyframes home-rot {
+    from {
+      transform: scaleX(0);
+    }
+    to {
+      transform: scaleX(1);
+    }
+  }
+
+  /* Abanico del oráculo. La posición de cada carta llega por `transform` desde
+     el componente; aquí sólo la transición compartida. */
+  .home-card {
+    transition:
+      transform 0.65s cubic-bezier(0.16, 1, 0.3, 1),
+      filter 0.65s cubic-bezier(0.16, 1, 0.3, 1),
+      box-shadow 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  /* Nube de categorías: el cuerpo de cada hilo es proporcional a cuántos
+     relatos reúne, así que el tamaño entra como variable desde el servidor. */
+  .home-cloud-item {
+    @apply inline-flex items-baseline gap-2 font-editorial leading-none text-jungle-700 transition-colors hover:text-ember-500;
+    font-size: var(--cloud-size, 1.5rem);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .home-rot-fill {
+      animation: none;
+      transform: scaleX(1);
+    }
+    .home-card {
+      transition: none;
+    }
+  }
+
 }
 
 @layer utilities {

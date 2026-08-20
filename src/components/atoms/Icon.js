@@ -48,6 +48,11 @@ const ICONS = {
       <path d="M5 20c.7-4 3-6 7-6s6.3 2 7 6" />
     </>
   ),
+  pause: <path d="M9 5v14M15 5v14" />,
+  // Dos hilos que se cruzan: el gesto de barajar del home y del oráculo.
+  shuffle: (
+    <path d="M17 4l3 3-3 3M17 14l3 3-3 3M4 7h4.2c1.5 0 2.9.8 3.7 2.1l3.2 5.8c.8 1.3 2.2 2.1 3.7 2.1H20M4 17h4.2c1.5 0 2.9-.8 3.7-2.1" />
+  ),
 };
 
 export function Icon({

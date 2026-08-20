@@ -12,7 +12,8 @@ import { SearchBox } from "../molecules";
  * Organismo · Header
  * Encabezado global del sitio. Sticky, fondo translúcido con backdrop-blur y
  * borde inferior sutil. En desktop muestra la navegación principal + búsqueda;
- * en móvil colapsa a un panel desplegable con enlaces grandes y un SearchBox.
+ * en móvil el buscador queda visible bajo la barra y la navegación colapsa en
+ * un panel desplegable con enlaces grandes.
  *
  * Presentacional y props-driven: no hace fetching. La ruta activa se pasa por
  * `active` (href) para resaltar el enlace correspondiente.
@@ -77,8 +78,14 @@ export function Header({ active, commerce }) {
 
           {/* Acciones derecha */}
           <div className="flex items-center gap-1">
+            {/* El buscador vive aquí, no en la portada: sobre la obra a sangre
+                tapaba la ilustración, que es el mejor activo del archivo. */}
             <div className="hidden lg:block">
-              <IconButton icon="search" label="Buscar" href="/mitos" />
+              <SearchBox
+                size="md"
+                placeholder="Buscar en el archivo…"
+                className="w-[15.5rem]"
+              />
             </div>
             <div className="hidden lg:block">
               <IconButton icon="user" label="Mi cuenta" href="/cuenta" />
@@ -120,6 +127,12 @@ export function Header({ active, commerce }) {
             </div>
           </div>
         </div>
+
+        {/* En móvil el campo queda a la vista bajo la barra: es la entrada
+            principal a 596 relatos y no debería costar un toque extra. */}
+        <div className="pb-3 lg:hidden">
+          <SearchBox size="md" placeholder="Buscar un mito, región o tema…" />
+        </div>
       </Container>
 
       {/* Panel móvil desplegable */}
@@ -131,12 +144,8 @@ export function Header({ active, commerce }) {
         )}
       >
         <Container size="atlas">
-          <div className="py-4">
-            <SearchBox
-              size="md"
-              placeholder="Buscar un mito, región o tema…"
-            />
-            <nav aria-label="Navegación móvil" className="mt-2">
+          <div className="py-2">
+            <nav aria-label="Navegación móvil">
               {NAV_LINKS.map((item) => (
                 <Link
                   key={item.href}

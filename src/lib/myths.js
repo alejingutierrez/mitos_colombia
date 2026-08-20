@@ -1016,6 +1016,221 @@ export async function getMythsByRegion(regionSlug, limit = 6, seed = 0) {
   }
 }
 
+/* Extras de un puñado de mitos ya elegidos: sus etiquetas y su obra vertical.
+   Las consultas de listado no traen ninguna de las dos —serían un join por fila
+   en todo el catálogo— pero el home sólo necesita las de la quincena de mitos
+   que va a pintar, así que se piden aparte y en un solo viaje.
+   Las etiquetas alimentan los filtros de la mesa y la línea de «por qué está
+   aquí»; la vertical permite servir otra obra en móvil en vez de recortar la
+   apaisada, que es donde se pierde el sujeto. */
+async function getMythExtrasBySlugsPostgres(slugs) {
+  const sql = getSqlClient();
+
+  const result = await sql.query(
+    `
+    SELECT
+      myths.slug,
+      vertical.image_url AS vertical_image_url,
+      COALESCE(
+        (
+          SELECT json_agg(json_build_object('name', tags.name, 'slug', tags.slug))
+          FROM myth_tags
+          JOIN tags ON tags.id = myth_tags.tag_id
+          WHERE myth_tags.myth_id = myths.id
+        ),
+        '[]'::json
+      ) AS tags
+    FROM myths
+    LEFT JOIN LATERAL (
+      SELECT image_url
+      FROM vertical_images
+      WHERE entity_type = 'myth' AND entity_id = myths.id
+      ORDER BY updated_at DESC, id DESC
+      LIMIT 1
+    ) AS vertical ON TRUE
+    WHERE myths.slug = ANY($1)
+    `,
+    [slugs]
+  );
+
+  return result.rows.map((row) => ({
+    slug: row.slug,
+    verticalImageUrl: row.vertical_image_url || null,
+    tags: Array.isArray(row.tags) ? row.tags : parseJsonArray(row.tags),
+  }));
+}
+
+function getMythExtrasBySlugsSqlite(slugs) {
+  const db = getSqliteDb();
+  const placeholders = slugs.map(() => "?").join(", ");
+
+  const rows = db
+    .prepare(
+      `
+      SELECT
+        myths.slug,
+        (
+          SELECT image_url
+          FROM vertical_images
+          WHERE entity_type = 'myth' AND entity_id = myths.id
+          ORDER BY updated_at DESC, id DESC
+          LIMIT 1
+        ) AS vertical_image_url,
+        (
+          SELECT group_concat(tags.name || '|' || tags.slug, '::')
+          FROM myth_tags
+          JOIN tags ON tags.id = myth_tags.tag_id
+          WHERE myth_tags.myth_id = myths.id
+        ) AS tags_joined
+      FROM myths
+      WHERE myths.slug IN (${placeholders})
+    `
+    )
+    .all(...slugs);
+
+  return rows.map((row) => ({
+    slug: row.slug,
+    verticalImageUrl: row.vertical_image_url || null,
+    tags: String(row.tags_joined || "")
+      .split("::")
+      .filter(Boolean)
+      .map((entry) => {
+        const [name, slug] = entry.split("|");
+        return { name, slug };
+      }),
+  }));
+}
+
+const getMythExtrasBySlugsCached = unstable_cache(
+  async (slugs) => {
+    if (isPostgres()) {
+      return await withRetry(() => getMythExtrasBySlugsPostgres(slugs));
+    }
+    return getMythExtrasBySlugsSqlite(slugs);
+  },
+  ["myth-extras"],
+  { revalidate: ONE_DAY }
+);
+
+export async function getMythExtrasBySlugs(slugs = []) {
+  const clean = [...new Set(slugs.filter(Boolean))];
+  if (!clean.length) return new Map();
+  try {
+    const rows = await getMythExtrasBySlugsCached(clean);
+    return new Map(rows.map((row) => [row.slug, row]));
+  } catch (error) {
+    console.error("Error in getMythExtrasBySlugs:", error);
+    return new Map();
+  }
+}
+
+/* Comunidades con obra propia, para las pestañas del home.
+   Devuelve un relato ilustrado por comunidad: la sección presenta al pueblo que
+   sostiene el relato, así que la comunidad manda y el mito es su muestra.
+   Las bolsas del importador ("Mestizo", "Mixto", "Varios") no son pueblos y se
+   filtran arriba, en la página, no aquí — el dato crudo se conserva. */
+async function getCommunitySpotlightsPostgres(limit = 8, seed = 0) {
+  const sql = getSqlClient();
+
+  const result = await sql.query(
+    `
+    SELECT
+      communities.id,
+      communities.name,
+      communities.slug,
+      regions.name AS region,
+      regions.slug AS region_slug,
+      spotlight.title AS myth_title,
+      spotlight.slug AS myth_slug,
+      spotlight.excerpt AS myth_excerpt,
+      spotlight.image_url AS myth_image_url,
+      spotlight.total AS myth_count
+    FROM communities
+    JOIN regions ON regions.id = communities.region_id
+    JOIN LATERAL (
+      SELECT
+        candidate.title,
+        candidate.slug,
+        candidate.excerpt,
+        candidate.image_url,
+        (
+          SELECT COUNT(*)
+          FROM myths counted
+          WHERE counted.community_id = communities.id
+        ) AS total
+      FROM myths candidate
+      WHERE candidate.community_id = communities.id
+        AND candidate.image_url IS NOT NULL
+      ORDER BY (candidate.id + $1) % 17, candidate.id
+      LIMIT 1
+    ) AS spotlight ON TRUE
+    ORDER BY spotlight.total DESC, communities.name ASC
+    LIMIT $2
+    `,
+    [seed, limit]
+  );
+
+  return result.rows;
+}
+
+function getCommunitySpotlightsSqlite(limit = 8, seed = 0) {
+  const db = getSqliteDb();
+
+  return db
+    .prepare(
+      `
+      SELECT
+        communities.id,
+        communities.name,
+        communities.slug,
+        regions.name AS region,
+        regions.slug AS region_slug,
+        spotlight.title AS myth_title,
+        spotlight.slug AS myth_slug,
+        spotlight.excerpt AS myth_excerpt,
+        spotlight.image_url AS myth_image_url,
+        (
+          SELECT COUNT(*)
+          FROM myths counted
+          WHERE counted.community_id = communities.id
+        ) AS myth_count
+      FROM communities
+      JOIN regions ON regions.id = communities.region_id
+      JOIN myths AS spotlight ON spotlight.id = (
+        SELECT candidate.id
+        FROM myths candidate
+        WHERE candidate.community_id = communities.id
+          AND candidate.image_url IS NOT NULL
+        ORDER BY (candidate.id + ?) % 17, candidate.id
+        LIMIT 1
+      )
+      ORDER BY myth_count DESC, communities.name COLLATE NOCASE ASC
+      LIMIT ?
+    `
+    )
+    .all(seed, limit);
+}
+
+const getCommunitySpotlightsCached = unstable_cache(
+  async (limit = 8, seed = 0) => {
+    if (isPostgres()) {
+      return await withRetry(() => getCommunitySpotlightsPostgres(limit, seed));
+    }
+    return getCommunitySpotlightsSqlite(limit, seed);
+  },
+  ["community-spotlights"],
+  { revalidate: ONE_DAY }
+);
+
+export async function getCommunitySpotlights(limit = 8, seed = 0) {
+  try {
+    return await getCommunitySpotlightsCached(limit, seed);
+  } catch (error) {
+    console.error("Error in getCommunitySpotlights:", error);
+    return [];
+  }
+}
+
 // Get diverse myths from different regions for home page
 async function getDiverseMythsPostgres(limit = 9, seed = 0) {
   const sql = getSqlClient();
@@ -1032,6 +1247,8 @@ async function getDiverseMythsPostgres(limit = 9, seed = 0) {
           myths.excerpt,
           myths.image_url,
           myths.category_path,
+          communities.name AS community,
+          communities.slug AS community_slug,
           regions.name AS region,
           regions.slug AS region_slug,
           ROW_NUMBER() OVER (
@@ -1042,8 +1259,11 @@ async function getDiverseMythsPostgres(limit = 9, seed = 0) {
           ) as rn
         FROM myths
         JOIN regions ON regions.id = myths.region_id
+        LEFT JOIN communities ON communities.id = myths.community_id
       )
-      SELECT id, title, slug, excerpt, image_url, category_path, region, region_slug
+      SELECT
+        id, title, slug, excerpt, image_url, category_path,
+        community, community_slug, region, region_slug
       FROM ranked_myths
       WHERE rn <= 2
       ORDER BY
@@ -1074,10 +1294,13 @@ function getDiverseMythsSqlite(limit = 9, seed = 0) {
         myths.excerpt,
         myths.image_url,
         myths.category_path,
+        communities.name AS community,
+        communities.slug AS community_slug,
         regions.name AS region,
         regions.slug AS region_slug
       FROM myths
       JOIN regions ON regions.id = myths.region_id
+      LEFT JOIN communities ON communities.id = myths.community_id
       ORDER BY
         CASE WHEN myths.image_url IS NOT NULL THEN 0 ELSE 1 END,
         (myths.id + ?) % 100
