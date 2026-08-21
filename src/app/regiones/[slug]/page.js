@@ -1,13 +1,12 @@
 import { notFound } from "next/navigation";
 import { filterAllowedCommunities } from "../../../lib/communityFilters";
 import { getTaxonomy, listMyths, listMythLinksByTaxon } from "../../../lib/myths";
-import { REGION_INFO, REGION_MOTIFS, RIVER_REGIONS } from "../../../lib/region-info";
+import { REGION_INFO, REGION_MOTIFS, regionSections } from "../../../lib/region-info";
 import { buildSeoMetadata, getSeoEntry } from "../../../lib/seo";
 import { resolveRouteParams } from "../../../lib/next-route-props";
 import { withMythImageVariants } from "../../../lib/myth-images";
 import { BreadcrumbJsonLd, CollectionPageJsonLd } from "../../../components/StructuredData";
-import { TaxonomyDetailTemplate } from "../../../components/templates";
-import { FilterableArchive } from "../../../components/organisms";
+import { RegionDetailTemplate } from "../../../components/templates";
 
 export const runtime = "nodejs";
 export const revalidate = 300;
@@ -65,19 +64,30 @@ export default async function RegionDetailPage({ params }) {
     notFound();
   }
 
-  const regionInfo = REGION_INFO[slug] || {
-    title: region.name,
-    description: "Región cultural de Colombia con rica tradición mitológica.",
-    longDescription: `La región ${region.name} es una de las áreas culturales de Colombia, hogar de diversos pueblos y tradiciones que han preservado mitos ancestrales sobre el origen del mundo, la naturaleza y la sociedad.`,
-    characteristics: [],
-  };
+  const info = REGION_INFO[slug] || {};
+  const nombre = info.title || region.name;
 
-  const accent = RIVER_REGIONS.includes(slug) ? "river" : "jungle";
-  const motif = REGION_MOTIFS[slug] || "hoja";
+  // Texto en bloques con título; si la región no tiene `sections` escritas cae
+  // a su texto largo como un solo bloque.
+  const respaldo = `La región ${region.name} es una de las áreas culturales de Colombia, hogar de diversos pueblos y tradiciones que han preservado mitos ancestrales sobre el origen del mundo, la naturaleza y la sociedad.`;
+  const sections = regionSections(slug, respaldo);
 
-  // Muestra para exploración interactiva (filtrable en cliente, SSR = rastreable).
-  const result = await listMyths({ region: region.slug, limit: 24, offset: 0 });
-  const exploreMyths = (result?.items || []).map((m) =>
+  // Los pueblos de este territorio: el puente que faltaba entre /regiones y
+  // /comunidades. Antes sólo servían como facetas de un filtro que no salía de
+  // la página.
+  const communities = filterAllowedCommunities(taxonomy.communities)
+    .filter((c) => c.region_slug === region.slug)
+    .sort((a, b) => (Number(b.myth_count) || 0) - (Number(a.myth_count) || 0))
+    .map((c) => ({
+      slug: c.slug,
+      name: c.name,
+      count: Number(c.myth_count) || 0,
+    }));
+
+  // Cuatro relatos para empezar. Antes esta consulta traía 24 para el archivo
+  // filtrable y los mismos títulos volvían a salir en el índice de abajo.
+  const result = await listMyths({ region: region.slug, limit: 4, offset: 0 });
+  const featured = (result?.items || []).map((m) =>
     withMythImageVariants({
       slug: m.slug,
       title: m.title,
@@ -88,17 +98,6 @@ export default async function RegionDetailPage({ params }) {
       vertical_image_url: m.vertical_image_url,
     })
   );
-
-  // Comunidades de esta región → facetas de filtro.
-  const regionCommunities = filterAllowedCommunities(taxonomy.communities).filter(
-    (c) => c.region_slug === region.slug
-  );
-  const communityOptions = regionCommunities
-    .map((c) => ({ value: c.name, label: c.name }))
-    .filter((o) => exploreMyths.some((m) => m.community === o.value));
-  const filters = communityOptions.length
-    ? [{ key: "community", label: "Comunidad", options: communityOptions }]
-    : [];
 
   // Índice completo, rastreable, de TODOS los mitos de la región (SEO).
   const allMythLinks = await listMythLinksByTaxon("region", region.slug);
@@ -120,37 +119,25 @@ export default async function RegionDetailPage({ params }) {
           />
           <CollectionPageJsonLd
             name={`Mitos de la región ${region.name}`}
-            description={regionInfo.description}
+            description={info.description}
             url={`${SITE_URL}/regiones/${region.slug}`}
             items={collectionItems}
           />
         </>
       )}
-      <TaxonomyDetailTemplate
-        taxonomy={{
-          name: regionInfo.title || region.name,
-          description: regionInfo.description,
+      <RegionDetailTemplate
+        region={{
+          name: nombre,
+          count: Number(region.myth_count) || 0,
           imageUrl: region.image_url,
-          motif,
-          count: region.myth_count,
-          kind: "Región cultural",
+          kicker: "Región cultural",
         }}
-        accent={accent}
-        breadcrumb={[
-          { label: "Regiones", href: "/regiones" },
-          { label: region.name },
-        ]}
-        intro={regionInfo.longDescription}
-        characteristics={regionInfo.characteristics}
-        filterable={
-          <FilterableArchive
-            myths={exploreMyths}
-            filters={filters}
-            totalCount={region.myth_count}
-          />
-        }
+        communities={communities}
+        characteristics={info.characteristics || []}
+        sections={sections}
+        featured={featured}
         mythIndex={allMythLinks}
-        indexTitle={`Todos los mitos de la región ${region.name}`}
+        motif={REGION_MOTIFS[slug] || "hoja"}
       />
     </>
   );
