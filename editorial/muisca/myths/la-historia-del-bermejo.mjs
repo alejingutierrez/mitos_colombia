@@ -10,11 +10,9 @@ export default defineMuiscaMyth({
 
 Su cabello tenía un color poco común en el altiplano. Durante los primeros días, ese rasgo bastó para darle un nombre. Después empezaron a conocerlo por lo que hacía.
 
-Aprendió a saludar sin apresurarse. Observó cómo se abrían los surcos, cuándo se cubrían las semillas y de qué manera cambiaban los caminos con la lluvia. Él y sus compañeros compartieron, a su vez, formas de orientarse por ciertas estrellas y reconocer señales del clima.
+Aprendió a saludar sin apresurarse, a leer los surcos, a saber cuándo se cubren las semillas y de qué manera cambian los caminos con la lluvia. Él y sus compañeros compartieron, a su vez, formas de orientarse por ciertas estrellas y de reconocer señales del clima. Nadie entregó todo su saber de una vez. La confianza creció en tareas pequeñas.
 
-Nadie entregó todo su saber de una vez. La confianza creció en tareas pequeñas.
-
-En Toca, el Bermejo conoció a la hija mayor del cacique. Ella no era un premio al final de su viaje. Hablaba con él en los campos, corregía palabras que pronunciaba mal y se reía cuando confundía el nombre de una herramienta con el de un pájaro.
+En Toca conoció a la hija mayor del cacique. Ella no era un premio al final de su viaje. Hablaba con él en los campos, corregía palabras que pronunciaba mal y se reía cuando confundía el nombre de una herramienta con el de un pájaro.
 
 Cuando ambos quisieron formar una casa, el Bermejo llevó regalos a la familia: una manta, un brazalete, una parte de venado. El cacique devolvió cada presente.
 
@@ -22,19 +20,19 @@ Cuando ambos quisieron formar una casa, el Bermejo llevó regalos a la familia: 
 
 El Bermejo preguntó qué podía hacer.
 
-El cacique le propuso dos pruebas. Primero debía pasar una larga temporada de ayuno y recogimiento. Después cargaría un tronco durante dos jornadas entre Hunsa y Sogamoso.
+El cacique le propuso dos pruebas. Primero pasaría una larga temporada de ayuno y recogimiento. Después cargaría un tronco durante dos jornadas, entre Hunsa y Sogamoso.
 
 La joven escuchó las condiciones.
 
-—No permitiré que mueras para demostrar que quieres vivir conmigo —advirtió al Bermejo.
+—No permitiré que mueras para demostrar que quieres vivir conmigo —advirtió.
 
-Él aceptó realizar las pruebas, pero prometió detenerse si su cuerpo dejaba de responder.
+Él aceptó, pero prometió detenerse si su cuerpo dejaba de responder.
 
 El ayuno fue lento. Lo difícil no era solo el hambre, sino permanecer quieto mientras afuera seguía la vida. Pensó en los caminos que había cruzado y en la diferencia entre llegar a un lugar y pertenecer a él.
 
 Cuando salió, el tronco lo esperaba.
 
-El primer día avanzó con el peso sobre los hombros. El segundo, cada paso pareció hundirlo. Varias personas caminaron a distancia. No podían cargar por él, pero le acercaban agua y le indicaban dónde el terreno cedía.
+El primer día avanzó con el peso sobre los hombros. El segundo, cada paso pareció hundirlo. Varias personas caminaron a distancia: no podían cargar por él, pero le acercaban agua y le indicaban dónde el terreno cedía.
 
 Al atardecer alcanzó el sitio acordado.
 
@@ -51,26 +49,25 @@ La celebración reunió a las familias durante varios días. El Bermejo no dejó
 Con los años, su cabello dejó de ser lo primero que la gente recordaba.
 
 Recordaban que había llegado desde lejos y había decidido quedarse.`,
-  historia: `El origen editorial de esta historia es *Érase una vez entre los chibchas*, libro juvenil de Alfredo García Giraldo publicado en 1984. Allí, el viejo Chypuy narra a Sesquilé la llegada del Bermejo y seis compañeros, su intercambio de conocimientos, su relación con la hija del cacique de Toca y las pruebas para casarse. No se ha encontrado una crónica colonial ni un registro etnográfico independiente con esta secuencia. Por eso la página deja de decir que “por ahora” desconoce la historia y declara lo que sí puede saberse: es un cuento literario moderno.
+  historia: `El origen editorial de esta historia es *Érase una vez entre los chibchas* (1984), obra juvenil de Alfredo García Giraldo enmarcada en las sesiones del sacerdote Chypuy. Allí, el viejo Chypuy narra a Sesquilé la llegada del Bermejo y seis compañeros, el intercambio de conocimientos, la relación con la hija del cacique de Toca y las dos pruebas para casarse. No se ha encontrado una crónica colonial ni un registro etnográfico independiente con esa secuencia; por eso la página declara lo que sí puede saberse: es un cuento literario moderno, no tradición oral antigua demostrada. Gómez Aldana rastrea pasajes presentados como tradición muisca hasta su antecedente literal en esta obra, lo que confirma la procedencia editorial.
 
-La historiografía actual sobre los muiscas ayuda a corregir su escenario. Hunsa no era la capital de un imperio homogéneo ni todo extranjero se integraba mediante un rito único. Las relaciones entre cacicazgos, parentescos, mercados y movilidad fueron más complejas. Tampoco es prudente atribuir a un visitante anónimo la agricultura, la astronomía o mejoras fundamentales, porque esa idea repite un modelo difusionista que subestima los conocimientos locales.
+La historiografía actual sobre los muiscas corrige el escenario. Hunsa no era la capital de un imperio homogéneo ni todo extranjero se integraba mediante un rito único; las relaciones entre cacicazgos, parentescos, mercados y movilidad fueron más complejas. Tampoco es prudente atribuir a un visitante anónimo la agricultura o la astronomía, porque esa idea repite un modelo difusionista que subestima los conocimientos locales.
 
-La reescritura conserva las pruebas y el viaje por su fuerza literaria. Modifica su sentido: la hija del cacique tiene voz, el ayuno no se celebra como daño y quienes observan al caminante pueden cuidarlo sin resolver el desafío por él. Los diálogos y el aprendizaje recíproco son invenciones nuevas.
+La reescritura conserva las pruebas y el viaje por su fuerza literaria y modifica su sentido: la hija del cacique tiene voz, el ayuno no se celebra como daño y quienes observan al caminante pueden cuidarlo sin resolver el desafío por él. Los diálogos y el aprendizaje recíproco son invenciones nuevas.
 
 El relato habla de una necesidad social reconocible: decidir cuándo una persona llegada de fuera puede asumir obligaciones duraderas dentro de una comunidad. No ofrece una reconstrucción matrimonial muisca ni prueba que un pelirrojo histórico llegara antes de los españoles. La geografía se centra en Toca, Boyacá, lugar de la relación principal.`,
-  versiones: `La versión de García Giraldo enmarca el cuento en las sesiones del sacerdote Chypuy. El Bermejo y seis hermanos llegan desde lejos, comparten conocimientos y buscan aceptación. Para casarse con la hija mayor del cacique de Toca, el protagonista enfrenta un ayuno prolongado y debe cargar un tronco durante dos días.
+  versiones: `En García Giraldo, el cuento se enmarca en las sesiones del sacerdote Chypuy con Sesquilé. El Bermejo y seis compañeros llegan desde lejos, comparten conocimientos y buscan aceptación. Para casarse con la hija mayor del cacique de Toca, el protagonista enfrenta un ayuno prolongado y debe cargar un tronco durante dos días.
 
-Adaptaciones posteriores eliminaron la autoría, llamaron “oral” a la narración y presentaron al extranjero como civilizador que enseña agricultura y astronomía a todo un pueblo. También describieron a la mujer como recompensa concedida por su padre. Esas lecturas no están obligadas por el núcleo del cuento y refuerzan jerarquías innecesarias.
+Adaptaciones posteriores eliminaron la autoría, llamaron "oral" a la narración y presentaron al extranjero como civilizador que enseña agricultura y astronomía a todo un pueblo. También describieron a la mujer como recompensa concedida por su padre. Esas lecturas no están obligadas por el núcleo del cuento y refuerzan jerarquías innecesarias. Otras versiones llaman hermanos a todos los acompañantes o varían la distancia y el paisaje de la prueba, sin que el archivo permita decidir cuál fue la primera.
 
-No hay base suficiente para decidir de dónde viene el Bermejo, identificarlo con un personaje europeo o convertir su color de cabello en evidencia de contacto transoceánico. Su continuación, “El Bermejo aspira a ser rey”, pertenece al mismo arco literario, pero cambia integración por ambición política y se mantiene en una página separada. Esta primera entrega termina con el compromiso de permanecer, no con la garantía de que toda pertenencia haya sido ganada para siempre.`,
-  leccion: `Integrarse no consiste en impresionar a una comunidad con una hazaña ni en borrar lo que se era antes de llegar. Exige tiempo, reciprocidad y disposición a responder por otras personas.
+No hay base suficiente para determinar de dónde viene el Bermejo, identificarlo con un personaje europeo ni convertir su color de cabello en evidencia de contacto transoceánico. Su continuación, "El Bermejo aspira a gobernar", pertenece al mismo arco literario, pero cambia la integración por la ambición política y se mantiene en una página separada. Esta entrega termina con el compromiso de permanecer, no con la garantía de que toda pertenencia haya sido ganada para siempre.`,
+  leccion:
+    "La pertenencia no se gana con una hazaña: se recibe cada día de la vida compartida.",
+  similitudes: `En el corpus muisca, la prueba del héroe aparece en Pacanchique: para recuperar a Azay debe cruzar de noche los cercados del zaque y arriesgar su vida con una planta de muerte aparente. El Bermejo también enfrenta pruebas antes de merecer la vida en común. La diferencia es decisiva: el desafío de Pacanchique es clandestino, casi solitario y cobra vidas, mientras las pruebas del viajero son públicas, acotadas y acompañadas por la propia comunidad. En la herencia de Tausa, además, el servicio ante el zipa funciona como prueba; allí el mérito abre la puerta del poder, y aquí el esfuerzo abre la puerta de una casa.
 
-Las pruebas del Bermejo solo tienen sentido cuando no reducen a la joven a un premio. La parte decisiva comienza después de cargar el tronco: construir una vida común sin dejar de aprender.`,
-  similitudes: `Heracles debe cumplir trabajos extraordinarios antes de transformar su condición heroica. El Bermejo también atraviesa pruebas físicas que vuelven visible su constancia. Sin embargo, Heracles combate monstruos y repara una culpa dentro de la mitología griega; el viajero de Toca busca confianza para permanecer en una red familiar.
+En la tradición andina oral se repite el motivo del yerno que debe cumplir tareas impuestas por la familia de la esposa para probar que sostendrá el hogar; la leyenda de Popocatépetl e Iztaccíhuatl condiciona además la mano de la princesa al valor demostrado en la guerra. Resuena la estructura del pretendiente que debe probar su constancia frente a una autoridad que duda. La diferencia es que en esos relatos la mujer es sobre todo el premio de la prueba y su voz casi no aparece; en esta versión la joven fija los límites de su propia vida y advierte que no aceptará una demostración que la convierta en motivo de muerte.
 
-Muchos cuentos matrimoniales imponen al pretendiente tareas imposibles. Esa estructura dramatiza una frontera social: alguien externo debe demostrar que aceptará obligaciones y no solo desea una recompensa. La reescritura cambia el centro al dar voz a la mujer y limitar el valor del sufrimiento.
-
-No hay evidencia de influencia griega sobre García Giraldo ni de una prueba histórica idéntica entre los muiscas. La semejanza permite ubicar el relato en una familia universal de historias de ingreso, mientras las diferencias protegen su paisaje y su pregunta principal. Aquí la verdadera hazaña no es la fuerza momentánea. Es pasar de viajero a vecino mediante intercambios cotidianos, y aceptar que la pertenencia nunca depende únicamente del juicio de un héroe sobre sí mismo.`,
+El ciclo de Heracles muestra al héroe que transforma su condición realizando trabajos extraordinarios impuestos por una autoridad externa; el motivo del tronco o de la carga pesada recorre además el folclor universal como medida de la fuerza. El Bermejo carga un tronco entre Hunsa y Sogamoso y su hazaña también vuelve visible la constancia. Pero Heracles vence monstruos, cumple doce tareas de otra escala y no busca pertenecer a una familia, sino pagar una culpa y ganar el rango divino. En Ovidio, competencias como la carrera de Atalanta condicionan el matrimonio a una prueba ganada; el viajero de Toca comparte esa lógica del pretendiente, sin el engaño y sin convertir a la mujer en una apuesta. La verdadera hazaña aquí no es la fuerza momentánea: es pasar de viajero a vecino mediante intercambios cotidianos, y aceptar que la pertenencia nunca depende solo del juicio de un héroe sobre sí mismo.`,
   excerpt:
     "Un viajero llamado el Bermejo aprende a vivir en Hunsa y enfrenta dos pruebas para demostrar que su deseo de quedarse puede volverse compromiso.",
   seoTitle: "La historia del Bermejo: origen, relato y fuentes",
@@ -88,33 +85,31 @@ No hay evidencia de influencia griega sobre García Giraldo ni de una prueba his
     "relatos muiscas de Boyacá",
   ],
   imagePrompt:
-    "Fotografía editorial horizontal 16:9 de una maqueta artesanal de papel cortado: camino realista entre Toca y Sogamoso, el Bermejo como viajero de cabello cobrizo carga un tronco sobrio sobre los hombros; a distancia caminan la joven de Toca y varias personas con agua, sin adoración. Altiplano boyacense, fibras, capas, micro-sombras. Sin rasgos vikingos, armadura, corona, texto ni CGI.",
-  imagePromptVertical:
-    "Fotografía editorial vertical 4:5 de una maqueta de papel cortado: el Bermejo avanza con un tronco por un sendero boyacense; la joven de Toca observa y sostiene agua, montañas hacia Sogamoso al fondo. Papel físico, fibras y micro-sombras. Sin exotización europea, texto ni CGI.",
+    "Fotografía editorial horizontal exacta 16:9. Escena principal: en el camino entre Toca y Sogamoso, el Bermejo de cabello cobrizo carga un tronco sobre los hombros como parte de una prueba de trabajo; la joven de Toca y otras personas observan sin adorarlo. Estilo studioPaperMaquette aprobado: maqueta física hecha a mano con papel cortado, cartón y fibras naturales, fotografiada de frente; relieve bajo, bordes visibles, pequeñas imperfecciones humanas, micro-sombras reales e iluminación sobria. Fantasía anclada en el paisaje del altiplano cundiboyacense. Composición panorámica de un solo tableau; los personajes y objetos esenciales permanecen dentro del 80 % central. Sin texto ni logotipos; sin CGI, render digital ni apariencia de 3D sintético; sin coronas, tronos o templos europeos; sin pirámides, penachos ni iconografía mesoamericana; sin símbolos espirituales inventados; sin héroe vikingo, músculos exagerados, armadura, corona o mujer presentada como premio.",
   imageUrl:
     "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/la-historia-del-bermejo-1784765890755.jpg",
   sourceKeys: [
     "garcia",
     "garciaCatalog",
     "gomezAldana",
+    "villa",
     "gamboaSenores",
     "cobo",
     "planBosa",
     "herakles",
+    "ovidio",
   ],
   researchNotes: `ESTADO: cuento juvenil moderno de autor, no tradición oral antigua demostrada.
 
 NÚCLEO DOCUMENTADO EN GARCÍA GIRALDO: Bermejo y seis compañeros; llegada a Hunsa; intercambio de conocimientos; hija del cacique de Toca; regalos rechazados; ayuno; tronco cargado durante dos días; integración y matrimonio.
 
-VARIANTES: adaptaciones que llaman hermanos a todos los acompañantes, exageran el papel civilizador o describen a la mujer como premio sin voz.
+VARIANTES: adaptaciones que llaman hermanos a los acompañantes, exageran el papel civilizador o describen a la mujer como premio sin voz; distancias y paisajes variables de la prueba, sin fuente para decidir la primera.
 
-MEMORIA VIVA: los planes comunitarios actuales permiten hablar de pertenencia, educación y territorio, no confirmar al personaje.
+LICENCIA EDITORIAL: diálogos de la joven, límites al ayuno, ayuda lateral durante el camino y cierre sobre la vida común son invenciones literarias; se conserva la estructura de García Giraldo sin atribuirle historicidad.
 
-HIPÓTESIS ACADÉMICA: la historia crítica cuestiona un reino muisca homogéneo y relatos difusionistas de extranjeros fundadores.
+DUDA: no se ha localizado una fuente anterior o independiente para el Bermejo ni evidencia histórica de su origen o de un pelirrojo anterior a los españoles.
 
-LECTURA EDITORIAL: diálogos de la joven, límites al ayuno, ayuda lateral durante el camino y cierre sobre la vida común son invenciones.
+GEOGRAFÍA: Toca, Boyacá, con recorrido narrativo entre Hunsa y Sogamoso; coordenadas 5.5636, -73.1836.
 
-DUDA: no se ha localizado una fuente anterior o independiente para el Bermejo ni evidencia histórica de su origen.
-
-GEOGRAFÍA: Toca, con recorrido narrativo hacia Hunsa y Sogamoso, Boyacá.`,
+REGISTRO LINGÜÍSTICO: español colombiano contemporáneo, tono mítico y sobrio, sin arcaísmos peninsulares, sin sermón moralista ni grandilocuencia; términos conservados: Hunsa, Toca, Sogamoso.`,
 });

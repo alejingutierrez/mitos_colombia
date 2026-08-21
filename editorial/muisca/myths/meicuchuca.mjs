@@ -6,89 +6,70 @@ export default defineMuiscaMyth({
   tags: ["Meicuchuca", "transformación", "serpiente", "río", "misterio"],
   latitude: 4.5751,
   longitude: -74.2921,
-  mito: `Una anciana llegó al cercado de Meicuchuca acompañada por una joven.
+  mito: `Una anciana llegó al cercado de Meicuchuca y traía a una joven doncella que el señor de Bogotá había mandado pedir. La anciana habló poco, entregó a la muchacha y se fue por donde había venido.
 
-Nadie supo de qué población venían. La anciana habló durante unos minutos con el cacique y se marchó sola. La joven permaneció.
+Meicuchuca se aficionó a ella como no se aficionaba a nadie. De noche y de día su entretenimiento era la recién llegada, y la esposa principal, que antes tenía el trato primero del cacique, se quedó sin caricias y sin palabras. Rabiaba de celos y no podía remediarlo.
 
-Meicuchuca empezó a pasar con ella más tiempo que con cualquier otra persona de la casa. Preguntaba poco por su pasado, como si temiera que una respuesta pudiera obligarla a irse. Ella tampoco ofrecía explicaciones. Conocía los senderos junto al río y desaparecía durante las horas de lluvia.
+Ella no fue a gritar delante de la casa. Consultó con un jeque, ayunó e hizo ofrendas en el santuario.
 
-La esposa principal observó el cambio. No le preocupaba solamente perder la atención de Meicuchuca. En la casa habían quedado asuntos sin decidir, visitas esperando y trabajos que él aplazaba.
+—No acuses a nadie todavía —dijo el jeque—. La noche muestra formas que el día no sabe nombrar. Llega a la cama del cacique cuando esté en ella con la joven, y mira.
 
-Consultó a un jeque.
+La mujer esperó a que el cercado quedara en silencio. Entró al aposento. Junto a Meicuchuca no había ningún cuerpo de mujer: sobre las mantas dormía una culebra grande, y la cabeza descansaba cerca del hombro del señor. Salió sin ruido y contó al jeque lo que había visto.
 
-Después de escucharla, el hombre le pidió que no acusara a la joven ni reuniera gente contra ella.
+—Convida a la joven mañana —dijo—, y que vaya con otra de las mujeres a bañarse al río que llaman Bogotá, o por su propio nombre Funza, por debajo del salto del Tequendama.
 
-—Mira primero —dijo—. La noche muestra formas que el día no sabe nombrar.
+La invitación llegó. La joven aceptó sin preguntar.
 
-La mujer esperó hasta que todos durmieran. Entró en silencio al aposento de Meicuchuca.
+Caminaron por la orilla hasta un recodo ancho. Las otras entraron al agua; ella permaneció en la arena, con la manta sobre los hombros, mirando la corriente.
 
-Junto a él no vio el cuerpo de la joven.
-
-Vio una serpiente grande, enrollada sobre las mantas. La cabeza descansaba cerca del hombro del cacique. Sus escamas no brillaban como metal ni despedían fuego. Subían y bajaban con una respiración tranquila.
-
-La esposa retrocedió.
-
-Al día siguiente no contó lo ocurrido a toda la casa. Volvió donde el jeque. Él propuso que las mujeres fueran juntas a bañarse en el río Funza, cerca del lugar donde el agua busca el Tequendama.
-
-La invitación llegó a la joven.
-
-Ella aceptó.
-
-Caminaron hasta una parte ancha del río. Algunas entraron primero. La joven permaneció en la orilla, mirando la corriente.
-
-—¿Sabes por qué estamos aquí? —preguntó la esposa principal.
+—¿Sabes por qué estamos aquí? —preguntó la esposa.
 
 —Lo sé desde que abriste la puerta anoche.
 
-Se quitó la manta y tocó el agua con un pie. La piel cambió sin violencia. Las piernas se unieron, la espalda se alargó y, donde un instante antes había una mujer, apareció la misma serpiente.
+Se desprendió la manta y tocó el agua con un pie. La piel cambió sin violencia: las piernas se fundieron, la espalda se alargó, y donde un instante antes había una mujer se levantó la misma culebra, a la vista de todas.
 
-Varias personas gritaron. La esposa principal no huyó.
+Algunas gritaron. La esposa principal no huyó.
 
 —¿Engañaste a Meicuchuca?
 
-La serpiente levantó la cabeza.
+La culebra levantó la cabeza.
 
 —Él nunca preguntó quién era. Solo decidió quién quería que fuera.
 
-Después se deslizó hacia la corriente. El río la recibió y cerró sobre ella todos sus reflejos.
+Y se deslizó entre las aguas y se desapareció, sin que nadie volviera a verla.
 
-Meicuchuca llegó cuando ya no podía alcanzarla.
+Meicuchuca llegó cuando ya no podía alcanzarla. Buscó entre juncos y piedras hasta que la luz se le fue. No la encontró.
 
-Buscó durante horas entre juncos y piedras. Nadie volvió a verla.
+Desde entonces, cada vez que debía decidir algo, el señor recordaba la frase dicha junto al agua. Había confundido el silencio con una respuesta y el deseo con conocimiento.
 
-Desde aquel día, cada vez que debía tomar una decisión, el cacique recordaba la frase junto al agua. Había confundido el silencio con una respuesta y el deseo con conocimiento.
+El Funza siguió su curso hacia el salto. Guardó la forma de la mujer y la forma de la culebra, y todo lo que ninguna de las dos había querido revelar.`,
+  historia: `Fray Pedro Simón registró el relato dentro de sus noticias sobre los gobernantes de Bogotá, en la parte donde describe las costumbres matrimoniales de los caciques: la poligamia, la esposa principal, las doncellas pedidas a sus padres y traídas por una vieja. En ese marco, la historia de Meicuchuca funciona como anécdota ejemplar: un señor se aficiona a la recién llegada, la esposa consulta a un jeque con ayuno y ofrendas, descubre la culebra en el lecho y organiza el baño en el Funza, donde la joven se convierte en una gran culebra y se pierde entre las aguas.
 
-El Funza siguió su curso hacia el salto.
+La crónica no narra como quien conserva un mito, sino como quien cierra un engaño: la amante es instrumento del demonio y su desenmascaramiento libera al cacique y a la casa. Esa lectura teológica es una cautela que obliga a leer el pasaje con distancia, sin tomar su moraleja como sentido indígena.
 
-Guardó la forma de la mujer, la forma de la serpiente y todo lo que ninguna de las dos había querido revelar.`,
-  historia: `Fray Pedro Simón registra el relato de Meicuchuca dentro de sus noticias sobre gobernantes de Bogotá. Cuenta que una mujer llevada por una anciana desplaza a otras esposas, que la principal consulta a un jeque, presencia una serpiente junto al cacique y organiza un baño en el río Funza, donde la joven toma forma de culebra y desaparece. Es una fuente temprana para la secuencia, pero está escrita desde categorías coloniales sobre poligamia, hechicería y engaño.
+Dos líneas sobreviven a esa lectura: la unión entre el amor y la serpiente, y los celos convertidos en método de conocimiento. La esposa no acusa a ciegas: consulta, espera, mira en la noche y diseña una escena pública de verificación. El engaño, si existe, no es solo de la joven: Meicuchuca ama lo que no ha preguntado, y el relato señala que confundió deseo con conocimiento.
 
-Eugenia Villa Posse recupera el pasaje y permite tratarlo como relato asociado a un personaje político, no como prueba directa de costumbres generales sobre “sexo y fertilidad”. La historiografía actual advierte, además, que los nombres y genealogías de gobernantes prehispánicos llegan mediados por cronistas y memorias coloniales. Meicuchuca puede tener una base histórica, mientras la mujer serpiente pertenece al campo narrativo.
+Eugenia Villa Posse lo recoge como mito de la serpiente asociado al sexo, la fertilidad y la infidelidad, aunque advierte que el personaje pertenece a una lista de gobernantes transmitida por cronistas. La historiografía reciente insiste en que esos nombres y genealogías llegan mediados por la memoria colonial, y que el personaje político y la anécdota sobrenatural deben leerse como capas distintas.`,
+  versiones: `En Simón, la variante más antigua registrada, la mujer es una china doncella pedida por el cacique y traída por una vieja; la esposa principal ayuna, hace ofrendas y consulta al jeque antes de mirar la cama; el baño es colectivo y la transformación ocurre a la vista de todas, por debajo del salto del Tequendama, en la casa de recreación que los españoles llamaron del monte.
 
-La versión anterior juzgaba a la joven como ilusión demoníaca y reducía a las otras mujeres a celos. Esta reescritura conserva el descubrimiento nocturno y la metamorfosis en el río, pero no decide que la serpiente sea la forma falsa o maligna. La preocupación por decisiones aplazadas, la respuesta junto al agua y el aprendizaje final son invenciones editoriales.
+Compilaciones y resúmenes modernos introducen variantes sin citar fuentes nuevas: que la joven era una doncella de Bacatá, que la culebra era un demonio, que Meicuchuca quedó liberado de una ilusión, o que el cuento explica costumbres de fertilidad e infidelidad. Villa Posse la presenta como doncella de Bacatá conseguida por una anciana chibcha, con celos de las demás mujeres, y la reúne con el ciclo de la serpiente, el sexo y las lagunas.
 
-El río se nombra Funza y Bogotá para hacer visible la traducción territorial. El punto geográfico se acerca al Salto del Tequendama, referencia de la crónica. No se afirma que allí exista un sitio arqueológico ligado a Meicuchuca ni que la historia explique literalmente una especie animal.`,
-  versiones: `En Simón, la esposa principal actúa por el desplazamiento causado por la recién llegada. Un jeque le indica cómo comprobar lo que ocurre y luego propone el baño colectivo. La amante se vuelve una gran culebra al entrar en el Funza y desaparece. El cronista presenta el prodigio dentro de un mundo que su teología interpreta como engaño.
+Esta reescritura no fusiona esas variantes. Mantiene a la joven sin nombre ni origen cierto, conserva la secuencia de Simón —pedido, llegada, celos, consulta, visión nocturna, baño, desaparición— y no resuelve cuál de las dos formas es la verdadera. Los diálogos y la reflexión final son literatura contemporánea, no citas de una tradición; la incertidumbre queda como parte del relato, no como vacío que llenar con moral cristiana.`,
+  leccion:
+    "Quien ama sin preguntar confunde el deseo con lo que el otro calla.",
+  similitudes: `En el corpus muisca, la serpiente se asocia al agua y a la mujer. Bachué, la madre del género humano, salió de la laguna con un niño, pobló la tierra y volvió a las aguas; varias versiones la hacen regresar en forma de serpiente. Allí la mujer es origen de todos; la de Meicuchuca, en cambio, no tiene origen y desaparece sola. La cacica de Guatavita también entra a una laguna, huyendo de un castigo, mientras la deidad del agua se manifiesta como serpiente que reclama ofrendas. La cacica cae al agua; la joven del Funza entra y decide su propia forma.
 
-Resúmenes modernos añaden que la joven era una “doncella de Bacatá”, hablan de demonios o concluyen que Meicuchuca quedó liberado de una ilusión. También proyectan sobre el cuento explicaciones universales de fertilidad e infidelidad sin mostrar la cadena de evidencia.
+La mujer-serpiente es una figura continental. En Mesoamérica, Cihuacóatl, la "mujer serpiente", es una diosa protectora de los partos, vinculada a Quetzalcóatl y al origen de la humanidad, que la tradición colonial convirtió en la Llorona. En la Amazonia, la Boiúna o "madre del río", de origen tupí-guaraní, es una gran serpiente de las aguas que puede tomar forma de mujer y seducir a los hombres. Ambas comparten con el relato la unión entre lo femenino, la serpiente y el agua, pero son deidades del orden del mundo, mientras la joven de Meicuchuca es un ser sin culto ni nombre.
 
-La nueva versión mantiene sin nombre ni origen cierto a la mujer y no resuelve cuál aspecto es verdadero. La forma humana puede ser tan real como la serpentina. Tampoco convierte a la esposa en heroína vengativa: investiga un cambio que afecta la casa y se atreve a formular una pregunta. Las frases de ambos personajes son literatura contemporánea, no citas de una tradición. La incertidumbre es parte del relato y no un vacío que deba llenarse con moral cristiana.`,
-  leccion: `El deseo puede convertir el silencio ajeno en la respuesta que queremos escuchar. Meicuchuca no es castigado por amar a un ser extraño; aprende que amar no equivale a conocer ni concede derecho a definirlo.
-
-La esposa principal también cambia el desenlace al mirar antes de acusar. La verdad que encuentra no simplifica a nadie. A veces comprender comienza aceptando que una persona contiene formas que no nos pertenecen.`,
-  similitudes: `Melusina, en la leyenda europea medieval, vive como mujer y conserva una forma serpentina que su pareja no debe observar en secreto. Cuando el pacto se rompe, la revelación altera la familia y ella se aleja. Meicuchuca comparte la unión entre agua, intimidad y cuerpo de serpiente, pero no el mismo pacto ni la misma genealogía.
-
-En muchas narraciones, descubrir una forma animal sirve para declarar monstruosa a una mujer. La comparación permite preguntar quién controla la mirada y quién decide cuál cuerpo es verdadero. Esta reescritura evita responder desde el miedo del observador.
-
-No existe relación histórica demostrada entre Melusina y el relato muisca. Las diferencias son más importantes que el parecido visual: el Funza y el Tequendama pertenecen a una geografía sagrada del altiplano; la casa de Meicuchuca se organiza mediante vínculos políticos y familiares distintos de un linaje feudal europeo. Ambas historias, sin embargo, satisfacen una necesidad humana persistente: imaginar que incluso la persona más cercana guarda una zona irreductible, y que el amor enfrenta límites cuando pretende poseerla por completo.`,
+Mélusine, en la leyenda europea, vuelve a tener cola de serpiente cada sábado y se aleja cuando su esposo la espía en el baño. La serpiente descubierta en el lecho o en el agua aparece en muchas tradiciones, incluida la leyenda china de la Serpiente Blanca, donde la esposa-serpiente pierde su amor al ser desenmascarada. En todas hay una mirada que descubre y una pérdida; la diferencia está en que aquí la desenmascarada no es víctima: sabe desde el comienzo y elige irse con la frase que desarma a quien la amó sin preguntar.`,
   excerpt:
-    "La esposa de Meicuchuca descubre una serpiente junto al cacique. En el río Funza, la joven decide revelar una forma que nadie había preguntado.",
-  seoTitle: "Meicuchuca y la mujer serpiente: mito y fuentes",
+    "La esposa de Meicuchuca descubre una serpiente en el lecho del cacique. En el río Funza, la joven sin nombre elige su forma y desaparece.",
+  seoTitle: "Meicuchuca y la mujer serpiente: mito del río Funza",
   seoDescription:
-    "Lee el relato de Meicuchuca y la mujer serpiente en el río Funza: versión literaria, historia colonial, significado, comparaciones y fuentes.",
+    "Relato de Meicuchuca y la mujer serpiente: versión literaria, historia colonial, significado, comparaciones y fuentes del mito muisca del Funza.",
   ogTitle: "Meicuchuca y la mujer serpiente: la forma que el río guarda",
   ogDescription:
-    "Una joven sin pasado visible entra al Funza y revela que el deseo de Meicuchuca nunca llegó a conocerla por completo.",
+    "Una joven sin pasado llega al cercado del señor de Bogotá; en el río revela que el deseo nunca alcanzó a conocerla.",
   focusKeywords: [
     "Meicuchuca",
     "mujer serpiente muisca",
@@ -98,9 +79,7 @@ No existe relación histórica demostrada entre Melusina y el relato muisca. Las
     "Meicuchuca cacique de Bogotá",
   ],
   imagePrompt:
-    "Fotografía editorial horizontal 16:9 de una maqueta artesanal de papel cortado: orilla del río Funza cerca del Tequendama, una joven entra al agua y su mitad inferior adopta con serenidad forma de gran serpiente acuática; la esposa principal observa firme y otras mujeres mantienen distancia. Paisaje realista de sabana y roca, fibras, capas, micro-sombras. Sin demonio, erotización, ojos de fuego, texto ni CGI.",
-  imagePromptVertical:
-    "Fotografía editorial vertical 4:5 de una maqueta de papel cortado: una figura femenina toca el río Funza y se transforma gradualmente en serpiente acuática; una mujer observa desde la orilla, neblina del Tequendama al fondo. Papel físico y micro-sombras. Sin horror, erotización, texto ni CGI.",
+    "Fotografía editorial horizontal exacta 16:9. Escena principal: en la orilla del río Funza, la joven entra al agua y su mitad inferior empieza a adoptar con serenidad forma de serpiente acuática; la esposa principal y otras mujeres observan desde tierra. Estilo studioPaperMaquette aprobado: maqueta física hecha a mano con papel cortado, cartón y fibras naturales, fotografiada de frente; relieve bajo, bordes visibles, pequeñas imperfecciones humanas, micro-sombras reales e iluminación sobria. Fantasía anclada en el paisaje del altiplano cundiboyacense. Composición panorámica de un solo tableau; los personajes y objetos esenciales permanecen dentro del 80 % central. Sin texto ni logotipos; sin CGI, render digital ni apariencia de 3D sintético; sin coronas, tronos o templos europeos; sin pirámides, penachos ni iconografía mesoamericana; sin símbolos espirituales inventados; sin coronas, palacio, erotización, demonio, ojos de fuego o horror corporal.",
   imageUrl:
     "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/meicuchuca-1784765977185.jpg",
   sourceKeys: [
@@ -111,20 +90,20 @@ No existe relación histórica demostrada entre Melusina y el relato muisca. Las
     "correa",
     "planBosa",
     "melusine",
+    "popolVuh",
+    "trentren",
   ],
-  researchNotes: `ESTADO: relato colonial asociado a un gobernante posiblemente histórico; sobrenaturalidad no verificable.
+  researchNotes: `ESTADO: relato colonial asociado a un gobernante posiblemente histórico; sobrenaturalidad no verificable; la crónica lo moraliza como engaño del demonio.
 
-NÚCLEO DOCUMENTADO: Meicuchuca; joven llevada por una anciana; esposa principal; consulta a un jeque; visión nocturna de una serpiente; baño en el Funza; transformación y desaparición.
+NÚCLEO DOCUMENTADO: Meicuchuca pide una doncella que una vieja le trae; se aficiona a ella; la esposa principal, celosa, consulta a un jeque con ayuno y ofrendas; ve una gran culebra en el lecho del cacique; el jeque ordena un baño colectivo en el río Bogotá o Funza, por debajo del salto del Tequendama; la joven se convierte en culebra a la vista de todas y desaparece.
 
-VARIANTES: joven de Bacatá; moral de infidelidad; demonización; interpretación como fertilidad; liberación del cacique, añadida en resúmenes.
+VARIANTES: doncella de Bacatá; celos de varias mujeres; demonización; lectura de fertilidad e infidelidad; liberación del cacique, añadida en resúmenes modernos sin fuente nueva.
 
-MEMORIA VIVA: el Funza/Bogotá y el Tequendama continúan como territorio de memoria muisca; no se adjudica a una comunidad actual una versión única.
+LICENCIA EDITORIAL: los diálogos, la pregunta final ("Él nunca preguntó quién era"), la agencia de la joven y la reflexión sobre el silencio son invenciones contemporáneas; no se atribuyen a una tradición oral.
 
-HIPÓTESIS ACADÉMICA: el personaje político y el cuento sobrenatural deben analizarse como capas distintas mediadas por Simón.
+DUDA: nombre, origen y naturaleza de la joven no están establecidos; la mirada colonial no permite acceder directamente a su sentido indígena; no se decide cuál forma es la verdadera.
 
-LECTURA EDITORIAL: asuntos aplazados, diálogo junto al agua, agencia de la mujer serpiente y reflexión final son invenciones.
+GEOGRAFÍA: río Bogotá/Funza en las cercanías del Salto del Tequendama; la casa de recreación del cacique, llamada por los españoles "del monte", no se ubica como sitio arqueológico.
 
-DUDA: nombre, origen y naturaleza de la joven no están establecidos; la mirada colonial no permite acceder directamente a su sentido indígena.
-
-GEOGRAFÍA: río Bogotá/Funza en las cercanías del Salto del Tequendama.`,
+REGISTRO LINGÜÍSTICO: español colombiano contemporáneo, sobrio y ceremonial, sin arcaísmos peninsulares; se usan los nombres Funza y Bogotá para el mismo río, y "culebra" como término local.`,
 });

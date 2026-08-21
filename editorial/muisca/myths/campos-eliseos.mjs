@@ -1,132 +1,103 @@
-import bachue from "../../myths/bachue.mjs";
-import { withMuiscaImagePrompts } from "../image-prompts.mjs";
+import { defineMuiscaMyth } from "../define-editorial-myth.mjs";
 
-const editorialMyth = {
-  ...{
-  "slug": "campos-eliseos",
-  "title": "El camino de las almas",
-  "category_path": "Andina > Varios > Muiscas",
-  "tags": [
-    "muerte",
-    "alma",
-    "araña",
-    "inmortalidad"
-  ],
-  "latitude": 4.710989,
-  "longitude": -74.072092,
-  "mito": "Al morir, una tejedora abrió los ojos en un camino que descendía bajo la tierra.\n\nNo llevaba sus mantas ni las herramientas de todos los días. Solo conservaba la memoria de sus manos: tensar un hilo, reconocer una fibra, reparar una esquina antes de que se deshiciera.\n\nEl sendero atravesaba barrancos amarillos y negros. A veces era ancho; otras veces apenas cabía un pie. La tejedora avanzó sin escuchar voces detrás de ella. No sabía cuánto duraría el descenso.\n\nAl final encontró un río.\n\nEra tan ancho que la otra orilla parecía una franja oscura. No había puente ni canoa. Sobre una piedra esperaba una araña. De su cuerpo salía un hilo fino, casi invisible, que se unía con miles de hilos tendidos sobre el agua.\n\nLa tejedora comprendió.\n\nFrente a ella había una balsa hecha de tela de araña. Parecía demasiado ligera para sostener a una persona, pero los hilos estaban enlazados con una paciencia que conocía bien. Puso un pie. La red cedió un poco y volvió a tensarse.\n\nLa araña subió a la proa.\n\nEl viaje fue silencioso. Bajo la balsa, el río llevaba reflejos de quienes habían cruzado antes. La tejedora sintió miedo cuando la corriente tiró de la tela, pero recordó que ningún hilo trabaja solo. Cada uno recibía fuerza de los demás.\n\nEn la otra orilla encontró un territorio parecido al suyo y, sin embargo, nuevo. Había caminos para distintas provincias, viviendas y campos preparados para la labranza. Reconoció personas de su comunidad. Nadie estaba inmóvil esperando una eternidad vacía.\n\nLe mostraron una parcela.\n\nLa tierra cedió bajo sus dedos. La tejedora abrió un surco y sembró. Después buscó fibras para hacer una manta. Una araña descendió por un hilo y se quedó cerca, como si vigilara la unión entre un mundo y otro.\n\nPor primera vez desde que había comenzado el camino, la mujer miró hacia atrás. No vio el río ni los barrancos. Vio la trama que su vida había dejado entre otras vidas: lo enseñado, lo recibido, lo reparado.\n\nEntonces entendió que morir no había borrado su pertenencia. Había cambiado la orilla.\n\nDesde aquel día, en las casas se dejó pasar a las arañas con cuidado. Cualquiera de sus hilos podía ser pequeño, pero juntos conocían la manera de atravesar el río que ninguna persona cruza dos veces.",
-  "historia": "Las fuentes coloniales y sus compilaciones atribuyen a los muiscas la creencia en la continuidad del alma. Describen un descenso por caminos y barrancos de tierra amarilla y negra, el cruce de un río ancho en balsas hechas con tela de araña y un mundo en el que cada provincia conservaba lugares para sus labranzas.\n\n“Campos Elíseos” era el título heredado de esta ficha. El nombre pertenece a la tradición griega y fue usado por autores posteriores como analogía para hacer familiar el destino de las almas. No aparece como denominación muisca. La revisión conserva el slug para no romper enlaces, pero cambia el título visible a “El camino de las almas”.\n\nLa tejedora, la araña que guía la balsa y los recuerdos reflejados en el agua son invenciones literarias. Sirven para enlazar motivos documentados sin afirmar que existió una protagonista específica. La frase final sobre no matar arañas procede de una explicación recogida por compiladores; debe leerse con cautela, porque no basta para establecer una regla uniforme en todo tiempo y territorio muisca.\n\nEl otro mundo descrito no es una recompensa de ocio ni un escenario de castigo. Mantiene territorio, parentesco y labranza. Esto sugiere una necesidad antropológica profunda: imaginar la muerte sin disolver por completo la pertenencia social. La vida continúa transformada, pero aún organizada por procedencia, relaciones y trabajo. Esa es una lectura editorial del conjunto, no una declaración doctrinal única.",
-  "versiones": "La versión reunida por los compiladores describe barrancos amarillos y negros, un río y balsas de tela de araña. También asigna a cada provincia un lugar donde sus integrantes encuentran espacio para cultivar. Algunos autores interpretan esa agricultura como prueba de un “amor al trabajo”, expresión que refleja su propia moral y reduce el sentido del relato a una virtud productiva.\n\nOtras descripciones coloniales del destino de los muertos muiscas mencionan caminos, moradas y continuidad de rangos o relaciones, pero no siempre repiten todos los detalles de la araña. Por eso no se fusionan aquí en una geografía exacta del más allá.\n\nEl título “Campos Elíseos” introduce una comparación griega que puede hacer creer que se trata del mismo paraíso. Esta versión la retira del relato y del título, aunque la explica por transparencia histórica. “El camino de las almas” nombra el movimiento central sin inventar una palabra muisca.\n\nEl relato nuevo elige a una tejedora para que la resistencia de la balsa se comprenda desde una experiencia humana concreta. Las fuentes no dicen que una araña individual guíe a los muertos ni que el río muestre recuerdos. Esas imágenes pertenecen a la literatura, mientras el descenso, el cruce y las labranzas pertenecen al núcleo documentado.",
-  "leccion": "La muerte aparece como un cambio de territorio, no como el borrado de todos los vínculos. Lo que una persona tejió con otras puede continuar después de que su cuerpo ya no está.\n\nLa balsa ofrece otra imagen: un hilo aislado parece frágil; una trama puede sostener un viaje. La pertenencia no elimina el miedo, pero da una forma para atravesarlo.",
-  "similitudes": "En el Popol Vuh, quienes entran en Xibalbá descienden por un camino peligroso y cruzan ríos antes de enfrentar pruebas. El relato muisca comparte el movimiento hacia un mundo subterráneo, pero no conserva los mismos señores, casas de tormento ni propósito heroico. La semejanza espacial no demuestra contacto ni una cosmología americana uniforme.\n\nEn tradiciones mesopotámicas, el mundo de los muertos también se imagina bajo la tierra y se alcanza mediante un tránsito. Allí predominan otras jerarquías y una existencia sombría asociada a deidades específicas. Las balsas de tela de araña y los campos organizados por provincias no pertenecen a ese corpus.\n\nLa comparación con los Campos Elíseos griegos es precisamente la que esta revisión limita. El Elíseo fue un destino privilegiado dentro de ciertas tradiciones griegas; el registro muisca consultado habla de continuidad comunitaria y labranzas. Llamarlos del mismo modo borra la diferencia más interesante: el más allá muisca descrito no abandona la vida territorial, sino que la vuelve a componer al otro lado del río.",
-  "content": "Mito\nAl morir, una tejedora abrió los ojos en un camino que descendía bajo la tierra.\n\nNo llevaba sus mantas ni las herramientas de todos los días. Solo conservaba la memoria de sus manos: tensar un hilo, reconocer una fibra, reparar una esquina antes de que se deshiciera.\n\nEl sendero atravesaba barrancos amarillos y negros. A veces era ancho; otras veces apenas cabía un pie. La tejedora avanzó sin escuchar voces detrás de ella. No sabía cuánto duraría el descenso.\n\nAl final encontró un río.\n\nEra tan ancho que la otra orilla parecía una franja oscura. No había puente ni canoa. Sobre una piedra esperaba una araña. De su cuerpo salía un hilo fino, casi invisible, que se unía con miles de hilos tendidos sobre el agua.\n\nLa tejedora comprendió.\n\nFrente a ella había una balsa hecha de tela de araña. Parecía demasiado ligera para sostener a una persona, pero los hilos estaban enlazados con una paciencia que conocía bien. Puso un pie. La red cedió un poco y volvió a tensarse.\n\nLa araña subió a la proa.\n\nEl viaje fue silencioso. Bajo la balsa, el río llevaba reflejos de quienes habían cruzado antes. La tejedora sintió miedo cuando la corriente tiró de la tela, pero recordó que ningún hilo trabaja solo. Cada uno recibía fuerza de los demás.\n\nEn la otra orilla encontró un territorio parecido al suyo y, sin embargo, nuevo. Había caminos para distintas provincias, viviendas y campos preparados para la labranza. Reconoció personas de su comunidad. Nadie estaba inmóvil esperando una eternidad vacía.\n\nLe mostraron una parcela.\n\nLa tierra cedió bajo sus dedos. La tejedora abrió un surco y sembró. Después buscó fibras para hacer una manta. Una araña descendió por un hilo y se quedó cerca, como si vigilara la unión entre un mundo y otro.\n\nPor primera vez desde que había comenzado el camino, la mujer miró hacia atrás. No vio el río ni los barrancos. Vio la trama que su vida había dejado entre otras vidas: lo enseñado, lo recibido, lo reparado.\n\nEntonces entendió que morir no había borrado su pertenencia. Había cambiado la orilla.\n\nDesde aquel día, en las casas se dejó pasar a las arañas con cuidado. Cualquiera de sus hilos podía ser pequeño, pero juntos conocían la manera de atravesar el río que ninguna persona cruza dos veces.\n\nHistoria\nLas fuentes coloniales y sus compilaciones atribuyen a los muiscas la creencia en la continuidad del alma. Describen un descenso por caminos y barrancos de tierra amarilla y negra, el cruce de un río ancho en balsas hechas con tela de araña y un mundo en el que cada provincia conservaba lugares para sus labranzas.\n\n“Campos Elíseos” era el título heredado de esta ficha. El nombre pertenece a la tradición griega y fue usado por autores posteriores como analogía para hacer familiar el destino de las almas. No aparece como denominación muisca. La revisión conserva el slug para no romper enlaces, pero cambia el título visible a “El camino de las almas”.\n\nLa tejedora, la araña que guía la balsa y los recuerdos reflejados en el agua son invenciones literarias. Sirven para enlazar motivos documentados sin afirmar que existió una protagonista específica. La frase final sobre no matar arañas procede de una explicación recogida por compiladores; debe leerse con cautela, porque no basta para establecer una regla uniforme en todo tiempo y territorio muisca.\n\nEl otro mundo descrito no es una recompensa de ocio ni un escenario de castigo. Mantiene territorio, parentesco y labranza. Esto sugiere una necesidad antropológica profunda: imaginar la muerte sin disolver por completo la pertenencia social. La vida continúa transformada, pero aún organizada por procedencia, relaciones y trabajo. Esa es una lectura editorial del conjunto, no una declaración doctrinal única.\n\nVersiones\nLa versión reunida por los compiladores describe barrancos amarillos y negros, un río y balsas de tela de araña. También asigna a cada provincia un lugar donde sus integrantes encuentran espacio para cultivar. Algunos autores interpretan esa agricultura como prueba de un “amor al trabajo”, expresión que refleja su propia moral y reduce el sentido del relato a una virtud productiva.\n\nOtras descripciones coloniales del destino de los muertos muiscas mencionan caminos, moradas y continuidad de rangos o relaciones, pero no siempre repiten todos los detalles de la araña. Por eso no se fusionan aquí en una geografía exacta del más allá.\n\nEl título “Campos Elíseos” introduce una comparación griega que puede hacer creer que se trata del mismo paraíso. Esta versión la retira del relato y del título, aunque la explica por transparencia histórica. “El camino de las almas” nombra el movimiento central sin inventar una palabra muisca.\n\nEl relato nuevo elige a una tejedora para que la resistencia de la balsa se comprenda desde una experiencia humana concreta. Las fuentes no dicen que una araña individual guíe a los muertos ni que el río muestre recuerdos. Esas imágenes pertenecen a la literatura, mientras el descenso, el cruce y las labranzas pertenecen al núcleo documentado.\n\nLección\nLa muerte aparece como un cambio de territorio, no como el borrado de todos los vínculos. Lo que una persona tejió con otras puede continuar después de que su cuerpo ya no está.\n\nLa balsa ofrece otra imagen: un hilo aislado parece frágil; una trama puede sostener un viaje. La pertenencia no elimina el miedo, pero da una forma para atravesarlo.\n\nSimilitudes\nEn el Popol Vuh, quienes entran en Xibalbá descienden por un camino peligroso y cruzan ríos antes de enfrentar pruebas. El relato muisca comparte el movimiento hacia un mundo subterráneo, pero no conserva los mismos señores, casas de tormento ni propósito heroico. La semejanza espacial no demuestra contacto ni una cosmología americana uniforme.\n\nEn tradiciones mesopotámicas, el mundo de los muertos también se imagina bajo la tierra y se alcanza mediante un tránsito. Allí predominan otras jerarquías y una existencia sombría asociada a deidades específicas. Las balsas de tela de araña y los campos organizados por provincias no pertenecen a ese corpus.\n\nLa comparación con los Campos Elíseos griegos es precisamente la que esta revisión limita. El Elíseo fue un destino privilegiado dentro de ciertas tradiciones griegas; el registro muisca consultado habla de continuidad comunitaria y labranzas. Llamarlos del mismo modo borra la diferencia más interesante: el más allá muisca descrito no abandona la vida territorial, sino que la vuelve a componer al otro lado del río.",
-  "excerpt": "Una tejedora desciende por tierras amarillas y negras y cruza el río de la muerte en una balsa hecha con tela de araña.",
-  "seo_title": "El camino de las almas: mito muisca de la muerte",
-  "seo_description": "Conoce el mito muisca del camino de las almas: el río, las balsas de tela de araña y el territorio que continúa después de la muerte.",
-  "seo": {
-    "meta_title": "El camino de las almas: mito muisca de la muerte",
-    "meta_description": "Conoce el mito muisca del camino de las almas: el río, las balsas de tela de araña y el territorio que continúa después de la muerte.",
-    "meta_keywords": "camino de las almas muisca, muerte en la mitología muisca, balsa de tela de araña, más allá muisca, inmortalidad del alma muisca, Campos Elíseos chibchas, mitología muisca",
-    "og_title": "El camino de las almas: la balsa de los hilos",
-    "og_description": "Una narración muisca sobre el descenso, el río de la muerte y la trama que sostiene el paso hacia otra orilla.",
-    "twitter_title": "El camino de las almas: mito muisca de la muerte",
-    "twitter_description": "Conoce el mito muisca del camino de las almas: el río, las balsas de tela de araña y el territorio que continúa después de la muerte.",
-    "canonical_path": "/mitos/campos-eliseos"
-  },
-  "focus_keyword": "camino de las almas muisca",
-  "focus_keywords": [
+export default defineMuiscaMyth({
+  slug: "campos-eliseos",
+  title: "El camino de las almas",
+  tags: ["muerte", "alma", "araña", "inmortalidad"],
+  latitude: 4.710989,
+  longitude: -74.072092,
+  mito: `Al morir, una tejedora abrió los ojos al pie de un barranco tenebroso.
+
+No llevaba sus mantas ni sus herramientas. Solo conservaba la memoria de sus manos: tensar un hilo, reconocer una fibra, reparar una esquina antes de que se deshiciera.
+
+El sendero bajaba entre tierras amarillas y negras. A veces era ancho; otras veces apenas cabía un pie. La tejedora avanzó sin escuchar voces detrás de ella. No supo cuánto duró el descenso.
+
+Al final encontró un río.
+
+Era tan ancho que la otra orilla apenas se adivinaba. No había puente ni canoa. Sobre una piedra esperaba una araña, y de su cuerpo salía un hilo fino que se unía con miles de hilos tendidos sobre el agua.
+
+—Los de tu tierra no me matan —dijo la araña—. Me guardan para que nadie falte en el paso.
+
+La tejedora comprendió que tenía delante una balsa hecha de tela de araña. Parecía demasiado ligera para sostenerla, pero los hilos estaban enlazados con una paciencia que conocía bien. Puso un pie. La red cedió y volvió a tensarse.
+
+La araña subió a la proa.
+
+El viaje fue silencioso. Bajo la balsa, el río llevaba reflejos de quienes habían cruzado antes. La tejedora sintió miedo cuando la corriente tiró de la tela, pero recordó que ningún hilo trabaja solo: cada uno recibía fuerza de los demás.
+
+En la otra orilla había un territorio parecido al suyo y, sin embargo, nuevo. Había caminos que iban a distintas provincias, viviendas y campos preparados para la labranza. La luz no era la misma: venía de un sol nuevo, bajo y tibio, que apenas levantaba la neblina sobre los cultivos.
+
+Reconoció a personas de su comunidad. Nadie esperaba inmóvil una eternidad vacía. Le mostraron una parcela, con sus términos señalados como acá, y le dieron semillas para la siembra.
+
+La tierra cedió bajo sus dedos. La tejedora abrió un surco, echó la semilla y la cubrió. Después buscó fibras para hacer una manta. Una araña descendió por un hilo y se quedó cerca, como si vigilara la unión entre un mundo y otro.
+
+Por primera vez desde que comenzó el camino, la mujer miró hacia atrás. No vio el río ni el barranco tenebroso. Vio la trama que su vida había dejado entre otras vidas: lo enseñado, lo recibido, lo reparado.
+
+Sobre el campo, el sol nuevo iba subiendo, y la neblina de la Sabana se abría en surcos verdes.`,
+  historia: `La noticia central viene de Fray Pedro Simón, que hacia 1627 registró la creencia como tradición de los mayores: las almas son inmortales; cuando salen del cuerpo —que es lo único que muere— bajan al centro de la tierra por caminos y barrancas de tierra amarilla y negra, pasan primero un gran río en barcas o balsas de telas de araña, y por eso nadie se atrevía a matar arañas, para que no faltara quien los pasara. En el otro mundo cada provincia conserva sus términos y lugares señalados, como acá, donde el muerto halla hechas sus labranzas.
+
+Esa escatología describe un más allá de trabajo y pertenencia, no de ocio. Se refuerza con otra noticia del propio Simón: como en la otra vida se tendría necesidad de comidas, se las ponía en los sepulcros. El paisaje funerario —tumbas con alimentos, ofrendas a los muertos— puede leerse como la materialización de esa creencia.
+
+Dos cautelas. Primera: Simón es una voz evangelizadora del siglo XVII y traduce lo muisca con categorías propias; cuando habla de resurrección, premio o pena, el marco colonial ya está operando. Segunda: el nombre de la araña, Sospquazine, circula en la divulgación moderna, pero no aparece en las crónicas; la fuente solo describe la balsa de telas de araña. No debe presentarse como término colonial.
+
+El título heredado de esta ficha, "Campos Elíseos", es una analogía griega introducida por autores posteriores, no una denominación muisca. Se conserva el slug para no romper enlaces, pero el título visible cambia a "El camino de las almas". La tejedora que protagoniza el relato y la araña que habla son invenciones editoriales responsables: enlazan motivos documentados sin afirmar una protagonista específica.`,
+  versiones: `La versión de Simón es la más completa y temprana: descenso por caminos y barrancas de tierra amarilla y negra, cruce de un gran río en balsas de tela de araña y, en la otra orilla, términos y labranzas de cada provincia. Villa Posse la reproduce casi al pie de la letra y le suma una lectura propia: elogia el "amor al trabajo" de los chibchas por no concebir la bienaventuranza sin labor agrícola. Ese juicio dice más de la compiladora que del relato.
+
+El mismo Simón ofrece otra línea, atribuida a un predicador antiguo: los muertos resucitarán y vivirán para siempre en este mismo mundo, y en la otra vida tendrán necesidad de comidas como en esta; de ahí las ponían en los sepulcros. Esta variante introduce resurrección y necesidad material, y no debe fusionarse con la del descenso al centro de la tierra.
+
+En otras descripciones coloniales del destino de los muertos muiscas se mencionan caminos, moradas y continuidad de rango o parentesco, sin repetir todos los detalles de la araña. La geografía exacta del más allá, pues, no es una sola: las fuentes acentúan territorio, vivienda o trabajo según su propósito.
+
+El título "Campos Elíseos" (Villa Posse) compara el destino muisca con el Elíseo griego; esta revisión lo retira del título y del relato, aunque lo explica por transparencia. La tejedora, la araña que guía la balsa y los reflejos en el agua son literatura; el descenso, el cruce y las labranzas pertenecen al núcleo documentado.`,
+  leccion:
+    "Atravesar la muerte es cambiar de territorio sin soltar el hilo de lo sembrado y lo aprendido.",
+  similitudes: `En el propio corpus colombiano, el cuidado de los muertos sostiene la misma intuición: la veneración a los soberanos muiscas y las ofrendas funerarias —comidas puestas en los sepulcros para la otra vida— materializan una continuidad entre vivos y difuntos. La diferencia es de escala: el trato a los caciques enaltece a un linaje, mientras el viaje descrito no reserva un cielo para jefes; la labranza y los términos son de toda la comunidad.
+
+En Mesoamérica, el alma también emprende un viaje. El Popol Vuh muestra a los héroes descendiendo a Xibalbá, un inframundo de señores de la muerte, ríos y casas de prueba, y los mexicas atravesaban el Mictlán en etapas sucesivas con la ayuda de un perro que cruza el río de los nueve niveles. Comparten el movimiento hacia lo subterráneo y el cruce de aguas, pero difieren en el tono: en esos mundos hay jueces, tormentos y niveles que el alma debe superar; en el muisca descrito no hay juicio central ni grados de castigo, y la guía no es un perro sino una araña que los vivos protegen para que el paso no falte. En los Andes del sur, otras tradiciones también imaginan la morada de los muertos como un territorio que prolonga la vida y sus quehaceres, aunque con reglas y geografías propias que no coinciden con las balsas de tela de araña.
+
+Fuera de América, el paralelo más citado es Caronte: el barquero griego cruza en su barca la laguna Estigia hacia el Hades. La resonancia es clara —un cruce de río para los muertos—, pero la diferencia lo es más: Caronte exige una moneda, transporta hacia un reino sombrío y es un personaje individual con un oficio inapelable; la balsa muisca está tejida de araña, no se paga, y desemboca en campos de cultivo iluminados por un sol nuevo, donde la pertenencia no se disuelve.`,
+  excerpt:
+    "Una tejedora desciende por barrancos de tierra amarilla y negra y cruza el río de la muerte en una balsa tejida por arañas, hacia campos de cultivo bajo un sol nuevo.",
+  seoTitle: "El camino de las almas: mito muisca de la muerte",
+  seoDescription:
+    "Conoce el mito muisca del camino de las almas: el barranco, el río, la balsa de telas de araña y los campos de cultivo de la otra orilla.",
+  ogTitle: "El camino de las almas: la balsa de los hilos",
+  ogDescription:
+    "Una narración muisca sobre el barranco, el río de la muerte y la trama que sostiene el paso hacia una tierra de labranza bajo un sol nuevo.",
+  focusKeywords: [
     "camino de las almas muisca",
     "muerte en la mitología muisca",
     "balsa de tela de araña",
     "más allá muisca",
     "inmortalidad del alma muisca",
     "Campos Elíseos chibchas",
-    "mitología muisca"
+    "mitología muisca",
+    "viaje de los muertos muiscas",
   ],
-  "image_prompt": "Fotografía editorial horizontal 16:9 de una maqueta artesanal de papel cortado. Una tejedora muisca adulta cruza un río oscuro en una balsa delicada pero firme hecha con hilos de araña; detrás quedan barrancos de tierra amarilla y negra y al frente aparecen campos sobrios. Una araña pequeña viaja en la proa. Papel físico, fibras, hilos reales y micro-sombras, ocre, carbón, azul profundo y verde apagado. Sin terror, fantasmas blancos, calaveras, cementerio, inframundo griego, texto ni CGI.",
-  "image_prompt_horizontal": "Fotografía editorial horizontal 16:9 de una maqueta artesanal de papel cortado. Una tejedora muisca adulta cruza un río oscuro en una balsa delicada pero firme hecha con hilos de araña; detrás quedan barrancos de tierra amarilla y negra y al frente aparecen campos sobrios. Una araña pequeña viaja en la proa. Papel físico, fibras, hilos reales y micro-sombras, ocre, carbón, azul profundo y verde apagado. Sin terror, fantasmas blancos, calaveras, cementerio, inframundo griego, texto ni CGI.",
-  "image_prompt_vertical": "Fotografía editorial horizontal 16:9 de una maqueta artesanal de papel cortado. Una tejedora muisca adulta cruza un río oscuro en una balsa delicada pero firme hecha con hilos de araña; detrás quedan barrancos de tierra amarilla y negra y al frente aparecen campos sobrios. Una araña pequeña viaja en la proa. Papel físico, fibras, hilos reales y micro-sombras, ocre, carbón, azul profundo y verde apagado. Sin terror, fantasmas blancos, calaveras, cementerio, inframundo griego, texto ni CGI.",
-  "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/editorial/campos-eliseos-ddc1eccc01df.jpg",
-  "keySources": [
-    {
-      "title": "Noticias historiales de las conquistas de Tierra Firme en las Indias occidentales, tomo II",
-      "author": "Fray Pedro Simón",
-      "year": 1892,
-      "originalYear": 1627,
-      "type": "crónica colonial",
-      "url": "https://archive.org/details/tierrafirmeindias02simbrich",
-      "limitation": "Conserva testimonios tempranos, pero los interpreta desde una mirada evangelizadora y colonial.",
-      "summary": "Conserva noticias coloniales sobre alma, muerte y continuidad de relaciones que contextualizan el tránsito."
-    },
-    {
-      "title": "Historia general de las conquistas del Nuevo Reino de Granada",
-      "author": "Lucas Fernández de Piedrahíta",
-      "year": 1688,
-      "type": "crónica colonial",
-      "url": "https://www.cervantesvirtual.com/obra/historia-general-de-las-conquistas-del-nuevo-reino-de-granada-a-las-s-c-r-m-de-d-carlos-segundo-rey-de-las-espanas-y-de-las-indias-1166129/",
-      "limitation": "Es una síntesis tardía del siglo XVII y debe contrastarse con testimonios anteriores y documentos de archivo.",
-      "summary": "Permite contrastar descripciones del destino de los muertos y evitar una geografía única fabricada."
-    },
-    {
-      "title": "Mitos y leyendas de Colombia, vol. III: Mitos prehispánicos muiscas",
-      "author": "Eugenia Villa Posse, compiladora",
-      "year": 1993,
-      "type": "compilación editorial",
-      "url": "https://www.flacso.edu.ec/biblio/catalog/resGet.php?resId=44622",
-      "limitation": "Reúne versiones de autores de los siglos XIX y XX; no es una transcripción directa de tradición oral.",
-      "summary": "Recoge el camino de tierras amarillas y negras, el río, las balsas de araña y las labranzas del otro mundo."
-    }
+  imagePrompt:
+    "Fotografía editorial horizontal 16:9 de una maqueta artesanal de papel cortado. Una tejedora muisca adulta cruza un río oscuro en una balsa delicada pero firme hecha con hilos de araña; detrás quedan barrancos de tierra amarilla y negra y al frente aparecen campos sobrios. Una araña pequeña viaja en la proa. Papel físico, fibras, hilos reales y micro-sombras, ocre, carbón, azul profundo y verde apagado. Sin terror, fantasmas blancos, calaveras, cementerio, inframundo griego, texto ni CGI.",
+  imageUrl:
+    "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/editorial/campos-eliseos-ddc1eccc01df.jpg",
+  sourceKeys: [
+    "simon",
+    "villa",
+    "piedrahita",
+    "gamboaArqueologiaHistoria",
+    "correa",
+    "planBosa",
+    "mantas",
+    "popolVuh",
+    "ovidio",
   ],
-  "sources": [
-    {
-      "title": "La civilización chibcha",
-      "author": "Miguel Triana",
-      "year": 1922,
-      "type": "síntesis histórica y etnográfica",
-      "url": "https://archive.org/details/lacivilizacionch0000tria",
-      "limitation": "Obra influyente pero marcada por comparaciones evolucionistas y conjeturas propias de comienzos del siglo XX.",
-      "summary": "Muestra cómo las síntesis históricas reinterpretaron las creencias funerarias y sus objetos materiales."
-    },
-    {
-      "title": "Los muiscas en los siglos XVI y XVII: miradas desde la arqueología y la historia",
-      "author": "Jorge Augusto Gamboa Mendoza, compilador",
-      "year": 2008,
-      "type": "investigación histórica y arqueológica",
-      "url": "https://ediciones.uniandes.edu.co/gpd-los-muiscas-en-los-siglos-xvi-y-xvii-miradas-desde-la-arqueologia-y-la-historia-9789586953481-67f86154e57c4.html",
-      "limitation": "Aporta contexto social e histórico y cuestiona modelos homogéneos; no es un catálogo de mitos.",
-      "summary": "Aporta contexto para no tratar las fuentes coloniales como una doctrina uniforme de todos los muiscas."
-    },
-    {
-      "title": "Plan de vida de la comunidad indígena Muisca de Bosa",
-      "author": "Cabildo Indígena Muisca de Bosa",
-      "year": 2019,
-      "type": "memoria y planeación comunitaria",
-      "url": "https://historico.gobiernobogota.gov.co/sites/gobiernobogota.gov.co/files/control/plan_de_vida_muisca-transparencia.pdf",
-      "limitation": "Expresa una construcción comunitaria contemporánea; no debe proyectarse automáticamente al periodo prehispánico.",
-      "summary": "Ofrece una voz comunitaria contemporánea sobre pertenencia y continuidad sin presentarla como versión antigua del viaje."
-    },
-    {
-      "title": "Popol Vuh: Sacred Book of the Quiché Maya People",
-      "author": "Allen J. Christenson, traducción y notas",
-      "year": 2007,
-      "type": "texto mítico comparativo",
-      "url": "https://www.mesoweb.com/publications/Christenson/PopolVuh.pdf",
-      "limitation": "La comparación muestra una pregunta cosmogónica compartida; no implica contacto ni origen común con el relato muisca.",
-      "summary": "Sustenta el paralelo limitado con el descenso y los cruces de río hacia Xibalbá."
-    },
-    {
-      "title": "Mesopotamian Deities",
-      "author": "Ira Spar, The Metropolitan Museum of Art",
-      "year": 2009,
-      "type": "estudio comparativo de religión y mitología",
-      "url": "https://www.metmuseum.org/essays/mesopotamian-deities",
-      "limitation": "Describe un corpus de más de tres milenios; se usa para comparaciones de función y ambivalencia, no como un panteón uniforme.",
-      "summary": "Documenta concepciones mesopotámicas del inframundo para una comparación funcional sin equivalencias."
-    }
-  ],
-  "researchNotes": "ESTADO: revisión integral y cambio de título.\n\nNÚCLEO DOCUMENTADO: continuidad del alma; descenso por tierras amarillas y negras; río ancho; balsas de tela de araña; lugares y labranzas para cada provincia.\n\nVARIANTES: los detalles del viaje no aparecen juntos en todas las síntesis; cambia el énfasis en territorio, rango, vivienda o trabajo.\n\nMEMORIA CONTEMPORÁNEA: el Plan de Vida de Bosa aporta una idea actual de pertenencia, no una confirmación literal de la escatología colonial.\n\nHIPÓTESIS ACADÉMICA: el más allá reproduce relaciones territoriales y sociales; no es simplemente premio por trabajar.\n\nLECTURA EDITORIAL: la tejedora, la araña guía, los reflejos y la parcela individual son invención responsable.\n\nDUDA: “Campos Elíseos” es una etiqueta comparativa griega, no un nombre muisca documentado.\n\nGEOGRAFÍA: punto simbólico en la Sabana de Bogotá; el viaje no corresponde a una localización cartografiable.\n\nIMAGEN: tejedora adulta cruzando un río oscuro en una balsa delicada de tela de araña, con barrancos amarillos y negros; no terror, inframundo grecorromano, calaveras, cementerio ni fantasmas blancos."
-},
-  methodologySeo: bachue.methodologySeo,
-};
+  researchNotes: `ESTADO: revisión integral de canon con cambio de título visible; se conserva el slug.
 
-export default withMuiscaImagePrompts(editorialMyth);
+NÚCLEO DOCUMENTADO: almas inmortales; descenso al centro de la tierra por caminos y barrancas de tierra amarilla y negra; cruce de un gran río en barcas o balsas de telas de araña; por eso no se mataban las arañas; en el otro mundo cada provincia conserva sus términos y labranzas; ofrendas de comida en sepulcros (Simón, 1627).
+
+VARIANTES: Simón ofrece además la tradición de resurrección en este mismo mundo y la línea del predicador (premio o pena, necesidad de comidas); Villa Posse añade el elogio del "amor al trabajo"; otras crónicas no repiten todos los detalles de la araña.
+
+LICENCIA EDITORIAL: la tejedora como protagonista, la araña que habla una vez, los reflejos en el agua y la parcela individual son invención responsable; no se inventan nombres, ceremonias ni símbolos; Sospquazine se nombra en historia solo como uso divulgativo moderno, con cautela.
+
+DUDA: "Campos Elíseos" es etiqueta comparativa griega, no nombre muisca; Sospquazine no consta en la crónica consultada.
+
+GEOGRAFÍA: punto simbólico en la Sabana de Bogotá; el viaje no corresponde a una localización cartografiable.
+
+REGISTRO LINGÜÍSTICO: español colombiano contemporáneo, tono de cuento sagrado, sin arcaísmos peninsulares ni moralización.`,
+});

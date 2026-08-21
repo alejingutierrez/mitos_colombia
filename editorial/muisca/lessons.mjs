@@ -4,11 +4,11 @@ export const muiscaLessons = {
   bochica:
     "Todo maestro termina por desaparecer, pero la huella de lo aprendido sigue abriendo camino.",
   "campos-eliseos":
-    "La muerte cambia la forma de los vínculos, no necesariamente su peso.",
+    "Atravesar la muerte es cambiar de territorio sin soltar el hilo de lo sembrado y lo aprendido.",
   chaquon:
     "El límite no separa: nombra lo que la tierra guarda para todos.",
   chia:
-    "Madurar también consiste en saber cuándo ocupar espacio y cuándo devolverlo.",
+    "Lo que mengua no desaparece: la luz que se retira deja espacio para otra luz.",
   chibchacum:
     "Todo poder termina cargando el peso de sus actos, y hasta los hombros divinos se cansan de sostener lo que provocaron.",
   chiminigagua:
@@ -18,7 +18,7 @@ export const muiscaLessons = {
   cuchavira:
     "El arco no abre el cielo: enseña el punto exacto donde la tormenta termina.",
   "el-bermejo-aspira-a-ser-rey":
-    "Una causa justa se corrompe cuando convierte a los demás en instrumentos.",
+    "Ninguna mano merece el mando si otras no la sostienen al alzarla.",
   "el-castigo-de-chaquen":
     "Todo límite cruzado deja en el paisaje la memoria de un orden que ya no vuelve a juntarse.",
   "el-dorado":
@@ -54,7 +54,7 @@ export const muiscaLessons = {
   "la-herencia":
     "Nadie hereda solo; lo que se reparte vuelve a unir lo que la posesión quiso dividir.",
   "la-historia-del-bermejo":
-    "Pertenecer no exige dejar de ser, sino aprender a responder por otros.",
+    "La pertenencia no se gana con una hazaña: se recibe cada día de la vida compartida.",
   "la-madre-de-los-hombres":
     "Quien reúne a su gente termina por entregarle el camino que abrió.",
   "los-cojines-del-zaque":
@@ -64,7 +64,7 @@ export const muiscaLessons = {
   "los-mojas":
     "Quien llama sagrada una voz puede estar callando, sin saberlo, a quien la pronuncia.",
   meicuchuca:
-    "Amar a alguien no concede el derecho de definirlo por completo.",
+    "Quien ama sin preguntar confunde el deseo con lo que el otro calla.",
   nemequene:
     "La norma termina en el cuerpo de quien la dicta, y hasta el poder más alto aprende a herirse.",
   nencatacoa:
@@ -80,7 +80,7 @@ export const muiscaLessons = {
   "toquecha-y-toquilla":
     "Lo que se modela con paciencia puede arrebatarse en un instante y no volver jamás.",
   "veneracion-a-los-soberanos":
-    "La autoridad se vuelve más humana cuando puede soportar una mirada.",
+    "Lo sagrado no siempre lo es por lo que muestra, sino por lo que la distancia guarda de ver.",
 };
 
 function composeContent({ mito, historia, versiones, leccion, similitudes }) {
