@@ -42,7 +42,7 @@ export default async function RegionesPage() {
     return {
       slug: region.slug,
       name: region.name,
-      count: region.myth_count,
+      count: Number(region.myth_count) || 0,
       imageUrl: region.image_url,
       motif: REGION_MOTIFS[region.slug] || "hoja",
       // El párrafo editorial vivía sólo en la interna; aquí es lo que sostiene

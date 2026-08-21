@@ -699,10 +699,17 @@ async function getTaxonomyPostgres() {
     `
   );
 
+  // Postgres devuelve COUNT() como bigint, y el driver lo entrega como STRING.
+  // Sqlite lo entrega como número. Sin normalizar aquí, cualquier `reduce` que
+  // sume `myth_count` concatena en producción y no en local — que es
+  // exactamente como se rompió el reparto de área de /regiones.
+  const conCifra = (rows) =>
+    (rows || []).map((row) => ({ ...row, myth_count: Number(row.myth_count) || 0 }));
+
   return {
-    regions: regionsResult.rows,
-    communities: communitiesResult.rows,
-    tags: tagsResult.rows,
+    regions: conCifra(regionsResult.rows),
+    communities: conCifra(communitiesResult.rows),
+    tags: conCifra(tagsResult.rows),
   };
 }
 

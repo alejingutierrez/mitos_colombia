@@ -131,13 +131,17 @@ export default async function CommunityDetailPage({ params }) {
       <CommunityDetailTemplate
         community={{
           name: nombre,
-          count: community.myth_count,
+          count: Number(community.myth_count) || 0,
           imageUrl: community.image_url,
           kicker: `Pueblo · ${community.region}`,
         }}
         region={
           region
-            ? { slug: region.slug, name: region.name, count: region.myth_count }
+            ? {
+                slug: region.slug,
+                name: region.name,
+                count: Number(region.myth_count) || 0,
+              }
             : null
         }
         siblings={siblings}

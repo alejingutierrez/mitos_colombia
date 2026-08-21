@@ -46,7 +46,7 @@ export default async function ComunidadesPage() {
   const communities = allowed.map((c) => ({
     slug: c.slug,
     name: c.name,
-    count: c.myth_count,
+    count: Number(c.myth_count) || 0,
     imageUrl: c.image_url,
     motif: REGION_MOTIFS[c.region_slug] || "condor",
     regionName: c.region,
