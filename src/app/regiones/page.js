@@ -1,6 +1,7 @@
-import { TaxonomyIndexTemplate } from "../../components/templates";
+import { RegionIndexTemplate } from "../../components/templates";
 import { Container, Heading, Text } from "../../components/atoms";
 import { getTaxonomy, listMythLinksByTaxon } from "../../lib/myths";
+import { REGION_INFO, REGION_MOTIFS } from "../../lib/region-info";
 import { buildSeoMetadata, getSeoEntry } from "../../lib/seo";
 
 export const runtime = "nodejs";
@@ -20,65 +21,44 @@ export async function generateMetadata() {
   });
 }
 
-const REGION_DESCRIPTIONS = {
-  Amazonas: "Selva, ríos y cosmogonías amazónicas.",
-  Andina: "Páramos, lagunas y seres de la cordillera.",
-  Caribe: "Mar, manglar y relatos de la costa.",
-  Pacífico: "Manglares, ritmo y memoria afro del litoral.",
-  Orinoquía: "Llanos, sabanas y ánimas errantes.",
-  Insular: "Islas del Caribe y su memoria raizal.",
-  Varios: "Historias que cruzan varios territorios.",
-};
-
-const REGION_MOTIFS = {
-  Amazonas: "hoja",
-  Andina: "montana",
-  Caribe: "agua",
-  Pacífico: "delfin",
-  Orinoquía: "luna",
-  Insular: "sol",
-  Varios: "condor",
-};
-
 export default async function RegionesPage() {
   const taxonomy = await getTaxonomy();
-  const regions = [...(taxonomy.regions || [])].sort((a, b) =>
-    a.name.localeCompare(b.name)
+
+  // Orden por volumen: es el que manda en la composición. El reparto de área
+  // de `RegionMosaic` lo recalcula de todas formas, pero así el HTML servido
+  // ya viene de mayor a menor.
+  const regions = [...(taxonomy.regions || [])].sort(
+    (a, b) => (b.myth_count || 0) - (a.myth_count || 0)
   );
 
-  // Enlaces de mitos representativos por región (índice rastreable, SEO).
+  // Cuatro relatos por región para el panel. Van servidos en el HTML para las
+  // seis, no sólo para la abierta: es índice rastreable, no adorno.
   const regionMyths = await Promise.all(
     regions.map((region) => listMythLinksByTaxon("region", region.slug))
   );
 
-  const items = regions.map((region) => ({
-    title: region.name,
-    href: `/regiones/${region.slug}`,
-    count: region.myth_count,
-    motif: REGION_MOTIFS[region.name] || "hoja",
-    imageUrl: region.image_url,
-    description:
-      REGION_DESCRIPTIONS[region.name] || "Explora los mitos de esta región.",
-  }));
-
-  const mythIndex = regions
-    .map((region, i) => ({
-      title: region.name,
-      href: `/regiones/${region.slug}`,
-      myths: (regionMyths[i] || []).slice(0, 6),
-    }))
-    .filter((g) => g.myths.length > 0);
+  const items = regions.map((region, i) => {
+    const info = REGION_INFO[region.slug] || {};
+    return {
+      slug: region.slug,
+      name: region.name,
+      count: region.myth_count,
+      imageUrl: region.image_url,
+      motif: REGION_MOTIFS[region.slug] || "hoja",
+      // El párrafo editorial vivía sólo en la interna; aquí es lo que sostiene
+      // el panel de la región abierta.
+      paragraph: info.description || null,
+      myths: (regionMyths[i] || []).slice(0, 4),
+    };
+  });
 
   return (
-    <TaxonomyIndexTemplate
-      eyebrow="Explora por territorio"
+    <RegionIndexTemplate
+      eyebrow="El archivo por territorio"
       title="Regiones culturales de Colombia"
-      description="Cada región tiene sus propias tradiciones, pueblos y narrativas. Recorre los mitos según la geografía de donde provienen, de la selva amazónica al mar Caribe."
-      items={items}
-      mythIndex={mythIndex}
+      description="Seis territorios repartidos por lo que pesan: cada pieza ocupa el área que le corresponde entre todos los relatos del archivo. Andina es más de un tercio; Varios, apenas un filo."
+      regions={items}
       active="/regiones"
-      heroMotif="montana"
-      columns={3}
     >
       <Container size="atlas" className="border-t border-line-100 py-12">
         <div className="grid gap-6 lg:grid-cols-[0.8fr_1.2fr]">
@@ -102,6 +82,6 @@ export default async function RegionesPage() {
           </div>
         </div>
       </Container>
-    </TaxonomyIndexTemplate>
+    </RegionIndexTemplate>
   );
 }

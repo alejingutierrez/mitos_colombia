@@ -8,4 +8,7 @@ export { TarotTemplate } from "./TarotTemplate";
 export { MapTemplate } from "./MapTemplate";
 export { DocumentTemplate } from "./DocumentTemplate";
 export { TaxonomyIndexTemplate } from "./TaxonomyIndexTemplate";
+export { RegionIndexTemplate } from "./RegionIndexTemplate";
+export { CommunityIndexTemplate } from "./CommunityIndexTemplate";
+export { CommunityDetailTemplate } from "./CommunityDetailTemplate";
 export { TaxonomyDetailTemplate } from "./TaxonomyDetailTemplate";
