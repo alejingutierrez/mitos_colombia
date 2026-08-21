@@ -53,7 +53,10 @@ export function CedulaTemplate({
               <Motif name={motif} size={220} />
             </span>
           )}
-          <span className="atlas-scrim-deep absolute inset-0" />
+          {/* `scrim-cover` y no `scrim-deep`: el texto vive en la banda
+              izquierda y este velo trae el refuerzo lateral que necesita
+              cuando la obra es clara justo ahí. */}
+          <span className="atlas-scrim-cover absolute inset-0" />
           <Container
             size="atlas"
             className="atlas-on-image relative flex min-h-[26rem] items-end pb-9 text-white md:min-h-[28rem] md:pb-12"
@@ -87,7 +90,7 @@ export function CedulaTemplate({
               ) : null}
 
               {kicker ? (
-                <p className="atlas-kicker mt-5 !text-white/78">{kicker}</p>
+                <p className="atlas-kicker mt-5 !text-white/85">{kicker}</p>
               ) : null}
               <h1 className="atlas-h1 mt-3 !text-white">{name}</h1>
               <span className="atlas-rule bg-ember-500" />
