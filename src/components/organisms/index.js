@@ -7,6 +7,8 @@ export { Footer } from "./Footer";
 export { HeroSection } from "./HeroSection";
 export { MythGrid } from "./MythGrid";
 export { TaxonomyGrid } from "./TaxonomyGrid";
+export { RegionMosaic } from "./RegionMosaic";
+export { CommunityMesa } from "./CommunityMesa";
 export { RouteGrid } from "./RouteGrid";
 export { CommentThread } from "./CommentThread";
 export { FilterableArchive } from "./FilterableArchive";
