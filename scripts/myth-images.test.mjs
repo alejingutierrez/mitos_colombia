@@ -4,6 +4,7 @@ import {
   getMythImage,
   getMythImageVariants,
   hasMythImageRoles,
+  hasMythTriptych,
   isMythImageVariantCurrent,
   withMythImageVariants,
 } from "../src/lib/myth-images.js";
@@ -70,4 +71,39 @@ test("keeps strict portrait slots from falling back to landscape imagery", () =>
     false
   );
   assert.equal(hasMythImageRoles(myth, ["landscape", "portrait"]), true);
+});
+
+const triptico = {
+  image_url: "https://example.com/entrada.jpg",
+  vertical_image_url: "https://example.com/acto.jpg",
+  square_image_url: "https://example.com/huella.jpg",
+};
+
+test("el tríptico manda: cada formato sirve su propia escena", () => {
+  assert.equal(getMythImage(triptico, "landscape"), triptico.image_url);
+  assert.equal(getMythImage(triptico, "portrait"), triptico.vertical_image_url);
+  assert.equal(getMythImage(triptico, "square"), triptico.square_image_url);
+});
+
+test("sin huella, el hueco cuadrado sigue cayendo en la vertical", () => {
+  const sinHuella = { ...triptico, square_image_url: null };
+  assert.equal(getMythImage(sinHuella, "square"), sinHuella.vertical_image_url);
+  assert.equal(getMythImage(sinHuella, "square", { fallback: false }), null);
+});
+
+test("hasMythTriptych sólo acepta las tres escenas propias", () => {
+  assert.equal(hasMythTriptych(triptico), true);
+  assert.equal(hasMythTriptych({ ...triptico, square_image_url: null }), false);
+  assert.equal(hasMythTriptych({ ...triptico, vertical_image_url: null }), false);
+  assert.equal(hasMythTriptych({ image_url: triptico.image_url }), false);
+});
+
+test("withMythImageVariants expone la huella y la suma a la secuencia", () => {
+  const normalized = withMythImageVariants(triptico);
+  assert.equal(normalized.squareImageUrl, triptico.square_image_url);
+  assert.deepEqual(normalized.imageUrls, [
+    triptico.image_url,
+    triptico.vertical_image_url,
+    triptico.square_image_url,
+  ]);
 });

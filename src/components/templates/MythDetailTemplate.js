@@ -22,13 +22,17 @@ const RIVER_REGIONS = ["Caribe", "Pacífico"];
 const pickAccent = (region) =>
   RIVER_REGIONS.includes(region) ? "river" : "jungle";
 
+/**
+ * Segunda escena del tríptico —el acto— junto al relato en escritorio, donde la
+ * portada ya mostró la entrada apaisada.
+ */
 function InlineStoryImage({ myth, className = "" }) {
   if (!myth.verticalImageUrl) return null;
   return (
     <figure className={className}>
       <ImageFrame
         src={myth.verticalImageUrl}
-        alt={`${myth.title}: segunda escena del relato`}
+        alt={`${myth.title}: el acto del relato`}
         ratio="9 / 16"
         sizes="(max-width: 768px) 100vw, 440px"
         placeholderMotif={myth.motif}
@@ -36,6 +40,30 @@ function InlineStoryImage({ myth, className = "" }) {
         className="rounded border border-line-100 bg-[rgb(var(--atlas-night))]"
         imgClassName="object-contain"
         data-image-role="inline-scene"
+      />
+    </figure>
+  );
+}
+
+/**
+ * Primera escena del tríptico —la entrada— al abrir el relato, sólo en móvil.
+ * En móvil la portada usa la vertical a sangre (el acto), así que sin esto la
+ * apaisada no se vería nunca en teléfono. En escritorio ya es la portada y
+ * repetirla aquí sobraría, por eso el bloque es `md:hidden`.
+ */
+function MobileEntranceImage({ myth, className = "" }) {
+  if (!myth.imageUrl || !myth.verticalImageUrl) return null;
+  return (
+    <figure className={className}>
+      <ImageFrame
+        src={myth.imageUrl}
+        alt={`${myth.title}: la entrada del relato`}
+        ratio="16 / 9"
+        sizes="100vw"
+        placeholderMotif={myth.motif}
+        placeholderSize={120}
+        className="rounded border border-line-100 bg-[rgb(var(--atlas-night))]"
+        data-image-role="inline-entrance"
       />
     </figure>
   );
@@ -74,7 +102,10 @@ function MythReading({ myth, accent, related }) {
               : "max-w-3xl"
           }`}
         >
-          <RelatoBlock text={myth.mito} accent={accent} motif={myth.motif} />
+          <div className="min-w-0">
+            <MobileEntranceImage myth={myth} className="mb-9 md:hidden" />
+            <RelatoBlock text={myth.mito} accent={accent} motif={myth.motif} />
+          </div>
           <InlineStoryImage
             myth={myth}
             className="hidden md:sticky md:top-36 md:block"
@@ -83,7 +114,13 @@ function MythReading({ myth, accent, related }) {
       </Container>
 
       <div id="ensenanza" className="scroll-mt-36">
-        <LeccionBlock text={myth.leccion} accent={accent} motif={myth.motif} />
+        <LeccionBlock
+          text={myth.leccion}
+          accent={accent}
+          motif={myth.motif}
+          huellaUrl={myth.squareImageUrl}
+          huellaAlt={`${myth.title}: lo que quedó del relato`}
+        />
       </div>
 
       {showTerritory ? (

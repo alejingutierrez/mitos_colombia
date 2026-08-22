@@ -3,6 +3,7 @@ import test from "node:test";
 
 import {
   APPROVED_IMAGE_STYLE_PROFILE,
+  buildBlobFilename,
   buildCraftImagePrompt,
   buildImageGenerationParams,
   IMAGE_GENERATION_MODEL,
@@ -136,6 +137,11 @@ test("presets keep horizontal, banner and vertical dimensions valid for gpt-imag
     IMAGE_PRESETS.vertical.outputWidth /
       IMAGE_PRESETS.vertical.outputHeight,
     9 / 16
+  );
+  assert.equal(IMAGE_PRESETS.square.size, "1024x1024");
+  assert.equal(
+    IMAGE_PRESETS.square.outputWidth / IMAGE_PRESETS.square.outputHeight,
+    1
   );
 
   for (const preset of Object.values(IMAGE_PRESETS)) {
@@ -280,4 +286,22 @@ test("production craft regeneration closes the database connection on selection 
     /production selection failed/
   );
   assert.deepEqual(calls, ["connect", "query", "end"]);
+});
+
+test("la huella cuadrada se guarda por tipo de entidad, la apaisada suelta", () => {
+  const square = buildBlobFilename({
+    preset: "square",
+    slug: "bachue",
+    entityType: "myth",
+  });
+  const vertical = buildBlobFilename({
+    preset: "vertical",
+    slug: "bachue",
+    entityType: "myth",
+  });
+  const horizontal = buildBlobFilename({ preset: "horizontal", slug: "bachue" });
+
+  assert.match(square, /^square\/myth\/bachue-\d+\.jpg$/);
+  assert.match(vertical, /^vertical\/myth\/bachue-\d+\.jpg$/);
+  assert.match(horizontal, /^mitos\/bachue-\d+\.jpg$/);
 });
