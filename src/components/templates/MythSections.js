@@ -1,6 +1,7 @@
 import { cn } from "../../lib/utils";
 import {
   Container,
+  ImageFrame,
   Motif,
   Eyebrow,
   Prose,
@@ -134,6 +135,38 @@ export function CreamMedallion({ motif = "luna", size = 44, className }) {
   );
 }
 
+/**
+ * Placa cuadrada con la tercera escena del tríptico —la huella: lo que queda
+ * cuando el personaje ya no está—. Ocupa el lugar del medallón de motivo en la
+ * enseñanza: mismo anillo dorado, misma función de objeto focal, pero con la
+ * obra real del mito en vez de un icono genérico. Cuadrada y no recortada en
+ * círculo porque la huella es una escena, no un emblema decorativo.
+ */
+export function HuellaPlate({ src, alt, className }) {
+  if (!src) return null;
+  return (
+    // El anillo va en la figura y no en `ImageFrame`: ese atom fija su
+    // `aspect-ratio` por `style`, y pasarle otro `style` se lo borra —la placa
+    // se quedaba con altura cero.
+    <figure
+      className={cn("mx-auto w-[11.5rem] rounded-sm md:w-[15rem]", className)}
+      style={{
+        boxShadow: `0 0 0 1px ${GOLD}, 0 0 0 7px rgba(189,134,66,0.14), 0 18px 44px rgba(0,0,0,0.38)`,
+      }}
+    >
+      <ImageFrame
+        src={src}
+        alt={alt}
+        ratio="1 / 1"
+        sizes="(max-width: 768px) 184px, 240px"
+        className="rounded-sm border-0 bg-transparent"
+        imgClassName="object-cover"
+        data-image-role="huella"
+      />
+    </figure>
+  );
+}
+
 /* Encabezado de sección con numeral editorial (columna vertebral). */
 export function SectionSpine({ index, eyebrow, accent = "jungle", className }) {
   return (
@@ -232,7 +265,16 @@ export function VersionesBlock({ text, accent = "jungle", index }) {
 
 /* ---------------- 4 · La enseñanza — banda ceremonial oscura (pico) ---------------- */
 /* Renderiza su propia sección a sangre completa; colócala FUERA de la medida angosta. */
-export function LeccionBlock({ text, accent = "jungle", motif = "luna" }) {
+export function LeccionBlock({
+  text,
+  accent = "jungle",
+  motif = "luna",
+  // Tercera escena del tríptico. Cae aquí, en la costura entre el relato y la
+  // enseñanza, porque es literalmente lo que el mito deja: el momento en que el
+  // personaje ya salió del cuadro. Sin ella el bloque usa el medallón de motivo.
+  huellaUrl,
+  huellaAlt,
+}) {
   const clean = String(text || "").trim();
   if (!clean) return null;
   const dark = acc(accent).dark;
@@ -240,7 +282,11 @@ export function LeccionBlock({ text, accent = "jungle", motif = "luna" }) {
     <section className="relative overflow-hidden" style={{ background: `linear-gradient(135deg, ${NIGHT} 0%, ${dark} 55%, ${NIGHT} 100%)` }}>
       <Motif name={motif} size={360} className="pointer-events-none absolute -right-16 -top-10 opacity-[0.06]" aria-hidden="true" />
       <Container size="atlas" className="relative py-16 text-center md:py-20">
-        <CreamMedallion motif={motif} size={38} className="mx-auto mb-6" />
+        {huellaUrl ? (
+          <HuellaPlate src={huellaUrl} alt={huellaAlt} className="mb-8 md:mb-10" />
+        ) : (
+          <CreamMedallion motif={motif} size={38} className="mx-auto mb-6" />
+        )}
         <h2 className="mb-5 text-xs font-semibold uppercase tracking-[0.2em]" style={{ color: GOLD }}>
           La enseñanza
         </h2>

@@ -54,6 +54,12 @@ ALTER TABLE myths ADD COLUMN IF NOT EXISTS historia TEXT;
 ALTER TABLE myths ADD COLUMN IF NOT EXISTS versiones TEXT;
 ALTER TABLE myths ADD COLUMN IF NOT EXISTS leccion TEXT;
 ALTER TABLE myths ADD COLUMN IF NOT EXISTS similitudes TEXT;
+-- Tríptico: la apaisada es `image_url`, la vertical vive en `vertical_images`
+-- y la cuadrada (la huella del mito) es esta columna.
+ALTER TABLE myths ADD COLUMN IF NOT EXISTS square_image_url TEXT;
+ALTER TABLE myths ADD COLUMN IF NOT EXISTS image_prompt_horizontal TEXT;
+ALTER TABLE myths ADD COLUMN IF NOT EXISTS image_prompt_vertical TEXT;
+ALTER TABLE myths ADD COLUMN IF NOT EXISTS image_prompt_square TEXT;
 
 CREATE INDEX IF NOT EXISTS idx_myths_region ON myths(region_id);
 CREATE INDEX IF NOT EXISTS idx_myths_community ON myths(community_id);
