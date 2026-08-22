@@ -112,8 +112,11 @@ export default async function MythDetailPage({ params }) {
     region_slug: regionSlug,
     community: myth.community,
     excerpt: myth.excerpt,
+    // Tríptico: entrada (16:9), acto (9:16) y huella (1:1). Cada una es una
+    // escena distinta del mito, no un recorte de la misma imagen.
     imageUrl: myth.image_url,
     verticalImageUrl: myth.vertical_image_url,
+    squareImageUrl: myth.square_image_url,
     content: myth.content,
     category_path: myth.category_path,
     keywords: myth.keywords,

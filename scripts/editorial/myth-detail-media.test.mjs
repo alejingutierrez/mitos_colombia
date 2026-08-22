@@ -38,6 +38,33 @@ test("la portada reparte horizontal en escritorio y vertical en móvil; el Relat
   assert.equal((template.match(/src=\{myth\.verticalImageUrl\}/g) || []).length, 1);
 });
 
+test("el tríptico reparte las tres escenas en tres sitios distintos de la interna", async () => {
+  const [page, template, sections] = await Promise.all([
+    read("src/app/mitos/[slug]/page.js"),
+    read("src/components/templates/MythDetailTemplate.js"),
+    read("src/components/templates/MythSections.js"),
+  ]);
+
+  // La huella (1:1) viaja desde la fila del mito hasta el bloque de enseñanza.
+  assert.match(page, /squareImageUrl:\s*myth\.square_image_url/);
+  assert.match(template, /huellaUrl=\{myth\.squareImageUrl\}/);
+  assert.match(sections, /data-image-role="huella"/);
+
+  // Cae en la costura entre el relato y la enseñanza, no en una sección propia:
+  // es el objeto focal del bloque, en lugar del medallón de motivo.
+  assert.match(sections, /huellaUrl \? \(\s*<HuellaPlate/);
+  assert.match(sections, /<CreamMedallion motif=\{motif\}/);
+
+  // En móvil la portada es la vertical, así que la entrada apaisada se muestra
+  // al abrir el relato para que no quede escondida en teléfono.
+  assert.match(template, /data-image-role="inline-entrance"/);
+  assert.match(template, /<MobileEntranceImage myth=\{myth\} className="mb-9 md:hidden"/);
+
+  // Cada escena aparece exactamente una vez en la plantilla.
+  assert.equal((template.match(/myth\.squareImageUrl/g) || []).length, 1);
+  assert.equal((template.match(/src=\{myth\.imageUrl\}/g) || []).length, 1);
+});
+
 test("la interna del mito declara un único h1", async () => {
   const [template, hero] = await Promise.all([
     read("src/components/templates/MythDetailTemplate.js"),

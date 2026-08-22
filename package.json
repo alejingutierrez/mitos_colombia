@@ -12,6 +12,8 @@
     "images:optimize:mitos": "node scripts/optimize-blob-mitos-images.js",
     "images:regenerate:craft": "node scripts/regenerate-craft-images.mjs",
     "images:style-round": "node scripts/generate-image-style-round.mjs",
+    "images:migrate:square": "node scripts/migrate-square-images-pg.mjs",
+    "images:apply:triptych": "node scripts/apply-myth-triptych.mjs",
     "icons:generate": "node scripts/generate-motif-icons.js",
     "brand:generate": "node scripts/generate-brand-assets.mjs",
     "instagram:env:copy": "node scripts/instagram/copy-bedrock-env.mjs",

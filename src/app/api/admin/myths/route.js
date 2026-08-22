@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { revalidateTag } from "next/cache";
+import { revalidatePath, revalidateTag } from "next/cache";
 import {
   getSqlClient,
   getSqliteDb,
@@ -1018,6 +1018,9 @@ export async function POST(request) {
 
     revalidateTag("myth");
     revalidateTag("taxonomy");
+    // La interna del mito está prerenderizada: sin `revalidatePath` el CDN
+    // sigue sirviendo el HTML viejo aunque el dato ya esté fresco.
+    revalidatePath(`/mitos/${data.slug}`);
 
     return NextResponse.json({
       myth: {
@@ -1146,6 +1149,10 @@ export async function PUT(request) {
 
     revalidateTag("myth");
     revalidateTag("taxonomy");
+    revalidatePath(`/mitos/${data.slug}`);
+    if (existing.slug && existing.slug !== data.slug) {
+      revalidatePath(`/mitos/${existing.slug}`);
+    }
 
     return NextResponse.json({
       myth: {

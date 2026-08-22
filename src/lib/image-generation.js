@@ -75,7 +75,19 @@ export const IMAGE_PRESETS = {
     contentType: "image/jpeg",
     extension: "jpg",
   },
+  square: {
+    size: "1024x1024",
+    outputWidth: 1024,
+    outputHeight: 1024,
+    blobPrefix: "square",
+    contentType: "image/jpeg",
+    extension: "jpg",
+  },
 };
+
+// Formatos que se guardan en una subcarpeta por tipo de entidad. La apaisada
+// vive suelta en `mitos/` por compatibilidad con las URLs ya publicadas.
+const ENTITY_SCOPED_PRESETS = new Set(["vertical", "square"]);
 
 const REGION_CRAFT = {
   Andina:
@@ -268,7 +280,7 @@ export function buildBlobFilename({ preset = "horizontal", slug, entityType }) {
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/(^-|-$)/g, "");
   const folder =
-    preset === "vertical" && entityType
+    ENTITY_SCOPED_PRESETS.has(preset) && entityType
       ? `${selectedPreset.blobPrefix}/${entityType}`
       : selectedPreset.blobPrefix;
   return `${folder}/${safeSlug || "image"}-${Date.now()}.${selectedPreset.extension}`;
