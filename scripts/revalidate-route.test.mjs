@@ -2,6 +2,8 @@ import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import test from "node:test";
 
+import { computeTargetSize } from "./apply-myth-triptych.mjs";
+
 const root = new URL("../", import.meta.url);
 const read = (path) => readFile(new URL(path, root), "utf8");
 
@@ -50,4 +52,43 @@ test("publicar un tríptico purga la caché salvo que se pida lo contrario", asy
   assert.match(script, /\/api\/admin\/revalidate/);
   // Si falla la purga, el script avisa pero no tumba la publicación ya escrita.
   assert.match(script, /aparecerá cuando expire el ISR/);
+});
+
+/**
+ * `IMAGE_PRESETS` describe el techo del pipeline viejo de OpenAI (1536 px de
+ * ancho). Usar esas medidas al publicar tiraba el 43% del ancho de las piezas
+ * de 2K y la portada se veía blanda en escritorio.
+ */
+test("publicar conserva la resolución del original, no la del preset viejo", () => {
+  const horizontal = { outputWidth: 1536, outputHeight: 864 };
+  const vertical = { outputWidth: 864, outputHeight: 1536 };
+  const square = { outputWidth: 1024, outputHeight: 1024 };
+
+  assert.deepEqual(
+    computeTargetSize({ sourceWidth: 2688, sourceHeight: 1520, preset: horizontal }),
+    { width: 2688, height: 1512 }
+  );
+  assert.deepEqual(
+    computeTargetSize({ sourceWidth: 1520, sourceHeight: 2688, preset: vertical }),
+    { width: 1512, height: 2688 }
+  );
+  assert.deepEqual(
+    computeTargetSize({ sourceWidth: 2048, sourceHeight: 2048, preset: square }),
+    { width: 2048, height: 2048 }
+  );
+});
+
+test("nunca amplía una pieza pequeña ni pasa del techo", () => {
+  const horizontal = { outputWidth: 1536, outputHeight: 864 };
+
+  // Original modesto: se respeta su ancho, no se infla al del preset.
+  assert.deepEqual(
+    computeTargetSize({ sourceWidth: 1200, sourceHeight: 800, preset: horizontal }),
+    { width: 1200, height: 675 }
+  );
+  // Original enorme: se recorta al techo de 2688.
+  assert.deepEqual(
+    computeTargetSize({ sourceWidth: 6000, sourceHeight: 3400, preset: horizontal }),
+    { width: 2688, height: 1512 }
+  );
 });

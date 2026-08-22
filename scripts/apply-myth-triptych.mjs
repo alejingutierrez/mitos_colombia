@@ -47,7 +47,15 @@ const FORMATS = [
   { key: "cuadrada", preset: "square", acto: "huella", match: /-(cuadrada|square)\.(png|jpe?g)$/i },
 ];
 
-const JPEG_QUALITY = 86;
+const JPEG_QUALITY = 88;
+
+// Lado largo máximo del archivo publicado. `IMAGE_PRESETS` describe lo que
+// genera el pipeline viejo de OpenAI (1536 px de ancho como techo), y usar esas
+// medidas aquí tiraba el 43% del ancho de las piezas de 2K: en escritorio la
+// portada pide ~2880 px con `sizes="100vw"` y se veía blanda. Subimos la
+// resolución nativa y dejamos que next/image reescale por dispositivo, que no
+// le cuesta ancho de banda a nadie.
+const MAX_EDGE = 2688;
 
 function parseArgs(argv) {
   const args = { dryRun: false, revalidate: true };
@@ -149,17 +157,42 @@ async function readManifest(dir) {
   }
 }
 
-/** Reencuadra al tamaño de salida del preset y comprime a jpeg. */
-async function renderForPreset(path, presetKey) {
+/**
+ * Tamaño de publicación: la proporción la manda el preset, la resolución la
+ * manda el original (con `MAX_EDGE` como techo). Nunca amplía.
+ */
+export function computeTargetSize({ sourceWidth, sourceHeight, preset }) {
+  const ratio = preset.outputWidth / preset.outputHeight;
+  // El lado que manda es el largo del preset: en apaisada el ancho, en vertical
+  // el alto, en cuadrada da igual.
+  const targetLong = Math.min(MAX_EDGE, ratio >= 1 ? sourceWidth : sourceHeight);
+  return {
+    width: ratio >= 1 ? targetLong : Math.round(targetLong * ratio),
+    height: ratio >= 1 ? Math.round(targetLong / ratio) : targetLong,
+  };
+}
+
+async function targetFor(path, presetKey) {
   const preset = IMAGE_PRESETS[presetKey];
+  const { width: sourceWidth = 0, height: sourceHeight = 0 } =
+    await sharp(path).metadata();
+  return {
+    preset,
+    sourceWidth,
+    sourceHeight,
+    ...computeTargetSize({ sourceWidth, sourceHeight, preset }),
+  };
+}
+
+/** Reencuadra a la proporción del preset a resolución nativa y comprime a jpeg. */
+async function renderForPreset(path, presetKey) {
+  const { preset, width, height } = await targetFor(path, presetKey);
+
   const buffer = await sharp(path)
-    .resize(preset.outputWidth, preset.outputHeight, {
-      fit: "cover",
-      position: "centre",
-    })
+    .resize(width, height, { fit: "cover", position: "centre", withoutEnlargement: true })
     .jpeg({ quality: JPEG_QUALITY, mozjpeg: true })
     .toBuffer();
-  return { buffer, preset };
+  return { buffer, preset, width, height };
 }
 
 async function fetchMyth(slug) {
@@ -222,9 +255,9 @@ async function main() {
 
   console.log("\n  ESCENAS a publicar:");
   for (const format of FORMATS) {
-    const preset = IMAGE_PRESETS[format.preset];
+    const t = await targetFor(files[format.key], format.preset);
     console.log(
-      `    ${format.acto.padEnd(8)} ${String(preset.outputWidth).padStart(4)}×${preset.outputHeight}  ${basename(files[format.key])}`
+      `    ${format.acto.padEnd(8)} ${t.sourceWidth}×${t.sourceHeight} → ${t.width}×${t.height}  ${basename(files[format.key])}`
     );
   }
 
@@ -235,7 +268,10 @@ async function main() {
 
   const uploaded = {};
   for (const format of FORMATS) {
-    const { buffer, preset } = await renderForPreset(files[format.key], format.preset);
+    const { buffer, preset, width, height } = await renderForPreset(
+      files[format.key],
+      format.preset
+    );
     const filename = buildBlobFilename({
       preset: format.preset,
       slug: myth.slug,
@@ -247,7 +283,9 @@ async function main() {
       token: process.env.BLOB_READ_WRITE_TOKEN,
     });
     uploaded[format.key] = blob.url;
-    console.log(`    ✓ ${format.acto} → ${blob.url}`);
+    console.log(
+      `    ✓ ${format.acto} ${width}×${height} · ${Math.round(buffer.length / 1024)} KB → ${blob.url}`
+    );
   }
 
   // El mito primero: `isMythImageVariantCurrent` considera vieja a la vertical
@@ -290,7 +328,11 @@ async function main() {
   console.log("");
 }
 
-main().catch((error) => {
-  console.error(`\n✖ ${error.message}\n`);
-  process.exitCode = 1;
-});
+// Sólo corre si se invoca directamente: así los tests pueden importar
+// `computeTargetSize` sin disparar la publicación.
+if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
+  main().catch((error) => {
+    console.error(`\n✖ ${error.message}\n`);
+    process.exitCode = 1;
+  });
+}
