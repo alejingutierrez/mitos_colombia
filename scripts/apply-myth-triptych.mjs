@@ -11,6 +11,10 @@
  * Uso:
  *   node scripts/apply-myth-triptych.mjs --slug <slug> --dir <carpeta> [--dry-run]
  *
+ * Al terminar purga la caché del sitio (`--no-revalidate` lo salta, `--site`
+ * apunta a otro dominio): escribir en la base no basta porque la interna del
+ * mito está prerenderizada.
+ *
  * La carpeta debe traer los tres archivos con sufijo `-horizontal`, `-vertical`
  * y `-cuadrada` (o `-square`), en png o jpg. Si hay un `manifest.json` al lado,
  * se leen de ahí las descripciones de escena y quedan guardadas como prompts.
@@ -46,18 +50,59 @@ const FORMATS = [
 const JPEG_QUALITY = 86;
 
 function parseArgs(argv) {
-  const args = { dryRun: false };
+  const args = { dryRun: false, revalidate: true };
   for (let i = 2; i < argv.length; i += 1) {
     const token = argv[i];
     if (token === "--dry-run") args.dryRun = true;
+    else if (token === "--no-revalidate") args.revalidate = false;
     else if (token === "--slug") args.slug = argv[++i];
     else if (token === "--dir") args.dir = argv[++i];
     else if (token === "--env") args.env = argv[++i];
+    else if (token === "--site") args.site = argv[++i];
     else throw new Error(`Argumento no reconocido: ${token}`);
   }
   if (!args.slug) throw new Error("Falta --slug");
   if (!args.dir) throw new Error("Falta --dir");
   return args;
+}
+
+/**
+ * Escribir en Postgres no basta: la interna del mito está prerenderizada y el
+ * dato pasa por `unstable_cache`. Sin esta purga la imagen nueva no se ve en
+ * producción hasta que expire la ventana de ISR.
+ */
+async function revalidateSite({ slug, site }) {
+  const base = (site || process.env.NEXT_PUBLIC_SITE_URL || "")
+    .trim()
+    .replace(/\/+$/, "");
+  const user = process.env.ADMIN_USERNAME;
+  const pass = process.env.ADMIN_PASSWORD;
+
+  if (!base || !user || !pass) {
+    console.log(
+      "\n  ⚠ No purgué caché: faltan NEXT_PUBLIC_SITE_URL, ADMIN_USERNAME o ADMIN_PASSWORD."
+    );
+    console.log("    La imagen nueva aparecerá cuando expire el ISR (1 h).");
+    return;
+  }
+
+  const response = await fetch(`${base}/api/admin/revalidate`, {
+    method: "POST",
+    headers: {
+      "content-type": "application/json",
+      authorization: `Basic ${Buffer.from(`${user}:${pass}`).toString("base64")}`,
+    },
+    body: JSON.stringify({ slugs: [slug], paths: ["/mitos"] }),
+  });
+
+  if (!response.ok) {
+    console.log(
+      `\n  ⚠ La purga de caché respondió ${response.status}. La imagen aparecerá cuando expire el ISR.`
+    );
+    return;
+  }
+  const result = await response.json();
+  console.log(`\n  ✓ Caché purgada: ${result.paths?.join(", ")}`);
 }
 
 function loadEnv(explicitPath) {
@@ -237,7 +282,12 @@ async function main() {
   console.log(`\n  DESPUÉS (fila vertical ${verticalAction}):`);
   console.log(`    image_url        = ${after.image_url}`);
   console.log(`    vertical_images  = ${verticalAfter?.image_url}`);
-  console.log(`    square_image_url = ${after.square_image_url}\n`);
+  console.log(`    square_image_url = ${after.square_image_url}`);
+
+  if (args.revalidate) {
+    await revalidateSite({ slug: myth.slug, site: args.site });
+  }
+  console.log("");
 }
 
 main().catch((error) => {
