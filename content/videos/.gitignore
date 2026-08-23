@@ -1,0 +1,25 @@
+# Biblioteca de video: se versiona el CONOCIMIENTO, no los rushes.
+#
+# Regla: si perderlo obliga a volver a gastar créditos o rompe la continuidad
+# visual del canal, va a git. Si se rehace sin costo desde lo que sí está
+# versionado, no.
+#
+# Los .mp4 son ~2,9 GB de los 3 GB del árbol y se reconstruyen gratis desde los
+# keyframes y `plan.json`, así que nunca entran. Todo lo demás pesa ~78 MB.
+#
+# SÍ entran, aunque parezcan salida: las fichas de `biblia/` (regenerarlas daría
+# otra cara), los keyframes, los trípticos, y las voces por bloque (rehacerlas
+# gasta cuota de ElevenLabs y hay un A/B de casting abierto sobre ellas).
+
+# Másters, clips y previews
+*.mp4
+*.mov
+*.webm
+
+# Los .png de los trípticos son redundantes: al lado vive el .jpg a la misma
+# resolución nativa (2688 px), que es lo que el generador usa como referencia
+# y lo que se publicó en el sitio.
+*.png
+
+# Bake-off de modelos: material de una decisión ya tomada.
+pruebas/
