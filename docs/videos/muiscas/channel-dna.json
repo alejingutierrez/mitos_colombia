@@ -1,0 +1,102 @@
+{
+  "pueblo": "muiscas",
+  "actualizado": "2026-08-21",
+  "estilo": {
+    "nombre": "Maqueta de papel del sitio (studioPaperMaquette)",
+    "imagen_modelo": "gpt-image-2",
+    "quality": "high",
+    "fuente_prompt": "scripts/videos/specs/*.mjs (hereda src/lib/image-generation.js)",
+    "paleta": "verde frio de paramo, azul gris de laguna, ocres minerales, crema de algodon crudo, blanco de niebla"
+  },
+  "formato": {
+    "aspecto": "9:16",
+    "clips_nativos": "720x1280 @ 24fps (grok)",
+    "entrega": "1080x1920 (upscale lanczos en ensamblaje local)"
+  },
+  "video": {
+    "modelo": "grok_video (RATIFICADO 2026-08-20 tras bake-off con ledger: 1,5 cr/s es el PISO de la plataforma — kling3_0 y wan2_7 empatan el precio, seedance mini 2,5/s; ver proceso-mitos-a-video.md 5b)",
+    "alternativas_mismo_precio": {
+      "kling3_0": "std+sound_off, 7,5 cr/5s: el mas fiel en planos fijos, pero niebla se vuelve algodon literal",
+      "wan2_7": "720p, 7,5 cr/5s: push de camara fuerte, 30fps, trae audio ambiente nativo; util para 1-2 planos de vuelo"
+    },
+    "declined_preset_id": "5a77643c-b6cc-4efd-bdc6-ab8ff48dfa82",
+    "nota_presets": "cada escena puede disparar un preset distinto (nocturna: 'IN THE DARK' 24bae836-2c4a-48e0-89b6-49fcc0b21612); declinar el id exacto que devuelva",
+    "descartados": {
+      "gemini_omni": "3 cr/s (2x grok), sin start_image",
+      "kling3_0": "2 cr/s; bueno, acepta start+end frame; segunda opcion valida",
+      "seedance_2_5": "6,5 cr/s (4,3x grok) y su filtro NSFW bloqueo 3/3 la escena madre-nino en el agua"
+    },
+    "moderacion": "el filtro reacciona a la IMAGEN de inicio con nino+agua/fuego/noche o multitudes con menores; solucion probada: re-escenificar (figuras de espaldas, lejanas o sin personas). Tope 12 jobs grok en vuelo (429 encima)."
+  },
+  "voz": {
+    "proveedor": "ElevenLabs eleven_multilingual_v2 (scripts/videos/generate-voice-el.mjs); MIGRADO desde OpenAI ash 2026-08-20",
+    "api_key": "ELEVENLABS_API_KEY en .env del repo principal (gitignored); plan Creator 300k chars/mes",
+    "voces_colombianas": {
+      "amaf_femenina": "4kaLaTbziI05Jwh8zWad (melodica, registros fogon y mistico)",
+      "el_faraon_masculina": "W1hAcdh0RNsPYUA7fkJh (profunda, registro epico)",
+      "alejandro": "2HsKyIMt2fxFwsry7Nd6 — funciona con eleven_flash_v2_5 Y (desde 2026-08-21 tarde) con eleven_v3 (mas expresivo, ~25% mas lento, sin param speed); multilingual_v2/turbo siguen dando not_fine_tuned. Voz de Bochica."
+    },
+    "prosodia": "previous_text/next_text entre tomas para narracion continua",
+    "wps_real": "2,4-2,6 palabras/s -> 19 palabras por bloque caben holgadas",
+    "registros_guion": "GANADOR DEFINITIVO: fogon-visual-coloquial con voz E (Amaf); ver plantillas 3a y direccion-cinematografica.md",
+    "settings": "fogon st.5 sty.25 sp1.0 · epico st.55 sty.3 sp.98 · mistico st.35 sty.5 sp.92",
+    "nota_modelos": "Amaf/Faraon -> eleven_multilingual_v2; Alejandro -> eleven_flash_v2_5 o eleven_v3 (v3 mas expresivo y ~25% mas lento, sin speed)",
+    "VOZ_OFICIAL_CANAL": "Alejandro 2HsKyIMt2fxFwsry7Nd6 en eleven_v3 (decision usuario 2026-08-21; v3 NO acepta previous/next_text ni speed — el generador lo maneja solo). Ambos videos re-narrados con ella."
+  },
+  "sfx": {
+    "modelo": "mirelo_text_to_audio (2,5 cr por 10 s)",
+    "uso": "cama de ambiente por bloque via plan.json {sfx, sfx_vol~0.45}; loop+fades y ducking bajo la voz los hace assemble-video.mjs",
+    "biblioteca": "content/videos/muiscas/audio/sfx/ (sfx-laguna.mp3, sfx-fogon.mp3) (reusables en todos los videos; ampliar con viento-paramo y aldea)"
+  },
+  "musica": {
+    "obligatoria": true,
+    "proveedor": "Eleven Music (POST /v1/music, music_length_ms); MIGRADO desde sonilo 2026-08-20",
+    "cama_actual": "content/videos/muiscas/audio/musica-cama-elevenlabs.mp3 (95s)",
+    "cama_anterior_sonilo": "content/videos/muiscas/audio/musica-cama.m4a (archivada)",
+    "mood": "dark-enchanted ambient: misteriosa, calma, cuerdas sostenidas suaves, arpa lejana, quena andina lejana y escasa, sin percusion, sin voces",
+    "reuso": "la cama se REUSA entre videos muiscas; regenerar solo si el mito pide otro mood",
+    "volumen_en_mezcla": 0.09
+  },
+  "ensamblaje": {
+    "script": "scripts/videos/assemble-video.mjs v3 (local, gratis)",
+    "estructura": "2 clips de 5-6s por bloque narrativo (grok cobra lineal: mas cortes, mismo costo); duraciones sugeridas por validate-plan.mjs --suggest; cola still 3,5s Ken Burns con solo ambiente",
+    "montaje": "corte seco DENTRO del bloque, crossfade 0,4s ENTRE bloques (auto-recortado al aire de la narracion; sin aire = corte seco), fundidos globales 0,6/0,8s, titulo de canal en bloque 1 (title/title_sub), musica resuelve con fade 4s en su final natural",
+    "subtitulos": "PNG por cue con sharp/Pango + overlay enable (ffmpeg local sin libass/drawtext); sin cues huerfanos; .srt aparte",
+    "herramientas_previas": "lint-spec.mjs (anti-nsfw, SIEMPRE antes de generar) y validate-plan.mjs (archivos + ventanas de habla)",
+    "playbook_prompts": "docs/videos/plantillas-prompts.md",
+    "entregas": "master CRF18 + social 1080p 8Mbps faststart + preview 720p <30MB"
+  },
+  "assets": {
+    "biblia_dir": "content/videos/muiscas/biblia/",
+    "videos_dir": "content/videos/muiscas/videos/bachue/",
+    "media_map": "content/videos/muiscas/videos/bachue/keyframes/media-map.json"
+  },
+  "costos_reales_bachue": {
+    "total_higgsfield_cr": 160.34,
+    "desglose": "piloto 27,4 (voces seed_audio descartadas + clips grok/kling de prueba) + produccion ~133 (18 clips grok 98s + musica 95s; nsfw/seedance no cobraron neto)",
+    "openai_usd_aprox": "~6 (31 imagenes gpt-image-2 high + ~21 tomas TTS)",
+    "balance": "1010 -> 849,66 (bachue) -> 673,51 (tras bake-off 32,5 + bochica 143,65)"
+  },
+  "video_1": {
+    "slug": "bachue",
+    "final": "content/videos/muiscas/videos/bachue/bachue-final.mp4 (v3: guion fogon-visual-coloquial + Alejandro v3 + musica andina, 1:39; anteriores: bachue-v2-ash, bachue-v1)",
+    "social": "content/videos/muiscas/videos/bachue/bachue-final-social.mp4",
+    "srt": "content/videos/muiscas/videos/bachue/bachue-final.srt",
+    "plan": "content/videos/muiscas/videos/bachue/plan.json",
+    "produccion": "docs/videos/muiscas/bachue-produccion.json",
+    "voz": "Alejandro (eleven_v3)"
+  },
+  "mvps_pendientes": {
+    "resuelto": "E gano; mvps a-f archivados en videos/bachue/"
+  },
+  "doctrina_direccion": "docs/videos/direccion-cinematografica.md (v1 2026-08-20: escalas alternadas, guion de luz por acto, objeto ancla+bookend, cita directa unica, checklist 8 puntos)",
+  "video_2": {
+    "slug": "bochica",
+    "final": "content/videos/muiscas/videos/bochica/bochica-final.mp4 (1:31)",
+    "plan": "content/videos/muiscas/videos/bochica/plan.json",
+    "produccion": "docs/videos/muiscas/bochica-produccion.json",
+    "costo_higgsfield_cr": 143.65,
+    "nota": "primera corrida perfecta: 18/18 clips sin rechazos nsfw gracias al checklist; 5s uniformes por bloque",
+    "voz": "Alejandro (eleven_v3)"
+  }
+}

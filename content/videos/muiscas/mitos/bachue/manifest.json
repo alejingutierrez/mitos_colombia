@@ -1,0 +1,95 @@
+{
+  "spec": "muisca-mitos-triptico",
+  "mito": "bachue",
+  "slug": "bachue",
+  "comunidad": "muiscas",
+  "doctrina": "entrada-acto-huella",
+  "doctrina_nota": "horizontal = la entrada del personaje (plano general de presentacion, figura legible, NUNCA paisaje vacio); vertical = el acto mitico EN OTRO LUGAR Y OTRA LUZ que la entrada; cuadrada = lo que quedo despues. Una escena distinta por formato, nunca recortes. Clausula de respaldo para mitos de un solo escenario: mismo lugar pero hora y distancia fijas por acto (entrada amanecer/plano general, acto atardecer/plano medio, huella anochecer/cenital).",
+  "generado_en": "higgsfield",
+  "model": "gpt_image_2",
+  "resolution": "2k",
+  "quality": "high",
+  "costo_creditos": 42,
+  "fecha": "2026-08-22",
+  "elements_higgsfield": {
+    "muisca-laguna-iguaque": "12287483-ebe0-4b50-80ac-4f7780e4eda1",
+    "muisca-bachue-adulta": "4e7d3edd-d02b-488b-909a-5f028bf22de2",
+    "muisca-serpientes-laguna": "a16ddcef-091d-456a-8943-2084e57a3ad7"
+  },
+  "medias_higgsfield": {
+    "laguna_iguaque_A": "935a460a-3702-42d9-b642-4606aab51aad",
+    "laguna_iguaque_B": "c99e8189-7052-40c2-97e7-3dc8bc93ef2a",
+    "bachue_adulta": "6ca95338-a571-43cb-9ebc-fac3f637ba6c",
+    "serpientes_laguna": "ef7f1423-a033-43b0-ab92-e26d9f9b65cf",
+    "companero_nino": "RECHAZADO por moderacion de Higgsfield al subir (status nsfw). No usar como referencia; describir la figura infantil en texto, de espaldas, lejana y con manta larga.",
+    "semillas_bolsita": "baca7928-9774-4e51-a27a-415eb560db7e",
+    "poblado_nuevo": "bc96b024-1740-4405-9020-57af16513453",
+    "familias_muiscas": "f2fe9bfb-cc89-4193-b3bc-ce4eda2942df"
+  },
+  "items": {
+    "horizontal": {
+      "acto": "la entrada del personaje",
+      "archivo": "bachue-horizontal.png",
+      "aspect_ratio": "16:9",
+      "px": "2688x1520",
+      "job_id": "bd02aa61-986c-4223-a7d6-a3f23773803c",
+      "refs": [
+        "laguna_iguaque_A",
+        "bachue_adulta",
+        "semillas_bolsita"
+      ],
+      "escena": "PLANO GENERAL AMPLIO A LA ALTURA DE LA ORILLA, luz fria de amanecer con rayo rasante. La misma Bachue adulta de la referencia EN MOVIMIENTO: sale del agua y pisa el barro, un pie en tierra y otro en el agua baja, de perfil tres cuartos; gotas cayendo de la manta y una hilera de huellas humedas detras. A su lado, de la mano, el nino de perfil tres cuartos mirandola hacia arriba, con manta larga hasta los tobillos y la bolsita de semillas contra el pecho. Seis capas de profundidad (pajonal y piedra plana, frailejones escalonados, agua, franja de niebla, tres planos de lomas, cielo de papel rasgado). Tercio superior izquierdo abierto para titulo."
+    },
+    "vertical": {
+      "acto": "el acto mitico",
+      "archivo": "bachue-vertical.png",
+      "aspect_ratio": "9:16",
+      "px": "1520x2688",
+      "job_id": "ad5c7ed8-54b2-47e2-8685-d92735a04ed2",
+      "refs": [
+        "poblado_nuevo",
+        "bachue_adulta",
+        "familias_muiscas",
+        "semillas_bolsita"
+      ],
+      "escena": "PLANO GENERAL ENTERO, LUZ PLENA DE MEDIODIA del altiplano (sombras cortas, tierra seca, sin agua ni niebla). La misma Bachue adulta de la referencia de pie en el patio del mismo poblado muisca, de perfil tres cuartos, volcando un punado de semillas de la misma bolsita sobre las manos abiertas de una mujer adulta. Alrededor, en semicirculo abierto y de pie, las mismas familias trabajando (telar de marco a la izquierda, surco a la derecha, vasija). Seis capas de profundidad; surco en el quinto inferior y cielo en el superior libres para texto."
+    },
+    "cuadrada": {
+      "acto": "lo que quedo",
+      "archivo": "bachue-cuadrada.png",
+      "aspect_ratio": "1:1",
+      "px": "2048x2048",
+      "job_id": "3253957b-eb54-4b56-aff8-ebe6b63b038c",
+      "refs": [
+        "serpientes_laguna",
+        "laguna_iguaque_B"
+      ],
+      "escena": "PLANO CENITAL CERRADO, luz fria de tarde. Las mismas dos serpientes de agua de la referencia trazando juntas un circulo lento sobre el agua oscura de la laguna, con una onda concentrica suave alrededor; frailejones de papel recortados en una esquina. Sin personas."
+    }
+  },
+  "descartes": {
+    "horizontal-v1": {
+      "motivo": "paisaje completamente vacio: no presentaba al personaje",
+      "destino": "reciclado a la biblia como biblia/laguna_iguaque_pano.jpg (panoramica 16:9 de Iguaque, reusable)",
+      "job_id": "d40cc41e-3a8d-42ac-a8ad-a2f28138e123"
+    },
+    "horizontal-v2": {
+      "motivo": "demasiado sencilla y el nino de espaldas; el usuario pidio mas sustancia y que el nino no mire hacia atras",
+      "archivo": "bachue-horizontal-v2.png",
+      "job_id": "4d022914-aa10-47ae-9cc0-8254480cd668"
+    }
+  },
+  "reglas_de_la_entrada": [
+    "la figura manda, el paisaje la rodea",
+    "diorama denso y habitado, nunca minimalista",
+    "ninguna figura de espaldas",
+    "accion en curso, no pose estatica",
+    "un objeto del hilo narrativo del mito en cuadro",
+    "un tercio abierto para el titulo"
+  ],
+  "arco": "sale del agua (entrada) -> hace el mundo (acto) -> vuelve al agua (huella). El agua abre y cierra: bookend.",
+  "reciclados_a_biblia": {
+    "laguna_iguaque_pano.jpg": "panoramica 16:9 de Iguaque vacia (ex horizontal v1)",
+    "bachue_salida_agua.jpg": "Bachue saliendo del agua con el nino, 9:16 (ex vertical v1) - escena canonica reusable"
+  }
+}

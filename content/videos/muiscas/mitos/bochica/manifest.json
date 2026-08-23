@@ -1,0 +1,63 @@
+{
+  "spec": "muisca-mitos-triptico",
+  "mito": "bochica",
+  "slug": "el-castigo-de-chibchachum-y-bochica",
+  "comunidad": "muiscas",
+  "doctrina": "entrada-acto-huella",
+  "doctrina_nota": "horizontal = la entrada del personaje; vertical = el acto mitico EN OTRO LUGAR Y OTRA LUZ que la entrada; cuadrada = lo que quedo despues. Una escena distinta por formato.",
+  "arco": "llega a la gente que ofrenda (lomas, lluvia plomiza) -> abre la roca (farallones, tormenta dorada) -> queda el salto (agua limpia despues)",
+  "generado_en": "higgsfield",
+  "model": "gpt_image_2",
+  "resolution": "2k",
+  "quality": "high",
+  "costo_creditos": 21,
+  "rechazos_moderacion": 0,
+  "fecha": "2026-08-22",
+  "medias_higgsfield": {
+    "bochica_anciano": "d391e4b7-9ac6-4bc1-80b9-06892c9ae711",
+    "vara_dorada": "607ca702-2a6f-466d-af60-25dad7013d01",
+    "rocas_tequendama": "2856ae9f-ecfa-4549-a1b5-e19ee4b801e3",
+    "salto_tequendama": "d227f5ae-7e28-4461-a4ee-30e803c2bb3e",
+    "sendero_territorio": "c731ebce-da66-454a-8b29-d42c2746b450",
+    "familias_muiscas": "f2fe9bfb-cc89-4193-b3bc-ce4eda2942df"
+  },
+  "items": {
+    "horizontal": {
+      "acto": "la entrada del personaje",
+      "archivo": "bochica-horizontal.png",
+      "aspect_ratio": "16:9",
+      "px": "2688x1520",
+      "job_id": "ca8606f8-d7cd-477f-bc50-6284fe5ea09d",
+      "refs": ["sendero_territorio", "bochica_anciano", "vara_dorada", "familias_muiscas"],
+      "luz": "plomiza de lluvia con UNA rendija de sol",
+      "escena": "PLANO GENERAL AMPLIO. El mismo Bochica anciano de pie sobre una piedra alta de la ladera, tercio derecho, cuerpo entero a media distancia, de perfil tres cuartos, la vara dorada apoyada en la roca. LA RENDIJA DE SOL CAE SOLO SOBRE EL: unica luz calida del cuadro, es lo que lo senala como protagonista. Abajo a su izquierda, las familias muiscas adultas DE PIE junto a un altar de ofrendas sobre hierba mojada. Al fondo la sabana anegada bajo la lluvia. Tercio superior izquierdo abierto para titulo."
+    },
+    "vertical": {
+      "acto": "el acto mitico",
+      "archivo": "bochica-vertical.png",
+      "aspect_ratio": "9:16",
+      "px": "1520x2688",
+      "job_id": "b4709571-52e4-4a6e-9c14-172b2cb063f6",
+      "luz": "dorada humeda de atardecer rompiendo la tormenta",
+      "refs": ["rocas_tequendama", "bochica_anciano", "vara_dorada"],
+      "escena": "PLANO CONTRAPICADO ENTERO. El mismo Bochica en lo alto de una de las mismas rocas del Tequendama, EL INSTANTE JUSTO DESPUES DEL LANZAMIENTO: brazo derecho aun extendido, la vara dorada VOLANDO en diagonal hacia la grieta entre los dos farallones, la roca empezando a abrirse con una linea fina de fractura y unos fragmentos saltando. Sin explosion ni rayos. Quinto superior e inferior libres para texto."
+    },
+    "cuadrada": {
+      "acto": "lo que quedo",
+      "archivo": "bochica-cuadrada.png",
+      "aspect_ratio": "1:1",
+      "px": "2048x2048",
+      "job_id": "ddfd9917-4bda-4073-a070-a0d5f869b99b",
+      "luz": "limpia y plana despues de la tormenta",
+      "refs": ["salto_tequendama", "rocas_tequendama"],
+      "escena": "PLANO FRONTAL CERRADO Y SIMETRICO. Las mismas dos rocas ya ABIERTAS, el agua cayendo por la grieta en cortina blanca de papel fibroso, espuma y vapor al pie. Una franja de arcoiris MUY SOBRIA, delgada y palida, cruzando el vapor abajo: senal discreta, jamas puente ni vehiculo. Sin personas. Al fondo, entre las rocas, la sabana verde ya seca."
+    }
+  },
+  "lineas_rojas_respetadas": [
+    "Bochica nunca europeo: rasgos indigenas andinos, sin barba larga, sin tunica de estilo europeo",
+    "sin cruces, sin aureola, sin alas, sin volar ni levitar (pies apoyados en la roca)",
+    "arcoiris sobrio, jamas vehiculo ni puente, nadie encima",
+    "gente de pie, nunca arrodillada ni en adoracion",
+    "sin ninos ni bebes (evita el filtro de moderacion)"
+  ]
+}
