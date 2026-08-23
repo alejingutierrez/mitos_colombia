@@ -42,8 +42,23 @@ Un mito completo de los cinco pasos: `la-aparicion-del-hombre` (25 piezas).
 
 ## Lo que estaba corriendo al cerrar
 
-Una tanda de **30 fichas** (21 personajes + 9 paisajes) lanzada en la pestaña
-de Higgsfield. Faltaban otras **31** (6 paisajes + 25 props).
+Una tanda de **30 fichas** (21 personajes + 9 paisajes) que se **detuvo a
+propósito en la pieza 4**, con 3 cerradas sin fallos. Faltaban además otras
+**31** (6 paisajes + 25 props).
+
+> **Cabo suelto: 3 fichas están generadas pero no ingestadas.** Son
+> `bermejo_forastero`, `chiguachi_nina` y `fu_dios`, y viven sólo en la galería
+> de Higgsfield — no en disco. Como el envío es secuencial, son **las 3 más
+> recientes de la galería, en ese orden**. Para reclamarlas: reinyectar el
+> arnés, `hfBarrerBG()` para leer los ids, e ingestarlas:
+>
+> ```bash
+> npm run mitos:ingest:biblia -- --fichas "bermejo_forastero=<id>,chiguachi_nina=<id>,fu_dios=<id>"
+> ```
+>
+> Si no se reclaman no se pierde nada irreversible: `mitos:tanda` sólo salta lo
+> que está en disco, así que se volverían a generar. Pero son ~18 min de cola
+> regalados.
 
 Los payloads no se versionan porque se regeneran en un segundo, y regenerarlos
 es además lo correcto — el emisor salta lo que ya aterrizó en disco:
