@@ -64,7 +64,11 @@ test("craft prompt asks for photographed handmade paper instead of flat illustra
 
   assert.match(prompt, /fotografia de un trabajo real de papel artesanal/i);
   assert.match(prompt, /no ilustracion digital plana/i);
-  assert.match(prompt, /composicion frontal/i);
+  // La frontalidad describe la técnica (una pieza física fotografiada, no un
+  // render), no la posición de la cámara: imponerla en el encuadre era lo que
+  // dejaba todas las escenas iguales. Ver docs/direccion-visual.md.
+  assert.doesNotMatch(prompt, /composicion frontal/i);
+  assert.match(prompt, /se fotografia una pieza fisica de papel, no un render/i);
   assert.match(prompt, /de borde a borde/i);
   assert.match(prompt, /sin texto/i);
   assert.match(prompt, /Andina/);
