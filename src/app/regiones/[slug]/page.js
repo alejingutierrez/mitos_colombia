@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import { filterAllowedCommunities } from "../../../lib/communityFilters";
-import { getTaxonomy, listMyths, listMythLinksByTaxon } from "../../../lib/myths";
+import { getTaxonomy, listMythPlatesByTaxon } from "../../../lib/myths";
 import { REGION_INFO, REGION_MOTIFS, regionSections } from "../../../lib/region-info";
 import { buildSeoMetadata, getSeoEntry } from "../../../lib/seo";
 import { resolveRouteParams } from "../../../lib/next-route-props";
@@ -84,24 +84,20 @@ export default async function RegionDetailPage({ params }) {
       count: Number(c.myth_count) || 0,
     }));
 
-  // Cuatro relatos para empezar. Antes esta consulta traía 24 para el archivo
-  // filtrable y los mismos títulos volvían a salir en el índice de abajo.
-  const result = await listMyths({ region: region.slug, limit: 4, offset: 0 });
-  const featured = (result?.items || []).map((m) =>
+  // Todos los relatos del territorio, cada uno con su obra: es lo que dibuja
+  // el muro, y sigue siendo el índice rastreable de siempre —el título va como
+  // texto real dentro de cada pieza. Antes eran dos consultas: cuatro con
+  // imagen y el resto como renglones, con esos cuatro repetidos en las dos.
+  const mythPlates = (await listMythPlatesByTaxon("region", region.slug)).map((m) =>
     withMythImageVariants({
       slug: m.slug,
       title: m.title,
-      excerpt: m.excerpt,
-      region: m.region,
-      community: m.community,
       image_url: m.image_url,
       vertical_image_url: m.vertical_image_url,
     })
   );
 
-  // Índice completo, rastreable, de TODOS los mitos de la región (SEO).
-  const allMythLinks = await listMythLinksByTaxon("region", region.slug);
-  const collectionItems = allMythLinks.slice(0, 30).map((m) => ({
+  const collectionItems = mythPlates.slice(0, 30).map((m) => ({
     url: `${SITE_URL}/mitos/${m.slug}`,
     name: m.title,
   }));
@@ -135,8 +131,8 @@ export default async function RegionDetailPage({ params }) {
         communities={communities}
         characteristics={info.characteristics || []}
         sections={sections}
-        featured={featured}
-        mythIndex={allMythLinks}
+        lead={info.description}
+        myths={mythPlates}
         motif={REGION_MOTIFS[slug] || "hoja"}
       />
     </>
