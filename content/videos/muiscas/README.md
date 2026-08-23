@@ -103,10 +103,21 @@ refs: ["muiscas/mitos/bachue/acto", "muiscas/biblia/bachue_adulta"]
 
 `acto.crop-9x16.jpg` es el 1080×1920 listo para animar, igual que en `biblia/`.
 
-⚠️ `generate-keyframes.mjs` resuelve un ref como `content/videos/<ref>.jpg` y, si
-el archivo no existe, **avisa por consola y genera la imagen sin la referencia**.
-No falla: sigue. Por eso todo lo que se quiera reusar tiene que existir como
-`.jpg` con ese nombre exacto — y por eso conviene leer la salida del generador.
+`generate-keyframes.mjs` resuelve un ref como `content/videos/<ref>.jpg`, así que
+todo lo reusable tiene que existir como `.jpg` con ese nombre exacto. Si falta
+alguno, **el generador aborta antes de gastar un crédito** y lista todas las
+referencias rotas de una vez:
+
+```
+[keyframes] error fatal: 2 referencia(s) rota(s). No genero nada para no gastar
+créditos con la continuidad rota:
+  · b6a_ensenanza_semillas → muiscas/biblia/vasija_ceramica
+```
+
+`--allow-missing-refs` vuelve al comportamiento viejo (avisar y generar sin la
+referencia), pero es una escotilla: generar sin la referencia rompe la
+continuidad visual en silencio, que fue exactamente lo que pasó con
+`vasija_ceramica` en dos keyframes de Bachué.
 
 ## audio/ — identidad sonora del canal
 

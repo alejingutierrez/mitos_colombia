@@ -47,6 +47,9 @@ const only = String(getFlag("--only", "") || "")
   .filter(Boolean);
 const dryRun = args.includes("--dry-run");
 const force = args.includes("--force");
+// Por defecto una referencia rota aborta la corrida antes de gastar un crédito.
+// Esta bandera vuelve al comportamiento viejo: avisar y generar sin ella.
+const allowMissingRefs = args.includes("--allow-missing-refs");
 
 const MODEL = process.env.IMAGE_GENERATION_MODEL || "gpt-image-2";
 const QUALITY = process.env.IMAGE_GENERATION_QUALITY || "high";
@@ -131,6 +134,56 @@ async function callOpenAI(openai, item, prompt, refPaths) {
   throw lastError;
 }
 
+// Un ref con "/" apunta a otra spec: content/videos/<spec>/<id>.jpg
+// Uno sin "/" es un hermano de esta misma spec: <outDir>/<id>.jpg
+function refPathFor(ref, outDir) {
+  return ref.includes("/")
+    ? path.join(rootDir, "content", "videos", `${ref}.jpg`)
+    : path.join(outDir, `${ref}.jpg`);
+}
+
+/**
+ * Comprueba TODAS las referencias antes de generar nada.
+ *
+ * Antes, una referencia que no existía sólo imprimía un aviso y la imagen se
+ * generaba sin ella: el resultado salía sin la continuidad visual que la
+ * referencia garantizaba, y el aviso se perdía entre la salida del generador.
+ * Así se colaron dos keyframes de Bachué con `vasija_ceramica` roto, y nadie
+ * lo vio hasta auditar la biblia meses después.
+ *
+ * Ahora se valida en seco y de una vez, así el fallo cuesta cero créditos y se
+ * ven todas las referencias rotas juntas, no una por corrida.
+ */
+async function assertRefsExist(items, outDir) {
+  const producedHere = new Set(items.map((item) => item.id));
+  const missing = [];
+  for (const item of items) {
+    for (const ref of item.refs || []) {
+      // Un hermano de esta corrida todavía no está en disco: lo hará la ola previa.
+      if (!ref.includes("/") && producedHere.has(ref)) continue;
+      const refPath = refPathFor(ref, outDir);
+      if (!(await fileExists(refPath))) {
+        missing.push({ id: item.id, ref, refPath: path.relative(rootDir, refPath) });
+      }
+    }
+  }
+  if (!missing.length) return;
+
+  const detail = missing
+    .map((m) => `  · ${m.id} → ${m.ref}   (falta ${m.refPath})`)
+    .join("\n");
+  if (allowMissingRefs) {
+    console.warn(
+      `[keyframes] ${missing.length} referencia(s) rota(s), continúo por --allow-missing-refs:\n${detail}`
+    );
+    return;
+  }
+  throw new Error(
+    `${missing.length} referencia(s) rota(s). No genero nada para no gastar créditos con la continuidad rota:\n${detail}\n` +
+      `  Revisa que el archivo exista como .jpg con ese nombre exacto, o pasa --allow-missing-refs si de verdad quieres generarlas sin referencia.`
+  );
+}
+
 async function main() {
   if (!specPath) throw new Error("--spec es requerido");
   const spec = await import(pathToFileURL(path.resolve(rootDir, specPath)).href);
@@ -147,6 +200,8 @@ async function main() {
   const items = spec.ITEMS.filter((i) => !only.length || only.includes(i.id));
   console.log(`[keyframes] spec=${spec.SPEC_NAME} items=${items.length} model=${MODEL} dryRun=${dryRun}`);
 
+  await assertRefsExist(items, outDir);
+
   const openai = dryRun ? null : new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
   const concurrency = Math.max(1, Number(getFlag("--concurrency", 4)) || 4);
   let ok = 0;
@@ -160,11 +215,15 @@ async function main() {
     }
     const refPaths = [];
     for (const ref of item.refs || []) {
-      // Un ref con "/" apunta a otra spec: content/videos/<spec>/<id>.jpg
-      const refPath = ref.includes("/")
-        ? path.join(rootDir, "content", "videos", `${ref}.jpg`)
-        : path.join(outDir, `${ref}.jpg`);
+      const refPath = refPathFor(ref, outDir);
       if (!(await fileExists(refPath))) {
+        // Red de seguridad: `assertRefsExist` ya validó en seco, así que llegar
+        // aquí significa que la referencia desapareció durante la corrida.
+        if (!allowMissingRefs) {
+          throw new Error(
+            `${item.id}: falta la referencia ${ref} (${path.relative(rootDir, refPath)}). No genero sin ella.`
+          );
+        }
         console.warn(`[keyframes] ${item.id}: falta la referencia ${ref} — se genera sin ella`);
         continue;
       }
