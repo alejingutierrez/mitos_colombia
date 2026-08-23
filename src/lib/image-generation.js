@@ -1,3 +1,11 @@
+import {
+  getCommunityCraft,
+  getCompositionLines,
+  getEraLines,
+  getRegionCraft,
+  inferEra,
+} from "./visual-direction.js";
+
 export const IMAGE_GENERATION_MODEL =
   process.env.IMAGE_GENERATION_MODEL || "gpt-image-2";
 
@@ -89,43 +97,9 @@ export const IMAGE_PRESETS = {
 // vive suelta en `mitos/` por compatibilidad con las URLs ya publicadas.
 const ENTITY_SCOPED_PRESETS = new Set(["vertical", "square"]);
 
-const REGION_CRAFT = {
-  Andina:
-    "paramo altoandino, laguna sagrada, frailejones, piedra gris humeda, niebla fria, oro mate y geometria muisca sobria cuando aplique",
-  Caribe:
-    "luz de luna o sol costero, caminos de arena, cardones, salinas, mar lejano, arquitectura costera y patrones textiles caribenos o Wayuu cuando aplique",
-  Amazonas:
-    "rio profundo, chagra, maloca, hojas grandes, fibras de cumare, canoa, semillas, canastos y niebla verde de selva humeda",
-  Amazonia:
-    "rio profundo, chagra, maloca, hojas grandes, fibras de cumare, canoa, semillas, canastos y niebla verde de selva humeda",
-  "Orinoquia":
-    "sabana abierta, rios espejo, cerros antiguos, palma de moriche, flor de Inirida, garzas y cielo amplio",
-  "Orinoquía":
-    "sabana abierta, rios espejo, cerros antiguos, palma de moriche, flor de Inirida, garzas y cielo amplio",
-  Pacifico:
-    "montana humeda, rio vivo, manglar o selva lluviosa segun el relato, neblina, vegetacion densa, madera, fibras y agua oscura",
-  "Pacífico":
-    "montana humeda, rio vivo, manglar o selva lluviosa segun el relato, neblina, vegetacion densa, madera, fibras y agua oscura",
-  Varios:
-    "geografia colombiana sintetizada con verde selva, azul rio, dorado tierra, piedra, agua y vegetacion nativa",
-};
-
-const COMMUNITY_CRAFT = {
-  Muiscas:
-    "lenguaje visual muisca: agua ceremonial, oro mate, piedra, tunjos sugeridos y textiles geometricos discretos",
-  Wayuu:
-    "lenguaje visual Wayuu: tramas de mochila y manta reinterpretadas como capas de papel, arena, indigo, cardon y oro nocturno",
-  Yukuna:
-    "lenguaje visual amazonico Yukuna: maloca, fibras vegetales, canastos, semillas, rutas de rio y signos de viaje sin exotizar",
-  Nasa:
-    "lenguaje visual Nasa: montana, agua, carrizo, bastones, tejido geometrico sobrio y territorio vivo",
-  Kogui:
-    "lenguaje visual serrano Kogui: Sierra Nevada, terrazas verdes, caminos de piedra, mochilas y equilibrio cosmico sobrio",
-  Sikuani:
-    "lenguaje visual Sikuani: sabana, vivienda tradicional, maraca, fauna de llanura y transformacion ritual sugerida",
-  Tumaco:
-    "lenguaje visual del Pacifico narinense: manglar, madera, marea, canoas, lluvia y brillo marino contenido",
-};
+// REGION_CRAFT y COMMUNITY_CRAFT se mudaron a `visual-direction.js`: los usan
+// también los generadores de keyframes de video, y una mejora escrita en un
+// solo sitio llega a los dos pipelines.
 
 function normalizeText(value) {
   return String(value || "")
@@ -164,14 +138,6 @@ export function softenLegacyImagePrompt(value) {
     .trim();
 }
 
-function getRegionCraft(region) {
-  return REGION_CRAFT[region] || REGION_CRAFT.Varios;
-}
-
-function getCommunityCraft(community) {
-  return COMMUNITY_CRAFT[community] || "";
-}
-
 function getEntityLabel(entity = {}) {
   if (entity.type === "homeBanner") return "elemento editorial del home";
   if (entity.type === "community") return "comunidad";
@@ -182,12 +148,12 @@ function getEntityLabel(entity = {}) {
 
 function getOrientationLine(orientation) {
   if (orientation === "vertical") {
-    return "Formato vertical 9:16, composicion frontal y estable, llena de borde a borde para uso editorial movil; mantener rostros, manos y objetos esenciales lejos de los extremos laterales para el recorte tecnico final.";
+    return "Formato vertical 9:16, llena de borde a borde para uso editorial movil; mantener rostros, manos y objetos esenciales lejos de los extremos laterales para el recorte tecnico final.";
   }
   if (orientation === "homeBanner") {
-    return "Formato horizontal panoramico para home, composicion frontal y estable, llena de borde a borde sin zonas vacias.";
+    return "Formato horizontal panoramico para home, llena de borde a borde sin zonas vacias.";
   }
-  return "Formato horizontal 16:9, composicion frontal y estable, llena de borde a borde; mantener rostros, manos y objetos esenciales lejos de los extremos superior e inferior para el recorte tecnico final.";
+  return "Formato horizontal 16:9, llena de borde a borde; mantener rostros, manos y objetos esenciales lejos de los extremos superior e inferior para el recorte tecnico final.";
 }
 
 function getStyleProfileLines(styleProfile) {
@@ -202,7 +168,13 @@ export function buildCraftImagePrompt({
   entity = {},
   orientation = "horizontal",
   styleProfile = APPROVED_IMAGE_STYLE_PROFILE,
-}) {
+  // Esquema de composición del catálogo del canal. Sin él la imagen sale
+  // "como siempre", que fue justo el problema: doce escenas seguidas con la
+  // figura en el tercio derecho porque cada prompt copiaba al anterior.
+  composition = null,
+  // Registro de época. Si no se pasa, se deduce de la comunidad.
+  era = null,
+} = {}) {
   const name = normalizeText(entity.name || entity.title || entity.slug || "");
   const region = normalizeText(entity.region || "Varios");
   const community = normalizeText(entity.community || "");
@@ -210,6 +182,8 @@ export function buildCraftImagePrompt({
   const excerpt = normalizeText(entity.excerpt || entity.description || "");
   const communityCraft = getCommunityCraft(community);
   const styleProfileLines = getStyleProfileLines(styleProfile);
+  const compositionLines = getCompositionLines(composition);
+  const eraLines = getEraLines(era || inferEra(community, entity.era));
 
   return [
     `Direccion de arte para una imagen editorial de ${getEntityLabel(entity)} colombiano.`,
@@ -218,12 +192,19 @@ export function buildCraftImagePrompt({
     "- Fotografia de un trabajo real de papel artesanal, no ilustracion digital plana.",
     "- Paper cut, paper relief y paper quilling hechos a mano: capas fisicas, bordes de papel visibles, fibras, micro-sombras, dobleces finos, cortes precisos y volumen bajo.",
     "- Debe sentirse como una pieza construida manualmente por artistas, fotografiada en estudio con luz suave y controlada.",
-    "- Profundidad real por capas de papel, pero sin verse como render 3D, sin plastico, sin glossy CGI, sin animacion, sin camara inclinada y sin figuras flotando en perspectivas raras.",
+    "- Profundidad real por capas de papel, pero sin verse como render 3D, sin plastico, sin glossy CGI, sin animacion y sin figuras flotando en perspectivas imposibles.",
+    "- La camara puede bajar, subir o mirar a plomo cuando la composicion lo pida; lo que nunca cambia es que se fotografia una pieza fisica de papel, no un render.",
     `- ${getOrientationLine(orientation)}`,
     "- Sin texto, sin letras, sin logos, sin marcas de agua, sin marco, sin borde decorativo.",
     "",
     "Perfil de ronda visual:",
     ...styleProfileLines.map((line) => `- ${line}`),
+    "",
+    ...(compositionLines.length
+      ? ["Esquema de composicion:", ...compositionLines.map((line) => `- ${line}`), ""]
+      : []),
+    "Epoca:",
+    ...eraLines.map((line) => `- ${line}`),
     "",
     "Identidad colombiana:",
     `- Nombre: ${name || "pieza editorial"}.`,
