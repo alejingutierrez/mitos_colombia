@@ -7,6 +7,7 @@
 // Tarjetas de contenido
 export { MythCard } from "./MythCard";
 export { MythListItem } from "./MythListItem";
+export { MythPlate } from "./MythPlate";
 export { TaxonomyCard } from "./TaxonomyCard";
 export { RouteCard } from "./RouteCard";
 export { TarotCard } from "./TarotCard";

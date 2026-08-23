@@ -383,6 +383,120 @@ export async function listMythLinksByTaxon(kind, value) {
   }
 }
 
+/* Como `listMythLinksByTaxon`, pero con la obra de cada mito: es lo que
+   necesita el muro de la ficha de pueblo, donde los relatos no son renglones
+   sino piezas ilustradas. Se mantiene aparte porque la versión ligera se pide
+   en paralelo para TODOS los taxones de las páginas índice y ahí el LATERAL de
+   la vertical no se paga por nada: allí nunca se dibuja una imagen.
+
+   La vertical no vive en `myths` sino en `vertical_images` (entity_type +
+   entity_id), y es la obra buena para una pieza 4:5: la apaisada recortada a
+   vertical pierde al personaje. */
+function listMythPlatesByTaxonSqlite(kind, value) {
+  const db = getSqliteDb();
+  const v = normalizeInput(value);
+  if (!v) return [];
+
+  let join = "";
+  let where = "";
+  if (kind === "region") {
+    where = "(regions.slug = :v OR regions.name = :v)";
+  } else if (kind === "community") {
+    where = "(communities.slug = :v OR communities.name = :v)";
+  } else if (kind === "tag") {
+    join =
+      "JOIN myth_tags ON myth_tags.myth_id = myths.id JOIN tags ON tags.id = myth_tags.tag_id";
+    where = "(tags.slug = :v OR tags.name = :v)";
+  } else {
+    return [];
+  }
+
+  const sql = `
+    SELECT DISTINCT
+      myths.slug AS slug,
+      myths.title AS title,
+      myths.image_url AS image_url,
+      (
+        SELECT image_url
+        FROM vertical_images
+        WHERE entity_type = 'myth' AND entity_id = myths.id
+        ORDER BY updated_at DESC, id DESC
+        LIMIT 1
+      ) AS vertical_image_url
+    FROM myths
+    JOIN regions ON regions.id = myths.region_id
+    LEFT JOIN communities ON communities.id = myths.community_id
+    ${join}
+    WHERE ${where} AND myths.slug IS NOT NULL AND myths.slug != ''
+    ORDER BY myths.title COLLATE NOCASE ASC
+  `;
+
+  return db.prepare(sql).all({ v });
+}
+
+async function listMythPlatesByTaxonPostgres(kind, value) {
+  const sql = getSqlClient();
+  const v = normalizeInput(value);
+  if (!v) return [];
+
+  let join = "";
+  let where = "";
+  if (kind === "region") {
+    where = "(regions.slug = $1 OR regions.name = $1)";
+  } else if (kind === "community") {
+    where = "(communities.slug = $1 OR communities.name = $1)";
+  } else if (kind === "tag") {
+    join =
+      "JOIN myth_tags ON myth_tags.myth_id = myths.id JOIN tags ON tags.id = myth_tags.tag_id";
+    where = "(tags.slug = $1 OR tags.name = $1)";
+  } else {
+    return [];
+  }
+
+  const result = await sql.query(
+    `
+      SELECT DISTINCT
+        myths.slug AS slug,
+        myths.title AS title,
+        myths.image_url AS image_url,
+          vertical.image_url AS vertical_image_url
+      FROM myths
+      JOIN regions ON regions.id = myths.region_id
+      LEFT JOIN communities ON communities.id = myths.community_id
+      LEFT JOIN LATERAL (
+        SELECT image_url
+        FROM vertical_images
+        WHERE entity_type = 'myth' AND entity_id = myths.id
+        ORDER BY updated_at DESC, id DESC
+        LIMIT 1
+      ) AS vertical ON TRUE
+      ${join}
+      WHERE ${where} AND myths.slug IS NOT NULL AND myths.slug != ''
+      ORDER BY myths.title ASC
+    `,
+    [v]
+  );
+
+  return result.rows || [];
+}
+
+// Sin `unstable_cache`, por lo mismo que `listMythLinksByTaxon`.
+export async function listMythPlatesByTaxon(kind, value) {
+  if (!kind || !value) return [];
+  try {
+    if (isPostgres()) {
+      return await withRetry(() => listMythPlatesByTaxonPostgres(kind, value));
+    }
+    return listMythPlatesByTaxonSqlite(kind, value);
+  } catch (error) {
+    console.error("[MYTHS] listMythPlatesByTaxon error:", error);
+    if (isStaticDataBuild()) {
+      throw error;
+    }
+    return [];
+  }
+}
+
 function getMythBySlugSqlite(slug) {
   const db = getSqliteDb();
   const slugValue = normalizeInput(slug);

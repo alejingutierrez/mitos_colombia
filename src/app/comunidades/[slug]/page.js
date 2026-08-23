@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 import { filterAllowedCommunities, MIN_COMMUNITY_MYTHS } from "../../../lib/communityFilters";
 import { COMMUNITY_INFO, communitySections } from "../../../lib/community-info";
 import { REGION_MOTIFS } from "../../../lib/region-info";
-import { getTaxonomy, listMyths, listMythLinksByTaxon } from "../../../lib/myths";
+import { getTaxonomy, listMythPlatesByTaxon } from "../../../lib/myths";
 import { buildSeoMetadata, getSeoEntry } from "../../../lib/seo";
 import { resolveRouteParams } from "../../../lib/next-route-props";
 import { withMythImageVariants } from "../../../lib/myth-images";
@@ -87,24 +87,21 @@ export default async function CommunityDetailPage({ params }) {
     .sort((a, b) => (b.myth_count || 0) - (a.myth_count || 0))
     .map((c) => ({ slug: c.slug, name: c.name, count: c.myth_count }));
 
-  // Cuatro relatos para empezar. Antes esta consulta traía 24 para el archivo
-  // filtrable y los mismos títulos volvían a salir en el índice de abajo.
-  const result = await listMyths({ community: community.slug, limit: 4, offset: 0 });
-  const featured = (result?.items || []).map((m) =>
+  // Todos los relatos del pueblo, cada uno con su obra: es lo que dibuja el
+  // muro. Antes había dos consultas —cuatro con imagen y el resto como
+  // renglones sin ella— y los cuatro primeros salían en las dos.
+  const mythPlates = (
+    await listMythPlatesByTaxon("community", community.slug)
+  ).map((m) =>
     withMythImageVariants({
       slug: m.slug,
       title: m.title,
-      excerpt: m.excerpt,
-      region: m.region,
-      community: m.community,
       image_url: m.image_url,
       vertical_image_url: m.vertical_image_url,
     })
   );
 
-  // Índice completo, rastreable, de todos los mitos de la comunidad.
-  const allMythLinks = await listMythLinksByTaxon("community", community.slug);
-  const collectionItems = allMythLinks.slice(0, 30).map((m) => ({
+  const collectionItems = mythPlates.slice(0, 30).map((m) => ({
     url: `${SITE_URL}/mitos/${m.slug}`,
     name: m.title,
   }));
@@ -146,8 +143,8 @@ export default async function CommunityDetailPage({ params }) {
         }
         siblings={siblings}
         sections={sections}
-        featured={featured}
-        mythIndex={allMythLinks}
+        lead={info?.description}
+        myths={mythPlates}
         motif={REGION_MOTIFS[community.region_slug] || "condor"}
       />
     </>

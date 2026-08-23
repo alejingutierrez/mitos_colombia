@@ -6,6 +6,7 @@ export { Header } from "./Header";
 export { Footer } from "./Footer";
 export { HeroSection } from "./HeroSection";
 export { MythGrid } from "./MythGrid";
+export { MythWall } from "./MythWall";
 export { TaxonomyGrid } from "./TaxonomyGrid";
 export { RegionMosaic } from "./RegionMosaic";
 export { CommunityMesa } from "./CommunityMesa";
