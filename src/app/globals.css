@@ -528,6 +528,40 @@ h1.font-editorial {
     }
   }
 
+  /* Portada de la ficha de pueblo. Más liviano que `.atlas-scrim-cover`: ahí
+     el pie sostenía además la cifra de relatos, que aquí bajó a la banda de
+     ficha, así que el velo vertical puede ceder y dejar ver la obra. En móvil
+     no hay banda lateral —el texto ocupa todo el ancho— y el refuerzo tiene
+     que venir de abajo. */
+  .atlas-scrim-portada {
+    background: linear-gradient(
+      to top,
+      rgba(8, 18, 20, 0.88) 0%,
+      rgba(8, 18, 20, 0.72) 26%,
+      rgba(8, 18, 20, 0.42) 52%,
+      rgba(8, 18, 20, 0.12) 78%,
+      rgba(8, 18, 20, 0.04) 100%
+    );
+  }
+  @media (min-width: 900px) {
+    .atlas-scrim-portada {
+      background:
+        linear-gradient(
+          to right,
+          rgba(8, 18, 20, 0.74) 0%,
+          rgba(8, 18, 20, 0.44) 38%,
+          rgba(8, 18, 20, 0.08) 68%,
+          rgba(8, 18, 20, 0) 100%
+        ),
+        linear-gradient(
+          to top,
+          rgba(8, 18, 20, 0.56) 0%,
+          rgba(8, 18, 20, 0.2) 26%,
+          rgba(8, 18, 20, 0) 54%
+        );
+    }
+  }
+
   /* Detalle del mito: preservar la obra con un velo que nunca supera 15%. */
   .atlas-scrim-myth {
     background: linear-gradient(
