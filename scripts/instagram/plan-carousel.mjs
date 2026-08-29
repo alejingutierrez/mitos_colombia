@@ -147,7 +147,9 @@ async function planOnceInner(systemPrompt) {
       systemPrompt,
     });
   } catch (error) {
-    if (!allowOpenAIFallback) throw error;
+    // El guion v10 no cae a OpenAI: las imágenes ya existen para todos los mitos
+    // y el fallback sólo escribía texto, así que no aporta nada que Bedrock no dé.
+    if (!allowOpenAIFallback || guion === "v10") throw error;
     return await planCarouselWithOpenAI({
       myth,
       assets,
