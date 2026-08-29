@@ -53,3 +53,21 @@ mantiene un historial de borrador separado. Cada plan recibe un índice de feed
 que rota arquetipo y orden cromático. `--resume` conserva los aprobados del
 reporte y procesa sólo los pendientes; no cambia la instantánea ni el historial
 canónico.
+
+## Sistema v10 · acabado A+C (producción actual)
+
+Aprobado el 2026-08-28. Seis tipos de pantalla × diez variaciones (60 plantillas),
+modo por carrusel (5 Revista · 3 Archivo · 2 Cartel), capacidad por variante y
+papel recortado en `public/motifs/carousel/v3/`.
+
+- Registro y reglas: `src/lib/instagram-v10.js`
+- Render: `src/components/instagram/SlideV10.js` + `/design-system/instagram-v10`
+- Compositor: `scripts/instagram/lib/composer-v10.mjs`
+
+```bash
+npm run instagram:v10:compose -- --slug <slug> [--feed-index N] [--mode A|B|C] [--record]
+npm run instagram:v10:render -- --slug <slug> --base-url http://localhost:3111
+```
+
+El historial de uso vive en `content/instagram/template-history-v10.jsonl`.
+El sistema anterior (85 plantillas) queda intacto para comparación y reversa.
