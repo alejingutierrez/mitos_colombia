@@ -6,6 +6,10 @@ import { planCarouselWithBedrock } from "./lib/bedrock-planner.mjs";
 import { planCarouselWithOpenAI } from "./lib/openai-planner.mjs";
 import { planCarouselLocally } from "./lib/local-planner.mjs";
 import {
+  buildGuionV10SystemPrompt,
+  validateGuionV10,
+} from "./lib/guion-v10.mjs";
+import {
   eligibleTemplates,
   resolveSlideLayout,
 } from "./lib/templates.mjs";
@@ -42,6 +46,11 @@ const slug = arg("--slug");
 const requireThirdImage = process.argv.includes("--require-third");
 const allowOpenAIFallback = process.argv.includes("--allow-openai-fallback");
 const provider = arg("--provider", "bedrock");
+const guion = arg("--guion", "");
+const modelIdOverride = arg("--model-id", "");
+const plannerEnv = modelIdOverride
+  ? { ...process.env, INSTAGRAM_BEDROCK_MODEL_ID: modelIdOverride }
+  : process.env;
 const snapshotPath = arg("--snapshot", "");
 const feedIndexArgument = arg("--feed-index", "");
 const feedIndex = /^\d+$/.test(feedIndexArgument)
@@ -49,7 +58,7 @@ const feedIndex = /^\d+$/.test(feedIndexArgument)
   : undefined;
 if (!slug) {
   throw new Error(
-    "Uso: npm run instagram:plan -- --slug <slug> [--require-third] [--provider bedrock|local] [--allow-openai-fallback]"
+    "Uso: npm run instagram:plan -- --slug <slug> [--require-third] [--provider bedrock|local] [--allow-openai-fallback] [--guion v10]"
   );
 }
 
@@ -100,7 +109,58 @@ const assets =
           url: myth.images.portrait,
         }),
       ]);
+if (guion && guion !== "v10") {
+  throw new Error(`Guion desconocido: ${guion}. El único disponible es v10.`);
+}
+if (guion === "v10" && provider === "local") {
+  throw new Error(
+    "El planificador local escribe cortando oraciones y no puede cumplir las 7 reglas del guion v10; usa --provider bedrock u openai."
+  );
+}
+
+const THROTTLE_PATTERN = /too many tokens|throttl|rate.?limit|429/i;
+const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
+async function planOnce(systemPrompt) {
+  for (let espera = 1; espera <= 4; espera += 1) {
+    try {
+      return await planOnceInner(systemPrompt);
+    } catch (error) {
+      const message = error instanceof Error ? error.message : String(error);
+      if (espera === 4 || !THROTTLE_PATTERN.test(message)) throw error;
+      const seconds = espera * 30;
+      console.warn(`proveedor estrangulado; reintento en ${seconds}s…`);
+      await sleep(seconds * 1000);
+    }
+  }
+  throw new Error("planOnce: sin intentos restantes");
+}
+
+async function planOnceInner(systemPrompt) {
+  try {
+    return await planCarouselWithBedrock({
+      myth,
+      assets,
+      templates,
+      requireThirdImage,
+      env: plannerEnv,
+      systemPrompt,
+    });
+  } catch (error) {
+    if (!allowOpenAIFallback) throw error;
+    return await planCarouselWithOpenAI({
+      myth,
+      assets,
+      templates,
+      requireThirdImage,
+      env: plannerEnv,
+      systemPrompt,
+    });
+  }
+}
+
 let result;
+let guionReport = null;
 if (provider === "local") {
   result = planCarouselLocally({
     myth,
@@ -108,23 +168,27 @@ if (provider === "local") {
     requireThirdImage,
     feedIndex,
   });
-} else {
-  try {
-    result = await planCarouselWithBedrock({
-      myth,
-      assets,
-      templates,
-      requireThirdImage,
-    });
-  } catch (error) {
-    if (!allowOpenAIFallback) throw error;
-    result = await planCarouselWithOpenAI({
-      myth,
-      assets,
-      templates,
-      requireThirdImage,
-    });
+} else if (guion === "v10") {
+  let repairNotes = [];
+  for (let intento = 1; intento <= 3; intento += 1) {
+    result = await planOnce(
+      buildGuionV10SystemPrompt({ requireThirdImage, repairNotes })
+    );
+    guionReport = validateGuionV10(result.plan);
+    if (guionReport.ok) break;
+    repairNotes = guionReport.errors;
+    console.warn(
+      `guion v10 · intento ${intento}: ${guionReport.errors.length} incumplimientos` +
+        (intento < 3 ? " → reparando" : "")
+    );
   }
+  if (!guionReport.ok) {
+    throw new Error(
+      `El plan no cumple el guion v10 tras 3 intentos:\n- ${guionReport.errors.join("\n- ")}`
+    );
+  }
+} else {
+  result = await planOnce(null);
 }
 const counters = {};
 const resolvedSlides = result.plan.slides.map((slide) => ({
@@ -151,6 +215,7 @@ const payload = {
     existing_landscape: myth.images.landscape,
     existing_portrait: myth.images.portrait,
   },
+  guion: guion || null,
   production_policy: {
     require_third_image: requireThirdImage,
     source_snapshot: snapshotPath ? path.resolve(snapshotPath) : null,
@@ -161,6 +226,18 @@ const payload = {
 
 await mkdir(path.dirname(outputPath), { recursive: true });
 await writeFile(outputPath, `${JSON.stringify(payload, null, 2)}\n`);
+
+if (guionReport) {
+  const reportPath = path.join(path.dirname(outputPath), "plan-guion-report.json");
+  await writeFile(
+    reportPath,
+    `${JSON.stringify({ guion: "v10", ...guionReport }, null, 2)}\n`
+  );
+  console.log(
+    `guion v10 · reglas verificadas · ${guionReport.warnings.length} avisos` +
+      (guionReport.warnings.length ? `:\n  - ${guionReport.warnings.join("\n  - ")}` : "")
+  );
+}
 console.log(
   JSON.stringify({
     status: "planned",

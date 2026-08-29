@@ -122,6 +122,7 @@ function buildPayload({
   modelId,
   repair,
   requireThirdImage,
+  systemPrompt,
 }) {
   const content = [
     {
@@ -157,7 +158,7 @@ function buildPayload({
 
   return {
     modelId,
-    system: [{ text: buildPlannerSystemPrompt({ requireThirdImage }) }],
+    system: [{ text: systemPrompt || buildPlannerSystemPrompt({ requireThirdImage }) }],
     messages: [{ role: "user", content }],
     inferenceConfig: { maxTokens: 5500, temperature: 0.55 },
     toolConfig: {
@@ -183,6 +184,7 @@ export async function planCarouselWithBedrock({
   env = process.env,
   maxAttempts = 2,
   requireThirdImage = false,
+  systemPrompt = null,
 }) {
   const modelId =
     envValue(
@@ -207,6 +209,7 @@ export async function planCarouselWithBedrock({
             modelId,
             repair,
             requireThirdImage,
+            systemPrompt,
           })
         ),
         { abortSignal: AbortSignal.timeout(90_000) }

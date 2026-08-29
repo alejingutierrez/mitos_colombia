@@ -138,6 +138,24 @@ await sharp({ create: { width, height, channels: 3, background: "#101716" } })
   .png()
   .toFile(path.join(outputDirectory, "contact-sheet.png"));
 
+const caption = [
+  composition.publishing?.caption || "",
+  "",
+  ...(composition.publishing?.hashtags || []),
+]
+  .join("\n")
+  .trim();
+if (caption) {
+  await fs.writeFile(path.join(outputDirectory, "caption.txt"), `${caption}\n`);
+}
+const altText = composition.slides
+  .filter((slide) => slide.alt_text)
+  .map((slide) => `${String(slide.sequence).padStart(2, "0")} · ${slide.alt_text}`)
+  .join("\n");
+if (altText) {
+  await fs.writeFile(path.join(outputDirectory, "alt-text.txt"), `${altText}\n`);
+}
+
 await fs.writeFile(
   path.join(outputDirectory, "manifest.json"),
   `${JSON.stringify({ slug, edition, mode: composition.mode, seed: composition.seed, slides: outputs }, null, 2)}\n`

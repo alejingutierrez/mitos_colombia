@@ -368,6 +368,11 @@ export function buildComposition({ plan, seed, feedIndex = 0, modeOverride, usag
     },
     semantic_motif: semanticMotif,
     warnings,
+    publishing: {
+      caption: plan.plan?.caption || "",
+      hashtags: plan.plan?.hashtags || [],
+      factual_guardrails: plan.plan?.factual_guardrails || [],
+    },
     slides: out,
   };
 }

@@ -69,5 +69,20 @@ npm run instagram:v10:compose -- --slug <slug> [--feed-index N] [--mode A|B|C] [
 npm run instagram:v10:render -- --slug <slug> --base-url http://localhost:3111
 ```
 
+### Guion v10 (las 7 reglas)
+
+El planificador con modelo escribe bajo las 7 reglas del guion (`--guion v10`);
+las reglas 1-4 y 6 se verifican por código y rechazan el plan con hasta dos
+reparaciones automáticas. El planificador local queda excluido de v10.
+
+```bash
+npm run instagram:v10:plan -- --slug <slug> --require-third [--model-id <bedrock-id>] --out artifacts/instagram/<slug>/plan-current.json
+npm run instagram:v10:qa:guion -- --plan artifacts/instagram/<slug>/plan-current.json
+```
+
+El guion aprobado de Bachué vive como fixture en
+`scripts/instagram/fixtures/plan-guion-v10-bachue.json` (pasa las 7 reglas y
+sirve para probar la cadena sin proveedor).
+
 El historial de uso vive en `content/instagram/template-history-v10.jsonl`.
 El sistema anterior (85 plantillas) queda intacto para comparación y reversa.
