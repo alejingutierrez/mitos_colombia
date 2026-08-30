@@ -90,10 +90,12 @@ const templates = eligibleTemplates(history).map((item) => ({
   minSlides: item.minSlides,
   maxSlides: item.maxSlides,
 }));
-const assets =
-  provider === "local"
-    ? []
-    : await Promise.all([
+// El guion v10 sólo escribe texto y asigna ranuras de imagen por su id: no
+// necesita ver los píxeles. Evitar el envío en base64 abarata y acelera el plan.
+const needsVision = provider !== "local" && guion !== "v10";
+const assets = !needsVision
+  ? []
+  : await Promise.all([
         fetchVisualAsset({
           id: "existing_landscape",
           role: "canonical landscape",
