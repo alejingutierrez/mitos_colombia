@@ -10,6 +10,9 @@
 // {
 //   "width": 1080, "height": 1920, "fps": 24,
 //   "music": "ruta.m4a" | null, "music_vol": 0.09,
+//   "burn_subtitles": true,             // false = exporta SRT, pero no lo quema
+//   "write_srt": true,
+//   "title_font": "ruta/Asimovian-Latin.woff2",
 //   "voice_offset": 0.5,
 //   "transition_dur": 0.4,            // *duración pedida de los crossfades
 //   "blocks": [
@@ -50,6 +53,8 @@ const FPS = plan.fps || 24;
 const VOICE_OFFSET = plan.voice_offset ?? 0.5;
 const MUSIC_VOL = plan.music_vol ?? 0.09;
 const XFADE_REQ = plan.transition_dur ?? 0.4;
+const BURN_SUBTITLES = plan.burn_subtitles !== false;
+const WRITE_SRT = plan.write_srt !== false;
 const VOICE_GAP = 0.25; // aire mínimo entre fin de habla y el siguiente arranque
 const planDir = path.dirname(path.resolve(planPath));
 const outDir = path.dirname(path.resolve(outPath));
@@ -297,21 +302,27 @@ filter += `;[mix]loudnorm=I=-16:TP=-1.5:LRA=11,afade=t=out:st=${(totalDur - 1).t
 const mixed = path.join(tmpDir, "mixed.mp4");
 run("ffmpeg", ["-y", ...inputs, "-filter_complex", filter, "-map", "0:v", "-map", "[aout]", "-c:v", "copy", "-c:a", "aac", "-b:a", "192k", "-t", String(totalDur), mixed]);
 
-// ── 5. Sobreimpresos: título de canal + subtítulos (PNG sharp, sin libass) ───
+// ── 5. Sobreimpresos: título editorial + subtítulos opcionales ───────────────
 let finalIn = mixed;
 const titles = blockFiles
   .map((b, i) => (b.title ? { text: b.title, sub: b.titleSub, at: visStart[i] } : null))
   .filter(Boolean);
-if (cues.length || titles.length) {
-  const srtPath = outPath.replace(/\.mp4$/, ".srt");
-  if (cues.length) {
-    fs.writeFileSync(
-      srtPath,
-      cues.map((c, i) => `${i + 1}\n${fmtSrtTime(c.start)} --> ${fmtSrtTime(c.end)}\n${c.text}\n`).join("\n")
-    );
-  }
+const srtPath = outPath.replace(/\.mp4$/, ".srt");
+if (cues.length && WRITE_SRT) {
+  fs.writeFileSync(
+    srtPath,
+    cues.map((c, i) => `${i + 1}\n${fmtSrtTime(c.start)} --> ${fmtSrtTime(c.end)}\n${c.text}\n`).join("\n")
+  );
+}
+
+const overlayCues = BURN_SUBTITLES ? cues : [];
+if (overlayCues.length || titles.length) {
   const sharp = (await import("sharp")).default;
   const esc = (t) => t.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+  const titleFont = plan.title_font ? resolveInput(plan.title_font) : null;
+  if (titleFont && !fs.existsSync(titleFont)) {
+    throw new Error(`No existe la fuente de título configurada: ${titleFont}`);
+  }
 
   async function textPngWithShadow(markup, widthPx, dpi, outFile, pad = 16) {
     const base = await sharp({ text: { text: markup, rgba: true, width: widthPx, dpi, align: "centre", font: "Helvetica" } })
@@ -328,18 +339,58 @@ if (cues.length || titles.length) {
       .toFile(outFile);
   }
 
+  async function editorialTitlePng(text, outFile) {
+    const titleText = esc(text.toUpperCase());
+    const fontName = titleFont ? "Asimovian" : "Helvetica";
+    const fontOptions = titleFont ? { fontfile: titleFont } : {};
+    const base = await sharp({
+      text: {
+        text: `<span foreground="#17352D" font_desc="${fontName} 84" letter_spacing="2048">${titleText}</span>`,
+        rgba: true,
+        dpi: 144,
+        align: "left",
+        font: fontName,
+        ...fontOptions,
+      },
+    })
+      .png()
+      .toBuffer();
+    const canvasHeight = 220;
+    const left = 82;
+    const top = 28;
+    const ornament = Buffer.from(`
+      <svg width="${W}" height="${canvasHeight}" xmlns="http://www.w3.org/2000/svg">
+        <path d="M 84 188 H 420" stroke="#9D762F" stroke-opacity="0.82" stroke-width="2.5"/>
+        <path d="M 84 181 l 7 7 -7 7 -7 -7 z" fill="#B38B3E"/>
+      </svg>
+    `);
+    await sharp({
+      create: {
+        width: W,
+        height: canvasHeight,
+        channels: 4,
+        background: { r: 0, g: 0, b: 0, alpha: 0 },
+      },
+    })
+      .composite([
+        { input: ornament, left: 0, top: 0 },
+        { input: base, left, top },
+      ])
+      .png()
+      .toFile(outFile);
+  }
+
   const overlayDefs = []; // {file, y, enableFrom, enableTo, fade: bool}
-  for (let i = 0; i < cues.length; i++) {
+  for (let i = 0; i < overlayCues.length; i++) {
     const cuePath = path.join(tmpDir, `cue${String(i).padStart(2, "0")}.png`);
-    await textPngWithShadow(`<span foreground="#F5F0E6" weight="600">${esc(cues[i].text)}</span>`, 880, 176, cuePath);
-    overlayDefs.push({ file: cuePath, y: null, from: cues[i].start, to: cues[i].end, fade: false });
+    await textPngWithShadow(`<span foreground="#F5F0E6" weight="600">${esc(overlayCues[i].text)}</span>`, 880, 176, cuePath);
+    overlayDefs.push({ file: cuePath, y: null, from: overlayCues[i].start, to: overlayCues[i].end, fade: false });
   }
   for (let t = 0; t < titles.length; t++) {
     const ti = titles[t];
     const titlePath = path.join(tmpDir, `title${t}.png`);
-    const markup = `<span foreground="#F5F0E6" weight="300" size="200%" letter_spacing="14336">${esc(ti.text.toUpperCase())}</span>${ti.sub ? `\n<span foreground="#E4DCC8" weight="500" size="66%" letter_spacing="6144">${esc(ti.sub)}</span>` : ""}`;
-    await textPngWithShadow(markup, 940, 200, titlePath, 24);
-    overlayDefs.push({ file: titlePath, y: Math.round(H * 0.24), from: ti.at + 1.0, to: ti.at + 5.2, fade: true });
+    await editorialTitlePng(ti.text, titlePath);
+    overlayDefs.push({ file: titlePath, y: plan.title_y ?? Math.round(H * 0.18), from: ti.at + 0.65, to: ti.at + 4.65, fade: true });
   }
 
   const subbed = path.join(tmpDir, "subbed.mp4");
@@ -362,7 +413,7 @@ if (cues.length || titles.length) {
   });
   run("ffmpeg", ["-y", ...inputsSub, "-filter_complex", parts.join(";"), "-map", "[vout]", "-map", "0:a", "-c:v", "libx264", "-preset", "medium", "-crf", "18", "-c:a", "copy", "-t", String(totalDur), subbed]);
   finalIn = subbed;
-  console.log(`[assemble] sobreimpresos: ${cues.length} cues${titles.length ? ` + ${titles.length} título(s)` : ""}${cues.length ? ` (srt: ${srtPath})` : ""}`);
+  console.log(`[assemble] sobreimpresos: ${overlayCues.length} cues${titles.length ? ` + ${titles.length} título(s)` : ""}${cues.length && WRITE_SRT ? ` (srt: ${srtPath})` : ""}`);
 }
 
 fs.mkdirSync(outDir, { recursive: true });
