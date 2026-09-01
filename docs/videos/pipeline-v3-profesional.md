@@ -185,6 +185,10 @@ descarga del .mp4 resultante. Primera tanda corta (2-3 clips) y a mitad de ritmo
 - El control visual de cinco muestras por clip confirmó movimiento desde el arranque, continuidad
   de papel/relieve y ausencia de texto o personas espurias. El bootstrap reproducible se emite con
   `node scripts/mitos/emit-bootstrap-video.mjs`.
+- En la tanda completa, `Checking content` llegó a superar 30 s: no seleccionar hasta que desaparezca.
+  Assets visualmente muy cercanos pueden deduplicarse al UUID anterior y un upload puede quedar
+  `Not eligible`. Verificar siempre UUID, elegibilidad y miniatura; cancelar antes del render si no
+  coinciden. Una reexportación JPEG visualmente idéntica resolvió ambos casos en un único reintento.
 
 ## 7. Paso 6 — Importar clips
 
