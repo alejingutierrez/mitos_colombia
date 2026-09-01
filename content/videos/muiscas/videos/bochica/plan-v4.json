@@ -1,0 +1,86 @@
+{
+  "_notas": "Plan v4 (pipeline v3 profesional): SOLO cortes secos — sin xfade ni transition_dur. 19 clips Seedance 2.5 1080p de 5 s (clips-v4/, pendientes de la sesión web unlimited) + cola still con Ken Burns (bookend de la sabana del inicio). Voces: voces-v4-2min/ (alejandro flash_v2_5, guion-bochica-v4-2min.json). Prompts de movimiento por clip: movimiento-v4.json. Validar con: validate-plan.mjs --plan plan-v4.json --secos",
+  "width": 1080,
+  "height": 1920,
+  "fps": 24,
+  "voice_offset": 0.5,
+  "music": "../../audio/musica-muisca-andina.mp3",
+  "music_vol": 0.12,
+  "blocks": [
+    {
+      "n": 1, "type": "motion", "clip": "clips-v4/c01.mp4", "duration": 5,
+      "voice": "voces-v4-2min/voz01.mp3",
+      "subtitle": "Dicen que la sabana era pura vida: maíz, agua buena y gente sembrando. Pero abajo, un dios escuchaba.",
+      "title": "Bochica", "title_sub": "Mitos de Colombia · muiscas",
+      "sfx": "../../audio/sfx/sfx-laguna.mp3", "sfx_vol": 0.22
+    },
+    { "n": 2, "type": "motion", "clip": "clips-v4/c02.mp4", "duration": 5, "sfx": "../../audio/sfx/sfx-laguna.mp3", "sfx_vol": 0.22 },
+    {
+      "n": 3, "type": "motion", "clip": "clips-v4/c03.mp4", "duration": 5,
+      "voice": "voces-v4-2min/voz02.mp3",
+      "subtitle": "Era Chibchacum, y estaba cansado de oír puras quejas. Les soltó dos ríos encima y empezó a llover.",
+      "sfx": "../../audio/sfx/sfx-lluvia.mp3", "sfx_vol": 0.25
+    },
+    { "n": 4, "type": "motion", "clip": "clips-v4/c04.mp4", "duration": 5, "sfx": "../../audio/sfx/sfx-lluvia.mp3", "sfx_vol": 0.3 },
+    {
+      "n": 5, "type": "motion", "clip": "clips-v4/c05.mp4", "duration": 5,
+      "voice": "voces-v4-2min/voz03.mp3",
+      "subtitle": "La sabana entera se volvió una laguna. Ya no había dónde sembrar, y el hambre andaba rondando.",
+      "sfx": "../../audio/sfx/sfx-lluvia.mp3", "sfx_vol": 0.28
+    },
+    { "n": 6, "type": "motion", "clip": "clips-v4/c06.mp4", "duration": 5, "sfx": "../../audio/sfx/sfx-lluvia.mp3", "sfx_vol": 0.28 },
+    {
+      "n": 7, "type": "motion", "clip": "clips-v4/c07.mp4", "duration": 5,
+      "voice": "voces-v4-2min/voz04.mp3",
+      "subtitle": "La gente subió a las lomas con lo poquito que pudo. Allá arriba prendieron fuego para pedir ayuda.",
+      "sfx": "../../audio/sfx/sfx-lluvia.mp3", "sfx_vol": 0.25
+    },
+    { "n": 8, "type": "motion", "clip": "clips-v4/c08.mp4", "duration": 5, "sfx": "../../audio/sfx/sfx-fogon.mp3", "sfx_vol": 0.22 },
+    {
+      "n": 9, "type": "motion", "clip": "clips-v4/c09.mp4", "duration": 5,
+      "voice": "voces-v4-2min/voz05.mp3",
+      "subtitle": "Le rezaron a Bochica, el viejo sabio. Le dejaron tejidos y semillas, y noches enteras de ruegos.",
+      "sfx": "../../audio/sfx/sfx-fogon.mp3", "sfx_vol": 0.22
+    },
+    { "n": 10, "type": "motion", "clip": "clips-v4/c10.mp4", "duration": 5, "sfx": "../../audio/sfx/sfx-fogon.mp3", "sfx_vol": 0.2 },
+    {
+      "n": 11, "type": "motion", "clip": "clips-v4/c11.mp4", "duration": 5,
+      "voice": "voces-v4-2min/voz06.mp3",
+      "subtitle": "Una tarde, con el sol entre la lluvia, apareció en lo alto de las rocas, vara dorada en mano.",
+      "sfx": "../../audio/sfx/sfx-lluvia.mp3", "sfx_vol": 0.22
+    },
+    { "n": 12, "type": "motion", "clip": "clips-v4/c12.mp4", "duration": 5, "sfx": "../../audio/sfx/sfx-lluvia.mp3", "sfx_vol": 0.22 },
+    {
+      "n": 13, "type": "motion", "clip": "clips-v4/c13.mp4", "duration": 5,
+      "voice": "voces-v4-2min/voz07.mp3",
+      "subtitle": "«No les quito los ríos», dijo, «pero les abro la montaña». Y lanzó la vara con toda su fuerza.",
+      "sfx": "../../audio/sfx/sfx-lluvia.mp3", "sfx_vol": 0.25
+    },
+    { "n": 14, "type": "motion", "clip": "clips-v4/c14.mp4", "duration": 5, "sfx": "../../audio/sfx/sfx-cascada.mp3", "sfx_vol": 0.3 },
+    {
+      "n": 15, "type": "motion", "clip": "clips-v4/c15.mp4", "duration": 5,
+      "voice": "voces-v4-2min/voz08.mp3",
+      "subtitle": "La roca se partió en dos y el agua salió en estampida. Así nació el salto del Tequendama.",
+      "sfx": "../../audio/sfx/sfx-cascada.mp3", "sfx_vol": 0.4
+    },
+    { "n": 16, "type": "motion", "clip": "clips-v4/c16.mp4", "duration": 5, "sfx": "../../audio/sfx/sfx-cascada.mp3", "sfx_vol": 0.4 },
+    {
+      "n": 17, "type": "motion", "clip": "clips-v4/c17.mp4", "duration": 5,
+      "voice": "voces-v4-2min/voz09.mp3",
+      "subtitle": "La sabana volvió verdecita y la gente volvió a sembrar. El lodo que quedó era pura tierra buena.",
+      "sfx": "../../audio/sfx/sfx-laguna.mp3", "sfx_vol": 0.25
+    },
+    { "n": 18, "type": "motion", "clip": "clips-v4/c18.mp4", "duration": 5, "sfx": "../../audio/sfx/sfx-laguna.mp3", "sfx_vol": 0.22 },
+    {
+      "n": 19, "type": "motion", "clip": "clips-v4/c19.mp4", "duration": 5,
+      "voice": "voces-v4-2min/voz10.mp3",
+      "subtitle": "Y cuando sale el arcoíris, dicen, es Bochica saludando. El salto sigue cantando, y el agua, por fin, quieta.",
+      "sfx": "../../audio/sfx/sfx-cascada.mp3", "sfx_vol": 0.25
+    },
+    {
+      "n": 20, "type": "still", "image": "../../biblia/sabana_cultivos.crop-9x16.jpg",
+      "kenburns": "out", "duration": 4,
+      "sfx": "../../audio/sfx/sfx-laguna.mp3", "sfx_vol": 0.3
+    }
+  ]
+}
