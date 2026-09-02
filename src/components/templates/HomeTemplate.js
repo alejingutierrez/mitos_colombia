@@ -12,6 +12,7 @@ import {
   TerritoryBanner,
   TerritoryMedallions,
   TodayTable,
+  UnattributedBand,
 } from "../home";
 
 /**
@@ -24,17 +25,20 @@ import {
  *
  * Lo que no se debe deshacer:
  *  · El buscador vive en el header, no en la portada (tapaba la obra).
- *  · Los mitos de la portada NO vuelven a aparecer más abajo: la página reparte
- *    el feed con un cursor `take(n)`, no con `slice` fijos que se solapaban.
- *  · «Varios» y las bolsas del importador se filtran antes de llegar aquí.
+ *  · Lo que se pinta arriba no se repite abajo: la página reparte el feed con
+ *    `partitionSections`, que da a cada sección su propio sorteo equilibrado.
+ *    (Antes era un cursor `take(n)` compartido, y ese cursor era el bug: nunca
+ *    pasaba del índice 16, así que una sección entera no llegaba a pintarse.)
+ *  · «Varios» y las bolsas del importador no entran a las pestañas de pueblo,
+ *    pero sí al archivo: viven en su propia banda, `UnattributedBand`.
  */
 export function HomeTemplate({
   hero,
   cover = [],
   today = [],
   todayFilters = [],
-  todayCriterio,
   communities = [],
+  unattributed = null,
   featuredRoute,
   routes = [],
   regions = [],
@@ -53,15 +57,11 @@ export function HomeTemplate({
           <Container size="atlas">
             <AtlasSectionHeader
               title="La mesa de hoy"
-              description="Cada pieza dice por qué está aquí. Filtra por lo que quieras leer y la mesa se recompone."
+              description="Diez relatos, distinto cada día. Filtra por tema o vuelve a barajar."
               actionHref="/mitos"
               actionLabel="Ver todos los mitos"
             />
-            <TodayTable
-              myths={today}
-              filters={todayFilters}
-              criterio={todayCriterio}
-            />
+            <TodayTable myths={today} filters={todayFilters} />
           </Container>
         </section>
 
@@ -74,6 +74,10 @@ export function HomeTemplate({
           />
           <CommunityTabs communities={communities} />
         </Container>
+
+        {/* Va DESPUÉS de los pueblos y fuera de sus pestañas a propósito: son
+            relatos sin procedencia atribuible, no un pueblo más. */}
+        <UnattributedBand data={unattributed} />
 
         <section>
           <RouteBanner route={featuredRoute} />

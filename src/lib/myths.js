@@ -1,9 +1,49 @@
 import { unstable_cache } from "next/cache";
 import { getSqlClient, getSqliteDb, isPostgres, isQuotaError } from "./db";
 import { isStaticDataBuild, withRetry } from "./db-resilience";
+import { isImporterBucket } from "./home-rotation";
 
 const ONE_HOUR = 60 * 60;
 const ONE_DAY = 60 * 60 * 24;
+
+/* ------------------------------------------------------------------ *
+ * Orden pseudoaleatorio y determinista, sembrado por día
+ * ------------------------------------------------------------------ */
+
+/* El módulo de la mezcla. Primo, y con el techo de ids del archivo (600) el
+   producto de abajo no pasa de ~4e14: muy por debajo del techo de un bigint. */
+const SEED_MODULUS = 1000003;
+
+/**
+ * Recorta la semilla del día al rango que aguanta `seededOrderSql`.
+ *
+ * `dailySeed()` devuelve 32 bits; en SQL se multiplican dos factores, así que
+ * hay que acotarla o el producto se sale del bigint.
+ */
+export function toSqlSeed(seed) {
+  const value = Number(seed);
+  if (!Number.isFinite(value)) return 0;
+  return Math.abs(Math.trunc(value)) % SEED_MODULUS;
+}
+
+/**
+ * Expresión de orden sembrado.
+ *
+ * NO usar `(id + semilla) % N`, que es lo que había: sumar la semilla ANTES de un
+ * módulo pequeño no reordena la lista, sólo la ROTA. Por eso `% 23` daba
+ * exactamente 23 portadas distintas y sólo 115 de los 596 mitos llegaban a
+ * portada (medido contra producción). Aquí la semilla entra en los DOS factores
+ * de un producto, así que el término lineal en `id` cambia con ella y la
+ * permutación es de verdad distinta: 400 semillas dan 400 portadas distintas y
+ * alcanzan 582 de los 596 mitos.
+ *
+ * `cast` es "::bigint" en Postgres y "" en SQLite (que ya usa enteros de 64 bits).
+ */
+function seededOrderSql(alias, param, cast = "::bigint") {
+  const id = `${alias}.id${cast}`;
+  const seed = `${param}${cast}`;
+  return `(((${id} * 7919 + ${seed}) * (${id} * 104729 + ${seed} + 1)) % ${SEED_MODULUS})`;
+}
 
 function normalizeInput(value) {
   if (!value) {
@@ -995,10 +1035,10 @@ async function getFeaturedMythsWithImagesPostgres(limit = 12, seed = 0) {
       JOIN regions ON regions.id = myths.region_id
       LEFT JOIN communities ON communities.id = myths.community_id
       WHERE myths.image_url IS NOT NULL
-      ORDER BY (myths.id + $1) % 23, myths.id
+      ORDER BY ${seededOrderSql("myths", "$1")}, myths.id
       LIMIT $2
       `,
-      [seed, limit]
+      [toSqlSeed(seed), limit]
     );
 
     return result.rows;
@@ -1028,11 +1068,14 @@ function getFeaturedMythsWithImagesSqlite(limit = 12, seed = 0) {
       JOIN regions ON regions.id = myths.region_id
       LEFT JOIN communities ON communities.id = myths.community_id
       WHERE myths.image_url IS NOT NULL
-      ORDER BY (myths.id + ?) % 23, myths.id
-      LIMIT ?
+      ORDER BY ${seededOrderSql("myths", ":seed", "")}, myths.id
+      LIMIT :limit
     `;
 
-    return db.prepare(sql).all(seed, limit);
+    // Parámetros CON NOMBRE: la expresión sembrada repite la semilla dos veces y
+    // con `?` habría que contar posiciones a mano (y better-sqlite3 no deja
+    // mezclar posicionales con nombrados).
+    return db.prepare(sql).all({ seed: toSqlSeed(seed), limit });
   } catch (error) {
     console.error("Error getting featured myths with images (SQLite):", error);
     return [];
@@ -1245,113 +1288,436 @@ export async function getMythExtrasBySlugs(slugs = []) {
   }
 }
 
-/* Comunidades con obra propia, para las pestañas del home.
-   Devuelve un relato ilustrado por comunidad: la sección presenta al pueblo que
-   sostiene el relato, así que la comunidad manda y el mito es su muestra.
-   Las bolsas del importador ("Mestizo", "Mixto", "Varios") no son pueblos y se
-   filtran arriba, en la página, no aquí — el dato crudo se conserva. */
-async function getCommunitySpotlightsPostgres(limit = 8, seed = 0) {
+/* Comunidades para las pestañas del home.
+   Devuelve VARIOS relatos ilustrados por comunidad, no uno.
+
+   Antes había un `LIMIT 1` dentro de un LATERAL: por construcción era imposible
+   que una comunidad mostrara más de un mito, por muchos que tenga (los Muiscas
+   tienen 41). Ahora la ventana `ROW_NUMBER() OVER (PARTITION BY comunidad)`
+   corta a `perCommunity` en UNA sola consulta — nada de N+1: 48 comunidades ×
+   4 mitos = 156 filas, 231 ms medidos contra producción.
+
+   Las bolsas del importador ("Mestizo", "Mixto", "Varios") NO son pueblos, pero
+   tampoco son basura: son 253 relatos, el 42,5 % del archivo. Aquí se conservan
+   y se marcan con `generic: true` para que la página las presente con su propia
+   etiqueta («sin pueblo identificado») en vez de descartarlas. */
+async function getCommunitySpotlightsPostgres({ seed = 0, perCommunity = 4 } = {}) {
   const sql = getSqlClient();
 
   const result = await sql.query(
     `
-    SELECT
-      communities.id,
-      communities.name,
-      communities.slug,
-      regions.name AS region,
-      regions.slug AS region_slug,
-      spotlight.title AS myth_title,
-      spotlight.slug AS myth_slug,
-      spotlight.excerpt AS myth_excerpt,
-      spotlight.image_url AS myth_image_url,
-      spotlight.total AS myth_count
-    FROM communities
-    JOIN regions ON regions.id = communities.region_id
-    JOIN LATERAL (
+    WITH ranked AS (
       SELECT
-        candidate.title,
-        candidate.slug,
-        candidate.excerpt,
-        candidate.image_url,
-        (
-          SELECT COUNT(*)
-          FROM myths counted
-          WHERE counted.community_id = communities.id
-        ) AS total
-      FROM myths candidate
-      WHERE candidate.community_id = communities.id
-        AND candidate.image_url IS NOT NULL
-      ORDER BY (candidate.id + $1) % 17, candidate.id
-      LIMIT 1
-    ) AS spotlight ON TRUE
-    ORDER BY spotlight.total DESC, communities.name ASC
-    LIMIT $2
+        communities.id AS community_id,
+        communities.name,
+        communities.slug,
+        regions.name AS region,
+        regions.slug AS region_slug,
+        COUNT(*) OVER (PARTITION BY communities.id) AS illustrated,
+        myths.id AS myth_id,
+        myths.title AS myth_title,
+        myths.slug AS myth_slug,
+        myths.excerpt AS myth_excerpt,
+        myths.image_url AS myth_image_url,
+        ROW_NUMBER() OVER (
+          PARTITION BY communities.id
+          ORDER BY ${seededOrderSql("myths", "$1")}, myths.id
+        ) AS rn
+      FROM communities
+      JOIN regions ON regions.id = communities.region_id
+      JOIN myths
+        ON myths.community_id = communities.id
+       AND myths.image_url IS NOT NULL
+    )
+    SELECT *
+    FROM ranked
+    WHERE rn <= $2
+    ORDER BY illustrated DESC, name ASC, rn ASC
     `,
-    [seed, limit]
+    [toSqlSeed(seed), clampNumber(perCommunity, 1, 12, 4)]
   );
 
   return result.rows;
 }
 
-function getCommunitySpotlightsSqlite(limit = 8, seed = 0) {
+function getCommunitySpotlightsSqlite({ seed = 0, perCommunity = 4 } = {}) {
   const db = getSqliteDb();
 
   return db
     .prepare(
       `
-      SELECT
-        communities.id,
-        communities.name,
-        communities.slug,
-        regions.name AS region,
-        regions.slug AS region_slug,
-        spotlight.title AS myth_title,
-        spotlight.slug AS myth_slug,
-        spotlight.excerpt AS myth_excerpt,
-        spotlight.image_url AS myth_image_url,
-        (
-          SELECT COUNT(*)
-          FROM myths counted
-          WHERE counted.community_id = communities.id
-        ) AS myth_count
-      FROM communities
-      JOIN regions ON regions.id = communities.region_id
-      JOIN myths AS spotlight ON spotlight.id = (
-        SELECT candidate.id
-        FROM myths candidate
-        WHERE candidate.community_id = communities.id
-          AND candidate.image_url IS NOT NULL
-        ORDER BY (candidate.id + ?) % 17, candidate.id
-        LIMIT 1
+      WITH ranked AS (
+        SELECT
+          communities.id AS community_id,
+          communities.name,
+          communities.slug,
+          regions.name AS region,
+          regions.slug AS region_slug,
+          COUNT(*) OVER (PARTITION BY communities.id) AS illustrated,
+          myths.id AS myth_id,
+          myths.title AS myth_title,
+          myths.slug AS myth_slug,
+          myths.excerpt AS myth_excerpt,
+          myths.image_url AS myth_image_url,
+          ROW_NUMBER() OVER (
+            PARTITION BY communities.id
+            ORDER BY ${seededOrderSql("myths", ":seed", "")}, myths.id
+          ) AS rn
+        FROM communities
+        JOIN regions ON regions.id = communities.region_id
+        JOIN myths
+          ON myths.community_id = communities.id
+         AND myths.image_url IS NOT NULL
       )
-      ORDER BY myth_count DESC, communities.name COLLATE NOCASE ASC
-      LIMIT ?
+      SELECT *
+      FROM ranked
+      WHERE rn <= :perCommunity
+      ORDER BY illustrated DESC, name COLLATE NOCASE ASC, rn ASC
     `
     )
-    .all(seed, limit);
+    .all({
+      seed: toSqlSeed(seed),
+      perCommunity: clampNumber(perCommunity, 1, 12, 4),
+    });
+}
+
+/* De filas planas a una comunidad por objeto. La clave es el `id`, NO el slug:
+   `mestizo`, `mixto`, `nasa-paeces` y `embera` se repiten en varias regiones y
+   agrupar por slug fundiría pueblos distintos. */
+function groupCommunitySpotlights(rows = []) {
+  const byId = new Map();
+
+  for (const row of rows) {
+    const id = row.community_id;
+    if (!byId.has(id)) {
+      byId.set(id, {
+        id,
+        name: row.name,
+        slug: row.slug,
+        region: row.region,
+        regionSlug: row.region_slug,
+        mythCount: Number(row.illustrated) || 0,
+        generic: isImporterBucket(row.name),
+        myths: [],
+      });
+    }
+    byId.get(id).myths.push({
+      id: row.myth_id,
+      slug: row.myth_slug,
+      title: row.myth_title,
+      excerpt: row.myth_excerpt,
+      imageUrl: row.myth_image_url,
+      region: row.region,
+      regionSlug: row.region_slug,
+      community: row.name,
+      communitySlug: row.slug,
+    });
+  }
+
+  return [...byId.values()];
 }
 
 const getCommunitySpotlightsCached = unstable_cache(
-  async (limit = 8, seed = 0) => {
-    if (isPostgres()) {
-      return await withRetry(() => getCommunitySpotlightsPostgres(limit, seed));
-    }
-    return getCommunitySpotlightsSqlite(limit, seed);
+  async (seed, perCommunity) => {
+    const rows = isPostgres()
+      ? await withRetry(() => getCommunitySpotlightsPostgres({ seed, perCommunity }))
+      : getCommunitySpotlightsSqlite({ seed, perCommunity });
+    return groupCommunitySpotlights(rows);
   },
-  ["community-spotlights"],
+  ["community-spotlights-v2"],
   { revalidate: ONE_DAY }
 );
 
-export async function getCommunitySpotlights(limit = 8, seed = 0) {
+/**
+ * Comunidades con obra propia, agrupadas.
+ *
+ * Devuelve TODAS las comunidades ilustradas (48 hoy), cada una con hasta
+ * `perCommunity` mitos, ordenadas por cuántos relatos ilustrados tienen. Quién
+ * llega a la portada lo decide la página con el motor de rotación — aquí no se
+ * recorta, para que haya de dónde rotar.
+ *
+ * Acepta la forma vieja `(limit, seed)` por compatibilidad; `limit` recorta
+ * cuántas comunidades vuelven.
+ */
+export async function getCommunitySpotlights(options = {}, legacySeed = 0) {
+  const config =
+    typeof options === "number"
+      ? { limit: options, seed: legacySeed }
+      : options || {};
+  const { seed = 0, perCommunity = 4, limit = 0 } = config;
+
   try {
-    return await getCommunitySpotlightsCached(limit, seed);
+    const grouped = await getCommunitySpotlightsCached(
+      toSqlSeed(seed),
+      clampNumber(perCommunity, 1, 12, 4)
+    );
+    return limit > 0 ? grouped.slice(0, limit) : grouped;
   } catch (error) {
     console.error("Error in getCommunitySpotlights:", error);
     return [];
   }
 }
+/* ------------------------------------------------------------------ *
+ * El pozo del home y los candidatos de «Barajar»
+ * ------------------------------------------------------------------ */
 
+/* Columnas mínimas de una tarjeta. Nada de `content`: son 596 relatos largos y
+   el home sólo pinta título, bajada y obra. */
+const CARD_COLUMNS_PG = `
+  myths.id,
+  myths.title,
+  myths.slug,
+  myths.excerpt,
+  myths.image_url,
+  regions.name AS region,
+  regions.slug AS region_slug,
+  communities.name AS community,
+  communities.slug AS community_slug
+`;
+
+/**
+ * El pozo del que salen portada, mesa y mapa.
+ *
+ * UNA consulta. Reparte por región con `ROW_NUMBER() OVER (PARTITION BY region)`
+ * y se queda con `perRegion` de cada una, así que las seis regiones entran al
+ * pozo con el mismo peso y el reparto fino lo hace `partitionSections` en JS.
+ * Con `perRegion = 20` son ~111 filas (Orinoquía tiene 34 y Varios 11).
+ *
+ * Sustituye al par `getFeaturedMythsWithImages(28) + getDiverseMyths(24)` que la
+ * home concatenaba en un pozo único con un cursor `take(n)`: el cursor sólo
+ * llegaba al elemento 16, así que las 24 filas de `getDiverseMyths` —la única
+ * consulta equilibrada— se traían en cada render y NO podían llegar a la página.
+ */
+async function getRotatingMythPoolPostgres({ seed = 0, perRegion = 20 } = {}) {
+  const sql = getSqlClient();
+
+  const result = await sql.query(
+    `
+    WITH pool AS (
+      SELECT
+        ${CARD_COLUMNS_PG},
+        ROW_NUMBER() OVER (
+          PARTITION BY myths.region_id
+          ORDER BY ${seededOrderSql("myths", "$1")}, myths.id
+        ) AS rn
+      FROM myths
+      JOIN regions ON regions.id = myths.region_id
+      LEFT JOIN communities ON communities.id = myths.community_id
+      WHERE myths.image_url IS NOT NULL
+    )
+    SELECT id, title, slug, excerpt, image_url, region, region_slug, community, community_slug
+    FROM pool
+    WHERE rn <= $2
+    `,
+    [toSqlSeed(seed), clampNumber(perRegion, 1, 60, 20)]
+  );
+
+  return result.rows;
+}
+
+function getRotatingMythPoolSqlite({ seed = 0, perRegion = 20 } = {}) {
+  const db = getSqliteDb();
+
+  return db
+    .prepare(
+      `
+      WITH pool AS (
+        SELECT
+          myths.id,
+          myths.title,
+          myths.slug,
+          myths.excerpt,
+          myths.image_url,
+          regions.name AS region,
+          regions.slug AS region_slug,
+          communities.name AS community,
+          communities.slug AS community_slug,
+          ROW_NUMBER() OVER (
+            PARTITION BY myths.region_id
+            ORDER BY ${seededOrderSql("myths", ":seed", "")}, myths.id
+          ) AS rn
+        FROM myths
+        JOIN regions ON regions.id = myths.region_id
+        LEFT JOIN communities ON communities.id = myths.community_id
+        WHERE myths.image_url IS NOT NULL
+      )
+      SELECT id, title, slug, excerpt, image_url, region, region_slug, community, community_slug
+      FROM pool
+      WHERE rn <= :perRegion
+    `
+    )
+    .all({ seed: toSqlSeed(seed), perRegion: clampNumber(perRegion, 1, 60, 20) });
+}
+
+const getRotatingMythPoolCached = unstable_cache(
+  async (seed, perRegion) => {
+    if (isPostgres()) {
+      return await withRetry(() => getRotatingMythPoolPostgres({ seed, perRegion }));
+    }
+    return getRotatingMythPoolSqlite({ seed, perRegion });
+  },
+  ["home-rotation-pool"],
+  { revalidate: ONE_DAY }
+);
+
+export async function getRotatingMythPool({ seed = 0, perRegion = 20 } = {}) {
+  try {
+    return await getRotatingMythPoolCached(
+      toSqlSeed(seed),
+      clampNumber(perRegion, 1, 60, 20)
+    );
+  } catch (error) {
+    console.error("Error in getRotatingMythPool:", error);
+    return [];
+  }
+}
+
+/**
+ * Candidatos para «Barajar la mesa» (`/api/mesa`).
+ *
+ * UNA consulta que ya trae las etiquetas de cada mito, para que el endpoint no
+ * tenga que ir dos veces a Neon. Filtra por tema (slug de etiqueta) y descarta
+ * los mitos que el cliente ya tiene en pantalla.
+ *
+ * A propósito NO pasa por `unstable_cache`: la lista de exclusiones viene del
+ * cliente y sería una clave de caché sin techo. La consulta cuesta ~80 ms sobre
+ * 596 filas y la respuesta la cachea el CDN por URL (`s-maxage`).
+ */
+async function getMesaCandidatesPostgres({ seed = 0, perRegion = 8, exclude = [], tag = null } = {}) {
+  const sql = getSqlClient();
+
+  const result = await sql.query(
+    `
+    WITH pool AS (
+      SELECT
+        ${CARD_COLUMNS_PG},
+        ROW_NUMBER() OVER (
+          PARTITION BY myths.region_id
+          ORDER BY ${seededOrderSql("myths", "$1")}, myths.id
+        ) AS rn
+      FROM myths
+      JOIN regions ON regions.id = myths.region_id
+      LEFT JOIN communities ON communities.id = myths.community_id
+      WHERE myths.image_url IS NOT NULL
+        AND ($3::text[] IS NULL OR NOT (myths.slug = ANY($3)))
+        AND ($4::text IS NULL OR EXISTS (
+          SELECT 1
+          FROM myth_tags
+          JOIN tags ON tags.id = myth_tags.tag_id
+          WHERE myth_tags.myth_id = myths.id AND tags.slug = $4
+        ))
+    )
+    SELECT
+      pool.id, pool.title, pool.slug, pool.excerpt, pool.image_url,
+      pool.region, pool.region_slug, pool.community, pool.community_slug,
+      COALESCE((
+        SELECT json_agg(json_build_object('name', tags.name, 'slug', tags.slug))
+        FROM myth_tags
+        JOIN tags ON tags.id = myth_tags.tag_id
+        WHERE myth_tags.myth_id = pool.id
+      ), '[]'::json) AS tags
+    FROM pool
+    WHERE pool.rn <= $2
+    `,
+    [
+      toSqlSeed(seed),
+      clampNumber(perRegion, 1, 40, 8),
+      exclude.length ? exclude : null,
+      tag || null,
+    ]
+  );
+
+  return result.rows.map((row) => ({
+    ...row,
+    tags: Array.isArray(row.tags) ? row.tags : parseJsonArray(row.tags),
+  }));
+}
+
+function getMesaCandidatesSqlite({ seed = 0, perRegion = 8, exclude = [], tag = null } = {}) {
+  const db = getSqliteDb();
+  const params = {
+    seed: toSqlSeed(seed),
+    perRegion: clampNumber(perRegion, 1, 40, 8),
+    tag: tag || null,
+  };
+  const excludeList = exclude.map((slug, index) => {
+    params[`ex${index}`] = slug;
+    return `:ex${index}`;
+  });
+  const excludeClause = excludeList.length
+    ? `AND myths.slug NOT IN (${excludeList.join(", ")})`
+    : "";
+
+  const rows = db
+    .prepare(
+      `
+      WITH pool AS (
+        SELECT
+          myths.id, myths.title, myths.slug, myths.excerpt, myths.image_url,
+          regions.name AS region, regions.slug AS region_slug,
+          communities.name AS community, communities.slug AS community_slug,
+          ROW_NUMBER() OVER (
+            PARTITION BY myths.region_id
+            ORDER BY ${seededOrderSql("myths", ":seed", "")}, myths.id
+          ) AS rn
+        FROM myths
+        JOIN regions ON regions.id = myths.region_id
+        LEFT JOIN communities ON communities.id = myths.community_id
+        WHERE myths.image_url IS NOT NULL
+          ${excludeClause}
+          AND (:tag IS NULL OR EXISTS (
+            SELECT 1
+            FROM myth_tags
+            JOIN tags ON tags.id = myth_tags.tag_id
+            WHERE myth_tags.myth_id = myths.id AND tags.slug = :tag
+          ))
+      )
+      SELECT
+        pool.id, pool.title, pool.slug, pool.excerpt, pool.image_url,
+        pool.region, pool.region_slug, pool.community, pool.community_slug,
+        (
+          SELECT group_concat(tags.name || '|' || tags.slug, '::')
+          FROM myth_tags
+          JOIN tags ON tags.id = myth_tags.tag_id
+          WHERE myth_tags.myth_id = pool.id
+        ) AS tags_joined
+      FROM pool
+      WHERE pool.rn <= :perRegion
+    `
+    )
+    .all(params);
+
+  return rows.map((row) => ({
+    ...row,
+    tags: String(row.tags_joined || "")
+      .split("::")
+      .filter(Boolean)
+      .map((entry) => {
+        const [name, slug] = entry.split("|");
+        return { name, slug };
+      }),
+  }));
+}
+
+export async function getMesaCandidates({
+  seed = 0,
+  perRegion = 8,
+  exclude = [],
+  tag = null,
+} = {}) {
+  const clean = [...new Set((exclude || []).filter(Boolean))].slice(0, 40);
+  try {
+    if (isPostgres()) {
+      return await withRetry(() =>
+        getMesaCandidatesPostgres({ seed, perRegion, exclude: clean, tag })
+      );
+    }
+    return getMesaCandidatesSqlite({ seed, perRegion, exclude: clean, tag });
+  } catch (error) {
+    console.error("Error in getMesaCandidates:", error);
+    return [];
+  }
+}
 // Get diverse myths from different regions for home page
 async function getDiverseMythsPostgres(limit = 9, seed = 0) {
   const sql = getSqlClient();
@@ -1376,7 +1742,7 @@ async function getDiverseMythsPostgres(limit = 9, seed = 0) {
             PARTITION BY regions.id
             ORDER BY
               CASE WHEN myths.image_url IS NOT NULL THEN 0 ELSE 1 END,
-              (myths.id + $1) % 100
+              ${seededOrderSql("myths", "$1")}
           ) as rn
         FROM myths
         JOIN regions ON regions.id = myths.region_id
@@ -1389,10 +1755,10 @@ async function getDiverseMythsPostgres(limit = 9, seed = 0) {
       WHERE rn <= 2
       ORDER BY
         CASE WHEN image_url IS NOT NULL THEN 0 ELSE 1 END,
-        (id + $1) % 100
+        ${seededOrderSql("ranked_myths", "$1")}
       LIMIT $2
       `,
-      [seed, limit]
+      [toSqlSeed(seed), limit]
     );
 
     return result.rows;
@@ -1424,11 +1790,11 @@ function getDiverseMythsSqlite(limit = 9, seed = 0) {
       LEFT JOIN communities ON communities.id = myths.community_id
       ORDER BY
         CASE WHEN myths.image_url IS NOT NULL THEN 0 ELSE 1 END,
-        (myths.id + ?) % 100
-      LIMIT ?
+        ${seededOrderSql("myths", ":seed", "")}
+      LIMIT :limit
     `;
 
-    return db.prepare(sql).all(seed, limit);
+    return db.prepare(sql).all({ seed: toSqlSeed(seed), limit });
   } catch (error) {
     console.error("Error getting diverse myths (SQLite):", error);
     return [];

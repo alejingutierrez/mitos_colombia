@@ -1,0 +1,207 @@
+/* ==========================================================================
+   Home · superficies de «Las otras cartografías» y «Los hilos del archivo».
+   Sólo vive aquí lo que Tailwind no expresa bien: el hilo que se dibuja sobre
+   la lámina y la medida teñida de cada categoría. Todo el color sale de los
+   tokens de globals.css — no hay un solo valor suelto.
+   ========================================================================== */
+
+/* ---------- Las otras cartografías: láminas ---------- */
+
+.plate {
+  transition:
+    transform 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.plate:hover,
+.plate:focus-visible {
+  transform: translateY(-4px);
+  box-shadow: 0 24px 48px -24px rgba(22, 22, 17, 0.32);
+}
+.plate:focus-visible {
+  outline: 2px solid rgb(var(--ember-500));
+  outline-offset: 3px;
+}
+
+/* El filo de ruta: una línea de oro que se traza de izquierda a derecha al
+   posarse encima. Es la firma cartográfica de la sección — la misma idea que
+   la línea con paradas de /rutas, reducida a su gesto mínimo. */
+.thread {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: rgb(var(--ember-500));
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.plate:hover .thread,
+.plate:focus-visible .thread {
+  transform: scaleX(1);
+}
+
+/* Celda de salida. Papel y filete: se lee como índice, no como una ruta más. */
+.exit {
+  transition:
+    border-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.exit:hover,
+.exit:focus-visible {
+  border-color: rgb(var(--jungle-500));
+  transform: translateY(-4px);
+}
+.exit:focus-visible {
+  outline: 2px solid rgb(var(--ember-500));
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .plate,
+  .exit,
+  .thread {
+    transition: none;
+  }
+  .plate:hover,
+  .plate:focus-visible,
+  .exit:hover,
+  .exit:focus-visible {
+    transform: none;
+  }
+  /* El filo sigue marcando el foco, pero aparece sin trazarse. */
+  .thread {
+    transform: scaleX(1);
+    opacity: 0;
+  }
+  .plate:hover .thread,
+  .plate:focus-visible .thread {
+    opacity: 1;
+  }
+  /* `.atlas-image-zoom` es global y no trae freno propio: aquí se le pone. */
+  .plate img {
+    transition: none !important;
+    transform: none !important;
+  }
+}
+
+/* ---------- Los hilos del archivo: la madeja ---------- */
+
+/* Cada categoría es un hilo tendido entre su nombre y su cifra. El cuerpo de
+   la letra, el grosor del hilo y el largo teñido de la medida dicen lo mismo
+   —cuántos relatos reúne— en tres registros distintos. La medida vive en una
+   pista de ancho FIJO: así el trecho teñido de un hilo se puede comparar
+   contra el de cualquier otro. */
+.hilo {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  padding-block: 0.5rem;
+  border-bottom: 1px solid rgb(var(--line-100));
+  color: rgb(var(--jungle-700));
+  transition: color 0.3s ease;
+}
+.hilo:focus-visible {
+  outline: 2px solid rgb(var(--ember-500));
+  outline-offset: 2px;
+}
+
+.hiloName {
+  font-family: var(--font-display), ui-sans-serif, system-ui, sans-serif;
+  font-size: var(--hilo-size, 1.25rem);
+  line-height: 1.06;
+  letter-spacing: -0.012em;
+  min-width: 0;
+  /* Un nombre largo con el cuerpo mayor puede no caber en un teléfono
+     angosto. Si tiene que partirse, que lo haga con guion y no a la mitad
+     de la palabra: el documento declara lang="es". */
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+/* Tramo suelto del hilo: sólo une el nombre con su medida. */
+.hiloLead {
+  flex: 1 1 auto;
+  align-self: center;
+  min-width: 0.75rem;
+  height: 1px;
+  /* La sección se sirve sobre `mist-50`: con `line-100` el hilo desaparecía
+     —los dos valores están a diez puntos de distancia— y el bloque volvía a
+     leerse como una lista suelta. */
+  background: rgb(var(--line-200));
+}
+
+/* La medida. Teñida de verde selva en la proporción real del conteo. El tramo
+   sin teñir tiene que VERSE: es la pista contra la que se compara, y con
+   `line-200` sobre `mist-50` no se distinguía del fondo — sin ella cada hilo
+   parecía una rayita suelta en vez de una medida. */
+.hiloTrack {
+  flex: 0 0 auto;
+  align-self: center;
+  width: 5rem;
+  height: var(--hilo-weight, 1px);
+  background: linear-gradient(
+    to right,
+    rgb(var(--jungle-500) / var(--hilo-ink, 0.4)) 0 var(--hilo-fill, 0%),
+    rgb(var(--line-300)) var(--hilo-fill, 0%) 100%
+  );
+  transition: background 0.3s ease;
+}
+/* Teléfono angosto: la medida cede ancho para que el nombre no se parta. */
+@media (max-width: 400px) {
+  .hilo {
+    gap: 0.5rem;
+  }
+  .hiloTrack {
+    width: 4rem;
+  }
+  .hiloCount {
+    width: 2.1rem;
+  }
+}
+@media (min-width: 1024px) {
+  .hiloTrack {
+    width: 7.5rem;
+  }
+}
+
+.hiloCount {
+  flex: 0 0 auto;
+  width: 2.5rem;
+  text-align: right;
+  font-family: var(--font-body), ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: rgb(var(--ink-500));
+  transition: color 0.3s ease;
+}
+
+.hilo:hover,
+.hilo:focus-visible {
+  color: rgb(var(--ember-500));
+}
+.hilo:hover .hiloCount,
+.hilo:focus-visible .hiloCount {
+  color: rgb(var(--ink-900));
+}
+.hilo:hover .hiloTrack,
+.hilo:focus-visible .hiloTrack {
+  background: linear-gradient(
+    to right,
+    rgb(var(--ember-500)) 0 var(--hilo-fill, 0%),
+    rgb(var(--line-300)) var(--hilo-fill, 0%) 100%
+  );
+}
+.hilo:hover .hiloLead,
+.hilo:focus-visible .hiloLead {
+  background: rgb(var(--ember-500) / 0.45);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hilo,
+  .hiloTrack,
+  .hiloCount {
+    transition: none;
+  }
+}

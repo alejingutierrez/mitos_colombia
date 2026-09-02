@@ -63,36 +63,10 @@ export function RouteBanner({ route }) {
   );
 }
 
-/* Las otras cartografías. Fichas tipográficas: la banda de arriba ya carga la
-   obra, y repetir imagen aquí volvía la página una sola lista de fotos. */
-export function RouteCards({ routes = [] }) {
-  if (!routes.length) return null;
-  return (
-    <div className="grid grid-cols-2 gap-3 lg:grid-cols-4 lg:gap-5">
-      {routes.map((route) => (
-        <Link
-          key={route.slug}
-          href={`/rutas/${route.slug}`}
-          className="group flex min-h-[8.25rem] flex-col border border-line-200 bg-paper p-4 transition-all duration-300 ease-editorial hover:-translate-y-1 hover:border-jungle-500 hover:shadow-lift md:min-h-[10.5rem] md:p-[22px]"
-        >
-          <span className="atlas-figure font-editorial text-[15px] leading-none text-ember-500">
-            {route.index}
-          </span>
-          <span className="atlas-title-sm mt-3 md:mt-4">{route.title}</span>
-          {route.detail ? (
-            <span className="mt-2 text-xs leading-relaxed text-ink-500 md:text-[13px]">
-              {route.detail}
-            </span>
-          ) : null}
-          <span className="mt-auto hidden items-center gap-2 pt-4 text-xs font-semibold text-ink-900 opacity-0 transition-opacity duration-200 group-hover:opacity-100 md:flex">
-            Seguir la ruta
-            <Arrow />
-          </span>
-        </Link>
-      ))}
-    </div>
-  );
-}
+/* Las otras cartografías → RouteAtlas.js.
+   Era una rejilla de fichas tipográficas: el bloque menos gráfico del sitio,
+   con la obra de cada ruta sin usar. Ahora es un pliego de láminas. */
+export { RouteCards } from "./RouteAtlas";
 
 /* Territorios en medallón. En móvil van en carril horizontal: con una rejilla
    de tres columnas los dos últimos quedaban huérfanos y desalineados. */
@@ -168,41 +142,10 @@ export function TerritoryBanner({ imageUrl, motif }) {
   );
 }
 
-/* Nube de categorías: el cuerpo de cada hilo es proporcional a cuántos relatos
-   reúne, así que la escala la calcula el servidor y viaja como --cloud-size.
-   Con una raíz de 0.6 el hilo dominante se ve dominante sin aplastar al resto. */
-function cloudSize(count, max) {
-  const ratio = max > 0 ? Math.min(count / max, 1) : 0;
-  const min = 16 + ratio ** 0.6 * 14;
-  const top = 16 + ratio ** 0.6 * 32;
-  const slope = ((top - min) / 1050) * 100;
-  const base = min - ((top - min) * 390) / 1050;
-  return `clamp(${min.toFixed(1)}px, ${base.toFixed(2)}px + ${slope.toFixed(3)}vw, ${top.toFixed(1)}px)`;
-}
-
-export function CategoryCloud({ categories = [] }) {
-  if (!categories.length) return null;
-  const max = categories.reduce((top, item) => Math.max(top, item.count || 0), 0);
-  return (
-    <div className="flex max-w-[70rem] flex-wrap items-baseline gap-x-5 gap-y-2 md:gap-x-6 md:gap-y-2.5">
-      {categories.map((category) => (
-        <Link
-          key={category.slug}
-          href={`/categorias/${category.slug}`}
-          className="home-cloud-item"
-          style={{ "--cloud-size": cloudSize(category.count, max) }}
-        >
-          {category.name}
-          {category.count ? (
-            <i className="atlas-figure font-body text-[10px] font-semibold not-italic text-ink-500 md:text-xs">
-              {category.count}
-            </i>
-          ) : null}
-        </Link>
-      ))}
-    </div>
-  );
-}
+/* Los hilos del archivo → ArchiveThreads.js.
+   Era una nube de etiquetas escalada por conteo: honesta pero inerte. Ahora es
+   una madeja — nombre, hilo y medida teñida — con la cifra real de cada tema. */
+export { CategoryCloud } from "./ArchiveThreads";
 
 export function HomeClosing({ totalMyths }) {
   return (
