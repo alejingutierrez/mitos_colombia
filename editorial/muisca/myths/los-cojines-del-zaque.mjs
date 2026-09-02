@@ -58,7 +58,7 @@ En el mundo, los observatorios y piedras de orientación solar, desde Stonehenge
     "Antes del alba, el zaque y su pueblo suben a dos discos de piedra de Tunja a esperar la salida del sol; una niña aprende por qué el amanecer no pertenece a quien gobierna.",
   seoTitle: "Cojines del Zaque: culto solar muisca en Tunja",
   seoDescription:
-    "Los Cojines del Zaque de Tunja: dos piedras talladas desde donde los hunzas esperaban la salida del sol, con su mito, su historia y su posible función astronómica.",
+    "Los Cojines del Zaque de Tunja: dos piedras talladas donde los hunzas esperaban la salida del sol, con su mito, su historia y su posible función astronómica.",
   ogTitle: "Los Cojines del Zaque: esperar el amanecer",
   ogDescription:
     "Antes del alba, el zaque de Hunza se arrodilla sobre dos discos de roca mientras el primer borde del sol aparece entre ellos.",
