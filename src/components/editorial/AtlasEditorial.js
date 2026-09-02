@@ -220,7 +220,7 @@ export function SelectionMosaic({ myths = [] }) {
         imageRole="portrait"
         strictImageRole
         priority
-        quality={70}
+        quality={68}
         sizes="(max-width: 767px) 800px, (max-width: 1024px) 900px, 67vw"
         className="md:col-span-3 md:row-span-2 lg:col-start-1 lg:col-end-6 lg:row-start-1 lg:row-end-3"
         titleClass="atlas-title-lg"

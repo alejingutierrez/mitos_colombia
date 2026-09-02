@@ -1,87 +1,60 @@
 "use client";
 
-import { useCallback, useEffect, useRef, useState } from "react";
+import dynamic from "next/dynamic";
 
-function MapPlaceholder({ onLoad }) {
+// La cartografía se resuelve sola. Antes vivía detrás de un IntersectionObserver
+// que sólo tenía una oportunidad: su primer registro. El navegador no entrega
+// registros de intersección mientras el documento no se pinta (pestaña oculta,
+// ventana tapada, carga en segundo plano), así que esa oportunidad se perdía y
+// el mapa quedaba pendiente para siempre; el botón de rescate tampoco podía
+// reintentar porque la bandera ya estaba levantada. `next/dynamic` con
+// `ssr: false` descarga Leaflet apenas hidrata la página —sin gestos ni
+// observadores— y muestra este esqueleto mientras llega el bundle.
+const MapaExplorer = dynamic(() => import("../../components/MapaExplorer"), {
+  ssr: false,
+  loading: MapaSkeleton,
+});
+
+// El esqueleto también es el HTML del servidor: `next/dynamic` renderiza el
+// `loading` en el servidor aunque `ssr` sea false, así que el <h1> de la página
+// viaja en la respuesta y no depende de que corra JavaScript.
+function MapaSkeleton() {
   return (
     <section
-      className="grid min-h-[calc(100svh-4rem)] border-b border-line-100 lg:grid-cols-[27rem_1fr]"
+      className="flex flex-col border-b border-line-100 bg-white lg:grid lg:h-[calc(100svh-4rem)] lg:grid-cols-[26rem_1fr]"
       aria-labelledby="mapa-interactivo"
     >
-      <div className="flex items-center border-b border-line-100 p-7 lg:border-b-0 lg:border-r lg:p-10">
-        <div>
+      <div className="relative order-1 h-[58svh] w-full overflow-hidden bg-river-tint lg:order-2 lg:h-full">
+        <span className="absolute inset-0 opacity-40 [background-image:radial-gradient(circle_at_30%_30%,white,transparent_45%)]" />
+        <p className="absolute inset-0 grid place-items-center text-sm text-river-700">
+          Dibujando el mapa…
+        </p>
+      </div>
+
+      <aside className="order-2 flex min-h-0 flex-col border-t border-line-100 lg:order-1 lg:border-r lg:border-t-0">
+        <div className="min-h-0 flex-1 px-5 py-6 lg:px-9 lg:py-9">
           <h1
             id="mapa-interactivo"
-            className="font-editorial text-[3.4rem] font-semibold leading-[0.9] text-ink-900"
+            className="font-display text-[length:var(--step-4)] leading-[1.04] tracking-[-0.012em] text-balance text-ink-900"
           >
             El mapa de los mitos de Colombia
           </h1>
-          <p className="mt-5 text-sm leading-relaxed text-ink-700">
+          <p className="mt-4 text-sm leading-relaxed text-ink-700">
             Cada relato anclado a su geografía.
           </p>
-          <button
-            type="button"
-            onClick={onLoad}
-            className="mt-7 inline-flex min-h-11 items-center justify-center bg-jungle-700 px-6 py-3 text-sm font-semibold text-white transition hover:bg-jungle-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-jungle-700"
-          >
-            Cargar mapa interactivo
-          </button>
+          <div className="mt-7 space-y-3" aria-hidden="true">
+            <div className="h-12 w-full animate-pulse bg-mist-50" />
+            <div className="grid grid-cols-2 gap-3">
+              <div className="h-12 animate-pulse bg-mist-50" />
+              <div className="h-12 animate-pulse bg-mist-50" />
+            </div>
+          </div>
         </div>
-      </div>
-      <div className="relative grid min-h-[65svh] place-items-center overflow-hidden bg-river-tint">
-        <span className="absolute inset-0 opacity-40 [background-image:radial-gradient(circle_at_30%_30%,white,transparent_45%)]" />
-        <p className="relative text-sm text-river-700">Preparando la cartografía…</p>
-      </div>
+      </aside>
     </section>
   );
 }
 
 export default function MapaPageClient() {
-  const [MapComponent, setMapComponent] = useState(null);
-  const [loadRequested, setLoadRequested] = useState(false);
-  const loaderRef = useRef(null);
-
-  const requestMap = useCallback(() => {
-    setLoadRequested(true);
-  }, []);
-
-  useEffect(() => {
-    const node = loaderRef.current;
-    if (!node || loadRequested || !("IntersectionObserver" in window)) return undefined;
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry?.isIntersecting) {
-          setLoadRequested(true);
-          observer.disconnect();
-        }
-      },
-      // Do not start cartography while it still competes with the page hero.
-      // It becomes automatic once the visitor scrolls the map into the upper
-      // third of the viewport; the explicit button remains available sooner.
-      { rootMargin: "0px 0px -65% 0px" }
-    );
-
-    observer.observe(node);
-    return () => observer.disconnect();
-  }, [loadRequested]);
-
-  useEffect(() => {
-    if (!loadRequested || MapComponent) return undefined;
-
-    let active = true;
-    import("../../components/MapaExplorer").then((module) => {
-      if (active) setMapComponent(() => module.default);
-    });
-
-    return () => {
-      active = false;
-    };
-  }, [MapComponent, loadRequested]);
-
-  return (
-    <div ref={loaderRef}>
-      {MapComponent ? <MapComponent /> : <MapPlaceholder onLoad={requestMap} />}
-    </div>
-  );
+  return <MapaExplorer />;
 }

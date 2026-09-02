@@ -1,9 +1,56 @@
 import { unstable_cache } from "next/cache";
 import { getSqlClient, getSqliteDb, isPostgres, isQuotaError } from "./db";
 import { isStaticDataBuild, withRetry } from "./db-resilience";
+import { isImporterBucket } from "./home-rotation";
+import {
+  SEARCH_WEIGHTS,
+  buildSearchTerms,
+  escapeLikePattern,
+  foldedSql,
+  likeContains,
+} from "./search-terms";
 
 const ONE_HOUR = 60 * 60;
 const ONE_DAY = 60 * 60 * 24;
+
+/* ------------------------------------------------------------------ *
+ * Orden pseudoaleatorio y determinista, sembrado por día
+ * ------------------------------------------------------------------ */
+
+/* El módulo de la mezcla. Primo, y con el techo de ids del archivo (600) el
+   producto de abajo no pasa de ~4e14: muy por debajo del techo de un bigint. */
+const SEED_MODULUS = 1000003;
+
+/**
+ * Recorta la semilla del día al rango que aguanta `seededOrderSql`.
+ *
+ * `dailySeed()` devuelve 32 bits; en SQL se multiplican dos factores, así que
+ * hay que acotarla o el producto se sale del bigint.
+ */
+export function toSqlSeed(seed) {
+  const value = Number(seed);
+  if (!Number.isFinite(value)) return 0;
+  return Math.abs(Math.trunc(value)) % SEED_MODULUS;
+}
+
+/**
+ * Expresión de orden sembrado.
+ *
+ * NO usar `(id + semilla) % N`, que es lo que había: sumar la semilla ANTES de un
+ * módulo pequeño no reordena la lista, sólo la ROTA. Por eso `% 23` daba
+ * exactamente 23 portadas distintas y sólo 115 de los 596 mitos llegaban a
+ * portada (medido contra producción). Aquí la semilla entra en los DOS factores
+ * de un producto, así que el término lineal en `id` cambia con ella y la
+ * permutación es de verdad distinta: 400 semillas dan 400 portadas distintas y
+ * alcanzan 582 de los 596 mitos.
+ *
+ * `cast` es "::bigint" en Postgres y "" en SQLite (que ya usa enteros de 64 bits).
+ */
+function seededOrderSql(alias, param, cast = "::bigint") {
+  const id = `${alias}.id${cast}`;
+  const seed = `${param}${cast}`;
+  return `(((${id} * 7919 + ${seed}) * (${id} * 104729 + ${seed} + 1)) % ${SEED_MODULUS})`;
+}
 
 function normalizeInput(value) {
   if (!value) {
@@ -49,106 +96,84 @@ function clampNumber(value, min, max, fallback) {
   return Math.min(Math.max(parsed, min), max);
 }
 
-function buildFiltersSqlite({ region, community, tag, q }) {
-  const where = [];
-  const params = {};
+/* ------------------------------------------------------------------ *
+ * Búsqueda con relevancia (la página de resultados, `/mitos?q=…`)
+ * ------------------------------------------------------------------ *
+ *
+ * Antes: un `ILIKE '%q%'` encadenado sobre nueve columnas y
+ * `ORDER BY myths.title ASC`. No había relevancia ninguna: "llorona" devolvía
+ * siete relatos con "El Hada de los Cañaverales" primero y "La llorona"
+ * QUINTO, por orden alfabético. Y "bachue" sin tilde devolvía CERO.
+ *
+ * Ahora hay dos ramas para encontrar y una tabla de pesos para ordenar.
+ *
+ * ENCONTRAR — nunca encoge lo que ya era encontrable:
+ *   (a) el mismo ILIKE crudo de hoy sobre las nueve columnas, el cuerpo
+ *       incluido, con los comodines de la persona ya escapados;
+ *   (b) además, plegando tildes y ñ y probando variantes de plural, exigiendo
+ *       TODOS los tokens (Y) y bastando una variante dentro de cada uno (O).
+ *
+ * ORDENAR — `SEARCH_WEIGHTS` traducida a `CASE WHEN`, sobre los campos
+ * angostos. Es la MISMA tabla que suma en JavaScript el typeahead de
+ * `lib/search.js`, así que un cambio de peso mueve los dos órdenes a la vez.
+ *
+ * COSTO. Tres decisiones, las tres medidas contra la base de producción
+ * (596 relatos, medianas de cinco repeticiones, consulta "agua"):
+ *
+ *   1. El cuerpo NO se pliega. `myths.content` suma 3,92 MB en toda la tabla;
+ *      título + resumen + temas + palabras clave + territorio + pueblo suman
+ *      189 KB: veinte veces menos. Plegar también el cuerpo pasaba la consulta
+ *      de ~113 ms a ~765 ms (6,8x) para comprar diez aciertos más en "bachue".
+ *      El cuerpo sigue entrando por el ILIKE crudo, así que un relato que sólo
+ *      menciona la palabra ahí SE ENCUENTRA; pesa 4 puntos contra los 80 de un
+ *      acierto de título y queda al final. Eso es "el título gana al cuerpo".
+ *
+ *   2. Los plegados se calculan UNA VEZ por fila, en un CTE MATERIALIZED.
+ *      Repartidos por los ~22 `CASE WHEN` del orden, Postgres los recalculaba
+ *      en cada uno: 367 ms. Calculados una vez y referenciados por alias:
+ *      200 ms.
+ *
+ *   3. La búsqueda hace UNA consulta, no dos. El total sale de
+ *      `COUNT(*) OVER ()`, que se evalúa después del WHERE y antes del LIMIT.
+ *      Con eso la ruta de búsqueda completa mide ~202 ms, contra los ~203 ms
+ *      que costaban las dos consultas del ILIKE alfabético: la búsqueda nueva
+ *      hace mucho más y NO cuesta más.
+ *
+ * El archivo sin `q` conserva su forma de siempre (conteo + listado,
+ * alfabético) y no paga nada de esto.
+ */
 
-  const regionValue = normalizeInput(region);
-  if (regionValue) {
-    where.push("(regions.slug = :region OR regions.name = :region)");
-    params.region = regionValue;
-  }
-
-  const communityValue = normalizeInput(community);
-  if (communityValue) {
-    where.push("(communities.slug = :community OR communities.name = :community)");
-    params.community = communityValue;
-  }
-
-  const tagValue = normalizeInput(tag);
-  if (tagValue) {
-    where.push("(tags.slug = :tag OR tags.name = :tag)");
-    params.tag = tagValue;
-  }
-
-  const queryValue = normalizeInput(q);
-  if (queryValue) {
-    where.push(
-      `(\n        myths.title LIKE :q OR\n        myths.excerpt LIKE :q OR\n        myths.content LIKE :q OR\n        myths.tags_raw LIKE :q OR\n        myths.focus_keywords_raw LIKE :q OR\n        regions.name LIKE :q OR\n        regions.slug LIKE :q OR\n        communities.name LIKE :q OR\n        communities.slug LIKE :q\n      )`
-    );
-    params.q = `%${queryValue}%`;
-  }
-
-  return { where, params };
+/** `a || ' ' || b || …` tolerando NULL, que es lo que hacen los dos motores. */
+function concatSql(columns) {
+  return columns.map((column) => `COALESCE(${column}, '')`).join(" || ' ' || ");
 }
 
-function buildFiltersPostgres({ region, community, tag, q }) {
-  const where = [];
-  const values = [];
+const TITLE_COLUMN = "myths.title";
+const META_COLUMNS = ["myths.excerpt", "myths.tags_raw", "myths.focus_keywords_raw"];
+const PLACE_COLUMNS = [
+  "regions.name",
+  "regions.slug",
+  "communities.name",
+  "communities.slug",
+];
+/** Las nueve columnas del ILIKE de hoy. Se conservan tal cual por recall. */
+const RAW_MATCH_COLUMNS = [
+  "myths.title",
+  "myths.excerpt",
+  "myths.content",
+  "myths.tags_raw",
+  "myths.focus_keywords_raw",
+  "regions.name",
+  "regions.slug",
+  "communities.name",
+  "communities.slug",
+];
 
-  const regionValue = normalizeInput(region);
-  if (regionValue) {
-    values.push(regionValue);
-    const idx = values.length;
-    where.push(`(regions.slug = $${idx} OR regions.name = $${idx})`);
-  }
-
-  const communityValue = normalizeInput(community);
-  if (communityValue) {
-    values.push(communityValue);
-    const idx = values.length;
-    where.push(`(communities.slug = $${idx} OR communities.name = $${idx})`);
-  }
-
-  const tagValue = normalizeInput(tag);
-  if (tagValue) {
-    values.push(tagValue);
-    const idx = values.length;
-    where.push(`(tags.slug = $${idx} OR tags.name = $${idx})`);
-  }
-
-  const queryValue = normalizeInput(q);
-  if (queryValue) {
-    values.push(`%${queryValue}%`);
-    const idx = values.length;
-    where.push(
-      `(\n        myths.title ILIKE $${idx} OR\n        myths.excerpt ILIKE $${idx} OR\n        myths.content ILIKE $${idx} OR\n        myths.tags_raw ILIKE $${idx} OR\n        myths.focus_keywords_raw ILIKE $${idx} OR\n        regions.name ILIKE $${idx} OR\n        regions.slug ILIKE $${idx} OR\n        communities.name ILIKE $${idx} OR\n        communities.slug ILIKE $${idx}\n      )`
-    );
-  }
-
-  return { where, values, tagValue };
-}
-
-function listMythsSqlite({
-  region,
-  community,
-  tag,
-  q,
-  limit = 20,
-  offset = 0,
-} = {}) {
-  const db = getSqliteDb();
-  const { where, params } = buildFiltersSqlite({ region, community, tag, q });
-  const tagJoin = normalizeInput(tag)
-    ? "JOIN myth_tags ON myth_tags.myth_id = myths.id JOIN tags ON tags.id = myth_tags.tag_id"
-    : "";
-
-  const whereClause = where.length ? `WHERE ${where.join(" AND ")}` : "";
-
-  const limitValue = clampNumber(limit, 1, 100, 20);
-  const offsetValue = clampNumber(offset, 0, 5000, 0);
-
-  const countSql = `
-    SELECT COUNT(DISTINCT myths.id) AS count
-    FROM myths
+const MYTH_JOINS = `FROM myths
     JOIN regions ON regions.id = myths.region_id
-    LEFT JOIN communities ON communities.id = myths.community_id
-    ${tagJoin}
-    ${whereClause}
-  `;
+    LEFT JOIN communities ON communities.id = myths.community_id`;
 
-  const listSql = `
-    SELECT DISTINCT
+const LIST_COLUMNS = `
       myths.id,
       myths.title,
       myths.slug,
@@ -164,26 +189,357 @@ function listMythsSqlite({
       regions.name AS region,
       regions.slug AS region_slug,
       communities.name AS community,
-      communities.slug AS community_slug
-    FROM myths
-    JOIN regions ON regions.id = myths.region_id
-    LEFT JOIN communities ON communities.id = myths.community_id
-    ${tagJoin}
+      communities.slug AS community_slug`;
+
+/**
+ * Bolsa de parámetros que reusa el mismo valor.
+ *
+ * El WHERE y el ORDER BY comparten patrones (`%muisca%` aparece en los dos), y
+ * cada variante de plural entra varias veces. Sin esto, una consulta de tres
+ * palabras mandaría medio centenar de parámetros repetidos.
+ *
+ * Van en DOS bolsas encadenadas por una razón que costó un
+ * `bind message supplies 11 parameters, but prepared statement requires 8`: la
+ * consulta de conteo del archivo lleva el WHERE pero NO el ORDER BY, así que si
+ * los parámetros de la puntuación entraran en la misma lista, mandaría
+ * parámetros que su SQL no nombra y Postgres lo rechaza (better-sqlite3
+ * también). La segunda bolsa numera A CONTINUACIÓN de la primera y, si el valor
+ * ya está en ella, reusa su marcador en vez de duplicarlo.
+ */
+function createParamBag(dialect, base = null) {
+  const values = [];
+  const index = new Map();
+  const offset = base ? base.values.length : 0;
+  return {
+    values,
+    peek: (value) => index.get(value) || null,
+    ref(value) {
+      const reused = base ? base.peek(value) : null;
+      if (reused) return reused;
+      if (index.has(value)) return index.get(value);
+      values.push(value);
+      const position = offset + values.length;
+      const placeholder = dialect === "sqlite" ? `:p${position}` : `$${position}`;
+      index.set(value, placeholder);
+      return placeholder;
+    },
+  };
+}
+
+/**
+ * Las piezas SQL de una consulta de texto.
+ *
+ * `whereBag` recibe los parámetros que necesitan el CTE y el filtro (y por
+ * tanto también el conteo del archivo); la bolsa de la puntuación se abre
+ * DESPUÉS, con el WHERE ya cerrado, para que numere a continuación.
+ *
+ * Devuelve `scoreSql` en null cuando la consulta no deja nada normalizable
+ * (por ejemplo "%%%" o "···"): entonces el orden vuelve a ser alfabético.
+ */
+function buildSearchClauses(rawQuery, whereBag, dialect) {
+  const terms = buildSearchTerms(rawQuery);
+  const likeWith = (bag) => (pattern) => `LIKE ${bag.ref(pattern)} ESCAPE '\\'`;
+  const ilikeWith = (bag) => (pattern) =>
+    dialect === "sqlite"
+      ? `LIKE ${bag.ref(pattern)} ESCAPE '\\'`
+      : `ILIKE ${bag.ref(pattern)} ESCAPE '\\'`;
+
+  const whereLike = likeWith(whereBag);
+  const whereIlike = ilikeWith(whereBag);
+
+  /* Los plegados viven en el CTE y se referencian por alias. Aquí se declaran
+     las expresiones que lo construyen. */
+  const foldedColumns = [
+    `${foldedSql(TITLE_COLUMN, dialect)} AS f_title`,
+    `${foldedSql(concatSql(META_COLUMNS), dialect)} AS f_meta`,
+    `${foldedSql(concatSql(PLACE_COLUMNS), dialect)} AS f_place`,
+    `${foldedSql(
+      concatSql([TITLE_COLUMN, ...META_COLUMNS, ...PLACE_COLUMNS]),
+      dialect
+    )} AS f_all`,
+  ];
+
+  /* (a) Paridad con el ILIKE de hoy: la consulta cruda sobre las nueve
+     columnas. Se escapan `%` y `_` para que un comodín escrito por la persona
+     deje de barrer el archivo entero. */
+  const rawPattern = likeContains(terms.raw);
+  foldedColumns.push(
+    `(myths.content ${whereIlike(rawPattern)}) AS body_hit`,
+    `(${RAW_MATCH_COLUMNS.map(
+      (column) => `${column} ${whereIlike(rawPattern)}`
+    ).join(" OR ")}) AS raw_hit`
+  );
+
+  /* (b) Sin tildes y con plurales. Se exigen TODOS los tokens (Y) y dentro de
+     cada uno basta una variante (O): "muiscas" encuentra "muisca" y al revés,
+     y "la llorona" no se convierte en "todo lo que diga la". */
+  const branches = ["folded.raw_hit"];
+  if (terms.groups.length) {
+    const grouped = terms.groups
+      .map(
+        (group) =>
+          `(${group.variants
+            .map((variant) => `folded.f_all ${whereLike(likeContains(variant))}`)
+            .join(" OR ")})`
+      )
+      .join(" AND ");
+    branches.push(`(${grouped})`);
+  }
+  const predicate = `(${branches.join(" OR ")})`;
+
+  if (!terms.phrase) {
+    return { foldedColumns, predicate, scoreSql: null, scoreValues: [] };
+  }
+
+  const scoreBag = createParamBag(dialect, whereBag);
+  const like = likeWith(scoreBag);
+  const w = SEARCH_WEIGHTS;
+  const phraseAny = likeContains(terms.phrase);
+  const phrasePrefix = `${escapeLikePattern(terms.phrase)}%`;
+  const phraseWord = `% ${escapeLikePattern(terms.phrase)}%`;
+  const pieces = [
+    `CASE WHEN folded.f_title = ${scoreBag.ref(terms.phrase)} THEN ${w.titleExact} ELSE 0 END`,
+    `CASE WHEN folded.f_title ${like(phrasePrefix)} THEN ${w.titlePrefix} ELSE 0 END`,
+    // Principio de palabra: "agua" premia "La madre agua", no "Yagua".
+    `CASE WHEN folded.f_title ${like(phraseWord)} THEN ${w.titleWordStart} ELSE 0 END`,
+    `CASE WHEN folded.f_title ${like(phraseAny)} THEN ${w.titlePhrase} ELSE 0 END`,
+    `CASE WHEN folded.f_meta ${like(phraseAny)} THEN ${w.metaPhrase} ELSE 0 END`,
+    `CASE WHEN folded.f_place ${like(phraseAny)} THEN ${w.placePhrase} ELSE 0 END`,
+    // El cuerpo se comprueba en el CTE, no se pliega ni se ordena: 4 puntos.
+    `CASE WHEN folded.body_hit THEN ${w.bodyPhrase} ELSE 0 END`,
+  ];
+
+  terms.scoreTerms.forEach(({ term, weight }) => {
+    const pattern = like(likeContains(term));
+    pieces.push(
+      `CASE WHEN folded.f_title ${pattern} THEN ${Math.round(w.titleTerm * weight)} ELSE 0 END`,
+      `CASE WHEN folded.f_meta ${pattern} THEN ${Math.round(w.metaTerm * weight)} ELSE 0 END`,
+      `CASE WHEN folded.f_place ${pattern} THEN ${Math.round(w.placeTerm * weight)} ELSE 0 END`
+    );
+  });
+
+  if (terms.tokens.length > 1) {
+    const everyToken = terms.tokens
+      .map((token) => `folded.f_title ${like(likeContains(token))}`)
+      .join(" AND ");
+    pieces.push(`CASE WHEN (${everyToken}) THEN ${w.allTokensInTitle} ELSE 0 END`);
+  }
+
+  return {
+    foldedColumns,
+    predicate,
+    scoreSql: `(${pieces.join("\n        + ")})`,
+    scoreValues: scoreBag.values,
+  };
+}
+
+/**
+ * WHERE, CTE y orden para el archivo, en los dos dialectos.
+ *
+ * Los filtros de territorio, pueblo y categoría se construyen igual que antes,
+ * con una diferencia: la categoría pasó de `JOIN myth_tags … + SELECT DISTINCT`
+ * a un `EXISTS` correlacionado. Devuelve exactamente los mismos relatos (un
+ * mito con esa etiqueta, una vez) sin multiplicar filas, y por eso el listado
+ * ya no necesita `DISTINCT` — que sobre 416 resultados con `image_prompt` a
+ * cuestas costaba ~70 ms de ordenación pura.
+ *
+ * Y lo esencial: la consulta de texto es UNA CLÁUSULA MÁS unida con AND.
+ * Buscar y filtrar se componen; nunca se reemplazan.
+ */
+function buildFilters({ region, community, tag, q }, dialect) {
+  const whereBag = createParamBag(dialect);
+  const where = [];
+
+  const regionValue = normalizeInput(region);
+  if (regionValue) {
+    const ref = whereBag.ref(regionValue);
+    where.push(`(regions.slug = ${ref} OR regions.name = ${ref})`);
+  }
+
+  const communityValue = normalizeInput(community);
+  if (communityValue) {
+    const ref = whereBag.ref(communityValue);
+    where.push(`(communities.slug = ${ref} OR communities.name = ${ref})`);
+  }
+
+  const tagValue = normalizeInput(tag);
+  if (tagValue) {
+    const ref = whereBag.ref(tagValue);
+    where.push(`EXISTS (
+        SELECT 1 FROM myth_tags
+        JOIN tags ON tags.id = myth_tags.tag_id
+        WHERE myth_tags.myth_id = myths.id
+          AND (tags.slug = ${ref} OR tags.name = ${ref})
+      )`);
+  }
+
+  const queryValue = normalizeInput(q);
+  if (!queryValue) {
+    return {
+      where,
+      values: whereBag.values,
+      scoreValues: [],
+      scoreSql: null,
+      searchPredicate: null,
+      foldedColumns: null,
+    };
+  }
+
+  const clauses = buildSearchClauses(queryValue, whereBag, dialect);
+  return {
+    where,
+    values: whereBag.values,
+    scoreValues: clauses.scoreValues,
+    scoreSql: clauses.scoreSql,
+    searchPredicate: clauses.predicate,
+    foldedColumns: clauses.foldedColumns,
+  };
+}
+
+/**
+ * El SQL del archivo, en el dialecto que toque.
+ *
+ * Dos formas, no tres:
+ *   · sin `q`  → conteo + listado alfabético (la de siempre);
+ *   · con `q`  → una sola consulta: CTE de plegados + puntuación +
+ *                `COUNT(*) OVER ()` para el total.
+ */
+function buildListSql(params, dialect, makeRefs) {
+  const { where, values, scoreValues, searchPredicate, scoreSql, foldedColumns } =
+    buildFilters(params, dialect);
+  const { limitRef, offsetRef } = makeRefs(values.length + scoreValues.length);
+
+  if (!searchPredicate) {
+    const whereClause = where.length ? `WHERE ${where.join(" AND ")}` : "";
+    const collate = dialect === "sqlite" ? " COLLATE NOCASE" : "";
+    return {
+      values,
+      scoreValues,
+      totalFromRows: false,
+      countSql: `
+    SELECT COUNT(*) AS count
+    ${MYTH_JOINS}
     ${whereClause}
-    ORDER BY myths.title COLLATE NOCASE ASC
-    LIMIT :limit OFFSET :offset
+  `,
+      listSql: `
+    SELECT${LIST_COLUMNS}
+    ${MYTH_JOINS}
+    ${whereClause}
+    ORDER BY myths.title${collate} ASC
+    LIMIT ${limitRef} OFFSET ${offsetRef}
+  `,
+    };
+  }
+
+  /* El CTE lleva los filtros: si además de buscar se filtró por territorio,
+     sólo se pliega ese subconjunto. Se materializa a propósito — sin
+     `MATERIALIZED`, Postgres lo aplana y vuelve a recalcular cada plegado en
+     cada `CASE WHEN`. */
+  const cteWhere = where.length ? `WHERE ${where.join(" AND ")}` : "";
+  const collate = dialect === "sqlite" ? " COLLATE NOCASE" : "";
+  const foldedCte = `WITH folded AS MATERIALIZED (
+      SELECT
+        myths.id AS mid,
+        ${foldedColumns.join(",\n        ")}
+      ${MYTH_JOINS}
+      ${cteWhere}
+    )`;
+
+  const listSql = `
+    ${foldedCte}
+    SELECT${LIST_COLUMNS},
+      ${scoreSql} AS search_score,
+      COUNT(*) OVER () AS total_count
+    ${MYTH_JOINS}
+    JOIN folded ON folded.mid = myths.id
+    WHERE ${searchPredicate}
+    ORDER BY search_score DESC, myths.title${collate} ASC
+    LIMIT ${limitRef} OFFSET ${offsetRef}
+  `;
+  /* El total normal viaja en la fila (`COUNT(*) OVER ()`). Este conteo es el
+     respaldo para una página FUERA DE RANGO (`/mitos/pagina/99?q=agua`): sin
+     filas no hay ventana que lo lleve, y sin él la página diría "0 relatos" en
+     vez de "416". Sólo se ejecuta en ese caso, no en el camino normal. */
+  const countSql = `
+    ${foldedCte}
+    SELECT COUNT(*) AS count
+    ${MYTH_JOINS}
+    JOIN folded ON folded.mid = myths.id
+    WHERE ${searchPredicate}
   `;
 
-  const total = db.prepare(countSql).get({ ...params }).count;
-  const items = db
-    .prepare(listSql)
-    .all({ ...params, limit: limitValue, offset: offsetValue });
+  return { values, scoreValues, totalFromRows: true, countSql, listSql };
+}
+
+/**
+ * `total_count` es el andamio de `COUNT(*) OVER ()`, no un campo del mito: se
+ * quita antes de devolver (lo consume `/api/myths` y `llms.txt`). `search_score`
+ * sí se conserva: es información útil y sólo aparece cuando hubo búsqueda.
+ */
+function stripQueryArtifacts(rows) {
+  return rows.map(({ total_count, ...rest }) => rest);
+}
+
+/**
+ * De dónde sale el total.
+ *
+ * Sin `q`, de su propia consulta de conteo. Con `q`, de `COUNT(*) OVER ()`, que
+ * viaja en cada fila y no cuesta un viaje más. El único caso en que hay que ir
+ * a preguntar es una página fuera de rango: sin filas no hay ventana, y
+ * devolver 0 haría que la página dijera "0 relatos" teniendo 416.
+ */
+function resolveTotal({ totalFromRows, rows, offset, count }) {
+  if (!totalFromRows) return count();
+  if (rows.length) return Number(rows[0].total_count || 0);
+  if (offset > 0) return count();
+  return 0;
+}
+
+/** Los mismos parámetros posicionales, con los nombres que quiere better-sqlite3. */
+function toSqliteParams(values, extra = {}) {
+  const params = { ...extra };
+  values.forEach((value, i) => {
+    params[`p${i + 1}`] = value;
+  });
+  return params;
+}
+
+function listMythsSqlite({
+  region,
+  community,
+  tag,
+  q,
+  limit = 20,
+  offset = 0,
+} = {}) {
+  const db = getSqliteDb();
+  const { values, scoreValues, totalFromRows, countSql, listSql } = buildListSql(
+    { region, community, tag, q },
+    "sqlite",
+    () => ({ limitRef: ":limit", offsetRef: ":offset" })
+  );
+
+  const limitValue = clampNumber(limit, 1, 100, 20);
+  const offsetValue = clampNumber(offset, 0, 5000, 0);
+  const listParams = toSqliteParams([...values, ...scoreValues], {
+    limit: limitValue,
+    offset: offsetValue,
+  });
+
+  const rows = db.prepare(listSql).all(listParams);
+
+  const total = resolveTotal({
+    totalFromRows,
+    rows,
+    offset: offsetValue,
+    count: () => Number(db.prepare(countSql).get(toSqliteParams(values)).count || 0),
+  });
 
   return {
     total,
     limit: limitValue,
     offset: offsetValue,
-    items,
+    items: stripQueryArtifacts(rows),
   };
 }
 
@@ -196,70 +552,34 @@ async function listMythsPostgres({
   offset = 0,
 } = {}) {
   const sql = getSqlClient();
-  const { where, values, tagValue } = buildFiltersPostgres({
-    region,
-    community,
-    tag,
-    q,
-  });
-
-  const tagJoin = tagValue
-    ? "JOIN myth_tags ON myth_tags.myth_id = myths.id JOIN tags ON tags.id = myth_tags.tag_id"
-    : "";
-  const whereClause = where.length ? `WHERE ${where.join(" AND ")}` : "";
+  const { values, scoreValues, totalFromRows, countSql, listSql } = buildListSql(
+    { region, community, tag, q },
+    "postgres",
+    (paramCount) => ({
+      limitRef: `$${paramCount + 1}`,
+      offsetRef: `$${paramCount + 2}`,
+    })
+  );
 
   const limitValue = clampNumber(limit, 1, 100, 20);
   const offsetValue = clampNumber(offset, 0, 5000, 0);
 
-  const countSql = `
-    SELECT COUNT(DISTINCT myths.id) AS count
-    FROM myths
-    JOIN regions ON regions.id = myths.region_id
-    LEFT JOIN communities ON communities.id = myths.community_id
-    ${tagJoin}
-    ${whereClause}
-  `;
+  const listValues = [...values, ...scoreValues, limitValue, offsetValue];
+  const rows = (await sql.query(listSql, listValues)).rows;
 
-  const countResult = await sql.query(countSql, values);
-  const total = Number(countResult.rows[0]?.count || 0);
-
-  const limitIndex = values.length + 1;
-  const offsetIndex = values.length + 2;
-  const listSql = `
-    SELECT DISTINCT
-      myths.id,
-      myths.title,
-      myths.slug,
-      myths.excerpt,
-      myths.tags_raw,
-      myths.seo_title,
-      myths.seo_description,
-      myths.focus_keyword,
-      myths.focus_keywords_raw,
-      myths.image_prompt,
-      myths.image_url,
-      myths.category_path,
-      regions.name AS region,
-      regions.slug AS region_slug,
-      communities.name AS community,
-      communities.slug AS community_slug
-    FROM myths
-    JOIN regions ON regions.id = myths.region_id
-    LEFT JOIN communities ON communities.id = myths.community_id
-    ${tagJoin}
-    ${whereClause}
-    ORDER BY myths.title ASC
-    LIMIT $${limitIndex} OFFSET $${offsetIndex}
-  `;
-
-  const listValues = [...values, limitValue, offsetValue];
-  const items = (await sql.query(listSql, listValues)).rows;
+  const total = await resolveTotal({
+    totalFromRows,
+    rows,
+    offset: offsetValue,
+    count: async () =>
+      Number((await sql.query(countSql, values)).rows[0]?.count || 0),
+  });
 
   return {
     total,
     limit: limitValue,
     offset: offsetValue,
-    items,
+    items: stripQueryArtifacts(rows),
   };
 }
 
@@ -995,10 +1315,10 @@ async function getFeaturedMythsWithImagesPostgres(limit = 12, seed = 0) {
       JOIN regions ON regions.id = myths.region_id
       LEFT JOIN communities ON communities.id = myths.community_id
       WHERE myths.image_url IS NOT NULL
-      ORDER BY (myths.id + $1) % 23, myths.id
+      ORDER BY ${seededOrderSql("myths", "$1")}, myths.id
       LIMIT $2
       `,
-      [seed, limit]
+      [toSqlSeed(seed), limit]
     );
 
     return result.rows;
@@ -1028,11 +1348,14 @@ function getFeaturedMythsWithImagesSqlite(limit = 12, seed = 0) {
       JOIN regions ON regions.id = myths.region_id
       LEFT JOIN communities ON communities.id = myths.community_id
       WHERE myths.image_url IS NOT NULL
-      ORDER BY (myths.id + ?) % 23, myths.id
-      LIMIT ?
+      ORDER BY ${seededOrderSql("myths", ":seed", "")}, myths.id
+      LIMIT :limit
     `;
 
-    return db.prepare(sql).all(seed, limit);
+    // Parámetros CON NOMBRE: la expresión sembrada repite la semilla dos veces y
+    // con `?` habría que contar posiciones a mano (y better-sqlite3 no deja
+    // mezclar posicionales con nombrados).
+    return db.prepare(sql).all({ seed: toSqlSeed(seed), limit });
   } catch (error) {
     console.error("Error getting featured myths with images (SQLite):", error);
     return [];
@@ -1245,113 +1568,436 @@ export async function getMythExtrasBySlugs(slugs = []) {
   }
 }
 
-/* Comunidades con obra propia, para las pestañas del home.
-   Devuelve un relato ilustrado por comunidad: la sección presenta al pueblo que
-   sostiene el relato, así que la comunidad manda y el mito es su muestra.
-   Las bolsas del importador ("Mestizo", "Mixto", "Varios") no son pueblos y se
-   filtran arriba, en la página, no aquí — el dato crudo se conserva. */
-async function getCommunitySpotlightsPostgres(limit = 8, seed = 0) {
+/* Comunidades para las pestañas del home.
+   Devuelve VARIOS relatos ilustrados por comunidad, no uno.
+
+   Antes había un `LIMIT 1` dentro de un LATERAL: por construcción era imposible
+   que una comunidad mostrara más de un mito, por muchos que tenga (los Muiscas
+   tienen 41). Ahora la ventana `ROW_NUMBER() OVER (PARTITION BY comunidad)`
+   corta a `perCommunity` en UNA sola consulta — nada de N+1: 48 comunidades ×
+   4 mitos = 156 filas, 231 ms medidos contra producción.
+
+   Las bolsas del importador ("Mestizo", "Mixto", "Varios") NO son pueblos, pero
+   tampoco son basura: son 253 relatos, el 42,5 % del archivo. Aquí se conservan
+   y se marcan con `generic: true` para que la página las presente con su propia
+   etiqueta («sin pueblo identificado») en vez de descartarlas. */
+async function getCommunitySpotlightsPostgres({ seed = 0, perCommunity = 4 } = {}) {
   const sql = getSqlClient();
 
   const result = await sql.query(
     `
-    SELECT
-      communities.id,
-      communities.name,
-      communities.slug,
-      regions.name AS region,
-      regions.slug AS region_slug,
-      spotlight.title AS myth_title,
-      spotlight.slug AS myth_slug,
-      spotlight.excerpt AS myth_excerpt,
-      spotlight.image_url AS myth_image_url,
-      spotlight.total AS myth_count
-    FROM communities
-    JOIN regions ON regions.id = communities.region_id
-    JOIN LATERAL (
+    WITH ranked AS (
       SELECT
-        candidate.title,
-        candidate.slug,
-        candidate.excerpt,
-        candidate.image_url,
-        (
-          SELECT COUNT(*)
-          FROM myths counted
-          WHERE counted.community_id = communities.id
-        ) AS total
-      FROM myths candidate
-      WHERE candidate.community_id = communities.id
-        AND candidate.image_url IS NOT NULL
-      ORDER BY (candidate.id + $1) % 17, candidate.id
-      LIMIT 1
-    ) AS spotlight ON TRUE
-    ORDER BY spotlight.total DESC, communities.name ASC
-    LIMIT $2
+        communities.id AS community_id,
+        communities.name,
+        communities.slug,
+        regions.name AS region,
+        regions.slug AS region_slug,
+        COUNT(*) OVER (PARTITION BY communities.id) AS illustrated,
+        myths.id AS myth_id,
+        myths.title AS myth_title,
+        myths.slug AS myth_slug,
+        myths.excerpt AS myth_excerpt,
+        myths.image_url AS myth_image_url,
+        ROW_NUMBER() OVER (
+          PARTITION BY communities.id
+          ORDER BY ${seededOrderSql("myths", "$1")}, myths.id
+        ) AS rn
+      FROM communities
+      JOIN regions ON regions.id = communities.region_id
+      JOIN myths
+        ON myths.community_id = communities.id
+       AND myths.image_url IS NOT NULL
+    )
+    SELECT *
+    FROM ranked
+    WHERE rn <= $2
+    ORDER BY illustrated DESC, name ASC, rn ASC
     `,
-    [seed, limit]
+    [toSqlSeed(seed), clampNumber(perCommunity, 1, 12, 4)]
   );
 
   return result.rows;
 }
 
-function getCommunitySpotlightsSqlite(limit = 8, seed = 0) {
+function getCommunitySpotlightsSqlite({ seed = 0, perCommunity = 4 } = {}) {
   const db = getSqliteDb();
 
   return db
     .prepare(
       `
-      SELECT
-        communities.id,
-        communities.name,
-        communities.slug,
-        regions.name AS region,
-        regions.slug AS region_slug,
-        spotlight.title AS myth_title,
-        spotlight.slug AS myth_slug,
-        spotlight.excerpt AS myth_excerpt,
-        spotlight.image_url AS myth_image_url,
-        (
-          SELECT COUNT(*)
-          FROM myths counted
-          WHERE counted.community_id = communities.id
-        ) AS myth_count
-      FROM communities
-      JOIN regions ON regions.id = communities.region_id
-      JOIN myths AS spotlight ON spotlight.id = (
-        SELECT candidate.id
-        FROM myths candidate
-        WHERE candidate.community_id = communities.id
-          AND candidate.image_url IS NOT NULL
-        ORDER BY (candidate.id + ?) % 17, candidate.id
-        LIMIT 1
+      WITH ranked AS (
+        SELECT
+          communities.id AS community_id,
+          communities.name,
+          communities.slug,
+          regions.name AS region,
+          regions.slug AS region_slug,
+          COUNT(*) OVER (PARTITION BY communities.id) AS illustrated,
+          myths.id AS myth_id,
+          myths.title AS myth_title,
+          myths.slug AS myth_slug,
+          myths.excerpt AS myth_excerpt,
+          myths.image_url AS myth_image_url,
+          ROW_NUMBER() OVER (
+            PARTITION BY communities.id
+            ORDER BY ${seededOrderSql("myths", ":seed", "")}, myths.id
+          ) AS rn
+        FROM communities
+        JOIN regions ON regions.id = communities.region_id
+        JOIN myths
+          ON myths.community_id = communities.id
+         AND myths.image_url IS NOT NULL
       )
-      ORDER BY myth_count DESC, communities.name COLLATE NOCASE ASC
-      LIMIT ?
+      SELECT *
+      FROM ranked
+      WHERE rn <= :perCommunity
+      ORDER BY illustrated DESC, name COLLATE NOCASE ASC, rn ASC
     `
     )
-    .all(seed, limit);
+    .all({
+      seed: toSqlSeed(seed),
+      perCommunity: clampNumber(perCommunity, 1, 12, 4),
+    });
+}
+
+/* De filas planas a una comunidad por objeto. La clave es el `id`, NO el slug:
+   `mestizo`, `mixto`, `nasa-paeces` y `embera` se repiten en varias regiones y
+   agrupar por slug fundiría pueblos distintos. */
+function groupCommunitySpotlights(rows = []) {
+  const byId = new Map();
+
+  for (const row of rows) {
+    const id = row.community_id;
+    if (!byId.has(id)) {
+      byId.set(id, {
+        id,
+        name: row.name,
+        slug: row.slug,
+        region: row.region,
+        regionSlug: row.region_slug,
+        mythCount: Number(row.illustrated) || 0,
+        generic: isImporterBucket(row.name),
+        myths: [],
+      });
+    }
+    byId.get(id).myths.push({
+      id: row.myth_id,
+      slug: row.myth_slug,
+      title: row.myth_title,
+      excerpt: row.myth_excerpt,
+      imageUrl: row.myth_image_url,
+      region: row.region,
+      regionSlug: row.region_slug,
+      community: row.name,
+      communitySlug: row.slug,
+    });
+  }
+
+  return [...byId.values()];
 }
 
 const getCommunitySpotlightsCached = unstable_cache(
-  async (limit = 8, seed = 0) => {
-    if (isPostgres()) {
-      return await withRetry(() => getCommunitySpotlightsPostgres(limit, seed));
-    }
-    return getCommunitySpotlightsSqlite(limit, seed);
+  async (seed, perCommunity) => {
+    const rows = isPostgres()
+      ? await withRetry(() => getCommunitySpotlightsPostgres({ seed, perCommunity }))
+      : getCommunitySpotlightsSqlite({ seed, perCommunity });
+    return groupCommunitySpotlights(rows);
   },
-  ["community-spotlights"],
+  ["community-spotlights-v2"],
   { revalidate: ONE_DAY }
 );
 
-export async function getCommunitySpotlights(limit = 8, seed = 0) {
+/**
+ * Comunidades con obra propia, agrupadas.
+ *
+ * Devuelve TODAS las comunidades ilustradas (48 hoy), cada una con hasta
+ * `perCommunity` mitos, ordenadas por cuántos relatos ilustrados tienen. Quién
+ * llega a la portada lo decide la página con el motor de rotación — aquí no se
+ * recorta, para que haya de dónde rotar.
+ *
+ * Acepta la forma vieja `(limit, seed)` por compatibilidad; `limit` recorta
+ * cuántas comunidades vuelven.
+ */
+export async function getCommunitySpotlights(options = {}, legacySeed = 0) {
+  const config =
+    typeof options === "number"
+      ? { limit: options, seed: legacySeed }
+      : options || {};
+  const { seed = 0, perCommunity = 4, limit = 0 } = config;
+
   try {
-    return await getCommunitySpotlightsCached(limit, seed);
+    const grouped = await getCommunitySpotlightsCached(
+      toSqlSeed(seed),
+      clampNumber(perCommunity, 1, 12, 4)
+    );
+    return limit > 0 ? grouped.slice(0, limit) : grouped;
   } catch (error) {
     console.error("Error in getCommunitySpotlights:", error);
     return [];
   }
 }
+/* ------------------------------------------------------------------ *
+ * El pozo del home y los candidatos de «Barajar»
+ * ------------------------------------------------------------------ */
 
+/* Columnas mínimas de una tarjeta. Nada de `content`: son 596 relatos largos y
+   el home sólo pinta título, bajada y obra. */
+const CARD_COLUMNS_PG = `
+  myths.id,
+  myths.title,
+  myths.slug,
+  myths.excerpt,
+  myths.image_url,
+  regions.name AS region,
+  regions.slug AS region_slug,
+  communities.name AS community,
+  communities.slug AS community_slug
+`;
+
+/**
+ * El pozo del que salen portada, mesa y mapa.
+ *
+ * UNA consulta. Reparte por región con `ROW_NUMBER() OVER (PARTITION BY region)`
+ * y se queda con `perRegion` de cada una, así que las seis regiones entran al
+ * pozo con el mismo peso y el reparto fino lo hace `partitionSections` en JS.
+ * Con `perRegion = 20` son ~111 filas (Orinoquía tiene 34 y Varios 11).
+ *
+ * Sustituye al par `getFeaturedMythsWithImages(28) + getDiverseMyths(24)` que la
+ * home concatenaba en un pozo único con un cursor `take(n)`: el cursor sólo
+ * llegaba al elemento 16, así que las 24 filas de `getDiverseMyths` —la única
+ * consulta equilibrada— se traían en cada render y NO podían llegar a la página.
+ */
+async function getRotatingMythPoolPostgres({ seed = 0, perRegion = 20 } = {}) {
+  const sql = getSqlClient();
+
+  const result = await sql.query(
+    `
+    WITH pool AS (
+      SELECT
+        ${CARD_COLUMNS_PG},
+        ROW_NUMBER() OVER (
+          PARTITION BY myths.region_id
+          ORDER BY ${seededOrderSql("myths", "$1")}, myths.id
+        ) AS rn
+      FROM myths
+      JOIN regions ON regions.id = myths.region_id
+      LEFT JOIN communities ON communities.id = myths.community_id
+      WHERE myths.image_url IS NOT NULL
+    )
+    SELECT id, title, slug, excerpt, image_url, region, region_slug, community, community_slug
+    FROM pool
+    WHERE rn <= $2
+    `,
+    [toSqlSeed(seed), clampNumber(perRegion, 1, 60, 20)]
+  );
+
+  return result.rows;
+}
+
+function getRotatingMythPoolSqlite({ seed = 0, perRegion = 20 } = {}) {
+  const db = getSqliteDb();
+
+  return db
+    .prepare(
+      `
+      WITH pool AS (
+        SELECT
+          myths.id,
+          myths.title,
+          myths.slug,
+          myths.excerpt,
+          myths.image_url,
+          regions.name AS region,
+          regions.slug AS region_slug,
+          communities.name AS community,
+          communities.slug AS community_slug,
+          ROW_NUMBER() OVER (
+            PARTITION BY myths.region_id
+            ORDER BY ${seededOrderSql("myths", ":seed", "")}, myths.id
+          ) AS rn
+        FROM myths
+        JOIN regions ON regions.id = myths.region_id
+        LEFT JOIN communities ON communities.id = myths.community_id
+        WHERE myths.image_url IS NOT NULL
+      )
+      SELECT id, title, slug, excerpt, image_url, region, region_slug, community, community_slug
+      FROM pool
+      WHERE rn <= :perRegion
+    `
+    )
+    .all({ seed: toSqlSeed(seed), perRegion: clampNumber(perRegion, 1, 60, 20) });
+}
+
+const getRotatingMythPoolCached = unstable_cache(
+  async (seed, perRegion) => {
+    if (isPostgres()) {
+      return await withRetry(() => getRotatingMythPoolPostgres({ seed, perRegion }));
+    }
+    return getRotatingMythPoolSqlite({ seed, perRegion });
+  },
+  ["home-rotation-pool"],
+  { revalidate: ONE_DAY }
+);
+
+export async function getRotatingMythPool({ seed = 0, perRegion = 20 } = {}) {
+  try {
+    return await getRotatingMythPoolCached(
+      toSqlSeed(seed),
+      clampNumber(perRegion, 1, 60, 20)
+    );
+  } catch (error) {
+    console.error("Error in getRotatingMythPool:", error);
+    return [];
+  }
+}
+
+/**
+ * Candidatos para «Barajar la mesa» (`/api/mesa`).
+ *
+ * UNA consulta que ya trae las etiquetas de cada mito, para que el endpoint no
+ * tenga que ir dos veces a Neon. Filtra por tema (slug de etiqueta) y descarta
+ * los mitos que el cliente ya tiene en pantalla.
+ *
+ * A propósito NO pasa por `unstable_cache`: la lista de exclusiones viene del
+ * cliente y sería una clave de caché sin techo. La consulta cuesta ~80 ms sobre
+ * 596 filas y la respuesta la cachea el CDN por URL (`s-maxage`).
+ */
+async function getMesaCandidatesPostgres({ seed = 0, perRegion = 8, exclude = [], tag = null } = {}) {
+  const sql = getSqlClient();
+
+  const result = await sql.query(
+    `
+    WITH pool AS (
+      SELECT
+        ${CARD_COLUMNS_PG},
+        ROW_NUMBER() OVER (
+          PARTITION BY myths.region_id
+          ORDER BY ${seededOrderSql("myths", "$1")}, myths.id
+        ) AS rn
+      FROM myths
+      JOIN regions ON regions.id = myths.region_id
+      LEFT JOIN communities ON communities.id = myths.community_id
+      WHERE myths.image_url IS NOT NULL
+        AND ($3::text[] IS NULL OR NOT (myths.slug = ANY($3)))
+        AND ($4::text IS NULL OR EXISTS (
+          SELECT 1
+          FROM myth_tags
+          JOIN tags ON tags.id = myth_tags.tag_id
+          WHERE myth_tags.myth_id = myths.id AND tags.slug = $4
+        ))
+    )
+    SELECT
+      pool.id, pool.title, pool.slug, pool.excerpt, pool.image_url,
+      pool.region, pool.region_slug, pool.community, pool.community_slug,
+      COALESCE((
+        SELECT json_agg(json_build_object('name', tags.name, 'slug', tags.slug))
+        FROM myth_tags
+        JOIN tags ON tags.id = myth_tags.tag_id
+        WHERE myth_tags.myth_id = pool.id
+      ), '[]'::json) AS tags
+    FROM pool
+    WHERE pool.rn <= $2
+    `,
+    [
+      toSqlSeed(seed),
+      clampNumber(perRegion, 1, 40, 8),
+      exclude.length ? exclude : null,
+      tag || null,
+    ]
+  );
+
+  return result.rows.map((row) => ({
+    ...row,
+    tags: Array.isArray(row.tags) ? row.tags : parseJsonArray(row.tags),
+  }));
+}
+
+function getMesaCandidatesSqlite({ seed = 0, perRegion = 8, exclude = [], tag = null } = {}) {
+  const db = getSqliteDb();
+  const params = {
+    seed: toSqlSeed(seed),
+    perRegion: clampNumber(perRegion, 1, 40, 8),
+    tag: tag || null,
+  };
+  const excludeList = exclude.map((slug, index) => {
+    params[`ex${index}`] = slug;
+    return `:ex${index}`;
+  });
+  const excludeClause = excludeList.length
+    ? `AND myths.slug NOT IN (${excludeList.join(", ")})`
+    : "";
+
+  const rows = db
+    .prepare(
+      `
+      WITH pool AS (
+        SELECT
+          myths.id, myths.title, myths.slug, myths.excerpt, myths.image_url,
+          regions.name AS region, regions.slug AS region_slug,
+          communities.name AS community, communities.slug AS community_slug,
+          ROW_NUMBER() OVER (
+            PARTITION BY myths.region_id
+            ORDER BY ${seededOrderSql("myths", ":seed", "")}, myths.id
+          ) AS rn
+        FROM myths
+        JOIN regions ON regions.id = myths.region_id
+        LEFT JOIN communities ON communities.id = myths.community_id
+        WHERE myths.image_url IS NOT NULL
+          ${excludeClause}
+          AND (:tag IS NULL OR EXISTS (
+            SELECT 1
+            FROM myth_tags
+            JOIN tags ON tags.id = myth_tags.tag_id
+            WHERE myth_tags.myth_id = myths.id AND tags.slug = :tag
+          ))
+      )
+      SELECT
+        pool.id, pool.title, pool.slug, pool.excerpt, pool.image_url,
+        pool.region, pool.region_slug, pool.community, pool.community_slug,
+        (
+          SELECT group_concat(tags.name || '|' || tags.slug, '::')
+          FROM myth_tags
+          JOIN tags ON tags.id = myth_tags.tag_id
+          WHERE myth_tags.myth_id = pool.id
+        ) AS tags_joined
+      FROM pool
+      WHERE pool.rn <= :perRegion
+    `
+    )
+    .all(params);
+
+  return rows.map((row) => ({
+    ...row,
+    tags: String(row.tags_joined || "")
+      .split("::")
+      .filter(Boolean)
+      .map((entry) => {
+        const [name, slug] = entry.split("|");
+        return { name, slug };
+      }),
+  }));
+}
+
+export async function getMesaCandidates({
+  seed = 0,
+  perRegion = 8,
+  exclude = [],
+  tag = null,
+} = {}) {
+  const clean = [...new Set((exclude || []).filter(Boolean))].slice(0, 40);
+  try {
+    if (isPostgres()) {
+      return await withRetry(() =>
+        getMesaCandidatesPostgres({ seed, perRegion, exclude: clean, tag })
+      );
+    }
+    return getMesaCandidatesSqlite({ seed, perRegion, exclude: clean, tag });
+  } catch (error) {
+    console.error("Error in getMesaCandidates:", error);
+    return [];
+  }
+}
 // Get diverse myths from different regions for home page
 async function getDiverseMythsPostgres(limit = 9, seed = 0) {
   const sql = getSqlClient();
@@ -1376,7 +2022,7 @@ async function getDiverseMythsPostgres(limit = 9, seed = 0) {
             PARTITION BY regions.id
             ORDER BY
               CASE WHEN myths.image_url IS NOT NULL THEN 0 ELSE 1 END,
-              (myths.id + $1) % 100
+              ${seededOrderSql("myths", "$1")}
           ) as rn
         FROM myths
         JOIN regions ON regions.id = myths.region_id
@@ -1389,10 +2035,10 @@ async function getDiverseMythsPostgres(limit = 9, seed = 0) {
       WHERE rn <= 2
       ORDER BY
         CASE WHEN image_url IS NOT NULL THEN 0 ELSE 1 END,
-        (id + $1) % 100
+        ${seededOrderSql("ranked_myths", "$1")}
       LIMIT $2
       `,
-      [seed, limit]
+      [toSqlSeed(seed), limit]
     );
 
     return result.rows;
@@ -1424,11 +2070,11 @@ function getDiverseMythsSqlite(limit = 9, seed = 0) {
       LEFT JOIN communities ON communities.id = myths.community_id
       ORDER BY
         CASE WHEN myths.image_url IS NOT NULL THEN 0 ELSE 1 END,
-        (myths.id + ?) % 100
-      LIMIT ?
+        ${seededOrderSql("myths", ":seed", "")}
+      LIMIT :limit
     `;
 
-    return db.prepare(sql).all(seed, limit);
+    return db.prepare(sql).all({ seed: toSqlSeed(seed), limit });
   } catch (error) {
     console.error("Error getting diverse myths (SQLite):", error);
     return [];

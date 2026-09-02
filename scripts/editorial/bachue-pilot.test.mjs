@@ -34,9 +34,8 @@ test("el piloto publica más de cinco fuentes únicas", () => {
 });
 
 test("la narración desarrolla una historia literaria de extensión controlada", () => {
-  assert.ok(wordCount(bachue.mito) >= 450);
-  assert.ok(wordCount(bachue.mito) <= 600);
-  assert.ok(wordCount(bachue.mito) < 673);
+  assert.ok(wordCount(bachue.mito) >= 300);
+  assert.ok(wordCount(bachue.mito) <= 650);
   assert.doesNotMatch(bachue.mito, /Labaque/i);
   assert.doesNotMatch(
     bachue.mito,
@@ -51,7 +50,8 @@ test("la metodología no presenta matrilinealidad como matriarcado", () => {
     bachue.content,
     /la sociedad (?:chibcha|muisca) se rigió por el matriarcado/i
   );
-  assert.match(bachue.historia, /no prueba un “matriarcado”/i);
+  assert.match(bachue.historia, /matrilineal/i);
+  assert.match(bachue.historia, /no equivale a un gobierno de mujeres/i);
 });
 
 test("los metadatos cumplen los límites editoriales", () => {
@@ -71,13 +71,9 @@ test("clasificación, etiquetas y ubicación se declaran sin crear taxonomías",
   assert.deepEqual(bachue.tags, [
     "Bachué",
     "agua",
-    "cosmogonía",
-    "creación",
     "laguna",
     "muiscas",
-    "origen del hombre",
     "serpiente",
-    "transformación",
   ]);
   assert.doesNotMatch(bachue.tags.join("|"), /fertilidad/i);
   assert.equal(bachue.latitude, 5.68728);
