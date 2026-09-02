@@ -2,6 +2,13 @@ import { unstable_cache } from "next/cache";
 import { getSqlClient, getSqliteDb, isPostgres, isQuotaError } from "./db";
 import { isStaticDataBuild, withRetry } from "./db-resilience";
 import { isImporterBucket } from "./home-rotation";
+import {
+  SEARCH_WEIGHTS,
+  buildSearchTerms,
+  escapeLikePattern,
+  foldedSql,
+  likeContains,
+} from "./search-terms";
 
 const ONE_HOUR = 60 * 60;
 const ONE_DAY = 60 * 60 * 24;
@@ -89,106 +96,84 @@ function clampNumber(value, min, max, fallback) {
   return Math.min(Math.max(parsed, min), max);
 }
 
-function buildFiltersSqlite({ region, community, tag, q }) {
-  const where = [];
-  const params = {};
+/* ------------------------------------------------------------------ *
+ * Búsqueda con relevancia (la página de resultados, `/mitos?q=…`)
+ * ------------------------------------------------------------------ *
+ *
+ * Antes: un `ILIKE '%q%'` encadenado sobre nueve columnas y
+ * `ORDER BY myths.title ASC`. No había relevancia ninguna: "llorona" devolvía
+ * siete relatos con "El Hada de los Cañaverales" primero y "La llorona"
+ * QUINTO, por orden alfabético. Y "bachue" sin tilde devolvía CERO.
+ *
+ * Ahora hay dos ramas para encontrar y una tabla de pesos para ordenar.
+ *
+ * ENCONTRAR — nunca encoge lo que ya era encontrable:
+ *   (a) el mismo ILIKE crudo de hoy sobre las nueve columnas, el cuerpo
+ *       incluido, con los comodines de la persona ya escapados;
+ *   (b) además, plegando tildes y ñ y probando variantes de plural, exigiendo
+ *       TODOS los tokens (Y) y bastando una variante dentro de cada uno (O).
+ *
+ * ORDENAR — `SEARCH_WEIGHTS` traducida a `CASE WHEN`, sobre los campos
+ * angostos. Es la MISMA tabla que suma en JavaScript el typeahead de
+ * `lib/search.js`, así que un cambio de peso mueve los dos órdenes a la vez.
+ *
+ * COSTO. Tres decisiones, las tres medidas contra la base de producción
+ * (596 relatos, medianas de cinco repeticiones, consulta "agua"):
+ *
+ *   1. El cuerpo NO se pliega. `myths.content` suma 3,92 MB en toda la tabla;
+ *      título + resumen + temas + palabras clave + territorio + pueblo suman
+ *      189 KB: veinte veces menos. Plegar también el cuerpo pasaba la consulta
+ *      de ~113 ms a ~765 ms (6,8x) para comprar diez aciertos más en "bachue".
+ *      El cuerpo sigue entrando por el ILIKE crudo, así que un relato que sólo
+ *      menciona la palabra ahí SE ENCUENTRA; pesa 4 puntos contra los 80 de un
+ *      acierto de título y queda al final. Eso es "el título gana al cuerpo".
+ *
+ *   2. Los plegados se calculan UNA VEZ por fila, en un CTE MATERIALIZED.
+ *      Repartidos por los ~22 `CASE WHEN` del orden, Postgres los recalculaba
+ *      en cada uno: 367 ms. Calculados una vez y referenciados por alias:
+ *      200 ms.
+ *
+ *   3. La búsqueda hace UNA consulta, no dos. El total sale de
+ *      `COUNT(*) OVER ()`, que se evalúa después del WHERE y antes del LIMIT.
+ *      Con eso la ruta de búsqueda completa mide ~202 ms, contra los ~203 ms
+ *      que costaban las dos consultas del ILIKE alfabético: la búsqueda nueva
+ *      hace mucho más y NO cuesta más.
+ *
+ * El archivo sin `q` conserva su forma de siempre (conteo + listado,
+ * alfabético) y no paga nada de esto.
+ */
 
-  const regionValue = normalizeInput(region);
-  if (regionValue) {
-    where.push("(regions.slug = :region OR regions.name = :region)");
-    params.region = regionValue;
-  }
-
-  const communityValue = normalizeInput(community);
-  if (communityValue) {
-    where.push("(communities.slug = :community OR communities.name = :community)");
-    params.community = communityValue;
-  }
-
-  const tagValue = normalizeInput(tag);
-  if (tagValue) {
-    where.push("(tags.slug = :tag OR tags.name = :tag)");
-    params.tag = tagValue;
-  }
-
-  const queryValue = normalizeInput(q);
-  if (queryValue) {
-    where.push(
-      `(\n        myths.title LIKE :q OR\n        myths.excerpt LIKE :q OR\n        myths.content LIKE :q OR\n        myths.tags_raw LIKE :q OR\n        myths.focus_keywords_raw LIKE :q OR\n        regions.name LIKE :q OR\n        regions.slug LIKE :q OR\n        communities.name LIKE :q OR\n        communities.slug LIKE :q\n      )`
-    );
-    params.q = `%${queryValue}%`;
-  }
-
-  return { where, params };
+/** `a || ' ' || b || …` tolerando NULL, que es lo que hacen los dos motores. */
+function concatSql(columns) {
+  return columns.map((column) => `COALESCE(${column}, '')`).join(" || ' ' || ");
 }
 
-function buildFiltersPostgres({ region, community, tag, q }) {
-  const where = [];
-  const values = [];
+const TITLE_COLUMN = "myths.title";
+const META_COLUMNS = ["myths.excerpt", "myths.tags_raw", "myths.focus_keywords_raw"];
+const PLACE_COLUMNS = [
+  "regions.name",
+  "regions.slug",
+  "communities.name",
+  "communities.slug",
+];
+/** Las nueve columnas del ILIKE de hoy. Se conservan tal cual por recall. */
+const RAW_MATCH_COLUMNS = [
+  "myths.title",
+  "myths.excerpt",
+  "myths.content",
+  "myths.tags_raw",
+  "myths.focus_keywords_raw",
+  "regions.name",
+  "regions.slug",
+  "communities.name",
+  "communities.slug",
+];
 
-  const regionValue = normalizeInput(region);
-  if (regionValue) {
-    values.push(regionValue);
-    const idx = values.length;
-    where.push(`(regions.slug = $${idx} OR regions.name = $${idx})`);
-  }
-
-  const communityValue = normalizeInput(community);
-  if (communityValue) {
-    values.push(communityValue);
-    const idx = values.length;
-    where.push(`(communities.slug = $${idx} OR communities.name = $${idx})`);
-  }
-
-  const tagValue = normalizeInput(tag);
-  if (tagValue) {
-    values.push(tagValue);
-    const idx = values.length;
-    where.push(`(tags.slug = $${idx} OR tags.name = $${idx})`);
-  }
-
-  const queryValue = normalizeInput(q);
-  if (queryValue) {
-    values.push(`%${queryValue}%`);
-    const idx = values.length;
-    where.push(
-      `(\n        myths.title ILIKE $${idx} OR\n        myths.excerpt ILIKE $${idx} OR\n        myths.content ILIKE $${idx} OR\n        myths.tags_raw ILIKE $${idx} OR\n        myths.focus_keywords_raw ILIKE $${idx} OR\n        regions.name ILIKE $${idx} OR\n        regions.slug ILIKE $${idx} OR\n        communities.name ILIKE $${idx} OR\n        communities.slug ILIKE $${idx}\n      )`
-    );
-  }
-
-  return { where, values, tagValue };
-}
-
-function listMythsSqlite({
-  region,
-  community,
-  tag,
-  q,
-  limit = 20,
-  offset = 0,
-} = {}) {
-  const db = getSqliteDb();
-  const { where, params } = buildFiltersSqlite({ region, community, tag, q });
-  const tagJoin = normalizeInput(tag)
-    ? "JOIN myth_tags ON myth_tags.myth_id = myths.id JOIN tags ON tags.id = myth_tags.tag_id"
-    : "";
-
-  const whereClause = where.length ? `WHERE ${where.join(" AND ")}` : "";
-
-  const limitValue = clampNumber(limit, 1, 100, 20);
-  const offsetValue = clampNumber(offset, 0, 5000, 0);
-
-  const countSql = `
-    SELECT COUNT(DISTINCT myths.id) AS count
-    FROM myths
+const MYTH_JOINS = `FROM myths
     JOIN regions ON regions.id = myths.region_id
-    LEFT JOIN communities ON communities.id = myths.community_id
-    ${tagJoin}
-    ${whereClause}
-  `;
+    LEFT JOIN communities ON communities.id = myths.community_id`;
 
-  const listSql = `
-    SELECT DISTINCT
+const LIST_COLUMNS = `
       myths.id,
       myths.title,
       myths.slug,
@@ -204,26 +189,357 @@ function listMythsSqlite({
       regions.name AS region,
       regions.slug AS region_slug,
       communities.name AS community,
-      communities.slug AS community_slug
-    FROM myths
-    JOIN regions ON regions.id = myths.region_id
-    LEFT JOIN communities ON communities.id = myths.community_id
-    ${tagJoin}
+      communities.slug AS community_slug`;
+
+/**
+ * Bolsa de parámetros que reusa el mismo valor.
+ *
+ * El WHERE y el ORDER BY comparten patrones (`%muisca%` aparece en los dos), y
+ * cada variante de plural entra varias veces. Sin esto, una consulta de tres
+ * palabras mandaría medio centenar de parámetros repetidos.
+ *
+ * Van en DOS bolsas encadenadas por una razón que costó un
+ * `bind message supplies 11 parameters, but prepared statement requires 8`: la
+ * consulta de conteo del archivo lleva el WHERE pero NO el ORDER BY, así que si
+ * los parámetros de la puntuación entraran en la misma lista, mandaría
+ * parámetros que su SQL no nombra y Postgres lo rechaza (better-sqlite3
+ * también). La segunda bolsa numera A CONTINUACIÓN de la primera y, si el valor
+ * ya está en ella, reusa su marcador en vez de duplicarlo.
+ */
+function createParamBag(dialect, base = null) {
+  const values = [];
+  const index = new Map();
+  const offset = base ? base.values.length : 0;
+  return {
+    values,
+    peek: (value) => index.get(value) || null,
+    ref(value) {
+      const reused = base ? base.peek(value) : null;
+      if (reused) return reused;
+      if (index.has(value)) return index.get(value);
+      values.push(value);
+      const position = offset + values.length;
+      const placeholder = dialect === "sqlite" ? `:p${position}` : `$${position}`;
+      index.set(value, placeholder);
+      return placeholder;
+    },
+  };
+}
+
+/**
+ * Las piezas SQL de una consulta de texto.
+ *
+ * `whereBag` recibe los parámetros que necesitan el CTE y el filtro (y por
+ * tanto también el conteo del archivo); la bolsa de la puntuación se abre
+ * DESPUÉS, con el WHERE ya cerrado, para que numere a continuación.
+ *
+ * Devuelve `scoreSql` en null cuando la consulta no deja nada normalizable
+ * (por ejemplo "%%%" o "···"): entonces el orden vuelve a ser alfabético.
+ */
+function buildSearchClauses(rawQuery, whereBag, dialect) {
+  const terms = buildSearchTerms(rawQuery);
+  const likeWith = (bag) => (pattern) => `LIKE ${bag.ref(pattern)} ESCAPE '\\'`;
+  const ilikeWith = (bag) => (pattern) =>
+    dialect === "sqlite"
+      ? `LIKE ${bag.ref(pattern)} ESCAPE '\\'`
+      : `ILIKE ${bag.ref(pattern)} ESCAPE '\\'`;
+
+  const whereLike = likeWith(whereBag);
+  const whereIlike = ilikeWith(whereBag);
+
+  /* Los plegados viven en el CTE y se referencian por alias. Aquí se declaran
+     las expresiones que lo construyen. */
+  const foldedColumns = [
+    `${foldedSql(TITLE_COLUMN, dialect)} AS f_title`,
+    `${foldedSql(concatSql(META_COLUMNS), dialect)} AS f_meta`,
+    `${foldedSql(concatSql(PLACE_COLUMNS), dialect)} AS f_place`,
+    `${foldedSql(
+      concatSql([TITLE_COLUMN, ...META_COLUMNS, ...PLACE_COLUMNS]),
+      dialect
+    )} AS f_all`,
+  ];
+
+  /* (a) Paridad con el ILIKE de hoy: la consulta cruda sobre las nueve
+     columnas. Se escapan `%` y `_` para que un comodín escrito por la persona
+     deje de barrer el archivo entero. */
+  const rawPattern = likeContains(terms.raw);
+  foldedColumns.push(
+    `(myths.content ${whereIlike(rawPattern)}) AS body_hit`,
+    `(${RAW_MATCH_COLUMNS.map(
+      (column) => `${column} ${whereIlike(rawPattern)}`
+    ).join(" OR ")}) AS raw_hit`
+  );
+
+  /* (b) Sin tildes y con plurales. Se exigen TODOS los tokens (Y) y dentro de
+     cada uno basta una variante (O): "muiscas" encuentra "muisca" y al revés,
+     y "la llorona" no se convierte en "todo lo que diga la". */
+  const branches = ["folded.raw_hit"];
+  if (terms.groups.length) {
+    const grouped = terms.groups
+      .map(
+        (group) =>
+          `(${group.variants
+            .map((variant) => `folded.f_all ${whereLike(likeContains(variant))}`)
+            .join(" OR ")})`
+      )
+      .join(" AND ");
+    branches.push(`(${grouped})`);
+  }
+  const predicate = `(${branches.join(" OR ")})`;
+
+  if (!terms.phrase) {
+    return { foldedColumns, predicate, scoreSql: null, scoreValues: [] };
+  }
+
+  const scoreBag = createParamBag(dialect, whereBag);
+  const like = likeWith(scoreBag);
+  const w = SEARCH_WEIGHTS;
+  const phraseAny = likeContains(terms.phrase);
+  const phrasePrefix = `${escapeLikePattern(terms.phrase)}%`;
+  const phraseWord = `% ${escapeLikePattern(terms.phrase)}%`;
+  const pieces = [
+    `CASE WHEN folded.f_title = ${scoreBag.ref(terms.phrase)} THEN ${w.titleExact} ELSE 0 END`,
+    `CASE WHEN folded.f_title ${like(phrasePrefix)} THEN ${w.titlePrefix} ELSE 0 END`,
+    // Principio de palabra: "agua" premia "La madre agua", no "Yagua".
+    `CASE WHEN folded.f_title ${like(phraseWord)} THEN ${w.titleWordStart} ELSE 0 END`,
+    `CASE WHEN folded.f_title ${like(phraseAny)} THEN ${w.titlePhrase} ELSE 0 END`,
+    `CASE WHEN folded.f_meta ${like(phraseAny)} THEN ${w.metaPhrase} ELSE 0 END`,
+    `CASE WHEN folded.f_place ${like(phraseAny)} THEN ${w.placePhrase} ELSE 0 END`,
+    // El cuerpo se comprueba en el CTE, no se pliega ni se ordena: 4 puntos.
+    `CASE WHEN folded.body_hit THEN ${w.bodyPhrase} ELSE 0 END`,
+  ];
+
+  terms.scoreTerms.forEach(({ term, weight }) => {
+    const pattern = like(likeContains(term));
+    pieces.push(
+      `CASE WHEN folded.f_title ${pattern} THEN ${Math.round(w.titleTerm * weight)} ELSE 0 END`,
+      `CASE WHEN folded.f_meta ${pattern} THEN ${Math.round(w.metaTerm * weight)} ELSE 0 END`,
+      `CASE WHEN folded.f_place ${pattern} THEN ${Math.round(w.placeTerm * weight)} ELSE 0 END`
+    );
+  });
+
+  if (terms.tokens.length > 1) {
+    const everyToken = terms.tokens
+      .map((token) => `folded.f_title ${like(likeContains(token))}`)
+      .join(" AND ");
+    pieces.push(`CASE WHEN (${everyToken}) THEN ${w.allTokensInTitle} ELSE 0 END`);
+  }
+
+  return {
+    foldedColumns,
+    predicate,
+    scoreSql: `(${pieces.join("\n        + ")})`,
+    scoreValues: scoreBag.values,
+  };
+}
+
+/**
+ * WHERE, CTE y orden para el archivo, en los dos dialectos.
+ *
+ * Los filtros de territorio, pueblo y categoría se construyen igual que antes,
+ * con una diferencia: la categoría pasó de `JOIN myth_tags … + SELECT DISTINCT`
+ * a un `EXISTS` correlacionado. Devuelve exactamente los mismos relatos (un
+ * mito con esa etiqueta, una vez) sin multiplicar filas, y por eso el listado
+ * ya no necesita `DISTINCT` — que sobre 416 resultados con `image_prompt` a
+ * cuestas costaba ~70 ms de ordenación pura.
+ *
+ * Y lo esencial: la consulta de texto es UNA CLÁUSULA MÁS unida con AND.
+ * Buscar y filtrar se componen; nunca se reemplazan.
+ */
+function buildFilters({ region, community, tag, q }, dialect) {
+  const whereBag = createParamBag(dialect);
+  const where = [];
+
+  const regionValue = normalizeInput(region);
+  if (regionValue) {
+    const ref = whereBag.ref(regionValue);
+    where.push(`(regions.slug = ${ref} OR regions.name = ${ref})`);
+  }
+
+  const communityValue = normalizeInput(community);
+  if (communityValue) {
+    const ref = whereBag.ref(communityValue);
+    where.push(`(communities.slug = ${ref} OR communities.name = ${ref})`);
+  }
+
+  const tagValue = normalizeInput(tag);
+  if (tagValue) {
+    const ref = whereBag.ref(tagValue);
+    where.push(`EXISTS (
+        SELECT 1 FROM myth_tags
+        JOIN tags ON tags.id = myth_tags.tag_id
+        WHERE myth_tags.myth_id = myths.id
+          AND (tags.slug = ${ref} OR tags.name = ${ref})
+      )`);
+  }
+
+  const queryValue = normalizeInput(q);
+  if (!queryValue) {
+    return {
+      where,
+      values: whereBag.values,
+      scoreValues: [],
+      scoreSql: null,
+      searchPredicate: null,
+      foldedColumns: null,
+    };
+  }
+
+  const clauses = buildSearchClauses(queryValue, whereBag, dialect);
+  return {
+    where,
+    values: whereBag.values,
+    scoreValues: clauses.scoreValues,
+    scoreSql: clauses.scoreSql,
+    searchPredicate: clauses.predicate,
+    foldedColumns: clauses.foldedColumns,
+  };
+}
+
+/**
+ * El SQL del archivo, en el dialecto que toque.
+ *
+ * Dos formas, no tres:
+ *   · sin `q`  → conteo + listado alfabético (la de siempre);
+ *   · con `q`  → una sola consulta: CTE de plegados + puntuación +
+ *                `COUNT(*) OVER ()` para el total.
+ */
+function buildListSql(params, dialect, makeRefs) {
+  const { where, values, scoreValues, searchPredicate, scoreSql, foldedColumns } =
+    buildFilters(params, dialect);
+  const { limitRef, offsetRef } = makeRefs(values.length + scoreValues.length);
+
+  if (!searchPredicate) {
+    const whereClause = where.length ? `WHERE ${where.join(" AND ")}` : "";
+    const collate = dialect === "sqlite" ? " COLLATE NOCASE" : "";
+    return {
+      values,
+      scoreValues,
+      totalFromRows: false,
+      countSql: `
+    SELECT COUNT(*) AS count
+    ${MYTH_JOINS}
     ${whereClause}
-    ORDER BY myths.title COLLATE NOCASE ASC
-    LIMIT :limit OFFSET :offset
+  `,
+      listSql: `
+    SELECT${LIST_COLUMNS}
+    ${MYTH_JOINS}
+    ${whereClause}
+    ORDER BY myths.title${collate} ASC
+    LIMIT ${limitRef} OFFSET ${offsetRef}
+  `,
+    };
+  }
+
+  /* El CTE lleva los filtros: si además de buscar se filtró por territorio,
+     sólo se pliega ese subconjunto. Se materializa a propósito — sin
+     `MATERIALIZED`, Postgres lo aplana y vuelve a recalcular cada plegado en
+     cada `CASE WHEN`. */
+  const cteWhere = where.length ? `WHERE ${where.join(" AND ")}` : "";
+  const collate = dialect === "sqlite" ? " COLLATE NOCASE" : "";
+  const foldedCte = `WITH folded AS MATERIALIZED (
+      SELECT
+        myths.id AS mid,
+        ${foldedColumns.join(",\n        ")}
+      ${MYTH_JOINS}
+      ${cteWhere}
+    )`;
+
+  const listSql = `
+    ${foldedCte}
+    SELECT${LIST_COLUMNS},
+      ${scoreSql} AS search_score,
+      COUNT(*) OVER () AS total_count
+    ${MYTH_JOINS}
+    JOIN folded ON folded.mid = myths.id
+    WHERE ${searchPredicate}
+    ORDER BY search_score DESC, myths.title${collate} ASC
+    LIMIT ${limitRef} OFFSET ${offsetRef}
+  `;
+  /* El total normal viaja en la fila (`COUNT(*) OVER ()`). Este conteo es el
+     respaldo para una página FUERA DE RANGO (`/mitos/pagina/99?q=agua`): sin
+     filas no hay ventana que lo lleve, y sin él la página diría "0 relatos" en
+     vez de "416". Sólo se ejecuta en ese caso, no en el camino normal. */
+  const countSql = `
+    ${foldedCte}
+    SELECT COUNT(*) AS count
+    ${MYTH_JOINS}
+    JOIN folded ON folded.mid = myths.id
+    WHERE ${searchPredicate}
   `;
 
-  const total = db.prepare(countSql).get({ ...params }).count;
-  const items = db
-    .prepare(listSql)
-    .all({ ...params, limit: limitValue, offset: offsetValue });
+  return { values, scoreValues, totalFromRows: true, countSql, listSql };
+}
+
+/**
+ * `total_count` es el andamio de `COUNT(*) OVER ()`, no un campo del mito: se
+ * quita antes de devolver (lo consume `/api/myths` y `llms.txt`). `search_score`
+ * sí se conserva: es información útil y sólo aparece cuando hubo búsqueda.
+ */
+function stripQueryArtifacts(rows) {
+  return rows.map(({ total_count, ...rest }) => rest);
+}
+
+/**
+ * De dónde sale el total.
+ *
+ * Sin `q`, de su propia consulta de conteo. Con `q`, de `COUNT(*) OVER ()`, que
+ * viaja en cada fila y no cuesta un viaje más. El único caso en que hay que ir
+ * a preguntar es una página fuera de rango: sin filas no hay ventana, y
+ * devolver 0 haría que la página dijera "0 relatos" teniendo 416.
+ */
+function resolveTotal({ totalFromRows, rows, offset, count }) {
+  if (!totalFromRows) return count();
+  if (rows.length) return Number(rows[0].total_count || 0);
+  if (offset > 0) return count();
+  return 0;
+}
+
+/** Los mismos parámetros posicionales, con los nombres que quiere better-sqlite3. */
+function toSqliteParams(values, extra = {}) {
+  const params = { ...extra };
+  values.forEach((value, i) => {
+    params[`p${i + 1}`] = value;
+  });
+  return params;
+}
+
+function listMythsSqlite({
+  region,
+  community,
+  tag,
+  q,
+  limit = 20,
+  offset = 0,
+} = {}) {
+  const db = getSqliteDb();
+  const { values, scoreValues, totalFromRows, countSql, listSql } = buildListSql(
+    { region, community, tag, q },
+    "sqlite",
+    () => ({ limitRef: ":limit", offsetRef: ":offset" })
+  );
+
+  const limitValue = clampNumber(limit, 1, 100, 20);
+  const offsetValue = clampNumber(offset, 0, 5000, 0);
+  const listParams = toSqliteParams([...values, ...scoreValues], {
+    limit: limitValue,
+    offset: offsetValue,
+  });
+
+  const rows = db.prepare(listSql).all(listParams);
+
+  const total = resolveTotal({
+    totalFromRows,
+    rows,
+    offset: offsetValue,
+    count: () => Number(db.prepare(countSql).get(toSqliteParams(values)).count || 0),
+  });
 
   return {
     total,
     limit: limitValue,
     offset: offsetValue,
-    items,
+    items: stripQueryArtifacts(rows),
   };
 }
 
@@ -236,70 +552,34 @@ async function listMythsPostgres({
   offset = 0,
 } = {}) {
   const sql = getSqlClient();
-  const { where, values, tagValue } = buildFiltersPostgres({
-    region,
-    community,
-    tag,
-    q,
-  });
-
-  const tagJoin = tagValue
-    ? "JOIN myth_tags ON myth_tags.myth_id = myths.id JOIN tags ON tags.id = myth_tags.tag_id"
-    : "";
-  const whereClause = where.length ? `WHERE ${where.join(" AND ")}` : "";
+  const { values, scoreValues, totalFromRows, countSql, listSql } = buildListSql(
+    { region, community, tag, q },
+    "postgres",
+    (paramCount) => ({
+      limitRef: `$${paramCount + 1}`,
+      offsetRef: `$${paramCount + 2}`,
+    })
+  );
 
   const limitValue = clampNumber(limit, 1, 100, 20);
   const offsetValue = clampNumber(offset, 0, 5000, 0);
 
-  const countSql = `
-    SELECT COUNT(DISTINCT myths.id) AS count
-    FROM myths
-    JOIN regions ON regions.id = myths.region_id
-    LEFT JOIN communities ON communities.id = myths.community_id
-    ${tagJoin}
-    ${whereClause}
-  `;
+  const listValues = [...values, ...scoreValues, limitValue, offsetValue];
+  const rows = (await sql.query(listSql, listValues)).rows;
 
-  const countResult = await sql.query(countSql, values);
-  const total = Number(countResult.rows[0]?.count || 0);
-
-  const limitIndex = values.length + 1;
-  const offsetIndex = values.length + 2;
-  const listSql = `
-    SELECT DISTINCT
-      myths.id,
-      myths.title,
-      myths.slug,
-      myths.excerpt,
-      myths.tags_raw,
-      myths.seo_title,
-      myths.seo_description,
-      myths.focus_keyword,
-      myths.focus_keywords_raw,
-      myths.image_prompt,
-      myths.image_url,
-      myths.category_path,
-      regions.name AS region,
-      regions.slug AS region_slug,
-      communities.name AS community,
-      communities.slug AS community_slug
-    FROM myths
-    JOIN regions ON regions.id = myths.region_id
-    LEFT JOIN communities ON communities.id = myths.community_id
-    ${tagJoin}
-    ${whereClause}
-    ORDER BY myths.title ASC
-    LIMIT $${limitIndex} OFFSET $${offsetIndex}
-  `;
-
-  const listValues = [...values, limitValue, offsetValue];
-  const items = (await sql.query(listSql, listValues)).rows;
+  const total = await resolveTotal({
+    totalFromRows,
+    rows,
+    offset: offsetValue,
+    count: async () =>
+      Number((await sql.query(countSql, values)).rows[0]?.count || 0),
+  });
 
   return {
     total,
     limit: limitValue,
     offset: offsetValue,
-    items,
+    items: stripQueryArtifacts(rows),
   };
 }
 

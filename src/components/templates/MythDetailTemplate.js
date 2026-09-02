@@ -1,14 +1,18 @@
+import {
+  FALLBACK_IMAGE_ASPECT,
+  getImageAspect,
+} from "../../lib/myth-images";
+import { cn } from "../../lib/utils";
 import { Container, Heading, ImageFrame, Motif } from "../atoms";
 import { Breadcrumb, ShareBar } from "../molecules";
 import { CommentThread, Header, MythGrid } from "../organisms";
 import { MythReadingRail } from "../MythReadingRail";
 import { MythHero, MythIntroMobile } from "./MythHero";
 import {
-  FuentesBlock,
+  ExpedienteBlock,
   HistoriaBlock,
   LeccionBlock,
   PalabrasClaveBlock,
-  ProcedenciaBlock,
   RelatoBlock,
   SimilitudesBlock,
   TerritorioBlock,
@@ -17,27 +21,75 @@ import {
   mythMotif,
   toParagraphs,
 } from "./MythSections";
+import { buildSourceGroups } from "./myth-expediente";
 
 const RIVER_REGIONS = ["Caribe", "Pacífico"];
 const pickAccent = (region) =>
   RIVER_REGIONS.includes(region) ? "river" : "jungle";
 
+/*
+ * Hasta aquí la escena del relato vivía en una caja dura de 9/16 sobre un
+ * fondo casi negro. Como sólo 207 de las 596 verticales del archivo son 9/16
+ * y 389 son 2:3, el 65 % de los mitos se leía con dos franjas negras arriba y
+ * abajo —el 15,6 % del alto de la caja—. La caja pasa a tomar la proporción
+ * real de cada obra: nada se recorta y no queda ni una franja.
+ */
+
+/* Por encima de esto la obra ya no es un retrato y no puede ir en la columna
+ * lateral: 0,95 deja pasar el cuadrado justo y ataja la apaisada. */
+const PORTRAIT_MAX_RATIO = 0.95;
+
+/*
+ * Techo de la caja. La obra más alta del archivo (1512×2688) mediría 766 px a
+ * lo ancho de la columna: más que el hueco visible bajo el riel en un portátil
+ * de 13" (≈730 px), así que quedaría cortada justo cuando se pega al hacer
+ * scroll. El tope se aplica al ANCHO —`alto × ancho/alto`—, de modo que la
+ * caja encoge sin dejar de tener la proporción exacta de la obra: sigue sin
+ * franjas, sólo más pequeña y centrada. De paso acota el ritmo vertical: entre
+ * un mito 2:3 y uno 9:16 la diferencia de alto nunca pasa del 18 %, y ninguno
+ * puede pasarse del alto de la ventana.
+ */
+const ART_HEIGHT_CAP = "max(20rem, 100svh - 11rem)";
+
+export function mythArtAspect(url) {
+  return getImageAspect(url) ?? FALLBACK_IMAGE_ASPECT;
+}
+
 /**
  * Segunda escena del tríptico —el acto— junto al relato en escritorio, donde la
  * portada ya mostró la entrada apaisada.
+ *
+ * `aspect` llega medido desde el servidor (`mythArtAspect`) para reservar el
+ * hueco ANTES de que baje la imagen: no hay salto de maquetación. Cuando la
+ * obra no está en el mapa se cae a 2:3, que es el formato mayoritario y por
+ * tanto la caja que menos desentona; y como `object-contain` sigue puesto, un
+ * dato equivocado deja un hilo de fondo en vez de recortar la obra.
  */
-function InlineStoryImage({ myth, className = "" }) {
+function InlineStoryImage({ myth, aspect, className = "" }) {
   if (!myth.verticalImageUrl) return null;
+  const isPortrait = aspect.ratio <= PORTRAIT_MAX_RATIO;
   return (
-    <figure className={className}>
+    <figure
+      className={cn("mx-auto w-full", className)}
+      style={{
+        aspectRatio: `${aspect.w} / ${aspect.h}`,
+        maxWidth: `calc(${ART_HEIGHT_CAP} * ${aspect.w} / ${aspect.h})`,
+      }}
+    >
       <ImageFrame
         src={myth.verticalImageUrl}
-        alt={`${myth.title}: el acto del relato`}
-        ratio="9 / 16"
-        sizes="(max-width: 768px) 100vw, 440px"
+        alt={`${myth.title}: ${isPortrait ? "el acto del relato" : "escena del relato"}`}
+        ratio={null}
+        // La de retrato vive en la columna lateral (≈440 px); la que no lo es
+        // baja a la medida de lectura completa y necesita el doble de fuente.
+        sizes={
+          isPortrait
+            ? "(max-width: 768px) 100vw, 440px"
+            : "(max-width: 768px) 100vw, 768px"
+        }
         placeholderMotif={myth.motif}
         placeholderSize={180}
-        className="rounded border border-line-100 bg-[rgb(var(--atlas-night))]"
+        className="rounded border border-line-100 bg-mist-50"
         imgClassName="object-contain"
         data-image-role="inline-scene"
       />
@@ -77,13 +129,35 @@ function MythReading({ myth, accent, related }) {
   );
   const hasVersions = Boolean(toParagraphs(myth.versiones).length);
   const hasTeaching = Boolean(String(myth.leccion || "").trim());
+
+  // La obra del relato se mide en el servidor: el mapa de dimensiones (56 KB)
+  // no debe cruzar al cliente, así que lo que baja al navegador es sólo la
+  // proporción ya resuelta dentro del `style` de la figura.
+  const artAspect = mythArtAspect(myth.verticalImageUrl);
+  // La ranura vertical a veces se llena con una obra que no lo es (una variante
+  // que quedó vieja y cae en la apaisada). Antes se metía a la fuerza en una
+  // columna de retrato; ahora, si no es retrato, la columna lateral no se abre
+  // y la obra baja al ancho de la lectura con su propia proporción.
+  const artIsPortrait =
+    Boolean(myth.verticalImageUrl) && artAspect.ratio <= PORTRAIT_MAX_RATIO;
+  const artBelowStory = Boolean(myth.verticalImageUrl) && !artIsPortrait;
+
+  const sourceGroups = buildSourceGroups({
+    keySources: myth.keySources,
+    sources: myth.sources,
+  });
+  const hasSources = sourceGroups.total > 0;
+
   const readingItems = [
     { href: "relato", label: "Relato", visible: Boolean(toParagraphs(myth.mito).length) },
     { href: "ensenanza", label: "Enseñanza", visible: hasTeaching },
     { href: "territorio", label: "Territorio", visible: showTerritory },
     { href: "contexto", label: "Contexto", visible: hasContext },
     { href: "versiones", label: "Versiones", visible: hasVersions },
-    { href: "fuentes", label: "Fuentes", visible: true },
+    // 218 de los 596 mitos no tienen ni una fuente publicada. El riel prometía
+    // "Fuentes" en los 596 y en más de un tercio llevaba a un aviso de que no
+    // las hay. La parada nombra lo que sí está en esa sección.
+    { href: "fuentes", label: hasSources ? "Fuentes" : "Procedencia", visible: true },
   ].filter((item) => item.visible);
   const shareUrl = myth.slug
     ? `https://www.mitosdecolombia.com/mitos/${myth.slug}`
@@ -97,7 +171,7 @@ function MythReading({ myth, accent, related }) {
         <section
           id="relato"
           className={`scroll-mt-36 mx-auto grid max-w-[1120px] items-start gap-10 md:gap-14 ${
-            myth.verticalImageUrl
+            artIsPortrait
               ? "md:grid-cols-[minmax(0,1fr)_minmax(18rem,0.68fr)]"
               : "max-w-3xl"
           }`}
@@ -105,11 +179,21 @@ function MythReading({ myth, accent, related }) {
           <div className="min-w-0">
             <MobileEntranceImage myth={myth} className="mb-9 md:hidden" />
             <RelatoBlock text={myth.mito} accent={accent} motif={myth.motif} />
+            {artBelowStory ? (
+              <InlineStoryImage
+                myth={myth}
+                aspect={artAspect}
+                className="mt-12 hidden md:block"
+              />
+            ) : null}
           </div>
-          <InlineStoryImage
-            myth={myth}
-            className="hidden md:sticky md:top-36 md:block"
-          />
+          {artIsPortrait ? (
+            <InlineStoryImage
+              myth={myth}
+              aspect={artAspect}
+              className="hidden md:sticky md:top-36 md:block"
+            />
+          ) : null}
         </section>
       </Container>
 
@@ -176,18 +260,14 @@ function MythReading({ myth, accent, related }) {
 
       <section id="fuentes" className="scroll-mt-36 border-y border-line-100 bg-mist-50/55">
         <Container size="atlas" className="py-14 md:py-20">
-          <div className="grid gap-10 lg:grid-cols-2 lg:gap-0">
-          <ProcedenciaBlock
+          <ExpedienteBlock
+            groups={sourceGroups}
             region={myth.region}
             community={myth.community}
             categoryPath={myth.category_path}
-          />
-          <FuentesBlock
-            sources={[...(myth.keySources || []), ...(myth.sources || [])]}
             updatedAt={myth.editorialUpdatedAt || myth.updatedAt}
           />
-          </div>
-          <div className="mt-10 grid gap-8 border-t border-line-200 pt-8 lg:grid-cols-[1fr_auto] lg:items-start">
+          <div className="mx-auto mt-12 grid max-w-3xl gap-8 border-t border-line-200 pt-8 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-start">
             <PalabrasClaveBlock keywords={myth.keywords} />
             <ShareBar url={shareUrl} title={myth.title} />
           </div>

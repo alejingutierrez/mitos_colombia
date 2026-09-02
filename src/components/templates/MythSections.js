@@ -11,6 +11,11 @@ import {
   StatusDot,
 } from "../atoms";
 import { VersionsDisclosure } from "../VersionsDisclosure";
+import {
+  SECONDARY_INLINE_LIMIT,
+  formatReviewDate,
+  provenanceTrail,
+} from "./myth-expediente";
 
 /**
  * Bloques de sección editorial de un mito + chrome compartido (sala de museo).
@@ -322,115 +327,227 @@ export function SimilitudesBlock({ text, accent = "jungle", index, motif = "anac
   );
 }
 
-/* ---------------- Procedencia — sello de credibilidad ---------------- */
-export function ProcedenciaBlock({ region, community, categoryPath }) {
-  const origin = [community, region].filter(Boolean).join(", ");
+/* ---------------- Procedencia y fuentes — el colofón del expediente ---------------- */
+
+/*
+ * Procedencia y fuentes NO son simétricas, y dejan de maquetarse como si lo
+ * fueran. La procedencia es UN DATO —cabe en un renglón—; las fuentes son una
+ * bibliografía real: 6 entradas en el caso mediano y hasta 33 en el mayor.
+ * Pareadas en dos columnas iguales, el dato quedaba inflado y la bibliografía
+ * estrangulada. Ahora la procedencia entra en el colofón (una ficha técnica de
+ * dos o tres renglones) y las fuentes ocupan la medida de lectura completa,
+ * agrupadas por función y numeradas de corrido.
+ */
+
+/* Ficha técnica: pares dato/valor, el mismo idiom de la tabla de Territorio. */
+function Colophon({ rows }) {
+  const visible = rows.filter((row) => row && row.value);
+  if (!visible.length) return null;
   return (
-    <div className="border-t border-line-200 pt-6 lg:border-t-0 lg:pt-0">
-      <div className="flex items-start gap-3.5">
-        <Icon name="map-pin" size={20} className="mt-0.5 shrink-0" style={{ color: GOLD }} />
-        <div>
-          <h3 className="font-display text-xl text-jungle-700">Procedencia</h3>
-          <p className="mt-1.5 font-display text-sm tracking-wide text-ink-900">
-            Recopilado de la tradición oral{origin ? ` de ${origin}` : ""}
-            {categoryPath ? ` · ${categoryPath}` : ""}.
-          </p>
-          <TextLink href="/metodologia" className="mt-2.5 inline-flex text-sm">
-            Cómo documentamos cada relato
-          </TextLink>
+    <dl className="mt-6 divide-y divide-line-100 border-y border-line-100 text-sm">
+      {visible.map((row) => (
+        <div
+          key={row.label}
+          className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1 py-3"
+        >
+          <dt className="text-ink-500">{row.label}</dt>
+          <dd className="min-w-0 text-right font-medium text-ink-900">{row.value}</dd>
         </div>
-      </div>
-    </div>
+      ))}
+    </dl>
   );
 }
 
-function normalizeSource(source) {
-  const title = String(source?.title || "").trim();
-  const summary = String(source?.summary || "").trim();
-  let url = "";
-  try {
-    const parsed = new URL(String(source?.url || ""));
-    if (parsed.protocol === "https:" || parsed.protocol === "http:") {
-      url = parsed.toString();
-    }
-  } catch {
-    url = "";
+/*
+ * Una referencia. El numeral, el título enlazado, el dominio como dato
+ * verificable de un vistazo y la nota de la ficha —que es donde el expediente
+ * dice qué aporta la fuente y hasta dónde llega—.
+ */
+function SourceEntry({ source, index }) {
+  return (
+    <li className="grid gap-x-4 gap-y-1 py-5 sm:grid-cols-[2.75rem_minmax(0,1fr)]">
+      <span
+        className="atlas-figure font-display text-base leading-tight text-ink-500"
+        aria-hidden="true"
+      >
+        {String(index).padStart(2, "0")}
+      </span>
+      <div className="min-w-0">
+        <a
+          href={source.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="font-display text-[length:var(--step-0)] leading-snug text-river-700 underline decoration-river-500/40 underline-offset-4 transition-colors hover:decoration-river-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-river-500/40"
+        >
+          {source.title}
+        </a>
+        {source.host ? (
+          <p className="mt-1.5 text-[0.7rem] uppercase tracking-[0.16em] text-ink-500">
+            {source.host}
+          </p>
+        ) : null}
+        {source.summary ? (
+          <p className="mt-2 max-w-[60ch] text-sm leading-relaxed text-ink-700">
+            {source.summary}
+          </p>
+        ) : null}
+      </div>
+    </li>
+  );
+}
+
+function SourceList({ items, start = 1, label }) {
+  return (
+    <ol
+      aria-label={label}
+      start={start}
+      className="divide-y divide-line-100 border-t border-line-100"
+    >
+      {items.map((source, i) => (
+        <SourceEntry key={source.url} source={source} index={start + i} />
+      ))}
+    </ol>
+  );
+}
+
+/*
+ * La cola larga se pliega en un `<details>` nativo: sigue completa en el HTML
+ * —y por tanto para buscadores y lectores de pantalla—, pero deja de convertir
+ * el final del artículo en un muro. Sin componente de cliente detrás.
+ */
+
+function SecondaryGroup({ items, start }) {
+  if (!items.length) return null;
+  const label = "Contraste y contexto";
+  const heading = `${label} · ${items.length} ${
+    items.length === 1 ? "referencia" : "referencias"
+  }`;
+
+  if (items.length <= SECONDARY_INLINE_LIMIT) {
+    return (
+      <div className="mt-10">
+        <Eyebrow className="mb-4">{heading}</Eyebrow>
+        <SourceList items={items} start={start} label={label} />
+      </div>
+    );
   }
-  return title && url ? { title, summary, url } : null;
-}
-
-function formatReviewDate(value) {
-  if (!value) return "";
-  const date = new Date(value);
-  if (Number.isNaN(date.getTime())) return "";
-  return new Intl.DateTimeFormat("es-CO", {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-    timeZone: "America/Bogota",
-  }).format(date);
-}
-
-export function FuentesBlock({ sources = [], updatedAt }) {
-  // Deduplicar por URL: varias fichas traen la misma referencia repetida y se
-  // listaba dos veces (además de romper las keys de React).
-  const normalized = Array.from(
-    new Map(
-      sources
-        .map(normalizeSource)
-        .filter(Boolean)
-        .map((source) => [source.url, source])
-    ).values()
-  ).slice(0, 12);
-  const reviewDate = formatReviewDate(updatedAt);
 
   return (
-    <div className="border-t border-line-200 pt-6 lg:border-l lg:border-t-0 lg:pl-8 lg:pt-0">
-      <div className="flex items-start gap-3.5">
-        <Icon name="link" size={20} className="mt-0.5 shrink-0 text-river-600" />
-        <div className="min-w-0 flex-1">
-          <h3 className="font-display text-xl text-jungle-700">
-            Fuentes y revisión editorial
-          </h3>
-          {normalized.length ? (
-            <>
-              <p className="mt-2 text-sm leading-relaxed text-ink-700">
-                Esta ficha cuenta con referencias de contraste publicadas. La adaptación
-                narrativa del sitio no sustituye la consulta de las fuentes originales.
-              </p>
-              <ul className="mt-4 space-y-3">
-                {normalized.map((source) => (
-                  <li key={source.url} className="border-l-2 border-river-500/35 pl-4">
-                    <a
-                      href={source.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="font-display text-sm font-semibold text-river-700 underline decoration-river-500/35 underline-offset-4 hover:decoration-river-600"
-                    >
-                      {source.title}
-                    </a>
-                    {source.summary ? (
-                      <p className="mt-1 text-xs leading-relaxed text-ink-600">
-                        {source.summary}
-                      </p>
-                    ) : null}
-                  </li>
-                ))}
-              </ul>
-            </>
-          ) : (
-            <p className="mt-2 text-sm leading-relaxed text-ink-700">
-              La procedencia cultural está clasificada, pero la referencia bibliográfica
-              primaria aún está pendiente de publicación en esta ficha. No presentamos
-              esa clasificación como si fuera una cita documental.
-            </p>
-          )}
-          <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs text-ink-700">
-            {reviewDate ? <span>Última revisión: {reviewDate}</span> : null}
-            <TextLink href="/contacto">Aportar o corregir una fuente</TextLink>
-          </div>
-        </div>
+    <details className="group mt-10 border-t border-line-100">
+      <summary className="flex min-h-14 cursor-pointer list-none items-center justify-between gap-6 py-4 text-ink-900 transition-colors hover:text-jungle-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-jungle-500/40 [&::-webkit-details-marker]:hidden">
+        <Eyebrow as="span" className="text-ink-900">
+          {heading}
+        </Eyebrow>
+        <Icon
+          name="chevron-down"
+          size={20}
+          className="shrink-0 text-ink-500 transition-transform duration-300 group-open:rotate-180 motion-reduce:transition-none"
+        />
+      </summary>
+      <SourceList items={items} start={start} label={label} />
+    </details>
+  );
+}
+
+/**
+ * Colofón del mito: de dónde viene el relato y sobre qué se sostiene.
+ *
+ * Dos estados, porque 218 de los 596 mitos (36,6 %) no tienen ni una fuente
+ * publicada y fingir lo contrario sería el peor de los defectos en una ficha
+ * que se presenta como documentada:
+ *
+ *   con bibliografía  → el rótulo es "Fuentes" y la lista es el cuerpo.
+ *   sin bibliografía  → el rótulo es "Procedencia": se muestra lo que sí hay
+ *                       (la clasificación) y se dice, sin rodeos, lo que falta.
+ *
+ * El rótulo del riel de lectura sale del mismo cálculo (`buildSourceGroups`),
+ * así que la navegación nunca promete una sección vacía.
+ */
+export function ExpedienteBlock({
+  groups,
+  region,
+  community,
+  categoryPath,
+  updatedAt,
+}) {
+  const trail = provenanceTrail({ region, community, categoryPath });
+  const origin = ["Tradición oral", ...trail].join(" · ");
+  const reviewDate = formatReviewDate(updatedAt);
+  const hasSources = groups.total > 0;
+
+  return (
+    <div className="mx-auto max-w-3xl">
+      <div className="mb-6">
+        <h2 className="atlas-section-heading">
+          {hasSources ? "Fuentes" : "Procedencia"}
+        </h2>
+        <span className="atlas-rule" aria-hidden="true" />
       </div>
+
+      <p className="max-w-[60ch] text-base leading-relaxed text-ink-700">
+        {hasSources
+          ? "Esta ficha se apoya en referencias publicadas y verificables. La adaptación narrativa del sitio no sustituye la consulta de las fuentes originales."
+          : "La procedencia cultural de este relato está clasificada y es la que aparece abajo. Lo que todavía no tiene es bibliografía publicada."}
+      </p>
+
+      <Colophon
+        rows={[
+          { label: hasSources ? "Procedencia" : "Clasificación", value: origin },
+          hasSources
+            ? {
+                label: "Referencias",
+                value: (
+                  <span className="atlas-figure">
+                    {groups.total}
+                  </span>
+                ),
+              }
+            : null,
+          { label: "Última revisión", value: reviewDate },
+        ]}
+      />
+
+      <p className="mt-4 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm">
+        <TextLink href="/metodologia">Cómo documentamos cada relato</TextLink>
+        <TextLink href="/contacto">
+          {hasSources ? "Aportar o corregir una fuente" : "Aportar una fuente"}
+        </TextLink>
+      </p>
+
+      {hasSources ? (
+        <>
+          {groups.primary.length ? (
+            <div className="mt-10">
+              <Eyebrow className="mb-4">
+                {`Base documental · ${groups.primary.length} ${
+                  groups.primary.length === 1 ? "referencia" : "referencias"
+                }`}
+              </Eyebrow>
+              <SourceList
+                items={groups.primary}
+                start={1}
+                label="Base documental"
+              />
+            </div>
+          ) : null}
+          <SecondaryGroup
+            items={groups.secondary}
+            start={groups.primary.length + 1}
+          />
+        </>
+      ) : (
+        <div className="mt-8 border-l-2 border-line-300 pl-5">
+          <p className="max-w-[60ch] text-base leading-relaxed text-ink-700">
+            Una clasificación no es una cita, y no la presentamos como si lo
+            fuera: mientras no haya una referencia contrastada, este relato se
+            lee como versión editorial de una tradición viva.
+          </p>
+          <p className="mt-3 max-w-[60ch] text-sm leading-relaxed text-ink-500">
+            Si usted conoce una crónica, un estudio o un registro comunitario
+            que documente este mito, puede proponerlo y lo revisamos.
+          </p>
+        </div>
+      )}
     </div>
   );
 }

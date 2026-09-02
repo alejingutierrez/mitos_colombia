@@ -34,7 +34,7 @@ export function RouteBanner({ route }) {
           ratio={null}
           sizes="(max-width: 767px) 780px, 100vw"
           mobileSizes="100vw"
-          quality={70}
+          quality={68}
           className="absolute inset-0 h-full w-full rounded-none border-0"
           imgClassName="atlas-image-zoom object-cover object-[50%_44%]"
         />
@@ -132,7 +132,7 @@ export function TerritoryBanner({ imageUrl, motif }) {
           alt=""
           ratio={null}
           sizes="(max-width: 1023px) 100vw, 52vw"
-          quality={70}
+          quality={68}
           placeholderMotif={motif || "montana"}
           className="absolute inset-0 h-full w-full rounded-none border-0"
           imgClassName="atlas-image-zoom object-cover"

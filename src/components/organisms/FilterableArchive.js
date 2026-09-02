@@ -1,49 +1,27 @@
 "use client";
 
-import Link from "next/link";
 import { useMemo, useState } from "react";
 import { cn } from "../../lib/utils";
 import { Container } from "../atoms/Container";
-import { Icon } from "../atoms/Icon";
-import { ImageFrame } from "../atoms/ImageFrame";
 import { Text } from "../atoms/Text";
+import { ArchiveRow } from "../molecules/ArchiveRow";
 import { EmptyState } from "../molecules/EmptyState";
 import { FilterBar } from "../molecules/FilterBar";
 import { OverlayMythCard } from "../editorial/AtlasEditorial";
-import { getMythImage } from "../../lib/myth-images";
 
-function ResultRow({ myth, index }) {
-  return (
-    <Link
-      href={`/mitos/${myth.slug}`}
-      className="group grid grid-cols-[2.3rem_5.5rem_1fr_auto] items-center gap-4 border-b border-line-100 py-4"
-    >
-      <span className="font-editorial text-2xl text-jungle-700">
-        {String(index + 1).padStart(2, "0")}
-      </span>
-      <ImageFrame
-        src={getMythImage(myth, "landscape")}
-        alt=""
-        ratio="4 / 3"
-        sizes="88px"
-        className="rounded-none border-0"
-        imgClassName="atlas-image-zoom object-cover"
-      />
-      <span className="min-w-0">
-        <span className="block font-editorial text-xl font-semibold leading-none text-ink-900">
-          {myth.title}
-        </span>
-        <span className="atlas-kicker mt-2 block">
-          {[myth.region, myth.community].filter(Boolean).join(" · ")}
-        </span>
-      </span>
-      <Icon name="arrow-right" size={16} className="mc-arrow text-jungle-700" />
-    </Link>
-  );
-}
+/**
+ * Organismo · FilterableArchive — explorador de una categoría.
+ *
+ * El renglón de resultados ya no vive aquí: es `ArchiveRow`, el mismo que usa
+ * `/mitos`. Antes había dos copias del mismo renglón con medidas distintas
+ * (miniatura de 88px acá, 104px allá) y con la numeración calculada por
+ * separado, así que cualquier arreglo tenía que hacerse dos veces —y una de
+ * las dos se quedaba atrás.
+ */
 
 function MixedResults({ myths }) {
   const [lead, second, third, ...rest] = myths;
+
   return (
     <>
       <div className="grid gap-3 lg:grid-cols-[1.2fr_0.8fr_0.8fr]">
@@ -68,18 +46,25 @@ function MixedResults({ myths }) {
           showExcerpt={false}
           titleClass="atlas-title-md"
         />
-        <div className="border-y border-line-100 lg:col-span-2">
-          {rest.slice(0, 4).map((myth, index) => (
-            <ResultRow key={myth.slug} myth={myth} index={index + 3} />
-          ))}
-        </div>
+        {rest.length ? (
+          <ol className="list-none border-t border-line-100 lg:col-span-2">
+            {rest.slice(0, 4).map((myth, index) => (
+              <li key={myth.slug}>
+                <ArchiveRow myth={myth} folio={index + 4} />
+              </li>
+            ))}
+          </ol>
+        ) : null}
       </div>
+
       {rest.length > 4 ? (
-        <div className="mt-10 grid gap-x-10 sm:grid-cols-2">
+        <ol className="mt-10 list-none border-t border-line-100">
           {rest.slice(4).map((myth, index) => (
-            <ResultRow key={myth.slug} myth={myth} index={index + 7} />
+            <li key={myth.slug}>
+              <ArchiveRow myth={myth} folio={index + 8} />
+            </li>
           ))}
-        </div>
+        </ol>
       ) : null}
     </>
   );
@@ -106,9 +91,7 @@ export function FilterableArchive({
     <Container size="atlas" as="section" className={cn("py-12", className)}>
       <div className="mb-8 flex flex-col gap-5 border-b border-line-100 pb-6 lg:flex-row lg:items-end lg:justify-between">
         <div>
-          <h2 className="font-editorial text-4xl font-semibold text-ink-900 md:text-5xl">
-            Relatos para explorar
-          </h2>
+          <h2 className="atlas-section-heading">Relatos para explorar</h2>
           <span className="atlas-rule" />
         </div>
         <div className="lg:max-w-3xl lg:flex-1">
