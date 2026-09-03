@@ -1,62 +1,48 @@
 import { NextResponse } from "next/server";
 import { addContactMessage } from "../../../lib/contact";
+import { serializeContactSubmission } from "../../../lib/contact-validation";
 
 export const runtime = "nodejs";
 
-function isValidEmail(value) {
-  return Boolean(value && String(value).includes("@"));
-}
-
+/**
+ * POST /api/contact
+ *
+ * Acepta las dos formas:
+ *  - Tres puertas: `{ intent, ...campos de la puerta, name, email }`.
+ *  - Heredada: `{ name, email, subject, message }` (sin `intent`).
+ *
+ * En ambos casos termina en las mismas cuatro columnas de `contact_messages`.
+ * La validación del servidor es la que manda; la del cliente es cortesía.
+ */
 export async function POST(request) {
+  let body;
   try {
-    const body = await request.json();
-    const { name, email, subject, message } = body || {};
+    body = await request.json();
+  } catch {
+    return NextResponse.json(
+      { error: "No pudimos leer el formulario. Inténtalo de nuevo." },
+      { status: 400 }
+    );
+  }
 
-    if (!name || !email || !message) {
-      return NextResponse.json(
-        { error: "Nombre, email y mensaje son requeridos." },
-        { status: 400 }
-      );
-    }
+  const result = serializeContactSubmission(body || {});
 
-    const trimmedName = String(name).trim();
-    const trimmedEmail = String(email).trim().toLowerCase();
-    const trimmedMessage = String(message).trim();
-    const trimmedSubject = subject ? String(subject).trim() : "";
+  if (!result.ok) {
+    // `error` es el primer problema en orden visual: quien sólo lea
+    // `payload.error` (el contrato viejo) sigue recibiendo una frase útil.
+    return NextResponse.json(
+      { error: result.error, field: result.field, errors: result.errors },
+      { status: 400 }
+    );
+  }
 
-    if (trimmedName.length < 2) {
-      return NextResponse.json(
-        { error: "El nombre debe tener al menos 2 caracteres." },
-        { status: 400 }
-      );
-    }
-
-    if (!isValidEmail(trimmedEmail)) {
-      return NextResponse.json(
-        { error: "El email no es válido." },
-        { status: 400 }
-      );
-    }
-
-    if (trimmedMessage.length < 10) {
-      return NextResponse.json(
-        { error: "El mensaje debe tener al menos 10 caracteres." },
-        { status: 400 }
-      );
-    }
-
-    const safeSubject = trimmedSubject.length ? trimmedSubject : "Sin asunto";
-    const result = await addContactMessage({
-      name: trimmedName,
-      email: trimmedEmail,
-      subject: safeSubject,
-      message: trimmedMessage,
-    });
-
+  try {
+    const saved = await addContactMessage(result.value);
     return NextResponse.json({
       success: true,
       message: "Gracias por escribirnos. Te responderemos pronto.",
-      id: result.id,
+      subject: result.value.subject,
+      id: saved.id,
     });
   } catch (error) {
     console.error("Error creating contact message:", error);

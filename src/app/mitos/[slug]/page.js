@@ -4,7 +4,7 @@ import {
   getRecommendedMyths,
   listAllMythSlugs,
 } from "../../../lib/myths";
-import { Comments } from "../../../components/Comments";
+import { CommentThread } from "../../../components/organisms";
 import { getApprovedCommentsForMyth } from "../../../lib/comments";
 import { buildSeoMetadata, getSeoEntry } from "../../../lib/seo";
 import { resolveRouteParams } from "../../../lib/next-route-props";
@@ -191,7 +191,15 @@ export default async function MythDetailPage({ params }) {
         breadcrumb={breadcrumb}
         map={map}
         commentsSlot={
-          <Comments mythId={myth.id} initialComments={approvedComments} />
+          <CommentThread
+            mythId={myth.id}
+            mythTitle={myth.title}
+            initialComments={approvedComments}
+            // La plantilla ya abre la sección con un h3 ("Voces de la
+            // comunidad"), así que el titular del hilo entra como hermano y no
+            // salta de nivel.
+            headingAs="h3"
+          />
         }
       />
     </>
