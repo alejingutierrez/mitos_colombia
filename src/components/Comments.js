@@ -95,7 +95,7 @@ export function Comments({ mythId, initialComments = [] }) {
 
       {/* Existing Comments */}
       {loadError && (
-        <p className="text-xs text-ember-600">{loadError}</p>
+        <p className="text-xs text-ember-500">{loadError}</p>
       )}
 
       {isLoading && comments.length === 0 ? (
