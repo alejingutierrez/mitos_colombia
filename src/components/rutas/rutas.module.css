@@ -1,0 +1,97 @@
+/* Mecánica de las piezas de /rutas.
+   El mismo gesto que el pliego de la portada (`home-surfaces.module.css`): un
+   filo de oro que se traza al posarse encima y un levantamiento corto. Se
+   repite aquí en vez de importarse porque son dos superficies distintas y cada
+   una tiene que poder cambiar sin arrastrar a la otra. */
+
+.card {
+  transition:
+    transform 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.35s ease,
+    box-shadow 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.card:hover,
+.card:focus-visible {
+  transform: translateY(-4px);
+  border-color: rgb(var(--jungle-500));
+  box-shadow: 0 24px 48px -28px rgba(22, 22, 17, 0.34);
+}
+.card:focus-visible {
+  outline: 2px solid rgb(var(--ember-500));
+  outline-offset: 3px;
+}
+
+.thread {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: rgb(var(--ember-500));
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 1;
+}
+.card:hover .thread,
+.card:focus-visible .thread {
+  transform: scaleX(1);
+}
+
+/* El hilo del recorrido: la línea que enhebra los movimientos de una ruta.
+   Sólo desde `lg`, que es donde la columna de texto queda fija a la izquierda
+   y el hilo tiene un canal propio por el que correr. */
+@media (min-width: 1024px) {
+  .movement {
+    padding-left: 2.25rem;
+  }
+  .movement::before {
+    content: "";
+    position: absolute;
+    left: 0.4375rem;
+    top: 0.75rem;
+    bottom: -4rem;
+    width: 1px;
+    background: rgb(var(--line-300));
+  }
+  .movement:last-child::before {
+    bottom: auto;
+    height: 4rem;
+  }
+  /* La parada: el punto que marca dónde empieza cada movimiento. */
+  .movement::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.5rem;
+    width: 0.9375rem;
+    height: 0.9375rem;
+    border-radius: 9999px;
+    border: 2px solid rgb(var(--ember-500));
+    background: rgb(var(--paper));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card,
+  .thread {
+    transition: none;
+  }
+  .card:hover,
+  .card:focus-visible {
+    transform: none;
+  }
+  .thread {
+    transform: scaleX(1);
+    opacity: 0;
+  }
+  .card:hover .thread,
+  .card:focus-visible .thread {
+    opacity: 1;
+  }
+  /* `.atlas-image-zoom` es global y no trae freno propio: aquí se le pone. */
+  .card img {
+    transition: none !important;
+    transform: none !important;
+  }
+}

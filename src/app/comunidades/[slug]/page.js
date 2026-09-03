@@ -1,5 +1,10 @@
-import { notFound } from "next/navigation";
-import { filterAllowedCommunities, MIN_COMMUNITY_MYTHS } from "../../../lib/communityFilters";
+import { notFound, redirect } from "next/navigation";
+import {
+  filterAllowedCommunities,
+  isUnattributedBucket,
+  MIN_COMMUNITY_MYTHS,
+  UNATTRIBUTED_PATH,
+} from "../../../lib/communityFilters";
 import { COMMUNITY_INFO, communitySections } from "../../../lib/community-info";
 import { REGION_MOTIFS } from "../../../lib/region-info";
 import { getTaxonomy, listMythPlatesByTaxon } from "../../../lib/myths";
@@ -25,10 +30,35 @@ export async function generateStaticParams() {
     .map((community) => ({ slug: community.slug }));
 }
 
+/**
+ * `mestizo` y `mixto` no son pueblos: son las etiquetas con las que entraron
+ * al archivo los relatos sin procedencia atribuida, y además están repetidas
+ * en cinco territorios cada una, así que `/comunidades/mestizo` nunca podría
+ * decir de cuál de las cinco habla. En vez de un 404 —que castigaría a
+ * cualquier enlace viejo—, van al registro donde esos relatos sí viven.
+ */
+function esBolsaDelImportador(taxonomy, slug) {
+  return (taxonomy.communities || []).some(
+    (community) => community.slug === slug && isUnattributedBucket(community)
+  );
+}
+
 export async function generateMetadata({ params }) {
   const { slug } = await resolveRouteParams(params);
   const taxonomy = await getTaxonomy();
-  const community = taxonomy.communities.find((c) => c.slug === slug);
+
+  if (esBolsaDelImportador(taxonomy, slug)) {
+    return {
+      title: "Relatos sin pueblo identificado | Mitos de Colombia",
+      description:
+        "Los relatos del archivo que llegaron sin constancia de qué pueblo los contaba.",
+    };
+  }
+
+  const community = filterAllowedCommunities(
+    taxonomy.communities,
+    MIN_COMMUNITY_MYTHS
+  ).find((c) => c.slug === slug);
 
   if (!community) {
     return {
@@ -40,7 +70,8 @@ export async function generateMetadata({ params }) {
   const communityInfo = COMMUNITY_INFO[slug] || {};
   const title = communityInfo.title || community.name;
   const description =
-    communityInfo.description || `Explora los mitos del pueblo ${community.name}`;
+    communityInfo.description ||
+    `Los ${community.myth_count} relatos que el archivo conserva de la comunidad ${community.name}, en la región ${community.region}.`;
   const seo = await getSeoEntry("community", slug);
 
   return buildSeoMetadata({
@@ -58,6 +89,11 @@ export async function generateMetadata({ params }) {
 export default async function CommunityDetailPage({ params }) {
   const { slug } = await resolveRouteParams(params);
   const taxonomy = await getTaxonomy();
+
+  if (esBolsaDelImportador(taxonomy, slug)) {
+    redirect(UNATTRIBUTED_PATH);
+  }
+
   const allowedCommunities = filterAllowedCommunities(
     taxonomy.communities,
     MIN_COMMUNITY_MYTHS
@@ -70,13 +106,23 @@ export default async function CommunityDetailPage({ params }) {
 
   const info = COMMUNITY_INFO[slug];
   const nombre = info?.title || community.name;
+  const relatos = Number(community.myth_count) || 0;
 
-  // Texto en bloques con título. Si el pueblo todavía no tiene `sections`
+  // Texto en bloques con título. Si la comunidad todavía no tiene `sections`
   // escritas cae a su texto largo como un solo bloque, y si tampoco lo tiene,
-  // al párrafo de respaldo. Lo que ya no se hace es rellenar: los dos párrafos
-  // genéricos que se añadían cuando el texto era corto eran intercambiables
-  // entre los veinte pueblos y no decían nada de ninguno.
-  const respaldo = `El pueblo ${community.name} es parte del patrimonio cultural de Colombia y preserva su tradición oral en la región ${community.region}. Sus mitos transmiten conocimientos, valores y cosmovisiones heredados de generación en generación.`;
+  // al párrafo de respaldo.
+  //
+  // Ese respaldo describe el ARCHIVO, no a la comunidad. El que había antes
+  // afirmaba que el pueblo «preserva su tradición oral» y que «sus mitos
+  // transmiten conocimientos, valores y cosmovisiones heredados de generación
+  // en generación»: frases intercambiables entre veinte pueblos, escritas sin
+  // fuente, sobre comunidades vivas. Diecisiete de las treinta y ocho
+  // comunidades del índice no tienen ficha escrita, y para todas ellas la
+  // respuesta honesta es decir qué guarda el archivo y admitir que la ficha
+  // está por escribir — no rellenar con etnografía inventada.
+  const respaldo = `El archivo reúne ${relatos} ${
+    relatos === 1 ? "relato" : "relatos"
+  } de ${community.name}, recogidos en la región ${community.region}. La ficha editorial de esta comunidad todavía está por escribir: lo que sigue son sus relatos, tal como se conservan.`;
   const sections = communitySections(slug, respaldo);
 
   const region = (taxonomy.regions || []).find(
@@ -87,9 +133,10 @@ export default async function CommunityDetailPage({ params }) {
     .sort((a, b) => (b.myth_count || 0) - (a.myth_count || 0))
     .map((c) => ({ slug: c.slug, name: c.name, count: c.myth_count }));
 
-  // Todos los relatos del pueblo, cada uno con su obra: es lo que dibuja el
-  // muro. Antes había dos consultas —cuatro con imagen y el resto como
-  // renglones sin ella— y los cuatro primeros salían en las dos.
+  // Todos los relatos de la comunidad, cada uno con su obra: es lo que dibuja
+  // el muro. La consulta empareja por slug o por nombre, es decir la unión de
+  // las filas homónimas — la misma unión que suma `myth_count` desde que las
+  // comunidades se pliegan por slug, así que la cifra y el muro coinciden.
   const mythPlates = (
     await listMythPlatesByTaxon("community", community.slug)
   ).map((m) =>
@@ -128,9 +175,9 @@ export default async function CommunityDetailPage({ params }) {
       <CommunityDetailTemplate
         community={{
           name: nombre,
-          count: Number(community.myth_count) || 0,
+          count: relatos,
           imageUrl: community.image_url,
-          kicker: `Pueblo · ${community.region}`,
+          kicker: `Comunidad · ${community.region}`,
         }}
         region={
           region

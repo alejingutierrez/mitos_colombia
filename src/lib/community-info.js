@@ -7,6 +7,32 @@
  * `sections` es opcional: cuando existe, la ficha reparte el texto en bloques
  * con título en vez de servir un único párrafo corrido. Cuando no existe, cae
  * al par description + longDescription de siempre.
+ *
+ * ── LA CLAVE ES EL SLUG DE LA BASE, NO EL NOMBRE DEL PUEBLO ──────────────
+ *
+ * Once claves de este archivo no correspondían a ninguna comunidad de la base,
+ * así que su texto —escrito, revisado, terminado— no se pintaba en ninguna
+ * página: la ficha caía al párrafo de respaldo, que es el mismo para todos.
+ * Casi todas eran diferencias de grafía de una letra. Verificadas una a una
+ * contra `communities.slug`, se resolvieron así:
+ *
+ *   yukuna    → yucuna        (Yucuna, Amazonas)
+ *   tanimuka  → ufaina        (Ufaina / Tanimuka, Amazonas)
+ *   nukak     → nukak-maku    (Nɨkak, Amazonas)
+ *   kuiva     → kuibas        (Kuiva (Wamonae), Orinoquía)
+ *
+ * Otras cuatro eran la segunda grafía de un pueblo que YA tenía su ficha con
+ * la clave correcta y con `sections` escritas —`catios`/katios,
+ * `uitoto`/huitotos, `kogui`/koguis, `nasa`/nasa-paeces—: se retiraron porque
+ * duplicaban, con menos texto, lo que la clave buena ya sirve.
+ *
+ * Las tres restantes —macuna, kurripaco, yanacona— no tienen comunidad en la
+ * base con ningún slug ni nombre. Se conservan al final, apartadas y marcadas,
+ * porque el texto es bueno y sirve el día que esos relatos entren; hasta
+ * entonces no hay página que las pueda pintar.
+ *
+ * Antes de añadir una clave: compruébala contra la base, no contra el nombre
+ * que te suena. Una clave que no existe no falla — sencillamente no se ve.
  */
 
 export const COMMUNITY_INFO = {
@@ -33,11 +59,12 @@ export const COMMUNITY_INFO = {
     ],
     imagePrompt: "Muisca golden ceremony at Guatavita lagoon, Bochica civilizer, Andean mountains, sacred offerings, El Dorado ritual"
   },
-  "yukuna": {
-    title: "Yukuna",
+  // Clave alineada con la base: `yucuna`, no `yukuna`.
+  "yucuna": {
+    title: "Yucuna",
     description: "Pueblo amazónico del grupo lingüístico arawak, con una rica tradición de mitos cosmogónicos y relatos sobre la creación.",
-    longDescription: "Los Yukuna habitan la región amazónica colombiana en el departamento del Amazonas. Pertenecen al grupo lingüístico arawak y han preservado una extensa tradición oral que incluye mitos sobre el origen del mundo, la creación de los seres humanos, y las transformaciones de héroes culturales. Su mitología está profundamente conectada con la selva, los ríos y los espíritus que habitan estos espacios. Los relatos yukuna transmiten conocimientos sobre la naturaleza, normas sociales y la relación entre humanos y el mundo sobrenatural.",
-    imagePrompt: "Yukuna village in Amazon rainforest, sacred river, tropical mythology, ancestral spirits"
+    longDescription: "Los Yucuna habitan la región amazónica colombiana en el departamento del Amazonas. Pertenecen al grupo lingüístico arawak y han preservado una extensa tradición oral que incluye mitos sobre el origen del mundo, la creación de los seres humanos, y las transformaciones de héroes culturales. Su mitología está profundamente conectada con la selva, los ríos y los espíritus que habitan estos espacios. Los relatos yucuna transmiten conocimientos sobre la naturaleza, normas sociales y la relación entre humanos y el mundo sobrenatural.",
+    imagePrompt: "Yucuna village in Amazon rainforest, sacred river, tropical mythology, ancestral spirits"
   },
   "wayuu": {
     title: "Wayúu",
@@ -59,12 +86,8 @@ export const COMMUNITY_INFO = {
 longDescription: "Los Wayúu son el pueblo indígena más numeroso de Colombia y Venezuela, habitantes ancestrales de la península de La Guajira en la región Caribe. Su sociedad matrilineal se refleja profundamente en su mitología, donde figuras femeninas como Pulowi (espíritu de la sequía y el viento) ocupan roles centrales. Los mitos wayúu narran el origen del fuego a través de un joven audaz que lo robó de los dioses, desatando un ciclo de castigos y transformaciones que definió la relación de la humanidad con este elemento sagrado. Maleiwa (Mareigua), el dios creador, estableció el orden del cosmos y las normas que rigen la vida wayúu. El relato de Ulépala explora temas de amor, lealtad y el tránsito entre el mundo de los vivos y los muertos, mientras que los dominios de Juyá (la lluvia) representan una rica tradición sobre el viaje de autodescubrimiento y supervivencia. Los mitos wayúu sobre el viaje al más allá revelan complejas narrativas sobre la interacción con seres sobrenaturales y la continuidad de la existencia después de la muerte. Su tradición oral enseña sobre la importancia del clan familiar, el respeto a los mayores, el sistema de justicia basado en compensación, y la armonía necesaria con el territorio desértico que habitan.",
     imagePrompt: "Wayuu matrilineal society in La Guajira desert, Pulowi and Juyá spirits, traditional patterns, journey between worlds"
   },
-  "catios": {
-    title: "Catíos",
-    description: "Grupo indígena del grupo emberá en la región andina, con tradiciones que mezclan elementos de selva y montaña.",
-    longDescription: "Los Catíos son parte de la familia lingüística emberá y habitan regiones del occidente colombiano, principalmente en Antioquia y Chocó. Sus mitos reflejan su conexión con entornos de montaña y selva tropical, incluyendo relatos sobre espíritus de la naturaleza, la creación de ríos y montañas, y enseñanzas sobre el equilibrio entre humanos y naturaleza. La tradición oral catía preserva conocimientos sobre plantas medicinales, caza y la relación con el territorio ancestral.",
-    imagePrompt: "Catío village in tropical mountains, sacred forest, river spirits, traditional dwellings"
-  },
+  // La clave `catios` se retiró: la comunidad de la base es `katios`, y su
+  // ficha —la de aquí abajo— ya trae el mismo contenido repartido en bloques.
   "katios": {
     title: "Katíos",
     description: "Pueblo emberá de la región andina, guardianes de relatos sobre la creación del mundo y la resistencia cultural.",
@@ -131,18 +154,16 @@ longDescription: "Los Chimila, originalmente conocidos como Paretare, son un pue
 longDescription: "Los Pananes o comuneros de Panán son habitantes de la región andina que han preservado una rica tradición oral que fusiona elementos indígenas prehispánicos con influencias católicas coloniales, creando un sincretismo cultural único. Su mitología está profundamente conectada con la geografía sagrada de su territorio, incluyendo lugares como el Ojo de Agua, la Laguna de María Panana, y la Chorrera del Duende. Los mitos pananes narran el origen de su estirpe en La Tuta, donde la dualidad entre luz y sombra forjó una comunidad inmortal. El Cucho de Cuaichala representa el sincretismo cultural donde música y danza expresan la evolución espiritual del pueblo. Los relatos sobre el Cualchio y la Olla del Granizo explican fenómenos naturales como la precipitación, mientras que la Laguna de María Panana es venerada como lugar sagrado de encantos y purificación. La tradición oral de Panán preserva historias sobre el duende de la Cangagua, entrelazando misterio y realidad en narrativas que mantienen viva la conexión entre los comuneros y su territorio ancestral.",
     imagePrompt: "Pananes highland community, sacred lagoons and water springs, Catholic-indigenous syncretism, mystical fog-covered landscapes"
   },
-  "tanimuka": {
-    title: "Tanimuka",
+  // Clave alineada con la base: `ufaina`, no `tanimuka`. La comunidad se
+  // registra como «Ufaina / Tanimuka», así que el título recoge las dos formas.
+  "ufaina": {
+    title: "Ufaina / Tanimuka",
     description: "Pueblo amazónico conocido por sus elaborados mitos de creación y transformación.",
-    longDescription: "Los Tanimuka habitan la región amazónica colombiana en el departamento del Amazonas, cerca del río Apaporis. Su tradición oral es extremadamente rica en relatos cosmogónicos que explican el origen del mundo, los animales, las plantas y las prácticas culturales. Los mitos tanimuka frecuentemente presentan transformaciones entre humanos y animales, viajes entre mundos, y enseñanzas sobre el uso apropiado de los recursos naturales. Sus relatos preservan profundos conocimientos ecológicos sobre la selva amazónica.",
+    longDescription: "Los Ufaina o Tanimuka habitan la región amazónica colombiana en el departamento del Amazonas, cerca del río Apaporis. Su tradición oral es extremadamente rica en relatos cosmogónicos que explican el origen del mundo, los animales, las plantas y las prácticas culturales. Los mitos tanimuka frecuentemente presentan transformaciones entre humanos y animales, viajes entre mundos, y enseñanzas sobre el uso apropiado de los recursos naturales. Sus relatos preservan profundos conocimientos ecológicos sobre la selva amazónica.",
     imagePrompt: "Tanimuka cosmic creation, Amazon river spirits, transformation mythology, pristine rainforest"
   },
-  "uitoto": {
-    title: "Uitoto",
-    description: "Pueblo amazónico con una compleja mitología sobre el origen de la palabra y el conocimiento.",
-    longDescription: "Los Uitoto o Huitoto habitan la región amazónica de Colombia y Perú. Su mitología es particularmente compleja y filosófica, centrada en conceptos sobre la palabra, el conocimiento y la creación a través del pensamiento. Los mitos uitoto incluyen elaborados relatos sobre el origen del mundo mediante la palabra divina, la importancia de las ceremonias de mambeadero, y la transmisión de conocimiento ancestral. Su tradición oral enfatiza la relación entre lenguaje, pensamiento y creación del mundo.",
-    imagePrompt: "Uitoto ceremonial gathering, sacred word and knowledge, Amazon shamanic tradition, maloca"
-  },
+  // La clave `uitoto` se retiró: la comunidad de la base es `huitotos`, y su
+  // ficha ya cubre lo mismo con `sections`.
   "huitotos": {
     title: "Huitotos",
     description: "Pueblo amazónico guardián de una rica tradición sobre la creación, la palabra sagrada y los ciclos de renovación.",
@@ -163,12 +184,7 @@ longDescription: "Los Pananes o comuneros de Panán son habitantes de la región
 longDescription: "Los Huitotos son un pueblo indígena de la región amazónica que ha preservado una de las mitologías más complejas y filosóficas de Colombia. Sus relatos cosmogónicos narran cómo Nofïdeño (la Madre) y Uuikï (el Padre) ordenaron el caos primordial y crearon el mundo a través de la palabra sagrada. Los mitos huitotos exploran temas de creación y restauración, transformación espiritual, y el profundo conocimiento sobre plantas sagradas como el tabaco y la yuca. Historias como la de Jirayauma revelan astucia y supervivencia, mientras que los relatos de Jitoma y Fïboi exploran la traición y las consecuencias de romper el equilibrio natural. La tradición oral huitoto enfatiza la importancia de las ceremonias en maloca, el mambeadero como espacio de transmisión de conocimiento, y la relación sagrada entre pensamiento, palabra y creación del cosmos.",
     imagePrompt: "Huitoto ceremonial maloca, sacred tobacco and yuca, Amazon creation mythology, spiritual renewal"
   },
-  "kogui": {
-    title: "Kogui",
-    description: "Pueblo de la Sierra Nevada de Santa Marta, guardianes de conocimiento ancestral y equilibrio ecológico.",
-    longDescription: "Los Kogui habitan la Sierra Nevada de Santa Marta, considerada por ellos el 'Corazón del Mundo'. Su mitología está profundamente arraigada en la concepción de que la Sierra es el centro del universo y que ellos son sus guardianes. Los mitos kogui hablan sobre la creación del mundo por la Madre Universal, la importancia del equilibrio entre fuerzas opuestas, y el rol de los Mamos (líderes espirituales) como intermediarios entre el mundo material y espiritual. Sus relatos enfatizan la responsabilidad humana en mantener el equilibrio ecológico.",
-    imagePrompt: "Kogui people in Sierra Nevada, sacred mountains, Mother Universal, spiritual guardianship"
-  },
+  // La clave `kogui` se retiró: la comunidad de la base es `koguis`.
   "koguis": {
     title: "Koguis",
     description: "Guardianes ancestrales de la Sierra Nevada de Santa Marta, el corazón del mundo y centro del equilibrio cósmico.",
@@ -189,12 +205,7 @@ longDescription: "Los Huitotos son un pueblo indígena de la región amazónica 
 longDescription: "Los Koguis son uno de los cuatro pueblos indígenas que habitan la Sierra Nevada de Santa Marta en la región Caribe, considerada por ellos como el 'Corazón del Mundo' y centro del universo. Su mitología cosmogónica narra la creación del mundo a través de nueve mundos previos, cada uno habitado por seres espirituales que evolucionaron hasta formar la humanidad actual. Los mitos koguis hablan de la Madre Wastora (Haba-Naowa) quien creó la diversidad étnica de la humanidad a partir de transformaciones corporales y espirituales. El relato de Kimaku y otros héroes culturales explica el origen del sol y la luna, los rituales necesarios para mantener su luz, y la importancia del primer hombre y la primera mujer en establecer el orden social. Los Mamos (líderes espirituales) son depositarios de este conocimiento sagrado y actúan como intermediarios entre lo material y lo espiritual, guiando a su pueblo en el cuidado del equilibrio ecológico del planeta.",
     imagePrompt: "Kogui mamos in Sierra Nevada, sacred mountain peaks, Mother Universal creation, cosmic balance guardianship"
   },
-  "nasa": {
-    title: "Nasa",
-    description: "Pueblo indígena del Cauca y Huila, con una tradición de resistencia y rica mitología andino-amazónica.",
-    longDescription: "Los Nasa, también conocidos como Páez, habitan principalmente el departamento del Cauca y el sur del Huila. Su mitología combina elementos andinos y amazónicos, reflejando su ubicación geográfica de transición. Los mitos nasa incluyen relatos sobre héroes culturales, el origen de sus territorios ancestrales, y luchas contra fuerzas opresoras. Su tradición oral ha sido central en la preservación de su identidad cultural a pesar de siglos de colonización, y sus mitos transmiten valores de resistencia, comunidad y armonía con la naturaleza.",
-    imagePrompt: "Nasa people in Cauca mountains, resistance symbols, cultural heroes, sacred territories"
-  },
+  // La clave `nasa` se retiró: la comunidad de la base es `nasa-paeces`.
   "nasa-paeces": {
     title: "Nasa - Páez",
     description: "Pueblo indígena del Cauca y Huila, conocido por su resistencia cultural y profunda conexión con la tierra ancestral.",
@@ -277,6 +288,9 @@ longDescription: "Los Barasana habitan la región del Vaupés en la Amazonía co
 longDescription: "Los Sikuani habitan los Llanos Orientales de Colombia y Venezuela. Su mitología incluye relatos sobre Kuwai y otros héroes culturales que transformaron el paisaje llanero, crearon ríos y establecieron prácticas culturales. Los mitos sikuani explican el origen de animales de la sabana, la importancia de las ceremonias de rezo, y las relaciones entre humanos y espíritus de la naturaleza en el ecosistema llanero. Su tradición oral transmite conocimientos sobre navegación, pesca y vida en las sabanas inundables.",
     imagePrompt: "Sikuani plains landscape, cultural heroes, savanna spirits, Orinoco region"
   },
+  // SIN COMUNIDAD EN LA BASE. Ningún registro de `communities` responde a
+  // «macuna» ni por slug ni por nombre, así que esta ficha no se pinta en
+  // ninguna página. Se conserva para el día que lleguen sus relatos.
   "macuna": {
     title: "Macuna",
     description: "Pueblo amazónico del Vaupés con tradiciones de pensamiento sagrado y creación.",
@@ -284,6 +298,7 @@ longDescription: "Los Sikuani habitan los Llanos Orientales de Colombia y Venezu
     imagePrompt: "Macuna sacred thought, Vaupés cosmology, ancestral anaconda, Amazon creation"
   },
   "misak-guambianos": {
+    title: "Misak",
     description: "Pueblo del Cauca con profundas tradiciones sobre el agua y la tierra.",
         sections: [
       {
@@ -313,10 +328,12 @@ longDescription: "Los Guambianos, también conocidos como Misak, habitan el depa
 longDescription: "Los Tikunas habitan la región amazónica en la frontera entre Colombia, Brasil y Perú. Su mitología es extremadamente rica e incluye elaborados ciclos narrativos sobre la creación del mundo, el origen de los clanes, y transformaciones míticas. Los mitos tikuna presentan complejas cosmologías con múltiples niveles del universo, relatos sobre héroes gemelos, y enseñanzas sobre organización social. Su tradición oral es una de las más extensas de la Amazonía.",
     imagePrompt: "Tikuna creation myths, Amazon triple frontier, clan origins, cosmic levels"
   },
-  "nukak": {
-    title: "Nukak",
+  // Clave alineada con la base: `nukak-maku`. El archivo registra el nombre en
+  // la grafía del propio pueblo, «Nɨkak», y el título la respeta.
+  "nukak-maku": {
+    title: "Nɨkak",
     description: "Pueblo nómada amazónico con tradiciones sobre movilidad y conocimiento de la selva.",
-    longDescription: "Los Nukak son un pueblo de tradición nómada que habita la región amazónica entre el Guaviare y el Vaupés. Su mitología refleja su estilo de vida móvil y profundo conocimiento de la selva. Los mitos nukak incluyen relatos sobre los caminos ancestrales, la relación con espíritus de animales y plantas, y prácticas de caza y recolección sostenibles. Su tradición oral preserva un extraordinario conocimiento ecológico sobre la selva amazónica.",
+    longDescription: "Los Nɨkak, registrados también como Nukak, son un pueblo de tradición nómada que habita la región amazónica entre el Guaviare y el Vaupés. Su mitología refleja su estilo de vida móvil y profundo conocimiento de la selva. Los mitos nukak incluyen relatos sobre los caminos ancestrales, la relación con espíritus de animales y plantas, y prácticas de caza y recolección sostenibles. Su tradición oral preserva un extraordinario conocimiento ecológico sobre la selva amazónica.",
     imagePrompt: "Nukak nomadic life, Amazon forest paths, hunting spirits, traditional mobility"
   },
   "u-wa": {
@@ -335,18 +352,21 @@ longDescription: "Los Tikunas habitan la región amazónica en la frontera entre
 longDescription: "Los U'wa habitan la Sierra Nevada del Cocuy en la región andina. Su mitología enfatiza la profunda responsabilidad de mantener el equilibrio de la tierra. Los U'wa consideran el petróleo como la 'sangre de la tierra' y tienen mitos que advierten sobre las consecuencias de su extracción. Sus relatos incluyen enseñanzas sobre el origen del mundo, la importancia de las lagunas sagradas en los páramos, y el rol de los humanos como cuidadores del planeta.",
     imagePrompt: "U'wa Sierra Nevada del Cocuy, sacred petroleum, earth balance, páramo spirituality"
   },
-  "kuiva": {
-    title: "Kuiva",
+  // Clave alineada con la base: `kuibas`, registrada como «Kuiva (Wamonae)».
+  "kuibas": {
+    title: "Kuiva (Wamonae)",
     description: "Pueblo de los Llanos Orientales con tradiciones sobre la vida en las sabanas.",
     longDescription: "Los Kuiva habitan los Llanos Orientales de Colombia. Su mitología refleja la vida en las extensas sabanas llaneras e incluye relatos sobre el origen de animales característicos de la región, la importancia de los ríos y caños, y ceremonias relacionadas con los ciclos naturales de lluvia y sequía. Los mitos kuiva transmiten conocimientos sobre navegación por las sabanas inundables y la relación armónica con el ecosistema llanero.",
     imagePrompt: "Kuiva savanna life, llanos plains, river spirits, seasonal cycles"
   },
+  // SIN COMUNIDAD EN LA BASE (ver la nota de `macuna`).
   "kurripaco": {
     title: "Kurripaco",
     description: "Pueblo arawak de la Orinoquía con tradiciones sobre Kuwai y transformaciones culturales.",
     longDescription: "Los Kurripaco pertenecen al grupo lingüístico arawak y habitan la región de la Orinoquía colombiana y venezolana. Su mitología incluye elaborados relatos sobre Kuwai, un héroe cultural transformador, y el origen de ceremonias sagradas. Los mitos kurripaco explican la creación de instrumentos musicales rituales, prácticas ceremoniales y la organización social. Su tradición oral preserva conocimientos sobre el manejo de recursos de ríos y selvas de galería.",
     imagePrompt: "Kurripaco Kuwai mythology, Orinoco region, sacred instruments, cultural transformation"
   },
+  // SIN COMUNIDAD EN LA BASE (ver la nota de `macuna`).
   "yanacona": {
     title: "Yanacona",
     description: "Pueblo del Macizo Colombiano con tradiciones de resistencia y reconexión cultural.",

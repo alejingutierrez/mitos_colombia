@@ -1,14 +1,20 @@
 import { Container } from "../atoms";
-import { CommunityMesa, Header } from "../organisms";
+import { Header } from "../organisms";
+import { CommunityIndexBoard } from "../comunidades/CommunityIndexBoard";
+import { UnattributedEntry } from "../comunidades/UnattributedEntry";
 
 /**
- * Plantilla · CommunityIndexTemplate — dirección "Mesa de pueblos" para
+ * Plantilla · CommunityIndexTemplate — dirección «Mesa de pueblos» para
  * /comunidades.
  *
- * Los veinte pueblos a la vista de entrada, con búsqueda, filtro por
- * territorio y orden. Sustituye a la retícula plana de `TaxonomyIndexTemplate`,
- * donde de la quinta tarjeta en adelante todas pesaban lo mismo y no había
- * forma de encontrar un pueblo por su nombre.
+ * Sigue siendo una sola superficie con búsqueda, filtro por territorio y
+ * orden, pero ahora la mesa la sirve `CommunityIndexBoard` y trae las treinta
+ * y ocho comunidades con relatos, no las veinte que pasaban un listón de seis.
+ *
+ * Debajo, y deliberadamente fuera de la mesa, va `UnattributedEntry`: la
+ * puerta a los relatos que llegaron sin pueblo atribuido. Están separados
+ * porque no son una comunidad, y están **a la vista** porque son el 42,5 % del
+ * archivo y antes no se nombraban en ninguna parte.
  */
 export function CommunityIndexTemplate({
   eyebrow,
@@ -16,6 +22,7 @@ export function CommunityIndexTemplate({
   description,
   communities = [],
   regions = [],
+  unattributed = null,
   note,
   active = "/comunidades",
   children,
@@ -40,13 +47,15 @@ export function CommunityIndexTemplate({
         </Container>
 
         <Container size="atlas" className="pb-12">
-          <CommunityMesa communities={communities} regions={regions} />
+          <CommunityIndexBoard communities={communities} regions={regions} />
           {note ? (
             <p className="mt-8 max-w-[46rem] border-t border-line-100 pt-5 text-[length:var(--step--1)] leading-relaxed text-ink-500">
               {note}
             </p>
           ) : null}
         </Container>
+
+        <UnattributedEntry data={unattributed} />
 
         {children}
       </main>
