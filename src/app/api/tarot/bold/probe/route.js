@@ -102,9 +102,20 @@ export async function GET() {
     ),
   ]);
 
+  /* Endpoints GET de API Integrations, tomados de su documentación: no piden
+     cuerpo ni datáfono, así que sirven para saber si la llave es de ESE
+     producto. Si responden 200, las llaves son de API Integrations y el
+     checkout web está construido contra el producto equivocado. */
+  const base = "https://integrations.api.bold.co";
+  const [metodos, terminales] = await Promise.all([
+    probe(`${base}/payments/payment-methods`, key),
+    probe(`${base}/payments/binded-terminals`, key),
+  ]);
+
   return NextResponse.json(
     {
       entorno: configuration.environment,
+      api_integrations: { metodos_de_pago: metodos, terminales_vinculadas: terminales },
       endpoint: `${BASE_URL}${RUTA_ACTUAL}`,
       esquemas_de_autenticacion: resultadosEsquemas,
       rutas_con_esquema_1: resultadosRutas,
