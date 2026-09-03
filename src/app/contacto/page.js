@@ -286,11 +286,14 @@ export default async function ContactoPage() {
   return (
     <DocumentTemplate
       eyebrow="Contacto editorial"
-      title="Hablemos del territorio, los relatos y la memoria"
-      description="Este espacio es para quienes desean compartir un mito, corregir un dato o sumarse a la conversación cultural."
+      title="¿Qué te trae al archivo?"
+      description="Elige por dónde entrar. Cambia lo que te preguntamos, no a dónde llega: todo lo lee la misma redacción."
       breadcrumb={[{ label: "Inicio", href: "/" }, { label: "Contacto" }]}
+      // El formulario va en `feature`, no en `aside`: es lo que la persona vino
+      // a hacer, así que se alcanza sin leer las ocho secciones de abajo (que
+      // se quedan porque son la prosa indexada de la página).
+      feature={<ContactForm />}
       sections={sections}
-      aside={<ContactForm />}
       related={related}
       accent="jungle"
     />
