@@ -1,3 +1,5 @@
+import { TAROT_PRODUCT_FACTS } from "./tarot-product-facts.js";
+
 const PRODUCT_SKU = "tarot-mitos-colombia-78";
 
 export const TAROT_COLOMBIA_REGIONS = [
@@ -193,17 +195,17 @@ export function getTarotCheckoutIntent(value) {
 export function getTarotProduct() {
   const priceCop = parsePositiveInteger(process.env.TAROT_PRICE_COP);
   const status = clean(process.env.TAROT_COMMERCE_STATUS) || "preview";
-  const dispatch = clean(process.env.TAROT_DISPATCH_TEXT);
+  const dispatch = clean(process.env.TAROT_DISPATCH_TEXT) || clean(TAROT_PRODUCT_FACTS.dispatch);
   const taxesIncluded = process.env.TAROT_TAXES_INCLUDED === "true";
   const shippingIncluded = process.env.TAROT_SHIPPING_INCLUDED === "true";
-  const shipping = clean(process.env.TAROT_SHIPPING_TEXT);
+  const shipping = clean(process.env.TAROT_SHIPPING_TEXT) || clean(TAROT_PRODUCT_FACTS.shipping);
   const shippingRegions = configuredShippingRegions(
-    process.env.TAROT_SHIPPING_REGIONS
+    process.env.TAROT_SHIPPING_REGIONS || TAROT_PRODUCT_FACTS.shippingRegions
   );
   const shippingRegionsReady = shippingRegions.length > 0;
-  const returns = clean(process.env.TAROT_RETURNS_TEXT);
-  const contents = clean(process.env.TAROT_PRODUCT_CONTENTS);
-  const physicalSpecs = clean(process.env.TAROT_PHYSICAL_SPECS);
+  const returns = clean(process.env.TAROT_RETURNS_TEXT) || clean(TAROT_PRODUCT_FACTS.returns);
+  const contents = clean(process.env.TAROT_PRODUCT_CONTENTS) || clean(TAROT_PRODUCT_FACTS.contents);
+  const physicalSpecs = clean(process.env.TAROT_PHYSICAL_SPECS) || clean(TAROT_PRODUCT_FACTS.physicalSpecs);
   const image = configuredProductImage(process.env.TAROT_PRODUCT_IMAGE);
   const imageStatus =
     (clean(process.env.TAROT_PRODUCT_IMAGE_STATUS) || "").toLowerCase() === "final"
@@ -430,7 +432,7 @@ export const TAROT_LANDING_VARIANTS = {
     heroPanel: {
       label: "Ficha de compra · Edición 01",
       title: "Una baraja completa, explicada antes de pagar",
-      items: ["78 cartas", "$124.900", "Envío incluido"],
+      items: ["78 cartas", "{price}", "{shipping}"],
     },
     galleryCount: 6,
     eyebrow: "Baraja editorial · 78 cartas",
@@ -837,4 +839,29 @@ export const TAROT_LANDING_VARIANTS = {
 
 export function getTarotLandingVariant(slug) {
   return TAROT_LANDING_VARIANTS[slug] || null;
+}
+
+/**
+ * Resuelve los tres hechos del panel del hero.
+ *
+ * Los tokens `{price}`, `{shipping}` y `{dispatch}` se llenan con el producto
+ * real. Antes el precio estaba escrito a mano en la configuración: la landing
+ * podía anunciar "$124.900" mientras la línea de estado, tres centímetros
+ * abajo, decía que la disponibilidad estaba por confirmar. Un visitante que
+ * llega por un anuncio no debería tener que decidir a cuál de las dos creerle.
+ */
+export function resolveTarotHeroFacts(variant, product) {
+  const tokens = {
+    "{price}": Number.isFinite(product?.priceCop)
+      ? formatCop(product.priceCop)
+      : "Precio confirmado antes de pagar",
+    "{shipping}": product?.shippingIncluded
+      ? "Envío incluido"
+      : "Envío informado antes de pagar",
+    "{dispatch}": product?.dispatch || "Despacho confirmado antes de cobrar",
+  };
+
+  return (variant?.heroPanel?.items || []).map(
+    (item) => tokens[item] ?? item
+  );
 }
