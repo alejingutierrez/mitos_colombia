@@ -94,7 +94,9 @@ dato exista en la configuración comercial.
 
 ## Proveedor de pagos
 
-La arquitectura usa la API de Pagos en Línea de Bold: tarjeta, PSE, Nequi,
-Botón Bancolombia y QR Bre-B. El efectivo en corresponsal no se anuncia porque
-no figura entre los métodos de esta API. La redirección no confirma una venta:
-el cierre depende del webhook firmado y de la consulta autoritativa del pago.
+La arquitectura usa el Botón de Pagos de Bold en su modalidad *embedded*: al
+confirmar, el cobro ocurre en una ventana de Bold sobre la misma página y el
+medio —tarjeta, PSE, Nequi, Botón Bancolombia o QR Bre-B— se elige allí. El
+efectivo en corresponsal no se anuncia porque no figura entre esos métodos. Que
+la ventana se cierre no confirma una venta: el cierre depende del webhook
+firmado y de la consulta autoritativa del pago.

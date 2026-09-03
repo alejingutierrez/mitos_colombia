@@ -12,18 +12,27 @@ export const TAROT_COLOMBIA_REGIONS = [
   "Valle del Cauca", "Vaupés", "Vichada",
 ];
 
+/**
+ * Medios que la baraja promete en su recorrido comercial.
+ *
+ * Con Botón de Pagos la elección ocurre DENTRO del modal de Bold: no los
+ * declaramos en la solicitud ni los pedimos en un formulario propio. La lista
+ * sigue existiendo porque la promesa pública sí es nuestra: si en la cuenta de
+ * Bold no están todos habilitados, la página estaría anunciando rutas que el
+ * modal no va a mostrar.
+ */
 export const TAROT_REQUIRED_PAYMENT_METHODS = [
   {
     id: "card",
     mark: "CARD",
     label: "Tarjeta débito o crédito",
-    detail: "Bold procesa la tarjeta y puede solicitar validación 3D Secure.",
+    detail: "Se paga dentro del modal de Bold; puede pedir validación 3D Secure.",
   },
   {
     id: "pse",
     mark: "PSE",
     label: "PSE",
-    detail: "El comprador elige su banco y continúa en su experiencia segura.",
+    detail: "El banco se elige dentro del modal y la autorización sigue allí.",
   },
   {
     id: "nequi",
@@ -228,15 +237,19 @@ export function getTarotProduct() {
     clean(process.env.BOLD_ENVIRONMENT)?.toLowerCase() === "production"
       ? "production"
       : "test";
-  const boldApiKey = clean(
+  /* Botón de Pagos tiene su propio par de llaves, distinto del de la API de
+     Pagos en Línea contra la que se construyó la primera versión del checkout.
+     Los nombres nuevos existen justamente para que no vuelvan a cruzarse: las
+     viejas `BOLD_API_KEY_*` resultaron ser de otro producto. */
+  const boldIdentityKey = clean(
     boldEnvironment === "production"
-      ? process.env.BOLD_API_KEY_PRODUCTION
-      : process.env.BOLD_API_KEY_TEST
+      ? process.env.BOLD_BUTTON_IDENTITY_KEY_PRODUCTION
+      : process.env.BOLD_BUTTON_IDENTITY_KEY_TEST
   );
   const boldSecretKey = clean(
     boldEnvironment === "production"
-      ? process.env.BOLD_SECRET_KEY_PRODUCTION
-      : process.env.BOLD_SECRET_KEY_TEST
+      ? process.env.BOLD_BUTTON_SECRET_KEY_PRODUCTION
+      : process.env.BOLD_BUTTON_SECRET_KEY_TEST
   );
   const checkoutSiteUrl = clean(process.env.NEXT_PUBLIC_SITE_URL);
   const checkoutRedirectReady = hasSecureCheckoutUrl(checkoutSiteUrl);
@@ -272,9 +285,7 @@ export function getTarotProduct() {
       imageReady &&
       sellerReady
   );
-  const paymentReady = Boolean(
-    boldApiKey && boldSecretKey
-  );
+  const paymentReady = Boolean(boldIdentityKey && boldSecretKey);
 
   return {
     sku: PRODUCT_SKU,
@@ -341,7 +352,8 @@ export function getTarotProduct() {
       !sellerReady && "Identidad y contacto verificables del vendedor",
     ].filter(Boolean),
     missingCheckoutFields: [
-      !paymentReady && "Llaves activa y secreta de Bold para el ambiente seleccionado",
+      !paymentReady &&
+        "Llaves de identidad y secreta de Botón de Pagos para el ambiente seleccionado",
       !paymentMethodsReady &&
         "Verificación en Bold de tarjeta, PSE, Nequi, Botón Bancolombia y QR Bre-B",
       !checkoutRedirectReady && "URL HTTPS definitiva para el retorno del pago",
