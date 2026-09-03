@@ -37,7 +37,11 @@
     "instagram:test": "node --test scripts/instagram/*.test.mjs",
     "tarot:audit": "node scripts/tarot/launch-audit.mjs",
     "tarot:test": "node --test scripts/tarot/*.test.mjs",
-    "seo:audit:indexability": "node scripts/seo/indexability-audit.mjs"
+    "seo:audit:indexability": "node scripts/seo/indexability-audit.mjs",
+    "instagram:v10:compose": "node scripts/instagram/compose-v10.mjs",
+    "instagram:v10:render": "node scripts/instagram/render-v10.mjs",
+    "instagram:v10:plan": "node scripts/instagram/plan-carousel.mjs --guion v10",
+    "instagram:v10:qa:guion": "node scripts/instagram/qa-guion.mjs"
   },
   "dependencies": {
     "@aws-sdk/client-bedrock-runtime": "^3.1095.0",
