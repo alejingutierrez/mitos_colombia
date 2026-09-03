@@ -34,8 +34,13 @@ export async function GET() {
       formaEsperada: "identidad=43, secreta=22",
       detalleBold: JSON.stringify(error?.details ?? []).slice(0, 300),
     });
+    /* Diagnóstico temporal: una sola palabra que dice si la llave configurada
+       tiene la forma de la de identidad (43) o la de la secreta (22). No
+       expone longitud, ni prefijo, ni valor. Retirar al arreglar el pago. */
+    const forma =
+      k.length === 43 ? "identidad" : k.length === 22 ? "secreta" : "otra";
     return NextResponse.json(
-      { error: "bold_banks_failed", banks: [] },
+      { error: "bold_banks_failed", banks: [], llaveParece: forma, entorno: configuration.environment },
       { status: 502, headers: NO_STORE }
     );
   }
