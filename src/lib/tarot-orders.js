@@ -350,8 +350,18 @@ export async function findTarotOrderByPaymentTransactionId(transactionId) {
   );
 }
 
+/**
+ * Una orden aprobada no se degrada: un aviso tardío o repetido no puede
+ * convertir una venta confirmada en un rechazo.
+ *
+ * La ÚNICA excepción es la anulación. Ahí el dinero volvió de verdad, y dejar
+ * el pedido en APROBADA sería registrar como cobrado algo que ya se devolvió.
+ * Sin esta línea, atender `VOID_APPROVED` en el webhook no serviría de nada.
+ */
 function nextStatus(currentStatus, incomingStatus) {
-  if (currentStatus === "APPROVED") return "APPROVED";
+  if (currentStatus === "APPROVED") {
+    return incomingStatus === "VOIDED" ? "VOIDED" : "APPROVED";
+  }
   if (incomingStatus === "APPROVED") return "APPROVED";
   if (FINAL_STATUSES.has(currentStatus) && incomingStatus === "PENDING") {
     return currentStatus;
