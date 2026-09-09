@@ -45,3 +45,20 @@ CREATE TABLE IF NOT EXISTS myth_narrations (
 
 CREATE INDEX IF NOT EXISTS idx_myth_narrations_slug ON myth_narrations(myth_slug);
 CREATE INDEX IF NOT EXISTS idx_myth_narrations_myth ON myth_narrations(myth_id);
+
+-- Catálogo de lechos musicales. `characters` lleva las etiquetas de carácter,
+-- EN ORDEN: la primera es el carácter dominante y las siguientes son matices.
+-- El orden decide desempates: para un tramo de silencio, «Silencio de la
+-- sabana» (silencio primero) gana a «Laguna de Iguaque», que es agua ante todo.
+CREATE TABLE IF NOT EXISTS narration_beds (
+  id SERIAL PRIMARY KEY,
+  slug TEXT NOT NULL UNIQUE,
+  title TEXT NOT NULL,
+  audio_url TEXT NOT NULL,
+  duration_seconds DOUBLE PRECISION NOT NULL,
+  lufs DOUBLE PRECISION,
+  seam_step_db DOUBLE PRECISION,
+  prompt TEXT,
+  characters JSONB,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);
