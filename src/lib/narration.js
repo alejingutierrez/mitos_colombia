@@ -77,6 +77,35 @@ export const BED_FADE_IN_S = 2;
 export const BED_FADE_OUT_S = 3;
 
 /**
+ * Cuántos lechos distintos lleva una narración.
+ *
+ * Con uno solo, un relato de tres minutos repite el mismo bucle de 30 s seis
+ * veces y se vuelve monótono: el oído aprende la vuelta y empieza a esperarla.
+ * Se reparte en tramos de ~55 s, con un mínimo de dos y un tope de cinco para
+ * que la pieza siga teniendo unidad y no parezca una lista de reproducción.
+ */
+export const BED_SEGMENT_S = 55;
+export const BED_MIN = 2;
+export const BED_MAX = 5;
+/** Cruce entre un lecho y el siguiente. Largo a propósito: son fondos, y el
+ *  relevo debe pasar desapercibido bajo la voz. */
+export const BED_CROSSFADE_S = 4;
+
+export function bedCountForDuration(seconds) {
+  if (!Number.isFinite(seconds) || seconds <= 0) return BED_MIN;
+  return Math.min(BED_MAX, Math.max(BED_MIN, Math.round(seconds / BED_SEGMENT_S)));
+}
+
+/**
+ * Largo de cada tramo para que al encadenarlos con cruces salga exactamente la
+ * duración pedida. Encadenar dos tramos con un cruce de X segundos da
+ * `L1 + L2 - X`, así que con K tramos: `K·L − (K−1)·X = D`.
+ */
+export function bedSegmentLength(duration, count, crossfade = BED_CROSSFADE_S) {
+  return (duration + (count - 1) * crossfade) / count;
+}
+
+/**
  * El texto que se narra: SÓLO el título y el relato.
  *
  * Fuera quedan a propósito historia, versiones, lección, similitudes, fuentes
@@ -201,15 +230,15 @@ export function storyOffsetInNarration(narrationText, storyText) {
  * versión anterior. Con la voz y los ajustes dentro, cada configuración estrena
  * URL y no hay forma de oír un audio viejo.
  */
-export function narrationRenderHash(text, voice = DEFAULT_VOICE, bed = null) {
+export function narrationRenderHash(text, voice = DEFAULT_VOICE, beds = null) {
   const huella = JSON.stringify({
     text: String(text || ""),
     voice: voice.id,
     model: voice.modelId,
     settings: voice.settings,
-    // El lecho también: dos narraciones con la misma voz y distinta música son
-    // dos archivos distintos y no pueden compartir URL.
-    bed: bed ? { slug: bed.slug, gain: BED_GAIN_DB } : null,
+    // Los lechos también, EN ORDEN: dos narraciones con la misma voz y distinta
+    // música son dos archivos distintos y no pueden compartir URL.
+    beds: beds?.length ? { slugs: beds.map((b) => b.slug), gain: BED_GAIN_DB } : null,
   });
   return createHash("sha256").update(huella, "utf8").digest("hex");
 }
