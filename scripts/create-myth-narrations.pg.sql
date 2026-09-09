@@ -29,6 +29,11 @@ CREATE TABLE IF NOT EXISTS myth_narrations (
   render_hash TEXT NOT NULL,
   char_count INTEGER NOT NULL,
   duration_seconds DOUBLE PRECISION,
+  -- Lechos musicales usados, en orden. Son varios y no uno: con un solo bucle
+  -- de 30 s un relato de tres minutos lo repite seis veces y se vuelve
+  -- monótono. Se encadenan con cruces largos por debajo de la voz.
+  bed_slugs JSONB,
+  bed_gain_db DOUBLE PRECISION,
   -- Marcas de tiempo por palabra del relato, [[inicio, fin], ...] en segundos,
   -- tal como las devuelve la alineación de ElevenLabs. Es lo que permite
   -- resaltar la palabra que se está leyendo sin estimar nada.

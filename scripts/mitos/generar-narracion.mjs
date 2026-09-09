@@ -16,10 +16,13 @@
  *   node scripts/mitos/generar-narracion.mjs --slug bachue --force     (regenera aunque el texto no haya cambiado)
  *   node scripts/mitos/generar-narracion.mjs --all --limit 10          (todos los que tengan relato y falten)
  *   node scripts/mitos/generar-narracion.mjs --slug bachue --sin-lecho (voz sola, sin música)
- *   node scripts/mitos/generar-narracion.mjs --slug bachue --lecho 04-viento-de-paramo
+ *   node scripts/mitos/generar-narracion.mjs --slug bachue --lecho 04-viento-de-paramo,10-fuego-y-humo
  *
- * Cada narración lleva un lecho musical distinto por rotación (el menos usado
- * del catálogo). Para que dejen de repetirse basta con ampliar el catálogo:
+ * Cada narración lleva VARIOS lechos encadenados (uno por cada ~55 s), para que
+ * un mismo bucle de 30 s no se repita seis veces seguidas y se vuelva monótono.
+ *
+ * Los lechos se reparten por rotación (los menos usados del catálogo). Para que
+ * dejen de repetirse basta con ampliarlo:
  *   node scripts/mitos/generar-lechos.mjs --nuevos 4
  *
  * Requiere ELEVENLABS_API_KEY, BLOB_READ_WRITE_TOKEN y POSTGRES_URL en .env.local.
@@ -40,9 +43,12 @@ import {
   DEFAULT_VOICE,
   MASTER_CONTENT_TYPE,
   MAX_REQUEST_CHARS,
+  BED_CROSSFADE_S,
   BED_FADE_IN_S,
   BED_FADE_OUT_S,
   BED_GAIN_DB,
+  bedCountForDuration,
+  bedSegmentLength,
   MP3_BITRATE_KBPS,
   PCM_CHANNELS,
   PCM_SAMPLE_RATE,
@@ -107,7 +113,40 @@ if (!dryRun && spawnSync("ffmpeg", ["-version"]).status !== 0) {
  * Del PCM crudo salen las dos piezas: el máster WAV (sin pérdida, se archiva y
  * sirve para mezclar) y el MP3 que baja el navegador.
  */
-async function renderAudio(pcm, duration, bed) {
+/**
+ * Pista de fondo de la duración exacta de la narración, hecha de VARIOS lechos
+ * encadenados con cruces largos.
+ *
+ * Cada lecho se repite en bucle sólo dentro de su tramo (`-stream_loop -1` en
+ * la entrada) y el relevo al siguiente se hace con `acrossfade`, que come el
+ * cruce: por eso los tramos miden más que su parte proporcional. El resultado
+ * dura lo mismo que la voz, sin costuras audibles y sin que ninguna vuelta se
+ * repita tantas veces como para que el oído la aprenda.
+ */
+function construirLecho(beds, duration) {
+  const K = beds.length;
+  const X = BED_CROSSFADE_S;
+  const L = bedSegmentLength(duration, K, X);
+  const entradas = beds.flatMap((b) => ["-stream_loop", "-1", "-i", b.archivo]);
+
+  const partes = beds.map(
+    (_, i) => `[${i + 1}:a]atrim=0:${L.toFixed(3)},asetpts=PTS-STARTPTS[s${i}]`
+  );
+  let etiqueta = "s0";
+  for (let i = 1; i < K; i += 1) {
+    partes.push(`[${etiqueta}][s${i}]acrossfade=d=${X}:c1=tri:c2=tri[x${i}]`);
+    etiqueta = `x${i}`;
+  }
+  const salidaFade = Math.max(0, duration - BED_FADE_OUT_S);
+  partes.push(
+    `[${etiqueta}]volume=${BED_GAIN_DB}dB,` +
+      `afade=t=in:st=0:d=${BED_FADE_IN_S},` +
+      `afade=t=out:st=${salidaFade.toFixed(3)}:d=${BED_FADE_OUT_S}[lecho]`
+  );
+  return { entradas, cadena: partes.join(";"), tramo: L };
+}
+
+async function renderAudio(pcm, duration, beds) {
   const dir = await mkdtemp(join(tmpdir(), "narracion-"));
   try {
     const raw = join(dir, "voz.pcm");
@@ -125,13 +164,12 @@ async function renderAudio(pcm, duration, bed) {
     // MP3 del reproductor: voz nivelada + lecho 18 dB por debajo.
     // `normalize=0` en amix es obligatorio; sin él ffmpeg divide cada entrada
     // entre el número de pistas y la voz perdería 6 dB.
-    const salidaFade = Math.max(0, duration - BED_FADE_OUT_S);
-    const args = bed
-      ? ["-y", "-loglevel", "error", ...entrada, "-stream_loop", "-1", "-i", bed.archivo,
+    const lecho = beds?.length ? construirLecho(beds, duration) : null;
+    const args = lecho
+      ? ["-y", "-loglevel", "error", ...entrada, ...lecho.entradas,
          "-filter_complex",
          `[0:a]loudnorm=I=${VOICE_LUFS}:TP=-1.5:LRA=11,aformat=channel_layouts=stereo[voz];` +
-         `[1:a]atrim=0:${duration},asetpts=PTS-STARTPTS,volume=${BED_GAIN_DB}dB,` +
-         `afade=t=in:st=0:d=${BED_FADE_IN_S},afade=t=out:st=${salidaFade}:d=${BED_FADE_OUT_S}[lecho];` +
+         `${lecho.cadena};` +
          `[voz][lecho]amix=inputs=2:duration=first:normalize=0[out]`,
          "-map", "[out]", "-c:a", "libmp3lame", "-b:a", `${MP3_BITRATE_KBPS}k`, mp3Path]
       : ["-y", "-loglevel", "error", ...entrada,
@@ -152,31 +190,48 @@ async function renderAudio(pcm, duration, bed) {
  * amontonarse en una, y cada lecho nuevo que se añade entra el primero en el
  * reparto porque arranca con cero usos.
  */
-async function pickBed(forzado) {
-  const r = forzado
-    ? await sql.query("SELECT slug, title, audio_url FROM narration_beds WHERE slug = $1", [forzado])
-    : await sql.query(`
-        SELECT b.slug, b.title, b.audio_url,
-               (SELECT count(*) FROM myth_narrations n WHERE n.bed_slug = b.slug) AS usos
-        FROM narration_beds b
-        ORDER BY usos ASC, b.slug ASC
-        LIMIT 1
-      `);
-  return r.rows[0] || null;
+async function pickBeds(cuantos, forzado) {
+  if (forzado) {
+    const pedidos = forzado.split(",").map((x) => x.trim()).filter(Boolean);
+    const r = await sql.query(
+      "SELECT slug, title, audio_url FROM narration_beds WHERE slug = ANY($1)",
+      [pedidos]
+    );
+    // Se respeta el orden que pidió quien ejecuta, no el que devuelva la base.
+    return pedidos.map((sl) => r.rows.find((x) => x.slug === sl)).filter(Boolean);
+  }
+  const r = await sql.query(
+    `
+      SELECT b.slug, b.title, b.audio_url,
+             (SELECT count(*) FROM myth_narrations n
+               WHERE n.bed_slugs @> to_jsonb(b.slug)) AS usos
+      FROM narration_beds b
+      ORDER BY usos ASC, b.slug ASC
+      LIMIT $1
+    `,
+    [cuantos]
+  );
+  return r.rows;
 }
 
-/** El lecho vive en el blob; se baja una vez por corrida y se reutiliza. */
+/** Los lechos viven en el blob; cada uno se baja una vez por corrida. */
 const cacheLechos = new Map();
-async function fetchBed(bed, dir) {
-  if (!bed) return null;
-  if (cacheLechos.has(bed.slug)) return cacheLechos.get(bed.slug);
-  const res = await fetch(bed.audio_url);
-  if (!res.ok) throw new Error(`no se pudo bajar el lecho ${bed.slug}: HTTP ${res.status}`);
-  const archivo = join(dir, `${bed.slug}.wav`);
-  await writeFile(archivo, Buffer.from(await res.arrayBuffer()));
-  const entrada = { ...bed, archivo };
-  cacheLechos.set(bed.slug, entrada);
-  return entrada;
+async function fetchBeds(beds, dir) {
+  const salida = [];
+  for (const bed of beds) {
+    if (cacheLechos.has(bed.slug)) {
+      salida.push(cacheLechos.get(bed.slug));
+      continue;
+    }
+    const res = await fetch(bed.audio_url);
+    if (!res.ok) throw new Error(`no se pudo bajar el lecho ${bed.slug}: HTTP ${res.status}`);
+    const archivo = join(dir, `${bed.slug}.wav`);
+    await writeFile(archivo, Buffer.from(await res.arrayBuffer()));
+    const entrada = { ...bed, archivo };
+    cacheLechos.set(bed.slug, entrada);
+    salida.push(entrada);
+  }
+  return salida;
 }
 
 /**
@@ -230,11 +285,19 @@ async function narrateMyth(myth, dirLechos) {
     return "failed";
   }
 
-  const bed = sinLecho ? null : await fetchBed(await pickBed(lechoForzado), dirLechos);
-  if (!sinLecho && !bed) {
+  // Cuántos lechos hacen falta se decide por la duración, y la duración sólo se
+  // conoce tras sintetizar. Se estima aquí a partir del número de caracteres
+  // —unos 14,5 por segundo con estos ajustes— porque el hash tiene que estar
+  // cerrado antes de gastar la petición: si ya existe ese audio, no se genera.
+  const duracionEstimada = text.length / 14.5;
+  const cuantosLechos = bedCountForDuration(duracionEstimada);
+  const beds = sinLecho
+    ? []
+    : await fetchBeds(await pickBeds(cuantosLechos, lechoForzado), dirLechos);
+  if (!sinLecho && !beds.length) {
     console.log(`  ! ${label}: no hay lechos en el catálogo, se narra sin música`);
   }
-  const hash = narrationRenderHash(text, DEFAULT_VOICE, bed);
+  const hash = narrationRenderHash(text, DEFAULT_VOICE, beds);
   const existing = await sql`
     SELECT audio_url, master_url, render_hash, duration_seconds
     FROM myth_narrations
@@ -267,7 +330,7 @@ async function narrateMyth(myth, dirLechos) {
   if (!timings) {
     console.log(`  ! ${label}: sin alineación utilizable, el audio queda sin resaltado de palabras`);
   }
-  const { wav, mp3 } = await renderAudio(pcm, duration, bed);
+  const { wav, mp3 } = await renderAudio(pcm, duration, beds);
   const subir = (ruta, cuerpo, tipo) =>
     put(ruta, cuerpo, {
       access: "public",
@@ -284,18 +347,19 @@ async function narrateMyth(myth, dirLechos) {
   await sql`
     INSERT INTO myth_narrations (
       myth_id, myth_slug, audio_url, master_url, voice_id, voice_name, model_id,
-      render_hash, char_count, duration_seconds, bed_slug, bed_gain_db, word_timings, updated_at
+      render_hash, char_count, duration_seconds, bed_slugs, bed_gain_db, word_timings, updated_at
     ) VALUES (
       ${myth.id}, ${myth.slug}, ${blob.url}, ${master.url}, ${DEFAULT_VOICE.id}, ${DEFAULT_VOICE.name},
       ${DEFAULT_VOICE.modelId}, ${hash}, ${text.length}, ${duration},
-      ${bed?.slug ?? null}, ${bed ? BED_GAIN_DB : null},
+      ${beds.length ? JSON.stringify(beds.map((b) => b.slug)) : null},
+      ${beds.length ? BED_GAIN_DB : null},
       ${timings ? JSON.stringify(timings) : null}, NOW()
     )
     ON CONFLICT (myth_slug, voice_id) DO UPDATE SET
       myth_id = EXCLUDED.myth_id,
       audio_url = EXCLUDED.audio_url,
       master_url = EXCLUDED.master_url,
-      bed_slug = EXCLUDED.bed_slug,
+      bed_slugs = EXCLUDED.bed_slugs,
       bed_gain_db = EXCLUDED.bed_gain_db,
       word_timings = EXCLUDED.word_timings,
       voice_name = EXCLUDED.voice_name,
@@ -309,7 +373,7 @@ async function narrateMyth(myth, dirLechos) {
   console.log(
     `  ✓ ${label}: ${formatClock(duration)} · ${text.length} caracteres · ` +
       `MP3 ${Math.round(mp3.length / 1024)} KB · máster WAV ${Math.round(wav.length / 1024)} KB\n` +
-      `    lecho: ${bed ? `${bed.title} (${BED_GAIN_DB} dB)` : "sin música"} · ` +
+      `    lechos: ${beds.length ? beds.map((b) => b.title).join(" → ") + ` (${BED_GAIN_DB} dB)` : "sin música"} · ` +
       `${timings ? `${timings.length} palabras con marca de tiempo` : "sin resaltado"}\n` +
       `    reproductor: ${blob.url}\n    máster (voz sola): ${master.url}`
   );
