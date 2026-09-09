@@ -21,8 +21,9 @@
  * Cada narración lleva VARIOS lechos encadenados (uno por cada ~55 s), para que
  * un mismo bucle de 30 s no se repita seis veces seguidas y se vuelva monótono.
  *
- * Los lechos se reparten por rotación (los menos usados del catálogo). Para que
- * dejen de repetirse basta con ampliarlo:
+ * Los lechos se eligen por el CARÁCTER de cada tramo del relato (un mito de
+ * caminos no lleva debajo la laguna de otro) y, a igualdad de encaje, por menor
+ * uso. Para ganar variedad basta con ampliar el catálogo:
  *   node scripts/mitos/generar-lechos.mjs --nuevos 4
  *
  * Requiere ELEVENLABS_API_KEY, BLOB_READ_WRITE_TOKEN y POSTGRES_URL en .env.local.
@@ -60,6 +61,7 @@ import {
   pcmDuration,
   wordTimingsFromAlignment,
 } from "../../src/lib/narration.js";
+import { chooseBedsForStory } from "../../src/lib/narration-character.js";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const rootDir = join(__dirname, "..", "..");
@@ -190,28 +192,35 @@ async function renderAudio(pcm, duration, beds) {
  * amontonarse en una, y cada lecho nuevo que se añade entra el primero en el
  * reparto porque arranca con cero usos.
  */
-async function pickBeds(cuantos, forzado) {
+/**
+ * Elige los lechos de una narración: por CARÁCTER del tramo que va a acompañar
+ * y, a igualdad, por menor uso.
+ *
+ * La consulta trae el catálogo entero ordenado por uso —no los N primeros—
+ * porque el filtro temático se aplica después: si sólo llegaran los menos
+ * usados, un mito de agua podría quedarse sin ningún lecho de agua entre los
+ * candidatos y el tema se perdería justo cuando más importa.
+ */
+async function pickBeds(cuantos, forzado, story, slug) {
   if (forzado) {
     const pedidos = forzado.split(",").map((x) => x.trim()).filter(Boolean);
     const r = await sql.query(
-      "SELECT slug, title, audio_url FROM narration_beds WHERE slug = ANY($1)",
+      "SELECT slug, title, audio_url, characters FROM narration_beds WHERE slug = ANY($1)",
       [pedidos]
     );
     // Se respeta el orden que pidió quien ejecuta, no el que devuelva la base.
     return pedidos.map((sl) => r.rows.find((x) => x.slug === sl)).filter(Boolean);
   }
-  const r = await sql.query(
-    `
-      SELECT b.slug, b.title, b.audio_url,
-             (SELECT count(*) FROM myth_narrations n
-               WHERE n.bed_slugs @> to_jsonb(b.slug)) AS usos
-      FROM narration_beds b
-      ORDER BY usos ASC, b.slug ASC
-      LIMIT $1
-    `,
-    [cuantos]
-  );
-  return r.rows;
+  const r = await sql.query(`
+    SELECT b.slug, b.title, b.audio_url, b.characters,
+           (SELECT count(*) FROM myth_narrations n
+             WHERE n.bed_slugs @> to_jsonb(b.slug)) AS usos
+    FROM narration_beds b
+    ORDER BY usos ASC, b.slug ASC
+  `);
+  // El slug como semilla: mismo mito, mismos lechos siempre; mitos distintos
+  // con el mismo perfil temático, repartos distintos.
+  return chooseBedsForStory(story, r.rows, cuantos, slug);
 }
 
 /** Los lechos viven en el blob; cada uno se baja una vez por corrida. */
@@ -293,7 +302,7 @@ async function narrateMyth(myth, dirLechos) {
   const cuantosLechos = bedCountForDuration(duracionEstimada);
   const beds = sinLecho
     ? []
-    : await fetchBeds(await pickBeds(cuantosLechos, lechoForzado), dirLechos);
+    : await fetchBeds(await pickBeds(cuantosLechos, lechoForzado, parts.story, myth.slug), dirLechos);
   if (!sinLecho && !beds.length) {
     console.log(`  ! ${label}: no hay lechos en el catálogo, se narra sin música`);
   }
@@ -373,7 +382,7 @@ async function narrateMyth(myth, dirLechos) {
   console.log(
     `  ✓ ${label}: ${formatClock(duration)} · ${text.length} caracteres · ` +
       `MP3 ${Math.round(mp3.length / 1024)} KB · máster WAV ${Math.round(wav.length / 1024)} KB\n` +
-      `    lechos: ${beds.length ? beds.map((b) => b.title).join(" → ") + ` (${BED_GAIN_DB} dB)` : "sin música"} · ` +
+      `    lechos: ${beds.length ? beds.map((b) => `${b.title}${b.characters?.length ? ` [${b.characters[0]}]` : ""}`).join(" → ") + ` (${BED_GAIN_DB} dB)` : "sin música"} · ` +
       `${timings ? `${timings.length} palabras con marca de tiempo` : "sin resaltado"}\n` +
       `    reproductor: ${blob.url}\n    máster (voz sola): ${master.url}`
   );

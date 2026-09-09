@@ -30,6 +30,7 @@ import path from "node:path";
 import process from "node:process";
 import { fileURLToPath } from "node:url";
 import dotenv from "dotenv";
+import { CHARACTERS } from "../../src/lib/narration-character.js";
 
 const rootDir = path.join(path.dirname(fileURLToPath(import.meta.url)), "..", "..");
 dotenv.config({ path: path.join(rootDir, ".env.local") });
@@ -61,12 +62,12 @@ const MUNDO =
   "Steady and continuous from beginning to end, no intro, no fade out, no ending.";
 
 const CATALOGO = [
-  { slug: "07-caracol-de-montana", title: "Caracol de montaña", foco: "A conch shell trumpet sounds long low calls that echo off rock walls, answered far away by another. Sparse hide drum strokes between calls. Vast, announcing, ancient." },
-  { slug: "08-lluvia-sobre-la-piedra", title: "Lluvia sobre la piedra", foco: "Steady highland rain on stone and thatch, with a clay ocarina playing a slow descending figure through it. A soft shell rattle keeps a loose pulse. Wet, close, sheltered." },
-  { slug: "09-telar-de-semillas", title: "Telar de semillas", foco: "Seed rattles and shell rattles interlock in a dry hypnotic weave, like hands working a loom. A single cane flute holds one long note above. Repetitive, textural, trance-like." },
-  { slug: "10-fuego-y-humo", title: "Fuego y humo", foco: "Crackling fire close by, a low hide drum pulsing slowly like breathing, and a breathy low flute circling a few notes. Warm, enclosed, nocturnal." },
-  { slug: "11-rio-que-baja", title: "Río que baja", foco: "A fast cold mountain river carries everything, with panpipes rising and falling over it in short overlapping phrases. Light rattles. Moving, bright, restless." },
-  { slug: "12-silencio-de-la-sabana", title: "Silencio de la sabana", foco: "Almost nothing: distant wind across open grassland, one far-off bird, and a single cane flute note held and released every few seconds. Extremely sparse, patient, empty." },
+  { slug: "07-caracol-de-montana", title: "Caracol de montaña", characters: ["montana", "ceremonia", "camino"], foco: "A conch shell trumpet sounds long low calls that echo off rock walls, answered far away by another. Sparse hide drum strokes between calls. Vast, announcing, ancient." },
+  { slug: "08-lluvia-sobre-la-piedra", title: "Lluvia sobre la piedra", characters: ["agua", "montana"], foco: "Steady highland rain on stone and thatch, with a clay ocarina playing a slow descending figure through it. A soft shell rattle keeps a loose pulse. Wet, close, sheltered." },
+  { slug: "09-telar-de-semillas", title: "Telar de semillas", characters: ["oficio", "comunidad"], foco: "Seed rattles and shell rattles interlock in a dry hypnotic weave, like hands working a loom. A single cane flute holds one long note above. Repetitive, textural, trance-like." },
+  { slug: "10-fuego-y-humo", title: "Fuego y humo", characters: ["fuego", "noche"], foco: "Crackling fire close by, a low hide drum pulsing slowly like breathing, and a breathy low flute circling a few notes. Warm, enclosed, nocturnal." },
+  { slug: "11-rio-que-baja", title: "Río que baja", characters: ["agua", "camino"], foco: "A fast cold mountain river carries everything, with panpipes rising and falling over it in short overlapping phrases. Light rattles. Moving, bright, restless." },
+  { slug: "12-silencio-de-la-sabana", title: "Silencio de la sabana", characters: ["silencio", "viento"], foco: "Almost nothing: distant wind across open grassland, one far-off bird, and a single cane flute note held and released every few seconds. Extremely sparse, patient, empty." },
 ];
 
 const ff = (a) => spawnSync("ffmpeg", ["-y", "-loglevel", "error", ...a], { encoding: "utf8" });
@@ -116,30 +117,42 @@ function normalizar(archivo, dir) {
   return ok;
 }
 
-async function registrar({ slug, title, archivo, prompt }) {
+async function registrar({ slug, title, archivo, prompt, characters }) {
   const blob = await put(`narraciones/lechos/${slug}.wav`, fs.readFileSync(archivo), {
     access: "public", contentType: "audio/wav",
     addRandomSuffix: false, allowOverwrite: true,
     token: process.env.BLOB_READ_WRITE_TOKEN,
   });
   await sql`
-    INSERT INTO narration_beds (slug, title, audio_url, duration_seconds, lufs, seam_step_db, prompt)
-    VALUES (${slug}, ${title}, ${blob.url}, ${duracion(archivo)}, ${lufs(archivo)}, ${null}, ${prompt})
+    INSERT INTO narration_beds (slug, title, audio_url, duration_seconds, lufs, seam_step_db, prompt, characters)
+    VALUES (${slug}, ${title}, ${blob.url}, ${duracion(archivo)}, ${lufs(archivo)}, ${null}, ${prompt},
+            ${characters ? JSON.stringify(characters) : null})
     ON CONFLICT (slug) DO UPDATE SET
       title = EXCLUDED.title, audio_url = EXCLUDED.audio_url,
       duration_seconds = EXCLUDED.duration_seconds, lufs = EXCLUDED.lufs,
-      prompt = COALESCE(EXCLUDED.prompt, narration_beds.prompt)
+      prompt = COALESCE(EXCLUDED.prompt, narration_beds.prompt),
+      characters = COALESCE(EXCLUDED.characters, narration_beds.characters)
   `;
   return blob.url;
 }
 
 async function main() {
   if (args.includes("--listar")) {
-    const r = await sql`SELECT slug, title, duration_seconds, lufs FROM narration_beds ORDER BY slug`;
+    const r = await sql`SELECT slug, title, duration_seconds, lufs, characters FROM narration_beds ORDER BY slug`;
     console.log(`Catálogo de lechos: ${r.rows.length}\n`);
     for (const b of r.rows) {
-      console.log(`  ${b.slug.padEnd(26)} ${b.title.padEnd(28)} ${Number(b.duration_seconds).toFixed(2)}s · ${Number(b.lufs).toFixed(1)} LUFS`);
+      console.log(
+        `  ${b.slug.padEnd(26)} ${b.title.padEnd(28)} ${Number(b.duration_seconds).toFixed(2)}s · ` +
+          `${Number(b.lufs).toFixed(1)} LUFS · ${(b.characters || []).join(", ") || "SIN ETIQUETAR"}`
+      );
     }
+    // Un carácter con pocos lechos condena a los mitos de ese tema a repetir
+    // siempre los mismos; conviene verlo antes de producir en tanda.
+    const cuenta = Object.fromEntries(CHARACTERS.map((c) => [c, 0]));
+    for (const b of r.rows) for (const c of b.characters || []) cuenta[c] = (cuenta[c] || 0) + 1;
+    const flojos = CHARACTERS.filter((c) => cuenta[c] <= 1);
+    console.log(`\nlechos por carácter: ${JSON.stringify(cuenta)}`);
+    if (flojos.length) console.log(`⚠️  con uno o ninguno: ${flojos.join(", ")} — ahí la variedad se agota enseguida`);
     return;
   }
 
@@ -153,7 +166,7 @@ async function main() {
       for (const [slug, title] of Object.entries(titulos)) {
         const archivo = path.join(base, `${slug}.wav`);
         if (!fs.existsSync(archivo)) { console.log(`· ${slug}: no está en la carpeta, se salta`); continue; }
-        const url = await registrar({ slug, title, archivo, prompt: null });
+        const url = await registrar({ slug, title, archivo, prompt: null, characters: null });
         console.log(`✓ ${title.padEnd(28)} ${duracion(archivo).toFixed(2)}s · ${lufs(archivo).toFixed(1)} LUFS\n    ${url}`);
       }
     } else {
@@ -194,7 +207,10 @@ async function main() {
         }
         if (!mejor) { console.log(`✗ ${p.slug}: no se pudo construir el bucle`); continue; }
         normalizar(mejor.archivo, dir);
-        const url = await registrar({ slug: p.slug, title: p.title, archivo: mejor.archivo, prompt: `${MUNDO} ${p.foco}` });
+        const url = await registrar({
+          slug: p.slug, title: p.title, archivo: mejor.archivo,
+          prompt: `${MUNDO} ${p.foco}`, characters: p.characters,
+        });
         await sql`UPDATE narration_beds SET seam_step_db = ${mejor.e} WHERE slug = ${p.slug}`;
         console.log(`✓ ${p.title.padEnd(28)} corte ${String(mejor.S).padStart(2)}s · costura ${mejor.e.toFixed(1)} dB · ${lufs(mejor.archivo).toFixed(1)} LUFS\n    ${url}`);
         fs.rmSync(mejor.archivo, { force: true });
