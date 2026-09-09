@@ -185,7 +185,28 @@ export function SectionSpine({ index, eyebrow, accent = "jungle", className }) {
 }
 
 /* ---------------- 1 · El relato (mito) ---------------- */
-export function RelatoBlock({ text, accent = "jungle", motif = "jaguar", player }) {
+/**
+ * Palabras del relato envueltas una a una para poder resaltar la que se está
+ * narrando. `desde` es el índice global de la primera palabra del trozo: los
+ * índices tienen que ser continuos entre párrafos porque así vienen las marcas
+ * de tiempo, que se calculan sobre el relato entero de corrido.
+ *
+ * Sin narración no se envuelve nada: el marcado de los 595 mitos sin audio se
+ * queda exactamente como estaba.
+ */
+function Palabras({ text, desde = 0, marcar }) {
+  if (!marcar) return text;
+  return text.split(/\s+/).filter(Boolean).map((palabra, i) => (
+    <span key={i}>
+      {i > 0 ? " " : null}
+      <span data-narration-word={desde + i}>{palabra}</span>
+    </span>
+  ));
+}
+
+const contarPalabras = (texto) => String(texto).split(/\s+/).filter(Boolean).length;
+
+export function RelatoBlock({ text, accent = "jungle", motif = "jaguar", player, marcarPalabras = false }) {
   const ps = toParagraphs(text);
   if (ps.length === 0) return null;
 
@@ -195,6 +216,14 @@ export function RelatoBlock({ text, accent = "jungle", motif = "jaguar", player 
   const leadCount = Math.min(4, Math.max(2, Math.round(words.length / 8)));
   const lead = words.slice(0, leadCount).join(" ");
   const rest = words.slice(leadCount).join(" ");
+  // Índice global acumulado: el primer párrafo abre en 0 y cada siguiente
+  // arranca donde terminó el anterior.
+  const inicioDeParrafo = [];
+  let acumulado = 0;
+  for (const parrafo of ps) {
+    inicioDeParrafo.push(acumulado);
+    acumulado += contarPalabras(parrafo);
+  }
 
   return (
     <div className="relative">
@@ -219,12 +248,14 @@ export function RelatoBlock({ text, accent = "jungle", motif = "jaguar", player 
           )}
         >
           <span className="font-display text-[0.9em] font-semibold uppercase tracking-[0.04em] text-ink-900">
-            {lead}{" "}
+            <Palabras text={lead} desde={0} marcar={marcarPalabras} />{" "}
           </span>
-          {rest}
+          <Palabras text={rest} desde={leadCount} marcar={marcarPalabras} />
         </p>
         {ps.slice(1).map((p, i) => (
-          <p key={i}>{p}</p>
+          <p key={i}>
+            <Palabras text={p} desde={inicioDeParrafo[i + 1]} marcar={marcarPalabras} />
+          </p>
         ))}
       </Prose>
     </div>

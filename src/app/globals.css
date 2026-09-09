@@ -425,6 +425,28 @@ h1.font-editorial {
     @apply mt-3 block h-0.5 w-14 bg-jungle-500;
   }
 
+  /* Palabra que se está narrando.
+     Dorado macizo con tinta casi negra encima: 8,7:1 de contraste, por encima
+     del AAA de WCAG para texto normal, y un tono cálido que no se confunde con
+     los verdes de la interfaz.
+     El realce se pinta con `box-shadow` y no con `padding` a propósito: así el
+     marcador respira sin empujar ni un píxel del texto, y la línea no se
+     recompone cada vez que avanza la palabra. */
+  [data-narration-word] {
+    transition: background-color 120ms linear, color 120ms linear;
+  }
+  [data-narration-word][data-narration-active] {
+    background-color: rgb(var(--ember-400));
+    color: rgb(var(--ink-900));
+    border-radius: 2px;
+    box-shadow: 0 0 0 0.12em rgb(var(--ember-400));
+  }
+  @media (prefers-reduced-motion: reduce) {
+    [data-narration-word] {
+      transition: none;
+    }
+  }
+
   /* Riel del reproductor de narración. El `range` va invisible por encima de
      las dos líneas que pinta el componente: así el avance se ve como un hilo
      editorial y no como un control de sistema, pero sigue siendo un `range`
