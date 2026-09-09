@@ -185,7 +185,7 @@ export function SectionSpine({ index, eyebrow, accent = "jungle", className }) {
 }
 
 /* ---------------- 1 · El relato (mito) ---------------- */
-export function RelatoBlock({ text, accent = "jungle", motif = "jaguar" }) {
+export function RelatoBlock({ text, accent = "jungle", motif = "jaguar", player }) {
   const ps = toParagraphs(text);
   if (ps.length === 0) return null;
 
@@ -207,6 +207,9 @@ export function RelatoBlock({ text, accent = "jungle", motif = "jaguar" }) {
       <div className="mb-8 md:mb-10">
         <h2 className="atlas-section-heading">El relato</h2>
         <span className={cn("atlas-rule", accent === "river" && "bg-river-500")} aria-hidden="true" />
+        {/* El cintillo de audio va aquí y no en la portada: narra exactamente
+            este bloque, así que se ofrece donde empieza lo que suena. */}
+        {player ? <div className="mt-6">{player}</div> : null}
       </div>
       <Prose className="prose-p:text-[1.14rem] prose-p:leading-[1.72] prose-p:text-pretty md:prose-p:text-[1.2rem] [&_p+p]:mt-[1.3em]">
         <p

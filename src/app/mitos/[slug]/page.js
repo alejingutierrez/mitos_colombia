@@ -137,6 +137,9 @@ export default async function MythDetailPage({ params }) {
     leccion: myth.leccion,
     similitudes: myth.similitudes,
     tags: myth.tags,
+    // Narración de audio (ElevenLabs) cuando el mito ya está grabado. Sin fila
+    // en `myth_narrations` no baja nada al cliente y no aparece el cintillo.
+    narration: myth.narration,
     sources: myth.sources,
     keySources: myth.keySources,
     editorialUpdatedAt: myth.editorialUpdatedAt,
