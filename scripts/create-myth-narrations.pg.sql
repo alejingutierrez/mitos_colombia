@@ -29,6 +29,10 @@ CREATE TABLE IF NOT EXISTS myth_narrations (
   render_hash TEXT NOT NULL,
   char_count INTEGER NOT NULL,
   duration_seconds DOUBLE PRECISION,
+  -- Marcas de tiempo por palabra del relato, [[inicio, fin], ...] en segundos,
+  -- tal como las devuelve la alineación de ElevenLabs. Es lo que permite
+  -- resaltar la palabra que se está leyendo sin estimar nada.
+  word_timings JSONB,
   created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
   updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
   UNIQUE (myth_slug, voice_id)

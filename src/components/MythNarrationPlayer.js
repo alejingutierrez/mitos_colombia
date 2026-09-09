@@ -5,16 +5,26 @@ import { Icon } from "./atoms";
 import { cn } from "../lib/utils";
 import { formatClock, formatNarrationLength } from "../lib/narration";
 
+/** Sin tocar el scroll durante este rato, la página vuelve a la lectura. */
+const SEGUIMIENTO_PAUSA_MS = 8000;
+
 /**
  * Cintillo de narración: el botón de escuchar, en la cabecera de «El relato».
  *
  * Suena SÓLO el título y el relato — es lo que se mandó a narrar, así que la
  * promesa del botón es literal y no hay que matizarla en ningún lado.
  *
- * `preload="none"` es deliberado: el MP3 de un relato pesa ~2 MB y la enorme
- * mayoría de las visitas viene a leer. Nada se descarga hasta que alguien pulsa
- * play. Por eso la duración llega medida desde la base de datos y no de los
- * metadatos del archivo: el cintillo puede decir «3 min» sin bajar un byte.
+ * `preload="none"` es deliberado: el MP3 de un relato pesa unos 4 MB y la
+ * enorme mayoría de las visitas viene a leer. Nada se descarga hasta que
+ * alguien pulsa play. Por eso la duración llega medida desde la base de datos y
+ * no de los metadatos del archivo: el cintillo puede decir «3 min» sin bajar un
+ * byte.
+ *
+ * Mientras suena va resaltando la palabra que se lee. Las marcas de tiempo son
+ * las que devuelve la alineación de ElevenLabs para el propio audio —no una
+ * estimación—, y se comprobó que ni `loudnorm` ni la codificación a MP3 mueven
+ * el reloj: los cortes de silencio coinciden antes y después del proceso con un
+ * desfase de una diezmilésima de segundo.
  */
 export function MythNarrationPlayer({ narration, title, className }) {
   const audioRef = useRef(null);
@@ -29,6 +39,90 @@ export function MythNarrationPlayer({ narration, title, className }) {
   const [scrubbing, setScrubbing] = useState(false);
 
   const audioUrl = narration?.audioUrl;
+  const timings = narration?.wordTimings || null;
+
+  // Palabra activa. Vive en una ref y no en el estado: se actualiza en cada
+  // fotograma y pasarla por React haría re-renderizar 400 spans sesenta veces
+  // por segundo. Lo que cambia es un atributo del DOM sobre dos elementos.
+  const palabraRef = useRef(-1);
+  const spansRef = useRef(null);
+  const rafRef = useRef(0);
+  // Seguimiento del scroll: `siguiendo` manda, y se apaga en cuanto la persona
+  // toma el control con la rueda, el dedo o el teclado.
+  const siguiendoRef = useRef(true);
+  const temporizadorRef = useRef(0);
+
+  /** Búsqueda binaria de la palabra que suena en el segundo `t`. */
+  const palabraEn = useCallback(
+    (t) => {
+      if (!timings?.length) return -1;
+      let lo = 0;
+      let hi = timings.length - 1;
+      let encontrada = -1;
+      while (lo <= hi) {
+        const mid = (lo + hi) >> 1;
+        if (timings[mid][0] <= t) {
+          encontrada = mid;
+          lo = mid + 1;
+        } else {
+          hi = mid - 1;
+        }
+      }
+      // Pasado el final de la palabra y antes de la siguiente (una pausa) se
+      // mantiene la última: el ojo se queda donde estaba en vez de parpadear.
+      return encontrada;
+    },
+    [timings]
+  );
+
+  const spans = useCallback(() => {
+    if (!spansRef.current) {
+      spansRef.current = Array.from(
+        document.querySelectorAll("[data-narration-word]")
+      );
+    }
+    return spansRef.current;
+  }, []);
+
+  /**
+   * Deja la palabra activa en una banda cómoda de la pantalla, con aire arriba
+   * y abajo. Sólo se mueve cuando se sale de esa banda: corregir en cada
+   * palabra convertiría la lectura en un carrusel tembloroso.
+   */
+  const seguirConLaVista = useCallback((el) => {
+    if (!siguiendoRef.current || !el) return;
+    const r = el.getBoundingClientRect();
+    const alto = window.innerHeight;
+    const arriba = alto * 0.3;   // por encima de esto, falta aire arriba
+    const abajo = alto * 0.62;   // por debajo, falta aire abajo
+    if (r.top >= arriba && r.bottom <= abajo) return;
+    const destino = window.scrollY + r.top - alto * 0.4;
+    const suave = !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    window.scrollTo({ top: Math.max(0, destino), behavior: suave ? "smooth" : "auto" });
+  }, []);
+
+  const pintar = useCallback(
+    (t) => {
+      const i = palabraEn(t);
+      if (i === palabraRef.current) return;
+      const lista = spans();
+      const antes = lista[palabraRef.current];
+      if (antes) antes.removeAttribute("data-narration-active");
+      const ahora = lista[i];
+      if (ahora) {
+        ahora.setAttribute("data-narration-active", "true");
+        seguirConLaVista(ahora);
+      }
+      palabraRef.current = i;
+    },
+    [palabraEn, seguirConLaVista, spans]
+  );
+
+  const limpiarResaltado = useCallback(() => {
+    const antes = spans()[palabraRef.current];
+    if (antes) antes.removeAttribute("data-narration-active");
+    palabraRef.current = -1;
+  }, [spans]);
 
   const toggle = useCallback(() => {
     const audio = audioRef.current;
@@ -70,6 +164,72 @@ export function MythNarrationPlayer({ narration, title, className }) {
     [duration, seek]
   );
 
+  /**
+   * El resaltado se refresca por fotograma y no con `timeupdate`, que sólo
+   * dispara unas cuatro veces por segundo: a esa cadencia la palabra iría
+   * medio segundo por detrás de la voz y el seguimiento se sentiría roto.
+   */
+  useEffect(() => {
+    if (!timings?.length) return undefined;
+    if (!playing) {
+      cancelAnimationFrame(rafRef.current);
+      return undefined;
+    }
+    const paso = () => {
+      const audio = audioRef.current;
+      if (audio) pintar(audio.currentTime);
+      rafRef.current = requestAnimationFrame(paso);
+    };
+    rafRef.current = requestAnimationFrame(paso);
+    return () => cancelAnimationFrame(rafRef.current);
+  }, [playing, pintar, timings]);
+
+  /**
+   * Quién manda sobre el scroll.
+   *
+   * Se escuchan los gestos de la persona (rueda, dedo, teclas de navegación) y
+   * NO el evento `scroll`: ese lo dispara también el desplazamiento automático,
+   * así que el reproductor se interpretaría a sí mismo como intromisión y se
+   * apagaría solo a la primera palabra. Tras ocho segundos sin tocar nada, la
+   * página vuelve por donde va la lectura.
+   */
+  useEffect(() => {
+    if (!timings?.length) return undefined;
+    const soltarElMando = () => {
+      siguiendoRef.current = false;
+      clearTimeout(temporizadorRef.current);
+      temporizadorRef.current = setTimeout(() => {
+        siguiendoRef.current = true;
+        const activa = spans()[palabraRef.current];
+        if (activa) {
+          // Al retomar se centra siempre, aunque la palabra estuviera dentro de
+          // la banda: es el gesto que devuelve a la persona al hilo del relato.
+          const suave = !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+          const r = activa.getBoundingClientRect();
+          window.scrollTo({
+            top: Math.max(0, window.scrollY + r.top - window.innerHeight * 0.4),
+            behavior: suave ? "smooth" : "auto",
+          });
+        }
+      }, SEGUIMIENTO_PAUSA_MS);
+    };
+    const teclas = new Set([
+      "ArrowUp", "ArrowDown", "PageUp", "PageDown", "Home", "End", " ", "Spacebar",
+    ]);
+    const porTecla = (e) => {
+      if (teclas.has(e.key)) soltarElMando();
+    };
+    window.addEventListener("wheel", soltarElMando, { passive: true });
+    window.addEventListener("touchmove", soltarElMando, { passive: true });
+    window.addEventListener("keydown", porTecla);
+    return () => {
+      window.removeEventListener("wheel", soltarElMando);
+      window.removeEventListener("touchmove", soltarElMando);
+      window.removeEventListener("keydown", porTecla);
+      clearTimeout(temporizadorRef.current);
+    };
+  }, [spans, timings]);
+
   useEffect(() => {
     const audio = audioRef.current;
     if (!audio) return undefined;
@@ -91,7 +251,10 @@ export function MythNarrationPlayer({ narration, title, className }) {
       setPlaying(false);
       setCurrent(0);
       audio.currentTime = 0;
+      limpiarResaltado();
     };
+    // Al saltar con el riel el resaltado salta con él, aunque esté en pausa.
+    const onSeeked = () => pintar(audio.currentTime);
     const onError = () => {
       setFailed(true);
       setLoading(false);
@@ -106,6 +269,7 @@ export function MythNarrationPlayer({ narration, title, className }) {
     audio.addEventListener("loadedmetadata", onMeta);
     audio.addEventListener("durationchange", onMeta);
     audio.addEventListener("ended", onEnded);
+    audio.addEventListener("seeked", onSeeked);
     audio.addEventListener("error", onError);
     audio.addEventListener("waiting", onWaiting);
     audio.addEventListener("playing", onPlaying);
@@ -116,11 +280,12 @@ export function MythNarrationPlayer({ narration, title, className }) {
       audio.removeEventListener("loadedmetadata", onMeta);
       audio.removeEventListener("durationchange", onMeta);
       audio.removeEventListener("ended", onEnded);
+      audio.removeEventListener("seeked", onSeeked);
       audio.removeEventListener("error", onError);
       audio.removeEventListener("waiting", onWaiting);
       audio.removeEventListener("playing", onPlaying);
     };
-  }, [scrubbing]);
+  }, [scrubbing, limpiarResaltado, pintar]);
 
   if (!audioUrl) return null;
 
@@ -128,8 +293,6 @@ export function MythNarrationPlayer({ narration, title, className }) {
   const lengthLabel = formatNarrationLength(narration.durationSeconds || total);
   const started = playing || current > 0;
   const progress = total > 0 ? Math.min(100, (current / total) * 100) : 0;
-
-  const credit = `voz ${narration.voiceName} · generada con IA`;
 
   return (
     /* Sin borde inferior: el riel de avance ES el cierre del cintillo. Una
@@ -177,12 +340,7 @@ export function MythNarrationPlayer({ narration, title, className }) {
               </span>
             ) : null}
           </p>
-          {/* En móvil no cabe a la derecha, así que el crédito baja aquí. */}
-          <p className="mt-0.5 text-[0.78rem] text-ink-500 sm:hidden">{credit}</p>
         </div>
-
-        {/* Crédito de voz. Una narración hecha con IA se dice, no se disimula. */}
-        <p className="hidden shrink-0 text-[0.78rem] text-ink-500 sm:block">{credit}</p>
       </div>
 
       {/* Riel de avance. Es un `range` de verdad, no un div pintado: se maneja

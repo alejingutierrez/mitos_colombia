@@ -41,6 +41,7 @@ async function main() {
       render_hash TEXT NOT NULL,
       char_count INTEGER NOT NULL,
       duration_seconds DOUBLE PRECISION,
+      word_timings JSONB,
       created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
       updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
       UNIQUE (myth_slug, voice_id)

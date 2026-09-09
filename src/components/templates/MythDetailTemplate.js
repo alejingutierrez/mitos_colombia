@@ -183,6 +183,7 @@ function MythReading({ myth, accent, related }) {
               text={myth.mito}
               accent={accent}
               motif={myth.motif}
+              marcarPalabras={Boolean(myth.narration?.wordTimings?.length)}
               player={
                 myth.narration ? (
                   <MythNarrationPlayer narration={myth.narration} title={myth.title} />

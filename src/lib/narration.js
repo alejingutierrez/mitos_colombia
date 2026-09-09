@@ -87,14 +87,27 @@ export const BED_FADE_OUT_S = 3;
  * nombre del mito y la primera frase. Si el título ya cierra con puntuación
  * («¿Quién es el Mohán?») no se le añade otro.
  */
-export function buildNarrationText(myth = {}) {
-  const title = String(myth.title || "").trim();
-  const story = String(myth.mito || "")
+export function storyParagraphs(mito) {
+  return String(mito || "")
     .split(/\n+/)
     .map((line) => line.trim())
-    .filter(Boolean)
-    .join("\n\n");
+    .filter(Boolean);
+}
 
+/**
+ * Las tres piezas de la narración: el texto completo que se manda a narrar, el
+ * cuerpo del relato ya normalizado y en qué carácter empieza dentro del texto.
+ *
+ * Devolver el desplazamiento calculado —en vez de buscarlo después con
+ * `indexOf(mito)`— cierra un fallo silencioso: el texto narrado usa los
+ * párrafos renormalizados, así que un relato con saltos de línea simples no se
+ * encontraría, el desplazamiento caería a 0 y TODAS las marcas de tiempo
+ * quedarían corridas una palabra, incluyendo el título en el resaltado. Aquí
+ * el número sale de la misma construcción y no puede descuadrarse.
+ */
+export function buildNarrationParts(myth = {}) {
+  const title = String(myth.title || "").trim();
+  const story = storyParagraphs(myth.mito).join("\n\n");
   if (!story) return null;
 
   const heading = title
@@ -102,8 +115,80 @@ export function buildNarrationText(myth = {}) {
       ? title
       : `${title}.`
     : "";
+  const text = heading ? `${heading}\n\n${story}` : story;
+  return { text, story, storyOffset: text.length - story.length };
+}
 
-  return heading ? `${heading}\n\n${story}` : story;
+export function buildNarrationText(myth = {}) {
+  return buildNarrationParts(myth)?.text ?? null;
+}
+
+/**
+ * Tokenizador canónico de palabras.
+ *
+ * Lo usan DOS sitios que tienen que coincidir exactamente: el generador, para
+ * convertir la alineación de ElevenLabs en marcas de tiempo por palabra, y la
+ * plantilla, para envolver cada palabra del relato en su `<span>`. Si cada uno
+ * partiera el texto a su manera, el resaltado señalaría la palabra equivocada.
+ * Por eso vive aquí y no duplicado en cada lado.
+ *
+ * Una "palabra" es cualquier racha sin espacios: la puntuación viaja pegada a
+ * la palabra («bohío,») igual que en la alineación, que también la agrupa así.
+ */
+export function tokenizeWords(text) {
+  const palabras = [];
+  const cadena = String(text || "");
+  const re = /\S+/g;
+  let m;
+  while ((m = re.exec(cadena)) !== null) {
+    palabras.push({ word: m[0], start: m.index, end: m.index + m[0].length });
+  }
+  return palabras;
+}
+
+/**
+ * Marcas de tiempo por palabra a partir de la alineación por carácter.
+ *
+ * ElevenLabs devuelve un tiempo de inicio y otro de fin por CARÁCTER del texto
+ * que se le mandó. Se agrupan por los límites que marca `tokenizeWords` sobre
+ * ese mismo texto, así que el resultado sale en el mismo orden y con el mismo
+ * criterio que los `<span>` de la página.
+ *
+ * `desde` descarta el principio del texto: la narración empieza por el título,
+ * que no está en el cuerpo del relato y no tiene span que resaltar.
+ *
+ * Devuelve `null` si la alineación no corresponde al texto. Es deliberado: con
+ * los índices descuadrados el resaltado señalaría palabras equivocadas, y es
+ * mejor quedarse sin resaltado que con uno que miente.
+ */
+export function wordTimingsFromAlignment(alignment, text, desde = 0) {
+  const inicios = alignment?.character_start_times_seconds;
+  const fines = alignment?.character_end_times_seconds;
+  const chars = alignment?.characters;
+  if (!Array.isArray(chars) || !Array.isArray(inicios) || !Array.isArray(fines)) return null;
+  if (chars.length !== inicios.length || chars.length !== fines.length) return null;
+  if (chars.join("") !== String(text)) return null;
+
+  return tokenizeWords(text)
+    .filter((t) => t.start >= desde)
+    .map((t) => {
+      const s = inicios[t.start];
+      // `end - 1` es el último carácter de la palabra, no el espacio de después.
+      const e = fines[t.end - 1];
+      return [
+        Math.round((Number.isFinite(s) ? s : 0) * 1000) / 1000,
+        Math.round((Number.isFinite(e) ? e : 0) * 1000) / 1000,
+      ];
+    });
+}
+
+/**
+ * Dónde empieza el relato dentro del texto narrado. La narración es
+ * «título.\n\nrelato», así que el cuerpo arranca después del título.
+ */
+export function storyOffsetInNarration(narrationText, storyText) {
+  const i = String(narrationText).indexOf(String(storyText));
+  return i === -1 ? 0 : i;
 }
 
 /**

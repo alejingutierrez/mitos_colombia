@@ -47,11 +47,12 @@ import {
   PCM_CHANNELS,
   PCM_SAMPLE_RATE,
   VOICE_LUFS,
-  buildNarrationText,
+  buildNarrationParts,
   formatClock,
   narrationBlobPath,
   narrationRenderHash,
   pcmDuration,
+  wordTimingsFromAlignment,
 } from "../../src/lib/narration.js";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -178,9 +179,19 @@ async function fetchBed(bed, dir) {
   return entrada;
 }
 
+/**
+ * Se pide por `with-timestamps` y no por el endpoint normal: además del audio
+ * devuelve el instante de inicio y fin de CADA CARÁCTER del texto enviado. De
+ * ahí salen las marcas por palabra que resaltan la lectura en la página. Es la
+ * alineación del propio motor de voz, no una estimación por número de sílabas.
+ *
+ * El audio viene en base64 dentro del JSON, así que la respuesta pesa un tercio
+ * más que el PCM; a cambio no hay que alinear a posteriori ni mantener dos
+ * peticiones que podrían no corresponderse entre sí.
+ */
 async function synthesize(text) {
   const response = await fetch(
-    `https://api.elevenlabs.io/v1/text-to-speech/${DEFAULT_VOICE.id}?output_format=${AUDIO_FORMAT}`,
+    `https://api.elevenlabs.io/v1/text-to-speech/${DEFAULT_VOICE.id}/with-timestamps?output_format=${AUDIO_FORMAT}`,
     {
       method: "POST",
       headers: { "xi-api-key": API_KEY, "Content-Type": "application/json" },
@@ -196,12 +207,17 @@ async function synthesize(text) {
       `ElevenLabs ${response.status}: ${(await response.text()).slice(0, 300)}`
     );
   }
-  return Buffer.from(await response.arrayBuffer());
+  const payload = await response.json();
+  return {
+    pcm: Buffer.from(payload.audio_base64, "base64"),
+    alignment: payload.alignment || null,
+  };
 }
 
 async function narrateMyth(myth, dirLechos) {
   const label = `${myth.slug}`;
-  const text = buildNarrationText(myth);
+  const parts = buildNarrationParts(myth);
+  const text = parts?.text;
   if (!text) {
     console.log(`  · ${label}: sin relato (columna \`mito\` vacía) → se salta`);
     return "skipped";
@@ -243,8 +259,14 @@ async function narrateMyth(myth, dirLechos) {
     return "dry";
   }
 
-  const pcm = await synthesize(text);
+  const { pcm, alignment } = await synthesize(text);
   const duration = pcmDuration(pcm.length);
+  // Sólo se resaltan las palabras del RELATO: la narración abre con el título,
+  // que no tiene span en la página.
+  const timings = wordTimingsFromAlignment(alignment, text, parts.storyOffset);
+  if (!timings) {
+    console.log(`  ! ${label}: sin alineación utilizable, el audio queda sin resaltado de palabras`);
+  }
   const { wav, mp3 } = await renderAudio(pcm, duration, bed);
   const subir = (ruta, cuerpo, tipo) =>
     put(ruta, cuerpo, {
@@ -262,11 +284,12 @@ async function narrateMyth(myth, dirLechos) {
   await sql`
     INSERT INTO myth_narrations (
       myth_id, myth_slug, audio_url, master_url, voice_id, voice_name, model_id,
-      render_hash, char_count, duration_seconds, bed_slug, bed_gain_db, updated_at
+      render_hash, char_count, duration_seconds, bed_slug, bed_gain_db, word_timings, updated_at
     ) VALUES (
       ${myth.id}, ${myth.slug}, ${blob.url}, ${master.url}, ${DEFAULT_VOICE.id}, ${DEFAULT_VOICE.name},
       ${DEFAULT_VOICE.modelId}, ${hash}, ${text.length}, ${duration},
-      ${bed?.slug ?? null}, ${bed ? BED_GAIN_DB : null}, NOW()
+      ${bed?.slug ?? null}, ${bed ? BED_GAIN_DB : null},
+      ${timings ? JSON.stringify(timings) : null}, NOW()
     )
     ON CONFLICT (myth_slug, voice_id) DO UPDATE SET
       myth_id = EXCLUDED.myth_id,
@@ -274,6 +297,7 @@ async function narrateMyth(myth, dirLechos) {
       master_url = EXCLUDED.master_url,
       bed_slug = EXCLUDED.bed_slug,
       bed_gain_db = EXCLUDED.bed_gain_db,
+      word_timings = EXCLUDED.word_timings,
       voice_name = EXCLUDED.voice_name,
       model_id = EXCLUDED.model_id,
       render_hash = EXCLUDED.render_hash,
@@ -285,7 +309,8 @@ async function narrateMyth(myth, dirLechos) {
   console.log(
     `  ✓ ${label}: ${formatClock(duration)} · ${text.length} caracteres · ` +
       `MP3 ${Math.round(mp3.length / 1024)} KB · máster WAV ${Math.round(wav.length / 1024)} KB\n` +
-      `    lecho: ${bed ? `${bed.title} (${BED_GAIN_DB} dB)` : "sin música"}\n` +
+      `    lecho: ${bed ? `${bed.title} (${BED_GAIN_DB} dB)` : "sin música"} · ` +
+      `${timings ? `${timings.length} palabras con marca de tiempo` : "sin resaltado"}\n` +
       `    reproductor: ${blob.url}\n    máster (voz sola): ${master.url}`
   );
   return "generated";

@@ -826,7 +826,7 @@ export async function listMythPlatesByTaxon(kind, value) {
  * de audio en vez de reventar la página entera.
  */
 const NARRATION_QUERY = `
-  SELECT audio_url, voice_id, voice_name, duration_seconds, updated_at
+  SELECT audio_url, voice_id, voice_name, duration_seconds, word_timings, updated_at
   FROM myth_narrations
   WHERE myth_slug = $1
   ORDER BY updated_at DESC
@@ -835,12 +835,22 @@ const NARRATION_QUERY = `
 
 function toNarration(row) {
   if (!row?.audio_url) return null;
+  // SQLite guardaría el JSON como texto y Postgres ya lo devuelve deserializado.
+  let wordTimings = row.word_timings ?? null;
+  if (typeof wordTimings === "string") {
+    try {
+      wordTimings = JSON.parse(wordTimings);
+    } catch {
+      wordTimings = null;
+    }
+  }
   return {
     audioUrl: row.audio_url,
     voiceId: row.voice_id,
     voiceName: row.voice_name,
     durationSeconds:
       row.duration_seconds != null ? Number(row.duration_seconds) : null,
+    wordTimings: Array.isArray(wordTimings) && wordTimings.length ? wordTimings : null,
   };
 }
 
