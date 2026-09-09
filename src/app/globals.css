@@ -425,6 +425,32 @@ h1.font-editorial {
     @apply mt-3 block h-0.5 w-14 bg-jungle-500;
   }
 
+  /* Riel del reproductor de narración. El `range` va invisible por encima de
+     las dos líneas que pinta el componente: así el avance se ve como un hilo
+     editorial y no como un control de sistema, pero sigue siendo un `range`
+     de verdad para el teclado y el lector de pantalla. El pulgar sólo asoma
+     cuando hay puntero encima o foco, para no ensuciar la barra en reposo. */
+  .narration-range::-webkit-slider-thumb {
+    @apply h-3 w-3 appearance-none rounded-full border-0 bg-jungle-500 opacity-0 transition-opacity duration-150;
+  }
+  .narration-range::-moz-range-thumb {
+    @apply h-3 w-3 rounded-full border-0 bg-jungle-500 opacity-0 transition-opacity duration-150;
+  }
+  .narration-range:hover::-webkit-slider-thumb,
+  .narration-range:focus-visible::-webkit-slider-thumb {
+    @apply opacity-100;
+  }
+  .narration-range:hover::-moz-range-thumb,
+  .narration-range:focus-visible::-moz-range-thumb {
+    @apply opacity-100;
+  }
+  .narration-range:focus-visible::-webkit-slider-thumb {
+    @apply ring-2 ring-jungle-500 ring-offset-2;
+  }
+  .narration-range:focus-visible::-moz-range-thumb {
+    @apply ring-2 ring-jungle-500 ring-offset-2;
+  }
+
   .atlas-image-zoom {
     @apply transition-transform duration-700 ease-editorial group-hover:scale-[1.035];
   }

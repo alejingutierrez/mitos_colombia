@@ -817,6 +817,54 @@ export async function listMythPlatesByTaxon(kind, value) {
   }
 }
 
+/**
+ * Narración de audio del mito (ElevenLabs), si existe. Se busca por slug —y no
+ * por id— porque `myth_narrations` no tiene llave foránea a `myths`: la
+ * identidad que sobrevive a un reimport es el slug (ver AGENTS.md).
+ *
+ * Si la tabla todavía no existe en ese entorno, el mito se sirve sin cintillo
+ * de audio en vez de reventar la página entera.
+ */
+const NARRATION_QUERY = `
+  SELECT audio_url, voice_id, voice_name, duration_seconds, updated_at
+  FROM myth_narrations
+  WHERE myth_slug = $1
+  ORDER BY updated_at DESC
+  LIMIT 1
+`;
+
+function toNarration(row) {
+  if (!row?.audio_url) return null;
+  return {
+    audioUrl: row.audio_url,
+    voiceId: row.voice_id,
+    voiceName: row.voice_name,
+    durationSeconds:
+      row.duration_seconds != null ? Number(row.duration_seconds) : null,
+  };
+}
+
+async function getNarrationPostgres(slug) {
+  try {
+    const result = await getSqlClient().query(NARRATION_QUERY, [slug]);
+    return toNarration(result.rows[0]);
+  } catch (error) {
+    console.error("[MYTHS] Narration unavailable (Postgres):", error.message);
+    return null;
+  }
+}
+
+function getNarrationSqlite(db, slug) {
+  try {
+    return toNarration(
+      db.prepare(NARRATION_QUERY.replace("$1", "?")).get(slug)
+    );
+  } catch (error) {
+    console.error("[MYTHS] Narration unavailable (SQLite):", error.message);
+    return null;
+  }
+}
+
 function getMythBySlugSqlite(slug) {
   const db = getSqliteDb();
   const slugValue = normalizeInput(slug);
@@ -908,6 +956,7 @@ function getMythBySlugSqlite(slug) {
   return {
     ...myth,
     vertical_image_url: verticalImageUrl,
+    narration: getNarrationSqlite(db, slugValue),
     tags,
     keywords,
     ...provenance,
@@ -948,7 +997,7 @@ async function getMythBySlugPostgres(slug) {
     return null;
   }
 
-  const [tagsResult, keywordsResult, verticalImageResult] = await Promise.all([
+  const [tagsResult, keywordsResult, verticalImageResult, narration] = await Promise.all([
     sql.query(
       `
         SELECT tags.name, tags.slug
@@ -978,6 +1027,7 @@ async function getMythBySlugPostgres(slug) {
       `,
       [myth.id]
     ),
+    getNarrationPostgres(slugValue),
   ]);
 
   const provenance = normalizeEditorialProvenance(myth);
@@ -985,6 +1035,7 @@ async function getMythBySlugPostgres(slug) {
   return {
     ...myth,
     vertical_image_url: verticalImageResult.rows[0]?.image_url || null,
+    narration,
     tags: tagsResult.rows,
     keywords: keywordsResult.rows.map((row) => row.keyword),
     ...provenance,

@@ -6,6 +6,7 @@ import { cn } from "../../lib/utils";
 import { Container, Heading, ImageFrame, Motif } from "../atoms";
 import { Breadcrumb, ShareBar } from "../molecules";
 import { CommentThread, Header, MythGrid } from "../organisms";
+import { MythNarrationPlayer } from "../MythNarrationPlayer";
 import { MythReadingRail } from "../MythReadingRail";
 import { MythHero, MythIntroMobile } from "./MythHero";
 import {
@@ -178,7 +179,16 @@ function MythReading({ myth, accent, related }) {
         >
           <div className="min-w-0">
             <MobileEntranceImage myth={myth} className="mb-9 md:hidden" />
-            <RelatoBlock text={myth.mito} accent={accent} motif={myth.motif} />
+            <RelatoBlock
+              text={myth.mito}
+              accent={accent}
+              motif={myth.motif}
+              player={
+                myth.narration ? (
+                  <MythNarrationPlayer narration={myth.narration} title={myth.title} />
+                ) : null
+              }
+            />
             {artBelowStory ? (
               <InlineStoryImage
                 myth={myth}
