@@ -86,3 +86,25 @@ test("sin encaje temático cae al menos usado en vez de quedarse sin música", (
 test("no se piden más lechos de los que hay en el catálogo", () => {
   assert.equal(chooseBedsForStory("agua y camino", lechos.slice(0, 2), 5).length, 2);
 });
+
+test("las raíces se anclan al comienzo de palabra, no a cualquier posición", () => {
+  // Regresión: sin ancla, «ard» encontraba fuego dentro de «guardaba», «ave»
+  // encontraba selva dentro de «grave» y «suave», y el resultado se desviaba
+  // sin dar ninguna señal.
+  assert.equal(scoreCharacters("La cosa que la guardaba era grave y suave.").fuego, undefined);
+  assert.equal(scoreCharacters("La cosa que la guardaba era grave y suave.").selva, undefined);
+  // fuego, hogu y ard: tres raíces distintas de la misma familia
+  assert.equal(scoreCharacters("El fuego ardía en la hoguera.").fuego, 3);
+});
+
+test("«nada» y «nadie» no son agua", () => {
+  // En un mito de creación «no había nada» aparece a cada paso; con la raíz
+  // «nad» eso convertía una cosmogonía de la noche en un relato de agua.
+  assert.equal(scoreCharacters("No había nada y nadie lo vio.").agua, undefined);
+  assert.equal(scoreCharacters("Nadaba en el agua.").agua, 2);
+});
+
+test("la noche del archivo se nombra tanto por la luz como por la oscuridad", () => {
+  const p = scoreCharacters("Dentro de la noche estaba encerrada la luz, y el sol no existía.");
+  assert.equal(p.noche, 3);
+});

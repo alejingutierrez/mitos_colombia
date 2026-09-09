@@ -41,15 +41,17 @@ export const CHARACTERS = [
  * páramo, frailejón, chicha— y no sobre un español genérico.
  */
 export const LEXICON = {
-  agua: ["agua", "rio", "laguna", "lluvia", "llov", "mar ", "cascada", "arroyo", "ahog", "nad", "pozo", "corrient", "orilla", "inund", "diluvi", "humed", "salto", "manantial", "quebrada", "cienaga", "pescad", "pez", "peces", "moj"],
+  // «nad» se quitó: atrapaba «nada» y «nadie», que en un mito de creación
+  // aparecen a cada paso y no tienen nada que ver con el agua.
+  agua: ["agua", "rio", "laguna", "lluvia", "llov", "cascada", "arroyo", "ahog", "nadar", "nadand", "nadab", "nado", "pozo", "corrient", "orilla", "inund", "diluvi", "humed", "salto", "manantial", "quebrada", "cienaga", "pescad", "pez", "peces", "moj"],
   camino: ["camin", "viaj", "andar", "andab", "cruz", "recorr", "senda", "huella", "forastero", "peregrin", "partir", "partió", "regres", "llegad", "rastro", "siguió", "paso ", "pasos"],
   ceremonia: ["ritual", "ofrend", "sacrifici", "templo", "sacerdot", "cacique", "zipa", "zaque", "ceremoni", "procesi", "culto", "sagrad", "adorat", "oro", "esmeralda", "chyquy", "jeque", "consagr", "divin"],
-  comunidad: ["pueblo", "gente", "familia", "hijos", "aldea", "vecin", "fiesta", "danz", "baile", "bail", "cant", "cosech", "maiz", "chicha", "comunidad", "reuni", "multitud", "todos ", "juntos"],
+  comunidad: ["pueblo", "gente", "familia", "hijos", "aldea", "vecin", "fiesta", "danz", "baile", "bail", "cantar", "canto", "cosech", "maiz", "chicha", "comunidad", "reuni", "multitud", "juntos"],
   fuego: ["fuego", "humo", "hogu", "ard", "quem", "ceniz", "bras", "llama", "fogón", "fogon", "incendi", "calor", "chispa"],
-  montana: ["montañ", "sierra", "cerro", "piedra", "roca", "peña", "cima", "altura", "paramo", "páramo", "farall", "cueva", "abismo", "risco", "cumbre", "alto "],
-  noche: ["noche", "luna", "oscur", "sombra", "estrella", "dormi", "sueño", "soñ", "madrugada", "amanec", "anochec", "tinieb"],
+  montana: ["montañ", "sierra", "cerro", "piedra", "roca", "peña", "cima", "altura", "paramo", "páramo", "farall", "cueva", "abismo", "risco", "cumbre"],
+  noche: ["noche", "luna", "oscur", "sombra", "estrella", "dormi", "sueño", "soñ", "madrugada", "amanec", "anochec", "tinieb", "luz", "luces", "sol", "alba", "negrur"],
   oficio: ["tej", "telar", "hil", "manta", "barro", "olla", "cultiv", "sembr", "labr", "trabaj", "oficio", "algodón", "algodon", "cest", "alfar", "arte", "enseñ", "aprend", "herramient"],
-  selva: ["selva", "monte", "bosque", "arbol", "árbol", "jaguar", "pajar", "pájar", "ave", "aves", "animal", "hoja", "planta", "flor", "serpiente", "culebra", "venado", "frailej"],
+  selva: ["selva", "monte", "bosque", "arbol", "árbol", "jaguar", "pajar", "pájar", "aves", "animal", "hoja", "planta", "flor", "serpiente", "culebra", "venado", "frailej"],
   silencio: ["silenci", "vacio", "vacío", "desaparec", "ausenc", "olvid", "soledad", "nadie", "perdi", "abandon", "nunca mas", "nunca más", "ya no ", "se fue", "murio", "murió", "muerte"],
   viento: ["viento", "aire", "niebla", "nube", "frio", "frío", "sopl", "brisa", "helad", "neblin", "tormenta", "vendaval"],
 };
@@ -66,20 +68,29 @@ export function normalize(text) {
  * Puntuación por carácter de un texto. Cuenta apariciones de cada raíz; no
  * pondera por longitud porque los tramos que se comparan miden casi lo mismo.
  */
+/**
+ * Las raíces se anclan al COMIENZO de palabra, no a cualquier posición.
+ *
+ * Sin el ancla, «ard» encontraba fuego dentro de «guardaba», «ave» encontraba
+ * selva dentro de «grave» y «suave», y el resultado se desviaba en silencio.
+ * Con el ancla, una raíz sigue atrapando toda su familia —«camin» vale para
+ * caminar, camino y caminante— pero deja de aparecer donde no la llamaron.
+ */
+const REGEXES = Object.fromEntries(
+  Object.entries(LEXICON).map(([caracter, raices]) => [
+    caracter,
+    raices.map((r) => new RegExp(`\\b${normalize(r).replace(/[.*+?^\${}()|[\]\\]/g, "\\$&")}`, "g")),
+  ])
+);
+
 export function scoreCharacters(text) {
   const plano = normalize(text);
   const puntos = {};
-  for (const [caracter, raices] of Object.entries(LEXICON)) {
+  for (const [caracter, expresiones] of Object.entries(REGEXES)) {
     let total = 0;
-    for (const raiz of raices) {
-      const r = normalize(raiz);
-      let desde = 0;
-      for (;;) {
-        const i = plano.indexOf(r, desde);
-        if (i === -1) break;
-        total += 1;
-        desde = i + r.length;
-      }
+    for (const re of expresiones) {
+      re.lastIndex = 0;
+      total += (plano.match(re) || []).length;
     }
     if (total > 0) puntos[caracter] = total;
   }
