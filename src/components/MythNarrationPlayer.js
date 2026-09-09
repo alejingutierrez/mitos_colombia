@@ -93,6 +93,11 @@ export function MythNarrationPlayer({ narration, title, className }) {
     if (!siguiendoRef.current || !el) return;
     const r = el.getBoundingClientRect();
     const alto = window.innerHeight;
+    // Sin alto de ventana no hay banda ni aire que calcular, y seguir adelante
+    // dejaría la palabra pegada al borde de arriba. Pasa en una pestaña oculta
+    // o durante los primeros instantes de la carga; en ambos casos no hay nadie
+    // leyendo todavía y lo correcto es no tocar el scroll.
+    if (!(alto > 0)) return;
     const arriba = alto * 0.3;   // por encima de esto, falta aire arriba
     const abajo = alto * 0.62;   // por debajo, falta aire abajo
     if (r.top >= arriba && r.bottom <= abajo) return;
@@ -205,9 +210,11 @@ export function MythNarrationPlayer({ narration, title, className }) {
           // Al retomar se centra siempre, aunque la palabra estuviera dentro de
           // la banda: es el gesto que devuelve a la persona al hilo del relato.
           const suave = !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+          const alto = window.innerHeight;
+          if (!(alto > 0)) return;
           const r = activa.getBoundingClientRect();
           window.scrollTo({
-            top: Math.max(0, window.scrollY + r.top - window.innerHeight * 0.4),
+            top: Math.max(0, window.scrollY + r.top - alto * 0.4),
             behavior: suave ? "smooth" : "auto",
           });
         }
