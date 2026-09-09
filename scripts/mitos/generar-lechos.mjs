@@ -68,6 +68,34 @@ const CATALOGO = [
   { slug: "10-fuego-y-humo", title: "Fuego y humo", characters: ["fuego", "noche"], foco: "Crackling fire close by, a low hide drum pulsing slowly like breathing, and a breathy low flute circling a few notes. Warm, enclosed, nocturnal." },
   { slug: "11-rio-que-baja", title: "Río que baja", characters: ["agua", "camino"], foco: "A fast cold mountain river carries everything, with panpipes rising and falling over it in short overlapping phrases. Light rattles. Moving, bright, restless." },
   { slug: "12-silencio-de-la-sabana", title: "Silencio de la sabana", characters: ["silencio", "viento"], foco: "Almost nothing: distant wind across open grassland, one far-off bird, and a single cane flute note held and released every few seconds. Extremely sparse, patient, empty." },
+
+  /* Segunda tanda. Va dirigida a los huecos que delató `--listar`: fuego,
+     oficio y selva tenían un solo lecho cada uno, y agua iba corta para lo que
+     pide el archivo muisca, donde abundan lagunas, saltos y diluvios. */
+  { slug: "13-manantial-que-brota", title: "Manantial que brota", characters: ["agua", "montana"],
+    foco: "A small spring bubbling out of rock, very close and intimate: irregular water sounds, single drops falling into a pool. A clay ocarina answers with two or three notes. No drums. Small, contained, secret." },
+  { slug: "14-tormenta-en-la-sabana", title: "Tormenta en la sabana", characters: ["agua", "viento"],
+    foco: "Heavy sheets of rain across open grassland with distant thunder rolling. A large hide drum answers the thunder with slow deep strokes. Wind pushes through. Vast, dark, powerful." },
+  { slug: "15-canoa-en-el-rio", title: "Canoa en el río", characters: ["agua", "camino"],
+    foco: "Slow paddle strokes dipping and lifting on a wide calm river, water running along the hull. Panpipes breathe long phrases above. Unhurried forward motion, travelling." },
+  { slug: "16-brasas-de-la-noche", title: "Brasas de la noche", characters: ["fuego", "noche"],
+    foco: "Embers ticking and settling in a dying fire, very close. A very low drum every few seconds like slow breathing. One sparse ocarina note. Night crickets far away. Intimate, drowsy, almost still." },
+  { slug: "17-horno-de-barro", title: "Horno de barro", characters: ["fuego", "oficio"],
+    foco: "A contained clay kiln: fire roaring low inside stone, wood cracking, someone feeding it in a steady work rhythm. A dry rattle keeps the pace. Hot, enclosed, laborious." },
+  { slug: "18-manos-de-barro", title: "Manos de barro", characters: ["oficio", "comunidad"],
+    foco: "Hands working wet clay: slapping, smoothing, the wheel-less turning of a pot. A soft irregular rhythm of the work itself, with a low flute holding one note underneath. Patient craft." },
+  { slug: "19-molienda-de-maiz", title: "Molienda de maíz", characters: ["oficio", "comunidad"],
+    foco: "Stone grinding on stone in a steady circular rhythm, grain shifting. Seed rattles join the same pulse. A cane flute plays a short repeating figure. Domestic, communal, tireless." },
+  { slug: "20-monte-espeso", title: "Monte espeso", characters: ["selva", "noche"],
+    foco: "Dense cloud forest at night: insects layered thick, a howler monkey far off, water dripping from leaves. A very low flute moves slowly underneath. Humid, enclosed, alive." },
+  { slug: "21-acecho-en-la-espesura", title: "Acecho en la espesura", characters: ["selva", "silencio"],
+    foco: "Tense stillness in the undergrowth: the forest has gone quiet, only a few clicks and a branch. A low frame drum strikes rarely and hard. Predatory, watchful, holding its breath." },
+  { slug: "22-trueque-en-la-plaza", title: "Trueque en la plaza", characters: ["comunidad", "oficio"],
+    foco: "A busy exchange: many seed and shell rattles overlapping at different speeds, several cane flutes trading short phrases like people talking over each other. Warm, crowded, cheerful." },
+  { slug: "23-vela-de-la-luna", title: "Vela de la luna", characters: ["noche", "silencio"],
+    foco: "A night watch: crickets, one flute note held very long and released, a shell rattle brushed once in a while. Nothing else. Cold, wakeful, waiting." },
+  { slug: "24-piedra-que-recuerda", title: "Piedra que recuerda", characters: ["silencio", "montana"],
+    foco: "Sound in a stone place: a single deep drum stroke every many seconds, its echo dying against rock walls. A breath of wind. Almost total emptiness between strokes. Ancient, monumental, patient." },
 ];
 
 const ff = (a) => spawnSync("ffmpeg", ["-y", "-loglevel", "error", ...a], { encoding: "utf8" });
