@@ -23,3 +23,12 @@
 
 # Bake-off de modelos: material de una decisión ya tomada.
 pruebas/
+
+# Derivados que se rehacen gratis desde lo versionado (2026-09-09):
+# el lecho del video (build-lecho.mjs + su .json) y los recortes 9:16 exactos de
+# los keyframes (kf-9x16/, generados desde keyframes/ y mitos/). Sus manifiestos sí van.
+lecho-*.wav
+**/kf-9x16/*.jpg
+
+# descargas de la web (hf_*.mp4 crudos): nunca a git
+**/descargas*/
