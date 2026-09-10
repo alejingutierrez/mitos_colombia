@@ -48,11 +48,16 @@ export const LEXICON = {
   ceremonia: ["ritual", "ofrend", "sacrifici", "templo", "sacerdot", "cacique", "zipa", "zaque", "ceremoni", "procesi", "culto", "sagrad", "adorat", "oro", "esmeralda", "chyquy", "jeque", "consagr", "divin"],
   comunidad: ["pueblo", "gente", "familia", "hijos", "aldea", "vecin", "fiesta", "danz", "baile", "bail", "cantar", "canto", "cosech", "maiz", "chicha", "comunidad", "reuni", "multitud", "juntos"],
   fuego: ["fuego", "humo", "hogu", "ard", "quem", "ceniz", "bras", "llama", "fogón", "fogon", "incendi", "calor", "chispa"],
-  montana: ["montañ", "sierra", "cerro", "piedra", "roca", "peña", "cima", "altura", "paramo", "páramo", "farall", "cueva", "abismo", "risco", "cumbre"],
+  montana: ["montañ", "sierra", "cerro", "piedra", "roca", "peña", "cima", "altura", "paramo", "páramo", "farall", "cueva", "risco", "cumbre"],
   noche: ["noche", "luna", "oscur", "sombra", "estrella", "dormi", "sueño", "soñ", "madrugada", "amanec", "anochec", "tinieb", "luz", "luces", "sol", "alba", "negrur"],
   oficio: ["tej", "telar", "hil", "manta", "barro", "olla", "cultiv", "sembr", "labr", "trabaj", "oficio", "algodón", "algodon", "cest", "alfar", "arte", "enseñ", "aprend", "herramient"],
   selva: ["selva", "monte", "bosque", "arbol", "árbol", "jaguar", "pajar", "pájar", "aves", "animal", "hoja", "planta", "flor", "serpiente", "culebra", "venado", "frailej"],
-  silencio: ["silenci", "vacio", "vacío", "desaparec", "ausenc", "olvid", "soledad", "nadie", "perdi", "abandon", "nunca mas", "nunca más", "ya no ", "se fue", "murio", "murió", "muerte"],
+  // La muerte vive aquí y no en un carácter propio: en estos relatos lo que la
+  // acompaña es la ausencia, no un sonido distinto. Faltaban casi todas sus
+  // palabras —«morir», «alma», «difunto», «tumba», «barranco», «abismo»—, así
+  // que un mito de ultratumba se puntuaba por cualquier otra cosa que
+  // nombrara de paso.
+  silencio: ["silenci", "vacio", "vacío", "desaparec", "ausenc", "olvid", "soledad", "nadie", "perdi", "abandon", "nunca mas", "nunca más", "se fue", "muri", "muerte", "muerto", "morir", "alma", "almas", "difunt", "tumba", "entierr", "cadaver", "cadáver", "barranco", "abismo", "ultratumba"],
   viento: ["viento", "aire", "niebla", "nube", "frio", "frío", "sopl", "brisa", "helad", "neblin", "tormenta", "vendaval"],
 };
 

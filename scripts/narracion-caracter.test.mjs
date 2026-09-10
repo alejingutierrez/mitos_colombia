@@ -108,3 +108,10 @@ test("la noche del archivo se nombra tanto por la luz como por la oscuridad", ()
   const p = scoreCharacters("Dentro de la noche estaba encerrada la luz, y el sol no existía.");
   assert.equal(p.noche, 3);
 });
+
+test("la muerte y la ultratumba puntúan como silencio", () => {
+  // Faltaban casi todas: un mito sobre el viaje de las almas se puntuaba por
+  // cualquier otra cosa que el texto nombrara de paso.
+  const p = scoreCharacters("Al morir, el alma bajó al barranco. La tumba quedó vacía.");
+  assert.ok(p.silencio >= 4, `esperaba al menos 4, dio ${p.silencio}`);
+});
