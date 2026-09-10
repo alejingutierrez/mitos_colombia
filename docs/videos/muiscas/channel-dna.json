@@ -1,6 +1,6 @@
 {
   "pueblo": "muiscas",
-  "actualizado": "2026-08-21",
+  "actualizado": "2026-09-09",
   "estilo": {
     "nombre": "Maqueta de papel del sitio (studioPaperMaquette)",
     "imagen_modelo": "gpt-image-2",
@@ -98,5 +98,60 @@
     "costo_higgsfield_cr": 143.65,
     "nota": "primera corrida perfecta: 18/18 clips sin rechazos nsfw gracias al checklist; 5s uniformes por bloque",
     "voz": "Alejandro (eleven_v3)"
-  }
+  },
+  "alcance": "Los 41 mitos muiscas deben quedar COMPLETOS con todo (fichas, tríptico, narración del sitio y video) — usuario 2026-09-09. Estado real: npm run mitos:estado -- --comunidad muiscas",
+  "video_v4": {
+    "modelo": "kling3_0 por el MCP de Higgsfield — mode pro (1080p), sound off, 5 s por keyframe, 9:16, un start_image por clip",
+    "costo": "8,75 cr por clip (get_cost verificado 2026-09-09; std = 7,5). 18 clips = 157,5 cr por video. UN intento por keyframe: piloto de 1 clip antes de la tanda",
+    "declined_preset_id": "24bae836-2c4a-48e0-89b6-49fcc0b21612 (IN THE DARK: sin declinarlo el MCP no encola; 3D RENDER = 5a77643c-b6cc-4efd-bdc6-ab8ff48dfa82)",
+    "subida": "kf-9x16/ recortes 9:16 EXACTOS (1512x2688 q95) → media_upload (uploads[] en el orden de files[], sin filename) → PUT presignado → media_confirm; media ids en kf-9x16/higgsfield-media.json (expiran)",
+    "salida": "h264 1080x1920 24 fps 5,04 s ~13 MB por clip",
+    "prompts": "movimiento-vN.json: prefijo de estilo + cuerpo (1 acción, 1-2 secundarias, UNA cámara) + sufijo de invariantes, byte-idénticos; ~700-820 caracteres; sin @Image (eso es de la web)",
+    "runbook": "docs/videos/pipeline-v4-mcp.md",
+    "supersede": "video.modelo (grok) y video_3 web-unlimited de v3 quedan como historia/alternativa; no mezclar modelos en un mismo video"
+  },
+  "voz_v4": {
+    "VOZ_OFICIAL_CANAL": "alejandro_narracion 9EHAKExD4lT2G6hPG74L (clon profesional de la voz del usuario, cuenta actual) en eleven_multilingual_v2 st .35 / sim .9 / style .3 / speaker_boost / speed 1.05 = DEFAULT_VOICE de src/lib/narration.js — la MISMA voz de las narraciones del sitio (usuario 2026-09-09)",
+    "formato": "generate-voice-el.mjs --format wav (pcm_48000 → WAV máster)",
+    "ritmo_medido": "2,4-3,6 palabras/s con estas líneas cortas (10-15 palabras → 3,4-5,8 s de habla)",
+    "nota": "bNziytBsHtCSsgcPplG9 y 2HsKyIMt2fxFwsry7Nd6 ya no existen (ids por cuenta)"
+  },
+  "musica_v4": {
+    "fuente": "los LECHOS de las narraciones del sitio (tabla narration_beds, 24 piezas de 30 s a -24 LUFS en Blob), encadenados con scripts/videos/build-lecho.mjs como en generar-narracion.mjs (tramos iguales, acrossfade 4 s, fades 2/3 s)",
+    "eleccion": "por ACTO y a mano con --lecho (el léxico automático se dispara con una palabra en guiones de 110 palabras); lecho-vN.wav.json deja constancia",
+    "mezcla": "plan mix \"narracion\": voz -16 LUFS, lecho -34 LUFS (18 dB abajo), sin ducking, limitador -1,5 dBTP",
+    "sfx": "no se usan aparte en v4 salvo que el mito lo pida; el ambiente viene dentro de los lechos"
+  },
+  "titulo_v4": {
+    "fuente": "Asimovian (--font-display del sitio: todos los títulos). TTF OFL en content/videos/fonts/Asimovian-Regular.ttf",
+    "render": "scripts/videos/render-text.swift (CoreText, carga la fuente POR ARCHIVO; se compila al vuelo a scripts/videos/.bin/). El ensamblador compara la familia devuelta y aborta si no es la pedida",
+    "trampa": "el libvips de sharp en macOS sólo trae el backend CoreText de Pango: fontfile, FONTCONFIG_FILE y PANGOCAIRO_BACKEND=fontconfig se ignoran y toda fuente no instalada cae a Helvetica EN SILENCIO. Pasó con el woff2 de Bochica v4 y con el TTF del primer máster de la-aparicion-del-hombre (el usuario lo notó: 'se ve muy diferente la fuente'). Prueba de fuego: renderizar el mismo texto en Helvetica y comparar",
+    "placa": "como el hero del sitio: kicker 'MITOS DE COLOMBIA · MUISCAS' (HelveticaNeue-Medium 28 px, tracking 0.2em, #E4DCC8) arriba y el título en caja de frase (Asimovian 104 px ≈ 6.4rem del h1, tracking −0.03em, leading 0.96, #F5F0E6); sombra suave; title_y 280; fade 0,8 s; 0,8-5,6 s del bloque 1. Sin filete dorado"
+  },
+  "video_3": {
+    "slug": "la-aparicion-del-hombre",
+    "titulo_video": "La aparición del hombre",
+    "titulo_canon": "La aparición de los primeros seres humanos (DB id 255)",
+    "estado": "TERMINADO 2026-09-09 (Kling 3.0 pro): la-aparicion-del-hombre-final-v1.mp4 94 s · 18 clips (16 a la primera + c09/c17 regenerados) · 175 cr · preview entregado, esperando aprobación · versión Kling: alternativa, no estándar",
+    "guion": "docs/videos/muiscas/mvp-guiones/guion-la-aparicion-del-hombre-v1.json",
+    "plan": "content/videos/muiscas/videos/la-aparicion-del-hombre/plan-v1.json",
+    "movimiento": "content/videos/muiscas/videos/la-aparicion-del-hombre/movimiento-v1.json",
+    "lecho": "24-piedra-que-recuerda → 18-manos-de-barro → 04-viento-de-paramo",
+    "cierre": "placa still 4 s con la huella del tríptico (recorte 9:16)"
+  },
+  "video_3b": {
+    "slug": "la-aparicion-del-hombre",
+    "version": "v1-seedance",
+    "estado": "TERMINADO 2026-09-09: la-aparicion-del-hombre-final-v1-seedance.mp4 94 s · 18 clips Seedance 2.5 1080p (17 a la primera + c15 regenerado por un corte interno a primer plano) · 855 cr · preview entregado, esperando aprobación",
+    "modelo": "seedance_2_5 por MCP: mode omni_reference · 1080p · generate_audio false · bitrate_mode high (mismo precio) · 5 s · 9:16 · declined_preset_id IN THE DARK",
+    "costo": "45 cr por clip (get_cost) → 810 cr por video; el usuario recargó créditos para esto (saldo 4.044,5 antes de empezar)",
+    "concurrencia": "tope ~12 en vuelo: el 13.º request devuelve 429 rate_limit_reached (Kling aceptó 17)",
+    "salida": "HEVC 10-bit 1080x1920 24 fps ~25 Mb/s, 5,04 s; render ~6,5 min por clip",
+    "prompts": "movimiento-v1-seedance.json (doctrina-movimiento-v2, 8 párrafos, @Image 1)",
+    "plan": "plan-v1-seedance.json → clips-v1-seedance/",
+    "nota": "versión paralela a la de Kling para comparar; mismas voces, lecho, título y cola",
+    "leccion": "Seedance es multi-shot por diseño: un endpoint de cámara ambicioso ('ending with the hands centered') se vuelve un CORTE a primer plano en el último segundo. Escribir 'ONE continuous take, no cuts, no close-up inserts'. Movimiento más amplio y push-ins más decididos que Kling (c06, c11 terminan en primer plano); c09 y c17 (los que Kling falló) salieron bien a la primera."
+  },
+  "subtitulos_v4": "NO se queman (usuario 2026-09-09: 'no quiero subtítulos'): burn_subtitles false y write_srt false en los planes; los campos subtitle se conservan por si vuelven",
+  "MODELO_ESTANDAR_V4": "Seedance 2.5 por MCP (usuario, 2026-09-09: 'vamos con seedance como estándar'): seedance_2_5 · mode omni_reference · resolution 1080p · generate_audio false · bitrate_mode high · 5 s · 9:16 · declined_preset_id IN THE DARK · 45 cr/clip (≈855 cr por video de 18 clips + 1 regen). Prompts en formato doctrina v2 (8 párrafos, @Image 1, 'ONE continuous take'). Tope 12 en vuelo. Kling 3.0 pro (8,75 cr/clip) queda como alternativa barata, no como estándar."
 }
