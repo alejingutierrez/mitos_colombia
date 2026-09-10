@@ -96,6 +96,28 @@ const CATALOGO = [
     foco: "A night watch: crickets, one flute note held very long and released, a shell rattle brushed once in a while. Nothing else. Cold, wakeful, waiting." },
   { slug: "24-piedra-que-recuerda", title: "Piedra que recuerda", characters: ["silencio", "montana"],
     foco: "Sound in a stone place: a single deep drum stroke every many seconds, its echo dying against rock walls. A breath of wind. Almost total emptiness between strokes. Ancient, monumental, patient." },
+
+  /* Tercera tanda. El recuento por etiqueta PRINCIPAL —que es la que decide los
+     desempates— dejó ver que el problema no era la cobertura sino el liderazgo:
+     `camino` no encabezaba ni un lecho, y `ceremonia`, `montana` y `noche`
+     encabezaban uno cada uno, mientras `agua` encabezaba seis. Los mitos de
+     viaje, de rito y de noche caían todos al desempate. */
+  { slug: "25-luciernagas", title: "Luciérnagas", characters: ["noche", "selva"],
+    foco: "A humid night full of insects, dense and continuous, with tiny high sparse pulses appearing and vanishing across the field like small lights. One very low flute holds underneath. No drums, no melody, only texture and specks." },
+  { slug: "26-luna-sobre-el-agua", title: "Luna sobre el agua", characters: ["noche", "agua"],
+    foco: "A completely still cold lake at night: water barely moving, an occasional single lap. A clay ocarina holds long cold tones with wide natural reverb. Nothing hurries. Silvered, motionless, vast." },
+  { slug: "27-antes-del-alba", title: "Antes del alba", characters: ["noche", "silencio"],
+    foco: "The greyest hour before dawn: the night wind dying down, one deep drum stroke every long while, a cane flute stretching a single note as if waking. Birds have not started yet. Cold, expectant, suspended." },
+  { slug: "28-sendero-de-piedra", title: "Sendero de piedra", characters: ["camino", "montana"],
+    foco: "Bare feet walking a stone path at a steady unhurried pace, small stones shifting. A cane flute breathes in time with the steps. A seed rattle marks the walk. Purposeful, forward, tireless." },
+  { slug: "29-cruce-del-llano", title: "Cruce del llano", characters: ["camino", "viento"],
+    foco: "A long crossing of open flatland: panpipes in long overlapping phrases like distance itself, a dry rattle keeping a walking pulse, wide wind behind everything. Vast, patient, going somewhere far." },
+  { slug: "30-ofrenda-de-oro", title: "Ofrenda de oro", characters: ["ceremonia", "silencio"],
+    foco: "A solemn offering: small bright metallic percussion struck rarely, like thin gold plates touching, over a very deep slow drum. Long silences between gestures. Sacred, weighty, unhurried." },
+  { slug: "31-procesion-del-zaque", title: "Procesión del zaque", characters: ["ceremonia", "comunidad"],
+    foco: "A procession approaching and passing: hide drums in a firm walking cadence, conch trumpets answering each other, seed rattles from many people at once. Grand, public, ceremonial." },
+  { slug: "32-farallon", title: "Farallón", characters: ["montana", "viento"],
+    foco: "A sheer rock face: wind pressing against stone, enormous natural echo, one very deep flute note released into the void and coming back changed. No rhythm at all. Sheer, exposed, immense." },
 ];
 
 const ff = (a) => spawnSync("ffmpeg", ["-y", "-loglevel", "error", ...a], { encoding: "utf8" });
