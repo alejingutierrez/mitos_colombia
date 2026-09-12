@@ -6,7 +6,7 @@ CUALQUIER agente pueda ejecutar su fase sin contexto previo. Cada fase es un con
 entrada → trabajo → salida → criterio de aceptación. Si tu fase referencia otro doc,
 ese doc es LECTURA OBLIGATORIA antes de tocar nada.
 
-Versión 1.2 · 2026-09-09 · **Pipeline v4: Kling 3.0 por el MCP de Higgsfield** (v1.1 =
+Versión 1.2 · 2026-09-09 · **Pipeline v4: generación por el MCP de Higgsfield, estándar Seedance 2.5 1080p** (v1.1 =
 auditada por panel de críticos: ejecutabilidad + consistencia + completitud; v1.2 = las
 leyes 3, 4 y 8 cambian por decisión del usuario del 2026-09-09 y el carril operativo pasa a
 `pipeline-v4-mcp.md`; el carril web-unlimited de v3 queda como alternativa sin créditos).
@@ -68,7 +68,7 @@ cama tomada del catálogo de lechos de las narraciones.
    un mismo video.
 5. **Fiel al canon, sin alargar.** El canon vive en la DB del sitio (ruta en §1). Nada
    de moralejas, nombres no documentados ni inventos. Guardarraíles visuales del sitio:
-   sin texto en pantalla (salvo subtítulos), sin coronas/templos europeos ni cruces, sin
+   sin texto en pantalla (salvo el título del bloque 1), sin coronas/templos europeos ni cruces, sin
    iconografía mesoamericana, sin desnudez, sin joyería u oro corporal (salvo que el
    mito lo documente, p. ej. El Dorado), rasgos SIEMPRE indígenas andinos, personajes de
    espaldas o a media distancia por defecto.
@@ -112,7 +112,8 @@ Formato y registro (sin esto, la aprobación NO existe para los demás agentes):
 ```
 docs/videos/
   PRODUCCION-END-TO-END.md        ← este playbook (el contrato)
-  pipeline-v4-mcp.md        ← RUNBOOK VIGENTE: Kling 3.0 por MCP, paso a paso (v4)
+  pipeline-v4-mcp.md        ← RUNBOOK VIGENTE: generación por MCP (estándar Seedance 2.5), paso a paso (v4)
+  retrospectiva-carril-v4-video-1.md ← qué pasó en el video 1, fricciones medidas y plan v4.1
   pipeline-v3-profesional.md      ← runbook v3 (web unlimited Seedance; alternativa sin créditos)
   (doctrina-movimiento-v2.md nunca se commiteó: sus reglas están en pipeline-v4 §2.5 y en movimiento-v4.json)
   direccion-cinematografica.md    ← cámara, escalas, luz, narrativa (LEY fases 1, 3, 4)
@@ -454,8 +455,8 @@ de cuenta, y el cierre de cada video. Todo lo demás se lee de aquí.
 
 | # | Mito | Slug(s) DB del canon | Guion | Voces | Mapeo | Movim. | Plan | Clips | Video | Claim | Notas |
 |---|------|----------------------|-------|-------|-------|--------|------|-------|-------|-------|-------|
-| 1 | **Bochica v4** | `el-castigo-de-chibchachum-y-bochica` (+coda de `castigo-y-redencion-de-chibchacum`) | ✅ | ✅ | ✅ | ✅ | ✅ | ⏳ licencia | — | fase-6 @ codex 2026-08-31 19:49 -05 | `videos/bochica/{plan-v4,movimiento-v4}.json`, `voces-v4-2min/`. Guion aprobado en chat 2026-08-31 (pendiente estampar campo `aprobado`) |
-| 2 | **La aparición del hombre** (video 1 del carril v4) | `la-aparicion-del-hombre` (DB id 255, «La aparición de los primeros seres humanos») | ✅ `guion-la-aparicion-del-hombre-v1.json` (aprobado 2026-09-09) | ✅ `voces-v1/` WAV | ✅ | ✅ `movimiento-v1.json` | ✅ `plan-v1.json` | ✅ 18/18 por MCP (16 a la primera + c09/c17 regenerados) · 175 cr | preview entregado 2026-09-09, **esperando aprobación** (§0b) | sesión principal 2026-09-09 | Primer video Kling 3.0 pro por MCP (175 cr); lecho 24→18→04; placa de cierre = huella del tríptico. **Versión paralela Seedance 2.5 1080p por MCP la misma noche** (`-final-v1-seedance.mp4`, 855 cr, 17/18 a la primera, c15 regenerado por un corte interno): el usuario recargó créditos para compararla — ver `pipeline-v4-mcp.md` §0b y §9b. **Decidido 2026-09-09: Seedance 2.5 es el estándar del carril**; el máster oficial de este mito es `-final-v1-seedance.mp4` (2ª ronda: sin subtítulos, título Asimovian por CoreText) |
+| 1 | **El salto del Tequendama** (Bochica v5 · video 2 del carril) | `el-castigo-de-chibchachum-y-bochica` (mito `el-tequendama`; +coda de `castigo-y-redencion-de-chibchacum`) | ✅ `guion-bochica-v5.json` (texto v4 aprobado 2026-08-31, revalidado 2026-09-11 al cambiar voz) | ✅ `voces-v5/` WAV, 67 s de habla en 99 s | ✅ | ✅ `movimiento-v5-seedance.json` (derivado 1:1 del v4 auditado + candado de toma continua) | ✅ `plan-v5.json` (0 errores, 2 avisos) | 🔄 en curso 2026-09-11 · 19 clips Seedance 2.5, 855 cr | — | sesión principal 2026-09-11 | Desbloqueado: ya no espera licencia web, se produce por MCP. Lecho = los mismos 3 de la narración de `el-tequendama` en la web (14-tormenta → 02-tambor → 11-rio-que-baja) |
+| 2 | **La aparición del hombre** (video 1 del carril v4) | `la-aparicion-del-hombre` (DB id 255, «La aparición de los primeros seres humanos») | ✅ `guion-la-aparicion-del-hombre-v1.json` (aprobado 2026-09-09) | ✅ `voces-v1/` WAV | ✅ | ✅ `movimiento-v1.json` | ✅ `plan-v1.json` | ✅ 18/18 por MCP (16 a la primera + c09/c17 regenerados) · 175 cr | ✅ **APROBADO 2026-09-11** | sesión principal 2026-09-09 | Primer video Kling 3.0 pro por MCP (175 cr); lecho 24→18→04; placa de cierre = huella del tríptico. **Versión paralela Seedance 2.5 1080p por MCP la misma noche** (`-final-v1-seedance.mp4`, 855 cr, 17/18 a la primera, c15 regenerado por un corte interno): el usuario recargó créditos para compararla — ver `pipeline-v4-mcp.md` §0b y §9b. **Decidido 2026-09-09: Seedance 2.5 es el estándar del carril**; el máster oficial de este mito es `-final-v1-seedance.mp4` (2ª ronda: sin subtítulos, título Asimovian por CoreText) |
 | 3 | Bachué extendida | `bachue-madre-primigenia-de-iguaque` (variantes ids 652, 721, 732-737) | — | — | — | — | — | — | — | — | 17 keyframes + guion 90s (`guion-bachue-v3.json`) como base |
 | 4 | El Dorado | `el-dorado-sueno-de-oro-y-esmeraldas` · variantes `dorado-sacrificio-del-cacique-dorado`, `el-dorado-y-la-diosa-sumergida`, `engano-acuatico-del-dorado` | — | — | — | — | — | — | — | — | biblia lista; decisión editorial pendiente del usuario: ritual-y-codicia vs cacica-sumergida |
 | 5 | Chibchacum | `castigo-y-redencion-de-chibchacum` (variante `chibchacum-castigo-y-redencion-muisca`) | — | — | — | — | — | — | — | — | centrarlo en el dios, 100-110s; no repetir la inundación de Bochica |

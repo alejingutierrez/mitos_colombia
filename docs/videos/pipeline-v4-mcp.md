@@ -42,6 +42,8 @@ plan y ensamblador); cambian el modelo, el precio y el formato del prompt:
 | Render | ~6-7 min por clip a 1080p (los dos pilotos: 6,5 min). Salida **HEVC 10-bit** (`yuv420p10le`) 1080×1920 24 fps ~25 Mb/s; el ensamblador la pasa a h264 8-bit sin problema |
 | Web Unlimited | la alternativa a 0 cr sigue documentada en `pipeline-v3-profesional.md` (harness `emit-bootstrap-video.mjs`, 1 en vuelo, ~3,5 min/clip); no se usó aquí porque el usuario prefirió créditos |
 
+**Mejoras pendientes (v4.1):** ver `retrospectiva-carril-v4-video-1.md` §4–5 — gate de QC automático, bucle de generación sin manos, prompts desde `beats`, cache de la placa, orquestador `video:mito`.
+
 ## 1. Precondiciones (se leen del disco, no de un doc)
 
 1. Keyframes del mito listos: `content/videos/muiscas/videos/<mito>/keyframes/bNa.jpg … bNb.jpg`
