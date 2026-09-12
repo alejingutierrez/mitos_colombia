@@ -332,6 +332,9 @@ Desde el 2026-09-12 **todo video termina con el cierre de canal**: 8,42 s fijos 
 leer los mitos completos en mitosdecolombia.com (ley 5 del playbook). Se produjo una vez y se
 reusa; el runbook completo está en **`docs/videos/cierre-de-canal.md`**.
 
+**Los tres videos entregados ya lo llevan** (2026-09-12): cada uno tiene su `plan-v6.json` y su
+`lecho-v6.wav` reconstruido a la duración total. Pegarlo cuesta 0 créditos y ~5 min de ensamblaje.
+
 Lo único que hay que hacer por video es añadir un bloque al plan y construir el lecho con la
 duración total incluyendo el cierre:
 

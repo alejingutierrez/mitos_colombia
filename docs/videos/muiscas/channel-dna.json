@@ -137,7 +137,8 @@
     "plan": "content/videos/muiscas/videos/la-aparicion-del-hombre/plan-v1.json",
     "movimiento": "content/videos/muiscas/videos/la-aparicion-del-hombre/movimiento-v1.json",
     "lecho": "24-piedra-que-recuerda → 18-manos-de-barro → 04-viento-de-paramo",
-    "cierre": "placa still 4 s con la huella del tríptico (recorte 9:16)"
+    "cierre": "placa still 4 s con la huella del tríptico (recorte 9:16)",
+    "master_con_cierre": "la-aparicion-del-hombre-final-v6-con-cierre.mp4 (plan-v6.json + lecho-v6.wav)"
   },
   "video_3b": {
     "slug": "la-aparicion-del-hombre",
@@ -172,7 +173,8 @@
       "Preset nuevo encontrado: 'DROWN IN MUSIC' f1821f84-945b-4cd1-9085-1f479db0028e (además de IN THE DARK y 3D RENDER). El recomendador varía por escena: hay que declinar el id EXACTO que devuelva cada request.",
       "El tope real de concurrencia de Seedance es ~10, no 12: con 9-10 en vuelo el siguiente request da 429. Encolar de a 9 y reponer a medida que terminan.",
       "REINCIDENCIA: volví a caer en el bucle zsh indexado desde 0 al subir keyframes (los 19 quedaron desplazados un puesto). Se detectó por el conteo de códigos HTTP y se re-subió con `for i in {1..N}` + `uploads[i-1]`. El patrón correcto está en el runbook §2.7."
-    ]
+    ],
+    "master_con_cierre": "el-tequendama-final-v6-con-cierre.mp4 (plan-v6.json + lecho-v6.wav)"
   },
   "video_5": {
     "slug": "bachue",
@@ -186,7 +188,8 @@
     "lecho": "01-flauta-de-niebla → 09-telar-de-semillas → 06-laguna-de-iguaque",
     "costo_cr": 810,
     "resultado": "18/18 clips a la primera, CERO regeneraciones. scene_score máximo 0,085 (c10, un tilt-up, no un corte); el resto por debajo de 0,08.",
-    "version_descartada": "v4-gemini — ver video_5_gemini_descartado"
+    "version_descartada": "v4-gemini — ver video_5_gemini_descartado",
+    "master_con_cierre": "bachue-final-v6-con-cierre.mp4 (plan-v6.json + lecho-v6.wav)"
   },
   "video_5_gemini_descartado": {
     "modelo": "gemini_omni_flash_1_1 por MCP — mode image-to-video · 1080p · start_image · 22,5 cr/clip · salida h264",
@@ -223,6 +226,7 @@
     "regla_de_oro": "Lo que se vaya a componer encima, el keyframe lo deja DESPEJADO. El pulgar cruzando el vidrio obligó a recortarlo con un matte, y como se movía el matte unión dejaba un hueco con el texto inventado del modelo. Rehacer la imagen (centavos) sale más barato que pelear con un matte de un objeto en movimiento.",
     "costo": "135 cr (3 clips Seedance de 45; uno descartado) + ~0,6 USD de gpt-image-2. Se produce UNA vez y se reusa.",
     "rehacerlo": "Si cambia el diseño del sitio: node scripts/videos/capturar-sitio.mjs y reensamblar (los clips sirven, la pantalla es un compuesto). Si cambia la locución: editar el guion, regenerar voces y reensamblar. Si cambian los clips: hay que volver a medir el cuadrilátero.",
-    "runbook": "docs/videos/cierre-de-canal.md"
+    "runbook": "docs/videos/cierre-de-canal.md",
+    "pegado_a": "Los TRES videos entregados lo llevan (2026-09-12): bachue (plan-v6.json, 102,46 s), el-tequendama (plan-v6.json, 107,4 s) y la-aparicion-del-hombre (plan-v6.json, 102,4 s). Cada uno con su lecho-v6.wav reconstruido a la duración total. Los másters -v5/-v1-seedance sin cierre quedan como historia."
   }
 }
