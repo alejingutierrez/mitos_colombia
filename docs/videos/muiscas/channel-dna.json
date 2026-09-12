@@ -205,6 +205,24 @@
     "video_3 la-aparicion-del-hombre": "175 cr (Kling, archivado) + 855 cr (Seedance, máster)",
     "video_4 el-tequendama": "855 cr (Seedance, 19/19 a la primera)",
     "video_5 bachue": "517,5 cr (Gemini, descartado) + 810 cr (Seedance, 18/18 a la primera)",
-    "balance_higgsfield": "932 cr al cerrar Bachué (2026-09-12). Un video con el estándar cuesta ~810-855 cr: quedan ~1 video de margen."
+    "balance_higgsfield": "797 cr tras el cierre (2026-09-12). Un video con el estándar cuesta ~810-855: el siguiente mito necesita recarga.",
+    "cierre_de_canal": "135 cr, una sola vez para todos los videos"
+  },
+  "cierre_canal": {
+    "que": "Clip fijo de 8,42 s que va al FINAL DE TODOS los videos: una mano de papel sostiene un celular de papel con el SITIO REAL desplazándose, y luego una placa tipográfica sobre el páramo de papel con el wordmark y la dirección. Decisión del usuario 2026-09-12.",
+    "masters": {
+      "mudo": "content/videos/muiscas/cierre/cierre-canal-v1-mudo.mp4 — el que se pega a cada video",
+      "suelto": "content/videos/muiscas/cierre/cierre-canal-v1.mp4 — con voz y lecho, para ver y compartir",
+      "voz": "content/videos/muiscas/cierre/voces-v1/voz-cierre.wav — las dos líneas en un solo archivo"
+    },
+    "guion": "«Hay cientos de mitos como este esperándote. / Léelos completos en mitos de colombia punto com.» Sin números: el catálogo crece (hoy 596 relatos) y esto va en todos los videos.",
+    "como_se_pega": "UN bloque más en el plan del video: {type:\"motion\", clip:\"../../cierre/cierre-canal-v1-mudo.mp4\", duration:8.42, voice:\"../../cierre/voces-v1/voz-cierre.wav\"}. El lecho hay que construirlo con la duración total INCLUYENDO el cierre, así sigue sonando encima y no hay costura de audio.",
+    "reparto_de_trabajo": "El modelo hace SÓLO el mundo físico (mano, celular, papel, luz) con la CÁMARA CLAVADA; la pantalla la pone ffmpeg encima con el filtro perspective sobre el cuadrilátero medido del vidrio, y el scroll se anima sobre una captura de página completa. Ningún modelo de video dibuja una interfaz legible: en la primera tanda el relato decía «Lasos de Colombia region obseas fiemia».",
+    "el_movimiento_de_camara_va_en_post": "Ken Burns con zoompan DESPUÉS de componer la pantalla. Ojo: el filtro crop evalúa w/h una sola vez, así que un zoom escrito como crop=w=W/z(t) falla.",
+    "keyframes": "scripts/videos/specs/canal-cierre.mjs. La captura del sitio va como referencia de gpt-image-2 para que la luz y el color del vidrio sean los correctos.",
+    "regla_de_oro": "Lo que se vaya a componer encima, el keyframe lo deja DESPEJADO. El pulgar cruzando el vidrio obligó a recortarlo con un matte, y como se movía el matte unión dejaba un hueco con el texto inventado del modelo. Rehacer la imagen (centavos) sale más barato que pelear con un matte de un objeto en movimiento.",
+    "costo": "135 cr (3 clips Seedance de 45; uno descartado) + ~0,6 USD de gpt-image-2. Se produce UNA vez y se reusa.",
+    "rehacerlo": "Si cambia el diseño del sitio: node scripts/videos/capturar-sitio.mjs y reensamblar (los clips sirven, la pantalla es un compuesto). Si cambia la locución: editar el guion, regenerar voces y reensamblar. Si cambian los clips: hay que volver a medir el cuadrilátero.",
+    "runbook": "docs/videos/cierre-de-canal.md"
   }
 }

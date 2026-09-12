@@ -6,12 +6,13 @@ CUALQUIER agente pueda ejecutar su fase sin contexto previo. Cada fase es un con
 entrada → trabajo → salida → criterio de aceptación. Si tu fase referencia otro doc,
 ese doc es LECTURA OBLIGATORIA antes de tocar nada.
 
-Versión 1.3 · 2026-09-12 · **Pipeline v4: generación por el MCP de Higgsfield, estándar Seedance 2.5 1080p** (v1.1 =
+Versión 1.4 · 2026-09-12 · **Pipeline v4: generación por el MCP de Higgsfield, estándar Seedance 2.5 1080p** (v1.1 =
 auditada por panel de críticos: ejecutabilidad + consistencia + completitud; v1.2 = las
 leyes 3, 4 y 8 cambian por decisión del usuario del 2026-09-09 y el carril operativo pasa a
 `pipeline-v4-mcp.md`; el carril web-unlimited de v3 queda como alternativa sin créditos;
 v1.3 = la ley 4 se ratifica con el bake-off contra Gemini Omni Flash 1.1 y se corrige el
-tope de concurrencia a ~10; tres videos entregados).
+tope de concurrencia a ~10; tres videos entregados; v1.4 = entra la ley 5, el cierre de
+canal al final de todos los videos, y las leyes 5-8 corren un número).
 
 **Alcance (usuario, 2026-09-09): los 41 mitos muiscas deben quedar completos con todo** —
 fichas, tríptico, narración del sitio y video. Ningún mito se da por hecho a medias.
@@ -38,7 +39,7 @@ lecciones de moderación/ffmpeg/entregas (§6); sus apartados de montaje y model
 colombianos, en estilo visual **maqueta de papel hecha a mano** (paper-maquette
 stop-motion), narrados en español colombiano por UNA voz (la del usuario, la misma de las
 narraciones del sitio), **sin subtítulos quemados** (usuario, 2026-09-09), con el título en
-la fuente de títulos del sitio (Asimovian, renderizada por CoreText: ver ley 8) y música de
+la fuente de títulos del sitio (Asimovian, renderizada por CoreText: ver ley 9) y música de
 cama tomada del catálogo de lechos de las narraciones.
 
 **Las leyes — violarlas invalida el trabajo, no importa lo demás:**
@@ -72,17 +73,27 @@ cama tomada del catálogo de lechos de las narraciones.
    `gemini_omni_flash_1_1` (1080p, `start_image`, la mitad de precio): Seedance 18/18 a la
    primera contra 13/18 de Gemini, que además cambia escenario u hora a mitad del clip. La
    mitad de precio con regeneraciones y un rechazo sale más caro (§9d del runbook).
-5. **Fiel al canon, sin alargar.** El canon vive en la DB del sitio (ruta en §1). Nada
+5. **Todo video cierra con el CIERRE DE CANAL** (usuario, 2026-09-12): el clip fijo
+   de 8,42 s de `content/videos/muiscas/cierre/` que invita a leer los mitos completos
+   en mitosdecolombia.com. Va como UN bloque más del plan
+   (`clip: "../../cierre/cierre-canal-v1-mudo.mp4"`, `duration: 8.42`,
+   `voice: "../../cierre/voces-v1/voz-cierre.wav"`), nunca concatenado aparte, y el
+   lecho se construye con la duración total INCLUYENDO el cierre para que no haya
+   costura de audio. Se produjo una vez y se reusa: `docs/videos/cierre-de-canal.md`.
+   **La pantalla del celular es el sitio real compuesto en post, no lo que pinta el
+   modelo**; si cambia el diseño del sitio se recaptura y se reensambla, sin gastar
+   créditos.
+6. **Fiel al canon, sin alargar.** El canon vive en la DB del sitio (ruta en §1). Nada
    de moralejas, nombres no documentados ni inventos. Guardarraíles visuales del sitio:
    sin texto en pantalla (salvo el título del bloque 1), sin coronas/templos europeos ni cruces, sin
    iconografía mesoamericana, sin desnudez, sin joyería u oro corporal (salvo que el
    mito lo documente, p. ej. El Dorado), rasgos SIEMPRE indígenas andinos, personajes de
    espaldas o a media distancia por defecto.
-6. **`lint-spec.mjs` y el checklist anti-moderación son precondición dura** en todo lo
+7. **`lint-spec.mjs` y el checklist anti-moderación son precondición dura** en todo lo
    visual: el filtro de Seedance reacciona a la IMAGEN de inicio (verificado 3/3).
-7. **Los personajes nunca hablan en pantalla** (narración en off). En video, el candado
+8. **Los personajes nunca hablan en pantalla** (narración en off). En video, el candado
    es `no lip-sync, no talking` en el NEGATIVE — jamás una orden de quietud.
-8. **Sonido y título como en el sitio** (usuario, 2026-09-09): la música del video son los
+9. **Sonido y título como en el sitio** (usuario, 2026-09-09): la música del video son los
    **lechos de las narraciones** (`narration_beds`, elegidos por acto y encadenados con
    `scripts/videos/build-lecho.mjs`), mezclados con la receta del reproductor
    (`mix: "narracion"`: voz −16 LUFS, lecho −34 LUFS, sin ducking); el **título va en

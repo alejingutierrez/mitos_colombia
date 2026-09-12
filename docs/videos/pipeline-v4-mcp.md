@@ -202,6 +202,7 @@ usuario · marcar la cola en `PRODUCCION-END-TO-END.md` §9.
 | Clip devuelto en horizontal (1920×1080) con `aspect_ratio:"9:16"` pedido | defecto observado en `gemini_omni_flash_1_1` | lo detecta `import-mcp-clips.mjs` al ffprobear; regenerar. **Nunca importar clips sin el guardián de resolución** |
 | Escenario u hora que cambian a mitad del clip | deriva de `gemini_omni_flash_1_1` | candado de plate fijo en el prompt (`background, light and hour identical to @Image 1 for all 5 seconds`); si reincide, cambiar de modelo |
 | `429 rate_limit_reached` y el lote no encola nada | el tope real de Seedance/Gemini es ~10 en vuelo | encolar de a 9 y reponer a medida que terminan |
+| Un bloque colocado DESPUÉS de una placa `still` no aparece: la placa se estira hasta el final | **bug del ensamblador, corregido 2026-09-12**: `zoompan` con `d=N` emite N fotogramas POR CADA fotograma de entrada, y `-loop 1 -t duration` ya entrega N → una placa de 4 s salía de 400 s. Nunca se notó porque la placa siempre iba al final y el `-t totalDur` la recortaba | `assemble-video.mjs` ahora pasa `-frames:v ${frames}` al codificar la placa. Los másters ya entregados no están afectados |
 | Mucho aire tras cada línea (4-6 s) | líneas de 10-15 palabras en ventanas de 10 s | aceptado en v1 (el mito respira); para tensar, líneas de ≤19 palabras en el guion vN+1 |
 
 ## 9. Resultado del video 1 — la-aparicion-del-hombre (2026-09-09)
@@ -324,3 +325,41 @@ sin subtítulos. Lecho `01-flauta-de-niebla → 09-telar-de-semillas → 06-lagu
 4. **Desintegración de materia (1 de 18).** La niebla se volvió bolas de algodón literales — el
    mismo defecto que ya tenía `kling3_0` en el carril v3.
 5. Concurrencia ~10 como Seedance; mismo baile de `declined_preset_id` por escena.
+
+## 10. El cierre de canal (2026-09-12)
+
+Desde el 2026-09-12 **todo video termina con el cierre de canal**: 8,42 s fijos que invitan a
+leer los mitos completos en mitosdecolombia.com (ley 5 del playbook). Se produjo una vez y se
+reusa; el runbook completo está en **`docs/videos/cierre-de-canal.md`**.
+
+Lo único que hay que hacer por video es añadir un bloque al plan y construir el lecho con la
+duración total incluyendo el cierre:
+
+```jsonc
+{ "n": 20, "type": "motion",
+  "clip": "../../cierre/cierre-canal-v1-mudo.mp4",
+  "duration": 8.42,
+  "voice": "../../cierre/voces-v1/voz-cierre.wav" }
+```
+
+```bash
+node scripts/videos/build-lecho.mjs --guion <guion> --duration <video + 8.42> --slug <slug> \
+  --lecho a,b,c --out <dir>/lecho-vN.wav
+```
+
+**Lo que aporta al carril, más allá del clip:**
+
+- **La pantalla de un dispositivo no la dibuja el modelo, se compone en post.** Seedance pinta una
+  interfaz convincente de lejos y basura de cerca (el cuerpo del relato decía «Lasos de Colombia
+  region obseas fiemia»). El reparto correcto es: el modelo hace el mundo físico con la cámara
+  clavada, y ffmpeg pone la captura real con `perspective` sobre el cuadrilátero medido del vidrio.
+- **El movimiento de cámara se puede añadir en post y sale mejor.** Pedir cámara quieta y luego
+  hacer el Ken Burns con `zoompan` da un movimiento exacto y repetible, y deja el compuesto
+  posible. Ojo: `crop` evalúa `w`/`h` una sola vez, un zoom escrito como `crop=w='W/z(t)'` falla.
+- **Lo que se vaya a componer encima, el keyframe lo deja despejado.** El pulgar cruzando el
+  vidrio obligó a un matte; como el pulgar se movía, el matte unión dejaba un hueco con el texto
+  inventado del modelo, y el color no separa el pulgar del arte arenoso de la página para hacerlo
+  por fotograma. Rehacer la imagen costó centavos; pelear con el matte, una hora.
+- **Se le puede pedir a Seedance que un objeto no se mueva EN ABSOLUTO y lo cumple**: con el
+  candado repetido en los beats, en el párrafo de cámara y en la lista NOT, el teléfono derivó
+  1-2 px en 120 fotogramas y el pulgar se quedó clavado en (580, 1233).
