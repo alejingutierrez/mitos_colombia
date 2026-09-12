@@ -1,6 +1,6 @@
 {
   "pueblo": "muiscas",
-  "actualizado": "2026-09-09",
+  "actualizado": "2026-09-11",
   "estilo": {
     "nombre": "Maqueta de papel del sitio (studioPaperMaquette)",
     "imagen_modelo": "gpt-image-2",
@@ -153,5 +153,25 @@
     "leccion": "Seedance es multi-shot por diseño: un endpoint de cámara ambicioso ('ending with the hands centered') se vuelve un CORTE a primer plano en el último segundo. Escribir 'ONE continuous take, no cuts, no close-up inserts'. Movimiento más amplio y push-ins más decididos que Kling (c06, c11 terminan en primer plano); c09 y c17 (los que Kling falló) salieron bien a la primera."
   },
   "subtitulos_v4": "NO se queman (usuario 2026-09-09: 'no quiero subtítulos'): burn_subtitles false y write_srt false en los planes; los campos subtitle se conservan por si vuelven",
-  "MODELO_ESTANDAR_V4": "Seedance 2.5 por MCP (usuario, 2026-09-09: 'vamos con seedance como estándar'): seedance_2_5 · mode omni_reference · resolution 1080p · generate_audio false · bitrate_mode high · 5 s · 9:16 · declined_preset_id IN THE DARK · 45 cr/clip (≈855 cr por video de 18 clips + 1 regen). Prompts en formato doctrina v2 (8 párrafos, @Image 1, 'ONE continuous take'). Tope 12 en vuelo. Kling 3.0 pro (8,75 cr/clip) queda como alternativa barata, no como estándar."
+  "MODELO_ESTANDAR_V4": "Seedance 2.5 por MCP (usuario, 2026-09-09: 'vamos con seedance como estándar'): seedance_2_5 · mode omni_reference · resolution 1080p · generate_audio false · bitrate_mode high · 5 s · 9:16 · declined_preset_id IN THE DARK · 45 cr/clip (≈855 cr por video de 18 clips + 1 regen). Prompts en formato doctrina v2 (8 párrafos, @Image 1, 'ONE continuous take'). Tope 12 en vuelo. Kling 3.0 pro (8,75 cr/clip) queda como alternativa barata, no como estándar.",
+  "video_4": {
+    "slug": "el-tequendama",
+    "titulo_video": "El salto del Tequendama",
+    "titulo_canon": "El castigo de Chibchachum y Bochica",
+    "estado": "ENSAMBLADO 2026-09-11, preview entregado, esperando aprobación",
+    "master": "content/videos/muiscas/videos/bochica/el-tequendama-final-v5.mp4 (99 s, 19 clips + cola still)",
+    "guion": "docs/videos/muiscas/mvp-guiones/guion-bochica-v5.json (texto v4 aprobado 2026-08-31, voz actual)",
+    "plan": "content/videos/muiscas/videos/bochica/plan-v5.json",
+    "movimiento": "content/videos/muiscas/videos/bochica/movimiento-v5-seedance.json (derivado del v4 auditado + candado de toma continua)",
+    "lecho": "14-tormenta-en-la-sabana → 02-tambor-ceremonial → 11-rio-que-baja (los mismos tres de la narración de el-tequendama en la web: identidad sonora entre web y video)",
+    "costo_cr": 855,
+    "resultado": "19/19 clips a la primera, CERO regeneraciones (vs 17/18 del video 1). El candado 'ONE continuous take, no cuts, no close-up inserts' aplicado desde el primer envío eliminó el defecto que costó una regeneración en el video 1.",
+    "aprendizajes": [
+      "Los prompts del v4, auditados en agosto por redactor+auditor contra la doctrina de movimiento v2, siguen siendo la mejor materia prima: derivarlos cuesta minutos y rinde 19/19.",
+      "Guion de 17-19 palabras por línea (doctrina) → 67 s de habla en 99 s = 68 % del video, contra el 44 % del video 1 con líneas de 10-15. El plan pasó de 8 avisos de aire muerto a 2.",
+      "Preset nuevo encontrado: 'DROWN IN MUSIC' f1821f84-945b-4cd1-9085-1f479db0028e (además de IN THE DARK y 3D RENDER). El recomendador varía por escena: hay que declinar el id EXACTO que devuelva cada request.",
+      "El tope real de concurrencia de Seedance es ~10, no 12: con 9-10 en vuelo el siguiente request da 429. Encolar de a 9 y reponer a medida que terminan.",
+      "REINCIDENCIA: volví a caer en el bucle zsh indexado desde 0 al subir keyframes (los 19 quedaron desplazados un puesto). Se detectó por el conteo de códigos HTTP y se re-subió con `for i in {1..N}` + `uploads[i-1]`. El patrón correcto está en el runbook §2.7."
+    ]
+  }
 }

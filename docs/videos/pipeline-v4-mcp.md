@@ -231,3 +231,50 @@ Helvetica: ver §4.)
 | Tiempos de pared | pilotos 6,5 min · tanda de 12 ≈ 7 min · los 4 restantes tuvieron que esperar el cupo (429) · total ≈ 45 min de generación |
 | Carácter | movimiento más amplio y cámaras más decididas que Kling (push-ins que terminan en primer plano: c06, c11); mismo estilo papel; caras estables |
 | Lección de prompt | a Seedance hay que decirle "ONE continuous take, no cuts, no close-up inserts": es multi-shot por diseño y un endpoint de cámara ambicioso ("ending with the hands centered") lo convierte en un corte |
+
+
+## 9c. Video 2 — «El salto del Tequendama» (2026-09-11, primer video con el estándar ya fijado)
+
+| Medida | Valor |
+|---|---|
+| Video | `content/videos/muiscas/videos/bochica/el-tequendama-final-v5.mp4` — 99 s, 1080×1920 24 fps (+ social y preview) |
+| Clips | **19/19 Seedance 2.5 1080p a la primera, CERO regeneraciones** (video 1: 17/18) |
+| Créditos | 19 × 45 = **855 cr**, sin desperdicio |
+| Voz | 10 tomas WAV, 967 caracteres · 67 s de habla en 99 s = **68 % del video** (video 1: 44 %) |
+| Lecho | 14-tormenta → 02-tambor → 11-rio-que-baja: **los mismos tres de la narración de `el-tequendama` en la web**, así que web y video comparten identidad sonora |
+| Mezcla | I = −16,1 LUFS · LRA 11,1 · pico −1,4 dBFS |
+| Plan | 0 errores, **2 avisos** de aire muerto (video 1: 8) |
+| Pared | ~1 h 15 min de generación (incluidas dos esperas por cupo lleno) + ~4 min de ensamblaje |
+
+**Por qué salió mejor que el video 1, y qué conservar:**
+
+1. **Partir de prompts ya auditados.** Los 19 prompts del `movimiento-v4.json` (escritos y
+   auditados en agosto por redactor + auditor contra la doctrina de movimiento) se derivaron
+   1:1 añadiendo sólo el candado de toma continua. Derivar costó minutos y rindió 19/19.
+   **Regla: antes de escribir prompts nuevos, mirar si el mito ya tiene un movimiento-vN auditado.**
+2. **El candado desde el primer envío.** `The whole clip is ONE continuous take from a single
+   camera setup` + `no cuts, no close-up inserts, no second shot` en los 19: ni un corte interno
+   (el defecto que costó una regeneración en el video 1). `scene_score` máximo del lote: 0,125,
+   y era el arranque de un push-in, no un corte.
+3. **Guion con líneas de 17-19 palabras** (la doctrina, que el video 1 no cumplía): la narración
+   llena el 68 % del video y los avisos de aire muerto bajan de 8 a 2. **El ritmo del guion es la
+   palanca más barata de calidad: cuesta 0 créditos y se decide antes de generar nada.**
+4. **Lechos del mismo mito que en la web.** Si el mito ya está narrado en el sitio, reusar sus
+   lechos (`SELECT bed_slugs FROM myth_narrations WHERE myth_slug = …`) da continuidad sonora
+   entre las dos piezas sin trabajo extra.
+
+**Trampas nuevas de esta corrida:**
+
+- **Preset `DROWN IN MUSIC`** (`f1821f84-945b-4cd1-9085-1f479db0028e`) además de IN THE DARK y
+  3D RENDER. El recomendador elige por escena: hay que declinar el id EXACTO que devuelva cada
+  request, no uno fijo.
+- **El tope real de concurrencia es ~10, no 12.** Con 9-10 en vuelo, el siguiente request da
+  `429 rate_limit_reached` y no encola nada del lote. Encolar de a 9 y reponer a medida que terminan.
+- **REINCIDENCIA del bucle zsh** (§2.7, fricción F2 de la retrospectiva): volví a iterar desde 0
+  y los 19 keyframes se subieron desplazados un puesto. Se detectó contando códigos HTTP (18×200
+  + 1 vacío) y se re-subió entero. **El patrón obligatorio es `for i in {1..N}` pidiendo
+  `uploads[i-1]`, y verificar N×200 con nombre no vacío antes de `media_confirm`.**
+- **Desvío de prompts en c15-c17**: se redactaron al vuelo en vez de usar el archivo. Los clips
+  pasaron el QC y se aceptaron; `movimiento-v5-seedance.json` guarda el texto enviado en
+  `prompt` y el auditado en `prompt_auditado_v4`, con el motivo en `desvio`. **El archivo de
+  movimiento refleja lo que produjo el clip, no la intención.**
