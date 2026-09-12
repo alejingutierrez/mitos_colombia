@@ -1,6 +1,6 @@
 {
   "pueblo": "muiscas",
-  "actualizado": "2026-09-11",
+  "actualizado": "2026-09-12",
   "estilo": {
     "nombre": "Maqueta de papel del sitio (studioPaperMaquette)",
     "imagen_modelo": "gpt-image-2",
@@ -153,12 +153,12 @@
     "leccion": "Seedance es multi-shot por diseño: un endpoint de cámara ambicioso ('ending with the hands centered') se vuelve un CORTE a primer plano en el último segundo. Escribir 'ONE continuous take, no cuts, no close-up inserts'. Movimiento más amplio y push-ins más decididos que Kling (c06, c11 terminan en primer plano); c09 y c17 (los que Kling falló) salieron bien a la primera."
   },
   "subtitulos_v4": "NO se queman (usuario 2026-09-09: 'no quiero subtítulos'): burn_subtitles false y write_srt false en los planes; los campos subtitle se conservan por si vuelven",
-  "MODELO_ESTANDAR_V4": "Seedance 2.5 por MCP (usuario, 2026-09-09: 'vamos con seedance como estándar'): seedance_2_5 · mode omni_reference · resolution 1080p · generate_audio false · bitrate_mode high · 5 s · 9:16 · declined_preset_id IN THE DARK · 45 cr/clip (≈855 cr por video de 18 clips + 1 regen). Prompts en formato doctrina v2 (8 párrafos, @Image 1, 'ONE continuous take'). Tope 12 en vuelo. Kling 3.0 pro (8,75 cr/clip) queda como alternativa barata, no como estándar.",
+  "MODELO_ESTANDAR_V4": "Seedance 2.5 por MCP (usuario, 2026-09-09: 'vamos con seedance como estándar'): seedance_2_5 · mode omni_reference · resolution 1080p · generate_audio false · bitrate_mode high · 5 s · 9:16 · declined_preset_id IN THE DARK · 45 cr/clip (≈855 cr por video de 18 clips + 1 regen). Prompts en formato doctrina v2 (8 párrafos, @Image 1, 'ONE continuous take'). Tope 12 en vuelo. Kling 3.0 pro (8,75 cr/clip) queda como alternativa barata, no como estándar. RATIFICADO 2026-09-12 tras el bake-off contra gemini_omni_flash_1_1 en Bachué: Seedance 18/18 a la primera contra 13/18 de Gemini, que además deriva de plano. Tope real ~10 en vuelo (no 12).",
   "video_4": {
     "slug": "el-tequendama",
     "titulo_video": "El salto del Tequendama",
     "titulo_canon": "El castigo de Chibchachum y Bochica",
-    "estado": "ENSAMBLADO 2026-09-11, preview entregado, esperando aprobación",
+    "estado": "ENTREGADO 2026-09-11 (preview enviado; el usuario siguió al video siguiente sin pedir cambios)",
     "master": "content/videos/muiscas/videos/bochica/el-tequendama-final-v5.mp4 (99 s, 19 clips + cola still)",
     "guion": "docs/videos/muiscas/mvp-guiones/guion-bochica-v5.json (texto v4 aprobado 2026-08-31, voz actual)",
     "plan": "content/videos/muiscas/videos/bochica/plan-v5.json",
@@ -173,5 +173,38 @@
       "El tope real de concurrencia de Seedance es ~10, no 12: con 9-10 en vuelo el siguiente request da 429. Encolar de a 9 y reponer a medida que terminan.",
       "REINCIDENCIA: volví a caer en el bucle zsh indexado desde 0 al subir keyframes (los 19 quedaron desplazados un puesto). Se detectó por el conteo de códigos HTTP y se re-subió con `for i in {1..N}` + `uploads[i-1]`. El patrón correcto está en el runbook §2.7."
     ]
+  },
+  "video_5": {
+    "slug": "bachue",
+    "titulo_video": "Bachué",
+    "titulo_canon": "Bachué, la madre de la humanidad",
+    "estado": "✅ ENTREGADO 2026-09-12 — máster oficial: content/videos/muiscas/videos/bachue/bachue-final-v5-seedance.mp4 (94 s, 1080x1920 24 fps, −16,2 LUFS, pico −1,3 dBFS, sin subtítulos, título Asimovian verificado por CoreText). Copia en ~/Downloads/bachue-seedance-1080p.mp4",
+    "ojo": "ESTE mito ya tenía un video v3 de 2026-08 (bachue-final.mp4, grok, voz eleven_v3). El v5 es el remake del carril v4 y lo reemplaza; el viejo queda como historia.",
+    "guion": "docs/videos/muiscas/mvp-guiones/guion-bachue-v4.json (9 líneas de 18-19 palabras, doctrina de longitud del video 4)",
+    "plan": "content/videos/muiscas/videos/bachue/plan-v5-seedance.json → clips-v5-seedance/",
+    "movimiento": "content/videos/muiscas/videos/bachue/movimiento-v5-seedance.json (los 18 prompts escritos mirando cada keyframe, con el candado de toma continua)",
+    "lecho": "01-flauta-de-niebla → 09-telar-de-semillas → 06-laguna-de-iguaque",
+    "costo_cr": 810,
+    "resultado": "18/18 clips a la primera, CERO regeneraciones. scene_score máximo 0,085 (c10, un tilt-up, no un corte); el resto por debajo de 0,08.",
+    "version_descartada": "v4-gemini — ver video_5_gemini_descartado"
+  },
+  "video_5_gemini_descartado": {
+    "modelo": "gemini_omni_flash_1_1 por MCP — mode image-to-video · 1080p · start_image · 22,5 cr/clip · salida h264",
+    "por_que_se_probo": "el usuario pidió explícitamente probarlo en este mito (\"bachué pero usando gemini omni flash 1.1\")",
+    "hallazgo_de_catalogo": "gemini_omni y gemini_omni_flash_1_1 son modelos DISTINTOS. gemini_omni: 720p máximo y SIN start_image (por eso quedó descartado en agosto). gemini_omni_flash_1_1: 1080p y 4K, start_image vía mode image-to-video, la mitad del precio de Seedance. Yo miré el modelo equivocado dos veces y el usuario tuvo que corregirme dos veces: SIEMPRE listar el catálogo completo con models_explore antes de afirmar que un modelo no puede algo.",
+    "resultado": "13/18 a la primera, 5 regeneraciones → 517,5 cr. Rechazado por el usuario: \"no me gusta\".",
+    "defectos": [
+      "DERIVA DE PLANO (3 casos): cambia el escenario o la hora a mitad del clip — la noche estrellada se vuelve día gris, el fondo gris se vuelve lago azul con montañas nevadas, el lago se vuelve otro lago con pinos. Se mitiga con candado de plate fijo (\"background, light and hour identical to @Image 1 for all 5 seconds\") pero no desaparece.",
+      "SALIDA HORIZONTAL (1 caso): devolvió 1920x1080 pese a aspect_ratio 9:16. Lo atrapó el guardián de resolución de import-mcp-clips.mjs, no el ojo.",
+      "DESINTEGRACIÓN DE MATERIA (1 caso): la niebla se volvió bolas de algodón literales flotando sobre el agua (el mismo defecto que ya tenía kling3_0 en v3)."
+    ],
+    "veredicto": "Más barato (22,5 vs 45) pero no más barato en la práctica: 517,5 cr para un resultado rechazado contra 810 cr para uno aceptado a la primera. NO usar como estándar. Concurrencia ~10 como Seedance.",
+    "archivo": "clips-v4/ + movimiento-v4-gemini.json + plan-v4.json + bachue-final-v4-gemini.mp4 se conservan como comparación"
+  },
+  "costos_carril_v4": {
+    "video_3 la-aparicion-del-hombre": "175 cr (Kling, archivado) + 855 cr (Seedance, máster)",
+    "video_4 el-tequendama": "855 cr (Seedance, 19/19 a la primera)",
+    "video_5 bachue": "517,5 cr (Gemini, descartado) + 810 cr (Seedance, 18/18 a la primera)",
+    "balance_higgsfield": "932 cr al cerrar Bachué (2026-09-12). Un video con el estándar cuesta ~810-855 cr: quedan ~1 video de margen."
   }
 }

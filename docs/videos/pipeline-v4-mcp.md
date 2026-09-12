@@ -199,6 +199,9 @@ usuario · marcar la cola en `PRODUCCION-END-TO-END.md` §9.
 | Faltó un keyframe por subir / ids corridos | `uploads[]` sin `filename` + arrays 1-indexados en zsh | mapear por índice explícito y verificar 18 × HTTP 200 antes de `media_confirm` |
 | Lecho de río/canoa en un mito sin agua | léxico de caracteres sobre un texto de 110 palabras | `--lecho` por acto (§2.4) |
 | `SE PASA` en una toma | línea larga | reescribir, `--only N` |
+| Clip devuelto en horizontal (1920×1080) con `aspect_ratio:"9:16"` pedido | defecto observado en `gemini_omni_flash_1_1` | lo detecta `import-mcp-clips.mjs` al ffprobear; regenerar. **Nunca importar clips sin el guardián de resolución** |
+| Escenario u hora que cambian a mitad del clip | deriva de `gemini_omni_flash_1_1` | candado de plate fijo en el prompt (`background, light and hour identical to @Image 1 for all 5 seconds`); si reincide, cambiar de modelo |
+| `429 rate_limit_reached` y el lote no encola nada | el tope real de Seedance/Gemini es ~10 en vuelo | encolar de a 9 y reponer a medida que terminan |
 | Mucho aire tras cada línea (4-6 s) | líneas de 10-15 palabras en ventanas de 10 s | aceptado en v1 (el mito respira); para tensar, líneas de ≤19 palabras en el guion vN+1 |
 
 ## 9. Resultado del video 1 — la-aparicion-del-hombre (2026-09-09)
@@ -278,3 +281,46 @@ Helvetica: ver §4.)
   pasaron el QC y se aceptaron; `movimiento-v5-seedance.json` guarda el texto enviado en
   `prompt` y el auditado en `prompt_auditado_v4`, con el motivo en `desvio`. **El archivo de
   movimiento refleja lo que produjo el clip, no la intención.**
+
+## 9d. Video 3 — «Bachué» (2026-09-12) y el bake-off contra Gemini Omni Flash 1.1
+
+Este mito ya tenía un video de agosto (`bachue-final.mp4`, grok, voz `eleven_v3`). El v5 es su
+remake con el carril v4 y lo reemplaza. El usuario pidió probar primero **Gemini Omni Flash 1.1**;
+al ver el resultado dijo **«no me gusta»** y pidió rehacerlo con el estándar. Las dos versiones
+se conservan porque la comparación vale más que el ahorro de disco.
+
+| Medida | Gemini Omni Flash 1.1 (descartado) | Seedance 2.5 (máster) |
+|---|---|---|
+| Llamada | `mode:"image-to-video"` · `start_image` · 1080p · h264 | `mode:"omni_reference"` · 1080p · `generate_audio:false` · `bitrate_mode:"high"` · HEVC 10-bit |
+| Precio | 22,5 cr/clip | 45 cr/clip |
+| A la primera | **13/18** (5 regeneraciones) | **18/18, cero regeneraciones** |
+| Gastado | 517,5 cr, resultado rechazado | 810 cr, resultado aceptado |
+| `scene_score` máx. | — | 0,085 (c10, un tilt-up; el resto < 0,08) |
+| Veredicto | la mitad de precio no compensa | **estándar ratificado** |
+
+Todo lo demás se reusó tal cual entre las dos versiones, porque el problema era el modelo y no el
+material: las 9 voces de `voces-v4/`, `lecho-v4.wav`, los 18 keyframes ya subidos (mismos
+`media_id` de `kf-9x16/higgsfield-media.json`) y los mismos 18 prompts. **Cambiar de modelo en un
+mito ya preparado cuesta un archivo de movimiento, un plan y la tanda: ~50 min de pared.**
+
+**Máster:** `content/videos/muiscas/videos/bachue/bachue-final-v5-seedance.mp4` — 94 s,
+1080×1920 24 fps, I = −16,2 LUFS, pico −1,3 dBFS, título Asimovian verificado por CoreText,
+sin subtítulos. Lecho `01-flauta-de-niebla → 09-telar-de-semillas → 06-laguna-de-iguaque`.
+
+**Lo que hay que saber de Gemini si algún día se vuelve a mirar:**
+
+1. **`gemini_omni` y `gemini_omni_flash_1_1` son modelos distintos.** El primero es 720p máximo
+   y **no acepta `start_image`** — por eso quedó descartado en agosto. El segundo hace 1080p y 4K
+   y sí acepta imagen de inicio vía `mode:"image-to-video"`. Yo consulté el modelo equivocado dos
+   veces y el usuario tuvo que corregirme dos veces. **Regla: `models_explore list` completo antes
+   de afirmar que un modelo no puede algo; no fiarse de la memoria ni de una entrada del DNA.**
+2. **Deriva de plano (3 de 18).** Cambia escenario u hora a mitad del clip: la noche estrellada se
+   vuelve día gris, un fondo gris se vuelve lago azul con montañas nevadas. Se mitiga con candado
+   de plate fijo (`background, light and hour identical to @Image 1 for all 5 seconds`) pero no
+   desaparece. Seedance no tiene este defecto.
+3. **Salida horizontal (1 de 18).** Devolvió 1920×1080 con `aspect_ratio:"9:16"` pedido. **Lo
+   atrapó el guardián de resolución de `import-mcp-clips.mjs`, no el ojo**: la comprobación
+   automática al importar paga por sí sola.
+4. **Desintegración de materia (1 de 18).** La niebla se volvió bolas de algodón literales — el
+   mismo defecto que ya tenía `kling3_0` en el carril v3.
+5. Concurrencia ~10 como Seedance; mismo baile de `declined_preset_id` por escena.

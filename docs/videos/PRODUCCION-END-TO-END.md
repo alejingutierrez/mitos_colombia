@@ -6,10 +6,12 @@ CUALQUIER agente pueda ejecutar su fase sin contexto previo. Cada fase es un con
 entrada → trabajo → salida → criterio de aceptación. Si tu fase referencia otro doc,
 ese doc es LECTURA OBLIGATORIA antes de tocar nada.
 
-Versión 1.2 · 2026-09-09 · **Pipeline v4: generación por el MCP de Higgsfield, estándar Seedance 2.5 1080p** (v1.1 =
+Versión 1.3 · 2026-09-12 · **Pipeline v4: generación por el MCP de Higgsfield, estándar Seedance 2.5 1080p** (v1.1 =
 auditada por panel de críticos: ejecutabilidad + consistencia + completitud; v1.2 = las
 leyes 3, 4 y 8 cambian por decisión del usuario del 2026-09-09 y el carril operativo pasa a
-`pipeline-v4-mcp.md`; el carril web-unlimited de v3 queda como alternativa sin créditos).
+`pipeline-v4-mcp.md`; el carril web-unlimited de v3 queda como alternativa sin créditos;
+v1.3 = la ley 4 se ratifica con el bake-off contra Gemini Omni Flash 1.1 y se corrige el
+tope de concurrencia a ~10; tres videos entregados).
 
 **Alcance (usuario, 2026-09-09): los 41 mitos muiscas deben quedar completos con todo** —
 fichas, tríptico, narración del sitio y video. Ningún mito se da por hecho a medias.
@@ -61,11 +63,15 @@ cama tomada del catálogo de lechos de las narraciones.
    `bitrate_mode: "high"`, **5 s por keyframe**, 9:16, un `start_image` por clip =
    **45 cr por clip** (verificado con `get_cost`; ≈855 cr por video con una regeneración).
    Prompts en el formato de la doctrina v2 (8 párrafos, `@Image 1`, y siempre "ONE
-   continuous take, no cuts, no close-up inserts"). Tope de 12 clips en vuelo. **Un intento
+   continuous take, no cuts, no close-up inserts"). Tope real ~10 clips en vuelo (el 11.º
+   da `429 rate_limit_reached` y no encola nada del lote). **Un intento
    por keyframe**: piloto de 1-2 clips antes de la tanda. Kling 3.0 pro (`kling3_0`, 8,75
    cr/clip) queda como alternativa barata; el carril web-unlimited de v3
    (`pipeline-v3-profesional.md`) como alternativa a 0 cr. No se mezclan modelos dentro de
-   un mismo video.
+   un mismo video. **RATIFICADO 2026-09-12** en el bake-off de Bachué contra
+   `gemini_omni_flash_1_1` (1080p, `start_image`, la mitad de precio): Seedance 18/18 a la
+   primera contra 13/18 de Gemini, que además cambia escenario u hora a mitad del clip. La
+   mitad de precio con regeneraciones y un rechazo sale más caro (§9d del runbook).
 5. **Fiel al canon, sin alargar.** El canon vive en la DB del sitio (ruta en §1). Nada
    de moralejas, nombres no documentados ni inventos. Guardarraíles visuales del sitio:
    sin texto en pantalla (salvo el título del bloque 1), sin coronas/templos europeos ni cruces, sin
@@ -455,9 +461,9 @@ de cuenta, y el cierre de cada video. Todo lo demás se lee de aquí.
 
 | # | Mito | Slug(s) DB del canon | Guion | Voces | Mapeo | Movim. | Plan | Clips | Video | Claim | Notas |
 |---|------|----------------------|-------|-------|-------|--------|------|-------|-------|-------|-------|
-| 1 | **El salto del Tequendama** (Bochica v5 · video 2 del carril) | `el-castigo-de-chibchachum-y-bochica` (mito `el-tequendama`; +coda de `castigo-y-redencion-de-chibchacum`) | ✅ `guion-bochica-v5.json` (texto v4 aprobado 2026-08-31, revalidado 2026-09-11 al cambiar voz) | ✅ `voces-v5/` WAV, 67 s de habla en 99 s | ✅ | ✅ `movimiento-v5-seedance.json` (derivado 1:1 del v4 auditado + candado de toma continua) | ✅ `plan-v5.json` (0 errores, 2 avisos) | ✅ 19/19 a la primera, 855 cr | preview entregado 2026-09-11, **esperando aprobación** (§0b) | sesión principal 2026-09-11 | Desbloqueado: ya no espera licencia web, se produce por MCP. Lecho = los mismos 3 de la narración de `el-tequendama` en la web (14-tormenta → 02-tambor → 11-rio-que-baja) |
+| 1 | **El salto del Tequendama** (Bochica v5 · video 2 del carril) | `el-castigo-de-chibchachum-y-bochica` (mito `el-tequendama`; +coda de `castigo-y-redencion-de-chibchacum`) | ✅ `guion-bochica-v5.json` (texto v4 aprobado 2026-08-31, revalidado 2026-09-11 al cambiar voz) | ✅ `voces-v5/` WAV, 67 s de habla en 99 s | ✅ | ✅ `movimiento-v5-seedance.json` (derivado 1:1 del v4 auditado + candado de toma continua) | ✅ `plan-v5.json` (0 errores, 2 avisos) | ✅ 19/19 a la primera, 855 cr | ✅ **ENTREGADO 2026-09-11** (preview enviado; el usuario siguió al video siguiente sin pedir cambios) | sesión principal 2026-09-11 | Desbloqueado: ya no espera licencia web, se produce por MCP. Lecho = los mismos 3 de la narración de `el-tequendama` en la web (14-tormenta → 02-tambor → 11-rio-que-baja) |
 | 2 | **La aparición del hombre** (video 1 del carril v4) | `la-aparicion-del-hombre` (DB id 255, «La aparición de los primeros seres humanos») | ✅ `guion-la-aparicion-del-hombre-v1.json` (aprobado 2026-09-09) | ✅ `voces-v1/` WAV | ✅ | ✅ `movimiento-v1.json` | ✅ `plan-v1.json` | ✅ 18/18 por MCP (16 a la primera + c09/c17 regenerados) · 175 cr | ✅ **APROBADO 2026-09-11** | sesión principal 2026-09-09 | Primer video Kling 3.0 pro por MCP (175 cr); lecho 24→18→04; placa de cierre = huella del tríptico. **Versión paralela Seedance 2.5 1080p por MCP la misma noche** (`-final-v1-seedance.mp4`, 855 cr, 17/18 a la primera, c15 regenerado por un corte interno): el usuario recargó créditos para compararla — ver `pipeline-v4-mcp.md` §0b y §9b. **Decidido 2026-09-09: Seedance 2.5 es el estándar del carril**; el máster oficial de este mito es `-final-v1-seedance.mp4` (2ª ronda: sin subtítulos, título Asimovian por CoreText) |
-| 3 | Bachué extendida | `bachue-madre-primigenia-de-iguaque` (variantes ids 652, 721, 732-737) | — | — | — | — | — | — | — | — | 17 keyframes + guion 90s (`guion-bachue-v3.json`) como base |
+| 3 | **Bachué** (video 3 del carril v4) | `bachue-madre-primigenia-de-iguaque` (variantes ids 652, 721, 732-737) | ✅ `guion-bachue-v4.json` (9 líneas de 18-19 palabras) | ✅ `voces-v4/` WAV | ✅ 18 keyframes en `kf-9x16/` | ✅ `movimiento-v5-seedance.json` | ✅ `plan-v5-seedance.json` | ✅ **18/18 a la primera, 810 cr** | ✅ **ENTREGADO 2026-09-12** — `bachue-final-v5-seedance.mp4` (94 s) | sesión principal 2026-09-12 | Reemplaza el video de agosto (`bachue-final.mp4`, grok). Lecho 01-flauta-de-niebla → 09-telar-de-semillas → 06-laguna-de-iguaque. **Versión previa con `gemini_omni_flash_1_1` a petición del usuario: 13/18 a la primera, 517,5 cr, RECHAZADA ("no me gusta") — ver `pipeline-v4-mcp.md` §9d** |
 | 4 | El Dorado | `el-dorado-sueno-de-oro-y-esmeraldas` · variantes `dorado-sacrificio-del-cacique-dorado`, `el-dorado-y-la-diosa-sumergida`, `engano-acuatico-del-dorado` | — | — | — | — | — | — | — | — | biblia lista; decisión editorial pendiente del usuario: ritual-y-codicia vs cacica-sumergida |
 | 5 | Chibchacum | `castigo-y-redencion-de-chibchacum` (variante `chibchacum-castigo-y-redencion-muisca`) | — | — | — | — | — | — | — | — | centrarlo en el dios, 100-110s; no repetir la inundación de Bochica |
 | 6 | Huitaca | `huitaca-deidad-oscura-y-diluvio` (variantes `huitaca-rebelion-y-transformacion-lunar`, `huitaca-belleza-noche-y-desobediencia`) | — | — | — | — | — | — | — | — | 95-105s máx, no estirar |
