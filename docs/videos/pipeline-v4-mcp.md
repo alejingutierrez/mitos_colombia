@@ -127,14 +127,25 @@ node scripts/videos/validate-plan.mjs --plan $D/plan-v1.json --secos --suggest  
 ```
 
 ### 2.7 Subir keyframes al MCP (0 cr)
-1. `media_upload` con `files: [{filename, content_type:"image/jpeg"} × 18]` → devuelve
+1. `media_upload` con `files: [{filename, content_type:"image/jpeg"} × N]` → devuelve
    `uploads[]` con `media_id`, `upload_url` (presignada S3, 24 h), `url` (CDN).
    **No devuelve `filename`: el orden de `uploads[]` es el de `files[]`.**
-2. `curl -X PUT -H "Content-Type: image/jpeg" --data-binary @<jpg> "<upload_url>"` por archivo
-   (HTTP 200). ⚠️ En zsh los arrays son 1-indexados: iterar con `seq 1 18` o con `for f in
-   "${FILES[@]}"`; aquí un `FILES[0]` vacío dejó c18 sin subir hasta que se detectó.
-3. `media_confirm` `{type:"image", media_ids:[…18]}` → todos `uploaded`.
-4. Guardar `$D/kf-9x16/higgsfield-media.json` (clip → media_id). **Los media_id expiran**:
+2. **Guardar esa respuesta en `$D/kf-9x16/uploads.json` y subir con el script, NO a mano:**
+
+   ```bash
+   node scripts/videos/subir-keyframes.mjs --uploads <dir>/kf-9x16/uploads.json --dir <dir>/kf-9x16
+   ```
+
+   El script empareja archivo ↔ URL por índice explícito en node, exige que el número de
+   archivos y de URLs coincida, verifica que TODOS devuelvan HTTP 200 y aborta si alguno
+   falla. Escribe `higgsfield-media.json` e imprime los `media_id` para el paso 3.
+
+   ⚠️ **Por qué existe el script:** el bucle a mano en zsh falló DOS veces (c18 del video 1
+   y los 19 keyframes del video 2, todos desplazados un puesto). Los arrays de zsh son
+   1-indexados y `media_upload` no devuelve `filename`, así que un `FILES[0]` vacío corre
+   el mapeo entero sin que nada avise. **No volver a hacerlo a mano.**
+3. `media_confirm` `{type:"image", media_ids:[…]}` → todos `uploaded`.
+4. `higgsfield-media.json` queda con el mapa keyframe → media_id. **Los media_id expiran**:
    para regenerar clips meses después hay que volver a subir.
 
 ### 2.8 Generar los clips (8,75 cr cada uno)
