@@ -174,7 +174,14 @@ for (const block of plan.blocks) {
     const kb = (KENBURNS[block.kenburns] || KENBURNS.in)(frames);
     // Sobre-escalar antes de zoompan evita el jitter clásico del filtro.
     const vf = `scale=${W * 2}:${H * 2}:force_original_aspect_ratio=increase,crop=${W * 2}:${H * 2},${kb}:d=${frames}:s=${W}x${H}:fps=${FPS},format=yuv420p`;
-    run("ffmpeg", ["-y", "-loop", "1", "-t", String(duration), "-i", image, "-vf", vf, "-r", String(FPS), "-c:v", "libx264", "-preset", "medium", "-crf", "18", "-an", blockOut]);
+    // `-frames:v frames` NO es decorativo: `zoompan` con `d=N` emite N fotogramas
+    // POR CADA fotograma de entrada, y `-loop 1 -t duration` ya entrega N. Sin el
+    // tope, una placa de 4 s salía de 400 s (9.600 fotogramas). Nunca se notó
+    // porque la placa siempre iba al FINAL y el `-t totalDur` del cierre la
+    // recortaba; en cuanto hay un bloque DESPUÉS (el cierre de canal), la placa se
+    // come el resto del video y ese bloque no aparece. La curva de zoom no cambia:
+    // usa `on`, que en los primeros N fotogramas ya recorre la animación entera.
+    run("ffmpeg", ["-y", "-loop", "1", "-t", String(duration), "-i", image, "-vf", vf, "-frames:v", String(frames), "-r", String(FPS), "-c:v", "libx264", "-preset", "medium", "-crf", "18", "-an", blockOut]);
   } else {
     const clip = resolveInput(block.clip);
     const clipDur = probeDuration(clip);
