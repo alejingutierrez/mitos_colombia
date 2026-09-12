@@ -377,3 +377,35 @@ node scripts/videos/build-lecho.mjs --guion <guion> --duration <video + 8.42> --
 - **Se le puede pedir a Seedance que un objeto no se mueva EN ABSOLUTO y lo cumple**: con el
   candado repetido en los beats, en el párrafo de cámara y en la lista NOT, el teléfono derivó
   1-2 px en 120 fotogramas y el pulgar se quedó clavado en (580, 1233).
+
+
+## 11. Video 4 — «El Dorado» (2026-09-12), el primero con presupuesto exacto
+
+| Medida | Valor |
+|---|---|
+| Clips | **17/17 a la primera, cero regeneraciones** |
+| Créditos | 17 × 45 = **765**, de un saldo de 797. Quedaron 32: cero margen |
+| Keyframes | **gpt-image-2.5-sunburst** en calidad high, primera vez en el carril |
+| Voz | 9 tomas, 59,5 s de habla en 97,4 s = **61 %** |
+| Lecho | 08-lluvia-sobre-la-piedra → 15-canoa-en-el-rio → 13-manantial-que-brota: **los mismos tres de la narración de `el-dorado` en el sitio** |
+| `scene_score` | máximo 0,073 (c07); los 17 por debajo de 0,08 |
+
+**Lo que este video añade al carril:**
+
+- **Con presupuesto exacto, el piloto deja de ser opcional.** Se enviaron primero los TRES planos de
+  riesgo (el cuerpo cubierto de polvo de oro) por 135 cr, para descubrir un bloqueo de moderación
+  barato en vez de caro. Pasaron 3/3. **Pilotar lo difícil, no lo fácil.**
+- **El canon puede contradecir un guardarraíl del sitio, y entonces manda el canon.** «Sin oro
+  corporal» tiene a El Dorado como excepción explícita. Lo que sí se mantiene es el pudor, que aquí
+  además es anti-moderación: figura siempre de espaldas, guayuco descrito en cada prompt, torso de
+  frente y rostro en la lista NOT.
+- **El oro va como POLVO MATE en todos los prompts.** El brillo metálico es lo que más rápido rompe
+  el registro de papel; `never glinting, never metallic, never blooming into light` en los nueve
+  clips donde aparece.
+- **`gpt-image-2.5-sunburst` es un salto real** y acepta los mismos parámetros que `gpt-image-2`,
+  incluida `images.edit` con referencias, así que la biblia visual vieja sigue sirviendo. Su registro
+  es algo más dimensional: se nota si se compara con los videos anteriores, no dentro de este.
+- **El tope de concurrencia real está en 7-8, no en 10.** Con 7 en vuelo el siguiente envío dio 429.
+- **Otra trampa de zsh, distinta de la del bucle:** `set -- $var` NO separa por espacios en zsh, así
+  que un bucle de descarga escribió archivos con el nombre entero pegado. La descarga va con
+  `import-mcp-clips.mjs`, que además verifica resolución y lleva el `import-map`.

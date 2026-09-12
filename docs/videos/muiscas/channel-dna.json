@@ -208,8 +208,9 @@
     "video_3 la-aparicion-del-hombre": "175 cr (Kling, archivado) + 855 cr (Seedance, máster)",
     "video_4 el-tequendama": "855 cr (Seedance, 19/19 a la primera)",
     "video_5 bachue": "517,5 cr (Gemini, descartado) + 810 cr (Seedance, 18/18 a la primera)",
-    "balance_higgsfield": "797 cr tras el cierre (2026-09-12). Un video con el estándar cuesta ~810-855: el siguiente mito necesita recarga.",
-    "cierre_de_canal": "135 cr, una sola vez para todos los videos"
+    "balance_higgsfield": "32 cr tras El Dorado (2026-09-12). El siguiente mito necesita recarga.",
+    "cierre_de_canal": "135 cr, una sola vez para todos los videos",
+    "video_6 el-dorado": "765 cr (17 clips, sin repeticiones)"
   },
   "cierre_canal": {
     "que": "Clip fijo de 8,42 s que va al FINAL DE TODOS los videos: una mano de papel sostiene un celular de papel con el SITIO REAL desplazándose, y luego una placa tipográfica sobre el páramo de papel con el wordmark y la dirección. Decisión del usuario 2026-09-12.",
@@ -228,5 +229,28 @@
     "rehacerlo": "Si cambia el diseño del sitio: node scripts/videos/capturar-sitio.mjs y reensamblar (los clips sirven, la pantalla es un compuesto). Si cambia la locución: editar el guion, regenerar voces y reensamblar. Si cambian los clips: hay que volver a medir el cuadrilátero.",
     "runbook": "docs/videos/cierre-de-canal.md",
     "pegado_a": "Los TRES videos entregados lo llevan (2026-09-12): bachue (plan-v6.json, 102,46 s), el-tequendama (plan-v6.json, 107,4 s) y la-aparicion-del-hombre (plan-v6.json, 102,4 s). Cada uno con su lecho-v6.wav reconstruido a la duración total. Los másters -v5/-v1-seedance sin cierre quedan como historia."
+  },
+  "imagen_v5": {
+    "modelo": "gpt-image-2.5-sunburst en calidad high (decisión del usuario 2026-09-12), reemplaza a gpt-image-2 para keyframes nuevos",
+    "por_que": "Salto real en la misma familia de papel: el crátel deja de ser una pila de tiras planas y gana profundidad, la niebla se comporta como niebla y las fibras del papel se leen. Comparación directa de la misma laguna de Guatavita en docs/videos/pipeline-v4-mcp.md.",
+    "como_se_usa": "IMAGE_GENERATION_MODEL=gpt-image-2.5-sunburst IMAGE_GENERATION_QUALITY=high node scripts/videos/generate-keyframes.mjs --spec …",
+    "compatibilidad": "Acepta los mismos parámetros que gpt-image-2 (size, quality, moderation, output_format) y también images.edit con referencias e input_fidelity high, así que la biblia visual vieja sigue sirviendo de referencia y la continuidad de personajes se mantiene.",
+    "ojo": "Registro algo más dimensional que el de los tres videos ya entregados. Para un mito nuevo no se nota; si algún día se quiere homogeneizar el catálogo habría que regenerar los keyframes viejos.",
+    "hermano": "gpt-image-2.5-flare existe en la misma cuenta y no se ha probado."
+  },
+  "video_6": {
+    "slug": "el-dorado",
+    "titulo_video": "El Dorado",
+    "titulo_canon": "El Dorado (DB, slug `el-dorado`)",
+    "estado": "EN PRODUCCIÓN 2026-09-12",
+    "guion": "docs/videos/muiscas/mvp-guiones/guion-el-dorado-v1.json — 9 líneas de 17-19 palabras sobre el canon de la DB: la investidura en Guatavita contada como entrega, no como tesoro",
+    "keyframes": "17, con gpt-image-2.5-sunburst, spec scripts/videos/specs/muisca-eldorado-escenas.mjs; referencias de la biblia muisca que ya existía",
+    "plan": "content/videos/muiscas/videos/el-dorado/plan-v1.json — 19 bloques, 97,42 s, con placa de cola y cierre de canal",
+    "lecho": "08-lluvia-sobre-la-piedra → 15-canoa-en-el-rio → 13-manantial-que-brota: LOS MISMOS TRES de la narración de el-dorado en el sitio",
+    "costo_cr": 765,
+    "por_que_17_clips": "El saldo eran 797 cr. 17 × 45 = 765 deja 32: no alcanza para repetir ni un clip, así que todos los candados fueron desde el primer envío y los tres planos de riesgo se pilotaron primero.",
+    "piloto_de_moderacion": "c07 (resina sobre la espalda), c08 (soplo de polvo de oro) y c16 (el oro se desprende bajo el agua) se enviaron solos, 135 cr, para descubrir un bloqueo barato. Pasaron 3/3 sin rechazo y sin cortes internos. El candado que lo permite: guayuco blanco descrito en cada prompt, figura SIEMPRE de espaldas, y torso de frente y rostro prohibidos en la lista NOT.",
+    "oro_corporal": "El canon documenta el cuerpo cubierto de polvo de oro: es la excepción explícita al guardarraíl del sitio. En los prompts el oro va siempre como POLVO MATE, nunca metálico ni con destello, porque el brillo es lo que más rápido rompe el registro de papel.",
+    "concurrencia_real": "Con 7 clips en vuelo el siguiente envío ya dio 429. El tope efectivo está más cerca de 7-8 que de los ~10 documentados: conviene enviar de a 5 y reponer."
   }
 }
