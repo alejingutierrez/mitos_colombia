@@ -1,0 +1,38 @@
+{
+  "_notas": [
+    "CIERRE DE CANAL — los dos clips que van al final de TODOS los videos.",
+    "Doctrina de movimiento v2 (8 párrafos, @Image 1, toma continua) con UNA desviación deliberada:",
+    "la cámara va CLAVADA en las dos tomas. En el carril normal cada clip lleva un movimiento de",
+    "cámara motivado; aquí no, porque encima de la pantalla del teléfono se compone en post la",
+    "captura real del sitio con el filtro perspective de ffmpeg, y eso sólo calza si el",
+    "cuadrilátero de la pantalla no se mueve. El movimiento de cámara del cierre se añade después,",
+    "en el ensamblaje, donde se controla al píxel (ver plan-v1.json, campo kenburns).",
+    "Por eso el prompt repite el candado de quietud tres veces: en los beats, en el párrafo de",
+    "cámara y en la lista NOT. Con Seedance una sola mención no basta: es multi-shot y con cámara",
+    "inquieta por diseño.",
+    "v2 de c01: el pulgar va APOYADO EN EL MARCO INFERIOR y QUIETO. En la v1 cruzaba el vidrio y barria hacia arriba; el matte union que lo recortaba dejaba un hueco por donde asomaba el texto inventado del modelo, y el color no separa el pulgar del arte arenoso de la pagina para hacer el matte por fotograma. Con el pulgar quieto y fuera del vidrio, la captura real cubre la pantalla ENTERA y el matte de un solo fotograma basta para el trozo de pulgar que roza la esquina inferior."
+  ],
+  "modelo": {
+    "model": "seedance_2_5",
+    "mode": "omni_reference",
+    "resolution": "1080p",
+    "generate_audio": false,
+    "bitrate_mode": "high",
+    "duration": 5,
+    "aspect_ratio": "9:16",
+    "costo_cr_por_clip": 45,
+    "declined_preset_id": "declinar el id EXACTO que devuelva cada request"
+  },
+  "clips": {
+    "c01": {
+      "keyframe": "keyframes/cierre_a_mano_celular.crop-9x16.jpg",
+      "papel": "La mano de papel sostiene el telefono, quieta; lo que se mueve es la pagina del sitio, que sube sola. Es el unico plano con accion.",
+      "prompt": "Handcrafted paper-maquette stop-motion, animated on twos (~12 fps): deliberate stepped motion with tiny holds and slight rebounds, as if repositioned by hand between exposures. @Image 1 is the first frame: composition, palette, materials, lighting and the exact position of the phone and of the hand stay locked to it. Motion starts on frame 1, no opening freeze.\n[0-2s] The web page on the phone screen SLIDES UPWARD AS ONE RIGID FLAT SHEET, in four or five visible steps, so new rows of the same page arrive from the bottom edge of the glass while the pale header bar stays pinned at the top. The page never blurs, never reflows, never changes design.\n[2-4s] The page overshoots by a hair and rebounds once, then holds perfectly still, as if a finger had let go.\n[4-5s] Everything holds: only the thin band of paper mist behind the phone drifts one notch to the right, and a frailejon leaf ticks once.\nCamera: NO camera movement whatsoever - the camera is locked on a tripod for all five seconds: no push-in, no pull-back, no pan, no tilt, no roll, no handheld drift, no zoom, no parallax, no rack focus. The phone itself does not move, rotate, tilt or drift: the four corners of its screen stay in exactly the same pixels of the frame from the first to the last frame. The whole clip is ONE continuous take from a single camera setup.\nTHE PAPER HAND IS COMPLETELY STILL: the thumb stays resting on the phone's lower paper frame exactly where it is in @Image 1 and never slides, lifts, bends or travels; the four fingers behind the phone never move; not one finger ever comes over the glass. The screen stays flat, matte and evenly lit like a sheet of paper lit from within, always showing the SAME real web page as in @Image 1, always legible and always fully visible corner to corner.\nEvery surface remains visibly cut paper, cardboard and natural fiber with raised edges and real contact shadows; the hand, the phone body, the table and the hills keep exactly the shapes, colors and proportions of @Image 1. Motion is small, deliberate and continuous; forms stay stable.\nNOT smooth motion, NOT fluid interpolation, NOT slow-motion, NOT motion blur, NOT photorealism, no camera movement of any kind, no zoom, no dolly, no shake, no hand movement, no thumb movement, no finger over the screen, no morphing, no melting, no new user interface, no app icons, no notifications, no status bar, no buttons appearing, no text outside the screen, no second hand, no arm, no people, no faces, no lip-sync, no talking, no cuts, no close-up inserts, no second shot."
+    },
+    "c02": {
+      "keyframe": "keyframes/cierre_b_paisaje.crop-9x16.jpg",
+      "papel": "Placa de cierre: el teléfono reposa en la mesa y el páramo de papel respira. Sobre el cielo vacío aterriza la tipografía.",
+      "prompt": "Handcrafted paper-maquette stop-motion, animated on twos (~12 fps): deliberate stepped motion with tiny holds and slight rebounds, as if repositioned by hand between exposures. @Image 1 is the first frame: composition, palette, materials, lighting and the exact position of the phone stay locked to it. Motion starts on frame 1, no opening freeze.\n[0-2s] A low band of paper mist drifts slowly from left to right between the layered paper hills, passing behind the tiny thatched houses; the cut edges of each hill catch the light one step at a time.\n[2-4s] The paper frailejones in the middle ground tick once each, one after another, as if a breath of wind crossed the table; a few short stepped ripples cross the grey-blue lagoon and settle.\n[4-5s] The mist thins and everything settles into stillness; the phone lying on the table keeps its screen evenly lit, unchanged.\nCamera: NO camera movement whatsoever — the camera is locked on a tripod for all five seconds: no push-in, no pull-back, no pan, no tilt, no roll, no handheld drift, no zoom, no parallax, no rack focus. The phone does not move, rotate or drift: the four corners of its screen stay in exactly the same pixels of the frame from the first to the last frame. The whole clip is ONE continuous take from a single camera setup.\nThe upper 46% of the frame stays completely empty cream paper sky for the whole clip: nothing enters it, nothing grows into it, no cloud, no bird, no star, no mist. The screen keeps showing the SAME real web page as in @Image 1, flat and unchanged.\nEvery surface remains visibly cut paper, cardboard and natural fiber with raised edges and real contact shadows; the phone, the table, the hills, the lagoon and the houses keep exactly the shapes, colors and proportions of @Image 1. Motion is small, deliberate and continuous; forms stay stable.\nNOT smooth motion, NOT fluid interpolation, NOT slow-motion, NOT motion blur, NOT photorealism, no camera movement of any kind, no zoom, no dolly, no shake, no morphing, no melting, no new user interface, no app icons, no notifications, no text anywhere, no hands, no people, no animals, no cuts, no close-up inserts, no second shot."
+    }
+  }
+}

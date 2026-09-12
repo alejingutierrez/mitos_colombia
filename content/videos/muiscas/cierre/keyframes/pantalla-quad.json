@@ -1,0 +1,48 @@
+{
+  "nota": "Cuadrilateros de la PANTALLA del telefono en cada keyframe, en el espacio final 1080x1920, orden TL,TR,BR,BL. El ensamblador del cierre compone encima la captura real del sitio con el filtro perspective de ffmpeg. Valen mientras la camara del clip este clavada: por eso los prompts prohiben todo movimiento de camara.",
+  "ancho": 1080,
+  "alto": 1920,
+  "c01": {
+    "keyframe": "content/videos/muiscas/cierre/keyframes/cierre_a_mano_celular.crop-9x16.jpg",
+    "quad": {
+      "TL": [
+        322,
+        474
+      ],
+      "TR": [
+        748,
+        462
+      ],
+      "BR": [
+        754,
+        1380
+      ],
+      "BL": [
+        322,
+        1392
+      ]
+    },
+    "nota": "Medido sobre el keyframe v3 (pulgar apoyado en el marco inferior). Proporcion 426/918 = 0.464, practicamente la del iPhone real (0.461): buena senal de que la medida es consistente."
+  },
+  "c02": {
+    "keyframe": "content/videos/muiscas/cierre/keyframes/cierre_b_paisaje.crop-9x16.jpg",
+    "quad": {
+      "TL": [
+        410,
+        1351
+      ],
+      "TR": [
+        668,
+        1348
+      ],
+      "BR": [
+        673,
+        1747
+      ],
+      "BL": [
+        390,
+        1747
+      ]
+    }
+  }
+}
