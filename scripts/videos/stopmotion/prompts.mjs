@@ -195,3 +195,33 @@ export function promptPuenteRecorte(plano) {
     bloque("PERSONAJE (idéntico a las referencias):", plano.figura || []),
   ].join("\n");
 }
+
+/**
+ * PLANCHA DE FONDO: los estados de lo que se mueve EN EL DECORADO.
+ *
+ * El plató fijo mató la deriva (0,00) pero también la vida: los fogones dejaron
+ * de temblar y el humo de subir. En una maqueta de papel real el fuego SÍ se
+ * anima —se cambian las llamas recortadas fotograma a fotograma—, así que aquí
+ * se pide lo mismo: la misma imagen N veces, cambiando únicamente lo que arde,
+ * humea o se mece. Lo demás se congela después con la mediana, así que da igual
+ * que el modelo redibuje: sólo pasará lo que de verdad cambió.
+ */
+export function promptPlanchaFondo(plano, { filas, cols, celdas, mueve }) {
+  return [
+    `La imagen adjunta es el PLATÓ VACÍO de un plano de stop-motion y es la autoridad absoluta sobre encuadre, composición, distancia de cámara, luz, materiales y colores.`,
+    `Genera una hoja de exactamente ${filas} filas y ${cols} columnas: ${filas * cols} versiones del MISMO plano, en orden de izquierda a derecha y luego de arriba abajo.`,
+    "Las celdas son fotogramas consecutivos del decorado quieto: TODO está exactamente en el mismo sitio y al mismo tamaño en todas —los bohíos, las vasijas, la piedra, el suelo, el cielo y el encuadre son idénticos, píxel por píxel.",
+    `LO ÚNICO QUE CAMBIA entre celdas es: ${mueve}. Cambia sólo eso, y de forma continua de una celda a la siguiente, como fotogramas seguidos de la misma toma.`,
+    "En ninguna celda aparecen personas.",
+    "Rejilla regular a sangre, SIN canales, bordes, líneas divisorias, etiquetas ni números.",
+    "",
+    bloque("TÉCNICA (idéntica en todas las celdas):", plano.estilo),
+    "",
+    // El bloque de escena describe a la figura: pasarlo aquí hace que el modelo
+    // dibuje a la mujer en el plató vacío. La plancha de fondo sólo ve decorado.
+    bloque("DECORADO (idéntico en todas las celdas, y SIN PERSONAS):", plano.decorado || []),
+    "",
+    "ESTADOS:",
+    ...celdas.map((c, i) => `Celda ${i + 1}: ${c}`),
+  ].join("\n");
+}

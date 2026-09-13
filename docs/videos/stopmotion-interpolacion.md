@@ -205,3 +205,49 @@ node scripts/videos/stopmotion/puente.mjs      --plano $P --dir <recortes> --out
 node scripts/videos/stopmotion/componer.mjs    --plato plato.jpg --recortes <con-puentes> --out <frames>
 node scripts/videos/stopmotion/montar.mjs      --dir <frames> --out clip.mp4 --img-s 6
 ```
+
+## 11. La plancha de FONDO: que el decorado no quede muerto
+
+El plató fijo compra estabilidad (deriva 0,00) al precio de congelarlo todo: los fogones dejan
+de temblar y el humo de subir. En una maqueta de papel real el fuego SÍ se anima —se cambian
+las llamas recortadas fotograma a fotograma—, así que el decorado necesita su propia plancha.
+
+`fondo.mjs` hace tres cosas, y las tres hacen falta:
+
+1. **Una hoja de N estados del plató vacío**, cambiando ÚNICAMENTE lo que arde, humea o se mece
+   (2×2 = 4 estados a 1080×1920 nativos, $0,117).
+2. **Registro** contra la primera celda (`alinear.mjs`): el modelo redibuja y desplaza el set.
+   Aquí el alineador SÍ funciona —todo el cuadro es decorado y la función de coste tiene señal
+   de sobra—, al revés que con la hoja de figura, donde el gesto le arrastraba el registro.
+3. **Mediana + zona de acción** (`estabilizar.mjs --vida 0`): el decorado queda congelado píxel
+   a píxel y sólo pasa lo que de verdad cambió. Medido aquí: **zona viva 11,2% del cuadro** —las
+   dos lumbres, su resplandor sobre el suelo y los hilos de humo— y **deriva 0,01**.
+
+`componer.mjs --plato <carpeta>` recorre esos estados en VAIVÉN (0,1,2,3,2,1…) para que el bucle
+no dé un salto al volver al primero.
+
+**Dos trampas que costaron dinero:**
+
+- **El bloque de escena describe a la FIGURA.** Pasárselo a la plancha de fondo hizo que el
+  modelo dibujara a la mujer —y en estilo 3D, porque tampoco le pasé el bloque de técnica—.
+  El plano ahora tiene un campo `decorado` aparte: set sin personaje, y con "no hay ninguna
+  persona en el cuadro" dicho explícitamente.
+- **Dos planchas de fondo NO registran entre sí.** Al añadir una segunda tanda de 4 estados, la
+  zona viva saltó de 8,6% a 27,3%: la diferencia entre hojas se cuela como movimiento. Si hacen
+  falta más estados, tienen que salir de UNA sola llamada (3×3, a costa de resolución) o por
+  parches de región. Con 4 estados en vaivén el ciclo es de 1 s a 6 img/s.
+
+**Receta completa y coste por plano de 5 s:**
+
+| Paso | Llamadas | Coste |
+|---|---|---|
+| Maestra del plano (look lock) | 1 | $0,056 |
+| Plancha de planificación (36 poses en miniatura) | 1 | $0,106 |
+| 9 hojas 2×2 de figura recortada | 9 | $1,11 |
+| Puentes en las costuras | 3 | $0,20 |
+| Plató vacío | 1 | $0,053 |
+| Plancha de fondo (4 estados) | 1 | $0,117 |
+| **Total** | **16** | **$1,64** |
+
+≈**$30 el video de 18 planos**. Resultado del plano de prueba: irregularidad **1,35×**, deriva
+de plató **0,01**, celdas nativas de 1080×1920 para figura y decorado.

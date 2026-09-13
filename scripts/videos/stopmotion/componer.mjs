@@ -29,7 +29,21 @@ const x0 = Number(flag("--x", 0.42));
 const x1 = Number(flag("--x-fin", flag("--x", 0.42)));
 const sombra = Number(flag("--sombra", 0.35));
 
-const { width: W, height: H } = await sharp(platoPath).metadata();
+// El plató puede ser UNA imagen (decorado muerto) o una CARPETA de estados
+// (la plancha de fondo: el fuego late, el humo sube y el resto sigue congelado
+// píxel a píxel). Los estados se recorren en vaivén —0,1,2,3,2,1…— para que el
+// bucle no dé un salto al volver al primero.
+const esCarpeta = (await fs.stat(platoPath)).isDirectory();
+const platos = esCarpeta
+  ? (await fs.readdir(platoPath)).filter((f) => /^f\d{4}\.jpg$/.test(f)).sort().map((f) => path.join(platoPath, f))
+  : [platoPath];
+const vaiven = (k) => {
+  if (platos.length === 1) return platos[0];
+  const ciclo = platos.length * 2 - 2;
+  const i = k % ciclo;
+  return platos[i < platos.length ? i : ciclo - i];
+};
+const { width: W, height: H } = await sharp(platos[0]).metadata();
 const files = (await fs.readdir(recortes)).filter((f) => /^f\d{4}\.png$/.test(f)).sort();
 await fs.mkdir(out, { recursive: true });
 const suave = (t) => t * t * (3 - 2 * t); // arranque y frenada, no rampa lineal
@@ -108,7 +122,7 @@ for (const [k, file] of files.entries()) {
   }
   capas.push({ input: figura, left: Math.max(0, left), top: Math.max(0, top) });
 
-  await sharp(platoPath).composite(capas).jpeg({ quality: 95 }).toFile(path.join(out, file.replace(".png", ".jpg")));
+  await sharp(vaiven(k)).composite(capas).jpeg({ quality: 95 }).toFile(path.join(out, file.replace(".png", ".jpg")));
   process.stdout.write(`\r  compuestos ${k + 1}/${files.length}`);
 }
 console.log(`\n${files.length} fotogramas sobre plató fijo → ${path.relative(process.cwd(), out)}`);
