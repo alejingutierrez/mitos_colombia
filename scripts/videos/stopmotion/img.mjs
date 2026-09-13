@@ -55,6 +55,7 @@ export async function genImage({
   moderation = "low",
   background = null,
   formato = "jpeg",
+  mask = null, // PNG RGBA del tamaño de la imagen: alfa 0 = zona editable, el resto se conserva píxel a píxel
   tag = "",
   client,
 }) {
@@ -69,6 +70,7 @@ export async function genImage({
     const call = openai.images.edit({
       model, image: images, prompt, n: 1, size, quality, output_format: formato,
       ...(background ? { background } : {}),
+      ...(mask ? { mask: await toFile(await fs.readFile(mask), "mask.png", { type: "image/png" }) } : {}),
     });
     ({ data: res, response: headers } = await call.withResponse().catch(async (e) => {
       // input_fidelity no existe en 2.5: reintentar sin él antes de rendirse.
@@ -95,6 +97,7 @@ export async function genImage({
     out: outPath ? path.relative(rootDir, outPath) : null,
     model, size, quality,
     refs: refs.map((r) => path.basename(r)),
+    mask: mask ? path.basename(mask) : null,
     ms,
     usage: res.usage,
     usd: Number(usd.toFixed(4)),

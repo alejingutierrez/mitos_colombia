@@ -32,6 +32,10 @@ const engorde = Number(flag("--engorde", 24)); // desenfoque+ganancia que engord
 // papel. `--vida` deja pasar una fracción del fotograma original en TODO el
 // cuadro: la lumbre respira, el decorado no hierve.
 const vida = Number(flag("--vida", 0.12));
+// Zona viva DIBUJADA A MANO (rectángulos x0,y0,x1,y1 en fracciones, separados
+// por ;): para un fuego cuyo sitio se conoce, es más fiable que deducir la zona
+// de la diferencia entre celdas, que se traga a la gente que "no debía moverse".
+const zonaManual = flag("--zona-manual") ? String(flag("--zona-manual")).split(";").map((r) => r.split(",").map(Number)) : null;
 
 const files = (await fs.readdir(dir)).filter((f) => /^f\d{4}\.jpg$/.test(f)).sort();
 await fs.mkdir(out, { recursive: true });
@@ -65,10 +69,14 @@ for (let k = 0; k < n; k++) {
     if (d > dev[i]) dev[i] = d;
   }
 }
-const zona0 = Buffer.allocUnsafe(W * H);
-for (let i = 0; i < W * H; i++) {
-  const d = dev[i];
-  zona0[i] = d <= umbral ? 0 : d >= arriba ? 255 : Math.round(((d - umbral) / (arriba - umbral)) * 255);
+const zona0 = Buffer.alloc(W * H, 0);
+if (zonaManual) {
+  for (const [x0, y0, x1, y1] of zonaManual) for (let y = Math.round(y0 * H); y < Math.round(y1 * H); y++) zona0.fill(255, y * W + Math.round(x0 * W), y * W + Math.round(x1 * W));
+} else {
+  for (let i = 0; i < W * H; i++) {
+    const d = dev[i];
+    zona0[i] = d <= umbral ? 0 : d >= arriba ? 255 : Math.round(((d - umbral) / (arriba - umbral)) * 255);
+  }
 }
 // Engordar: desenfocar y subir ganancia deja un borde suave pero generoso, que
 // se traga los flecos del pelo y de la manta sin dejar costura visible.

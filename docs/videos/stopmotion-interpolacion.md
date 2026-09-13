@@ -287,3 +287,60 @@ de un sitio a otro y no vuelven.
 - **`setsar=1`**: sin él, el camino de Ken Burns deja píxeles 136:135 y el concat del
   ensamblador se niega a juntar los clips.
 
+## 13. Experimentos del rediseño v2 sin Higgsfield: E0, E2 y E4 (2026-09-12, noche)
+
+Ejecutados los tres experimentos que no dependen de créditos de video. Coste: **$1.62** de OpenAI
+(0 créditos). E1, E3 y E5 (Kling A→B) quedan para cuando haya saldo. Material en
+`content/videos/muiscas/videos/huitaca/v2/` (mundo, planos, planos-out, contacto-E0*.jpg, reel/).
+
+**E0 — Mundo + anclas + compuerta.** La hoja de lookdev (4 decorados en una llamada, $0,117) y las
+tres fichas de producción (3 vistas sobre gris, $0,10 cada una) pasaron G0 a la primera: maqueta
+sin bokeh, noche cerrada, luna de papel a la derecha en los cuatro decorados, cerros secos, ni una
+gota de agua; la lechuza de cara redonda con una vasija de escala; Huitaca con su olla gris en las
+tres vistas. Las anclas A/B de P13, P02, P14 y P15 costaron $0,52 la primera tanda, y el panel de
+17 verificadores (dos por imagen + un juez de par) encontró lo que las métricas insinuaban:
+
+- **P13 B salió lechuza de campanario** (cara blanca en corazón): mi script recortaba la ficha de la
+  lechuza de las referencias de B. Corregido (B ve hasta 3 referencias además de A): la B nueva es
+  el búho moteado de la ficha, sobre la manta, con la olla en el aire.
+- **P14 cambiaba de encuadre entre A y B** (olla enorme en el aire, pequeña y lejos en el suelo).
+  Reescrito el spec con tamaño explícito ("la olla mide un tercio del alto del cuadro") y B como
+  "misma cámara, mismo tamaño, justo debajo": resuelto.
+- **«B como edición de A» no clava el plató**: en los tres pares el modelo movió bohíos y añadió
+  cercas (MAD de fondo 2,6-3,1). Probé la **máscara de edición de la API** y **no es un cerrojo de
+  píxeles**: fuera de la máscara A y B difieren igual con ella (6,21) que sin ella (6,98). Es una
+  pista. La fidelidad se garantiza en post: `clavar-b.mjs` compone B dentro del rectángulo editable
+  y A fuera, con borde difuminado de 48 px → MAD de fondo **0,80 / 0,88 / 0,99**. Trampa de sharp
+  que costó una ronda: desenfocar un raw de 1 canal devuelve 3 canales, y leer la máscara sin
+  desentrelazar produjo un "fantasma" de la mujer en P13 (la B libre era limpia).
+- Pendiente para E1: el orden correcto es **plató vacío primero** y A y B como ediciones del plató,
+  para que el fondo inventado detrás de la figura no nazca distinto en A y en B.
+
+**E2 — Inserto dibujado con carta (P14, la olla cae).** Plató = A sin la olla ($0,052); UNA hoja
+3×3 de recortes sobre alfa con A y B como referencias, celda 1 = A, celda 9 = B ($0,129). Los
+dibujos son buenos (chicha, salpicadura, pluma), pero **G5 falló tal cual**: variación de tamaño
+28,5 % (el splash ensancha la máscara) y, sobre todo, el modelo dibujó la caída como una diagonal
+global de la hoja y **la posición se reinicia en cada fila** (centroide y: 790 → 936 → 1078 →
+1013…); además hornea un **halo cálido en el alfa** que se pega como una mancha. Arreglo en post,
+como el plan preveía: alfa endurecido (halo fuera) y el núcleo del objeto (alfa > 200) llevado por
+una **trayectoria escrita** (x lineal, y con aceleración, de la celda 1 a la 9). Con la carta
+`[f0 12] [f1..f6 ×2] [f7 1] [f8 36]` el inserto de 2,54 s **lee "cae y se queda"**. Segunda trampa
+de sharp: `extract` se aplica antes que `extend` dentro de la misma tubería; en dos pasos.
+
+**Fuego de P15.** `fondo.mjs` con mediana falló aquí (zona 32,5 %, deriva 5,4: el modelo movió a la
+gente pese al "quietas"). Con la **zona viva dibujada a mano** (`estabilizar.mjs --zona-manual`,
+dos rectángulos sobre los fogones): zona 16,1 %, **deriva 0,00**, irregularidad 1,06×.
+
+**E4 — La ley de tiempo, viendo.** Reel de 8,94 s: P13 B quieto con cámara escalonada (2,50) →
+inserto P14 (2,54) → P15 quieto con fuego vivo (3,90), con la voz 7 real partida en sus tres pausas
+medidas (`silencedetect`: 2,50 / 4,46 / 6,19 s) — «quedó» sobre la lechuza, «cayó» sobre el impacto
+(el arranque de voz07b se retrasó 0,5 s para que caiga en el fotograma 24 del inserto), «se detuvo»
+con el lecho bajando 8 dB — en tres versiones: **a dos** (12 dibujos/s, pares de fotogramas
+idénticos: cambio par→impar 0,02, impar→par 3,48), **a tres** (8/s) y **continuo** (24 fps por
+`minterpolate` + grano). Y el mejor clip de v1 (c03) en las tres cadencias, como referencia.
+**La cadencia la elige el usuario viendo los tres reels; hasta entonces no se fija.**
+
+**Nuevas herramientas v2** (`scripts/videos/stopmotion/v2/`): `comun.mjs` (bloque común obligatorio
+con `assertComun`), `lookdev.mjs`, `anclas-ab.mjs` (con máscara), `clavar-b.mjs`, `contacto.mjs`,
+`inserto.mjs`, `quieto.mjs`, `posterizar.mjs`; y `estabilizar.mjs --zona-manual`, `img.mjs --mask`.
+

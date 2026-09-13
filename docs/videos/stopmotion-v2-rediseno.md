@@ -1,6 +1,6 @@
 # Carril de stop-motion v2 — rediseño tras Huitaca v1
 
-**Fecha:** 2026-09-12 · **Estado:** propuesta técnica para aprobación del usuario; nada de lo que sigue se ha producido todavía · **Sustituye a:** `docs/videos/stopmotion-interpolacion.md` §12 como receta de producción (los §1-11 siguen valiendo como medición).
+**Fecha:** 2026-09-12 · **Estado:** E0, E2 y E4 ejecutados la misma noche (resultados en `stopmotion-interpolacion.md` §13); E1, E3 y E5 esperan créditos de Higgsfield · **Sustituye a:** `docs/videos/stopmotion-interpolacion.md` §12 como receta de producción (los §1-11 siguen valiendo como medición).
 
 **Verificado hoy antes de escribir esto (no leído de un doc):**
 
