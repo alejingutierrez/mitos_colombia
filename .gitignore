@@ -48,3 +48,12 @@ public/motifs/carousel/v1/
 
 # Payloads regenerables de las tandas de Higgsfield (se reemiten con mitos:tanda)
 scripts/tmp/
+
+# Listas temporales del montador de stop-motion (las regenera montar.mjs)
+content/videos/**/.concat-*.txt
+
+# Salidas derivadas del laboratorio de stop-motion: los fotogramas estabilizados
+# se rehacen gratis desde los generados (`estabilizar.mjs`), así que se versiona
+# el plató y la zona de acción —que explican el resultado— pero no las 33 copias.
+content/videos/muiscas/lab-stopmotion/*/*-estab/f*.jpg
+content/videos/muiscas/lab-stopmotion/*/tmp-est/
