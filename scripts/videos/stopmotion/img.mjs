@@ -131,6 +131,7 @@ if (esCLI) {
     model: flag("--model", "gpt-image-2.5-sunburst"),
     size: flag("--size", "1088x1920"),
     quality: flag("--quality", "high"),
+    ...(args.includes("--recorte") ? { background: "transparent", formato: "png" } : {}),
     tag: flag("--tag", "cli"),
   });
   console.log(JSON.stringify({ ...r.fila, limites: limites(r.headers) }, null, 1));

@@ -22,6 +22,7 @@ const args = process.argv.slice(2);
 const flag = (n, d = null) => (args.indexOf(n) === -1 ? d : args[args.indexOf(n) + 1]);
 const plano = JSON.parse(await fs.readFile(path.resolve(rootDir, flag("--plano")), "utf8"));
 const master = path.resolve(rootDir, flag("--master"));
+const plan = flag("--plan") ? path.resolve(rootDir, flag("--plan")) : null;
 const dir = path.resolve(rootDir, flag("--out"));
 const size = flag("--size", "2160x3840"); // el máximo que admite la API: 8,29 Mpx
 const [W, H] = size.split("x").map(Number);
@@ -40,8 +41,9 @@ const r = await genImage({
     filas, cols, celdas,
     antes: desde > 0 ? plano.poses.hoja[desde - 1] : "",
     despues: plano.poses.hoja[(hasta ?? 0)] || "",
+    conPlan: Boolean(plan),
   }),
-  refs: [master],
+  refs: plan ? [master, plan] : [master],
   outPath: hojaPath,
   quality: flag("--quality", "high"),
   size,

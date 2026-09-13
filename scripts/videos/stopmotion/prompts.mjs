@@ -128,9 +128,12 @@ export function promptHoja(plano, { filas, cols, celdas }) {
  * se mueve jamás. De paso resuelve el otro límite: si la figura va suelta, el
  * desplazamiento por el cuadro lo decidimos nosotros, no el modelo.
  */
-export function promptHojaRecorte(plano, { filas, cols, celdas, antes = "", despues = "" }) {
+export function promptHojaRecorte(plano, { filas, cols, celdas, antes = "", despues = "", conPlan = false }) {
   return [
     `Usando la imagen adjunta como REFERENCIA MAESTRA y autoridad sobre identidad, materiales, colores, proporciones y luz del personaje, genera UNA hoja de poses de exactamente ${filas} filas y ${cols} columnas.`,
+    conPlan
+      ? `La SEGUNDA imagen adjunta es la TIRA DE PLANIFICACIÓN de este mismo tramo: son estas ${celdas.length} poses, ya repartidas y en este mismo orden. Copia de ella el REPARTO EXACTO del gesto —el ángulo del brazo y la altura de la mano de cada celda, una por una— y de la primera imagen la identidad, los materiales y la luz. Si el plan y el texto no coinciden, manda el plan.`
+      : "",
     "IMPORTANTE: en todas las celdas aparece ÚNICAMENTE LA FIGURA RECORTADA SOBRE FONDO COMPLETAMENTE TRANSPARENTE. Sin decorado, sin suelo, sin piedra, sin cielo, sin sombra proyectada, sin viñeta: sólo el personaje y transparencia alrededor.",
     `Cada celda, todas del mismo tamaño, es una pose consecutiva del plan numerado de abajo, de izquierda a derecha y luego de arriba abajo.`,
     "Trata las celdas como muestras consecutivas de UNA SOLA acción continua de stop-motion: el movimiento sigue de una fila a la siguiente sin cortarse.",
@@ -151,4 +154,44 @@ export function promptHojaRecorte(plano, { filas, cols, celdas, antes = "", desp
     "PLAN DE POSES NUMERADO PARA ESTA HOJA:",
     ...celdas.map((c, i) => `Celda ${i + 1} (fotograma ${i + 1}): ${c}`),
   ].filter(Boolean).join("\n");
+}
+
+/**
+ * PLANCHA DE PLANIFICACIÓN: toda la acción del plano en una sola imagen, en
+ * miniaturas. No es material de montaje, es el REPARTO del gesto.
+ *
+ * Idea del usuario, y coincide con lo medido: cuando el modelo ve la acción
+ * entera de un golpe la reparte bien (irregularidad 1,29x en una hoja suelta),
+ * y cuando la ve a trozos cada trozo interpreta la escala a su manera y en la
+ * costura el brazo retrocede. La plancha se hace una vez, barata y pequeña, y
+ * luego cada hoja de producción copia de ella el ángulo de cada celda.
+ *
+ * Se pide en FILAS COMPLETAS por hoja de producción: así una tira recortada de
+ * la plancha son exactamente las 9 poses de esa hoja, en su orden, y no hay que
+ * fiarse de que el modelo cuente celdas en una rejilla.
+ */
+export function promptPlancha(plano, { filas, cols, celdas }) {
+  return [
+    `Usando la imagen adjunta como referencia de identidad, materiales y proporciones del personaje, genera una PLANCHA DE PLANIFICACIÓN de animación: una rejilla de exactamente ${filas} filas y ${cols} columnas.`,
+    `Cada celda es una pose consecutiva de UNA SOLA acción continua, en orden de izquierda a derecha y luego de arriba abajo: ${filas * cols} poses en total. El movimiento sigue de una fila a la siguiente sin cortarse ni retroceder.`,
+    "En cada celda aparece SÓLO la figura, de cuerpo entero y pequeña, sobre un fondo mate liso gris medio, idéntico en todas las celdas. Sin decorado, sin suelo, sin sombra proyectada.",
+    "La figura está en el mismo sitio, al mismo tamaño y a la misma distancia en todas las celdas, con aire por encima de la cabeza y por debajo de los pies. Lo único que cambia entre celdas es la pose.",
+    "Rejilla regular a sangre, SIN canales, bordes, líneas divisorias, etiquetas ni números.",
+    "",
+    bloque("PERSONAJE (idéntico en todas las celdas):", plano.figura || []),
+    "",
+    "PLAN DE POSES NUMERADO:",
+    ...celdas.map((c, i) => `Celda ${i + 1}: ${c}`),
+  ].join("\n");
+}
+
+/** Puente entre dos recortes vecinos: el intermedio, también sobre alfa. */
+export function promptPuenteRecorte(plano) {
+  return [
+    "Las dos imágenes adjuntas son dos poses CONSECUTIVAS del mismo personaje en una animación de stop-motion, recortadas sobre fondo transparente.",
+    "Genera la pose EXACTAMENTE INTERMEDIA entre las dos: cada extremidad, la manta y el pelo a mitad de camino entre la primera y la segunda. No es una mezcla ni un fundido de las dos imágenes: es la fotografía del muñeco en el instante intermedio.",
+    "Fondo COMPLETAMENTE TRANSPARENTE, sin decorado, sin suelo y sin sombra proyectada. La figura queda al mismo tamaño y en el mismo sitio del encuadre que en las dos referencias, con el mismo margen por encima de la cabeza y por debajo de los pies.",
+    "",
+    bloque("PERSONAJE (idéntico a las referencias):", plano.figura || []),
+  ].join("\n");
 }

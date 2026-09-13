@@ -160,3 +160,48 @@ la luz del recorte encaje con la del plató cuando el plano tenga fuego cerca de
 
 Guion, prompts y fotogramas: `content/videos/muiscas/lab-stopmotion/`.
 El libro mayor de gasto real por imagen: `content/videos/muiscas/lab-stopmotion/ledger.jsonl`.
+
+## 10. Las dos etapas: plancha de planificación → hojas de producción (idea del usuario)
+
+La hipótesis: el modelo entiende mejor una acción cuando la ve ENTERA en una imagen, así que
+primero se le pide una **plancha de planificación** —las 36 poses en miniatura, figura sola
+sobre gris, 9 columnas × 4 filas, $0,106— y después cada hoja de producción copia de ella el
+reparto del gesto. Confirmada y medida:
+
+| Ruta (36 fotogramas, 5 s) | Coste | Irregularidad | Deriva | Resolución de celda |
+|---|---|---|---|---|
+| 4 hojas 3×3, sin plan | $0,53 | 2,81× | 0,00 | 720×1280 subida a 1080 |
+| 4 hojas 3×3, guiadas por la plancha | $0,64 | 2,62× | 0,00 | 720×1280 subida |
+| + 3 puentes en las costuras | $0,84 | 2,19× | 0,00 | 720×1280 subida |
+| **9 hojas 2×2 guiadas + 3 puentes** | **$1,47** | **1,68×** | **0,00** | **1080×1920 NATIVA** |
+| 36 fotogramas individuales | ~$2,5 | — | 0,00 | 1088×1920, figura más grande |
+
+Tres cosas que salieron de aquí:
+
+1. **La plancha arregla el reparto dentro de cada hoja.** Con ella, todos los pasos internos
+   quedan por debajo de 3,0 y los ÚNICOS saltos que sobreviven son las costuras entre hojas.
+   La tira que ve cada hoja se recorta de la plancha (`tira.mjs`): así no hay que fiarse de que
+   el modelo cuente celdas en una rejilla ajena.
+2. **La costura se repara, no se rehace.** `qc.mjs` dice dónde salta, `puente.mjs` genera el
+   fotograma intermedio entre esos dos vecinos por $0,065 y renumera. Tres puentes bajaron la
+   irregularidad de 2,62× a 2,19×.
+3. **El tamaño de la rejilla es una decisión de CALIDAD, no de coste.** La API da 8,29 Mpx por
+   llamada, se repartan como se repartan: una hoja de 2×2 son cuatro celdas de 1080×1920
+   NATIVAS —exactamente la resolución de entrega— por $0,031 la pose. La de 3×3 sale a $0,013
+   pero cada celda es 720×1280 y hay que subirla: la piel se alisa y el pelo de papel pierde
+   los cortes. A tamaño real la diferencia canta (`detalle-3x3-vs-2x2-vs-individual.jpg`).
+   El fotograma individual sólo gana porque encuadra a la figura más grande.
+
+**Receta vigente del carril, por plano de 5 s (~$1,5; ≈$26 el video de 18 planos):**
+
+```bash
+node scripts/videos/stopmotion/anclas.mjs      --plano $P --dir $D --solo a      # maestra
+node scripts/videos/stopmotion/plancha.mjs     --plano $P --master $D/A.jpg --out $D/plancha
+node scripts/videos/stopmotion/tira.mjs        --plancha $D/plancha/plancha.png --desde N --hasta N+4 --out tN.png
+node scripts/videos/stopmotion/hoja-poses.mjs  --plano $P --master A.jpg --plan tN.png --recorte --filas 2 --cols 2 --desde N --hasta N+4
+node scripts/videos/stopmotion/img.mjs         --ref A.jpg --prompt "…mismo plano sin la figura…"   # plató
+node scripts/videos/stopmotion/qc.mjs          --dir <compuesto>                                    # dónde salta
+node scripts/videos/stopmotion/puente.mjs      --plano $P --dir <recortes> --out <con-puentes> --entre 19,23,31
+node scripts/videos/stopmotion/componer.mjs    --plato plato.jpg --recortes <con-puentes> --out <frames>
+node scripts/videos/stopmotion/montar.mjs      --dir <frames> --out clip.mp4 --img-s 6
+```
