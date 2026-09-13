@@ -389,3 +389,42 @@ hojas (32 dibujos, 4 s de acción a 8/s) ≈ $2,4. Un video de 18 planos ≈ **$
 Textura de tiempo elegida para la prueba: a tres (8 dibujos/s, 3 fotogramas por dibujo); la
 decisión final sigue siendo del usuario sobre los reels de E4.
 
+## 15. v3.2: más fotogramas y el proceso que los aguanta (2026-09-13, madrugada)
+
+Objetivo del usuario: más fotogramas y seguir mejorando el proceso. Resultado:
+`planos-out/P13/flipbook-36b/P13-flipbook.mp4` — **36 poses en una sola hoja 6×6, 12 dibujos/s a
+dos, 5 s, $2,7, 0 créditos**, y por fin coherente de la primera a la última imagen. Gasto v3 total
+$8.23; ledger del proyecto $25.53.
+
+Cinco cambios de proceso, cada uno con la medida que lo motivó:
+
+1. **Rejilla 6×6 en una sola hoja.** 36 poses comparten un solo sistema de coordenadas; la
+   resolución la devuelve el redibujado. Centroide continuo entre filas (salto máximo 0,04-0,13).
+2. **Puerta de hoja antes de gastar en redibujos**: masa por celda, salto de centroide, líneas
+   dibujadas y **altura del componente que apoya** en la última celda frente a la primera (la
+   lechuza al tercio). La primera hoja 6×6 fue rechazada por dos verificadores (12 celdas
+   idénticas al inicio, transformación apretada, olla saltando, cara pálida en 19-21); la segunda,
+   con el reparto que pidieron, mide 0,43 y la metamorfosis ocupa 18 celdas en vez de 12. El
+   modelo **adelanta el final aunque se le reparta**: en ambas hojas el último tercio es reposo.
+3. **La hoja manda en la geometría, el redibujo pone el detalle.** Con celdas de 360×640 el
+   redibujado llena el cuadro (la lechuza salía tan alta como la mujer, 33 de 36 fuera de escala).
+   Cada redibujo se reescala y se coloca en la caja de su celda, comparando a ambos lados **el
+   componente conexo que apoya** (≥ 3 % del cuadro, el más bajo) — no la caja de todo lo que cambia,
+   que la olla flotante inflaba, ni el componente mayor, que a veces era la olla. Luego la hoja
+   entera se lleva a las coordenadas de A con un recorte extra de A sobre alfa (anclaje 1,07,
+   −97 px, −188 px).
+4. **Identidad por tramo.** Con la maestra (la mujer) como identidad de una celda que ya es la
+   lechuza, el redibujo **volvía a dibujar a la mujer** (fotogramas 20-22, 28, 31, 35 de la v1). La
+   referencia de identidad es la que corresponde al contenido de la celda: A hasta la 18, B de la
+   19 a la 36, y el prompt dice "lo que no está en la celda no se dibuja".
+5. **QC en tres escalas con la silueta exacta**: como todo va sobre el mismo plató, |fotograma −
+   plató| es la silueta; de ahí altura y base por fotograma, distancia a la pose final y salto entre
+   vecinos. v2-36: **distancia a la pose final monótona con cero retrocesos** (33 → 0), base 0,97-0,98
+   en los 36, salto medio 11,4. Queda ruido en "altura" cuando la olla flota (la métrica une todo lo
+   que cambia): pendiente medir sujeto y atrezo por separado.
+
+Lo que sigue pendiente: la olla salta de sitio en el paso 18→19 y la lechuza cambia un poco de
+tamaño en 19-36 (ancla por objeto, no sólo por componente que apoya); y para tener más fotogramas
+de la metamorfosis misma, **dos hojas encadenadas** (A → estado medio, estado medio → B), cada una
+con su puerta, porque una sola hoja siempre regala un tercio al reposo.
+
