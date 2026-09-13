@@ -251,3 +251,39 @@ no dé un salto al volver al primero.
 
 ≈**$30 el video de 18 planos**. Resultado del plano de prueba: irregularidad **1,35×**, deriva
 de plató **0,01**, celdas nativas de 1080×1920 para figura y decorado.
+
+## 12. Primer video entero por este carril: «Huitaca» (2026-09-12)
+
+98,4 s, 18 planos + cierre de canal, **0 créditos de Higgsfield y $4,37 de OpenAI** (54 llamadas).
+Máster: `content/videos/muiscas/videos/huitaca/huitaca-final-v1.mp4`.
+
+**Un guion no son 18 primeros planos de un personaje**, así que el carril necesitó tres vías, y
+el orquestador (`plano.mjs`) elige por el campo `track` de cada plano:
+
+| Vía | Cuándo | Cómo | Coste |
+|---|---|---|---|
+| `figura` | hay un sujeto que se puede aislar | recorte sobre alfa + plató fijo; el desplazamiento lo pone el montaje | $0,21-1,64 |
+| `cuadro` | no hay sujeto que aislar (objetos, manos, multitudes) | hojas del fotograma entero + registro + mediana con zona de acción | $0,16-0,53 |
+| `quieto` | el plano no tiene movimiento propio | una sola imagen y un Ken Burns en el montaje | $0,04 |
+
+**El hallazgo que abarató todo: el movimiento CÍCLICO no necesita 36 poses.** Unas manos en un
+tambor, una rueda de danza, un aleteo o una marcha son ciclos: una sola hoja de 2×2 (4 estados)
+recorrida en VAIVÉN llena los 5 s, sale a **$0,16-0,22 el plano** y además no tiene costuras,
+porque no hay más de una hoja. Los 36 fotogramas distintos se reservan para los gestos que van
+de un sitio a otro y no vuelven.
+
+**Lo que no funcionó, medido plano a plano (`qc.mjs`):**
+
+- **Escena llena + varias hojas = el decorado salta.** Los planos de multitud y los de 4 hojas
+  (b5a, b6a, b6b, b7a) se quedan en deriva 2,7-5,5 aunque se suba el umbral y se afine el
+  registro: en una escena abarrotada el modelo redibuja todo, y ninguna transformación global
+  cuadra dos dibujos distintos. Se mitiga bajando la cadencia a 3 img/s (la mitad de saltos),
+  no se arregla. **Los planos de multitud siguen siendo el punto débil del carril.**
+- **La identidad se pierde entre planos si no se ata.** Los primeros planos salieron con otra
+  Huitaca: hay que pasar SIEMPRE la ficha de la biblia y el fotograma maestro del personaje
+  como referencias de cada maestra nueva.
+- **El deslinde del mito hay que meterlo en los invariantes.** Sin decirlo, la plaza apareció
+  con una laguna al fondo — en un mito cuyo deslinde es «ni una gota de agua».
+- **`setsar=1`**: sin él, el camino de Ken Burns deja píxeles 136:135 y el concat del
+  ensamblador se niega a juntar los clips.
+

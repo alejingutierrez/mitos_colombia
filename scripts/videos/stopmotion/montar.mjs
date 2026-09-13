@@ -12,11 +12,26 @@ import { spawnSync } from "node:child_process";
 
 const args = process.argv.slice(2);
 const flag = (n, d = null) => (args.indexOf(n) === -1 ? d : args[args.indexOf(n) + 1]);
-const dir = path.resolve(flag("--dir"));
+const dir = flag("--dir") ? path.resolve(flag("--dir")) : null;
 const out = path.resolve(flag("--out"));
 const fps = Number(flag("--fps", 24));
 const dur = Number(flag("--dur", 5));
 const imgS = Number(flag("--img-s", 8));
+
+// Un plano QUIETO no tiene fotogramas: es una sola imagen y el movimiento lo
+// pone la cámara. Sale por otra puerta, con zoompan, y cuesta 0 de generación.
+const imagen = flag("--imagen");
+if (imagen) {
+  const kb = flag("--kenburns", "in");
+  const total = Math.round(dur * fps);
+  const z = kb === "out" ? `1.12-0.12*on/${total}` : `1+0.12*on/${total}`;
+  const r0 = spawnSync("ffmpeg", ["-y", "-loop", "1", "-i", path.resolve(imagen), "-t", String(dur),
+    "-vf", `scale=3240:5760:flags=lanczos,zoompan=z='${z}':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d=1:s=1080x1920:fps=${fps},setsar=1,fps=${fps}`,
+    "-c:v", "libx264", "-preset", "slow", "-crf", "18", "-pix_fmt", "yuv420p", out], { encoding: "utf8" });
+  if (r0.status !== 0) throw new Error(r0.stderr.slice(-1500));
+  console.log(`imagen fija · ken burns ${kb} · ${dur}s → ${path.relative(process.cwd(), out)}`);
+  process.exit(0);
+}
 
 const todos = (await fs.readdir(dir)).filter((f) => /^f\d{4}\.jpg$/.test(f)).sort();
 if (!todos.length) throw new Error(`sin fotogramas f####.jpg en ${dir}`);
@@ -25,8 +40,17 @@ if (!todos.length) throw new Error(`sin fotogramas f####.jpg en ${dir}`);
 const hold = Math.max(1, Math.round(fps / imgS));
 const nQuiero = Math.round((dur * fps) / hold);
 // Repartir las imágenes disponibles a lo largo del clip sin saltos desiguales.
+// Dos formas de repartir: recorrer la secuencia una vez (un gesto que empieza
+// y termina) o repetir un ciclo en vaivén (un movimiento que no va a ninguna
+// parte: unas manos, una danza, una lumbre).
+const ciclo = args.includes("--ciclo");
+const vaiven = (k) => {
+  const c = todos.length * 2 - 2;
+  const i = k % c;
+  return todos[i < todos.length ? i : c - i];
+};
 const elegidos = Array.from({ length: nQuiero }, (_, k) =>
-  todos[Math.round((k * (todos.length - 1)) / (nQuiero - 1))]
+  ciclo ? vaiven(k) : todos[Math.round((k * (todos.length - 1)) / (nQuiero - 1))]
 );
 
 const lista = elegidos.map((f) => `file '${path.join(dir, f)}'\nduration ${(hold / fps).toFixed(5)}`).join("\n");
@@ -35,7 +59,7 @@ await fs.writeFile(listaPath, `${lista}\nfile '${path.join(dir, elegidos.at(-1))
 
 const r = spawnSync("ffmpeg", [
   "-y", "-f", "concat", "-safe", "0", "-i", listaPath,
-  "-vf", `scale=1080:1920:flags=lanczos,fps=${fps}`,
+  "-vf", `scale=1080:1920:flags=lanczos,setsar=1,fps=${fps}`,
   "-c:v", "libx264", "-preset", "slow", "-crf", "18", "-pix_fmt", "yuv420p",
   "-t", String(dur), out,
 ], { encoding: "utf8" });

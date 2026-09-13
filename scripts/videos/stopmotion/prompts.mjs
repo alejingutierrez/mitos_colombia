@@ -225,3 +225,52 @@ export function promptPlanchaFondo(plano, { filas, cols, celdas, mueve }) {
     ...celdas.map((c, i) => `Celda ${i + 1}: ${c}`),
   ].join("\n");
 }
+
+/**
+ * Plancha desde un ARCO en vez de 36 poses escritas a mano.
+ *
+ * Escribir 36 poses medidas por plano son 648 líneas para un video de 18: no
+ * escala. Y no hace falta: cuando el modelo ve toda la rejilla de un golpe
+ * reparte solo, que es justo lo que NO sabe hacer viendo dos fotogramas. Así
+ * que se le escribe el arco —de dónde sale el gesto y a dónde llega— y él pone
+ * los pasos intermedios. Las poses escritas a mano siguen ganando cuando el
+ * movimiento tiene que caer en un sitio exacto.
+ */
+export function promptPlanchaArco(plano, { filas, cols }) {
+  const n = filas * cols;
+  return [
+    `Usando la imagen adjunta como referencia de identidad, materiales y proporciones, genera una PLANCHA DE PLANIFICACIÓN de animación: una rejilla de exactamente ${filas} filas y ${cols} columnas, ${n} poses en total.`,
+    `Las ${n} celdas son los ${n} fotogramas consecutivos de UNA SOLA acción continua, en orden de izquierda a derecha y luego de arriba abajo. REPARTE EL MOVIMIENTO EN PASOS IGUALES: la celda 1 es el principio exacto, la celda ${n} es el final exacto, y entre medias cada celda avanza la misma fracción. Nunca retrocede, nunca se salta un trozo, nunca se queda quieta dos celdas seguidas.`,
+    "En cada celda aparece SÓLO la figura, de cuerpo entero y pequeña, sobre un fondo mate liso gris medio idéntico en todas. Sin decorado, sin suelo, sin sombra proyectada.",
+    "La figura está en el mismo sitio, al mismo tamaño y a la misma distancia en todas las celdas, con aire por encima de la cabeza y por debajo de los pies.",
+    "Rejilla regular a sangre, SIN canales, bordes, líneas divisorias, etiquetas ni números.",
+    "",
+    bloque("PERSONAJE (idéntico en todas las celdas):", plano.figura || []),
+    "",
+    bloque("EL ARCO DEL MOVIMIENTO (de la celda 1 a la celda " + n + "):", plano.arco || []),
+  ].join("\n");
+}
+
+/**
+ * Hoja de CUADRO COMPLETO: la vía para los planos sin figura que aislar
+ * (objetos, manos, multitudes). Aquí no hay recorte ni plató: cada celda es el
+ * fotograma entero, y lo que no se mueve se congela después con la mediana.
+ */
+export function promptHojaCuadro(plano, { filas, cols, celdas, conPlan = false }) {
+  return [
+    `La imagen adjunta es el FOTOGRAMA MAESTRO de este plano y es la autoridad sobre encuadre, composición, distancia de cámara, luz, materiales y colores.`,
+    `Genera una hoja de exactamente ${filas} filas y ${cols} columnas: ${filas * cols} fotogramas consecutivos del MISMO plano, en orden de izquierda a derecha y luego de arriba abajo.`,
+    conPlan ? "La segunda imagen es la TIRA DE PLANIFICACIÓN de este mismo tramo: copia de ella el reparto del movimiento, celda por celda." : "",
+    "Trata las celdas como fotogramas seguidos de una sola toma de stop-motion: el encuadre, la cámara, la luz y todo lo que no se mueve están en el mismo sitio EXACTO en todas las celdas, píxel por píxel. Sólo cambia lo que el plan dice que cambia, y cambia poco a poco.",
+    "Rejilla regular a sangre, SIN canales, bordes, líneas divisorias, etiquetas ni números.",
+    "",
+    bloque("TÉCNICA (idéntica en todas las celdas):", plano.estilo),
+    "",
+    bloque("DECORADO Y ENCUADRE (idénticos en todas las celdas):", plano.decorado || []),
+    "",
+    bloque("QUIETO EN TODAS LAS CELDAS:", plano.invariantes || []),
+    "",
+    "PLAN DE FOTOGRAMAS:",
+    ...celdas.map((c, i) => `Celda ${i + 1}: ${c}`),
+  ].filter(Boolean).join("\n");
+}

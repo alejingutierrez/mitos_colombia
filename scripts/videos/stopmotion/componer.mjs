@@ -28,6 +28,11 @@ const baseRel = Number(flag("--base", 0.93));    // línea del suelo donde apoya
 const x0 = Number(flag("--x", 0.42));
 const x1 = Number(flag("--x-fin", flag("--x", 0.42)));
 const sombra = Number(flag("--sombra", 0.35));
+// Un CICLO corto de recortes (una marcha, un aleteo) se repite en vaivén hasta
+// llenar el plano, mientras la traslación avanza de principio a fin: así una
+// caminata de 5 s cuesta una hoja de 4 poses en vez de nueve.
+const ciclo = args.includes("--ciclo");
+const cuantos = Number(flag("--frames", 0));
 
 // El plató puede ser UNA imagen (decorado muerto) o una CARPETA de estados
 // (la plancha de fondo: el fuego late, el humo sube y el resto sigue congelado
@@ -44,7 +49,15 @@ const vaiven = (k) => {
   return platos[i < platos.length ? i : ciclo - i];
 };
 const { width: W, height: H } = await sharp(platos[0]).metadata();
-const files = (await fs.readdir(recortes)).filter((f) => /^f\d{4}\.png$/.test(f)).sort();
+const fuentes = (await fs.readdir(recortes)).filter((f) => /^f\d{4}\.png$/.test(f)).sort();
+const nSalida = cuantos || fuentes.length;
+const vaivenRecorte = (k) => {
+  if (!ciclo || fuentes.length < 2) return fuentes[Math.min(k, fuentes.length - 1)];
+  const c = fuentes.length * 2 - 2;
+  const i = k % c;
+  return fuentes[i < fuentes.length ? i : c - i];
+};
+const files = Array.from({ length: nSalida }, (_, k) => vaivenRecorte(k));
 await fs.mkdir(out, { recursive: true });
 const suave = (t) => t * t * (3 - 2 * t); // arranque y frenada, no rampa lineal
 
@@ -90,7 +103,7 @@ for (const [k, file] of files.entries()) {
     .png()
     .toBuffer();
 
-  const t = files.length > 1 ? suave(k / (files.length - 1)) : 0;
+  const t = nSalida > 1 ? suave(k / (nSalida - 1)) : 0;
   const cx = (x0 + (x1 - x0) * t) * W;
   const left = Math.round(cx - (anclaX - x0b) * escala);
   const top = Math.round(baseRel * H - destH);
@@ -122,7 +135,7 @@ for (const [k, file] of files.entries()) {
   }
   capas.push({ input: figura, left: Math.max(0, left), top: Math.max(0, top) });
 
-  await sharp(vaiven(k)).composite(capas).jpeg({ quality: 95 }).toFile(path.join(out, file.replace(".png", ".jpg")));
+  await sharp(vaiven(k)).composite(capas).jpeg({ quality: 95 }).toFile(path.join(out, `f${String(k).padStart(4, "0")}.jpg`));
   process.stdout.write(`\r  compuestos ${k + 1}/${files.length}`);
 }
-console.log(`\n${files.length} fotogramas sobre plató fijo → ${path.relative(process.cwd(), out)}`);
+console.log(`\n${nSalida} fotogramas sobre plató fijo → ${path.relative(process.cwd(), out)}`);

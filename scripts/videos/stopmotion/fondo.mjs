@@ -17,7 +17,11 @@ import { promptPlanchaFondo } from "./prompts.mjs";
 
 const args = process.argv.slice(2);
 const flag = (n, d = null) => (args.indexOf(n) === -1 ? d : args[args.indexOf(n) + 1]);
-const plano = JSON.parse(await fs.readFile(path.resolve(rootDir, flag("--plano")), "utf8"));
+const specPath = path.resolve(rootDir, flag("--plano"));
+const spec = JSON.parse(await fs.readFile(specPath, "utf8"));
+const comunPath = path.join(path.dirname(specPath), "_comun.json");
+const comun = await fs.readFile(comunPath, "utf8").then(JSON.parse).catch(() => ({}));
+const plano = { ...comun, ...spec };
 const plato = path.resolve(rootDir, flag("--plato"));
 const dir = path.resolve(rootDir, flag("--out"));
 const filas = Number(flag("--filas", 2));
