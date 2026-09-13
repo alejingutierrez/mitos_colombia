@@ -344,3 +344,48 @@ idénticos: cambio par→impar 0,02, impar→par 3,48), **a tres** (8/s) y **con
 con `assertComun`), `lookdev.mjs`, `anclas-ab.mjs` (con máscara), `clavar-b.mjs`, `contacto.mjs`,
 `inserto.mjs`, `quieto.mjs`, `posterizar.mjs`; y `estabilizar.mjs --zona-manual`, `img.mjs --mask`.
 
+## 14. Carril v3 «hoja + redibujado» (guía Sunburst del 13-09) — prueba de 5 s en el clímax
+
+El usuario trajo la guía de animación por fotogramas con GPT Image 2.5 Sunburst y pidió cambiar de
+método. El que adoptamos es el del flipbook auditado en la guía: **una hoja de 16 poses distribuye
+la acción de la celda 1 a la 16; cada celda se redibuja a resolución completa con dos referencias de
+papel distinto** (la maestra manda en identidad, materiales y luz; la celda manda en pose y
+colocación, sin adelantar la acción); **el montaje asigna exposición por imagen desde una tabla de
+estados** (prompt efectivo, referencias, ajustes, archivo, aprobación). Sobre eso conservamos lo
+nuestro: bloque común obligatorio, recortes sobre alfa y plató clavado.
+
+**Prueba: P13, la transformación (A y B aprobados en E0).** `scripts/videos/stopmotion/v3/flipbook.mjs`.
+Resultado: `planos-out/P13/flipbook/P13-flipbook.mp4`, 5,00 s, 16 estados, **17 solicitudes, $1.29**,
+0 créditos: plató vacío ($0,05) + hoja 4×4 ($0,14) + 16 redibujados (~$0,07 cada uno).
+
+Lo que salió bien, y es la primera vez:
+
+- **La hoja es la mejor coreografía de todo el laboratorio**: 16 celdas, sin líneas de rejilla, masa
+  25-34 % por celda y centroide continuo entre filas (122 → 173 → 152): **no hay reinicio por fila**.
+  Plumas del antebrazo al hombro y al pelo, ella se pliega, la olla se suelta, la manta cae, la
+  lechuza queda posada. La inspección previa al recorte (guía §7) se hace con números y con el ojo.
+- **El redibujado entrega resolución completa de verdad**: cara, plumas recortadas una a una, manta
+  y olla a 1088×1920, con la identidad de la maestra. Es lo que las hojas de 3×3 y 2×2 no daban.
+- **Distancia a la pose final monótona** (37 → 15 → 0) sobre un plató idéntico en los 16 fotogramas.
+
+Lo que falló y cómo se corrigió:
+
+- **Escala y colocación.** El redibujado conserva la colocación de la CELDA, y la celda va a la escala
+  de la hoja, no de la maestra: la figura salió más grande y centrada que en A, y la lechuza final
+  enorme frente a la de B (salto de 23,9 al cortar). Intenté una transformación global medida entre
+  la celda 1 y la maestra; la caja de A contra un plató regenerado sale inflada (escala 0,98: no
+  corrige nada). **Solución: el clip es autoconsistente** — se redibuja también la celda 1
+  (`coordenadas: "hoja"`), los 16 fotogramas viven en el sistema de la hoja y A/B no entran en la
+  secuencia. El primer salto baja de 23,5 a 12,5.
+- **La lechuza queda al 60 % de la mujer, no al tercio del spec.** Es una decisión de la HOJA, y una
+  escala global no la arregla. Puerta pendiente: medir en la hoja la altura de la celda 16 contra la
+  celda 1 antes de redibujar, y regenerar la hoja si no cumple.
+- El criterio "el fotograma más parecido entre los anteriores debe ser el vecino" marca 4 regresiones
+  que a la vista no lo son: con redibujos de cuadro completo es ruido. La monotonía contra la pose
+  final es el criterio que sirve.
+
+**Números del carril v3 por plano de 5 s:** 17 solicitudes ≈ $1,25 y ≈ 5 min de pared; con dos
+hojas (32 dibujos, 4 s de acción a 8/s) ≈ $2,4. Un video de 18 planos ≈ **$25-45** y 0 créditos.
+Textura de tiempo elegida para la prueba: a tres (8 dibujos/s, 3 fotogramas por dibujo); la
+decisión final sigue siendo del usuario sobre los reels de E4.
+
