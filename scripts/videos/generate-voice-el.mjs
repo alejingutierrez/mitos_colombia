@@ -3,14 +3,17 @@
 // (previous_text / next_text) y reporta si cada toma cabe en su ventana.
 //
 // Uso:
-//   node scripts/videos/generate-voice-el.mjs --lines docs/videos/muiscas/mvp-guiones/guion-a.json --out-dir content/videos/muiscas/videos/bachue/voces-mvp-a
-//   (flags opcionales: --only 3,7 regenera solo esas tomas 1-indexadas)
+//   node scripts/videos/generate-voice-el.mjs --lines docs/videos/muiscas/mvp-guiones/guion-x.json --out-dir content/videos/muiscas/videos/x/voces-v1 [--format wav|mp3] [--only 3,7]
+//
+// --format wav (recomendado desde 2026-09-09, igual que las narraciones del sitio):
+//   pide pcm_48000 a la API y envuelve el PCM en WAV con ffmpeg → máster sin pérdida
+//   (vozNN.wav). --format mp3 (por defecto, compatibilidad): mp3_44100_128 → vozNN.mp3.
 //
 // Formato del JSON de tomas:
 // {
 //   "voice_id": "...", "model_id": "eleven_multilingual_v2",
-//   "voice_settings": { "stability": 0.5, "similarity_boost": 0.8, "style": 0.3, "speed": 1.0 },
-//   "lines": [ { "text": "...", "window": 9.35 }, ... ]   // window: tope de habla en s
+//   "voice_settings": { "stability": 0.35, "similarity_boost": 0.9, "style": 0.3, "use_speaker_boost": true, "speed": 1.05 },
+//   "lines": [ { "text": "...", "window": 9.5 }, ... ]   // window: tope de habla en s
 // }
 //
 // La API key se lee de ELEVENLABS_API_KEY (.env del repo o del repo padre).
@@ -25,7 +28,7 @@ import dotenv from "dotenv";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const rootDir = path.resolve(__dirname, "../..");
 for (const envPath of [path.join(rootDir, ".env"), path.resolve(rootDir, "../../..", ".env")]) {
-  dotenv.config({ path: envPath });
+  dotenv.config({ path: envPath, quiet: true });
   if (process.env.ELEVENLABS_API_KEY) break;
 }
 const API_KEY = process.env.ELEVENLABS_API_KEY;
@@ -42,9 +45,10 @@ function getFlag(name, fallback = null) {
 }
 const linesPath = getFlag("--lines");
 const outDir = getFlag("--out-dir");
+const format = String(getFlag("--format", "mp3")).toLowerCase();
 const only = String(getFlag("--only", "") || "").split(",").map((s) => Number(s.trim())).filter(Boolean);
-if (!linesPath || !outDir) {
-  console.error("Uso: --lines tomas.json --out-dir carpeta [--only 2,5]");
+if (!linesPath || !outDir || !["mp3", "wav"].includes(format)) {
+  console.error("Uso: --lines tomas.json --out-dir carpeta [--format wav|mp3] [--only 2,5]");
   process.exit(1);
 }
 
@@ -52,7 +56,7 @@ const spec = JSON.parse(await fs.readFile(path.resolve(rootDir, linesPath), "utf
 const outAbs = path.resolve(rootDir, outDir);
 await fs.mkdir(outAbs, { recursive: true });
 
-function probe(file, filterArgs = []) {
+function probe(file) {
   const res = spawnSync("ffprobe", ["-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", file], { encoding: "utf8" });
   return Number.parseFloat(String(res.stdout).trim());
 }
@@ -66,14 +70,24 @@ function speechEnd(file, totalDur) {
   const lastEnd = ends.length >= starts.length ? ends[ends.length - 1] : totalDur;
   return lastEnd >= totalDur - 0.15 ? lastStart : totalDur;
 }
+// PCM crudo (s16le mono 48 kHz) → WAV. Sin recodificar: el máster queda sin pérdida.
+function pcmToWav(pcmBuffer, wavPath) {
+  const res = spawnSync(
+    "ffmpeg",
+    ["-y", "-loglevel", "error", "-f", "s16le", "-ar", "48000", "-ac", "1", "-i", "pipe:0", "-c:a", "pcm_s16le", wavPath],
+    { input: pcmBuffer }
+  );
+  if (res.status !== 0) throw new Error(`ffmpeg (wav): ${String(res.stderr).slice(0, 200)}`);
+}
 
 const model = spec.model_id || "eleven_multilingual_v2";
+const outputFormat = format === "wav" ? "pcm_48000" : "mp3_44100_128";
 let fails = 0;
 for (let i = 0; i < spec.lines.length; i++) {
   const n = i + 1;
   if (only.length && !only.includes(n)) continue;
   const line = spec.lines[i];
-  const outPath = path.join(outAbs, `voz${String(n).padStart(2, "0")}.mp3`);
+  const outPath = path.join(outAbs, `voz${String(n).padStart(2, "0")}.${format}`);
   // eleven_v3 aún no soporta previous_text/next_text (contexto de prosodia).
   const supportsContext = !/^eleven_v3/.test(model);
   const body = {
@@ -87,7 +101,7 @@ for (let i = 0; i < spec.lines.length; i++) {
   if (line.voice_settings) body.voice_settings = line.voice_settings;
   const voiceId = line.voice_id || spec.voice_id;
   const res = await fetch(
-    `https://api.elevenlabs.io/v1/text-to-speech/${voiceId}?output_format=mp3_44100_128`,
+    `https://api.elevenlabs.io/v1/text-to-speech/${voiceId}?output_format=${outputFormat}`,
     { method: "POST", headers: { "xi-api-key": API_KEY, "Content-Type": "application/json" }, body: JSON.stringify(body) }
   );
   if (!res.ok) {
@@ -95,13 +109,16 @@ for (let i = 0; i < spec.lines.length; i++) {
     console.error(`[voz-el] ERROR toma ${n}: ${res.status} ${(await res.text()).slice(0, 300)}`);
     continue;
   }
-  await fs.writeFile(outPath, Buffer.from(await res.arrayBuffer()));
+  const audio = Buffer.from(await res.arrayBuffer());
+  if (format === "wav") pcmToWav(audio, outPath);
+  else await fs.writeFile(outPath, audio);
   const dur = probe(outPath);
   const end = speechEnd(outPath, dur);
   const window = line.window || null;
   const fit = window ? (end <= window ? "OK" : `SE PASA ${(end - window).toFixed(2)}s`) : "";
   if (window && end > window) fails += 1;
-  console.log(`[voz-el] voz${String(n).padStart(2, "0")} ${dur.toFixed(2)}s (habla ${end.toFixed(2)}s${window ? ` / tope ${window}` : ""}) ${fit}`);
+  const words = line.text.split(/\s+/).filter(Boolean).length;
+  console.log(`[voz-el] voz${String(n).padStart(2, "0")} ${dur.toFixed(2)}s (habla ${end.toFixed(2)}s${window ? ` / tope ${window}` : ""}; ${words} palabras → ${(words / end).toFixed(2)} pal/s) ${fit}`);
 }
 console.log(`[voz-el] listo → ${outAbs}${fails ? ` · ${fails} problema(s)` : ""}`);
 if (fails) process.exitCode = 1;

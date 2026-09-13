@@ -19,13 +19,29 @@ import process from "node:process";
 const args = process.argv.slice(2);
 const planPath = args[args.indexOf("--plan") + 1];
 const suggest = args.includes("--suggest");
+const secos = args.includes("--secos");
 if (!planPath || planPath.startsWith("--")) {
-  console.error("Uso: node scripts/videos/validate-plan.mjs --plan plan.json [--suggest]");
+  console.error("Uso: node scripts/videos/validate-plan.mjs --plan plan.json [--suggest] [--secos]");
   process.exit(1);
 }
 const plan = JSON.parse(fs.readFileSync(planPath, "utf8"));
 const planDir = path.dirname(path.resolve(planPath));
 const resolveInput = (p) => (p ? (path.isAbsolute(p) ? p : path.resolve(planDir, p)) : null);
+
+// --secos: plan v3/v4 = SOLO cortes secos (sin xfade ni transition_dur), y las
+// fuentes de sobreimpresos, si están configuradas, tienen que ser .ttf/.otf que
+// existan (sharp no carga woff2 y caería a Helvetica en silencio).
+let preErrors = 0;
+if (secos) {
+  if (plan.transition_dur !== undefined) { console.log(`✗ --secos: el plan trae transition_dur (${plan.transition_dur})`); preErrors += 1; }
+  for (const b of plan.blocks) if (b.xfade) { console.log(`✗ --secos: bloque ${b.n} trae xfade`); preErrors += 1; }
+}
+for (const key of ["title_font", "subtitle_font"]) {
+  if (!plan[key]) continue;
+  const f = resolveInput(plan[key]);
+  if (!fs.existsSync(f)) { console.log(`✗ ${key}: no existe ${f}`); preErrors += 1; }
+  else if (!/\.(ttf|otf)$/i.test(f)) { console.log(`✗ ${key}: debe ser .ttf/.otf, no ${path.extname(f)}`); preErrors += 1; }
+}
 const VOICE_OFFSET = plan.voice_offset ?? 0.5;
 const GAP = 0.3;
 
@@ -51,7 +67,7 @@ function suggestPair(need) {
   return [7, Math.ceil(need - 7)];
 }
 
-let errors = 0;
+let errors = preErrors;
 let warns = 0;
 const err = (m) => { errors += 1; console.log(`✗ ${m}`); };
 const warn = (m) => { warns += 1; console.log(`! ${m}`); };

@@ -1,0 +1,19 @@
+{
+  "_nota": "Plan mínimo, sólo para que import-mcp-clips.mjs baje los clips con su guardián de resolución y lleve el import-map. El cierre NO se ensambla con assemble-video.mjs sino con scripts/videos/build-cierre.mjs.",
+  "out": "cierre-canal-v1-mudo.mp4",
+  "fps": 24,
+  "blocks": [
+    {
+      "n": 1,
+      "clip": "clips-v1/c01.mp4",
+      "duration": 5,
+      "type": "motion"
+    },
+    {
+      "n": 2,
+      "clip": "clips-v1/c02.mp4",
+      "duration": 5,
+      "type": "motion"
+    }
+  ]
+}
