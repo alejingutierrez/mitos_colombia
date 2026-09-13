@@ -57,3 +57,10 @@ content/videos/**/.concat-*.txt
 # el plató y la zona de acción —que explican el resultado— pero no las 33 copias.
 content/videos/muiscas/lab-stopmotion/*/*-estab/f*.jpg
 content/videos/muiscas/lab-stopmotion/*/tmp-est/
+content/videos/muiscas/lab-stopmotion/*/compuesto*/f*.jpg
+content/videos/muiscas/lab-stopmotion/*/hoja-alineada/
+# Los recortes con alfa del laboratorio de stop-motion pesan 4 MB cada uno (PNG
+# RGBA a 1088x1920) y se rehacen por $0,48: se versiona lo compuesto, que es lo
+# que explica el resultado, no el material crudo.
+content/videos/muiscas/lab-stopmotion/*/recortes-*/
+content/videos/muiscas/lab-stopmotion/*/hoja-recorte/

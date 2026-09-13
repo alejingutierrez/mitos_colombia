@@ -79,22 +79,76 @@ licencia de cambiar la luz — y el clip parpadea.
    que usar la **unión temporal** (un píxel está vivo si se movió en ALGÚN fotograma) con
    umbral alto y borde engordado.
 
-## 5. Las tres pruebas (mismo plano, `huitaca-b2a`, 5 s, 1080×1920)
+## 5. Las cinco pruebas (mismo plano, `huitaca-b2a`, 5 s, 1080×1920)
 
-| | Método | Fotogramas | Coste | Irregularidad | Deriva de plató |
+| | Método | Fotogramas | Coste | Irregularidad del movimiento | Deriva de plató |
 |---|---|---|---|---|---|
 | **P1** | Bisección pura desde A y B | 33 | $2,19 | 3,06× | 2,06 |
-| **P2** | 3 poses clave escritas + bisección | 33 | $2,26 | 1,52× entre claves | 1,63 |
-| **P3** | P2 + plató fijo por mediana | 33 | $0 extra | — | **0,88** |
+| **P2** | 3 poses clave escritas + bisección | 33 | $2,26 | 1,52× | 1,63 |
+| **P3** | P2 + plató fijo por mediana | 33 | $0 extra | — | 0,88 |
+| **P4** | 4 hojas de 9 poses recortadas + plató fijo | 36 | **$0,53** | 2,81× | **0,00** |
+| **P5** | El mismo material de P4, desplazado en el montaje | 36 | $0 extra | igual | **0,00** |
 
-`p3b` es P3 montado a 3 img/s en vez de 6, para comparar el pulso sin gastar un dólar más:
-la cadencia se decide al MONTAR, no al generar.
+`p3b` es P3 montado a 3 img/s en vez de 6: la cadencia se decide al MONTAR, no al generar.
 
-## 6. Lo que falta antes de que esto sea un carril
+## 6. Lo que enseñó el caso de Higgsfield / gregschoeninger
 
-- **Planos con viaje**: generar la figura con `background: "transparent"` (la API lo admite),
-  el plató vacío por separado, y componer el desplazamiento en post con la caja alfa
-  normalizada. Es el método real del papel recortado y resolvería el límite 1 de §4.
+Un flujo publicado (Deykhan Ten, VP de Higgsfield) y un prompt de hoja de poses de
+gregschoeninger. Lo que dicen, y lo que confirmó o corrigió nuestra medición:
+
+| Ellos | Nosotros |
+|---|---|
+| **Una imagen MAESTRA manda** sobre identidad, materiales, decorado, cámara y luz | Igual: es lo que sostiene la identidad 36 fotogramas después |
+| **Lista de movimientos, uno por línea, de 10 a 36 imágenes** | Confirmado por la vía dura: el modelo no sabe qué es "la mitad" de un gesto, hay que escribirle cada paso |
+| **Poses NUMERADAS Y MEDIDAS** ("se inclina unos 5 grados, pivotando sobre la base") | Adoptado: nuestro plan de 36 celdas va en grados y en referencias anatómicas |
+| **Anclajes quietos dichos por su nombre** ("el nido de paja y la mesa no se mueven nunca") | Adoptado tal cual como bloque de invariantes |
+| **Rejilla a sangre, sin canales, bordes, etiquetas ni números** | Necesario: sin esa frase la hoja sale con marcos y numeritos dibujados |
+| **Cadena: cada fotograma editando el anterior** (Flare para ir rápido) | Sirve para gestos cortos; encadenar HOJAS hizo crecer la figura hasta recortarle los pies. Mejor: todas las hojas desde la MISMA maestra, en paralelo (44 s las cuatro) y enlazadas con una nota de continuidad |
+| **Montar a 6 fps, sin interpolación** | Coincide con lo que medimos: 6 img/s es la cadencia de trabajo; la decidimos al montar |
+
+Lo que el caso no resuelve y aquí sí: **el decorado**. Sus ejemplos son un huevo en un nido
+sobre una mesa; en cuanto el plano tiene plaza, fogones y bohíos, cada celda se redibuja
+distinta y el clip salta.
+
+## 7. La hoja de poses, medida
+
+Una llamada de 2160×3840 (el máximo de la API, 8,29 Mpx) con 9 celdas de 720×1280:
+**$0,119 la hoja = $0,0133 por pose, 5,2× más barato que fotograma a fotograma**, y 43 s
+para nueve poses en vez de nueve esperas de 30 s.
+
+- **Coreografía: la mejor de todas.** Irregularidad 1,29× (la bisección pura: 3,06×). Las
+  nueve poses nacen de una sola pasada y el gesto se reparte solo.
+- **Registro: el peor de todos.** Deriva de plató 4,85. El modelo redibuja el decorado en
+  cada celda: los bohíos cambian de sitio y de tamaño.
+- **Alinear no lo arregla.** Se probó con búsqueda de escala y desplazamiento sobre las
+  franjas donde no está la figura (`alinear.mjs`): el residuo crece de 3,5 a 12 celda a
+  celda. Las celdas no se relacionan por una transformación, son dibujos distintos.
+
+## 8. La salida: hoja RECORTADA sobre plató fijo
+
+Si el problema es el decorado, que el modelo no dibuje decorado. `background: "transparent"`
+y las nueve celdas salen con la figura sola sobre alfa limpio. Entonces:
+
+1. **Plató**: una sola imagen, el plano vacío sin la figura ($0,053, una vez por plano).
+2. **Poses**: 4 hojas de 9 recortes, todas desde la misma maestra, en paralelo ($0,48).
+3. **Composición** (`componer.mjs`): cada recorte se normaliza por su caja alfa —misma altura,
+   pies en la misma línea— y se pega sobre el plató con una sombra de contacto. El ancla
+   horizontal es el centroide del tercio inferior de la silueta (las piernas): con el centro
+   de la caja, al extender el brazo la figura se iría hacia el otro lado.
+
+Resultado: **deriva de plató 0,00 por construcción** —es literalmente la misma imagen de
+fondo— y **$0,53 el clip de 5 s**, cuatro veces más barato que la escalera. Y de regalo,
+el límite que parecía insalvable: si la figura va suelta, **el desplazamiento lo decide el
+montaje**. `p5` es exactamente el mismo material que `p4` cruzando el cuadro.
+
+Lo que queda pendiente en este camino: las costuras entre hojas (los saltos en f8→f9,
+f17→f18 y f26→f27 son el doble del movimiento medio, aun con la nota de continuidad) y que
+la luz del recorte encaje con la del plató cuando el plano tenga fuego cerca de la figura.
+
+## 9. Lo que falta antes de que esto sea un carril
+
+- **Costuras entre hojas**: solapar una celda entre hoja y hoja, o generar las 36 poses en
+  una sola hoja de 6×6 (celdas de 360×640, habría que ver si aguantan el subido a 1080).
 - **Cámara en post**: generar a 1440×2560 y hacer el push-in recortando, en vez de pedirle
   movimiento de cámara al modelo.
 - **12-13 img/s**: hoy el techo probado son 6,6 (33 fotogramas). Subir un nivel son 65

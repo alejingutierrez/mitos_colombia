@@ -87,3 +87,68 @@ export function promptClave(plano, { i, total, pose, ms }) {
     bloque("POSE DE ESTE FOTOGRAMA:", [pose]),
   ].join("\n");
 }
+
+/**
+ * Hoja de poses. Tres cosas la hacen funcionar, y las tres vienen del caso que
+ * estudiamos: (1) una imagen MAESTRA que manda sobre identidad, materiales,
+ * set, cámara y luz; (2) la rejilla pedida como rejilla —exacta, a sangre, sin
+ * canales ni números—; (3) una pose por celda, NUMERADA Y MEDIDA, con los
+ * anclajes quietos dichos por su nombre.
+ */
+export function promptHoja(plano, { filas, cols, celdas }) {
+  return [
+    `Usando la imagen adjunta como REFERENCIA MAESTRA y autoridad sobre identidad, materiales, colores, decorado, cámara y luz, genera UNA hoja de poses de exactamente ${filas} filas y ${cols} columnas.`,
+    `Cada celda, todas del mismo tamaño, es una pose consecutiva del plan numerado de abajo. Ordena las celdas de izquierda a derecha y luego de arriba abajo.`,
+    "Trata las celdas como muestras consecutivas de UNA SOLA acción continua de stop-motion: el movimiento sigue de una fila a la siguiente sin cortarse.",
+    "Conserva proporciones, escala, posición de cámara, luz, fondo y los ANCLAJES QUIETOS que se nombran abajo. Lo que arrastra el movimiento (tela, pelo, polvo) cambia de forma coherente con la pose.",
+    `Encuadre IDÉNTICO en todas las celdas: cada celda muestra la misma vista vertical 9:16 de la imagen maestra, con la figura en el mismo sitio y del mismo tamaño. Cada pose queda dentro de su celda.`,
+    "Rejilla regular a sangre, SIN canales, bordes, líneas divisorias, etiquetas, números de fotograma ni marcas de movimiento. Las celdas se tocan entre sí y llenan la imagen entera.",
+    "",
+    bloque("APARIENCIA Y DECORADO FIJOS (idénticos en todas las celdas):", [...plano.estilo, ...plano.escena]),
+    "",
+    bloque("ANCLAJES QUIETOS (no se mueven ni un milímetro en ninguna celda):", plano.invariantes),
+    "",
+    // Las hojas de un mismo plano se generan en paralelo y cada una sólo ve sus
+    // nueve líneas: sin este enlace, cada hoja interpreta la escala del gesto a
+    // su manera y en la costura entre hojas el brazo da un salto hacia atrás.
+    antes ? `CONTINUIDAD: esta hoja NO empieza el gesto. La celda 1 va justo después de esta pose, y sigue desde ahí sin retroceder: ${antes}` : "",
+    despues ? `La celda ${celdas.length} enlaza con la pose siguiente, que ya no está en esta hoja: ${despues}. No la adelantes ni la sobrepases.` : "",
+    "",
+    "PLAN DE POSES NUMERADO PARA ESTA HOJA:",
+    ...celdas.map((c, i) => `Celda ${i + 1} (fotograma ${i + 1}): ${c}`),
+  ].filter(Boolean).join("\n");
+}
+
+/**
+ * Hoja de poses RECORTADA: la figura sola, sin decorado, sobre fondo
+ * transparente. Nace de medir el límite de la hoja normal: el modelo redibuja
+ * el decorado en cada celda y ningún registro lo cuadra (la deriva de fondo
+ * subía a 4,8 y alinear no la bajaba). Una silueta, en cambio, SÍ se puede
+ * normalizar en post —por su caja alfa— y se pega sobre un plató único que no
+ * se mueve jamás. De paso resuelve el otro límite: si la figura va suelta, el
+ * desplazamiento por el cuadro lo decidimos nosotros, no el modelo.
+ */
+export function promptHojaRecorte(plano, { filas, cols, celdas, antes = "", despues = "" }) {
+  return [
+    `Usando la imagen adjunta como REFERENCIA MAESTRA y autoridad sobre identidad, materiales, colores, proporciones y luz del personaje, genera UNA hoja de poses de exactamente ${filas} filas y ${cols} columnas.`,
+    "IMPORTANTE: en todas las celdas aparece ÚNICAMENTE LA FIGURA RECORTADA SOBRE FONDO COMPLETAMENTE TRANSPARENTE. Sin decorado, sin suelo, sin piedra, sin cielo, sin sombra proyectada, sin viñeta: sólo el personaje y transparencia alrededor.",
+    `Cada celda, todas del mismo tamaño, es una pose consecutiva del plan numerado de abajo, de izquierda a derecha y luego de arriba abajo.`,
+    "Trata las celdas como muestras consecutivas de UNA SOLA acción continua de stop-motion: el movimiento sigue de una fila a la siguiente sin cortarse.",
+    "La figura está EXACTAMENTE en el mismo sitio y al MISMO TAMAÑO en todas las celdas: misma altura de cabeza, mismos pies a la misma altura, misma distancia de cámara. Lo único que cambia entre celdas es la pose descrita.",
+    "La figura entera cabe dentro de su celda con aire de sobra: queda un margen transparente claro por encima de la cabeza y por debajo de los pies, y la figura ocupa alrededor de tres cuartos del alto de la celda. Ni un dedo, ni un pie, ni un mechón tocan el borde de la celda.",
+    "Rejilla regular a sangre, SIN canales, bordes, líneas divisorias, etiquetas ni números. Cada figura queda entera dentro de su celda, sin tocar los bordes.",
+    "",
+    bloque("APARIENCIA FIJA DEL PERSONAJE (idéntica en todas las celdas):", [...plano.estilo, ...(plano.figura || [])]),
+    "",
+    bloque("LUZ (idéntica en todas las celdas, para que la figura encaje luego en su decorado):", plano.luz || []),
+    "",
+    // Las hojas de un mismo plano se generan en paralelo y cada una sólo ve sus
+    // nueve líneas: sin este enlace, cada hoja interpreta la escala del gesto a
+    // su manera y en la costura entre hojas el brazo da un salto hacia atrás.
+    antes ? `CONTINUIDAD: esta hoja NO empieza el gesto. La celda 1 va justo después de esta pose, y sigue desde ahí sin retroceder: ${antes}` : "",
+    despues ? `La celda ${celdas.length} enlaza con la pose siguiente, que ya no está en esta hoja: ${despues}. No la adelantes ni la sobrepases.` : "",
+    "",
+    "PLAN DE POSES NUMERADO PARA ESTA HOJA:",
+    ...celdas.map((c, i) => `Celda ${i + 1} (fotograma ${i + 1}): ${c}`),
+  ].filter(Boolean).join("\n");
+}
