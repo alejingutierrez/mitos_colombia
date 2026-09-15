@@ -98,8 +98,23 @@ export function MythHero({ myth }) {
           alt={myth.title}
           ratio={null}
           priority
+          // Sin esto la portada no lleva precarga: `next/image` se la quita a
+          // toda imagen con art direction. Ver `ImageFrame`.
+          preloadArtDirection
           sizes="100vw"
           mobileSizes="100vw"
+          /*
+           * 90 y no el 75 de la casa. La portada es lo único del sitio que se
+           * pinta a sangre y a pantalla completa, y con el 93 % del archivo
+           * en masters de 1536 px el navegador la estira ×1,9 en cualquier
+           * retina: lo que el AVIF tira, el estirón lo agranda. A 75 el
+           * papel recortado pierde la fibra —el fondo queda liso y las
+           * láminas plásticas— y es justo la textura que define el estilo.
+           * Cuesta ~41 KB en escritorio y ~50 KB en móvil, sobre una obra que
+           * es el motivo de la página. 90 es el tope: `next.config.js` sólo
+           * admite [68, 75, 90] y responde 400 a cualquier otro valor.
+           */
+          quality={90}
           className="absolute inset-0 rounded-none border-0 bg-transparent"
           imgClassName="object-cover object-center"
           data-image-role="cover"
