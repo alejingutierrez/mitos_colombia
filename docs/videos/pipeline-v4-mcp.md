@@ -1,4 +1,4 @@
-# Pipeline v4 — mito → video por el MCP de Higgsfield (2026-09-09) — estándar: Seedance 2.5 1080p
+# Pipeline v4 — mito → video por el MCP de Higgsfield (2026-09-09) — default del canal: Seedance 2.5 1080p (ratificado 2026-09-16)
 
 Runbook operativo del carril de producción vigente. Se estrenó con **la-aparicion-del-hombre**
 (video 1 del carril; ver §9 con lo medido). Está escrito para que cualquier agente o persona
@@ -22,7 +22,7 @@ produce el video; el estado de lo demás se lee del disco con
 
 | Qué | Decisión | Verificado |
 |---|---|---|
-| Modelo de video | **ESTÁNDAR (usuario 2026-09-09): Seedance 2.5** (`seedance_2_5`, `mode:"omni_reference"`, `resolution:"1080p"`, `generate_audio:false`, `bitrate_mode:"high"`, `duration:5`, `aspect_ratio:"9:16"`, un start_image por clip; ver §0b). **Alternativa barata: Kling 3.0** (`kling3_0`, `mode:"pro"`, `sound:"off"`), con la que se estrenó el carril y se escribió este paso a paso | Seedance **45 cr/clip** (preflight 2026-09-09, revalidado el 16-sep); Kling **8,75 cr/clip** (preflight 2026-09-09, ⚠ no revalidado) |
+| Modelo de video | **DEFAULT DEL CANAL — Seedance 2.5** (estándar desde 2026-09-09, **ratificado como default por el usuario el 2026-09-16**): `seedance_2_5` con el **bloque canónico de params de abajo**, un start_image por clip. **Kling 3.0 queda como alternativa acotada** (`kling3_0`, `mode:"pro"`, `sound:"off"`), con la que se estrenó el carril y se escribió este paso a paso: se usa por decisión explícita para un caso concreto (presupuesto agotado, prueba comparativa), **no es una opción que se sopese en cada video** | Seedance **45 cr/clip** (preflight 2026-09-09, revalidado el 16-sep); Kling **8,75 cr/clip** (preflight 2026-09-09, ⚠ no revalidado) |
 | Un clip por keyframe, 5 s | 9 bloques × 2 keyframes = 18 clips = 90 s + placa de cierre still (4 s) | plan-v1.json |
 | Un intento por keyframe | Seedance: 18 × 45 = **810 cr** por video + 45 por regeneración (aquí 855). Kling: 18 × 8,75 = 157,5. Preflight antes de encolar: **precio y saldo, en ese orden** (ver el aviso de abajo) | balance MCP |
 | Voz | **La misma voz de las narraciones del sitio**: `alejandro_narracion` `9EHAKExD4lT2G6hPG74L`, `eleven_multilingual_v2`, stability .35 / similarity .9 / style .3 / speaker_boost / speed 1.05 (= `DEFAULT_VOICE` de `src/lib/narration.js`). Máster WAV (pcm_48000) | voces-v1/ |
@@ -34,6 +34,42 @@ produce el video; el estado de lo demás se lee del disco con
 | Montaje | **Sólo cortes secos** (`validate-plan.mjs --secos`); fade global de entrada/salida; título con fade 0,8 s en el bloque 1 | — |
 | Cierre | Placa still con Ken Burns "out": recorte 9:16 de la **huella del tríptico** (lo que quedó después) | kf-9x16/cola-huella.jpg |
 
+### 0a. El bloque canónico de params (ratificado por el usuario el 2026-09-16)
+
+> **Palabras del usuario (2026-09-16):** «por ahora vamos a dejar que el modelo de video definido
+> como default es seedance 2.5 pro 1080». **No es un cambio de modelo** —Seedance 2.5 es el estándar
+> del carril desde el 9-sep, cuando el usuario comparó los dos másters de *la-aparición-del-hombre*
+> hechos la misma noche (§9 vs §9b)—: lo nuevo es el **rango** de la decisión. Queda declarado
+> **default del canal** y se cierra la puerta a seguir sopesando modelos video por video.
+>
+> ⚠ **"pro" no es un modo de Seedance 2.5.** `models_explore action:"get" model_id:"seedance_2_5"`
+> (16-sep-2026) da como modos `t2v`, `omni_reference`, `video_edit` y `video_extension`; `pro` es un
+> modo de **`kling3_0`**, otro modelo. Lo que el usuario llama "pro 1080" es esta configuración
+> completa a máxima calidad, que es exactamente la que el carril ya venía usando:
+
+```jsonc
+// Bloque canónico del carril. Va idéntico en `generate_video` y en CADA request de
+// `generate_video_batch`. Éste es el único sitio del documento donde está escrito
+// entero: §0b y §2.8 se refieren aquí.
+{
+  "model":          "seedance_2_5",
+  "mode":           "omni_reference",   // obligatorio con start_image (el default del modelo es t2v)
+  "resolution":     "1080p",            // ⚠ NO OMITIR — default del modelo: 720p
+  "bitrate_mode":   "high",             // ⚠ NO OMITIR — default del modelo: standard
+  "generate_audio": false,              // ⚠ NO OMITIR — default del modelo: true
+  "duration":       5,                  // el modelo admite 4-30 s; el canal usa 5
+  "aspect_ratio":   "9:16"
+}
+// + por clip: "medias":[{"value":<media_id>,"role":"start_image"}]
+// + por clip: "declined_preset_id":<el id EXACTO que devuelva ese request> (§2.8)
+```
+
+**Los tres campos señalados no se pueden omitir nunca.** Los defaults del modelo son otros
+(`resolution:"720p"`, `bitrate_mode:"standard"`, `generate_audio:true`, `mode:"t2v"`), así que un
+encolado que los deje fuera **sale en 720p, con menos bitrate y con un audio que el canal no quiere**
+— y ya pagado. `unlim.available: false` para `seedance_2_5` (16-sep): no hay generaciones ilimitadas
+por MCP, cada clip se paga a 45 cr. Capacidad disponible y sin estrenar: `end_image` (ver §0b).
+
 > **`get_cost` NO es una herramienta del MCP** (corregido 2026-09-16; este doc lo citaba como si
 > fuera un comando suelto). Es un **booleano dentro de los `params` de `generate_video`**: se manda
 > una llamada suelta con los parámetros exactos del lote y `"get_cost": true`, y devuelve el precio
@@ -42,7 +78,7 @@ produce el video; el estado de lo demás se lee del disco con
 > orden es: (1) `generate_video` con `get_cost:true` y los params del lote, (2) `balance`, (3)
 > encolar. Receta completa en `MANUAL-DE-PRODUCCION.md` §3.2.
 
-### 0b. Variante Seedance 2.5 por MCP (mismo carril, otro modelo — 2026-09-09)
+### 0b. Ficha del default: Seedance 2.5 por MCP (nació como variante el 2026-09-09; default del canal desde §0a)
 
 El usuario pidió recrear el video 1 con Seedance 2.5 a 1080p y recargó créditos para
 hacerlo por MCP. Todo el carril es idéntico (mismos keyframes subidos, mismas voces, lecho,
@@ -50,7 +86,7 @@ plan y ensamblador); cambian el modelo, el precio y el formato del prompt:
 
 | Qué | Seedance 2.5 por MCP |
 |---|---|
-| Request | `model:"seedance_2_5", mode:"omni_reference"` (obligatorio con `start_image`), `resolution:"1080p"`, `generate_audio:false`, `bitrate_mode:"high"` (mismo precio que standard), `duration:5`, `aspect_ratio:"9:16"`, `declined_preset_id` como en Kling |
+| Request | **El bloque canónico del §0a tal cual** (incluidos los tres campos que no se pueden omitir; `bitrate_mode:"high"` cuesta lo mismo que standard) + `medias` con el `start_image` del clip + `declined_preset_id` como en Kling |
 | Costo | **45 cr por clip** (preflight con `get_cost:true` el 2026-09-09, revalidado el 2026-09-16; 720p = 32,5) → 18 clips = **810 cr**, 5,1× Kling |
 | Prompt | `movimiento-vN-seedance.json`: doctrina-movimiento-v2, **8 párrafos** (estilo "on twos" + `@Image 1` lock · beats `[0-2s][2-4s][4-5s]` · cámara única con endpoint y paralaje · invariantes físicos positivos · materia + identidad · NOT-list estética + candado del plano). Seedance lee TODO como instrucción positiva: la quietud se escribe como conducta ("stays bent over…"), nunca como orden de no moverse |
 | Artefactos | `clips-v1-seedance/` (jobs.json, import-map.json), `plan-v1-seedance.json`, máster `-final-v1-seedance.mp4` — versión paralela a la de Kling para comparar |
@@ -212,11 +248,15 @@ node scripts/videos/validate-plan.mjs --plan $D/plan-v1.json --secos --suggest  
 - **Piloto primero, y de lo DIFÍCIL** (personajes caminando con rostro; con presupuesto exacto, los
   planos con riesgo de moderación) con `generate_video_batch` de 1-3 requests; mirar 5 fotogramas
   antes de lanzar los demás.
-- Request por clip **con el estándar**: `{ model:"seedance_2_5", prompt:<movimiento-vN-seedance.json>,
-  mode:"omni_reference", resolution:"1080p", duration:5, aspect_ratio:"9:16", generate_audio:false,
-  bitrate_mode:"high", medias:[{value:<media_id>, role:"start_image"}],
-  declined_preset_id:<el que devuelva el request> }`.
-- Request por clip **con la alternativa Kling** (así se estrenó el carril):
+- Request por clip **con el default del canal**: los siete campos del **bloque canónico del §0a**,
+  copiados de allí tal cual (es el único sitio donde están escritos con su valor), +
+  `prompt:<movimiento-vN-seedance.json>` + `medias:[{value:<media_id>, role:"start_image"}]` +
+  `declined_preset_id:<el que devuelva el request>`. **No se copia de memoria: `resolution`, `bitrate_mode` y `generate_audio` van escritos
+  en cada request** o el clip sale en 720p con audio (§0a). `end_image` está disponible en este
+  modelo y el canal no lo ha usado nunca (§0b): si algún día se estrena, se decide por video, no por
+  defecto.
+- Request por clip **con la alternativa acotada Kling** (así se estrenó el carril; sólo por decisión
+  explícita, no se sopesa por video):
   `{ model:"kling3_0", prompt:<movimiento-v1.json>, duration:5, aspect_ratio:"9:16",
   mode:"pro", sound:"off", medias:[{value:<media_id>, role:"start_image"}],
   declined_preset_id:"24bae836-2c4a-48e0-89b6-49fcc0b21612" }`.
@@ -293,8 +333,8 @@ el §0b de este mismo doc y el §10 de `PRODUCCION-END-TO-END.md`.
 
 | Concepto | Por video (18 clips) |
 |---|---|
-| **ESTÁNDAR — Seedance 2.5 `omni_reference` 1080p 5 s sin audio** | 18 × 45 = **810 cr** (+45 por cada regeneración; 19 clips = 855) |
-| Alternativa barata — Kling 3.0 pro 5 s sin sonido | 18 × 8,75 = 157,5 cr (+8,75 por regeneración) |
+| **DEFAULT DEL CANAL — Seedance 2.5 `omni_reference` 1080p 5 s sin audio** (ratificado 2026-09-16, §0a) | 18 × 45 = **810 cr** (+45 por cada regeneración; 19 clips = 855) |
+| Alternativa acotada — Kling 3.0 pro 5 s sin sonido (barata, pero sólo por decisión explícita) | 18 × 8,75 = 157,5 cr (+8,75 por regeneración) |
 | Descartado — Gemini Omni Flash 1.1 1080p | 22,5 cr/clip (⚠ precio anotado por la propia tanda del 11-sep en `bachue/movimiento-v4-gemini.json` y `clips-v4/jobs.json`, no revalidado con preflight), pero 13/18 a la primera: 405 + 5 × 22,5 = 517,5 cr **y tanda rechazada** (§9d) |
 | ElevenLabs | ~660-970 caracteres (9-10 tomas): 664 en La aparición, 967 en Bochica |
 | Lechos, título, recortes, ensamblaje, entregas | 0 |

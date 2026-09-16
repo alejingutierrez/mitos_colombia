@@ -151,7 +151,7 @@
   "leccion": "Seedance es multi-shot por diseño: un endpoint de cámara ambicioso ('ending with the hands centered') se vuelve un CORTE a primer plano en el último segundo. Escribir 'ONE continuous take, no cuts, no close-up inserts'. Movimiento más amplio y push-ins más decididos que Kling (c06, c11 terminan en primer plano); c09 y c17 (los que Kling falló) salieron bien a la primera."
  },
  "subtitulos_v4": "NO se queman (usuario 2026-09-09: 'no quiero subtítulos'): burn_subtitles false y write_srt false en los planes; los campos subtitle se conservan por si vuelven",
- "MODELO_ESTANDAR_V4": "Seedance 2.5 por MCP (usuario, 2026-09-09: 'vamos con seedance como estándar'): seedance_2_5 · mode omni_reference · resolution 1080p · generate_audio false · bitrate_mode high · 5 s · 9:16 · declined_preset_id IN THE DARK · 45 cr/clip (≈855 cr por video de 18 clips + 1 regen). Prompts en formato doctrina v2 (8 párrafos, @Image 1, 'ONE continuous take'). Tope 12 en vuelo. Kling 3.0 pro (8,75 cr/clip) queda como alternativa barata, no como estándar. RATIFICADO 2026-09-12 tras el bake-off contra gemini_omni_flash_1_1 en Bachué: Seedance 18/18 a la primera contra 13/18 de Gemini, que además deriva de plano. Tope real ~10 en vuelo (no 12).",
+ "MODELO_ESTANDAR_V4": "Seedance 2.5 por MCP (usuario, 2026-09-09: 'vamos con seedance como estándar'): seedance_2_5 · mode omni_reference · resolution 1080p · generate_audio false · bitrate_mode high · 5 s · 9:16 · declined_preset_id IN THE DARK · 45 cr/clip (≈855 cr por video de 18 clips + 1 regen). Prompts en formato doctrina v2 (8 párrafos, @Image 1, 'ONE continuous take'). Tope 12 en vuelo. Kling 3.0 pro (8,75 cr/clip) queda como alternativa barata, no como estándar. RATIFICADO 2026-09-12 tras el bake-off contra gemini_omni_flash_1_1 en Bachué: Seedance 18/18 a la primera contra 13/18 de Gemini, que además deriva de plano. Tope real ~10 en vuelo (no 12). DEFAULT DEL CANAL ratificado por el usuario el 2026-09-16 («por ahora vamos a dejar que el modelo de video definido como default es seedance 2.5 pro 1080»): no es un cambio de modelo, es el cierre de la duda entre modelos. Los siete campos, escritos una sola vez, viven en .video.parametros; el relato de la decisión, en .video.modelo; los defaults del modelo que no se pueden omitir, en .video.parametros_nota_defaults.",
  "video_4": {
   "slug": "el-tequendama",
   "titulo_video": "El salto del Tequendama",
@@ -268,7 +268,7 @@
   "moderacion": "el filtro reacciona a la IMAGEN de inicio con nino+agua/fuego/noche o multitudes con menores; solucion probada: re-escenificar (figuras de espaldas, lejanas o sin personas). Tope 12 jobs grok en vuelo (429 encima)."
  },
  "video": {
-  "modelo": "seedance_2_5 por el MCP de Higgsfield (ESTÁNDAR desde 2026-09-09, elegido por el usuario tras comparar los dos másters de `la-aparicion-del-hombre` hechos la misma noche)",
+  "modelo": "seedance_2_5 por el MCP de Higgsfield (ESTÁNDAR desde 2026-09-09, elegido por el usuario tras comparar los dos másters de `la-aparicion-del-hombre` hechos la misma noche). DEFAULT DEL CANAL ratificado por el usuario el 2026-09-16: «por ahora vamos a dejar que el modelo de video definido como default es seedance 2.5 pro 1080». No es un cambio de modelo, es el cierre de la duda entre modelos: lo que cambia es el rango de la decisión. Matiz de vocabulario: `pro` NO es un modo de seedance_2_5 (sus modos son t2v, omni_reference, video_edit, video_extension; `pro` es un modo de kling3_0) — «pro 1080» significa aquí la configuración completa a máxima calidad, que es exactamente la de `parametros`.",
   "parametros": {
    "model": "seedance_2_5",
    "mode": "omni_reference",
@@ -278,6 +278,7 @@
    "duration": 5,
    "aspect_ratio": "9:16"
   },
+  "parametros_nota_defaults": "Los defaults del propio modelo son OTROS (models_explore del 2026-09-16 contra el catálogo vivo): mode t2v · resolution 720p · bitrate_mode standard · generate_audio TRUE · duration 5. Es decir: si no escribes `resolution`, `bitrate_mode` y `generate_audio` en CADA encolado, el clip sale en 720p, con menos bitrate y con audio que el canal no quiere. Esos tres campos no se pueden omitir nunca. Rangos del catálogo: duration 4-30 s (el canal usa 5), resolution 480p/720p/1080p. `unlim` para este modelo: available false.",
   "coste_verificado": {
    "seedance_2_5_1080p_5s": "45 cr",
    "seedance_2_5_720p_5s": "32,5 cr",
@@ -285,7 +286,7 @@
    "gemini_omni_flash_1_1": "22,5 cr"
   },
   "alternativas": {
-   "kling3_0": "8,75 cr/clip, 3-15 s, acepta fotograma inicial Y final (roles start_image y end_image): la vía para planos con estado final fijado. ⚠ NO es el único: un `models_explore` del 2026-09-16 anotado por la auditoría del repo lista `end_image` también en `seedance_2_5` y `gemini_omni_flash_1_1` (no re-verificado en esta edición). Y ninguno de los videos del canal ha usado `end_image`: es capacidad disponible y sin probar, no un diferenciador de Kling.",
+   "kling3_0": "8,75 cr/clip, 3-15 s, acepta fotograma inicial Y final (roles start_image y end_image): una vía para planos con estado final fijado. NO es el único: re-verificado contra el catálogo vivo el 2026-09-16 (models_explore model_id seedance_2_5), `seedance_2_5` acepta los roles start_image, end_image, image_references, video_references y audio_references — o sea que el default del canal también admite fotograma final. Ninguno de los videos del canal ha usado `end_image` todavía: es capacidad disponible y sin probar, no un diferenciador de Kling.",
    "gemini_omni_flash_1_1": "DESCARTADO por el usuario 2026-09-11 («no me gusta»): 13/18 a la primera, deriva de plano y una salida horizontal pese a pedir 9:16."
   },
   "concurrencia": "tope real ~10 en vuelo; el siguiente request da 429 y no encola nada del lote",

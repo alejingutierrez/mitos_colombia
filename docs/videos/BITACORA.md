@@ -45,7 +45,7 @@ Este archivo es el registro corrida a corrida del canal de video de mitosdecolom
 
 ## 2026-09-16 · La documentación del canal · manual nuevo, bitácora, cola y ADN al día
 
-**Qué se hizo.** Se escribió `MANUAL-DE-PRODUCCION.md` —el proceso entero de un video de punta a punta— y esta bitácora, y se pusieron al día la cola §9 de `PRODUCCION-END-TO-END.md` y el ADN del canal. La documentación se trabajó **como se trabaja el código**: el manual se repartió en seis bloques, cada bloque lo escribió un agente y **otro agente distinto lo auditó contra el repo**, con la regla de que nada se escribe si no se puede abrir el archivo que lo demuestra. **Ni un crédito, ni una llamada a un modelo: todo es lectura de disco y de git.**
+**Qué se hizo.** Se escribió `MANUAL-DE-PRODUCCION.md` —el proceso entero de un video de punta a punta— y esta bitácora, y se pusieron al día la cola §9 de `PRODUCCION-END-TO-END.md` y el ADN del canal. La documentación se trabajó **como se trabaja el código**: el manual se repartió en seis bloques, cada bloque lo escribió un agente y **otro agente distinto lo auditó contra el repo**, con la regla de que nada se escribe si no se puede abrir el archivo que lo demuestra. **Ni un crédito, ni una generación: todo es lectura —de disco, de git y, para ratificar el modelo, del catálogo del MCP.**
 
 **Resultado medido.**
 - Manual: **nueve secciones numeradas** y un arranque rápido que recorre la corrida entera, **1.250 líneas** al commitearlo (`docs/videos/MANUAL-DE-PRODUCCION.md`; el arranque salió con seis pasos y la pasada de correcciones del mismo día le añadió el séptimo, «anotar la corrida en la bitácora»).
@@ -63,8 +63,21 @@ Este archivo es el registro corrida a corrida del canal de video de mitosdecolom
 - **Escribir la bitácora el mismo día no basta si no se relee la fuente.** Esta misma bitácora se commiteó a las 10:35 diciendo que la cola §9 «sigue declarando la v6» como entrega de Bachué: `dee51627` la había corregido diez minutos antes, a las 10:25. (La otra frase del mismo párrafo —que `channel-dna` llama a El Dorado «EN PRODUCCIÓN»— seguía siendo cierta en git: ese arreglo llegó después y en otra pasada, ver la entrada del 11-sep.) **Regla: antes de escribir «el documento X dice Y», abrir X.**
 - **La trampa de la hora.** Media docena de fechas de los docs están en UTC y las de disco en local (−05). El lote de 35 mitos «del 1 de septiembre a las 03:50» se congeló en realidad el **31 de agosto a las 22:50**, y la cola del navegador «de 05:31 a 13:41» corrió de **00:31 a 08:41**. Los sellos de máquina (`imported` de los `import-map.json`, el `at` de los `.jsonl`) van en UTC; los `mtime` y esta bitácora, en local.
 - **Lo que no se pudo verificar hay que decirlo, no redondearlo.** Las 47 SV son el mapa de lo que el repo no prueba: los precios de Kling y Gemini, el plan real de ElevenLabs, si los `media_id` siguen vivos, y el saldo de créditos de hoy.
+- **Ratificar el modelo no es lo mismo que poder omitir sus campos.** El catálogo del 16-sep da como defaults `mode: t2v`, `resolution: 720p`, `bitrate_mode: standard` y `generate_audio: true`: si un encolado no escribe los tres últimos, el clip sale en 720p, con menos bitrate y con audio que el canal no quiere. Se escriben **siempre**, los siete de la configuración que queda abajo en «Decisiones del usuario». Del mismo catálogo, dos datos que el repo no tenía: `duration` admite **4-30 s** (el canal usa 5), y `seedance_2_5` acepta **`end_image`** además de `start_image` —o sea que «Kling es el único que acepta fotograma inicial y final» es falso, y ningún video del canal ha usado todavía esa capacidad—. `unlim` para este modelo: **no disponible**.
 
-**Decisiones del usuario.** Ninguna.
+**Decisiones del usuario.** El usuario fija el modelo del canal: **«por ahora vamos a dejar que el modelo de video definido como default es seedance 2.5 pro 1080»** (16-sep). Seedance 2.5 era el estándar desde el 9-sep; lo nuevo es el rango de la decisión —queda **declarado default del canal**, no preferencia de corrida— y lo que cierra: deja de estar abierta la duda entre modelos «por ahora», con **Kling 3.0 como alternativa acotada** (8,75 cr/clip, para estirar créditos) y **Gemini Omni Flash 1.1 descartado** (rechazado entero el 11-sep). En parámetros, «pro 1080» es la configuración que el carril ya venía usando, escrita entera y una sola vez:
+
+```
+model          seedance_2_5
+mode           omni_reference
+resolution     1080p
+bitrate_mode   high
+generate_audio false
+duration       5
+aspect_ratio   9:16
+```
+
+**«pro» no es un modo de este modelo**, por eso la decisión se registra por la configuración real y no por el apodo: el catálogo vivo (`models_explore` con `model_id:"seedance_2_5"`, consultado el 16-sep) lista `t2v`, `omni_reference`, `video_edit` y `video_extension`; «pro» es un modo de **kling3_0**, otro modelo.
 
 **Pendiente.**
 - Los tres veredictos abiertos: **Bachué v6 o v7**, **El Dorado**, y la **cadencia** de los reels E4. Los tres los desbloquea el usuario y los tres cuestan cero.

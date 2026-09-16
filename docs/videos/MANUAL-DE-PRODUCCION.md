@@ -10,8 +10,8 @@
 
 | | |
 |---|---|
-| **Carril vigente** | **v4 por MCP de Higgsfield**, modelo **Seedance 2.5** a 1080p, `omni_reference` desde un `start_image`. Voces de ElevenLabs (`alejandro_narracion`), lechos de las narraciones del sitio, ensamblaje local con ffmpeg. |
-| **Novedad del 16-sep** | **Mesa de montaje escena por escena**: el usuario eligió toma a toma entre las variantes de tres mitos (164 tomas comparables) y salió `bachue-final-v7-seleccion.mp4`, el primer máster que **mezcla tandas** (9 tomas grok de agosto + 5 Seedance + 4 Gemini). Obliga a reescribir la ley 4. |
+| **Carril vigente** | **v4 por MCP de Higgsfield**, modelo **Seedance 2.5** a 1080p, `omni_reference` desde un `start_image` — **default del canal ratificado por el usuario el 16-sep-2026**; la configuración completa, campo a campo, es la del encolado (§3.4). Voces de ElevenLabs (`alejandro_narracion`), lechos de las narraciones del sitio, ensamblaje local con ffmpeg. |
+| **Novedad del 16-sep** | **Mesa de montaje escena por escena**: el usuario eligió toma a toma entre las variantes de tres mitos (164 tomas comparables) y salió `bachue-final-v7-seleccion.mp4`, el primer máster que **mezcla tandas** (9 tomas grok de agosto + 5 Seedance + 4 Gemini). Obliga a reescribir la ley 4. **Y ese mismo día el usuario ratifica `seedance_2_5` como modelo por defecto del canal** (§3.1): no es un cambio de modelo —lo era desde el 9-sep— sino la decisión de fijarlo y dejar de dudar entre modelos por ahora. |
 | **Superado (no usar)** | Carril v3 "web unlimited" de Higgsfield · grok_video como modelo del canal · Gemini Omni Flash 1.1 (rechazado por el usuario) · OpenAI TTS `gpt-4o-mini-tts` ("ash") · `eleven_v3` y `eleven_flash_v2_5` · voces `2HsKyIMt2fxFwsry7Nd6` y `bNziytBsHtCSsgcPplG9` (ya no existen en la cuenta) · subtítulos quemados y `.srt` · SFX por bloque · las camas de música de 95 s · el perfil de mezcla `canal` (ducking + `loudnorm`). |
 | **Experimental, sin créditos** | Carril de stop-motion (Huitaca). Produjo un máster **rechazado** (`huitaca-final-v1.mp4`) y un rediseño v2 con ocho puertas de calidad, la mitad sin implementar. |
 | **Saldo de Higgsfield** | **32 créditos**, plan `plus`, `unlim` no disponible — último `balance` registrado el **12-sep** (`stopmotion-v2-rediseno.md` §0). Desde el 11-sep 21:53 no se ha gastado un crédito: el `jobs.json` más reciente con trabajo real es el de El Dorado, y el ledger del laboratorio (387 llamadas) no tiene ni una a Higgsfield. **Con 32 cr no se puede producir nada por ninguna vía.** ⚠ Sin verificar hoy contra la cuenta: hay que llamar a `balance` antes de encolar. |
@@ -51,6 +51,8 @@ node scripts/videos/validate-plan.mjs --plan $D/plan-vN.json --suggest          
 #  3 preflight:  MCP balance   +   generate_video {..., "get_cost": true}  con los params exactos §3.2
 #  4 subida:     media_upload (≤20) → subir-keyframes.mjs --uploads … --dir $D/kf-9x16 → media_confirm §3.3
 #  5 encolar:    generate_video_batch, olas de ~8 → jobs_wait → escribir $D/clips-vN/jobs.json  §3.4-3.6
+#     con la configuración ratificada de §3.4 y SIN OMITIR NUNCA resolution / bitrate_mode /
+#     generate_audio: los defaults del modelo son 720p, standard y audio ENCENDIDO           §3.4
 node scripts/videos/import-mcp-clips.mjs --plan $D/plan-vN.json --jobs $D/clips-vN/jobs.json   # dry-run, luego --apply §3.7
 node scripts/videos/qc-sheet.mjs --plan $D/plan-vN.json --out $D/qc                            # mirar las hojas §6.3
 node scripts/videos/validate-plan.mjs --plan $D/plan-vN.json --secos                           # 0 errores §5.2
@@ -74,6 +76,8 @@ Once reglas. Todas salen de decisiones del usuario o de un fallo medido que cost
 **Ley 3 · Voz e identidad sonora.** La voz del canal es la del sitio: `alejandro_narracion` (`9EHAKExD4lT2G6hPG74L`) en `eleven_multilingual_v2`, con los `voice_settings` de `src/lib/narration.js:19-36`. Máster **WAV** (`--format wav`). **`atempo` está prohibido**: una línea que no cabe se reescribe, no se acelera.
 
 **Ley 4 · Un modelo por tanda; el montaje elige entre tandas.** *(Reescrita el 16-sep-2026.)* Dentro de una **tanda de generación** no se mezclan modelos, para que la comparación sea limpia. El **montaje final sí puede escoger la mejor toma de cada tanda**, como hizo el usuario en la mesa de montaje de Bachué v7 (9 grok + 5 Seedance + 4 Gemini). Mezclar tandas está permitido; mezclar **resoluciones nativas** tiene un coste visible y hay que declararlo al entregar (§5.9).
+
+**Y el modelo de la tanda ya está decidido:** `seedance_2_5` con la configuración de siete campos de §3.4 es el **default del canal, ratificado por el usuario el 16-sep-2026** («por ahora vamos a dejar que el modelo de video definido como default es seedance 2.5 pro 1080»; «pro 1080» es el apodo de esa configuración a máxima calidad, no un `mode` — §3.1). No hay que volver a comparar modelos antes de cada video: se encola con esa configuración salvo que el usuario diga otra cosa, y usar otro modelo —Kling cuando el presupuesto no da (§3.1, §7.2)— es una **excepción que se declara** en el `jobs.json` de la tanda y al entregar.
 
 **Ley 5 · Cierre de canal obligatorio.** Todo video termina con la pieza fija de **8,42 s** (`cierre-canal-v1-mudo.mp4`, 8,416667 s reales = 202 fotogramas), que va como **un bloque más del plan**, nunca concatenada aparte, con su `voice` en el mismo bloque. El lecho se construye con la duración **total, cierre incluido**.
 
@@ -273,11 +277,11 @@ Es la única fase que cuesta dinero. Todo lo demás (guion, voces, lechos, plan,
 
 | Modelo | `model` | Papel |
 |---|---|---|
-| **Seedance 2.5** | `seedance_2_5` | **Estándar del carril desde el 9-sep-2026.** 1080p, `omni_reference`, 5 s, sin audio. |
-| **Kling 3.0** | `kling3_0` | Alternativa barata (`pro`, `sound:"off"`). Factura **lineal a 1,75 cr/s**. |
+| **Seedance 2.5** | `seedance_2_5` | **Estándar del carril desde el 9-sep-2026 y default del canal ratificado por el usuario el 16-sep-2026.** 1080p, `omni_reference`, 5 s, sin audio: la configuración entera, campo a campo, es la del encolado de **§3.4** — se escribe una vez y se copia de ahí. |
+| **Kling 3.0** | `kling3_0` | **Excepción declarada**, sólo cuando el presupuesto no da (§7.2). Alternativa barata (`pro`, `sound:"off"`). Factura **lineal a 1,75 cr/s**. |
 | **Gemini Omni Flash 1.1** | `gemini_omni_flash_1_1` | **Descartado por el usuario** («no me gusta», 11-sep). |
 
-⚠ Verificado a medias, y en tres sitios distintos. **Kling**: `models_explore` del 12-sep, anotado en `stopmotion-v2-rediseno.md` §0 — modos `std|pro|4k`, 3-15 s, `start_image` y `end_image`, `sound on|off`. **Seedance**: `models_explore action:"get"` del 16-sep, anotado en `pipeline-v4-mcp.md` §0b — `medias.roles = [start_image, end_image, image_references, video_references, audio_references]` y `duration` **4-30 s**, no sólo 5 ⚠ *(no re-consultado al escribir esta línea)*. **Gemini**: sigue sin registro en el repo. **Antes de afirmar que un modelo no puede algo, `models_explore`.** Consecuencia ya aplicada: donde un doc dijera que «Kling es el ÚNICO que acepta fotograma inicial Y final» está desactualizado — `channel-dna.json .video.alternativas.kling3_0` lleva desde el 16-sep su propio desmentido. **Ninguna tanda de video del canal ha usado `end_image`** (ni un `movimiento-*.json` ni un `jobs.json` lo nombra): es capacidad disponible y sin probar, no un diferenciador de Kling. Y ojo: `gemini_omni` ≠ `gemini_omni_flash_1_1` — el primero es 720p máximo y no acepta `start_image`.
+⚠ Verificado a medias, y en tres sitios distintos. **Kling**: `models_explore` del 12-sep, anotado en `stopmotion-v2-rediseno.md` §0 — modos `std|pro|4k`, 3-15 s, `start_image` y `end_image`, `sound on|off`. **Seedance**: `models_explore action:"get" model_id:"seedance_2_5"`, **reconsultado el 16-sep-2026 al ratificar el default** — modos `t2v | omni_reference | video_edit | video_extension` (**`pro` NO es un modo de Seedance: es de `kling3_0`**, y pedirlo aquí no existe), `resolution` `480p | 720p | 1080p`, `duration` **4-30 s** (el canal usa 5), `medias.roles = [start_image, end_image, image_references, video_references, audio_references]`, `unlim.available: false`. **Sus defaults son otros que los del canal** — `mode t2v`, `720p`, `bitrate_mode standard`, `generate_audio true` —: por eso los tres campos de §3.4 no se omiten nunca. **Gemini**: sigue sin registro en el repo. **Antes de afirmar que un modelo no puede algo, `models_explore`.** Consecuencia ya aplicada: donde un doc dijera que «Kling es el ÚNICO que acepta fotograma inicial Y final» está desactualizado — `channel-dna.json .video.alternativas.kling3_0` lleva desde el 16-sep su propio desmentido. **Ninguna tanda de video del canal ha usado `end_image`** (ni un `movimiento-*.json` ni un `jobs.json` lo nombra): es capacidad disponible y sin probar, no un diferenciador de Kling. Y ojo: `gemini_omni` ≠ `gemini_omni_flash_1_1` — el primero es 720p máximo y no acepta `start_image`.
 
 La razón de Seedance no es el precio, es el desperdicio: acierta a la primera casi siempre, y un clip rehecho cuesta lo mismo que uno nuevo.
 
@@ -308,6 +312,8 @@ Los dos que Kling falló (`c09`, el personaje se endereza y mira a cámara; `c17
    // → 45 créditos (verificado con get_cost el 16-sep-2026)
    ```
 
+   Ojo con el `mode`: esa medición se hizo con **`t2v`** —una llamada suelta de preflight no lleva `medias`— mientras que la tanda real va en `omni_reference` (§3.4). Los demás seis campos sí son los ratificados. ⚠ Sin verificar: que el modo no mueva el precio; los 45 cr coinciden con los `cost_cr` anotados en los `jobs.json` de tandas reales en `omni_reference`, que es la única comprobación que hay.
+
 2. **Saldo.** `balance` → `{"credits": …, "subscription_plan_type": …}`. Regla: no se arranca sin **los N clips más 3 regeneraciones** (§7).
 
 Cuando el presupuesto es exacto, **el piloto deja de ser opcional y se pilotan los planos difíciles, no los fáciles**. En El Dorado se enviaron primero los tres planos del cuerpo cubierto de polvo de oro (135 cr) para descubrir un bloqueo de moderación barato en vez de caro: pasaron 3/3. En Bochica los pilotos fueron `c12` y `c14`.
@@ -336,7 +342,7 @@ Aviso no documentado: el script cuenta **todo** `.jpg/.jpeg/.png` de `--dir`. Un
 
 ### 3.4 La llamada que encola los clips
 
-Un `generate_video_batch` admite **1-12 requests**; cada uno lleva un `index` estable (el número de escena) y sus `params`:
+Un `generate_video_batch` admite **1-12 requests**; cada uno lleva un `index` estable (el número de escena) y sus `params`. **Los siete campos de configuración del bloque que sigue —`model`, `mode`, `resolution`, `duration`, `aspect_ratio`, `generate_audio`, `bitrate_mode`— son la configuración ratificada del canal** (usuario, 16-sep-2026; ley 4). Es la **fuente** del manual: de aquí se copian tal cual a cada request del lote, y aquí apunta todo lo que los nombre. (Vuelven a aparecer con valor en dos sitios que NO son fuente: el preflight de §3.2 —que va con `mode:"t2v"` porque una llamada suelta no lleva `medias`— y el `jobs.json` de §3.6, que registra lo ya enviado.)
 
 ```jsonc
 { "requests": [
@@ -348,7 +354,7 @@ Un `generate_video_batch` admite **1-12 requests**; cada uno lleva un `index` es
       "duration": 5,
       "aspect_ratio": "9:16",
       "generate_audio": false,          // el default es TRUE
-      "bitrate_mode": "high",           // mismo precio que standard, más bitrate
+      "bitrate_mode": "high",           // el default es "standard"; "high" cuesta lo mismo y da más bitrate
       "prompt": "<texto de movimiento-vN.json#c01>",
       "medias": [ { "value": "<media_id del keyframe c01>", "role": "start_image" } ],
       "declined_preset_id": "24bae836-2c4a-48e0-89b6-49fcc0b21612"
@@ -360,7 +366,7 @@ Un `generate_video_batch` admite **1-12 requests**; cada uno lleva un `index` es
 Campos que cuestan dinero si se equivocan:
 
 - **`mode:"omni_reference"`** es lo que hace que Seedance mire la imagen. Con `t2v` el `start_image` se ignora.
-- **`generate_audio:false`** y **`resolution:"1080p"`** van contra el default del modelo.
+- **Tres campos que no se pueden omitir nunca: `resolution`, `bitrate_mode` y `generate_audio`.** Los defaults del modelo son `720p`, `standard` y `generate_audio: true` (catálogo vivo, 16-sep, §3.1): si no los escribes en **cada** request del lote, el clip sale en 720p, con menos bitrate y con una pista de audio que el canal no quiere —y ya pagado, porque el clip se genera igual—. Es el error que de verdad se comete: el `mode` se nota al primer vistazo, estos tres no.
 - **`prompt`**: el texto del `movimiento-vN.json` del mito, byte a byte. Los prompts Seedance del carril miden **1.283-1.897 caracteres, media 1.622** (8 párrafos: estilo "on twos" + `@Image 1` como candado · beats `[0-2s][2-4s][4-5s]` · una cámara con endpoint y paralaje · invariantes físicos · materia e identidad · NOT-list). Los de Kling, **677-818**, y ese rango ya es el prompt completo (`estilo_prefijo` + cuerpo + `invariantes_sufijo` concatenados dentro del campo). Una ola de 8 lleva unos **13 KB** de prompt (15,2 KB en el peor caso).
   - **El candado de toma continua son dos cadenas en dos sitios distintos**, no una frase: `"The whole clip is ONE continuous take from a single camera setup"` **en la línea de cámara**, y `"no cuts, no close-up inserts, no second shot"` **en la NOT-list**. Seedance es multi-shot por diseño y un endpoint de cámara ambicioso («ending with the hands centered») lo convierte en un corte. Ese candado desde el primer envío es lo que dio 19/19 en Bochica.
   - **`@Image 1` sí funciona por MCP.** `pipeline-v4-mcp.md` §2.5 dice que es sintaxis del editor web: es falso para Seedance — los 54 prompts de los videos 2, 3 y 4 lo usan y dieron 19/19, 18/18 y 17/17. La advertencia sólo vale para el bloque de Kling donde está escrita.
@@ -1026,7 +1032,7 @@ Definidas en `stopmotion-v2-rediseno.md` §5, cada una con el defecto de Huitaca
 
 | Configuración | cr/clip | Cómo se verificó |
 |---|---|---|
-| `seedance_2_5` · `omni_reference` · 1080p · 5 s · sin audio · bitrate high | **45** | `get_cost`, **16-sep-2026** |
+| `seedance_2_5` · `omni_reference` · 1080p · 5 s · sin audio · bitrate high — **la configuración ratificada** (§3.4) | **45** | `get_cost`, **16-sep-2026** |
 | `seedance_2_5` · 720p · 5 s · sin audio | **32,5** | `get_cost`, 16-sep-2026 |
 | `kling3_0` · `pro` · 5 s · `sound:"off"` | **8,75** | `get_cost` **9-sep**, anotado en `movimiento-v1.json` y en los 18 jobs ⚠ no re-verificado hoy |
 | `kling3_0` · `std` · 5 s · `sound:"off"` | 7,5 | `get_cost` 9-sep ⚠ |
