@@ -1,10 +1,12 @@
 {
   "pueblo": "muiscas",
-  "actualizado": "2026-08-21",
+  "actualizado": "2026-09-03",
   "estilo": {
     "nombre": "Maqueta de papel del sitio (studioPaperMaquette)",
     "imagen_modelo": "gpt-image-2",
-    "quality": "high",
+    "calidad_biblia": "medium",
+    "calidad_triptico": { "horizontal_entrada": "high", "vertical_acto": "medium", "cuadrada_huella": "medium" },
+    "calidad_keyframes_nuevos": "medium",
     "fuente_prompt": "scripts/videos/specs/*.mjs (hereda src/lib/image-generation.js)",
     "paleta": "verde frio de paramo, azul gris de laguna, ocres minerales, crema de algodon crudo, blanco de niebla"
   },

@@ -98,9 +98,10 @@ figura humana), Chibchacum (cargador, sin Atlas griego). Sus "avoid" ya están e
 Tres candidatos evaluados (decisión del 2026-08-19, ver conversación):
 
 - **A · Maqueta de papel del sitio (custom)** — la identidad `studioPaperMaquette` del
-  sitio llevada a video: maqueta física artesanal de papel cortado, cartón y fibras
-  naturales, relieve bajo, bordes visibles, imperfecciones humanas, micro-sombras
-  reales, iluminación sobria, paleta del altiplano; movimiento tipo stop-motion suave.
+  sitio llevada a video: maqueta física artesanal de papel y fibras naturales,
+  relieve bajo, imperfecciones humanas, micro-sombras reales e iluminación sobria,
+  pero con encuadre inmersivo sin borde exterior, cartón, base, mesa o estudio
+  visibles; movimiento tipo stop-motion suave.
   Donantes de estilo: las imágenes ya publicadas del sitio (p. ej. la de
   la-madre-de-los-hombres). Coherencia total web ↔ Instagram ↔ video.
 - **B · Cinematic Storybook (default del canal de mitos)** — 2D pintado a mano tipo

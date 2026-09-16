@@ -1,5 +1,12 @@
 # Proceso: de mito a video narrado (90 s)
 
+> Cierre de ciclos (9 de septiembre de 2026): Muisca y Wayúu están terminadas
+> dentro de sus alcances aprobados, que no son equivalentes. El procedimiento para
+> abrir una tercera comunidad, sus decisiones obligatorias y los aprendizajes de
+> ambos cierres están en [`TRASPASO-SIGUIENTE-COMUNIDAD.md`](TRASPASO-SIGUIENTE-COMUNIDAD.md).
+
+> Actualización Wayúu (9 de septiembre de 2026): el flujo específico vigente está en `content/videos/wayuu/ANDAMIAJE-VIDEOS.md`; el progreso humano en `content/videos/wayuu/PRODUCCION-ACTIVA.md` y el estado estructurado en `content/videos/wayuu/campaign.v1.json`. Usa keyframes nativos 864×1536, `medium`. Desde La majayura de Puró ya no usa continuidad sólo textual: cada fotograma desde el tercero recibe al menos los dos keyframes aprobados inmediatamente anteriores del mismo mito. La política visual/modelos está en `content/videos/wayuu/channel-dna.v3.json`. No hereda automáticamente proveedores, precios históricos, referencias muiscas, duración rígida ni reglas de elusión de moderación. Los precios y estados de proveedores indicados más abajo son registros históricos, no cotizaciones vigentes.
+
 Proceso repetible para transformar los mitos del catálogo en videos narrados de ~1:30
 en 9:16. El objetivo no es un video suelto: es una **línea de producción consistente**
 donde cada pueblo tiene una biblia visual reutilizable y cada video nuevo cuesta menos
@@ -11,7 +18,7 @@ Primer piloto: **Bachué** (muiscas). Ver `docs/videos/muiscas/`.
 
 ## 1. Arquitectura (v2 — 2026-08-19)
 
-Decisión de costos: las **imágenes se generan con OpenAI** (cuenta propia, estilo
+Decisión vigente: las **imágenes se generan con la única cuenta OpenAI API local** (`OPENAI_API_KEY`, estilo
 `studioPaperMaquette` del sitio) y Higgsfield se usa solo para lo que OpenAI no hace:
 **animar keyframes, narrar y componer la música**. El ensamblaje es **local con ffmpeg**
 (gratis, versionado en el repo).
@@ -19,13 +26,20 @@ Decisión de costos: las **imágenes se generan con OpenAI** (cuenta propia, est
 | Fase | Qué pasa | Herramienta | Costo |
 |---|---|---|---|
 | A · Guion | 9 bloques × 1 línea de VO (20–23 palabras es) + storyboard + through-line | Claude (repo) | 0 |
-| B · Biblia + keyframes | Personajes/paisajes/props con cadena de identidad (`images.edit` con referencias); keyframes de escena por bloque | OpenAI `gpt-image-2` vía `scripts/videos/generate-keyframes.mjs` | ~USD 0,2/imagen (cuenta OpenAI) |
+| B · Biblia + keyframes | Personajes/paisajes/props con cadena de identidad (`images.edit` con referencias); keyframes de escena por bloque | Modelo OpenAI fijado en el DNA de campaña; Wayúu V3 prefiere `gpt-image-2.5-sunburst`, keyframes `medium`; paquete e ingesta trazables | Facturación API OpenAI |
 | C · Bloques motion | Image-to-video desde el keyframe (start_image) | Higgsfield: `grok_video` (1,5 cr/s) o `kling3_0` (2 cr/s, acepta start+end frame) | 15 cr por clip de 10 s (grok) |
 | D · Bloques stills | Keyframe + movimiento de cámara (Ken Burns/parallax) local | ffmpeg local | 0 |
 | E · Narración | 1 toma por bloque, misma voz siempre | OpenAI TTS `gpt-4o-mini-tts` vía `scripts/videos/generate-voice.mjs` | ~USD 0,02/video (cuenta OpenAI) |
 | F · Música | Cama instrumental misteriosa-calma a duración exacta — **SIEMPRE lleva música** (decisión 2026-08-19) | Higgsfield: `sonilo_music` | ~5,6 cr/90 s |
 | G · Ensamblaje | Concat, voz por bloque, música ducked, subtítulos | ffmpeg local (script del repo) | 0 |
 | H · Publicación | Reels/TikTok/Shorts + embed | — | 0 |
+
+Política de calidad única: Biblia y keyframes `medium`; en el tríptico, sólo
+la entrada horizontal 16:9 usa `high`, mientras el acto vertical y la huella
+cuadrada usan `medium`. La orientación sola no eleva calidad. Todas las escenas
+son inmersivas de borde a borde, sin mostrar borde exterior de la maqueta,
+cartón, base, mesa ni estudio. El interior conserva profundidad 3D real: capas
+a distintas distancias con aire, oclusiones, cantos internos y sombras.
 
 Costos unitarios verificados el 2026-08-19 (preflight `get_cost`, sin gastar):
 imagen Higgsfield 3 cr (no se usa) · gemini_omni 30 cr/10 s (no se usa) ·
@@ -67,6 +81,13 @@ del agua y la transformación en serpientes), stills rítmicos en el resto.
 - **Cadena de identidad (OpenAI):** un personaje que envejece o cambia de escena se
   genera con `images.edit` pasando su ficha como referencia ("LA MISMA persona…").
   Los keyframes de escena reciben paisaje + personajes + props como referencias.
+- **Memoria secuencial Wayúu V3:** desde el tercer fotograma, cada nueva imagen recibe
+  además los dos keyframes aprobados inmediatamente anteriores del mismo mito. El
+  primero arranca con al menos dos referentes de Biblia/tríptico y el segundo con el
+  primero más un referente canónico. Se congelan orden, rol, ruta y SHA-256. Esto obliga
+  a producir causalmente y evita que cada cuadro reinvente rostros, vestuario, paleta,
+  densidad y tratamiento de papel. Las referencias no autorizan copiar utilería o
+  acciones ausentes del nuevo plano.
 - **Keyframe → clip:** el video se genera desde el keyframe aprobado (`start_image`),
   no desde texto. El clip no puede desviarse mucho de un primer frame correcto.
 - **Manifest reproducible:** `content/videos/<spec>/manifest.json` guarda cada prompt
@@ -96,8 +117,8 @@ del agua y la transformación en serpientes), stills rítmicos en el resto.
 1. [ ] Releer la ficha editorial del mito (`editorial/<pueblo>/myths/<slug>.mjs`),
        en especial `researchNotes` (qué está documentado, qué es licencia).
 2. [ ] Guion de 9 bloques + storyboard + through-line (`docs/videos/<pueblo>/<slug>-guion.md`).
-3. [ ] Actualizar biblia/spec si hay personajes o paisajes nuevos; correr
-       `node scripts/videos/generate-keyframes.mjs --spec scripts/videos/specs/<spec>.mjs`.
+3. [ ] Actualizar biblia/plan si hay personajes o paisajes nuevos; declarar las
+       refs por keyframe y preparar con `npm run mitos:prepare:keyframes:openai`.
 4. [ ] Revisar keyframes ANTES de animar (consistencia de personajes, estilo, exclusiones).
 5. [ ] Elegir bloques motion vs. stills; subir keyframes a Higgsfield (`media_upload`);
        generar clips (batch) con el modelo bloqueado en el DNA.

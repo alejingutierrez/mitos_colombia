@@ -233,7 +233,7 @@ toques artísticos. Composición vertical dramática.
 ### Formato de Imagen
 - **Dimensiones**: 1024x1536 pixels (9:16)
 - **Formato**: JPEG
-- **Calidad**: High
+- **Calidad**: Medium
 - **Modelo**: gpt-image-2
 
 ### Almacenamiento
