@@ -2,7 +2,7 @@
 
 55 ramas locales fuera de `main`. Auditadas una por una: la mayoría son
 eslabones de dos cadenas o duplicados que `main` ya absorbió. **Lo que hay que
-decidir son 9 cosas, no 55.**
+decidir son 10 cosas, no 55.**
 
 Método: `git cherry` para detectar commits ya presentes en `main` con otro hash,
 `git merge-base --is-ancestor` para detectar cadenas, y `git merge-tree` para
@@ -64,8 +64,9 @@ en archivos que `main` rehízo desde entonces.
 | `codex/tarot-commerce-production` | 2 | Landings de comercio del tarot. | 11, todos en archivos de tarot que `main` ya rehízo |
 | `claude/muisca-myths-video-mvp-834b41` | 1 | Rescate del 2026-09-16: 35 archivos del A/B de casting de voces. | — |
 | `claude/myth-internal-mobile-design-dba6fe` | 1 | Rescate del 2026-09-16: `dep.html`. | — |
+| `claude/rehacer-imagenes-nueva-tecnica-a4102d` | 1 | **No fusionar en crudo.** Tiene contenido real que `main` no tiene —`enhanceImageBuffer()` con `IMAGE_POST_BRIGHTNESS`/`IMAGE_POST_SATURATION`, la concurrencia con backoff de `regenerate-craft-images.mjs` y `scripts/reprocess-realce.mjs`— pero reescribe 161 líneas de `src/lib/image-generation.js`, que `main` rehízo después con GPT Image 2. Hay que extraer las piezas, no fusionar. | 1 |
 
-## 5. Descartables — 14 ramas
+## 5. Descartables — 13 ramas
 
 **Cero commits propios.** Todo su contenido ya está en `main` con otro hash,
 verificado con `git cherry`:
@@ -86,8 +87,6 @@ verificado con `git cherry`:
   camino.
 - `backup/local-sin-commitear-20260729` — respaldo de julio. Sus 123 archivos
   nuevos son logs de `.playwright-cli/`.
-- `claude/rehacer-imagenes-nueva-tecnica-a4102d` — añade un script de julio,
-  `scripts/reprocess-realce.mjs`, de la época anterior a los trípticos.
 
 Las 27 ramas contenidas en `codex/ticuna-editorial-review` se pueden borrar sin
 pérdida en cuanto se decida qué hacer con la punta: son ancestros suyos.
@@ -104,7 +103,7 @@ pérdida en cuanto se decida qué hacer con la punta: son ancestros suyos.
    `video-tests-search`.
 5. **La cadena editorial de julio**: decisión aparte, es la única que pide
    trabajo de verdad.
-6. Borrar las 14 descartables y las 27 contenidas.
+6. Borrar las 13 descartables y las 27 contenidas.
 
 Hacer esto **antes** de mover carpetas: cualquier reorganización convierte estas
 fusiones en conflictos masivos.

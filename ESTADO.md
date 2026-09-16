@@ -60,7 +60,7 @@ Auditado el 2026-09-16, pendiente de ejecutar:
    regenerable: son investigación. Su sitio es `content/` o `docs/`.
 5. **55 ramas sin fusionar.** Auditadas el 2026-09-16 en
    [`docs/ramas-sin-fusionar-2026-09-16.md`](docs/ramas-sin-fusionar-2026-09-16.md):
-   son dos cadenas y 14 duplicados, así que hay 9 decisiones, no 55. La más
+   son dos cadenas y 13 duplicados, así que hay 10 decisiones, no 55. La más
    grande es un tronco de 41 commits —los PR #44, #47, #48, #49 y #64— que
    `main` nunca recibió y que fusiona con un solo conflicto. Son también la
    razón de que `.git` pese 6,2 GB con un HEAD de 240 MB: arrastran historia de
