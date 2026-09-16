@@ -1,5 +1,5 @@
 // Ensamblador local de videos de mitos (ffmpeg + sharp): bloques motion/still,
-// crossfades entre capítulos con re-timing automático de voz y subtítulos,
+// transiciones entre capítulos con re-timing automático de voz y subtítulos,
 // narración por bloque, música + camas de ambiente (SFX) con ducking, títulos
 // de canal y subtítulos quemados. Cero costos de API.
 //
@@ -14,17 +14,17 @@
 //   "write_srt": true,
 //   "title_font": "ruta/Asimovian-Latin.woff2",
 //   "voice_offset": 0.5,
-//   "transition_dur": 0.4,            // *duración pedida de los crossfades
+//   "transition_dur": 0.4,            // *duración pedida de las transiciones
 //   "blocks": [
 //     { "n": 1, "type": "motion", "clip": "c01.mp4", "voice": "voz01.wav",
 //       "subtitle": "texto", "duration": 5,
-//       "xfade": true,                 // *fundido cruzado AL ENTRAR a este bloque
+//       "transition": "dissolve",      // *transición AL ENTRAR a este bloque
 //       "sfx": "sfx-laguna.mp3", "sfx_vol": 0.45,
 //       "title": "BACHUÉ", "title_sub": "Mitos de Colombia" },  // *título sobreimpreso
 //     { "n": 2, "type": "still", "image": "kf.jpg", "kenburns": "out", "duration": 3 }
 //   ]
 // }
-// El xfade pedido se recorta automáticamente al aire real que deja la narración
+// La transición pedida se recorta automáticamente al aire real que deja la narración
 // del bloque anterior (medido con silencedetect); si no hay aire, queda corte seco.
 
 import { spawnSync } from "node:child_process";
@@ -56,6 +56,17 @@ const XFADE_REQ = plan.transition_dur ?? 0.4;
 const BURN_SUBTITLES = plan.burn_subtitles !== false;
 const WRITE_SRT = plan.write_srt !== false;
 const VOICE_GAP = 0.25; // aire mínimo entre fin de habla y el siguiente arranque
+const XFADE_TRANSITIONS = new Set([
+  "fade", "wipeleft", "wiperight", "wipeup", "wipedown", "slideleft",
+  "slideright", "slideup", "slidedown", "circlecrop", "rectcrop", "distance",
+  "fadeblack", "fadewhite", "radial", "smoothleft", "smoothright", "smoothup",
+  "smoothdown", "circleopen", "circleclose", "vertopen", "vertclose", "horzopen",
+  "horzclose", "dissolve", "pixelize", "diagtl", "diagtr", "diagbl", "diagbr",
+  "hlslice", "hrslice", "vuslice", "vdslice", "hblur", "fadegrays", "wipetl",
+  "wipetr", "wipebl", "wipebr", "squeezeh", "squeezev", "zoomin", "fadefast",
+  "fadeslow", "hlwind", "hrwind", "vuwind", "vdwind", "coverleft", "coverright",
+  "coverup", "coverdown", "revealleft", "revealright", "revealup", "revealdown",
+]);
 const planDir = path.dirname(path.resolve(planPath));
 const outDir = path.dirname(path.resolve(outPath));
 const tmpDir = path.join(outDir, ".assemble-tmp");
@@ -157,6 +168,10 @@ for (const block of plan.blocks) {
     run("ffmpeg", ["-y", "-i", clip, "-t", String(duration), "-vf", vf, "-c:v", "libx264", "-preset", "medium", "-crf", "18", "-an", blockOut]);
   }
 
+  const transition = block.transition || (block.xfade ? "fade" : "cut");
+  if (transition !== "cut" && !XFADE_TRANSITIONS.has(transition)) {
+    throw new Error(`Transición no soportada en bloque ${block.n}: ${transition}`);
+  }
   blockFiles.push({
     n: block.n,
     file: blockOut,
@@ -165,7 +180,12 @@ for (const block of plan.blocks) {
     voiceDur,
     speechEnd,
     subtitle: block.subtitle || null,
-    xfadeReq: block.xfade ? (typeof block.xfade === "number" ? block.xfade : XFADE_REQ) : 0,
+    transition,
+    xfadeReq: transition !== "cut"
+      ? (typeof block.transition_dur === "number"
+          ? block.transition_dur
+          : typeof block.xfade === "number" ? block.xfade : XFADE_REQ)
+      : 0,
     sfxPath: block.sfx ? resolveInput(block.sfx) : null,
     sfxVol: block.sfx_vol ?? 0.4,
     title: block.title || null,
@@ -204,7 +224,7 @@ for (let i = 1; i < blockFiles.length; i++) {
     if (prevV !== undefined) consumedSlack.set(prevV, (consumedSlack.get(prevV) || 0) + joinD[i]);
   }
   if (joinD[i] < req) {
-    console.log(`[assemble] xfade → bloque ${blockFiles[i].n}: ${joinD[i] ? `recortado a ${joinD[i]}s` : "sin aire, corte seco"}`);
+    console.log(`[assemble] ${blockFiles[i].transition} → bloque ${blockFiles[i].n}: ${joinD[i] ? `recortado a ${joinD[i]}s` : "sin aire, corte seco"}`);
   }
 }
 
@@ -228,14 +248,14 @@ let cur = "[p0]";
 for (let i = 1; i < blockFiles.length; i++) {
   const out = `[j${i}]`;
   vFilter += joinD[i]
-    ? `;${cur}[p${i}]xfade=transition=fade:duration=${joinD[i]}:offset=${visStart[i].toFixed(3)},settb=AVTB${out}`
+    ? `;${cur}[p${i}]xfade=transition=${blockFiles[i].transition}:duration=${joinD[i]}:offset=${visStart[i].toFixed(3)},settb=AVTB${out}`
     : `;${cur}[p${i}]concat=n=2:v=1:a=0,settb=AVTB${out}`;
   cur = out;
 }
 vFilter += `;${cur}fade=t=in:st=0:d=0.6,fade=t=out:st=${(totalDur - 0.8).toFixed(2)}:d=0.8,format=yuv420p[vjoin]`;
 const videoOnly = path.join(tmpDir, "video.mp4");
 run("ffmpeg", ["-y", ...vInputs, "-filter_complex", vFilter, "-map", "[vjoin]", "-r", String(FPS), "-c:v", "libx264", "-preset", "medium", "-crf", "18", "-an", videoOnly]);
-console.log(`[assemble] video unido: ${totalDur.toFixed(2)}s (${joinD.filter(Boolean).length} crossfades)`);
+console.log(`[assemble] video unido: ${totalDur.toFixed(2)}s (${joinD.filter(Boolean).length} transiciones)`);
 
 // ── 4. Audio: voz + (música con resolución final + ambientes) con ducking ────
 const cues = [];

@@ -35,37 +35,76 @@ node scripts/videos/generate-keyframes.mjs --spec scripts/videos/specs/<spec>.mj
 
 ---
 
-## 2. Prompts de movimiento (grok_video, image-to-video)
+## 2. Prompts de movimiento (image-to-video — doctrina v2)
 
-Estructura fija de 4 partes — rellenar [1] y [2], copiar [3] y [4] tal cual:
+**Doctrina completa, vocabulario y 3 ejemplos de producción: `doctrina-movimiento-v2.md`**
+(investigación 2026-08-31: guía oficial de Seedance + manual interno de Higgsfield +
+comunidad + animación profesional; anexo con los 5 informes al lado). Desarrollada y
+validada sobre Seedance 2.5; los anti-patrones aplican también a grok. La sintaxis de
+beats `[0-2s]` y `@Image 1` es de Seedance.
+
+**Regla madre: el modelo lee TODO como instrucción positiva.** Un "negativo" que
+describe movimiento ("only breathe and gesture softly", "subtle motion only") es una
+orden literal de quietud — fue el asesino de la animación en Bachué/Bochica v1.
+Negativos SOLO de estética/material, nunca de cantidad o suavidad de movimiento.
+
+Estructura fija de 7 líneas, un bloque, 100-150 palabras. Las líneas 1, 6 y 7 van
+**byte-idénticas** en todos los clips del canal (mecanismo de consistencia); se
+rellenan 3 (beats), 4 (cámara) y 5 (física):
 
 ```
-[1 APERTURA] Handcrafted paper-maquette stop-motion animation.
-[2 ACCIÓN]   <1 acción principal en presente + 1-2 movimientos secundarios
-              (niebla, humo, ondas, ropa) + 1 movimiento de cámara>
-[3 MATERIA]  Everything is visibly handmade from cut paper, cardboard and natural
-             fibers: low relief, visible cut edges, real micro-shadows, sober cold
-             Andean highland light. Subtle stepped stop-motion cadence.
-[4 NEGATIVOS] The characters only breathe and gesture softly, they do NOT talk.
-             No morphing, no melting, no photorealism, no 3D render look, no text,
-             no extra characters appearing.
+[1 STYLE+CADENCE] Handcrafted paper-maquette stop-motion, animated on twos (~12 fps):
+    deliberate stepped motion with tiny holds and slight rebounds, as if repositioned
+    by hand between exposures.
+[2 FIRST FRAME]  @Image 1 is the first frame: composition, palette, materials and
+    lighting stay locked to it. Motion starts on frame 1, no opening freeze.
+    (NO re-describir el contenido de la imagen: los tokens van a lo que CAMBIA.)
+[3 BEATS]        [0-2s] … [2-4s] … [4-5s] — 1 acción dominante + 1-2 secundarias en
+    TODO el clip, repartidas por beat; cada beat con causa→consecuencia, amplitud
+    declarada (bursts, large stepped drops), un verbo de aterrizaje (slams, snaps,
+    settles) y estado final observable. El material vive pegado a su verbo
+    ("cotton-fiber mist swells", nunca materia quieta). Cierre: settled ≠ frozen.
+[4 CAMERA]       UNA conducta, dicha una vez, motivada por un evento visible y con
+    endpoint nombrado ("beginning as…, ending on…"). Opcional: "slightly handheld".
+[5 PHYSICS]      1-2 invariantes de comportamiento ("foam only accumulates, never
+    resets; paper edges shiver slightly between frames").
+[6 INVARIANTES]  Every surface remains visibly cut paper, cardboard and natural fiber
+    with raised edges and real contact shadows. Motion is large and continuous;
+    forms stay stable.
+[7 NEGATIVE]     NOT smooth motion, NOT fluid interpolation, NOT slow-motion, NOT
+    motion blur, NOT liquid simulation, NOT photorealism, no morphing, no melting,
+    no text, no extra people.
 ```
 
-Vocabulario de cámara (uno solo por clip): `slow gentle push-in` ·
-`slow lateral tracking` · `very slow push-in` (retratos) · `slow tilt up` ·
-`slow overhead drift` · `gentle slow arc around` · `slow follow from behind`.
-
-Reglas aprendidas:
-- **Un movimiento de cámara por clip.** Dos = deriva y morphing.
-- Los personajes **nunca hablan** (la narración es en off); siempre incluir la cláusula.
-- Escenas nocturnas: añadir "night scene" tras la apertura y describir la luz
-  (warm firelight against the cold night). Ojo: el recomendador de presets puede
-  devolver un preset distinto (p. ej. "IN THE DARK") — declinar el id exacto.
-- Ajustar [4] al plano: "no people appearing" en paisajes; "no fish, no koi, no fins"
-  con serpientes; "no faces needed" en planos de manos/pies.
-- El prompt de movimiento debe **describir lo que ya se ve en el keyframe** y solo
-  añadir tiempo (qué se mueve). No introducir elementos nuevos: el filtro y el
-  morphing castigan las sorpresas.
+Reglas duras (detalle y evidencia en la doctrina):
+- **Amplitud declarada o no hay vida**: en i2v el modelo no infiere intensidad desde
+  la imagen; sin "large/burst/erupts" elige la mínima. "rising slowly" = orden micro.
+- **Cámara**: compuestos coherentes OK (crane-up con tilt = una trayectoria); dos
+  gramáticas mezcladas = jitter. Nunca "fast" (el keyword que más degrada). Pedir
+  paralaje dentro del movimiento único ("foreground fronds drift faster than the
+  far cliff").
+- **Personajes cobran vida** con: estado inicial en acción (mid-stride, mid-breath),
+  anticipación→acción, drag/follow-through de manta y pelo, mecánica de puppet
+  ("jointed limbs pivot at paper hinges") que legitima movimiento amplio sin
+  morphing. Identidad por invariante positivo ("face, garments and proportions stay
+  exactly as in @Image 1"), nunca frenando la acción.
+- **Candado anti-habla** (narración en off): va en el NEGATIVE como "no lip-sync,
+  no talking" — nunca como limitador de energía.
+- **No incluir "no 3D render"** (pelea con el bajo relieve real del papel);
+  "NOT photorealism" siempre.
+- **Oner de 5s con 3 beats por defecto** (el start_image ancla el primer frame; un
+  corte abandona el ancla). Variante 2-shots con HARD CUT solo como A/B en saltos
+  de escala.
+- **Dos trabajos incompatibles = dos generaciones** (física de entorno vs. actuación
+  de personaje) y se montan en edición.
+- Escenas nocturnas: "night scene" tras la línea 1 + describir la luz. El
+  recomendador de presets puede sugerir otro preset — declinar el id exacto.
+- Ajustar el NEGATIVE al plano: "no extra people, no rainbow" en paisajes; "no fish,
+  no koi, no fins" con serpientes; "no cloned or extra figures, no faces turning to
+  camera" en multitudes. Nunca OTS sin personaje nombrado (inventa gente).
+- **Gates de QC**: verb test (beat sin verbo = decoración, reescribir);
+  before/after (cada clip muestra un cambio de estado visible); apertura estática =
+  regenerar. Proxy de movimiento: peso del archivo (v3 pesó 2,3× v1).
 
 ---
 
@@ -90,7 +129,12 @@ Reglas duras del guion (las tres): apegado a la historia canónica; los versos a
 con el bloque visual que acompañan; la última línea siempre deja el agua quieta;
 nombres propios máx. 2 por video; nada de moralejas explícitas.
 
-### 3b. La voz (ElevenLabs, acento colombiano)
+### 3b. La voz — ⚠️ SUPERSEDED (2026-08-31)
+
+> La doctrina de voz vigente está en `PRODUCCION-END-TO-END.md` ley 3 y
+> `pipeline-v3-profesional.md` §3: **alejandro `bNziytBsHtCSsgcPplG9` en
+> `eleven_flash_v2_5`** (st .5 / sim .8 / sp .97); eleven_v3 descartado. Lo de abajo
+> es histórico (la voz "Alejandro" `2HsKyIMt…` ya no existe en la cuenta).
 - Generador: `node scripts/videos/generate-voice-el.mjs --lines guion.json --out-dir voces/`
   — usa `previous_text`/`next_text` para prosodia continua entre tomas y mide el
   ajuste de cada toma contra su `window` (tope de habla por bloque).
@@ -156,7 +200,14 @@ sonido es diegético (se VE el agua/fuego); bloques neutros van solo con música
 
 ---
 
-## 6. Gramática de montaje (plan.json v3)
+## 6. Gramática de montaje — ⚠️ SUPERSEDED (2026-08-31)
+
+> El pipeline v3 profesional usa **SOLO CORTES SECOS** (sin `xfade` ni
+> `transition_dur`; `validate-plan.mjs --secos` lo vigila) y genera los clips en la
+> web de Higgsfield, no por MCP. Ver `PRODUCCION-END-TO-END.md` y
+> `pipeline-v3-profesional.md` §8. Lo de abajo describe el montaje v2 (histórico).
+
+## 6-histórico. Gramática de montaje (plan.json v2)
 
 - **Corte seco DENTRO de cada bloque narrativo** (entre clip A y B): mantiene ritmo.
 - **Crossfade ENTRE bloques** (`"xfade": true` en el primer clip del bloque): respiración

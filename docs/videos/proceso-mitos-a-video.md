@@ -1,5 +1,10 @@
 # Proceso: de mito a video narrado (90 s)
 
+> **⚠️ SUPERSEDIDO (2026-08-31): el flujo operativo vigente es `pipeline-v3-profesional.md`**
+> (Seedance 2.5 unlimited vía web, solo cortes secos, guiones hasta 2 min, doctrina de
+> movimiento v2). Este documento queda como referencia de la arquitectura v2 y —sobre
+> todo— de las lecciones verificadas de §5b y §6, que siguen vigentes.
+
 Proceso repetible para transformar los mitos del catálogo en videos narrados de ~1:30
 en 9:16. El objetivo no es un video suelto: es una **línea de producción consistente**
 donde cada pueblo tiene una biblia visual reutilizable y cada video nuevo cuesta menos

@@ -1,6 +1,7 @@
 {
   "pueblo": "muiscas",
-  "actualizado": "2026-08-21",
+  "actualizado": "2026-08-31",
+  "precedencia": "Ante conflicto manda docs/videos/PRODUCCION-END-TO-END.md (el playbook de agentes) y luego este DNA; lo historico quedo marcado como tal.",
   "estilo": {
     "nombre": "Maqueta de papel del sitio (studioPaperMaquette)",
     "imagen_modelo": "gpt-image-2",
@@ -10,93 +11,76 @@
   },
   "formato": {
     "aspecto": "9:16",
-    "clips_nativos": "720x1280 @ 24fps (grok)",
-    "entrega": "1080x1920 (upscale lanczos en ensamblaje local)"
+    "clips_nativos": "1080x1920 @ 24fps (Seedance 2.5 via web unlimited, pipeline v3); historicos: 720x1280 (grok, videos 1-2)",
+    "entrega": "1080x1920"
   },
   "video": {
-    "modelo": "grok_video (RATIFICADO 2026-08-20 tras bake-off con ledger: 1,5 cr/s es el PISO de la plataforma — kling3_0 y wan2_7 empatan el precio, seedance mini 2,5/s; ver proceso-mitos-a-video.md 5b)",
-    "alternativas_mismo_precio": {
-      "kling3_0": "std+sound_off, 7,5 cr/5s: el mas fiel en planos fijos, pero niebla se vuelve algodon literal",
-      "wan2_7": "720p, 7,5 cr/5s: push de camara fuerte, 30fps, trae audio ambiente nativo; util para 1-2 planos de vuelo"
-    },
+    "modelo": "Seedance 2.5 1080p via WEB de Higgsfield con licencia unlimited (decision usuario 2026-08-31, pipeline v3) — 0 creditos; prompts por doctrina-movimiento-v2.md. Por MCP/creditos NO producir (Seedance 2.5 1080p/5s = 45 cr, solo pruebas autorizadas).",
+    "respaldo_por_creditos": "grok_video 1,5 cr/s (el ratificado de la era v2; piso de la plataforma) — solo si el unlimited no esta disponible y el usuario lo autoriza",
     "declined_preset_id": "5a77643c-b6cc-4efd-bdc6-ab8ff48dfa82",
-    "nota_presets": "cada escena puede disparar un preset distinto (nocturna: 'IN THE DARK' 24bae836-2c4a-48e0-89b6-49fcc0b21612); declinar el id exacto que devuelva",
-    "descartados": {
-      "gemini_omni": "3 cr/s (2x grok), sin start_image",
-      "kling3_0": "2 cr/s; bueno, acepta start+end frame; segunda opcion valida",
-      "seedance_2_5": "6,5 cr/s (4,3x grok) y su filtro NSFW bloqueo 3/3 la escena madre-nino en el agua"
-    },
-    "moderacion": "el filtro reacciona a la IMAGEN de inicio con nino+agua/fuego/noche o multitudes con menores; solucion probada: re-escenificar (figuras de espaldas, lejanas o sin personas). Tope 12 jobs grok en vuelo (429 encima)."
+    "nota_presets": "aplica al MCP: cada escena puede disparar un preset distinto (nocturna: 'IN THE DARK' 24bae836-2c4a-48e0-89b6-49fcc0b21612); declinar el id exacto que devuelva. En la web: apagar Enhance si existe.",
+    "moderacion": "el filtro reacciona a la IMAGEN de inicio (nino+agua/fuego/noche, multitudes con menores; Seedance es el mas estricto: bloqueo 3/3 madre-nino en agua). Solucion probada: re-escenificar (figuras de espaldas, lejanas o sin personas). lint-spec.mjs SIEMPRE antes de generar.",
+    "historico_v2": "grok_video RATIFICADO 2026-08-20 tras bake-off (kling3_0 y wan2_7 empatan precio; seedance_2_5 descartado entonces por costo+filtro — reabierto 2026-08-31 por la licencia unlimited y el duelo de calidad que gano)"
   },
   "voz": {
-    "proveedor": "ElevenLabs eleven_multilingual_v2 (scripts/videos/generate-voice-el.mjs); MIGRADO desde OpenAI ash 2026-08-20",
+    "VOZ_OFICIAL_CANAL": "alejandro bNziytBsHtCSsgcPplG9 (professional, clon de la voz del usuario, acento es-colombian) en eleven_flash_v2_5, settings stability .5 / similarity_boost .8 / speed .97 (decision usuario 2026-08-31 tras A/B vs multilingual_v2)",
+    "v3_descartado": "eleven_v3 DESCARTADO 2026-08-31: genera (2,47 wps, sin fine-tuning) pero el clon pierde el parecido con la voz real del usuario. No revisitar salvo fine-tuning de professional clones para v3.",
+    "proveedor": "ElevenLabs via scripts/videos/generate-voice-el.mjs",
     "api_key": "ELEVENLABS_API_KEY en .env del repo principal (gitignored); plan Creator 300k chars/mes",
-    "voces_colombianas": {
-      "amaf_femenina": "4kaLaTbziI05Jwh8zWad (melodica, registros fogon y mistico)",
-      "el_faraon_masculina": "W1hAcdh0RNsPYUA7fkJh (profunda, registro epico)",
-      "alejandro": "2HsKyIMt2fxFwsry7Nd6 — funciona con eleven_flash_v2_5 Y (desde 2026-08-21 tarde) con eleven_v3 (mas expresivo, ~25% mas lento, sin param speed); multilingual_v2/turbo siguen dando not_fine_tuned. Voz de Bochica."
+    "elenco_secundario": {
+      "amaf_femenina": "4kaLaTbziI05Jwh8zWad (melodica; multilingual_v2)",
+      "el_faraon_masculina": "W1hAcdh0RNsPYUA7fkJh (profunda; multilingual_v2)"
     },
     "prosodia": "previous_text/next_text entre tomas para narracion continua",
     "wps_real": "2,4-2,6 palabras/s -> 19 palabras por bloque caben holgadas",
-    "registros_guion": "GANADOR DEFINITIVO: fogon-visual-coloquial con voz E (Amaf); ver plantillas 3a y direccion-cinematografica.md",
-    "settings": "fogon st.5 sty.25 sp1.0 · epico st.55 sty.3 sp.98 · mistico st.35 sty.5 sp.92",
-    "nota_modelos": "Amaf/Faraon -> eleven_multilingual_v2; Alejandro -> eleven_flash_v2_5 o eleven_v3 (v3 mas expresivo y ~25% mas lento, sin speed)",
-    "VOZ_OFICIAL_CANAL": "Alejandro 2HsKyIMt2fxFwsry7Nd6 en eleven_v3 (decision usuario 2026-08-21; v3 NO acepta previous/next_text ni speed — el generador lo maneja solo). Ambos videos re-narrados con ella."
+    "registros_guion": "GANADOR DEFINITIVO: fogon-visual-coloquial; ver plantillas 3a y direccion-cinematografica.md",
+    "historico": "voz anterior 'Alejandro' 2HsKyIMt2fxFwsry7Nd6 (eleven_v3) YA NO EXISTE en la cuenta — si un guion viejo la referencia, actualizarlo"
   },
   "sfx": {
-    "modelo": "mirelo_text_to_audio (2,5 cr por 10 s)",
-    "uso": "cama de ambiente por bloque via plan.json {sfx, sfx_vol~0.45}; loop+fades y ducking bajo la voz los hace assemble-video.mjs",
-    "biblioteca": "content/videos/muiscas/audio/sfx/ (sfx-laguna.mp3, sfx-fogon.mp3) (reusables en todos los videos; ampliar con viento-paramo y aldea)"
+    "modelo": "mirelo_text_to_audio (2,5 cr por 10 s) — la biblioteca SE REUSA, generar nuevos solo con autorizacion",
+    "uso": "por bloque via plan.json {sfx, sfx_vol} SOLO donde el sonido es diegetico; sfx_vol 0,2-0,3 (0,4 si el agua es protagonista); loop+fades y ducking bajo la voz los hace assemble-video.mjs",
+    "biblioteca": "content/videos/muiscas/audio/sfx/ (sfx-laguna, sfx-fogon, sfx-lluvia, sfx-cascada — 10s loopeables)"
   },
   "musica": {
     "obligatoria": true,
-    "proveedor": "Eleven Music (POST /v1/music, music_length_ms); MIGRADO desde sonilo 2026-08-20",
-    "cama_actual": "content/videos/muiscas/audio/musica-cama-elevenlabs.mp3 (95s)",
-    "cama_anterior_sonilo": "content/videos/muiscas/audio/musica-cama.m4a (archivada)",
-    "mood": "dark-enchanted ambient: misteriosa, calma, cuerdas sostenidas suaves, arpa lejana, quena andina lejana y escasa, sin percusion, sin voces",
-    "reuso": "la cama se REUSA entre videos muiscas; regenerar solo si el mito pide otro mood",
-    "volumen_en_mezcla": 0.09
+    "proveedor": "Eleven Music (POST /v1/music, music_length_ms)",
+    "cama_actual": "content/videos/muiscas/audio/musica-muisca-andina.mp3 (95s, quenas/ocarina/tambor-latido; prompt en plantillas 4)",
+    "camas_anteriores": "musica-cama-elevenlabs.mp3 (ambient) y musica-cama.m4a (sonilo) — archivadas",
+    "reuso": "la cama se REUSA entre videos muiscas; video >105s => cama nueva a duracion exacta PREVIA autorizacion del usuario (nunca loopear)",
+    "volumen_en_mezcla": 0.12
   },
   "ensamblaje": {
-    "script": "scripts/videos/assemble-video.mjs v3 (local, gratis)",
-    "estructura": "2 clips de 5-6s por bloque narrativo (grok cobra lineal: mas cortes, mismo costo); duraciones sugeridas por validate-plan.mjs --suggest; cola still 3,5s Ken Burns con solo ambiente",
-    "montaje": "corte seco DENTRO del bloque, crossfade 0,4s ENTRE bloques (auto-recortado al aire de la narracion; sin aire = corte seco), fundidos globales 0,6/0,8s, titulo de canal en bloque 1 (title/title_sub), musica resuelve con fade 4s en su final natural",
-    "subtitulos": "PNG por cue con sharp/Pango + overlay enable (ffmpeg local sin libass/drawtext); sin cues huerfanos; .srt aparte",
-    "herramientas_previas": "lint-spec.mjs (anti-nsfw, SIEMPRE antes de generar) y validate-plan.mjs (archivos + ventanas de habla)",
-    "playbook_prompts": "docs/videos/plantillas-prompts.md",
-    "entregas": "master CRF18 + social 1080p 8Mbps faststart + preview 720p <30MB"
+    "script": "scripts/videos/assemble-video.mjs (local, gratis)",
+    "estructura": "2 clips de 5s por bloque narrativo + cola still 3,5-5s Ken Burns con solo ambiente (bookend del plano inicial cuando aplique)",
+    "montaje": "SOLO CORTES SECOS (decision usuario 2026-08-31): sin xfade ni transition_dur en el plan (validate-plan.mjs --secos lo vigila); sobreviven fundidos globales 0,6/0,8s y el fade del titulo de canal (bloque 1); musica resuelve con fade 4s en su final natural",
+    "subtitulos": "PNG por cue con sharp/Pango + overlay enable (ffmpeg local sin libass); sin cues huerfanos; .srt aparte",
+    "herramientas_previas": "lint-spec.mjs (anti-nsfw, SIEMPRE antes de generar) y validate-plan.mjs --secos --suggest",
+    "playbook": "docs/videos/PRODUCCION-END-TO-END.md (maestro) + docs/videos/pipeline-v3-profesional.md (runbook)",
+    "entregas": "master CRF18 + social 1080p 8Mbps faststart + preview 720p <30MB + .srt"
   },
   "assets": {
-    "biblia_dir": "content/videos/muiscas/biblia/",
-    "videos_dir": "content/videos/muiscas/videos/bachue/",
-    "media_map": "content/videos/muiscas/videos/bachue/keyframes/media-map.json"
+    "biblia_dir": "content/videos/muiscas/biblia/ (89 fichas + manifest.json + higgsfield-ids.json)",
+    "videos_dir": "content/videos/muiscas/videos/<mito>/"
   },
-  "costos_reales_bachue": {
-    "total_higgsfield_cr": 160.34,
-    "desglose": "piloto 27,4 (voces seed_audio descartadas + clips grok/kling de prueba) + produccion ~133 (18 clips grok 98s + musica 95s; nsfw/seedance no cobraron neto)",
-    "openai_usd_aprox": "~6 (31 imagenes gpt-image-2 high + ~21 tomas TTS)",
-    "balance": "1010 -> 849,66 (bachue) -> 673,51 (tras bake-off 32,5 + bochica 143,65)"
+  "costos_reales_v2": {
+    "bachue_cr": 160.34,
+    "bochica_cr": 143.65,
+    "nota": "era grok por creditos; con el unlimited web los clips pasan a 0 cr y el costo marginal es ElevenLabs (cuota) + OpenAI solo si se aprueban imagenes nuevas"
   },
   "video_1": {
     "slug": "bachue",
-    "final": "content/videos/muiscas/videos/bachue/bachue-final.mp4 (v3: guion fogon-visual-coloquial + Alejandro v3 + musica andina, 1:39; anteriores: bachue-v2-ash, bachue-v1)",
-    "social": "content/videos/muiscas/videos/bachue/bachue-final-social.mp4",
-    "srt": "content/videos/muiscas/videos/bachue/bachue-final.srt",
+    "final": "content/videos/muiscas/videos/bachue/bachue-final.mp4 (1:39; voz alejandro re-narrada)",
     "plan": "content/videos/muiscas/videos/bachue/plan.json",
-    "produccion": "docs/videos/muiscas/bachue-produccion.json",
-    "voz": "Alejandro (eleven_v3)"
+    "produccion": "docs/videos/muiscas/bachue-produccion.json"
   },
-  "mvps_pendientes": {
-    "resuelto": "E gano; mvps a-f archivados en videos/bachue/"
-  },
-  "doctrina_direccion": "docs/videos/direccion-cinematografica.md (v1 2026-08-20: escalas alternadas, guion de luz por acto, objeto ancla+bookend, cita directa unica, checklist 8 puntos)",
   "video_2": {
     "slug": "bochica",
     "final": "content/videos/muiscas/videos/bochica/bochica-final.mp4 (1:31)",
     "plan": "content/videos/muiscas/videos/bochica/plan.json",
     "produccion": "docs/videos/muiscas/bochica-produccion.json",
-    "costo_higgsfield_cr": 143.65,
-    "nota": "primera corrida perfecta: 18/18 clips sin rechazos nsfw gracias al checklist; 5s uniformes por bloque",
-    "voz": "Alejandro (eleven_v3)"
-  }
+    "remake_v4": "PREVIEW LISTO, PENDIENTE APROBACION DEL USUARIO (pipeline v3): 19 clips Seedance 2.5 unlimited 1080p/5s + cola still 4s; master 99s, social, preview y SRT ensamblados",
+    "aprendizajes_v4": "La web conserva el enlace Lexical @Image 1 si el asset es elegible; validar UUID y data-beautiful-mention antes de enviar. Assets visualmente cercanos pueden deduplicarse y un JPEG puede quedar Not eligible: cancelar antes de render, reexportar visualmente identico una sola vez, volver a validar y no entrar en bucles. El arranque c01-c19 tuvo diferencia medible entre frames 0 y 12; QC visual inicial, mitad y final en verde."
+  },
+  "doctrina_direccion": "docs/videos/direccion-cinematografica.md",
+  "doctrina_movimiento": "docs/videos/doctrina-movimiento-v2.md"
 }
