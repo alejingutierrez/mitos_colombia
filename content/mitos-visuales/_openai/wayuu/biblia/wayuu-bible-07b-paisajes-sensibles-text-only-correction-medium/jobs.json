@@ -1,0 +1,103 @@
+{
+  "schema": "mitos-colombia-biblia-batch/v1",
+  "batch_id": "wayuu-bible-07b-paisajes-sensibles-text-only-correction-medium",
+  "asset_type": "bible",
+  "quality": "medium",
+  "framing": "immersive_full_bleed",
+  "surface_finish": "layered_depth_no_exposed_support",
+  "plan": "content/mitos-visuales/_openai/wayuu/biblia/wayuu-bible-07b-paisajes-sensibles-text-only-correction-medium/plan.snapshot.json",
+  "prepared_at": "2026-09-03",
+  "generation_scope": "Corrección 07b en medium y completamente desde texto: las figuras del incesto se absorben en paisaje sin estatuas; Jepira usa siluetas sin género ni atadura; el valle construye una ausencia no figurativa. No se adjunta ni exporta ninguna imagen local.",
+  "jobs": [
+    {
+      "id": "el-incesto__magia--regla",
+      "model_id": "el-incesto__magia",
+      "view_id": "regla",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/biblia/wayuu-bible-07b-paisajes-sensibles-text-only-correction-medium/prompts/el-incesto__magia--regla.prompt.txt",
+      "output_file": "output/imagegen/wayuu/wayuu-bible-07b-paisajes-sensibles-text-only-correction-medium/el-incesto__magia--regla.jpeg",
+      "prompt_sha256": "b01cf2e3dedcb0b50932fdb3bbf8593e49d6cb9b2f92067b05fc4b54e216c613",
+      "provider": "OpenAI API",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "1536x1024",
+      "output_format": "jpeg",
+      "references": [
+        "el-incesto__ancla:canon"
+      ],
+      "input_references": [],
+      "safeguards": [
+        "generación correctiva desde texto; no adjuntar ni exportar imágenes locales en esta tanda",
+        "todo elemento está construido con papel cortado, plegado, enrollado o prensado y fibras artesanales; mostrar pliegues, cantos internos, uniones, aire y sombras físicas",
+        "sin violencia o sexualidad explícitas, desnudez, cuerpos vulnerados o sufrimiento gráfico",
+        "sin borde exterior, base, cartón, mesa ni estudio visibles; la escena continúa hasta los cuatro límites",
+        "profundidad 3D por capas físicas a distintas distancias, aire, oclusiones, cantos internos y sombras reales; nunca collage plano",
+        "sin aura, chispas, runas, ojos luminosos o humo místico genérico",
+        "sin patrones, kanas, marcas claniles, texto, etiquetas o símbolos decorativos inventados",
+        "ningún lugar se presenta como coordenada exacta, acceso turístico o reconstrucción total",
+        "paisaje horizontal inventado con dos transformaciones no equivalentes y muy separadas: a la izquierda un contorno humano neutro yace reclinado y casi absorbido por estratos bajos de piedra blanca litoral; a la derecha otro contorno reclinado se pierde lateralmente dentro de las capas de un cerro",
+        "la dirección es cuerpo de papel que desaparece en paisaje; nunca figura que emerge, estatua erguida o rostro en la roca; contornos lisos sin cara, sexo, ropa, gesto, contacto o herida; ningún acto sexual, familiar o violento"
+      ],
+      "status": "prepared"
+    },
+    {
+      "id": "el-viaje-del-mas-alla__magia--regla",
+      "model_id": "el-viaje-del-mas-alla__magia",
+      "view_id": "regla",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/biblia/wayuu-bible-07b-paisajes-sensibles-text-only-correction-medium/prompts/el-viaje-del-mas-alla__magia--regla.prompt.txt",
+      "output_file": "output/imagegen/wayuu/wayuu-bible-07b-paisajes-sensibles-text-only-correction-medium/el-viaje-del-mas-alla__magia--regla.jpeg",
+      "prompt_sha256": "28aed576af50a2f129c83baed19748406c2883fd06f7dac6f76ac5438aaf50c3",
+      "provider": "OpenAI API",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "1536x1024",
+      "output_format": "jpeg",
+      "references": [
+        "el-viaje-del-mas-alla__ancla:canon"
+      ],
+      "input_references": [],
+      "safeguards": [
+        "generación correctiva desde texto; no adjuntar ni exportar imágenes locales en esta tanda",
+        "todo elemento está construido con papel cortado, plegado, enrollado o prensado y fibras artesanales; mostrar pliegues, cantos internos, uniones, aire y sombras físicas",
+        "sin violencia o sexualidad explícitas, desnudez, cuerpos vulnerados o sufrimiento gráfico",
+        "sin borde exterior, base, cartón, mesa ni estudio visibles; la escena continúa hasta los cuatro límites",
+        "profundidad 3D por capas físicas a distintas distancias, aire, oclusiones, cantos internos y sombras reales; nunca collage plano",
+        "sin aura, chispas, runas, ojos luminosos o humo místico genérico",
+        "sin patrones, kanas, marcas claniles, texto, etiquetas o símbolos decorativos inventados",
+        "ningún lugar se presenta como coordenada exacta, acceso turístico o reconstrucción total",
+        "paisaje marino de papel con capas de costa y cabo lejano; una única pareja de siluetas sólidas, lisas e idénticamente anónimas cruza a pie sobre el agua: una sostiene y carga a la otra como relación físicamente imposible",
+        "ambas siluetas sin rostro, cabello, ropa, sexo, edad, transparencia o heridas; una tira fina sale suelta desde los labios cerrados de la figura cargada y continúa hacia la orilla, sin atravesar boca, atar, envolver o tocar cuello y cuerpo; expresa silencio, nunca gag o coerción"
+      ],
+      "status": "prepared"
+    },
+    {
+      "id": "las-wanulus-y-el-valle-de-la-muerte__magia--regla",
+      "model_id": "las-wanulus-y-el-valle-de-la-muerte__magia",
+      "view_id": "regla",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/biblia/wayuu-bible-07b-paisajes-sensibles-text-only-correction-medium/prompts/las-wanulus-y-el-valle-de-la-muerte__magia--regla.prompt.txt",
+      "output_file": "output/imagegen/wayuu/wayuu-bible-07b-paisajes-sensibles-text-only-correction-medium/las-wanulus-y-el-valle-de-la-muerte__magia--regla.jpeg",
+      "prompt_sha256": "082080943f3899fb5ba51d3bea42c38f7d63fc9f4f6e365d0f5c53dfcf962446",
+      "provider": "OpenAI API",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "1536x1024",
+      "output_format": "jpeg",
+      "references": [
+        "las-wanulus-y-el-valle-de-la-muerte__ancla:canon"
+      ],
+      "input_references": [],
+      "safeguards": [
+        "generación correctiva desde texto; no adjuntar ni exportar imágenes locales en esta tanda",
+        "todo elemento está construido con papel cortado, plegado, enrollado o prensado y fibras artesanales; mostrar pliegues, cantos internos, uniones, aire y sombras físicas",
+        "sin violencia o sexualidad explícitas, desnudez, cuerpos vulnerados o sufrimiento gráfico",
+        "sin borde exterior, base, cartón, mesa ni estudio visibles; la escena continúa hasta los cuatro límites",
+        "profundidad 3D por capas físicas a distintas distancias, aire, oclusiones, cantos internos y sombras reales; nunca collage plano",
+        "sin aura, chispas, runas, ojos luminosos o humo místico genérico",
+        "sin patrones, kanas, marcas claniles, texto, etiquetas o símbolos decorativos inventados",
+        "ningún lugar se presenta como coordenada exacta, acceso turístico o reconstrucción total",
+        "valle amplio no georreferenciable en planos de papel, con sendero vacío; una única zona irregular no figurativa carece de varias capas, y sendero, plantas y bordes del relieve se desvían físicamente alrededor del hueco sin que nada emerja",
+        "el hueco es corte material mate, no negro ni luminoso, y no puede parecer persona, animal, serpiente, demonio, ojo, boca, portal o sombra de criatura; sin hermanos, cuerpos, sangre, huesos, aura o coordenada"
+      ],
+      "status": "prepared"
+    }
+  ]
+}

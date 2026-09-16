@@ -1,0 +1,33 @@
+{
+  "schema": "mitos-triptych-art-study-review/v1",
+  "date": "2026-09-05",
+  "myth": "aramai",
+  "batch_id": "wayuu-aramai-art-13-wide-01",
+  "status": "PARTIAL_ART_DIRECTION_STUDY_NOT_APPROVED",
+  "editorial_approval": null,
+  "production_ready": false,
+  "completed_triptych": false,
+  "generated_acts": ["entrada"],
+  "provider": "OpenAI API",
+  "model": "gpt-image-2",
+  "generation_mode": "text_only_no_local_references",
+  "output": "output/imagegen/wayuu/triptychs/wayuu-aramai-art-13-wide-01/entrada.jpeg",
+  "output_sha256": "b983e84e6d136c9306253abe173402bb431a52064ef47aebe9f7b9c6d7d5f177",
+  "size": "1536x864",
+  "aspect_ratio": "16:9",
+  "quality": "high",
+  "generation_duration_seconds": 80.9,
+  "observed": [
+    "Arámai entero a la izquierda bajo enramada; perfil más plano, pequeño ojo, sin grandes rasgos expresivos de animación.",
+    "Dos mujeres sirven provisiones a la derecha; patio abierto, rancherías y cardones distantes.",
+    "Recortes visibles en cielo, plantas y ropa; sombra de capas físicas, sin borde exterior de maqueta."
+  ],
+  "unmet_or_unresolved": [
+    "Arámai ocupa aproximadamente 224/864 píxeles de alto, 26%, por encima del máximo solicitado del 16%; medición visual aproximada, no detección automática.",
+    "El espacio azul puede leerse como sombra ordinaria, no como presencia o escucha mítica.",
+    "La enramada izquierda aún ocupa mucho encuadre; el suelo continuo no permite verificar los ocho planos físicos solicitados.",
+    "El usuario todavía no ha juzgado esta nueva dirección."
+  ],
+  "review_method": "Inspección visual directa del agente; distinción entre observaciones y requisitos del prompt. No revisión independiente.",
+  "next_scope": "Evaluar lenguaje material con el usuario; no ejecutar acto, huella ni otro mito."
+}

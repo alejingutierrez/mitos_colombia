@@ -1,0 +1,2951 @@
+{
+  "schema": "mitos-colombia-biblia-visual/v3",
+  "batch": {
+    "id": "wayuu-v3-production-26-waleker-el-origen-del-tejido-medium",
+    "myth_slug": "waleker-el-origen-del-tejido",
+    "model_ids": [
+      "waleker__identity_sheet",
+      "waleker__state_sheet",
+      "irunuu__identity_sheet",
+      "irunuu__state_sheet",
+      "uyaaliwa_outshi_waleker__identity_sheet",
+      "tool_waleker__identity_sheet",
+      "tool_waleker__state_sheet",
+      "kulamia_waleker__identity_sheet",
+      "servidores_wanuru_waleker__group_grammar",
+      "tejedoras_herederas__group_grammar",
+      "atia__presence_model",
+      "kanaspi__presence_model",
+      "maawui_waleker__presence_model",
+      "sese_waleker__presence_model",
+      "hermanas_irunuu_waleker__group_grammar",
+      "hermanas_irunuu_waleker__state_sheet",
+      "hormigas_waleker__group_grammar",
+      "tejidos_waleker__object_sheet",
+      "telar_wayuu__object_sheet",
+      "jiron_telarana_waleker__object_sheet",
+      "isashii_waleker__spatial_model",
+      "suumain_yolujaa_waleker__spatial_model",
+      "transformacion_nocturna_waleker__phenomenon_rule",
+      "tejido_nocturno_waleker__phenomenon_rule",
+      "sueno_chinchorro_waleker__phenomenon_rule",
+      "revelacion_secreto_waleker__phenomenon_rule",
+      "legado_textil_waleker__phenomenon_rule",
+      "estrella_corazon_irunuu__phenomenon_rule"
+    ],
+    "quality": "medium",
+    "framing": "immersive_full_bleed",
+    "surface_finish": "layered_depth_no_exposed_support",
+    "generation_mode": "text_only_no_local_references",
+    "status": "prepared_after_complete_primary_reaudit",
+    "selection_manifest": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/wayuu-v3-production-26-waleker-el-origen-del-tejido-medium/selection.json",
+    "contact_sheet": "output/imagegen/wayuu-v3-production/waleker-el-origen-del-tejido-batch26-selected-contact-sheet.jpeg"
+  },
+  "inventory_approved_at": "2026-09-03",
+  "pilot_approved_at": "2026-09-03",
+  "source_snapshot_sha256": "6b5b1c5ebdb2524a7524b065d96c6d33ad6f5694db239a0d722ded8485f435f5",
+  "model_ids": [
+    "waleker__identity_sheet",
+    "waleker__state_sheet",
+    "irunuu__identity_sheet",
+    "irunuu__state_sheet",
+    "uyaaliwa_outshi_waleker__identity_sheet",
+    "tool_waleker__identity_sheet",
+    "tool_waleker__state_sheet",
+    "kulamia_waleker__identity_sheet",
+    "servidores_wanuru_waleker__group_grammar",
+    "tejedoras_herederas__group_grammar",
+    "atia__presence_model",
+    "kanaspi__presence_model",
+    "maawui_waleker__presence_model",
+    "sese_waleker__presence_model",
+    "hermanas_irunuu_waleker__group_grammar",
+    "hermanas_irunuu_waleker__state_sheet",
+    "hormigas_waleker__group_grammar",
+    "tejidos_waleker__object_sheet",
+    "telar_wayuu__object_sheet",
+    "jiron_telarana_waleker__object_sheet",
+    "isashii_waleker__spatial_model",
+    "suumain_yolujaa_waleker__spatial_model",
+    "transformacion_nocturna_waleker__phenomenon_rule",
+    "tejido_nocturno_waleker__phenomenon_rule",
+    "sueno_chinchorro_waleker__phenomenon_rule",
+    "revelacion_secreto_waleker__phenomenon_rule",
+    "legado_textil_waleker__phenomenon_rule",
+    "estrella_corazon_irunuu__phenomenon_rule"
+  ],
+  "models": {
+    "waleker__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "waleker"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "waleker-el-origen-del-tejido",
+          "field": "mito",
+          "note": "Wokoloonat pasa de niña acogida a joven tejedora nocturna y araña."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Silueta singular derivada de la accion y los estados documentados; si la forma no esta descrita, usar presencia y huella en vez de anatomia inventada. Entidad: Wokoloonat / Waleker. Funcion visual: Niña acogida por Irunúu, joven tejedora nocturna y araña que deja conocimiento transmisible.",
+        "materials": [
+          "papel mate estratificado",
+          "fibras y pliegues con volumen fisico",
+          "superficies propias del estado narrativo"
+        ],
+        "palette_logic": "Contraste suficiente para continuidad, restringido a materiales y acciones del relato.",
+        "scale": "Escala declarada frente a una referencia material; evitar monstruosidad generica.",
+        "continuity_markers": [
+          "nombre estable: Wokoloonat / Waleker",
+          "funcion estable: Niña acogida por Irunúu, joven tejedora nocturna y araña que deja conocimiento transmisible.",
+          "estados declarados: niña, joven_tejedora, araña"
+        ],
+        "documented_features": [
+          "Niña acogida por Irunúu, joven tejedora nocturna y araña que deja conocimiento transmisible.",
+          "alias documentado: Wokoloonat",
+          "alias documentado: Wale’kerü",
+          "alias documentado: Walé’kerü",
+          "alias documentado: Wale Kerü"
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para identity_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · identity_sheet",
+        "primary_request": "identidad corporal completa y legible para Wokoloonat / Waleker. Niña acogida por Irunúu, joven tejedora nocturna y araña que deja conocimiento transmisible.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Escala declarada frente a una referencia material; evitar monstruosidad generica.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel mate estratificado; fibras y pliegues con volumen fisico; superficies propias del estado narrativo",
+        "constraints": [
+          "Silueta singular derivada de la accion y los estados documentados; si la forma no esta descrita, usar presencia y huella en vez de anatomia inventada.",
+          "mostrar: Niña acogida por Irunúu, joven tejedora nocturna y araña que deja conocimiento transmisible.",
+          "estados autorizados: niña, joven_tejedora, araña",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "1:1",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "niña"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "waleker__state_sheet": {
+      "purpose": "state_sheet",
+      "entity_refs": [
+        "waleker"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "waleker-el-origen-del-tejido",
+          "field": "mito",
+          "note": "Wokoloonat pasa de niña acogida a joven tejedora nocturna y araña."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Silueta singular derivada de la accion y los estados documentados; si la forma no esta descrita, usar presencia y huella en vez de anatomia inventada. Entidad: Wokoloonat / Waleker. Funcion visual: Niña acogida por Irunúu, joven tejedora nocturna y araña que deja conocimiento transmisible.",
+        "materials": [
+          "papel mate estratificado",
+          "fibras y pliegues con volumen fisico",
+          "superficies propias del estado narrativo"
+        ],
+        "palette_logic": "Contraste suficiente para continuidad, restringido a materiales y acciones del relato.",
+        "scale": "Escala declarada frente a una referencia material; evitar monstruosidad generica.",
+        "continuity_markers": [
+          "nombre estable: Wokoloonat / Waleker",
+          "funcion estable: Niña acogida por Irunúu, joven tejedora nocturna y araña que deja conocimiento transmisible.",
+          "estados declarados: niña, joven_tejedora, araña"
+        ],
+        "documented_features": [
+          "Niña acogida por Irunúu, joven tejedora nocturna y araña que deja conocimiento transmisible.",
+          "alias documentado: Wokoloonat",
+          "alias documentado: Wale’kerü",
+          "alias documentado: Walé’kerü",
+          "alias documentado: Wale Kerü"
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para state_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · state_sheet",
+        "primary_request": "continuidad entre estados sin adelantar un keyframe para Wokoloonat / Waleker. Niña acogida por Irunúu, joven tejedora nocturna y araña que deja conocimiento transmisible.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Escala declarada frente a una referencia material; evitar monstruosidad generica.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel mate estratificado; fibras y pliegues con volumen fisico; superficies propias del estado narrativo",
+        "constraints": [
+          "Silueta singular derivada de la accion y los estados documentados; si la forma no esta descrita, usar presencia y huella en vez de anatomia inventada.",
+          "mostrar: Niña acogida por Irunúu, joven tejedora nocturna y araña que deja conocimiento transmisible.",
+          "estados autorizados: niña, joven_tejedora, araña",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "estados",
+          "view_type": "state_sequence",
+          "purpose": "continuidad entre estados sin adelantar un keyframe",
+          "aspect": "16:9",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "niña",
+            "joven_tejedora",
+            "araña"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "irunuu__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "irunuu"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "waleker-el-origen-del-tejido",
+          "field": "mito",
+          "note": "Caza, acoge, cuida, recibe un vestuario completo, promete, revela y pierde."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos. Entidad: Irunúu. Funcion visual: Cazador que acoge a Wokoloonat, recibe de ella un sistema completo de prendas y luego rompe el secreto que prometió guardar.",
+        "materials": [
+          "papel mate de fibra visible",
+          "capas prensadas para cuerpo y vestuario",
+          "hilo solo cuando el relato lo exige"
+        ],
+        "palette_logic": "Arena, barro, carbon y fibras naturales; un acento propio de la entidad puede repetirse, sin patrones kanas o marcas claniles inventadas.",
+        "scale": "Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "continuity_markers": [
+          "nombre estable: Irunúu",
+          "funcion estable: Cazador que acoge a Wokoloonat, recibe de ella un sistema completo de prendas y luego rompe el secreto que prometió guardar.",
+          "estados declarados: cazador_cuidador, vestido_por_waleker, promesa_quebrada"
+        ],
+        "documented_features": [
+          "Cazador que acoge a Wokoloonat, recibe de ella un sistema completo de prendas y luego rompe el secreto que prometió guardar."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para identity_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · identity_sheet",
+        "primary_request": "identidad corporal completa y legible para Irunúu. Cazador que acoge a Wokoloonat, recibe de ella un sistema completo de prendas y luego rompe el secreto que prometió guardar.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel mate de fibra visible; capas prensadas para cuerpo y vestuario; hilo solo cuando el relato lo exige",
+        "constraints": [
+          "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos.",
+          "mostrar: Cazador que acoge a Wokoloonat, recibe de ella un sistema completo de prendas y luego rompe el secreto que prometió guardar.",
+          "estados autorizados: cazador_cuidador, vestido_por_waleker, promesa_quebrada",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "1:1",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "cazador_cuidador"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "irunuu__state_sheet": {
+      "purpose": "state_sheet",
+      "entity_refs": [
+        "irunuu"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "waleker-el-origen-del-tejido",
+          "field": "mito",
+          "note": "Caza, acoge, cuida, recibe un vestuario completo, promete, revela y pierde."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos. Entidad: Irunúu. Funcion visual: Cazador que acoge a Wokoloonat, recibe de ella un sistema completo de prendas y luego rompe el secreto que prometió guardar.",
+        "materials": [
+          "papel mate de fibra visible",
+          "capas prensadas para cuerpo y vestuario",
+          "hilo solo cuando el relato lo exige"
+        ],
+        "palette_logic": "Arena, barro, carbon y fibras naturales; un acento propio de la entidad puede repetirse, sin patrones kanas o marcas claniles inventadas.",
+        "scale": "Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "continuity_markers": [
+          "nombre estable: Irunúu",
+          "funcion estable: Cazador que acoge a Wokoloonat, recibe de ella un sistema completo de prendas y luego rompe el secreto que prometió guardar.",
+          "estados declarados: cazador_cuidador, vestido_por_waleker, promesa_quebrada"
+        ],
+        "documented_features": [
+          "Cazador que acoge a Wokoloonat, recibe de ella un sistema completo de prendas y luego rompe el secreto que prometió guardar."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para state_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · state_sheet",
+        "primary_request": "continuidad entre estados sin adelantar un keyframe para Irunúu. Cazador que acoge a Wokoloonat, recibe de ella un sistema completo de prendas y luego rompe el secreto que prometió guardar.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel mate de fibra visible; capas prensadas para cuerpo y vestuario; hilo solo cuando el relato lo exige",
+        "constraints": [
+          "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos.",
+          "mostrar: Cazador que acoge a Wokoloonat, recibe de ella un sistema completo de prendas y luego rompe el secreto que prometió guardar.",
+          "estados autorizados: cazador_cuidador, vestido_por_waleker, promesa_quebrada",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "estados",
+          "view_type": "state_sequence",
+          "purpose": "continuidad entre estados sin adelantar un keyframe",
+          "aspect": "16:9",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "cazador_cuidador",
+            "vestido_por_waleker",
+            "promesa_quebrada"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "uyaaliwa_outshi_waleker__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "uyaaliwa_outshi_waleker"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "waleker-el-origen-del-tejido",
+          "field": "mito",
+          "note": "Especialista mayor que vive de hojas, flores y miel olorosas y comparte flores con las hermanas."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos. Entidad: Uyaaliwa / Outshi. Funcion visual: Especialista mayor que se alimenta de hojas, flores y miel olorosas y comparte flores con las hermanas de Irunúu.",
+        "materials": [
+          "papel mate de fibra visible",
+          "capas prensadas para cuerpo y vestuario",
+          "hilo solo cuando el relato lo exige"
+        ],
+        "palette_logic": "Arena, barro, carbon y fibras naturales; un acento propio de la entidad puede repetirse, sin patrones kanas o marcas claniles inventadas.",
+        "scale": "Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "continuity_markers": [
+          "nombre estable: Uyaaliwa / Outshi",
+          "funcion estable: Especialista mayor que se alimenta de hojas, flores y miel olorosas y comparte flores con las hermanas de Irunúu.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Especialista mayor que se alimenta de hojas, flores y miel olorosas y comparte flores con las hermanas de Irunúu.",
+          "alias documentado: Uyaaliwa",
+          "alias documentado: Outshi"
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para identity_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · identity_sheet",
+        "primary_request": "identidad corporal completa y legible para Uyaaliwa / Outshi. Especialista mayor que se alimenta de hojas, flores y miel olorosas y comparte flores con las hermanas de Irunúu.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel mate de fibra visible; capas prensadas para cuerpo y vestuario; hilo solo cuando el relato lo exige",
+        "constraints": [
+          "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos.",
+          "mostrar: Especialista mayor que se alimenta de hojas, flores y miel olorosas y comparte flores con las hermanas de Irunúu.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "1:1",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "tool_waleker__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "tool_waleker"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "waleker-el-origen-del-tejido",
+          "field": "mito",
+          "note": "Anciana contratada para descubrir el tejido, hila algodón y termina convertida en búho."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Silueta singular derivada de la accion y los estados documentados; si la forma no esta descrita, usar presencia y huella en vez de anatomia inventada. Entidad: Tool. Funcion visual: Anciana trabajadora nocturna del algodón que usa huso, descubre a Waleker y se transforma en búho.",
+        "materials": [
+          "papel mate estratificado",
+          "fibras y pliegues con volumen fisico",
+          "superficies propias del estado narrativo"
+        ],
+        "palette_logic": "Contraste suficiente para continuidad, restringido a materiales y acciones del relato.",
+        "scale": "Escala declarada frente a una referencia material; evitar monstruosidad generica.",
+        "continuity_markers": [
+          "nombre estable: Tool",
+          "funcion estable: Anciana trabajadora nocturna del algodón que usa huso, descubre a Waleker y se transforma en búho.",
+          "estados declarados: anciana_hilando, buho"
+        ],
+        "documented_features": [
+          "Anciana trabajadora nocturna del algodón que usa huso, descubre a Waleker y se transforma en búho."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para identity_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · identity_sheet",
+        "primary_request": "identidad corporal completa y legible para Tool. Anciana trabajadora nocturna del algodón que usa huso, descubre a Waleker y se transforma en búho.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Escala declarada frente a una referencia material; evitar monstruosidad generica.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel mate estratificado; fibras y pliegues con volumen fisico; superficies propias del estado narrativo",
+        "constraints": [
+          "Silueta singular derivada de la accion y los estados documentados; si la forma no esta descrita, usar presencia y huella en vez de anatomia inventada.",
+          "mostrar: Anciana trabajadora nocturna del algodón que usa huso, descubre a Waleker y se transforma en búho.",
+          "estados autorizados: anciana_hilando, buho",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "1:1",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "anciana_hilando"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "tool_waleker__state_sheet": {
+      "purpose": "state_sheet",
+      "entity_refs": [
+        "tool_waleker"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "waleker-el-origen-del-tejido",
+          "field": "mito",
+          "note": "Anciana contratada para descubrir el tejido, hila algodón y termina convertida en búho."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Silueta singular derivada de la accion y los estados documentados; si la forma no esta descrita, usar presencia y huella en vez de anatomia inventada. Entidad: Tool. Funcion visual: Anciana trabajadora nocturna del algodón que usa huso, descubre a Waleker y se transforma en búho.",
+        "materials": [
+          "papel mate estratificado",
+          "fibras y pliegues con volumen fisico",
+          "superficies propias del estado narrativo"
+        ],
+        "palette_logic": "Contraste suficiente para continuidad, restringido a materiales y acciones del relato.",
+        "scale": "Escala declarada frente a una referencia material; evitar monstruosidad generica.",
+        "continuity_markers": [
+          "nombre estable: Tool",
+          "funcion estable: Anciana trabajadora nocturna del algodón que usa huso, descubre a Waleker y se transforma en búho.",
+          "estados declarados: anciana_hilando, buho"
+        ],
+        "documented_features": [
+          "Anciana trabajadora nocturna del algodón que usa huso, descubre a Waleker y se transforma en búho."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para state_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · state_sheet",
+        "primary_request": "continuidad entre estados sin adelantar un keyframe para Tool. Anciana trabajadora nocturna del algodón que usa huso, descubre a Waleker y se transforma en búho.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Escala declarada frente a una referencia material; evitar monstruosidad generica.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel mate estratificado; fibras y pliegues con volumen fisico; superficies propias del estado narrativo",
+        "constraints": [
+          "Silueta singular derivada de la accion y los estados documentados; si la forma no esta descrita, usar presencia y huella en vez de anatomia inventada.",
+          "mostrar: Anciana trabajadora nocturna del algodón que usa huso, descubre a Waleker y se transforma en búho.",
+          "estados autorizados: anciana_hilando, buho",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "estados",
+          "view_type": "state_sequence",
+          "purpose": "continuidad entre estados sin adelantar un keyframe",
+          "aspect": "16:9",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "anciana_hilando",
+            "buho"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "kulamia_waleker__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "kulamia_waleker"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "waleker-el-origen-del-tejido",
+          "field": "mito",
+          "note": "Recibe las piezas de Irunúu para imitarlas y enseñarlas a otras mujeres."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos. Entidad: Kulami'a. Funcion visual: Tejedora reconocida a quien Irunúu entrega piezas para que las imite y enseñe a otras mujeres.",
+        "materials": [
+          "papel mate de fibra visible",
+          "capas prensadas para cuerpo y vestuario",
+          "hilo solo cuando el relato lo exige"
+        ],
+        "palette_logic": "Arena, barro, carbon y fibras naturales; un acento propio de la entidad puede repetirse, sin patrones kanas o marcas claniles inventadas.",
+        "scale": "Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "continuity_markers": [
+          "nombre estable: Kulami'a",
+          "funcion estable: Tejedora reconocida a quien Irunúu entrega piezas para que las imite y enseñe a otras mujeres.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Tejedora reconocida a quien Irunúu entrega piezas para que las imite y enseñe a otras mujeres.",
+          "alias documentado: Külami'a"
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para identity_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · identity_sheet",
+        "primary_request": "identidad corporal completa y legible para Kulami'a. Tejedora reconocida a quien Irunúu entrega piezas para que las imite y enseñe a otras mujeres.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel mate de fibra visible; capas prensadas para cuerpo y vestuario; hilo solo cuando el relato lo exige",
+        "constraints": [
+          "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos.",
+          "mostrar: Tejedora reconocida a quien Irunúu entrega piezas para que las imite y enseñe a otras mujeres.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "1:1",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "servidores_wanuru_waleker__group_grammar": {
+      "purpose": "group_grammar",
+      "entity_refs": [
+        "servidores_wanuru_waleker"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "waleker-el-origen-del-tejido",
+          "field": "mito",
+          "note": "Preparan el falso velorio y obtienen el secreto."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Conjunto legible como relacion, no multitud de clones: variacion de escala, postura y distancia sin convertir el grupo en tipo etnico generico. Entidad: Servidores de Wanurü. Funcion visual: Presencias con apariencia humana que preparan una casa como falso velorio y obtienen la revelación del secreto.",
+        "materials": [
+          "figuras de papel individualizadas",
+          "planos separados",
+          "objetos relacionales solo si estan documentados"
+        ],
+        "palette_logic": "Familia cromatica compartida con variaciones internas; sin uniformes o emblemas inventados.",
+        "scale": "Numero y separacion suficientes para entender el grupo sin llenar la imagen de extras.",
+        "continuity_markers": [
+          "nombre estable: Servidores de Wanurü",
+          "funcion estable: Presencias con apariencia humana que preparan una casa como falso velorio y obtienen la revelación del secreto.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Presencias con apariencia humana que preparan una casa como falso velorio y obtienen la revelación del secreto."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para group_grammar",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · group_grammar",
+        "primary_request": "numero, relaciones, escala y variacion interna para Servidores de Wanurü. Presencias con apariencia humana que preparan una casa como falso velorio y obtienen la revelación del secreto.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Numero y separacion suficientes para entender el grupo sin llenar la imagen de extras.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "figuras de papel individualizadas; planos separados; objetos relacionales solo si estan documentados",
+        "constraints": [
+          "Conjunto legible como relacion, no multitud de clones: variacion de escala, postura y distancia sin convertir el grupo en tipo etnico generico.",
+          "mostrar: Presencias con apariencia humana que preparan una casa como falso velorio y obtienen la revelación del secreto.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "group_grammar",
+          "purpose": "numero, relaciones, escala y variacion interna",
+          "aspect": "16:9",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "tejedoras_herederas__group_grammar": {
+      "purpose": "group_grammar",
+      "entity_refs": [
+        "tejedoras_herederas"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "waleker-el-origen-del-tejido",
+          "field": "mito",
+          "note": "Transmiten técnicas por vínculos maternos y familiares."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Conjunto legible como relacion, no multitud de clones: variacion de escala, postura y distancia sin convertir el grupo en tipo etnico generico. Entidad: Tejedoras herederas. Funcion visual: Mujeres de generaciones sucesivas que observan, imitan, corrigen y enseñan mediante relaciones maternas y familiares.",
+        "materials": [
+          "figuras de papel individualizadas",
+          "planos separados",
+          "objetos relacionales solo si estan documentados"
+        ],
+        "palette_logic": "Familia cromatica compartida con variaciones internas; sin uniformes o emblemas inventados.",
+        "scale": "Numero y separacion suficientes para entender el grupo sin llenar la imagen de extras.",
+        "continuity_markers": [
+          "nombre estable: Tejedoras herederas",
+          "funcion estable: Mujeres de generaciones sucesivas que observan, imitan, corrigen y enseñan mediante relaciones maternas y familiares.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Mujeres de generaciones sucesivas que observan, imitan, corrigen y enseñan mediante relaciones maternas y familiares."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para group_grammar",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · group_grammar",
+        "primary_request": "numero, relaciones, escala y variacion interna para Tejedoras herederas. Mujeres de generaciones sucesivas que observan, imitan, corrigen y enseñan mediante relaciones maternas y familiares.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Numero y separacion suficientes para entender el grupo sin llenar la imagen de extras.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "figuras de papel individualizadas; planos separados; objetos relacionales solo si estan documentados",
+        "constraints": [
+          "Conjunto legible como relacion, no multitud de clones: variacion de escala, postura y distancia sin convertir el grupo en tipo etnico generico.",
+          "mostrar: Mujeres de generaciones sucesivas que observan, imitan, corrigen y enseñan mediante relaciones maternas y familiares.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "group_grammar",
+          "purpose": "numero, relaciones, escala y variacion interna",
+          "aspect": "16:9",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "atia__presence_model": {
+      "purpose": "presence_model",
+      "entity_refs": [
+        "atia"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "waleker-el-origen-del-tejido",
+          "field": "mito",
+          "note": "Precedente del color relacionado con arco iris y herramienta de telar."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "No fijar cuerpo humano. La presencia se reconoce por una relacion irrepetible entre territorio, materia, clima, objeto, ausencia y huella. Entidad: Atía / Attia. Funcion visual: Precedente del color relacionado con el arco iris y con una herramienta del telar nombrada en el glosario del relato.",
+        "materials": [
+          "papel territorial fibroso",
+          "capas de agua, suelo, aire o sombra segun evidencia",
+          "uniones fisicas visibles dentro del mundo"
+        ],
+        "palette_logic": "Color gobernado por la accion documentada de la fuerza; sin halo, aura, ojos luminosos o codigo religioso externo.",
+        "scale": "Escala relacional: puede atravesar varios planos sin convertirse en gigante antropomorfo.",
+        "continuity_markers": [
+          "nombre estable: Atía / Attia",
+          "funcion estable: Precedente del color relacionado con el arco iris y con una herramienta del telar nombrada en el glosario del relato.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Precedente del color relacionado con el arco iris y con una herramienta del telar nombrada en el glosario del relato.",
+          "alias documentado: Attia"
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para presence_model",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · presence_model",
+        "primary_request": "accion y huella sin inventar anatomia para Atía / Attia. Precedente del color relacionado con el arco iris y con una herramienta del telar nombrada en el glosario del relato.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Escala relacional: puede atravesar varios planos sin convertirse en gigante antropomorfo.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel territorial fibroso; capas de agua, suelo, aire o sombra segun evidencia; uniones fisicas visibles dentro del mundo",
+        "constraints": [
+          "No fijar cuerpo humano. La presencia se reconoce por una relacion irrepetible entre territorio, materia, clima, objeto, ausencia y huella.",
+          "mostrar: Precedente del color relacionado con el arco iris y con una herramienta del telar nombrada en el glosario del relato.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "presence_grammar",
+          "purpose": "accion y huella sin inventar anatomia",
+          "aspect": "16:9",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "kanaspi__presence_model": {
+      "purpose": "presence_model",
+      "entity_refs": [
+        "kanaspi"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "waleker-el-origen-del-tejido",
+          "field": "mito",
+          "note": "Precedente floral rojo del conocimiento textil."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "No fijar cuerpo humano. La presencia se reconoce por una relacion irrepetible entre territorio, materia, clima, objeto, ausencia y huella. Entidad: Kanaspi. Funcion visual: Precedente floral del conocimiento textil, vinculado con una planta de flores rojas semejantes a un tejido.",
+        "materials": [
+          "papel territorial fibroso",
+          "capas de agua, suelo, aire o sombra segun evidencia",
+          "uniones fisicas visibles dentro del mundo"
+        ],
+        "palette_logic": "Color gobernado por la accion documentada de la fuerza; sin halo, aura, ojos luminosos o codigo religioso externo.",
+        "scale": "Escala relacional: puede atravesar varios planos sin convertirse en gigante antropomorfo.",
+        "continuity_markers": [
+          "nombre estable: Kanaspi",
+          "funcion estable: Precedente floral del conocimiento textil, vinculado con una planta de flores rojas semejantes a un tejido.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Precedente floral del conocimiento textil, vinculado con una planta de flores rojas semejantes a un tejido."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para presence_model",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · presence_model",
+        "primary_request": "accion y huella sin inventar anatomia para Kanaspi. Precedente floral del conocimiento textil, vinculado con una planta de flores rojas semejantes a un tejido.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Escala relacional: puede atravesar varios planos sin convertirse en gigante antropomorfo.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel territorial fibroso; capas de agua, suelo, aire o sombra segun evidencia; uniones fisicas visibles dentro del mundo",
+        "constraints": [
+          "No fijar cuerpo humano. La presencia se reconoce por una relacion irrepetible entre territorio, materia, clima, objeto, ausencia y huella.",
+          "mostrar: Precedente floral del conocimiento textil, vinculado con una planta de flores rojas semejantes a un tejido.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "presence_grammar",
+          "purpose": "accion y huella sin inventar anatomia",
+          "aspect": "16:9",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "maawui_waleker__presence_model": {
+      "purpose": "presence_model",
+      "entity_refs": [
+        "maawui_waleker"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "waleker-el-origen-del-tejido",
+          "field": "mito",
+          "note": "Precedente del algodón sin cuerpo inventado."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "No fijar cuerpo humano. La presencia se reconoce por una relacion irrepetible entre territorio, materia, clima, objeto, ausencia y huella. Entidad: Maawüi. Funcion visual: Precedente del algodón nombrado por Waleker sin cuerpo humano ni fisonomía descritos.",
+        "materials": [
+          "papel territorial fibroso",
+          "capas de agua, suelo, aire o sombra segun evidencia",
+          "uniones fisicas visibles dentro del mundo"
+        ],
+        "palette_logic": "Color gobernado por la accion documentada de la fuerza; sin halo, aura, ojos luminosos o codigo religioso externo.",
+        "scale": "Escala relacional: puede atravesar varios planos sin convertirse en gigante antropomorfo.",
+        "continuity_markers": [
+          "nombre estable: Maawüi",
+          "funcion estable: Precedente del algodón nombrado por Waleker sin cuerpo humano ni fisonomía descritos.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Precedente del algodón nombrado por Waleker sin cuerpo humano ni fisonomía descritos."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para presence_model",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · presence_model",
+        "primary_request": "accion y huella sin inventar anatomia para Maawüi. Precedente del algodón nombrado por Waleker sin cuerpo humano ni fisonomía descritos.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Escala relacional: puede atravesar varios planos sin convertirse en gigante antropomorfo.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel territorial fibroso; capas de agua, suelo, aire o sombra segun evidencia; uniones fisicas visibles dentro del mundo",
+        "constraints": [
+          "No fijar cuerpo humano. La presencia se reconoce por una relacion irrepetible entre territorio, materia, clima, objeto, ausencia y huella.",
+          "mostrar: Precedente del algodón nombrado por Waleker sin cuerpo humano ni fisonomía descritos.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "presence_grammar",
+          "purpose": "accion y huella sin inventar anatomia",
+          "aspect": "16:9",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "sese_waleker__presence_model": {
+      "purpose": "presence_model",
+      "entity_refs": [
+        "sese_waleker"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "waleker-el-origen-del-tejido",
+          "field": "mito",
+          "note": "Precedente del hilo sin cuerpo inventado."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "No fijar cuerpo humano. La presencia se reconoce por una relacion irrepetible entre territorio, materia, clima, objeto, ausencia y huella. Entidad: Sese. Funcion visual: Precedente del hilo y del hilado nombrado por Waleker sin anatomía documentada.",
+        "materials": [
+          "papel territorial fibroso",
+          "capas de agua, suelo, aire o sombra segun evidencia",
+          "uniones fisicas visibles dentro del mundo"
+        ],
+        "palette_logic": "Color gobernado por la accion documentada de la fuerza; sin halo, aura, ojos luminosos o codigo religioso externo.",
+        "scale": "Escala relacional: puede atravesar varios planos sin convertirse en gigante antropomorfo.",
+        "continuity_markers": [
+          "nombre estable: Sese",
+          "funcion estable: Precedente del hilo y del hilado nombrado por Waleker sin anatomía documentada.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Precedente del hilo y del hilado nombrado por Waleker sin anatomía documentada."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para presence_model",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · presence_model",
+        "primary_request": "accion y huella sin inventar anatomia para Sese. Precedente del hilo y del hilado nombrado por Waleker sin anatomía documentada.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Escala relacional: puede atravesar varios planos sin convertirse en gigante antropomorfo.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel territorial fibroso; capas de agua, suelo, aire o sombra segun evidencia; uniones fisicas visibles dentro del mundo",
+        "constraints": [
+          "No fijar cuerpo humano. La presencia se reconoce por una relacion irrepetible entre territorio, materia, clima, objeto, ausencia y huella.",
+          "mostrar: Precedente del hilo y del hilado nombrado por Waleker sin anatomía documentada.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "presence_grammar",
+          "purpose": "accion y huella sin inventar anatomia",
+          "aspect": "16:9",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "hermanas_irunuu_waleker__group_grammar": {
+      "purpose": "group_grammar",
+      "entity_refs": [
+        "hermanas_irunuu_waleker"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "waleker-el-origen-del-tejido",
+          "field": "mito",
+          "note": "Tres hermanas de Irunúu, cuidadoras de Wokoloonat y luego tres murciélagos."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Conjunto legible como relacion, no multitud de clones: variacion de escala, postura y distancia sin convertir el grupo en tipo etnico generico. Entidad: Tres hermanas de Irunúu. Funcion visual: Tres mujeres adultas que crían a Wokoloonat en la casa de Irunúu y terminan convertidas en tres murciélagos.",
+        "materials": [
+          "figuras de papel individualizadas",
+          "planos separados",
+          "objetos relacionales solo si estan documentados"
+        ],
+        "palette_logic": "Familia cromatica compartida con variaciones internas; sin uniformes o emblemas inventados.",
+        "scale": "Numero y separacion suficientes para entender el grupo sin llenar la imagen de extras.",
+        "continuity_markers": [
+          "nombre estable: Tres hermanas de Irunúu",
+          "funcion estable: Tres mujeres adultas que crían a Wokoloonat en la casa de Irunúu y terminan convertidas en tres murciélagos.",
+          "estados declarados: tres_mujeres, tres_murcielagos"
+        ],
+        "documented_features": [
+          "Tres mujeres adultas que crían a Wokoloonat en la casa de Irunúu y terminan convertidas en tres murciélagos."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para group_grammar",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · group_grammar",
+        "primary_request": "numero, relaciones, escala y variacion interna para Tres hermanas de Irunúu. Tres mujeres adultas que crían a Wokoloonat en la casa de Irunúu y terminan convertidas en tres murciélagos.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Numero y separacion suficientes para entender el grupo sin llenar la imagen de extras.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "figuras de papel individualizadas; planos separados; objetos relacionales solo si estan documentados",
+        "constraints": [
+          "Conjunto legible como relacion, no multitud de clones: variacion de escala, postura y distancia sin convertir el grupo en tipo etnico generico.",
+          "mostrar: Tres mujeres adultas que crían a Wokoloonat en la casa de Irunúu y terminan convertidas en tres murciélagos.",
+          "estados autorizados: tres_mujeres, tres_murcielagos",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "group_grammar",
+          "purpose": "numero, relaciones, escala y variacion interna",
+          "aspect": "16:9",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "tres_mujeres"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "hermanas_irunuu_waleker__state_sheet": {
+      "purpose": "state_sheet",
+      "entity_refs": [
+        "hermanas_irunuu_waleker"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "waleker-el-origen-del-tejido",
+          "field": "mito",
+          "note": "Tres hermanas de Irunúu, cuidadoras de Wokoloonat y luego tres murciélagos."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Conjunto legible como relacion, no multitud de clones: variacion de escala, postura y distancia sin convertir el grupo en tipo etnico generico. Entidad: Tres hermanas de Irunúu. Funcion visual: Tres mujeres adultas que crían a Wokoloonat en la casa de Irunúu y terminan convertidas en tres murciélagos.",
+        "materials": [
+          "figuras de papel individualizadas",
+          "planos separados",
+          "objetos relacionales solo si estan documentados"
+        ],
+        "palette_logic": "Familia cromatica compartida con variaciones internas; sin uniformes o emblemas inventados.",
+        "scale": "Numero y separacion suficientes para entender el grupo sin llenar la imagen de extras.",
+        "continuity_markers": [
+          "nombre estable: Tres hermanas de Irunúu",
+          "funcion estable: Tres mujeres adultas que crían a Wokoloonat en la casa de Irunúu y terminan convertidas en tres murciélagos.",
+          "estados declarados: tres_mujeres, tres_murcielagos"
+        ],
+        "documented_features": [
+          "Tres mujeres adultas que crían a Wokoloonat en la casa de Irunúu y terminan convertidas en tres murciélagos."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para state_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · state_sheet",
+        "primary_request": "continuidad entre estados sin adelantar un keyframe para Tres hermanas de Irunúu. Tres mujeres adultas que crían a Wokoloonat en la casa de Irunúu y terminan convertidas en tres murciélagos.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Numero y separacion suficientes para entender el grupo sin llenar la imagen de extras.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "figuras de papel individualizadas; planos separados; objetos relacionales solo si estan documentados",
+        "constraints": [
+          "Conjunto legible como relacion, no multitud de clones: variacion de escala, postura y distancia sin convertir el grupo en tipo etnico generico.",
+          "mostrar: Tres mujeres adultas que crían a Wokoloonat en la casa de Irunúu y terminan convertidas en tres murciélagos.",
+          "estados autorizados: tres_mujeres, tres_murcielagos",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "estados",
+          "view_type": "state_sequence",
+          "purpose": "continuidad entre estados sin adelantar un keyframe",
+          "aspect": "16:9",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "tres_mujeres",
+            "tres_murcielagos"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "hormigas_waleker__group_grammar": {
+      "purpose": "group_grammar",
+      "entity_refs": [
+        "hormigas_waleker"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "waleker-el-origen-del-tejido",
+          "field": "mito",
+          "note": "Acompañan a la niña cuando Irunúu la encuentra en Isashii."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Morfologia zoologica reconocible, cuerpo completo cuando es individuo y variacion controlada cuando es grupo; sin hibridacion no documentada. Entidad: Hormigas de Wokoloonat. Funcion visual: Hormigas entre las que juega la niña al ser encontrada.",
+        "materials": [
+          "capas de papel recortado para anatomia",
+          "fibras finas para pelaje o pluma cuando corresponda",
+          "cantos internos y articulaciones fisicas"
+        ],
+        "palette_logic": "Color natural o explicitamente narrado; no usar brillo magico para señalar importancia.",
+        "scale": "Escala zoologica verificable frente al entorno y los personajes.",
+        "continuity_markers": [
+          "nombre estable: Hormigas de Wokoloonat",
+          "funcion estable: Hormigas entre las que juega la niña al ser encontrada.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Hormigas entre las que juega la niña al ser encontrada."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para group_grammar",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · group_grammar",
+        "primary_request": "numero, relaciones, escala y variacion interna para Hormigas de Wokoloonat. Hormigas entre las que juega la niña al ser encontrada.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Escala zoologica verificable frente al entorno y los personajes.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "capas de papel recortado para anatomia; fibras finas para pelaje o pluma cuando corresponda; cantos internos y articulaciones fisicas",
+        "constraints": [
+          "Morfologia zoologica reconocible, cuerpo completo cuando es individuo y variacion controlada cuando es grupo; sin hibridacion no documentada.",
+          "mostrar: Hormigas entre las que juega la niña al ser encontrada.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "group_grammar",
+          "purpose": "numero, relaciones, escala y variacion interna",
+          "aspect": "16:9",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "tejidos_waleker__object_sheet": {
+      "purpose": "object_sheet",
+      "entity_refs": [
+        "tejidos_waleker"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "waleker-el-origen-del-tejido",
+          "field": "mito",
+          "note": "Conjunto diferenciado de piezas y prendas del legado."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Contorno, volumen, piezas y modo de uso claramente separables; evitar convertir utileria cotidiana en reliquia mistica. Entidad: Conjunto de tejidos de Waleker. Funcion visual: Jamaa, Supüna, Susü, Ekialajaa, She'i, manta de silla, fajas, chinchorros y prendas nombradas por el relato, sin copiar kanas específicos.",
+        "materials": [
+          "papel, fibra, madera o mineral traducidos a paper craft",
+          "uniones y desgaste fisico",
+          "sombras proyectadas coherentes"
+        ],
+        "palette_logic": "Color propio del material y el estado; sin ornamentacion cultural no respaldada.",
+        "scale": "Escala demostrable mediante mano, suelo o arquitectura sin texto ni regla grafica.",
+        "continuity_markers": [
+          "nombre estable: Conjunto de tejidos de Waleker",
+          "funcion estable: Jamaa, Supüna, Susü, Ekialajaa, She'i, manta de silla, fajas, chinchorros y prendas nombradas por el relato, sin copiar kanas específicos.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Jamaa, Supüna, Susü, Ekialajaa, She'i, manta de silla, fajas, chinchorros y prendas nombradas por el relato, sin copiar kanas específicos."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para object_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · object_sheet",
+        "primary_request": "forma, escala, material y uso legibles para Conjunto de tejidos de Waleker. Jamaa, Supüna, Susü, Ekialajaa, She'i, manta de silla, fajas, chinchorros y prendas nombradas por el relato, sin copiar kanas específicos.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Escala demostrable mediante mano, suelo o arquitectura sin texto ni regla grafica.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel, fibra, madera o mineral traducidos a paper craft; uniones y desgaste fisico; sombras proyectadas coherentes",
+        "constraints": [
+          "Contorno, volumen, piezas y modo de uso claramente separables; evitar convertir utileria cotidiana en reliquia mistica.",
+          "mostrar: Jamaa, Supüna, Susü, Ekialajaa, She'i, manta de silla, fajas, chinchorros y prendas nombradas por el relato, sin copiar kanas específicos.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_object",
+          "purpose": "forma, escala, material y uso legibles",
+          "aspect": "1:1",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "telar_wayuu__object_sheet": {
+      "purpose": "object_sheet",
+      "entity_refs": [
+        "telar_wayuu"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "waleker-el-origen-del-tejido",
+          "field": "mito",
+          "note": "Estructura técnica de continuidad, no telar único universal."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Contorno, volumen, piezas y modo de uso claramente separables; evitar convertir utileria cotidiana en reliquia mistica. Entidad: Telar del ciclo de Waleker. Funcion visual: Estructura de tejido documentada por fuentes de continuidad, sin patrones claniles inventados.",
+        "materials": [
+          "papel, fibra, madera o mineral traducidos a paper craft",
+          "uniones y desgaste fisico",
+          "sombras proyectadas coherentes"
+        ],
+        "palette_logic": "Color propio del material y el estado; sin ornamentacion cultural no respaldada.",
+        "scale": "Escala demostrable mediante mano, suelo o arquitectura sin texto ni regla grafica.",
+        "continuity_markers": [
+          "nombre estable: Telar del ciclo de Waleker",
+          "funcion estable: Estructura de tejido documentada por fuentes de continuidad, sin patrones claniles inventados.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Estructura de tejido documentada por fuentes de continuidad, sin patrones claniles inventados."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para object_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · object_sheet",
+        "primary_request": "forma, escala, material y uso legibles para Telar del ciclo de Waleker. Estructura de tejido documentada por fuentes de continuidad, sin patrones claniles inventados.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Escala demostrable mediante mano, suelo o arquitectura sin texto ni regla grafica.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel, fibra, madera o mineral traducidos a paper craft; uniones y desgaste fisico; sombras proyectadas coherentes",
+        "constraints": [
+          "Contorno, volumen, piezas y modo de uso claramente separables; evitar convertir utileria cotidiana en reliquia mistica.",
+          "mostrar: Estructura de tejido documentada por fuentes de continuidad, sin patrones claniles inventados.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_object",
+          "purpose": "forma, escala, material y uso legibles",
+          "aspect": "1:1",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "jiron_telarana_waleker__object_sheet": {
+      "purpose": "object_sheet",
+      "entity_refs": [
+        "jiron_telarana_waleker"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "waleker-el-origen-del-tejido",
+          "field": "mito",
+          "note": "Resto material que queda en las manos de Irunúu."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Contorno, volumen, piezas y modo de uso claramente separables; evitar convertir utileria cotidiana en reliquia mistica. Entidad: Jirón de telaraña. Funcion visual: Resto que queda en las manos de Irunúu durante la transformacion.",
+        "materials": [
+          "papel, fibra, madera o mineral traducidos a paper craft",
+          "uniones y desgaste fisico",
+          "sombras proyectadas coherentes"
+        ],
+        "palette_logic": "Color propio del material y el estado; sin ornamentacion cultural no respaldada.",
+        "scale": "Escala demostrable mediante mano, suelo o arquitectura sin texto ni regla grafica.",
+        "continuity_markers": [
+          "nombre estable: Jirón de telaraña",
+          "funcion estable: Resto que queda en las manos de Irunúu durante la transformacion.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Resto que queda en las manos de Irunúu durante la transformacion."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para object_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · object_sheet",
+        "primary_request": "forma, escala, material y uso legibles para Jirón de telaraña. Resto que queda en las manos de Irunúu durante la transformacion.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Escala demostrable mediante mano, suelo o arquitectura sin texto ni regla grafica.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel, fibra, madera o mineral traducidos a paper craft; uniones y desgaste fisico; sombras proyectadas coherentes",
+        "constraints": [
+          "Contorno, volumen, piezas y modo de uso claramente separables; evitar convertir utileria cotidiana en reliquia mistica.",
+          "mostrar: Resto que queda en las manos de Irunúu durante la transformacion.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_object",
+          "purpose": "forma, escala, material y uso legibles",
+          "aspect": "1:1",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "isashii_waleker__spatial_model": {
+      "purpose": "spatial_model",
+      "entity_refs": [
+        "isashii_waleker"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "waleker-el-origen-del-tejido",
+          "field": "mito",
+          "note": "Lugar de caza y encuentro inicial."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Umbral y organizacion espacial propios del relato; la geografia incierta se mantiene aproximada y nunca se publica como coordenada. Entidad: Isashii. Funcion visual: Lugar de caza donde Irunúu encuentra a Wokoloonat entre hormigas, sin coordenada exacta.",
+        "materials": [
+          "estratos de papel y suelo prensado",
+          "elementos materiales citados por el relato",
+          "aire y oclusiones entre planos"
+        ],
+        "palette_logic": "Paleta territorial modulada por funcion, clima y estado narrativo.",
+        "scale": "Profundidad recorrible con primer plano, plano medio y fondo a distancias reales.",
+        "continuity_markers": [
+          "nombre estable: Isashii",
+          "funcion estable: Lugar de caza donde Irunúu encuentra a Wokoloonat entre hormigas, sin coordenada exacta.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Lugar de caza donde Irunúu encuentra a Wokoloonat entre hormigas, sin coordenada exacta."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para spatial_model",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · spatial_model",
+        "primary_request": "relaciones espaciales, entradas, planos y escala para Isashii. Lugar de caza donde Irunúu encuentra a Wokoloonat entre hormigas, sin coordenada exacta.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Profundidad recorrible con primer plano, plano medio y fondo a distancias reales.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "estratos de papel y suelo prensado; elementos materiales citados por el relato; aire y oclusiones entre planos",
+        "constraints": [
+          "Umbral y organizacion espacial propios del relato; la geografia incierta se mantiene aproximada y nunca se publica como coordenada.",
+          "mostrar: Lugar de caza donde Irunúu encuentra a Wokoloonat entre hormigas, sin coordenada exacta.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "spatial_grammar",
+          "purpose": "relaciones espaciales, entradas, planos y escala",
+          "aspect": "16:9",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "suumain_yolujaa_waleker__spatial_model": {
+      "purpose": "spatial_model",
+      "entity_refs": [
+        "suumain_yolujaa_waleker"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "waleker-el-origen-del-tejido",
+          "field": "mito",
+          "note": "Casa preparada como falso velorio."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Sistema constructivo legible por estructura, cubierta, cerramiento, vacios y relacion con senderos; no casa decorativa aislada. Entidad: Suumain Yolujaa. Funcion visual: Casa de los Yolujaa preparada como un velorio aparente por servidores de Wanurü, no reconstrucción funeraria universal.",
+        "materials": [
+          "yotojoro, madera, paja y barro cuando estan documentados",
+          "capas estructurales separadas",
+          "suelo fibroso continuo"
+        ],
+        "palette_logic": "Materiales mates de arena, madera y barro; sin patrones decorativos inventados.",
+        "scale": "Escala habitable demostrada por vanos, sombra y relaciones espaciales.",
+        "continuity_markers": [
+          "nombre estable: Suumain Yolujaa",
+          "funcion estable: Casa de los Yolujaa preparada como un velorio aparente por servidores de Wanurü, no reconstrucción funeraria universal.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Casa de los Yolujaa preparada como un velorio aparente por servidores de Wanurü, no reconstrucción funeraria universal."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para spatial_model",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · spatial_model",
+        "primary_request": "relaciones espaciales, entradas, planos y escala para Suumain Yolujaa. Casa de los Yolujaa preparada como un velorio aparente por servidores de Wanurü, no reconstrucción funeraria universal.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Escala habitable demostrada por vanos, sombra y relaciones espaciales.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "yotojoro, madera, paja y barro cuando estan documentados; capas estructurales separadas; suelo fibroso continuo",
+        "constraints": [
+          "Sistema constructivo legible por estructura, cubierta, cerramiento, vacios y relacion con senderos; no casa decorativa aislada.",
+          "mostrar: Casa de los Yolujaa preparada como un velorio aparente por servidores de Wanurü, no reconstrucción funeraria universal.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "spatial_grammar",
+          "purpose": "relaciones espaciales, entradas, planos y escala",
+          "aspect": "16:9",
+          "era": "territorial_documentado_no_fecha_unica",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "transformacion_nocturna_waleker__phenomenon_rule": {
+      "purpose": "phenomenon_rule",
+      "entity_refs": [
+        "transformacion_nocturna_waleker"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "waleker-el-origen-del-tejido",
+          "field": "mito",
+          "note": "Separa la niña diurna de la joven tejedora nocturna sin sexualización."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Secuencia material de causa, accion, limite y huella; debe entenderse sin texto, aura o particulas magicas genericas. Entidad: Transformación nocturna de Wokoloonat. Funcion visual: Regla por la que la niña aparece de noche como joven tejedora completamente vestida, sin desnudez, sexualización ni VFX.",
+        "materials": [
+          "papel y fibras que cambian de tension, humedad, luz o posicion",
+          "capas causales separadas",
+          "huella fisica persistente"
+        ],
+        "palette_logic": "El cambio cromatico nace de la materia afectada, nunca de un resplandor sobrenatural por defecto.",
+        "scale": "Escala definida por aquello que transforma, desde objeto hasta territorio.",
+        "continuity_markers": [
+          "nombre estable: Transformación nocturna de Wokoloonat",
+          "funcion estable: Regla por la que la niña aparece de noche como joven tejedora completamente vestida, sin desnudez, sexualización ni VFX.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Regla por la que la niña aparece de noche como joven tejedora completamente vestida, sin desnudez, sexualización ni VFX."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para phenomenon_rule",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · phenomenon_rule",
+        "primary_request": "entrada, accion, limite y huella del fenomeno para Transformación nocturna de Wokoloonat. Regla por la que la niña aparece de noche como joven tejedora completamente vestida, sin desnudez, sexualización ni VFX.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Escala definida por aquello que transforma, desde objeto hasta territorio.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel y fibras que cambian de tension, humedad, luz o posicion; capas causales separadas; huella fisica persistente",
+        "constraints": [
+          "Secuencia material de causa, accion, limite y huella; debe entenderse sin texto, aura o particulas magicas genericas.",
+          "mostrar: Regla por la que la niña aparece de noche como joven tejedora completamente vestida, sin desnudez, sexualización ni VFX.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "phenomenon_grammar",
+          "purpose": "entrada, accion, limite y huella del fenomeno",
+          "aspect": "16:9",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "tejido_nocturno_waleker__phenomenon_rule": {
+      "purpose": "phenomenon_rule",
+      "entity_refs": [
+        "tejido_nocturno_waleker"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "waleker-el-origen-del-tejido",
+          "field": "mito",
+          "note": "Hilo de la boca y construcción material de tejidos durante la noche."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Secuencia material de causa, accion, limite y huella; debe entenderse sin texto, aura o particulas magicas genericas. Entidad: Tejido nocturno de Waleker. Funcion visual: Regla material en la que hilo fino y brillante sale de la boca de la joven y se convierte en tejidos mientras la casa duerme.",
+        "materials": [
+          "papel y fibras que cambian de tension, humedad, luz o posicion",
+          "capas causales separadas",
+          "huella fisica persistente"
+        ],
+        "palette_logic": "El cambio cromatico nace de la materia afectada, nunca de un resplandor sobrenatural por defecto.",
+        "scale": "Escala definida por aquello que transforma, desde objeto hasta territorio.",
+        "continuity_markers": [
+          "nombre estable: Tejido nocturno de Waleker",
+          "funcion estable: Regla material en la que hilo fino y brillante sale de la boca de la joven y se convierte en tejidos mientras la casa duerme.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Regla material en la que hilo fino y brillante sale de la boca de la joven y se convierte en tejidos mientras la casa duerme."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para phenomenon_rule",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · phenomenon_rule",
+        "primary_request": "entrada, accion, limite y huella del fenomeno para Tejido nocturno de Waleker. Regla material en la que hilo fino y brillante sale de la boca de la joven y se convierte en tejidos mientras la casa duerme.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Escala definida por aquello que transforma, desde objeto hasta territorio.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel y fibras que cambian de tension, humedad, luz o posicion; capas causales separadas; huella fisica persistente",
+        "constraints": [
+          "Secuencia material de causa, accion, limite y huella; debe entenderse sin texto, aura o particulas magicas genericas.",
+          "mostrar: Regla material en la que hilo fino y brillante sale de la boca de la joven y se convierte en tejidos mientras la casa duerme.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "phenomenon_grammar",
+          "purpose": "entrada, accion, limite y huella del fenomeno",
+          "aspect": "16:9",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "sueno_chinchorro_waleker__phenomenon_rule": {
+      "purpose": "phenomenon_rule",
+      "entity_refs": [
+        "sueno_chinchorro_waleker"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "waleker-el-origen-del-tejido",
+          "field": "mito",
+          "note": "Peso y silencio del sueño producido por el chinchorro."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Secuencia material de causa, accion, limite y huella; debe entenderse sin texto, aura o particulas magicas genericas. Entidad: Sueño del chinchorro de Waleker. Funcion visual: Sueño profundo asociado con el chinchorro tejido por Waleker, expresado por peso, silencio y pliegues, no como hechizo digital.",
+        "materials": [
+          "papel y fibras que cambian de tension, humedad, luz o posicion",
+          "capas causales separadas",
+          "huella fisica persistente"
+        ],
+        "palette_logic": "El cambio cromatico nace de la materia afectada, nunca de un resplandor sobrenatural por defecto.",
+        "scale": "Escala definida por aquello que transforma, desde objeto hasta territorio.",
+        "continuity_markers": [
+          "nombre estable: Sueño del chinchorro de Waleker",
+          "funcion estable: Sueño profundo asociado con el chinchorro tejido por Waleker, expresado por peso, silencio y pliegues, no como hechizo digital.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Sueño profundo asociado con el chinchorro tejido por Waleker, expresado por peso, silencio y pliegues, no como hechizo digital."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para phenomenon_rule",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · phenomenon_rule",
+        "primary_request": "entrada, accion, limite y huella del fenomeno para Sueño del chinchorro de Waleker. Sueño profundo asociado con el chinchorro tejido por Waleker, expresado por peso, silencio y pliegues, no como hechizo digital.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Escala definida por aquello que transforma, desde objeto hasta territorio.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel y fibras que cambian de tension, humedad, luz o posicion; capas causales separadas; huella fisica persistente",
+        "constraints": [
+          "Secuencia material de causa, accion, limite y huella; debe entenderse sin texto, aura o particulas magicas genericas.",
+          "mostrar: Sueño profundo asociado con el chinchorro tejido por Waleker, expresado por peso, silencio y pliegues, no como hechizo digital.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "phenomenon_grammar",
+          "purpose": "entrada, accion, limite y huella del fenomeno",
+          "aspect": "16:9",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "revelacion_secreto_waleker__phenomenon_rule": {
+      "purpose": "phenomenon_rule",
+      "entity_refs": [
+        "revelacion_secreto_waleker"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "waleker-el-origen-del-tejido",
+          "field": "mito",
+          "note": "Promesa rota en el falso velorio, sin reproducir violencia o embriaguez."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Secuencia material de causa, accion, limite y huella; debe entenderse sin texto, aura o particulas magicas genericas. Entidad: Revelación del secreto de Waleker. Funcion visual: Ruptura de la promesa en el falso velorio de Suumain Yolujaa, sin embriaguez, amenaza o violencia explícitas.",
+        "materials": [
+          "papel y fibras que cambian de tension, humedad, luz o posicion",
+          "capas causales separadas",
+          "huella fisica persistente"
+        ],
+        "palette_logic": "El cambio cromatico nace de la materia afectada, nunca de un resplandor sobrenatural por defecto.",
+        "scale": "Escala definida por aquello que transforma, desde objeto hasta territorio.",
+        "continuity_markers": [
+          "nombre estable: Revelación del secreto de Waleker",
+          "funcion estable: Ruptura de la promesa en el falso velorio de Suumain Yolujaa, sin embriaguez, amenaza o violencia explícitas.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Ruptura de la promesa en el falso velorio de Suumain Yolujaa, sin embriaguez, amenaza o violencia explícitas."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para phenomenon_rule",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · phenomenon_rule",
+        "primary_request": "entrada, accion, limite y huella del fenomeno para Revelación del secreto de Waleker. Ruptura de la promesa en el falso velorio de Suumain Yolujaa, sin embriaguez, amenaza o violencia explícitas.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Escala definida por aquello que transforma, desde objeto hasta territorio.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel y fibras que cambian de tension, humedad, luz o posicion; capas causales separadas; huella fisica persistente",
+        "constraints": [
+          "Secuencia material de causa, accion, limite y huella; debe entenderse sin texto, aura o particulas magicas genericas.",
+          "mostrar: Ruptura de la promesa en el falso velorio de Suumain Yolujaa, sin embriaguez, amenaza o violencia explícitas.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "phenomenon_grammar",
+          "purpose": "entrada, accion, limite y huella del fenomeno",
+          "aspect": "16:9",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "legado_textil_waleker__phenomenon_rule": {
+      "purpose": "phenomenon_rule",
+      "entity_refs": [
+        "legado_textil_waleker"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "waleker-el-origen-del-tejido",
+          "field": "mito",
+          "note": "Conecta precedentes, Waleker, Kulami'a y generaciones de mujeres."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Secuencia material de causa, accion, limite y huella; debe entenderse sin texto, aura o particulas magicas genericas. Entidad: Legado y transmisión textil. Funcion visual: Cadena que conecta precedentes materiales, Waleker, Kulami'a y generaciones de mujeres mediante observación, imitación, corrección y enseñanza.",
+        "materials": [
+          "papel y fibras que cambian de tension, humedad, luz o posicion",
+          "capas causales separadas",
+          "huella fisica persistente"
+        ],
+        "palette_logic": "El cambio cromatico nace de la materia afectada, nunca de un resplandor sobrenatural por defecto.",
+        "scale": "Escala definida por aquello que transforma, desde objeto hasta territorio.",
+        "continuity_markers": [
+          "nombre estable: Legado y transmisión textil",
+          "funcion estable: Cadena que conecta precedentes materiales, Waleker, Kulami'a y generaciones de mujeres mediante observación, imitación, corrección y enseñanza.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Cadena que conecta precedentes materiales, Waleker, Kulami'a y generaciones de mujeres mediante observación, imitación, corrección y enseñanza."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para phenomenon_rule",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · phenomenon_rule",
+        "primary_request": "entrada, accion, limite y huella del fenomeno para Legado y transmisión textil. Cadena que conecta precedentes materiales, Waleker, Kulami'a y generaciones de mujeres mediante observación, imitación, corrección y enseñanza.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Escala definida por aquello que transforma, desde objeto hasta territorio.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel y fibras que cambian de tension, humedad, luz o posicion; capas causales separadas; huella fisica persistente",
+        "constraints": [
+          "Secuencia material de causa, accion, limite y huella; debe entenderse sin texto, aura o particulas magicas genericas.",
+          "mostrar: Cadena que conecta precedentes materiales, Waleker, Kulami'a y generaciones de mujeres mediante observación, imitación, corrección y enseñanza.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "phenomenon_grammar",
+          "purpose": "entrada, accion, limite y huella del fenomeno",
+          "aspect": "16:9",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "estrella_corazon_irunuu__phenomenon_rule": {
+      "purpose": "phenomenon_rule",
+      "entity_refs": [
+        "estrella_corazon_irunuu"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "waleker-el-origen-del-tejido",
+          "field": "mito",
+          "note": "Consecuencia estelar del epílogo de Irunúu."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Secuencia material de causa, accion, limite y huella; debe entenderse sin texto, aura o particulas magicas genericas. Entidad: Estrella fugaz asociada con Irunúu. Funcion visual: Destino estelar atribuido a Irunúu en el epílogo del relato, sin convertirlo en regla astronómica general.",
+        "materials": [
+          "papel y fibras que cambian de tension, humedad, luz o posicion",
+          "capas causales separadas",
+          "huella fisica persistente"
+        ],
+        "palette_logic": "El cambio cromatico nace de la materia afectada, nunca de un resplandor sobrenatural por defecto.",
+        "scale": "Escala definida por aquello que transforma, desde objeto hasta territorio.",
+        "continuity_markers": [
+          "nombre estable: Estrella fugaz asociada con Irunúu",
+          "funcion estable: Destino estelar atribuido a Irunúu en el epílogo del relato, sin convertirlo en regla astronómica general.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Destino estelar atribuido a Irunúu en el epílogo del relato, sin convertirlo en regla astronómica general."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para phenomenon_rule",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · phenomenon_rule",
+        "primary_request": "entrada, accion, limite y huella del fenomeno para Estrella fugaz asociada con Irunúu. Destino estelar atribuido a Irunúu en el epílogo del relato, sin convertirlo en regla astronómica general.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Escala definida por aquello que transforma, desde objeto hasta territorio.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel y fibras que cambian de tension, humedad, luz o posicion; capas causales separadas; huella fisica persistente",
+        "constraints": [
+          "Secuencia material de causa, accion, limite y huella; debe entenderse sin texto, aura o particulas magicas genericas.",
+          "mostrar: Destino estelar atribuido a Irunúu en el epílogo del relato, sin convertirlo en regla astronómica general.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "phenomenon_grammar",
+          "purpose": "entrada, accion, limite y huella del fenomeno",
+          "aspect": "16:9",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    }
+  },
+  "entities": {
+    "waleker": {
+      "name": "Wokoloonat / Waleker",
+      "kind": "criatura",
+      "description": "Niña acogida por Irunúu, joven tejedora nocturna y araña que deja conocimiento transmisible.",
+      "aliases": [
+        "Wokoloonat",
+        "Wale’kerü",
+        "Walé’kerü",
+        "Wale Kerü"
+      ],
+      "states": [
+        "niña",
+        "joven_tejedora",
+        "araña"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "contextual",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet",
+        "state_sheet"
+      ],
+      "model_refs": [
+        "waleker__identity_sheet",
+        "waleker__state_sheet"
+      ],
+      "legacy_model_refs": [
+        "waleker-el-origen-del-tejido__ancla"
+      ],
+      "myth_refs": [
+        "waleker-el-origen-del-tejido"
+      ],
+      "evidence": [
+        {
+          "myth": "waleker-el-origen-del-tejido",
+          "field": "mito",
+          "note": "Wokoloonat pasa de niña acogida a joven tejedora nocturna y araña."
+        }
+      ]
+    },
+    "irunuu": {
+      "name": "Irunúu",
+      "kind": "personaje",
+      "description": "Cazador que acoge a Wokoloonat, recibe de ella un sistema completo de prendas y luego rompe el secreto que prometió guardar.",
+      "aliases": [],
+      "states": [
+        "cazador_cuidador",
+        "vestido_por_waleker",
+        "promesa_quebrada"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "contextual",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet",
+        "state_sheet"
+      ],
+      "model_refs": [
+        "irunuu__identity_sheet",
+        "irunuu__state_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "waleker-el-origen-del-tejido"
+      ],
+      "evidence": [
+        {
+          "myth": "waleker-el-origen-del-tejido",
+          "field": "mito",
+          "note": "Caza, acoge, cuida, recibe un vestuario completo, promete, revela y pierde."
+        }
+      ]
+    },
+    "uyaaliwa_outshi_waleker": {
+      "name": "Uyaaliwa / Outshi",
+      "kind": "personaje",
+      "description": "Especialista mayor que se alimenta de hojas, flores y miel olorosas y comparte flores con las hermanas de Irunúu.",
+      "aliases": [
+        "Uyaaliwa",
+        "Outshi"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "sensitive",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet"
+      ],
+      "model_refs": [
+        "uyaaliwa_outshi_waleker__identity_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "waleker-el-origen-del-tejido"
+      ],
+      "evidence": [
+        {
+          "myth": "waleker-el-origen-del-tejido",
+          "field": "mito",
+          "note": "Especialista mayor que vive de hojas, flores y miel olorosas y comparte flores con las hermanas."
+        }
+      ]
+    },
+    "tool_waleker": {
+      "name": "Tool",
+      "kind": "criatura",
+      "description": "Anciana trabajadora nocturna del algodón que usa huso, descubre a Waleker y se transforma en búho.",
+      "aliases": [],
+      "states": [
+        "anciana_hilando",
+        "buho"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "contextual",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet",
+        "state_sheet"
+      ],
+      "model_refs": [
+        "tool_waleker__identity_sheet",
+        "tool_waleker__state_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "waleker-el-origen-del-tejido"
+      ],
+      "evidence": [
+        {
+          "myth": "waleker-el-origen-del-tejido",
+          "field": "mito",
+          "note": "Anciana contratada para descubrir el tejido, hila algodón y termina convertida en búho."
+        }
+      ]
+    },
+    "kulamia_waleker": {
+      "name": "Kulami'a",
+      "kind": "personaje",
+      "description": "Tejedora reconocida a quien Irunúu entrega piezas para que las imite y enseñe a otras mujeres.",
+      "aliases": [
+        "Külami'a"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet"
+      ],
+      "model_refs": [
+        "kulamia_waleker__identity_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "waleker-el-origen-del-tejido"
+      ],
+      "evidence": [
+        {
+          "myth": "waleker-el-origen-del-tejido",
+          "field": "mito",
+          "note": "Recibe las piezas de Irunúu para imitarlas y enseñarlas a otras mujeres."
+        }
+      ]
+    },
+    "servidores_wanuru_waleker": {
+      "name": "Servidores de Wanurü",
+      "kind": "colectivo",
+      "description": "Presencias con apariencia humana que preparan una casa como falso velorio y obtienen la revelación del secreto.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "sensitive",
+      "visual_status": "required",
+      "model_requirements": [
+        "group_grammar"
+      ],
+      "model_refs": [
+        "servidores_wanuru_waleker__group_grammar"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "waleker-el-origen-del-tejido"
+      ],
+      "evidence": [
+        {
+          "myth": "waleker-el-origen-del-tejido",
+          "field": "mito",
+          "note": "Preparan el falso velorio y obtienen el secreto."
+        }
+      ]
+    },
+    "tejedoras_herederas": {
+      "name": "Tejedoras herederas",
+      "kind": "colectivo",
+      "description": "Mujeres de generaciones sucesivas que observan, imitan, corrigen y enseñan mediante relaciones maternas y familiares.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "group_grammar"
+      ],
+      "model_refs": [
+        "tejedoras_herederas__group_grammar"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "waleker-el-origen-del-tejido"
+      ],
+      "evidence": [
+        {
+          "myth": "waleker-el-origen-del-tejido",
+          "field": "mito",
+          "note": "Transmiten técnicas por vínculos maternos y familiares."
+        }
+      ]
+    },
+    "atia": {
+      "name": "Atía / Attia",
+      "kind": "deidad_fuerza",
+      "description": "Precedente del color relacionado con el arco iris y con una herramienta del telar nombrada en el glosario del relato.",
+      "aliases": [
+        "Attia"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "sensitive",
+      "visual_status": "required",
+      "model_requirements": [
+        "presence_model"
+      ],
+      "model_refs": [
+        "atia__presence_model"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "waleker-el-origen-del-tejido"
+      ],
+      "evidence": [
+        {
+          "myth": "waleker-el-origen-del-tejido",
+          "field": "mito",
+          "note": "Precedente del color relacionado con arco iris y herramienta de telar."
+        }
+      ]
+    },
+    "kanaspi": {
+      "name": "Kanaspi",
+      "kind": "deidad_fuerza",
+      "description": "Precedente floral del conocimiento textil, vinculado con una planta de flores rojas semejantes a un tejido.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "sensitive",
+      "visual_status": "required",
+      "model_requirements": [
+        "presence_model"
+      ],
+      "model_refs": [
+        "kanaspi__presence_model"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "waleker-el-origen-del-tejido"
+      ],
+      "evidence": [
+        {
+          "myth": "waleker-el-origen-del-tejido",
+          "field": "mito",
+          "note": "Precedente floral rojo del conocimiento textil."
+        }
+      ]
+    },
+    "maawui_waleker": {
+      "name": "Maawüi",
+      "kind": "deidad_fuerza",
+      "description": "Precedente del algodón nombrado por Waleker sin cuerpo humano ni fisonomía descritos.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "sensitive",
+      "visual_status": "required",
+      "model_requirements": [
+        "presence_model"
+      ],
+      "model_refs": [
+        "maawui_waleker__presence_model"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "waleker-el-origen-del-tejido"
+      ],
+      "evidence": [
+        {
+          "myth": "waleker-el-origen-del-tejido",
+          "field": "mito",
+          "note": "Precedente del algodón sin cuerpo inventado."
+        }
+      ]
+    },
+    "sese_waleker": {
+      "name": "Sese",
+      "kind": "deidad_fuerza",
+      "description": "Precedente del hilo y del hilado nombrado por Waleker sin anatomía documentada.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "sensitive",
+      "visual_status": "required",
+      "model_requirements": [
+        "presence_model"
+      ],
+      "model_refs": [
+        "sese_waleker__presence_model"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "waleker-el-origen-del-tejido"
+      ],
+      "evidence": [
+        {
+          "myth": "waleker-el-origen-del-tejido",
+          "field": "mito",
+          "note": "Precedente del hilo sin cuerpo inventado."
+        }
+      ]
+    },
+    "hermanas_irunuu_waleker": {
+      "name": "Tres hermanas de Irunúu",
+      "kind": "colectivo",
+      "description": "Tres mujeres adultas que crían a Wokoloonat en la casa de Irunúu y terminan convertidas en tres murciélagos.",
+      "aliases": [],
+      "states": [
+        "tres_mujeres",
+        "tres_murcielagos"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "sensitive",
+      "visual_status": "required",
+      "model_requirements": [
+        "group_grammar",
+        "state_sheet"
+      ],
+      "model_refs": [
+        "hermanas_irunuu_waleker__group_grammar",
+        "hermanas_irunuu_waleker__state_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "waleker-el-origen-del-tejido"
+      ],
+      "evidence": [
+        {
+          "myth": "waleker-el-origen-del-tejido",
+          "field": "mito",
+          "note": "Tres hermanas de Irunúu, cuidadoras de Wokoloonat y luego tres murciélagos."
+        }
+      ]
+    },
+    "hormigas_waleker": {
+      "name": "Hormigas de Wokoloonat",
+      "kind": "animal",
+      "description": "Hormigas entre las que juega la niña al ser encontrada.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "group_grammar"
+      ],
+      "model_refs": [
+        "hormigas_waleker__group_grammar"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "waleker-el-origen-del-tejido"
+      ],
+      "evidence": [
+        {
+          "myth": "waleker-el-origen-del-tejido",
+          "field": "mito",
+          "note": "Acompañan a la niña cuando Irunúu la encuentra en Isashii."
+        }
+      ]
+    },
+    "tejidos_waleker": {
+      "name": "Conjunto de tejidos de Waleker",
+      "kind": "objeto",
+      "description": "Jamaa, Supüna, Susü, Ekialajaa, She'i, manta de silla, fajas, chinchorros y prendas nombradas por el relato, sin copiar kanas específicos.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "object_sheet"
+      ],
+      "model_refs": [
+        "tejidos_waleker__object_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "waleker-el-origen-del-tejido"
+      ],
+      "evidence": [
+        {
+          "myth": "waleker-el-origen-del-tejido",
+          "field": "mito",
+          "note": "Conjunto diferenciado de piezas y prendas del legado."
+        }
+      ]
+    },
+    "telar_wayuu": {
+      "name": "Telar del ciclo de Waleker",
+      "kind": "objeto",
+      "description": "Estructura de tejido documentada por fuentes de continuidad, sin patrones claniles inventados.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "object_sheet"
+      ],
+      "model_refs": [
+        "telar_wayuu__object_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "waleker-el-origen-del-tejido"
+      ],
+      "evidence": [
+        {
+          "myth": "waleker-el-origen-del-tejido",
+          "field": "mito",
+          "note": "Estructura técnica de continuidad, no telar único universal."
+        }
+      ]
+    },
+    "jiron_telarana_waleker": {
+      "name": "Jirón de telaraña",
+      "kind": "objeto",
+      "description": "Resto que queda en las manos de Irunúu durante la transformacion.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "object_sheet"
+      ],
+      "model_refs": [
+        "jiron_telarana_waleker__object_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "waleker-el-origen-del-tejido"
+      ],
+      "evidence": [
+        {
+          "myth": "waleker-el-origen-del-tejido",
+          "field": "mito",
+          "note": "Resto material que queda en las manos de Irunúu."
+        }
+      ]
+    },
+    "isashii_waleker": {
+      "name": "Isashii",
+      "kind": "lugar",
+      "description": "Lugar de caza donde Irunúu encuentra a Wokoloonat entre hormigas, sin coordenada exacta.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "spatial_model"
+      ],
+      "model_refs": [
+        "isashii_waleker__spatial_model"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "waleker-el-origen-del-tejido"
+      ],
+      "evidence": [
+        {
+          "myth": "waleker-el-origen-del-tejido",
+          "field": "mito",
+          "note": "Lugar de caza y encuentro inicial."
+        }
+      ]
+    },
+    "suumain_yolujaa_waleker": {
+      "name": "Suumain Yolujaa",
+      "kind": "arquitectura",
+      "description": "Casa de los Yolujaa preparada como un velorio aparente por servidores de Wanurü, no reconstrucción funeraria universal.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "spatial_model"
+      ],
+      "model_refs": [
+        "suumain_yolujaa_waleker__spatial_model"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "waleker-el-origen-del-tejido"
+      ],
+      "evidence": [
+        {
+          "myth": "waleker-el-origen-del-tejido",
+          "field": "mito",
+          "note": "Casa preparada como falso velorio."
+        }
+      ]
+    },
+    "transformacion_nocturna_waleker": {
+      "name": "Transformación nocturna de Wokoloonat",
+      "kind": "fenomeno",
+      "description": "Regla por la que la niña aparece de noche como joven tejedora completamente vestida, sin desnudez, sexualización ni VFX.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "phenomenon_rule"
+      ],
+      "model_refs": [
+        "transformacion_nocturna_waleker__phenomenon_rule"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "waleker-el-origen-del-tejido"
+      ],
+      "evidence": [
+        {
+          "myth": "waleker-el-origen-del-tejido",
+          "field": "mito",
+          "note": "Separa la niña diurna de la joven tejedora nocturna sin sexualización."
+        }
+      ]
+    },
+    "tejido_nocturno_waleker": {
+      "name": "Tejido nocturno de Waleker",
+      "kind": "fenomeno",
+      "description": "Regla material en la que hilo fino y brillante sale de la boca de la joven y se convierte en tejidos mientras la casa duerme.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "phenomenon_rule"
+      ],
+      "model_refs": [
+        "tejido_nocturno_waleker__phenomenon_rule"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "waleker-el-origen-del-tejido"
+      ],
+      "evidence": [
+        {
+          "myth": "waleker-el-origen-del-tejido",
+          "field": "mito",
+          "note": "Hilo de la boca y construcción material de tejidos durante la noche."
+        }
+      ]
+    },
+    "sueno_chinchorro_waleker": {
+      "name": "Sueño del chinchorro de Waleker",
+      "kind": "fenomeno",
+      "description": "Sueño profundo asociado con el chinchorro tejido por Waleker, expresado por peso, silencio y pliegues, no como hechizo digital.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "phenomenon_rule"
+      ],
+      "model_refs": [
+        "sueno_chinchorro_waleker__phenomenon_rule"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "waleker-el-origen-del-tejido"
+      ],
+      "evidence": [
+        {
+          "myth": "waleker-el-origen-del-tejido",
+          "field": "mito",
+          "note": "Peso y silencio del sueño producido por el chinchorro."
+        }
+      ]
+    },
+    "revelacion_secreto_waleker": {
+      "name": "Revelación del secreto de Waleker",
+      "kind": "fenomeno",
+      "description": "Ruptura de la promesa en el falso velorio de Suumain Yolujaa, sin embriaguez, amenaza o violencia explícitas.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "phenomenon_rule"
+      ],
+      "model_refs": [
+        "revelacion_secreto_waleker__phenomenon_rule"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "waleker-el-origen-del-tejido"
+      ],
+      "evidence": [
+        {
+          "myth": "waleker-el-origen-del-tejido",
+          "field": "mito",
+          "note": "Promesa rota en el falso velorio, sin reproducir violencia o embriaguez."
+        }
+      ]
+    },
+    "legado_textil_waleker": {
+      "name": "Legado y transmisión textil",
+      "kind": "fenomeno",
+      "description": "Cadena que conecta precedentes materiales, Waleker, Kulami'a y generaciones de mujeres mediante observación, imitación, corrección y enseñanza.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "phenomenon_rule"
+      ],
+      "model_refs": [
+        "legado_textil_waleker__phenomenon_rule"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "waleker-el-origen-del-tejido"
+      ],
+      "evidence": [
+        {
+          "myth": "waleker-el-origen-del-tejido",
+          "field": "mito",
+          "note": "Conecta precedentes, Waleker, Kulami'a y generaciones de mujeres."
+        }
+      ]
+    },
+    "estrella_corazon_irunuu": {
+      "name": "Estrella fugaz asociada con Irunúu",
+      "kind": "fenomeno",
+      "description": "Destino estelar atribuido a Irunúu en el epílogo del relato, sin convertirlo en regla astronómica general.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "phenomenon_rule"
+      ],
+      "model_refs": [
+        "estrella_corazon_irunuu__phenomenon_rule"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "waleker-el-origen-del-tejido"
+      ],
+      "evidence": [
+        {
+          "myth": "waleker-el-origen-del-tejido",
+          "field": "mito",
+          "note": "Consecuencia estelar del epílogo de Irunúu."
+        }
+      ]
+    }
+  }
+}

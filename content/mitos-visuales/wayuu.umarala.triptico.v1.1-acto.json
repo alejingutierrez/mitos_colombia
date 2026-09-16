@@ -1,0 +1,239 @@
+{
+  "schema": "mitos-colombia-triptychs/v1.6",
+  "status": "production_and_publication_authorized",
+  "comunidad": "Wayúu",
+  "region": "Caribe",
+  "prompt_profile": "story_first_v3_symbolic_huella",
+  "generation_mode": "text_only_no_local_references",
+  "bible_selection": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/accepted-selection.json",
+  "campaign_scope": "content/mitos-visuales/production/wayuu-2026-09-05/scope.json",
+  "visual_memory_library": "content/mitos-visuales/wayuu.visual-memory.v1.json",
+  "approval_gate": "Campaña completa autorizada; QA por orientación y publicación aditiva sin borrar versiones.",
+  "output_sizes": {
+    "entrada": "1536x864",
+    "acto": "864x1536",
+    "huella": "1024x1024"
+  },
+  "quality_policy": {
+    "entrada": "high",
+    "acto": "medium",
+    "huella": "medium"
+  },
+  "mitos": {
+    "umarala": {
+      "titulo": "Umaralá",
+      "canon_models": [
+        "umarala__identity_sheet",
+        "umarala__state_sheet",
+        "tia_outsu_umarala__identity_sheet",
+        "tia_outsu_umarala__state_sheet",
+        "paciente_umarala__identity_sheet",
+        "paciente_umarala__state_sheet",
+        "capote_umarala__object_sheet",
+        "transmision_vida_nombre_umarala__phenomenon_rule",
+        "curacion_nocturna_umarala__phenomenon_rule",
+        "jarara__spatial_model"
+      ],
+      "evidence": [
+        {
+          "id": "chaves_1946",
+          "type": "primary_narrative",
+          "url": "https://publicaciones.icanh.gov.co/index.php/picanh/catalog/download/243/266/1579?inline=1",
+          "pages": "321–325; PDF índices 17–21",
+          "supports": "Tía maestra, canto y maraca, herencia de instrumentos, visita nocturna y partida.",
+          "limits": "Testimonio histórico mediado por recopilador. No prueba clínica ni protocolo ritual."
+        },
+        {
+          "id": "published_umarala",
+          "type": "project_narrative",
+          "path": "content/mitos-visuales/production/wayuu-2026-09-05/narratives/umarala.json",
+          "supports": "Texto objetivo y centralidad de la tía en una vocación de cuidado.",
+          "limits": "Condensa la visita nocturna y atribuye imitadores al protagonista, que en Chaves corresponden a Jururiana. No se ilustra esta discrepancia ni se edita el texto."
+        }
+      ],
+      "bible_overrides": [
+        {
+          "model_id": "umarala__state_sheet",
+          "decision": "H sólo joven enfermo, nunca varios estados simultáneos; rostro plano y distante."
+        },
+        {
+          "model_id": "tia_outsu_umarala__identity_sheet",
+          "decision": "Conservar edad, trenza gris, Wayuushein ciruela y capote carbón; simplificar anatomía a recorte."
+        },
+        {
+          "model_id": "curacion_nocturna_umarala__phenomenon_rule",
+          "decision": "Elegir sólo noche con paciente sola y huellas; no paneles, ofertas ni retrato del piache. Dos botellas cerradas secundarias, sin administración."
+        },
+        {
+          "model_id": "jarara__spatial_model",
+          "decision": "Geografía orientativa sin coordenadas: reducir a serranía xerofítica de papel, no réplica fotográfica ni turismo ritual."
+        }
+      ],
+      "narrative_contract": {
+        "target_slug": "umarala",
+        "target_snapshot": "content/mitos-visuales/production/wayuu-2026-09-05/narratives/umarala.json",
+        "target_content_sha256": "71517b0486e08baa34cdba4f1b92627ddb82b5df9022ac0db6a5dd39ba66af71",
+        "summary": "La tía piache cuida al joven Umaralá mediante canto y maraca. Su legado de instrumentos lo compromete a cuidar a otros. Una visita nocturna se reconoce por canto, maraca y tropel sin que la familia vea al visitante. Las imágenes no muestran muerte ni afirman eficacia clínica.",
+        "events": [
+          {
+            "id": "canto_tia",
+            "action": "La tía canta junto al joven enfermo y mueve la maraca.",
+            "provenance": "historical_core",
+            "required": true,
+            "source": "chaves_1946"
+          },
+          {
+            "id": "visita_nocturna",
+            "action": "La paciente queda sola; se oyen canto, maraca y tropel; al amanecer cambia su estado en el relato.",
+            "provenance": "historical_core",
+            "required": true,
+            "source": "chaves_1946"
+          },
+          {
+            "id": "legado_cuidado",
+            "action": "Umaralá recibe maraca y capote de su tía y asume el cuidado.",
+            "provenance": "historical_core",
+            "required": true,
+            "source": "chaves_1946"
+          }
+        ],
+        "emotional_reading": "Escucha, vínculo y responsabilidad heredada.",
+        "magic_reading": "La noche adquiere pliegues al ritmo del canto; una presencia se reconoce por efectos y no por anatomía; los instrumentos guardan relación de cuidado.",
+        "qa_method": "H tía pequeña junto a un solo joven y noche levantada por el canto; V mujer sola, dos botellas, huellas sin caballos y pliegues materiales; S instrumento abrigado en capote, no escena."
+      },
+      "visual_memory_review": {
+        "reviewer": "agent_direct_visual_review",
+        "reviewed_at": "2026-09-06T18:37:42.694Z",
+        "reviewed_reference_ids": [
+          "efdd2dddda49d59e8bf1",
+          "d7f5dc0ea38289e3a1f1"
+        ],
+        "retained": [
+          "Noche índigo y ocre cálido; sensación de que el paisaje participa en el canto.",
+          "Profundidad por planos superpuestos, maraca y cuidado como motivos reconocibles."
+        ],
+        "rejected": [
+          "Figura femenina gigante y espectral en el cielo, anatomía modelada, planos cerrados y vestuario geométrico de las imágenes previas.",
+          "Tratar generaciones previas como pruebas culturales; reutilizar rostro o ropa sin contraste con la Biblia.",
+          "Confundir los imitadores de Jururiana con Umaralá; se omiten sin modificar el texto público."
+        ],
+        "influence_by_act": {
+          "entrada": "La noche participa en el canto de la tía mediante capas que se levantan sobre su sobrino; maestra humana pequeña y presente, no fantasma celestial.",
+          "acto": "Retener contraste azul/ocre pero dejar a la paciente sola: huellas sin caballo visible y suelo plegado hacen audible la visita.",
+          "huella": "Maraca y capote se condensan en un solo motivo de amparo y saber heredado, sin personajes ni paisaje."
+        }
+      },
+      "material_direction": "Immersive full-bleed world entirely built from matte dyed CUT PAPER, broad sheets with crisp internal cut edges, air gaps and cast shadows at multiple physical depths. People are almost-flat side-profile paper cutouts with natural adult proportions, one tiny eye slit, nose only in outline, no modeled cheeks. Clothes are few broad folded paper pieces. Ground, rocks, sea and sky are paper too. No outer cardboard backing, base, pedestal, tabletop, frame, model island or stage edge.",
+      "paleta": "Índigo profundo, carbón, ciruela, arena cálida y ocre mate. Luz lateral tenue y sombras físicas; no neón ni partículas.",
+      "continuity_contract": [
+        "Cada imagen contiene sólo el reparto de su propia escena. Personas de proporciones adultas, pequeñas, perfiles recortados casi planos; no piel modelada.",
+        "Maraca lisa sin pintura; capote carbón flexible. Prendas Wayúu completas según Biblia. Magia como comportamiento del espacio, no superpoder personal ni fantasma visible."
+      ],
+      "avoid": [
+        "Pixar, Disney, large eyes, modeled cheeks, portrait, photographic skin, sculpted doll",
+        "giant sky woman, ghost body, demon, wings, soul, beam from hands, stars arranged as symbols",
+        "death, corpse, burial, violence, sexual imagery, bare torso",
+        "medical instruction, drinking, administering liquid, touching patient body",
+        "invented face paint, feather crown, decorative geometric patterns, sacred glyph",
+        "outer cardboard, base, tabletop, pedestal, frame, floating diorama island, theatrical stage"
+      ],
+      "escenas": {
+        "entrada": {
+          "era": "historico_contacto_wayuu",
+          "refs": [],
+          "composicion": "profundidad_abierta",
+          "visual_function": "narrative_scene",
+          "narrative_event_ids": [
+            "canto_tia"
+          ],
+          "beat": "El canto de quien lo crió sostiene un espacio para la vida.",
+          "escena": "16:9 EXTREME WIDE panoramic view of Jarara dry hills at night, camera very FAR from two tiny people. Layered indigo hills extend beyond both edges. In the RIGHT middle distance x70%, y56%, one elderly Wayuu aunt stands in flat side profile, height only 12% of canvas, beside ONE small suspended woven SAND chinchorro between two plain wooden posts at x79%. She wears full ankle-length PLUM Wayuushein over SAND pechera, separate short CHARCOAL open-front capote, CLAY strapped waireñas, GRAY braid. She holds ONE small plain OCHRE gourd maraca at chest height, mouth a simple cut notch as she sings. In the chinchorro lies ONE young adult man with black hair, INDIGO sleeved Kemiisa and CREAM long cotton Kotin, head visible and one relaxed hand on his lap; no body touch. THE IMPOSSIBLE EVENT: the broad dark sky above this tiny pair physically lifts like a sheet of night being gently drawn away. THREE immense nested curved PAPER LAYERS of the SKY curl UPWARD, opening a warm narrow SAND-colored pocket of air above the hammock. These are massive layers of the entire night, attached to the sky extending beyond frame, NOT ribbons emitted from a person, not wings or a portal. Each layer has a visible cut edge, air gap, and shadow cast onto the layer behind; the empty warm gap follows the sagging curve of the tiny hammock below, making the breathing space and listening tangible. One tiny plain house far right, sparse small gray-green dry shrubs, no cactus foreground. Lower quarter and left half dark quiet uninterrupted terrain reserved for website title; all important action x62–87%,y40–67%, away from bottom. No moon disk, stars, giant face, extra people, bottles or animals. Paper terrain, paper sky, almost-flat paper people; five clearly separated depth planes, intimate human act within an immense responsive night.",
+          "editorial_translation": "Levantar físicamente la noche traduce el canto cuidador y la tensión sobre la vida; no es una descripción literal ni una anatomía del séyuu.",
+          "visual_question": "¿La tía pequeña canta junto a un único joven y la noche se levanta en capas, dejando espacio de respiración sobre el chinchorro?",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Noche sobre el chinchorro.",
+            "impossible_behavior": "La noche se levanta en capas y abre espacio alrededor del joven.",
+            "narrative_effect": "La voz de la tía sostiene el cuidado dentro de un territorio sensible.",
+            "agency": "La tía y su conocimiento heredado son centrales; la presencia se lee en efectos espaciales, no en un antagonista visible.",
+            "physical_translation": "Tres láminas inmensas de cielo curvadas con huecos y sombras sobre un chinchorro pequeño.",
+            "visible_test": "¿La tía pequeña canta junto a un único joven y la noche se levanta en capas, dejando espacio de respiración sobre el chinchorro?",
+            "event_ids": [
+              "canto_tia"
+            ],
+            "provenance": "editorial_metaphor",
+            "temporal_role": "present"
+          }
+        },
+        "acto": {
+          "era": "historico_contacto_wayuu",
+          "refs": [],
+          "composicion": "profundidad_abierta",
+          "visual_function": "narrative_scene",
+          "narrative_event_ids": [
+            "visita_nocturna"
+          ],
+          "beat": "El visitante no se ve; el canto deja su paso en el espacio.",
+          "escena": "9:16 VERY WIDE elevated distant view of a Wayuu night dwelling opening onto immense dry hills. The scene is a continuous full-bleed world made of dyed matte paper, with NO loose rectangular sheets or exposed craft board. Camera FAR BACK; only ONE person, an adult woman resting in a small SAND chinchorro between two slender poles, entirely within upper RIGHT area x65–82%,y33–44%. Her whole body is no more than 17% of image width; full plain OLIVE Wayuushein over CLAY pechera, black braid, closed eyes in flat side-profile cutout. Exactly TWO tiny closed dark bottles sit upright by the right pole, secondary, nobody touching them. A cropped edge of thatch near top right and a small side wall indicate an open ENRAMADA, but NO huge foreground pillars and no enclosing frame. Five layers of deep blue dry hills recede above a narrow dawn seam, no sun or moon. The magical action: a narrow trail of EQUINE HOOF INDENTATIONS crosses the ground toward the hammock and curves away into distant empty hills, with NO horse, rider or other person. Along that trail, between y44% and y67%, THREE low curving sand-colored SWELLS rise out of the earth like successive breaths. Each swell is an organic CRESCENT fold in the continuous topography, extends beyond one side of the picture, has NO straight edge, NO corner, NO detached endpoint, and casts a thin dark shadow into its valley. Think broad flowing dune ridges that impossibly rise in the rhythm of a song, NOT stacked boards, rugs, rectangular sheets, steps or platforms. Hoof marks continue across this undulating ground, visible before and after folds. The earth is dyed ochre and indigo PAPER rather than cardboard brown; edges inside curved valleys show physical layered depth but no outer backing is exposed. The visitor is only suggested by the singing rhythm in the ground and the marks, never shown. Lower quarter broad quiet indigo sand for mobile title, no main fold hidden there. Moderate readable night exposure, lateral muted warm light on folds and small patient, restrained atmosphere, crisp internal paper shapes with real air gaps. No extra person, visible maraca, ritual instructions, medical gesture, bottle pouring, stars or magic particles.",
+          "editorial_translation": "La paciente sola, el tropel y el canto corresponden a Chaves. Los pliegues y huellas hacen visible el sonido; no reconstruyen un ritual ni muestran un procedimiento o resultado médico. Corrección 02: suelo continuo con crestas curvas a sangre; se rechazan esquinas y láminas rectangulares despegadas.",
+          "visual_question": "¿Hay una sola paciente y una visita invisible reconocible por huellas equinas y tres pliegues del suelo, sin sanador ni caballo visibles?",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Suelo junto a una paciente que descansa.",
+            "impossible_behavior": "La tierra se pliega siguiendo un tropel y un canto cuyo visitante no se ve.",
+            "narrative_effect": "La visita se reconoce por sus efectos, preservando su misterio.",
+            "agency": "La tía y su conocimiento heredado son centrales; la presencia se lee en efectos espaciales, no en un antagonista visible.",
+            "physical_translation": "Tres pliegues del suelo con sombra propia y huellas equinas, sin caballo.",
+            "visible_test": "¿Hay una sola paciente y una visita invisible reconocible por huellas equinas y tres pliegues del suelo, sin sanador ni caballo visibles?",
+            "event_ids": [
+              "visita_nocturna"
+            ],
+            "provenance": "editorial_metaphor",
+            "temporal_role": "present"
+          }
+        },
+        "huella": {
+          "era": "sintesis_editorial",
+          "refs": [],
+          "composicion": "simbolo_central",
+          "visual_function": "symbolic_synthesis",
+          "narrative_event_ids": [
+            "legado_cuidado"
+          ],
+          "beat": "Lo heredado no es poder: es una responsabilidad que abriga.",
+          "escena": "1:1 SYMBOLIC CUT-PAPER object, absolutely NO landscape or scene. Centered against a flat muted PLUM field, ONE small plain OCHRE gourd maraca lies diagonally, its round head upper left and short handle lower right. It rests within the open fold of a single CHARCOAL CAPOTE made of broad flexible matte paper: two rectangular soft garment panels joined across a gently curved neckline, folded inward underneath the maraca like a protective cradle. Keep open-front garment construction recognizable but NO human silhouette, body, mannequin, sleeves, face or wearer. The cloak does not stand upright: it gently gathers horizontally around the instrument. ONE slender SAND paper strip, an echo of the maraca, emerges from within its round head as an editorial material impossibility, curves once around the instrument and bridges the two cloak panels, connecting rather than radiating like a spell. The strip is physical matte paper with a shadow and slight air gap, no glowing light. Charcoal panels at three distances, ochre maraca made of few faceted folded paper pieces, sand connection at a fourth depth. Generous blank margins, entire motif occupies central 60%. No ornamental glyphs, words, scenery, people, hands, altar, pedestal, bowl, flowers or extra instruments.",
+          "editorial_translation": "Capote que sostiene la maraca y un eco que conecta sus dos lados condensan cuidado y continuidad. La forma es una metáfora editorial, no un emblema o disposición ritual documentados.",
+          "visual_question": "¿Una sola maraca queda sostenida por un capote abierto y plegado, con un eco material que une sus lados, sin escena ni figura humana?",
+          "material_direction": "Papel carbón flexible en amplios pliegues, maraca ocre faceteada y una tira arena con sombra; fondo ciruela sin horizonte ni soporte.",
+          "continuity_contract": [
+            "Sólo capote y maraca en una unidad simbólica, no personajes ni escenario.",
+            "No presentar esta composición editorial como símbolo ritual Wayúu."
+          ],
+          "symbolic_contract": {
+            "thesis": "Heredar un saber obliga a sostener la vida de otros.",
+            "carrier": "Maraca sostenida por el capote de la tía.",
+            "operation": "Un eco material une los lados del abrigo alrededor del instrumento.",
+            "story_connection": "La tía entrega los instrumentos que fundan la vocación de Umaralá.",
+            "visible_test": "¿Una sola maraca queda sostenida por un capote abierto y plegado, con un eco material que une sus lados, sin escena ni figura humana?"
+          },
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Maraca y capote heredados.",
+            "impossible_behavior": "El eco del instrumento se vuelve una unión material del abrigo.",
+            "narrative_effect": "Vuelve visible una relación de cuidado que continúa.",
+            "agency": "La tía y su conocimiento heredado son centrales; la presencia se lee en efectos espaciales, no en un antagonista visible.",
+            "physical_translation": "Una tira arena sale del instrumento y une pliegues carbón sin rayos ni figura.",
+            "visible_test": "¿Una sola maraca queda sostenida por un capote abierto y plegado, con un eco material que une sus lados, sin escena ni figura humana?",
+            "event_ids": [
+              "legado_cuidado"
+            ],
+            "provenance": "editorial_metaphor",
+            "temporal_role": "memory"
+          }
+        }
+      }
+    }
+  },
+  "revision": {
+    "reason": "Vertical base mostró cartón en láminas rectangulares expuestas y sólo dos elevaciones. Conservar H/S; corregir únicamente terreno y escala de V.",
+    "replaces_only": "acto",
+    "previous_plan": "content/mitos-visuales/wayuu.umarala.triptico.v1.json"
+  }
+}

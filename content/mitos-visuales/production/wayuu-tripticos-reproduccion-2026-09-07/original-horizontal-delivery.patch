@@ -1,0 +1,54 @@
+diff --git a/src/components/atoms/ImageFrame.js b/src/components/atoms/ImageFrame.js
+index 62cc7e8..dcde46d 100644
+--- a/src/components/atoms/ImageFrame.js
++++ b/src/components/atoms/ImageFrame.js
+@@ -26,6 +26,9 @@ export function ImageFrame({
+   mobileSizes = "100vw",
+   priority = false,
+   quality = 75,
++  // Preserve an original artwork without recompressing the desktop source.
++  unoptimized = false,
++  mobileUnoptimized = false,
+   fetchPriority = priority ? "high" : undefined,
+   placeholderMotif = "jaguar",
+   placeholderSize = 56,
+@@ -41,6 +44,7 @@ export function ImageFrame({
+         fill: true,
+         sizes: mobileSizes,
+         quality,
++        unoptimized: mobileUnoptimized,
+       }).props
+     : null;
+ 
+@@ -79,6 +83,7 @@ export function ImageFrame({
+             priority={priority && !hasMobileArtDirection}
+             loading={priority && hasMobileArtDirection ? "eager" : undefined}
+             quality={quality}
++            unoptimized={unoptimized}
+             fetchPriority={fetchPriority}
+             className={cn("object-cover", imgClassName)}
+           />
+diff --git a/src/components/templates/MythDetailTemplate.js b/src/components/templates/MythDetailTemplate.js
+index 3c306ba..33ec1f9 100644
+--- a/src/components/templates/MythDetailTemplate.js
++++ b/src/components/templates/MythDetailTemplate.js
+@@ -109,6 +109,7 @@ function MobileEntranceImage({ myth, className = "" }) {
+     <figure className={className}>
+       <ImageFrame
+         src={myth.imageUrl}
++        unoptimized
+         alt={`${myth.title}: la entrada del relato`}
+         ratio="16 / 9"
+         sizes="100vw"
+diff --git a/src/components/templates/MythHero.js b/src/components/templates/MythHero.js
+index fcd4dad..25f05ec 100644
+--- a/src/components/templates/MythHero.js
++++ b/src/components/templates/MythHero.js
+@@ -95,6 +95,7 @@ export function MythHero({ myth }) {
+         <ImageFrame
+           src={desktopSrc}
+           mobileSrc={mobileSrc}
++          unoptimized={Boolean(myth.imageUrl)}
+           alt={myth.title}
+           ratio={null}
+           priority

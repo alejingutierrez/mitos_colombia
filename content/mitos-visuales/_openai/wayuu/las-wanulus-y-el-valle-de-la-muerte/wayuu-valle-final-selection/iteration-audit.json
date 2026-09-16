@@ -1,0 +1,112 @@
+{
+  "schema": "mitos-triptych-iteration-audit/v1",
+  "audited_at": "2026-09-06T05:03:34.366Z",
+  "package_root": "content/mitos-visuales/_openai/wayuu/las-wanulus-y-el-valle-de-la-muerte",
+  "scope": "Artefactos locales referidos por jobs.json, deduplicados por SHA-256; no mide llamadas fallidas sin imagen ni facturación de API.",
+  "unique_images": 4,
+  "by_act": {
+    "entrada": {
+      "unique_images": 1,
+      "preparation_rounds": 1,
+      "requested_alternatives": 0
+    },
+    "acto": {
+      "unique_images": 1,
+      "preparation_rounds": 1,
+      "requested_alternatives": 0
+    },
+    "huella": {
+      "unique_images": 2,
+      "preparation_rounds": 2,
+      "requested_alternatives": 0
+    }
+  },
+  "prepared_without_output": 0,
+  "duplicates": 0,
+  "rows": [
+    {
+      "batch_id": "wayuu-valle-triptych-01",
+      "prepared_at": "2026-09-06T04:59:53.680Z",
+      "act": "entrada",
+      "purpose": "generation_or_revision",
+      "manifest": "content/mitos-visuales/_openai/wayuu/las-wanulus-y-el-valle-de-la-muerte/wayuu-valle-triptych-01/jobs.json",
+      "output": "output/imagegen/wayuu/triptychs/wayuu-valle-triptych-01/entrada.jpeg",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/las-wanulus-y-el-valle-de-la-muerte/wayuu-valle-triptych-01/prompts/entrada.prompt.txt",
+      "requested_size": "1536x864",
+      "requested_quality": "high",
+      "visual_function": "narrative_scene",
+      "status": "unique_generated_artifact",
+      "sha256": "9c4d02af57f0cdab288aa19179c56ba2bb7ba86a6b3c65be81c320a8cb89353b",
+      "duplicate_of": null,
+      "width": 1536,
+      "height": 864,
+      "size_matches_request": true,
+      "prompt_sha256": "3e5ca7a6ea3ce237ce25d030a7d8502368fa30951fdc7ee603dfdc454abc9178",
+      "prompt_hash_matches_manifest": true,
+      "prompt_integrity": "exact_bytes"
+    },
+    {
+      "batch_id": "wayuu-valle-triptych-01",
+      "prepared_at": "2026-09-06T04:59:53.680Z",
+      "act": "acto",
+      "purpose": "generation_or_revision",
+      "manifest": "content/mitos-visuales/_openai/wayuu/las-wanulus-y-el-valle-de-la-muerte/wayuu-valle-triptych-01/jobs.json",
+      "output": "output/imagegen/wayuu/triptychs/wayuu-valle-triptych-01/acto.jpeg",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/las-wanulus-y-el-valle-de-la-muerte/wayuu-valle-triptych-01/prompts/acto.prompt.txt",
+      "requested_size": "864x1536",
+      "requested_quality": "medium",
+      "visual_function": "narrative_scene",
+      "status": "unique_generated_artifact",
+      "sha256": "561a406f319936bb43aed4b6ebbff58758028e5b904d191612c7557e6293dea4",
+      "duplicate_of": null,
+      "width": 864,
+      "height": 1536,
+      "size_matches_request": true,
+      "prompt_sha256": "8f11ba97ea1df2121b95aa6b7608c9a68696a0e1cc959b42e72a68f10e496c99",
+      "prompt_hash_matches_manifest": true,
+      "prompt_integrity": "exact_bytes"
+    },
+    {
+      "batch_id": "wayuu-valle-triptych-01",
+      "prepared_at": "2026-09-06T04:59:53.680Z",
+      "act": "huella",
+      "purpose": "generation_or_revision",
+      "manifest": "content/mitos-visuales/_openai/wayuu/las-wanulus-y-el-valle-de-la-muerte/wayuu-valle-triptych-01/jobs.json",
+      "output": "output/imagegen/wayuu/triptychs/wayuu-valle-triptych-01/huella.jpeg",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/las-wanulus-y-el-valle-de-la-muerte/wayuu-valle-triptych-01/prompts/huella.prompt.txt",
+      "requested_size": "1024x1024",
+      "requested_quality": "medium",
+      "visual_function": "symbolic_synthesis",
+      "status": "unique_generated_artifact",
+      "sha256": "878f741f9afe09505d4617a1d3ca049a4625efb6f419d8a16fafb921c93a33d1",
+      "duplicate_of": null,
+      "width": 1024,
+      "height": 1024,
+      "size_matches_request": true,
+      "prompt_sha256": "e0f51793fdfe0612ea9b472d1cd2a9ad846a2ccaab965b6dbb5c2ca149cec731",
+      "prompt_hash_matches_manifest": true,
+      "prompt_integrity": "exact_bytes"
+    },
+    {
+      "batch_id": "wayuu-valle-triptych-02-huella",
+      "prepared_at": "2026-09-06T05:02:39.439Z",
+      "act": "huella",
+      "purpose": "generation_or_revision",
+      "manifest": "content/mitos-visuales/_openai/wayuu/las-wanulus-y-el-valle-de-la-muerte/wayuu-valle-triptych-02-huella/jobs.json",
+      "output": "output/imagegen/wayuu/triptychs/wayuu-valle-triptych-02-huella/huella.jpeg",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/las-wanulus-y-el-valle-de-la-muerte/wayuu-valle-triptych-02-huella/prompts/huella.prompt.txt",
+      "requested_size": "1024x1024",
+      "requested_quality": "medium",
+      "visual_function": "symbolic_synthesis",
+      "status": "unique_generated_artifact",
+      "sha256": "3653f0f61017d992b78792dedbaa99f4164a44f56b3d312da5855fbdf06f1c72",
+      "duplicate_of": null,
+      "width": 1024,
+      "height": 1024,
+      "size_matches_request": true,
+      "prompt_sha256": "d4c71b43db930c7ba8c7874f66a50a4425dc6e69ed00ddb996a2f723b01dd782",
+      "prompt_hash_matches_manifest": true,
+      "prompt_integrity": "exact_bytes"
+    }
+  ]
+}

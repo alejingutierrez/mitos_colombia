@@ -1,0 +1,125 @@
+{
+  "schema": "mitos-triptych-selection/v2",
+  "myth": "la-majayura-que-pierde-a-los-hombres",
+  "title": "La majayura de Puró",
+  "created_at": "2026-09-06T18:13:29.521Z",
+  "status": "approved_for_publication_under_campaign_authorization",
+  "approval_basis": "Campaña de 27 mitos autorizada por el usuario; QA del agente con fuente, Biblia y memoria visual.",
+  "campaign_scope": "content/mitos-visuales/production/wayuu-2026-09-05/scope.json",
+  "narrative_target_sha256": "cf37022e776485ed07d5a9b5cff160e097890c3d726bb002fd11804108b01097",
+  "visual_memory_library": "content/mitos-visuales/wayuu.visual-memory.v1.json",
+  "visual_memory_review": {
+    "reviewer": "agent_direct_visual_review",
+    "reviewed_at": "2026-09-06T18:10:19.648Z",
+    "reviewed_reference_ids": [
+      "aba3d158e790734be3c4",
+      "a1243c6bd2c9ba716bd0",
+      "67cca5d753f938fbae3f"
+    ],
+    "retained": [
+      "Cueva y costa como territorio continuo; índigo nocturno, ocres y profundidad del papel.",
+      "Retrato atribuido a Julio Ariza: dignidad, quietud y autonomía, no pose seductora; contraste verde/arcilla como inspiración cromática secundaria."
+    ],
+    "rejected": [
+      "Estrellas en vestido y cabeza, piedra en mano, torso masculino descubierto y proximidad de retrato de las imágenes previas.",
+      "Copiar adornos, patrones, pintura facial o identidad del retrato externo como canon del personaje.",
+      "Papach como sabedor, tesoros y expedición de hombres de la ampliación editorial: no tienen apoyo en la transcripción revisada."
+    ],
+    "influence_by_act": {
+      "entrada": "Conservar cueva y capas de territorio; alejar figuras, dignificar postura y convertir la desorientación en distancia que se pliega.",
+      "acto": "Separar episodio costero de la cueva: piedra blanca móvil sin estar en la mano ni mostrar víctimas en el agua.",
+      "huella": "Condensar cueva y obligación de callar como un único pliegue que guarda un interior; no retrato ni escena."
+    }
+  },
+  "selected": [
+    {
+      "act": "entrada",
+      "path": "output/imagegen/wayuu/triptychs/wayuu-puro-triptych-01/entrada.jpeg",
+      "sha256": "861aedd8e051148ed93c9f98dccded6e8f16e375fac5c2ffe6fb5158539053e6",
+      "width": 1536,
+      "height": 864,
+      "quality": "high",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/la-majayura-que-pierde-a-los-hombres/wayuu-puro-triptych-01/prompts/entrada.prompt.txt",
+      "prompt_sha256": "eca18ba60ae60b78ffb6d443ad5cfc151a07986d881e92bd6890fb633beed124",
+      "visual_function": "narrative_scene",
+      "review": {
+        "observed": "Dos figuras pequeñas separadas por un camino de papel que se levanta en tres pliegues altos; mujer índigo cerca de cueva, hombre ocre más próximo. Acantilado estratificado, mar al fondo y terreno continuo sin base exterior.",
+        "limits": [
+          "El hombre está más a la izquierda que el objetivo; comprobar título largo en portada.",
+          "El acordeón afecta sobre todo a la tira del camino, no a todo el ancho del terreno. La multiplicación de recorrido queda visible.",
+          "Desorientación traducida editorialmente, no forma real de Puró."
+        ]
+      }
+    },
+    {
+      "act": "acto",
+      "path": "output/imagegen/wayuu/triptychs/wayuu-puro-triptych-01/acto.jpeg",
+      "sha256": "841ca3f56019814631f4a24a64e220f898c2ef95185cd8287c18af0acb106440",
+      "width": 864,
+      "height": 1536,
+      "quality": "medium",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/la-majayura-que-pierde-a-los-hombres/wayuu-puro-triptych-01/prompts/acto.prompt.txt",
+      "prompt_sha256": "71169a1218c6ee90c8f0100bf892fbccdb3addfb6d105575ec041ff199d2c3f5",
+      "visual_function": "narrative_scene",
+      "review": {
+        "observed": "Hombre ocre en tierra seca observa una piedra blanca única en borde del agua. Dos hendiduras vacías y estela clara alineadas con la piedra. Mar de láminas azules con sombras y primer plano despejado.",
+        "limits": [
+          "Hombre de alrededor de un quinto de altura, mayor que objetivo de un octavo pero sin retrato ni primer plano.",
+          "Estela doble se lee como rastro material; los vacíos no reproducen exactamente todas las facetas de la piedra.",
+          "Vacíos y estela son metáforas del desplazamiento, no marcas documentadas."
+        ]
+      }
+    },
+    {
+      "act": "huella",
+      "path": "output/imagegen/wayuu/triptychs/wayuu-puro-triptych-01/huella.jpeg",
+      "sha256": "536fabd4d99458d25acc93ddad90c0b0afbf6f00ae720f7fe3919c9c9f9a876c",
+      "width": 1024,
+      "height": 1024,
+      "quality": "medium",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/la-majayura-que-pierde-a-los-hombres/wayuu-puro-triptych-01/prompts/huella.prompt.txt",
+      "prompt_sha256": "00781c9fdbdb57b97cfbde780397aff095897ed6626849b1bce9b2b722d32f0b",
+      "visual_function": "symbolic_synthesis",
+      "review": {
+        "observed": "Forma compacta de láminas carbón superpuestas, abertura oscura y tira arena que entra y desaparece bajo un pliegue. Sin personas ni paisaje; fondo verde gris y sombras físicas.",
+        "limits": [
+          "La abertura es mayor que la rendija pedida y la tira asoma hacia fuera; el camino termina oculto, no hay cierre hermético.",
+          "Síntesis editorial de acceso y secreto; no Papach, objeto ritual o emblema tradicional."
+        ]
+      }
+    }
+  ],
+  "generation": {
+    "provider": "OpenAI API",
+    "model": "gpt-image-2",
+    "mode": "text_only_no_local_references",
+    "unique_images": 3,
+    "by_act": {
+      "entrada": {
+        "unique_images": 1,
+        "preparation_rounds": 1,
+        "requested_alternatives": 0
+      },
+      "acto": {
+        "unique_images": 1,
+        "preparation_rounds": 1,
+        "requested_alternatives": 0
+      },
+      "huella": {
+        "unique_images": 1,
+        "preparation_rounds": 1,
+        "requested_alternatives": 0
+      }
+    },
+    "corrections": 0,
+    "cli_seconds": {
+      "entrada_01": 77.7,
+      "acto_01": 33.7,
+      "huella_01": 43.7
+    },
+    "cost": null,
+    "request_ids": null
+  },
+  "excluded": [],
+  "published": false
+}

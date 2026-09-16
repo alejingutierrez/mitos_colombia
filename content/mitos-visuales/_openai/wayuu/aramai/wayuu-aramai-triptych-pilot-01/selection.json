@@ -1,0 +1,55 @@
+{
+  "schema": "mitos-colombia-triptych-selection/v1",
+  "community": "Wayúu",
+  "myth": "aramai",
+  "title": "Arámai",
+  "status": "qa_pass_waiting_editorial_approval",
+  "provider": "OpenAI API",
+  "model": "gpt-image-2",
+  "generation_mode": "text_only_no_local_references",
+  "editorial_approval": null,
+  "selected": [
+    {
+      "act": "entrada",
+      "path": "output/imagegen/wayuu/triptychs/wayuu-aramai-triptych-pilot-01/entrada.jpeg",
+      "batch_id": "wayuu-aramai-triptych-pilot-01",
+      "size": "1536x1024",
+      "quality": "high",
+      "sha256": "9960d8a4917b31fa3d1fa8c01a808b5c9458cf4bfe9db95f7fd2610201df70ae",
+      "qa_status": "PASS"
+    },
+    {
+      "act": "acto",
+      "path": "output/imagegen/wayuu/triptychs/wayuu-aramai-triptych-pilot-01-correction-01/acto.jpeg",
+      "batch_id": "wayuu-aramai-triptych-pilot-01-correction-01",
+      "size": "1024x1536",
+      "quality": "medium",
+      "sha256": "77d7779ac5cc79f8ec104f4c9207dca613ddc9c13a2331240be1e6a4ddc1d6e9",
+      "qa_status": "PASS_AFTER_CORRECTION_01"
+    },
+    {
+      "act": "huella",
+      "path": "output/imagegen/wayuu/triptychs/wayuu-aramai-triptych-pilot-01/huella.jpeg",
+      "batch_id": "wayuu-aramai-triptych-pilot-01",
+      "size": "1024x1024",
+      "quality": "medium",
+      "sha256": "6f9a134731f16fd04a7fc88bd69bc23b243b54735079725657d7d1f51f8af924",
+      "qa_status": "PASS"
+    }
+  ],
+  "rejected": [
+    {
+      "act": "acto",
+      "path": "output/imagegen/wayuu/triptychs/wayuu-aramai-triptych-pilot-01/acto.jpeg",
+      "batch_id": "wayuu-aramai-triptych-pilot-01",
+      "sha256": "4b7e9f36106505b84f621b90d1e97bed135356d82098f587dbff1945c431cd58",
+      "qa_status": "REJECTED_REPLACED",
+      "reasons": [
+        "inventó cuatro testigos humanos cuando el acto debía tener sólo a Arámai",
+        "convirtió el pliegue de Mareiwa en una forma vertical semejante a monolito o altar",
+        "levantó las arrugas pálidas como picos de origami monumentales"
+      ]
+    }
+  ],
+  "next_gate": "El editor revisa las tres piezas seleccionadas juntas. No se prepara ni genera el siguiente tríptico Wayúu hasta recibir aprobación explícita."
+}

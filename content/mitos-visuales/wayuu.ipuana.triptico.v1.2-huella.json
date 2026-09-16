@@ -1,0 +1,295 @@
+{
+  "schema": "mitos-colombia-triptychs/v1.6",
+  "status": "production_and_publication_authorized",
+  "comunidad": "Wayúu",
+  "region": "Caribe",
+  "prompt_profile": "story_first_v3_symbolic_huella",
+  "generation_mode": "text_only_no_local_references",
+  "bible_selection": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/accepted-selection.json",
+  "approval_gate": "Campaña completa autorizada por el usuario; QA del agente por imagen y publicación aditiva verificable, sin nuevas pausas de aprobación por mito.",
+  "output_sizes": {
+    "entrada": "1536x864",
+    "acto": "864x1536",
+    "huella": "1024x1024"
+  },
+  "quality_policy": {
+    "entrada": "high",
+    "acto": "medium",
+    "huella": "medium"
+  },
+  "mitos": {
+    "el-indio-guerrero-ipuana": {
+      "titulo": "El guerrero Ipuana",
+      "pilot": false,
+      "canon_models": [
+        "guerrero_ipuana__identity_sheet",
+        "hijo_guerrero_ipuana__identity_sheet",
+        "majayura_sueno_ipuana__identity_sheet",
+        "cardon_iguaraya__botanical_sheet",
+        "arco_flechas__object_sheet",
+        "rancheria_wayuu__spatial_model",
+        "territorio_alta_guajira__environment_model"
+      ],
+      "evidence": [
+        {
+          "id": "chaves_1946_ipuana",
+          "type": "primary_source",
+          "title": "Mitos, leyendas y cuentos de la Guajira, XII: El indio Guerrero Ipuana",
+          "author": "Milcíades Chaves Ch.",
+          "year": 1946,
+          "url": "https://publicaciones.icanh.gov.co/index.php/picanh/catalog/download/243/266/1579?inline=1",
+          "locator": "pp.320–321; índices PDF 16–17. Informante Enrique Epinayú; intérprete Roberto Iguarán.",
+          "supports": "Dos retornos del padre, desenlace definitivo y sueño desatendido del hijo que involucra majayura y cardón.",
+          "limits": "La voz del sueño, el incidente de caza y el papel del cardón difieren de la reescritura vigente. No atribuir a esta fuente literalmente una majayura que aconseja no tomar un camino, ni la mediación final. Villa Posse es reedición, no segunda versión independiente."
+        },
+        {
+          "id": "published_ipuana",
+          "type": "project_narrative",
+          "path": "content/mitos-visuales/production/wayuu-2026-09-05/narratives/el-indio-guerrero-ipuana.json",
+          "supports": "Relato objetivo público completo: dos generaciones, súplicas familiares, advertencia y continuidad del conflicto. Los gestos de detener y la lectura de prudencia siguen esta edición.",
+          "limits": "No reescribir el registro histórico ni convertir la edición en transcripción literal; no cambiar contenido del sitio durante esta campaña visual."
+        },
+        {
+          "id": "bible_ipuana",
+          "type": "internal_visual_research",
+          "path": "editorial/wayuu/production-direction-v3.mjs",
+          "supports": "Identidad diferenciada de padre e hijo, majayura del sueño, vestuario y materialidad previamente investigados.",
+          "limits": "Fisonomía, colores y puesta en escena son decisiones de diseño reversibles; la figura onírica no es la majayura de Puró ni Pülowi."
+        },
+        {
+          "id": "clothing_wayuu",
+          "type": "internal_visual_research",
+          "path": "docs/wayuu-indumentaria-y-pintura-v3.md",
+          "supports": "Vestuario diverso; contexto no prehispánico uniforme; evitar reducir personas al taparrabos.",
+          "limits": "Sin diseños faciales o claniles inventados."
+        }
+      ],
+      "bible_overrides": [
+        {
+          "model_id": "guerrero_ipuana__identity_sheet",
+          "decision": "Conservar camisa carbón azulada de manga corta y pantalón arena. Reemplazar la construcción facial facetada por recorte plano mínimo; no repetir cicatriz o pómulo como detalle de primer plano."
+        },
+        {
+          "model_id": "guerrero_ipuana__state_sheet",
+          "decision": "No heredar cuatro duplicados del hombre ni representar al fallecido participando en su propio duelo. Una sola aparición corporal por escena; los retornos se condensan en una acción."
+        },
+        {
+          "model_id": "hijo_guerrero_ipuana__state_sheet",
+          "decision": "La ficha aislaba categorías; el tríptico vuelve a reunir al hijo con la figura onírica en una escena de sueño, sin duplicar su cuerpo en otra cama."
+        },
+        {
+          "model_id": "majayura_sueno_ipuana__identity_sheet",
+          "decision": "Conservar manta amplia azul gris con bordes crudos y gesto de advertencia; simplificar el rostro fotográfico de la ficha. El gesto es interpretación editorial del sueño, no cita literal de Chaves."
+        }
+      ],
+      "narrative_contract": {
+        "target_slug": "el-indio-guerrero-ipuana",
+        "target_snapshot": "content/mitos-visuales/production/wayuu-2026-09-05/narratives/el-indio-guerrero-ipuana.json",
+        "target_content_sha256": "ed372c67225e9e8b81df9eaa17e44c96d38205196ac3902a9f1ffe9491475fc1",
+        "summary": "El guerrero Ipuana vuelve dos veces de lo que su familia cree definitivo y decide regresar al conflicto pese a las súplicas. Finalmente ya no retorna. Su hijo recibe un sueño con una majayura y un cardón, pero desoye la advertencia y tampoco vuelve de la caza. La edición del sitio lee ambas generaciones como dificultad para detener una escalada, no como gloria de un héroe invulnerable. Representar sólo el retorno intacto, el sueño y la huella de la ausencia, sin combate o daño corporal.",
+        "events": [
+          {
+            "id": "retornos",
+            "provenance": "historical_core",
+            "required": true,
+            "source": "chaves_1946_ipuana",
+            "action": "El padre vuelve dos veces; una sola escena condensa el retorno."
+          },
+          {
+            "id": "suplica",
+            "provenance": "published_editorial_expansion",
+            "required": true,
+            "source": "published_ipuana",
+            "action": "Los parientes le ruegan que no vuelva al enfrentamiento."
+          },
+          {
+            "id": "no_retorno_padre",
+            "provenance": "historical_core",
+            "required": true,
+            "source": "chaves_1946_ipuana",
+            "action": "La escalada provoca un final sin retorno; no se representa el daño."
+          },
+          {
+            "id": "sueno",
+            "provenance": "historical_core",
+            "required": true,
+            "source": "chaves_1946_ipuana",
+            "action": "El hijo sueña con una majayura y un cardón, y desatiende el sueño. Su contenido exacto se distingue de la edición."
+          },
+          {
+            "id": "advertencia_camino",
+            "provenance": "published_editorial_expansion",
+            "required": true,
+            "source": "published_ipuana",
+            "action": "El sueño se presenta en la página como advertencia sobre un camino; el hijo confunde prudencia con miedo."
+          },
+          {
+            "id": "no_retorno_hijo",
+            "provenance": "historical_core",
+            "required": true,
+            "source": "chaves_1946_ipuana",
+            "action": "El hijo muere tras salir a cazar; queda la continuidad entre dos generaciones. Sin representar caída ni cuerpo."
+          }
+        ],
+        "emotional_reading": "Lo extraordinario no resuelve una decisión repetida. El asombro de volver convive con el temor de quienes piden detenerse; una advertencia no escuchada deja dos ausencias.",
+        "magic_reading": "Sombras que no obedecen al cuerpo y al tiempo: el padre está de pie pero su sombra sigue acostada; dentro del sueño la sombra del cardón se pliega y cierra un camino; un cardón conserva sombras de dos arcos que ya no están. Son tres licencias de una misma gramática editorial, no símbolos tradicionales certificados.",
+        "qa_method": "Ver primero cada imagen sin prompt: regreso y súplica, sueño y decisión, símbolo de dos ausencias. Verificar papel casi plano de personas, profundidad del entorno, ausencia de daño y diferenciación padre-hijo."
+      },
+      "material_direction": "Fotografía de un mundo construido artesanalmente con papel recortado y teñido mate. Los personajes son recortes CASI PLANOS de cuerpo entero, adultos de cabeza pequeña: un perfil sencillo por cabeza, nariz en el contorno, un punto mínimo como ojo, cabello como una o dos piezas; manos como siluetas simples. Vestidos en dos o tres hojas amplias, sin modelado redondo ni caras facetadas. El volumen pertenece al MUNDO: al menos seis planos a distintas distancias, separados por aire, oclusiones y sombras físicas entre hojas. Arena, arbustos, cardones, casas, cielo, paños y piedra son papel, nunca naturaleza fotográfica mezclada con figuras. El prodigio está construido de la misma materia tangible. Gran plano general con figuras pequeñas, ninguna supera un quinto de la altura de imagen. Nitidez espacial, no bokeh de retrato. Mundo inmersivo a sangre, sin base, mesa, marco, respaldo de maqueta, caja ni cartón corrugado visibles. Del historial del propio mito se recuperan cielos en estratos amplios azul profundo y planos de arena ocre; no se recupera ninguna escena violenta o indumentaria descartada.",
+      "paleta": "arena crema, carbón azulado, azul gris, crudo y pequeños acentos terracota; sombras añil mate",
+      "continuity_contract": [
+        "Padre, sólo cuando aparece: adulto Wayúu de proporciones naturales, cabello negro recogido atrás, camisa lisa carbón azulada de MANGA CORTA por encima del codo, pantalón largo arena y sandalias oscuras. Cabeza pequeña de perfil recortado, rasgos mínimos, sin facetas, musculatura heroica, tocado ni pintura de guerra.",
+        "Hijo, sólo cuando aparece: joven ADULTO más ligero que el padre, cabello negro en pequeño nudo posterior, camisa cruda de manga corta con ÚNICAMENTE borde terracota estrecho en el cuello en V, pantalón carbón y sandalias arena. Ninguna correa diagonal ni banda en el torso.",
+        "Majayura del sueño, sólo en la vertical: mujer adulta con manta Wayuushein muy amplia y suelta azul gris, bordes crudos y mangas anchas, largo hasta tobillos, cabello negro recogido hacia atrás y cabeza descubierta. Perfil mínimo de papel recortado, nunca cara fotográfica, vestido entallado, halo, hada ni novia.",
+        "Parientes de la horizontal: dos mujeres adultas con mantas Wayuushein amplias y sueltas hasta los tobillos en tonos ocre y arcilla, cabello descubierto; un adulto mayor con camisa cruda, pantalón largo y manto abierto carbón. Reparto editorial no numeración tradicional.",
+        "Todo —personas, arena, enramada, chinchorro, cardones, sombras y cielos— es papel mate teñido. El arco, cuando aparece como objeto, está destensado y apoyado sin flecha. Cardones de varios tallos desde la base, nunca cactus saguaro o rosetas de agave. Territorio histórico Wayúu no georreferenciado; no decorado prehispánico genérico.",
+        "Sin adversarios, batalla, cadáver, lesión, sangre, arma en uso, ingestión, corte corporal ni sexualidad. La condición mágica pertenece a sombras materiales y al sueño, no a un protagonista lanzando energía."
+      ],
+      "avoid": [
+        "caras Pixar, ojos grandes, muñecos CGI, rostro facetado low-poly, piel realista",
+        "primer plano, plano medio, recortes de cuerpos, figura mayor de un quinto de la altura en escenas",
+        "ilustración digital con textura; paisaje fotográfico mezclado con papel",
+        "base exterior, mesa, marco, cartón corrugado, caja o soporte de maqueta",
+        "violencia, daño corporal, cadáver, batalla, flechas disparadas, armas apuntadas",
+        "fantasmas humanos, zombis, almas visibles, esqueletos, ángeles, halos o chispas",
+        "pintura facial, kanaas, símbolos claniles o ritos inventados",
+        "portales estelares de Arámai, cintas-camino o tuma de Kuriruputá",
+        "texto, paneles, números, letras o logos"
+      ],
+      "escenas": {
+        "entrada": {
+          "era": "historico_wayuu",
+          "refs": [],
+          "composicion": "profundidad_abierta",
+          "visual_function": "narrative_scene",
+          "narrative_event_ids": [
+            "retornos",
+            "suplica"
+          ],
+          "beat": "Volver no significa estar a salvo. El padre se pone de pie mientras los suyos le piden quedarse.",
+          "escena": "Horizontal 16:9 en GRAN PLANO GENERAL inmersivo. Ranchería Wayúu de papel, con una enramada abierta y varias distancias de patio, casas bajas, cardones y colinas secas. En un lado del tercio medio inferior, el guerrero Ipuana acaba de levantarse de un chinchorro bajo y vacío. Está vivo, intacto, sereno y completamente vestido; una mano aún toca suavemente una cinta del chinchorro, los dos pies en el suelo, empieza a girarse hacia el camino. Su figura ocupa sólo 17% de la altura. Lo imposible es inequívoco: aunque el hombre ya está ERGUIDO al lado, SU SOMBRA AÚN PERMANECE ACOSTADA DENTRO DEL CHINCHORRO VACÍO. No es otra persona, bulto, cuerpo, doble transparente ni dibujo: es un recorte plano de papel añil oscuro que sigue la concavidad del tejido y tiene el perfil sencillo de un hombre descansando, sin detalle corporal. Unos centímetros de aire y sombra física separan ese plano oscuro del tejido crudo. Cerca, dos mujeres de mantas amplias ocre y arcilla y un pariente mayor de camisa cruda lo miran; una mujer alarga una mano baja pidiendo que se quede. Los tres están de pie, pequeños y de cuerpo entero, no celebran ni lloran sobre un muerto. Un arco destensado descansa contra un poste; nadie lo usa. El camino sale hacia un territorio extenso sin adversarios. Luz de tarde cálida, sombras normales de todos los demás elementos. La única sombra que contradice a su dueño es la del guerrero, detenida todavía en el descanso. Cuatro personas en total, una única imagen continua, sin duplicaciones temporales ni paneles. El cielo ocupa distancia real en hojas grandes azul petróleo y azul gris, con un sol pequeño mate dorado. Es luz diurna de tarde, no portal estelar: retomar el cielo estratificado de las imágenes anteriores sin su combate o adornos.",
+          "editorial_translation": "La escena doméstica y la súplica siguen la edición vigente; los dos retornos están en la fuente primaria. La sombra acostada es licencia plástica que condensa la dificultad de detenerse, no un alma ni un rito o episodio nuevo atribuido a la tradición.",
+          "visual_question": "¿Se ve un hombre vivo de pie, una familia que le pide quedarse y su sombra todavía acostada en un chinchorro vacío? ¿Es sombra material y no segundo cuerpo?",
+          "light": "Luz dorada oblicua sobre arena y prendas; cielo de hojas azul petróleo y azul gris, con disco solar mate pequeño. Sombra inmóvil añil en el chinchorro, sin halo. Sombras físicas entre todos los estratos.",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Levantarse de un chinchorro en presencia de familiares.",
+            "impossible_behavior": "La sombra permanece acostada cuando el hombre ya está de pie.",
+            "narrative_effect": "Cada retorno deja algo sin resolver: su familia pide detenerse, él mira de nuevo al camino.",
+            "agency": "El padre decide volver; los familiares suplican. La sombra no es otra persona ni un poder que él controle.",
+            "physical_translation": "Perfil oscuro recortado casi plano sobre el tejido cóncavo, separado por aire y sombras; hombre erguido a un lado.",
+            "visible_test": "Un solo cuerpo erguido y una sombra horizontal inmóvil en el chinchorro, dentro de un plano amplio.",
+            "event_ids": [
+              "retornos",
+              "suplica"
+            ],
+            "provenance": "editorial_metaphor",
+            "temporal_role": "present"
+          }
+        },
+        "acto": {
+          "era": "sueno_wayuu",
+          "refs": [],
+          "composicion": "camino_vertical",
+          "visual_function": "narrative_scene",
+          "narrative_event_ids": [
+            "sueno",
+            "advertencia_camino"
+          ],
+          "beat": "El sueño ofrece una pausa. El hijo se dispone a continuar aunque la advertencia le cierra el paso.",
+          "escena": "Vertical 9:16 en GRAN PLANO GENERAL dentro del sueño del hijo, una sola escena sin cama, durmiente duplicado, burbuja o viñeta. Un sendero pálido atraviesa cardones y colinas de papel azul gris en seis distancias físicas; la altura del encuadre lleva la mirada muy lejos. En el tercio inferior, dos figuras ADULTAS pequeñas de cuerpo entero, no más de 16% de la altura. El hijo viste camisa cruda con cuello terracota estrecho y pantalón carbón; lleva las manos bajas, está de perfil, avanzando con un pie hacia el camino y la cabeza ligeramente apartada del gesto de la mujer. A varios pasos de él, junto a UN CARDÓN de tallos desde la base, la majayura de manta amplia azul gris y bordes crudos levanta una palma baja y abierta para advertirle que se detenga, sin tocarlo ni amenazarlo. La sombra de ese cardón NO se extiende por el suelo como debería: se despega en una lámina larga de papel añil, se alza transversalmente a la altura de la cintura del joven y DOBLA EL CAMINO DE VUELTA HACIA LA RANCHERÍA distante. Mantiene la silueta reconocible de varios tallos proyectados, no cinta lisa, pared rígida o portal. La sombra levantada arroja a su vez una sombra fina sobre la arena, demostrando que tiene materia y aire. El hijo está a punto de rodear el extremo libre de esa sombra en vez de aceptar el retorno que marca. La mujer, planta y joven pertenecen al mismo mundo de recortes; nada sale de manos u ojos. Hacia arriba queda mucho territorio con cardones, caminos y una casa minúscula. Luz de madrugada lechosa, azul gris y arena, sin estrellas decorativas ni niebla que oculte la acción. Dos personas en total. No padre, combate, caballo en accidente, presa o muerte.",
+          "editorial_translation": "El sueño con majayura y cardón se conserva; la mujer que advierte y el camino corresponden a la lectura editorial de la página y a su Biblia. La sombra que se levanta y devuelve el camino es una metáfora visual, no un episodio literal de 1946 ni una identidad con Pülowi o Puró.",
+          "visual_question": "¿Se lee una advertencia dentro del sueño, con el hijo orientado a continuar y una sombra de cardón material que contradice al suelo? ¿Los personajes son pequeños y de papel plano?",
+          "light": "Madrugada pálida de papel azul gris y arena, perfiles y prendas legibles, sombra añil sólida con cantos finos y oclusiones. Sin halo, rayos, estrellas ni resplandor.",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "El cardón junto al camino y el gesto de una mujer dentro del sueño.",
+            "impossible_behavior": "La sombra del cardón se levanta y pliega el camino hacia el regreso.",
+            "narrative_effect": "La advertencia crea una posibilidad de detenerse que el hijo se dispone a ignorar.",
+            "agency": "La figura onírica advierte; el hijo elige su dirección. Nadie lanza magia desde las manos.",
+            "physical_translation": "Lámina recortada con silueta de tallos, elevada con oclusiones y sombra propia sobre hojas de arena.",
+            "visible_test": "Sombra reconocible de cardón fuera del suelo, palma de advertencia y paso del joven hacia el lado que la evita.",
+            "event_ids": [
+              "sueno",
+              "advertencia_camino"
+            ],
+            "provenance": "editorial_metaphor",
+            "temporal_role": "present"
+          }
+        },
+        "huella": {
+          "era": "sintesis_editorial",
+          "refs": [],
+          "composicion": "simbolo_y_sombra",
+          "visual_function": "symbolic_synthesis",
+          "narrative_event_ids": [
+            "no_retorno_padre",
+            "no_retorno_hijo"
+          ],
+          "beat": "Dos ausencias en la misma advertencia: no todo retorno puede repetirse.",
+          "symbolic_contract": {
+            "thesis": "La advertencia permanece cuando ya faltan quienes podían escucharla.",
+            "carrier": "Un solo cardón pequeño, construido con tallos de hojas verde ceniza y oliva mate.",
+            "operation": "Proyecta DOS sombras claramente separadas: un arco de caza a la izquierda y otro más corto a la derecha, cada uno con su propia cuerda floja. Una amplia franja de arena queda entre ambos; nunca se superponen.",
+            "story_connection": "El cardón del sueño conserva la huella del padre y del hijo como dos arcos sin portadores. No se representa muerte, combate ni dos escenas.",
+            "visible_test": "Una única planta física y dos siluetas planas de arcos sin dueño donde debería estar su sombra vegetal."
+          },
+          "escena": "Cuadrada 1:1, emblema artesanal de papel, sin escena. UN SOLO CARDÓN de varios tallos verticales que nacen juntos, verde ceniza mate, ocupa el centro del tercio superior. Planta completa, pequeña y tridimensional de hojas dobladas y finas espinas de papel, sin maceta ni pedestal. Proyecta DOS SOMBRAS IMPOSIBLES HACIA EL TERCIO INFERIOR: una sombra en forma de arco de caza a la IZQUIERDA y otra, más corta, a la DERECHA. Los dos arcos están SEPARADOS POR UNA FRANJA ANCHA DE ARENA VACÍA; no se tocan, no se superponen y no comparten ninguna cuerda. Cada sombra tiene su propio perfil curvado sencillo y una cuerda fina levemente floja uniendo ÚNICAMENTE SUS DOS EXTREMOS. Deben reconocerse DOS ARCOS AUTÓNOMOS, como dos letras D alargadas inclinadas en direcciones distintas, no una sola figura triangular, abanico, tres curvas o arco compuesto. No dibujar letras: esa comparación describe sólo la silueta. Las dos sombras empiezan apenas debajo de la planta, pero se separan enseguida hacia lados opuestos, sin líneas extra que conecten sus extremos inferiores. No hay arcos físicos, flechas, personas o manos. Sombras de láminas de papel carbón muy finas casi a ras del campo de papel arena crema, con diminutas oclusiones internas. El único objeto físico es la planta; la contradicción es que sus dos sombras tienen forma de arcos sin portadores. Mucho espacio vacío cálido a sangre alrededor, sin horizonte, paisaje, casa, marco, caja, cartón soporte o mesa. Una sola imagen simbólica fotografiada, mate y silenciosa; la separación de las dos sombras debe seguir siendo clara en miniatura.",
+          "material_direction": "Fotografía de una construcción artesanal de papel mate. Tallos plegados con profundidad y sombras internas; las dos sombras de arcos son capas oscuras casi planas que pertenecen a un único motivo. Fondo cálido full bleed sin base visible, papel fino, no cartón corrugado ni ilustración digital. Relieve real, un solo símbolo legible.",
+          "continuity_contract": [
+            "El cardón procede del sueño de esta historia; no identifica una especie ritual ni un significado universal.",
+            "Verde ceniza, arena e índigo carbón mantienen la materia del tríptico sin repetir el escenario o el reparto.",
+            "Las sombras de dos arcos son invención editorial para dos generaciones ausentes, no emblema de clan, amuleto ni diseño tradicional."
+          ],
+          "editorial_translation": "El cardón que proyecta sombras de dos arcos es una síntesis gráfica propia. La fuente no narra estas sombras ni atribuye al cactus un símbolo de dos generaciones. No añadir rito funerario o propiedad botánica mágica.",
+          "visual_question": "¿Se distinguen dos sombras de arcos independientes, cada cual con su propia cuerda y arena visible entre ambos, nacidas de un solo cardón?",
+          "light": "Luz oblicua cálida, arena crema, verde ceniza y sombras añil carbón nítidas, sin brillos o drama cinematográfico.",
+          "avoid": [
+            "paisaje, casas, horizonte, relato escenificado",
+            "personas, cuerpos, cadáveres, sangre, manos, armas en uso o flechas",
+            "arcos físicos adicionales, maceta, pedestal, joyas, flores o etiquetas",
+            "emblema clanil, kanaas, amuleto, altar, símbolos rituales inventados",
+            "cartón soporte, caja, mesa, marco exterior",
+            "ilustración vectorial, render plástico, aura, chispas, texto o logos",
+            "sombras superpuestas, cuerdas compartidas, figura triangular, abanico, extremos inferiores conectados"
+          ],
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Un cardón y la sombra que proyecta.",
+            "impossible_behavior": "Su sombra toma la forma de dos arcos sin dueño en lugar de repetir sus tallos.",
+            "narrative_effect": "Padre e hijo quedan vinculados por la ausencia ante una advertencia que permanece.",
+            "agency": "No hay actor humano; el símbolo no realiza un rito ni revive a nadie.",
+            "physical_translation": "Tallos plegados en papel oliva y dos láminas carbón casi planas en forma de arcos destensados.",
+            "visible_test": "Una planta física y dos sombras separadas e inequívocas de arcos, con una franja ancha de arena entre ellas; no una sola silueta compuesta.",
+            "event_ids": [
+              "no_retorno_padre",
+              "no_retorno_hijo"
+            ],
+            "provenance": "editorial_metaphor",
+            "temporal_role": "present"
+          }
+        }
+      },
+      "visual_memory_review": {
+        "reviewer": "agent_direct_visual_review",
+        "reviewed_at": "2026-09-06T03:37:38.141Z",
+        "reviewed_reference_ids": [
+          "907bf4196cf208398a70",
+          "8b29dc34056bc00e126e"
+        ],
+        "retained": [
+          "Cielos azul petróleo en estratos recortados y luz dorada mate.",
+          "Ritmo de capas del territorio y presencia del cardón como señal reconocible."
+        ],
+        "rejected": [
+          "Proyectiles en cuerpos, armas disparadas y combate visible.",
+          "Adornos y vestuario no documentados; poses heroicas, rostros modelados y planos cerrados."
+        ],
+        "influence_by_act": {
+          "entrada": "Añadir cielo profundo de hojas azul petróleo y gris con sol mate y luz dorada, conservando la sombra que no sigue al padre y el plano abierto.",
+          "acto": "Retomar la arquitectura de capas y el cardón de la imagen antigua, pero dentro del sueño: advertencia y decisión, no cuerpos vulnerados.",
+          "huella": "Condensar el cardón reconocible en un único símbolo con sombras de dos arcos. No heredar escena, protagonistas ni proyectiles."
+        }
+      }
+    }
+  },
+  "campaign_scope": "content/mitos-visuales/production/wayuu-2026-09-05/scope.json",
+  "visual_memory_library": "content/mitos-visuales/wayuu.visual-memory.v1.json"
+}

@@ -1,0 +1,292 @@
+{
+  "schema": "mitos-openai-keyframes/v1",
+  "created_at": "2026-09-03T17:08:48.660Z",
+  "account_source": "OPENAI_API_KEY from ignored .env",
+  "provider": "openai",
+  "model": "gpt-image-2",
+  "quality": "medium",
+  "size": "1024x1536",
+  "community": "muiscas",
+  "myth": "pacanchique",
+  "plan": "content/mitos-visuales/muiscas.json",
+  "jobs": [
+    {
+      "tag": "b1a",
+      "block": "b1",
+      "side": "a",
+      "line": "Pacanchique y Azay crecieron entre los huertos de Baganique.",
+      "composition": "figura_pequena",
+      "era": null,
+      "refs": [
+        "mitos/pacanchique/entrada",
+        "refugio_huertos"
+      ],
+      "ref_paths": [
+        "content/videos/muiscas/mitos/pacanchique/entrada.jpg",
+        "content/videos/muiscas/biblia/refugio_huertos.jpg"
+      ],
+      "api_method": "images.edit",
+      "prompt_sha256": "c11d94c5a0a769c928d36639ce7baa9b9b20c3bb79ad0a3b573d65d299fce4e6",
+      "output": "content/mitos-visuales/_openai/muiscas/pacanchique/generated/b1a.jpeg",
+      "prompt_file": "b1a.prompt.txt"
+    },
+    {
+      "tag": "b1b",
+      "block": "b1",
+      "side": "b",
+      "line": "Pacanchique y Azay crecieron entre los huertos de Baganique.",
+      "composition": "enfrentados",
+      "era": null,
+      "refs": [
+        "mitos/pacanchique/entrada",
+        "refugio_huertos"
+      ],
+      "ref_paths": [
+        "content/videos/muiscas/mitos/pacanchique/entrada.jpg",
+        "content/videos/muiscas/biblia/refugio_huertos.jpg"
+      ],
+      "api_method": "images.edit",
+      "prompt_sha256": "9e324bd0438c4d334426d166238ed49f48c226f09b7fd14d855e80c4e70f093e",
+      "output": "content/mitos-visuales/_openai/muiscas/pacanchique/generated/b1b.jpeg",
+      "prompt_file": "b1b.prompt.txt"
+    },
+    {
+      "tag": "b2a",
+      "block": "b2",
+      "side": "a",
+      "line": "Durante la reunión, el zaque vio a Azay y ordenó que permaneciera en su cercado.",
+      "composition": "diagonal",
+      "era": null,
+      "refs": [
+        "mitos/pacanchique/entrada",
+        "cercado_bacata"
+      ],
+      "ref_paths": [
+        "content/videos/muiscas/mitos/pacanchique/entrada.jpg",
+        "content/videos/muiscas/biblia/cercado_bacata.jpg"
+      ],
+      "api_method": "images.edit",
+      "prompt_sha256": "15ea5f36b503bccbd70f76fcd135c119a2b666f20620822411335e7e50a806ac",
+      "output": "content/mitos-visuales/_openai/muiscas/pacanchique/generated/b2a.jpeg",
+      "prompt_file": "b2a.prompt.txt"
+    },
+    {
+      "tag": "b2b",
+      "block": "b2",
+      "side": "b",
+      "line": "Durante la reunión, el zaque vio a Azay y ordenó que permaneciera en su cercado.",
+      "composition": "peso_contrario",
+      "era": null,
+      "refs": [
+        "azay_joven",
+        "cercado_bacata"
+      ],
+      "ref_paths": [
+        "content/videos/muiscas/biblia/azay_joven.jpg",
+        "content/videos/muiscas/biblia/cercado_bacata.jpg"
+      ],
+      "api_method": "images.edit",
+      "prompt_sha256": "fa763577ef55a200e66d34550391588f7865766be2446ede044a563d0332c88d",
+      "output": "content/mitos-visuales/_openai/muiscas/pacanchique/generated/b2b.jpeg",
+      "prompt_file": "b2b.prompt.txt"
+    },
+    {
+      "tag": "b3b",
+      "block": "b3",
+      "side": "b",
+      "line": "—Si tomas esto, dejarás de respirar como quien duerme. —¿Intentarás? —Entonces decido yo.",
+      "composition": "primer_plano",
+      "era": null,
+      "refs": [
+        "planta_hojas_palidas"
+      ],
+      "ref_paths": [
+        "content/videos/muiscas/biblia/planta_hojas_palidas.jpg"
+      ],
+      "api_method": "images.edit",
+      "prompt_sha256": "97bdfd6d0383c0bff76bf4a73bb5705cd1f79984f71222a2d7feb63273a15642",
+      "output": "content/mitos-visuales/_openai/muiscas/pacanchique/generated/b3b.jpeg",
+      "prompt_file": "b3b.prompt.txt"
+    },
+    {
+      "tag": "b4a",
+      "block": "b4",
+      "side": "a",
+      "line": "Horas después, el cercado creyó que había muerto.",
+      "composition": "diagonal",
+      "era": null,
+      "refs": [
+        "azay_joven",
+        "cercado_bacata"
+      ],
+      "ref_paths": [
+        "content/videos/muiscas/biblia/azay_joven.jpg",
+        "content/videos/muiscas/biblia/cercado_bacata.jpg"
+      ],
+      "api_method": "images.edit",
+      "prompt_sha256": "b33b13ab1468d221e37ed5473a9abc9061bbeca0d4c38807d1add59ce31c5dc8",
+      "output": "content/mitos-visuales/_openai/muiscas/pacanchique/generated/b4a.jpeg",
+      "prompt_file": "b4a.prompt.txt"
+    },
+    {
+      "tag": "b4b",
+      "block": "b4",
+      "side": "b",
+      "line": "Horas después, el cercado creyó que había muerto.",
+      "composition": "diagonal",
+      "era": null,
+      "refs": [
+        "mitos/pacanchique/entrada",
+        "cercado_bacata"
+      ],
+      "ref_paths": [
+        "content/videos/muiscas/mitos/pacanchique/entrada.jpg",
+        "content/videos/muiscas/biblia/cercado_bacata.jpg"
+      ],
+      "api_method": "images.edit",
+      "prompt_sha256": "4754f507b6af8af1a9a6cf3a854ed5340eff13bbfbb26b58ddfe4c86c192ab7e",
+      "output": "content/mitos-visuales/_openai/muiscas/pacanchique/generated/b4b.jpeg",
+      "prompt_file": "b4b.prompt.txt"
+    },
+    {
+      "tag": "b5a",
+      "block": "b5",
+      "side": "a",
+      "line": "Lejos de las miradas, aplicó otra mezcla sobre sus labios y esperó.",
+      "composition": "primer_plano",
+      "era": null,
+      "refs": [
+        "planta_hojas_palidas",
+        "azay_joven"
+      ],
+      "ref_paths": [
+        "content/videos/muiscas/biblia/planta_hojas_palidas.jpg",
+        "content/videos/muiscas/biblia/azay_joven.jpg"
+      ],
+      "api_method": "images.edit",
+      "prompt_sha256": "d0fb94b5fba66486f2790f0d1612e01d7aa4c129cf4f33ef2bca13a2e298de78",
+      "output": "content/mitos-visuales/_openai/muiscas/pacanchique/generated/b5a.jpeg",
+      "prompt_file": "b5a.prompt.txt"
+    },
+    {
+      "tag": "b5b",
+      "block": "b5",
+      "side": "b",
+      "line": "Lejos de las miradas, aplicó otra mezcla sobre sus labios y esperó.",
+      "composition": "diagonal",
+      "era": null,
+      "refs": [
+        "mitos/pacanchique/entrada"
+      ],
+      "ref_paths": [
+        "content/videos/muiscas/mitos/pacanchique/entrada.jpg"
+      ],
+      "api_method": "images.edit",
+      "prompt_sha256": "bf2ecc8c79b06bbfb4b6317b228d6ce2f6619d837bf314f6367c52c7f2fd81c6",
+      "output": "content/mitos-visuales/_openai/muiscas/pacanchique/generated/b5b.jpeg",
+      "prompt_file": "b5b.prompt.txt"
+    },
+    {
+      "tag": "b6a",
+      "block": "b6",
+      "side": "a",
+      "line": "Compartieron comida, miedo y una libertad demasiado pequeña.",
+      "composition": "enfrentados",
+      "era": null,
+      "refs": [
+        "mitos/pacanchique/entrada",
+        "refugio_huertos"
+      ],
+      "ref_paths": [
+        "content/videos/muiscas/mitos/pacanchique/entrada.jpg",
+        "content/videos/muiscas/biblia/refugio_huertos.jpg"
+      ],
+      "api_method": "images.edit",
+      "prompt_sha256": "f44cd1578abbebbe8a012b3bd08805d1ed7fd33d201274e9128938e4ce5e22e3",
+      "output": "content/mitos-visuales/_openai/muiscas/pacanchique/generated/b6a.jpeg",
+      "prompt_file": "b6a.prompt.txt"
+    },
+    {
+      "tag": "b6b",
+      "block": "b6",
+      "side": "b",
+      "line": "Compartieron comida, miedo y una libertad demasiado pequeña.",
+      "composition": "paisaje_abierto",
+      "era": null,
+      "refs": [
+        "refugio_huertos"
+      ],
+      "ref_paths": [
+        "content/videos/muiscas/biblia/refugio_huertos.jpg"
+      ],
+      "api_method": "images.edit",
+      "prompt_sha256": "a5172f74009f2bbee6db0a8161928c9fdf649a51701b28ec7da8adda8ca61e6d",
+      "output": "content/mitos-visuales/_openai/muiscas/pacanchique/generated/b6b.jpeg",
+      "prompt_file": "b6b.prompt.txt"
+    },
+    {
+      "tag": "b7a",
+      "block": "b7",
+      "side": "a",
+      "line": "Los hombres del zaque llegaron antes de que pudieran huir.",
+      "composition": "paisaje_abierto",
+      "era": null,
+      "refs": [
+        "refugio_huertos"
+      ],
+      "ref_paths": [
+        "content/videos/muiscas/biblia/refugio_huertos.jpg"
+      ],
+      "api_method": "images.edit",
+      "prompt_sha256": "87274610487df258bdea954b6f00e60b992d8c7f4d8eea4f13582bc21e3cc7d1",
+      "output": "content/mitos-visuales/_openai/muiscas/pacanchique/generated/b7a.jpeg",
+      "prompt_file": "b7a.prompt.txt"
+    },
+    {
+      "tag": "b7b",
+      "block": "b7",
+      "side": "b",
+      "line": "Los hombres del zaque llegaron antes de que pudieran huir.",
+      "composition": "diagonal",
+      "era": null,
+      "refs": [
+        "pacanchique_joven"
+      ],
+      "ref_paths": [
+        "content/videos/muiscas/biblia/pacanchique_joven.jpg"
+      ],
+      "api_method": "images.edit",
+      "prompt_sha256": "da190e4265a9f58069e1f9a63941de2e132a5a0e80a1344ab9bc51e5cb33e63c",
+      "output": "content/mitos-visuales/_openai/muiscas/pacanchique/generated/b7b.jpeg",
+      "prompt_file": "b7b.prompt.txt"
+    },
+    {
+      "tag": "b8b",
+      "block": "b8",
+      "side": "b",
+      "line": "Llegaron hombres de otra tierra, con animales enormes y armas desconocidas.",
+      "composition": "cenital",
+      "era": "colonial_rural",
+      "refs": [],
+      "ref_paths": [],
+      "api_method": "images.generate",
+      "prompt_sha256": "592a3c794ea613ea1a8c3c83ad04046b6b38e853786ded27981fd8af7be3bc1e",
+      "output": "content/mitos-visuales/_openai/muiscas/pacanchique/generated/b8b.jpeg",
+      "prompt_file": "b8b.prompt.txt"
+    },
+    {
+      "tag": "b9a",
+      "block": "b9",
+      "side": "a",
+      "line": "Comprendió que su venganza no distinguía ya entre el zaque y la gente.",
+      "composition": "paisaje_abierto",
+      "era": "colonial_rural",
+      "refs": [],
+      "ref_paths": [],
+      "api_method": "images.generate",
+      "prompt_sha256": "9e11732d055a6b7519596bbbe99e4f7fa3197860d23732a4444600bbf033d776",
+      "output": "content/mitos-visuales/_openai/muiscas/pacanchique/generated/b9a.jpeg",
+      "prompt_file": "b9a.prompt.txt"
+    }
+  ]
+}

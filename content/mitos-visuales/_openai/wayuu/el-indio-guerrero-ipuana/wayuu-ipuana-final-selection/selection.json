@@ -1,0 +1,130 @@
+{
+  "schema": "mitos-triptych-selection/v2",
+  "myth": "el-indio-guerrero-ipuana",
+  "title": "El guerrero Ipuana",
+  "created_at": "2026-09-06T03:43:44.755Z",
+  "status": "approved_for_publication_under_campaign_authorization",
+  "approval_basis": "Usuario autoriza producir y publicar todos los trípticos Wayúu; revisión visual directa del agente",
+  "campaign_scope": "content/mitos-visuales/production/wayuu-2026-09-05/scope.json",
+  "narrative_target_sha256": "ed372c67225e9e8b81df9eaa17e44c96d38205196ac3902a9f1ffe9491475fc1",
+  "visual_memory_library": "content/mitos-visuales/wayuu.visual-memory.v1.json",
+  "visual_memory_review": {
+    "reviewer": "agent_direct_visual_review",
+    "reviewed_at": "2026-09-06T03:37:38.141Z",
+    "reviewed_reference_ids": [
+      "907bf4196cf208398a70",
+      "8b29dc34056bc00e126e"
+    ],
+    "retained": [
+      "Cielos azul petróleo en estratos recortados y luz dorada mate.",
+      "Ritmo de capas del territorio y presencia del cardón como señal reconocible."
+    ],
+    "rejected": [
+      "Proyectiles en cuerpos, armas disparadas y combate visible.",
+      "Adornos y vestuario no documentados; poses heroicas, rostros modelados y planos cerrados."
+    ],
+    "influence_by_act": {
+      "entrada": "Añadir cielo profundo de hojas azul petróleo y gris con sol mate y luz dorada, conservando la sombra que no sigue al padre y el plano abierto.",
+      "acto": "Retomar la arquitectura de capas y el cardón de la imagen antigua, pero dentro del sueño: advertencia y decisión, no cuerpos vulnerados.",
+      "huella": "Condensar el cardón reconocible en un único símbolo con sombras de dos arcos. No heredar escena, protagonistas ni proyectiles."
+    }
+  },
+  "selected": [
+    {
+      "act": "entrada",
+      "path": "output/imagegen/wayuu/triptychs/wayuu-ipuana-triptych-02-visual-memory/entrada.jpeg",
+      "sha256": "d5fb24aaead55c1a0694d4bf83cd16efa06926e9d0b39356591097171705f99c",
+      "width": 1536,
+      "height": 864,
+      "quality": "high",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/el-indio-guerrero-ipuana/wayuu-ipuana-triptych-02-visual-memory/prompts/entrada.prompt.txt",
+      "prompt_sha256": "ebfe526f068545788b516a320336549b4ebbd4101e98dc95bc2bc5514792f471",
+      "visual_function": "narrative_scene",
+      "review": {
+        "observed": "Padre erguido, cuatro adultos en total, sombra plana acostada en chinchorro, familiares con gesto de súplica. Cielo azul estratificado y sol mate recuperan atmósfera de las referencias previas; no violencia.",
+        "limits": [
+          "Las figuras ocupan más altura que el 17% solicitado, pero permanecen enteras y el encuadre incluye ranchería y distancias.",
+          "El chinchorro se aproxima a una construcción de tiras anchas de papel; no reconstrucción textil literal.",
+          "La sombra puede leerse como un recorte depositado: la contradicción con el hombre erguido sigue visible."
+        ]
+      }
+    },
+    {
+      "act": "acto",
+      "path": "output/imagegen/wayuu/triptychs/wayuu-ipuana-triptych-02-visual-memory/acto.jpeg",
+      "sha256": "bc555d51b13cd2c2efecafd4c323bfda0510014f3dc50ddcb08d34bd012a1e7e",
+      "width": 864,
+      "height": 1536,
+      "quality": "medium",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/el-indio-guerrero-ipuana/wayuu-ipuana-triptych-02-visual-memory/prompts/acto.prompt.txt",
+      "prompt_sha256": "7da494915683537b7bb809cbe53d09da24b536afd709d7d2a610c8e9932be74b",
+      "visual_function": "narrative_scene",
+      "review": {
+        "observed": "Joven de camisa cruda y cuello terracota, mujer de manta azul gris, advertencia y sombra de cardón levantada. Amplio territorio en papel y silencio onírico; no combate ni cuerpo vulnerable.",
+        "limits": [
+          "La sombra se lee como una lámina que se curva; el retorno geométrico del camino es menos literal que lo pedido.",
+          "El joven mira parcialmente hacia la mujer mientras continúa: la desatención no es total en su rostro.",
+          "El gesto de advertencia pertenece a la puesta en escena editorial, no es transcripción de Chaves."
+        ]
+      }
+    },
+    {
+      "act": "huella",
+      "path": "output/imagegen/wayuu/triptychs/wayuu-ipuana-triptych-03-huella/huella.jpeg",
+      "sha256": "484d6417859af788041e075d1817917c729a55e7c4d6dd8433c71c0e69cee12e",
+      "width": 1024,
+      "height": 1024,
+      "quality": "medium",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/el-indio-guerrero-ipuana/wayuu-ipuana-triptych-03-huella/prompts/huella.prompt.txt",
+      "prompt_sha256": "c2aed4a5f28cfc2d7810120fd2f68c90261b2ed9d1c74089e725b3751c2928e5",
+      "visual_function": "symbolic_synthesis",
+      "review": {
+        "observed": "Un cardón y dos sombras de arcos independientes, sin portadores. La separación corrige la lectura confusa de la primera cuadrada; símbolo sin escena.",
+        "limits": [
+          "Las sombras quedan separadas de la base del cardón y se leen mejor como ausencias ante la planta que como una proyección físicamente conectada.",
+          "Las cuerdas son más rectas que las solicitadas, sin arma en uso; la distinción entre dos arcos es inequívoca."
+        ]
+      }
+    }
+  ],
+  "generation": {
+    "provider": "OpenAI API",
+    "model": "gpt-image-2",
+    "mode": "text_only_no_local_references",
+    "unique_images": 4,
+    "by_act": {
+      "entrada": {
+        "unique_images": 1,
+        "preparation_rounds": 1,
+        "requested_alternatives": 0
+      },
+      "acto": {
+        "unique_images": 1,
+        "preparation_rounds": 1,
+        "requested_alternatives": 0
+      },
+      "huella": {
+        "unique_images": 2,
+        "preparation_rounds": 2,
+        "requested_alternatives": 0
+      }
+    },
+    "corrections": 1,
+    "prepared_without_generation": "wayuu-ipuana-triptych-01, superseded after user visual-memory instruction",
+    "cli_seconds": {
+      "entrada": 83.4,
+      "acto": 38.1,
+      "huella_first": 36.3,
+      "huella_correction": 37.8
+    },
+    "cost": null,
+    "request_ids": null
+  },
+  "excluded": [
+    {
+      "path": "output/imagegen/wayuu/triptychs/wayuu-ipuana-triptych-02-visual-memory/huella.jpeg",
+      "reason": "Dos arcos superpuestos forman una silueta ambigua; corregida sólo su separación."
+    }
+  ],
+  "published": false
+}

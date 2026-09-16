@@ -1,0 +1,230 @@
+{
+  "schema": "mitos-colombia-biblia-visual/v3",
+  "inventory_approved_at": "2026-09-03",
+  "source_snapshot_sha256": "6b5b1c5ebdb2524a7524b065d96c6d33ad6f5694db239a0d722ded8485f435f5",
+  "model_ids": [
+    "jose_juan__identity_sheet",
+    "juramia__identity_sheet"
+  ],
+  "models": {
+    "jose_juan__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "jose_juan"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "el-hijo-del-condor",
+          "field": "mito",
+          "note": "Crece, libera a su madre y atraviesa las pruebas."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos. Entidad: José Juan. Funcion visual: Hijo de crecimiento acelerado, liberador de su madre y protagonista de pruebas posteriores.",
+        "materials": [
+          "papel mate de fibra visible",
+          "capas prensadas para cuerpo y vestuario",
+          "hilo solo cuando el relato lo exige"
+        ],
+        "palette_logic": "Arena, barro, carbon y fibras naturales; un acento propio de la entidad puede repetirse, sin patrones kanas o marcas claniles inventadas.",
+        "scale": "Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "continuity_markers": [
+          "nombre estable: José Juan",
+          "funcion estable: Hijo de crecimiento acelerado, liberador de su madre y protagonista de pruebas posteriores.",
+          "estados declarados: niño, joven, viajero_subterraneo"
+        ],
+        "documented_features": [
+          "Hijo de crecimiento acelerado, liberador de su madre y protagonista de pruebas posteriores."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para identity_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · identity_sheet",
+        "primary_request": "identidad corporal completa y legible para José Juan. Hijo de crecimiento acelerado, liberador de su madre y protagonista de pruebas posteriores.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel mate de fibra visible; capas prensadas para cuerpo y vestuario; hilo solo cuando el relato lo exige",
+        "constraints": [
+          "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos.",
+          "mostrar: Hijo de crecimiento acelerado, liberador de su madre y protagonista de pruebas posteriores.",
+          "estados autorizados: niño, joven, viajero_subterraneo",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "1:1",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "niño"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "juramia__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "juramia"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "el-hijo-del-condor",
+          "field": "mito",
+          "note": "Cóndor que inicia el cautiverio."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Silueta singular derivada de la accion y los estados documentados; si la forma no esta descrita, usar presencia y huella en vez de anatomia inventada. Entidad: Juramía, el cóndor. Funcion visual: Ser-condor que rapta a una majayura y la retiene en una cueva.",
+        "materials": [
+          "papel mate estratificado",
+          "fibras y pliegues con volumen fisico",
+          "superficies propias del estado narrativo"
+        ],
+        "palette_logic": "Contraste suficiente para continuidad, restringido a materiales y acciones del relato.",
+        "scale": "Escala declarada frente a una referencia material; evitar monstruosidad generica.",
+        "continuity_markers": [
+          "nombre estable: Juramía, el cóndor",
+          "funcion estable: Ser-condor que rapta a una majayura y la retiene en una cueva.",
+          "estados declarados: condor, presencia_del_dominio"
+        ],
+        "documented_features": [
+          "Ser-condor que rapta a una majayura y la retiene en una cueva."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para identity_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · identity_sheet",
+        "primary_request": "identidad corporal completa y legible para Juramía, el cóndor. Ser-condor que rapta a una majayura y la retiene en una cueva.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Escala declarada frente a una referencia material; evitar monstruosidad generica.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel mate estratificado; fibras y pliegues con volumen fisico; superficies propias del estado narrativo",
+        "constraints": [
+          "Silueta singular derivada de la accion y los estados documentados; si la forma no esta descrita, usar presencia y huella en vez de anatomia inventada.",
+          "mostrar: Ser-condor que rapta a una majayura y la retiene en una cueva.",
+          "estados autorizados: condor, presencia_del_dominio",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "1:1",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "condor"
+          ],
+          "reference_views": []
+        }
+      ]
+    }
+  },
+  "entities": {
+    "jose_juan": {
+      "name": "José Juan",
+      "kind": "personaje",
+      "description": "Hijo de crecimiento acelerado, liberador de su madre y protagonista de pruebas posteriores.",
+      "aliases": [],
+      "states": [
+        "niño",
+        "joven",
+        "viajero_subterraneo"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "contextual",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet",
+        "state_sheet"
+      ],
+      "model_refs": [
+        "jose_juan__identity_sheet",
+        "jose_juan__state_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-hijo-del-condor"
+      ],
+      "evidence": [
+        {
+          "myth": "el-hijo-del-condor",
+          "field": "mito",
+          "note": "Crece, libera a su madre y atraviesa las pruebas."
+        }
+      ]
+    },
+    "juramia": {
+      "name": "Juramía, el cóndor",
+      "kind": "criatura",
+      "description": "Ser-condor que rapta a una majayura y la retiene en una cueva.",
+      "aliases": [],
+      "states": [
+        "condor",
+        "presencia_del_dominio"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "sensitive",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet",
+        "state_sheet"
+      ],
+      "model_refs": [
+        "juramia__identity_sheet",
+        "juramia__state_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-hijo-del-condor"
+      ],
+      "evidence": [
+        {
+          "myth": "el-hijo-del-condor",
+          "field": "mito",
+          "note": "Cóndor que inicia el cautiverio."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "schema": "mitos-colombia-biblia-production/v3",
+  "batch_id": "wayuu-v3-production-10-maleiwa-medium-corrections-02",
+  "parent_batch_id": "wayuu-v3-production-10-maleiwa-medium",
+  "revision": "corrections-02",
+  "myth_slug": "maleiwa",
+  "asset_type": "bible_model",
+  "plan": "content/mitos-visuales/wayuu.v3.json",
+  "prepared_at": "2026-09-03",
+  "quality": "medium",
+  "framing": "immersive_full_bleed",
+  "surface_finish": "layered_depth_no_exposed_support",
+  "generation_mode": "text_only_no_local_references",
+  "jobs": [
+    {
+      "id": "primeros_wayuu__group_grammar--canon",
+      "model_id": "primeros_wayuu__group_grammar",
+      "entity_id": "primeros_wayuu",
+      "view_id": "canon",
+      "title": "Primeros Wayuu · comunidad sin uniforme",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/wayuu-v3-production-10-maleiwa-medium-corrections-02/prompts/primeros_wayuu__group_grammar--canon.prompt.txt",
+      "output_file": "output/imagegen/wayuu-v3-production/wayuu-v3-production-10-maleiwa-medium-corrections-02/primeros_wayuu__group_grammar--canon.jpeg",
+      "prompt_sha256": "9d475b1c48754d18dbbe518b5c23b039d039a74beb2f569a00e0140d2e48dd12",
+      "provider": "OpenAI API",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "1536x1024",
+      "output_format": "jpeg",
+      "input_references": [],
+      "status": "prepared"
+    }
+  ]
+}

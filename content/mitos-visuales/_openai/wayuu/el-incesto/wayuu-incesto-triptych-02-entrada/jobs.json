@@ -1,0 +1,142 @@
+{
+  "schema": "mitos-openai-triptych/v1",
+  "batch_id": "wayuu-incesto-triptych-02-entrada",
+  "created_at": "2026-09-06T09:08:04.393Z",
+  "account_source": "OPENAI_API_KEY from ignored .env",
+  "provider": "openai",
+  "model": "gpt-image-2",
+  "community": "wayuu",
+  "myth": "el-incesto",
+  "plan": "content/mitos-visuales/wayuu.incesto.triptico.v1.1-entrada.json",
+  "prompt_profile": "story_first_v3_symbolic_huella",
+  "plan_sha256": "05fd786289d437ef4e80cea54e2b57500c407f5b21df7a83d523e70e732f2ba6",
+  "narrative_target_sha256": "9491938e8823d014380f75ac41188ca4ff644735a7d9dd41e147bbcf41ff9ef0",
+  "evidence": [
+    {
+      "id": "published_incesto",
+      "type": "project_narrative",
+      "path": "content/mitos-visuales/production/wayuu-2026-09-05/narratives/el-incesto.json",
+      "supports": "Dos episodios distintos asociados a costa y Katetamana; pregunta editorial por cuidado y responsabilidad.",
+      "limits": "La fuga conjunta y petrificación de ambos hermanos son ampliaciones frente a Chaves. El método de muerte también difiere. No reescribir el texto durante esta campaña."
+    },
+    {
+      "id": "chaves_312",
+      "type": "primary_narrative_record",
+      "url": "https://publicaciones.icanh.gov.co/index.php/picanh/catalog/download/243/266/1579?inline=1",
+      "pages": "311–312, PDF 7–8",
+      "supports": "Transformación de hermana en piedra litoral y otro episodio asociado a Katetamana.",
+      "limits": "No afirma petrificación del hermano. No se adoptan juicios culpabilizantes ni se representan los actos dañinos."
+    },
+    {
+      "id": "pineda_katetamana",
+      "type": "primary_narrative_record",
+      "url": "https://publicaciones.icanh.gov.co/index.php/picanh/catalog/download/248/272/1634?inline=1",
+      "supports": "Variante de Katetamana registrada por Pineda.",
+      "limits": "Registro no equivale a aval actual de sus juicios. No se representa anatomía del cerro ni muerte."
+    },
+    {
+      "id": "bible_lot12",
+      "type": "internal_visual_research",
+      "path": "docs/wayuu-lote-12-el-incesto-v3.md",
+      "supports": "Manta verde cerrada, womu, veta litoral; estrato ocre, cresta y collado no humanos.",
+      "limits": "Colores y geometría son contratos editoriales, no prueba arqueológica o topográfica."
+    }
+  ],
+  "visual_memory_library": "content/mitos-visuales/wayuu.visual-memory.v1.json",
+  "visual_memory_review": {
+    "reviewer": "agent_direct_visual_review",
+    "reviewed_at": "2026-09-06T09:05:03.610Z",
+    "reviewed_reference_ids": [
+      "88ace892a25f73934a2b",
+      "55e927122f96c4294e35"
+    ],
+    "retained": [
+      "Azules marinos, ocres de relieve y mar construido con tiras de papel a diferentes distancias.",
+      "Relación entre costa y cerro como memoria territorial; contornos internos y sombras palpables."
+    ],
+    "rejected": [
+      "Figuras suspendidas en el cerro y cualquier representación de autolesión.",
+      "Mujer divina gigante, joyas y coronas vegetales inventadas, vestido genérico ornamentado y cuerpos modelados.",
+      "Fusión de los dos episodios en una misma escena o doble petrificación presentada como dato de Chaves."
+    ],
+    "influence_by_act": {
+      "entrada": "Conservar amplitud marina y capas; centrar sólo a la hermana, pequeña, cuya manta verde continúa materialmente en roca litoral.",
+      "acto": "Sustituir cuerpo suspendido por cerro enteramente no anatómico: estrato ocre plegado conserva memoria sin reconstruir la muerte.",
+      "huella": "Abstraer costa y cerro en dos fragmentos minerales separados con pliegues verde y ocre; sin paisaje, personas ni emblema tradicional."
+    }
+  },
+  "bible_selection": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/accepted-selection.json",
+  "canonical_models": [
+    {
+      "model_id": "hermana_litoral__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-12-el-incesto-medium-corrections-01/hermana_litoral__identity_sheet--canon.jpeg",
+      "sha256": "97142510cb983ba1e7c605bed4ce5ef112195f75dd081aecd5276ec37dc948f4",
+      "qa_status": "PASS_AFTER_CORRECTION_01"
+    },
+    {
+      "model_id": "hermana_litoral__state_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-12-el-incesto-medium-corrections-02/hermana_litoral__state_sheet--estados.jpeg",
+      "sha256": "97d74a23f307b0997982bb56e25b7cd6f30a36bbac5e8c6bfc0d5b325fb70bda",
+      "qa_status": "PASS_AFTER_CORRECTION_02"
+    },
+    {
+      "model_id": "hija_katetamana__state_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-12-el-incesto-medium/hija_katetamana__state_sheet--estados.jpeg",
+      "sha256": "27b0fd3df630174c57e1fdb90e0eb9507dee18112d1ea0ded21d5f43ab913d7b",
+      "qa_status": "PASS"
+    },
+    {
+      "model_id": "cerro_katetamana__spatial_model",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-12-el-incesto-medium/cerro_katetamana__spatial_model--canon.jpeg",
+      "sha256": "118b88a4076fb674f751a3de9360fa6902bf2ada7fb7d40d4597de51a7c9ed40",
+      "qa_status": "PASS"
+    }
+  ],
+  "approval_gate": "Campaña completa autorizada; QA por orientación y publicación aditiva sin borrar versiones.",
+  "requested_acts": [
+    "entrada"
+  ],
+  "generation_mode": "text_only_no_local_references",
+  "framing": "immersive_full_bleed",
+  "surface_finish": "layered_depth_no_exposed_support",
+  "jobs": [
+    {
+      "act": "entrada",
+      "aspect_ratio": "16:9",
+      "size": "1536x864",
+      "quality": "high",
+      "api_method": "images.generate",
+      "composition": "profundidad_abierta",
+      "canon_model_ids": [
+        "hermana_litoral__identity_sheet",
+        "hermana_litoral__state_sheet",
+        "hija_katetamana__state_sheet",
+        "cerro_katetamana__spatial_model"
+      ],
+      "refs": [],
+      "ref_paths": [],
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/el-incesto/wayuu-incesto-triptych-02-entrada/prompts/entrada.prompt.txt",
+      "prompt_sha256": "d1154b68e89f9e306ac1524131e0bef8b142a1fab4e28f24e7fdcc1d07d1ab17",
+      "narrative_event_ids": [
+        "hermana_litoral"
+      ],
+      "editorial_translation": "La transformación litoral es del registro; la continuidad de un pliegue verde hacia una veta mineral es puesta en escena editorial de la Biblia. No representa la fuga ampliada ni al hermano petrificado.",
+      "magic_in_the_ordinary": {
+        "ordinary_anchor": "Una mujer vestida está en una costa llana.",
+        "impossible_behavior": "Un pliegue de su manta continúa como veta dentro de piedra.",
+        "narrative_effect": "El litoral guarda identidad sin convertirla en estatua humana.",
+        "agency": "El relato atribuye a Mareiwa la transformación; su presencia no se convierte en cuerpo o juez visible.",
+        "physical_translation": "Una sola tira verde corta entre bajo trasero de manta a la derecha y roca a la izquierda, un pliegue elevado con sombra. Ambos extremos unidos, ninguna tira adicional.",
+        "visible_test": "Seguir con la vista la misma tira desde manta hasta interior de roca sin ningún corte; mujer y roca comparten nivel.",
+        "event_ids": [
+          "hermana_litoral"
+        ],
+        "provenance": "editorial_metaphor",
+        "temporal_role": "present"
+      },
+      "visual_function": "narrative_scene",
+      "output": "output/imagegen/wayuu/triptychs/wayuu-incesto-triptych-02-entrada/entrada.jpeg",
+      "status": "prepared"
+    }
+  ]
+}

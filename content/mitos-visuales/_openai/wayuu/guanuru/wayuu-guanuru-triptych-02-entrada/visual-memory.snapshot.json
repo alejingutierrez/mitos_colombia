@@ -1,0 +1,131 @@
+{
+  "title": "Guanurú",
+  "references": [
+    {
+      "id": "0b77fdbfdfdff55c35ed",
+      "location": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/guanuru-1784766845426.jpg",
+      "roles": [
+        "current_public",
+        "public_at_campaign_start",
+        "stored_version_candidate"
+      ],
+      "evidence": [
+        {
+          "source": "myths.image_url",
+          "format": "horizontal"
+        },
+        {
+          "source": "content/mitos-visuales/production/wayuu-2026-09-05/database-before.json",
+          "field": "image_url"
+        },
+        {
+          "source": "Vercel Blob scoped prefix",
+          "prefix": "mitos/guanuru-",
+          "pathname": "mitos/guanuru-1784766845426.jpg",
+          "uploaded_at": "2026-07-23T00:34:07.000Z"
+        }
+      ],
+      "visual_review": "inspected",
+      "cultural_authority": "none_from_image_alone",
+      "reviewed_at": "2026-09-06T17:46:17.596Z",
+      "inspection_artifact": "output/playwright/wayuu-campaign/guanuru-before-0.png",
+      "observed": "Durmiente en cama, cinco mariposas blancas, mantis, cráneo, algodón, costa y vivienda; composición acumulativa.",
+      "decision": "Retener atmósfera y profundidad; no trasladar collage como rito."
+    },
+    {
+      "id": "9ec7ff71b4245f8c73bf",
+      "location": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/guanuru-1784911150684.jpg",
+      "roles": [
+        "current_public",
+        "database_version",
+        "stored_version_candidate"
+      ],
+      "evidence": [
+        {
+          "source": "vertical_images",
+          "row_id": 360,
+          "format": "vertical"
+        },
+        {
+          "source": "vertical_images",
+          "row_id": 360,
+          "updated_at": "2026-07-24T16:39:12.057Z"
+        },
+        {
+          "source": "Vercel Blob scoped prefix",
+          "prefix": "vertical/myth/guanuru-",
+          "pathname": "vertical/myth/guanuru-1784911150684.jpg",
+          "uploaded_at": "2026-07-24T16:39:12.000Z"
+        }
+      ],
+      "visual_review": "inspected",
+      "cultural_authority": "none_from_image_alone",
+      "reviewed_at": "2026-09-06T17:46:17.596Z",
+      "inspection_artifact": "output/playwright/wayuu-campaign/guanuru-before-1.png",
+      "observed": "Cama vacía, gran mariposa, mantis, cráneo y algodón ante costa; papel con sombras.",
+      "decision": "Retener atmósfera y profundidad; no trasladar collage como rito."
+    },
+    {
+      "id": "7ca11e3ff18173a510df",
+      "location": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/guanuru-1767975591873.png",
+      "roles": [
+        "stored_version_candidate"
+      ],
+      "evidence": [
+        {
+          "source": "Vercel Blob scoped prefix",
+          "prefix": "mitos/guanuru-",
+          "pathname": "mitos/guanuru-1767975591873.png",
+          "uploaded_at": "2026-01-10T22:22:13.000Z"
+        }
+      ],
+      "visual_review": "not_yet_inspected",
+      "cultural_authority": "none_from_image_alone",
+      "bytes": 974729
+    }
+  ],
+  "discovery_failures": [],
+  "review_status": "reviewed_for_story_direction",
+  "review": {
+    "reviewer": "agent_direct_visual_review",
+    "reviewed_at": "2026-09-06T17:46:17.596Z",
+    "reviewed_reference_ids": [
+      "0b77fdbfdfdff55c35ed",
+      "9ec7ff71b4245f8c73bf"
+    ],
+    "retained": [
+      "Interior en penumbra frente a territorio distante; capas físicas, ocre, índigo y crema.",
+      "Visita pequeña de alas blancas como motivo doméstico."
+    ],
+    "rejected": [
+      "Collage de mantis, cráneo, algodón y mariposas como supuesto ritual único.",
+      "Cama europea como sustituto del chinchorro; enjambre, insectos gigantes y textiles geométricos no específicos.",
+      "Fijar mariposa como cuerpo de Guanurú o atribuir causalidad única a enfermedad."
+    ],
+    "influence_by_act": {
+      "entrada": "Conservar casa y profundidad; vaciar acumulación de símbolos. Una huella de peso en chinchorro vacío vuelve perceptible la presencia sin darle cuerpo.",
+      "acto": "Conservar relación interior/otra distancia; sueño con pariente opaco y contraste noche/día, no espectro ni efecto saliendo de manos.",
+      "huella": "Conservar una única mariposa blanca, aislarla como gesto de acogida mediante ala entreabierta; sin paisaje ni objetos protectores combinados."
+    }
+  },
+  "external_reference_search": {
+    "searched_at": "2026-09-06T17:46:17.596Z",
+    "query": "Guanuru Wayuu Pineda ilustración",
+    "candidates": [
+      {
+        "url": "https://premioggm.org/trabajo/edicion/2025/fotografia/yoluja/",
+        "author": "Fernanda Pineda",
+        "date": "2025",
+        "status": "not_accepted_as_visual_reference",
+        "reason": "Imagen principal inspeccionada resultó retrato de autora, parcialmente cubierta por formulario; no representa el mito.",
+        "inspection_artifact": "output/playwright/wayuu-campaign/guanuru-reference-yoluja-pineda.png"
+      },
+      {
+        "url": "https://baudoap.com/yoluja-2/",
+        "status": "text_reviewed_images_not_inspected",
+        "reason": "Texto del proyecto accesible; navegador mostró encabezado/pie sin galería. Obra contemporánea de sueños y extractivismo, no iconografía histórica de Guanurú."
+      }
+    ],
+    "result": "No representación histórica externa específica aceptada. No se declara búsqueda exhaustiva."
+  }
+}

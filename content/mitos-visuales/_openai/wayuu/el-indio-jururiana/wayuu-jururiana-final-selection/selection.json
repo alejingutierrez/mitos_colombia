@@ -1,0 +1,135 @@
+{
+  "schema": "mitos-triptych-selection/v2",
+  "myth": "el-indio-jururiana",
+  "title": "Jururiana y la gran lluvia",
+  "created_at": "2026-09-06T09:31:35.651Z",
+  "status": "approved_for_publication_under_campaign_authorization",
+  "approval_basis": "Usuario autorizó producir y publicar los 27 trípticos; selección del agente tras inspección directa de relato, referencias e imágenes.",
+  "campaign_scope": "content/mitos-visuales/production/wayuu-2026-09-05/scope.json",
+  "narrative_target_sha256": "f20ab5c6a73667df8cfaf3d9c81ec163dfd5573b1efde6255c273d6530d3eb63",
+  "visual_memory_library": "content/mitos-visuales/wayuu.visual-memory.v1.json",
+  "visual_memory_review": {
+    "reviewer": "agent_direct_visual_review",
+    "reviewed_at": "2026-09-06T09:24:44.694Z",
+    "reviewed_reference_ids": [
+      "b2cde9ba6c5e3ae25d31",
+      "d73a4e17adef4824ae60"
+    ],
+    "retained": [
+      "Contraste tierra ocre y azul marino, amplitud de horizonte costero y capas físicas.",
+      "Presencia de recursos reunidos; el conocimiento se relaciona con sostener vida, no sólo con mirar el cielo."
+    ],
+    "rejected": [
+      "Bastón/cayado, tocado, bolsa con patrones y ropa profética genérica no pertenecen a las identidades aprobadas.",
+      "Gigante central, realismo de rostro modelado, estrellas y espirales usadas como sustituto de magia narrativa.",
+      "Vegetación en roseta, grandes serranías junto al mar, paisaje doméstico mezclado y símbolos sin fuente."
+    ],
+    "influence_by_act": {
+      "entrada": "Planicie de Patsuo y mar distante; Jururiana pequeño con reservas y chivos, lluvia física que borra el rastro detrás de él.",
+      "acto": "Cambiar el exterior ornamental por la habitación oscura del relato público: Warir toca tierra y ésta responde con una ondulación material sin luz propia.",
+      "huella": "Aislar las semillas preparadas: lluvia de papel se aparta y deja seco el pequeño paquete. Sin paisaje, personas ni símbolo tradicional."
+    }
+  },
+  "selected": [
+    {
+      "act": "entrada",
+      "path": "output/imagegen/wayuu/triptychs/wayuu-jururiana-triptych-02-escenas/entrada.jpeg",
+      "sha256": "1f3e8fe28f0e9fcc1d22058d8c9ae64748eea21ae66ad672cfa304bc56412ae9",
+      "width": 1536,
+      "height": 864,
+      "quality": "high",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/el-indio-jururiana/wayuu-jururiana-triptych-02-escenas/prompts/entrada.prompt.txt",
+      "prompt_sha256": "a90a4f1ebc8b60e8c0bd08f636a3212a40e95c4604e31be713880f6699ab4bf5",
+      "visual_function": "narrative_scene",
+      "review": {
+        "observed": "Jururiana de perfil con Kotin carbón, womu y sandalias, pequeño frente a planicie. Cinco chivos negros completos, reservas y rastro que se atenúa hacia cinco cortinas físicas de lluvia. Grupo y prodigio dentro del margen, mitad inferior libre.",
+        "limits": [
+          "Figura cerca de un sexto de altura, mayor que los 100 px pedidos pero muy inferior al primer intento y sin retrato.",
+          "El rastro termina cerca de las reservas, no exactamente en el talón; borrado progresivo visible hacia el chubasco.",
+          "Paipai y detalle del conjunto inferior tienen resolución limitada por distancia; sin motivos faciales o símbolos visibles. No se afirma precisión etnográfica de pigmento o topografía."
+        ]
+      }
+    },
+    {
+      "act": "acto",
+      "path": "output/imagegen/wayuu/triptychs/wayuu-jururiana-triptych-02-escenas/acto.jpeg",
+      "sha256": "d67a6752ebb6c150576d4e11db6492d2ad7db7836159d97a4d25ef6655a70b57",
+      "width": 864,
+      "height": 1536,
+      "quality": "medium",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/el-indio-jururiana/wayuu-jururiana-triptych-02-escenas/prompts/acto.prompt.txt",
+      "prompt_sha256": "c434c33f2629bf46db07e05185eeeaeadf8d83adf230bae3199108c12d94b488",
+      "visual_function": "narrative_scene",
+      "review": {
+        "observed": "Dos hombres diferenciados en habitación de bahareque: mayor con womu/cabello corto/Kotin, Warir con camisa índigo y paño rojizo de hombro, palmas apoyadas. Hoja continua de tierra se eleva en onda transversal con hueco sombreado; no grieta, libro, divinidad humana o luz mágica.",
+        "limits": [
+          "Mayor ocupa cerca de un tercio de altura, más de lo pedido; ambos completos y subordinados a arquitectura y piso.",
+          "La postura en cuclillas ocluye paneles del wayuco de Warir; no se pueden verificar sus dos caras completas.",
+          "El borde de la capa elevada es visible como papel del suelo; no se declara terremoto ni rito documentado."
+        ]
+      }
+    },
+    {
+      "act": "huella",
+      "path": "output/imagegen/wayuu/triptychs/wayuu-jururiana-triptych-01/huella.jpeg",
+      "sha256": "2f4ec60bc79725d347f3aff4cdd3bba4f7467573b42740fa722835cb7d272bc2",
+      "width": 1024,
+      "height": 1024,
+      "quality": "medium",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/el-indio-jururiana/wayuu-jururiana-triptych-01/prompts/huella.prompt.txt",
+      "prompt_sha256": "d5f5f0d066b3521393b052d1578856ff82d4532a679c50004de6ea82147f9eaf",
+      "visual_function": "symbolic_synthesis",
+      "review": {
+        "observed": "Paquete liso abierto con semillas secas; tiras azules verticales se apartan y dejan vacío central sobre campo índigo. Sombras y separación física; sin escena, persona, halo o emblema.",
+        "limits": [
+          "La tira central se interrumpe por encima de las semillas; las otras continúan. No se cumple que cada una llegue abajo, pero la lectura de reserva protegida permanece.",
+          "Semillas botánicamente anónimas; paquete y lluvia apartada son símbolo editorial, no contenedor ancestral o amuleto."
+        ]
+      }
+    }
+  ],
+  "generation": {
+    "provider": "OpenAI API",
+    "model": "gpt-image-2",
+    "mode": "text_only_no_local_references",
+    "unique_images": 5,
+    "by_act": {
+      "entrada": {
+        "unique_images": 2,
+        "preparation_rounds": 2,
+        "requested_alternatives": 0
+      },
+      "acto": {
+        "unique_images": 2,
+        "preparation_rounds": 2,
+        "requested_alternatives": 0
+      },
+      "huella": {
+        "unique_images": 1,
+        "preparation_rounds": 1,
+        "requested_alternatives": 0
+      }
+    },
+    "corrections": 2,
+    "cli_seconds": {
+      "entrada_01": 82.4,
+      "acto_01": 35.9,
+      "huella_01": 38.9,
+      "entrada_02": 74.1,
+      "acto_02": 33.4
+    },
+    "cost": null,
+    "request_ids": null
+  },
+  "excluded": [
+    {
+      "path": "output/imagegen/wayuu/triptychs/wayuu-jururiana-triptych-01/entrada.jpeg",
+      "reason": "Mayor demasiado grande y chivo cortado por borde."
+    },
+    {
+      "path": "output/imagegen/wayuu/triptychs/wayuu-jururiana-triptych-01/acto.jpeg",
+      "reason": "Mayor sin womu/cabello recogido y tierra leída como fisura longitudinal."
+    }
+  ],
+  "published": false
+}

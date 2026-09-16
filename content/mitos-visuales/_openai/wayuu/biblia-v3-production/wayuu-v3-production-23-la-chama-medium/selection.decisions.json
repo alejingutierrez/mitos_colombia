@@ -1,0 +1,65 @@
+{
+  "reviewed_at": "2026-09-04",
+  "contact_sheet": "output/imagegen/wayuu-v3-production/la-chama-batch23-selected-contact-sheet.jpeg",
+  "selections": {
+    "la_chama__identity_sheet": "wayuu-v3-production-23-la-chama-medium-corrections-01",
+    "la_chama__state_sheet": "wayuu-v3-production-23-la-chama-medium",
+    "hombre_caballos_chama__identity_sheet": "wayuu-v3-production-23-la-chama-medium",
+    "hombre_caballos_chama__state_sheet": "wayuu-v3-production-23-la-chama-medium-corrections-01",
+    "hijo_chama__identity_sheet": "wayuu-v3-production-23-la-chama-medium-corrections-01",
+    "companera_chama__presence_model": "wayuu-v3-production-23-la-chama-medium-corrections-01",
+    "familia_chama__group_grammar": "wayuu-v3-production-23-la-chama-medium",
+    "burro_chama__identity_sheet": "wayuu-v3-production-23-la-chama-medium-corrections-01",
+    "burro_chama__state_sheet": "wayuu-v3-production-23-la-chama-medium-corrections-01",
+    "caballos_hombre_chama__group_grammar": "wayuu-v3-production-23-la-chama-medium",
+    "ollas_mochilas_chama__object_sheet": "wayuu-v3-production-23-la-chama-medium",
+    "esterilla_chama__object_sheet": "wayuu-v3-production-23-la-chama-medium",
+    "manta_roja_chama__object_sheet": "wayuu-v3-production-23-la-chama-medium-corrections-01",
+    "cueva_casa_chama__spatial_model": "wayuu-v3-production-23-la-chama-medium",
+    "nueva_pareja_hombre_chama__identity_sheet": "wayuu-v3-production-23-la-chama-medium",
+    "metamorfosis_chama__phenomenon_rule": "wayuu-v3-production-23-la-chama-medium",
+    "transformacion_carga_chama__phenomenon_rule": "wayuu-v3-production-23-la-chama-medium-corrections-01"
+  },
+  "rejections": [
+    {
+      "model_id": "la_chama__identity_sheet",
+      "source_batch": "wayuu-v3-production-23-la-chama-medium",
+      "reason": "REJECTED_NONLOCAL_SAGUARO_FORMS_DESPITE_IDENTITY_AND_FULL_ATTIRE_PASS"
+    },
+    {
+      "model_id": "hombre_caballos_chama__state_sheet",
+      "source_batch": "wayuu-v3-production-23-la-chama-medium",
+      "reason": "REJECTED_PERVASIVE_AGAVE_ROSETTES_AND_FINAL_CHAMA_IDENTITY_DRIFT"
+    },
+    {
+      "model_id": "hijo_chama__identity_sheet",
+      "source_batch": "wayuu-v3-production-23-la-chama-medium",
+      "reason": "REJECTED_PERVASIVE_NONLOCAL_AGAVE_ROSETTES_DESPITE_FULL_CHILD_ATTIRE_PASS"
+    },
+    {
+      "model_id": "companera_chama__presence_model",
+      "source_batch": "wayuu-v3-production-23-la-chama-medium",
+      "reason": "REJECTED_NONLOCAL_ROSETTE_FLORA_DESPITE_PRESENCE_AND_ATTIRE_PASS"
+    },
+    {
+      "model_id": "burro_chama__identity_sheet",
+      "source_batch": "wayuu-v3-production-23-la-chama-medium",
+      "reason": "REJECTED_NONLOCAL_ROSETTE_FLORA_DESPITE_THREE_VIEW_IDENTITY_PASS"
+    },
+    {
+      "model_id": "burro_chama__state_sheet",
+      "source_batch": "wayuu-v3-production-23-la-chama-medium",
+      "reason": "REJECTED_PERVASIVE_NONLOCAL_ROSETTE_FLORA_DESPITE_TWO_STATE_PASS"
+    },
+    {
+      "model_id": "manta_roja_chama__object_sheet",
+      "source_batch": "wayuu-v3-production-23-la-chama-medium",
+      "reason": "REJECTED_SHORT_T_SHAPED_TUNIC_INSTEAD_OF_LONG_SLEEVE_FULL_BODY_WAYUUSHEIN"
+    },
+    {
+      "model_id": "transformacion_carga_chama__phenomenon_rule",
+      "source_batch": "wayuu-v3-production-23-la-chama-medium",
+      "reason": "REJECTED_FOLDED_BLANKETS_INSTEAD_OF_TWO_LONG_SLEEVE_FULL_BODY_WAYUUSHEIN_STATES"
+    }
+  ]
+}

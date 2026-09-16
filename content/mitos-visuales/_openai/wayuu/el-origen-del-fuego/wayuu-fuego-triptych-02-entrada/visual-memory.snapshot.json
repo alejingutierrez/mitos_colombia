@@ -1,0 +1,139 @@
+{
+  "title": "El origen del fuego",
+  "references": [
+    {
+      "id": "b5ddcbc9bfbcf35285db",
+      "location": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/el-origen-del-fuego-1784766681000.jpg",
+      "roles": [
+        "current_public",
+        "public_at_campaign_start",
+        "stored_version_candidate"
+      ],
+      "evidence": [
+        {
+          "source": "myths.image_url",
+          "format": "horizontal"
+        },
+        {
+          "source": "content/mitos-visuales/production/wayuu-2026-09-05/database-before.json",
+          "field": "image_url"
+        },
+        {
+          "source": "Vercel Blob scoped prefix",
+          "prefix": "mitos/el-origen-del-fuego-",
+          "pathname": "mitos/el-origen-del-fuego-1784766681000.jpg",
+          "uploaded_at": "2026-07-23T00:31:22.000Z"
+        }
+      ],
+      "visual_review": "inspected",
+      "cultural_authority": "none_from_image_alone",
+      "inspection": {
+        "reviewed_at": "2026-09-06T15:02:39.762Z",
+        "method": "direct_inspection_browser_capture",
+        "capture": "output/playwright/wayuu-campaign/fuego-before-0.png",
+        "observed": "Joven con torso descubierto sale de gruta con recipiente; figura grande entre llamas; cueva y vegetación recortadas.",
+        "limits": [
+          "Imagen anterior del proyecto, no evidencia del vestuario ni apariencia divina.",
+          "Texto de página en captura no se traslada al arte."
+        ]
+      }
+    },
+    {
+      "id": "ac0343457ea8c5a1943a",
+      "location": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/el-origen-del-fuego-1784910924463.jpg",
+      "roles": [
+        "current_public",
+        "database_version",
+        "stored_version_candidate"
+      ],
+      "evidence": [
+        {
+          "source": "vertical_images",
+          "row_id": 342,
+          "format": "vertical"
+        },
+        {
+          "source": "vertical_images",
+          "row_id": 342,
+          "updated_at": "2026-07-24T16:35:25.419Z"
+        },
+        {
+          "source": "Vercel Blob scoped prefix",
+          "prefix": "vertical/myth/el-origen-del-fuego-",
+          "pathname": "vertical/myth/el-origen-del-fuego-1784910924463.jpg",
+          "uploaded_at": "2026-07-24T16:35:25.000Z"
+        }
+      ],
+      "visual_review": "inspected",
+      "cultural_authority": "none_from_image_alone",
+      "inspection": {
+        "reviewed_at": "2026-09-06T15:02:39.762Z",
+        "method": "direct_inspection_browser_capture",
+        "capture": "output/playwright/wayuu-campaign/fuego-before-1.png",
+        "observed": "Joven agachado con recipiente ante anciano monumental barbado y aureola; fuego en cueva de capas y vegetación densa.",
+        "limits": [
+          "Imagen anterior del proyecto, no evidencia del vestuario ni apariencia divina.",
+          "Texto de página en captura no se traslada al arte."
+        ]
+      }
+    },
+    {
+      "id": "03a8c0b969e47d907068",
+      "location": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/el-origen-del-fuego-1767973039367.png",
+      "roles": [
+        "stored_version_candidate"
+      ],
+      "evidence": [
+        {
+          "source": "Vercel Blob scoped prefix",
+          "prefix": "mitos/el-origen-del-fuego-",
+          "pathname": "mitos/el-origen-del-fuego-1767973039367.png",
+          "uploaded_at": "2026-01-10T22:14:46.000Z"
+        }
+      ],
+      "visual_review": "not_yet_inspected",
+      "cultural_authority": "none_from_image_alone",
+      "bytes": 470921
+    }
+  ],
+  "discovery_failures": [],
+  "review_status": "reviewed_before_prompt",
+  "review": {
+    "reviewer": "agent_direct_visual_review",
+    "reviewed_at": "2026-09-06T15:02:39.762Z",
+    "reviewed_reference_ids": [
+      "b5ddcbc9bfbcf35285db",
+      "ac0343457ea8c5a1943a"
+    ],
+    "retained": [
+      "Cueva de estratos con profundidad real, sombras y contraste ámbar/azul.",
+      "Fuego como centro de atención dentro del mundo material."
+    ],
+    "rejected": [
+      "Torso descubierto, cenefas inventadas, rostros volumétricos, deidad gigante barbada y aureola.",
+      "Selva densa, agaves ornamentales y planos cerrados; no copiar la misma escena en dos formatos."
+    ],
+    "influence_by_act": {
+      "entrada": "Contraste cálido/frío y estratos trasladados al chinchorro de Siki: la trama contiene fuego sin arder.",
+      "acto": "Recorrido profundo junto a gruta; personaje pequeño y dos brasas abren capas de oscuridad, sin deidad inventada.",
+      "huella": "Estratos cálidos condensados en fuego plegado dentro de madera intacta; sin cueva, personajes ni escena."
+    }
+  },
+  "external_research": {
+    "checked_at": "2026-09-06T15:02:39.762Z",
+    "status": "partial_not_saturated",
+    "candidates": [
+      {
+        "url": "https://heymau.com/works/vochi/",
+        "title": "Venezuelan Myths",
+        "creator": "Heymau",
+        "year": 2015,
+        "kind": "contemporary_external_representation",
+        "image_url": "https://heymau.com/wp-content/uploads/2023/03/vochiArtboard-1-copy-3-1.png",
+        "status": "page_read_image_not_inspected",
+        "failure": "Image fetch returned cache miss; not used as inspected visual reference.",
+        "limits": "Series combines multiple peoples; no generic graphic system imported as Wayuu canon. No reproduction license established."
+      }
+    ]
+  }
+}

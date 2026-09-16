@@ -1,0 +1,33 @@
+{
+  "schema": "mitos-colombia-biblia-production/v3",
+  "batch_id": "wayuu-v3-production-26-waleker-el-origen-del-tejido-medium-corrections-08",
+  "parent_batch_id": "wayuu-v3-production-26-waleker-el-origen-del-tejido-medium",
+  "revision": "corrections-08",
+  "myth_slug": "waleker-el-origen-del-tejido",
+  "asset_type": "bible_model",
+  "plan": "content/mitos-visuales/wayuu.v3.json",
+  "prepared_at": "2026-09-04",
+  "quality": "medium",
+  "framing": "immersive_full_bleed",
+  "surface_finish": "layered_depth_no_exposed_support",
+  "generation_mode": "text_only_no_local_references",
+  "jobs": [
+    {
+      "id": "legado_textil_waleker__phenomenon_rule--canon",
+      "model_id": "legado_textil_waleker__phenomenon_rule",
+      "entity_id": "legado_textil_waleker",
+      "view_id": "canon",
+      "title": "Legado textil · de los precedentes a la enseñanza",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/wayuu-v3-production-26-waleker-el-origen-del-tejido-medium-corrections-08/prompts/legado_textil_waleker__phenomenon_rule--canon.prompt.txt",
+      "output_file": "output/imagegen/wayuu-v3-production/wayuu-v3-production-26-waleker-el-origen-del-tejido-medium-corrections-08/legado_textil_waleker__phenomenon_rule--canon.jpeg",
+      "prompt_sha256": "463d1807b87b4b5a11cb367a323784b82c615c0f6f9616a76a9e82b6b174a94d",
+      "provider": "OpenAI API",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "1536x1024",
+      "output_format": "jpeg",
+      "input_references": [],
+      "status": "prepared"
+    }
+  ]
+}

@@ -1,0 +1,265 @@
+{
+  "schema": "mitos-colombia-biblia-visual/v3",
+  "batch": {
+    "id": "wayuu-v3-production-26-waleker-el-origen-del-tejido-medium",
+    "myth_slug": "waleker-el-origen-del-tejido",
+    "model_ids": [
+      "waleker__identity_sheet",
+      "waleker__state_sheet",
+      "irunuu__identity_sheet",
+      "irunuu__state_sheet",
+      "uyaaliwa_outshi_waleker__identity_sheet",
+      "tool_waleker__identity_sheet",
+      "tool_waleker__state_sheet",
+      "kulamia_waleker__identity_sheet",
+      "servidores_wanuru_waleker__group_grammar",
+      "tejedoras_herederas__group_grammar",
+      "atia__presence_model",
+      "kanaspi__presence_model",
+      "maawui_waleker__presence_model",
+      "sese_waleker__presence_model",
+      "hermanas_irunuu_waleker__group_grammar",
+      "hermanas_irunuu_waleker__state_sheet",
+      "hormigas_waleker__group_grammar",
+      "tejidos_waleker__object_sheet",
+      "telar_wayuu__object_sheet",
+      "jiron_telarana_waleker__object_sheet",
+      "isashii_waleker__spatial_model",
+      "suumain_yolujaa_waleker__spatial_model",
+      "transformacion_nocturna_waleker__phenomenon_rule",
+      "tejido_nocturno_waleker__phenomenon_rule",
+      "sueno_chinchorro_waleker__phenomenon_rule",
+      "revelacion_secreto_waleker__phenomenon_rule",
+      "legado_textil_waleker__phenomenon_rule",
+      "estrella_corazon_irunuu__phenomenon_rule"
+    ],
+    "quality": "medium",
+    "framing": "immersive_full_bleed",
+    "surface_finish": "layered_depth_no_exposed_support",
+    "generation_mode": "text_only_no_local_references",
+    "status": "prepared_after_complete_primary_reaudit",
+    "selection_manifest": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/wayuu-v3-production-26-waleker-el-origen-del-tejido-medium/selection.json",
+    "contact_sheet": "output/imagegen/wayuu-v3-production/waleker-el-origen-del-tejido-batch26-selected-contact-sheet.jpeg"
+  },
+  "inventory_approved_at": "2026-09-03",
+  "pilot_approved_at": "2026-09-03",
+  "source_snapshot_sha256": "6b5b1c5ebdb2524a7524b065d96c6d33ad6f5694db239a0d722ded8485f435f5",
+  "model_ids": [
+    "maawui_waleker__presence_model",
+    "legado_textil_waleker__phenomenon_rule"
+  ],
+  "models": {
+    "maawui_waleker__presence_model": {
+      "purpose": "presence_model",
+      "entity_refs": [
+        "maawui_waleker"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "waleker-el-origen-del-tejido",
+          "field": "mito",
+          "note": "Precedente del algodón sin cuerpo inventado."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "No fijar cuerpo humano. La presencia se reconoce por una relacion irrepetible entre territorio, materia, clima, objeto, ausencia y huella. Entidad: Maawüi. Funcion visual: Precedente del algodón nombrado por Waleker sin cuerpo humano ni fisonomía descritos.",
+        "materials": [
+          "papel territorial fibroso",
+          "capas de agua, suelo, aire o sombra segun evidencia",
+          "uniones fisicas visibles dentro del mundo"
+        ],
+        "palette_logic": "Color gobernado por la accion documentada de la fuerza; sin halo, aura, ojos luminosos o codigo religioso externo.",
+        "scale": "Escala relacional: puede atravesar varios planos sin convertirse en gigante antropomorfo.",
+        "continuity_markers": [
+          "nombre estable: Maawüi",
+          "funcion estable: Precedente del algodón nombrado por Waleker sin cuerpo humano ni fisonomía descritos.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Precedente del algodón nombrado por Waleker sin cuerpo humano ni fisonomía descritos."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para presence_model",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · presence_model",
+        "primary_request": "accion y huella sin inventar anatomia para Maawüi. Precedente del algodón nombrado por Waleker sin cuerpo humano ni fisonomía descritos.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Escala relacional: puede atravesar varios planos sin convertirse en gigante antropomorfo.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel territorial fibroso; capas de agua, suelo, aire o sombra segun evidencia; uniones fisicas visibles dentro del mundo",
+        "constraints": [
+          "No fijar cuerpo humano. La presencia se reconoce por una relacion irrepetible entre territorio, materia, clima, objeto, ausencia y huella.",
+          "mostrar: Precedente del algodón nombrado por Waleker sin cuerpo humano ni fisonomía descritos.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "presence_grammar",
+          "purpose": "accion y huella sin inventar anatomia",
+          "aspect": "16:9",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "legado_textil_waleker__phenomenon_rule": {
+      "purpose": "phenomenon_rule",
+      "entity_refs": [
+        "legado_textil_waleker"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "waleker-el-origen-del-tejido",
+          "field": "mito",
+          "note": "Conecta precedentes, Waleker, Kulami'a y generaciones de mujeres."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Secuencia material de causa, accion, limite y huella; debe entenderse sin texto, aura o particulas magicas genericas. Entidad: Legado y transmisión textil. Funcion visual: Cadena que conecta precedentes materiales, Waleker, Kulami'a y generaciones de mujeres mediante observación, imitación, corrección y enseñanza.",
+        "materials": [
+          "papel y fibras que cambian de tension, humedad, luz o posicion",
+          "capas causales separadas",
+          "huella fisica persistente"
+        ],
+        "palette_logic": "El cambio cromatico nace de la materia afectada, nunca de un resplandor sobrenatural por defecto.",
+        "scale": "Escala definida por aquello que transforma, desde objeto hasta territorio.",
+        "continuity_markers": [
+          "nombre estable: Legado y transmisión textil",
+          "funcion estable: Cadena que conecta precedentes materiales, Waleker, Kulami'a y generaciones de mujeres mediante observación, imitación, corrección y enseñanza.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Cadena que conecta precedentes materiales, Waleker, Kulami'a y generaciones de mujeres mediante observación, imitación, corrección y enseñanza."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para phenomenon_rule",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · phenomenon_rule",
+        "primary_request": "entrada, accion, limite y huella del fenomeno para Legado y transmisión textil. Cadena que conecta precedentes materiales, Waleker, Kulami'a y generaciones de mujeres mediante observación, imitación, corrección y enseñanza.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Escala definida por aquello que transforma, desde objeto hasta territorio.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel y fibras que cambian de tension, humedad, luz o posicion; capas causales separadas; huella fisica persistente",
+        "constraints": [
+          "Secuencia material de causa, accion, limite y huella; debe entenderse sin texto, aura o particulas magicas genericas.",
+          "mostrar: Cadena que conecta precedentes materiales, Waleker, Kulami'a y generaciones de mujeres mediante observación, imitación, corrección y enseñanza.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "phenomenon_grammar",
+          "purpose": "entrada, accion, limite y huella del fenomeno",
+          "aspect": "16:9",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    }
+  },
+  "entities": {
+    "maawui_waleker": {
+      "name": "Maawüi",
+      "kind": "deidad_fuerza",
+      "description": "Precedente del algodón nombrado por Waleker sin cuerpo humano ni fisonomía descritos.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "sensitive",
+      "visual_status": "required",
+      "model_requirements": [
+        "presence_model"
+      ],
+      "model_refs": [
+        "maawui_waleker__presence_model"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "waleker-el-origen-del-tejido"
+      ],
+      "evidence": [
+        {
+          "myth": "waleker-el-origen-del-tejido",
+          "field": "mito",
+          "note": "Precedente del algodón sin cuerpo inventado."
+        }
+      ]
+    },
+    "legado_textil_waleker": {
+      "name": "Legado y transmisión textil",
+      "kind": "fenomeno",
+      "description": "Cadena que conecta precedentes materiales, Waleker, Kulami'a y generaciones de mujeres mediante observación, imitación, corrección y enseñanza.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "phenomenon_rule"
+      ],
+      "model_refs": [
+        "legado_textil_waleker__phenomenon_rule"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "waleker-el-origen-del-tejido"
+      ],
+      "evidence": [
+        {
+          "myth": "waleker-el-origen-del-tejido",
+          "field": "mito",
+          "note": "Conecta precedentes, Waleker, Kulami'a y generaciones de mujeres."
+        }
+      ]
+    }
+  }
+}

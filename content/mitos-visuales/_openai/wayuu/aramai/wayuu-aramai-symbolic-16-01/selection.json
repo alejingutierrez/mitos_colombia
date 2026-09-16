@@ -1,0 +1,117 @@
+{
+  "schema": "mitos-triptych-selection/v2",
+  "created_at": "2026-09-06T02:44:42.918Z",
+  "myth": "aramai",
+  "status": "SYMBOLIC_SQUARE_CANDIDATE_PENDING_EDITORIAL_REVIEW",
+  "editorial_approval": null,
+  "published": false,
+  "production_ready": false,
+  "supersedes": "content/mitos-visuales/_openai/wayuu/aramai/wayuu-aramai-triptych-15-selection/selection.json",
+  "user_decision": "Rehacer la cuadrada como imagen orientada a lo simbólico, no como escena; aprender del proceso y contar iteraciones.",
+  "narrative_snapshot": "content/mitos-visuales/research/aramai-narrative-2026-09-05.json",
+  "narrative_target_sha256": "a949509df6e51454154a33e3e11979dc5a236ea8065cc1af1aa3d2eba5a0db1d",
+  "selected": [
+    {
+      "act": "entrada",
+      "path": "output/imagegen/wayuu/triptychs/wayuu-aramai-triptych-15-selected/entrada.jpeg",
+      "source": "output/imagegen/wayuu/triptychs/wayuu-aramai-magic-14-options-01/01-la-noche-que-escucha.jpeg",
+      "source_manifest": "content/mitos-visuales/_openai/wayuu/aramai/wayuu-aramai-magic-14-options-01/jobs.json",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/aramai/wayuu-aramai-magic-14-options-01/prompts/01-la-noche-que-escucha.prompt.txt",
+      "prompt_sha256": "7fc7a443bc20e58d988160097577e0aabc2d3e98476b21cd61521201564e2c79",
+      "sha256": "42964c2bfc4d1fb2e7440ff069b609e71f2d5a06fa70bca9cfe8528a8e68c28c",
+      "width": 1536,
+      "height": 864,
+      "quality": "high",
+      "aspect_ratio": "16:9",
+      "reused": true,
+      "unchanged_sha256_verified": true,
+      "visual_function": "narrative_scene"
+    },
+    {
+      "act": "acto",
+      "path": "output/imagegen/wayuu/triptychs/wayuu-aramai-triptych-15-selected/acto.jpeg",
+      "source": "output/imagegen/wayuu/triptychs/wayuu-aramai-triptych-15-01/acto.jpeg",
+      "source_manifest": "content/mitos-visuales/_openai/wayuu/aramai/wayuu-aramai-triptych-15-01/jobs.json",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/aramai/wayuu-aramai-triptych-15-01/prompts/acto.prompt.txt",
+      "prompt_sha256": "8898e4dd2f724c58b6571e4d08e9bc07c82c3a3799a492dd9c6f0784f57beb02",
+      "sha256": "6c562c8d966918fe80ce4f62c697324caec4b34946bbac683f783b3f597128d4",
+      "width": 864,
+      "height": 1536,
+      "quality": "medium",
+      "aspect_ratio": "9:16",
+      "reused": true,
+      "unchanged_sha256_verified": true,
+      "visual_function": "narrative_scene"
+    },
+    {
+      "act": "huella",
+      "path": "output/imagegen/wayuu/triptychs/wayuu-aramai-symbolic-16-01/huella.jpeg",
+      "source": "output/imagegen/wayuu/triptychs/wayuu-aramai-symbolic-16-01/huella.jpeg",
+      "source_manifest": "content/mitos-visuales/_openai/wayuu/aramai/wayuu-aramai-symbolic-16-01/jobs.json",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/aramai/wayuu-aramai-symbolic-16-01/prompts/huella.prompt.txt",
+      "prompt_sha256": "c4c526c1e4d9dc86ac9043b2bb62abc2d1318e6b36c5abc35ba0794280e912c9",
+      "sha256": "5e4cbe9a1ba7dbc7143ab5ebaec98b8d1a86a39ef453e12f0e7cdeeb4236f055",
+      "width": 1024,
+      "height": 1024,
+      "quality": "medium",
+      "aspect_ratio": "1:1",
+      "visual_function": "symbolic_synthesis",
+      "reused": false
+    }
+  ],
+  "generation": {
+    "provider": "OpenAI API",
+    "model": "gpt-image-2",
+    "runner": "official imagegen skill CLI",
+    "mode": "text_only_no_local_references",
+    "images_generated_this_turn": 1,
+    "seconds_reported_by_cli": 38.3,
+    "corrections_this_turn": 0,
+    "image_uploads_made": false
+  },
+  "visual_review": {
+    "reviewer": "agent_direct_inspection_not_independent_editorial_approval",
+    "thesis": "El vacío pesa.",
+    "observations": [
+      "Un único objeto suspendido, sin personas, acción humana ni ranchería.",
+      "Tiras de papel entrecruzadas rodean una concavidad índigo en varias distancias.",
+      "Noche interior y exterior cálido, pequeños puntos estelares, sombras y oclusiones visibles.",
+      "No hay texto, cuerpo, marco ni soporte exterior visible."
+    ],
+    "limitations": [
+      "El tejido de tiras anchas puede recordar cestería; es interpretación plástica, no reconstrucción literal del chinchorro.",
+      "La metáfora de ausencia y responsabilidad requiere juicio editorial; los tests no certifican su lectura.",
+      "Se conservan las ambigüedades ya documentadas en entrada y acto; no se los declara nuevamente aprobados."
+    ],
+    "cultural_provenance": "Chinchorro nocturno: metáfora editorial. No rito, amuleto, apariencia de Wanurü ni símbolo Wayúu certificado."
+  },
+  "historical_counts": {
+    "entrada": {
+      "unique_images": 9,
+      "preparation_rounds": 5,
+      "requested_alternatives": 5
+    },
+    "acto": {
+      "unique_images": 7,
+      "preparation_rounds": 7,
+      "requested_alternatives": 0
+    },
+    "huella": {
+      "unique_images": 8,
+      "preparation_rounds": 8,
+      "requested_alternatives": 0
+    }
+  },
+  "iterations_audit": "content/mitos-visuales/_openai/wayuu/aramai/wayuu-aramai-symbolic-16-01/iterations-audit.json",
+  "process_document": "docs/prompting-realismo-magico.md",
+  "learning_document": "docs/wayuu-tripticos-v1.6-aprendizajes.md",
+  "technical_checks": {
+    "dimensions": true,
+    "source_prompt_hash": true,
+    "preserved_entry_and_act": true,
+    "tests_passed": 90,
+    "docker_recreated": true,
+    "local_http_status": 200
+  },
+  "scope": "No publicación, ingesta, cambios de base de datos, regeneración de Biblia, nuevos mitos ni modificación de cuenta."
+}

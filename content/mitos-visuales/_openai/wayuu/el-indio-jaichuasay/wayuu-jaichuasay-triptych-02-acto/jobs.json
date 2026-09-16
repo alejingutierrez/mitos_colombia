@@ -1,0 +1,146 @@
+{
+  "schema": "mitos-openai-triptych/v1",
+  "batch_id": "wayuu-jaichuasay-triptych-02-acto",
+  "created_at": "2026-09-06T04:01:56.272Z",
+  "account_source": "OPENAI_API_KEY from ignored .env",
+  "provider": "openai",
+  "model": "gpt-image-2",
+  "community": "wayuu",
+  "myth": "el-indio-jaichuasay",
+  "plan": "content/mitos-visuales/wayuu.jaichuasay.triptico.v1.1-acto.json",
+  "prompt_profile": "story_first_v3_symbolic_huella",
+  "plan_sha256": "e20c0a2f85300dca0c4926a58f5278cfaa8ab8f97567a87a721804b5527e95e5",
+  "narrative_target_sha256": "f678153a5340e8286e8f32c9c664379b8dac6413a5f14e805785ca4623a17a6b",
+  "evidence": [
+    {
+      "id": "chaves_1946_jaichuasay",
+      "type": "primary_source",
+      "title": "Mitos, leyendas y cuentos de la Guajira, XI: El Indio Jaichuasay",
+      "author": "Milcíades Chaves Ch.",
+      "year": 1946,
+      "url": "https://publicaciones.icanh.gov.co/index.php/picanh/catalog/download/243/266/1579?inline=1",
+      "locator": "pp.319–320, índices PDF 15–16",
+      "supports": "Persecución, desorientación, alternancia humana-animal y reconocimiento final.",
+      "limits": "El venado inicial es también humano en la fuente; el relato público omite esa explicación. Las visitas y el final educativo tienen diferencias. No agregar Pülowi ni adjudicar informante sin certeza. Reedición de Villa Posse no equivale a otra versión independiente."
+    },
+    {
+      "id": "published_jaichuasay",
+      "type": "project_narrative",
+      "path": "content/mitos-visuales/production/wayuu-2026-09-05/narratives/el-indio-jaichuasay.json",
+      "supports": "Edición objetivo de la página: hombre en ranchería, venado en sabana, memoria del miedo de la presa.",
+      "limits": "El sueño inicial y enseñanza posterior son expansiones de esta edición. No cambiar contenido del sitio durante la campaña visual."
+    },
+    {
+      "id": "bible_jaichuasay",
+      "type": "internal_visual_research",
+      "path": "editorial/wayuu/production-direction-v3.mjs",
+      "supports": "Camisa oliva, pantalón arena, cola baja, venado natural sin astas en la ficha elegida y territorio seco estratificado.",
+      "limits": "Vestuario y color son dirección artística reversible; no reconstrucción de un traje ceremonial. La ficha de estados no se copia como tres cuerpos simultáneos."
+    },
+    {
+      "id": "clothing_wayuu",
+      "type": "internal_visual_research",
+      "path": "docs/wayuu-indumentaria-y-pintura-v3.md",
+      "supports": "Diversidad de vestuario y rechazo del taparrabos como única representación.",
+      "limits": "No inventar pintura facial, kanas o emblemas claniles."
+    }
+  ],
+  "visual_memory_library": "content/mitos-visuales/wayuu.visual-memory.v1.json",
+  "visual_memory_review": {
+    "reviewer": "agent_direct_visual_review",
+    "reviewed_at": "2026-09-06T03:56:00Z",
+    "reviewed_reference_ids": [
+      "07cbe6fb59fd7f68efca",
+      "d12385cccde004f1f1bf"
+    ],
+    "retained": [
+      "Relación visual hombre-venado como motor, no decoración.",
+      "Contraste de azul profundo, verde seco y ocre; relieve por capas recortadas."
+    ],
+    "rejected": [
+      "Torso desnudo, cintillo y brazaletes con patrones no sustentados.",
+      "Doble busto monumental, rostro detallado, astas ornamentales, río sinuoso genérico y dispersión del cuerpo."
+    ],
+    "influence_by_act": {
+      "entrada": "Conservar contraste azul/ocre y relación hombre-venado, pero separarlos por un sendero profundo y dar al venado una sombra humana como anticipo editorial.",
+      "acto": "Transformar la antigua composición vertical de bustos en una visita a casa vista a distancia: las huellas animales continúan hasta los pies humanos.",
+      "huella": "Recuperar la unión visual entre identidades como un venado de papel con vacío humano; no bustos, armas cruzadas ni paisaje narrativo."
+    }
+  },
+  "bible_selection": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/accepted-selection.json",
+  "canonical_models": [
+    {
+      "model_id": "jaichuasay__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-05-el-indio-jaichuasay-medium/jaichuasay__identity_sheet--canon.jpeg",
+      "sha256": "c07ff09d04cd75bf0cfaddada84332d6845a2221cdf43891a80d60f8d4e45555",
+      "qa_status": "PASS"
+    },
+    {
+      "model_id": "venado_guia_jaichuasay__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-05-el-indio-jaichuasay-medium/venado_guia_jaichuasay__identity_sheet--canon.jpeg",
+      "sha256": "ddcad71df8983b651447ee85b3667d9152e58c8f0495c449b34a23e7f3e20fd2",
+      "qa_status": "PASS"
+    },
+    {
+      "model_id": "serrania_transformacion_jaichuasay__spatial_model",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-05-el-indio-jaichuasay-medium-corrections-01/serrania_transformacion_jaichuasay__spatial_model--canon.jpeg",
+      "sha256": "e8101084bf18918de1a5036b73f477498c8ac887ed1316eba94f290c9b6846c6",
+      "qa_status": "PASS_AFTER_CORRECTION"
+    },
+    {
+      "model_id": "rancheria_wayuu__spatial_model",
+      "path": "output/imagegen/wayuu-v3/wayuu-v3-pilot-03-corrections-medium/rancheria_wayuu__spatial_model--canon.jpeg",
+      "sha256": "273831e777e2bf8615f5640f626204fac4b96ea268e55d4215f991d2a6012464",
+      "qa_status": "DIRECTION_CANDIDATE_PASS"
+    }
+  ],
+  "approval_gate": "Campaña completa autorizada; QA directo del agente y publicación aditiva sin borrar versiones previas.",
+  "requested_acts": [
+    "acto"
+  ],
+  "generation_mode": "text_only_no_local_references",
+  "framing": "immersive_full_bleed",
+  "surface_finish": "layered_depth_no_exposed_support",
+  "jobs": [
+    {
+      "act": "acto",
+      "aspect_ratio": "9:16",
+      "size": "864x1536",
+      "quality": "medium",
+      "api_method": "images.generate",
+      "composition": "camino_vertical",
+      "canon_model_ids": [
+        "jaichuasay__identity_sheet",
+        "venado_guia_jaichuasay__identity_sheet",
+        "serrania_transformacion_jaichuasay__spatial_model",
+        "rancheria_wayuu__spatial_model"
+      ],
+      "refs": [],
+      "ref_paths": [],
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/el-indio-jaichuasay/wayuu-jaichuasay-triptych-02-acto/prompts/acto.prompt.txt",
+      "prompt_sha256": "0ec721d06d4bdde257e9dcf64f6363be1ce12cb91e516a15ec4a8106167f7d4a",
+      "narrative_event_ids": [
+        "alternancia",
+        "visita"
+      ],
+      "editorial_translation": "La visita humana y la alternancia constan en la tradición registrada y en la edición. Familiar, comida ofrecida y huellas como memoria son puesta en escena editorial, no afirmación de un episodio literal nuevo.",
+      "magic_in_the_ordinary": {
+        "ordinary_anchor": "Volver a casa y recibir comida.",
+        "impossible_behavior": "Las huellas animales terminan en pies humanos sin animal presente.",
+        "narrative_effect": "La vida doméstica no borra el cuerpo de presa ni su inquietud.",
+        "agency": "Jaichuasay entra a casa pero mira aún al monte; su rastro revela lo que no explica.",
+        "physical_translation": "Pezuñas hendidas cortadas en capas del suelo, conectadas hasta el talón del recorte humano.",
+        "visible_test": "Las últimas dos pezuñas se detienen junto a los talones. Ninguna huella sigue de largo, ninguna marca humana paralela.",
+        "event_ids": [
+          "alternancia",
+          "visita"
+        ],
+        "provenance": "editorial_metaphor",
+        "temporal_role": "memory"
+      },
+      "visual_function": "narrative_scene",
+      "output": "output/imagegen/wayuu/triptychs/wayuu-jaichuasay-triptych-02-acto/acto.jpeg",
+      "status": "prepared"
+    }
+  ]
+}

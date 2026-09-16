@@ -1,0 +1,119 @@
+{
+  "schema": "mitos-colombia-triptych-publication-v1",
+  "publication_id": "wayuu-wave-21",
+  "status": "published",
+  "started_at": "2026-09-06T19:10:11.111Z",
+  "myth": {
+    "id": 344,
+    "title": "La Chama",
+    "slug": "la-chama"
+  },
+  "local": {
+    "horizontal": {
+      "path": "output/imagegen/wayuu/triptychs/wayuu-chama-triptych-02-entrada/entrada.jpeg",
+      "bytes": 145065,
+      "sha256": "072fbb196a5b8412a3713516e527637ee45c4298c5f14b4a04e09ebccb295a55",
+      "source": {
+        "width": 1536,
+        "height": 864
+      },
+      "published": {
+        "width": 1536,
+        "height": 864
+      }
+    },
+    "vertical": {
+      "path": "output/imagegen/wayuu/triptychs/wayuu-chama-triptych-01/acto.jpeg",
+      "bytes": 174777,
+      "sha256": "27d4884d79fd299766d8de1056c953b66624a9b381c50bb89fe2d4db0a3950a4",
+      "source": {
+        "width": 864,
+        "height": 1536
+      },
+      "published": {
+        "width": 864,
+        "height": 1536
+      }
+    },
+    "cuadrada": {
+      "path": "output/imagegen/wayuu/triptychs/wayuu-chama-triptych-01/huella.jpeg",
+      "bytes": 85995,
+      "sha256": "f7f341c7aecf74348bef48f00d67fae09778578836c4cc9c69a6fb64e1e0f61a",
+      "source": {
+        "width": 1024,
+        "height": 1024
+      },
+      "published": {
+        "width": 1024,
+        "height": 1024
+      }
+    }
+  },
+  "selection": "content/mitos-visuales/_openai/wayuu/la-chama/wayuu-chama-final-selection/selection.json",
+  "narrative_target_sha256": "93461758732b5d6028affe6246ca8342486b5e9bb310cf0976ae15a07f72a627",
+  "preserve_original_bytes": true,
+  "before": {
+    "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/la-chama-1784766864163.jpg",
+    "vertical_image": {
+      "id": 363,
+      "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/la-chama-1784911167209.jpg",
+      "updated_at": "2026-07-24T16:39:28.615Z"
+    },
+    "square_image_url": null,
+    "updated_at": "2026-07-27T20:51:03.954Z",
+    "image_prompt_horizontal": null,
+    "image_prompt_vertical": null,
+    "image_prompt_square": null
+  },
+  "preservation": {
+    "blob_uploads_use_new_random_suffixes": true,
+    "previous_blob_urls_are_not_deleted": true,
+    "previous_vertical_database_row_is_not_updated_or_deleted": true
+  },
+  "uploads": {
+    "horizontal": {
+      "url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/la-chama-1788721811113-bKDtETlb5TmQXw6Ol8E5Cq5nAJ9ucG.jpg",
+      "sha256": "072fbb196a5b8412a3713516e527637ee45c4298c5f14b4a04e09ebccb295a55",
+      "bytes": 145065,
+      "width": 1536,
+      "height": 864
+    },
+    "vertical": {
+      "url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/la-chama-1788721812054-9S5M9NxLVPVyzOWLFLqlmxV2reC2p2.jpg",
+      "sha256": "27d4884d79fd299766d8de1056c953b66624a9b381c50bb89fe2d4db0a3950a4",
+      "bytes": 174777,
+      "width": 864,
+      "height": 1536
+    },
+    "cuadrada": {
+      "url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/square/myth/la-chama-1788721812896-eMKyheBJgQRlKhmlnneSbgAe1jGxAY.jpg",
+      "sha256": "f7f341c7aecf74348bef48f00d67fae09778578836c4cc9c69a6fb64e1e0f61a",
+      "bytes": 85995,
+      "width": 1024,
+      "height": 1024
+    }
+  },
+  "remote_history_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/triptych-history/la-chama/wayuu-wave-21-jRijgGS55OlJTmZoKs11MCaZo6N1ey.json",
+  "vertical_version_inserted": {
+    "action": "creada",
+    "id": 678
+  },
+  "completed_at": "2026-09-06T19:10:14.830Z",
+  "after": {
+    "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/la-chama-1788721811113-bKDtETlb5TmQXw6Ol8E5Cq5nAJ9ucG.jpg",
+    "vertical_image": {
+      "id": 678,
+      "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/la-chama-1788721812054-9S5M9NxLVPVyzOWLFLqlmxV2reC2p2.jpg",
+      "updated_at": "2026-09-06T19:10:13.349Z"
+    },
+    "square_image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/square/myth/la-chama-1788721812896-eMKyheBJgQRlKhmlnneSbgAe1jGxAY.jpg"
+  },
+  "revalidation": {
+    "ok": true,
+    "status": 200,
+    "paths": [
+      "/mitos/la-chama",
+      "/mitos"
+    ]
+  }
+}

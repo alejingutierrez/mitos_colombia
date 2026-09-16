@@ -1,0 +1,113 @@
+{
+  "schema": "mitos-triptych-iteration-audit/v1",
+  "audited_at": "2026-09-06T04:25:55.195Z",
+  "package_root": "content/mitos-visuales/_openai/wayuu/los-dos-hermanos",
+  "scope": "Artefactos locales referidos por jobs.json, deduplicados por SHA-256; no mide llamadas fallidas sin imagen ni facturación de API.",
+  "unique_images": 4,
+  "by_act": {
+    "entrada": {
+      "unique_images": 2,
+      "preparation_rounds": 2,
+      "requested_alternatives": 0
+    },
+    "acto": {
+      "unique_images": 1,
+      "preparation_rounds": 1,
+      "requested_alternatives": 0
+    },
+    "huella": {
+      "unique_images": 1,
+      "preparation_rounds": 1,
+      "requested_alternatives": 0
+    }
+  },
+  "prepared_without_output": 0,
+  "duplicates": 0,
+  "rows": [
+    {
+      "batch_id": "wayuu-hermanos-triptych-01",
+      "prepared_at": "2026-09-06T04:16:02.575Z",
+      "act": "entrada",
+      "purpose": "generation_or_revision",
+      "manifest": "content/mitos-visuales/_openai/wayuu/los-dos-hermanos/wayuu-hermanos-triptych-01/jobs.json",
+      "output": "output/imagegen/wayuu/triptychs/wayuu-hermanos-triptych-01/entrada.jpeg",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/los-dos-hermanos/wayuu-hermanos-triptych-01/prompts/entrada.prompt.txt",
+      "requested_size": "1536x864",
+      "requested_quality": "high",
+      "visual_function": "narrative_scene",
+      "status": "unique_generated_artifact",
+      "sha256": "b390b1c67784e02caf34c8abeb1365937f8a89eb4b21bd28b6c43d312b44296d",
+      "duplicate_of": null,
+      "width": 1536,
+      "height": 864,
+      "size_matches_request": true,
+      "prompt_sha256": "843116afa08a79479901e7dcf4a090285205ba9b61204a3e1ee9795824698076",
+      "prompt_hash_matches_manifest": true,
+      "prompt_integrity": "exact_bytes"
+    },
+    {
+      "batch_id": "wayuu-hermanos-triptych-01",
+      "prepared_at": "2026-09-06T04:16:02.575Z",
+      "act": "acto",
+      "purpose": "generation_or_revision",
+      "manifest": "content/mitos-visuales/_openai/wayuu/los-dos-hermanos/wayuu-hermanos-triptych-01/jobs.json",
+      "output": "output/imagegen/wayuu/triptychs/wayuu-hermanos-triptych-01/acto.jpeg",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/los-dos-hermanos/wayuu-hermanos-triptych-01/prompts/acto.prompt.txt",
+      "requested_size": "864x1536",
+      "requested_quality": "medium",
+      "visual_function": "narrative_scene",
+      "status": "unique_generated_artifact",
+      "sha256": "90e4946571b6a94a190d3773367f689ac0bc4c4d22f0421a77217a090a66f30c",
+      "duplicate_of": null,
+      "width": 864,
+      "height": 1536,
+      "size_matches_request": true,
+      "prompt_sha256": "11c1e6d10a1d3b45659bbce5997aadde6fd3a0df3f76f80cf3a6d0f3b3c9b12d",
+      "prompt_hash_matches_manifest": true,
+      "prompt_integrity": "exact_bytes"
+    },
+    {
+      "batch_id": "wayuu-hermanos-triptych-01",
+      "prepared_at": "2026-09-06T04:16:02.575Z",
+      "act": "huella",
+      "purpose": "generation_or_revision",
+      "manifest": "content/mitos-visuales/_openai/wayuu/los-dos-hermanos/wayuu-hermanos-triptych-01/jobs.json",
+      "output": "output/imagegen/wayuu/triptychs/wayuu-hermanos-triptych-01/huella.jpeg",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/los-dos-hermanos/wayuu-hermanos-triptych-01/prompts/huella.prompt.txt",
+      "requested_size": "1024x1024",
+      "requested_quality": "medium",
+      "visual_function": "symbolic_synthesis",
+      "status": "unique_generated_artifact",
+      "sha256": "e10e3140a7d5591f5b68961376b3a85d85303682d3574b187a428cd3939b9f16",
+      "duplicate_of": null,
+      "width": 1024,
+      "height": 1024,
+      "size_matches_request": true,
+      "prompt_sha256": "d59b6f4a1053623221764671ff34ea6292c806a9b02b0d117317809602a3fc64",
+      "prompt_hash_matches_manifest": true,
+      "prompt_integrity": "exact_bytes"
+    },
+    {
+      "batch_id": "wayuu-hermanos-triptych-02-entrada",
+      "prepared_at": "2026-09-06T04:19:51.688Z",
+      "act": "entrada",
+      "purpose": "generation_or_revision",
+      "manifest": "content/mitos-visuales/_openai/wayuu/los-dos-hermanos/wayuu-hermanos-triptych-02-entrada/jobs.json",
+      "output": "output/imagegen/wayuu/triptychs/wayuu-hermanos-triptych-02-entrada/entrada.jpeg",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/los-dos-hermanos/wayuu-hermanos-triptych-02-entrada/prompts/entrada.prompt.txt",
+      "requested_size": "1536x864",
+      "requested_quality": "high",
+      "visual_function": "narrative_scene",
+      "status": "unique_generated_artifact",
+      "sha256": "5bdabc9a4c9db28cb03e3e795b3b17f6b3008e232428d3cde56f9f790cc50247",
+      "duplicate_of": null,
+      "width": 1536,
+      "height": 864,
+      "size_matches_request": true,
+      "prompt_sha256": "38d9498d46ac1364e0538aa43c475a1353aa316de602c2deb073a4493ff8ead2",
+      "prompt_hash_matches_manifest": true,
+      "prompt_integrity": "exact_bytes"
+    }
+  ]
+}
+

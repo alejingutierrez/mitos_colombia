@@ -1,0 +1,33 @@
+{
+  "schema": "mitos-colombia-biblia-production/v3",
+  "batch_id": "wayuu-v3-production-03-el-indio-kuriruputa-medium-corrections-01",
+  "parent_batch_id": "wayuu-v3-production-03-el-indio-kuriruputa-medium",
+  "revision": "corrections-01",
+  "myth_slug": "el-indio-kuriruputa",
+  "asset_type": "bible_model",
+  "plan": "content/mitos-visuales/wayuu.v3.json",
+  "prepared_at": "2026-09-03",
+  "quality": "medium",
+  "framing": "immersive_full_bleed",
+  "surface_finish": "layered_depth_no_exposed_support",
+  "generation_mode": "text_only_no_local_references",
+  "jobs": [
+    {
+      "id": "kuriruputa__identity_sheet--canon",
+      "model_id": "kuriruputa__identity_sheet",
+      "entity_id": "kuriruputa",
+      "view_id": "canon",
+      "title": "Kuriruputá · identidad de ganadero",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/wayuu-v3-production-03-el-indio-kuriruputa-medium-corrections-01/prompts/kuriruputa__identity_sheet--canon.prompt.txt",
+      "output_file": "output/imagegen/wayuu-v3-production/wayuu-v3-production-03-el-indio-kuriruputa-medium-corrections-01/kuriruputa__identity_sheet--canon.jpeg",
+      "prompt_sha256": "c6e8a3ea11d9d36f457ac98c5c4f28d7d0451737573715bcdc376c343b56249c",
+      "provider": "OpenAI API",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "1024x1024",
+      "output_format": "jpeg",
+      "input_references": [],
+      "status": "prepared"
+    }
+  ]
+}

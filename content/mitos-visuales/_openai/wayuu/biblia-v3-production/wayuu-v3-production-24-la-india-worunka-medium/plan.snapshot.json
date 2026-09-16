@@ -1,0 +1,1947 @@
+{
+  "schema": "mitos-colombia-biblia-visual/v3",
+  "batch": {
+    "id": "wayuu-v3-production-24-la-india-worunka-medium",
+    "myth_slug": "la-india-worunka",
+    "model_ids": [
+      "worunka__identity_sheet",
+      "worunka__state_sheet",
+      "sangre_toro__identity_sheet",
+      "carpintero_rojo__identity_sheet",
+      "guacamayo_rojo__identity_sheet",
+      "color_aves_worunka__phenomenon_rule",
+      "piedra_worunka__object_sheet",
+      "transformaciones_cuerpo_worunka__phenomenon_rule",
+      "cambio_alianzas_worunka__phenomenon_rule",
+      "viajeros_semillas_worunka__group_grammar",
+      "matas_fruto_rojo_worunka__botanical_sheet",
+      "origen_tumas_worunka__phenomenon_rule",
+      "semillas_alimento_worunka__object_sheet",
+      "siembra_cosecha_worunka__phenomenon_rule",
+      "comunidad_cosecha_worunka__group_grammar",
+      "bebida_cosecha_worunka__object_sheet",
+      "arroyo_worunka__spatial_model",
+      "sequia_worunka__phenomenon_rule"
+    ],
+    "quality": "medium",
+    "framing": "immersive_full_bleed",
+    "surface_finish": "layered_depth_no_exposed_support",
+    "generation_mode": "text_only_no_local_references",
+    "status": "inventory_and_design_frozen_ready_for_generation",
+    "selection_manifest": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/wayuu-v3-production-24-la-india-worunka-medium/selection.json",
+    "contact_sheet": "output/imagegen/wayuu-v3-production/la-india-worunka-batch24-selected-contact-sheet.jpeg"
+  },
+  "inventory_approved_at": "2026-09-03",
+  "pilot_approved_at": "2026-09-03",
+  "source_snapshot_sha256": "6b5b1c5ebdb2524a7524b065d96c6d33ad6f5694db239a0d722ded8485f435f5",
+  "model_ids": [
+    "worunka__identity_sheet",
+    "worunka__state_sheet",
+    "sangre_toro__identity_sheet",
+    "carpintero_rojo__identity_sheet",
+    "guacamayo_rojo__identity_sheet",
+    "color_aves_worunka__phenomenon_rule",
+    "piedra_worunka__object_sheet",
+    "transformaciones_cuerpo_worunka__phenomenon_rule",
+    "cambio_alianzas_worunka__phenomenon_rule",
+    "viajeros_semillas_worunka__group_grammar",
+    "matas_fruto_rojo_worunka__botanical_sheet",
+    "origen_tumas_worunka__phenomenon_rule",
+    "semillas_alimento_worunka__object_sheet",
+    "siembra_cosecha_worunka__phenomenon_rule",
+    "comunidad_cosecha_worunka__group_grammar",
+    "bebida_cosecha_worunka__object_sheet",
+    "arroyo_worunka__spatial_model",
+    "sequia_worunka__phenomenon_rule"
+  ],
+  "models": {
+    "worunka__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "worunka"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "la-india-worunka",
+          "field": "mito",
+          "note": "Llega desde la Macuira embarazada, es fortalecida y queda convertida en piedra junto al arroyo."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos. Entidad: Worunka. Funcion visual: Mujer primigenia que llega desde la Macuira al arroyo y queda enlazada con cambios de nacimiento, aves rojas, alianzas, semillas, sequia y piedra en la version de Chaves.",
+        "materials": [
+          "papel mate de fibra visible",
+          "capas prensadas para cuerpo y vestuario",
+          "hilo solo cuando el relato lo exige"
+        ],
+        "palette_logic": "Arena, barro, carbon y fibras naturales; un acento propio de la entidad puede repetirse, sin patrones kanas o marcas claniles inventadas.",
+        "scale": "Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "continuity_markers": [
+          "nombre estable: Worunka",
+          "funcion estable: Mujer primigenia que llega desde la Macuira al arroyo y queda enlazada con cambios de nacimiento, aves rojas, alianzas, semillas, sequia y piedra en la version de Chaves.",
+          "estados declarados: embarazada_debil, fortalecida, convertida_en_piedra"
+        ],
+        "documented_features": [
+          "Mujer primigenia que llega desde la Macuira al arroyo y queda enlazada con cambios de nacimiento, aves rojas, alianzas, semillas, sequia y piedra en la version de Chaves.",
+          "alias documentado: Wolunka",
+          "alias documentado: Walunkáa",
+          "alias documentado: Woruka",
+          "alias documentado: Wootka",
+          "alias documentado: Borunka"
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para identity_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · identity_sheet",
+        "primary_request": "identidad corporal completa y legible para Worunka. Mujer primigenia que llega desde la Macuira al arroyo y queda enlazada con cambios de nacimiento, aves rojas, alianzas, semillas, sequia y piedra en la version de Chaves.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel mate de fibra visible; capas prensadas para cuerpo y vestuario; hilo solo cuando el relato lo exige",
+        "constraints": [
+          "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos.",
+          "mostrar: Mujer primigenia que llega desde la Macuira al arroyo y queda enlazada con cambios de nacimiento, aves rojas, alianzas, semillas, sequia y piedra en la version de Chaves.",
+          "estados autorizados: embarazada_debil, fortalecida, convertida_en_piedra",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "1:1",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "embarazada_debil"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "worunka__state_sheet": {
+      "purpose": "state_sheet",
+      "entity_refs": [
+        "worunka"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "la-india-worunka",
+          "field": "mito",
+          "note": "Llega desde la Macuira embarazada, es fortalecida y queda convertida en piedra junto al arroyo."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos. Entidad: Worunka. Funcion visual: Mujer primigenia que llega desde la Macuira al arroyo y queda enlazada con cambios de nacimiento, aves rojas, alianzas, semillas, sequia y piedra en la version de Chaves.",
+        "materials": [
+          "papel mate de fibra visible",
+          "capas prensadas para cuerpo y vestuario",
+          "hilo solo cuando el relato lo exige"
+        ],
+        "palette_logic": "Arena, barro, carbon y fibras naturales; un acento propio de la entidad puede repetirse, sin patrones kanas o marcas claniles inventadas.",
+        "scale": "Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "continuity_markers": [
+          "nombre estable: Worunka",
+          "funcion estable: Mujer primigenia que llega desde la Macuira al arroyo y queda enlazada con cambios de nacimiento, aves rojas, alianzas, semillas, sequia y piedra en la version de Chaves.",
+          "estados declarados: embarazada_debil, fortalecida, convertida_en_piedra"
+        ],
+        "documented_features": [
+          "Mujer primigenia que llega desde la Macuira al arroyo y queda enlazada con cambios de nacimiento, aves rojas, alianzas, semillas, sequia y piedra en la version de Chaves.",
+          "alias documentado: Wolunka",
+          "alias documentado: Walunkáa",
+          "alias documentado: Woruka",
+          "alias documentado: Wootka",
+          "alias documentado: Borunka"
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para state_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · state_sheet",
+        "primary_request": "continuidad entre estados sin adelantar un keyframe para Worunka. Mujer primigenia que llega desde la Macuira al arroyo y queda enlazada con cambios de nacimiento, aves rojas, alianzas, semillas, sequia y piedra en la version de Chaves.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel mate de fibra visible; capas prensadas para cuerpo y vestuario; hilo solo cuando el relato lo exige",
+        "constraints": [
+          "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos.",
+          "mostrar: Mujer primigenia que llega desde la Macuira al arroyo y queda enlazada con cambios de nacimiento, aves rojas, alianzas, semillas, sequia y piedra en la version de Chaves.",
+          "estados autorizados: embarazada_debil, fortalecida, convertida_en_piedra",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "estados",
+          "view_type": "state_sequence",
+          "purpose": "continuidad entre estados sin adelantar un keyframe",
+          "aspect": "16:9",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "embarazada_debil",
+            "fortalecida",
+            "convertida_en_piedra"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "sangre_toro__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "sangre_toro"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "la-india-worunka",
+          "field": "mito",
+          "note": "Pajarito que recibe rojo en la piedra; identificacion regional solo hasta Ramphocelus sp."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Morfologia zoologica reconocible, cuerpo completo cuando es individuo y variacion controlada cuando es grupo; sin hibridacion no documentada. Entidad: Pájaro Sangre Toro. Funcion visual: Ave pequeña nombrada por Chaves que recibe color rojo en la piedra; la morfologia se mantiene en Ramphocelus sp. como identificacion regional reversible, no especie cerrada.",
+        "materials": [
+          "capas de papel recortado para anatomia",
+          "fibras finas para pelaje o pluma cuando corresponda",
+          "cantos internos y articulaciones fisicas"
+        ],
+        "palette_logic": "Color natural o explicitamente narrado; no usar brillo magico para señalar importancia.",
+        "scale": "Escala zoologica verificable frente al entorno y los personajes.",
+        "continuity_markers": [
+          "nombre estable: Pájaro Sangre Toro",
+          "funcion estable: Ave pequeña nombrada por Chaves que recibe color rojo en la piedra; la morfologia se mantiene en Ramphocelus sp. como identificacion regional reversible, no especie cerrada.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Ave pequeña nombrada por Chaves que recibe color rojo en la piedra; la morfologia se mantiene en Ramphocelus sp. como identificacion regional reversible, no especie cerrada."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para identity_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · identity_sheet",
+        "primary_request": "identidad corporal completa y legible para Pájaro Sangre Toro. Ave pequeña nombrada por Chaves que recibe color rojo en la piedra; la morfologia se mantiene en Ramphocelus sp. como identificacion regional reversible, no especie cerrada.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Escala zoologica verificable frente al entorno y los personajes.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "capas de papel recortado para anatomia; fibras finas para pelaje o pluma cuando corresponda; cantos internos y articulaciones fisicas",
+        "constraints": [
+          "Morfologia zoologica reconocible, cuerpo completo cuando es individuo y variacion controlada cuando es grupo; sin hibridacion no documentada.",
+          "mostrar: Ave pequeña nombrada por Chaves que recibe color rojo en la piedra; la morfologia se mantiene en Ramphocelus sp. como identificacion regional reversible, no especie cerrada.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "1:1",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "carpintero_rojo__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "carpintero_rojo"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "la-india-worunka",
+          "field": "mito",
+          "note": "Solo el copete alcanza el rojo; especie no indicada."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Morfologia zoologica reconocible, cuerpo completo cuando es individuo y variacion controlada cuando es grupo; sin hibridacion no documentada. Entidad: Pájaro carpintero de copete rojo. Funcion visual: Ave no identificada a especie cuyo copete alcanza el rojo de la piedra; el resto del cuerpo no se inventa como completamente rojo.",
+        "materials": [
+          "capas de papel recortado para anatomia",
+          "fibras finas para pelaje o pluma cuando corresponda",
+          "cantos internos y articulaciones fisicas"
+        ],
+        "palette_logic": "Color natural o explicitamente narrado; no usar brillo magico para señalar importancia.",
+        "scale": "Escala zoologica verificable frente al entorno y los personajes.",
+        "continuity_markers": [
+          "nombre estable: Pájaro carpintero de copete rojo",
+          "funcion estable: Ave no identificada a especie cuyo copete alcanza el rojo de la piedra; el resto del cuerpo no se inventa como completamente rojo.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Ave no identificada a especie cuyo copete alcanza el rojo de la piedra; el resto del cuerpo no se inventa como completamente rojo."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para identity_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · identity_sheet",
+        "primary_request": "identidad corporal completa y legible para Pájaro carpintero de copete rojo. Ave no identificada a especie cuyo copete alcanza el rojo de la piedra; el resto del cuerpo no se inventa como completamente rojo.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Escala zoologica verificable frente al entorno y los personajes.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "capas de papel recortado para anatomia; fibras finas para pelaje o pluma cuando corresponda; cantos internos y articulaciones fisicas",
+        "constraints": [
+          "Morfologia zoologica reconocible, cuerpo completo cuando es individuo y variacion controlada cuando es grupo; sin hibridacion no documentada.",
+          "mostrar: Ave no identificada a especie cuyo copete alcanza el rojo de la piedra; el resto del cuerpo no se inventa como completamente rojo.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "1:1",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "guacamayo_rojo__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "guacamayo_rojo"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "la-india-worunka",
+          "field": "mito",
+          "note": "Guacamayo no identificado a especie que toca la piedra."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Morfologia zoologica reconocible, cuerpo completo cuando es individuo y variacion controlada cuando es grupo; sin hibridacion no documentada. Entidad: Guacamayo del episodio de Worunka. Funcion visual: Guacamayo no identificado a especie que toca la piedra y recibe rojo; se conserva como Ara sp. reversible sin fijar patron taxonomico falso.",
+        "materials": [
+          "capas de papel recortado para anatomia",
+          "fibras finas para pelaje o pluma cuando corresponda",
+          "cantos internos y articulaciones fisicas"
+        ],
+        "palette_logic": "Color natural o explicitamente narrado; no usar brillo magico para señalar importancia.",
+        "scale": "Escala zoologica verificable frente al entorno y los personajes.",
+        "continuity_markers": [
+          "nombre estable: Guacamayo del episodio de Worunka",
+          "funcion estable: Guacamayo no identificado a especie que toca la piedra y recibe rojo; se conserva como Ara sp. reversible sin fijar patron taxonomico falso.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Guacamayo no identificado a especie que toca la piedra y recibe rojo; se conserva como Ara sp. reversible sin fijar patron taxonomico falso."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para identity_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · identity_sheet",
+        "primary_request": "identidad corporal completa y legible para Guacamayo del episodio de Worunka. Guacamayo no identificado a especie que toca la piedra y recibe rojo; se conserva como Ara sp. reversible sin fijar patron taxonomico falso.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Escala zoologica verificable frente al entorno y los personajes.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "capas de papel recortado para anatomia; fibras finas para pelaje o pluma cuando corresponda; cantos internos y articulaciones fisicas",
+        "constraints": [
+          "Morfologia zoologica reconocible, cuerpo completo cuando es individuo y variacion controlada cuando es grupo; sin hibridacion no documentada.",
+          "mostrar: Guacamayo no identificado a especie que toca la piedra y recibe rojo; se conserva como Ara sp. reversible sin fijar patron taxonomico falso.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "1:1",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "color_aves_worunka__phenomenon_rule": {
+      "purpose": "phenomenon_rule",
+      "entity_refs": [
+        "color_aves_worunka"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "la-india-worunka",
+          "field": "mito",
+          "note": "Distribuye rojo de manera distinta entre aves y conserva la piedra como origen material."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Secuencia material de causa, accion, limite y huella; debe entenderse sin texto, aura o particulas magicas genericas. Entidad: Color rojo de las aves de Worunka. Funcion visual: Regla material que lleva rojo desde la piedra al cuerpo completo del Sangre Toro, al copete del carpintero, al guacamayo y a otras aves sin baño de sangre ni efecto digital.",
+        "materials": [
+          "papel y fibras que cambian de tension, humedad, luz o posicion",
+          "capas causales separadas",
+          "huella fisica persistente"
+        ],
+        "palette_logic": "El cambio cromatico nace de la materia afectada, nunca de un resplandor sobrenatural por defecto.",
+        "scale": "Escala definida por aquello que transforma, desde objeto hasta territorio.",
+        "continuity_markers": [
+          "nombre estable: Color rojo de las aves de Worunka",
+          "funcion estable: Regla material que lleva rojo desde la piedra al cuerpo completo del Sangre Toro, al copete del carpintero, al guacamayo y a otras aves sin baño de sangre ni efecto digital.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Regla material que lleva rojo desde la piedra al cuerpo completo del Sangre Toro, al copete del carpintero, al guacamayo y a otras aves sin baño de sangre ni efecto digital."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para phenomenon_rule",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · phenomenon_rule",
+        "primary_request": "entrada, accion, limite y huella del fenomeno para Color rojo de las aves de Worunka. Regla material que lleva rojo desde la piedra al cuerpo completo del Sangre Toro, al copete del carpintero, al guacamayo y a otras aves sin baño de sangre ni efecto digital.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Escala definida por aquello que transforma, desde objeto hasta territorio.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel y fibras que cambian de tension, humedad, luz o posicion; capas causales separadas; huella fisica persistente",
+        "constraints": [
+          "Secuencia material de causa, accion, limite y huella; debe entenderse sin texto, aura o particulas magicas genericas.",
+          "mostrar: Regla material que lleva rojo desde la piedra al cuerpo completo del Sangre Toro, al copete del carpintero, al guacamayo y a otras aves sin baño de sangre ni efecto digital.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "phenomenon_grammar",
+          "purpose": "entrada, accion, limite y huella del fenomeno",
+          "aspect": "16:9",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "piedra_worunka__object_sheet": {
+      "purpose": "object_sheet",
+      "entity_refs": [
+        "piedra_worunka"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "la-india-worunka",
+          "field": "mito",
+          "note": "Locus petreo del cambio corporal, las aves rojas y la forma final de Worunka."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Contorno, volumen, piezas y modo de uso claramente separables; evitar convertir utileria cotidiana en reliquia mistica. Entidad: Piedra de Worunka. Funcion visual: Piedra del arroyo asociada en Chaves con el cambio corporal, el rojo de las aves y la petrificacion de Worunka; no se georreferencia ni reproduce anatomia genital.",
+        "materials": [
+          "papel, fibra, madera o mineral traducidos a paper craft",
+          "uniones y desgaste fisico",
+          "sombras proyectadas coherentes"
+        ],
+        "palette_logic": "Color propio del material y el estado; sin ornamentacion cultural no respaldada.",
+        "scale": "Escala demostrable mediante mano, suelo o arquitectura sin texto ni regla grafica.",
+        "continuity_markers": [
+          "nombre estable: Piedra de Worunka",
+          "funcion estable: Piedra del arroyo asociada en Chaves con el cambio corporal, el rojo de las aves y la petrificacion de Worunka; no se georreferencia ni reproduce anatomia genital.",
+          "estados declarados: piedra_del_arroyo_con_rojo, forma_petrea_de_worunka"
+        ],
+        "documented_features": [
+          "Piedra del arroyo asociada en Chaves con el cambio corporal, el rojo de las aves y la petrificacion de Worunka; no se georreferencia ni reproduce anatomia genital."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para object_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · object_sheet",
+        "primary_request": "forma, escala, material y uso legibles para Piedra de Worunka. Piedra del arroyo asociada en Chaves con el cambio corporal, el rojo de las aves y la petrificacion de Worunka; no se georreferencia ni reproduce anatomia genital.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Escala demostrable mediante mano, suelo o arquitectura sin texto ni regla grafica.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel, fibra, madera o mineral traducidos a paper craft; uniones y desgaste fisico; sombras proyectadas coherentes",
+        "constraints": [
+          "Contorno, volumen, piezas y modo de uso claramente separables; evitar convertir utileria cotidiana en reliquia mistica.",
+          "mostrar: Piedra del arroyo asociada en Chaves con el cambio corporal, el rojo de las aves y la petrificacion de Worunka; no se georreferencia ni reproduce anatomia genital.",
+          "estados autorizados: piedra_del_arroyo_con_rojo, forma_petrea_de_worunka",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_object",
+          "purpose": "forma, escala, material y uso legibles",
+          "aspect": "1:1",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "piedra_del_arroyo_con_rojo"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "transformaciones_cuerpo_worunka__phenomenon_rule": {
+      "purpose": "phenomenon_rule",
+      "entity_refs": [
+        "transformaciones_cuerpo_worunka"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "la-india-worunka",
+          "field": "mito",
+          "note": "Relaciona embarazo debil, cambio del nacimiento, dos costillas y fortalecimiento sin anatomia explicita."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Secuencia material de causa, accion, limite y huella; debe entenderse sin texto, aura o particulas magicas genericas. Entidad: Transformaciones corporales de Worunka. Funcion visual: Regla visual no anatomica para embarazo debil, cambio del nacimiento, incorporacion de dos costillas y fortalecimiento; evita herida, genitales, operacion o prescripcion corporal.",
+        "materials": [
+          "papel y fibras que cambian de tension, humedad, luz o posicion",
+          "capas causales separadas",
+          "huella fisica persistente"
+        ],
+        "palette_logic": "El cambio cromatico nace de la materia afectada, nunca de un resplandor sobrenatural por defecto.",
+        "scale": "Escala definida por aquello que transforma, desde objeto hasta territorio.",
+        "continuity_markers": [
+          "nombre estable: Transformaciones corporales de Worunka",
+          "funcion estable: Regla visual no anatomica para embarazo debil, cambio del nacimiento, incorporacion de dos costillas y fortalecimiento; evita herida, genitales, operacion o prescripcion corporal.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Regla visual no anatomica para embarazo debil, cambio del nacimiento, incorporacion de dos costillas y fortalecimiento; evita herida, genitales, operacion o prescripcion corporal."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para phenomenon_rule",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · phenomenon_rule",
+        "primary_request": "entrada, accion, limite y huella del fenomeno para Transformaciones corporales de Worunka. Regla visual no anatomica para embarazo debil, cambio del nacimiento, incorporacion de dos costillas y fortalecimiento; evita herida, genitales, operacion o prescripcion corporal.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Escala definida por aquello que transforma, desde objeto hasta territorio.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel y fibras que cambian de tension, humedad, luz o posicion; capas causales separadas; huella fisica persistente",
+        "constraints": [
+          "Secuencia material de causa, accion, limite y huella; debe entenderse sin texto, aura o particulas magicas genericas.",
+          "mostrar: Regla visual no anatomica para embarazo debil, cambio del nacimiento, incorporacion de dos costillas y fortalecimiento; evita herida, genitales, operacion o prescripcion corporal.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "phenomenon_grammar",
+          "purpose": "entrada, accion, limite y huella del fenomeno",
+          "aspect": "16:9",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "cambio_alianzas_worunka__phenomenon_rule": {
+      "purpose": "phenomenon_rule",
+      "entity_refs": [
+        "cambio_alianzas_worunka"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "la-india-worunka",
+          "field": "mito",
+          "note": "Contrasta iniciativa y compensacion matrimonial como proposicion historica del relato, no norma vigente."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Secuencia material de causa, accion, limite y huella; debe entenderse sin texto, aura o particulas magicas genericas. Entidad: Cambio de iniciativa y compensación matrimonial. Funcion visual: Cambio social atribuido a Mareiwa en la version historica: iniciativa, entrega de animales y devolucion de bienes; se muestra como contraste relacional, no como doctrina vigente o compraventa de mujeres.",
+        "materials": [
+          "papel y fibras que cambian de tension, humedad, luz o posicion",
+          "capas causales separadas",
+          "huella fisica persistente"
+        ],
+        "palette_logic": "El cambio cromatico nace de la materia afectada, nunca de un resplandor sobrenatural por defecto.",
+        "scale": "Escala definida por aquello que transforma, desde objeto hasta territorio.",
+        "continuity_markers": [
+          "nombre estable: Cambio de iniciativa y compensación matrimonial",
+          "funcion estable: Cambio social atribuido a Mareiwa en la version historica: iniciativa, entrega de animales y devolucion de bienes; se muestra como contraste relacional, no como doctrina vigente o compraventa de mujeres.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Cambio social atribuido a Mareiwa en la version historica: iniciativa, entrega de animales y devolucion de bienes; se muestra como contraste relacional, no como doctrina vigente o compraventa de mujeres."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para phenomenon_rule",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · phenomenon_rule",
+        "primary_request": "entrada, accion, limite y huella del fenomeno para Cambio de iniciativa y compensación matrimonial. Cambio social atribuido a Mareiwa en la version historica: iniciativa, entrega de animales y devolucion de bienes; se muestra como contraste relacional, no como doctrina vigente o compraventa de mujeres.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Escala definida por aquello que transforma, desde objeto hasta territorio.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel y fibras que cambian de tension, humedad, luz o posicion; capas causales separadas; huella fisica persistente",
+        "constraints": [
+          "Secuencia material de causa, accion, limite y huella; debe entenderse sin texto, aura o particulas magicas genericas.",
+          "mostrar: Cambio social atribuido a Mareiwa en la version historica: iniciativa, entrega de animales y devolucion de bienes; se muestra como contraste relacional, no como doctrina vigente o compraventa de mujeres.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "phenomenon_grammar",
+          "purpose": "entrada, accion, limite y huella del fenomeno",
+          "aspect": "16:9",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "viajeros_semillas_worunka__group_grammar": {
+      "purpose": "group_grammar",
+      "entity_refs": [
+        "viajeros_semillas_worunka"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "la-india-worunka",
+          "field": "mito",
+          "note": "Dos hombres anonimos recorren el camino largo y traen frutos colorados."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Conjunto legible como relacion, no multitud de clones: variacion de escala, postura y distancia sin convertir el grupo en tipo etnico generico. Entidad: Dos viajeros de las semillas. Funcion visual: Dos hombres anonimos enviados por Mareiwa a recorrer un camino largo y traer frutos colorados para sembrarlos en la Macuira.",
+        "materials": [
+          "figuras de papel individualizadas",
+          "planos separados",
+          "objetos relacionales solo si estan documentados"
+        ],
+        "palette_logic": "Familia cromatica compartida con variaciones internas; sin uniformes o emblemas inventados.",
+        "scale": "Numero y separacion suficientes para entender el grupo sin llenar la imagen de extras.",
+        "continuity_markers": [
+          "nombre estable: Dos viajeros de las semillas",
+          "funcion estable: Dos hombres anonimos enviados por Mareiwa a recorrer un camino largo y traer frutos colorados para sembrarlos en la Macuira.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Dos hombres anonimos enviados por Mareiwa a recorrer un camino largo y traer frutos colorados para sembrarlos en la Macuira."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para group_grammar",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · group_grammar",
+        "primary_request": "numero, relaciones, escala y variacion interna para Dos viajeros de las semillas. Dos hombres anonimos enviados por Mareiwa a recorrer un camino largo y traer frutos colorados para sembrarlos en la Macuira.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Numero y separacion suficientes para entender el grupo sin llenar la imagen de extras.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "figuras de papel individualizadas; planos separados; objetos relacionales solo si estan documentados",
+        "constraints": [
+          "Conjunto legible como relacion, no multitud de clones: variacion de escala, postura y distancia sin convertir el grupo en tipo etnico generico.",
+          "mostrar: Dos hombres anonimos enviados por Mareiwa a recorrer un camino largo y traer frutos colorados para sembrarlos en la Macuira.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "group_grammar",
+          "purpose": "numero, relaciones, escala y variacion interna",
+          "aspect": "16:9",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "matas_fruto_rojo_worunka__botanical_sheet": {
+      "purpose": "botanical_sheet",
+      "entity_refs": [
+        "matas_fruto_rojo_worunka"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "la-india-worunka",
+          "field": "mito",
+          "note": "Plantas no identificadas que producen los frutos y semillas de tuma."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Morfologia botanica especifica en tallos, hojas, fruto y crecimiento; prohibida la sustitucion por cactus saguaro o flora desertica generica. Entidad: Matas de frutos colorados. Funcion visual: Plantas no identificadas de cuyos frutos se toman semillas que al sembrarse resultan tumas; no se equiparan con cultivo botanico conocido.",
+        "materials": [
+          "papel recortado y plegado por organo vegetal",
+          "fibras visibles",
+          "volumen por capas y separacion real"
+        ],
+        "palette_logic": "Verdes, ocres y frutos localizados según especie y estado, sin saturacion tropical uniforme.",
+        "scale": "Altura y extension legibles frente a suelo, vivienda o figura secundaria.",
+        "continuity_markers": [
+          "nombre estable: Matas de frutos colorados",
+          "funcion estable: Plantas no identificadas de cuyos frutos se toman semillas que al sembrarse resultan tumas; no se equiparan con cultivo botanico conocido.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Plantas no identificadas de cuyos frutos se toman semillas que al sembrarse resultan tumas; no se equiparan con cultivo botanico conocido."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para botanical_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · botanical_sheet",
+        "primary_request": "morfologia vegetal sin flora generica para Matas de frutos colorados. Plantas no identificadas de cuyos frutos se toman semillas que al sembrarse resultan tumas; no se equiparan con cultivo botanico conocido.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Altura y extension legibles frente a suelo, vivienda o figura secundaria.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel recortado y plegado por organo vegetal; fibras visibles; volumen por capas y separacion real",
+        "constraints": [
+          "Morfologia botanica especifica en tallos, hojas, fruto y crecimiento; prohibida la sustitucion por cactus saguaro o flora desertica generica.",
+          "mostrar: Plantas no identificadas de cuyos frutos se toman semillas que al sembrarse resultan tumas; no se equiparan con cultivo botanico conocido.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_botanical",
+          "purpose": "morfologia vegetal sin flora generica",
+          "aspect": "1:1",
+          "era": "territorial_documentado_no_fecha_unica",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "origen_tumas_worunka__phenomenon_rule": {
+      "purpose": "phenomenon_rule",
+      "entity_refs": [
+        "origen_tumas_worunka"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "la-india-worunka",
+          "field": "mito",
+          "note": "Fruto, semilla y piedra tuma se conectan mediante germinacion mineral y entierro."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Secuencia material de causa, accion, limite y huella; debe entenderse sin texto, aura o particulas magicas genericas. Entidad: Frutos y semillas que resultan tumas. Funcion visual: Transformacion material de fruto colorado a semilla y piedra tuma bajo tierra, sin convertir la joya en planta literal o gema luminosa.",
+        "materials": [
+          "papel y fibras que cambian de tension, humedad, luz o posicion",
+          "capas causales separadas",
+          "huella fisica persistente"
+        ],
+        "palette_logic": "El cambio cromatico nace de la materia afectada, nunca de un resplandor sobrenatural por defecto.",
+        "scale": "Escala definida por aquello que transforma, desde objeto hasta territorio.",
+        "continuity_markers": [
+          "nombre estable: Frutos y semillas que resultan tumas",
+          "funcion estable: Transformacion material de fruto colorado a semilla y piedra tuma bajo tierra, sin convertir la joya en planta literal o gema luminosa.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Transformacion material de fruto colorado a semilla y piedra tuma bajo tierra, sin convertir la joya en planta literal o gema luminosa."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para phenomenon_rule",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · phenomenon_rule",
+        "primary_request": "entrada, accion, limite y huella del fenomeno para Frutos y semillas que resultan tumas. Transformacion material de fruto colorado a semilla y piedra tuma bajo tierra, sin convertir la joya en planta literal o gema luminosa.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Escala definida por aquello que transforma, desde objeto hasta territorio.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel y fibras que cambian de tension, humedad, luz o posicion; capas causales separadas; huella fisica persistente",
+        "constraints": [
+          "Secuencia material de causa, accion, limite y huella; debe entenderse sin texto, aura o particulas magicas genericas.",
+          "mostrar: Transformacion material de fruto colorado a semilla y piedra tuma bajo tierra, sin convertir la joya en planta literal o gema luminosa.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "phenomenon_grammar",
+          "purpose": "entrada, accion, limite y huella del fenomeno",
+          "aspect": "16:9",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "semillas_alimento_worunka__object_sheet": {
+      "purpose": "object_sheet",
+      "entity_refs": [
+        "semillas_alimento_worunka"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "la-india-worunka",
+          "field": "mito",
+          "note": "Semillas no identificadas entregadas a Worunka para el sustento."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Contorno, volumen, piezas y modo de uso claramente separables; evitar convertir utileria cotidiana en reliquia mistica. Entidad: Semillas de alimento entregadas a Worunka. Funcion visual: Conjunto plural no identificado de semillas que Worunka siembra para el sostenimiento de la comunidad; la fuente no nombra maiz.",
+        "materials": [
+          "papel, fibra, madera o mineral traducidos a paper craft",
+          "uniones y desgaste fisico",
+          "sombras proyectadas coherentes"
+        ],
+        "palette_logic": "Color propio del material y el estado; sin ornamentacion cultural no respaldada.",
+        "scale": "Escala demostrable mediante mano, suelo o arquitectura sin texto ni regla grafica.",
+        "continuity_markers": [
+          "nombre estable: Semillas de alimento entregadas a Worunka",
+          "funcion estable: Conjunto plural no identificado de semillas que Worunka siembra para el sostenimiento de la comunidad; la fuente no nombra maiz.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Conjunto plural no identificado de semillas que Worunka siembra para el sostenimiento de la comunidad; la fuente no nombra maiz."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para object_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · object_sheet",
+        "primary_request": "forma, escala, material y uso legibles para Semillas de alimento entregadas a Worunka. Conjunto plural no identificado de semillas que Worunka siembra para el sostenimiento de la comunidad; la fuente no nombra maiz.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Escala demostrable mediante mano, suelo o arquitectura sin texto ni regla grafica.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel, fibra, madera o mineral traducidos a paper craft; uniones y desgaste fisico; sombras proyectadas coherentes",
+        "constraints": [
+          "Contorno, volumen, piezas y modo de uso claramente separables; evitar convertir utileria cotidiana en reliquia mistica.",
+          "mostrar: Conjunto plural no identificado de semillas que Worunka siembra para el sostenimiento de la comunidad; la fuente no nombra maiz.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_object",
+          "purpose": "forma, escala, material y uso legibles",
+          "aspect": "1:1",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "siembra_cosecha_worunka__phenomenon_rule": {
+      "purpose": "phenomenon_rule",
+      "entity_refs": [
+        "siembra_cosecha_worunka"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "la-india-worunka",
+          "field": "mito",
+          "note": "Crecimiento desde semillas hasta una cosecha abundante sin inventar especies."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Secuencia material de causa, accion, limite y huella; debe entenderse sin texto, aura o particulas magicas genericas. Entidad: Siembra y cosecha abundante de Worunka. Funcion visual: Regla de crecimiento desde semillas no identificadas hasta plantas y cosecha abundante antes de la sequia.",
+        "materials": [
+          "papel y fibras que cambian de tension, humedad, luz o posicion",
+          "capas causales separadas",
+          "huella fisica persistente"
+        ],
+        "palette_logic": "El cambio cromatico nace de la materia afectada, nunca de un resplandor sobrenatural por defecto.",
+        "scale": "Escala definida por aquello que transforma, desde objeto hasta territorio.",
+        "continuity_markers": [
+          "nombre estable: Siembra y cosecha abundante de Worunka",
+          "funcion estable: Regla de crecimiento desde semillas no identificadas hasta plantas y cosecha abundante antes de la sequia.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Regla de crecimiento desde semillas no identificadas hasta plantas y cosecha abundante antes de la sequia."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para phenomenon_rule",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · phenomenon_rule",
+        "primary_request": "entrada, accion, limite y huella del fenomeno para Siembra y cosecha abundante de Worunka. Regla de crecimiento desde semillas no identificadas hasta plantas y cosecha abundante antes de la sequia.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Escala definida por aquello que transforma, desde objeto hasta territorio.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel y fibras que cambian de tension, humedad, luz o posicion; capas causales separadas; huella fisica persistente",
+        "constraints": [
+          "Secuencia material de causa, accion, limite y huella; debe entenderse sin texto, aura o particulas magicas genericas.",
+          "mostrar: Regla de crecimiento desde semillas no identificadas hasta plantas y cosecha abundante antes de la sequia.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "phenomenon_grammar",
+          "purpose": "entrada, accion, limite y huella del fenomeno",
+          "aspect": "16:9",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "comunidad_cosecha_worunka__group_grammar": {
+      "purpose": "group_grammar",
+      "entity_refs": [
+        "comunidad_cosecha_worunka"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "la-india-worunka",
+          "field": "mito",
+          "note": "Personas que preparan y beben chicha, con cuerpos y conjuntos completos variados."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Conjunto legible como relacion, no multitud de clones: variacion de escala, postura y distancia sin convertir el grupo en tipo etnico generico. Entidad: Comunidad de la cosecha de Worunka. Funcion visual: Personas Wayuu que reciben alimento, preparan chicha y participan de la abundancia; muestra variacion por edad, genero, tarea y vestido completo, no un uniforme.",
+        "materials": [
+          "figuras de papel individualizadas",
+          "planos separados",
+          "objetos relacionales solo si estan documentados"
+        ],
+        "palette_logic": "Familia cromatica compartida con variaciones internas; sin uniformes o emblemas inventados.",
+        "scale": "Numero y separacion suficientes para entender el grupo sin llenar la imagen de extras.",
+        "continuity_markers": [
+          "nombre estable: Comunidad de la cosecha de Worunka",
+          "funcion estable: Personas Wayuu que reciben alimento, preparan chicha y participan de la abundancia; muestra variacion por edad, genero, tarea y vestido completo, no un uniforme.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Personas Wayuu que reciben alimento, preparan chicha y participan de la abundancia; muestra variacion por edad, genero, tarea y vestido completo, no un uniforme."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para group_grammar",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · group_grammar",
+        "primary_request": "numero, relaciones, escala y variacion interna para Comunidad de la cosecha de Worunka. Personas Wayuu que reciben alimento, preparan chicha y participan de la abundancia; muestra variacion por edad, genero, tarea y vestido completo, no un uniforme.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Numero y separacion suficientes para entender el grupo sin llenar la imagen de extras.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "figuras de papel individualizadas; planos separados; objetos relacionales solo si estan documentados",
+        "constraints": [
+          "Conjunto legible como relacion, no multitud de clones: variacion de escala, postura y distancia sin convertir el grupo en tipo etnico generico.",
+          "mostrar: Personas Wayuu que reciben alimento, preparan chicha y participan de la abundancia; muestra variacion por edad, genero, tarea y vestido completo, no un uniforme.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "group_grammar",
+          "purpose": "numero, relaciones, escala y variacion interna",
+          "aspect": "16:9",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "bebida_cosecha_worunka__object_sheet": {
+      "purpose": "object_sheet",
+      "entity_refs": [
+        "bebida_cosecha_worunka"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "la-india-worunka",
+          "field": "mito",
+          "note": "Chicha fuerteada en tinaja; no receta, marca, producto u ofrenda."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Contorno, volumen, piezas y modo de uso claramente separables; evitar convertir utileria cotidiana en reliquia mistica. Entidad: Chicha fuerte de la cosecha. Funcion visual: Chicha preparada por la comunidad, dejada fermentar en una tinaja y bebida en exceso antes del cambio de clima; no es producto, receta u ofrenda.",
+        "materials": [
+          "papel, fibra, madera o mineral traducidos a paper craft",
+          "uniones y desgaste fisico",
+          "sombras proyectadas coherentes"
+        ],
+        "palette_logic": "Color propio del material y el estado; sin ornamentacion cultural no respaldada.",
+        "scale": "Escala demostrable mediante mano, suelo o arquitectura sin texto ni regla grafica.",
+        "continuity_markers": [
+          "nombre estable: Chicha fuerte de la cosecha",
+          "funcion estable: Chicha preparada por la comunidad, dejada fermentar en una tinaja y bebida en exceso antes del cambio de clima; no es producto, receta u ofrenda.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Chicha preparada por la comunidad, dejada fermentar en una tinaja y bebida en exceso antes del cambio de clima; no es producto, receta u ofrenda."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para object_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · object_sheet",
+        "primary_request": "forma, escala, material y uso legibles para Chicha fuerte de la cosecha. Chicha preparada por la comunidad, dejada fermentar en una tinaja y bebida en exceso antes del cambio de clima; no es producto, receta u ofrenda.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Escala demostrable mediante mano, suelo o arquitectura sin texto ni regla grafica.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel, fibra, madera o mineral traducidos a paper craft; uniones y desgaste fisico; sombras proyectadas coherentes",
+        "constraints": [
+          "Contorno, volumen, piezas y modo de uso claramente separables; evitar convertir utileria cotidiana en reliquia mistica.",
+          "mostrar: Chicha preparada por la comunidad, dejada fermentar en una tinaja y bebida en exceso antes del cambio de clima; no es producto, receta u ofrenda.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_object",
+          "purpose": "forma, escala, material y uso legibles",
+          "aspect": "1:1",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "arroyo_worunka__spatial_model": {
+      "purpose": "spatial_model",
+      "entity_refs": [
+        "arroyo_worunka"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "la-india-worunka",
+          "field": "mito",
+          "note": "Arroyo del valle entre Itojoro y Kousopa, sin coordenada publica exacta."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Umbral y organizacion espacial propios del relato; la geografia incierta se mantiene aproximada y nunca se publica como coordenada. Entidad: Arroyo del valle entre Itojoro y Kousopa. Funcion visual: Lugar aproximado al que Worunka llega desde la Macuira para bañarse y donde la fuente ubica la piedra; no se publica coordenada ni se reconstruye como destino turistico.",
+        "materials": [
+          "estratos de papel y suelo prensado",
+          "elementos materiales citados por el relato",
+          "aire y oclusiones entre planos"
+        ],
+        "palette_logic": "Paleta territorial modulada por funcion, clima y estado narrativo.",
+        "scale": "Profundidad recorrible con primer plano, plano medio y fondo a distancias reales.",
+        "continuity_markers": [
+          "nombre estable: Arroyo del valle entre Itojoro y Kousopa",
+          "funcion estable: Lugar aproximado al que Worunka llega desde la Macuira para bañarse y donde la fuente ubica la piedra; no se publica coordenada ni se reconstruye como destino turistico.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Lugar aproximado al que Worunka llega desde la Macuira para bañarse y donde la fuente ubica la piedra; no se publica coordenada ni se reconstruye como destino turistico."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para spatial_model",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · spatial_model",
+        "primary_request": "relaciones espaciales, entradas, planos y escala para Arroyo del valle entre Itojoro y Kousopa. Lugar aproximado al que Worunka llega desde la Macuira para bañarse y donde la fuente ubica la piedra; no se publica coordenada ni se reconstruye como destino turistico.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Profundidad recorrible con primer plano, plano medio y fondo a distancias reales.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "estratos de papel y suelo prensado; elementos materiales citados por el relato; aire y oclusiones entre planos",
+        "constraints": [
+          "Umbral y organizacion espacial propios del relato; la geografia incierta se mantiene aproximada y nunca se publica como coordenada.",
+          "mostrar: Lugar aproximado al que Worunka llega desde la Macuira para bañarse y donde la fuente ubica la piedra; no se publica coordenada ni se reconstruye como destino turistico.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "spatial_grammar",
+          "purpose": "relaciones espaciales, entradas, planos y escala",
+          "aspect": "16:9",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "sequia_worunka__phenomenon_rule": {
+      "purpose": "phenomenon_rule",
+      "entity_refs": [
+        "sequia_worunka"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "la-india-worunka",
+          "field": "mito",
+          "note": "Seca plantas, entierra tumas, prolonga veranos y permite el retorno estacional de la lluvia."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Secuencia material de causa, accion, limite y huella; debe entenderse sin texto, aura o particulas magicas genericas. Entidad: Sequía prolongada y lluvia estacional de Worunka. Funcion visual: Cambio que seca las matas, deja las tumas bajo tierra, prolonga los veranos y hace volver la lluvia por temporadas; no personifica el sufrimiento.",
+        "materials": [
+          "papel y fibras que cambian de tension, humedad, luz o posicion",
+          "capas causales separadas",
+          "huella fisica persistente"
+        ],
+        "palette_logic": "El cambio cromatico nace de la materia afectada, nunca de un resplandor sobrenatural por defecto.",
+        "scale": "Escala definida por aquello que transforma, desde objeto hasta territorio.",
+        "continuity_markers": [
+          "nombre estable: Sequía prolongada y lluvia estacional de Worunka",
+          "funcion estable: Cambio que seca las matas, deja las tumas bajo tierra, prolonga los veranos y hace volver la lluvia por temporadas; no personifica el sufrimiento.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Cambio que seca las matas, deja las tumas bajo tierra, prolonga los veranos y hace volver la lluvia por temporadas; no personifica el sufrimiento."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para phenomenon_rule",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · phenomenon_rule",
+        "primary_request": "entrada, accion, limite y huella del fenomeno para Sequía prolongada y lluvia estacional de Worunka. Cambio que seca las matas, deja las tumas bajo tierra, prolonga los veranos y hace volver la lluvia por temporadas; no personifica el sufrimiento.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Escala definida por aquello que transforma, desde objeto hasta territorio.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel y fibras que cambian de tension, humedad, luz o posicion; capas causales separadas; huella fisica persistente",
+        "constraints": [
+          "Secuencia material de causa, accion, limite y huella; debe entenderse sin texto, aura o particulas magicas genericas.",
+          "mostrar: Cambio que seca las matas, deja las tumas bajo tierra, prolonga los veranos y hace volver la lluvia por temporadas; no personifica el sufrimiento.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "phenomenon_grammar",
+          "purpose": "entrada, accion, limite y huella del fenomeno",
+          "aspect": "16:9",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    }
+  },
+  "entities": {
+    "worunka": {
+      "name": "Worunka",
+      "kind": "personaje",
+      "description": "Mujer primigenia que llega desde la Macuira al arroyo y queda enlazada con cambios de nacimiento, aves rojas, alianzas, semillas, sequia y piedra en la version de Chaves.",
+      "aliases": [
+        "Wolunka",
+        "Walunkáa",
+        "Woruka",
+        "Wootka",
+        "Borunka"
+      ],
+      "states": [
+        "embarazada_debil",
+        "fortalecida",
+        "convertida_en_piedra"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "sensitive",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet",
+        "state_sheet"
+      ],
+      "model_refs": [
+        "worunka__identity_sheet",
+        "worunka__state_sheet"
+      ],
+      "legacy_model_refs": [
+        "la-india-worunka__ancla"
+      ],
+      "myth_refs": [
+        "la-india-worunka"
+      ],
+      "evidence": [
+        {
+          "myth": "la-india-worunka",
+          "field": "mito",
+          "note": "Llega desde la Macuira embarazada, es fortalecida y queda convertida en piedra junto al arroyo."
+        }
+      ]
+    },
+    "sangre_toro": {
+      "name": "Pájaro Sangre Toro",
+      "kind": "animal",
+      "description": "Ave pequeña nombrada por Chaves que recibe color rojo en la piedra; la morfologia se mantiene en Ramphocelus sp. como identificacion regional reversible, no especie cerrada.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet"
+      ],
+      "model_refs": [
+        "sangre_toro__identity_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "la-india-worunka"
+      ],
+      "evidence": [
+        {
+          "myth": "la-india-worunka",
+          "field": "mito",
+          "note": "Pajarito que recibe rojo en la piedra; identificacion regional solo hasta Ramphocelus sp."
+        }
+      ]
+    },
+    "carpintero_rojo": {
+      "name": "Pájaro carpintero de copete rojo",
+      "kind": "animal",
+      "description": "Ave no identificada a especie cuyo copete alcanza el rojo de la piedra; el resto del cuerpo no se inventa como completamente rojo.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet"
+      ],
+      "model_refs": [
+        "carpintero_rojo__identity_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "la-india-worunka"
+      ],
+      "evidence": [
+        {
+          "myth": "la-india-worunka",
+          "field": "mito",
+          "note": "Solo el copete alcanza el rojo; especie no indicada."
+        }
+      ]
+    },
+    "guacamayo_rojo": {
+      "name": "Guacamayo del episodio de Worunka",
+      "kind": "animal",
+      "description": "Guacamayo no identificado a especie que toca la piedra y recibe rojo; se conserva como Ara sp. reversible sin fijar patron taxonomico falso.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet"
+      ],
+      "model_refs": [
+        "guacamayo_rojo__identity_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "la-india-worunka"
+      ],
+      "evidence": [
+        {
+          "myth": "la-india-worunka",
+          "field": "mito",
+          "note": "Guacamayo no identificado a especie que toca la piedra."
+        }
+      ]
+    },
+    "color_aves_worunka": {
+      "name": "Color rojo de las aves de Worunka",
+      "kind": "fenomeno",
+      "description": "Regla material que lleva rojo desde la piedra al cuerpo completo del Sangre Toro, al copete del carpintero, al guacamayo y a otras aves sin baño de sangre ni efecto digital.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "phenomenon_rule"
+      ],
+      "model_refs": [
+        "color_aves_worunka__phenomenon_rule"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "la-india-worunka"
+      ],
+      "evidence": [
+        {
+          "myth": "la-india-worunka",
+          "field": "mito",
+          "note": "Distribuye rojo de manera distinta entre aves y conserva la piedra como origen material."
+        }
+      ]
+    },
+    "piedra_worunka": {
+      "name": "Piedra de Worunka",
+      "kind": "objeto",
+      "description": "Piedra del arroyo asociada en Chaves con el cambio corporal, el rojo de las aves y la petrificacion de Worunka; no se georreferencia ni reproduce anatomia genital.",
+      "aliases": [],
+      "states": [
+        "piedra_del_arroyo_con_rojo",
+        "forma_petrea_de_worunka"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "sensitive",
+      "visual_status": "required",
+      "model_requirements": [
+        "object_sheet"
+      ],
+      "model_refs": [
+        "piedra_worunka__object_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "la-india-worunka"
+      ],
+      "evidence": [
+        {
+          "myth": "la-india-worunka",
+          "field": "mito",
+          "note": "Locus petreo del cambio corporal, las aves rojas y la forma final de Worunka."
+        }
+      ]
+    },
+    "transformaciones_cuerpo_worunka": {
+      "name": "Transformaciones corporales de Worunka",
+      "kind": "fenomeno",
+      "description": "Regla visual no anatomica para embarazo debil, cambio del nacimiento, incorporacion de dos costillas y fortalecimiento; evita herida, genitales, operacion o prescripcion corporal.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "sensitive",
+      "visual_status": "required",
+      "model_requirements": [
+        "phenomenon_rule"
+      ],
+      "model_refs": [
+        "transformaciones_cuerpo_worunka__phenomenon_rule"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "la-india-worunka"
+      ],
+      "evidence": [
+        {
+          "myth": "la-india-worunka",
+          "field": "mito",
+          "note": "Relaciona embarazo debil, cambio del nacimiento, dos costillas y fortalecimiento sin anatomia explicita."
+        }
+      ]
+    },
+    "cambio_alianzas_worunka": {
+      "name": "Cambio de iniciativa y compensación matrimonial",
+      "kind": "fenomeno",
+      "description": "Cambio social atribuido a Mareiwa en la version historica: iniciativa, entrega de animales y devolucion de bienes; se muestra como contraste relacional, no como doctrina vigente o compraventa de mujeres.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "sensitive",
+      "visual_status": "required",
+      "model_requirements": [
+        "phenomenon_rule"
+      ],
+      "model_refs": [
+        "cambio_alianzas_worunka__phenomenon_rule"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "la-india-worunka"
+      ],
+      "evidence": [
+        {
+          "myth": "la-india-worunka",
+          "field": "mito",
+          "note": "Contrasta iniciativa y compensacion matrimonial como proposicion historica del relato, no norma vigente."
+        }
+      ]
+    },
+    "viajeros_semillas_worunka": {
+      "name": "Dos viajeros de las semillas",
+      "kind": "colectivo",
+      "description": "Dos hombres anonimos enviados por Mareiwa a recorrer un camino largo y traer frutos colorados para sembrarlos en la Macuira.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "group_grammar"
+      ],
+      "model_refs": [
+        "viajeros_semillas_worunka__group_grammar"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "la-india-worunka"
+      ],
+      "evidence": [
+        {
+          "myth": "la-india-worunka",
+          "field": "mito",
+          "note": "Dos hombres anonimos recorren el camino largo y traen frutos colorados."
+        }
+      ]
+    },
+    "matas_fruto_rojo_worunka": {
+      "name": "Matas de frutos colorados",
+      "kind": "planta",
+      "description": "Plantas no identificadas de cuyos frutos se toman semillas que al sembrarse resultan tumas; no se equiparan con cultivo botanico conocido.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "botanical_sheet"
+      ],
+      "model_refs": [
+        "matas_fruto_rojo_worunka__botanical_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "la-india-worunka"
+      ],
+      "evidence": [
+        {
+          "myth": "la-india-worunka",
+          "field": "mito",
+          "note": "Plantas no identificadas que producen los frutos y semillas de tuma."
+        }
+      ]
+    },
+    "origen_tumas_worunka": {
+      "name": "Frutos y semillas que resultan tumas",
+      "kind": "fenomeno",
+      "description": "Transformacion material de fruto colorado a semilla y piedra tuma bajo tierra, sin convertir la joya en planta literal o gema luminosa.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "phenomenon_rule"
+      ],
+      "model_refs": [
+        "origen_tumas_worunka__phenomenon_rule"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "la-india-worunka"
+      ],
+      "evidence": [
+        {
+          "myth": "la-india-worunka",
+          "field": "mito",
+          "note": "Fruto, semilla y piedra tuma se conectan mediante germinacion mineral y entierro."
+        }
+      ]
+    },
+    "semillas_alimento_worunka": {
+      "name": "Semillas de alimento entregadas a Worunka",
+      "kind": "objeto",
+      "description": "Conjunto plural no identificado de semillas que Worunka siembra para el sostenimiento de la comunidad; la fuente no nombra maiz.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "object_sheet"
+      ],
+      "model_refs": [
+        "semillas_alimento_worunka__object_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "la-india-worunka"
+      ],
+      "evidence": [
+        {
+          "myth": "la-india-worunka",
+          "field": "mito",
+          "note": "Semillas no identificadas entregadas a Worunka para el sustento."
+        }
+      ]
+    },
+    "siembra_cosecha_worunka": {
+      "name": "Siembra y cosecha abundante de Worunka",
+      "kind": "fenomeno",
+      "description": "Regla de crecimiento desde semillas no identificadas hasta plantas y cosecha abundante antes de la sequia.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "phenomenon_rule"
+      ],
+      "model_refs": [
+        "siembra_cosecha_worunka__phenomenon_rule"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "la-india-worunka"
+      ],
+      "evidence": [
+        {
+          "myth": "la-india-worunka",
+          "field": "mito",
+          "note": "Crecimiento desde semillas hasta una cosecha abundante sin inventar especies."
+        }
+      ]
+    },
+    "comunidad_cosecha_worunka": {
+      "name": "Comunidad de la cosecha de Worunka",
+      "kind": "colectivo",
+      "description": "Personas Wayuu que reciben alimento, preparan chicha y participan de la abundancia; muestra variacion por edad, genero, tarea y vestido completo, no un uniforme.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "group_grammar"
+      ],
+      "model_refs": [
+        "comunidad_cosecha_worunka__group_grammar"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "la-india-worunka"
+      ],
+      "evidence": [
+        {
+          "myth": "la-india-worunka",
+          "field": "mito",
+          "note": "Personas que preparan y beben chicha, con cuerpos y conjuntos completos variados."
+        }
+      ]
+    },
+    "bebida_cosecha_worunka": {
+      "name": "Chicha fuerte de la cosecha",
+      "kind": "objeto",
+      "description": "Chicha preparada por la comunidad, dejada fermentar en una tinaja y bebida en exceso antes del cambio de clima; no es producto, receta u ofrenda.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "object_sheet"
+      ],
+      "model_refs": [
+        "bebida_cosecha_worunka__object_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "la-india-worunka"
+      ],
+      "evidence": [
+        {
+          "myth": "la-india-worunka",
+          "field": "mito",
+          "note": "Chicha fuerteada en tinaja; no receta, marca, producto u ofrenda."
+        }
+      ]
+    },
+    "arroyo_worunka": {
+      "name": "Arroyo del valle entre Itojoro y Kousopa",
+      "kind": "lugar",
+      "description": "Lugar aproximado al que Worunka llega desde la Macuira para bañarse y donde la fuente ubica la piedra; no se publica coordenada ni se reconstruye como destino turistico.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "sensitive",
+      "visual_status": "required",
+      "model_requirements": [
+        "spatial_model"
+      ],
+      "model_refs": [
+        "arroyo_worunka__spatial_model"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "la-india-worunka"
+      ],
+      "evidence": [
+        {
+          "myth": "la-india-worunka",
+          "field": "mito",
+          "note": "Arroyo del valle entre Itojoro y Kousopa, sin coordenada publica exacta."
+        }
+      ]
+    },
+    "sequia_worunka": {
+      "name": "Sequía prolongada y lluvia estacional de Worunka",
+      "kind": "fenomeno",
+      "description": "Cambio que seca las matas, deja las tumas bajo tierra, prolonga los veranos y hace volver la lluvia por temporadas; no personifica el sufrimiento.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "phenomenon_rule"
+      ],
+      "model_refs": [
+        "sequia_worunka__phenomenon_rule"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "la-india-worunka"
+      ],
+      "evidence": [
+        {
+          "myth": "la-india-worunka",
+          "field": "mito",
+          "note": "Seca plantas, entierra tumas, prolonga veranos y permite el retorno estacional de la lluvia."
+        }
+      ]
+    }
+  }
+}

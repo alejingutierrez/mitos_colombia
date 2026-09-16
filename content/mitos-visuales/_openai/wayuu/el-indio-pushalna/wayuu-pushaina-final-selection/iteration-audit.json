@@ -1,0 +1,112 @@
+{
+  "schema": "mitos-triptych-iteration-audit/v1",
+  "audited_at": "2026-09-06T14:33:41.871Z",
+  "package_root": "content/mitos-visuales/_openai/wayuu/el-indio-pushalna",
+  "scope": "Artefactos locales referidos por jobs.json, deduplicados por SHA-256; no mide llamadas fallidas sin imagen ni facturación de API.",
+  "unique_images": 4,
+  "by_act": {
+    "entrada": {
+      "unique_images": 2,
+      "preparation_rounds": 2,
+      "requested_alternatives": 0
+    },
+    "acto": {
+      "unique_images": 1,
+      "preparation_rounds": 1,
+      "requested_alternatives": 0
+    },
+    "huella": {
+      "unique_images": 1,
+      "preparation_rounds": 1,
+      "requested_alternatives": 0
+    }
+  },
+  "prepared_without_output": 0,
+  "duplicates": 0,
+  "rows": [
+    {
+      "batch_id": "wayuu-pushaina-triptych-01",
+      "prepared_at": "2026-09-06T10:31:57.252Z",
+      "act": "entrada",
+      "purpose": "generation_or_revision",
+      "manifest": "content/mitos-visuales/_openai/wayuu/el-indio-pushalna/wayuu-pushaina-triptych-01/jobs.json",
+      "output": "output/imagegen/wayuu/triptychs/wayuu-pushaina-triptych-01/entrada.jpeg",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/el-indio-pushalna/wayuu-pushaina-triptych-01/prompts/entrada.prompt.txt",
+      "requested_size": "1536x864",
+      "requested_quality": "high",
+      "visual_function": "narrative_scene",
+      "status": "unique_generated_artifact",
+      "sha256": "c4fc34de6cd87d58bdac1ad16c4b15cdfd55c38d9a809ba14fbed3ef8f5040aa",
+      "duplicate_of": null,
+      "width": 1536,
+      "height": 864,
+      "size_matches_request": true,
+      "prompt_sha256": "3b09e7c6d6b2c857bc8b2cedf66be13ed75cb39a58a9c9f40e4e34c9e600df13",
+      "prompt_hash_matches_manifest": true,
+      "prompt_integrity": "exact_bytes"
+    },
+    {
+      "batch_id": "wayuu-pushaina-triptych-01",
+      "prepared_at": "2026-09-06T10:31:57.252Z",
+      "act": "acto",
+      "purpose": "generation_or_revision",
+      "manifest": "content/mitos-visuales/_openai/wayuu/el-indio-pushalna/wayuu-pushaina-triptych-01/jobs.json",
+      "output": "output/imagegen/wayuu/triptychs/wayuu-pushaina-triptych-01/acto.jpeg",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/el-indio-pushalna/wayuu-pushaina-triptych-01/prompts/acto.prompt.txt",
+      "requested_size": "864x1536",
+      "requested_quality": "medium",
+      "visual_function": "narrative_scene",
+      "status": "unique_generated_artifact",
+      "sha256": "725e016a0b78a0e1023df543058408a686124ab48d12bddfd6c0ea8c6007e4ce",
+      "duplicate_of": null,
+      "width": 864,
+      "height": 1536,
+      "size_matches_request": true,
+      "prompt_sha256": "25a8f85bd156f8856f4142ce28f31dca9d92ace97a927e58ab51bcc5ee408354",
+      "prompt_hash_matches_manifest": true,
+      "prompt_integrity": "exact_bytes"
+    },
+    {
+      "batch_id": "wayuu-pushaina-triptych-01",
+      "prepared_at": "2026-09-06T10:31:57.252Z",
+      "act": "huella",
+      "purpose": "generation_or_revision",
+      "manifest": "content/mitos-visuales/_openai/wayuu/el-indio-pushalna/wayuu-pushaina-triptych-01/jobs.json",
+      "output": "output/imagegen/wayuu/triptychs/wayuu-pushaina-triptych-01/huella.jpeg",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/el-indio-pushalna/wayuu-pushaina-triptych-01/prompts/huella.prompt.txt",
+      "requested_size": "1024x1024",
+      "requested_quality": "medium",
+      "visual_function": "symbolic_synthesis",
+      "status": "unique_generated_artifact",
+      "sha256": "806abd2004d5c105ab491c954e963a7ee7b4e17afda8cc0a7ae5ab1c4967889f",
+      "duplicate_of": null,
+      "width": 1024,
+      "height": 1024,
+      "size_matches_request": true,
+      "prompt_sha256": "12449305e2722f1962e1ac994744e503d8386047ed531227063e9182377ece37",
+      "prompt_hash_matches_manifest": true,
+      "prompt_integrity": "exact_bytes"
+    },
+    {
+      "batch_id": "wayuu-pushaina-triptych-02-entrada",
+      "prepared_at": "2026-09-06T14:31:16.346Z",
+      "act": "entrada",
+      "purpose": "generation_or_revision",
+      "manifest": "content/mitos-visuales/_openai/wayuu/el-indio-pushalna/wayuu-pushaina-triptych-02-entrada/jobs.json",
+      "output": "output/imagegen/wayuu/triptychs/wayuu-pushaina-triptych-02-entrada/entrada.jpeg",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/el-indio-pushalna/wayuu-pushaina-triptych-02-entrada/prompts/entrada.prompt.txt",
+      "requested_size": "1536x864",
+      "requested_quality": "high",
+      "visual_function": "narrative_scene",
+      "status": "unique_generated_artifact",
+      "sha256": "596d4cb7556bce7f026c4df33450a78246cc5c5e7a0d11a8e13e83a21cf0db0d",
+      "duplicate_of": null,
+      "width": 1536,
+      "height": 864,
+      "size_matches_request": true,
+      "prompt_sha256": "93005b97b232164b3b6027944577852f1deb7b7ddf91330ea029981227905c6a",
+      "prompt_hash_matches_manifest": true,
+      "prompt_integrity": "exact_bytes"
+    }
+  ]
+}

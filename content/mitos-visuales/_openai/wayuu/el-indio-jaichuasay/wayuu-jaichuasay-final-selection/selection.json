@@ -1,0 +1,127 @@
+{
+  "schema": "mitos-triptych-selection/v2",
+  "myth": "el-indio-jaichuasay",
+  "title": "El indio Jaichuasay",
+  "created_at": "2026-09-06T04:04:16.207Z",
+  "status": "approved_for_publication_under_campaign_authorization",
+  "approval_basis": "Usuario autoriza producir y publicar todos los trípticos Wayúu; revisión visual directa del agente.",
+  "campaign_scope": "content/mitos-visuales/production/wayuu-2026-09-05/scope.json",
+  "narrative_target_sha256": "f678153a5340e8286e8f32c9c664379b8dac6413a5f14e805785ca4623a17a6b",
+  "visual_memory_library": "content/mitos-visuales/wayuu.visual-memory.v1.json",
+  "visual_memory_review": {
+    "reviewer": "agent_direct_visual_review",
+    "reviewed_at": "2026-09-06T03:56:00Z",
+    "reviewed_reference_ids": [
+      "07cbe6fb59fd7f68efca",
+      "d12385cccde004f1f1bf"
+    ],
+    "retained": [
+      "Relación visual hombre-venado como motor, no decoración.",
+      "Contraste de azul profundo, verde seco y ocre; relieve por capas recortadas."
+    ],
+    "rejected": [
+      "Torso desnudo, cintillo y brazaletes con patrones no sustentados.",
+      "Doble busto monumental, rostro detallado, astas ornamentales, río sinuoso genérico y dispersión del cuerpo."
+    ],
+    "influence_by_act": {
+      "entrada": "Conservar contraste azul/ocre y relación hombre-venado, pero separarlos por un sendero profundo y dar al venado una sombra humana como anticipo editorial.",
+      "acto": "Transformar la antigua composición vertical de bustos en una visita a casa vista a distancia: las huellas animales continúan hasta los pies humanos.",
+      "huella": "Recuperar la unión visual entre identidades como un venado de papel con vacío humano; no bustos, armas cruzadas ni paisaje narrativo."
+    }
+  },
+  "selected": [
+    {
+      "act": "entrada",
+      "path": "output/imagegen/wayuu/triptychs/wayuu-jaichuasay-triptych-01/entrada.jpeg",
+      "sha256": "8852829b42409b4a26a75126586853ae7da644403f2c48940196af0588a305f6",
+      "width": 1536,
+      "height": 864,
+      "quality": "high",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/el-indio-jaichuasay/wayuu-jaichuasay-triptych-01/prompts/entrada.prompt.txt",
+      "prompt_sha256": "8c5b4e7f6c03bfdc5fb9dca5a57190ec9ff818402dec9739cc44270dbbffd821",
+      "visual_function": "narrative_scene",
+      "review": {
+        "observed": "Cazador y venado separados por un sendero profundo; sombra humana proyectada desde el animal. Camisa oliva, pantalón arena y cola baja; capas de roca, matorral y cielo azul/ocre con aire. Sin daño ni arma en uso.",
+        "limits": [
+          "El protagonista ocupa aproximadamente 30% de altura frente al máximo solicitado de 18%, aunque permanece entero en un amplio territorio.",
+          "La sombra humana se alarga mucho; funciona como anticipo editorial, no explicación literal del fenómeno."
+        ]
+      }
+    },
+    {
+      "act": "acto",
+      "path": "output/imagegen/wayuu/triptychs/wayuu-jaichuasay-triptych-02-acto/acto.jpeg",
+      "sha256": "08a21f162b2c89672feeee0b26dea8955586893e6e4fa601f299f42401b94ff0",
+      "width": 864,
+      "height": 1536,
+      "quality": "medium",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/el-indio-jaichuasay/wayuu-jaichuasay-triptych-02-acto/prompts/acto.prompt.txt",
+      "prompt_sha256": "0ec721d06d4bdde257e9dcf64f6363be1ce12cb91e516a15ec4a8106167f7d4a",
+      "visual_function": "narrative_scene",
+      "review": {
+        "observed": "Un solo rastro de pezuñas se detiene detrás de los talones de Jaichuasay. Arena vacía hacia la casa, familiar con comida, vestuario diferenciado y territorio profundo de papel. Ya no hay dos rastros paralelos.",
+        "limits": [
+          "La casa aparece más regular y cerrada que la enramada abierta imaginada; mantiene volumen rectangular y cubierta plana.",
+          "La correa conserva un estuche/carcaj vacío; no implica arco disparado."
+        ]
+      }
+    },
+    {
+      "act": "huella",
+      "path": "output/imagegen/wayuu/triptychs/wayuu-jaichuasay-triptych-01/huella.jpeg",
+      "sha256": "c0acf4c7c68e976cee85d736a79cb2db79dbb17f31c658cac065226d46686692",
+      "width": 1024,
+      "height": 1024,
+      "quality": "medium",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/el-indio-jaichuasay/wayuu-jaichuasay-triptych-01/prompts/huella.prompt.txt",
+      "prompt_sha256": "de5db92dd230070d56331fd92552814909b9d98248309d8086ae142a16b57ea1",
+      "visual_function": "symbolic_synthesis",
+      "review": {
+        "observed": "Venado de papel con vacío humano inequívoco; una sola relación simbólica, sombras físicas y fondo estratificado azul/oliva. Sin retratos, armas ni escena.",
+        "limits": [
+          "El vacío humano se prolonga bajo el torso dentro de un puente de papel hasta el nivel de las patas, en vez de quedar sólo en el torso. Es geometría simbólica, no anatomía literal.",
+          "Silueta humana genérica sin cola baja: funciona como ausencia simbólica, no ficha de identidad."
+        ]
+      }
+    }
+  ],
+  "generation": {
+    "provider": "OpenAI API",
+    "model": "gpt-image-2",
+    "mode": "text_only_no_local_references",
+    "unique_images": 4,
+    "by_act": {
+      "entrada": {
+        "unique_images": 1,
+        "preparation_rounds": 1,
+        "requested_alternatives": 0
+      },
+      "acto": {
+        "unique_images": 2,
+        "preparation_rounds": 2,
+        "requested_alternatives": 0
+      },
+      "huella": {
+        "unique_images": 1,
+        "preparation_rounds": 1,
+        "requested_alternatives": 0
+      }
+    },
+    "corrections": 1,
+    "cli_seconds": {
+      "entrada": 97.3,
+      "acto_first": 34.3,
+      "huella": 37.7,
+      "acto_correction": 35.9
+    },
+    "cost": null,
+    "request_ids": null
+  },
+  "excluded": [
+    {
+      "path": "output/imagegen/wayuu/triptychs/wayuu-jaichuasay-triptych-01/acto.jpeg",
+      "reason": "Rastros paralelos pasan de largo junto al humano; no se entiende la alternancia. Corregida sólo vertical."
+    }
+  ],
+  "published": false
+}

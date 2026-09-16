@@ -1,0 +1,229 @@
+{
+  "schema": "mitos-colombia-triptychs/v1.6",
+  "status": "production_and_publication_authorized",
+  "comunidad": "Wayúu",
+  "region": "Caribe",
+  "prompt_profile": "story_first_v3_symbolic_huella",
+  "generation_mode": "text_only_no_local_references",
+  "bible_selection": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/accepted-selection.json",
+  "campaign_scope": "content/mitos-visuales/production/wayuu-2026-09-05/scope.json",
+  "visual_memory_library": "content/mitos-visuales/wayuu.visual-memory.v1.json",
+  "approval_gate": "Campaña completa autorizada; QA por orientación y publicación aditiva sin borrar versiones.",
+  "output_sizes": {
+    "entrada": "1536x864",
+    "acto": "864x1536",
+    "huella": "1024x1024"
+  },
+  "quality_policy": {
+    "entrada": "high",
+    "acto": "medium",
+    "huella": "medium"
+  },
+  "mitos": {
+    "waleker-el-origen-del-tejido": {
+      "titulo": "Waleker, el origen del tejido",
+      "canon_models": [
+        "waleker__identity_sheet",
+        "tejido_nocturno_waleker__phenomenon_rule",
+        "tejedoras_herederas__group_grammar",
+        "telar_wayuu__object_sheet",
+        "jiron_telarana_waleker__object_sheet",
+        "legado_textil_waleker__phenomenon_rule"
+      ],
+      "evidence": [
+        {
+          "id": "bible_paz",
+          "type": "previous_project_research",
+          "path": "docs/wayuu-lote-26-waleker-v3.md",
+          "supports": "Versión extensa Paz Ipuana, inventario y prendas; reaprovechamos investigación previa sin afirmar releer el libro completo hoy."
+        },
+        {
+          "id": "icanh_hilos",
+          "type": "institutional_context",
+          "url": "https://colecciones.icanh.gov.co/articulos/mujeresWayuu.php",
+          "supports": "Transmisión y distinción telar/huso frente a crochet moderno.",
+          "limits": "No fuente literal de todos los episodios ni permiso para copiar patrones."
+        }
+      ],
+      "bible_overrides": [
+        {
+          "model_id": "tejido_nocturno_waleker__phenomenon_rule",
+          "decision": "Un telar y figura pequeña; hilos de colores del relato público, no catálogo de seis procesos."
+        },
+        {
+          "model_id": "tejedoras_herederas__group_grammar",
+          "decision": "Tres mujeres distintas, recortes pequeños; malla a urdimbre como licencia editorial no episodio añadido."
+        }
+      ],
+      "narrative_contract": {
+        "target_slug": "waleker-el-origen-del-tejido",
+        "target_snapshot": "content/mitos-visuales/production/wayuu-2026-09-05/narratives/waleker-el-origen-del-tejido.json",
+        "target_content_sha256": "85c26434ccbf8d6b85fb6f1b1159d9a11b0160ad394d68209596a87aede5cf55",
+        "summary": "Waleker origina hilo nocturno, pierde su vínculo con Irunúu y deja conocimiento transmisible.",
+        "events": [
+          {
+            "id": "tejido_nocturno",
+            "action": "Hilos de boca y tejidos nocturnos.",
+            "provenance": "historical_core",
+            "required": true
+          },
+          {
+            "id": "despedida",
+            "action": "Manta convertida en jirón de telaraña.",
+            "provenance": "historical_core",
+            "required": true
+          },
+          {
+            "id": "transmision",
+            "action": "Mujeres imitan y enseñan los tejidos.",
+            "provenance": "historical_core",
+            "required": true
+          },
+          {
+            "id": "traicion",
+            "action": "Irunúu revela secreto en casa de servidores de Wanurü.",
+            "provenance": "historical_core",
+            "required": false
+          }
+        ],
+        "emotional_reading": "Don, pérdida y continuidad compartida.",
+        "magic_reading": "Hilo corporal, materia que cambia y saber que continúa.",
+        "qa_method": "Acción distinta por pieza; conexiones visibles, no estampados inventados."
+      },
+      "visual_memory_review": {
+        "reviewer": "agent_direct_visual_review",
+        "reviewed_at": "2026-09-07T15:23:00Z",
+        "reviewed_reference_ids": [
+          "e8c5cdf22485c8d98fb6",
+          "c6964c7e83806e8fa4ce"
+        ],
+        "retained": [
+          "Hilo que sale de la boca, trabajo con telar y transmisión entre mujeres; paleta noche/tierra."
+        ],
+        "rejected": [
+          "Cara gigantesca, joyas y espirales en cabello, patrones geométricos no documentados, rosetas, figuras de sombra ajenas."
+        ],
+        "influence_by_act": {
+          "entrada": "Alejar tejedora, fijar manta índigo y continuidad real de hilo/boca/telar.",
+          "acto": "Conservar enseñanza pero hacer visible la continuidad del jirón de telaraña al tejido humano.",
+          "huella": "Un jirón tejido se abre como telaraña; objeto único sin paisaje."
+        }
+      },
+      "material_direction": "Immersive full-bleed CUT-PAPER world: matte dyed broad sheets, internal cut edges, separated physical depths, occlusion and cast shadows. Almost-flat human side-profile cutouts, natural adult proportions, tiny eye slit and nose only in silhouette, clothes of broad folded sheets. No painted illustration, Pixar faces, outer cardboard, base, tabletop, pedestal, frame or model island.",
+      "paleta": "Índigo profundo, arena, terracota y marfil; luz lateral física, no brillo sobrenatural.",
+      "continuity_contract": [
+        "Papel mate."
+      ],
+      "avoid": [
+        "Pixar, Disney, portrait, big eyes, modeled cheeks, realistic skin",
+        "uncovered body, violence, horror, sexualization",
+        "ornamental spirals, jewelry, invented kanas, clan glyphs, patterns on clothing",
+        "glow, glitter, aura, generic rainbow, spiky rosettes, agave",
+        "outer cardboard, base, stage, tabletop, frame, model island"
+      ],
+      "escenas": {
+        "entrada": {
+          "era": "tiempo_mitico_wayuu",
+          "refs": [],
+          "composicion": "profundidad_abierta",
+          "visual_function": "narrative_scene",
+          "narrative_event_ids": [
+            "tejido_nocturno"
+          ],
+          "narrative_summary": "Waleker joven teje de noche con hilos de colores que nacen de su boca. Sólo Waleker en esta escena.",
+          "beat": "El hilo tiene voz antes de convertirse en tela.",
+          "escena": "CAMERA FAR AWAY: the entire woman is a TINY silhouette, only ONE EIGHTH of frame height, head barely a few pixels. Stand camera across a vast courtyard at least thirty meters from her. Woman and loom together fit inside a small rectangle x67–83%, y34–56%. Most of image is empty wide land and sky. 16:9 EXTREME WIDE view from far across a quiet paper-earth courtyard into a small open-sided Guajira enramada at RIGHT, spanning x63–100%,y24–60%, roof continues off right edge naturally. Entire figure Waleker at x69%,y47%, standing height at most12% image height, tiny adult side-profile paper cutout, long black single braid. Long opaque INDIGO Wayuushein mantle with full sleeves over terracotta pechera, full legs covered, simple waireñas. NO white dress, no jewelry or patterns. One vertical wooden paper loom to her right at x79%. THE IMPOSSIBILITY: THREE narrow solid matte paper ribbons coral, ivory, muted ochre emerge continuously from her tiny closed lip line, bow softly through air to her working hands, and continue unbroken into the loom's warp and growing plain cloth. Clearly distinguish mouth origin from hand origin; no ball of yarn feeding those lines. Between hands and loom the strips broaden into three sections of one modest cloth that hangs unsupported briefly before passing into the warp, with physical cast shadows, no glow. Cloth is simple interlacing, no traditional kanas or diamonds, not multiple floating garments. Night beyond shelter is layered deep blue hills and empty sky, NO VEGETATION AT ALL; only bare paper earth. No spider, other human, child, rainbow, giant moon or constellation. Quiet left60% and lower35% dark sand plain for title; small lit action strictly upper-middle-right. Enramada's posts sit in continuous ground, no stage or base. Ground visibly broad layered smooth dyed paper sheets, sweeping overlapped contours, not realistic sand or granular earth. Seven physical depths of paper, broad-cut surfaces rather than photographic wood or sand.",
+          "editorial_translation": "Núcleo del relato público; geometría material y distribución son traducción editorial, no técnica etnográfica ni diseño tradicional reproducido.",
+          "visual_question": "¿Se ve un origen en la boca y un tejido pequeño trabajado, sin retrato gigante?",
+          "continuity_contract": [
+            "Waleker joven teje de noche con hilos de colores que nacen de su boca. Sólo Waleker en esta escena.",
+            "Personas pequeñas de recorte casi plano; manta completa y pechera, sin estampados ni joyas. Mundo de papel a sangre."
+          ],
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Boca, manos, telar e hilo.",
+            "impossible_behavior": "El hilo continuo nace de la boca y se vuelve tejido entre manos y telar.",
+            "narrative_effect": "El hilo tiene voz antes de convertirse en tela.",
+            "agency": "Waleker origina el don; las tejedoras humanas observan, aprenden y trabajan, no son sustituidas por magia.",
+            "physical_translation": "Tres tiras de papel conectan labio, dedos y urdimbre.",
+            "visible_test": "¿Se ve un origen en la boca y un tejido pequeño trabajado, sin retrato gigante?",
+            "event_ids": [
+              "tejido_nocturno"
+            ],
+            "provenance": "editorial_metaphor",
+            "temporal_role": "present"
+          }
+        },
+        "acto": {
+          "era": "tiempo_mitico_wayuu",
+          "refs": [],
+          "composicion": "profundidad_abierta",
+          "visual_function": "narrative_scene",
+          "narrative_event_ids": [
+            "transmision"
+          ],
+          "narrative_summary": "Los tejidos de Waleker quedan para mujeres que los observan, imitan y enseñan. No está presente Waleker ni Irunúu.",
+          "beat": "El secreto perdido se vuelve conocimiento compartido.",
+          "escena": "CAMERA VERY FAR BACK, elevated angle from twenty meters away, almost all the image is the spacious layered courtyard. Three women are SMALL, each only ONE SIXTH of total image height; people AND entire loom all fit inside rectangle x27–73%,y30–59%. DO NOT ENLARGE THE PEOPLE FOR FACIAL DETAIL. 9:16 WIDE view of airy Guajira enramada with continuous sand-paper floor and layered dry hills seen beyond. EXACTLY THREE small women of distinct generations, group centered x25–75%,y32–59%, whole human figures each only16% image height. Elder at left in sand Wayuushein over gray pechera, gray hair low bun; middle adult in muted blue mantle over charcoal pechera; young ADULT at right in terracotta mantle over dark pechera, long black braid. All full long opaque clothes, waireñas, flat side-profile cutouts, tiny eye slits, no modeled cheeks. One upright loom at middle, narrow ivory warp with a small plain indigo-and-coral weave. Elder guides a wooden weaving blade, middle woman counts warp, young woman winds a spindle: visible different skilled gestures. THE IMPOSSIBILITY: a single small triangular remnant of pale spider silk hangs from upper loom corner, its sparse irregular web strands progressively become straight taut warp threads physically joined to the same half-woven cloth the women are making. Clearly one continuous transition WEB-to-WARP-to-CLOTH, not a giant decorative cobweb in sky, no spider creature, no magical glowing lines from hands. Blank sky and beams upper25%, quiet lower35% paper earth for mobile title. One shallow cotton bowl small next to loom, no crochet hook, no many baskets, no patterns on clothing or architecture. Five staggered terrain planes and three separated posts, roof extends past frame with no model edge, no rectangular platform. Warm daylight and real cast shadows. Ground is six BROAD SMOOTH DYED-PAPER sheets, seams and edges visible with physical shadows, absolutely NO photographic dirt, dust, sand granules or realistic floor. Keep human actions at mid-distance; do not foreground any woman.",
+          "editorial_translation": "Núcleo del relato público; geometría material y distribución son traducción editorial, no técnica etnográfica ni diseño tradicional reproducido.",
+          "visual_question": "¿Tres mujeres trabajan y la misma malla se convierte en urdimbre, sin Waleker duplicada?",
+          "continuity_contract": [
+            "Los tejidos de Waleker quedan para mujeres que los observan, imitan y enseñan. No está presente Waleker ni Irunúu.",
+            "Personas pequeñas de recorte casi plano; manta completa y pechera, sin estampados ni joyas. Mundo de papel a sangre."
+          ],
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Telar y aprendizaje humano.",
+            "impossible_behavior": "El jirón de telaraña se hace urdimbre que otras manos continúan.",
+            "narrative_effect": "El secreto perdido se vuelve conocimiento compartido.",
+            "agency": "Waleker origina el don; las tejedoras humanas observan, aprenden y trabajan, no son sustituidas por magia.",
+            "physical_translation": "Un solo paso continuo de malla irregular a hilos rectos y tejido bajo manos activas.",
+            "visible_test": "¿Tres mujeres trabajan y la misma malla se convierte en urdimbre, sin Waleker duplicada?",
+            "event_ids": [
+              "transmision"
+            ],
+            "provenance": "editorial_metaphor",
+            "temporal_role": "present"
+          }
+        },
+        "huella": {
+          "era": "tiempo_mitico_wayuu",
+          "refs": [],
+          "composicion": "simbolo_central",
+          "visual_function": "symbolic_synthesis",
+          "narrative_event_ids": [
+            "despedida"
+          ],
+          "narrative_summary": "La manta de Waleker se vuelve jirón de telaraña cuando desaparece; el saber permanece.",
+          "beat": "La ausencia también deja una trama.",
+          "escena": "1:1 one isolated integrated torn textile object against uniform deep indigo background. A single small matte ivory-and-coral woven swatch, irregular trapezoid, occupying central55%; its tightly interlaced lower half gradually opens into a sparse asymmetric SPIDER-WEB mesh in upper half. SAME physical thin paper strips continue from weaving into the web with visible open gaps; no separate framed web, no spider, no human hand, no loom, no scene or horizon. A few coral strands persist through the pale mesh like remembered threads, no decorative embroidery, kanas, symbols or regular diamonds. Compact folded swatch with 3–5 layered depths, soft cast shadows and broad empty margins. An unfinished material memory, not icon of a spider, not net draped on a pedestal.",
+          "editorial_translation": "Núcleo del relato público; geometría material y distribución son traducción editorial, no técnica etnográfica ni diseño tradicional reproducido.",
+          "visual_question": "¿Un único jirón es a la vez tejido y telaraña?",
+          "continuity_contract": [
+            "Un solo jirón, sin personas, telar, paisaje ni araña.",
+            "Trama abierta y cerrada del mismo material, no diseño tradicional atribuido."
+          ],
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Jirón textil.",
+            "impossible_behavior": "La misma trama continúa como telaraña.",
+            "narrative_effect": "La ausencia también deja una trama.",
+            "agency": "Waleker origina el don; las tejedoras humanas observan, aprenden y trabajan, no son sustituidas por magia.",
+            "physical_translation": "Tiras entrecruzadas que se abren en malla irregular.",
+            "visible_test": "¿Un único jirón es a la vez tejido y telaraña?",
+            "event_ids": [
+              "despedida"
+            ],
+            "provenance": "editorial_metaphor",
+            "temporal_role": "memory"
+          },
+          "material_direction": "Immersive full-bleed CUT-PAPER world: matte dyed broad sheets, internal cut edges, separated physical depths, occlusion and cast shadows. Almost-flat human side-profile cutouts, natural adult proportions, tiny eye slit and nose only in silhouette, clothes of broad folded sheets. No painted illustration, Pixar faces, outer cardboard, base, tabletop, pedestal, frame or model island.",
+          "symbolic_contract": {
+            "thesis": "Queda una trama que otras manos pueden continuar.",
+            "carrier": "Jirón tejido-telaraña.",
+            "operation": "Abrir la misma trama sin cortarla en dos objetos.",
+            "story_connection": "Despedida de Waleker y transmisión del tejido.",
+            "visible_test": "¿Un único jirón es a la vez tejido y telaraña?"
+          }
+        }
+      }
+    }
+  }
+}

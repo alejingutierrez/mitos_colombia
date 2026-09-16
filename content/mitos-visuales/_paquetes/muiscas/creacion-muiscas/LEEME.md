@@ -1,6 +1,6 @@
 # La creación muisca · creacion-muiscas
 
-**Modelo:** GPT Image 2 · **Resolución:** 2K · **Calidad:** high · **Unlimited ON**
+**Política vigente si se reanuda:** GPT Image 2 · entrada horizontal `high`; acto vertical y huella cuadrada `medium`. Este paquete histórico no autoriza `high` global.
 
 **Arco:** bajan del páramo y hacen casa (entrada) -> la tierra se llena de gente (acto) -> el humo del fogón, señal de mundo habitado (huella)
 

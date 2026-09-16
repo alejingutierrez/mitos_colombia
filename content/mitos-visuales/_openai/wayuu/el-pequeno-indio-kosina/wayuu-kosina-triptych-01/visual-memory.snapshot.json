@@ -1,0 +1,134 @@
+{
+  "title": "El pequeño indio Kosina",
+  "references": [
+    {
+      "id": "732145844ee6f8d036d3",
+      "location": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/el-pequeno-indio-kosina-1784766820860.jpg",
+      "roles": [
+        "current_public",
+        "public_at_campaign_start",
+        "stored_version_candidate"
+      ],
+      "evidence": [
+        {
+          "source": "myths.image_url",
+          "format": "horizontal"
+        },
+        {
+          "source": "content/mitos-visuales/production/wayuu-2026-09-05/database-before.json",
+          "field": "image_url"
+        },
+        {
+          "source": "Vercel Blob scoped prefix",
+          "prefix": "mitos/el-pequeno-indio-kosina-",
+          "pathname": "mitos/el-pequeno-indio-kosina-1784766820860.jpg",
+          "uploaded_at": "2026-07-23T00:33:42.000Z"
+        }
+      ],
+      "visual_review": "inspected",
+      "cultural_authority": "none_from_image_alone",
+      "inspection": {
+        "reviewed_at": "2026-09-06T16:04:44.812Z",
+        "method": "direct_inspection_browser_capture",
+        "capture": "output/playwright/wayuu-campaign/kosina-before-1.png",
+        "observed": "Jinete con arco sobre caballo blanco alado; casas, cactus, grandes espirales, disco solar y franja de motivos geométricos.",
+        "limits": [
+          "Generación anterior del proyecto; no evidencia histórica cultural.",
+          "Alas no pertenecen al relato objetivo ni a la fuente primaria."
+        ]
+      }
+    },
+    {
+      "id": "2f5b2e80829e7607d8d3",
+      "location": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/el-pequeno-indio-kosina-1784911118195.jpg",
+      "roles": [
+        "current_public",
+        "database_version",
+        "stored_version_candidate"
+      ],
+      "evidence": [
+        {
+          "source": "vertical_images",
+          "row_id": 358,
+          "format": "vertical"
+        },
+        {
+          "source": "vertical_images",
+          "row_id": 358,
+          "updated_at": "2026-07-24T16:38:39.930Z"
+        },
+        {
+          "source": "Vercel Blob scoped prefix",
+          "prefix": "vertical/myth/el-pequeno-indio-kosina-",
+          "pathname": "vertical/myth/el-pequeno-indio-kosina-1784911118195.jpg",
+          "uploaded_at": "2026-07-24T16:38:40.000Z"
+        }
+      ],
+      "visual_review": "inspected",
+      "cultural_authority": "none_from_image_alone",
+      "inspection": {
+        "reviewed_at": "2026-09-06T16:04:44.812Z",
+        "method": "direct_inspection_browser_capture",
+        "capture": "output/playwright/wayuu-campaign/kosina-before-0.png",
+        "observed": "Jinete con arma sobre caballo blanco alado; crin y viento en tiras, casas bajo el animal, cactus y gran disco solar.",
+        "limits": [
+          "Generación anterior del proyecto; no evidencia histórica cultural.",
+          "Alas no pertenecen al relato objetivo ni a la fuente primaria."
+        ]
+      }
+    },
+    {
+      "id": "b1726988345cf9e418b4",
+      "location": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/el-pequeno-indio-kosina-1767974124105.png",
+      "roles": [
+        "stored_version_candidate"
+      ],
+      "evidence": [
+        {
+          "source": "Vercel Blob scoped prefix",
+          "prefix": "mitos/el-pequeno-indio-kosina-",
+          "pathname": "mitos/el-pequeno-indio-kosina-1767974124105.png",
+          "uploaded_at": "2026-01-10T22:15:28.000Z"
+        }
+      ],
+      "visual_review": "not_yet_inspected",
+      "cultural_authority": "none_from_image_alone",
+      "bytes": 979353
+    }
+  ],
+  "discovery_failures": [],
+  "review_status": "reviewed_before_prompt",
+  "review": {
+    "reviewer": "agent_direct_visual_review",
+    "reviewed_at": "2026-09-06T16:04:44.812Z",
+    "reviewed_reference_ids": [
+      "732145844ee6f8d036d3",
+      "2f5b2e80829e7607d8d3"
+    ],
+    "retained": [
+      "Papel recortado y relación entre ocres cálidos y cielo azul profundo.",
+      "Continuidad entre animal y territorio; crin de tiras de papel."
+    ],
+    "rejected": [
+      "Alas de Pegaso, jinete con lanza/arco en la carrera y ornamentos geométricos sin sustento.",
+      "Rostros volumétricos y personaje grande; cielos de espirales y gran disco solar.",
+      "Paisaje reducido a maqueta aislada y arquitectura no identificada por la fuente."
+    ],
+    "influence_by_act": {
+      "entrada": "Cambiar caballo alado por potro sin alas y rastro de cascos que mengua lateralmente; figuras pequeñas y distancia.",
+      "acto": "Mantener capas del terreno, convertirlas en entrada bajo tierra; no vuelo ni alas.",
+      "huella": "Conservar contraste ocre/azul; faja abierta y ausencia de caballo como síntesis del vínculo, sin jinete ni paisaje."
+    }
+  },
+  "external_research": {
+    "checked_at": "2026-09-06T16:04:44.812Z",
+    "status": "partial_not_saturated",
+    "queries": [
+      "\"Kosina\" caballo ilustración Chaves",
+      "\"pequeño indio Kosina\" imagen"
+    ],
+    "result": "Se localizaron texto primario y reediciones, no una imagen histórica específica inspeccionable del mito en esta búsqueda acotada. Resultados homónimos no pertinentes excluidos.",
+    "primary_url": "https://publicaciones.icanh.gov.co/index.php/picanh/catalog/download/243/266/1579?inline=1",
+    "failure": "Capturas de páginas PDF 21–23 fallaron con Cache miss; texto de esas páginas sí fue leído. No se afirma inspección de iconografía en ellas."
+  }
+}

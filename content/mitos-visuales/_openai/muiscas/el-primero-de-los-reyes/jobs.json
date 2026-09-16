@@ -1,0 +1,308 @@
+{
+  "schema": "mitos-openai-keyframes/v1",
+  "created_at": "2026-09-03T16:45:37.510Z",
+  "account_source": "OPENAI_API_KEY from ignored .env",
+  "provider": "openai",
+  "model": "gpt-image-2",
+  "quality": "medium",
+  "size": "1024x1536",
+  "community": "muiscas",
+  "myth": "el-primero-de-los-reyes",
+  "plan": "content/mitos-visuales/muiscas.json",
+  "jobs": [
+    {
+      "tag": "b1b",
+      "block": "b1",
+      "side": "b",
+      "line": "Un abuelo contaba a las niñas junto al río.",
+      "composition": "primer_plano",
+      "era": null,
+      "refs": [
+        "chiguachi_nina",
+        "quiquitzua_nina",
+        "rio_prueba"
+      ],
+      "ref_paths": [
+        "content/videos/muiscas/biblia/chiguachi_nina.jpg",
+        "content/videos/muiscas/biblia/quiquitzua_nina.jpg",
+        "content/videos/muiscas/biblia/rio_prueba.jpg"
+      ],
+      "api_method": "images.edit",
+      "prompt_sha256": "69d06489b5cb444352aab73602fdf312354bb5f7255ff91f85b2f1f4f541c961",
+      "output": "content/mitos-visuales/_openai/muiscas/el-primero-de-los-reyes/generated/b1b.jpeg",
+      "prompt_file": "b1b.prompt.txt"
+    },
+    {
+      "tag": "b2a",
+      "block": "b2",
+      "side": "a",
+      "line": "—Nadie nació antes que la luz. Cuando el mundo amaneció, sólo había dos hombres.",
+      "composition": "figura_pequena",
+      "era": null,
+      "refs": [
+        "rio_prueba"
+      ],
+      "ref_paths": [
+        "content/videos/muiscas/biblia/rio_prueba.jpg"
+      ],
+      "api_method": "images.edit",
+      "prompt_sha256": "bd46c6ca585faed125bdd8927b074354180ec637716c13c2b2b6eee6b20fc2ec",
+      "output": "content/mitos-visuales/_openai/muiscas/el-primero-de-los-reyes/generated/b2a.jpeg",
+      "prompt_file": "b2a.prompt.txt"
+    },
+    {
+      "tag": "b2b",
+      "block": "b2",
+      "side": "b",
+      "line": "—Nadie nació antes que la luz. Cuando el mundo amaneció, sólo había dos hombres.",
+      "composition": "peso_contrario",
+      "era": null,
+      "refs": [
+        "chiguachi_nina",
+        "rio_prueba"
+      ],
+      "ref_paths": [
+        "content/videos/muiscas/biblia/chiguachi_nina.jpg",
+        "content/videos/muiscas/biblia/rio_prueba.jpg"
+      ],
+      "api_method": "images.edit",
+      "prompt_sha256": "4ea9ef3a561caf62de46084fb050ac230410789eecdf4ae79d317d7fcf287cc4",
+      "output": "content/mitos-visuales/_openai/muiscas/el-primero-de-los-reyes/generated/b2b.jpeg",
+      "prompt_file": "b2b.prompt.txt"
+    },
+    {
+      "tag": "b3a",
+      "block": "b3",
+      "side": "a",
+      "line": "El primero hizo a los hombres de tierra amarilla y a las mujeres de tallos huecos.",
+      "composition": "primer_plano",
+      "era": null,
+      "refs": [
+        "figura_barro_amarillo",
+        "figura_tallos_huecos"
+      ],
+      "ref_paths": [
+        "content/videos/muiscas/biblia/figura_barro_amarillo.jpg",
+        "content/videos/muiscas/biblia/figura_tallos_huecos.jpg"
+      ],
+      "api_method": "images.edit",
+      "prompt_sha256": "1f3bf09842b7e523a3cb00deaa707f19559cf31fcd6d015e12064635cf6c5a56",
+      "output": "content/mitos-visuales/_openai/muiscas/el-primero-de-los-reyes/generated/b3a.jpeg",
+      "prompt_file": "b3a.prompt.txt"
+    },
+    {
+      "tag": "b3b",
+      "block": "b3",
+      "side": "b",
+      "line": "El primero hizo a los hombres de tierra amarilla y a las mujeres de tallos huecos.",
+      "composition": "peso_contrario",
+      "era": null,
+      "refs": [
+        "abuelo_narrador",
+        "rio_prueba"
+      ],
+      "ref_paths": [
+        "content/videos/muiscas/biblia/abuelo_narrador.jpg",
+        "content/videos/muiscas/biblia/rio_prueba.jpg"
+      ],
+      "api_method": "images.edit",
+      "prompt_sha256": "949b0727e960fa69be14a2d4c51aa84035648b0f6266f49a5706fcc9e2191880",
+      "output": "content/mitos-visuales/_openai/muiscas/el-primero-de-los-reyes/generated/b3b.jpeg",
+      "prompt_file": "b3b.prompt.txt"
+    },
+    {
+      "tag": "b4a",
+      "block": "b4",
+      "side": "a",
+      "line": "Allí vivía Itaca, hija del cacique, con su hermana Huitaca.",
+      "composition": "paisaje_abierto",
+      "era": null,
+      "refs": [
+        "poblado_nuevo",
+        "rio_prueba"
+      ],
+      "ref_paths": [
+        "content/videos/muiscas/biblia/poblado_nuevo.jpg",
+        "content/videos/muiscas/biblia/rio_prueba.jpg"
+      ],
+      "api_method": "images.edit",
+      "prompt_sha256": "1e739fe82174d646ba55cd15b46dad4a96cfe072de72e3da1f516e32887ee192",
+      "output": "content/mitos-visuales/_openai/muiscas/el-primero-de-los-reyes/generated/b4a.jpeg",
+      "prompt_file": "b4a.prompt.txt"
+    },
+    {
+      "tag": "b4b",
+      "block": "b4",
+      "side": "b",
+      "line": "Allí vivía Itaca, hija del cacique, con su hermana Huitaca.",
+      "composition": "peso_contrario",
+      "era": null,
+      "refs": [],
+      "ref_paths": [],
+      "api_method": "images.generate",
+      "prompt_sha256": "1b68281d156bcd93e97654dd3d869f45c7a394be877b58b3b2cbd7f29027bf8b",
+      "output": "content/mitos-visuales/_openai/muiscas/el-primero-de-los-reyes/generated/b4b.jpeg",
+      "prompt_file": "b4b.prompt.txt"
+    },
+    {
+      "tag": "b5a",
+      "block": "b5",
+      "side": "a",
+      "line": "No dio a luz un niño sino una esmeralda, verde y grande como un huevo.",
+      "composition": "primer_plano",
+      "era": null,
+      "refs": [
+        "esmeralda_algodones",
+        "copo_algodon"
+      ],
+      "ref_paths": [
+        "content/videos/muiscas/biblia/esmeralda_algodones.jpg",
+        "content/videos/muiscas/biblia/copo_algodon.jpg"
+      ],
+      "api_method": "images.edit",
+      "prompt_sha256": "84d033e768f2048d8d6eef7f1878b82d4409411bbebbbfaa00c0012bfd0d1e07",
+      "output": "content/mitos-visuales/_openai/muiscas/el-primero-de-los-reyes/generated/b5a.jpeg",
+      "prompt_file": "b5a.prompt.txt"
+    },
+    {
+      "tag": "b5b",
+      "block": "b5",
+      "side": "b",
+      "line": "No dio a luz un niño sino una esmeralda, verde y grande como un huevo.",
+      "composition": "peso_contrario",
+      "era": null,
+      "refs": [
+        "chiguachi_nina",
+        "rio_prueba"
+      ],
+      "ref_paths": [
+        "content/videos/muiscas/biblia/chiguachi_nina.jpg",
+        "content/videos/muiscas/biblia/rio_prueba.jpg"
+      ],
+      "api_method": "images.edit",
+      "prompt_sha256": "f2ff7bdfd179661f25ea980738286b86d4513e38c1e38fa3824ba09fa8e430de",
+      "output": "content/mitos-visuales/_openai/muiscas/el-primero-de-los-reyes/generated/b5b.jpeg",
+      "prompt_file": "b5b.prompt.txt"
+    },
+    {
+      "tag": "b6b",
+      "block": "b6",
+      "side": "b",
+      "line": "Para conocer su suerte lo llevaron al río y arrojaron un copo de algodón a la corriente.",
+      "composition": "primer_plano",
+      "era": null,
+      "refs": [
+        "mitos/el-primero-de-los-reyes/acto",
+        "copo_algodon"
+      ],
+      "ref_paths": [
+        "content/videos/muiscas/mitos/el-primero-de-los-reyes/acto.jpg",
+        "content/videos/muiscas/biblia/copo_algodon.jpg"
+      ],
+      "api_method": "images.edit",
+      "prompt_sha256": "68f1d27a101d9cdf52412701eb93958723aa69d71cb7d1775d59d477406131e8",
+      "output": "content/mitos-visuales/_openai/muiscas/el-primero-de-los-reyes/generated/b6b.jpeg",
+      "prompt_file": "b6b.prompt.txt"
+    },
+    {
+      "tag": "b7a",
+      "block": "b7",
+      "side": "a",
+      "line": "—Eso significa buena fortuna. El agua no lo quiso.",
+      "composition": "diagonal",
+      "era": null,
+      "refs": [
+        "mitos/el-primero-de-los-reyes/acto"
+      ],
+      "ref_paths": [
+        "content/videos/muiscas/mitos/el-primero-de-los-reyes/acto.jpg"
+      ],
+      "api_method": "images.edit",
+      "prompt_sha256": "b5774e337ea6e0177d874fd73e5bbbcd8c854b28dd4ae9ebe173eff35c153182",
+      "output": "content/mitos-visuales/_openai/muiscas/el-primero-de-los-reyes/generated/b7a.jpeg",
+      "prompt_file": "b7a.prompt.txt"
+    },
+    {
+      "tag": "b7b",
+      "block": "b7",
+      "side": "b",
+      "line": "—Eso significa buena fortuna. El agua no lo quiso.",
+      "composition": "peso_contrario",
+      "era": null,
+      "refs": [
+        "abuelo_narrador",
+        "rio_prueba"
+      ],
+      "ref_paths": [
+        "content/videos/muiscas/biblia/abuelo_narrador.jpg",
+        "content/videos/muiscas/biblia/rio_prueba.jpg"
+      ],
+      "api_method": "images.edit",
+      "prompt_sha256": "8557cfa9feec7079682afee368a99bdaa36d4e07d117b0f4cb27a4eecfa4c6da",
+      "output": "content/mitos-visuales/_openai/muiscas/el-primero-de-los-reyes/generated/b7b.jpeg",
+      "prompt_file": "b7b.prompt.txt"
+    },
+    {
+      "tag": "b8a",
+      "block": "b8",
+      "side": "a",
+      "line": "Chiguachí arrancó un copo de la cesta y lo dejó caer. El agua podía llevarlo a muchos lugares.",
+      "composition": "primer_plano",
+      "era": null,
+      "refs": [
+        "chiguachi_nina",
+        "copo_algodon"
+      ],
+      "ref_paths": [
+        "content/videos/muiscas/biblia/chiguachi_nina.jpg",
+        "content/videos/muiscas/biblia/copo_algodon.jpg"
+      ],
+      "api_method": "images.edit",
+      "prompt_sha256": "f99eafeb4ff6670a0d1df73745631a994cf7196756a853f07a94ea57ff6f6aff",
+      "output": "content/mitos-visuales/_openai/muiscas/el-primero-de-los-reyes/generated/b8a.jpeg",
+      "prompt_file": "b8a.prompt.txt"
+    },
+    {
+      "tag": "b8b",
+      "block": "b8",
+      "side": "b",
+      "line": "Chiguachí arrancó un copo de la cesta y lo dejó caer. El agua podía llevarlo a muchos lugares.",
+      "composition": "diagonal",
+      "era": null,
+      "refs": [
+        "copo_algodon",
+        "rio_prueba"
+      ],
+      "ref_paths": [
+        "content/videos/muiscas/biblia/copo_algodon.jpg",
+        "content/videos/muiscas/biblia/rio_prueba.jpg"
+      ],
+      "api_method": "images.edit",
+      "prompt_sha256": "bb9050963c48086f7296fe4cc1e34bfa07a1613f3419c4a6b8c5db983e5be8fa",
+      "output": "content/mitos-visuales/_openai/muiscas/el-primero-de-los-reyes/generated/b8b.jpeg",
+      "prompt_file": "b8b.prompt.txt"
+    },
+    {
+      "tag": "b9a",
+      "block": "b9",
+      "side": "a",
+      "line": "—¿Ninguna de nosotras será gobernante? —Una señal necesita quien la interprete.",
+      "composition": "enfrentados",
+      "era": null,
+      "refs": [
+        "chiguachi_nina",
+        "quiquitzua_nina",
+        "rio_prueba"
+      ],
+      "ref_paths": [
+        "content/videos/muiscas/biblia/chiguachi_nina.jpg",
+        "content/videos/muiscas/biblia/quiquitzua_nina.jpg",
+        "content/videos/muiscas/biblia/rio_prueba.jpg"
+      ],
+      "api_method": "images.edit",
+      "prompt_sha256": "91ce3d50c0a9b7ca68da141e36f61624e91ed1e2b4492a75f013eb6921a2c946",
+      "output": "content/mitos-visuales/_openai/muiscas/el-primero-de-los-reyes/generated/b9a.jpeg",
+      "prompt_file": "b9a.prompt.txt"
+    }
+  ]
+}

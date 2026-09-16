@@ -1,0 +1,2769 @@
+{
+  "schema": "mitos-colombia-biblia-visual/v3",
+  "batch": {
+    "id": "wayuu-v3-production-17-el-pequeno-indio-kosina-medium",
+    "myth_slug": "el-pequeno-indio-kosina",
+    "model_ids": [
+      "kosina_joven__identity_sheet",
+      "kosina_joven__state_sheet",
+      "madre_kosina__identity_sheet",
+      "caballo_kosina__state_sheet",
+      "hermano_caballo_kosina__identity_sheet",
+      "familia_caballos_kosina__group_grammar",
+      "aliado_rico_kosina__identity_sheet",
+      "indigenas_ricos_camino_kosina__group_grammar",
+      "duenos_caballos_kosina__group_grammar",
+      "jefe_fiesta_kosina__identity_sheet",
+      "lagartijas_kosina__group_grammar",
+      "burros_camino_kosina__group_grammar",
+      "patilla__botanical_sheet",
+      "ahuyama__botanical_sheet",
+      "frijol_roza_kosina__botanical_sheet",
+      "trupillo_sancochado_kosina__object_sheet",
+      "faja_captura_kosina__object_sheet",
+      "manea_caballo_kosina__object_sheet",
+      "tambor_carreras_kosina__object_sheet",
+      "huellas_caballo_kosina__phenomenon_rule",
+      "roza_kosina__spatial_model",
+      "vivienda_kosina__spatial_model",
+      "pista_carreras_kosina__spatial_model",
+      "corral_caballos_kosina__spatial_model",
+      "abertura_subterranea_caballo__spatial_model"
+    ],
+    "quality": "medium",
+    "framing": "immersive_full_bleed",
+    "surface_finish": "layered_depth_no_exposed_support",
+    "generation_mode": "text_only_no_local_references",
+    "status": "research_inventory_design_complete_preflight_pending"
+  },
+  "inventory_approved_at": "2026-09-03",
+  "pilot_approved_at": "2026-09-03",
+  "source_snapshot_sha256": "6b5b1c5ebdb2524a7524b065d96c6d33ad6f5694db239a0d722ded8485f435f5",
+  "model_ids": [
+    "kosina_joven__identity_sheet",
+    "kosina_joven__state_sheet",
+    "madre_kosina__identity_sheet",
+    "caballo_kosina__state_sheet",
+    "hermano_caballo_kosina__identity_sheet",
+    "familia_caballos_kosina__group_grammar",
+    "aliado_rico_kosina__identity_sheet",
+    "indigenas_ricos_camino_kosina__group_grammar",
+    "duenos_caballos_kosina__group_grammar",
+    "jefe_fiesta_kosina__identity_sheet",
+    "lagartijas_kosina__group_grammar",
+    "burros_camino_kosina__group_grammar",
+    "patilla__botanical_sheet",
+    "ahuyama__botanical_sheet",
+    "frijol_roza_kosina__botanical_sheet",
+    "trupillo_sancochado_kosina__object_sheet",
+    "faja_captura_kosina__object_sheet",
+    "manea_caballo_kosina__object_sheet",
+    "tambor_carreras_kosina__object_sheet",
+    "huellas_caballo_kosina__phenomenon_rule",
+    "roza_kosina__spatial_model",
+    "vivienda_kosina__spatial_model",
+    "pista_carreras_kosina__spatial_model",
+    "corral_caballos_kosina__spatial_model",
+    "abertura_subterranea_caballo__spatial_model"
+  ],
+  "models": {
+    "kosina_joven__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "kosina_joven"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "el-pequeno-indio-kosina",
+          "field": "mito",
+          "note": "Sigue huellas, toca, corre, escucha y comparte."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos. Entidad: Joven kusina del relato. Funcion visual: Joven cazador, agricultor y musico llamado Kosina por la transcripcion; Kusina puede ser una categoria relacional o historica y no se trata automaticamente como nombre propio ni como sinonimo de Wayuu.",
+        "materials": [
+          "papel mate de fibra visible",
+          "capas prensadas para cuerpo y vestuario",
+          "hilo solo cuando el relato lo exige"
+        ],
+        "palette_logic": "Arena, barro, carbon y fibras naturales; un acento propio de la entidad puede repetirse, sin patrones kanas o marcas claniles inventadas.",
+        "scale": "Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "continuity_markers": [
+          "nombre estable: Joven kusina del relato",
+          "funcion estable: Joven cazador, agricultor y musico llamado Kosina por la transcripcion; Kusina puede ser una categoria relacional o historica y no se trata automaticamente como nombre propio ni como sinonimo de Wayuu.",
+          "estados declarados: cazador, agricultor, musico, jinete, cuidador_del_rebano"
+        ],
+        "documented_features": [
+          "Joven cazador, agricultor y musico llamado Kosina por la transcripcion; Kusina puede ser una categoria relacional o historica y no se trata automaticamente como nombre propio ni como sinonimo de Wayuu.",
+          "alias documentado: Kosina",
+          "alias documentado: Kusiña",
+          "alias documentado: Kusina"
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para identity_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · identity_sheet",
+        "primary_request": "identidad corporal completa y legible para Joven kusina del relato. Joven cazador, agricultor y musico llamado Kosina por la transcripcion; Kusina puede ser una categoria relacional o historica y no se trata automaticamente como nombre propio ni como sinonimo de Wayuu.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel mate de fibra visible; capas prensadas para cuerpo y vestuario; hilo solo cuando el relato lo exige",
+        "constraints": [
+          "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos.",
+          "mostrar: Joven cazador, agricultor y musico llamado Kosina por la transcripcion; Kusina puede ser una categoria relacional o historica y no se trata automaticamente como nombre propio ni como sinonimo de Wayuu.",
+          "estados autorizados: cazador, agricultor, musico, jinete, cuidador_del_rebano",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "1:1",
+          "era": "historico_wayuu_segun_relato",
+          "states": [
+            "cazador"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "kosina_joven__state_sheet": {
+      "purpose": "state_sheet",
+      "entity_refs": [
+        "kosina_joven"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "el-pequeno-indio-kosina",
+          "field": "mito",
+          "note": "Sigue huellas, toca, corre, escucha y comparte."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos. Entidad: Joven kusina del relato. Funcion visual: Joven cazador, agricultor y musico llamado Kosina por la transcripcion; Kusina puede ser una categoria relacional o historica y no se trata automaticamente como nombre propio ni como sinonimo de Wayuu.",
+        "materials": [
+          "papel mate de fibra visible",
+          "capas prensadas para cuerpo y vestuario",
+          "hilo solo cuando el relato lo exige"
+        ],
+        "palette_logic": "Arena, barro, carbon y fibras naturales; un acento propio de la entidad puede repetirse, sin patrones kanas o marcas claniles inventadas.",
+        "scale": "Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "continuity_markers": [
+          "nombre estable: Joven kusina del relato",
+          "funcion estable: Joven cazador, agricultor y musico llamado Kosina por la transcripcion; Kusina puede ser una categoria relacional o historica y no se trata automaticamente como nombre propio ni como sinonimo de Wayuu.",
+          "estados declarados: cazador, agricultor, musico, jinete, cuidador_del_rebano"
+        ],
+        "documented_features": [
+          "Joven cazador, agricultor y musico llamado Kosina por la transcripcion; Kusina puede ser una categoria relacional o historica y no se trata automaticamente como nombre propio ni como sinonimo de Wayuu.",
+          "alias documentado: Kosina",
+          "alias documentado: Kusiña",
+          "alias documentado: Kusina"
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para state_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · state_sheet",
+        "primary_request": "continuidad entre estados sin adelantar un keyframe para Joven kusina del relato. Joven cazador, agricultor y musico llamado Kosina por la transcripcion; Kusina puede ser una categoria relacional o historica y no se trata automaticamente como nombre propio ni como sinonimo de Wayuu.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel mate de fibra visible; capas prensadas para cuerpo y vestuario; hilo solo cuando el relato lo exige",
+        "constraints": [
+          "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos.",
+          "mostrar: Joven cazador, agricultor y musico llamado Kosina por la transcripcion; Kusina puede ser una categoria relacional o historica y no se trata automaticamente como nombre propio ni como sinonimo de Wayuu.",
+          "estados autorizados: cazador, agricultor, musico, jinete, cuidador_del_rebano",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "estados",
+          "view_type": "state_sequence",
+          "purpose": "continuidad entre estados sin adelantar un keyframe",
+          "aspect": "16:9",
+          "era": "historico_wayuu_segun_relato",
+          "states": [
+            "cazador",
+            "agricultor",
+            "musico",
+            "jinete",
+            "cuidador_del_rebano"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "madre_kosina__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "madre_kosina"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "el-pequeno-indio-kosina",
+          "field": "mito",
+          "note": "Situa la vida inicial y recibe el cambio final."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos. Entidad: Madre del joven kusina. Funcion visual: Madre que prepara alimento, recibe al caballo y acompaña el cambio economico final; su pertenencia cultural exacta y su vestuario no quedan descritos.",
+        "materials": [
+          "papel mate de fibra visible",
+          "capas prensadas para cuerpo y vestuario",
+          "hilo solo cuando el relato lo exige"
+        ],
+        "palette_logic": "Arena, barro, carbon y fibras naturales; un acento propio de la entidad puede repetirse, sin patrones kanas o marcas claniles inventadas.",
+        "scale": "Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "continuity_markers": [
+          "nombre estable: Madre del joven kusina",
+          "funcion estable: Madre que prepara alimento, recibe al caballo y acompaña el cambio economico final; su pertenencia cultural exacta y su vestuario no quedan descritos.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Madre que prepara alimento, recibe al caballo y acompaña el cambio economico final; su pertenencia cultural exacta y su vestuario no quedan descritos."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para identity_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · identity_sheet",
+        "primary_request": "identidad corporal completa y legible para Madre del joven kusina. Madre que prepara alimento, recibe al caballo y acompaña el cambio economico final; su pertenencia cultural exacta y su vestuario no quedan descritos.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel mate de fibra visible; capas prensadas para cuerpo y vestuario; hilo solo cuando el relato lo exige",
+        "constraints": [
+          "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos.",
+          "mostrar: Madre que prepara alimento, recibe al caballo y acompaña el cambio economico final; su pertenencia cultural exacta y su vestuario no quedan descritos.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "1:1",
+          "era": "historico_wayuu_segun_relato",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "caballo_kosina__state_sheet": {
+      "purpose": "state_sheet",
+      "entity_refs": [
+        "caballo_kosina"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "el-pequeno-indio-kosina",
+          "field": "mito",
+          "note": "Cambia de tamaño, habla y fija condiciones."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Morfologia zoologica reconocible, cuerpo completo cuando es individuo y variacion controlada cuando es grupo; sin hibridacion no documentada. Entidad: Caballo del joven kusina. Funcion visual: Caballo hablante que alterna entre enorme, potro debil y corredor extraordinario.",
+        "materials": [
+          "capas de papel recortado para anatomia",
+          "fibras finas para pelaje o pluma cuando corresponda",
+          "cantos internos y articulaciones fisicas"
+        ],
+        "palette_logic": "Color natural o explicitamente narrado; no usar brillo magico para señalar importancia.",
+        "scale": "Escala zoologica verificable frente al entorno y los personajes.",
+        "continuity_markers": [
+          "nombre estable: Caballo del joven kusina",
+          "funcion estable: Caballo hablante que alterna entre enorme, potro debil y corredor extraordinario.",
+          "estados declarados: gigante, potro, corredor, guia"
+        ],
+        "documented_features": [
+          "Caballo hablante que alterna entre enorme, potro debil y corredor extraordinario."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para state_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · state_sheet",
+        "primary_request": "continuidad entre estados sin adelantar un keyframe para Caballo del joven kusina. Caballo hablante que alterna entre enorme, potro debil y corredor extraordinario.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Escala zoologica verificable frente al entorno y los personajes.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "capas de papel recortado para anatomia; fibras finas para pelaje o pluma cuando corresponda; cantos internos y articulaciones fisicas",
+        "constraints": [
+          "Morfologia zoologica reconocible, cuerpo completo cuando es individuo y variacion controlada cuando es grupo; sin hibridacion no documentada.",
+          "mostrar: Caballo hablante que alterna entre enorme, potro debil y corredor extraordinario.",
+          "estados autorizados: gigante, potro, corredor, guia",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "estados",
+          "view_type": "state_sequence",
+          "purpose": "continuidad entre estados sin adelantar un keyframe",
+          "aspect": "16:9",
+          "era": "historico_wayuu_segun_relato",
+          "states": [
+            "gigante",
+            "potro",
+            "corredor",
+            "guia"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "hermano_caballo_kosina__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "hermano_caballo_kosina"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "el-pequeno-indio-kosina",
+          "field": "mito",
+          "note": "Se entrega al aliado como don."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Morfologia zoologica reconocible, cuerpo completo cuando es individuo y variacion controlada cuando es grupo; sin hibridacion no documentada. Entidad: Hermano menor del caballo. Funcion visual: Caballo entregado al aliado como parte de una relacion de parentesco y don.",
+        "materials": [
+          "capas de papel recortado para anatomia",
+          "fibras finas para pelaje o pluma cuando corresponda",
+          "cantos internos y articulaciones fisicas"
+        ],
+        "palette_logic": "Color natural o explicitamente narrado; no usar brillo magico para señalar importancia.",
+        "scale": "Escala zoologica verificable frente al entorno y los personajes.",
+        "continuity_markers": [
+          "nombre estable: Hermano menor del caballo",
+          "funcion estable: Caballo entregado al aliado como parte de una relacion de parentesco y don.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Caballo entregado al aliado como parte de una relacion de parentesco y don."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para identity_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · identity_sheet",
+        "primary_request": "identidad corporal completa y legible para Hermano menor del caballo. Caballo entregado al aliado como parte de una relacion de parentesco y don.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Escala zoologica verificable frente al entorno y los personajes.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "capas de papel recortado para anatomia; fibras finas para pelaje o pluma cuando corresponda; cantos internos y articulaciones fisicas",
+        "constraints": [
+          "Morfologia zoologica reconocible, cuerpo completo cuando es individuo y variacion controlada cuando es grupo; sin hibridacion no documentada.",
+          "mostrar: Caballo entregado al aliado como parte de una relacion de parentesco y don.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "1:1",
+          "era": "historico_wayuu_segun_relato",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "familia_caballos_kosina__group_grammar": {
+      "purpose": "group_grammar",
+      "entity_refs": [
+        "familia_caballos_kosina"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "el-pequeno-indio-kosina",
+          "field": "mito",
+          "note": "Madre y hermanos forman el rebaño final."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Morfologia zoologica reconocible, cuerpo completo cuando es individuo y variacion controlada cuando es grupo; sin hibridacion no documentada. Entidad: Madre y hermanos del caballo. Funcion visual: Familia equina que sale del dominio subterraneo y forma el nucleo del rebaño final, sin numero total documentado.",
+        "materials": [
+          "capas de papel recortado para anatomia",
+          "fibras finas para pelaje o pluma cuando corresponda",
+          "cantos internos y articulaciones fisicas"
+        ],
+        "palette_logic": "Color natural o explicitamente narrado; no usar brillo magico para señalar importancia.",
+        "scale": "Escala zoologica verificable frente al entorno y los personajes.",
+        "continuity_markers": [
+          "nombre estable: Madre y hermanos del caballo",
+          "funcion estable: Familia equina que sale del dominio subterraneo y forma el nucleo del rebaño final, sin numero total documentado.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Familia equina que sale del dominio subterraneo y forma el nucleo del rebaño final, sin numero total documentado."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para group_grammar",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · group_grammar",
+        "primary_request": "numero, relaciones, escala y variacion interna para Madre y hermanos del caballo. Familia equina que sale del dominio subterraneo y forma el nucleo del rebaño final, sin numero total documentado.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Escala zoologica verificable frente al entorno y los personajes.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "capas de papel recortado para anatomia; fibras finas para pelaje o pluma cuando corresponda; cantos internos y articulaciones fisicas",
+        "constraints": [
+          "Morfologia zoologica reconocible, cuerpo completo cuando es individuo y variacion controlada cuando es grupo; sin hibridacion no documentada.",
+          "mostrar: Familia equina que sale del dominio subterraneo y forma el nucleo del rebaño final, sin numero total documentado.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "group_grammar",
+          "purpose": "numero, relaciones, escala y variacion interna",
+          "aspect": "16:9",
+          "era": "historico_wayuu_segun_relato",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "aliado_rico_kosina__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "aliado_rico_kosina"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "el-pequeno-indio-kosina",
+          "field": "mito",
+          "note": "Reconoce parentesco y recibe un caballo."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos. Entidad: Joven aliado del kusina. Funcion visual: Joven elegante y bien vestido que reconoce al protagonista como pariente y recibe el caballo hermano; la fuente no fija su pueblo, clan ni prendas.",
+        "materials": [
+          "papel mate de fibra visible",
+          "capas prensadas para cuerpo y vestuario",
+          "hilo solo cuando el relato lo exige"
+        ],
+        "palette_logic": "Arena, barro, carbon y fibras naturales; un acento propio de la entidad puede repetirse, sin patrones kanas o marcas claniles inventadas.",
+        "scale": "Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "continuity_markers": [
+          "nombre estable: Joven aliado del kusina",
+          "funcion estable: Joven elegante y bien vestido que reconoce al protagonista como pariente y recibe el caballo hermano; la fuente no fija su pueblo, clan ni prendas.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Joven elegante y bien vestido que reconoce al protagonista como pariente y recibe el caballo hermano; la fuente no fija su pueblo, clan ni prendas."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para identity_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · identity_sheet",
+        "primary_request": "identidad corporal completa y legible para Joven aliado del kusina. Joven elegante y bien vestido que reconoce al protagonista como pariente y recibe el caballo hermano; la fuente no fija su pueblo, clan ni prendas.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel mate de fibra visible; capas prensadas para cuerpo y vestuario; hilo solo cuando el relato lo exige",
+        "constraints": [
+          "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos.",
+          "mostrar: Joven elegante y bien vestido que reconoce al protagonista como pariente y recibe el caballo hermano; la fuente no fija su pueblo, clan ni prendas.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "1:1",
+          "era": "historico_wayuu_segun_relato",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "indigenas_ricos_camino_kosina__group_grammar": {
+      "purpose": "group_grammar",
+      "entity_refs": [
+        "indigenas_ricos_camino_kosina"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "el-pequeno-indio-kosina",
+          "field": "mito",
+          "note": "Comparten alimento durante la segunda salida de caza."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Conjunto legible como relacion, no multitud de clones: variacion de escala, postura y distancia sin convertir el grupo en tipo etnico generico. Entidad: Viajeros indigenas acomodados del camino. Funcion visual: Varias personas que comparten carne, arroz y panela con el cazador; no se afirma que sean las mismas de la fiesta ni se les asigna identidad etnica fija.",
+        "materials": [
+          "figuras de papel individualizadas",
+          "planos separados",
+          "objetos relacionales solo si estan documentados"
+        ],
+        "palette_logic": "Familia cromatica compartida con variaciones internas; sin uniformes o emblemas inventados.",
+        "scale": "Numero y separacion suficientes para entender el grupo sin llenar la imagen de extras.",
+        "continuity_markers": [
+          "nombre estable: Viajeros indigenas acomodados del camino",
+          "funcion estable: Varias personas que comparten carne, arroz y panela con el cazador; no se afirma que sean las mismas de la fiesta ni se les asigna identidad etnica fija.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Varias personas que comparten carne, arroz y panela con el cazador; no se afirma que sean las mismas de la fiesta ni se les asigna identidad etnica fija."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para group_grammar",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · group_grammar",
+        "primary_request": "numero, relaciones, escala y variacion interna para Viajeros indigenas acomodados del camino. Varias personas que comparten carne, arroz y panela con el cazador; no se afirma que sean las mismas de la fiesta ni se les asigna identidad etnica fija.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Numero y separacion suficientes para entender el grupo sin llenar la imagen de extras.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "figuras de papel individualizadas; planos separados; objetos relacionales solo si estan documentados",
+        "constraints": [
+          "Conjunto legible como relacion, no multitud de clones: variacion de escala, postura y distancia sin convertir el grupo en tipo etnico generico.",
+          "mostrar: Varias personas que comparten carne, arroz y panela con el cazador; no se afirma que sean las mismas de la fiesta ni se les asigna identidad etnica fija.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "group_grammar",
+          "purpose": "numero, relaciones, escala y variacion interna",
+          "aspect": "16:9",
+          "era": "historico_wayuu_segun_relato",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "duenos_caballos_kosina__group_grammar": {
+      "purpose": "group_grammar",
+      "entity_refs": [
+        "duenos_caballos_kosina"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "el-pequeno-indio-kosina",
+          "field": "mito",
+          "note": "Quieren comprar o destruir al caballo."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Conjunto legible como relacion, no multitud de clones: variacion de escala, postura y distancia sin convertir el grupo en tipo etnico generico. Entidad: Jinetes y dueños de las carreras. Funcion visual: Participantes que compiten, admiran, intentan comprar y luego amenazan al animal, sin convertirlos en un pueblo, clan o enemigo colectivo.",
+        "materials": [
+          "figuras de papel individualizadas",
+          "planos separados",
+          "objetos relacionales solo si estan documentados"
+        ],
+        "palette_logic": "Familia cromatica compartida con variaciones internas; sin uniformes o emblemas inventados.",
+        "scale": "Numero y separacion suficientes para entender el grupo sin llenar la imagen de extras.",
+        "continuity_markers": [
+          "nombre estable: Jinetes y dueños de las carreras",
+          "funcion estable: Participantes que compiten, admiran, intentan comprar y luego amenazan al animal, sin convertirlos en un pueblo, clan o enemigo colectivo.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Participantes que compiten, admiran, intentan comprar y luego amenazan al animal, sin convertirlos en un pueblo, clan o enemigo colectivo."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para group_grammar",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · group_grammar",
+        "primary_request": "numero, relaciones, escala y variacion interna para Jinetes y dueños de las carreras. Participantes que compiten, admiran, intentan comprar y luego amenazan al animal, sin convertirlos en un pueblo, clan o enemigo colectivo.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Numero y separacion suficientes para entender el grupo sin llenar la imagen de extras.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "figuras de papel individualizadas; planos separados; objetos relacionales solo si estan documentados",
+        "constraints": [
+          "Conjunto legible como relacion, no multitud de clones: variacion de escala, postura y distancia sin convertir el grupo en tipo etnico generico.",
+          "mostrar: Participantes que compiten, admiran, intentan comprar y luego amenazan al animal, sin convertirlos en un pueblo, clan o enemigo colectivo.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "group_grammar",
+          "purpose": "numero, relaciones, escala y variacion interna",
+          "aspect": "16:9",
+          "era": "historico_wayuu_segun_relato",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "jefe_fiesta_kosina__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "jefe_fiesta_kosina"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "el-pequeno-indio-kosina",
+          "field": "mito",
+          "note": "Dirige la hospitalidad de la fiesta."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos. Entidad: Jefe de la fiesta de carreras. Funcion visual: Persona que dirige la hospitalidad de la fiesta y ordena servir alimento al recien llegado; su identidad y vestuario no se describen.",
+        "materials": [
+          "papel mate de fibra visible",
+          "capas prensadas para cuerpo y vestuario",
+          "hilo solo cuando el relato lo exige"
+        ],
+        "palette_logic": "Arena, barro, carbon y fibras naturales; un acento propio de la entidad puede repetirse, sin patrones kanas o marcas claniles inventadas.",
+        "scale": "Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "continuity_markers": [
+          "nombre estable: Jefe de la fiesta de carreras",
+          "funcion estable: Persona que dirige la hospitalidad de la fiesta y ordena servir alimento al recien llegado; su identidad y vestuario no se describen.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Persona que dirige la hospitalidad de la fiesta y ordena servir alimento al recien llegado; su identidad y vestuario no se describen."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para identity_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · identity_sheet",
+        "primary_request": "identidad corporal completa y legible para Jefe de la fiesta de carreras. Persona que dirige la hospitalidad de la fiesta y ordena servir alimento al recien llegado; su identidad y vestuario no se describen.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel mate de fibra visible; capas prensadas para cuerpo y vestuario; hilo solo cuando el relato lo exige",
+        "constraints": [
+          "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos.",
+          "mostrar: Persona que dirige la hospitalidad de la fiesta y ordena servir alimento al recien llegado; su identidad y vestuario no se describen.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "1:1",
+          "era": "historico_wayuu_segun_relato",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "lagartijas_kosina__group_grammar": {
+      "purpose": "group_grammar",
+      "entity_refs": [
+        "lagartijas_kosina"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "el-pequeno-indio-kosina",
+          "field": "mito",
+          "note": "Caza menor de la vida inicial."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Morfologia zoologica reconocible, cuerpo completo cuando es individuo y variacion controlada cuando es grupo; sin hibridacion no documentada. Entidad: Lagartijas de la caza del kusina. Funcion visual: Caza menor que situa su vida antes de las carreras.",
+        "materials": [
+          "capas de papel recortado para anatomia",
+          "fibras finas para pelaje o pluma cuando corresponda",
+          "cantos internos y articulaciones fisicas"
+        ],
+        "palette_logic": "Color natural o explicitamente narrado; no usar brillo magico para señalar importancia.",
+        "scale": "Escala zoologica verificable frente al entorno y los personajes.",
+        "continuity_markers": [
+          "nombre estable: Lagartijas de la caza del kusina",
+          "funcion estable: Caza menor que situa su vida antes de las carreras.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Caza menor que situa su vida antes de las carreras."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para group_grammar",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · group_grammar",
+        "primary_request": "numero, relaciones, escala y variacion interna para Lagartijas de la caza del kusina. Caza menor que situa su vida antes de las carreras.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Escala zoologica verificable frente al entorno y los personajes.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "capas de papel recortado para anatomia; fibras finas para pelaje o pluma cuando corresponda; cantos internos y articulaciones fisicas",
+        "constraints": [
+          "Morfologia zoologica reconocible, cuerpo completo cuando es individuo y variacion controlada cuando es grupo; sin hibridacion no documentada.",
+          "mostrar: Caza menor que situa su vida antes de las carreras.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "group_grammar",
+          "purpose": "numero, relaciones, escala y variacion interna",
+          "aspect": "16:9",
+          "era": "historico_wayuu_segun_relato",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "burros_camino_kosina__group_grammar": {
+      "purpose": "group_grammar",
+      "entity_refs": [
+        "burros_camino_kosina"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "el-pequeno-indio-kosina",
+          "field": "mito",
+          "note": "Reciben el trupillo cocido descartado."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Morfologia zoologica reconocible, cuerpo completo cuando es individuo y variacion controlada cuando es grupo; sin hibridacion no documentada. Entidad: Burros del encuentro del camino. Funcion visual: Animales de carga a los que los viajeros dan el trupillo cocido descartado, sin cantidad ni aparejos descritos.",
+        "materials": [
+          "capas de papel recortado para anatomia",
+          "fibras finas para pelaje o pluma cuando corresponda",
+          "cantos internos y articulaciones fisicas"
+        ],
+        "palette_logic": "Color natural o explicitamente narrado; no usar brillo magico para señalar importancia.",
+        "scale": "Escala zoologica verificable frente al entorno y los personajes.",
+        "continuity_markers": [
+          "nombre estable: Burros del encuentro del camino",
+          "funcion estable: Animales de carga a los que los viajeros dan el trupillo cocido descartado, sin cantidad ni aparejos descritos.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Animales de carga a los que los viajeros dan el trupillo cocido descartado, sin cantidad ni aparejos descritos."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para group_grammar",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · group_grammar",
+        "primary_request": "numero, relaciones, escala y variacion interna para Burros del encuentro del camino. Animales de carga a los que los viajeros dan el trupillo cocido descartado, sin cantidad ni aparejos descritos.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Escala zoologica verificable frente al entorno y los personajes.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "capas de papel recortado para anatomia; fibras finas para pelaje o pluma cuando corresponda; cantos internos y articulaciones fisicas",
+        "constraints": [
+          "Morfologia zoologica reconocible, cuerpo completo cuando es individuo y variacion controlada cuando es grupo; sin hibridacion no documentada.",
+          "mostrar: Animales de carga a los que los viajeros dan el trupillo cocido descartado, sin cantidad ni aparejos descritos.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "group_grammar",
+          "purpose": "numero, relaciones, escala y variacion interna",
+          "aspect": "16:9",
+          "era": "historico_wayuu_segun_relato",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "patilla__botanical_sheet": {
+      "purpose": "botanical_sheet",
+      "entity_refs": [
+        "patilla"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "el-pequeno-indio-kosina",
+          "field": "mito",
+          "note": "Cultivo de la roza."
+        },
+        {
+          "myth": "el-viaje-del-mas-alla",
+          "field": "mito",
+          "note": "Habla y parece familia humana."
+        },
+        {
+          "myth": "los-dominios-de-juya",
+          "field": "mito",
+          "note": "Cultivo con apariencia familiar."
+        },
+        {
+          "myth": "ulepala",
+          "field": "mito",
+          "note": "Fruto con apariencia humana."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Morfologia botanica especifica en tallos, hojas, fruto y crecimiento; prohibida la sustitucion por cactus saguaro o flora desertica generica. Entidad: Patilla. Funcion visual: Cultivo y alimento que en el dominio de Juyá puede tener apariencia de familia humana.",
+        "materials": [
+          "papel recortado y plegado por organo vegetal",
+          "fibras visibles",
+          "volumen por capas y separacion real"
+        ],
+        "palette_logic": "Verdes, ocres y frutos localizados según especie y estado, sin saturacion tropical uniforme.",
+        "scale": "Altura y extension legibles frente a suelo, vivienda o figura secundaria.",
+        "continuity_markers": [
+          "nombre estable: Patilla",
+          "funcion estable: Cultivo y alimento que en el dominio de Juyá puede tener apariencia de familia humana.",
+          "estados declarados: cultivo, fruto, apariencia_humana"
+        ],
+        "documented_features": [
+          "Cultivo y alimento que en el dominio de Juyá puede tener apariencia de familia humana."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para botanical_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · botanical_sheet",
+        "primary_request": "morfologia vegetal sin flora generica para Patilla. Cultivo y alimento que en el dominio de Juyá puede tener apariencia de familia humana.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Altura y extension legibles frente a suelo, vivienda o figura secundaria.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel recortado y plegado por organo vegetal; fibras visibles; volumen por capas y separacion real",
+        "constraints": [
+          "Morfologia botanica especifica en tallos, hojas, fruto y crecimiento; prohibida la sustitucion por cactus saguaro o flora desertica generica.",
+          "mostrar: Cultivo y alimento que en el dominio de Juyá puede tener apariencia de familia humana.",
+          "estados autorizados: cultivo, fruto, apariencia_humana",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_botanical",
+          "purpose": "morfologia vegetal sin flora generica",
+          "aspect": "1:1",
+          "era": "historico_wayuu_segun_relato",
+          "states": [
+            "cultivo"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "ahuyama__botanical_sheet": {
+      "purpose": "botanical_sheet",
+      "entity_refs": [
+        "ahuyama"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "el-pequeno-indio-kosina",
+          "field": "mito",
+          "note": "Cultivo de la roza."
+        },
+        {
+          "myth": "el-viaje-del-mas-alla",
+          "field": "mito",
+          "note": "Parece persona de gran vientre."
+        },
+        {
+          "myth": "los-dominios-de-juya",
+          "field": "mito",
+          "note": "Cultivo con apariencia humana."
+        },
+        {
+          "myth": "ulepala",
+          "field": "mito",
+          "note": "Fruto con apariencia humana."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Morfologia botanica especifica en tallos, hojas, fruto y crecimiento; prohibida la sustitucion por cactus saguaro o flora desertica generica. Entidad: Ahuyama. Funcion visual: Cultivo y alimento que en el dominio de Juyá puede parecer una persona de gran vientre.",
+        "materials": [
+          "papel recortado y plegado por organo vegetal",
+          "fibras visibles",
+          "volumen por capas y separacion real"
+        ],
+        "palette_logic": "Verdes, ocres y frutos localizados según especie y estado, sin saturacion tropical uniforme.",
+        "scale": "Altura y extension legibles frente a suelo, vivienda o figura secundaria.",
+        "continuity_markers": [
+          "nombre estable: Ahuyama",
+          "funcion estable: Cultivo y alimento que en el dominio de Juyá puede parecer una persona de gran vientre.",
+          "estados declarados: cultivo, fruto, apariencia_humana"
+        ],
+        "documented_features": [
+          "Cultivo y alimento que en el dominio de Juyá puede parecer una persona de gran vientre."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para botanical_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · botanical_sheet",
+        "primary_request": "morfologia vegetal sin flora generica para Ahuyama. Cultivo y alimento que en el dominio de Juyá puede parecer una persona de gran vientre.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Altura y extension legibles frente a suelo, vivienda o figura secundaria.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel recortado y plegado por organo vegetal; fibras visibles; volumen por capas y separacion real",
+        "constraints": [
+          "Morfologia botanica especifica en tallos, hojas, fruto y crecimiento; prohibida la sustitucion por cactus saguaro o flora desertica generica.",
+          "mostrar: Cultivo y alimento que en el dominio de Juyá puede parecer una persona de gran vientre.",
+          "estados autorizados: cultivo, fruto, apariencia_humana",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_botanical",
+          "purpose": "morfologia vegetal sin flora generica",
+          "aspect": "1:1",
+          "era": "historico_wayuu_segun_relato",
+          "states": [
+            "cultivo"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "frijol_roza_kosina__botanical_sheet": {
+      "purpose": "botanical_sheet",
+      "entity_refs": [
+        "frijol_roza_kosina"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "el-pequeno-indio-kosina",
+          "field": "mito",
+          "note": "Cultivo pisoteado que inicia la busqueda."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Morfologia botanica especifica en tallos, hojas, fruto y crecimiento; prohibida la sustitucion por cactus saguaro o flora desertica generica. Entidad: Fríjol de la roza del kusina. Funcion visual: Cultivo pisoteado que inicia el seguimiento de huellas.",
+        "materials": [
+          "papel recortado y plegado por organo vegetal",
+          "fibras visibles",
+          "volumen por capas y separacion real"
+        ],
+        "palette_logic": "Verdes, ocres y frutos localizados según especie y estado, sin saturacion tropical uniforme.",
+        "scale": "Altura y extension legibles frente a suelo, vivienda o figura secundaria.",
+        "continuity_markers": [
+          "nombre estable: Fríjol de la roza del kusina",
+          "funcion estable: Cultivo pisoteado que inicia el seguimiento de huellas.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Cultivo pisoteado que inicia el seguimiento de huellas."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para botanical_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · botanical_sheet",
+        "primary_request": "morfologia vegetal sin flora generica para Fríjol de la roza del kusina. Cultivo pisoteado que inicia el seguimiento de huellas.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Altura y extension legibles frente a suelo, vivienda o figura secundaria.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel recortado y plegado por organo vegetal; fibras visibles; volumen por capas y separacion real",
+        "constraints": [
+          "Morfologia botanica especifica en tallos, hojas, fruto y crecimiento; prohibida la sustitucion por cactus saguaro o flora desertica generica.",
+          "mostrar: Cultivo pisoteado que inicia el seguimiento de huellas.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_botanical",
+          "purpose": "morfologia vegetal sin flora generica",
+          "aspect": "1:1",
+          "era": "historico_wayuu_segun_relato",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "trupillo_sancochado_kosina__object_sheet": {
+      "purpose": "object_sheet",
+      "entity_refs": [
+        "trupillo_sancochado_kosina"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "el-pequeno-indio-kosina",
+          "field": "mito",
+          "note": "Alimento preparado por la madre y llevado a cazar."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Contorno, volumen, piezas y modo de uso claramente separables; evitar convertir utileria cotidiana en reliquia mistica. Entidad: Trupillo sancochado del viaje. Funcion visual: Vainas cocidas preparadas por la madre y conservadas como alimento de caza; se distinguen del arbol y de su ficha botanica.",
+        "materials": [
+          "papel, fibra, madera o mineral traducidos a paper craft",
+          "uniones y desgaste fisico",
+          "sombras proyectadas coherentes"
+        ],
+        "palette_logic": "Color propio del material y el estado; sin ornamentacion cultural no respaldada.",
+        "scale": "Escala demostrable mediante mano, suelo o arquitectura sin texto ni regla grafica.",
+        "continuity_markers": [
+          "nombre estable: Trupillo sancochado del viaje",
+          "funcion estable: Vainas cocidas preparadas por la madre y conservadas como alimento de caza; se distinguen del arbol y de su ficha botanica.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Vainas cocidas preparadas por la madre y conservadas como alimento de caza; se distinguen del arbol y de su ficha botanica."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para object_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · object_sheet",
+        "primary_request": "forma, escala, material y uso legibles para Trupillo sancochado del viaje. Vainas cocidas preparadas por la madre y conservadas como alimento de caza; se distinguen del arbol y de su ficha botanica.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Escala demostrable mediante mano, suelo o arquitectura sin texto ni regla grafica.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel, fibra, madera o mineral traducidos a paper craft; uniones y desgaste fisico; sombras proyectadas coherentes",
+        "constraints": [
+          "Contorno, volumen, piezas y modo de uso claramente separables; evitar convertir utileria cotidiana en reliquia mistica.",
+          "mostrar: Vainas cocidas preparadas por la madre y conservadas como alimento de caza; se distinguen del arbol y de su ficha botanica.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_object",
+          "purpose": "forma, escala, material y uso legibles",
+          "aspect": "1:1",
+          "era": "historico_wayuu_segun_relato",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "faja_captura_kosina__object_sheet": {
+      "purpose": "object_sheet",
+      "entity_refs": [
+        "faja_captura_kosina"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "el-pequeno-indio-kosina",
+          "field": "mito",
+          "note": "Permite sujetar al caballo reducido sin atribuir una tipologia cultural no demostrada."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Contorno, volumen, piezas y modo de uso claramente separables; evitar convertir utileria cotidiana en reliquia mistica. Entidad: Faja usada para sujetar al caballo. Funcion visual: Faja personal que el joven retira para sujetar al caballo reducido; no se clasifica como si'ira Wayuu ni recibe motivos inventados.",
+        "materials": [
+          "papel, fibra, madera o mineral traducidos a paper craft",
+          "uniones y desgaste fisico",
+          "sombras proyectadas coherentes"
+        ],
+        "palette_logic": "Color propio del material y el estado; sin ornamentacion cultural no respaldada.",
+        "scale": "Escala demostrable mediante mano, suelo o arquitectura sin texto ni regla grafica.",
+        "continuity_markers": [
+          "nombre estable: Faja usada para sujetar al caballo",
+          "funcion estable: Faja personal que el joven retira para sujetar al caballo reducido; no se clasifica como si'ira Wayuu ni recibe motivos inventados.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Faja personal que el joven retira para sujetar al caballo reducido; no se clasifica como si'ira Wayuu ni recibe motivos inventados."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para object_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · object_sheet",
+        "primary_request": "forma, escala, material y uso legibles para Faja usada para sujetar al caballo. Faja personal que el joven retira para sujetar al caballo reducido; no se clasifica como si'ira Wayuu ni recibe motivos inventados.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Escala demostrable mediante mano, suelo o arquitectura sin texto ni regla grafica.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel, fibra, madera o mineral traducidos a paper craft; uniones y desgaste fisico; sombras proyectadas coherentes",
+        "constraints": [
+          "Contorno, volumen, piezas y modo de uso claramente separables; evitar convertir utileria cotidiana en reliquia mistica.",
+          "mostrar: Faja personal que el joven retira para sujetar al caballo reducido; no se clasifica como si'ira Wayuu ni recibe motivos inventados.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_object",
+          "purpose": "forma, escala, material y uso legibles",
+          "aspect": "1:1",
+          "era": "historico_wayuu_segun_relato",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "manea_caballo_kosina__object_sheet": {
+      "purpose": "object_sheet",
+      "entity_refs": [
+        "manea_caballo_kosina"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "el-pequeno-indio-kosina",
+          "field": "mito",
+          "note": "Sujeta al caballo antes de entrar a la fiesta."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Contorno, volumen, piezas y modo de uso claramente separables; evitar convertir utileria cotidiana en reliquia mistica. Entidad: Manea del caballo. Funcion visual: Amarre con el que el joven deja al caballo antes de acercarse a la fiesta; material y tecnica exactos no descritos.",
+        "materials": [
+          "papel, fibra, madera o mineral traducidos a paper craft",
+          "uniones y desgaste fisico",
+          "sombras proyectadas coherentes"
+        ],
+        "palette_logic": "Color propio del material y el estado; sin ornamentacion cultural no respaldada.",
+        "scale": "Escala demostrable mediante mano, suelo o arquitectura sin texto ni regla grafica.",
+        "continuity_markers": [
+          "nombre estable: Manea del caballo",
+          "funcion estable: Amarre con el que el joven deja al caballo antes de acercarse a la fiesta; material y tecnica exactos no descritos.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Amarre con el que el joven deja al caballo antes de acercarse a la fiesta; material y tecnica exactos no descritos."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para object_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · object_sheet",
+        "primary_request": "forma, escala, material y uso legibles para Manea del caballo. Amarre con el que el joven deja al caballo antes de acercarse a la fiesta; material y tecnica exactos no descritos.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Escala demostrable mediante mano, suelo o arquitectura sin texto ni regla grafica.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel, fibra, madera o mineral traducidos a paper craft; uniones y desgaste fisico; sombras proyectadas coherentes",
+        "constraints": [
+          "Contorno, volumen, piezas y modo de uso claramente separables; evitar convertir utileria cotidiana en reliquia mistica.",
+          "mostrar: Amarre con el que el joven deja al caballo antes de acercarse a la fiesta; material y tecnica exactos no descritos.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_object",
+          "purpose": "forma, escala, material y uso legibles",
+          "aspect": "1:1",
+          "era": "historico_wayuu_segun_relato",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "tambor_carreras_kosina__object_sheet": {
+      "purpose": "object_sheet",
+      "entity_refs": [
+        "tambor_carreras_kosina"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "el-pequeno-indio-kosina",
+          "field": "mito",
+          "note": "Instrumento de participacion en la fiesta."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Contorno, volumen, piezas y modo de uso claramente separables; evitar convertir utileria cotidiana en reliquia mistica. Entidad: Caja o tambor de la fiesta. Funcion visual: Instrumento que la transcripcion llama primero tambor y despues caja, con el que el protagonista interpreta toques regionales antes de las carreras.",
+        "materials": [
+          "papel, fibra, madera o mineral traducidos a paper craft",
+          "uniones y desgaste fisico",
+          "sombras proyectadas coherentes"
+        ],
+        "palette_logic": "Color propio del material y el estado; sin ornamentacion cultural no respaldada.",
+        "scale": "Escala demostrable mediante mano, suelo o arquitectura sin texto ni regla grafica.",
+        "continuity_markers": [
+          "nombre estable: Caja o tambor de la fiesta",
+          "funcion estable: Instrumento que la transcripcion llama primero tambor y despues caja, con el que el protagonista interpreta toques regionales antes de las carreras.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Instrumento que la transcripcion llama primero tambor y despues caja, con el que el protagonista interpreta toques regionales antes de las carreras."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para object_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · object_sheet",
+        "primary_request": "forma, escala, material y uso legibles para Caja o tambor de la fiesta. Instrumento que la transcripcion llama primero tambor y despues caja, con el que el protagonista interpreta toques regionales antes de las carreras.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Escala demostrable mediante mano, suelo o arquitectura sin texto ni regla grafica.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel, fibra, madera o mineral traducidos a paper craft; uniones y desgaste fisico; sombras proyectadas coherentes",
+        "constraints": [
+          "Contorno, volumen, piezas y modo de uso claramente separables; evitar convertir utileria cotidiana en reliquia mistica.",
+          "mostrar: Instrumento que la transcripcion llama primero tambor y despues caja, con el que el protagonista interpreta toques regionales antes de las carreras.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_object",
+          "purpose": "forma, escala, material y uso legibles",
+          "aspect": "1:1",
+          "era": "historico_wayuu_segun_relato",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "huellas_caballo_kosina__phenomenon_rule": {
+      "purpose": "phenomenon_rule",
+      "entity_refs": [
+        "huellas_caballo_kosina"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "el-pequeno-indio-kosina",
+          "field": "mito",
+          "note": "Menguan mientras el caballo cambia de escala."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Secuencia material de causa, accion, limite y huella; debe entenderse sin texto, aura o particulas magicas genericas. Entidad: Huellas menguantes del caballo. Funcion visual: Secuencia de pisadas que se vuelve cada vez mas pequeña antes de revelar el cambio entre caballo grande y potro.",
+        "materials": [
+          "papel y fibras que cambian de tension, humedad, luz o posicion",
+          "capas causales separadas",
+          "huella fisica persistente"
+        ],
+        "palette_logic": "El cambio cromatico nace de la materia afectada, nunca de un resplandor sobrenatural por defecto.",
+        "scale": "Escala definida por aquello que transforma, desde objeto hasta territorio.",
+        "continuity_markers": [
+          "nombre estable: Huellas menguantes del caballo",
+          "funcion estable: Secuencia de pisadas que se vuelve cada vez mas pequeña antes de revelar el cambio entre caballo grande y potro.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Secuencia de pisadas que se vuelve cada vez mas pequeña antes de revelar el cambio entre caballo grande y potro."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para phenomenon_rule",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · phenomenon_rule",
+        "primary_request": "entrada, accion, limite y huella del fenomeno para Huellas menguantes del caballo. Secuencia de pisadas que se vuelve cada vez mas pequeña antes de revelar el cambio entre caballo grande y potro.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Escala definida por aquello que transforma, desde objeto hasta territorio.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel y fibras que cambian de tension, humedad, luz o posicion; capas causales separadas; huella fisica persistente",
+        "constraints": [
+          "Secuencia material de causa, accion, limite y huella; debe entenderse sin texto, aura o particulas magicas genericas.",
+          "mostrar: Secuencia de pisadas que se vuelve cada vez mas pequeña antes de revelar el cambio entre caballo grande y potro.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "phenomenon_grammar",
+          "purpose": "entrada, accion, limite y huella del fenomeno",
+          "aspect": "16:9",
+          "era": "historico_wayuu_segun_relato",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "roza_kosina__spatial_model": {
+      "purpose": "spatial_model",
+      "entity_refs": [
+        "roza_kosina"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "el-pequeno-indio-kosina",
+          "field": "mito",
+          "note": "Parcela dañada que inicia la persecucion."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Umbral y organizacion espacial propios del relato; la geografia incierta se mantiene aproximada y nunca se publica como coordenada. Entidad: Roza del joven kusina. Funcion visual: Parcela con ahuyama, patilla y frijol cuyo daño inicia el seguimiento del caballo.",
+        "materials": [
+          "estratos de papel y suelo prensado",
+          "elementos materiales citados por el relato",
+          "aire y oclusiones entre planos"
+        ],
+        "palette_logic": "Paleta territorial modulada por funcion, clima y estado narrativo.",
+        "scale": "Profundidad recorrible con primer plano, plano medio y fondo a distancias reales.",
+        "continuity_markers": [
+          "nombre estable: Roza del joven kusina",
+          "funcion estable: Parcela con ahuyama, patilla y frijol cuyo daño inicia el seguimiento del caballo.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Parcela con ahuyama, patilla y frijol cuyo daño inicia el seguimiento del caballo."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para spatial_model",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · spatial_model",
+        "primary_request": "relaciones espaciales, entradas, planos y escala para Roza del joven kusina. Parcela con ahuyama, patilla y frijol cuyo daño inicia el seguimiento del caballo.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Profundidad recorrible con primer plano, plano medio y fondo a distancias reales.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "estratos de papel y suelo prensado; elementos materiales citados por el relato; aire y oclusiones entre planos",
+        "constraints": [
+          "Umbral y organizacion espacial propios del relato; la geografia incierta se mantiene aproximada y nunca se publica como coordenada.",
+          "mostrar: Parcela con ahuyama, patilla y frijol cuyo daño inicia el seguimiento del caballo.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "spatial_grammar",
+          "purpose": "relaciones espaciales, entradas, planos y escala",
+          "aspect": "16:9",
+          "era": "historico_wayuu_segun_relato",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "vivienda_kosina__spatial_model": {
+      "purpose": "spatial_model",
+      "entity_refs": [
+        "vivienda_kosina"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "el-pequeno-indio-kosina",
+          "field": "mito",
+          "note": "Casa no descrita del protagonista y su madre."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Sistema constructivo legible por estructura, cubierta, cerramiento, vacios y relacion con senderos; no casa decorativa aislada. Entidad: Casa del joven y su madre. Funcion visual: Vivienda no descrita donde el joven vive con su madre; no se llama ni se diseña automaticamente como rancheria Wayuu.",
+        "materials": [
+          "yotojoro, madera, paja y barro cuando estan documentados",
+          "capas estructurales separadas",
+          "suelo fibroso continuo"
+        ],
+        "palette_logic": "Materiales mates de arena, madera y barro; sin patrones decorativos inventados.",
+        "scale": "Escala habitable demostrada por vanos, sombra y relaciones espaciales.",
+        "continuity_markers": [
+          "nombre estable: Casa del joven y su madre",
+          "funcion estable: Vivienda no descrita donde el joven vive con su madre; no se llama ni se diseña automaticamente como rancheria Wayuu.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Vivienda no descrita donde el joven vive con su madre; no se llama ni se diseña automaticamente como rancheria Wayuu."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para spatial_model",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · spatial_model",
+        "primary_request": "relaciones espaciales, entradas, planos y escala para Casa del joven y su madre. Vivienda no descrita donde el joven vive con su madre; no se llama ni se diseña automaticamente como rancheria Wayuu.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Escala habitable demostrada por vanos, sombra y relaciones espaciales.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "yotojoro, madera, paja y barro cuando estan documentados; capas estructurales separadas; suelo fibroso continuo",
+        "constraints": [
+          "Sistema constructivo legible por estructura, cubierta, cerramiento, vacios y relacion con senderos; no casa decorativa aislada.",
+          "mostrar: Vivienda no descrita donde el joven vive con su madre; no se llama ni se diseña automaticamente como rancheria Wayuu.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "spatial_grammar",
+          "purpose": "relaciones espaciales, entradas, planos y escala",
+          "aspect": "16:9",
+          "era": "historico_wayuu_segun_relato",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "pista_carreras_kosina__spatial_model": {
+      "purpose": "spatial_model",
+      "entity_refs": [
+        "pista_carreras_kosina"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "el-pequeno-indio-kosina",
+          "field": "mito",
+          "note": "Lugar de reconocimiento, carrera y envidia."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Umbral y organizacion espacial propios del relato; la geografia incierta se mantiene aproximada y nunca se publica como coordenada. Entidad: Lugar de las carreras. Funcion visual: Fiesta y pista donde cambian reconocimiento, riqueza y envidia.",
+        "materials": [
+          "estratos de papel y suelo prensado",
+          "elementos materiales citados por el relato",
+          "aire y oclusiones entre planos"
+        ],
+        "palette_logic": "Paleta territorial modulada por funcion, clima y estado narrativo.",
+        "scale": "Profundidad recorrible con primer plano, plano medio y fondo a distancias reales.",
+        "continuity_markers": [
+          "nombre estable: Lugar de las carreras",
+          "funcion estable: Fiesta y pista donde cambian reconocimiento, riqueza y envidia.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Fiesta y pista donde cambian reconocimiento, riqueza y envidia."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para spatial_model",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · spatial_model",
+        "primary_request": "relaciones espaciales, entradas, planos y escala para Lugar de las carreras. Fiesta y pista donde cambian reconocimiento, riqueza y envidia.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Profundidad recorrible con primer plano, plano medio y fondo a distancias reales.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "estratos de papel y suelo prensado; elementos materiales citados por el relato; aire y oclusiones entre planos",
+        "constraints": [
+          "Umbral y organizacion espacial propios del relato; la geografia incierta se mantiene aproximada y nunca se publica como coordenada.",
+          "mostrar: Fiesta y pista donde cambian reconocimiento, riqueza y envidia.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "spatial_grammar",
+          "purpose": "relaciones espaciales, entradas, planos y escala",
+          "aspect": "16:9",
+          "era": "historico_wayuu_segun_relato",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "corral_caballos_kosina__spatial_model": {
+      "purpose": "spatial_model",
+      "entity_refs": [
+        "corral_caballos_kosina"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "el-pequeno-indio-kosina",
+          "field": "mito",
+          "note": "Aloja el rebaño durante el dia."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Sistema constructivo legible por estructura, cubierta, cerramiento, vacios y relacion con senderos; no casa decorativa aislada. Entidad: Corral del rebaño de caballos. Funcion visual: Corral que el caballo pide construir para alojar las bestias durante el dia, sin forma o material exactos documentados.",
+        "materials": [
+          "yotojoro, madera, paja y barro cuando estan documentados",
+          "capas estructurales separadas",
+          "suelo fibroso continuo"
+        ],
+        "palette_logic": "Materiales mates de arena, madera y barro; sin patrones decorativos inventados.",
+        "scale": "Escala habitable demostrada por vanos, sombra y relaciones espaciales.",
+        "continuity_markers": [
+          "nombre estable: Corral del rebaño de caballos",
+          "funcion estable: Corral que el caballo pide construir para alojar las bestias durante el dia, sin forma o material exactos documentados.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Corral que el caballo pide construir para alojar las bestias durante el dia, sin forma o material exactos documentados."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para spatial_model",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · spatial_model",
+        "primary_request": "relaciones espaciales, entradas, planos y escala para Corral del rebaño de caballos. Corral que el caballo pide construir para alojar las bestias durante el dia, sin forma o material exactos documentados.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Escala habitable demostrada por vanos, sombra y relaciones espaciales.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "yotojoro, madera, paja y barro cuando estan documentados; capas estructurales separadas; suelo fibroso continuo",
+        "constraints": [
+          "Sistema constructivo legible por estructura, cubierta, cerramiento, vacios y relacion con senderos; no casa decorativa aislada.",
+          "mostrar: Corral que el caballo pide construir para alojar las bestias durante el dia, sin forma o material exactos documentados.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "spatial_grammar",
+          "purpose": "relaciones espaciales, entradas, planos y escala",
+          "aspect": "16:9",
+          "era": "historico_wayuu_segun_relato",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "abertura_subterranea_caballo__spatial_model": {
+      "purpose": "spatial_model",
+      "entity_refs": [
+        "abertura_subterranea_caballo"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "el-pequeno-indio-kosina",
+          "field": "mito",
+          "note": "Lugar del retorno del animal."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Umbral y organizacion espacial propios del relato; la geografia incierta se mantiene aproximada y nunca se publica como coordenada. Entidad: Cueva subterránea de los caballos. Funcion visual: Cueva bajo tierra de la que salen los caballos y a la que el primero regresa despues de entregar la riqueza.",
+        "materials": [
+          "estratos de papel y suelo prensado",
+          "elementos materiales citados por el relato",
+          "aire y oclusiones entre planos"
+        ],
+        "palette_logic": "Paleta territorial modulada por funcion, clima y estado narrativo.",
+        "scale": "Profundidad recorrible con primer plano, plano medio y fondo a distancias reales.",
+        "continuity_markers": [
+          "nombre estable: Cueva subterránea de los caballos",
+          "funcion estable: Cueva bajo tierra de la que salen los caballos y a la que el primero regresa despues de entregar la riqueza.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Cueva bajo tierra de la que salen los caballos y a la que el primero regresa despues de entregar la riqueza."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para spatial_model",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · spatial_model",
+        "primary_request": "relaciones espaciales, entradas, planos y escala para Cueva subterránea de los caballos. Cueva bajo tierra de la que salen los caballos y a la que el primero regresa despues de entregar la riqueza.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Profundidad recorrible con primer plano, plano medio y fondo a distancias reales.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "estratos de papel y suelo prensado; elementos materiales citados por el relato; aire y oclusiones entre planos",
+        "constraints": [
+          "Umbral y organizacion espacial propios del relato; la geografia incierta se mantiene aproximada y nunca se publica como coordenada.",
+          "mostrar: Cueva bajo tierra de la que salen los caballos y a la que el primero regresa despues de entregar la riqueza.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "spatial_grammar",
+          "purpose": "relaciones espaciales, entradas, planos y escala",
+          "aspect": "16:9",
+          "era": "historico_wayuu_segun_relato",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    }
+  },
+  "entities": {
+    "kosina_joven": {
+      "name": "Joven kusina del relato",
+      "kind": "personaje",
+      "description": "Joven cazador, agricultor y musico llamado Kosina por la transcripcion; Kusina puede ser una categoria relacional o historica y no se trata automaticamente como nombre propio ni como sinonimo de Wayuu.",
+      "aliases": [
+        "Kosina",
+        "Kusiña",
+        "Kusina"
+      ],
+      "states": [
+        "cazador",
+        "agricultor",
+        "musico",
+        "jinete",
+        "cuidador_del_rebano"
+      ],
+      "evidence_basis": "uncertain",
+      "sensitivity": "contextual",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet",
+        "state_sheet"
+      ],
+      "model_refs": [
+        "kosina_joven__identity_sheet",
+        "kosina_joven__state_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-pequeno-indio-kosina"
+      ],
+      "evidence": [
+        {
+          "myth": "el-pequeno-indio-kosina",
+          "field": "mito",
+          "note": "Sigue huellas, toca, corre, escucha y comparte."
+        }
+      ]
+    },
+    "madre_kosina": {
+      "name": "Madre del joven kusina",
+      "kind": "personaje",
+      "description": "Madre que prepara alimento, recibe al caballo y acompaña el cambio economico final; su pertenencia cultural exacta y su vestuario no quedan descritos.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "uncertain",
+      "sensitivity": "contextual",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet"
+      ],
+      "model_refs": [
+        "madre_kosina__identity_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-pequeno-indio-kosina"
+      ],
+      "evidence": [
+        {
+          "myth": "el-pequeno-indio-kosina",
+          "field": "mito",
+          "note": "Situa la vida inicial y recibe el cambio final."
+        }
+      ]
+    },
+    "caballo_kosina": {
+      "name": "Caballo del joven kusina",
+      "kind": "animal",
+      "description": "Caballo hablante que alterna entre enorme, potro debil y corredor extraordinario.",
+      "aliases": [],
+      "states": [
+        "gigante",
+        "potro",
+        "corredor",
+        "guia"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet",
+        "state_sheet"
+      ],
+      "model_refs": [
+        "caballo_kosina__identity_sheet",
+        "caballo_kosina__state_sheet"
+      ],
+      "legacy_model_refs": [
+        "el-pequeno-indio-kosina__ancla"
+      ],
+      "myth_refs": [
+        "el-pequeno-indio-kosina"
+      ],
+      "evidence": [
+        {
+          "myth": "el-pequeno-indio-kosina",
+          "field": "mito",
+          "note": "Cambia de tamaño, habla y fija condiciones."
+        }
+      ]
+    },
+    "hermano_caballo_kosina": {
+      "name": "Hermano menor del caballo",
+      "kind": "animal",
+      "description": "Caballo entregado al aliado como parte de una relacion de parentesco y don.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet"
+      ],
+      "model_refs": [
+        "hermano_caballo_kosina__identity_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-pequeno-indio-kosina"
+      ],
+      "evidence": [
+        {
+          "myth": "el-pequeno-indio-kosina",
+          "field": "mito",
+          "note": "Se entrega al aliado como don."
+        }
+      ]
+    },
+    "familia_caballos_kosina": {
+      "name": "Madre y hermanos del caballo",
+      "kind": "animal",
+      "description": "Familia equina que sale del dominio subterraneo y forma el nucleo del rebaño final, sin numero total documentado.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "group_grammar"
+      ],
+      "model_refs": [
+        "familia_caballos_kosina__group_grammar"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-pequeno-indio-kosina"
+      ],
+      "evidence": [
+        {
+          "myth": "el-pequeno-indio-kosina",
+          "field": "mito",
+          "note": "Madre y hermanos forman el rebaño final."
+        }
+      ]
+    },
+    "aliado_rico_kosina": {
+      "name": "Joven aliado del kusina",
+      "kind": "personaje",
+      "description": "Joven elegante y bien vestido que reconoce al protagonista como pariente y recibe el caballo hermano; la fuente no fija su pueblo, clan ni prendas.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet"
+      ],
+      "model_refs": [
+        "aliado_rico_kosina__identity_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-pequeno-indio-kosina"
+      ],
+      "evidence": [
+        {
+          "myth": "el-pequeno-indio-kosina",
+          "field": "mito",
+          "note": "Reconoce parentesco y recibe un caballo."
+        }
+      ]
+    },
+    "indigenas_ricos_camino_kosina": {
+      "name": "Viajeros indigenas acomodados del camino",
+      "kind": "colectivo",
+      "description": "Varias personas que comparten carne, arroz y panela con el cazador; no se afirma que sean las mismas de la fiesta ni se les asigna identidad etnica fija.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "contextual",
+      "visual_status": "required",
+      "model_requirements": [
+        "group_grammar"
+      ],
+      "model_refs": [
+        "indigenas_ricos_camino_kosina__group_grammar"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-pequeno-indio-kosina"
+      ],
+      "evidence": [
+        {
+          "myth": "el-pequeno-indio-kosina",
+          "field": "mito",
+          "note": "Comparten alimento durante la segunda salida de caza."
+        }
+      ]
+    },
+    "duenos_caballos_kosina": {
+      "name": "Jinetes y dueños de las carreras",
+      "kind": "colectivo",
+      "description": "Participantes que compiten, admiran, intentan comprar y luego amenazan al animal, sin convertirlos en un pueblo, clan o enemigo colectivo.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "contextual",
+      "visual_status": "required",
+      "model_requirements": [
+        "group_grammar"
+      ],
+      "model_refs": [
+        "duenos_caballos_kosina__group_grammar"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-pequeno-indio-kosina"
+      ],
+      "evidence": [
+        {
+          "myth": "el-pequeno-indio-kosina",
+          "field": "mito",
+          "note": "Quieren comprar o destruir al caballo."
+        }
+      ]
+    },
+    "jefe_fiesta_kosina": {
+      "name": "Jefe de la fiesta de carreras",
+      "kind": "personaje",
+      "description": "Persona que dirige la hospitalidad de la fiesta y ordena servir alimento al recien llegado; su identidad y vestuario no se describen.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "uncertain",
+      "sensitivity": "contextual",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet"
+      ],
+      "model_refs": [
+        "jefe_fiesta_kosina__identity_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-pequeno-indio-kosina"
+      ],
+      "evidence": [
+        {
+          "myth": "el-pequeno-indio-kosina",
+          "field": "mito",
+          "note": "Dirige la hospitalidad de la fiesta."
+        }
+      ]
+    },
+    "lagartijas_kosina": {
+      "name": "Lagartijas de la caza del kusina",
+      "kind": "animal",
+      "description": "Caza menor que situa su vida antes de las carreras.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "group_grammar"
+      ],
+      "model_refs": [
+        "lagartijas_kosina__group_grammar"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-pequeno-indio-kosina"
+      ],
+      "evidence": [
+        {
+          "myth": "el-pequeno-indio-kosina",
+          "field": "mito",
+          "note": "Caza menor de la vida inicial."
+        }
+      ]
+    },
+    "burros_camino_kosina": {
+      "name": "Burros del encuentro del camino",
+      "kind": "animal",
+      "description": "Animales de carga a los que los viajeros dan el trupillo cocido descartado, sin cantidad ni aparejos descritos.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "group_grammar"
+      ],
+      "model_refs": [
+        "burros_camino_kosina__group_grammar"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-pequeno-indio-kosina"
+      ],
+      "evidence": [
+        {
+          "myth": "el-pequeno-indio-kosina",
+          "field": "mito",
+          "note": "Reciben el trupillo cocido descartado."
+        }
+      ]
+    },
+    "patilla": {
+      "name": "Patilla",
+      "kind": "planta",
+      "description": "Cultivo y alimento que en el dominio de Juyá puede tener apariencia de familia humana.",
+      "aliases": [],
+      "states": [
+        "cultivo",
+        "fruto",
+        "apariencia_humana"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "botanical_sheet"
+      ],
+      "model_refs": [
+        "patilla__botanical_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-pequeno-indio-kosina",
+        "el-viaje-del-mas-alla",
+        "los-dominios-de-juya",
+        "ulepala"
+      ],
+      "evidence": [
+        {
+          "myth": "el-pequeno-indio-kosina",
+          "field": "mito",
+          "note": "Cultivo de la roza."
+        },
+        {
+          "myth": "el-viaje-del-mas-alla",
+          "field": "mito",
+          "note": "Habla y parece familia humana."
+        },
+        {
+          "myth": "los-dominios-de-juya",
+          "field": "mito",
+          "note": "Cultivo con apariencia familiar."
+        },
+        {
+          "myth": "ulepala",
+          "field": "mito",
+          "note": "Fruto con apariencia humana."
+        }
+      ]
+    },
+    "ahuyama": {
+      "name": "Ahuyama",
+      "kind": "planta",
+      "description": "Cultivo y alimento que en el dominio de Juyá puede parecer una persona de gran vientre.",
+      "aliases": [],
+      "states": [
+        "cultivo",
+        "fruto",
+        "apariencia_humana"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "botanical_sheet"
+      ],
+      "model_refs": [
+        "ahuyama__botanical_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-pequeno-indio-kosina",
+        "el-viaje-del-mas-alla",
+        "los-dominios-de-juya",
+        "ulepala"
+      ],
+      "evidence": [
+        {
+          "myth": "el-pequeno-indio-kosina",
+          "field": "mito",
+          "note": "Cultivo de la roza."
+        },
+        {
+          "myth": "el-viaje-del-mas-alla",
+          "field": "mito",
+          "note": "Parece persona de gran vientre."
+        },
+        {
+          "myth": "los-dominios-de-juya",
+          "field": "mito",
+          "note": "Cultivo con apariencia humana."
+        },
+        {
+          "myth": "ulepala",
+          "field": "mito",
+          "note": "Fruto con apariencia humana."
+        }
+      ]
+    },
+    "frijol_roza_kosina": {
+      "name": "Fríjol de la roza del kusina",
+      "kind": "planta",
+      "description": "Cultivo pisoteado que inicia el seguimiento de huellas.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "botanical_sheet"
+      ],
+      "model_refs": [
+        "frijol_roza_kosina__botanical_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-pequeno-indio-kosina"
+      ],
+      "evidence": [
+        {
+          "myth": "el-pequeno-indio-kosina",
+          "field": "mito",
+          "note": "Cultivo pisoteado que inicia la busqueda."
+        }
+      ]
+    },
+    "trupillo_sancochado_kosina": {
+      "name": "Trupillo sancochado del viaje",
+      "kind": "objeto",
+      "description": "Vainas cocidas preparadas por la madre y conservadas como alimento de caza; se distinguen del arbol y de su ficha botanica.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "object_sheet"
+      ],
+      "model_refs": [
+        "trupillo_sancochado_kosina__object_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-pequeno-indio-kosina"
+      ],
+      "evidence": [
+        {
+          "myth": "el-pequeno-indio-kosina",
+          "field": "mito",
+          "note": "Alimento preparado por la madre y llevado a cazar."
+        }
+      ]
+    },
+    "faja_captura_kosina": {
+      "name": "Faja usada para sujetar al caballo",
+      "kind": "objeto",
+      "description": "Faja personal que el joven retira para sujetar al caballo reducido; no se clasifica como si'ira Wayuu ni recibe motivos inventados.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "object_sheet"
+      ],
+      "model_refs": [
+        "faja_captura_kosina__object_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-pequeno-indio-kosina"
+      ],
+      "evidence": [
+        {
+          "myth": "el-pequeno-indio-kosina",
+          "field": "mito",
+          "note": "Permite sujetar al caballo reducido sin atribuir una tipologia cultural no demostrada."
+        }
+      ]
+    },
+    "manea_caballo_kosina": {
+      "name": "Manea del caballo",
+      "kind": "objeto",
+      "description": "Amarre con el que el joven deja al caballo antes de acercarse a la fiesta; material y tecnica exactos no descritos.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "object_sheet"
+      ],
+      "model_refs": [
+        "manea_caballo_kosina__object_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-pequeno-indio-kosina"
+      ],
+      "evidence": [
+        {
+          "myth": "el-pequeno-indio-kosina",
+          "field": "mito",
+          "note": "Sujeta al caballo antes de entrar a la fiesta."
+        }
+      ]
+    },
+    "tambor_carreras_kosina": {
+      "name": "Caja o tambor de la fiesta",
+      "kind": "objeto",
+      "description": "Instrumento que la transcripcion llama primero tambor y despues caja, con el que el protagonista interpreta toques regionales antes de las carreras.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "object_sheet"
+      ],
+      "model_refs": [
+        "tambor_carreras_kosina__object_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-pequeno-indio-kosina"
+      ],
+      "evidence": [
+        {
+          "myth": "el-pequeno-indio-kosina",
+          "field": "mito",
+          "note": "Instrumento de participacion en la fiesta."
+        }
+      ]
+    },
+    "huellas_caballo_kosina": {
+      "name": "Huellas menguantes del caballo",
+      "kind": "fenomeno",
+      "description": "Secuencia de pisadas que se vuelve cada vez mas pequeña antes de revelar el cambio entre caballo grande y potro.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "phenomenon_rule"
+      ],
+      "model_refs": [
+        "huellas_caballo_kosina__phenomenon_rule"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-pequeno-indio-kosina"
+      ],
+      "evidence": [
+        {
+          "myth": "el-pequeno-indio-kosina",
+          "field": "mito",
+          "note": "Menguan mientras el caballo cambia de escala."
+        }
+      ]
+    },
+    "roza_kosina": {
+      "name": "Roza del joven kusina",
+      "kind": "lugar",
+      "description": "Parcela con ahuyama, patilla y frijol cuyo daño inicia el seguimiento del caballo.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "spatial_model"
+      ],
+      "model_refs": [
+        "roza_kosina__spatial_model"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-pequeno-indio-kosina"
+      ],
+      "evidence": [
+        {
+          "myth": "el-pequeno-indio-kosina",
+          "field": "mito",
+          "note": "Parcela dañada que inicia la persecucion."
+        }
+      ]
+    },
+    "vivienda_kosina": {
+      "name": "Casa del joven y su madre",
+      "kind": "arquitectura",
+      "description": "Vivienda no descrita donde el joven vive con su madre; no se llama ni se diseña automaticamente como rancheria Wayuu.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "spatial_model"
+      ],
+      "model_refs": [
+        "vivienda_kosina__spatial_model"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-pequeno-indio-kosina"
+      ],
+      "evidence": [
+        {
+          "myth": "el-pequeno-indio-kosina",
+          "field": "mito",
+          "note": "Casa no descrita del protagonista y su madre."
+        }
+      ]
+    },
+    "pista_carreras_kosina": {
+      "name": "Lugar de las carreras",
+      "kind": "lugar",
+      "description": "Fiesta y pista donde cambian reconocimiento, riqueza y envidia.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "spatial_model"
+      ],
+      "model_refs": [
+        "pista_carreras_kosina__spatial_model"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-pequeno-indio-kosina"
+      ],
+      "evidence": [
+        {
+          "myth": "el-pequeno-indio-kosina",
+          "field": "mito",
+          "note": "Lugar de reconocimiento, carrera y envidia."
+        }
+      ]
+    },
+    "corral_caballos_kosina": {
+      "name": "Corral del rebaño de caballos",
+      "kind": "arquitectura",
+      "description": "Corral que el caballo pide construir para alojar las bestias durante el dia, sin forma o material exactos documentados.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "spatial_model"
+      ],
+      "model_refs": [
+        "corral_caballos_kosina__spatial_model"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-pequeno-indio-kosina"
+      ],
+      "evidence": [
+        {
+          "myth": "el-pequeno-indio-kosina",
+          "field": "mito",
+          "note": "Aloja el rebaño durante el dia."
+        }
+      ]
+    },
+    "abertura_subterranea_caballo": {
+      "name": "Cueva subterránea de los caballos",
+      "kind": "lugar",
+      "description": "Cueva bajo tierra de la que salen los caballos y a la que el primero regresa despues de entregar la riqueza.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "spatial_model"
+      ],
+      "model_refs": [
+        "abertura_subterranea_caballo__spatial_model"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-pequeno-indio-kosina"
+      ],
+      "evidence": [
+        {
+          "myth": "el-pequeno-indio-kosina",
+          "field": "mito",
+          "note": "Lugar del retorno del animal."
+        }
+      ]
+    }
+  }
+}

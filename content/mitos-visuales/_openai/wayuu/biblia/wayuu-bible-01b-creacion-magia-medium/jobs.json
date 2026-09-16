@@ -1,0 +1,37 @@
+{
+  "schema": "mitos-colombia-biblia-batch/v1",
+  "batch_id": "wayuu-bible-01b-creacion-magia-medium",
+  "asset_type": "bible",
+  "quality": "medium",
+  "framing": "immersive_full_bleed",
+  "surface_finish": "layered_depth_no_exposed_support",
+  "plan": "content/mitos-visuales/_openai/wayuu/biblia/wayuu-bible-01b-creacion-magia-medium/plan.snapshot.json",
+  "prepared_at": "2026-09-03",
+  "generation_scope": "Continuación del primer lote mítico: regla mágica de Creación Wayuu en medium mediante edición controlada del ancla ya aprobada, conservando cámara y geografía y avanzando sólo agua, semillas y germinación localizada.",
+  "jobs": [
+    {
+      "id": "creacion-wayuu__magia--regla",
+      "model_id": "creacion-wayuu__magia",
+      "view_id": "regla",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/biblia/wayuu-bible-01b-creacion-magia-medium/prompts/creacion-wayuu__magia--regla.prompt.txt",
+      "output_file": "output/imagegen/wayuu/wayuu-bible-01b-creacion-magia-medium/creacion-wayuu__magia--regla.jpeg",
+      "prompt_sha256": "3ab3d9f7d15ecd59fd7f116681a76213319bc463f34a6052e76d42cbd6d35a0a",
+      "provider": "OpenAI API",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "1536x1024",
+      "output_format": "jpeg",
+      "references": [
+        "creacion-wayuu__ancla:canon"
+      ],
+      "input_references": [
+        {
+          "role": "Imagen 1: ancla territorial y objetivo de continuidad visual; conservar cámara, geografía, materialidad y escala, pero avanzar el estado narrativo hacia germinación localizada.",
+          "path": "output/imagegen/wayuu/wayuu-bible-01-creacion-medium/creacion-wayuu__ancla--canon.jpeg",
+          "status": "DIRECTION_CANDIDATE_PASS"
+        }
+      ],
+      "status": "prepared"
+    }
+  ]
+}

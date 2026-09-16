@@ -1,0 +1,481 @@
+{
+  "schema": "mitos-colombia-biblia-visual/v3",
+  "inventory_approved_at": "2026-09-03",
+  "source_snapshot_sha256": "6b5b1c5ebdb2524a7524b065d96c6d33ad6f5694db239a0d722ded8485f435f5",
+  "model_ids": [
+    "caballo_kosina__identity_sheet",
+    "rancheria_wayuu__spatial_model",
+    "fuego_compartido__phenomenon_rule"
+  ],
+  "models": {
+    "caballo_kosina__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "caballo_kosina"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "el-pequeno-indio-kosina",
+          "field": "mito",
+          "note": "Cambia de tamaño, habla y fija condiciones."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Morfologia zoologica reconocible, cuerpo completo cuando es individuo y variacion controlada cuando es grupo; sin hibridacion no documentada. Entidad: Caballo de Kosina. Funcion visual: Caballo hablante que alterna entre enorme, potro debil y corredor extraordinario.",
+        "materials": [
+          "capas de papel recortado para anatomia",
+          "fibras finas para pelaje o pluma cuando corresponda",
+          "cantos internos y articulaciones fisicas"
+        ],
+        "palette_logic": "Color natural o explicitamente narrado; no usar brillo magico para señalar importancia.",
+        "scale": "Escala zoologica verificable frente al entorno y los personajes.",
+        "continuity_markers": [
+          "nombre estable: Caballo de Kosina",
+          "funcion estable: Caballo hablante que alterna entre enorme, potro debil y corredor extraordinario.",
+          "estados declarados: gigante, potro, corredor, guia"
+        ],
+        "documented_features": [
+          "Caballo hablante que alterna entre enorme, potro debil y corredor extraordinario."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para identity_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · identity_sheet",
+        "primary_request": "identidad corporal completa y legible para Caballo de Kosina. Caballo hablante que alterna entre enorme, potro debil y corredor extraordinario.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Escala zoologica verificable frente al entorno y los personajes.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "capas de papel recortado para anatomia; fibras finas para pelaje o pluma cuando corresponda; cantos internos y articulaciones fisicas",
+        "constraints": [
+          "Morfologia zoologica reconocible, cuerpo completo cuando es individuo y variacion controlada cuando es grupo; sin hibridacion no documentada.",
+          "mostrar: Caballo hablante que alterna entre enorme, potro debil y corredor extraordinario.",
+          "estados autorizados: gigante, potro, corredor, guia",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "1:1",
+          "era": "historico_wayuu_segun_relato",
+          "states": [
+            "gigante"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "rancheria_wayuu__spatial_model": {
+      "purpose": "spatial_model",
+      "entity_refs": [
+        "rancheria_wayuu"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "aramai",
+          "field": "mito",
+          "note": "La enfermedad se desplaza entre casas y familias."
+        },
+        {
+          "myth": "el-hijo-del-condor",
+          "field": "mito",
+          "note": "Lugar de recuperacion de la madre."
+        },
+        {
+          "myth": "el-indio-guerrero-ipuana",
+          "field": "mito",
+          "note": "Lugar de duelo y retorno."
+        },
+        {
+          "myth": "el-indio-jaichuasay",
+          "field": "mito",
+          "note": "Lugar donde recupera forma humana."
+        },
+        {
+          "myth": "el-indio-jururiana",
+          "field": "mito",
+          "note": "Arquitectura de preparacion y crisis."
+        },
+        {
+          "myth": "el-indio-kuriruputa",
+          "field": "mito",
+          "note": "Lugar de recuperacion y deliberacion."
+        },
+        {
+          "myth": "el-indio-pushalna",
+          "field": "mito",
+          "note": "Lugar de familia, pruebas y voz."
+        },
+        {
+          "myth": "el-origen-del-fuego",
+          "field": "mito",
+          "note": "Casas entre las que circula la llama."
+        },
+        {
+          "myth": "el-pequeno-indio-kosina",
+          "field": "mito",
+          "note": "Casa, roza y corral del protagonista."
+        },
+        {
+          "myth": "guanuru",
+          "field": "mito",
+          "note": "Contexto arquitectonico de la reconstruccion."
+        },
+        {
+          "myth": "jirairay",
+          "field": "mito",
+          "note": "Espacio familiar de la reconstruccion."
+        },
+        {
+          "myth": "los-dos-hermanos",
+          "field": "mito",
+          "note": "Casa, duelo y retorno."
+        },
+        {
+          "myth": "umarala",
+          "field": "mito",
+          "note": "Espacio de cuidado y visita."
+        },
+        {
+          "myth": "waleker-el-origen-del-tejido",
+          "field": "mito",
+          "note": "Casa y comunidad donde circula el conocimiento."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Sistema constructivo legible por estructura, cubierta, cerramiento, vacios y relacion con senderos; no casa decorativa aislada. Entidad: Rancheria y piichipala. Funcion visual: Conjunto de vivienda, enramada, corral y senderos, sin convertir una casa en modelo universal.",
+        "materials": [
+          "yotojoro, madera, paja y barro cuando estan documentados",
+          "capas estructurales separadas",
+          "suelo fibroso continuo"
+        ],
+        "palette_logic": "Materiales mates de arena, madera y barro; sin patrones decorativos inventados.",
+        "scale": "Escala habitable demostrada por vanos, sombra y relaciones espaciales.",
+        "continuity_markers": [
+          "nombre estable: Rancheria y piichipala",
+          "funcion estable: Conjunto de vivienda, enramada, corral y senderos, sin convertir una casa en modelo universal.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Conjunto de vivienda, enramada, corral y senderos, sin convertir una casa en modelo universal."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para spatial_model",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · spatial_model",
+        "primary_request": "relaciones espaciales, entradas, planos y escala para Rancheria y piichipala. Conjunto de vivienda, enramada, corral y senderos, sin convertir una casa en modelo universal.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Escala habitable demostrada por vanos, sombra y relaciones espaciales.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "yotojoro, madera, paja y barro cuando estan documentados; capas estructurales separadas; suelo fibroso continuo",
+        "constraints": [
+          "Sistema constructivo legible por estructura, cubierta, cerramiento, vacios y relacion con senderos; no casa decorativa aislada.",
+          "mostrar: Conjunto de vivienda, enramada, corral y senderos, sin convertir una casa en modelo universal.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "spatial_grammar",
+          "purpose": "relaciones espaciales, entradas, planos y escala",
+          "aspect": "16:9",
+          "era": "historico_wayuu_segun_relato",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "fuego_compartido__phenomenon_rule": {
+      "purpose": "phenomenon_rule",
+      "entity_refs": [
+        "fuego_compartido"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "el-origen-del-fuego",
+          "field": "mito",
+          "note": "Pasa de posesion exclusiva a responsabilidad comun."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Secuencia material de causa, accion, limite y huella; debe entenderse sin texto, aura o particulas magicas genericas. Entidad: Llama y brasa compartidas. Funcion visual: Fuego que pasa de casa en casa y exige cuidado en lugar de posesion exclusiva.",
+        "materials": [
+          "papel y fibras que cambian de tension, humedad, luz o posicion",
+          "capas causales separadas",
+          "huella fisica persistente"
+        ],
+        "palette_logic": "El cambio cromatico nace de la materia afectada, nunca de un resplandor sobrenatural por defecto.",
+        "scale": "Escala definida por aquello que transforma, desde objeto hasta territorio.",
+        "continuity_markers": [
+          "nombre estable: Llama y brasa compartidas",
+          "funcion estable: Fuego que pasa de casa en casa y exige cuidado en lugar de posesion exclusiva.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Fuego que pasa de casa en casa y exige cuidado en lugar de posesion exclusiva."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para phenomenon_rule",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · phenomenon_rule",
+        "primary_request": "entrada, accion, limite y huella del fenomeno para Llama y brasa compartidas. Fuego que pasa de casa en casa y exige cuidado en lugar de posesion exclusiva.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Escala definida por aquello que transforma, desde objeto hasta territorio.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel y fibras que cambian de tension, humedad, luz o posicion; capas causales separadas; huella fisica persistente",
+        "constraints": [
+          "Secuencia material de causa, accion, limite y huella; debe entenderse sin texto, aura o particulas magicas genericas.",
+          "mostrar: Fuego que pasa de casa en casa y exige cuidado en lugar de posesion exclusiva.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "phenomenon_grammar",
+          "purpose": "entrada, accion, limite y huella del fenomeno",
+          "aspect": "16:9",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    }
+  },
+  "entities": {
+    "caballo_kosina": {
+      "name": "Caballo de Kosina",
+      "kind": "animal",
+      "description": "Caballo hablante que alterna entre enorme, potro debil y corredor extraordinario.",
+      "aliases": [],
+      "states": [
+        "gigante",
+        "potro",
+        "corredor",
+        "guia"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet",
+        "state_sheet"
+      ],
+      "model_refs": [
+        "caballo_kosina__identity_sheet",
+        "caballo_kosina__state_sheet"
+      ],
+      "legacy_model_refs": [
+        "el-pequeno-indio-kosina__ancla"
+      ],
+      "myth_refs": [
+        "el-pequeno-indio-kosina"
+      ],
+      "evidence": [
+        {
+          "myth": "el-pequeno-indio-kosina",
+          "field": "mito",
+          "note": "Cambia de tamaño, habla y fija condiciones."
+        }
+      ]
+    },
+    "rancheria_wayuu": {
+      "name": "Rancheria y piichipala",
+      "kind": "arquitectura",
+      "description": "Conjunto de vivienda, enramada, corral y senderos, sin convertir una casa en modelo universal.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "spatial_model"
+      ],
+      "model_refs": [
+        "rancheria_wayuu__spatial_model"
+      ],
+      "legacy_model_refs": [
+        "piichipala_arquitectura"
+      ],
+      "myth_refs": [
+        "aramai",
+        "el-hijo-del-condor",
+        "el-indio-guerrero-ipuana",
+        "el-indio-jaichuasay",
+        "el-indio-jururiana",
+        "el-indio-kuriruputa",
+        "el-indio-pushalna",
+        "el-origen-del-fuego",
+        "el-pequeno-indio-kosina",
+        "guanuru",
+        "jirairay",
+        "los-dos-hermanos",
+        "umarala",
+        "waleker-el-origen-del-tejido"
+      ],
+      "evidence": [
+        {
+          "myth": "aramai",
+          "field": "mito",
+          "note": "La enfermedad se desplaza entre casas y familias."
+        },
+        {
+          "myth": "el-hijo-del-condor",
+          "field": "mito",
+          "note": "Lugar de recuperacion de la madre."
+        },
+        {
+          "myth": "el-indio-guerrero-ipuana",
+          "field": "mito",
+          "note": "Lugar de duelo y retorno."
+        },
+        {
+          "myth": "el-indio-jaichuasay",
+          "field": "mito",
+          "note": "Lugar donde recupera forma humana."
+        },
+        {
+          "myth": "el-indio-jururiana",
+          "field": "mito",
+          "note": "Arquitectura de preparacion y crisis."
+        },
+        {
+          "myth": "el-indio-kuriruputa",
+          "field": "mito",
+          "note": "Lugar de recuperacion y deliberacion."
+        },
+        {
+          "myth": "el-indio-pushalna",
+          "field": "mito",
+          "note": "Lugar de familia, pruebas y voz."
+        },
+        {
+          "myth": "el-origen-del-fuego",
+          "field": "mito",
+          "note": "Casas entre las que circula la llama."
+        },
+        {
+          "myth": "el-pequeno-indio-kosina",
+          "field": "mito",
+          "note": "Casa, roza y corral del protagonista."
+        },
+        {
+          "myth": "guanuru",
+          "field": "mito",
+          "note": "Contexto arquitectonico de la reconstruccion."
+        },
+        {
+          "myth": "jirairay",
+          "field": "mito",
+          "note": "Espacio familiar de la reconstruccion."
+        },
+        {
+          "myth": "los-dos-hermanos",
+          "field": "mito",
+          "note": "Casa, duelo y retorno."
+        },
+        {
+          "myth": "umarala",
+          "field": "mito",
+          "note": "Espacio de cuidado y visita."
+        },
+        {
+          "myth": "waleker-el-origen-del-tejido",
+          "field": "mito",
+          "note": "Casa y comunidad donde circula el conocimiento."
+        }
+      ]
+    },
+    "fuego_compartido": {
+      "name": "Llama y brasa compartidas",
+      "kind": "fenomeno",
+      "description": "Fuego que pasa de casa en casa y exige cuidado en lugar de posesion exclusiva.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "phenomenon_rule"
+      ],
+      "model_refs": [
+        "fuego_compartido__phenomenon_rule"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-origen-del-fuego"
+      ],
+      "evidence": [
+        {
+          "myth": "el-origen-del-fuego",
+          "field": "mito",
+          "note": "Pasa de posesion exclusiva a responsabilidad comun."
+        }
+      ]
+    }
+  }
+}

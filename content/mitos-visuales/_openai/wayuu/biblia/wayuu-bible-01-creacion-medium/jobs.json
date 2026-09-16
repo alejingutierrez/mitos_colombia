@@ -1,0 +1,47 @@
+{
+  "schema": "mitos-colombia-biblia-batch/v1",
+  "batch_id": "wayuu-bible-01-creacion-medium",
+  "asset_type": "bible",
+  "quality": "medium",
+  "framing": "immersive_full_bleed",
+  "surface_finish": "layered_depth_no_exposed_support",
+  "plan": "content/mitos-visuales/_openai/wayuu/biblia/wayuu-bible-01-creacion-medium/plan.snapshot.json",
+  "prepared_at": "2026-09-03",
+  "generation_scope": "Primer lote mítico de producción completa: dos modelos de Creación Wayuu en medium, sin cuerpos de deidades y con magia material situada en agua, suelo, semillas y germinación localizada.",
+  "jobs": [
+    {
+      "id": "creacion-wayuu__ancla--canon",
+      "model_id": "creacion-wayuu__ancla",
+      "view_id": "canon",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/biblia/wayuu-bible-01-creacion-medium/prompts/creacion-wayuu__ancla--canon.prompt.txt",
+      "output_file": "output/imagegen/wayuu/wayuu-bible-01-creacion-medium/creacion-wayuu__ancla--canon.jpeg",
+      "prompt_sha256": "317ce2d7a2c156f0b56e4c0a1123b50b00e3e5f952cbf75a725e88fbf783f5f9",
+      "provider": "OpenAI API",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "1536x1024",
+      "output_format": "jpeg",
+      "references": [],
+      "input_references": [],
+      "status": "prepared"
+    },
+    {
+      "id": "creacion-wayuu__magia--regla",
+      "model_id": "creacion-wayuu__magia",
+      "view_id": "regla",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/biblia/wayuu-bible-01-creacion-medium/prompts/creacion-wayuu__magia--regla.prompt.txt",
+      "output_file": "output/imagegen/wayuu/wayuu-bible-01-creacion-medium/creacion-wayuu__magia--regla.jpeg",
+      "prompt_sha256": "c109f3fe4ced29602422a82494710cd66cb69a9f3f46eb13c428ab9f7126ea72",
+      "provider": "OpenAI API",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "1536x1024",
+      "output_format": "jpeg",
+      "references": [
+        "creacion-wayuu__ancla:canon"
+      ],
+      "input_references": [],
+      "status": "prepared"
+    }
+  ]
+}

@@ -1,0 +1,212 @@
+{
+  "schema": "mitos-openai-triptych/v1",
+  "batch_id": "wayuu-juya-triptych-01",
+  "created_at": "2026-09-07T15:31:16.552Z",
+  "account_source": "OPENAI_API_KEY from ignored .env",
+  "provider": "openai",
+  "model": "gpt-image-2",
+  "community": "wayuu",
+  "myth": "los-dominios-de-juya",
+  "plan": "content/mitos-visuales/wayuu.juya.triptico.v1.json",
+  "prompt_profile": "story_first_v3_symbolic_huella",
+  "plan_sha256": "f4f80faa085847e086eec1452387045d491b9907ccc2280fa7d3e157c7e00e54",
+  "narrative_target_sha256": "e7bbf6fdeb7ab39e3b8dec5dee3c9b41e46fab2f068974fe64b6297a392fda54",
+  "evidence": [
+    {
+      "id": "finol_perrin",
+      "type": "primary_transcription_in_analysis",
+      "url": "https://www.joseenriquefinol.com/wp-content/uploads/2020/07/MITO-Y-CULTURA-GUAJIRA-Libro.pdf",
+      "pages": "213–217 y contraste231",
+      "supports": "Boa-banco, tajada de patilla, seres vegetales y límite Pulowi.",
+      "limits": "Transcripción/comparación Paz Ipuana y Perrin; elegir boa Perrin y no mezclar banco jabalí."
+    }
+  ],
+  "visual_memory_library": "content/mitos-visuales/wayuu.visual-memory.v1.json",
+  "visual_memory_review": {
+    "reviewer": "agent_direct_visual_review",
+    "reviewed_at": "2026-09-07T15:33:00Z",
+    "reviewed_reference_ids": [
+      "b2ad863900b1c7217c48",
+      "d1ea72ea6e785060204f"
+    ],
+    "retained": [
+      "Contraste seco/húmedo y capas del dominio; espacios amplios."
+    ],
+    "rejected": [
+      "Dios gigante barbado con corona, viajero de torso expuesto, rosetas, sol ornamental, ausencia de prodigio específico."
+    ],
+    "influence_by_act": {
+      "entrada": "Sustituir retrato celeste por encuentro concreto con boa-banco y viajero vestido.",
+      "acto": "Mostrar identidades vegetales mediante sombras correspondientes, no paisaje genérico fértil.",
+      "huella": "Hoja con sombra humana: identidad no agotada por apariencia, sin avatar."
+    }
+  },
+  "bible_selection": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/accepted-selection.json",
+  "canonical_models": [
+    {
+      "model_id": "viudo_viaje_mas_alla__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-18-el-viaje-del-mas-alla-medium/viudo_viaje_mas_alla__identity_sheet--canon.jpeg",
+      "sha256": "74bc465196c1da6997a71a7d436bbca4f90e23591753a545d4b7d52b8383efae",
+      "qa_status": "PASS"
+    },
+    {
+      "model_id": "boa_banco__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-18-el-viaje-del-mas-alla-medium-corrections-01/boa_banco__identity_sheet--canon.jpeg",
+      "sha256": "0269df5d82c4fe5ecb3db99832b8497f8d0bc90c75e55cb5bd5ca9903c8d0fd6",
+      "qa_status": "PASS_AFTER_CORRECTION_01"
+    },
+    {
+      "model_id": "dominio_juya__spatial_model",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-18-el-viaje-del-mas-alla-medium/dominio_juya__spatial_model--canon.jpeg",
+      "sha256": "90e4bae4114a02220296064cbc2dc012403b3d69416576f606b55837ffbb4983",
+      "qa_status": "PASS"
+    },
+    {
+      "model_id": "patilla__botanical_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-17-el-pequeno-indio-kosina-medium/patilla__botanical_sheet--canon.jpeg",
+      "sha256": "199c12b131ac104832b6ac1e7359952464bcc00582c9034b3036f369cdcdfad7",
+      "qa_status": "PASS"
+    },
+    {
+      "model_id": "patilla__state_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-18-el-viaje-del-mas-alla-medium-corrections-01/patilla__state_sheet--estados.jpeg",
+      "sha256": "5952bc1fa982b6b037ccb1a10e1c6eb6fb7e7e03c9881e7ea60e88f78ca751dd",
+      "qa_status": "PASS_AFTER_CORRECTION_01"
+    }
+  ],
+  "approval_gate": "Campaña completa autorizada; QA por orientación y publicación aditiva sin borrar versiones.",
+  "requested_acts": [
+    "entrada",
+    "acto",
+    "huella"
+  ],
+  "generation_mode": "text_only_no_local_references",
+  "framing": "immersive_full_bleed",
+  "surface_finish": "layered_depth_no_exposed_support",
+  "jobs": [
+    {
+      "act": "entrada",
+      "aspect_ratio": "16:9",
+      "size": "1536x864",
+      "quality": "high",
+      "api_method": "images.generate",
+      "composition": "profundidad_abierta",
+      "canon_model_ids": [
+        "viudo_viaje_mas_alla__identity_sheet",
+        "boa_banco__identity_sheet",
+        "dominio_juya__spatial_model",
+        "patilla__botanical_sheet",
+        "patilla__state_sheet"
+      ],
+      "refs": [],
+      "ref_paths": [],
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/los-dominios-de-juya/wayuu-juya-triptych-01/prompts/entrada.prompt.txt",
+      "prompt_sha256": "406b386d67e497f74632d1e35ee4b5cc928f312d582e43269181d1b3cdfa3f15",
+      "narrative_event_ids": [
+        "boa_banco"
+      ],
+      "editorial_translation": "Traducción editorial por pliegues y sombras de una percepción narrada; no taxonomía natural ni derecho sobre personas.",
+      "magic_in_the_ordinary": {
+        "ordinary_anchor": "Asiento y boa.",
+        "impossible_behavior": "Un solo objeto se enrolla como boa y sostiene como banco.",
+        "narrative_effect": "Aquello que causa miedo puede sostenerlo sin herirlo.",
+        "agency": "Los seres del dominio de Juyá tienen otra identidad; el viajero recibe y aprende, no controla la transformación.",
+        "physical_translation": "Misma materia de papel, pliegues continuos y sombras físicas vinculadas.",
+        "visible_test": "¿Un viajero pequeño se sienta en una sola boa-banco sin ataque, sin dios gigante?",
+        "event_ids": [
+          "boa_banco"
+        ],
+        "provenance": "editorial_metaphor",
+        "temporal_role": "present"
+      },
+      "visual_function": "narrative_scene",
+      "output": "output/imagegen/wayuu/triptychs/wayuu-juya-triptych-01/entrada.jpeg",
+      "status": "prepared"
+    },
+    {
+      "act": "acto",
+      "aspect_ratio": "9:16",
+      "size": "864x1536",
+      "quality": "medium",
+      "api_method": "images.generate",
+      "composition": "profundidad_abierta",
+      "canon_model_ids": [
+        "viudo_viaje_mas_alla__identity_sheet",
+        "boa_banco__identity_sheet",
+        "dominio_juya__spatial_model",
+        "patilla__botanical_sheet",
+        "patilla__state_sheet"
+      ],
+      "refs": [],
+      "ref_paths": [],
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/los-dominios-de-juya/wayuu-juya-triptych-01/prompts/acto.prompt.txt",
+      "prompt_sha256": "9dd679c789b5d8d6f31653a58179c097a839f7423098eca9a6e3fee655c8f8ea",
+      "narrative_event_ids": [
+        "patillas_personas"
+      ],
+      "editorial_translation": "Traducción editorial por pliegues y sombras de una percepción narrada; no taxonomía natural ni derecho sobre personas.",
+      "magic_in_the_ordinary": {
+        "ordinary_anchor": "Cultivo y familia percibida.",
+        "impossible_behavior": "Las personas conservan sombras de patillas.",
+        "narrative_effect": "El cultivo devuelve una presencia que no esperábamos.",
+        "agency": "Los seres del dominio de Juyá tienen otra identidad; el viajero recibe y aprende, no controla la transformación.",
+        "physical_translation": "Misma materia de papel, pliegues continuos y sombras físicas vinculadas.",
+        "visible_test": "¿Cuatro figuras completas tienen cuatro sombras de patilla conectadas a sus pies, sin violencia?",
+        "event_ids": [
+          "patillas_personas"
+        ],
+        "provenance": "editorial_metaphor",
+        "temporal_role": "present"
+      },
+      "visual_function": "narrative_scene",
+      "output": "output/imagegen/wayuu/triptychs/wayuu-juya-triptych-01/acto.jpeg",
+      "status": "prepared"
+    },
+    {
+      "act": "huella",
+      "aspect_ratio": "1:1",
+      "size": "1024x1024",
+      "quality": "medium",
+      "api_method": "images.generate",
+      "composition": "simbolo_central",
+      "canon_model_ids": [
+        "viudo_viaje_mas_alla__identity_sheet",
+        "boa_banco__identity_sheet",
+        "dominio_juya__spatial_model",
+        "patilla__botanical_sheet",
+        "patilla__state_sheet"
+      ],
+      "refs": [],
+      "ref_paths": [],
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/los-dominios-de-juya/wayuu-juya-triptych-01/prompts/huella.prompt.txt",
+      "prompt_sha256": "45b6eba4b05b26a073539a42471b06f9e40a2f2b4441db2a9fc0fcdb4761185f",
+      "narrative_event_ids": [
+        "patillas_personas"
+      ],
+      "editorial_translation": "Traducción editorial por pliegues y sombras de una percepción narrada; no taxonomía natural ni derecho sobre personas.",
+      "magic_in_the_ordinary": {
+        "ordinary_anchor": "Hoja y sombra.",
+        "impossible_behavior": "Una hoja tiene sombra humana.",
+        "narrative_effect": "Lo que vemos no termina en su contorno.",
+        "agency": "Los seres del dominio de Juyá tienen otra identidad; el viajero recibe y aprende, no controla la transformación.",
+        "physical_translation": "Misma materia de papel, pliegues continuos y sombras físicas vinculadas.",
+        "visible_test": "¿Una única hoja proyecta una sombra humana conectada, sin escena?",
+        "event_ids": [
+          "patillas_personas"
+        ],
+        "provenance": "editorial_metaphor",
+        "temporal_role": "memory"
+      },
+      "visual_function": "symbolic_synthesis",
+      "symbolic_contract": {
+        "thesis": "Ningún contorno contiene toda una identidad.",
+        "carrier": "Hoja con sombra humana.",
+        "operation": "Contradecir la sombra manteniendo conexión con el objeto.",
+        "story_connection": "Personas y vegetales cambian de apariencia en el dominio de Juyá.",
+        "visible_test": "¿Una única hoja proyecta una sombra humana conectada, sin escena?"
+      },
+      "output": "output/imagegen/wayuu/triptychs/wayuu-juya-triptych-01/huella.jpeg",
+      "status": "prepared"
+    }
+  ]
+}

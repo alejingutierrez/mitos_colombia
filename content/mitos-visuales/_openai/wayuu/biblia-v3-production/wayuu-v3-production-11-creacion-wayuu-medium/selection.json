@@ -1,0 +1,140 @@
+{
+  "schema": "mitos-colombia-biblia-production-selection/v3",
+  "community": "Wayúu",
+  "myth_slug": "creacion-wayuu",
+  "batch_id": "wayuu-v3-production-11-creacion-wayuu-medium",
+  "status": "QA_PASS_AFTER_RESEARCH_AND_CORRECTIONS",
+  "reviewed_at": "2026-09-03",
+  "quality": "medium",
+  "generation_mode": "text_only_no_local_references",
+  "contact_sheet": "output/imagegen/wayuu-v3-production/creacion-wayuu-selected-contact-sheet.jpeg",
+  "contact_sheet_sha256": "186553ec09db7912c43f7df61b8edea89606e637ad3222bde0c1699b63b1650d",
+  "batch_models": 8,
+  "selected_models": 8,
+  "approved_models_reused_for_myth": [
+    "mareiwa__presence_model",
+    "mareiwa__state_sheet",
+    "juya__presence_model",
+    "juya__state_sheet",
+    "pava_semillera__identity_sheet",
+    "turpial_semillero__identity_sheet",
+    "paloma_semillera__identity_sheet",
+    "cardon_iguaraya__botanical_sheet",
+    "tuna_higo__botanical_sheet",
+    "primeros_wayuu__group_grammar",
+    "territorio_alta_guajira__environment_model",
+    "serrania_macuira__environment_model",
+    "costa_mar_guajira__environment_model"
+  ],
+  "myth_model_coverage": {
+    "selected": 21,
+    "required": 21,
+    "remaining": 0
+  },
+  "bible_progress_after_batch": {
+    "selected_models": 101,
+    "required_models": 265,
+    "remaining_models": 164
+  },
+  "selections": {
+    "mma__presence_model": {
+      "status": "PASS",
+      "batch_id": "wayuu-v3-production-11-creacion-wayuu-medium",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-11-creacion-wayuu-medium/mma__presence_model--canon.jpeg",
+      "sha256": "99473ea5e38e7d1a0cfe588b281524480a0d82f960e3af548755a18c2c9cf4a9"
+    },
+    "kai_sol__presence_model": {
+      "status": "PASS_AFTER_CORRECTION_01",
+      "batch_id": "wayuu-v3-production-11-creacion-wayuu-medium-corrections-01",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-11-creacion-wayuu-medium-corrections-01/kai_sol__presence_model--canon.jpeg",
+      "sha256": "c7500cb1d6d1aa88e5cbbeace4009cd70ec16d3a302a394ca903cfa338441bda"
+    },
+    "kashi_luna__presence_model": {
+      "status": "PASS",
+      "batch_id": "wayuu-v3-production-11-creacion-wayuu-medium",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-11-creacion-wayuu-medium/kashi_luna__presence_model--canon.jpeg",
+      "sha256": "cadcae8d5f84a1e339cd060f396e3cdafb7e6fdbd789ab68e8da95f9ff91ce21"
+    },
+    "trupillo__botanical_sheet": {
+      "status": "PASS",
+      "batch_id": "wayuu-v3-production-11-creacion-wayuu-medium",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-11-creacion-wayuu-medium/trupillo__botanical_sheet--canon.jpeg",
+      "sha256": "5235c64ae58510f8a0be14484bb20cd8d10e6ba7f9c4e27f43947b5bbb959577"
+    },
+    "arachi__spatial_model": {
+      "status": "PASS_AFTER_CORRECTION_03",
+      "batch_id": "wayuu-v3-production-11-creacion-wayuu-medium-corrections-03",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-11-creacion-wayuu-medium-corrections-03/arachi__spatial_model--canon.jpeg",
+      "sha256": "ab8cd6084b542257307e0ca66d814033af26168992d4a6077dc275e2f16aa1f9"
+    },
+    "cavidad_origen__spatial_model": {
+      "status": "PASS_AFTER_CORRECTION_01",
+      "batch_id": "wayuu-v3-production-11-creacion-wayuu-medium-corrections-01",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-11-creacion-wayuu-medium-corrections-01/cavidad_origen__spatial_model--canon.jpeg",
+      "sha256": "0d6f9bd074cd115c959a053495a065f589c68bf9690ebf96539a58bcb7a58448"
+    },
+    "barro_creacion__object_sheet": {
+      "status": "PASS_AFTER_CORRECTION_01",
+      "batch_id": "wayuu-v3-production-11-creacion-wayuu-medium-corrections-01",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-11-creacion-wayuu-medium-corrections-01/barro_creacion__object_sheet--canon.jpeg",
+      "sha256": "556fcc1396bb52182b0205b8f17b7fe9bdc1915a1fbd9f953b9de75d4aee8d5b"
+    },
+    "fogon_primero__object_sheet": {
+      "status": "PASS_AFTER_CORRECTION_01",
+      "batch_id": "wayuu-v3-production-11-creacion-wayuu-medium-corrections-01",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-11-creacion-wayuu-medium-corrections-01/fogon_primero__object_sheet--canon.jpeg",
+      "sha256": "5081475042fcd6fb56073a0c005a40775603b2e0bef8e8fd17176a178d3d5b08"
+    }
+  },
+  "rejections": [
+    {
+      "model_id": "arachi__spatial_model",
+      "batch_id": "wayuu-v3-production-11-creacion-wayuu-medium",
+      "reason": "REJECTED_PHOTOREALISTIC_ROCKS_AND_TERRAIN_INSTEAD_OF_UNMISTAKABLE_PAPER_CRAFT",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-11-creacion-wayuu-medium/arachi__spatial_model--canon.jpeg",
+      "sha256": "6b70e59d7f13eb90699bb71d1de8ad7dece73de2d59b308f3deb2047bf71ba2a"
+    },
+    {
+      "model_id": "barro_creacion__object_sheet",
+      "batch_id": "wayuu-v3-production-11-creacion-wayuu-medium",
+      "reason": "REJECTED_HOLLOW_MASS_READ_AS_VESSEL_OR_BOWL",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-11-creacion-wayuu-medium/barro_creacion__object_sheet--canon.jpeg",
+      "sha256": "f717d3f9e58ecc11851d24f1a5da36cf6a4fbd51bc0e8ff69d5932013b64e0b2"
+    },
+    {
+      "model_id": "cavidad_origen__spatial_model",
+      "batch_id": "wayuu-v3-production-11-creacion-wayuu-medium",
+      "reason": "REJECTED_PHOTOREALISTIC_MINERAL_CAVE_WITH_REGULAR_STAIR_READING",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-11-creacion-wayuu-medium/cavidad_origen__spatial_model--canon.jpeg",
+      "sha256": "307883836d033647f4c58bb6d12e319fada985c35765a5e41487789bb790a687"
+    },
+    {
+      "model_id": "fogon_primero__object_sheet",
+      "batch_id": "wayuu-v3-production-11-creacion-wayuu-medium",
+      "reason": "REJECTED_NON_LOCAL_AGAVE_OR_ALOE_ROSETTES_IN_BACKGROUND",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-11-creacion-wayuu-medium/fogon_primero__object_sheet--canon.jpeg",
+      "sha256": "2e8b45fb3c0782a909922bdf719fea9f0ea631971372ed5ed8eaa68449436952"
+    },
+    {
+      "model_id": "kai_sol__presence_model",
+      "batch_id": "wayuu-v3-production-11-creacion-wayuu-medium",
+      "reason": "REJECTED_NON_LOCAL_AGAVE_OR_ALOE_ROSETTES_DOMINATING_TERRITORY",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-11-creacion-wayuu-medium/kai_sol__presence_model--canon.jpeg",
+      "sha256": "7049c670cef70a96a01baea5c5794c96ef0653fb3805dd32fa226719ac9b1439"
+    },
+    {
+      "model_id": "arachi__spatial_model",
+      "batch_id": "wayuu-v3-production-11-creacion-wayuu-medium-corrections-01",
+      "reason": "REJECTED_PAPER_MATERIAL_FIXED_BUT_AGAVE_OR_ALOE_ROSETTES_INTRODUCED",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-11-creacion-wayuu-medium-corrections-01/arachi__spatial_model--canon.jpeg",
+      "sha256": "0f330a0847593b3cec8a42a09d97a8531ce458ea8f2cc27f62df0b96853b8be8"
+    },
+    {
+      "model_id": "arachi__spatial_model",
+      "batch_id": "wayuu-v3-production-11-creacion-wayuu-medium-corrections-02",
+      "reason": "REJECTED_ROSETTE_VEGETATION_PERSISTED_DESPITE_LOCAL_FLORA_CONSTRAINT",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-11-creacion-wayuu-medium-corrections-02/arachi__spatial_model--canon.jpeg",
+      "sha256": "8971c7f1fc93ed10ea9ec04a2a2ab5313a7d541a68a2e789db179488ecc120b2"
+    }
+  ]
+}

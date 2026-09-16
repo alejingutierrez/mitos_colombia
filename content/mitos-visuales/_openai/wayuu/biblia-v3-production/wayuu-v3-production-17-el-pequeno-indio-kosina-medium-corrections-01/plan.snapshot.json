@@ -1,0 +1,277 @@
+{
+  "schema": "mitos-colombia-biblia-visual/v3",
+  "batch": {
+    "id": "wayuu-v3-production-17-el-pequeno-indio-kosina-medium",
+    "myth_slug": "el-pequeno-indio-kosina",
+    "model_ids": [
+      "kosina_joven__identity_sheet",
+      "kosina_joven__state_sheet",
+      "madre_kosina__identity_sheet",
+      "caballo_kosina__state_sheet",
+      "hermano_caballo_kosina__identity_sheet",
+      "familia_caballos_kosina__group_grammar",
+      "aliado_rico_kosina__identity_sheet",
+      "indigenas_ricos_camino_kosina__group_grammar",
+      "duenos_caballos_kosina__group_grammar",
+      "jefe_fiesta_kosina__identity_sheet",
+      "lagartijas_kosina__group_grammar",
+      "burros_camino_kosina__group_grammar",
+      "patilla__botanical_sheet",
+      "ahuyama__botanical_sheet",
+      "frijol_roza_kosina__botanical_sheet",
+      "trupillo_sancochado_kosina__object_sheet",
+      "faja_captura_kosina__object_sheet",
+      "manea_caballo_kosina__object_sheet",
+      "tambor_carreras_kosina__object_sheet",
+      "huellas_caballo_kosina__phenomenon_rule",
+      "roza_kosina__spatial_model",
+      "vivienda_kosina__spatial_model",
+      "pista_carreras_kosina__spatial_model",
+      "corral_caballos_kosina__spatial_model",
+      "abertura_subterranea_caballo__spatial_model"
+    ],
+    "quality": "medium",
+    "framing": "immersive_full_bleed",
+    "surface_finish": "layered_depth_no_exposed_support",
+    "generation_mode": "text_only_no_local_references",
+    "status": "research_inventory_design_complete_preflight_pending"
+  },
+  "inventory_approved_at": "2026-09-03",
+  "pilot_approved_at": "2026-09-03",
+  "source_snapshot_sha256": "6b5b1c5ebdb2524a7524b065d96c6d33ad6f5694db239a0d722ded8485f435f5",
+  "model_ids": [
+    "kosina_joven__state_sheet",
+    "abertura_subterranea_caballo__spatial_model"
+  ],
+  "models": {
+    "kosina_joven__state_sheet": {
+      "purpose": "state_sheet",
+      "entity_refs": [
+        "kosina_joven"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "el-pequeno-indio-kosina",
+          "field": "mito",
+          "note": "Sigue huellas, toca, corre, escucha y comparte."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos. Entidad: Joven kusina del relato. Funcion visual: Joven cazador, agricultor y musico llamado Kosina por la transcripcion; Kusina puede ser una categoria relacional o historica y no se trata automaticamente como nombre propio ni como sinonimo de Wayuu.",
+        "materials": [
+          "papel mate de fibra visible",
+          "capas prensadas para cuerpo y vestuario",
+          "hilo solo cuando el relato lo exige"
+        ],
+        "palette_logic": "Arena, barro, carbon y fibras naturales; un acento propio de la entidad puede repetirse, sin patrones kanas o marcas claniles inventadas.",
+        "scale": "Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "continuity_markers": [
+          "nombre estable: Joven kusina del relato",
+          "funcion estable: Joven cazador, agricultor y musico llamado Kosina por la transcripcion; Kusina puede ser una categoria relacional o historica y no se trata automaticamente como nombre propio ni como sinonimo de Wayuu.",
+          "estados declarados: cazador, agricultor, musico, jinete, cuidador_del_rebano"
+        ],
+        "documented_features": [
+          "Joven cazador, agricultor y musico llamado Kosina por la transcripcion; Kusina puede ser una categoria relacional o historica y no se trata automaticamente como nombre propio ni como sinonimo de Wayuu.",
+          "alias documentado: Kosina",
+          "alias documentado: Kusiña",
+          "alias documentado: Kusina"
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para state_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · state_sheet",
+        "primary_request": "continuidad entre estados sin adelantar un keyframe para Joven kusina del relato. Joven cazador, agricultor y musico llamado Kosina por la transcripcion; Kusina puede ser una categoria relacional o historica y no se trata automaticamente como nombre propio ni como sinonimo de Wayuu.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel mate de fibra visible; capas prensadas para cuerpo y vestuario; hilo solo cuando el relato lo exige",
+        "constraints": [
+          "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos.",
+          "mostrar: Joven cazador, agricultor y musico llamado Kosina por la transcripcion; Kusina puede ser una categoria relacional o historica y no se trata automaticamente como nombre propio ni como sinonimo de Wayuu.",
+          "estados autorizados: cazador, agricultor, musico, jinete, cuidador_del_rebano",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "estados",
+          "view_type": "state_sequence",
+          "purpose": "continuidad entre estados sin adelantar un keyframe",
+          "aspect": "16:9",
+          "era": "historico_wayuu_segun_relato",
+          "states": [
+            "cazador",
+            "agricultor",
+            "musico",
+            "jinete",
+            "cuidador_del_rebano"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "abertura_subterranea_caballo__spatial_model": {
+      "purpose": "spatial_model",
+      "entity_refs": [
+        "abertura_subterranea_caballo"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "el-pequeno-indio-kosina",
+          "field": "mito",
+          "note": "Lugar del retorno del animal."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Umbral y organizacion espacial propios del relato; la geografia incierta se mantiene aproximada y nunca se publica como coordenada. Entidad: Cueva subterránea de los caballos. Funcion visual: Cueva bajo tierra de la que salen los caballos y a la que el primero regresa despues de entregar la riqueza.",
+        "materials": [
+          "estratos de papel y suelo prensado",
+          "elementos materiales citados por el relato",
+          "aire y oclusiones entre planos"
+        ],
+        "palette_logic": "Paleta territorial modulada por funcion, clima y estado narrativo.",
+        "scale": "Profundidad recorrible con primer plano, plano medio y fondo a distancias reales.",
+        "continuity_markers": [
+          "nombre estable: Cueva subterránea de los caballos",
+          "funcion estable: Cueva bajo tierra de la que salen los caballos y a la que el primero regresa despues de entregar la riqueza.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Cueva bajo tierra de la que salen los caballos y a la que el primero regresa despues de entregar la riqueza."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para spatial_model",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · spatial_model",
+        "primary_request": "relaciones espaciales, entradas, planos y escala para Cueva subterránea de los caballos. Cueva bajo tierra de la que salen los caballos y a la que el primero regresa despues de entregar la riqueza.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Profundidad recorrible con primer plano, plano medio y fondo a distancias reales.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "estratos de papel y suelo prensado; elementos materiales citados por el relato; aire y oclusiones entre planos",
+        "constraints": [
+          "Umbral y organizacion espacial propios del relato; la geografia incierta se mantiene aproximada y nunca se publica como coordenada.",
+          "mostrar: Cueva bajo tierra de la que salen los caballos y a la que el primero regresa despues de entregar la riqueza.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "spatial_grammar",
+          "purpose": "relaciones espaciales, entradas, planos y escala",
+          "aspect": "16:9",
+          "era": "historico_wayuu_segun_relato",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    }
+  },
+  "entities": {
+    "kosina_joven": {
+      "name": "Joven kusina del relato",
+      "kind": "personaje",
+      "description": "Joven cazador, agricultor y musico llamado Kosina por la transcripcion; Kusina puede ser una categoria relacional o historica y no se trata automaticamente como nombre propio ni como sinonimo de Wayuu.",
+      "aliases": [
+        "Kosina",
+        "Kusiña",
+        "Kusina"
+      ],
+      "states": [
+        "cazador",
+        "agricultor",
+        "musico",
+        "jinete",
+        "cuidador_del_rebano"
+      ],
+      "evidence_basis": "uncertain",
+      "sensitivity": "contextual",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet",
+        "state_sheet"
+      ],
+      "model_refs": [
+        "kosina_joven__identity_sheet",
+        "kosina_joven__state_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-pequeno-indio-kosina"
+      ],
+      "evidence": [
+        {
+          "myth": "el-pequeno-indio-kosina",
+          "field": "mito",
+          "note": "Sigue huellas, toca, corre, escucha y comparte."
+        }
+      ]
+    },
+    "abertura_subterranea_caballo": {
+      "name": "Cueva subterránea de los caballos",
+      "kind": "lugar",
+      "description": "Cueva bajo tierra de la que salen los caballos y a la que el primero regresa despues de entregar la riqueza.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "spatial_model"
+      ],
+      "model_refs": [
+        "abertura_subterranea_caballo__spatial_model"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-pequeno-indio-kosina"
+      ],
+      "evidence": [
+        {
+          "myth": "el-pequeno-indio-kosina",
+          "field": "mito",
+          "note": "Lugar del retorno del animal."
+        }
+      ]
+    }
+  }
+}

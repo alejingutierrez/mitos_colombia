@@ -1,0 +1,218 @@
+{
+  "schema": "mitos-colombia-triptychs/v1.2",
+  "status": "pilot_in_revision",
+  "comunidad": "Wayúu",
+  "region": "Caribe",
+  "prompt_profile": "story_first_v1",
+  "generation_mode": "text_only_no_local_references",
+  "bible_selection": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/accepted-selection.json",
+  "approval_gate": "Iteración autorizada de Arámai; la aprobación del resto sigue pendiente del resultado del piloto.",
+  "output_sizes": {
+    "entrada": "1536x864",
+    "acto": "864x1536",
+    "huella": "1024x1024"
+  },
+  "quality_policy": {
+    "entrada": "high",
+    "acto": "medium",
+    "huella": "medium"
+  },
+  "mitos": {
+    "aramai": {
+      "titulo": "Arámai",
+      "pilot": true,
+      "canon_models": [
+        "aramai__identity_sheet",
+        "rancheria_wayuu__spatial_model",
+        "territorio_alta_guajira__environment_model"
+      ],
+      "evidence": [
+        {
+          "id": "chaves_1946_aramai",
+          "type": "primary_source",
+          "title": "Mitos, leyendas y cuentos de la Guajira, VI: Aramai",
+          "author": "Milcíades Chaves Ch.",
+          "year": 1946,
+          "locator": "p. impresa 314; índice PDF 10. Procedencia oral al final de VIII, p.316.",
+          "url": "https://publicaciones.icanh.gov.co/index.php/picanh/catalog/download/243/266/1579?inline=1",
+          "supports": "Edad mayor, escasez, petición de mortandad, respuesta de Mareiwa, recorrido de Wanurú y responsabilidad atribuida a Arámai.",
+          "limits": "Registro mediado por recopilador e intérprete; no contiene retorno, petición de cese ni cuidado. No fija una anatomía para Mareiwa o Wanurú."
+        },
+        {
+          "id": "published_aramai_20260905",
+          "type": "project_narrative",
+          "path": "content/mitos-visuales/research/aramai-narrative-2026-09-05.json",
+          "supports": "Texto objetivo de estas imágenes: incluye petición de cese, intento de ayudar y pérdida irreversible como desarrollo editorial.",
+          "limits": "El desarrollo editorial no se presenta como episodios documentados en Chaves."
+        },
+        {
+          "id": "paz_reverol_2017",
+          "type": "community_author_context",
+          "author": "Carmen Laura Paz Reverol",
+          "title": "Hacer los sueños. Una perspectiva wayuu",
+          "url": "https://entrediversidades.unach.mx/index.php/entrediversidades/article/view/18",
+          "supports": "Perspectiva situada sobre comunicación entre experiencias cotidianas y no humanas.",
+          "limits": "Contexto; no aporta episodios a Arámai ni permite convertirlo en un sueño. Ficha y extracto consultables; enlace de descarga HTML falló."
+        },
+        {
+          "id": "garcia_valbuena_2004",
+          "type": "ethnographic_context",
+          "title": "Cuando cambian los sueños. La cultura wayúu frente a las iglesias evangélicas",
+          "author": "Nelly García Gavidia y Carlos Valbuena",
+          "url": "https://www.humanas.unal.edu.co/colantropos/files/5114/5615/3446/garcia_wayuu.pdf",
+          "supports": "Relaciones activas entre mundos cotidianos y no humanos; documenta otras descripciones de wanülü.",
+          "limits": "Contexto de campo situado, no otra versión de Arámai. No se trasladan Pulowi, flechas, sueños ni anatomías de este texto al episodio."
+        },
+        {
+          "id": "material_culture_v3",
+          "type": "internal_visual_research",
+          "path": "editorial/wayuu/material-culture-v3.mjs",
+          "supports": "Repertorio completo de vestuario y relaciones domésticas.",
+          "limits": "Puesta en escena editorial para tiempo mítico no fechado."
+        }
+      ],
+      "bible_overrides": [
+        {
+          "model_id": "aramai__identity_sheet",
+          "decision": "Conservar silueta e identidad de papel y representar edad mayor; la ficha aprobada es una decisión de arte, no fuente narrativa."
+        },
+        {
+          "model_id": "wanuru__presence_model",
+          "decision": "No heredar la obligación de representar a Wanurü como pequeñas piedras carbón inmóviles. La presencia debe poder recorrer y actuar. La ausencia de anatomía descrita no implica ausencia de agencia."
+        },
+        {
+          "model_id": "mareiwa__state_sheet",
+          "decision": "No usar un pliegue ocre como objeto obligatorio a los pies de Arámai. Su escucha y decisión se ponen en escena mediante un interlocutor fuera de campo; no se declara una anatomía canónica."
+        },
+        {
+          "model_id": "epidemia_aramai__phenomenon_rule",
+          "decision": "Retirar el número obligatorio de tres rancherías y la prohibición de trayecto. Son elecciones de composición previas, no hechos del relato."
+        }
+      ],
+      "narrative_contract": {
+        "target_slug": "aramai",
+        "target_snapshot": "content/mitos-visuales/research/aramai-narrative-2026-09-05.json",
+        "target_content_sha256": "a949509df6e51454154a33e3e11979dc5a236ea8065cc1af1aa3d2eba5a0db1d",
+        "summary": "Arámai, un hombre Wayúu mayor inquieto por la escasez, pide a Mareiwa reducir la población mediante enfermedad. Mareiwa atiende la petición y Wanurü queda ligado a la mortandad que recorre La Guajira. En la versión editorial de nuestra página, Arámai vuelve a pedir que termine y después ayuda a las familias; la pérdida no se deshace. La comunidad conserva la responsabilidad de su petición.",
+        "events": [
+          {
+            "id": "escasez",
+            "provenance": "historical_core",
+            "required": true,
+            "source": "chaves_1946_aramai",
+            "action": "La falta de recursos motiva una decisión humana."
+          },
+          {
+            "id": "peticion",
+            "provenance": "historical_core",
+            "required": true,
+            "source": "chaves_1946_aramai",
+            "action": "Arámai pide a Mareiwa una reducción de personas mediante enfermedad."
+          },
+          {
+            "id": "respuesta",
+            "provenance": "historical_core",
+            "required": true,
+            "source": "chaves_1946_aramai",
+            "action": "Mareiwa atiende la petición."
+          },
+          {
+            "id": "recorrido",
+            "provenance": "historical_core",
+            "required": true,
+            "source": "chaves_1946_aramai",
+            "action": "Wanurü recorre La Guajira; conserva agencia propia."
+          },
+          {
+            "id": "reproche",
+            "provenance": "historical_core",
+            "required": true,
+            "source": "chaves_1946_aramai",
+            "action": "La comunidad responsabiliza a Arámai."
+          },
+          {
+            "id": "cese",
+            "provenance": "published_editorial_expansion",
+            "required": true,
+            "source": "published_aramai_20260905",
+            "action": "Arámai vuelve a pedir que termine lo que solicitó."
+          },
+          {
+            "id": "cuidado",
+            "provenance": "published_editorial_expansion",
+            "required": true,
+            "source": "published_aramai_20260905",
+            "action": "Arámai reparte agua y acompaña; la ayuda no revierte las pérdidas."
+          }
+        ],
+        "emotional_reading": "Temor a la escasez, confianza peligrosa en una petición, impotencia ante su cumplimiento, responsabilidad que persiste dentro del cuidado. No mirada de turista maravillado ni triunfo de una solución demográfica.",
+        "magic_reading": "Una palabra humana alcanza una voluntad no humana y sus efectos adquieren autonomía dentro del mundo doméstico. La maravilla inquieta porque altera vínculos, no porque el escenario sea colosal.",
+        "qa_method": "Describir primero la imagen sin leer su prompt. Comparar después sujeto, verbo, destinatario y efecto con los eventos declarados. Distinguir QA técnico, narrativo, material y juicio editorial; tests verdes no aprueban imágenes."
+      },
+      "paleta": "arena pálida, arcilla roja, índigo profundo, azules de papel teñido y pequeños acentos cálidos en el vestuario",
+      "material_direction": "Fotografía de un teatro de papel cortado artesanal, inmersivo y de profundidad real. Figuras de bajo relieve: cara en pocos recortes de bordes precisos, cejas, nariz, mejillas, cabello y manos en capas visibles; ropa como hojas delgadas plegadas superpuestas. Papel teñido, sin piel pintada ni cabeza esculpida. Cinco o más planos físicamente separados por aire, oclusiones y sombras verdaderas; las finas capas oscuras también son papel. Mundo hasta los cuatro bordes; sólo se ven cantos internos de las piezas.",
+      "continuity_contract": [
+        "Arámai es un hombre Wayúu mayor, delgado, mandíbula estrecha, cabello corto negro y gris hecho de mechones recortados y ceja izquierda ligeramente alta. Kemiisa arcilla de mangas, Kotin carbón amplio de papel sobre hombros y piernas, faja S'ira arena y dos waireñas abiertas. Cabeza descubierta, sin capucha ni sombrero.",
+        "Mujeres con Wayuushein amplias lisas, sueltas y largas hasta los tobillos, con mangas anchas, cabeza descubierta y cabello negro visible, más waireñas. Hombres con camisa y prenda exterior completa, faja y sandalias. Prendas de papel, siluetas Wayúu diferenciadas; sin capuchas, velos, hábitos, cuerdas monacales, túnicas religiosas ni sombreros.",
+        "Rancherías dispersas, viviendas bajas rectilíneas y enramadas abiertas de postes. Cardones de varios tallos, tierra árida y distancias guajiras habitables. Entorno mítico sin fecha arqueológica.",
+        "Mareiwa conserva su papel de interlocutor que atiende la petición. Wanurü conserva su papel activo en la enfermedad. Esta puesta en escena deja la anatomía de ambos indeterminada."
+      ],
+      "avoid": [
+        "violencia o enfermedad gráfica",
+        "sexualización",
+        "símbolos, pintura facial y patrones sin respaldo para esta escena",
+        "demonio europeo, calavera, guadaña, cuernos o vestuario ceremonial inventado",
+        "piel realista o ilustración pintada",
+        "montaña plegada monumental o cesta convertida en mapa",
+        "base, cartón corrugado, marco, mesa o estudio visibles",
+        "diagrama, flechas o efectos que expliquen un mecanismo epidemiológico"
+      ],
+      "escenas": {
+        "entrada": {
+          "composicion": "peso_contrario",
+          "era": "mitico_wayuu",
+          "refs": [],
+          "narrative_event_ids": [
+            "escasez",
+            "peticion",
+            "respuesta"
+          ],
+          "beat": "La primera petición. La escasez es una experiencia vivida por familias reconocibles; Arámai cree que su petición puede resolverla.",
+          "escena": "Horizontal a altura humana. Arámai conversa con un interlocutor que permanece fuera del encuadre bajo la penumbra de una enramada: una mano abierta en petición, rostro concentrado, mirada a la altura de otro ser, nunca hacia una montaña. Una cesta escasa descansa a su lado, objeto doméstico secundario. Más allá, mujeres y hombres completamente vestidos distribuyen lo poco que queda en recipientes lisos; conservar diversidad de edades y actividad humana. En el mismo espacio la respuesta se percibe como un cambio imposible de luz: la penumbra de la enramada continúa más allá del techo y empieza a apartarse de las sombras inmóviles del lugar, como si hubiera recibido una instrucción. Ningún cuerpo sobrenatural visible. El suelo conserva su geografía. La mirada y la mano de Arámai llevan la narración; la presencia le contesta sin teatralidad. Profundidad de patio, personas, casas dispersas, cardones y horizonte.",
+          "editorial_translation": "Interlocutor fuera de campo y sombra que adquiere autonomía son soluciones de puesta en escena, no símbolos tradicionales ni sucesos adicionales atribuidos a Chaves.",
+          "visual_question": "¿Se ve un hombre que está pidiendo algo a alguien, con una comunidad y una escasez concretas que motivan su gesto?",
+          "light": "Día cálido y seco; la sombra índigo sólo empieza a actuar junto al umbral. Conservar variación cromática de prendas y materia."
+        },
+        "acto": {
+          "composicion": "diagonal",
+          "era": "mitico_wayuu",
+          "refs": [],
+          "narrative_event_ids": [
+            "respuesta",
+            "recorrido",
+            "cese"
+          ],
+          "beat": "Arámai ha vuelto a pedir que termine. Lo que fue enviado ya recorre las casas y no se deja detener. Intimidad, angustia contenida y presencia sagrada activa.",
+          "escena": "Vertical 9:16. Una conversación íntima y sobrecogedora dentro de un patio de ranchería Wayúu, arena clara, casas bajas y cardones a distintas profundidades. Arámai mayor está SENTADO en el borde de una estera a la izquierda, cuerpo en tres cuartos y pies visibles. Habla hacia un interlocutor fuera de campo, a la izquierda de la cámara, en el umbral de la enramada: ese es el lugar narrativo de Mareiwa. Rostro cercano, boca apenas abierta, cansancio y una súplica que no obtiene el cese. Una mano descansa sobre su propia rodilla; la otra permanece ABIERTA BAJO EL PECHO, palma hacia arriba, sin apuntar ni tocar el fenómeno. Su gesto es el de quien pide, nunca el de quien empuja, lanza o maneja poder. A una distancia de un brazo, pero ignorando su súplica, WANURÜ PASA CON VOLUNTAD PROPIA. Sólo vemos su SOMBRA SIN DUEÑO: una silueta alta, delgada y de paso humano, HECHA DE UNA AUSENCIA DE LUZ en papel índigo recortado, sin un cuerpo que la proyecte. No lleva prenda, capa ni capucha: es literalmente un recorte de penumbra caminando erguido entre planos de papel, dos bordes incompletos bastan para insinuar el paso sin fijar anatomía. El paisaje puede verse entre sus recortes separados; carece de ojos, boca, rostro, huesos o manos detalladas. La sombra cruza perpendicularmente a Arámai y prosigue por un sendero hacia los umbrales de casas distantes; su continuidad a varias profundidades es una única presencia que pasa, nunca procesión de fantasmas. Todas las demás sombras quedan pegadas al suelo bajo el mismo sol; esta sola sombra camina levantada. Una mujer adulta de Wayuushein azul, cabeza descubierta y cabello negro visible, se ha detenido junto a su puerta en un segundo plano, sosteniendo un cuenco con gesto preocupado. Esta vecina viva conserva cuerpo y sombra ordinarios. El vacío junto a ella y la estera sin ocupar a los pies de Arámai anclan el costo doméstico. La altura de la presencia no supera la de una persona. Geografía estable, perspectiva habitada; no espectáculo monumental, cinta, cortina, río, humo, tendido de tela ni portal.",
+          "editorial_translation": "La sombra autónoma de paso humano es una hipótesis gráfica reversible para hacer legible la agencia y el recorrido de Wanurü; no fija una apariencia canónica ni traslada flechas o parentesco con Pulowi desde otras fuentes. La súplica de cese y la postura sentada traducen la versión editorial de la página.",
+          "visual_question": "¿La súplica sentada de Arámai está dirigida a su interlocutor fuera de campo mientras la presencia continúa de forma independiente? ¿La sombra camina sin dueño? Si parece mago, fantasma con sábana o una cinta decorativa, corregir.",
+          "light": "Día pálido guajiro coexistiendo con penumbra índigo que actúa a escala humana. Luz rasante en dedos y recortes faciales; pequeño calor arcilla en la ropa. Sombras de contacto nítidas. Misterio legible sin oscurecer toda la imagen."
+        },
+        "huella": {
+          "composicion": "peso_contrario",
+          "era": "mitico_wayuu",
+          "refs": [],
+          "narrative_event_ids": [
+            "reproche",
+            "cuidado"
+          ],
+          "beat": "Arámai ayuda a una familia mientras continúa siendo responsable. Cuidado concreto y ausencia imposible de reparar; sin absolución inventada.",
+          "escena": "Cuadrado, cámara a altura de un adulto sentado bajo una enramada Wayúu. Dos acciones humanas y una ausencia nítida. En el tercio izquierdo, Arámai, anciano de pelo corto gris y negro, cabeza descubierta, vierte agua de una vasija en el cuenco de una mujer de Wayuushein azul AMPLIA Y SUELTA, mangas anchas, cabeza descubierta y cabello negro visible. Sus manos de papel se relacionan con precisión y sus miradas se encuentran; ninguno ocupa el centro del cuadro. Al fondo izquierdo, otra mujer mayor de Wayuushein arcilla suelta, sin capucha, mira a Arámai con un reproche silencioso, palma abierta hacia el espacio vacío. LA MITAD DERECHA PERTENECE A UN CHINCHORRO DOMÉSTICO VACÍO suspendido entre dos postes ante una pared clara, a distancia visible de los tres cuerpos vivos. Lo vemos desde un ángulo que muestra toda la superficie interior vacía, ligera y abierta, sin persona, bulto ni carga. SOBRE ESA PARED, inmediatamente detrás del chinchorro y separada de las sombras de las personas vivas, persiste UNA SOLA SOMBRA de alguien que estuvo sentado de lado en él: perfil sin detalles, torso inclinado suavemente y piernas hacia el suelo. El chinchorro real permanece vacío y su sombra conserva esa ocupación imposible. No hay un cuarto cuerpo. Dejar arena iluminada y espacio limpio entre esta sombra y las figuras de la izquierda para que ningún cuerpo real pueda producirla. La mujer mayor vincula a Arámai con esa ausencia mediante la mirada y la mano, sin atacar. Servir agua es un trabajo humano cotidiano, sin rito. La única magia es que la ausencia sigue proyectando una presencia doméstica; no vuelve nadie, no hay cadáver, fantasma corporal, enfermedad visible ni amenaza. Papel cortado fino, rostros planos por recortes amplios, pelo en mechones claros; manos y prendas en estratos. Cinco planos separados por aire: borde de estera, agua y cuenco, dos protagonistas, chinchorro y mujer mayor, pared y paisaje lateral distante. Cielo cálido pálido y casas pequeñas al fondo.",
+          "editorial_translation": "El cuidado pertenece al desarrollo editorial de la página; el reproche al núcleo histórico. Chinchorro y sombra de una ocupación ausente son una metáfora visual de memoria y pérdida, no afirmación de un alma, rito o regreso del muerto.",
+          "visual_question": "¿El chinchorro está visiblemente vacío y la sombra sentada no puede pertenecer a ninguno de los tres cuerpos vivos? ¿La acción de servir agua y el reproche se entienden juntos? La sombra es una metáfora editorial de memoria, no otro personaje del relato.",
+          "light": "Tarde de arena cálida, luz de papel crema sobre manos y cuenco, azul profundo en la sombra. El interior conserva color y detalle; silencio humano, no abandono apocalíptico."
+        }
+      }
+    }
+  }
+}

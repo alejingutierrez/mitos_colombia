@@ -1,0 +1,43 @@
+{
+  "schema": "mitos-colombia-biblia-batch/v1",
+  "batch_id": "wayuu-bible-09c-chama-neutral-silhouette-correction-medium",
+  "asset_type": "bible",
+  "quality": "medium",
+  "framing": "immersive_full_bleed",
+  "surface_finish": "layered_depth_no_exposed_support",
+  "plan": "content/mitos-visuales/_openai/wayuu/biblia/wayuu-bible-09c-chama-neutral-silhouette-correction-medium/plan.snapshot.json",
+  "prepared_at": "2026-09-03",
+  "generation_scope": "Corrección 09c en medium y desde texto de La Chama: silueta humana completamente neutra, con torso rectangular y piernas rectas separadas, sin base triangular, género, anatomía o vestuario; conservar manos tipo mitón, capas exteriores móviles y función protectora.",
+  "jobs": [
+    {
+      "id": "la-chama__magia--regla",
+      "model_id": "la-chama__magia",
+      "view_id": "regla",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/biblia/wayuu-bible-09c-chama-neutral-silhouette-correction-medium/prompts/la-chama__magia--regla.prompt.txt",
+      "output_file": "output/imagegen/wayuu/wayuu-bible-09c-chama-neutral-silhouette-correction-medium/la-chama__magia--regla.jpeg",
+      "prompt_sha256": "286bd2cd0104dce671d06ef7e33d217a3abfedcf79f9e3e2edafe489e7b26f5f",
+      "provider": "OpenAI API",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "1536x1024",
+      "output_format": "jpeg",
+      "references": [
+        "la-chama__ancla:canon"
+      ],
+      "input_references": [],
+      "safeguards": [
+        "generación desde texto; no adjuntar ni exportar imágenes locales en esta tanda",
+        "todo elemento está construido con papel cortado, plegado, enrollado o prensado y fibras artesanales; mostrar pliegues, cantos internos, uniones, aire y sombras físicas",
+        "sin violencia o sexualidad explícitas, desnudez, cuerpos vulnerados, heridas, cadáveres o sufrimiento gráfico",
+        "sin borde exterior, base, cartón, mesa ni estudio visibles; la escena continúa hasta los cuatro límites",
+        "profundidad 3D por capas físicas a distintas distancias, aire, oclusiones, cantos internos y sombras reales; nunca collage plano",
+        "sin aura, chispas, runas, ojos luminosos o humo místico genérico",
+        "sin patrones, kanas, marcas claniles, texto, etiquetas o símbolos decorativos inventados",
+        "figuras humanas como placeholders editoriales reversibles: caras lisas, sin fisonomía, cabello, sexo, ropa detallada, joyas, pintura, tocado o rasgo convertido en canon",
+        "última corrección horizontal de apariencia protectora: una única silueta humana plana recortada tiene cabeza circular, cuello corto, torso estrictamente rectangular de lados paralelos, cintura sin estrechamiento, dos piernas rectas claramente separadas, brazos continuos y manos tipo mitón sin dedos; conserva la posición entre una cueva y una figura pequeña mientras tres contornos abstractos giran como hojas separadas sin tocarla",
+        "la silueta no puede tener base triangular, falda, vestido, túnica, manga, capa, cadera, pecho, cintura marcada, volumen anatómico, rostro, ojos, dedos, cabello, sexo, desnudez o vestuario; sin seducción, mujer fatal, monstruo, animal, humo, espejo, sangre o dolor gráfico"
+      ],
+      "status": "prepared"
+    }
+  ]
+}

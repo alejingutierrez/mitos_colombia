@@ -1,0 +1,249 @@
+{
+  "schema": "mitos-colombia-triptychs/v1.6",
+  "status": "production_and_publication_authorized",
+  "comunidad": "Wayúu",
+  "region": "Caribe",
+  "prompt_profile": "story_first_v3_symbolic_huella",
+  "generation_mode": "text_only_no_local_references",
+  "bible_selection": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/accepted-selection.json",
+  "campaign_scope": "content/mitos-visuales/production/wayuu-2026-09-05/scope.json",
+  "visual_memory_library": "content/mitos-visuales/wayuu.visual-memory.v1.json",
+  "approval_gate": "Campaña completa autorizada; QA por orientación y publicación aditiva sin borrar versiones.",
+  "output_sizes": {
+    "entrada": "1536x864",
+    "acto": "864x1536",
+    "huella": "1024x1024"
+  },
+  "quality_policy": {
+    "entrada": "high",
+    "acto": "medium",
+    "huella": "medium"
+  },
+  "mitos": {
+    "la-sed-da-los-civilizados": {
+      "titulo": "La sed de los forasteros",
+      "canon_models": [
+        "comerciante_alijuna_1__identity_sheet",
+        "comerciante_alijuna_1__state_sheet",
+        "comerciante_alijuna_2__identity_sheet",
+        "comerciante_alijuna_2__state_sheet",
+        "carga_panela__object_sheet",
+        "utta__spatial_model"
+      ],
+      "evidence": [
+        {
+          "id": "published_sed",
+          "type": "project_narrative",
+          "path": "content/mitos-visuales/production/wayuu-2026-09-05/narratives/la-sed-da-los-civilizados.json",
+          "supports": "Relato congelado, cargas, pausa, transformación y contraste entre mercancía y agua.",
+          "limits": "Búsqueda en ranchería, viajeros Wayuu, desorientación y panela petrificada son ampliaciones editoriales, no detalles literales del breve registro."
+        },
+        {
+          "id": "chaves_312",
+          "type": "primary_narrative_record",
+          "url": "https://publicaciones.icanh.gov.co/index.php/picanh/catalog/download/243/266/1579?inline=1",
+          "pages": "312, PDF índice 8",
+          "supports": "Dos comerciantes con panela se detienen por sed/cansancio en Utta cerca de Katetamana y se vuelven piedra.",
+          "limits": "No fija nombres, raza, vestuario, embalaje ni transporte. No reproducir esencialismo racial del comentario del recopilador."
+        },
+        {
+          "id": "bible_lot16",
+          "type": "internal_visual_research",
+          "path": "docs/wayuu-lote-16-la-sed-de-los-forasteros-v3.md",
+          "supports": "Seis modelos aprobados diferenciados y límites de la fuente.",
+          "limits": "Prendas, colores y siluetas son decisiones editoriales, no retratos documentales."
+        }
+      ],
+      "bible_overrides": [
+        {
+          "model_id": "comerciante_alijuna_1__identity_sheet",
+          "decision": "Conservar bigote, camisa ocre, pantalón carbón y sombrero ancho; rostro de recorte plano en vez de anatomía facetada."
+        },
+        {
+          "model_id": "comerciante_alijuna_2__identity_sheet",
+          "decision": "Conservar camisa azul, tirantes oscuros, pantalón terracota y gorra arena; evitar aspecto caricaturesco."
+        },
+        {
+          "model_id": "utta__spatial_model",
+          "decision": "No copiar franjas alternas como patrón cultural, bases circulares ni monumentos. Mantener dos formas distintas en terreno continuo."
+        },
+        {
+          "model_id": "carga_panela__object_sheet",
+          "decision": "Dos bultos en la escena; una panela única en símbolo. Embalaje liso sólo como decisión de puesta en escena."
+        }
+      ],
+      "narrative_contract": {
+        "target_slug": "la-sed-da-los-civilizados",
+        "target_snapshot": "content/mitos-visuales/production/wayuu-2026-09-05/narratives/la-sed-da-los-civilizados.json",
+        "target_content_sha256": "201aebbdfc08bb25f1f5fbeab2f3ea5a57f1128a82df48e65cc1ae6f0a88bc3f",
+        "summary": "Dos comerciantes forasteros cruzan Utta con panela, se detienen por sed y cansancio, y quedan ligados a formas de piedra. Las imágenes narran la carga y la transformación, y condensan el contraste entre mercancía y agua. No hay una deidad visible, uniformes étnicos ni celebración de daño.",
+        "events": [
+          {
+            "id": "carga_sed",
+            "provenance": "historical_core",
+            "required": true,
+            "source": "chaves_312",
+            "action": "Dos comerciantes llevan panela y se detienen por sed/cansancio."
+          },
+          {
+            "id": "petrificacion",
+            "provenance": "historical_core",
+            "required": true,
+            "source": "chaves_312",
+            "action": "Ambos quedan convertidos en piedra en Utta."
+          },
+          {
+            "id": "mercancia_agua",
+            "provenance": "published_editorial_expansion",
+            "required": true,
+            "source": "published_sed",
+            "action": "La edición contrapone valor de la panela y necesidad de agua."
+          }
+        ],
+        "emotional_reading": "Vulnerabilidad y límite, sin burla, superioridad racial ni castigo espectacular.",
+        "magic_reading": "El peso del comercio y la ausencia de agua quedan inscritos en la materia.",
+        "qa_method": "Dos comerciantes diferenciados; H carga y sombras imposibles de vasijas; V ropa conectada al terreno como transformación sin dolor; S una panela y vacío, no escena."
+      },
+      "visual_memory_review": {
+        "reviewer": "agent_direct_visual_review",
+        "reviewed_at": "2026-09-06T15:32:21.946Z",
+        "reviewed_reference_ids": [
+          "1b43dcc08b673fa8230a",
+          "98b01b8a5635628fe315"
+        ],
+        "retained": [
+          "Estratos de papel y contraste entre amarillos/ocres cálidos y azules fríos.",
+          "Dos figuras diferenciadas vinculadas al paisaje; quietud del desenlace."
+        ],
+        "rejected": [
+          "Figura sobrenatural femenina, rostro en árbol y espirales de viento no descritos por la fuente.",
+          "Árbol monumental tropical, vegetación exuberante, grandes discos solares y escenografía monumental.",
+          "Rostros volumétricos, estatuas genéricas y falta de la carga de panela."
+        ],
+        "influence_by_act": {
+          "entrada": "Abrir la llanura y conservar contraste cromático; dos comerciantes y sus cargas, cuyas sombras de vasija expresan sed sin añadir vasijas reales.",
+          "acto": "Pasar de estatuas bajo un árbol mágico a transformación material de ropa en terreno, con los dos comerciantes pequeños y sin agente sobrenatural visible.",
+          "huella": "Condensar ámbar y azul en una panela con vacío de gota; sin paisaje ni cuerpos."
+        }
+      },
+      "material_direction": "Immersive photographed world made ENTIRELY of matte dyed CUT PAPER. Ground, distant hills and objects are broad physical sheets at different distances with visible air, overlaps, occlusion and cast shadows. No photoreal sand or soil, no painted flat collage. Characters are nearly flat brown SIDE-PROFILE cutouts with tiny eye incision and noses in silhouette, natural adult proportions, no modeled cheeks or glass eyeballs. Clothing uses a few broad folded sheets. Full bleed from inside the world; NO outer cardboard, board, model base, plinth, frame, tabletop or stage edge. Magic changes one material relation; no decorative sparkles, auras or glyphs.",
+      "paleta": "arena, ocre panela, carbón, terracota y azul humo; luz seca lateral, sin disco solar",
+      "continuity_contract": [
+        "Exactly TWO adult merchants, distinct, never twins. Neither is identified as a specific ethnic group by invented features.",
+        "Merchant 1: slimmer, short black hair and small moustache, plain wide straw-colored hat, OCHRE long-sleeved collared shirt, CHARCOAL long trousers, plain belt and brown closed shoes.",
+        "Merchant 2: stockier adult with short curly black hair, plain sand cloth cap with short brim, smoke-BLUE long-sleeved shirt, plain dark suspenders, TERRACOTTA long trousers and dark closed shoes.",
+        "Faces remain flat profile paper silhouettes with tiny eyes, no caricature. Whole body visible, subordinate to the land.",
+        "No deity or spirit, no people celebrating, no actual injury or corpse. Transformation is continuous material folding, not mutilation or imprisonment."
+      ],
+      "avoid": [
+        "Pixar, giant portrait, faceted head, glass eyes, exaggerated racial traits",
+        "bare chest, loincloth costume for merchants, feathers, facial paint, ceremonial symbols",
+        "deity, witch, tree face, floating spirit, aura, glyphs, sun disc, tropical foliage, agave",
+        "violence, corpse, agony, trapped body, torn limbs, petrifying weapon, public humiliation",
+        "cardboard base, pedestal, isolated model island, frame, table, studio, real sand"
+      ],
+      "escenas": {
+        "entrada": {
+          "era": "historico_contacto_wayuu",
+          "refs": [],
+          "composicion": "profundidad_abierta",
+          "visual_function": "narrative_scene",
+          "narrative_event_ids": [
+            "carga_sed",
+            "mercancia_agua"
+          ],
+          "beat": "La carga no puede darles lo que necesitan.",
+          "escena": "16:9 EXTREME WIDE landscape, distant slightly elevated camera across dry open Utta plain. Vast EMPTY continuous ochre cut-paper terrain in lower 40% and LEFT half for website title; distant low dry hills in separate blue/gray sheets under quiet pale sky. No buildings, trees framing picture, giant sun or sand dunes. At x66% and x79%, y39–53%, exactly TWO small complete adult merchants have paused, looking tired but calm, feet planted, hands resting low. Each person only 14% image height, NOT portraits. Merchant 1 slim with moustache, wide straw hat, ochre shirt, charcoal trousers; merchant 2 stockier with short-brim sand cap, blue shirt, dark suspenders and terracotta trousers. Both closed shoes and full flat profile silhouettes. TWO small rectangular loads of AMBER PANELA lie on ground next to them, one per merchant, pale plain wrapping partly open to show blocky caramel sugar, tied with simple plain cord. The SINGLE impossible relation: EACH RECTANGULAR BUNDLE casts a long clearly connected dark paper shadow shaped like a ROUND-BELLIED WATER JAR with narrow neck, mouth and a small handle, rather than the rectangular shape of its sugar load. There are NO actual jars or vessels anywhere. Trace each shadow from directly under its bundle into its rounded jar silhouette, separate from each man's ordinary faint human shadow. The jar-shaped shadows fall diagonally toward RIGHT MIDGROUND, within x64–95%,y49–66%, fully inside frame, not across title area. Two bundles, two jar shadows, no duplicate loads or extra people. Their goods have the shadow of what they lack, but no water appears. No liquid, blue puddle, mirage lake or supernatural being. Broad dry PAPER sheets continue under shoes, bundles and shadows without pedestal or outer support. Strong real depth and restrained side light, large quiet world.",
+          "editorial_translation": "Metáfora material y puesta en escena editorial; no nuevo episodio literal, vestuario fechado ni símbolo ancestral.",
+          "visual_question": "¿Hay dos comerciantes pequeños, dos bultos y dos sombras de vasija claramente conectadas, sin vasijas reales?",
+          "light": "Luz lateral seca y mate, sombras inequívocas, ocre y azul humo. Sin resplandor sobrenatural.",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Dos cargas de panela en una pausa del camino.",
+            "impossible_behavior": "Los bultos rectangulares proyectan sombras de vasijas redondeadas que no existen físicamente.",
+            "narrative_effect": "La mercancía no sustituye al agua que necesitan.",
+            "agency": "Los hombres descansan; nadie controla un poder. La anomalía es traducción visual del relato.",
+            "physical_translation": "Sombras recortadas oscuras unidas a cada bulto, forma de vasija distinta de la carga; suelo y horizonte a distancias reales.",
+            "visible_test": "¿Hay dos comerciantes pequeños, dos bultos y dos sombras de vasija claramente conectadas, sin vasijas reales?",
+            "event_ids": [
+              "carga_sed",
+              "mercancia_agua"
+            ],
+            "provenance": "editorial_metaphor",
+            "temporal_role": "present"
+          }
+        },
+        "acto": {
+          "era": "historico_contacto_wayuu",
+          "refs": [],
+          "composicion": "profundidad_abierta",
+          "visual_function": "narrative_scene",
+          "narrative_event_ids": [
+            "petrificacion"
+          ],
+          "beat": "Los pliegues del viaje se quedan en la tierra.",
+          "escena": "9:16 WIDE landscape scene in dry Utta plain at subdued late afternoon. Distant low hills and empty sky occupy upper third; broad ochre PAPER terrain with physical separated layers, no stage platform. At x37%,y39–59% the first adult merchant rests SEATED with knees bent, plain wide straw hat, tiny moustache, ochre shirt, charcoal trousers. At x65%,y44–63% the second adult rests CROUCHED with one knee low, short-brim sand cap, blue shirt, dark suspenders, terracotta trousers. Complete small bodies, each less than a quarter frame height, natural adult proportions, nearly flat brown profile faces; calm and still, heads slightly lowered, NO pain or injury. The two distinct postures remain readable. ONE impossible material transformation: broad lower folds of their trousers and shirt hems continue WITHOUT A BREAK into attached solid ROCK STRATA that spread into the ground around their resting feet. On the first figure charcoal and ochre folds become ONE taller irregular stone form; on second blue-gray and muted terracotta folds become ONE lower broader rock form. Clear continuity from each human's garment fold to its mineral fold to the terrain; no separate rock next to an unchanged person. Upper torsos, arms and heads remain fully clothed and intact as a poetic instant of metamorphosis, not corpses or people trapped in stone. All layers are matte cut paper with air gaps, shadows and occasional lifted edges. No rock rings enclosing people, no cairns, stacked monuments, pyramids, armor, amputations or trapped legs. Two small plain tied panela bundles rest beside them, one amber rectangular block visible at each opening, not multiplied loads. Lower THIRD empty quiet terrain for mobile title. No extra human, god, witch, face in tree, water, animal, sun disc, houses, forest, agave or decorative wind. Transformation belongs to the ground and garment folds; no beam or magic gesture.",
+          "editorial_translation": "Metáfora material y puesta en escena editorial; no nuevo episodio literal, vestuario fechado ni símbolo ancestral.",
+          "visual_question": "¿Las dos prendas continúan físicamente en roca sin duplicar personajes ni encerrar cuerpos, con posturas completas y tranquilas?",
+          "light": "Luz lateral seca y mate, sombras inequívocas, ocre y azul humo. Sin resplandor sobrenatural.",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Ropa y postura de dos comerciantes que descansan.",
+            "impossible_behavior": "Los pliegues de sus prendas continúan en estratos minerales del terreno.",
+            "narrative_effect": "Hace visible la petrificación como permanencia de la marcha, sin representar daño.",
+            "agency": "Los hombres descansan; nadie controla un poder. La anomalía es traducción visual del relato.",
+            "physical_translation": "Continuidad unida de prenda a roca y de roca a suelo; dos posturas distintas, aire y sombras.",
+            "visible_test": "¿Las dos prendas continúan físicamente en roca sin duplicar personajes ni encerrar cuerpos, con posturas completas y tranquilas?",
+            "event_ids": [
+              "petrificacion"
+            ],
+            "provenance": "editorial_metaphor",
+            "temporal_role": "present"
+          }
+        },
+        "huella": {
+          "era": "sintesis_editorial",
+          "refs": [],
+          "composicion": "simbolo_central",
+          "visual_function": "symbolic_synthesis",
+          "narrative_event_ids": [
+            "mercancia_agua"
+          ],
+          "beat": "Toda la dulzura deja intacta la sed.",
+          "escena": "Square 1:1 SYMBOLIC STILL LIFE. Full-bleed deep muted INDIGO matte paper field, no scene or horizon. ONE rough AMBER PANELA block, squat irregular rectangular brown-sugar brick, oblique view from above at center, about 58% frame width. Constructed from thick-looking layered matte caramel and ochre paper, slightly chipped irregular corners, fibrous granular paper edges, NOT shiny candy or soap. A LARGE DRY TEARDROP-SHAPED VOID passes completely THROUGH its center: we see the dark indigo background through the hole, not blue water. The drop is oriented along the long diagonal of the top face, with softly irregular chipped edges rather than a clean commercial icon. Interior cut surfaces reveal three separated darker brown paper strata with tiny cast shadows, proving emptiness. No glossy liquid, ripples or luminous blue filling. Solid sweet matter frames the ABSENCE of one drop; nothing can be drunk. Block remains ONE connected object around the void, not broken into two pieces. Large quiet negative space. No wrapper, labels, cord, bowl, landscape, people, bodies, stones, other bricks, table, pedestal, frame, lettering, watermark, brand, logo or sacred sign. Precise sculptural paper shadow beneath the brick, no display stand.",
+          "editorial_translation": "Metáfora material y puesta en escena editorial; no nuevo episodio literal, vestuario fechado ni símbolo ancestral.",
+          "visual_question": "¿Se reconoce una sola panela con gota vacía y seca, sin agua real, empaque o escena?",
+          "light": "Luz lateral seca y mate, sombras inequívocas, ocre y azul humo. Sin resplandor sobrenatural.",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Una panela y la necesidad de agua.",
+            "impossible_behavior": "La materia dulce encierra una gota como ausencia vacía, no como líquido.",
+            "narrative_effect": "Condensa el límite de la mercancía frente a una necesidad vital.",
+            "agency": "Los hombres descansan; nadie controla un poder. La anomalía es traducción visual del relato.",
+            "physical_translation": "Una panela conectada con cavidad de gota pasante, estratos marrones interiores y fondo índigo visible.",
+            "visible_test": "¿Se reconoce una sola panela con gota vacía y seca, sin agua real, empaque o escena?",
+            "event_ids": [
+              "mercancia_agua"
+            ],
+            "provenance": "editorial_metaphor",
+            "temporal_role": "present"
+          },
+          "material_direction": "Symbolic sculptural matte CUT PAPER still life, actual separated strata and shadows, full bleed indigo; no studio backdrop edge or external cardboard support.",
+          "continuity_contract": [
+            "Only one rough caramel panela block with a dry through-hole; no cast or costume from narrative scenes.",
+            "The drop-shaped void is an editorial symbol, not a traditional Wayuu motif or archaeological object."
+          ],
+          "symbolic_contract": {
+            "thesis": "La riqueza dulce no contiene el agua necesaria.",
+            "carrier": "Una panela única con vacío de gota.",
+            "operation": "Sustraer la forma de aquello que la mercancía no puede ofrecer.",
+            "story_connection": "Contraste editorial del relato entre panela y agua.",
+            "visible_test": "Panela reconocible y gota inequívocamente vacía, no líquido ni tercera escena."
+          },
+          "avoid": [
+            "third scene, horizon, people, landscape, water, ripples, glitter, glow",
+            "soap, candy wrapper, glossy product ad, brand, logo, labels, engraving",
+            "extra blocks, bowl, table, pedestal, frame, studio equipment"
+          ]
+        }
+      }
+    }
+  }
+}

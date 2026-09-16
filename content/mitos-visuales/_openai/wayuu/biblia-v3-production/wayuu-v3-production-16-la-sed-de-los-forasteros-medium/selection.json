@@ -1,0 +1,92 @@
+{
+  "schema": "mitos-colombia-biblia-production-selection/v3",
+  "community": "Wayúu",
+  "myth_slug": "la-sed-da-los-civilizados",
+  "batch_id": "wayuu-v3-production-16-la-sed-de-los-forasteros-medium",
+  "status": "QA_PASS_AFTER_RESEARCH_AND_CORRECTIONS_01",
+  "reviewed_at": "2026-09-04",
+  "quality": "medium",
+  "generation_mode": "text_only_no_local_references",
+  "contact_sheet": "output/imagegen/wayuu-v3-production/la-sed-de-los-forasteros-selected-contact-sheet.jpeg",
+  "contact_sheet_sha256": "19ea0581163c42c5f3a462c2fa4e09c9a23a8d5e9101453419e880a6136ff1a3",
+  "batch_models": 6,
+  "selected_models": 6,
+  "approved_models_reused_for_myth": [
+    "cerro_katetamana__spatial_model",
+    "mareiwa__presence_model",
+    "mareiwa__state_sheet",
+    "territorio_alta_guajira__environment_model"
+  ],
+  "myth_model_coverage": {
+    "selected": 10,
+    "required": 10,
+    "remaining": 0
+  },
+  "bible_progress_after_batch": {
+    "selected_models": 170,
+    "required_models": 294,
+    "remaining_models": 124
+  },
+  "completed_myths_after_batch": 16,
+  "selections": {
+    "comerciante_alijuna_1__identity_sheet": {
+      "status": "PASS_AFTER_CORRECTION_01",
+      "batch_id": "wayuu-v3-production-16-la-sed-de-los-forasteros-medium-qa-correction-01",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-16-la-sed-de-los-forasteros-medium-qa-correction-01/comerciante_alijuna_1__identity_sheet--canon.jpeg",
+      "sha256": "cd96b13fc355cfc1af686ef89d880d6e705273df0803920c697c5556e82b6c0e"
+    },
+    "comerciante_alijuna_1__state_sheet": {
+      "status": "PASS_AFTER_CORRECTION_01",
+      "batch_id": "wayuu-v3-production-16-la-sed-de-los-forasteros-medium-qa-correction-01",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-16-la-sed-de-los-forasteros-medium-qa-correction-01/comerciante_alijuna_1__state_sheet--estados.jpeg",
+      "sha256": "36dcc0d5ac989ded3b0204c27310d5da72d90bafa3f56f65ee62328de83901e5"
+    },
+    "comerciante_alijuna_2__identity_sheet": {
+      "status": "PASS",
+      "batch_id": "wayuu-v3-production-16-la-sed-de-los-forasteros-medium-culture-scope-fix-01",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-16-la-sed-de-los-forasteros-medium-culture-scope-fix-01/comerciante_alijuna_2__identity_sheet--canon.jpeg",
+      "sha256": "cc9385123d6d42c46b00ca45105c0270fccb31d29af3c18f7a51078359c79da5"
+    },
+    "comerciante_alijuna_2__state_sheet": {
+      "status": "PASS_AFTER_CORRECTION_01",
+      "batch_id": "wayuu-v3-production-16-la-sed-de-los-forasteros-medium-qa-correction-01",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-16-la-sed-de-los-forasteros-medium-qa-correction-01/comerciante_alijuna_2__state_sheet--estados.jpeg",
+      "sha256": "f63f35f7464234802cd4556bade88b6cd12dec3cf93dd605ef3c87a92d8949d0"
+    },
+    "carga_panela__object_sheet": {
+      "status": "PASS",
+      "batch_id": "wayuu-v3-production-16-la-sed-de-los-forasteros-medium-culture-scope-fix-01",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-16-la-sed-de-los-forasteros-medium-culture-scope-fix-01/carga_panela__object_sheet--canon.jpeg",
+      "sha256": "9fa441f5d929904e6a62e93c69e6b3a4a1c8e865f2435c9cf73b3263ee98e7b6"
+    },
+    "utta__spatial_model": {
+      "status": "PASS",
+      "batch_id": "wayuu-v3-production-16-la-sed-de-los-forasteros-medium-culture-scope-fix-01",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-16-la-sed-de-los-forasteros-medium-culture-scope-fix-01/utta__spatial_model--canon.jpeg",
+      "sha256": "bbb60dd50bc9e3f775c037f8c14ee5338f3d38655a07da5df3372112d304a445"
+    }
+  },
+  "rejections": [
+    {
+      "model_id": "comerciante_alijuna_1__identity_sheet",
+      "batch_id": "wayuu-v3-production-16-la-sed-de-los-forasteros-medium-culture-scope-fix-01",
+      "reason": "REJECTED_GENERIC_DESERT_ROSETTES_AND_AGAVE_LIKE_FLORA",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-16-la-sed-de-los-forasteros-medium-culture-scope-fix-01/comerciante_alijuna_1__identity_sheet--canon.jpeg",
+      "sha256": "7da7bb81d9e6244c0bcb859505e767e94ccd4a694792cd377594aaac22cf6d33"
+    },
+    {
+      "model_id": "comerciante_alijuna_1__state_sheet",
+      "batch_id": "wayuu-v3-production-16-la-sed-de-los-forasteros-medium-culture-scope-fix-01",
+      "reason": "REJECTED_FINAL_STONE_BECAME_A_STACKED_CAIRN_AND_GENERIC_WESTERN_DESERT_FLORA_APPEARED",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-16-la-sed-de-los-forasteros-medium-culture-scope-fix-01/comerciante_alijuna_1__state_sheet--estados.jpeg",
+      "sha256": "b28eb70461cc1c5a3dc710a1b282f19978db245820af32a251fa43518a66980e"
+    },
+    {
+      "model_id": "comerciante_alijuna_2__state_sheet",
+      "batch_id": "wayuu-v3-production-16-la-sed-de-los-forasteros-medium-culture-scope-fix-01",
+      "reason": "REJECTED_FINAL_STONE_BECAME_A_MONUMENTAL_STRIPED_PYRAMID",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-16-la-sed-de-los-forasteros-medium-culture-scope-fix-01/comerciante_alijuna_2__state_sheet--estados.jpeg",
+      "sha256": "d7f0f58a56465999cb2442729db9e89a3c7e1491c14b90a60b22a689249e4084"
+    }
+  ]
+}

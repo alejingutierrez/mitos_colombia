@@ -1,0 +1,155 @@
+{
+  "schema": "mitos-openai-triptych/v1",
+  "batch_id": "wayuu-jirairay-triptych-02-entrada",
+  "created_at": "2026-09-06T04:42:06.011Z",
+  "account_source": "OPENAI_API_KEY from ignored .env",
+  "provider": "openai",
+  "model": "gpt-image-2",
+  "community": "wayuu",
+  "myth": "jirairay",
+  "plan": "content/mitos-visuales/wayuu.jirairay.triptico.v1.1-entrada.json",
+  "prompt_profile": "story_first_v3_symbolic_huella",
+  "plan_sha256": "6b3922deef33b63aa86bae2e5d4bddd0e4976a145ca549ce8e184c9e348ff2f2",
+  "narrative_target_sha256": "de3208df9c1af40319a095634d8eaadcc54882c9c643eeb8d520140a3ee5d9e2",
+  "evidence": [
+    {
+      "id": "pineda_1950",
+      "type": "primary_source",
+      "title": "Aspectos de la magia en la Guajira",
+      "author": "Roberto Pineda Giraldo",
+      "year": 1950,
+      "url": "https://publicaciones.icanh.gov.co/index.php/picanh/catalog/download/248/272/1634?inline=1",
+      "locator": "p.25, índice PDF30, apartado Espíritus protectores de los piaches; matiz p.27, índice32.",
+      "supports": "Nombre cantado de invocación a Wanurü, relación de canto y auxiliares.",
+      "limits": "La propia fuente alterna términos en p.27; no es una taxonomía uniforme ni voz comunitaria actual. No reproducir instrucciones, promesas terapéuticas o categorías de demonio."
+    },
+    {
+      "id": "published_jirairay",
+      "type": "project_narrative",
+      "path": "content/mitos-visuales/production/wayuu-2026-09-05/narratives/jirairay.json",
+      "supports": "Reconstrucción editorial centrada en especialista, paciente, canto y continuidad del cuidado al amanecer.",
+      "limits": "No cuento autónomo atestiguado; no afirmar que Jirairay tenga un cuerpo o que la ceremonia garantice curación."
+    },
+    {
+      "id": "bible_jirairay",
+      "type": "internal_visual_research",
+      "path": "editorial/wayuu/production-direction-v3.mjs",
+      "supports": "Identidades individuales y regla material del canto.",
+      "limits": "Las fichas aisladas separan entidades por diseño; sus prohibiciones de reparto no se trasladan mecánicamente a escenas narrativas."
+    }
+  ],
+  "visual_memory_library": "content/mitos-visuales/wayuu.visual-memory.v1.json",
+  "visual_memory_review": {
+    "reviewer": "agent_direct_visual_review",
+    "reviewed_at": "2026-09-06T04:38:23.950Z",
+    "reviewed_reference_ids": [
+      "20c6db91c24b98b5932d",
+      "251bd6299a2e2abb5ddf"
+    ],
+    "retained": [
+      "Cielo azul estratificado y movimiento continuo de las tiras de papel.",
+      "Contraste entre intimidad humana y espacio nocturno; plantas laterales y arena mate."
+    ],
+    "rejected": [
+      "Figura encapuchada monumental y espíritus blancos con rostro, halos o coronas.",
+      "Sombrero y ropa de la figura central ajenos a la identidad aprobada; humo, llama, cráneo, oro y patrones sin anclaje.",
+      "Confundir canto con deidad, oscurecer al paciente o convertirlo en espectáculo."
+    ],
+    "influence_by_act": {
+      "entrada": "Traducir las curvas del cielo a una presión nocturna que el canto despliega fuera de la enramada, sin cuerpos sobrenaturales.",
+      "acto": "Conservar profundidad territorial pero cambiar el conjuro ilustrado por cuidado al amanecer y un último pliegue del canto suspendido.",
+      "huella": "Retener ritmo de curvas de papel como sombra imposible de una sola maraca; no escena, cara o fantasma."
+    }
+  },
+  "bible_selection": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/accepted-selection.json",
+  "canonical_models": [
+    {
+      "model_id": "outsu_jirairay__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-07-jirairay-medium/outsu_jirairay__identity_sheet--canon.jpeg",
+      "sha256": "3ca7447f476275e1409ed76648603282b43c0f88f829a99f742b27fd24300c60",
+      "qa_status": "PASS"
+    },
+    {
+      "model_id": "paciente_jirairay__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-07-jirairay-medium-corrections-01/paciente_jirairay__identity_sheet--canon.jpeg",
+      "sha256": "9b4636285690518cc1b51980c084e28094a736f7a1f751bc2d9da767f1c3fef9",
+      "qa_status": "PASS_AFTER_CORRECTION"
+    },
+    {
+      "model_id": "jirairay_canto__phenomenon_rule",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-07-jirairay-medium/jirairay_canto__phenomenon_rule--canon.jpeg",
+      "sha256": "d9f0afc0a540e9a8045a87cedd57e8633704a7b094bbc652040c7b424421fa41",
+      "qa_status": "PASS"
+    },
+    {
+      "model_id": "maraca_outsu__object_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-07-jirairay-medium/maraca_outsu__object_sheet--canon.jpeg",
+      "sha256": "d6f40968f33d6f9d4e8b3cb54dfc7af10d56d688f40ff42642fdb3943cbd8e91",
+      "qa_status": "PASS"
+    },
+    {
+      "model_id": "chinchorro__object_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-06-los-dos-hermanos-medium/chinchorro__object_sheet--canon.jpeg",
+      "sha256": "29a9ee12acd56ae11fde72343c34ac2b52521571cf60faa53aae2954de4b1b15",
+      "qa_status": "PASS"
+    },
+    {
+      "model_id": "rancheria_wayuu__spatial_model",
+      "path": "output/imagegen/wayuu-v3/wayuu-v3-pilot-03-corrections-medium/rancheria_wayuu__spatial_model--canon.jpeg",
+      "sha256": "273831e777e2bf8615f5640f626204fac4b96ea268e55d4215f991d2a6012464",
+      "qa_status": "DIRECTION_CANDIDATE_PASS"
+    }
+  ],
+  "approval_gate": "Campaña completa autorizada; QA por orientación y publicación aditiva sin borrar versiones.",
+  "requested_acts": [
+    "entrada"
+  ],
+  "generation_mode": "text_only_no_local_references",
+  "framing": "immersive_full_bleed",
+  "surface_finish": "layered_depth_no_exposed_support",
+  "jobs": [
+    {
+      "act": "entrada",
+      "aspect_ratio": "16:9",
+      "size": "1536x864",
+      "quality": "high",
+      "api_method": "images.generate",
+      "composition": "profundidad_abierta",
+      "canon_model_ids": [
+        "outsu_jirairay__identity_sheet",
+        "paciente_jirairay__identity_sheet",
+        "jirairay_canto__phenomenon_rule",
+        "maraca_outsu__object_sheet",
+        "chinchorro__object_sheet",
+        "rancheria_wayuu__spatial_model"
+      ],
+      "refs": [],
+      "ref_paths": [],
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/jirairay/wayuu-jirairay-triptych-02-entrada/prompts/entrada.prompt.txt",
+      "prompt_sha256": "83718bf5f1760cf3cadc769c78dd88e19e52c578f22714afe623a2751cb424f2",
+      "narrative_event_ids": [
+        "llamada",
+        "invocacion",
+        "escucha"
+      ],
+      "editorial_translation": "Bandas y noche desplegada traducen canto, escucha y presión como licencia plástica, no rito tradicional ni efecto clínico. Dos personas condensan la reconstrucción editorial sin secuencia terapéutica.",
+      "magic_in_the_ordinary": {
+        "ordinary_anchor": "Cantar y escuchar junto al chinchorro.",
+        "impossible_behavior": "Tres bandas de voz despliegan una presión de noche material; una respuesta vuelve.",
+        "narrative_effect": "La especialista participa en una relación y el misterio permanece sin personaje inventado.",
+        "agency": "La mujer canta, pero escucha una respuesta que no controla.",
+        "physical_translation": "Papel fino mate separado por aire, pliegues carbón largos y bajos, fibras inclinadas.",
+        "visible_test": "Origen cerca de boca y encuentro con pliegues; nada sale del paciente.",
+        "event_ids": [
+          "invocacion",
+          "escucha"
+        ],
+        "provenance": "editorial_metaphor",
+        "temporal_role": "present"
+      },
+      "visual_function": "narrative_scene",
+      "output": "output/imagegen/wayuu/triptychs/wayuu-jirairay-triptych-02-entrada/entrada.jpeg",
+      "status": "prepared"
+    }
+  ]
+}

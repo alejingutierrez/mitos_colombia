@@ -1,0 +1,269 @@
+{
+  "schema": "mitos-colombia-triptychs/v1.6",
+  "status": "production_authorized_pending_editorial_review",
+  "comunidad": "Wayúu",
+  "region": "Caribe",
+  "prompt_profile": "story_first_v3_symbolic_huella",
+  "generation_mode": "text_only_no_local_references",
+  "bible_selection": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/accepted-selection.json",
+  "approval_gate": "El usuario autoriza producir el siguiente mito Wayúu con lo aprendido. Se crean estas tres piezas para revisión; no autoriza publicación ni lotes de otros mitos.",
+  "output_sizes": {
+    "entrada": "1536x864",
+    "acto": "864x1536",
+    "huella": "1024x1024"
+  },
+  "quality_policy": {
+    "entrada": "high",
+    "acto": "medium",
+    "huella": "medium"
+  },
+  "mitos": {
+    "el-indio-kuriruputa": {
+      "titulo": "El indio Kuriruputá",
+      "pilot": false,
+      "canon_models": [
+        "kuriruputa__identity_sheet",
+        "hermanas_kuriruputa__group_grammar",
+        "tuma_roja__object_sheet",
+        "corral_kuriruputa__spatial_model",
+        "rebanos__group_grammar",
+        "rancheria_wayuu__spatial_model",
+        "territorio_alta_guajira__environment_model"
+      ],
+      "evidence": [
+        {
+          "id": "chaves_1946_kuriruputa",
+          "type": "primary_source",
+          "title": "Mitos, leyendas y cuentos de la Guajira, IX: El Indio Kuriruputá",
+          "author": "Milcíades Chaves Ch.",
+          "year": 1946,
+          "locator": "pp. impresas 316–317; índices PDF 12–13. Atribución a Ana Isolina Ipuana e intérprete Ana Ofelia Ortíz al cierre del bloque IX–X, p.319; no confundir con Juancito Iguarán, atribuido a los cuentos anteriores.",
+          "url": "https://publicaciones.icanh.gov.co/index.php/picanh/catalog/download/243/266/1579?inline=1",
+          "supports": "Pérdida de ganado, rescate por hermanas con paño largo, herida en una pierna, recuperación y sueño con tuma. Memoria histórica, no cosmogonía.",
+          "limits": "Una versión narrativa completa identificada. Villa Posse es una compilación dependiente, no evidencia independiente. La deliberación y mediación de la página son desarrollo editorial. Texto del PDF consultado; capturas de páginas devolvieron Cache miss."
+        },
+        {
+          "id": "published_kuriruputa_20260905",
+          "type": "project_narrative",
+          "path": "content/mitos-visuales/research/kuriruputa-narrative-2026-09-05.json",
+          "supports": "Relato objetivo vigente: hermanas rescatan, escuchan el sueño y deliberan; posterior mediación y continuidad familiar.",
+          "limits": "La reformulación de la alianza y el énfasis deliberativo no se atribuyen literalmente al registro de 1946."
+        },
+        {
+          "id": "unesco_wayuu_normative_context",
+          "type": "institutional_context",
+          "title": "Wayuu normative system, applied by the Pütchipü’üi (palabrero)",
+          "url": "https://ich.unesco.org/en/RL/wayuu-normative-system-applied-by-the-putchipu-ui-palabrero-00435",
+          "supports": "Contexto de reparación, compensación, diálogo y relaciones entre clanes matrilineales.",
+          "limits": "No demuestra un protocolo histórico particular para Kuriruputá. No añadir un palabrero, insignia, ceremonia o collar a la escena por esta fuente."
+        },
+        {
+          "id": "material_culture_v3",
+          "type": "internal_visual_research",
+          "path": "docs/wayuu-indumentaria-y-pintura-v3.md",
+          "supports": "Vestuario diverso y contexto histórico; mantas amplias femeninas, camisa y pantalones masculinos del modelo aprobado.",
+          "limits": "Investigación material previa del proyecto. No inventar diseños codificados de pintura facial ni asignarles significados."
+        }
+      ],
+      "bible_overrides": [
+        {
+          "model_id": "kuriruputa__state_sheet",
+          "decision": "La ficha anterior sitúa el paño en el antebrazo; el registro de 1946 sitúa la herida en la pierna/rodilla. Para este tríptico se usa un paño limpio en una pierna, sin lesión visible y sin fijar lado como dato histórico. No se modifica ni regenera la ficha previa."
+        },
+        {
+          "model_id": "hermanas_kuriruputa__group_grammar",
+          "decision": "Conservar tres siluetas y colores como reparto editorial aprobado; el relato habla de hermanas sin fijar aquí el número tres. Mantener su agencia en rescate y deliberación."
+        },
+        {
+          "model_id": "tuma_roja__object_sheet",
+          "decision": "Conservar piedra pequeña rojo óxido mate, de contorno irregular y estratos de papel. La fractura y las fibras son una operación gráfica de la huella, no una propiedad de la tuma tradicional ni un episodio narrado."
+        },
+        {
+          "model_id": "kuriruputa__identity_sheet",
+          "decision": "Conservar camisa terracota, pantalón crudo, cabello oscuro y proporciones adultas. Simplificar cabeza y manos a recortes planos, evitando heredar el volumen facial ilustrado de la ficha."
+        }
+      ],
+      "narrative_contract": {
+        "target_slug": "el-indio-kuriruputa",
+        "target_snapshot": "content/mitos-visuales/research/kuriruputa-narrative-2026-09-05.json",
+        "target_content_sha256": "c429661b841073b2f2436a91d41d047fd05fadf25a12b2df0226192fcd239c91",
+        "summary": "Kuriruputá pierde ganado y resulta herido cuando intenta recuperarlo. Sus hermanas lo rescatan y lo llevan a casa. Durante la recuperación sueña con una tuma roja y un cambio de alianza. En la versión editorial del sitio comparte el sueño con sus hermanas, quienes deliberan con él; busca mediación y comprende que su continuidad depende de relaciones sostenidas entre varias personas, no de riqueza individual ni de ser invencible. Es una memoria histórica de La Guajira, no una creación del universo.",
+        "events": [
+          {
+            "id": "perdida",
+            "provenance": "historical_core",
+            "required": false,
+            "source": "chaves_1946_kuriruputa",
+            "action": "La pérdida del ganado provoca la persecución y el conflicto; antecedente no representado como combate."
+          },
+          {
+            "id": "rescate",
+            "provenance": "historical_core",
+            "required": true,
+            "source": "chaves_1946_kuriruputa",
+            "action": "Las hermanas rescatan a Kuriruputá, usan un paño largo y lo llevan a casa."
+          },
+          {
+            "id": "sueno",
+            "provenance": "historical_core",
+            "required": true,
+            "source": "chaves_1946_kuriruputa",
+            "action": "Durante la recuperación sueña con una tuma y una nueva alianza."
+          },
+          {
+            "id": "deliberacion",
+            "provenance": "published_editorial_expansion",
+            "required": true,
+            "source": "published_kuriruputa_20260905",
+            "action": "Cuenta el sueño a sus hermanas; ellas deliberan e interpretan con él."
+          },
+          {
+            "id": "mediacion",
+            "provenance": "published_editorial_expansion",
+            "required": true,
+            "source": "published_kuriruputa_20260905",
+            "action": "Busca reparación y mediación; no todo queda resuelto, pero puede continuar la vida compartida."
+          },
+          {
+            "id": "continuidad",
+            "provenance": "published_editorial_expansion",
+            "required": true,
+            "source": "published_kuriruputa_20260905",
+            "action": "Su riqueza y continuidad dependen de vínculos; las hermanas son reconocidas como defensoras y participantes en la reconstrucción."
+          }
+        ],
+        "emotional_reading": "De la autosuficiencia rota a dejarse sostener, escuchar y reconstruir en compañía. Las hermanas conducen; no acompañan a un héroe triunfal.",
+        "magic_reading": "Una materia cotidiana sostiene más de lo posible: el paño del rescate se prolonga en camino; la tuma del sueño vuelve visibles vínculos que atraviesan el territorio. Cada fenómeno es metáfora editorial, no poder de un personaje o rito documentado.",
+        "qa_method": "Leer cada imagen primero sin prompt; verificar verbo y agencia, distancia de cámara, papel plano de personajes y profundidad física del mundo. La cuadrada debe funcionar como un único símbolo a escala pequeña. QA del agente no sustituye aprobación del usuario."
+      },
+      "paleta": "arenas pálidas, óxido rojo, ocre mostaza, índigo teñido y sombras malva; luz cálida contenida",
+      "material_direction": "Fotografía de un mundo construido artesanalmente con papel recortado y teñido mate. Los personajes son recortes CASI PLANOS de cuerpo entero, adultos de cabeza pequeña: un perfil sencillo por cabeza, nariz en el contorno, un punto mínimo como ojo, cabello como una o dos piezas; manos como siluetas simples. Vestidos en dos o tres hojas amplias, sin modelado redondo ni caras facetadas. El volumen pertenece al MUNDO: al menos seis planos a distintas distancias, separados por aire, oclusiones y sombras físicas entre hojas. Arena, arbustos, cardones, casas, cielo, paños y piedra son papel, nunca naturaleza fotográfica mezclada con figuras. El prodigio está construido de la misma materia tangible. Gran plano general con figuras pequeñas, ninguna supera un quinto de la altura de imagen. Nitidez espacial, no bokeh de retrato. Mundo inmersivo a sangre, sin base, mesa, marco, respaldo de maqueta, caja ni cartón corrugado visibles.",
+      "continuity_contract": [
+        "Cuando aparecen, Kuriruputá y sus hermanas son cuatro figuras adultas pequeñas en total. Él lleva camisa de mangas terracota rojiza, pantalón largo crudo y sandalias abiertas oscuras; cabello negro ondulado hasta la nuca, rostro de perfil mínimo, proporciones naturales. No taparrabos ni pecho desnudo.",
+        "Tres hermanas como decisión de reparto de la Biblia: la mayor de cabello gris y manta Wayuushein ocre mostaza; otra de cabello negro y manta rojo oscuro; otra de cabello negro y manta índigo. Mantas de silueta muy amplia y suelta, mangas anchas, hasta tobillos, sin cintura ceñida; cabello descubierto y sandalias sencillas. No velos, capuchas ni hábitos. Su identidad se lee por silueta, color, edad y acción, no por rostros detallados.",
+        "Territorio de La Guajira en memoria histórica/postcontacto: suelo seco, arbustos bajos espinosos, cardones con varios tallos que nacen de la base, enramadas abiertas de postes y techos de tiras, casas bajas rectilíneas, corral de estacas. No selva, tipis ni pirámides. No reconstrucción prehispánica genérica.",
+        "La tuma es una pequeña piedra de contorno irregular, rojo óxido profundo y superficie mate estratificada en papel. No rubí tallado, cristal transparente, joya engastada ni gema de videojuego.",
+        "Los paños y fibras que sostienen el camino y relacionan las casas son licencias plásticas del tríptico. Ningún personaje lanza energía o controla el territorio. No mostrar batalla, rifles, sangre, lesiones abiertas, ingestión de objetos ni mujeres como recompensa."
+      ],
+      "avoid": [
+        "caras Pixar o Disney, muñecos 3D, ojos grandes, cabezas grandes",
+        "rostro modelado, redondo, low-poly o facetado; ilustración digital con textura",
+        "primeros planos, planos medios o cuerpos cortados",
+        "cartón corrugado, base de maqueta, mesa, caja, marco exterior",
+        "tela y naturaleza fotográficas mezcladas con papel",
+        "rayos, auras, partículas decorativas, estrellas, portales, noche dentro de casas copiada de Arámai",
+        "pintura facial o diseños kanaas inventados, amuletos, insignias rituales",
+        "violencia, armas, sangre, heridas visibles, ingestión, sexualización",
+        "texto, letras, leyendas, logos"
+      ],
+      "escenas": {
+        "entrada": {
+          "era": "historico_wayuu",
+          "refs": [],
+          "composicion": "diagonal",
+          "visual_function": "narrative_scene",
+          "narrative_event_ids": [
+            "rescate"
+          ],
+          "beat": "El regreso después del rescate. La fuerza está en las hermanas que lo sostienen y abren el camino, no en un guerrero vencedor.",
+          "escena": "Horizontal 16:9, GRAN PLANO GENERAL de territorio seco Wayúu al final de la tarde. Cuatro figuras pequeñas de papel recortado cruzan de izquierda a derecha por el centro bajo, alrededor de 16% de la altura total. Kuriruputá, despierto y de cuerpo entero, avanza con el peso apoyado en sus dos hermanas de mantas índigo y rojo oscuro, que caminan una a cada lado y lo sostienen por los brazos. Un paño limpio crudo rodea una rodilla sobre el pantalón, sin mancha ni lesión. Un paso por delante va la hermana mayor de manta mostaza, llevando un extremo largo de ese mismo paño. Lo imposible sucede con naturalidad: desde esa mano baja el paño se ensancha y se prolonga en UN CAMINO DE PAPEL CRUDO que atraviesa una hendidura entre estratos de arena y continúa, a una distancia enorme, hasta una ranchería pequeña al fondo derecho. El camino ondula suavemente en el aire entre lomas como una cinta de tela convertida en geografía; sus finos pliegues y sombras proyectadas demuestran que no es sólo un sendero pintado. Las tres hermanas y Kuriruputá pisan su tramo cercano, ancho y bajo. El paisaje no flota como una isla: las capas de terreno se prolongan más allá de todos los bordes de la imagen; sólo el camino se eleva entre ellas. Amplio cielo pálido de hojas, cardones y arbustos de papel en varias profundidades, dos casas bajas y un corral muy pequeño al fondo. Las mujeres llevan la acción; el hombre acepta su apoyo. No multitud, no armas, no heridos adicionales. La extraordinaria longitud del paño es el único prodigio; no efectos de luz.",
+          "editorial_translation": "Rescate y paño largo pertenecen al núcleo de 1946. El paño que se convierte en camino es una metáfora editorial de la agencia y el sostén de las hermanas; no se afirma que ellas hicieran flotar el camino en la tradición. El número de tres hermanas procede de la Biblia de arte, no de un recuento documentado.",
+          "visual_question": "¿Las hermanas sostienen al hombre y conducen el regreso? ¿El paño se transforma de manera visible en un camino imposible, dentro de un territorio amplio y de papel?",
+          "light": "Tarde cálida oblicua sobre arena crema, rojo óxido, mostaza e índigo; sombras malva largas entre capas. Sin contraluz que borre vestuario ni magia luminosa.",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "El paño largo del rescate y el camino de regreso.",
+            "impossible_behavior": "El mismo paño se ensancha y continúa como camino suspendido entre estratos de terreno.",
+            "narrative_effect": "Quien parecía sostener su riqueza por sí solo necesita un camino sostenido por sus hermanas.",
+            "agency": "Las hermanas rescatan, sostienen y guían; el hombre no hace magia.",
+            "physical_translation": "Cinta de papel mate con pliegues, torsiones y sombras separada del suelo; territorio de hojas a varias distancias.",
+            "visible_test": "Se reconoce el paño sostenido por la hermana y su continuidad física hasta un camino demasiado largo para ser una tela normal.",
+            "event_ids": [
+              "rescate"
+            ],
+            "provenance": "editorial_metaphor",
+            "temporal_role": "present"
+          }
+        },
+        "acto": {
+          "era": "historico_wayuu",
+          "refs": [],
+          "composicion": "profundidad_vertical",
+          "visual_function": "narrative_scene",
+          "narrative_event_ids": [
+            "sueno",
+            "deliberacion",
+            "mediacion"
+          ],
+          "beat": "Después del sueño, contar y escuchar. La piedra no da una orden automática: una familia interpreta qué relaciones permitirán continuar.",
+          "escena": "Vertical 9:16 en GRAN PLANO GENERAL ligeramente elevado. Usar toda la altura para distancia territorial, NO para acercarse a los rostros. En el tercio inferior izquierdo, una enramada Wayúu ABIERTA de postes delgados y techo corto cubre una estera de papel. Cuatro adultos pequeños, no más de 15% de la altura del cuadro, están sentados en un círculo abierto que permite verlos de cuerpo entero. Kuriruputá de camisa terracota y pantalón crudo está despierto, sentado de perfil con una mano baja abierta al contar su sueño; enfrente la hermana mayor de manta mostaza responde con un gesto discreto, las hermanas índigo y rojo oscuro escuchan atentamente. No todos miran una joya como adoradores: se miran entre sí, están conversando. En el centro de la estera hay UNA TUMA pequeña, rojo óxido mate, sin pedestal ni brillo. La memoria del sueño se vuelve material: de los estratos de la piedra emergen unas pocas fibras finas de papel rojo tierra; se prolongan por el patio y se ensanchan gradualmente en tres SENDAS TEJIDAS DE PAPEL que atraviesan largos espacios de arena hacia tres umbrales domésticos distantes. Cada senda levanta suavemente un pliegue de la misma arena, cosiendo distancias que normalmente permanecerían separadas. Recorrido orgánico y asimétrico, jamás red informática o mandala. Las fibras están sobre el suelo y separadas por sombras, ninguna nace de una mano. La mitad superior conserva un paisaje extenso de colinas, cardones de papel, casas pequeñas y cielo pálido. El entorno permanece de día, sin estrellas ni portales. Hay conversación humana sencilla dentro de una geografía imposible que la prolonga. Cuatro personas en total; ninguna figura sobrenatural o mediador ceremonial añadido.",
+          "editorial_translation": "El sueño con tuma pertenece a 1946. Compartirlo, deliberar y orientar la mediación sigue el relato editorial vigente. Las fibras que enlazan umbrales son una traducción visual de vínculos y posibilidades; no un mapa étnico, una ceremonia, un protocolo de compensación o un poder atribuido a la piedra.",
+          "visual_question": "¿Se ve una conversación entre el hombre despierto y sus hermanas, no culto a una gema? ¿El sueño se hace visible mediante fibras que continúan en largas sendas entre casas? ¿Las personas siguen siendo pequeñas?",
+          "light": "Mañana ocre pálida, sombras nítidas pero suaves entre capas, rojo profundo mate de la tuma y sus fibras, mostaza e índigo del vestuario; atmósfera serena y extraña sin resplandor sobrenatural.",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "La pequeña tuma del sueño, una estera y una conversación familiar.",
+            "impossible_behavior": "Los estratos de la piedra continúan en fibras que cosen distancias entre espacios domésticos.",
+            "narrative_effect": "La interpretación abre conexiones y posibilidades de reparación que la fuerza individual no pudo asegurar.",
+            "agency": "Las hermanas participan en interpretar; Kuriruputá escucha y cuenta. La piedra no emite órdenes visibles ni rayos.",
+            "physical_translation": "Fibras y sendas de papel rojo mate que prolongan la piedra y levantan pliegues del suelo con sombras físicas.",
+            "visible_test": "Conversación de cuatro adultos diminutos y continuidad de piedra, fibras y caminos entre varios umbrales diurnos.",
+            "event_ids": [
+              "sueno",
+              "deliberacion",
+              "mediacion"
+            ],
+            "provenance": "editorial_metaphor",
+            "temporal_role": "present"
+          }
+        },
+        "huella": {
+          "era": "historico_wayuu",
+          "refs": [],
+          "composicion": "motivo_unico",
+          "visual_function": "symbolic_synthesis",
+          "narrative_event_ids": [
+            "continuidad"
+          ],
+          "beat": "La riqueza no se sostiene sola: los vínculos mantienen unido lo que podía dispersarse.",
+          "symbolic_contract": {
+            "thesis": "Lo valioso permanece unido por vínculos, no por su dureza ni por su dueño.",
+            "carrier": "Una sola tuma rojo óxido construida en estratos finos de papel mate.",
+            "operation": "La piedra está abierta en tres fragmentos apenas separados; fibras continuas de sus propios estratos atraviesan las grietas y mantienen su silueta suspendida.",
+            "story_connection": "Condensa la dependencia de Kuriruputá respecto de sus hermanas y la continuidad sostenida entre personas en el relato editorial. No vuelve a mostrar el rescate ni la conversación.",
+            "visible_test": "Una piedra roja de contorno orgánico sigue siendo una sola forma aunque está abierta; lo único que la une son fibras visibles que cruzan el vacío."
+          },
+          "escena": "Imagen CUADRADA 1:1: un único símbolo material, NO escena. Una sola pequeña piedra tuma de contorno orgánico irregular, casi ovalado, ROJO ÓXIDO PROFUNDO y mate, ocupa aproximadamente la mitad del ancho del cuadro; se ve completa y respira. Está construida con muchas hojas finas teñidas y comprimidas, cuyos cantos internos revelan estratos curvos. La piedra se abre en TRES fragmentos grandes apenas separados, aún dentro de la misma silueta: dos grietas estrechas pero profundas dejan ver aire y sombra. De las propias capas de los fragmentos salen fibras finas rojo tierra y crudo; cruzan las grietas tensas y enlazadas, en una sola trama discreta que mantiene unidos los fragmentos sin mano, pegamento ni soporte. Es una piedra frágil que permanece entera gracias a lo que une sus partes. No tres piedras independientes, no mineral tallado, no corazón anatómico ni medallón. Alrededor hay vacío cálido de papel arena mate con dos o tres distancias sutiles de luz y sombra que se extienden a sangre, sin horizonte, paisaje, mesa, pedestal o caja. Fotografía cercana de un símbolo artesanal suspendido, NO ilustración vectorial. Relieve físico entre láminas, fibras y grietas; una sola operación imposible legible en miniatura. Sin personajes, manos, casas, ropa, plantas u otros objetos.",
+          "material_direction": "Construcción artesanal fotografiada, hecha por completo de papel fino teñido mate, cantos internos sutiles y fibras tensadas. Profundidad física entre fragmentos y hojas, aire en las grietas y sombras proyectadas; no relieve dibujado ni render brillante. Fondo inmersivo cálido de borde a borde, sin base ni cartón corrugado. La forma no es un rubí facetado ni una joya. Todo el detalle sirve a una sola silueta y a los vínculos que la mantienen unida.",
+          "continuity_contract": [
+            "Conservar la tuma irregular mate rojo óxido de la Biblia y la materia de papel del tríptico.",
+            "Las fibras prolongan la idea de sostén del paño y de conexiones de la conversación, sin repetir personas o escenarios.",
+            "Tres fragmentos es una elección de composición, no un número cosmológico. Piedra fracturada y fibras son metáfora editorial, no símbolo tradicional certificado."
+          ],
+          "editorial_translation": "La tuma fracturada sostenida por fibras es una invención plástica para esta imagen. El relato no dice que la piedra se rompa, se repare o levite. No presentar esta imagen como amuleto, símbolo ritual, propiedad mineralógica o diseño tradicional Wayúu.",
+          "visual_question": "¿Se lee un solo símbolo —lo valioso se sostiene por sus vínculos— sin seguir acciones de personajes? ¿Las fibras unen físicamente grietas reales entre capas de papel?",
+          "light": "Luz lateral tibia y sobria, rojo óxido mate, fibras crudas y sombras burdeos; fondo arena claro. Sin oro, destellos, neón ni aura.",
+          "avoid": [
+            "escena narrativa, paisaje, casas, seres humanos, manos, ropa",
+            "rubí facetado, cristal brillante, joyería, amuleto, corazón, medallón",
+            "oro tipo kintsugi, pegamento luminoso, explosión de fragmentos",
+            "patrón étnico inventado, mandala, runas, letras, logos",
+            "cartón corrugado, marco, caja, pedestal, mesa, base de maqueta",
+            "dibujo plano, CGI pulido, textura de papel aplicada sobre ilustración"
+          ],
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "La tuma roja valiosa.",
+            "impossible_behavior": "La piedra abierta mantiene su unidad suspendida gracias a fibras surgidas de sus propias capas.",
+            "narrative_effect": "La continuidad depende de relaciones que sostienen lo que una sola fuerza no mantiene.",
+            "agency": "El vínculo sostiene; ninguna persona domina la piedra y no se muestra un rito.",
+            "physical_translation": "Tres fragmentos laminados de papel rojo mate, grietas con aire y fibras tensadas entre los estratos.",
+            "visible_test": "Una sola silueta de piedra dividida, pero unida por una trama de fibras visibles, sin escena alrededor.",
+            "event_ids": [
+              "continuidad"
+            ],
+            "provenance": "editorial_metaphor",
+            "temporal_role": "present"
+          }
+        }
+      }
+    }
+  }
+}

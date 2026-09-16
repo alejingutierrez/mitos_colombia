@@ -1,0 +1,118 @@
+{
+  "schema": "mitos-triptych-selection/v2",
+  "myth": "el-hijo-del-condor",
+  "title": "El hijo del Cóndor",
+  "created_at": "2026-09-07T15:49:00Z",
+  "status": "approved_for_publication_under_campaign_authorization",
+  "approval_basis": "Campaña autorizada; QA por relato, Biblia y memoria.",
+  "campaign_scope": "content/mitos-visuales/production/wayuu-2026-09-05/scope.json",
+  "narrative_target_sha256": "82d3c04ab01a5cbb8e81991d03a12aaded2ddb90ce31244d12ec669b5bc3991b",
+  "visual_memory_library": "content/mitos-visuales/wayuu.visual-memory.v1.json",
+  "visual_memory_review": {
+    "reviewer": "agent_direct_visual_review",
+    "reviewed_at": "2026-09-07T15:46:00Z",
+    "reviewed_reference_ids": [
+      "ff6068e7165f72dbd552",
+      "0573a69c653ee72cd8b2"
+    ],
+    "retained": [
+      "Profundidad rocosa, caballo castaño y paleta noche/tierra."
+    ],
+    "rejected": [
+      "Collage de caballo, ave, serpientes y cueva; emblemas, rosetas, caballo atacando y héroe con capa estampada; ave de cabeza blanca."
+    ],
+    "influence_by_act": {
+      "entrada": "Reemplazar catálogo por salida de madre e hijo con puerta de roca como acción.",
+      "acto": "Conservar caballo, aislado en el cruce subterráneo sin combate ni serpientes.",
+      "huella": "Una piedra que abre camino; ningún ave ni caballo separado."
+    }
+  },
+  "selected": [
+    {
+      "act": "entrada",
+      "path": "output/imagegen/wayuu/triptychs/wayuu-condor-triptych-01/entrada.jpeg",
+      "sha256": "053f4663d468fe30f24d2d3c6747a29dac8a3b4ded7c4d6879bdd2812128f8ae",
+      "width": 1536,
+      "height": 864,
+      "quality": "high",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/el-hijo-del-condor/wayuu-condor-triptych-01/prompts/entrada.prompt.txt",
+      "prompt_sha256": "c89b54cf0db61fce48ddd5cbce6d07b59b3dbfd248a208da21046c9bd6181e57",
+      "visual_function": "narrative_scene",
+      "review": {
+        "observed": "Madre e hijo jóvenes/adultos de recorte plano, vestidos, salen a la derecha; palma del hijo coincide con estratos de piedra abiertos en abanico, gran cueva de papel.",
+        "limits": [
+          "Figuras rondan un quinto de altura, no octavo solicitado; están a la derecha fuera del título.",
+          "Vestuario materno es continuidad editorial de Biblia, no reproducción literal de ropa deteriorada."
+        ]
+      }
+    },
+    {
+      "act": "acto",
+      "path": "output/imagegen/wayuu/triptychs/wayuu-condor-triptych-01/acto.jpeg",
+      "sha256": "319d0abb9582f7224258a9ec976be863e5d22f9339b203295538b1d4574bcb98",
+      "width": 864,
+      "height": 1536,
+      "quality": "medium",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/el-hijo-del-condor/wayuu-condor-triptych-01/prompts/acto.prompt.txt",
+      "prompt_sha256": "309e93e369c07042711290a2b5eaef96eb3c79c7dcbe6f4d6ccd033eb55961bc",
+      "visual_function": "narrative_scene",
+      "review": {
+        "observed": "Un joven vestido cabalga un caballo natural castaño sin violencia. Tres láminas conectadas abren descenso hacia cámara cálida, mundo inmersivo sin maqueta cortada.",
+        "limits": [
+          "Pliegue comienza delante del caballo, no exactamente bajo casco; se lee acceso material, no causa literal.",
+          "Identidad por ropa y cabello; la distancia no permite identidad facial biométrica."
+        ]
+      }
+    },
+    {
+      "act": "huella",
+      "path": "output/imagegen/wayuu/triptychs/wayuu-condor-triptych-01/huella.jpeg",
+      "sha256": "68cc44386bf6628251f6df1ba0222a77e26e8ebd9d876bb66f7920d7d5036fed",
+      "width": 1024,
+      "height": 1024,
+      "quality": "medium",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/el-hijo-del-condor/wayuu-condor-triptych-01/prompts/huella.prompt.txt",
+      "prompt_sha256": "a0127231353c630ab1ecd030cd447b40925e43f9770756ef70d68d33b8c727f1",
+      "visual_function": "symbolic_synthesis",
+      "review": {
+        "observed": "Una piedra estratificada deja salir una lámina ocre que se bifurca en dos caminos; objeto único contra marfil.",
+        "limits": [
+          "Es metáfora editorial, no piedra sagrada ni símbolo tradicional atribuido."
+        ]
+      }
+    }
+  ],
+  "generation": {
+    "provider": "OpenAI API",
+    "model": "gpt-image-2",
+    "mode": "text_only_no_local_references",
+    "unique_images": 3,
+    "by_act": {
+      "entrada": {
+        "unique_images": 1,
+        "preparation_rounds": 1,
+        "requested_alternatives": 0
+      },
+      "acto": {
+        "unique_images": 1,
+        "preparation_rounds": 1,
+        "requested_alternatives": 0
+      },
+      "huella": {
+        "unique_images": 1,
+        "preparation_rounds": 1,
+        "requested_alternatives": 0
+      }
+    },
+    "corrections": 0,
+    "cli_seconds": {
+      "entrada_01": 87.8,
+      "acto_01": 38.2,
+      "huella_01": 48.3
+    },
+    "cost": null,
+    "request_ids": null
+  },
+  "excluded": [],
+  "published": false
+}

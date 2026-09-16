@@ -1,0 +1,285 @@
+{
+  "schema": "mitos-openai-triptych/v1",
+  "batch_id": "wayuu-chama-triptych-01",
+  "created_at": "2026-09-06T19:01:25.711Z",
+  "account_source": "OPENAI_API_KEY from ignored .env",
+  "provider": "openai",
+  "model": "gpt-image-2",
+  "community": "wayuu",
+  "myth": "la-chama",
+  "plan": "content/mitos-visuales/wayuu.chama.triptico.v1.json",
+  "prompt_profile": "story_first_v3_symbolic_huella",
+  "plan_sha256": "debd195b2cae4f566c2cb9b6cbfec91a05c257f1d75c939640d700ebe400247f",
+  "narrative_target_sha256": "93461758732b5d6028affe6246ca8342486b5e9bb310cf0976ae15a07f72a627",
+  "evidence": [
+    {
+      "id": "pineda_chama_1947",
+      "type": "primary_bibliographic_record",
+      "url": "https://www.bibliotecadigitaldebogota.gov.co/resources/2910662/",
+      "pages": "Revista de Folklore 2, 1947, 113–126",
+      "supports": "Identidad bibliográfica del artículo, no Chaves como autor principal.",
+      "limits": "Facsímil no recuperado legiblemente en esta consulta; la lectura narrativa se hace mediante compilación posterior y expediente de Biblia."
+    },
+    {
+      "id": "villa_posse_1993",
+      "type": "secondary_narrative_transcription",
+      "url": "https://studylib.es/doc/8316192/mitos-y-leyendas",
+      "pages": "Sección 4.7, pp. 84–87; transcripción atribuida a Pineda.",
+      "supports": "Partida con hijo y burro, transformación de carga y ropa, regreso y protección dentro de la cueva; repertorio huevo/flor.",
+      "limits": "Compilación posterior mediada, no testimonio oral nuevo. Lenguaje de época no trasladado a representación."
+    },
+    {
+      "id": "published_chama",
+      "type": "project_narrative",
+      "path": "content/mitos-visuales/production/wayuu-2026-09-05/narratives/la-chama.json",
+      "supports": "Relato objetivo: transformación, partida, refugio, ambivalencia y agencia.",
+      "limits": "Atribución principal y alias difieren del expediente; final de venganza no aparece en pasaje secundario revisado. No se ilustran discrepancias ni se modifica texto."
+    }
+  ],
+  "visual_memory_library": "content/mitos-visuales/wayuu.visual-memory.v1.json",
+  "visual_memory_review": {
+    "reviewer": "agent_direct_visual_review",
+    "reviewed_at": "2026-09-06T19:01:25.171Z",
+    "reviewed_reference_ids": [
+      "03b239b5132d895f4c18",
+      "fd86b4d337874421bcd6"
+    ],
+    "retained": [
+      "Estratos de roca y profundidad, contraste de ocres con azul profundo, cabello como continuidad entre apariencias.",
+      "Sensación de territorio vasto y presencia cambiante."
+    ],
+    "rejected": [
+      "Dos apariencias humanas simultáneas como si fueran dos personajes, espalda descubierta y pose de retrato de las imágenes previas.",
+      "Mar, vegetación en rosetas, luna decorativa y prendas estampadas no necesarios para el episodio.",
+      "Rostro y ojos grandes del modelo infantil: conservar conjunto verde/arena pero reducir a perfil de papel distante.",
+      "Kalamantuunay como alias de La Chama; venganza o persecución de familiares no sustentadas en el pasaje secundario revisado. No se edita el texto público."
+    ],
+    "influence_by_act": {
+      "entrada": "Recuperar territorio en capas y escala amplia; mostrar la partida con hijo y carga renovada, no dos mujeres junto al mar.",
+      "acto": "Conservar roca/cueva, sustituir retrato por acción de refugio y ocultamiento entre capas.",
+      "huella": "Sintetizar inestabilidad de forma con huevo y flor en una sola estructura de papel; sin escena ni catálogo de cinco figuras."
+    }
+  },
+  "bible_selection": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/accepted-selection.json",
+  "canonical_models": [
+    {
+      "model_id": "la_chama__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-23-la-chama-medium-corrections-01/la_chama__identity_sheet--canon.jpeg",
+      "sha256": "5d062a7dce3b1ab2e4f356f42e1be6bde8d943e3dd385764a15aa99bd14c568b",
+      "qa_status": "PASS_AFTER_CORRECTION_01"
+    },
+    {
+      "model_id": "la_chama__state_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-23-la-chama-medium/la_chama__state_sheet--estados.jpeg",
+      "sha256": "4ce99c75c63fd6606706e1434442efeba9acfc159478ce4fe0630408de3ff61f",
+      "qa_status": "PASS"
+    },
+    {
+      "model_id": "hombre_caballos_chama__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-23-la-chama-medium/hombre_caballos_chama__identity_sheet--canon.jpeg",
+      "sha256": "89b2563166373f38e44ab0c158659ecbe024ce7632600de263e8bcbe914d7c3c",
+      "qa_status": "PASS"
+    },
+    {
+      "model_id": "hombre_caballos_chama__state_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-23-la-chama-medium-corrections-01/hombre_caballos_chama__state_sheet--estados.jpeg",
+      "sha256": "e138db3858ffe125b5321f3de359d24dd6f719e899122a7b4b84af38fe6f30eb",
+      "qa_status": "PASS_AFTER_CORRECTION_01"
+    },
+    {
+      "model_id": "hijo_chama__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-23-la-chama-medium-corrections-01/hijo_chama__identity_sheet--canon.jpeg",
+      "sha256": "e1ea5f32d62dbeb56c617f04d23a96ee082e6db5e697f7fe6c98236006359933",
+      "qa_status": "PASS_AFTER_CORRECTION_01"
+    },
+    {
+      "model_id": "burro_chama__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-23-la-chama-medium-corrections-01/burro_chama__identity_sheet--canon.jpeg",
+      "sha256": "a82e8ae2d31c65a1a4cec92b1d1dbc451302c0f0e7a75bd6e791e817fb7e029f",
+      "qa_status": "PASS_AFTER_CORRECTION_01"
+    },
+    {
+      "model_id": "ollas_mochilas_chama__object_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-23-la-chama-medium/ollas_mochilas_chama__object_sheet--canon.jpeg",
+      "sha256": "965db38eb9da4694ea7e6b3c3ef9467a71646c01a358ee251f65a138fc2478b0",
+      "qa_status": "PASS"
+    },
+    {
+      "model_id": "manta_roja_chama__object_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-23-la-chama-medium-corrections-01/manta_roja_chama__object_sheet--canon.jpeg",
+      "sha256": "f956da6e4ca44c77e5eeb1113993c88a08550d2e11c4ae000355886fc1571848",
+      "qa_status": "PASS_AFTER_CORRECTION_01"
+    },
+    {
+      "model_id": "cueva_casa_chama__spatial_model",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-23-la-chama-medium/cueva_casa_chama__spatial_model--canon.jpeg",
+      "sha256": "b348640b302cd76978a9134afc43e054e53fd31ad3c695676587d44b22021270",
+      "qa_status": "PASS"
+    },
+    {
+      "model_id": "metamorfosis_chama__phenomenon_rule",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-23-la-chama-medium/metamorfosis_chama__phenomenon_rule--canon.jpeg",
+      "sha256": "aec88214d1c57d0ab5b33d584fa2f3028e741cd2e8eaaae778af547a2dc05bd6",
+      "qa_status": "PASS"
+    },
+    {
+      "model_id": "transformacion_carga_chama__phenomenon_rule",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-23-la-chama-medium-corrections-01/transformacion_carga_chama__phenomenon_rule--canon.jpeg",
+      "sha256": "d80c3ec6e1819bdf829452bdd326072e647e8bbd76fb99bb39b1c432b2d13876",
+      "qa_status": "PASS_AFTER_CORRECTION_01"
+    }
+  ],
+  "approval_gate": "Campaña completa autorizada; QA por orientación y publicación aditiva sin borrar versiones.",
+  "requested_acts": [
+    "entrada",
+    "acto",
+    "huella"
+  ],
+  "generation_mode": "text_only_no_local_references",
+  "framing": "immersive_full_bleed",
+  "surface_finish": "layered_depth_no_exposed_support",
+  "jobs": [
+    {
+      "act": "entrada",
+      "aspect_ratio": "16:9",
+      "size": "1536x864",
+      "quality": "high",
+      "api_method": "images.generate",
+      "composition": "profundidad_abierta",
+      "canon_model_ids": [
+        "la_chama__identity_sheet",
+        "la_chama__state_sheet",
+        "hombre_caballos_chama__identity_sheet",
+        "hombre_caballos_chama__state_sheet",
+        "hijo_chama__identity_sheet",
+        "burro_chama__identity_sheet",
+        "ollas_mochilas_chama__object_sheet",
+        "manta_roja_chama__object_sheet",
+        "cueva_casa_chama__spatial_model",
+        "metamorfosis_chama__phenomenon_rule",
+        "transformacion_carga_chama__phenomenon_rule"
+      ],
+      "refs": [],
+      "ref_paths": [],
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/la-chama/wayuu-chama-triptych-01/prompts/entrada.prompt.txt",
+      "prompt_sha256": "13db0e747bcee3db841cbc6a4d85a63ae5edb9517edbd9b13e1e9cd6334cd5ef",
+      "narrative_event_ids": [
+        "partida_carga"
+      ],
+      "editorial_translation": "La transformación de carga procede del relato; sombras con forma anterior permiten leerla en una sola escena. No se afirma que las sombras se comporten así literalmente ni que los colores o número de bultos sean datos etnográficos.",
+      "magic_in_the_ordinary": {
+        "ordinary_anchor": "Mochilas transportadas en un burro.",
+        "impossible_behavior": "Las bolsas nuevas proyectan la forma de las ollas anteriores.",
+        "narrative_effect": "Hace visible una transformación durante la partida sin duplicar animales ni cuerpos.",
+        "agency": "La Chama decide y protege; no es un objeto poseído ni una caricatura de mujer Wayúu.",
+        "physical_translation": "Tres bolsas con correas y tres sombras de ollas vinculadas por luz rasante.",
+        "visible_test": "¿Una madre y su hijo viajan con un burro y mochilas nuevas, mientras sus sombras conservan la forma de ollas?",
+        "event_ids": [
+          "partida_carga"
+        ],
+        "provenance": "editorial_metaphor",
+        "temporal_role": "present"
+      },
+      "visual_function": "narrative_scene",
+      "output": "output/imagegen/wayuu/triptychs/wayuu-chama-triptych-01/entrada.jpeg",
+      "status": "prepared"
+    },
+    {
+      "act": "acto",
+      "aspect_ratio": "9:16",
+      "size": "864x1536",
+      "quality": "medium",
+      "api_method": "images.generate",
+      "composition": "profundidad_abierta",
+      "canon_model_ids": [
+        "la_chama__identity_sheet",
+        "la_chama__state_sheet",
+        "hombre_caballos_chama__identity_sheet",
+        "hombre_caballos_chama__state_sheet",
+        "hijo_chama__identity_sheet",
+        "burro_chama__identity_sheet",
+        "ollas_mochilas_chama__object_sheet",
+        "manta_roja_chama__object_sheet",
+        "cueva_casa_chama__spatial_model",
+        "metamorfosis_chama__phenomenon_rule",
+        "transformacion_carga_chama__phenomenon_rule"
+      ],
+      "refs": [],
+      "ref_paths": [],
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/la-chama/wayuu-chama-triptych-01/prompts/acto.prompt.txt",
+      "prompt_sha256": "95925bf2b987786859e50d749421ef9e376a2e7a309c6bc187999b6574ddb1da",
+      "narrative_event_ids": [
+        "refugio_cueva"
+      ],
+      "editorial_translation": "Esconder al hombre en un cuarto de roca pertenece al relato. La pared que se pliega como cortina materializa el refugio; no describe arquitectura real ni invoca un portal.",
+      "magic_in_the_ordinary": {
+        "ordinary_anchor": "Pared estratificada de una cueva doméstica.",
+        "impossible_behavior": "La roca se vuelve pliegue que limita la mirada hacia el huésped.",
+        "narrative_effect": "Hace visible el acto protector de La Chama.",
+        "agency": "La Chama decide y protege; no es un objeto poseído ni una caricatura de mujer Wayúu.",
+        "physical_translation": "Tres capas curvas continuas se recogen frente al receso sin encerrar anatómicamente al hombre.",
+        "visible_test": "¿La Chama protege el acceso a un hombre pequeño entre capas de roca que se repliegan, sin familia amenazante ni violencia?",
+        "event_ids": [
+          "refugio_cueva"
+        ],
+        "provenance": "editorial_metaphor",
+        "temporal_role": "present"
+      },
+      "visual_function": "narrative_scene",
+      "output": "output/imagegen/wayuu/triptychs/wayuu-chama-triptych-01/acto.jpeg",
+      "status": "prepared"
+    },
+    {
+      "act": "huella",
+      "aspect_ratio": "1:1",
+      "size": "1024x1024",
+      "quality": "medium",
+      "api_method": "images.generate",
+      "composition": "simbolo_central",
+      "canon_model_ids": [
+        "la_chama__identity_sheet",
+        "la_chama__state_sheet",
+        "hombre_caballos_chama__identity_sheet",
+        "hombre_caballos_chama__state_sheet",
+        "hijo_chama__identity_sheet",
+        "burro_chama__identity_sheet",
+        "ollas_mochilas_chama__object_sheet",
+        "manta_roja_chama__object_sheet",
+        "cueva_casa_chama__spatial_model",
+        "metamorfosis_chama__phenomenon_rule",
+        "transformacion_carga_chama__phenomenon_rule"
+      ],
+      "refs": [],
+      "ref_paths": [],
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/la-chama/wayuu-chama-triptych-01/prompts/huella.prompt.txt",
+      "prompt_sha256": "e9b1cae80eb36fef9f82c1577e5e5f426c3bc4dc26ac6cc2c076a3b38f3c925a",
+      "narrative_event_ids": [
+        "forma_cambiante"
+      ],
+      "editorial_translation": "Huevo y flor están en el repertorio atribuido a La Chama. Su unión en un pliegue único es editorial: no se inventa una secuencia huevo→flor dentro del relato ni un símbolo ritual.",
+      "magic_in_the_ordinary": {
+        "ordinary_anchor": "Huevo y flor como apariencias reconocibles.",
+        "impossible_behavior": "Un mismo pliegue mantiene ambas lecturas.",
+        "narrative_effect": "Condensa una identidad que no se deja fijar.",
+        "agency": "La Chama decide y protege; no es un objeto poseído ni una caricatura de mujer Wayúu.",
+        "physical_translation": "Óvalo marfil continuo con segmentos que abren reverso rojo como pétalos.",
+        "visible_test": "¿Un mismo volumen de papel se lee como huevo cerrado y flor que se abre, sin convertirse en escena o catálogo?",
+        "event_ids": [
+          "forma_cambiante"
+        ],
+        "provenance": "editorial_metaphor",
+        "temporal_role": "memory"
+      },
+      "visual_function": "symbolic_synthesis",
+      "symbolic_contract": {
+        "thesis": "Una apariencia no agota la identidad.",
+        "carrier": "Un volumen de papel entre huevo y flor.",
+        "operation": "La superficie cerrada se vuelve pétalo al plegar su reverso.",
+        "story_connection": "Repertorio de formas cambiantes atribuido a La Chama.",
+        "visible_test": "¿Un mismo volumen de papel se lee como huevo cerrado y flor que se abre, sin convertirse en escena o catálogo?"
+      },
+      "output": "output/imagegen/wayuu/triptychs/wayuu-chama-triptych-01/huella.jpeg",
+      "status": "prepared"
+    }
+  ]
+}

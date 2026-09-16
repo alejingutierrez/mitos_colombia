@@ -1,0 +1,243 @@
+{
+  "schema": "mitos-colombia-triptychs/v1.6",
+  "status": "production_and_publication_authorized",
+  "comunidad": "Wayúu",
+  "region": "Caribe",
+  "prompt_profile": "story_first_v3_symbolic_huella",
+  "generation_mode": "text_only_no_local_references",
+  "bible_selection": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/accepted-selection.json",
+  "campaign_scope": "content/mitos-visuales/production/wayuu-2026-09-05/scope.json",
+  "visual_memory_library": "content/mitos-visuales/wayuu.visual-memory.v1.json",
+  "approval_gate": "Campaña completa autorizada; QA por orientación y publicación aditiva sin borrar versiones.",
+  "output_sizes": {
+    "entrada": "1536x864",
+    "acto": "864x1536",
+    "huella": "1024x1024"
+  },
+  "quality_policy": {
+    "entrada": "high",
+    "acto": "medium",
+    "huella": "medium"
+  },
+  "mitos": {
+    "el-origen-del-fuego": {
+      "titulo": "El origen del fuego",
+      "canon_models": [
+        "siki__identity_sheet",
+        "siki__state_sheet",
+        "junuunay__identity_sheet",
+        "brasas_morral_junuunay__object_sheet",
+        "varitas_friccion__object_sheet",
+        "caujaro_koushot__botanical_sheet"
+      ],
+      "evidence": [
+        {
+          "id": "published_fire",
+          "type": "project_narrative",
+          "path": "content/mitos-visuales/production/wayuu-2026-09-05/narratives/el-origen-del-fuego.json",
+          "supports": "Relato público congelado: Siki, distribución y fuego en madera.",
+          "limits": "Su prosa combina variantes aunque Historia las distingue. No representar robo de Junuunay a Siki ni reescribir el texto."
+        },
+        {
+          "id": "finol_fire",
+          "type": "primary_narrative_record",
+          "url": "https://www.joseenriquefinol.com/wp-content/uploads/2020/07/MITO-Y-CULTURA-GUAJIRA-Libro.pdf",
+          "pages": "59–62 y 109–119",
+          "supports": "Siki descansa en chinchorro en primera versión. En segunda, Junuunay toma dos brasas de Maleiwa y Jimut esconde fuego en madera.",
+          "limits": "Versiones paralelas. Tejido y oscuridad transformados son metáforas editoriales."
+        },
+        {
+          "id": "bible_lot15",
+          "type": "internal_visual_research",
+          "path": "docs/wayuu-lote-15-origen-del-fuego-v3.md",
+          "supports": "Identidades, objetos, prendas y separación de versiones.",
+          "limits": "Diseño de vestuario no equivale a reconstrucción histórica fechada."
+        }
+      ],
+      "bible_overrides": [
+        {
+          "model_id": "siki__identity_sheet",
+          "decision": "Conservar crudo/ocre/carbón, Wom y waireñas; sin pala en descanso; rostro casi plano."
+        },
+        {
+          "model_id": "junuunay__identity_sheet",
+          "decision": "Conservar camisa azul humo corta, Wusi, S'ira ocre, Kotin separado arena y paño liso; sin pantalones."
+        },
+        {
+          "model_id": "brasas_morral_junuunay__object_sheet",
+          "decision": "Un pequeño morral flexible liso y dos brasas; no tres recipientes de distintas vistas de la ficha."
+        },
+        {
+          "model_id": "varitas_friccion__object_sheet",
+          "decision": "Dos piezas separadas, sin taladro ni tutorial; fuego plegado como metáfora."
+        }
+      ],
+      "narrative_contract": {
+        "target_slug": "el-origen-del-fuego",
+        "target_snapshot": "content/mitos-visuales/production/wayuu-2026-09-05/narratives/el-origen-del-fuego.json",
+        "target_content_sha256": "3f42d4dafc69dc59021c36cfb6024033597d24c0c92f96b50b0ae0db314e819e",
+        "summary": "Motivos paralelos del origen del fuego: descanso de Siki; traslado de dos brasas por Junuunay en otra versión; fuego en la madera. NO son una cronología común. Siki y Junuunay NO se encuentran. Cada escena incluye sólo el personaje asignado.",
+        "events": [
+          {
+            "id": "siki_descansa",
+            "provenance": "historical_core",
+            "required": true,
+            "source": "finol_fire",
+            "action": "Siki, fuego personificado, descansa en chinchorro; primera versión."
+          },
+          {
+            "id": "junuunay_dos_brasas",
+            "provenance": "historical_core",
+            "required": true,
+            "source": "finol_fire",
+            "action": "Junuunay lleva dos brasas en un morral al salir de la gruta; segunda versión."
+          },
+          {
+            "id": "fuego_madera",
+            "provenance": "historical_core",
+            "required": true,
+            "source": "finol_fire",
+            "action": "El fuego permanece en madera y se obtiene mediante varitas."
+          }
+        ],
+        "emotional_reading": "Potencia contenida, tránsito precario y cuidado; no triunfo heroico.",
+        "magic_reading": "Lo quieto puede guardar fuego: tejido, morral y madera.",
+        "qa_method": "H trama con fuego sin incendio; V dos brasas y noche material apartada; S dos maderas con fuego interior, sin escena."
+      },
+      "visual_memory_review": {
+        "reviewer": "agent_direct_visual_review",
+        "reviewed_at": "2026-09-06T15:02:39.762Z",
+        "reviewed_reference_ids": [
+          "b5ddcbc9bfbcf35285db",
+          "ac0343457ea8c5a1943a"
+        ],
+        "retained": [
+          "Cueva de estratos con profundidad real, sombras y contraste ámbar/azul.",
+          "Fuego como centro de atención dentro del mundo material."
+        ],
+        "rejected": [
+          "Torso descubierto, cenefas inventadas, rostros volumétricos, deidad gigante barbada y aureola.",
+          "Selva densa, agaves ornamentales y planos cerrados; no copiar la misma escena en dos formatos."
+        ],
+        "influence_by_act": {
+          "entrada": "Contraste cálido/frío y estratos trasladados al chinchorro de Siki: la trama contiene fuego sin arder.",
+          "acto": "Recorrido profundo junto a gruta; personaje pequeño y dos brasas abren capas de oscuridad, sin deidad inventada.",
+          "huella": "Estratos cálidos condensados en fuego plegado dentro de madera intacta; sin cueva, personajes ni escena."
+        }
+      },
+      "material_direction": "Immersive photographed world ENTIRELY made from matte dyed CUT PAPER. Large terrain sheets and architecture assembled at real different distances with visible air, occlusion and cast shadows; no flat collage, real sand, wood or cloth. Human faces are ONE almost-flat brown side-profile silhouette, nose only cut outline, tiny eye slit; no modeled cheeks, faceted heads, glass eyeballs or Pixar expressions. Clothing assembled from few broad flat folded sheets. Small complete humans subordinate to their surroundings, not portrait. Full bleed inside the world, no outer cardboard support, box, tabletop, base, pedestal or frame. Fire also consists of folded dyed paper, with restrained inner light and no digital bloom. Magic changes a specific physical relationship.",
+      "paleta": "ocre y arena, índigo frío, rojo brasa y ámbar mate",
+      "continuity_contract": [
+        "Only the actor assigned to this orientation; Siki and Junuunay are from parallel variants, not an encounter.",
+        "Nearly flat brown side-profile faces, natural adult proportions, tiny eye incision; no sculpted cheeks or cartoon expressions.",
+        "Entire world made of matte cut paper at real separated distances with air and shadows, including flame; no real cloth, sand or wood."
+      ],
+      "avoid": [
+        "Pixar, giant portrait, faceted head, glass eyes, bare chest, trousers, invented clan patterns",
+        "giant deity, halo, bearded idol, magic gestures, staff, feathers, glyphs, glitter",
+        "Siki and Junuunay together, chronological mashup, harmed child, burning person, violence",
+        "giant moon, jungle, agave rosettes, cardboard base, box, frame, table edge"
+      ],
+      "escenas": {
+        "entrada": {
+          "era": "mitico_wayuu",
+          "refs": [],
+          "composicion": "profundidad_abierta",
+          "visual_function": "narrative_scene",
+          "narrative_event_ids": [
+            "siki_descansa"
+          ],
+          "beat": "La quietud guarda una fuerza todavía contenida.",
+          "escena": "16:9 EXTREME WIDE, distant slightly elevated view. A small open Wayuu shelter in upper RIGHT of a vast dry courtyard at blue dusk. Thin brown paper yotojoro posts, low roof of straw-paper strips, plain clay wall behind. Reserve lower 40% and left half for website title: continuous quiet dark ochre ground, NO essential action there. At x72%,y44%, ONE small adult SIKI reclines calmly in ONE suspended sand-colored chinchorro, his complete body and sandals visible; body length about 16% image width. Short black hair, plain low wide straw WOM hat, CRUDE CREAM long-sleeve KEMIISA to mid-thigh, ochre WUSI front/back panels held by one CHARCOAL S'IRA sash, brown WAIREÑAS; no pants or shovel. Almost-flat profile face. Impossible detail ONLY inside lower woven belly of hammock: pale outer paper weave remains intact, but through several broad gaps we see a SINGLE long red-and-amber folded PAPER FLAME lying HORIZONTALLY, suspended along curved inner hammock belly BELOW the resting body. Flame tip follows hammock toward tether instead of rising. Intact pale strands pass IN FRONT OF and partially occlude flame; visible air separates weave from warm core. Secret interior of hammock, NOT campfire underneath, orange blanket or burning man. Flame never touches skin or roof. No smoke, damage or suffering. Hammock, man and roof entirely inside x60–91%,y25–58%; shelter less than third of frame. Cold blue sky and distant sparse thorn woodland in physically separated paper planes. No other humans, stars, moon or flames elsewhere. A quiet everyday rest holds impossible contained fire.",
+          "editorial_translation": "Transformación material editorial, no rito ni episodio nuevo atribuido a una fuente.",
+          "visual_question": "¿Se ve una llama dentro de trama intacta y un hombre pequeño que descansa sin quemarse?",
+          "light": "Índigo y arena mate, ámbar y rojo localizados; luz oblicua revela aire, bordes y sombras.",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "El chinchorro de Siki.",
+            "impossible_behavior": "Su trama intacta contiene una llama horizontal suspendida sin consumirse.",
+            "narrative_effect": "Revela el fuego-persona en reposo sin incendiar un cuerpo.",
+            "agency": "La anomalía es narración visual; nadie dirige poderes con sus manos.",
+            "physical_translation": "Trama clara por delante de núcleo ámbar, aire y sombra; llama sigue curva del chinchorro.",
+            "visible_test": "¿Se ve una llama dentro de trama intacta y un hombre pequeño que descansa sin quemarse?",
+            "event_ids": [
+              "siki_descansa"
+            ],
+            "provenance": "editorial_metaphor",
+            "temporal_role": "present"
+          }
+        },
+        "acto": {
+          "era": "mitico_wayuu",
+          "refs": [],
+          "composicion": "profundidad_abierta",
+          "visual_function": "narrative_scene",
+          "narrative_event_ids": [
+            "junuunay_dos_brasas"
+          ],
+          "beat": "Dos brasas pequeñas empiezan a abrir el mundo.",
+          "escena": "9:16 WIDE distant view of a narrow path beside a natural gruta in dry Wayuu thorn woodland at cold blue dusk. Cave walls made from large angular gray/sand PAPER sheets at real separated depths. ONE complete young adult JUNUUNAY walks cautiously away from cave at x50%,y42–65%; figure less than quarter image height. Almost-flat brown profile, short black hair under plain sand tied headcloth Ekiialiiijaa; smoke-BLUE long-sleeve KEMIISA just ABOVE knees, opaque charcoal WUSI panels beneath, one plain OCHRE S'IRA sash, separate SAND KOTIN cape over one shoulder, dark WAIREÑAS sandals, bare lower legs, no pants. ONE small plain tan flexible morral supported under forearm at waist, mouth tilted toward viewer. EXACTLY TWO separate charcoal embers with folded RED-AMBER paper interiors visible side by side inside. No bowl, torch or third ember. Other hand hangs, no spell gesture. Magical editorial translation: darkness across path is a broad opaque INDIGO paper plane; at the light of the bag TWO ATTACHED FLAPS of that blue night plane curl outward, one on each side of the morral, opening a seam in the night and exposing a narrow AMBER PAPER path receding behind. Flaps visibly connected to surrounding blue night sheet, air gaps and cast shadows. Night itself opens: not cave doors, wings, extensions of cape, smoke or shooting flames. Bag stays small and intact, embers do not fly out. Main action at y45–60%; lower third empty path for mobile title. Upper two thirds dominated by stone planes and blue depths. Sparse dry thorn silhouettes at different distances. No giant cactus, moon, person in cave, statue, deity, Siki, extra bags or giant flames. Restrained warm light, not inferno. Remote camera, whole body and feet, no portrait.",
+          "editorial_translation": "Transformación material editorial, no rito ni episodio nuevo atribuido a una fuente.",
+          "visual_question": "¿Se cuentan dos brasas y se ve noche de papel abierta con cuerpo entero y manos sin gesto mágico?",
+          "light": "Índigo y arena mate, ámbar y rojo localizados; luz oblicua revela aire, bordes y sombras.",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Morral con dos brasas.",
+            "impossible_behavior": "La oscuridad se abre en dos solapas materiales alrededor de su luz.",
+            "narrative_effect": "Expresa el paso del fuego reservado hacia su circulación sin mezclar personajes de otras versiones.",
+            "agency": "La anomalía es narración visual; nadie dirige poderes con sus manos.",
+            "physical_translation": "Plano índigo unido a solapas levantadas, aire y sombras; dos núcleos cálidos dentro del morral.",
+            "visible_test": "¿Se cuentan dos brasas y se ve noche de papel abierta con cuerpo entero y manos sin gesto mágico?",
+            "event_ids": [
+              "junuunay_dos_brasas"
+            ],
+            "provenance": "editorial_metaphor",
+            "temporal_role": "present"
+          }
+        },
+        "huella": {
+          "era": "sintesis_editorial",
+          "refs": [],
+          "composicion": "simbolo_central",
+          "visual_function": "symbolic_synthesis",
+          "narrative_event_ids": [
+            "fuego_madera"
+          ],
+          "beat": "El fuego duerme donde parece haber sólo madera.",
+          "escena": "Square 1:1 SYMBOLIC STILL LIFE, no narrative scene. Full-bleed midnight INDIGO matte paper field. TWO plain short dry brown sticks made entirely from layered cut paper lie APART at center, neither touching nor crossed, oblique view from above. One longer irregular stick angles across composition, shorter stick nearby with clear gap. Together occupy about 60% frame width. Bark intact cool brown paper, no char, ash or real timber. In a narrow LENGTHWISE opening in longer stick, the exposed inner wood grain becomes a SINGLE tightly folded RED-and-AMBER PAPER FLAME lying asleep INSIDE wood. Flame silhouette has taper and three simple nested warm folds: unmistakable flame, not red paint or gemstone. Entire tip contained within dry stick outline; no fire rising above. Brown grain layers overlap flame at opening, physically separated with tiny shadows. One impossible fire stored in intact cool wood. Second stick closed plain and unlit, no drill hole. No hands, tools, mechanism, tutorial, people, faces, village, forest, hearth, table, pedestal, sparks, letters, logo or sacred symbol. Large quiet indigo negative space, few confident sculptural paper layers.",
+          "editorial_translation": "Transformación material editorial, no rito ni episodio nuevo atribuido a una fuente.",
+          "visual_question": "¿Se reconocen dos maderas separadas y una llama dentro de la veta sin escena ni tutorial?",
+          "light": "Índigo y arena mate, ámbar y rojo localizados; luz oblicua revela aire, bordes y sombras.",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Dos varitas de madera.",
+            "impossible_behavior": "La veta contiene una llama plegada sin quemar la corteza.",
+            "narrative_effect": "Condensa fuego como posibilidad compartida, no propiedad de una persona.",
+            "agency": "La anomalía es narración visual; nadie dirige poderes con sus manos.",
+            "physical_translation": "Veta marrón solapada sobre una única llama roja y ámbar, con huecos reales.",
+            "visible_test": "¿Se reconocen dos maderas separadas y una llama dentro de la veta sin escena ni tutorial?",
+            "event_ids": [
+              "fuego_madera"
+            ],
+            "provenance": "editorial_metaphor",
+            "temporal_role": "present"
+          },
+          "material_direction": "Sculptural matte CUT PAPER symbolic still life, separated folds with air, occlusion and shadows; full bleed indigo, no support board or visible studio.",
+          "continuity_contract": [
+            "Exactly two separated plain wooden pieces; no scene cast or clothing.",
+            "One folded flame inside intact wood is editorial metaphor, not a documented ritual object."
+          ],
+          "symbolic_contract": {
+            "thesis": "El fuego permanece como posibilidad compartida dentro de la madera.",
+            "carrier": "Dos varitas y una llama interior.",
+            "operation": "Veta abierta revela fuego plegado sin quemar corteza.",
+            "story_connection": "Fuego contenido en maderas y obtenido mediante varitas.",
+            "visible_test": "Dos piezas separadas, una con llama reconocible dentro y corteza intacta."
+          },
+          "avoid": [
+            "third scene, landscape, person, hands, room, tabletop, stand",
+            "drill, tutorial, crossed sticks, extra sticks, bonfire, charred wood, ash",
+            "gemstone, orange paint, logo, glyphs, mandala, box, cardboard backing"
+          ]
+        }
+      }
+    }
+  }
+}

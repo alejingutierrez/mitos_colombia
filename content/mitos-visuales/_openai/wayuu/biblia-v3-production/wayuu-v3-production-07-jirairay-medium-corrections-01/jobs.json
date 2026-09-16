@@ -1,0 +1,33 @@
+{
+  "schema": "mitos-colombia-biblia-production/v3",
+  "batch_id": "wayuu-v3-production-07-jirairay-medium-corrections-01",
+  "parent_batch_id": "wayuu-v3-production-07-jirairay-medium",
+  "revision": "corrections-01",
+  "myth_slug": "jirairay",
+  "asset_type": "bible_model",
+  "plan": "content/mitos-visuales/wayuu.v3.json",
+  "prepared_at": "2026-09-03",
+  "quality": "medium",
+  "framing": "immersive_full_bleed",
+  "surface_finish": "layered_depth_no_exposed_support",
+  "generation_mode": "text_only_no_local_references",
+  "jobs": [
+    {
+      "id": "paciente_jirairay__identity_sheet--canon",
+      "model_id": "paciente_jirairay__identity_sheet",
+      "entity_id": "paciente_jirairay",
+      "view_id": "canon",
+      "title": "Persona enferma de Jirairay · identidad cuidada",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/wayuu-v3-production-07-jirairay-medium-corrections-01/prompts/paciente_jirairay__identity_sheet--canon.prompt.txt",
+      "output_file": "output/imagegen/wayuu-v3-production/wayuu-v3-production-07-jirairay-medium-corrections-01/paciente_jirairay__identity_sheet--canon.jpeg",
+      "prompt_sha256": "f92f9aec06cfd4289cb45beca1cdcf0ed6d2bd6d42b5c95303df32c98f4772d2",
+      "provider": "OpenAI API",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "1024x1024",
+      "output_format": "jpeg",
+      "input_references": [],
+      "status": "prepared"
+    }
+  ]
+}

@@ -1,0 +1,774 @@
+{
+  "schema": "mitos-colombia-biblia-visual/v3",
+  "batch": {
+    "id": "wayuu-v3-production-08-las-wanulus-y-el-valle-de-la-muerte-medium",
+    "myth_slug": "las-wanulus-y-el-valle-de-la-muerte",
+    "model_ids": [
+      "hermano_mayor_valle__identity_sheet",
+      "hermano_menor_valle__identity_sheet",
+      "serpiente_valle__identity_sheet",
+      "valle_documentacion_pendiente__environment_model",
+      "casa_parcela_valle__spatial_model",
+      "rifle_valle__object_sheet",
+      "huesos_senales_valle__object_sheet"
+    ],
+    "quality": "medium",
+    "framing": "immersive_full_bleed",
+    "surface_finish": "layered_depth_no_exposed_support",
+    "generation_mode": "text_only_no_local_references",
+    "status": "design_frozen_ready_to_prepare"
+  },
+  "inventory_approved_at": "2026-09-03",
+  "pilot_approved_at": "2026-09-03",
+  "source_snapshot_sha256": "6b5b1c5ebdb2524a7524b065d96c6d33ad6f5694db239a0d722ded8485f435f5",
+  "model_ids": [
+    "hermano_mayor_valle__identity_sheet",
+    "hermano_menor_valle__identity_sheet",
+    "serpiente_valle__identity_sheet",
+    "valle_documentacion_pendiente__environment_model",
+    "casa_parcela_valle__spatial_model",
+    "rifle_valle__object_sheet",
+    "huesos_senales_valle__object_sheet"
+  ],
+  "models": {
+    "hermano_mayor_valle__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "hermano_mayor_valle"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "las-wanulus-y-el-valle-de-la-muerte",
+          "field": "mito",
+          "note": "Dispara y recibe una advertencia."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos. Entidad: Hermano mayor del valle. Funcion visual: Migrante que dispara contra una serpiente y recibe una advertencia en sueños.",
+        "materials": [
+          "papel mate de fibra visible",
+          "capas prensadas para cuerpo y vestuario",
+          "hilo solo cuando el relato lo exige"
+        ],
+        "palette_logic": "Arena, barro, carbon y fibras naturales; un acento propio de la entidad puede repetirse, sin patrones kanas o marcas claniles inventadas.",
+        "scale": "Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "continuity_markers": [
+          "nombre estable: Hermano mayor del valle",
+          "funcion estable: Migrante que dispara contra una serpiente y recibe una advertencia en sueños.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Migrante que dispara contra una serpiente y recibe una advertencia en sueños."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para identity_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · identity_sheet",
+        "primary_request": "identidad corporal completa y legible para Hermano mayor del valle. Migrante que dispara contra una serpiente y recibe una advertencia en sueños.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel mate de fibra visible; capas prensadas para cuerpo y vestuario; hilo solo cuando el relato lo exige",
+        "constraints": [
+          "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos.",
+          "mostrar: Migrante que dispara contra una serpiente y recibe una advertencia en sueños.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "1:1",
+          "era": "historico_wayuu_segun_relato",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "hermano_menor_valle__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "hermano_menor_valle"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "las-wanulus-y-el-valle-de-la-muerte",
+          "field": "mito",
+          "note": "Comparte migracion, cultivo y salida."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos. Entidad: Hermano menor del valle. Funcion visual: Compañero de migracion, cultivo y decision de abandonar el lugar.",
+        "materials": [
+          "papel mate de fibra visible",
+          "capas prensadas para cuerpo y vestuario",
+          "hilo solo cuando el relato lo exige"
+        ],
+        "palette_logic": "Arena, barro, carbon y fibras naturales; un acento propio de la entidad puede repetirse, sin patrones kanas o marcas claniles inventadas.",
+        "scale": "Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "continuity_markers": [
+          "nombre estable: Hermano menor del valle",
+          "funcion estable: Compañero de migracion, cultivo y decision de abandonar el lugar.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Compañero de migracion, cultivo y decision de abandonar el lugar."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para identity_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · identity_sheet",
+        "primary_request": "identidad corporal completa y legible para Hermano menor del valle. Compañero de migracion, cultivo y decision de abandonar el lugar.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel mate de fibra visible; capas prensadas para cuerpo y vestuario; hilo solo cuando el relato lo exige",
+        "constraints": [
+          "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos.",
+          "mostrar: Compañero de migracion, cultivo y decision de abandonar el lugar.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "1:1",
+          "era": "historico_wayuu_segun_relato",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "serpiente_valle__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "serpiente_valle"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "las-wanulus-y-el-valle-de-la-muerte",
+          "field": "mito",
+          "note": "Animal al que los protagonistas llaman wanurü."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Morfologia zoologica reconocible, cuerpo completo cuando es individuo y variacion controlada cuando es grupo; sin hibridacion no documentada. Entidad: Serpiente del valle. Funcion visual: Serpiente narrativa llamada wanurü por los protagonistas sin convertirla en definicion de Wanurü.",
+        "materials": [
+          "capas de papel recortado para anatomia",
+          "fibras finas para pelaje o pluma cuando corresponda",
+          "cantos internos y articulaciones fisicas"
+        ],
+        "palette_logic": "Color natural o explicitamente narrado; no usar brillo magico para señalar importancia.",
+        "scale": "Escala zoologica verificable frente al entorno y los personajes.",
+        "continuity_markers": [
+          "nombre estable: Serpiente del valle",
+          "funcion estable: Serpiente narrativa llamada wanurü por los protagonistas sin convertirla en definicion de Wanurü.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Serpiente narrativa llamada wanurü por los protagonistas sin convertirla en definicion de Wanurü."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para identity_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · identity_sheet",
+        "primary_request": "identidad corporal completa y legible para Serpiente del valle. Serpiente narrativa llamada wanurü por los protagonistas sin convertirla en definicion de Wanurü.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Escala zoologica verificable frente al entorno y los personajes.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "capas de papel recortado para anatomia; fibras finas para pelaje o pluma cuando corresponda; cantos internos y articulaciones fisicas",
+        "constraints": [
+          "Morfologia zoologica reconocible, cuerpo completo cuando es individuo y variacion controlada cuando es grupo; sin hibridacion no documentada.",
+          "mostrar: Serpiente narrativa llamada wanurü por los protagonistas sin convertirla en definicion de Wanurü.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "1:1",
+          "era": "historico_wayuu_segun_relato",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "valle_documentacion_pendiente__environment_model": {
+      "purpose": "environment_model",
+      "entity_refs": [
+        "valle_documentacion_pendiente"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "las-wanulus-y-el-valle-de-la-muerte",
+          "field": "mito",
+          "note": "Paso peligroso sin fuente primaria localizada."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Perfil territorial continuo y reconocible, con costa, planicie, serrania o ecotono solo donde corresponda. Entidad: Valle de documentación pendiente. Funcion visual: Paso arido con huesos y señales cuya ubicacion e identidad permanecen abiertas.",
+        "materials": [
+          "estratos amplios de papel fibroso",
+          "relieve plegado y prensado",
+          "agua o vegetacion localizada"
+        ],
+        "palette_logic": "Arena, sal, roca y sombra como base; azul y verde aparecen localizados, no como filtro exotizante.",
+        "scale": "Gran profundidad atmosferica construida con capas fisicas, sin borde exterior de maqueta.",
+        "continuity_markers": [
+          "nombre estable: Valle de documentación pendiente",
+          "funcion estable: Paso arido con huesos y señales cuya ubicacion e identidad permanecen abiertas.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Paso arido con huesos y señales cuya ubicacion e identidad permanecen abiertas."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para environment_model",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · environment_model",
+        "primary_request": "sistema territorial y profundidad de paisaje para Valle de documentación pendiente. Paso arido con huesos y señales cuya ubicacion e identidad permanecen abiertas.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Gran profundidad atmosferica construida con capas fisicas, sin borde exterior de maqueta.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "estratos amplios de papel fibroso; relieve plegado y prensado; agua o vegetacion localizada",
+        "constraints": [
+          "Perfil territorial continuo y reconocible, con costa, planicie, serrania o ecotono solo donde corresponda.",
+          "mostrar: Paso arido con huesos y señales cuya ubicacion e identidad permanecen abiertas.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "environment_grammar",
+          "purpose": "sistema territorial y profundidad de paisaje",
+          "aspect": "16:9",
+          "era": "historico_wayuu_segun_relato",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "casa_parcela_valle__spatial_model": {
+      "purpose": "spatial_model",
+      "entity_refs": [
+        "casa_parcela_valle"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "las-wanulus-y-el-valle-de-la-muerte",
+          "field": "mito",
+          "note": "Asentamiento temporal en tierra humeda."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Sistema constructivo legible por estructura, cubierta, cerramiento, vacios y relacion con senderos; no casa decorativa aislada. Entidad: Casa y parcela del valle. Funcion visual: Asentamiento temporal en una tierra mas humeda que no equivale a recibir permiso.",
+        "materials": [
+          "yotojoro, madera, paja y barro cuando estan documentados",
+          "capas estructurales separadas",
+          "suelo fibroso continuo"
+        ],
+        "palette_logic": "Materiales mates de arena, madera y barro; sin patrones decorativos inventados.",
+        "scale": "Escala habitable demostrada por vanos, sombra y relaciones espaciales.",
+        "continuity_markers": [
+          "nombre estable: Casa y parcela del valle",
+          "funcion estable: Asentamiento temporal en una tierra mas humeda que no equivale a recibir permiso.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Asentamiento temporal en una tierra mas humeda que no equivale a recibir permiso."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para spatial_model",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · spatial_model",
+        "primary_request": "relaciones espaciales, entradas, planos y escala para Casa y parcela del valle. Asentamiento temporal en una tierra mas humeda que no equivale a recibir permiso.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Escala habitable demostrada por vanos, sombra y relaciones espaciales.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "yotojoro, madera, paja y barro cuando estan documentados; capas estructurales separadas; suelo fibroso continuo",
+        "constraints": [
+          "Sistema constructivo legible por estructura, cubierta, cerramiento, vacios y relacion con senderos; no casa decorativa aislada.",
+          "mostrar: Asentamiento temporal en una tierra mas humeda que no equivale a recibir permiso.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "spatial_grammar",
+          "purpose": "relaciones espaciales, entradas, planos y escala",
+          "aspect": "16:9",
+          "era": "historico_wayuu_segun_relato",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "rifle_valle__object_sheet": {
+      "purpose": "object_sheet",
+      "entity_refs": [
+        "rifle_valle"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "las-wanulus-y-el-valle-de-la-muerte",
+          "field": "mito",
+          "note": "Objeto historico del disparo."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Contorno, volumen, piezas y modo de uso claramente separables; evitar convertir utileria cotidiana en reliquia mistica. Entidad: Rifle del valle. Funcion visual: Tecnologia historica usada en el disparo, sin ocultarla para simular antigüedad.",
+        "materials": [
+          "papel, fibra, madera o mineral traducidos a paper craft",
+          "uniones y desgaste fisico",
+          "sombras proyectadas coherentes"
+        ],
+        "palette_logic": "Color propio del material y el estado; sin ornamentacion cultural no respaldada.",
+        "scale": "Escala demostrable mediante mano, suelo o arquitectura sin texto ni regla grafica.",
+        "continuity_markers": [
+          "nombre estable: Rifle del valle",
+          "funcion estable: Tecnologia historica usada en el disparo, sin ocultarla para simular antigüedad.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Tecnologia historica usada en el disparo, sin ocultarla para simular antigüedad."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para object_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · object_sheet",
+        "primary_request": "forma, escala, material y uso legibles para Rifle del valle. Tecnologia historica usada en el disparo, sin ocultarla para simular antigüedad.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Escala demostrable mediante mano, suelo o arquitectura sin texto ni regla grafica.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel, fibra, madera o mineral traducidos a paper craft; uniones y desgaste fisico; sombras proyectadas coherentes",
+        "constraints": [
+          "Contorno, volumen, piezas y modo de uso claramente separables; evitar convertir utileria cotidiana en reliquia mistica.",
+          "mostrar: Tecnologia historica usada en el disparo, sin ocultarla para simular antigüedad.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_object",
+          "purpose": "forma, escala, material y uso legibles",
+          "aspect": "1:1",
+          "era": "historico_wayuu_segun_relato",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "huesos_senales_valle__object_sheet": {
+      "purpose": "object_sheet",
+      "entity_refs": [
+        "huesos_senales_valle"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "las-wanulus-y-el-valle-de-la-muerte",
+          "field": "mito",
+          "note": "Indicios no comprendidos durante el cruce."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Contorno, volumen, piezas y modo de uso claramente separables; evitar convertir utileria cotidiana en reliquia mistica. Entidad: Huesos y señales del valle. Funcion visual: Indicios que los hermanos no saben interpretar durante el cruce.",
+        "materials": [
+          "papel, fibra, madera o mineral traducidos a paper craft",
+          "uniones y desgaste fisico",
+          "sombras proyectadas coherentes"
+        ],
+        "palette_logic": "Color propio del material y el estado; sin ornamentacion cultural no respaldada.",
+        "scale": "Escala demostrable mediante mano, suelo o arquitectura sin texto ni regla grafica.",
+        "continuity_markers": [
+          "nombre estable: Huesos y señales del valle",
+          "funcion estable: Indicios que los hermanos no saben interpretar durante el cruce.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Indicios que los hermanos no saben interpretar durante el cruce."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para object_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · object_sheet",
+        "primary_request": "forma, escala, material y uso legibles para Huesos y señales del valle. Indicios que los hermanos no saben interpretar durante el cruce.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Escala demostrable mediante mano, suelo o arquitectura sin texto ni regla grafica.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel, fibra, madera o mineral traducidos a paper craft; uniones y desgaste fisico; sombras proyectadas coherentes",
+        "constraints": [
+          "Contorno, volumen, piezas y modo de uso claramente separables; evitar convertir utileria cotidiana en reliquia mistica.",
+          "mostrar: Indicios que los hermanos no saben interpretar durante el cruce.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_object",
+          "purpose": "forma, escala, material y uso legibles",
+          "aspect": "1:1",
+          "era": "historico_wayuu_segun_relato",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    }
+  },
+  "entities": {
+    "hermano_mayor_valle": {
+      "name": "Hermano mayor del valle",
+      "kind": "personaje",
+      "description": "Migrante que dispara contra una serpiente y recibe una advertencia en sueños.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "contextual",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet"
+      ],
+      "model_refs": [
+        "hermano_mayor_valle__identity_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "las-wanulus-y-el-valle-de-la-muerte"
+      ],
+      "evidence": [
+        {
+          "myth": "las-wanulus-y-el-valle-de-la-muerte",
+          "field": "mito",
+          "note": "Dispara y recibe una advertencia."
+        }
+      ]
+    },
+    "hermano_menor_valle": {
+      "name": "Hermano menor del valle",
+      "kind": "personaje",
+      "description": "Compañero de migracion, cultivo y decision de abandonar el lugar.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "contextual",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet"
+      ],
+      "model_refs": [
+        "hermano_menor_valle__identity_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "las-wanulus-y-el-valle-de-la-muerte"
+      ],
+      "evidence": [
+        {
+          "myth": "las-wanulus-y-el-valle-de-la-muerte",
+          "field": "mito",
+          "note": "Comparte migracion, cultivo y salida."
+        }
+      ]
+    },
+    "serpiente_valle": {
+      "name": "Serpiente del valle",
+      "kind": "animal",
+      "description": "Serpiente narrativa llamada wanurü por los protagonistas sin convertirla en definicion de Wanurü.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "uncertain",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet"
+      ],
+      "model_refs": [
+        "serpiente_valle__identity_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "las-wanulus-y-el-valle-de-la-muerte"
+      ],
+      "evidence": [
+        {
+          "myth": "las-wanulus-y-el-valle-de-la-muerte",
+          "field": "mito",
+          "note": "Animal al que los protagonistas llaman wanurü."
+        }
+      ]
+    },
+    "valle_documentacion_pendiente": {
+      "name": "Valle de documentación pendiente",
+      "kind": "paisaje",
+      "description": "Paso arido con huesos y señales cuya ubicacion e identidad permanecen abiertas.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "uncertain",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "environment_model"
+      ],
+      "model_refs": [
+        "valle_documentacion_pendiente__environment_model"
+      ],
+      "legacy_model_refs": [
+        "las-wanulus-y-el-valle-de-la-muerte__ancla"
+      ],
+      "myth_refs": [
+        "las-wanulus-y-el-valle-de-la-muerte"
+      ],
+      "evidence": [
+        {
+          "myth": "las-wanulus-y-el-valle-de-la-muerte",
+          "field": "mito",
+          "note": "Paso peligroso sin fuente primaria localizada."
+        }
+      ]
+    },
+    "casa_parcela_valle": {
+      "name": "Casa y parcela del valle",
+      "kind": "arquitectura",
+      "description": "Asentamiento temporal en una tierra mas humeda que no equivale a recibir permiso.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "spatial_model"
+      ],
+      "model_refs": [
+        "casa_parcela_valle__spatial_model"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "las-wanulus-y-el-valle-de-la-muerte"
+      ],
+      "evidence": [
+        {
+          "myth": "las-wanulus-y-el-valle-de-la-muerte",
+          "field": "mito",
+          "note": "Asentamiento temporal en tierra humeda."
+        }
+      ]
+    },
+    "rifle_valle": {
+      "name": "Rifle del valle",
+      "kind": "objeto",
+      "description": "Tecnologia historica usada en el disparo, sin ocultarla para simular antigüedad.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "object_sheet"
+      ],
+      "model_refs": [
+        "rifle_valle__object_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "las-wanulus-y-el-valle-de-la-muerte"
+      ],
+      "evidence": [
+        {
+          "myth": "las-wanulus-y-el-valle-de-la-muerte",
+          "field": "mito",
+          "note": "Objeto historico del disparo."
+        }
+      ]
+    },
+    "huesos_senales_valle": {
+      "name": "Huesos y señales del valle",
+      "kind": "objeto",
+      "description": "Indicios que los hermanos no saben interpretar durante el cruce.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "object_sheet"
+      ],
+      "model_refs": [
+        "huesos_senales_valle__object_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "las-wanulus-y-el-valle-de-la-muerte"
+      ],
+      "evidence": [
+        {
+          "myth": "las-wanulus-y-el-valle-de-la-muerte",
+          "field": "mito",
+          "note": "Indicios no comprendidos durante el cruce."
+        }
+      ]
+    }
+  }
+}

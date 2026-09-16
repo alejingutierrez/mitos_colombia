@@ -1,0 +1,134 @@
+{
+  "schema": "mitos-triptych-selection/v2",
+  "myth": "jirairay",
+  "title": "Jirairay, canto para llamar a Wanurü",
+  "created_at": "2026-09-06T04:44:51.953Z",
+  "status": "approved_for_publication_under_campaign_authorization",
+  "approval_basis": "Campaña Wayúu completa autorizada por usuario; inspección visual directa del agente.",
+  "campaign_scope": "content/mitos-visuales/production/wayuu-2026-09-05/scope.json",
+  "narrative_target_sha256": "de3208df9c1af40319a095634d8eaadcc54882c9c643eeb8d520140a3ee5d9e2",
+  "visual_memory_library": "content/mitos-visuales/wayuu.visual-memory.v1.json",
+  "visual_memory_review": {
+    "reviewer": "agent_direct_visual_review",
+    "reviewed_at": "2026-09-06T04:38:23.950Z",
+    "reviewed_reference_ids": [
+      "20c6db91c24b98b5932d",
+      "251bd6299a2e2abb5ddf"
+    ],
+    "retained": [
+      "Cielo azul estratificado y movimiento continuo de las tiras de papel.",
+      "Contraste entre intimidad humana y espacio nocturno; plantas laterales y arena mate."
+    ],
+    "rejected": [
+      "Figura encapuchada monumental y espíritus blancos con rostro, halos o coronas.",
+      "Sombrero y ropa de la figura central ajenos a la identidad aprobada; humo, llama, cráneo, oro y patrones sin anclaje.",
+      "Confundir canto con deidad, oscurecer al paciente o convertirlo en espectáculo."
+    ],
+    "influence_by_act": {
+      "entrada": "Traducir las curvas del cielo a una presión nocturna que el canto despliega fuera de la enramada, sin cuerpos sobrenaturales.",
+      "acto": "Conservar profundidad territorial pero cambiar el conjuro ilustrado por cuidado al amanecer y un último pliegue del canto suspendido.",
+      "huella": "Retener ritmo de curvas de papel como sombra imposible de una sola maraca; no escena, cara o fantasma."
+    }
+  },
+  "selected": [
+    {
+      "act": "entrada",
+      "path": "output/imagegen/wayuu/triptychs/wayuu-jirairay-triptych-02-entrada/entrada.jpeg",
+      "sha256": "b15b70da6dba1e0a6644e8b90cea298b0c1ebd88d97b437b112e4a59ab4ff0c9",
+      "width": 1536,
+      "height": 864,
+      "quality": "high",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/jirairay/wayuu-jirairay-triptych-02-entrada/prompts/entrada.prompt.txt",
+      "prompt_sha256": "83718bf5f1760cf3cadc769c78dd88e19e52c578f22714afe623a2751cb424f2",
+      "visual_function": "narrative_scene",
+      "review": {
+        "observed": "Enramada pequeña y dos humanos en gran territorio de papel. La especialista de manta azul carbón canta; tres bandas se conectan con capas abiertas del cielo nocturno, sin anatomía. Paciente descansa en chinchorro, rattle baja y rostros mínimos; hojas de suelo y cielo separadas con aire.",
+        "limits": [
+          "La franja azul de respuesta se integra en las bandas del canto; la ida y vuelta no se distinguen con igual claridad que el despliegue nocturno.",
+          "La tela azul gris sobre el paciente no se distingue a esta distancia; se mantiene la camisa ocre y la ropa clara."
+        ]
+      }
+    },
+    {
+      "act": "acto",
+      "path": "output/imagegen/wayuu/triptychs/wayuu-jirairay-triptych-01/acto.jpeg",
+      "sha256": "d269ab3242251137aadd1303c72216b0430f32f6628a4bc1d777183284aecbf8",
+      "width": 864,
+      "height": 1536,
+      "quality": "medium",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/jirairay/wayuu-jirairay-triptych-01/prompts/acto.prompt.txt",
+      "prompt_sha256": "bbc9decbb9a0035fb36a168514bb290d921b42ad214c986c7ad3df7ee302b870",
+      "visual_function": "narrative_scene",
+      "review": {
+        "observed": "Familiar de manta arcilla atiende a paciente de camisa ocre en chinchorro al amanecer. Una sola tira azul plegada flota bajo la cubierta y proyecta sombra sobre suelo vacío. Dos personas pequeñas y espacio amplio; sin instrumento ni figura sobrenatural.",
+        "limits": [
+          "El cabello del paciente aparece recogido en nuca, en lugar de la silueta corta suelta de la ficha; ropa, papel narrativo y color se conservan.",
+          "La sombra del pliegue es continua en vez de tres segmentos separados; sigue siendo una única memoria física del canto."
+        ]
+      }
+    },
+    {
+      "act": "huella",
+      "path": "output/imagegen/wayuu/triptychs/wayuu-jirairay-triptych-01/huella.jpeg",
+      "sha256": "6ad1875a618d3ed3cab7dd82452f193413cd5660ae83c9df47f607b4bd11c1a3",
+      "width": 1024,
+      "height": 1024,
+      "quality": "medium",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/jirairay/wayuu-jirairay-triptych-01/prompts/huella.prompt.txt",
+      "prompt_sha256": "e93f8b6665ae3374721b6c62b0e8f7477291cb94b363fe925d39249245bbd3fe",
+      "visual_function": "symbolic_synthesis",
+      "review": {
+        "observed": "Una maraca íntegra, oval ocre y mango crudo. De su sombra nace una cinta carbón plegada con sombra física propia sobre fondo petróleo. Lectura simbólica de ritmo, sin humanos, escena, signos o cuerpo de deidad.",
+        "limits": [
+          "La superficie del calabazo es muy lisa; el relieve de papel queda más explícito en la sombra plegada que en el cuerpo del instrumento."
+        ]
+      }
+    }
+  ],
+  "generation": {
+    "provider": "OpenAI API",
+    "model": "gpt-image-2",
+    "mode": "text_only_no_local_references",
+    "unique_images": 4,
+    "by_act": {
+      "entrada": {
+        "unique_images": 2,
+        "preparation_rounds": 2,
+        "requested_alternatives": 0
+      },
+      "acto": {
+        "unique_images": 1,
+        "preparation_rounds": 1,
+        "requested_alternatives": 0
+      },
+      "huella": {
+        "unique_images": 1,
+        "preparation_rounds": 1,
+        "requested_alternatives": 0
+      }
+    },
+    "corrections": 1,
+    "cli_seconds": {
+      "entrada_first": 80.3,
+      "acto": 29,
+      "huella": 36.6,
+      "entrada_correction": 73.4
+    },
+    "pre_api_errors": [
+      {
+        "reason": "requests.jsonl no existía en la primera invocación; el CLI terminó antes de iniciar trabajos. Se preparó el JSONL desde los prompts congelados.",
+        "images_generated": 0
+      }
+    ],
+    "cost": null,
+    "request_ids": null
+  },
+  "excluded": [
+    {
+      "path": "output/imagegen/wayuu/triptychs/wayuu-jirairay-triptych-01/entrada.jpeg",
+      "reason": "Especialista de aproximadamente 38% de altura; encuadre demasiado cerrado. Se repitió sólo horizontal con cámara más lejana y escala explícita."
+    }
+  ],
+  "published": false
+}
+

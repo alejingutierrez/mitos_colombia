@@ -1,0 +1,29 @@
+{
+  "schema": "mitos-colombia-biblia-batch/v1",
+  "batch_id": "wayuu-foundation-07-flora-text-only-medium",
+  "asset_type": "bible",
+  "quality": "medium",
+  "framing": "immersive_full_bleed",
+  "surface_finish": "layered_depth_no_exposed_support",
+  "plan": "content/mitos-visuales/_openai/wayuu/biblia/wayuu-foundation-07-flora-text-only-medium/plan.snapshot.json",
+  "prepared_at": "2026-09-03",
+  "generation_scope": "Corrección de materialidad posterior a QA; sólo flora en medium, reconstruida desde morfología textual documentada como maqueta de papel 3D sin adjuntar imágenes locales y sin soporte exterior visible.",
+  "jobs": [
+    {
+      "id": "flora_sequia--canon",
+      "model_id": "flora_sequia",
+      "view_id": "canon",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/biblia/wayuu-foundation-07-flora-text-only-medium/prompts/flora_sequia--canon.prompt.txt",
+      "output_file": "output/imagegen/wayuu/wayuu-foundation-07-flora-text-only-medium/flora_sequia--canon.jpeg",
+      "prompt_sha256": "df29c164bb0b4241c30e61d6b42017eadf47852c3d5103a9056d82fb7be8a0a5",
+      "provider": "OpenAI API",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "1536x1024",
+      "output_format": "jpeg",
+      "references": [],
+      "input_references": [],
+      "status": "prepared"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "schema": "mitos-colombia-biblia-production/v3",
+  "batch_id": "wayuu-v3-production-09-los-mellizos-transformadores-medium-corrections-02",
+  "parent_batch_id": "wayuu-v3-production-09-los-mellizos-transformadores-medium",
+  "revision": "corrections-02",
+  "myth_slug": "los-mellizos-transformadores",
+  "asset_type": "bible_model",
+  "plan": "content/mitos-visuales/wayuu.v3.json",
+  "prepared_at": "2026-09-03",
+  "quality": "medium",
+  "framing": "immersive_full_bleed",
+  "surface_finish": "layered_depth_no_exposed_support",
+  "generation_mode": "text_only_no_local_references",
+  "jobs": [
+    {
+      "id": "manna__identity_sheet--canon",
+      "model_id": "manna__identity_sheet",
+      "entity_id": "manna",
+      "view_id": "canon",
+      "title": "Manna · joven viajera",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/wayuu-v3-production-09-los-mellizos-transformadores-medium-corrections-02/prompts/manna__identity_sheet--canon.prompt.txt",
+      "output_file": "output/imagegen/wayuu-v3-production/wayuu-v3-production-09-los-mellizos-transformadores-medium-corrections-02/manna__identity_sheet--canon.jpeg",
+      "prompt_sha256": "05b652eed1fadb80162add248fd930bf82af23c0cf424236d67ae6b98292490b",
+      "provider": "OpenAI API",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "1024x1024",
+      "output_format": "jpeg",
+      "input_references": [],
+      "status": "prepared"
+    },
+    {
+      "id": "manna__state_sheet--estados",
+      "model_id": "manna__state_sheet",
+      "entity_id": "manna",
+      "view_id": "estados",
+      "title": "Manna · joven, huida y memoria vegetal",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/wayuu-v3-production-09-los-mellizos-transformadores-medium-corrections-02/prompts/manna__state_sheet--estados.prompt.txt",
+      "output_file": "output/imagegen/wayuu-v3-production/wayuu-v3-production-09-los-mellizos-transformadores-medium-corrections-02/manna__state_sheet--estados.jpeg",
+      "prompt_sha256": "9aeaece0f6f66786c5b597493b65da0945cd9d78b5849c6b3f15bff2f9040650",
+      "provider": "OpenAI API",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "1536x1024",
+      "output_format": "jpeg",
+      "input_references": [],
+      "status": "prepared"
+    }
+  ]
+}

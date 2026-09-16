@@ -1,0 +1,133 @@
+{
+  "schema": "mitos-triptych-selection/v2",
+  "myth": "creacion-wayuu",
+  "title": "Creación Wayuu",
+  "created_at": "2026-09-06T06:00:18.164Z",
+  "status": "approved_for_publication_under_campaign_authorization",
+  "approval_basis": "Usuario autorizó producir y publicar los 27 trípticos; selección del agente tras inspección directa de píxeles, relato y referencias.",
+  "campaign_scope": "content/mitos-visuales/production/wayuu-2026-09-05/scope.json",
+  "narrative_target_sha256": "8e39659bf2e7796d5f813cd744fdceb278176576c5d9d3c1feb76db182075b8f",
+  "visual_memory_library": "content/mitos-visuales/wayuu.visual-memory.v1.json",
+  "visual_memory_review": {
+    "reviewer": "agent_direct_visual_review",
+    "reviewed_at": "2026-09-06T05:53:28.642Z",
+    "reviewed_reference_ids": [
+      "c6b753decbdb80c3f1a1",
+      "dd905f4f5b7860997fef",
+      "castrillon-cosmogonia-wayuu-01"
+    ],
+    "retained": [
+      "Azul nocturno y arena en capas del proyecto; calidez localizada frente a territorio extenso.",
+      "De la referencia contemporánea de Castrillón: territorio entendido como relaciones entre diferentes formas de vida, con figuras pequeñas dentro de una composición amplia."
+    ],
+    "rejected": [
+      "Anciano creador gigante, barbas y traje geométrico como identidad universal de Mareiwa; enfoque cerrado de taller y muñecos de barro.",
+      "Casas redondas, canoa, velero y patrones decorativos que mezclan variantes.",
+      "No copiar de la obra externa composición, cuerpos divinos, patrones, colores exactos ni genealogía como si fueran la fuente del relato público."
+    ],
+    "influence_by_act": {
+      "entrada": "Noche azul amplia con fuegos familiares separados; curvas de luz se vuelven caminos materiales entre lugares, no taller de un creador gigante.",
+      "acto": "Restituir seis personas pequeñas y distintas dentro del territorio de origen; cavidad y barro permanecen separados.",
+      "huella": "Condensar la relación entre agua y vida latente en una semilla seca cuya sombra tiene forma de árbol; sin tercera escena."
+    }
+  },
+  "selected": [
+    {
+      "act": "entrada",
+      "path": "output/imagegen/wayuu/triptychs/wayuu-creacion-triptych-03-entrada/entrada.jpeg",
+      "sha256": "e025cefe6b17cee7abd219ae77fe1bb4774857000a706eb395a33d45d54eb550",
+      "width": 1536,
+      "height": 864,
+      "quality": "high",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/creacion-wayuu/wayuu-creacion-triptych-03-entrada/prompts/entrada.prompt.txt",
+      "prompt_sha256": "456d136018eb1928506416f4112287cb1b35ce3864180c8a661c37c406b9b7b1",
+      "visual_function": "narrative_scene",
+      "review": {
+        "observed": "Tres fuegos a gran distancia, dos familiares en el más cercano, niño con camisa y paneles cortos sobre piernas separadas. Camino ámbar conecta dos fuegos, con pliegues suspendidos y sombras; enorme territorio azul sin rostro divino.",
+        "limits": [
+          "Grupo aún mayor que el 9% pedido: mujer aproximadamente un sexto de altura, pero plano territorial muy abierto y sin retrato.",
+          "La ubicación del segundo fuego se desplaza a izquierda; título se verificará en el tercio inferior libre.",
+          "Luz transformada en camino es metáfora editorial, no episodio histórico ni rito."
+        ]
+      }
+    },
+    {
+      "act": "acto",
+      "path": "output/imagegen/wayuu/triptychs/wayuu-creacion-triptych-02/acto.jpeg",
+      "sha256": "5574524c935184c33f004ca86180032f4d21fdc5192faad066815dcc5ca4b6c4",
+      "width": 864,
+      "height": 1536,
+      "quality": "medium",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/creacion-wayuu/wayuu-creacion-triptych-02/prompts/acto.prompt.txt",
+      "prompt_sha256": "73a84b710d25f92732417a9d610ca376dc8b9b02e534e5f2f1e9c7e6c274709d",
+      "visual_function": "narrative_scene",
+      "review": {
+        "observed": "Seis personas completas con edades y prendas distintas salen de cavidad estratificada: mayor con sombrero, mayor marfil, hombre arena/ocre, joven salvia, niño crudo/índigo y mujer terracota. Estrato se abre al costado, sin barro ni creador humano.",
+        "limits": [
+          "Mujer cercana alrededor de un sexto, no un séptimo de altura; no se vuelve retrato.",
+          "La perspectiva simplifica solapas de paneles y mantas; vestuario editorial, sin precisión arqueológica afirmada.",
+          "Salida y estrato activo pertenecen a puesta en escena del relato compuesto."
+        ]
+      }
+    },
+    {
+      "act": "huella",
+      "path": "output/imagegen/wayuu/triptychs/wayuu-creacion-triptych-02/huella.jpeg",
+      "sha256": "5a244b3fd3cfddaabf5f10fb728cc01bd57091fda1473d7441c66af0a08feb91",
+      "width": 1024,
+      "height": 1024,
+      "quality": "medium",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/creacion-wayuu/wayuu-creacion-triptych-02/prompts/huella.prompt.txt",
+      "prompt_sha256": "3496dffa99b6f4edcbe0372125d84db2657716f18508674d8803f3d60daf6b02",
+      "visual_function": "symbolic_synthesis",
+      "review": {
+        "observed": "Semilla seca ocre con sombra arbórea índigo naciendo exactamente en su contacto con el suelo; gota azul aún separada. Relieve mínimo y campo arena, sin árbol real o paisaje.",
+        "limits": [
+          "Cubierta muestra junta abierta superficial; no aparece brote real.",
+          "Silueta arbórea genérica de ramificación extendida, sin especie botánica afirmada.",
+          "Sombra de árbol y gota son símbolo editorial, no objeto tradicional."
+        ]
+      }
+    }
+  ],
+  "generation": {
+    "provider": "OpenAI API",
+    "model": "gpt-image-2",
+    "mode": "text_only_no_local_references",
+    "unique_images": 4,
+    "by_act": {
+      "entrada": {
+        "unique_images": 2,
+        "preparation_rounds": 2,
+        "requested_alternatives": 0
+      },
+      "acto": {
+        "unique_images": 1,
+        "preparation_rounds": 1,
+        "requested_alternatives": 0
+      },
+      "huella": {
+        "unique_images": 1,
+        "preparation_rounds": 1,
+        "requested_alternatives": 0
+      }
+    },
+    "corrections": 1,
+    "cli_seconds": {
+      "entrada_02": 81.5,
+      "acto_02": 33.6,
+      "huella_02": 38.4,
+      "entrada_03": 81.3
+    },
+    "cost": null,
+    "request_ids": null
+  },
+  "excluded": [
+    {
+      "path": "output/imagegen/wayuu/triptychs/wayuu-creacion-triptych-02/entrada.jpeg",
+      "reason": "Figuras demasiado grandes para el plano previsto y prenda del niño larga; se corrigió sólo H."
+    }
+  ],
+  "preparation_notes": "Paquete 01 no se envió a API: se separó reparto por orientación antes de generar. Tres preparaciones sin salida no cuentan como imágenes.",
+  "published": false
+}

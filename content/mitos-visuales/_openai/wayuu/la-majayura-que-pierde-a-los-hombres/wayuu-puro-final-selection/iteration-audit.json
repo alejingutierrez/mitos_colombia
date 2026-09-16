@@ -1,0 +1,91 @@
+{
+  "schema": "mitos-triptych-iteration-audit/v1",
+  "audited_at": "2026-09-06T18:13:29.385Z",
+  "package_root": "content/mitos-visuales/_openai/wayuu/la-majayura-que-pierde-a-los-hombres",
+  "scope": "Artefactos locales referidos por jobs.json, deduplicados por SHA-256; no mide llamadas fallidas sin imagen ni facturación de API.",
+  "unique_images": 3,
+  "by_act": {
+    "entrada": {
+      "unique_images": 1,
+      "preparation_rounds": 1,
+      "requested_alternatives": 0
+    },
+    "acto": {
+      "unique_images": 1,
+      "preparation_rounds": 1,
+      "requested_alternatives": 0
+    },
+    "huella": {
+      "unique_images": 1,
+      "preparation_rounds": 1,
+      "requested_alternatives": 0
+    }
+  },
+  "prepared_without_output": 0,
+  "duplicates": 0,
+  "rows": [
+    {
+      "batch_id": "wayuu-puro-triptych-01",
+      "prepared_at": "2026-09-06T18:10:20.478Z",
+      "act": "entrada",
+      "purpose": "generation_or_revision",
+      "manifest": "content/mitos-visuales/_openai/wayuu/la-majayura-que-pierde-a-los-hombres/wayuu-puro-triptych-01/jobs.json",
+      "output": "output/imagegen/wayuu/triptychs/wayuu-puro-triptych-01/entrada.jpeg",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/la-majayura-que-pierde-a-los-hombres/wayuu-puro-triptych-01/prompts/entrada.prompt.txt",
+      "requested_size": "1536x864",
+      "requested_quality": "high",
+      "visual_function": "narrative_scene",
+      "status": "unique_generated_artifact",
+      "sha256": "861aedd8e051148ed93c9f98dccded6e8f16e375fac5c2ffe6fb5158539053e6",
+      "duplicate_of": null,
+      "width": 1536,
+      "height": 864,
+      "size_matches_request": true,
+      "prompt_sha256": "eca18ba60ae60b78ffb6d443ad5cfc151a07986d881e92bd6890fb633beed124",
+      "prompt_hash_matches_manifest": true,
+      "prompt_integrity": "exact_bytes"
+    },
+    {
+      "batch_id": "wayuu-puro-triptych-01",
+      "prepared_at": "2026-09-06T18:10:20.478Z",
+      "act": "acto",
+      "purpose": "generation_or_revision",
+      "manifest": "content/mitos-visuales/_openai/wayuu/la-majayura-que-pierde-a-los-hombres/wayuu-puro-triptych-01/jobs.json",
+      "output": "output/imagegen/wayuu/triptychs/wayuu-puro-triptych-01/acto.jpeg",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/la-majayura-que-pierde-a-los-hombres/wayuu-puro-triptych-01/prompts/acto.prompt.txt",
+      "requested_size": "864x1536",
+      "requested_quality": "medium",
+      "visual_function": "narrative_scene",
+      "status": "unique_generated_artifact",
+      "sha256": "841ca3f56019814631f4a24a64e220f898c2ef95185cd8287c18af0acb106440",
+      "duplicate_of": null,
+      "width": 864,
+      "height": 1536,
+      "size_matches_request": true,
+      "prompt_sha256": "71169a1218c6ee90c8f0100bf892fbccdb3addfb6d105575ec041ff199d2c3f5",
+      "prompt_hash_matches_manifest": true,
+      "prompt_integrity": "exact_bytes"
+    },
+    {
+      "batch_id": "wayuu-puro-triptych-01",
+      "prepared_at": "2026-09-06T18:10:20.478Z",
+      "act": "huella",
+      "purpose": "generation_or_revision",
+      "manifest": "content/mitos-visuales/_openai/wayuu/la-majayura-que-pierde-a-los-hombres/wayuu-puro-triptych-01/jobs.json",
+      "output": "output/imagegen/wayuu/triptychs/wayuu-puro-triptych-01/huella.jpeg",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/la-majayura-que-pierde-a-los-hombres/wayuu-puro-triptych-01/prompts/huella.prompt.txt",
+      "requested_size": "1024x1024",
+      "requested_quality": "medium",
+      "visual_function": "symbolic_synthesis",
+      "status": "unique_generated_artifact",
+      "sha256": "536fabd4d99458d25acc93ddad90c0b0afbf6f00ae720f7fe3919c9c9f9a876c",
+      "duplicate_of": null,
+      "width": 1024,
+      "height": 1024,
+      "size_matches_request": true,
+      "prompt_sha256": "00781c9fdbdb57b97cfbde780397aff095897ed6626849b1bce9b2b722d32f0b",
+      "prompt_hash_matches_manifest": true,
+      "prompt_integrity": "exact_bytes"
+    }
+  ]
+}

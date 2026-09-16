@@ -1,0 +1,50 @@
+{
+  "schema": "mitos-colombia-biblia-production/v3",
+  "batch_id": "wayuu-v3-production-14-el-indio-pushaina-medium-corrections-02",
+  "parent_batch_id": "wayuu-v3-production-14-el-indio-pushaina-medium",
+  "revision": "corrections-02",
+  "myth_slug": "el-indio-pushalna",
+  "asset_type": "bible_model",
+  "plan": "content/mitos-visuales/wayuu.v3.json",
+  "prepared_at": "2026-09-03",
+  "quality": "medium",
+  "framing": "immersive_full_bleed",
+  "surface_finish": "layered_depth_no_exposed_support",
+  "generation_mode": "text_only_no_local_references",
+  "jobs": [
+    {
+      "id": "pushaina__identity_sheet--canon",
+      "model_id": "pushaina__identity_sheet",
+      "entity_id": "pushaina",
+      "view_id": "canon",
+      "title": "Pushaina · jinete antes del retorno",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/wayuu-v3-production-14-el-indio-pushaina-medium-corrections-02/prompts/pushaina__identity_sheet--canon.prompt.txt",
+      "output_file": "output/imagegen/wayuu-v3-production/wayuu-v3-production-14-el-indio-pushaina-medium-corrections-02/pushaina__identity_sheet--canon.jpeg",
+      "prompt_sha256": "89dee8ac983915309398f46c9bc3dfe1fd420065724b294c575ab27b37582ca9",
+      "provider": "OpenAI API",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "1024x1024",
+      "output_format": "jpeg",
+      "input_references": [],
+      "status": "prepared"
+    },
+    {
+      "id": "pushaina__state_sheet--estados",
+      "model_id": "pushaina__state_sheet",
+      "entity_id": "pushaina",
+      "view_id": "estados",
+      "title": "Pushaina · cuerpo, voz y cinco formas animales",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/wayuu-v3-production-14-el-indio-pushaina-medium-corrections-02/prompts/pushaina__state_sheet--estados.prompt.txt",
+      "output_file": "output/imagegen/wayuu-v3-production/wayuu-v3-production-14-el-indio-pushaina-medium-corrections-02/pushaina__state_sheet--estados.jpeg",
+      "prompt_sha256": "09673bf7bdb8585ba3cc501e304f3ddfe946dd86eb3e751389fd3b1db64c530a",
+      "provider": "OpenAI API",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "1536x1024",
+      "output_format": "jpeg",
+      "input_references": [],
+      "status": "prepared"
+    }
+  ]
+}

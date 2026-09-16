@@ -1,0 +1,33 @@
+{
+  "schema": "mitos-colombia-biblia-production/v3",
+  "batch_id": "wayuu-v3-production-24-la-india-worunka-medium-corrections-05",
+  "parent_batch_id": "wayuu-v3-production-24-la-india-worunka-medium",
+  "revision": "corrections-05",
+  "myth_slug": "la-india-worunka",
+  "asset_type": "bible_model",
+  "plan": "content/mitos-visuales/wayuu.v3.json",
+  "prepared_at": "2026-09-04",
+  "quality": "medium",
+  "framing": "immersive_full_bleed",
+  "surface_finish": "layered_depth_no_exposed_support",
+  "generation_mode": "text_only_no_local_references",
+  "jobs": [
+    {
+      "id": "sequia_worunka__phenomenon_rule--canon",
+      "model_id": "sequia_worunka__phenomenon_rule",
+      "entity_id": "sequia_worunka",
+      "view_id": "canon",
+      "title": "Worunka · abundancia, sequía, tumas enterradas y lluvia estacional",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/wayuu-v3-production-24-la-india-worunka-medium-corrections-05/prompts/sequia_worunka__phenomenon_rule--canon.prompt.txt",
+      "output_file": "output/imagegen/wayuu-v3-production/wayuu-v3-production-24-la-india-worunka-medium-corrections-05/sequia_worunka__phenomenon_rule--canon.jpeg",
+      "prompt_sha256": "03e59d168555c164e87bb6f14f964825bbf480be8eb1d34c4534539718803d5d",
+      "provider": "OpenAI API",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "1536x1024",
+      "output_format": "jpeg",
+      "input_references": [],
+      "status": "prepared"
+    }
+  ]
+}

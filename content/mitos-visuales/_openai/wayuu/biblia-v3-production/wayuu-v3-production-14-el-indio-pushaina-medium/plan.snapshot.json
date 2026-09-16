@@ -1,0 +1,1616 @@
+{
+  "schema": "mitos-colombia-biblia-visual/v3",
+  "batch": {
+    "id": "wayuu-v3-production-14-el-indio-pushaina-medium",
+    "myth_slug": "el-indio-pushalna",
+    "model_ids": [
+      "pushaina__identity_sheet",
+      "pushaina__state_sheet",
+      "hija_pushaina__identity_sheet",
+      "kasap__identity_sheet",
+      "presencia_invisible_pushaina__presence_model",
+      "culebra_pushaina__identity_sheet",
+      "zorro_pushaina__identity_sheet",
+      "mapurito_pushaina__identity_sheet",
+      "gallinazo_pushaina__identity_sheet",
+      "ciempies_pushaina__identity_sheet",
+      "anillo_oculto_pushaina__object_sheet",
+      "ofrenda_alimento_pushaina__object_sheet",
+      "lugar_caida_pushaina__spatial_model",
+      "casa_grande_pushaina__spatial_model",
+      "cementerios_pushaina__spatial_model"
+    ],
+    "quality": "medium",
+    "framing": "immersive_full_bleed",
+    "surface_finish": "layered_depth_no_exposed_support",
+    "generation_mode": "text_only_no_local_references",
+    "status": "design_ready"
+  },
+  "inventory_approved_at": "2026-09-03",
+  "pilot_approved_at": "2026-09-03",
+  "source_snapshot_sha256": "6b5b1c5ebdb2524a7524b065d96c6d33ad6f5694db239a0d722ded8485f435f5",
+  "model_ids": [
+    "pushaina__identity_sheet",
+    "pushaina__state_sheet",
+    "hija_pushaina__identity_sheet",
+    "kasap__identity_sheet",
+    "presencia_invisible_pushaina__presence_model",
+    "culebra_pushaina__identity_sheet",
+    "zorro_pushaina__identity_sheet",
+    "mapurito_pushaina__identity_sheet",
+    "gallinazo_pushaina__identity_sheet",
+    "ciempies_pushaina__identity_sheet",
+    "anillo_oculto_pushaina__object_sheet",
+    "ofrenda_alimento_pushaina__object_sheet",
+    "lugar_caida_pushaina__spatial_model",
+    "casa_grande_pushaina__spatial_model",
+    "cementerios_pushaina__spatial_model"
+  ],
+  "models": {
+    "pushaina__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "pushaina"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "el-indio-pushalna",
+          "field": "mito",
+          "note": "Jinete que muere, retorna, habla sin cuerpo visible y declara formas animales."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos. Entidad: Pushaina. Funcion visual: Jinete que muere en una caida desde Kasap, vuelve, permanece visible o como voz y declara varias formas animales.",
+        "materials": [
+          "papel mate de fibra visible",
+          "capas prensadas para cuerpo y vestuario",
+          "hilo solo cuando el relato lo exige"
+        ],
+        "palette_logic": "Arena, barro, carbon y fibras naturales; un acento propio de la entidad puede repetirse, sin patrones kanas o marcas claniles inventadas.",
+        "scale": "Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "continuity_markers": [
+          "nombre estable: Pushaina",
+          "funcion estable: Jinete que muere en una caida desde Kasap, vuelve, permanece visible o como voz y declara varias formas animales.",
+          "estados declarados: jinete, retornado_visible, voz_invisible, formas_animales"
+        ],
+        "documented_features": [
+          "Jinete que muere en una caida desde Kasap, vuelve, permanece visible o como voz y declara varias formas animales.",
+          "alias documentado: Pushiana",
+          "alias documentado: Pushalna"
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para identity_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · identity_sheet",
+        "primary_request": "identidad corporal completa y legible para Pushaina. Jinete que muere en una caida desde Kasap, vuelve, permanece visible o como voz y declara varias formas animales.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel mate de fibra visible; capas prensadas para cuerpo y vestuario; hilo solo cuando el relato lo exige",
+        "constraints": [
+          "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos.",
+          "mostrar: Jinete que muere en una caida desde Kasap, vuelve, permanece visible o como voz y declara varias formas animales.",
+          "estados autorizados: jinete, retornado_visible, voz_invisible, formas_animales",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "1:1",
+          "era": "historico_wayuu_segun_relato",
+          "states": [
+            "jinete"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "pushaina__state_sheet": {
+      "purpose": "state_sheet",
+      "entity_refs": [
+        "pushaina"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "el-indio-pushalna",
+          "field": "mito",
+          "note": "Jinete que muere, retorna, habla sin cuerpo visible y declara formas animales."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos. Entidad: Pushaina. Funcion visual: Jinete que muere en una caida desde Kasap, vuelve, permanece visible o como voz y declara varias formas animales.",
+        "materials": [
+          "papel mate de fibra visible",
+          "capas prensadas para cuerpo y vestuario",
+          "hilo solo cuando el relato lo exige"
+        ],
+        "palette_logic": "Arena, barro, carbon y fibras naturales; un acento propio de la entidad puede repetirse, sin patrones kanas o marcas claniles inventadas.",
+        "scale": "Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "continuity_markers": [
+          "nombre estable: Pushaina",
+          "funcion estable: Jinete que muere en una caida desde Kasap, vuelve, permanece visible o como voz y declara varias formas animales.",
+          "estados declarados: jinete, retornado_visible, voz_invisible, formas_animales"
+        ],
+        "documented_features": [
+          "Jinete que muere en una caida desde Kasap, vuelve, permanece visible o como voz y declara varias formas animales.",
+          "alias documentado: Pushiana",
+          "alias documentado: Pushalna"
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para state_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · state_sheet",
+        "primary_request": "continuidad entre estados sin adelantar un keyframe para Pushaina. Jinete que muere en una caida desde Kasap, vuelve, permanece visible o como voz y declara varias formas animales.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel mate de fibra visible; capas prensadas para cuerpo y vestuario; hilo solo cuando el relato lo exige",
+        "constraints": [
+          "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos.",
+          "mostrar: Jinete que muere en una caida desde Kasap, vuelve, permanece visible o como voz y declara varias formas animales.",
+          "estados autorizados: jinete, retornado_visible, voz_invisible, formas_animales",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "estados",
+          "view_type": "state_sequence",
+          "purpose": "continuidad entre estados sin adelantar un keyframe",
+          "aspect": "16:9",
+          "era": "historico_wayuu_segun_relato",
+          "states": [
+            "jinete",
+            "retornado_visible",
+            "voz_invisible",
+            "formas_animales"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "hija_pushaina__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "hija_pushaina"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "el-indio-pushalna",
+          "field": "mito",
+          "note": "Cuida, alimenta y resguarda a su padre despues del retorno."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos. Entidad: Hija de Pushaina. Funcion visual: Hija adulta inferida por su funcion de cuidado: sostiene la alimentacion y resguarda a Pushaina en la casa grande despues de su retorno.",
+        "materials": [
+          "papel mate de fibra visible",
+          "capas prensadas para cuerpo y vestuario",
+          "hilo solo cuando el relato lo exige"
+        ],
+        "palette_logic": "Arena, barro, carbon y fibras naturales; un acento propio de la entidad puede repetirse, sin patrones kanas o marcas claniles inventadas.",
+        "scale": "Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "continuity_markers": [
+          "nombre estable: Hija de Pushaina",
+          "funcion estable: Hija adulta inferida por su funcion de cuidado: sostiene la alimentacion y resguarda a Pushaina en la casa grande despues de su retorno.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Hija adulta inferida por su funcion de cuidado: sostiene la alimentacion y resguarda a Pushaina en la casa grande despues de su retorno."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para identity_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · identity_sheet",
+        "primary_request": "identidad corporal completa y legible para Hija de Pushaina. Hija adulta inferida por su funcion de cuidado: sostiene la alimentacion y resguarda a Pushaina en la casa grande despues de su retorno.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel mate de fibra visible; capas prensadas para cuerpo y vestuario; hilo solo cuando el relato lo exige",
+        "constraints": [
+          "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos.",
+          "mostrar: Hija adulta inferida por su funcion de cuidado: sostiene la alimentacion y resguarda a Pushaina en la casa grande despues de su retorno.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "1:1",
+          "era": "historico_wayuu_segun_relato",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "kasap__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "kasap"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "el-indio-pushalna",
+          "field": "mito",
+          "note": "Caballo capon cuyo sobresalto participa en la caida."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Morfologia zoologica reconocible, cuerpo completo cuando es individuo y variacion controlada cuando es grupo; sin hibridacion no documentada. Entidad: Kasap. Funcion visual: Caballo capon de Pushaina; el sobresalto que sigue a la caida sobre su anca conduce al golpe mortal.",
+        "materials": [
+          "capas de papel recortado para anatomia",
+          "fibras finas para pelaje o pluma cuando corresponda",
+          "cantos internos y articulaciones fisicas"
+        ],
+        "palette_logic": "Color natural o explicitamente narrado; no usar brillo magico para señalar importancia.",
+        "scale": "Escala zoologica verificable frente al entorno y los personajes.",
+        "continuity_markers": [
+          "nombre estable: Kasap",
+          "funcion estable: Caballo capon de Pushaina; el sobresalto que sigue a la caida sobre su anca conduce al golpe mortal.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Caballo capon de Pushaina; el sobresalto que sigue a la caida sobre su anca conduce al golpe mortal."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para identity_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · identity_sheet",
+        "primary_request": "identidad corporal completa y legible para Kasap. Caballo capon de Pushaina; el sobresalto que sigue a la caida sobre su anca conduce al golpe mortal.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Escala zoologica verificable frente al entorno y los personajes.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "capas de papel recortado para anatomia; fibras finas para pelaje o pluma cuando corresponda; cantos internos y articulaciones fisicas",
+        "constraints": [
+          "Morfologia zoologica reconocible, cuerpo completo cuando es individuo y variacion controlada cuando es grupo; sin hibridacion no documentada.",
+          "mostrar: Caballo capon de Pushaina; el sobresalto que sigue a la caida sobre su anca conduce al golpe mortal.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "1:1",
+          "era": "historico_wayuu_segun_relato",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "presencia_invisible_pushaina__presence_model": {
+      "purpose": "presence_model",
+      "entity_refs": [
+        "presencia_invisible_pushaina"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "el-indio-pushalna",
+          "field": "mito",
+          "note": "Voz del propio Pushaina oida sin cuerpo visible."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Secuencia material de causa, accion, limite y huella; debe entenderse sin texto, aura o particulas magicas genericas. Entidad: Voz invisible de Pushaina. Funcion visual: Manifestacion auditiva del propio Pushaina dentro de la casa grande; no es un segundo ser ni una entidad que le preste conocimiento.",
+        "materials": [
+          "papel y fibras que cambian de tension, humedad, luz o posicion",
+          "capas causales separadas",
+          "huella fisica persistente"
+        ],
+        "palette_logic": "El cambio cromatico nace de la materia afectada, nunca de un resplandor sobrenatural por defecto.",
+        "scale": "Escala definida por aquello que transforma, desde objeto hasta territorio.",
+        "continuity_markers": [
+          "nombre estable: Voz invisible de Pushaina",
+          "funcion estable: Manifestacion auditiva del propio Pushaina dentro de la casa grande; no es un segundo ser ni una entidad que le preste conocimiento.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Manifestacion auditiva del propio Pushaina dentro de la casa grande; no es un segundo ser ni una entidad que le preste conocimiento."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para presence_model",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · presence_model",
+        "primary_request": "accion y huella sin inventar anatomia para Voz invisible de Pushaina. Manifestacion auditiva del propio Pushaina dentro de la casa grande; no es un segundo ser ni una entidad que le preste conocimiento.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Escala definida por aquello que transforma, desde objeto hasta territorio.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel y fibras que cambian de tension, humedad, luz o posicion; capas causales separadas; huella fisica persistente",
+        "constraints": [
+          "Secuencia material de causa, accion, limite y huella; debe entenderse sin texto, aura o particulas magicas genericas.",
+          "mostrar: Manifestacion auditiva del propio Pushaina dentro de la casa grande; no es un segundo ser ni una entidad que le preste conocimiento.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "presence_grammar",
+          "purpose": "accion y huella sin inventar anatomia",
+          "aspect": "16:9",
+          "era": "historico_wayuu_segun_relato",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "culebra_pushaina__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "culebra_pushaina"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "el-indio-pushalna",
+          "field": "mito",
+          "note": "Primera forma animal anunciada."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Morfologia zoologica reconocible, cuerpo completo cuando es individuo y variacion controlada cuando es grupo; sin hibridacion no documentada. Entidad: Culebra asociada con Pushaina. Funcion visual: Primera forma animal que Pushaina anuncia; la transcripcion no fija especie, color ni veneno.",
+        "materials": [
+          "capas de papel recortado para anatomia",
+          "fibras finas para pelaje o pluma cuando corresponda",
+          "cantos internos y articulaciones fisicas"
+        ],
+        "palette_logic": "Color natural o explicitamente narrado; no usar brillo magico para señalar importancia.",
+        "scale": "Escala zoologica verificable frente al entorno y los personajes.",
+        "continuity_markers": [
+          "nombre estable: Culebra asociada con Pushaina",
+          "funcion estable: Primera forma animal que Pushaina anuncia; la transcripcion no fija especie, color ni veneno.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Primera forma animal que Pushaina anuncia; la transcripcion no fija especie, color ni veneno."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para identity_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · identity_sheet",
+        "primary_request": "identidad corporal completa y legible para Culebra asociada con Pushaina. Primera forma animal que Pushaina anuncia; la transcripcion no fija especie, color ni veneno.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Escala zoologica verificable frente al entorno y los personajes.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "capas de papel recortado para anatomia; fibras finas para pelaje o pluma cuando corresponda; cantos internos y articulaciones fisicas",
+        "constraints": [
+          "Morfologia zoologica reconocible, cuerpo completo cuando es individuo y variacion controlada cuando es grupo; sin hibridacion no documentada.",
+          "mostrar: Primera forma animal que Pushaina anuncia; la transcripcion no fija especie, color ni veneno.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "1:1",
+          "era": "historico_wayuu_segun_relato",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "zorro_pushaina__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "zorro_pushaina"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "el-indio-pushalna",
+          "field": "mito",
+          "note": "Segunda forma animal anunciada."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Morfologia zoologica reconocible, cuerpo completo cuando es individuo y variacion controlada cuando es grupo; sin hibridacion no documentada. Entidad: Zorro asociado con Pushaina. Funcion visual: Segunda forma animal anunciada por Pushaina; la transcripcion no fija especie ni pelaje.",
+        "materials": [
+          "capas de papel recortado para anatomia",
+          "fibras finas para pelaje o pluma cuando corresponda",
+          "cantos internos y articulaciones fisicas"
+        ],
+        "palette_logic": "Color natural o explicitamente narrado; no usar brillo magico para señalar importancia.",
+        "scale": "Escala zoologica verificable frente al entorno y los personajes.",
+        "continuity_markers": [
+          "nombre estable: Zorro asociado con Pushaina",
+          "funcion estable: Segunda forma animal anunciada por Pushaina; la transcripcion no fija especie ni pelaje.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Segunda forma animal anunciada por Pushaina; la transcripcion no fija especie ni pelaje."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para identity_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · identity_sheet",
+        "primary_request": "identidad corporal completa y legible para Zorro asociado con Pushaina. Segunda forma animal anunciada por Pushaina; la transcripcion no fija especie ni pelaje.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Escala zoologica verificable frente al entorno y los personajes.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "capas de papel recortado para anatomia; fibras finas para pelaje o pluma cuando corresponda; cantos internos y articulaciones fisicas",
+        "constraints": [
+          "Morfologia zoologica reconocible, cuerpo completo cuando es individuo y variacion controlada cuando es grupo; sin hibridacion no documentada.",
+          "mostrar: Segunda forma animal anunciada por Pushaina; la transcripcion no fija especie ni pelaje.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "1:1",
+          "era": "historico_wayuu_segun_relato",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "mapurito_pushaina__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "mapurito_pushaina"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "el-indio-pushalna",
+          "field": "mito",
+          "note": "Tercera forma animal anunciada."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Morfologia zoologica reconocible, cuerpo completo cuando es individuo y variacion controlada cuando es grupo; sin hibridacion no documentada. Entidad: Mapurito asociado con Pushaina. Funcion visual: Tercera forma animal anunciada por Pushaina, entendida visualmente como zorrillo sin cerrar una especie zoologica.",
+        "materials": [
+          "capas de papel recortado para anatomia",
+          "fibras finas para pelaje o pluma cuando corresponda",
+          "cantos internos y articulaciones fisicas"
+        ],
+        "palette_logic": "Color natural o explicitamente narrado; no usar brillo magico para señalar importancia.",
+        "scale": "Escala zoologica verificable frente al entorno y los personajes.",
+        "continuity_markers": [
+          "nombre estable: Mapurito asociado con Pushaina",
+          "funcion estable: Tercera forma animal anunciada por Pushaina, entendida visualmente como zorrillo sin cerrar una especie zoologica.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Tercera forma animal anunciada por Pushaina, entendida visualmente como zorrillo sin cerrar una especie zoologica."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para identity_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · identity_sheet",
+        "primary_request": "identidad corporal completa y legible para Mapurito asociado con Pushaina. Tercera forma animal anunciada por Pushaina, entendida visualmente como zorrillo sin cerrar una especie zoologica.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Escala zoologica verificable frente al entorno y los personajes.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "capas de papel recortado para anatomia; fibras finas para pelaje o pluma cuando corresponda; cantos internos y articulaciones fisicas",
+        "constraints": [
+          "Morfologia zoologica reconocible, cuerpo completo cuando es individuo y variacion controlada cuando es grupo; sin hibridacion no documentada.",
+          "mostrar: Tercera forma animal anunciada por Pushaina, entendida visualmente como zorrillo sin cerrar una especie zoologica.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "1:1",
+          "era": "historico_wayuu_segun_relato",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "gallinazo_pushaina__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "gallinazo_pushaina"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "el-indio-pushalna",
+          "field": "mito",
+          "note": "Forma de ave activada por la entrada al cuarto."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Morfologia zoologica reconocible, cuerpo completo cuando es individuo y variacion controlada cuando es grupo; sin hibridacion no documentada. Entidad: Gallinazo asociado con Pushaina. Funcion visual: Forma de ave que sale del cuarto cuando entra un visitante, sin simbolismo maligno añadido.",
+        "materials": [
+          "capas de papel recortado para anatomia",
+          "fibras finas para pelaje o pluma cuando corresponda",
+          "cantos internos y articulaciones fisicas"
+        ],
+        "palette_logic": "Color natural o explicitamente narrado; no usar brillo magico para señalar importancia.",
+        "scale": "Escala zoologica verificable frente al entorno y los personajes.",
+        "continuity_markers": [
+          "nombre estable: Gallinazo asociado con Pushaina",
+          "funcion estable: Forma de ave que sale del cuarto cuando entra un visitante, sin simbolismo maligno añadido.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Forma de ave que sale del cuarto cuando entra un visitante, sin simbolismo maligno añadido."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para identity_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · identity_sheet",
+        "primary_request": "identidad corporal completa y legible para Gallinazo asociado con Pushaina. Forma de ave que sale del cuarto cuando entra un visitante, sin simbolismo maligno añadido.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Escala zoologica verificable frente al entorno y los personajes.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "capas de papel recortado para anatomia; fibras finas para pelaje o pluma cuando corresponda; cantos internos y articulaciones fisicas",
+        "constraints": [
+          "Morfologia zoologica reconocible, cuerpo completo cuando es individuo y variacion controlada cuando es grupo; sin hibridacion no documentada.",
+          "mostrar: Forma de ave que sale del cuarto cuando entra un visitante, sin simbolismo maligno añadido.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "1:1",
+          "era": "historico_wayuu_segun_relato",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "ciempies_pushaina__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "ciempies_pushaina"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "el-indio-pushalna",
+          "field": "mito",
+          "note": "Forma animal conservada sin representar la prueba sexualizada."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Morfologia zoologica reconocible, cuerpo completo cuando es individuo y variacion controlada cuando es grupo; sin hibridacion no documentada. Entidad: Ciempiés asociado con Pushaina. Funcion visual: Forma animal posterior de Pushaina; se modela aislada y nunca en la prueba sexualizada descrita por la fuente historica.",
+        "materials": [
+          "capas de papel recortado para anatomia",
+          "fibras finas para pelaje o pluma cuando corresponda",
+          "cantos internos y articulaciones fisicas"
+        ],
+        "palette_logic": "Color natural o explicitamente narrado; no usar brillo magico para señalar importancia.",
+        "scale": "Escala zoologica verificable frente al entorno y los personajes.",
+        "continuity_markers": [
+          "nombre estable: Ciempiés asociado con Pushaina",
+          "funcion estable: Forma animal posterior de Pushaina; se modela aislada y nunca en la prueba sexualizada descrita por la fuente historica.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Forma animal posterior de Pushaina; se modela aislada y nunca en la prueba sexualizada descrita por la fuente historica."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para identity_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · identity_sheet",
+        "primary_request": "identidad corporal completa y legible para Ciempiés asociado con Pushaina. Forma animal posterior de Pushaina; se modela aislada y nunca en la prueba sexualizada descrita por la fuente historica.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Escala zoologica verificable frente al entorno y los personajes.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "capas de papel recortado para anatomia; fibras finas para pelaje o pluma cuando corresponda; cantos internos y articulaciones fisicas",
+        "constraints": [
+          "Morfologia zoologica reconocible, cuerpo completo cuando es individuo y variacion controlada cuando es grupo; sin hibridacion no documentada.",
+          "mostrar: Forma animal posterior de Pushaina; se modela aislada y nunca en la prueba sexualizada descrita por la fuente historica.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "1:1",
+          "era": "historico_wayuu_segun_relato",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "anillo_oculto_pushaina__object_sheet": {
+      "purpose": "object_sheet",
+      "entity_refs": [
+        "anillo_oculto_pushaina"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "el-indio-pushalna",
+          "field": "mito",
+          "note": "Demuestra conocimiento del paradero de un objeto empeñado."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Contorno, volumen, piezas y modo de uso claramente separables; evitar convertir utileria cotidiana en reliquia mistica. Entidad: Anillo consultado de Pushaina. Funcion visual: Anillo de gran valor cuyo paradero revela Pushaina: estaba empeñado en poder de una mujer por el valor de una oveja negra.",
+        "materials": [
+          "papel, fibra, madera o mineral traducidos a paper craft",
+          "uniones y desgaste fisico",
+          "sombras proyectadas coherentes"
+        ],
+        "palette_logic": "Color propio del material y el estado; sin ornamentacion cultural no respaldada.",
+        "scale": "Escala demostrable mediante mano, suelo o arquitectura sin texto ni regla grafica.",
+        "continuity_markers": [
+          "nombre estable: Anillo consultado de Pushaina",
+          "funcion estable: Anillo de gran valor cuyo paradero revela Pushaina: estaba empeñado en poder de una mujer por el valor de una oveja negra.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Anillo de gran valor cuyo paradero revela Pushaina: estaba empeñado en poder de una mujer por el valor de una oveja negra."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para object_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · object_sheet",
+        "primary_request": "forma, escala, material y uso legibles para Anillo consultado de Pushaina. Anillo de gran valor cuyo paradero revela Pushaina: estaba empeñado en poder de una mujer por el valor de una oveja negra.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Escala demostrable mediante mano, suelo o arquitectura sin texto ni regla grafica.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel, fibra, madera o mineral traducidos a paper craft; uniones y desgaste fisico; sombras proyectadas coherentes",
+        "constraints": [
+          "Contorno, volumen, piezas y modo de uso claramente separables; evitar convertir utileria cotidiana en reliquia mistica.",
+          "mostrar: Anillo de gran valor cuyo paradero revela Pushaina: estaba empeñado en poder de una mujer por el valor de una oveja negra.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_object",
+          "purpose": "forma, escala, material y uso legibles",
+          "aspect": "1:1",
+          "era": "historico_wayuu_segun_relato",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "ofrenda_alimento_pushaina__object_sheet": {
+      "purpose": "object_sheet",
+      "entity_refs": [
+        "ofrenda_alimento_pushaina"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "el-indio-pushalna",
+          "field": "mito",
+          "note": "Hace visible el consumo de una voz sin cuerpo y sus exigencias materiales."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Contorno, volumen, piezas y modo de uso claramente separables; evitar convertir utileria cotidiana en reliquia mistica. Entidad: Comida y botellas solicitadas por Pushaina. Funcion visual: Alimentos, platos, huesos limpios y botellas cerradas pedidos por Pushaina; se muestran sin sacrificio, consumo ni celebracion del alcohol.",
+        "materials": [
+          "papel, fibra, madera o mineral traducidos a paper craft",
+          "uniones y desgaste fisico",
+          "sombras proyectadas coherentes"
+        ],
+        "palette_logic": "Color propio del material y el estado; sin ornamentacion cultural no respaldada.",
+        "scale": "Escala demostrable mediante mano, suelo o arquitectura sin texto ni regla grafica.",
+        "continuity_markers": [
+          "nombre estable: Comida y botellas solicitadas por Pushaina",
+          "funcion estable: Alimentos, platos, huesos limpios y botellas cerradas pedidos por Pushaina; se muestran sin sacrificio, consumo ni celebracion del alcohol.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Alimentos, platos, huesos limpios y botellas cerradas pedidos por Pushaina; se muestran sin sacrificio, consumo ni celebracion del alcohol."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para object_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · object_sheet",
+        "primary_request": "forma, escala, material y uso legibles para Comida y botellas solicitadas por Pushaina. Alimentos, platos, huesos limpios y botellas cerradas pedidos por Pushaina; se muestran sin sacrificio, consumo ni celebracion del alcohol.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Escala demostrable mediante mano, suelo o arquitectura sin texto ni regla grafica.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel, fibra, madera o mineral traducidos a paper craft; uniones y desgaste fisico; sombras proyectadas coherentes",
+        "constraints": [
+          "Contorno, volumen, piezas y modo de uso claramente separables; evitar convertir utileria cotidiana en reliquia mistica.",
+          "mostrar: Alimentos, platos, huesos limpios y botellas cerradas pedidos por Pushaina; se muestran sin sacrificio, consumo ni celebracion del alcohol.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_object",
+          "purpose": "forma, escala, material y uso legibles",
+          "aspect": "1:1",
+          "era": "historico_wayuu_segun_relato",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "lugar_caida_pushaina__spatial_model": {
+      "purpose": "spatial_model",
+      "entity_refs": [
+        "lugar_caida_pushaina"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "el-indio-pushalna",
+          "field": "mito",
+          "note": "Lugar no identificado del accidente, sin atribuirle retorno o sacralidad."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Umbral y organizacion espacial propios del relato; la geografia incierta se mantiene aproximada y nunca se publica como coordenada. Entidad: Lugar no identificado de la caída de Pushaina. Funcion visual: Camino o terreno abierto donde ocurre la caida de Kasap; la fuente no afirma un umbral, regreso posterior ni geografia exacta.",
+        "materials": [
+          "estratos de papel y suelo prensado",
+          "elementos materiales citados por el relato",
+          "aire y oclusiones entre planos"
+        ],
+        "palette_logic": "Paleta territorial modulada por funcion, clima y estado narrativo.",
+        "scale": "Profundidad recorrible con primer plano, plano medio y fondo a distancias reales.",
+        "continuity_markers": [
+          "nombre estable: Lugar no identificado de la caída de Pushaina",
+          "funcion estable: Camino o terreno abierto donde ocurre la caida de Kasap; la fuente no afirma un umbral, regreso posterior ni geografia exacta.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Camino o terreno abierto donde ocurre la caida de Kasap; la fuente no afirma un umbral, regreso posterior ni geografia exacta."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para spatial_model",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · spatial_model",
+        "primary_request": "relaciones espaciales, entradas, planos y escala para Lugar no identificado de la caída de Pushaina. Camino o terreno abierto donde ocurre la caida de Kasap; la fuente no afirma un umbral, regreso posterior ni geografia exacta.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Profundidad recorrible con primer plano, plano medio y fondo a distancias reales.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "estratos de papel y suelo prensado; elementos materiales citados por el relato; aire y oclusiones entre planos",
+        "constraints": [
+          "Umbral y organizacion espacial propios del relato; la geografia incierta se mantiene aproximada y nunca se publica como coordenada.",
+          "mostrar: Camino o terreno abierto donde ocurre la caida de Kasap; la fuente no afirma un umbral, regreso posterior ni geografia exacta.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "spatial_grammar",
+          "purpose": "relaciones espaciales, entradas, planos y escala",
+          "aspect": "16:9",
+          "era": "historico_wayuu_segun_relato",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "casa_grande_pushaina__spatial_model": {
+      "purpose": "spatial_model",
+      "entity_refs": [
+        "casa_grande_pushaina"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "el-indio-pushalna",
+          "field": "mito",
+          "note": "Casa, sala y cuarto donde la voz permanece invisible."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Sistema constructivo legible por estructura, cubierta, cerramiento, vacios y relacion con senderos; no casa decorativa aislada. Entidad: Casa grande de Pushaina. Funcion visual: Casa con sala y cuarto donde la hija resguarda a Pushaina y la gente escucha su voz sin verlo; su forma exacta no queda descrita.",
+        "materials": [
+          "yotojoro, madera, paja y barro cuando estan documentados",
+          "capas estructurales separadas",
+          "suelo fibroso continuo"
+        ],
+        "palette_logic": "Materiales mates de arena, madera y barro; sin patrones decorativos inventados.",
+        "scale": "Escala habitable demostrada por vanos, sombra y relaciones espaciales.",
+        "continuity_markers": [
+          "nombre estable: Casa grande de Pushaina",
+          "funcion estable: Casa con sala y cuarto donde la hija resguarda a Pushaina y la gente escucha su voz sin verlo; su forma exacta no queda descrita.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Casa con sala y cuarto donde la hija resguarda a Pushaina y la gente escucha su voz sin verlo; su forma exacta no queda descrita."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para spatial_model",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · spatial_model",
+        "primary_request": "relaciones espaciales, entradas, planos y escala para Casa grande de Pushaina. Casa con sala y cuarto donde la hija resguarda a Pushaina y la gente escucha su voz sin verlo; su forma exacta no queda descrita.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Escala habitable demostrada por vanos, sombra y relaciones espaciales.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "yotojoro, madera, paja y barro cuando estan documentados; capas estructurales separadas; suelo fibroso continuo",
+        "constraints": [
+          "Sistema constructivo legible por estructura, cubierta, cerramiento, vacios y relacion con senderos; no casa decorativa aislada.",
+          "mostrar: Casa con sala y cuarto donde la hija resguarda a Pushaina y la gente escucha su voz sin verlo; su forma exacta no queda descrita.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "spatial_grammar",
+          "purpose": "relaciones espaciales, entradas, planos y escala",
+          "aspect": "16:9",
+          "era": "historico_wayuu_segun_relato",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "cementerios_pushaina__spatial_model": {
+      "purpose": "spatial_model",
+      "entity_refs": [
+        "cementerios_pushaina"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "el-indio-pushalna",
+          "field": "mito",
+          "note": "Lugar plural citado por Pushaina tras tres dias de ausencia."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Umbral y organizacion espacial propios del relato; la geografia incierta se mantiene aproximada y nunca se publica como coordenada. Entidad: Cementerios visitados por Pushaina. Funcion visual: Lugar plural al que Pushaina dice haber ido durante tres dias; no se reconstruye como fiesta ni mapa funerario exacto.",
+        "materials": [
+          "estratos de papel y suelo prensado",
+          "elementos materiales citados por el relato",
+          "aire y oclusiones entre planos"
+        ],
+        "palette_logic": "Paleta territorial modulada por funcion, clima y estado narrativo.",
+        "scale": "Profundidad recorrible con primer plano, plano medio y fondo a distancias reales.",
+        "continuity_markers": [
+          "nombre estable: Cementerios visitados por Pushaina",
+          "funcion estable: Lugar plural al que Pushaina dice haber ido durante tres dias; no se reconstruye como fiesta ni mapa funerario exacto.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Lugar plural al que Pushaina dice haber ido durante tres dias; no se reconstruye como fiesta ni mapa funerario exacto."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para spatial_model",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · spatial_model",
+        "primary_request": "relaciones espaciales, entradas, planos y escala para Cementerios visitados por Pushaina. Lugar plural al que Pushaina dice haber ido durante tres dias; no se reconstruye como fiesta ni mapa funerario exacto.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Profundidad recorrible con primer plano, plano medio y fondo a distancias reales.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "estratos de papel y suelo prensado; elementos materiales citados por el relato; aire y oclusiones entre planos",
+        "constraints": [
+          "Umbral y organizacion espacial propios del relato; la geografia incierta se mantiene aproximada y nunca se publica como coordenada.",
+          "mostrar: Lugar plural al que Pushaina dice haber ido durante tres dias; no se reconstruye como fiesta ni mapa funerario exacto.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "spatial_grammar",
+          "purpose": "relaciones espaciales, entradas, planos y escala",
+          "aspect": "16:9",
+          "era": "historico_wayuu_segun_relato",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    }
+  },
+  "entities": {
+    "pushaina": {
+      "name": "Pushaina",
+      "kind": "personaje",
+      "description": "Jinete que muere en una caida desde Kasap, vuelve, permanece visible o como voz y declara varias formas animales.",
+      "aliases": [
+        "Pushiana",
+        "Pushalna"
+      ],
+      "states": [
+        "jinete",
+        "retornado_visible",
+        "voz_invisible",
+        "formas_animales"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "sensitive",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet",
+        "state_sheet"
+      ],
+      "model_refs": [
+        "pushaina__identity_sheet",
+        "pushaina__state_sheet"
+      ],
+      "legacy_model_refs": [
+        "el-indio-pushalna__ancla"
+      ],
+      "myth_refs": [
+        "el-indio-pushalna"
+      ],
+      "evidence": [
+        {
+          "myth": "el-indio-pushalna",
+          "field": "mito",
+          "note": "Jinete que muere, retorna, habla sin cuerpo visible y declara formas animales."
+        }
+      ]
+    },
+    "hija_pushaina": {
+      "name": "Hija de Pushaina",
+      "kind": "personaje",
+      "description": "Hija adulta inferida por su funcion de cuidado: sostiene la alimentacion y resguarda a Pushaina en la casa grande despues de su retorno.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "sensitive",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet"
+      ],
+      "model_refs": [
+        "hija_pushaina__identity_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-indio-pushalna"
+      ],
+      "evidence": [
+        {
+          "myth": "el-indio-pushalna",
+          "field": "mito",
+          "note": "Cuida, alimenta y resguarda a su padre despues del retorno."
+        }
+      ]
+    },
+    "kasap": {
+      "name": "Kasap",
+      "kind": "animal",
+      "description": "Caballo capon de Pushaina; el sobresalto que sigue a la caida sobre su anca conduce al golpe mortal.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet"
+      ],
+      "model_refs": [
+        "kasap__identity_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-indio-pushalna"
+      ],
+      "evidence": [
+        {
+          "myth": "el-indio-pushalna",
+          "field": "mito",
+          "note": "Caballo capon cuyo sobresalto participa en la caida."
+        }
+      ]
+    },
+    "presencia_invisible_pushaina": {
+      "name": "Voz invisible de Pushaina",
+      "kind": "fenomeno",
+      "description": "Manifestacion auditiva del propio Pushaina dentro de la casa grande; no es un segundo ser ni una entidad que le preste conocimiento.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "sensitive",
+      "visual_status": "required",
+      "model_requirements": [
+        "presence_model"
+      ],
+      "model_refs": [
+        "presencia_invisible_pushaina__presence_model"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-indio-pushalna"
+      ],
+      "evidence": [
+        {
+          "myth": "el-indio-pushalna",
+          "field": "mito",
+          "note": "Voz del propio Pushaina oida sin cuerpo visible."
+        }
+      ]
+    },
+    "culebra_pushaina": {
+      "name": "Culebra asociada con Pushaina",
+      "kind": "animal",
+      "description": "Primera forma animal que Pushaina anuncia; la transcripcion no fija especie, color ni veneno.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet"
+      ],
+      "model_refs": [
+        "culebra_pushaina__identity_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-indio-pushalna"
+      ],
+      "evidence": [
+        {
+          "myth": "el-indio-pushalna",
+          "field": "mito",
+          "note": "Primera forma animal anunciada."
+        }
+      ]
+    },
+    "zorro_pushaina": {
+      "name": "Zorro asociado con Pushaina",
+      "kind": "animal",
+      "description": "Segunda forma animal anunciada por Pushaina; la transcripcion no fija especie ni pelaje.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet"
+      ],
+      "model_refs": [
+        "zorro_pushaina__identity_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-indio-pushalna"
+      ],
+      "evidence": [
+        {
+          "myth": "el-indio-pushalna",
+          "field": "mito",
+          "note": "Segunda forma animal anunciada."
+        }
+      ]
+    },
+    "mapurito_pushaina": {
+      "name": "Mapurito asociado con Pushaina",
+      "kind": "animal",
+      "description": "Tercera forma animal anunciada por Pushaina, entendida visualmente como zorrillo sin cerrar una especie zoologica.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet"
+      ],
+      "model_refs": [
+        "mapurito_pushaina__identity_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-indio-pushalna"
+      ],
+      "evidence": [
+        {
+          "myth": "el-indio-pushalna",
+          "field": "mito",
+          "note": "Tercera forma animal anunciada."
+        }
+      ]
+    },
+    "gallinazo_pushaina": {
+      "name": "Gallinazo asociado con Pushaina",
+      "kind": "animal",
+      "description": "Forma de ave que sale del cuarto cuando entra un visitante, sin simbolismo maligno añadido.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet"
+      ],
+      "model_refs": [
+        "gallinazo_pushaina__identity_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-indio-pushalna"
+      ],
+      "evidence": [
+        {
+          "myth": "el-indio-pushalna",
+          "field": "mito",
+          "note": "Forma de ave activada por la entrada al cuarto."
+        }
+      ]
+    },
+    "ciempies_pushaina": {
+      "name": "Ciempiés asociado con Pushaina",
+      "kind": "animal",
+      "description": "Forma animal posterior de Pushaina; se modela aislada y nunca en la prueba sexualizada descrita por la fuente historica.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet"
+      ],
+      "model_refs": [
+        "ciempies_pushaina__identity_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-indio-pushalna"
+      ],
+      "evidence": [
+        {
+          "myth": "el-indio-pushalna",
+          "field": "mito",
+          "note": "Forma animal conservada sin representar la prueba sexualizada."
+        }
+      ]
+    },
+    "anillo_oculto_pushaina": {
+      "name": "Anillo consultado de Pushaina",
+      "kind": "objeto",
+      "description": "Anillo de gran valor cuyo paradero revela Pushaina: estaba empeñado en poder de una mujer por el valor de una oveja negra.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "object_sheet"
+      ],
+      "model_refs": [
+        "anillo_oculto_pushaina__object_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-indio-pushalna"
+      ],
+      "evidence": [
+        {
+          "myth": "el-indio-pushalna",
+          "field": "mito",
+          "note": "Demuestra conocimiento del paradero de un objeto empeñado."
+        }
+      ]
+    },
+    "ofrenda_alimento_pushaina": {
+      "name": "Comida y botellas solicitadas por Pushaina",
+      "kind": "objeto",
+      "description": "Alimentos, platos, huesos limpios y botellas cerradas pedidos por Pushaina; se muestran sin sacrificio, consumo ni celebracion del alcohol.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "object_sheet"
+      ],
+      "model_refs": [
+        "ofrenda_alimento_pushaina__object_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-indio-pushalna"
+      ],
+      "evidence": [
+        {
+          "myth": "el-indio-pushalna",
+          "field": "mito",
+          "note": "Hace visible el consumo de una voz sin cuerpo y sus exigencias materiales."
+        }
+      ]
+    },
+    "lugar_caida_pushaina": {
+      "name": "Lugar no identificado de la caída de Pushaina",
+      "kind": "lugar",
+      "description": "Camino o terreno abierto donde ocurre la caida de Kasap; la fuente no afirma un umbral, regreso posterior ni geografia exacta.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "spatial_model"
+      ],
+      "model_refs": [
+        "lugar_caida_pushaina__spatial_model"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-indio-pushalna"
+      ],
+      "evidence": [
+        {
+          "myth": "el-indio-pushalna",
+          "field": "mito",
+          "note": "Lugar no identificado del accidente, sin atribuirle retorno o sacralidad."
+        }
+      ]
+    },
+    "casa_grande_pushaina": {
+      "name": "Casa grande de Pushaina",
+      "kind": "arquitectura",
+      "description": "Casa con sala y cuarto donde la hija resguarda a Pushaina y la gente escucha su voz sin verlo; su forma exacta no queda descrita.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "spatial_model"
+      ],
+      "model_refs": [
+        "casa_grande_pushaina__spatial_model"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-indio-pushalna"
+      ],
+      "evidence": [
+        {
+          "myth": "el-indio-pushalna",
+          "field": "mito",
+          "note": "Casa, sala y cuarto donde la voz permanece invisible."
+        }
+      ]
+    },
+    "cementerios_pushaina": {
+      "name": "Cementerios visitados por Pushaina",
+      "kind": "lugar",
+      "description": "Lugar plural al que Pushaina dice haber ido durante tres dias; no se reconstruye como fiesta ni mapa funerario exacto.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "spatial_model"
+      ],
+      "model_refs": [
+        "cementerios_pushaina__spatial_model"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-indio-pushalna"
+      ],
+      "evidence": [
+        {
+          "myth": "el-indio-pushalna",
+          "field": "mito",
+          "note": "Lugar plural citado por Pushaina tras tres dias de ausencia."
+        }
+      ]
+    }
+  }
+}

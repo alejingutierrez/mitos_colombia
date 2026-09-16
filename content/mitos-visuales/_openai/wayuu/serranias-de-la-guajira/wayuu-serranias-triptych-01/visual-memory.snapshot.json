@@ -1,0 +1,104 @@
+{
+  "title": "Serranías de La Guajira",
+  "references": [
+    {
+      "id": "9a53f0a5b25c47cc62df",
+      "location": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/serranias-de-la-guajira-1784766728133.jpg",
+      "roles": [
+        "current_public",
+        "public_at_campaign_start",
+        "stored_version_candidate"
+      ],
+      "evidence": [
+        {
+          "source": "myths.image_url",
+          "format": "horizontal"
+        },
+        {
+          "source": "content/mitos-visuales/production/wayuu-2026-09-05/database-before.json",
+          "field": "image_url"
+        },
+        {
+          "source": "Vercel Blob scoped prefix",
+          "prefix": "mitos/serranias-de-la-guajira-",
+          "pathname": "mitos/serranias-de-la-guajira-1784766728133.jpg",
+          "uploaded_at": "2026-07-23T00:32:09.000Z"
+        }
+      ],
+      "visual_review": "inspected",
+      "cultural_authority": "none_from_image_alone",
+      "review_notes": "Portada con título, figura sobre cima, cerros con caras, mar y casa; rescatar capas y color, no rostros gigantes ni atuendo inventado.",
+      "review_artifact": "output/playwright/wayuu-campaign/serranias-before-0.png"
+    },
+    {
+      "id": "c501081f59be649a6ed9",
+      "location": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/serranias-de-la-guajira-1784910987242.jpg",
+      "roles": [
+        "current_public",
+        "database_version",
+        "stored_version_candidate"
+      ],
+      "evidence": [
+        {
+          "source": "vertical_images",
+          "row_id": 347,
+          "format": "vertical"
+        },
+        {
+          "source": "vertical_images",
+          "row_id": 347,
+          "updated_at": "2026-07-24T16:36:28.777Z"
+        },
+        {
+          "source": "Vercel Blob scoped prefix",
+          "prefix": "vertical/myth/serranias-de-la-guajira-",
+          "pathname": "vertical/myth/serranias-de-la-guajira-1784910987242.jpg",
+          "uploaded_at": "2026-07-24T16:36:29.000Z"
+        }
+      ],
+      "visual_review": "inspected",
+      "cultural_authority": "none_from_image_alone",
+      "review_notes": "Mar abierto entre paredes de agua, figura dominante, cerros con caras, animales y casa con estampados; no trasladar collage.",
+      "review_artifact": "output/playwright/wayuu-campaign/serranias-before-1.png"
+    },
+    {
+      "id": "c6c13f8d3fa0fb0fecff",
+      "location": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/serranias-de-la-guajira-1767973490659.png",
+      "roles": [
+        "stored_version_candidate"
+      ],
+      "evidence": [
+        {
+          "source": "Vercel Blob scoped prefix",
+          "prefix": "mitos/serranias-de-la-guajira-",
+          "pathname": "mitos/serranias-de-la-guajira-1767973490659.png",
+          "uploaded_at": "2026-01-10T22:52:58.000Z"
+        }
+      ],
+      "visual_review": "not_yet_inspected",
+      "cultural_authority": "none_from_image_alone",
+      "bytes": 1016814
+    }
+  ],
+  "discovery_failures": [],
+  "review_status": "reviewed_for_prompt",
+  "review": {
+    "reviewer": "agent_direct_visual_review",
+    "reviewed_at": "2026-09-07T15:18:00Z",
+    "reviewed_reference_ids": [
+      "9a53f0a5b25c47cc62df",
+      "c501081f59be649a6ed9"
+    ],
+    "retained": [
+      "Capas de relieve y mar azul profundo; distancia territorial."
+    ],
+    "rejected": [
+      "Caras monumentales, Mareiwa genérico con tocado y estampados, mezcla de episodios, rosetas y arquitectura innecesaria."
+    ],
+    "influence_by_act": {
+      "entrada": "Trasladar profundidad a Wojoro convirtiéndose en loma baja, sin cabezas de piedra.",
+      "acto": "Mar y honda se aíslan de viajeros, animales y clanes.",
+      "huella": "Condensar caminante/relieve en una sandalia que se vuelve loma; no otra escena."
+    }
+  }
+}

@@ -1,0 +1,126 @@
+{
+  "title": "La India Worunka",
+  "references": [
+    {
+      "id": "23a56ad5fcd7c1414238",
+      "location": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/la-india-worunka-1784766769339.jpg",
+      "roles": [
+        "current_public",
+        "public_at_campaign_start",
+        "stored_version_candidate"
+      ],
+      "evidence": [
+        {
+          "source": "myths.image_url",
+          "format": "horizontal"
+        },
+        {
+          "source": "content/mitos-visuales/production/wayuu-2026-09-05/database-before.json",
+          "field": "image_url"
+        },
+        {
+          "source": "Vercel Blob scoped prefix",
+          "prefix": "mitos/la-india-worunka-",
+          "pathname": "mitos/la-india-worunka-1784766769339.jpg",
+          "uploaded_at": "2026-07-23T00:32:50.000Z"
+        }
+      ],
+      "visual_review": "inspected",
+      "cultural_authority": "none_from_image_alone",
+      "review": {
+        "observed": "Horizontal: dos figuras grandes junto a arroyo, gesto hacia piedra grabada, cabaña, vasijas y frutos; prendas crema estampadas y nubes decorativas.",
+        "screenshot": "output/playwright/wayuu-campaign/worunka-before-1.png",
+        "limits": "Revisión de imagen previa de producción; no aprobación de sus detalles ni autoridad cultural."
+      }
+    },
+    {
+      "id": "4792f97e24bf81c0ce79",
+      "location": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/la-india-worunka-1784911041824.jpg",
+      "roles": [
+        "current_public",
+        "database_version",
+        "stored_version_candidate"
+      ],
+      "evidence": [
+        {
+          "source": "vertical_images",
+          "row_id": 352,
+          "format": "vertical"
+        },
+        {
+          "source": "vertical_images",
+          "row_id": 352,
+          "updated_at": "2026-07-24T16:37:23.233Z"
+        },
+        {
+          "source": "Vercel Blob scoped prefix",
+          "prefix": "vertical/myth/la-india-worunka-",
+          "pathname": "vertical/myth/la-india-worunka-1784911041824.jpg",
+          "uploaded_at": "2026-07-24T16:37:23.000Z"
+        }
+      ],
+      "visual_review": "inspected",
+      "cultural_authority": "none_from_image_alone",
+      "review": {
+        "observed": "Vertical: figura con piedra levantada, mujer con dientes externos en la falda, piedra grabada, cactus, rosetas y disco solar. Imagen propia previa, no evidencia cultural.",
+        "screenshot": "output/playwright/wayuu-campaign/worunka-before-0.png",
+        "limits": "Revisión de imagen previa de producción; no aprobación de sus detalles ni autoridad cultural."
+      }
+    },
+    {
+      "id": "731e23383a0a9a560e55",
+      "location": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/la-india-worunka-1767973661232.png",
+      "roles": [
+        "stored_version_candidate"
+      ],
+      "evidence": [
+        {
+          "source": "Vercel Blob scoped prefix",
+          "prefix": "mitos/la-india-worunka-",
+          "pathname": "mitos/la-india-worunka-1767973661232.png",
+          "uploaded_at": "2026-01-10T22:38:46.000Z"
+        }
+      ],
+      "visual_review": "not_yet_inspected",
+      "cultural_authority": "none_from_image_alone",
+      "bytes": 1060486
+    }
+  ],
+  "discovery_failures": [],
+  "review_status": "reviewed_for_next_prompt",
+  "review": {
+    "reviewer": "agent_direct_visual_review",
+    "reviewed_at": "2026-09-06T19:31:50Z",
+    "reviewed_reference_ids": [
+      "23a56ad5fcd7c1414238",
+      "4792f97e24bf81c0ce79"
+    ],
+    "retained": [
+      "Arroyo azul como continuidad territorial y profundidad por montañas superpuestas.",
+      "Contraste entre suelo ocre, azul oscuro y acentos de rojo."
+    ],
+    "rejected": [
+      "Dientes sobre ropa, piedra levantada como amenaza y gestos de violencia.",
+      "Petroglifos, estampados o símbolos no sustentados; rosetas botánicas y sol ornamental.",
+      "Personajes grandes, caras modeladas y piel ilustrada. No transformar la ficha de identidad en retrato ni copiar variantes de otras narraciones."
+    ],
+    "influence_by_act": {
+      "entrada": "Conservar arroyo y capas, pero cambiar el centro de lectura a piedra abstracta y rojo que se convierte físicamente en plumas, sin agresor.",
+      "acto": "La tierra participa en la transformación: cavidad orgánica que conserva tumas bajo plantas secas, no escena de castigo corporal.",
+      "huella": "Del repertorio de frutos y semillas tomar la relación semilla/piedra, aislada en un solo motivo; no reutilizar escena ni grabados."
+    }
+  },
+  "external_research": {
+    "searched_at": "2026-09-06T19:31:50Z",
+    "queries": [
+      "\"Worunka\" ilustración pintura",
+      "\"Worunka\" \"Juancito\""
+    ],
+    "outcome": "Búsqueda acotada localizó narraciones, referencias bibliográficas, mención de obra teatral y ensayo de viaje Arijuna; no se verificó una representación artística atribuible para usar en este prompt. No se equiparan imágenes turísticas ni nuestra página con evidencia histórica.",
+    "exhaustive": false,
+    "source_urls": [
+      "https://revistacronopio.com/arijuna-alejandro-vega-carvajal/",
+      "https://publicaciones.icanh.gov.co/index.php/picanh/catalog/download/243/266/1579?inline=1"
+    ]
+  }
+}

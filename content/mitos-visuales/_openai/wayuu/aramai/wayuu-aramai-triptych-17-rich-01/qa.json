@@ -1,0 +1,126 @@
+{
+  "schema": "mitos-triptych-qa/v1",
+  "date": "2026-09-07",
+  "batch_id": "wayuu-aramai-triptych-17-rich-01",
+  "status": "partial_selection_horizontal_correction_requested",
+  "review_method": "Direct inspection of all three native JPEG outputs, then comparison with scene and material contracts. Tests are not visual approval.",
+  "generation_count": 3,
+  "provider": "OpenAI gpt-image-2 via official imagegen CLI",
+  "attempts_per_act": {
+    "entrada": 1,
+    "acto": 1,
+    "huella": 1
+  },
+  "technical_audit": {
+    "plan_hash_matches": true,
+    "models": [
+      {
+        "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-02-aramai-medium-corrections-02/aramai__identity_sheet--canon.jpeg",
+        "unchanged": true
+      },
+      {
+        "path": "output/imagegen/wayuu-v3/wayuu-v3-pilot-03-corrections-medium/rancheria_wayuu__spatial_model--canon.jpeg",
+        "unchanged": true
+      },
+      {
+        "path": "output/imagegen/wayuu-v3/wayuu-v3-pilot-02-remaining-categories-medium/territorio_alta_guajira__environment_model--canon.jpeg",
+        "unchanged": true
+      }
+    ],
+    "references": [
+      {
+        "path": "output/imagegen/wayuu/keyframes/aramai-piloto-02/b1a.jpeg",
+        "unchanged": true
+      },
+      {
+        "path": "output/imagegen/wayuu/keyframes/aramai-piloto-02/b2a.jpeg",
+        "unchanged": true
+      },
+      {
+        "path": "output/imagegen/wayuu/keyframes/aramai-piloto-02/b2b.jpeg",
+        "unchanged": true
+      },
+      {
+        "path": "output/imagegen/wayuu/keyframes/aramai-piloto-02/b3a.jpeg",
+        "unchanged": true
+      },
+      {
+        "path": "output/imagegen/wayuu/triptychs/wayuu-aramai-triptych-15-selected/entrada.jpeg",
+        "unchanged": true
+      },
+      {
+        "path": "output/imagegen/wayuu/triptychs/wayuu-aramai-triptych-15-selected/acto.jpeg",
+        "unchanged": true
+      },
+      {
+        "path": "output/imagegen/wayuu/triptychs/wayuu-aramai-symbolic-16-01/huella.jpeg",
+        "unchanged": true
+      }
+    ],
+    "images": [
+      {
+        "act": "entrada",
+        "path": "output/imagegen/wayuu/triptychs/wayuu-aramai-triptych-17-rich-01/entrada.jpeg",
+        "sha256": "d492e904eeebca7c7cb99b51fab2ebd97ed13a01b97af5b4f872d39cc0cb9532",
+        "bytes": 221223,
+        "prompt_hash_matches": true,
+        "metadata": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/wayuu/triptychs/wayuu-aramai-triptych-17-rich-01/entrada.jpeg\n  pixelWidth: 1536\n  pixelHeight: 864\n  format: jpeg\n"
+      },
+      {
+        "act": "acto",
+        "path": "output/imagegen/wayuu/triptychs/wayuu-aramai-triptych-17-rich-01/acto.jpeg",
+        "sha256": "56888000526273816bb257fe04125ffef82c3b5910fbcf4d3c8b96e1c268a39f",
+        "bytes": 267590,
+        "prompt_hash_matches": true,
+        "metadata": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/wayuu/triptychs/wayuu-aramai-triptych-17-rich-01/acto.jpeg\n  pixelWidth: 864\n  pixelHeight: 1536\n  format: jpeg\n"
+      },
+      {
+        "act": "huella",
+        "path": "output/imagegen/wayuu/triptychs/wayuu-aramai-triptych-17-rich-01/huella.jpeg",
+        "sha256": "89150475616c5bcf6a1a31afc88245a5242e15da895dd889a899968ebf119d05",
+        "bytes": 199992,
+        "prompt_hash_matches": true,
+        "metadata": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/wayuu/triptychs/wayuu-aramai-triptych-17-rich-01/huella.jpeg\n  pixelWidth: 1024\n  pixelHeight: 1024\n  format: jpeg\n"
+      }
+    ]
+  },
+  "tests": {
+    "passed": 40,
+    "failed": 0,
+    "files": [
+      "scripts/image-quality-policy.test.mjs",
+      "scripts/visual-direction.test.mjs",
+      "scripts/mitos/triptych-story-direction.test.mjs",
+      "scripts/mitos/visual-memory.test.mjs",
+      "scripts/mitos/wayuu-triptych-v1.test.mjs"
+    ],
+    "warning": "Existing MODULE_TYPELESS_PACKAGE_JSON warning; no package change made."
+  },
+  "visual_review": {
+    "entrada": {
+      "status": "retained_not_selected_camera_correction",
+      "observed": "Three people, full clothing, clear empty impossible-night shelter with receding posts, scarce food exchange and dry water edge. Paper depth and magic successful; Aramai is about 45% of frame height instead of requested 20%, roof touches upper/right borders.",
+      "next": "New high horizontal generation rich-02 only; preserve this image."
+    },
+    "acto": {
+      "status": "candidate_for_user_review_with_notes",
+      "observed": "Three living people with full clothing; two separate nighttime interiors during daylight, empty hammock, no magical beam from Aramai. Layered roof, doors, ground and flat-profile people. Environmental vertical with no external model edges.",
+      "notes": [
+        "Seated Aramai approximately 20% frame height, slightly larger than requested one-sixth; not a portrait.",
+        "Foreground foliage includes pointed fan-like leaves despite avoiding rosettes; do not promote this botany to canon.",
+        "Aramai's low open hand reads as appeal but its visual direction can also read toward the women; exact addressee is not self-evident."
+      ]
+    },
+    "huella": {
+      "status": "candidate_for_user_review",
+      "observed": "One empty woven hammock, no people or setting clutter; internally layered night has actual depth, warm weave has tension and shadow, symbolic rather than episodic.",
+      "notes": [
+        "Paper ribbons look broader than a literal chinchorro weave; deliberate material abstraction, not an ethnographic object model.",
+        "Visible internal paper layer contours are not an exterior model base; no corrugated cardboard."
+      ]
+    }
+  },
+  "cultural_scope": "Impossible night and weighted absence are editorial metaphors, not certified traditional symbols. Existing narrative and evidence unchanged.",
+  "user_approval": false,
+  "published": false
+}

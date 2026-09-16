@@ -1,0 +1,232 @@
+{
+  "schema": "mitos-openai-triptych/v1",
+  "batch_id": "wayuu-puro-triptych-01",
+  "created_at": "2026-09-06T18:10:20.478Z",
+  "account_source": "OPENAI_API_KEY from ignored .env",
+  "provider": "openai",
+  "model": "gpt-image-2",
+  "community": "wayuu",
+  "myth": "la-majayura-que-pierde-a-los-hombres",
+  "plan": "content/mitos-visuales/wayuu.puro.triptico.v1.json",
+  "prompt_profile": "story_first_v3_symbolic_huella",
+  "plan_sha256": "7f78f7fdc6c2c4387eac0be71981cd164309d16e87af2698ad7cf93128122b06",
+  "narrative_target_sha256": "cf37022e776485ed07d5a9b5cff160e097890c3d726bb002fd11804108b01097",
+  "evidence": [
+    {
+      "id": "chaves_1946",
+      "type": "primary_narrative",
+      "url": "https://publicaciones.icanh.gov.co/index.php/picanh/catalog/download/243/266/1579?inline=1",
+      "pages": "PDF índice 5, página impresa 309 según extracción; termina antes de 310.",
+      "supports": "Aparición, desorientación, cueva, secreto, piedra móvil y Papach pétreo.",
+      "limits": "Registro histórico; no sabedor Papach ni expedición detallada."
+    },
+    {
+      "id": "published_puro",
+      "type": "project_narrative",
+      "path": "content/mitos-visuales/production/wayuu-2026-09-05/narratives/la-majayura-que-pierde-a-los-hombres.json",
+      "supports": "Texto objetivo publicado; comparte cueva, extravío, secreto y piedra hacia mar.",
+      "limits": "Ampliaciones editoriales y Papach humano discrepante: documentados, no ilustrados ni corregidos en esta campaña de imágenes."
+    }
+  ],
+  "visual_memory_library": "content/mitos-visuales/wayuu.visual-memory.v1.json",
+  "visual_memory_review": {
+    "reviewer": "agent_direct_visual_review",
+    "reviewed_at": "2026-09-06T18:10:19.648Z",
+    "reviewed_reference_ids": [
+      "aba3d158e790734be3c4",
+      "a1243c6bd2c9ba716bd0",
+      "67cca5d753f938fbae3f"
+    ],
+    "retained": [
+      "Cueva y costa como territorio continuo; índigo nocturno, ocres y profundidad del papel.",
+      "Retrato atribuido a Julio Ariza: dignidad, quietud y autonomía, no pose seductora; contraste verde/arcilla como inspiración cromática secundaria."
+    ],
+    "rejected": [
+      "Estrellas en vestido y cabeza, piedra en mano, torso masculino descubierto y proximidad de retrato de las imágenes previas.",
+      "Copiar adornos, patrones, pintura facial o identidad del retrato externo como canon del personaje.",
+      "Papach como sabedor, tesoros y expedición de hombres de la ampliación editorial: no tienen apoyo en la transcripción revisada."
+    ],
+    "influence_by_act": {
+      "entrada": "Conservar cueva y capas de territorio; alejar figuras, dignificar postura y convertir la desorientación en distancia que se pliega.",
+      "acto": "Separar episodio costero de la cueva: piedra blanca móvil sin estar en la mano ni mostrar víctimas en el agua.",
+      "huella": "Condensar cueva y obligación de callar como un único pliegue que guarda un interior; no retrato ni escena."
+    }
+  },
+  "bible_selection": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/accepted-selection.json",
+  "canonical_models": [
+    {
+      "model_id": "majayura_puro__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-21-la-majayura-que-pierde-a-los-hombres-medium-corrections-01/majayura_puro__identity_sheet--canon.jpeg",
+      "sha256": "0f2046f0937c29434ee437040b6f49507cb4841d4c7fa32af792ab973c2c926d",
+      "qa_status": "PASS_AFTER_CORRECTION_01"
+    },
+    {
+      "model_id": "hombres_alcanzados_puro__group_grammar",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-21-la-majayura-que-pierde-a-los-hombres-medium-corrections-01/hombres_alcanzados_puro__group_grammar--canon.jpeg",
+      "sha256": "eef0f4d8e4ddf34a626d7ab7cd5f919d6536f38d8ee74f02131c0c5df760a4eb",
+      "qa_status": "PASS_AFTER_CORRECTION_01"
+    },
+    {
+      "model_id": "cueva_puro__spatial_model",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-21-la-majayura-que-pierde-a-los-hombres-medium/cueva_puro__spatial_model--canon.jpeg",
+      "sha256": "b34feb4c30b551328126c77aeaff3d4ce32e172ab8a488ea0fe0a709942008a5",
+      "qa_status": "PASS"
+    },
+    {
+      "model_id": "desorientacion_puro__phenomenon_rule",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-21-la-majayura-que-pierde-a-los-hombres-medium/desorientacion_puro__phenomenon_rule--canon.jpeg",
+      "sha256": "4d65cf647ed601a3c6ee66268fc18b41502e52bcec4e7f0c0d90ff7d2153d321",
+      "qa_status": "PASS"
+    },
+    {
+      "model_id": "secreto_y_silencio_puro__phenomenon_rule",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-21-la-majayura-que-pierde-a-los-hombres-medium/secreto_y_silencio_puro__phenomenon_rule--canon.jpeg",
+      "sha256": "2b69266f03399a3e1511f3beeedaccdf8f43d3c1438ecb25b195db280db317ca",
+      "qa_status": "PASS"
+    },
+    {
+      "model_id": "piedra_blanca_movil_puro__phenomenon_rule",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-21-la-majayura-que-pierde-a-los-hombres-medium/piedra_blanca_movil_puro__phenomenon_rule--canon.jpeg",
+      "sha256": "ffdffd4597808d9d616c2ca9d131174321acdabcef58aeb046d757e5c5859b07",
+      "qa_status": "PASS"
+    }
+  ],
+  "approval_gate": "Campaña completa autorizada; QA por orientación y publicación aditiva sin borrar versiones.",
+  "requested_acts": [
+    "entrada",
+    "acto",
+    "huella"
+  ],
+  "generation_mode": "text_only_no_local_references",
+  "framing": "immersive_full_bleed",
+  "surface_finish": "layered_depth_no_exposed_support",
+  "jobs": [
+    {
+      "act": "entrada",
+      "aspect_ratio": "16:9",
+      "size": "1536x864",
+      "quality": "high",
+      "api_method": "images.generate",
+      "composition": "profundidad_abierta",
+      "canon_model_ids": [
+        "majayura_puro__identity_sheet",
+        "hombres_alcanzados_puro__group_grammar",
+        "cueva_puro__spatial_model",
+        "desorientacion_puro__phenomenon_rule",
+        "secreto_y_silencio_puro__phenomenon_rule",
+        "piedra_blanca_movil_puro__phenomenon_rule"
+      ],
+      "refs": [],
+      "ref_paths": [],
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/la-majayura-que-pierde-a-los-hombres/wayuu-puro-triptych-01/prompts/entrada.prompt.txt",
+      "prompt_sha256": "eca18ba60ae60b78ffb6d443ad5cfc151a07986d881e92bd6890fb633beed124",
+      "narrative_event_ids": [
+        "desorientacion_cueva"
+      ],
+      "editorial_translation": "El terreno en acordeón materializa la desorientación y distancia; no pliegue literal narrado ni ubicación real de Puró.",
+      "magic_in_the_ordinary": {
+        "ordinary_anchor": "Camino sobre suelo costero.",
+        "impossible_behavior": "La tierra se pliega y multiplica la distancia entre viajero y destino.",
+        "narrative_effect": "Hace visible el extravío sin hechizo lanzado por manos.",
+        "agency": "La presencia y el territorio conservan agencia; el viajero no controla poderes.",
+        "physical_translation": "Tres pliegues verticales continuos del terreno, camino recorre sus caras.",
+        "visible_test": "¿Entre dos figuras pequeñas y la cueva, el propio camino se pliega para multiplicar una distancia que parecía corta?",
+        "event_ids": [
+          "desorientacion_cueva"
+        ],
+        "provenance": "editorial_metaphor",
+        "temporal_role": "present"
+      },
+      "visual_function": "narrative_scene",
+      "output": "output/imagegen/wayuu/triptychs/wayuu-puro-triptych-01/entrada.jpeg",
+      "status": "prepared"
+    },
+    {
+      "act": "acto",
+      "aspect_ratio": "9:16",
+      "size": "864x1536",
+      "quality": "medium",
+      "api_method": "images.generate",
+      "composition": "profundidad_abierta",
+      "canon_model_ids": [
+        "majayura_puro__identity_sheet",
+        "hombres_alcanzados_puro__group_grammar",
+        "cueva_puro__spatial_model",
+        "desorientacion_puro__phenomenon_rule",
+        "secreto_y_silencio_puro__phenomenon_rule",
+        "piedra_blanca_movil_puro__phenomenon_rule"
+      ],
+      "refs": [],
+      "ref_paths": [],
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/la-majayura-que-pierde-a-los-hombres/wayuu-puro-triptych-01/prompts/acto.prompt.txt",
+      "prompt_sha256": "71169a1218c6ee90c8f0100bf892fbccdb3addfb6d105575ec041ff199d2c3f5",
+      "narrative_event_ids": [
+        "piedra_mar"
+      ],
+      "editorial_translation": "La piedra que se aleja procede del relato; hendiduras vacías y estela de papel hacen visible su desplazamiento en una imagen. El observador queda en tierra, sin representar ahogamiento.",
+      "magic_in_the_ordinary": {
+        "ordinary_anchor": "Piedra blanca en la orilla.",
+        "impossible_behavior": "Se aleja por sí sola dejando posiciones vacías.",
+        "narrative_effect": "Lo que parecía alcanzable se retira; el viajero no lo posee.",
+        "agency": "La presencia y el territorio conservan agencia; el viajero no controla poderes.",
+        "physical_translation": "Una piedra, dos vacíos y estela opuesta al oleaje.",
+        "visible_test": "¿Una sola piedra blanca se aleja hacia el agua y deja dos vacíos de su forma, mientras el viajero permanece en tierra?",
+        "event_ids": [
+          "piedra_mar"
+        ],
+        "provenance": "editorial_metaphor",
+        "temporal_role": "present"
+      },
+      "visual_function": "narrative_scene",
+      "output": "output/imagegen/wayuu/triptychs/wayuu-puro-triptych-01/acto.jpeg",
+      "status": "prepared"
+    },
+    {
+      "act": "huella",
+      "aspect_ratio": "1:1",
+      "size": "1024x1024",
+      "quality": "medium",
+      "api_method": "images.generate",
+      "composition": "simbolo_central",
+      "canon_model_ids": [
+        "majayura_puro__identity_sheet",
+        "hombres_alcanzados_puro__group_grammar",
+        "cueva_puro__spatial_model",
+        "desorientacion_puro__phenomenon_rule",
+        "secreto_y_silencio_puro__phenomenon_rule",
+        "piedra_blanca_movil_puro__phenomenon_rule"
+      ],
+      "refs": [],
+      "ref_paths": [],
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/la-majayura-que-pierde-a-los-hombres/wayuu-puro-triptych-01/prompts/huella.prompt.txt",
+      "prompt_sha256": "00781c9fdbdb57b97cfbde780397aff095897ed6626849b1bce9b2b722d32f0b",
+      "narrative_event_ids": [
+        "secreto_callado"
+      ],
+      "editorial_translation": "Una cueva plegada sobre su acceso condensa la obligación de guardar secreto; es una síntesis editorial, no Papach ni un objeto ritual tradicional.",
+      "magic_in_the_ordinary": {
+        "ordinary_anchor": "Acceso de una cueva.",
+        "impossible_behavior": "El espacio se recoge para guardar su acceso.",
+        "narrative_effect": "Condensa el conocimiento que debe permanecer callado.",
+        "agency": "La presencia y el territorio conservan agencia; el viajero no controla poderes.",
+        "physical_translation": "Lámina exterior cubre tira que entra al hueco.",
+        "visible_test": "¿Un único pliegue oscuro guarda un camino hacia su interior sin convertirse en escena o retrato?",
+        "event_ids": [
+          "secreto_callado"
+        ],
+        "provenance": "editorial_metaphor",
+        "temporal_role": "memory"
+      },
+      "visual_function": "symbolic_synthesis",
+      "symbolic_contract": {
+        "thesis": "Conocer un lugar no da permiso para revelar todo.",
+        "carrier": "Una cueva condensada en un pliegue oscuro.",
+        "operation": "El acceso se recoge sobre un camino que queda guardado dentro.",
+        "story_connection": "Obligación de silencio de quien vuelve de Puró.",
+        "visible_test": "Interior y tira entrante parcialmente ocultos bajo pliegue, un solo motivo."
+      },
+      "output": "output/imagegen/wayuu/triptychs/wayuu-puro-triptych-01/huella.jpeg",
+      "status": "prepared"
+    }
+  ]
+}

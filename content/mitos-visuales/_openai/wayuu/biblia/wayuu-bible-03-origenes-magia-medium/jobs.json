@@ -1,0 +1,115 @@
+{
+  "schema": "mitos-colombia-biblia-batch/v1",
+  "batch_id": "wayuu-bible-03-origenes-magia-medium",
+  "asset_type": "bible",
+  "quality": "medium",
+  "framing": "immersive_full_bleed",
+  "surface_finish": "layered_depth_no_exposed_support",
+  "plan": "content/mitos-visuales/_openai/wayuu/biblia/wayuu-bible-03-origenes-magia-medium/plan.snapshot.json",
+  "prepared_at": "2026-09-03",
+  "generation_scope": "Tercer lote en medium: reglas mágicas de Serranías, Siki y Waleker mediante edición de sus anclas aprobadas; cada archivo local se usa sólo como referencia necesaria de continuidad.",
+  "jobs": [
+    {
+      "id": "serranias-de-la-guajira__magia--regla",
+      "model_id": "serranias-de-la-guajira__magia",
+      "view_id": "regla",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/biblia/wayuu-bible-03-origenes-magia-medium/prompts/serranias-de-la-guajira__magia--regla.prompt.txt",
+      "output_file": "output/imagegen/wayuu/wayuu-bible-03-origenes-magia-medium/serranias-de-la-guajira__magia--regla.jpeg",
+      "prompt_sha256": "2d503a3e899f09eb70848122562e015258a8ddc1c00340c02c1d2a5991b671ff",
+      "provider": "OpenAI API",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "1536x1024",
+      "output_format": "jpeg",
+      "references": [
+        "serranias-de-la-guajira__ancla:canon"
+      ],
+      "input_references": [
+        {
+          "role": "Imagen 1: ancla territorial aprobada; conservar costa, secuencia de relieves, botánica y materialidad mientras las paradas se sedimentan como serranías",
+          "path": "output/imagegen/wayuu/wayuu-bible-02-origenes-anclas-medium/serranias-de-la-guajira__ancla--canon.jpeg",
+          "status": "DIRECTION_CANDIDATE_PASS"
+        }
+      ],
+      "safeguards": [
+        "ediciones con referencias generadas por este pipeline, aprobadas y necesarias para continuidad",
+        "todo elemento debe conservar materialidad visible de papel, fibras, hilos y piezas artesanales",
+        "sin violencia o sexualidad explícitas",
+        "sin borde exterior, base, cartón, mesa ni estudio visibles; la escena continúa hasta los cuatro límites",
+        "profundidad 3D por capas físicas, aire, oclusiones, cantos internos y sombras reales; nunca collage plano",
+        "sin aura, chispas, runas, ojos luminosos o humo místico genérico",
+        "mostrar una secuencia de formas humanas acostadas que se expanden gradualmente en estratos de cerro sin caras, ojos o estatuas; conservar el orden de las detenciones y dejar la retirada del mar para una fase posterior",
+        "si aparece cactus, sólo cardón guajiro de tallos columnares agrupados desde la base; prohibido saguaro"
+      ],
+      "status": "prepared"
+    },
+    {
+      "id": "el-origen-del-fuego__magia--regla",
+      "model_id": "el-origen-del-fuego__magia",
+      "view_id": "regla",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/biblia/wayuu-bible-03-origenes-magia-medium/prompts/el-origen-del-fuego__magia--regla.prompt.txt",
+      "output_file": "output/imagegen/wayuu/wayuu-bible-03-origenes-magia-medium/el-origen-del-fuego__magia--regla.jpeg",
+      "prompt_sha256": "ac4fdeac399ff915777763f58e685c7f41f7df15d884503ca1679a271249b968",
+      "provider": "OpenAI API",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "1536x1024",
+      "output_format": "jpeg",
+      "references": [
+        "el-origen-del-fuego__ancla:canon"
+      ],
+      "input_references": [
+        {
+          "role": "Imagen 1: ancla material Siki aprobada; conservar la identidad de papel de cavidad, carbón, ceniza y brasa al mostrar su transferencia",
+          "path": "output/imagegen/wayuu/wayuu-bible-02c-origenes-anclas-material-correction-medium/el-origen-del-fuego__ancla--canon.jpeg",
+          "status": "DIRECTION_CANDIDATE_PASS"
+        }
+      ],
+      "safeguards": [
+        "ediciones con referencias generadas por este pipeline, aprobadas y necesarias para continuidad",
+        "todo elemento debe conservar materialidad visible de papel, fibras, hilos y piezas artesanales",
+        "sin violencia o sexualidad explícitas",
+        "sin borde exterior, base, cartón, mesa ni estudio visibles; la escena continúa hasta los cuatro límites",
+        "profundidad 3D por capas físicas, aire, oclusiones, cantos internos y sombras reales; nunca collage plano",
+        "sin aura, chispas, runas, ojos luminosos o humo místico genérico",
+        "mostrar transferencia por contacto material: una brasa de papel sale del núcleo Siki y se replica en pequeños fuegos domésticos separados; no rayo, explosión, figura humanoide ni incendio",
+        "las llamas y brasas son pliegues y fibras de papel rojo y naranja, nunca fuego real fotografiado"
+      ],
+      "status": "prepared"
+    },
+    {
+      "id": "waleker-el-origen-del-tejido__magia--regla",
+      "model_id": "waleker-el-origen-del-tejido__magia",
+      "view_id": "regla",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/biblia/wayuu-bible-03-origenes-magia-medium/prompts/waleker-el-origen-del-tejido__magia--regla.prompt.txt",
+      "output_file": "output/imagegen/wayuu/wayuu-bible-03-origenes-magia-medium/waleker-el-origen-del-tejido__magia--regla.jpeg",
+      "prompt_sha256": "b463ea6bf04ae01b11df139f56a87117ffb0e9c4ffbe134106c86b948dcae0f1",
+      "provider": "OpenAI API",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "1536x1024",
+      "output_format": "jpeg",
+      "references": [
+        "waleker-el-origen-del-tejido__ancla:canon"
+      ],
+      "input_references": [
+        {
+          "role": "Imagen 1: ancla Waleker aprobada; conservar una sola araña pequeña, telar liso, cardón correcto y materialidad de papel durante la transformación",
+          "path": "output/imagegen/wayuu/wayuu-bible-02d-waleker-botany-correction-medium/waleker-el-origen-del-tejido__ancla--canon.jpeg",
+          "status": "DIRECTION_CANDIDATE_PASS"
+        }
+      ],
+      "safeguards": [
+        "ediciones con referencias generadas por este pipeline, aprobadas y necesarias para continuidad",
+        "todo elemento debe conservar materialidad visible de papel, fibras, hilos y piezas artesanales",
+        "sin violencia o sexualidad explícitas",
+        "sin borde exterior, base, cartón, mesa ni estudio visibles; la escena continúa hasta los cuatro límites",
+        "profundidad 3D por capas físicas, aire, oclusiones, cantos internos y sombras reales; nunca collage plano",
+        "sin aura, chispas, runas, ojos luminosos o humo místico genérico",
+        "mostrar continuidad gesto-hilo-patas: un solo par de manos sobrias de papel cruza hilo en el telar y el mismo ritmo se reorganiza en una única araña pequeña de papel; sin desnudez, cuerpo completo, araña gigante o duplicada",
+        "tejido liso sin kanas, marcas claniles ni geometrías inventadas; cardón agrupado desde la base, nunca saguaro"
+      ],
+      "status": "prepared"
+    }
+  ]
+}

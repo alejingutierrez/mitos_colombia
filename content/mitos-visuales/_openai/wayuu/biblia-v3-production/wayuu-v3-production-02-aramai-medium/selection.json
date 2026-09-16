@@ -1,0 +1,117 @@
+{
+  "schema": "mitos-colombia-biblia-production-selection/v3",
+  "community": "Wayúu",
+  "myth_slug": "aramai",
+  "batch_id": "wayuu-v3-production-02-aramai-medium",
+  "status": "QA_PASS_AFTER_CORRECTIONS",
+  "reviewed_at": "2026-09-03",
+  "quality": "medium",
+  "generation_mode": "text_only_no_local_references",
+  "contact_sheet": "output/imagegen/wayuu-v3-production/aramai-selected-contact-sheet.jpeg",
+  "contact_sheet_sha256": "ca893819117e498420bb7eca1d371686f1b3cf6147685d401618ae832a163b23",
+  "batch_models": 7,
+  "selected_models": 7,
+  "pilot_models_for_myth": [
+    "mareiwa__presence_model",
+    "territorio_alta_guajira__environment_model",
+    "rancheria_wayuu__spatial_model"
+  ],
+  "myth_model_coverage": {
+    "selected": 10,
+    "required": 10,
+    "remaining": 0
+  },
+  "bible_progress_after_batch": {
+    "selected_models": 31,
+    "required_models": 265,
+    "remaining_models": 234
+  },
+  "selections": {
+    "aramai__identity_sheet": {
+      "status": "PASS_AFTER_CORRECTION_02",
+      "batch_id": "wayuu-v3-production-02-aramai-medium-corrections-02",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-02-aramai-medium-corrections-02/aramai__identity_sheet--canon.jpeg",
+      "sha256": "ec13d40a57184f34fa89e3c7d7546968134222f3cd8635d023f1c4e429fcc52a"
+    },
+    "aramai__state_sheet": {
+      "status": "PASS",
+      "batch_id": "wayuu-v3-production-02-aramai-medium",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-02-aramai-medium/aramai__state_sheet--estados.jpeg",
+      "sha256": "7bc748268912015495c336d6ac993acb872b788c4d1c15427adc3fe558faeaac"
+    },
+    "mareiwa__state_sheet": {
+      "status": "PASS",
+      "batch_id": "wayuu-v3-production-02-aramai-medium",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-02-aramai-medium/mareiwa__state_sheet--estados.jpeg",
+      "sha256": "8644c37d610930c79b789b7b9cd2ac1bcb0016baa11599ffc63917ef50c2b2fb"
+    },
+    "wanuru__presence_model": {
+      "status": "PASS_AFTER_CORRECTION_02",
+      "batch_id": "wayuu-v3-production-02-aramai-medium-corrections-02",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-02-aramai-medium-corrections-02/wanuru__presence_model--canon.jpeg",
+      "sha256": "c8406e27227a5dc245346be4465b977665190a4f5e89e12153545cb832a68f30"
+    },
+    "wanuru__state_sheet": {
+      "status": "PASS",
+      "batch_id": "wayuu-v3-production-02-aramai-medium",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-02-aramai-medium/wanuru__state_sheet--estados.jpeg",
+      "sha256": "3396142c7ff0487ffd3261e40a6001c7842b96a86a637ab90351167ed0738a19"
+    },
+    "epidemia_aramai__phenomenon_rule": {
+      "status": "PASS_AFTER_CORRECTION",
+      "batch_id": "wayuu-v3-production-02-aramai-medium-corrections-01",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-02-aramai-medium-corrections-01/epidemia_aramai__phenomenon_rule--canon.jpeg",
+      "sha256": "19f8905947cb9e407806da12899774c5e9ce0d3576304ef9e4ce9e92faf8d100"
+    },
+    "jaguey__spatial_model": {
+      "status": "PASS_AFTER_CORRECTION",
+      "batch_id": "wayuu-v3-production-02-aramai-medium-corrections-01",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-02-aramai-medium-corrections-01/jaguey__spatial_model--canon.jpeg",
+      "sha256": "4000944b67796537764030d9c65a5aec2e75ea0709a34b13e8bf3d07671ce9d7"
+    }
+  },
+  "rejections": [
+    {
+      "model_id": "aramai__identity_sheet",
+      "batch_id": "wayuu-v3-production-02-aramai-medium",
+      "reason": "REJECTED_GENERIC_ROUND_HUT_ARCHITECTURE",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-02-aramai-medium/aramai__identity_sheet--canon.jpeg",
+      "sha256": "2d94df4a6bb6cff612c61a6ca874714208fd686f36ebe47809b42408df0dfef1"
+    },
+    {
+      "model_id": "aramai__identity_sheet",
+      "batch_id": "wayuu-v3-production-02-aramai-medium-corrections-01",
+      "reason": "REJECTED_IDENTITY_CONTINUITY_FOOTWEAR",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-02-aramai-medium-corrections-01/aramai__identity_sheet--canon.jpeg",
+      "sha256": "253592f3387b5a84b0bffd8054c66706324ee5e35607d278035e010c5f5374f0"
+    },
+    {
+      "model_id": "wanuru__presence_model",
+      "batch_id": "wayuu-v3-production-02-aramai-medium",
+      "reason": "REJECTED_UNSUPPORTED_WATERBORNE_CAUSALITY",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-02-aramai-medium/wanuru__presence_model--canon.jpeg",
+      "sha256": "e8bcc8ac69c9c8afd2bfb0749e547a8f13a45a04a0666a116db679e5b83834b9"
+    },
+    {
+      "model_id": "wanuru__presence_model",
+      "batch_id": "wayuu-v3-production-02-aramai-medium-corrections-01",
+      "reason": "REJECTED_BRAIDED_SCALE_PATTERN",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-02-aramai-medium-corrections-01/wanuru__presence_model--canon.jpeg",
+      "sha256": "2e3c0cc0aa8cc4458ab0de955162d384dd4946e1fe1dec87f966f7c50f076e6d"
+    },
+    {
+      "model_id": "epidemia_aramai__phenomenon_rule",
+      "batch_id": "wayuu-v3-production-02-aramai-medium",
+      "reason": "REJECTED_CAUSAL_CONNECTOR_AND_GENERIC_ARCHITECTURE",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-02-aramai-medium/epidemia_aramai__phenomenon_rule--canon.jpeg",
+      "sha256": "eb4a283e7d9bae2fd87a8df906de66412efd024a87def9900072e9c46901af7c"
+    },
+    {
+      "model_id": "jaguey__spatial_model",
+      "batch_id": "wayuu-v3-production-02-aramai-medium",
+      "reason": "REJECTED_GENERIC_ROUND_HUT_ARCHITECTURE",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-02-aramai-medium/jaguey__spatial_model--canon.jpeg",
+      "sha256": "0254d619c5617f868ccc95428347fddf5893386b16b3843c6022a3827feb8d00"
+    }
+  ]
+}

@@ -1,0 +1,113 @@
+{
+  "schema": "mitos-triptych-iteration-audit/v1",
+  "audited_at": "2026-09-06T04:44:51.813Z",
+  "package_root": "content/mitos-visuales/_openai/wayuu/jirairay",
+  "scope": "Artefactos locales referidos por jobs.json, deduplicados por SHA-256; no mide llamadas fallidas sin imagen ni facturación de API.",
+  "unique_images": 4,
+  "by_act": {
+    "entrada": {
+      "unique_images": 2,
+      "preparation_rounds": 2,
+      "requested_alternatives": 0
+    },
+    "acto": {
+      "unique_images": 1,
+      "preparation_rounds": 1,
+      "requested_alternatives": 0
+    },
+    "huella": {
+      "unique_images": 1,
+      "preparation_rounds": 1,
+      "requested_alternatives": 0
+    }
+  },
+  "prepared_without_output": 0,
+  "duplicates": 0,
+  "rows": [
+    {
+      "batch_id": "wayuu-jirairay-triptych-01",
+      "prepared_at": "2026-09-06T04:38:24.500Z",
+      "act": "entrada",
+      "purpose": "generation_or_revision",
+      "manifest": "content/mitos-visuales/_openai/wayuu/jirairay/wayuu-jirairay-triptych-01/jobs.json",
+      "output": "output/imagegen/wayuu/triptychs/wayuu-jirairay-triptych-01/entrada.jpeg",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/jirairay/wayuu-jirairay-triptych-01/prompts/entrada.prompt.txt",
+      "requested_size": "1536x864",
+      "requested_quality": "high",
+      "visual_function": "narrative_scene",
+      "status": "unique_generated_artifact",
+      "sha256": "dc76aaeceefcfabbaf008ddfdf7ec588b7267b096d7457de97e37e9901c05b1c",
+      "duplicate_of": null,
+      "width": 1536,
+      "height": 864,
+      "size_matches_request": true,
+      "prompt_sha256": "b1684bd87b66d547593b9827b86f1f4dee830db2a7bfa5c505631c978d78ca99",
+      "prompt_hash_matches_manifest": true,
+      "prompt_integrity": "exact_bytes"
+    },
+    {
+      "batch_id": "wayuu-jirairay-triptych-01",
+      "prepared_at": "2026-09-06T04:38:24.500Z",
+      "act": "acto",
+      "purpose": "generation_or_revision",
+      "manifest": "content/mitos-visuales/_openai/wayuu/jirairay/wayuu-jirairay-triptych-01/jobs.json",
+      "output": "output/imagegen/wayuu/triptychs/wayuu-jirairay-triptych-01/acto.jpeg",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/jirairay/wayuu-jirairay-triptych-01/prompts/acto.prompt.txt",
+      "requested_size": "864x1536",
+      "requested_quality": "medium",
+      "visual_function": "narrative_scene",
+      "status": "unique_generated_artifact",
+      "sha256": "d269ab3242251137aadd1303c72216b0430f32f6628a4bc1d777183284aecbf8",
+      "duplicate_of": null,
+      "width": 864,
+      "height": 1536,
+      "size_matches_request": true,
+      "prompt_sha256": "bbc9decbb9a0035fb36a168514bb290d921b42ad214c986c7ad3df7ee302b870",
+      "prompt_hash_matches_manifest": true,
+      "prompt_integrity": "exact_bytes"
+    },
+    {
+      "batch_id": "wayuu-jirairay-triptych-01",
+      "prepared_at": "2026-09-06T04:38:24.500Z",
+      "act": "huella",
+      "purpose": "generation_or_revision",
+      "manifest": "content/mitos-visuales/_openai/wayuu/jirairay/wayuu-jirairay-triptych-01/jobs.json",
+      "output": "output/imagegen/wayuu/triptychs/wayuu-jirairay-triptych-01/huella.jpeg",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/jirairay/wayuu-jirairay-triptych-01/prompts/huella.prompt.txt",
+      "requested_size": "1024x1024",
+      "requested_quality": "medium",
+      "visual_function": "symbolic_synthesis",
+      "status": "unique_generated_artifact",
+      "sha256": "6ad1875a618d3ed3cab7dd82452f193413cd5660ae83c9df47f607b4bd11c1a3",
+      "duplicate_of": null,
+      "width": 1024,
+      "height": 1024,
+      "size_matches_request": true,
+      "prompt_sha256": "e93f8b6665ae3374721b6c62b0e8f7477291cb94b363fe925d39249245bbd3fe",
+      "prompt_hash_matches_manifest": true,
+      "prompt_integrity": "exact_bytes"
+    },
+    {
+      "batch_id": "wayuu-jirairay-triptych-02-entrada",
+      "prepared_at": "2026-09-06T04:42:06.011Z",
+      "act": "entrada",
+      "purpose": "generation_or_revision",
+      "manifest": "content/mitos-visuales/_openai/wayuu/jirairay/wayuu-jirairay-triptych-02-entrada/jobs.json",
+      "output": "output/imagegen/wayuu/triptychs/wayuu-jirairay-triptych-02-entrada/entrada.jpeg",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/jirairay/wayuu-jirairay-triptych-02-entrada/prompts/entrada.prompt.txt",
+      "requested_size": "1536x864",
+      "requested_quality": "high",
+      "visual_function": "narrative_scene",
+      "status": "unique_generated_artifact",
+      "sha256": "b15b70da6dba1e0a6644e8b90cea298b0c1ebd88d97b437b112e4a59ab4ff0c9",
+      "duplicate_of": null,
+      "width": 1536,
+      "height": 864,
+      "size_matches_request": true,
+      "prompt_sha256": "83718bf5f1760cf3cadc769c78dd88e19e52c578f22714afe623a2751cb424f2",
+      "prompt_hash_matches_manifest": true,
+      "prompt_integrity": "exact_bytes"
+    }
+  ]
+}
+

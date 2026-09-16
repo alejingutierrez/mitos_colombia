@@ -1,0 +1,49 @@
+{
+  "schema": "wayuu-triptych-browser-review/v1",
+  "reviewed_at": "2026-09-06T04:30:47.754Z",
+  "reviewer": "agent_direct_browser_and_screenshot_review",
+  "scope": "Sólo Los dos hermanos, ola 04; no acredita los 22 pendientes.",
+  "status": "passed_with_notes",
+  "viewports": [
+    1440,
+    390
+  ],
+  "console": {
+    "errors": 0,
+    "warnings": 2,
+    "notes": "Dos advertencias del mismo CSS precargado no utilizado inmediatamente; no errores de imágenes."
+  },
+  "notes": [
+    "La portada usa horizontal en escritorio y vertical en móvil; la horizontal se conserva dentro del relato en móvil.",
+    "Título superpuesto por la plantilla existente. Las escenas y el símbolo permanecen legibles."
+  ],
+  "myths": [
+    {
+      "slug": "los-dos-hermanos",
+      "url": "https://www.mitosdecolombia.com/mitos/los-dos-hermanos",
+      "publication_receipt": "content/mitos-visuales/production/wayuu-2026-09-05/publication-receipts/wayuu-wave-04/los-dos-hermanos.json",
+      "rendered_formats": [
+        "horizontal",
+        "vertical",
+        "cuadrada"
+      ],
+      "images_loaded": true,
+      "horizontal_overflow": false,
+      "captured_screenshots": [
+        "output/playwright/wayuu-campaign/hermanos-1440-0.png",
+        "output/playwright/wayuu-campaign/hermanos-1440-1.png",
+        "output/playwright/wayuu-campaign/hermanos-1440-2.png",
+        "output/playwright/wayuu-campaign/hermanos-390-0.png",
+        "output/playwright/wayuu-campaign/hermanos-390-1.png",
+        "output/playwright/wayuu-campaign/hermanos-390-2.png"
+      ],
+      "representative_screenshots_inspected": [
+        "output/playwright/wayuu-campaign/hermanos-1440-0.png",
+        "output/playwright/wayuu-campaign/hermanos-390-0.png",
+        "output/playwright/wayuu-campaign/hermanos-1440-2.png"
+      ],
+      "review": "La relación mula-perro-hermana queda visible en portada ancha; la ausencia del chinchorro y franja abierta se leen en móvil. Flecha circular legible a tamaño pequeño."
+    }
+  ]
+}
+

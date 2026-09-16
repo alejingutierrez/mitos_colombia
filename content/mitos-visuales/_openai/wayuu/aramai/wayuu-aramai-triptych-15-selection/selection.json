@@ -1,0 +1,102 @@
+{
+  "schema": "mitos-triptych-selection/v1",
+  "date": "2026-09-05",
+  "myth": "aramai",
+  "status": "COMPLETE_SET_PENDING_JOINT_EDITORIAL_REVIEW",
+  "completed_triptych_files": true,
+  "editorial_approval": null,
+  "production_ready": false,
+  "published": false,
+  "direction_decision": "Opciones 01 y 05 escogidas por el usuario; autorizado producir el primer tríptico completo.",
+  "narrative_snapshot": "content/mitos-visuales/research/aramai-narrative-2026-09-05.json",
+  "narrative_target_sha256": "a949509df6e51454154a33e3e11979dc5a236ea8065cc1af1aa3d2eba5a0db1d",
+  "general_process": "docs/prompting-realismo-magico.md",
+  "execution_doc": "docs/wayuu-tripticos-v1.5-completo.md",
+  "provider": "OpenAI API",
+  "model": "gpt-image-2",
+  "generation_mode": "text_only_no_local_references",
+  "image_uploads_made": false,
+  "selected": [
+    {
+      "act": "entrada",
+      "path": "output/imagegen/wayuu/triptychs/wayuu-aramai-triptych-15-selected/entrada.jpeg",
+      "source": "output/imagegen/wayuu/triptychs/wayuu-aramai-magic-14-options-01/01-la-noche-que-escucha.jpeg",
+      "source_manifest": "content/mitos-visuales/_openai/wayuu/aramai/wayuu-aramai-magic-14-options-01/jobs.json",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/aramai/wayuu-aramai-magic-14-options-01/prompts/01-la-noche-que-escucha.prompt.txt",
+      "prompt_sha256": "7fc7a443bc20e58d988160097577e0aabc2d3e98476b21cd61521201564e2c79",
+      "sha256": "42964c2bfc4d1fb2e7440ff069b609e71f2d5a06fa70bca9cfe8528a8e68c28c",
+      "width": 1536,
+      "height": 864,
+      "quality": "high",
+      "aspect_ratio": "16:9",
+      "reused": true
+    },
+    {
+      "act": "acto",
+      "path": "output/imagegen/wayuu/triptychs/wayuu-aramai-triptych-15-selected/acto.jpeg",
+      "source": "output/imagegen/wayuu/triptychs/wayuu-aramai-triptych-15-01/acto.jpeg",
+      "source_manifest": "content/mitos-visuales/_openai/wayuu/aramai/wayuu-aramai-triptych-15-01/jobs.json",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/aramai/wayuu-aramai-triptych-15-01/prompts/acto.prompt.txt",
+      "prompt_sha256": "8898e4dd2f724c58b6571e4d08e9bc07c82c3a3799a492dd9c6f0784f57beb02",
+      "sha256": "6c562c8d966918fe80ce4f62c697324caec4b34946bbac683f783b3f597128d4",
+      "width": 864,
+      "height": 1536,
+      "quality": "medium",
+      "aspect_ratio": "9:16",
+      "reused": false
+    },
+    {
+      "act": "huella",
+      "path": "output/imagegen/wayuu/triptychs/wayuu-aramai-triptych-15-selected/huella.jpeg",
+      "source": "output/imagegen/wayuu/triptychs/wayuu-aramai-triptych-15-huella-03/huella.jpeg",
+      "source_manifest": "content/mitos-visuales/_openai/wayuu/aramai/wayuu-aramai-triptych-15-huella-03/jobs.json",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/aramai/wayuu-aramai-triptych-15-huella-03/prompts/huella.prompt.txt",
+      "prompt_sha256": "cadf606adfaac1f3c6826afb16789b515285a03bf70ef3ace9ff01b8dca79a0b",
+      "sha256": "6f34b49b75d4c6bc553c528ca4547c069190ce769fda48ede375596918a3af20",
+      "width": 1024,
+      "height": 1024,
+      "quality": "medium",
+      "aspect_ratio": "1:1",
+      "reused": false
+    }
+  ],
+  "joint_review": {
+    "method": "Inspección directa del agente de las tres piezas, conservando juicio editorial del usuario pendiente; no QA independiente.",
+    "continuity": "Arámai mayor de cabello gris corto, Kemiisa arcilla y Kotin gris carbón, faja arena y sandalias; mujeres azul/arcilla, casas bajas y cardones. Figuras de papel con perfiles sobrios y capas espaciales.",
+    "arc": "Noche en la enramada de la petición; noche en interiores de varias casas mientras pide cese; noche y ausencia en el reflejo del jagüey junto al cuidado.",
+    "visible_checks": {
+      "entrada": "Se conserva sin editar la horizontal 01 que gustó al usuario. Día exterior y profundidad nocturna interna son inequívocos.",
+      "acto": "Arámai sentado, palma baja, dos mujeres en otro plano, tres umbrales nocturnos dentro de una ranchería diurna.",
+      "huella": "Tres personas reales, cero reflejos humanos; arquitectura y noche sí reflejadas. Arámai sirve agua, mujer mayor observa junto a chinchorro vacío. No se ven postes con travesaños."
+    },
+    "limitations": [
+      "La horizontal elegida conserva una figura doméstica adicional dentro de la enramada; no se identifica automáticamente como Mareiwa. El destinatario del gesto admite ambigüedad.",
+      "La altura de Arámai y el peso de la enramada de la horizontal exceden la guía de escala del plan nuevo; se prioriza la composición que el usuario escogió.",
+      "En el acto la dirección exacta de la súplica admite lectura hacia las casas, aunque su postura y la ausencia de conexión con el efecto descartan un rayo controlado.",
+      "El jagüey de la huella ocupa cerca de media imagen; se conserva orilla seca, pero su extensión es una decisión compositiva, no medida del agua disponible.",
+      "Los edificios y rostros reconstruidos desde texto mantienen rasgos generales, no identidad geométrica exacta entre píxeles."
+    ]
+  },
+  "not_selected": [
+    {
+      "path": "output/imagegen/wayuu/triptychs/wayuu-aramai-triptych-15-01/entrada.jpeg",
+      "reason": "Acercamiento mayor que la composición elegida; se recupera la opción 01 sin sobrescribir."
+    },
+    {
+      "path": "output/imagegen/wayuu/triptychs/wayuu-aramai-triptych-15-01/huella.jpeg",
+      "reason": "Reflejaba a las tres personas y perdía la ausencia prevista."
+    },
+    {
+      "path": "output/imagegen/wayuu/triptychs/wayuu-aramai-triptych-15-huella-02/huella.jpeg",
+      "reason": "Ausencia lograda, pero postes con travesaños no pedidos."
+    }
+  ],
+  "technical_checks": {
+    "source_prompt_hashes": true,
+    "copy_hashes": true,
+    "dimensions": true,
+    "quality_policy": true,
+    "tests_passed": 82
+  },
+  "scope": "No other myths generated; no Bible regenerated; no database or public image selection changed."
+}

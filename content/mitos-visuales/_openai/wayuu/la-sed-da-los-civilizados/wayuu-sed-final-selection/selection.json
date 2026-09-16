@@ -1,0 +1,139 @@
+{
+  "schema": "mitos-triptych-selection/v2",
+  "myth": "la-sed-da-los-civilizados",
+  "title": "La sed de los forasteros",
+  "created_at": "2026-09-06T15:41:29.386Z",
+  "status": "approved_for_publication_under_campaign_authorization",
+  "approval_basis": "Campaña completa autorizada por el usuario; selección del agente tras investigación e inspección directa de cada original.",
+  "campaign_scope": "content/mitos-visuales/production/wayuu-2026-09-05/scope.json",
+  "narrative_target_sha256": "201aebbdfc08bb25f1f5fbeab2f3ea5a57f1128a82df48e65cc1ae6f0a88bc3f",
+  "visual_memory_library": "content/mitos-visuales/wayuu.visual-memory.v1.json",
+  "visual_memory_review": {
+    "reviewer": "agent_direct_visual_review",
+    "reviewed_at": "2026-09-06T15:32:21.946Z",
+    "reviewed_reference_ids": [
+      "1b43dcc08b673fa8230a",
+      "98b01b8a5635628fe315"
+    ],
+    "retained": [
+      "Estratos de papel y contraste entre amarillos/ocres cálidos y azules fríos.",
+      "Dos figuras diferenciadas vinculadas al paisaje; quietud del desenlace."
+    ],
+    "rejected": [
+      "Figura sobrenatural femenina, rostro en árbol y espirales de viento no descritos por la fuente.",
+      "Árbol monumental tropical, vegetación exuberante, grandes discos solares y escenografía monumental.",
+      "Rostros volumétricos, estatuas genéricas y falta de la carga de panela."
+    ],
+    "influence_by_act": {
+      "entrada": "Abrir la llanura y conservar contraste cromático; dos comerciantes y sus cargas, cuyas sombras de vasija expresan sed sin añadir vasijas reales.",
+      "acto": "Pasar de estatuas bajo un árbol mágico a transformación material de ropa en terreno, con los dos comerciantes pequeños y sin agente sobrenatural visible.",
+      "huella": "Condensar ámbar y azul en una panela con vacío de gota; sin paisaje ni cuerpos."
+    }
+  },
+  "selected": [
+    {
+      "act": "entrada",
+      "path": "output/imagegen/wayuu/triptychs/wayuu-sed-triptych-02-hs/entrada.jpeg",
+      "sha256": "98f23cd7da709af4b16fbe2959bcb8e8526a0f345bea0d79262470086151f2f1",
+      "width": 1536,
+      "height": 864,
+      "quality": "high",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/la-sed-da-los-civilizados/wayuu-sed-triptych-02-hs/prompts/entrada.prompt.txt",
+      "prompt_sha256": "dbd0d20a6c0d37ece56b2a1144ad7365eed6c513df37091afe99410d19340c9e",
+      "visual_function": "narrative_scene",
+      "review": {
+        "observed": "Dos comerciantes enteros de prendas y tocados distintos, dos bultos de panela y dos sombras de vasija conectadas a las cargas; no hay vasijas físicas. Figuras a la derecha, amplio vacío a izquierda; horizonte de planos de papel y rostros mínimos.",
+        "limits": [
+          "Las figuras rondan un cuarto del alto, más que el octavo pedido; la composición mantiene distancia y reserva de título suficiente.",
+          "Sombras imposibles son metáfora de necesidad de agua, no motivo tradicional documentado.",
+          "Identidad facial poco detallada por escala y orientación; no se inventa etnia."
+        ]
+      }
+    },
+    {
+      "act": "acto",
+      "path": "output/imagegen/wayuu/triptychs/wayuu-sed-triptych-01/acto.jpeg",
+      "sha256": "72bc023f14404a728c68ab42aa0facd472f7f552e2bf525109124d9517be90ad",
+      "width": 864,
+      "height": 1536,
+      "quality": "medium",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/la-sed-da-los-civilizados/wayuu-sed-triptych-01/prompts/acto.prompt.txt",
+      "prompt_sha256": "3f861f3023d7647c9043512d59e421db5348e7d759a184e3c1f689a190033d0d",
+      "visual_function": "narrative_scene",
+      "review": {
+        "observed": "Dos hombres en posturas de reposo diferenciadas; pliegues carbón/ocre y terracota/azul continúan en estratos del suelo. Caras de papel mínimas, prendas y calzado, dos cargas cercanas, sin dolor, cadáver o deidad. Profundidad de papel y tercio inferior disponible.",
+        "limits": [
+          "Metamorfosis por continuidad de pliegues, no una vista literal del lugar actual ni reconstrucción arqueológica.",
+          "El embalaje queda cerca de ambos bordes laterales; los personajes y bloques visibles están completos.",
+          "La composición privilegia transición material sobre anatomía de estatuas acabadas."
+        ]
+      }
+    },
+    {
+      "act": "huella",
+      "path": "output/imagegen/wayuu/triptychs/wayuu-sed-triptych-02-hs/huella.jpeg",
+      "sha256": "0ec4625238ddc7fe0b6676533f94862cc6e8ad2e888e35e636b91a644458dddb",
+      "width": 1024,
+      "height": 1024,
+      "quality": "medium",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/la-sed-da-los-civilizados/wayuu-sed-triptych-02-hs/prompts/huella.prompt.txt",
+      "prompt_sha256": "3c987767a62aa97970b6aa5d488a5d58ddb24be1e3377ce36b9d51ec7ff286a2",
+      "visual_function": "symbolic_synthesis",
+      "review": {
+        "observed": "Una representación de panela en capas de papel ocre, cavidad pasante de gota e índigo seco visible por dentro. Cantos, fibras y sombras propios; sin líquido, marca, escena o soporte exterior.",
+        "limits": [
+          "El referente de panela depende también del contexto del mito; la síntesis no es fotografía de alimento.",
+          "Gota vacía es signo editorial, no diseño tradicional atribuido a la comunidad."
+        ]
+      }
+    }
+  ],
+  "generation": {
+    "provider": "OpenAI API",
+    "model": "gpt-image-2",
+    "mode": "text_only_no_local_references",
+    "unique_images": 5,
+    "by_act": {
+      "entrada": {
+        "unique_images": 2,
+        "preparation_rounds": 2,
+        "requested_alternatives": 0
+      },
+      "acto": {
+        "unique_images": 1,
+        "preparation_rounds": 1,
+        "requested_alternatives": 0
+      },
+      "huella": {
+        "unique_images": 2,
+        "preparation_rounds": 2,
+        "requested_alternatives": 0
+      }
+    },
+    "corrections": 2,
+    "cli_seconds": {
+      "entrada_01": 85.3,
+      "acto_01": 37.6,
+      "huella_01": 43.3,
+      "entrada_02": 82.5,
+      "huella_02": 40.2
+    },
+    "cost": null,
+    "request_ids": null
+  },
+  "excluded": [
+    {
+      "act": "entrada",
+      "path": "output/imagegen/wayuu/triptychs/wayuu-sed-triptych-01/entrada.jpeg",
+      "sha256": "0842790d035f2cdcf09020e11aa6ef2545cff04eb0bd81e0050088613717fed9",
+      "reason": "Personajes demasiado grandes y gorra convertida en sombrero con ala circular."
+    },
+    {
+      "act": "huella",
+      "path": "output/imagegen/wayuu/triptychs/wayuu-sed-triptych-01/huella.jpeg",
+      "sha256": "463350294a42857eff04e4aae5e58134080db6cdd020f4ba9bfd6e12bd5ac673",
+      "reason": "Superficie de panela fotográfica; insuficiente materialidad de papel."
+    }
+  ],
+  "published": false
+}

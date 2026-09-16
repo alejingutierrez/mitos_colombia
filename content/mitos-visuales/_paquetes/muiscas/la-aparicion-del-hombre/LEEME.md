@@ -1,6 +1,6 @@
 # La aparición de los primeros seres humanos · la-aparicion-del-hombre
 
-**Modelo:** GPT Image 2 · **Resolución:** 2K · **Calidad:** high · **Unlimited ON**
+**Política vigente si se reanuda:** GPT Image 2 · entrada horizontal `high`; acto vertical y huella cuadrada `medium`. Este paquete histórico no autoriza `high` global.
 
 **Arco:** los dos caciques deciden en la oscuridad (entrada) -> modelan la humanidad a tientas (acto) -> quedan las huellas húmedas del primer paso (huella)
 

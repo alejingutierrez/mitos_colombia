@@ -1,0 +1,356 @@
+{
+  "schema": "mitos-colombia-biblia-production-selection/v3",
+  "community": "Wayúu",
+  "myth_slug": "el-origen-del-fuego",
+  "batch_id": "wayuu-v3-production-15-el-origen-del-fuego-medium",
+  "status": "QA_PASS_AFTER_RESEARCH_AND_CORRECTIONS_02",
+  "reviewed_at": "2026-09-03",
+  "quality": "medium",
+  "generation_mode": "text_only_no_local_references",
+  "contact_sheet": "output/imagegen/wayuu-v3-production/el-origen-del-fuego-selected-contact-sheet.jpeg",
+  "contact_sheet_sha256": "2453895d4d3e3d86639e05858f51cdd387d7d008dc653fa94d699df8062b9790",
+  "batch_models": 32,
+  "selected_models": 32,
+  "approved_models_reused_for_myth": [
+    "kai_sol__presence_model",
+    "mareiwa__presence_model",
+    "mareiwa__state_sheet",
+    "fuego_compartido__phenomenon_rule",
+    "fogon_primero__object_sheet",
+    "rancheria_wayuu__spatial_model",
+    "territorio_alta_guajira__environment_model"
+  ],
+  "myth_model_coverage": {
+    "selected": 39,
+    "required": 39,
+    "remaining": 0
+  },
+  "bible_progress_after_batch": {
+    "selected_models": 164,
+    "required_models": 296,
+    "remaining_models": 132
+  },
+  "completed_myths_after_batch": 15,
+  "selections": {
+    "siki__identity_sheet": {
+      "status": "PASS_AFTER_CORRECTION_02",
+      "batch_id": "wayuu-v3-production-15-el-origen-del-fuego-medium-corrections-02",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-15-el-origen-del-fuego-medium-corrections-02/siki__identity_sheet--canon.jpeg",
+      "sha256": "8887ff91c3cebd2cc5b5e748a293716137ef64e439b1ed938a08d29b9d20a46c"
+    },
+    "siki__state_sheet": {
+      "status": "PASS_AFTER_CORRECTION_01",
+      "batch_id": "wayuu-v3-production-15-el-origen-del-fuego-medium-corrections-01",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-15-el-origen-del-fuego-medium-corrections-01/siki__state_sheet--estados.jpeg",
+      "sha256": "296ce98841452bbee925168734dfbd7de4d20457109938c8352e2a3c2b8cf72c"
+    },
+    "mujer_siki__identity_sheet": {
+      "status": "PASS",
+      "batch_id": "wayuu-v3-production-15-el-origen-del-fuego-medium",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-15-el-origen-del-fuego-medium/mujer_siki__identity_sheet--canon.jpeg",
+      "sha256": "05df9c4fe8d771f1cb8640f244ab29bfc040159f4073d81cfc10ccb19004ea6b"
+    },
+    "mujer_siki__state_sheet": {
+      "status": "PASS",
+      "batch_id": "wayuu-v3-production-15-el-origen-del-fuego-medium",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-15-el-origen-del-fuego-medium/mujer_siki__state_sheet--estados.jpeg",
+      "sha256": "c82faf0f3ff278e678e7243b51550297a6aa5a5b08fe68be17e96f805ef0e47a"
+    },
+    "suegra_siki__identity_sheet": {
+      "status": "PASS",
+      "batch_id": "wayuu-v3-production-15-el-origen-del-fuego-medium",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-15-el-origen-del-fuego-medium/suegra_siki__identity_sheet--canon.jpeg",
+      "sha256": "3afdca2836014a8d5173e87f93f8e79a74d09b05f3cd338267536ed0d28026ed"
+    },
+    "suegra_siki__state_sheet": {
+      "status": "PASS",
+      "batch_id": "wayuu-v3-production-15-el-origen-del-fuego-medium",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-15-el-origen-del-fuego-medium/suegra_siki__state_sheet--estados.jpeg",
+      "sha256": "3d0062bf5c24c42f23d626cc7de1f7d06a782d3860ac4be99d7f3c205240691b"
+    },
+    "senores_wunaapu__group_grammar": {
+      "status": "PASS_AFTER_CORRECTION_01",
+      "batch_id": "wayuu-v3-production-15-el-origen-del-fuego-medium-corrections-01",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-15-el-origen-del-fuego-medium-corrections-01/senores_wunaapu__group_grammar--canon.jpeg",
+      "sha256": "1705e7c9107e15d89749b378aebd5fb37cc8a530357ad42558bdf78d8d244ec1"
+    },
+    "senores_wunaapu__state_sheet": {
+      "status": "PASS_AFTER_CORRECTION_02",
+      "batch_id": "wayuu-v3-production-15-el-origen-del-fuego-medium-corrections-02",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-15-el-origen-del-fuego-medium-corrections-02/senores_wunaapu__state_sheet--estados.jpeg",
+      "sha256": "5703fed4ec0ee41c200b7def55ab16de2ce98f38307562117cb1777c8fa3ff8c"
+    },
+    "mouwa_fuego__identity_sheet": {
+      "status": "PASS",
+      "batch_id": "wayuu-v3-production-15-el-origen-del-fuego-medium",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-15-el-origen-del-fuego-medium/mouwa_fuego__identity_sheet--canon.jpeg",
+      "sha256": "16ce8f1799b10042ce6dff9572315197fa0fee69543d6d4d66b87dd1fae14bbb"
+    },
+    "jamu_hambre__presence_model": {
+      "status": "PASS_AFTER_CORRECTION_02",
+      "batch_id": "wayuu-v3-production-15-el-origen-del-fuego-medium-corrections-02",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-15-el-origen-del-fuego-medium-corrections-02/jamu_hambre__presence_model--canon.jpeg",
+      "sha256": "94e62eeb8b14a747932e8747035d83e29e0aa3983afa394dc552470489727282"
+    },
+    "pala_maravillosa_siki__object_sheet": {
+      "status": "PASS",
+      "batch_id": "wayuu-v3-production-15-el-origen-del-fuego-medium",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-15-el-origen-del-fuego-medium/pala_maravillosa_siki__object_sheet--canon.jpeg",
+      "sha256": "3e92473ac93add2294d2c201670c2e01c018c0c1586b429080d43f91fe5300c5"
+    },
+    "huerta_siki__spatial_model": {
+      "status": "PASS",
+      "batch_id": "wayuu-v3-production-15-el-origen-del-fuego-medium",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-15-el-origen-del-fuego-medium/huerta_siki__spatial_model--canon.jpeg",
+      "sha256": "c8761a752d138a471836dca1a0a85cc84cc35254ba0c7b9c5a26566868355a31"
+    },
+    "cultivos_huerta_siki__object_sheet": {
+      "status": "PASS",
+      "batch_id": "wayuu-v3-production-15-el-origen-del-fuego-medium",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-15-el-origen-del-fuego-medium/cultivos_huerta_siki__object_sheet--canon.jpeg",
+      "sha256": "d56d35c443421c646fe30888a2cea70bead6a405b321b18655e97ede55271317"
+    },
+    "junuunay__identity_sheet": {
+      "status": "PASS_AFTER_CORRECTION_01",
+      "batch_id": "wayuu-v3-production-15-el-origen-del-fuego-medium-corrections-01",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-15-el-origen-del-fuego-medium-corrections-01/junuunay__identity_sheet--canon.jpeg",
+      "sha256": "c27d854a78c4fdae26b8156bc1ca484cf4781abda5c6707326d8980b8a6e42cb"
+    },
+    "junuunay__state_sheet": {
+      "status": "PASS_AFTER_CORRECTION_01",
+      "batch_id": "wayuu-v3-production-15-el-origen-del-fuego-medium-corrections-01",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-15-el-origen-del-fuego-medium-corrections-01/junuunay__state_sheet--estados.jpeg",
+      "sha256": "b74ed2c9b4699d5ed9dad31e286238017ef210f6a235ad84501a867d56bc25d6"
+    },
+    "kenaa_fuego__identity_sheet": {
+      "status": "PASS",
+      "batch_id": "wayuu-v3-production-15-el-origen-del-fuego-medium",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-15-el-origen-del-fuego-medium/kenaa_fuego__identity_sheet--canon.jpeg",
+      "sha256": "b7ab9e249bd60616c4fffbb64b6bbcd7a3037567db737d88af59058967dcea19"
+    },
+    "kenaa_fuego__state_sheet": {
+      "status": "PASS_AFTER_CORRECTION_01",
+      "batch_id": "wayuu-v3-production-15-el-origen-del-fuego-medium-corrections-01",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-15-el-origen-del-fuego-medium-corrections-01/kenaa_fuego__state_sheet--estados.jpeg",
+      "sha256": "fbcd82776f36a4b3643c5a503a6ba126119dc7daf60c19d9180b1c84dc5a0132"
+    },
+    "jimut_cigarron__identity_sheet": {
+      "status": "PASS",
+      "batch_id": "wayuu-v3-production-15-el-origen-del-fuego-medium",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-15-el-origen-del-fuego-medium/jimut_cigarron__identity_sheet--canon.jpeg",
+      "sha256": "c7bbe21f10afeacf54e5ec1c6c5d3b7672345a8c2595d1ff56b9cdf666b7f8fc"
+    },
+    "serumaa_sikiyuu__identity_sheet": {
+      "status": "PASS",
+      "batch_id": "wayuu-v3-production-15-el-origen-del-fuego-medium",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-15-el-origen-del-fuego-medium/serumaa_sikiyuu__identity_sheet--canon.jpeg",
+      "sha256": "2c586a0d14dd360570efd7ca643a28adcb8de2b471ae710c6c8cba90924c340f"
+    },
+    "serumaa_sikiyuu__state_sheet": {
+      "status": "PASS",
+      "batch_id": "wayuu-v3-production-15-el-origen-del-fuego-medium",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-15-el-origen-del-fuego-medium/serumaa_sikiyuu__state_sheet--estados.jpeg",
+      "sha256": "d6c34c59a3b468873ee079b2ba02af75aeaa511448407cd81e0839ed00e6c2ed"
+    },
+    "humanidad_sin_fuego__group_grammar": {
+      "status": "PASS_AFTER_CORRECTION_01",
+      "batch_id": "wayuu-v3-production-15-el-origen-del-fuego-medium-corrections-01",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-15-el-origen-del-fuego-medium-corrections-01/humanidad_sin_fuego__group_grammar--canon.jpeg",
+      "sha256": "92d5194648a0042ec98e9cc9215c5531917a7b26a3b478cc59d612a0b74d9e99"
+    },
+    "gruta_fuego_maleiwa__spatial_model": {
+      "status": "PASS_AFTER_CORRECTION_02",
+      "batch_id": "wayuu-v3-production-15-el-origen-del-fuego-medium-corrections-02",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-15-el-origen-del-fuego-medium-corrections-02/gruta_fuego_maleiwa__spatial_model--canon.jpeg",
+      "sha256": "7169ee3527ec20fcba02723421fb5a573a25cd2c0ac13c4d37a5de9696ba30c2"
+    },
+    "brasas_morral_junuunay__object_sheet": {
+      "status": "PASS",
+      "batch_id": "wayuu-v3-production-15-el-origen-del-fuego-medium",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-15-el-origen-del-fuego-medium/brasas_morral_junuunay__object_sheet--canon.jpeg",
+      "sha256": "934aa8eb17d99d86b5a8a20c5b310e22205efea08f1c266d7e07b294dce4a5d0"
+    },
+    "noche_revela_kenaa__phenomenon_rule": {
+      "status": "PASS",
+      "batch_id": "wayuu-v3-production-15-el-origen-del-fuego-medium",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-15-el-origen-del-fuego-medium/noche_revela_kenaa__phenomenon_rule--canon.jpeg",
+      "sha256": "432e60fdb5a801aa0a97c964401f252c5acbf245dd54b20d58eabe64a7719b04"
+    },
+    "caujaro_koushot__botanical_sheet": {
+      "status": "PASS",
+      "batch_id": "wayuu-v3-production-15-el-origen-del-fuego-medium",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-15-el-origen-del-fuego-medium/caujaro_koushot__botanical_sheet--canon.jpeg",
+      "sha256": "ff876cfcddc101272ebfa3ab7599faecb22a30d38f6827b268ef28b97b651bdb"
+    },
+    "kasemashi__identity_sheet": {
+      "status": "PASS_AFTER_CORRECTION_01",
+      "batch_id": "wayuu-v3-production-15-el-origen-del-fuego-medium-corrections-01",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-15-el-origen-del-fuego-medium-corrections-01/kasemashi__identity_sheet--canon.jpeg",
+      "sha256": "55a76f491df9850ad46fd49830bc46ffbd814c4f3b787afc68a926d36439bb60"
+    },
+    "kasemashi__state_sheet": {
+      "status": "PASS_AFTER_CORRECTION_01",
+      "batch_id": "wayuu-v3-production-15-el-origen-del-fuego-medium-corrections-01",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-15-el-origen-del-fuego-medium-corrections-01/kasemashi__state_sheet--estados.jpeg",
+      "sha256": "48e8195bd8825efc215685c0506bbfc8b3368dbb5c38cbf669b8b02b77026310"
+    },
+    "maleiwa_viejo_fuego__identity_sheet": {
+      "status": "PASS",
+      "batch_id": "wayuu-v3-production-15-el-origen-del-fuego-medium",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-15-el-origen-del-fuego-medium/maleiwa_viejo_fuego__identity_sheet--canon.jpeg",
+      "sha256": "105781ed278b0f19f065d85336e578b1808c48583b133b2c6241fa0845dd0e14"
+    },
+    "flecha_meteoro_awaalas__phenomenon_rule": {
+      "status": "PASS_AFTER_CORRECTION_01",
+      "batch_id": "wayuu-v3-production-15-el-origen-del-fuego-medium-corrections-01",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-15-el-origen-del-fuego-medium-corrections-01/flecha_meteoro_awaalas__phenomenon_rule--canon.jpeg",
+      "sha256": "c04f5f2241d085bf77708a4c42a60bb5ca658f09cb225826d7e63d6b95890b8d"
+    },
+    "piedras_puloi_fuego__spatial_model": {
+      "status": "PASS",
+      "batch_id": "wayuu-v3-production-15-el-origen-del-fuego-medium",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-15-el-origen-del-fuego-medium/piedras_puloi_fuego__spatial_model--canon.jpeg",
+      "sha256": "273cd5bf3bb33ff2767643a8a9dc3f3f7028922b49188ba49adb0caef8bcf9f9"
+    },
+    "maayui_ulapiuy__group_grammar": {
+      "status": "PASS_AFTER_CORRECTION_01",
+      "batch_id": "wayuu-v3-production-15-el-origen-del-fuego-medium-corrections-01",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-15-el-origen-del-fuego-medium-corrections-01/maayui_ulapiuy__group_grammar--canon.jpeg",
+      "sha256": "e105470c03106502efa1ea1ac2dcea8f7d14603f93b8ad7cb685365ca2dfef90"
+    },
+    "varitas_friccion__object_sheet": {
+      "status": "PASS",
+      "batch_id": "wayuu-v3-production-15-el-origen-del-fuego-medium",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-15-el-origen-del-fuego-medium/varitas_friccion__object_sheet--canon.jpeg",
+      "sha256": "a94532b234b07e1d8165ed27e5ced858d31d87654fcd61adc453a99830e7023f"
+    }
+  },
+  "rejections": [
+    {
+      "model_id": "siki__identity_sheet",
+      "batch_id": "wayuu-v3-production-15-el-origen-del-fuego-medium",
+      "reason": "REJECTED_KEMIISA_BECAME_CALF_LENGTH_GENERIC_TUNIC_AND_SUPPORT_SHOWED_INVENTED_PATTERN",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-15-el-origen-del-fuego-medium/siki__identity_sheet--canon.jpeg",
+      "sha256": "2c53f483b61c6e59ef0dbd00788f16d7882547b3e3c64342a9ac8c5db7b49d78"
+    },
+    {
+      "model_id": "siki__state_sheet",
+      "batch_id": "wayuu-v3-production-15-el-origen-del-fuego-medium",
+      "reason": "REJECTED_KEMIISA_BECAME_CALF_LENGTH_GENERIC_TUNIC",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-15-el-origen-del-fuego-medium/siki__state_sheet--estados.jpeg",
+      "sha256": "4634803c77ced295f33021ddb1029e6dc4459487102df165aa8fdc56c5ce0fb3"
+    },
+    {
+      "model_id": "senores_wunaapu__group_grammar",
+      "batch_id": "wayuu-v3-production-15-el-origen-del-fuego-medium",
+      "reason": "REJECTED_INVENTED_GEOMETRIC_PATTERNS_ON_GARMENTS_BAGS_AND_TOOLS",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-15-el-origen-del-fuego-medium/senores_wunaapu__group_grammar--canon.jpeg",
+      "sha256": "b8a2778a8047fd21bb01184c3a8b94351004fbc460021d60f09a790725ee16e2"
+    },
+    {
+      "model_id": "senores_wunaapu__state_sheet",
+      "batch_id": "wayuu-v3-production-15-el-origen-del-fuego-medium",
+      "reason": "REJECTED_DEER_REPLACED_SAINO_BACHACO_AND_ANT_WERE_NOT_DISTINCT_AND_TEXTILE_PATTERNS_APPEARED",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-15-el-origen-del-fuego-medium/senores_wunaapu__state_sheet--estados.jpeg",
+      "sha256": "506db501621cca2bbfec66c8f47de3f35136cde97bfa7216dbc4cccaab83b21b"
+    },
+    {
+      "model_id": "jamu_hambre__presence_model",
+      "batch_id": "wayuu-v3-production-15-el-origen-del-fuego-medium",
+      "reason": "REJECTED_GENERIC_HUT_AND_SAGUARO_LIKE_CACTUS_ADDED",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-15-el-origen-del-fuego-medium/jamu_hambre__presence_model--canon.jpeg",
+      "sha256": "c3bb410ad9587d245c6c38d4b129fb39d53a64fb79663cb85f605d00be4182e3"
+    },
+    {
+      "model_id": "junuunay__identity_sheet",
+      "batch_id": "wayuu-v3-production-15-el-origen-del-fuego-medium",
+      "reason": "REJECTED_KEMIISA_BECAME_CALF_LENGTH_GENERIC_TUNIC",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-15-el-origen-del-fuego-medium/junuunay__identity_sheet--canon.jpeg",
+      "sha256": "87d26a46410d1a9a5c0db4590b0342984a3d36d5d21af828596d754e03b531ca"
+    },
+    {
+      "model_id": "junuunay__state_sheet",
+      "batch_id": "wayuu-v3-production-15-el-origen-del-fuego-medium",
+      "reason": "REJECTED_KEMIISA_BECAME_CALF_LENGTH_GENERIC_TUNIC",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-15-el-origen-del-fuego-medium/junuunay__state_sheet--estados.jpeg",
+      "sha256": "8e53f168b9a3e238ac9d7e42752290910f29f56b803d7fa6d2bc45f9ac7a40ed"
+    },
+    {
+      "model_id": "kenaa_fuego__state_sheet",
+      "batch_id": "wayuu-v3-production-15-el-origen-del-fuego-medium",
+      "reason": "REJECTED_INVENTED_PATTERNED_CROSSBODY_BAG",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-15-el-origen-del-fuego-medium/kenaa_fuego__state_sheet--estados.jpeg",
+      "sha256": "73d55306f9bbfe9d90369a319f5c0cba6e09531af6e141be27c829a43bab2b86"
+    },
+    {
+      "model_id": "humanidad_sin_fuego__group_grammar",
+      "batch_id": "wayuu-v3-production-15-el-origen-del-fuego-medium",
+      "reason": "REJECTED_INVENTED_CHEST_EMBROIDERY_AND_PATTERNED_STRAPS",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-15-el-origen-del-fuego-medium/humanidad_sin_fuego__group_grammar--canon.jpeg",
+      "sha256": "cfb9667eda18574db1979d608692a3dc10988d5e119efad292493f2ee1ac7d7b"
+    },
+    {
+      "model_id": "gruta_fuego_maleiwa__spatial_model",
+      "batch_id": "wayuu-v3-production-15-el-origen-del-fuego-medium",
+      "reason": "REJECTED_EIGHT_HOT_STONES_INSTEAD_OF_SEVEN",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-15-el-origen-del-fuego-medium/gruta_fuego_maleiwa__spatial_model--canon.jpeg",
+      "sha256": "1784120022b8c102578585dea3752992c226e75442f5bb8a30f1c3e6284e9217"
+    },
+    {
+      "model_id": "kasemashi__identity_sheet",
+      "batch_id": "wayuu-v3-production-15-el-origen-del-fuego-medium",
+      "reason": "REJECTED_INVENTED_GEOMETRIC_BAND_ON_WOM",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-15-el-origen-del-fuego-medium/kasemashi__identity_sheet--canon.jpeg",
+      "sha256": "f364e4dfe4b91584723d8f87336ca182bf3eec4318a0b35ad9b58e4bfdf23de6"
+    },
+    {
+      "model_id": "kasemashi__state_sheet",
+      "batch_id": "wayuu-v3-production-15-el-origen-del-fuego-medium",
+      "reason": "REJECTED_INVENTED_GEOMETRIC_BAND_ON_WOM",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-15-el-origen-del-fuego-medium/kasemashi__state_sheet--estados.jpeg",
+      "sha256": "186df7523e69dbc301ffe7ae48b0fab911c11ca57886295aa4764bbfc3f449a5"
+    },
+    {
+      "model_id": "flecha_meteoro_awaalas__phenomenon_rule",
+      "batch_id": "wayuu-v3-production-15-el-origen-del-fuego-medium",
+      "reason": "REJECTED_MORE_THAN_ONE_ARROW_VISIBLE",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-15-el-origen-del-fuego-medium/flecha_meteoro_awaalas__phenomenon_rule--canon.jpeg",
+      "sha256": "e53f82fea78f6e141e93921607db063e1fed8f981cfb2411863c6a663f7089ec"
+    },
+    {
+      "model_id": "maayui_ulapiuy__group_grammar",
+      "batch_id": "wayuu-v3-production-15-el-origen-del-fuego-medium",
+      "reason": "REJECTED_INVENTED_PATTERNED_STRAPS_AND_EDGING",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-15-el-origen-del-fuego-medium/maayui_ulapiuy__group_grammar--canon.jpeg",
+      "sha256": "d143025bed0230b7acef5eabaa9d1320cc745c4db1664e0bdadb9b93f2f86943"
+    },
+    {
+      "model_id": "siki__identity_sheet",
+      "batch_id": "wayuu-v3-production-15-el-origen-del-fuego-medium-corrections-01",
+      "reason": "REJECTED_UNDOCUMENTED_TROUSERS_ADDED_UNDER_WUSI_AND_CONTINUITY_DIVERGED",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-15-el-origen-del-fuego-medium-corrections-01/siki__identity_sheet--canon.jpeg",
+      "sha256": "112b6ea0ba55c4e1eac10c92d9502c5cfa8438d6dd51cdfafdd84ccc257e7abb"
+    },
+    {
+      "model_id": "senores_wunaapu__state_sheet",
+      "batch_id": "wayuu-v3-production-15-el-origen-del-fuego-medium-corrections-01",
+      "reason": "REJECTED_BACHACO_AND_COMMON_ANT_NOT_DISTINCT_AND_SAINO_LIKE_MAMMAL_DUPLICATED",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-15-el-origen-del-fuego-medium-corrections-01/senores_wunaapu__state_sheet--estados.jpeg",
+      "sha256": "e43293b41d67bb75c6635a1e47310005ee82abaa3d581854fc24d636cac345bb"
+    },
+    {
+      "model_id": "jamu_hambre__presence_model",
+      "batch_id": "wayuu-v3-production-15-el-origen-del-fuego-medium-corrections-01",
+      "reason": "REJECTED_REQUIRED_CAUJARO_ABSENT_AND_MONUMENTAL_MESA_SUBSTITUTED_DESTINATION",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-15-el-origen-del-fuego-medium-corrections-01/jamu_hambre__presence_model--canon.jpeg",
+      "sha256": "73d34ea7b98291e7b0d343767d1021d8e9bc633f2569bec281b623dcb86b629e"
+    },
+    {
+      "model_id": "gruta_fuego_maleiwa__spatial_model",
+      "batch_id": "wayuu-v3-production-15-el-origen-del-fuego-medium-corrections-01",
+      "reason": "REJECTED_EIGHT_HOT_STONES_INSTEAD_OF_SEVEN",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-15-el-origen-del-fuego-medium-corrections-01/gruta_fuego_maleiwa__spatial_model--canon.jpeg",
+      "sha256": "2b9ddc5bd47a82bd8619573bcc088b3fc8e88d76d432ef1bed6df08435386fd0"
+    }
+  ]
+}

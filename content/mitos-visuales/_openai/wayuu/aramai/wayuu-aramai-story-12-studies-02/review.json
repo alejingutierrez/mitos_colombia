@@ -1,0 +1,81 @@
+{
+  "schema": "mitos-triptych-studies-review/v1",
+  "date": "2026-09-05",
+  "myth": "aramai",
+  "status": "direction_study_editorial_review",
+  "narrative_snapshot": "content/mitos-visuales/research/aramai-narrative-2026-09-05.json",
+  "target_content_sha256": "a949509df6e51454154a33e3e11979dc5a236ea8065cc1af1aa3d2eba5a0db1d",
+  "provider": "OpenAI API",
+  "model": "gpt-image-2",
+  "generation_mode": "text_only_no_local_references",
+  "editorial_approval": null,
+  "production_ready": false,
+  "completed_triptych": false,
+  "candidate": {
+    "batch_id": "wayuu-aramai-story-12-studies-02",
+    "act": "huella",
+    "path": "output/imagegen/wayuu/triptychs/wayuu-aramai-story-12-studies-02/huella.jpeg",
+    "size": "1024x1024",
+    "quality": "medium",
+    "sha256": "7a49c6ec870513630838f2a7a374875927a0e3ae2d6fb1b422cfaed415acf487",
+    "prompt_file": "content/mitos-visuales/_openai/wayuu/aramai/wayuu-aramai-story-12-studies-02/prompts/huella.prompt.txt",
+    "prompt_sha256": "a4b389418e6208cecc3fdc36d77285c07132b8cc30cd4ef5d22b4aa183fc535e",
+    "status": "PROMISING_DIRECTION_STUDY_NOT_FINAL",
+    "visible_observations": [
+      "Arámai vierte agua y mira a la mujer que sostiene el cuenco.",
+      "La otra mujer orienta mano y mirada hacia la zona del chinchorro; el gesto admite lectura de reproche o reclamo.",
+      "El chinchorro está vacío y sobre una pared separada se ve una sombra de figura sentada.",
+      "Prendas amplias, cabezas descubiertas y planos espaciales con oclusiones; los rostros aún podrían construirse con recortes más inequívocos."
+    ],
+    "editorial_license": "La sombra del lugar vacío es metáfora de memoria y pérdida. No hay un episodio tradicional de alma o aparición que se esté afirmando como literal.",
+    "remaining": [
+      "Evaluación del usuario del nivel de mística y emoción.",
+      "Ajustar la definición material del rostro si se adopta la dirección.",
+      "La continuidad del futuro tríptico todavía no está resuelta."
+    ]
+  },
+  "rejected": [
+    {
+      "batch_id": "wayuu-aramai-story-12-studies-01",
+      "act": "acto",
+      "path": "output/imagegen/wayuu/triptychs/wayuu-aramai-story-12-studies-01/acto.jpeg",
+      "size": "864x1536",
+      "quality": "medium",
+      "sha256": "da1115d2e148e4af3de81f9c8f7e80a617f19621bf5492a742c84a04a5ccdf6f",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/aramai/wayuu-aramai-story-12-studies-01/prompts/acto.prompt.txt",
+      "prompt_sha256": "863f2893d9ba5c0c5916aa6f00016b7a6d3640f4758b82622a415e59245ded89",
+      "status": "REJECTED_DIRECTION",
+      "reason": "La presencia parece una cinta azul; ambas manos de Arámai pueden leerse como control mágico. Vestuario deriva a capuchas y hábitos."
+    },
+    {
+      "batch_id": "wayuu-aramai-story-12-studies-01",
+      "act": "huella",
+      "path": "output/imagegen/wayuu/triptychs/wayuu-aramai-story-12-studies-01/huella.jpeg",
+      "size": "1024x1024",
+      "quality": "medium",
+      "sha256": "8d3dffc96739286dbc21efaabe8cce04fdbb885b5f62dcc4c4f9fdf1ca104b08",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/aramai/wayuu-aramai-story-12-studies-01/prompts/huella.prompt.txt",
+      "prompt_sha256": "1b3c84d528eda1087b4f66b731ad7ad7a48d62e4b304b4833a340dc20f33058d",
+      "status": "REJECTED_DIRECTION",
+      "reason": "La sombra no distingue claramente un lugar vacío de las figuras presentes. Aparecen capuchas y siluetas demasiado monacales."
+    },
+    {
+      "batch_id": "wayuu-aramai-story-12-studies-02",
+      "act": "acto",
+      "path": "output/imagegen/wayuu/triptychs/wayuu-aramai-story-12-studies-02/acto.jpeg",
+      "size": "864x1536",
+      "quality": "medium",
+      "sha256": "761833137a0a8c2be619e197f548722d6615901387c570486b5b96f0b96c3939",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/aramai/wayuu-aramai-story-12-studies-02/prompts/acto.prompt.txt",
+      "prompt_sha256": "20cdde4937e44d60fee5eef49eaeaf7b2164c2569bf142c128c089489ce8b69b",
+      "status": "REJECTED_DIRECTION",
+      "reason": "Mejora la súplica y la agencia, pero Wanurü parece una silueta de señalética; no alcanza el misterio buscado."
+    }
+  ],
+  "review_method": "Inspección visual directa por el agente; descripción de píxeles seguida de contraste con relato y brief. No se presenta como revisión independiente ni como prueba automática de fidelidad.",
+  "checks": {
+    "prompt_hashes": "verified_against_file_bytes",
+    "tests": "59 passed; integridad y reglas de preparación, no calidad artística"
+  },
+  "scope": "Estudios de Arámai autorizados por el usuario. No se produjeron otro mito ni la entrada high de V1.2."
+}

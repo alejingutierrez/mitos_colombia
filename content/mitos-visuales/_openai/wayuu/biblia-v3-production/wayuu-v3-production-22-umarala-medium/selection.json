@@ -1,0 +1,250 @@
+{
+  "schema": "mitos-colombia-biblia-production-selection/v3",
+  "community": "Wayúu",
+  "myth_slug": "umarala",
+  "batch_id": "wayuu-v3-production-22-umarala-medium",
+  "status": "QA_PASS_AFTER_RESEARCH_AND_CORRECTIONS_02",
+  "reviewed_at": "2026-09-04",
+  "quality": "medium",
+  "generation_mode": "text_only_no_local_references",
+  "contact_sheet": "output/imagegen/wayuu-v3-production/umarala-batch22-selected-contact-sheet.jpeg",
+  "contact_sheet_sha256": "3d6965a6316c319410cc830f33610dda86f2f9fd815754d3078410fd4b083815",
+  "batch_models": 17,
+  "selected_models": 17,
+  "approved_models_reused_for_myth": [
+    "jirairay_canto__phenomenon_rule",
+    "wanuru__presence_model",
+    "wanuru__state_sheet",
+    "maraca_outsu__object_sheet",
+    "chinchorro__object_sheet",
+    "jururiana__identity_sheet"
+  ],
+  "supersedes": {
+    "jururiana__state_sheet": {
+      "selection_source": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/wayuu-v3-production-13-el-indio-jururiana-medium/selection.json",
+      "reason": "UMARALA_PRIMARY_SOURCE_REAUDIT_EXPANDS_THE_SAME_JURURIANA_MODEL_WITH_TRAVEL_ROOTS_RAIN_AND_ANNOUNCEMENT_STATES"
+    }
+  },
+  "myth_model_coverage": {
+    "selected": 23,
+    "required": 23,
+    "remaining": 0
+  },
+  "bible_progress_after_batch": {
+    "selected_models": 343,
+    "required_models": 395,
+    "remaining_models": 52
+  },
+  "completed_myths_after_batch": 23,
+  "selections": {
+    "umarala__identity_sheet": {
+      "status": "PASS",
+      "batch_id": "wayuu-v3-production-22-umarala-medium",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-22-umarala-medium/umarala__identity_sheet--canon.jpeg",
+      "sha256": "5f0479ac0c23d918897f2bc68d5a7e4f7db287386b33bb311578477982dbce33"
+    },
+    "umarala__state_sheet": {
+      "status": "PASS",
+      "batch_id": "wayuu-v3-production-22-umarala-medium",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-22-umarala-medium/umarala__state_sheet--estados.jpeg",
+      "sha256": "4ecb3646117e63998ea341b98fe6ea7e1356659da4373a0e34dce06dac1f4e1b"
+    },
+    "tia_outsu_umarala__identity_sheet": {
+      "status": "PASS_AFTER_CORRECTION_01",
+      "batch_id": "wayuu-v3-production-22-umarala-medium-corrections-01",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-22-umarala-medium-corrections-01/tia_outsu_umarala__identity_sheet--canon.jpeg",
+      "sha256": "b5c3f1d305438a5719c47127beffad7d6d597c8b656174ada5dd1828534710c1"
+    },
+    "tia_outsu_umarala__state_sheet": {
+      "status": "PASS_AFTER_CORRECTION_02",
+      "batch_id": "wayuu-v3-production-22-umarala-medium-corrections-02",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-22-umarala-medium-corrections-02/tia_outsu_umarala__state_sheet--estados.jpeg",
+      "sha256": "eac157395f3d438ae3d55db34fd91dfb9fc6672b8cf37f18f4b587ea53434e25"
+    },
+    "paciente_umarala__identity_sheet": {
+      "status": "PASS",
+      "batch_id": "wayuu-v3-production-22-umarala-medium",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-22-umarala-medium/paciente_umarala__identity_sheet--canon.jpeg",
+      "sha256": "ab71d3ccbc93fe9d0b0e1642728e6554bc013416f308503c75b769daeeb19241"
+    },
+    "paciente_umarala__state_sheet": {
+      "status": "PASS",
+      "batch_id": "wayuu-v3-production-22-umarala-medium",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-22-umarala-medium/paciente_umarala__state_sheet--estados.jpeg",
+      "sha256": "12f07b891a385cf69087494c8fa930e6b05e8b1bae91a2169be19e373df7b51b"
+    },
+    "jumajule_umarala__presence_model": {
+      "status": "PASS",
+      "batch_id": "wayuu-v3-production-22-umarala-medium",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-22-umarala-medium/jumajule_umarala__presence_model--canon.jpeg",
+      "sha256": "7101fec1b35452186cd12e99ba95218db6322f6f7565897c3949b137091f42d8"
+    },
+    "capote_umarala__object_sheet": {
+      "status": "PASS_AFTER_CORRECTION_01",
+      "batch_id": "wayuu-v3-production-22-umarala-medium-corrections-01",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-22-umarala-medium-corrections-01/capote_umarala__object_sheet--canon.jpeg",
+      "sha256": "4c7fe237d564e7d55d504a193d46bc6686550f10591bc57b3549cfe9caae58cc"
+    },
+    "hombre_parashi_venado__identity_sheet": {
+      "status": "PASS",
+      "batch_id": "wayuu-v3-production-22-umarala-medium",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-22-umarala-medium/hombre_parashi_venado__identity_sheet--canon.jpeg",
+      "sha256": "9b4c4078be115943cdb3b39c18e8087e42aef1d4f0e5e4d81121bb4a52617e77"
+    },
+    "hombre_parashi_venado__state_sheet": {
+      "status": "PASS_AFTER_CORRECTION_01",
+      "batch_id": "wayuu-v3-production-22-umarala-medium-corrections-01",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-22-umarala-medium-corrections-01/hombre_parashi_venado__state_sheet--estados.jpeg",
+      "sha256": "bb0348f5587765d5d5c6214b2e5ebf28f8e8207502489b74ee705c3e9c36ca2a"
+    },
+    "servidor_umarala__identity_sheet": {
+      "status": "PASS_AFTER_CORRECTION_01",
+      "batch_id": "wayuu-v3-production-22-umarala-medium-corrections-01",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-22-umarala-medium-corrections-01/servidor_umarala__identity_sheet--canon.jpeg",
+      "sha256": "f569a50206b828c0e3391e1d25ce2ecc6b1c8cd203ab86c99afa33a13169c12c"
+    },
+    "maiceo__spatial_model": {
+      "status": "PASS_AFTER_CORRECTION_02",
+      "batch_id": "wayuu-v3-production-22-umarala-medium-corrections-02",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-22-umarala-medium-corrections-02/maiceo__spatial_model--canon.jpeg",
+      "sha256": "152c12a5d3f5e0a19220bb434f36244e88f58cd6b7bc802c3c1e7ab9a2de04a0"
+    },
+    "jarara__spatial_model": {
+      "status": "PASS_AFTER_CORRECTION_01",
+      "batch_id": "wayuu-v3-production-22-umarala-medium-corrections-01",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-22-umarala-medium-corrections-01/jarara__spatial_model--canon.jpeg",
+      "sha256": "44cc2cc3e7483e0906538a956932f3bdd2611ed3a65852d6bc3f48018016566a"
+    },
+    "transmision_vida_nombre_umarala__phenomenon_rule": {
+      "status": "PASS_AFTER_CORRECTION_01",
+      "batch_id": "wayuu-v3-production-22-umarala-medium-corrections-01",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-22-umarala-medium-corrections-01/transmision_vida_nombre_umarala__phenomenon_rule--canon.jpeg",
+      "sha256": "8e22a2a12a4be9e057017c71be9b49a82a7e78910d5c0f47fe35d2a591976ef0"
+    },
+    "curacion_nocturna_umarala__phenomenon_rule": {
+      "status": "PASS_AFTER_CORRECTION_02",
+      "batch_id": "wayuu-v3-production-22-umarala-medium-corrections-02",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-22-umarala-medium-corrections-02/curacion_nocturna_umarala__phenomenon_rule--canon.jpeg",
+      "sha256": "805649658969f1a0175816af3a2c6312abc290e618de5b9b217ab02b118754c1"
+    },
+    "partida_occidente_umarala__phenomenon_rule": {
+      "status": "PASS_AFTER_CORRECTION_01",
+      "batch_id": "wayuu-v3-production-22-umarala-medium-corrections-01",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-22-umarala-medium-corrections-01/partida_occidente_umarala__phenomenon_rule--canon.jpeg",
+      "sha256": "cb0541eab2fa4ec24be3f0e451d6e8366ca568463921e935f7a1671449f918d2"
+    },
+    "jururiana__state_sheet": {
+      "status": "PASS_AFTER_CORRECTION_02",
+      "batch_id": "wayuu-v3-production-22-umarala-medium-corrections-02",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-22-umarala-medium-corrections-02/jururiana__state_sheet--estados.jpeg",
+      "sha256": "82bca8a9501c2e646f9c56f0e56d8c5a1c2007c2330f250ee395723a040f7605"
+    }
+  },
+  "rejections": [
+    {
+      "model_id": "capote_umarala__object_sheet",
+      "batch_id": "wayuu-v3-production-22-umarala-medium",
+      "reason": "REJECTED_RIGID_TENT_AND_COFFIN_LIKE_FORMS_NOT_LEGIBLE_AS_WEARABLE_GARMENT",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-22-umarala-medium/capote_umarala__object_sheet--canon.jpeg",
+      "sha256": "b5f28fd19c31b78dc08da392a2a0069f8bf9fa18892fef2527e944cddac38124"
+    },
+    {
+      "model_id": "curacion_nocturna_umarala__phenomenon_rule",
+      "batch_id": "wayuu-v3-production-22-umarala-medium",
+      "reason": "REJECTED_NONLOCAL_SPIKY_ROSETTE_FLORA",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-22-umarala-medium/curacion_nocturna_umarala__phenomenon_rule--canon.jpeg",
+      "sha256": "178920caeaba580e1d8edd4f7aa3ba6f65832ab5a48e38bef8e5c54783d85571"
+    },
+    {
+      "model_id": "hombre_parashi_venado__state_sheet",
+      "batch_id": "wayuu-v3-production-22-umarala-medium",
+      "reason": "REJECTED_ROSETTE_FLORA_MULTIPLE_ROPE_COILS_AND_HARNESS_LIKE_TRANSFORMATION",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-22-umarala-medium/hombre_parashi_venado__state_sheet--estados.jpeg",
+      "sha256": "56816e4575f3ecf353c7dc4e57bb0c11625260243a317e6a478926ebc27fd3cc"
+    },
+    {
+      "model_id": "jarara__spatial_model",
+      "batch_id": "wayuu-v3-production-22-umarala-medium",
+      "reason": "REJECTED_NONLOCAL_SPIKY_ROSETTE_GROUNDCOVER",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-22-umarala-medium/jarara__spatial_model--canon.jpeg",
+      "sha256": "0bc5ebe01be0276745e9ce05d10db5eab07fb458008a5ad32c1fe91131ede6cc"
+    },
+    {
+      "model_id": "jururiana__state_sheet",
+      "batch_id": "wayuu-v3-production-22-umarala-medium",
+      "reason": "REJECTED_AGAVE_ROSETTES_DESPITE_STATE_AND_WARDROBE_PASS",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-22-umarala-medium/jururiana__state_sheet--estados.jpeg",
+      "sha256": "b4c7640a28cf4050e802b27725254f39a5cfa51815ac058cd49d7e78a613ab2e"
+    },
+    {
+      "model_id": "maiceo__spatial_model",
+      "batch_id": "wayuu-v3-production-22-umarala-medium",
+      "reason": "REJECTED_PHOTOGRAPHIC_LANDSCAPE_READ_WITH_INSUFFICIENT_LAYERED_PAPER_MATERIALITY",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-22-umarala-medium/maiceo__spatial_model--canon.jpeg",
+      "sha256": "b532bafb8a664870fc2a669b3f16ffcced6f3fca8bd54140e88c9abe5224e07f"
+    },
+    {
+      "model_id": "partida_occidente_umarala__phenomenon_rule",
+      "batch_id": "wayuu-v3-production-22-umarala-medium",
+      "reason": "REJECTED_PERVASIVE_AGAVE_ROSETTE_FLORA_DESPITE_TRAVELER_COUNT_PASS",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-22-umarala-medium/partida_occidente_umarala__phenomenon_rule--canon.jpeg",
+      "sha256": "82329ba3bba16c0ed3bcaeea3868b38a72b6391f86c53abbbeed084cd08ce740"
+    },
+    {
+      "model_id": "servidor_umarala__identity_sheet",
+      "batch_id": "wayuu-v3-production-22-umarala-medium",
+      "reason": "REJECTED_PERVASIVE_AGAVE_ROSETTE_FLORA_DESPITE_COMPLETE_ATTIRE_PASS",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-22-umarala-medium/servidor_umarala__identity_sheet--canon.jpeg",
+      "sha256": "80686e5b3de013166c8bb9324b31e711a2529a21cb1df573b708d331ca7d7fdc"
+    },
+    {
+      "model_id": "tia_outsu_umarala__identity_sheet",
+      "batch_id": "wayuu-v3-production-22-umarala-medium",
+      "reason": "REJECTED_NONLOCAL_AGAVE_ROSETTES_DESPITE_IDENTITY_AND_ATTIRE_PASS",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-22-umarala-medium/tia_outsu_umarala__identity_sheet--canon.jpeg",
+      "sha256": "ce2c42aa2eabf73737a154cb8923412bc889d6c640dd9f0742ba9130d1709ca8"
+    },
+    {
+      "model_id": "tia_outsu_umarala__state_sheet",
+      "batch_id": "wayuu-v3-production-22-umarala-medium",
+      "reason": "REJECTED_NONLOCAL_AGAVE_ROSETTES_DESPITE_FOUR_STATE_PASS",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-22-umarala-medium/tia_outsu_umarala__state_sheet--estados.jpeg",
+      "sha256": "5f8299d8a770b1d8f9fda94b1243439df9a573049dc750e0a88982e58ab44dc3"
+    },
+    {
+      "model_id": "transmision_vida_nombre_umarala__phenomenon_rule",
+      "batch_id": "wayuu-v3-production-22-umarala-medium",
+      "reason": "REJECTED_AUNT_AGE_IDENTITY_DRIFT_AND_NONLOCAL_ROSETTE_FLORA",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-22-umarala-medium/transmision_vida_nombre_umarala__phenomenon_rule--canon.jpeg",
+      "sha256": "217eb0c7ffdb01224a37c7c98c41c7338673aba714a82f671330122c0d216432"
+    },
+    {
+      "model_id": "curacion_nocturna_umarala__phenomenon_rule",
+      "batch_id": "wayuu-v3-production-22-umarala-medium-corrections-01",
+      "reason": "REJECTED_PATTERNED_PONCHO_LIKE_MESSENGER_CLOTHING_AND_DECORATED_UMARALA_GARMENT",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-22-umarala-medium-corrections-01/curacion_nocturna_umarala__phenomenon_rule--canon.jpeg",
+      "sha256": "9ba58eea13d8126ddfd0643a84ef10a6c512b783f76720887b8f3a8f531a41ba"
+    },
+    {
+      "model_id": "jururiana__state_sheet",
+      "batch_id": "wayuu-v3-production-22-umarala-medium-corrections-01",
+      "reason": "REJECTED_RAMIFIED_SAGUARO_FORM_DESPITE_FOUR_STATE_PASS",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-22-umarala-medium-corrections-01/jururiana__state_sheet--estados.jpeg",
+      "sha256": "1ff632dcb9f3b6e780daa6c9ac9daf621dc8349aaf1229ff8574798aa1f0a64b"
+    },
+    {
+      "model_id": "maiceo__spatial_model",
+      "batch_id": "wayuu-v3-production-22-umarala-medium-corrections-01",
+      "reason": "REJECTED_EXACT_THREE_FIRE_STONES_NOT_UNAMBIGUOUSLY_COUNTABLE",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-22-umarala-medium-corrections-01/maiceo__spatial_model--canon.jpeg",
+      "sha256": "eedb7be2c106c8bf1177e5ff5f58f8dc00cdba7d9c9006ac2e57a40e6b4569e3"
+    },
+    {
+      "model_id": "tia_outsu_umarala__state_sheet",
+      "batch_id": "wayuu-v3-production-22-umarala-medium-corrections-01",
+      "reason": "REJECTED_BODY_SHAPED_DRAPED_MOUND_AT_MARACA_TRANSFER",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-22-umarala-medium-corrections-01/tia_outsu_umarala__state_sheet--estados.jpeg",
+      "sha256": "f2497349dcb9f97b07ca7621331cd5b7b3e1d5fb17d9fcbce466f85f283b465e"
+    }
+  ]
+}

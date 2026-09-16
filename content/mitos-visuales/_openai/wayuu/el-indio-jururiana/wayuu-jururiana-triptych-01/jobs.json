@@ -1,0 +1,255 @@
+{
+  "schema": "mitos-openai-triptych/v1",
+  "batch_id": "wayuu-jururiana-triptych-01",
+  "created_at": "2026-09-06T09:24:45.244Z",
+  "account_source": "OPENAI_API_KEY from ignored .env",
+  "provider": "openai",
+  "model": "gpt-image-2",
+  "community": "wayuu",
+  "myth": "el-indio-jururiana",
+  "plan": "content/mitos-visuales/wayuu.jururiana.triptico.v1.json",
+  "prompt_profile": "story_first_v3_symbolic_huella",
+  "plan_sha256": "d95973ed7320db49a53b25d60c8cc5f89d28c5fbeb87e3cd8eb9b33bb9ed760a",
+  "narrative_target_sha256": "f20ab5c6a73667df8cfaf3d9c81ec163dfd5573b1efde6255c273d6530d3eb63",
+  "evidence": [
+    {
+      "id": "published_jururiana",
+      "type": "project_narrative",
+      "path": "content/mitos-visuales/production/wayuu-2026-09-05/narratives/el-indio-jururiana.json",
+      "supports": "Preparación, reparto y escena editorial de Warir tocando suelo en habitación oscura.",
+      "limits": "Sueño, lluvia de varios días, reparto y diálogo con abuelo son ampliaciones editoriales. No convertirlas en literalidad de Chaves ni reescribir texto durante campaña."
+    },
+    {
+      "id": "chaves_314_315",
+      "type": "primary_narrative_record",
+      "url": "https://publicaciones.icanh.gov.co/index.php/picanh/catalog/download/243/266/1579?inline=1",
+      "pages": "314–315, PDF 10–11",
+      "supports": "Semillas, chivos negros, Patsuo, chubasco que borra huellas; Warir y Tierra-abuela.",
+      "limits": "Transcripción ambigua respecto de sujeto de prueba oscura. Respuesta a Tierra ocurre en otro episodio, no en diálogo literal de nuestra síntesis."
+    },
+    {
+      "id": "bible_lot13",
+      "type": "internal_visual_research",
+      "path": "docs/wayuu-lote-13-jururiana-v3.md",
+      "supports": "Identidades, paipai solar, lluvia material, semillas anónimas, chivos y planicie aproximada.",
+      "limits": "Geometría, colores, cantidades del modelo y paquetes son puesta en escena editorial, no medidas históricas."
+    }
+  ],
+  "visual_memory_library": "content/mitos-visuales/wayuu.visual-memory.v1.json",
+  "visual_memory_review": {
+    "reviewer": "agent_direct_visual_review",
+    "reviewed_at": "2026-09-06T09:24:44.694Z",
+    "reviewed_reference_ids": [
+      "b2cde9ba6c5e3ae25d31",
+      "d73a4e17adef4824ae60"
+    ],
+    "retained": [
+      "Contraste tierra ocre y azul marino, amplitud de horizonte costero y capas físicas.",
+      "Presencia de recursos reunidos; el conocimiento se relaciona con sostener vida, no sólo con mirar el cielo."
+    ],
+    "rejected": [
+      "Bastón/cayado, tocado, bolsa con patrones y ropa profética genérica no pertenecen a las identidades aprobadas.",
+      "Gigante central, realismo de rostro modelado, estrellas y espirales usadas como sustituto de magia narrativa.",
+      "Vegetación en roseta, grandes serranías junto al mar, paisaje doméstico mezclado y símbolos sin fuente."
+    ],
+    "influence_by_act": {
+      "entrada": "Planicie de Patsuo y mar distante; Jururiana pequeño con reservas y chivos, lluvia física que borra el rastro detrás de él.",
+      "acto": "Cambiar el exterior ornamental por la habitación oscura del relato público: Warir toca tierra y ésta responde con una ondulación material sin luz propia.",
+      "huella": "Aislar las semillas preparadas: lluvia de papel se aparta y deja seco el pequeño paquete. Sin paisaje, personas ni símbolo tradicional."
+    }
+  },
+  "bible_selection": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/accepted-selection.json",
+  "canonical_models": [
+    {
+      "model_id": "jururiana__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-13-el-indio-jururiana-medium-corrections-01/jururiana__identity_sheet--canon.jpeg",
+      "sha256": "14c675109b39faac46f259c25ac598f8da8e51ee4f4822f095f829c10b4d2f19",
+      "qa_status": "PASS_AFTER_CORRECTION_01"
+    },
+    {
+      "model_id": "warir__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-13-el-indio-jururiana-medium-corrections-01/warir__identity_sheet--canon.jpeg",
+      "sha256": "8dc036cbd40a3bf66d9a8bbc0109c0e49bf59d8470893c04c3c8924026792b5b",
+      "qa_status": "PASS_AFTER_CORRECTION_01"
+    },
+    {
+      "model_id": "gran_lluvia_jururiana__phenomenon_rule",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-13-el-indio-jururiana-medium-corrections-01/gran_lluvia_jururiana__phenomenon_rule--canon.jpeg",
+      "sha256": "aca92f558dd86e34ab0491e47c611f80d54fe5b263dc1b8038f6a5354c6c3886",
+      "qa_status": "PASS_AFTER_CORRECTION_01"
+    },
+    {
+      "model_id": "reservas_semillas_jururiana__object_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-13-el-indio-jururiana-medium/reservas_semillas_jururiana__object_sheet--canon.jpeg",
+      "sha256": "c827ee247cff505d15c7a102a11b15a485f0865659a739a81f6e0cdfbc9e5795",
+      "qa_status": "PASS"
+    },
+    {
+      "model_id": "animales_oscuros_jururiana__group_grammar",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-13-el-indio-jururiana-medium-corrections-01/animales_oscuros_jururiana__group_grammar--canon.jpeg",
+      "sha256": "01ca7bc27338e55c62fda47f72acdd1fbc0f98bb9d47845f38e41e0c34a5caba",
+      "qa_status": "PASS_AFTER_CORRECTION_01"
+    },
+    {
+      "model_id": "patsuo__spatial_model",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-13-el-indio-jururiana-medium/patsuo__spatial_model--canon.jpeg",
+      "sha256": "21ac2fa9acadbcaa0074b76122ef1fa79c1a43df3d1f6a86f7056a0200ef3040",
+      "qa_status": "PASS"
+    },
+    {
+      "model_id": "habitacion_oscura_warir__spatial_model",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-13-el-indio-jururiana-medium/habitacion_oscura_warir__spatial_model--canon.jpeg",
+      "sha256": "ea2aa3da2cd62b093769e3e114561428399db092211e6e9432063e7748acfac2",
+      "qa_status": "PASS"
+    }
+  ],
+  "approval_gate": "Campaña completa autorizada; QA por orientación y publicación aditiva sin borrar versiones.",
+  "requested_acts": [
+    "entrada",
+    "acto",
+    "huella"
+  ],
+  "generation_mode": "text_only_no_local_references",
+  "framing": "immersive_full_bleed",
+  "surface_finish": "layered_depth_no_exposed_support",
+  "jobs": [
+    {
+      "act": "entrada",
+      "aspect_ratio": "16:9",
+      "size": "1536x864",
+      "quality": "high",
+      "api_method": "images.generate",
+      "composition": "profundidad_abierta",
+      "canon_model_ids": [
+        "jururiana__identity_sheet",
+        "warir__identity_sheet",
+        "gran_lluvia_jururiana__phenomenon_rule",
+        "reservas_semillas_jururiana__object_sheet",
+        "animales_oscuros_jururiana__group_grammar",
+        "patsuo__spatial_model",
+        "habitacion_oscura_warir__spatial_model"
+      ],
+      "refs": [],
+      "ref_paths": [],
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/el-indio-jururiana/wayuu-jururiana-triptych-01/prompts/entrada.prompt.txt",
+      "prompt_sha256": "8bf03ab8533dee61c6b5d36dcce69b090e86c09cc4d787c04dff1def6633d169",
+      "narrative_event_ids": [
+        "reservas",
+        "lluvia_huellas",
+        "cuidado"
+      ],
+      "editorial_translation": "Se reúnen visualmente reservas y chubasco del registro. Cinco cortinas y paquetes son decisiones de Biblia; lluvia que alisa papel hace perceptible el borrado, sin atribuir control meteorológico a Jururiana.",
+      "magic_in_the_ordinary": {
+        "ordinary_anchor": "Un mayor reúne semillas y chivos antes de un chubasco.",
+        "impossible_behavior": "La lluvia toma forma de tiras materiales y alisa físicamente las huellas al tocar la tierra.",
+        "narrative_effect": "El anuncio se cumple y revela por qué preparar importa.",
+        "agency": "La lluvia actúa, Jururiana observa y prepara; no ordena al clima con las manos.",
+        "physical_translation": "Tiras azules con aire; único rastro pasa de depresiones claras a tierra lisa dentro de lluvia.",
+        "visible_test": "Se puede seguir una sola senda desde sandalias hasta su desaparición, sin ruta paralela.",
+        "event_ids": [
+          "reservas",
+          "lluvia_huellas",
+          "cuidado"
+        ],
+        "provenance": "editorial_metaphor",
+        "temporal_role": "present"
+      },
+      "visual_function": "narrative_scene",
+      "output": "output/imagegen/wayuu/triptychs/wayuu-jururiana-triptych-01/entrada.jpeg",
+      "status": "prepared"
+    },
+    {
+      "act": "acto",
+      "aspect_ratio": "9:16",
+      "size": "864x1536",
+      "quality": "medium",
+      "api_method": "images.generate",
+      "composition": "camino_vertical",
+      "canon_model_ids": [
+        "jururiana__identity_sheet",
+        "warir__identity_sheet",
+        "gran_lluvia_jururiana__phenomenon_rule",
+        "reservas_semillas_jururiana__object_sheet",
+        "animales_oscuros_jururiana__group_grammar",
+        "patsuo__spatial_model",
+        "habitacion_oscura_warir__spatial_model"
+      ],
+      "refs": [],
+      "ref_paths": [],
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/el-indio-jururiana/wayuu-jururiana-triptych-01/prompts/acto.prompt.txt",
+      "prompt_sha256": "98e999b29b6afb23a0831ae68afacc2dd5ffd26280def9b0e1f76f2de24ed6b2",
+      "narrative_event_ids": [
+        "warir_mma",
+        "manos_tierra"
+      ],
+      "editorial_translation": "La escena de palmas y abuelo sigue la versión publicada, no una cita de Chaves. El suelo que responde con un pliegue es metáfora de Mma como relación y fuente de saber, no rito o práctica Wayuu universal.",
+      "magic_in_the_ordinary": {
+        "ordinary_anchor": "Warir pone ambas manos sobre el suelo en una habitación oscura.",
+        "impossible_behavior": "La tierra sólida responde desde ese contacto con una pequeña ondulación material.",
+        "narrative_effect": "El conocimiento es vínculo con Mma y transmisión, no poder personal.",
+        "agency": "Mma como Tierra-abuela, sin cuerpo visible; Warir escucha y el abuelo acompaña.",
+        "physical_translation": "Una única cresta del mismo papel de suelo empieza bajo palmas y deja aire/sombra sin desprenderse.",
+        "visible_test": "Manos en contacto con origen del pliegue; ninguna alfombra, libro, grieta luminosa o rostro.",
+        "event_ids": [
+          "warir_mma",
+          "manos_tierra"
+        ],
+        "provenance": "editorial_metaphor",
+        "temporal_role": "present"
+      },
+      "visual_function": "narrative_scene",
+      "output": "output/imagegen/wayuu/triptychs/wayuu-jururiana-triptych-01/acto.jpeg",
+      "status": "prepared"
+    },
+    {
+      "act": "huella",
+      "aspect_ratio": "1:1",
+      "size": "1024x1024",
+      "quality": "medium",
+      "api_method": "images.generate",
+      "composition": "simbolo_central",
+      "canon_model_ids": [
+        "jururiana__identity_sheet",
+        "warir__identity_sheet",
+        "gran_lluvia_jururiana__phenomenon_rule",
+        "reservas_semillas_jururiana__object_sheet",
+        "animales_oscuros_jururiana__group_grammar",
+        "patsuo__spatial_model",
+        "habitacion_oscura_warir__spatial_model"
+      ],
+      "refs": [],
+      "ref_paths": [],
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/el-indio-jururiana/wayuu-jururiana-triptych-01/prompts/huella.prompt.txt",
+      "prompt_sha256": "d5f5f0d066b3521393b052d1578856ff82d4532a679c50004de6ea82147f9eaf",
+      "narrative_event_ids": [
+        "reservas",
+        "cuidado"
+      ],
+      "editorial_translation": "Las reservas del relato se condensan en un paquete seco; lluvia que deja vacío a su alrededor es una metáfora de previsión y cuidado, no episodio u objeto literal.",
+      "magic_in_the_ordinary": {
+        "ordinary_anchor": "Se guardan semillas para afrontar lluvia y escasez.",
+        "impossible_behavior": "La lluvia se curva alrededor de la pequeña reserva sin tocarla.",
+        "narrative_effect": "La preparación preserva una posibilidad de vida.",
+        "agency": "Cuidado humano condensado en reserva, no poder ritual del paquete.",
+        "physical_translation": "Cinco tiras azules separadas rodean sin cerrar un campo vacío con paquete seco.",
+        "visible_test": "Paquete legible, semillas secas y espacio libre entre ambos; no halo protector.",
+        "event_ids": [
+          "reservas",
+          "cuidado"
+        ],
+        "provenance": "editorial_metaphor",
+        "temporal_role": "anticipation"
+      },
+      "visual_function": "symbolic_synthesis",
+      "symbolic_contract": {
+        "thesis": "Prever deja un espacio para sostener la vida cuando llega la lluvia.",
+        "carrier": "Un paquete liso de semillas secas y tiras separadas de lluvia material.",
+        "operation": "La lluvia se aparta y conserva un pequeño vacío seco, sin barrera visible.",
+        "story_connection": "Jururiana reúne semillas antes del cambio y convierte previsión en cuidado.",
+        "visible_test": "Semillas secas en paquete central, lluvia apartada y vacío sin contorno ni escena."
+      },
+      "output": "output/imagegen/wayuu/triptychs/wayuu-jururiana-triptych-01/huella.jpeg",
+      "status": "prepared"
+    }
+  ]
+}

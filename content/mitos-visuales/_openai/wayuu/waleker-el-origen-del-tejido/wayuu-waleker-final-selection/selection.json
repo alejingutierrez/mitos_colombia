@@ -1,0 +1,130 @@
+{
+  "schema": "mitos-triptych-selection/v2",
+  "myth": "waleker-el-origen-del-tejido",
+  "title": "Waleker, el origen del tejido",
+  "created_at": "2026-09-07T15:38:00Z",
+  "status": "approved_for_publication_under_campaign_authorization",
+  "approval_basis": "Campaña autorizada; QA por relato, Biblia y memoria.",
+  "campaign_scope": "content/mitos-visuales/production/wayuu-2026-09-05/scope.json",
+  "narrative_target_sha256": "85c26434ccbf8d6b85fb6f1b1159d9a11b0160ad394d68209596a87aede5cf55",
+  "visual_memory_library": "content/mitos-visuales/wayuu.visual-memory.v1.json",
+  "visual_memory_review": {
+    "reviewer": "agent_direct_visual_review",
+    "reviewed_at": "2026-09-07T15:23:00Z",
+    "reviewed_reference_ids": [
+      "e8c5cdf22485c8d98fb6",
+      "c6964c7e83806e8fa4ce"
+    ],
+    "retained": [
+      "Hilo que sale de la boca, trabajo con telar y transmisión entre mujeres; paleta noche/tierra."
+    ],
+    "rejected": [
+      "Cara gigantesca, joyas y espirales en cabello, patrones geométricos no documentados, rosetas, figuras de sombra ajenas."
+    ],
+    "influence_by_act": {
+      "entrada": "Alejar tejedora, fijar manta índigo y continuidad real de hilo/boca/telar.",
+      "acto": "Conservar enseñanza pero hacer visible la continuidad del jirón de telaraña al tejido humano.",
+      "huella": "Un jirón tejido se abre como telaraña; objeto único sin paisaje."
+    }
+  },
+  "selected": [
+    {
+      "act": "entrada",
+      "path": "output/imagegen/wayuu/triptychs/wayuu-waleker-triptych-02-distancia/entrada.jpeg",
+      "sha256": "bb23cd7a41c543a890db8892a007cee4fe7c948c461da68a9515c8aa3b5b29ea",
+      "width": 1536,
+      "height": 864,
+      "quality": "high",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/waleker-el-origen-del-tejido/wayuu-waleker-triptych-02-distancia/prompts/entrada.prompt.txt",
+      "prompt_sha256": "8c25922c938f9d6d3f5a34e57b30650cc300eb30e0dbae88e8c052b4c3d06060",
+      "visual_function": "narrative_scene",
+      "review": {
+        "observed": "Una Waleker de recorte casi plano bajo enramada a la derecha, manta índigo y pechera; hilos conectan boca con telar. Suelo de grandes láminas y espacio negativo.",
+        "limits": [
+          "Figura cercana a un cuarto de altura, no al octavo pedido; conjunto abierto sin rostro protagonista.",
+          "Postes y techo retienen textura fibrosa más naturalista; suelo y figura inequívocamente recortados."
+        ]
+      }
+    },
+    {
+      "act": "acto",
+      "path": "output/imagegen/wayuu/triptychs/wayuu-waleker-triptych-02-distancia/acto.jpeg",
+      "sha256": "a2a853a5d832cb9c18a8a5644cf35b089e60edf8fa5e4eb0373014887fc94cf9",
+      "width": 864,
+      "height": 1536,
+      "quality": "medium",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/waleker-el-origen-del-tejido/wayuu-waleker-triptych-02-distancia/prompts/acto.prompt.txt",
+      "prompt_sha256": "b65a1c0a4af88c582890b6c926f354c11906096f48f29812aebea5845c53b8ef",
+      "visual_function": "narrative_scene",
+      "review": {
+        "observed": "Tres mujeres vestidas de arena, azul y terracota trabajan en un telar; la malla superior continúa en urdimbre, suelo por planos y cuerpos menores.",
+        "limits": [
+          "Transición telaraña/urdimbre es metáfora editorial, no una técnica textil documentada."
+        ]
+      }
+    },
+    {
+      "act": "huella",
+      "path": "output/imagegen/wayuu/triptychs/wayuu-waleker-triptych-01/huella.jpeg",
+      "sha256": "675b78c9e5b38e60881e602ecfb09bfa6dd09e74c0873da04c2ae856a77d8ff6",
+      "width": 1024,
+      "height": 1024,
+      "quality": "medium",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/waleker-el-origen-del-tejido/wayuu-waleker-triptych-01/prompts/huella.prompt.txt",
+      "prompt_sha256": "e366407bee5e0552f3ae4a456bf9da36c9e952d64aa9147a3f656e20ab7db8d7",
+      "visual_function": "symbolic_synthesis",
+      "review": {
+        "observed": "Un jirón marfil/coral pasa de tejido cerrado a malla abierta contra fondo índigo, sin escena.",
+        "limits": [
+          "No reproduce ni atribuye un patrón tradicional concreto."
+        ]
+      }
+    }
+  ],
+  "generation": {
+    "provider": "OpenAI API",
+    "model": "gpt-image-2",
+    "mode": "text_only_no_local_references",
+    "unique_images": 5,
+    "by_act": {
+      "entrada": {
+        "unique_images": 2,
+        "preparation_rounds": 2,
+        "requested_alternatives": 0
+      },
+      "acto": {
+        "unique_images": 2,
+        "preparation_rounds": 2,
+        "requested_alternatives": 0
+      },
+      "huella": {
+        "unique_images": 1,
+        "preparation_rounds": 1,
+        "requested_alternatives": 0
+      }
+    },
+    "corrections": 2,
+    "cli_seconds": {
+      "entrada_01": 92.8,
+      "acto_01": 51.6,
+      "huella_01": 43.1,
+      "entrada_02": 85.1,
+      "acto_02": 37.3
+    },
+    "cost": null,
+    "request_ids": null
+  },
+  "excluded": [
+    {
+      "path": "output/imagegen/wayuu/triptychs/wayuu-waleker-triptych-01/entrada.jpeg",
+      "sha256": "1ae267886df440701d44e12016f7e4216bb2bf627ee5d0432cace27acac2f001",
+      "reason": "Figura(s) demasiado cercanas y suelo naturalista; preservada, no publicada."
+    },
+    {
+      "path": "output/imagegen/wayuu/triptychs/wayuu-waleker-triptych-01/acto.jpeg",
+      "sha256": "7f3887ce1ef3530491e3e637e5416eb871e7a136a5dcefe9e853c7fec5c564be",
+      "reason": "Figura(s) demasiado cercanas y suelo naturalista; preservada, no publicada."
+    }
+  ],
+  "published": false
+}

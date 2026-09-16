@@ -1,0 +1,83 @@
+{
+  "schema": "mitos-colombia-biblia-batch/v1",
+  "batch_id": "wayuu-bible-05b-umbrales-magia-correction-medium",
+  "asset_type": "bible",
+  "quality": "medium",
+  "framing": "immersive_full_bleed",
+  "surface_finish": "layered_depth_no_exposed_support",
+  "plan": "content/mitos-visuales/_openai/wayuu/biblia/wayuu-bible-05b-umbrales-magia-correction-medium/plan.snapshot.json",
+  "prepared_at": "2026-09-03",
+  "generation_scope": "Corrección 05b en medium: la sed conserva exactamente dos viajeros en un instante transicional; Juyá integra tres mecanismos reversibles al terreno y elimina todo atributo humano inventado. Cada edición usa sólo su ancla aprobada.",
+  "jobs": [
+    {
+      "id": "la-sed-da-los-civilizados__magia--regla",
+      "model_id": "la-sed-da-los-civilizados__magia",
+      "view_id": "regla",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/biblia/wayuu-bible-05b-umbrales-magia-correction-medium/prompts/la-sed-da-los-civilizados__magia--regla.prompt.txt",
+      "output_file": "output/imagegen/wayuu/wayuu-bible-05b-umbrales-magia-correction-medium/la-sed-da-los-civilizados__magia--regla.jpeg",
+      "prompt_sha256": "b3b05cdb1a86435ace4b5a86de139b325796f1a482bc380a3b27fd3e38ca0955",
+      "provider": "OpenAI API",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "1536x1024",
+      "output_format": "jpeg",
+      "references": [
+        "la-sed-da-los-civilizados__ancla:canon"
+      ],
+      "input_references": [
+        {
+          "role": "Imagen 1: ancla aprobada de la carga; conservar exactamente bloques de panela, ataduras, sacos lisos, recipientes vacíos y materialidad de papel",
+          "path": "output/imagegen/wayuu/wayuu-bible-04b-umbrales-anclas-correction-medium/la-sed-da-los-civilizados__ancla--canon.jpeg",
+          "status": "DIRECTION_CANDIDATE_PASS"
+        }
+      ],
+      "safeguards": [
+        "edición con una referencia generada por este pipeline, aprobada y necesaria para continuidad entre ancla y regla mágica",
+        "todo elemento está construido con papel cortado, plegado, enrollado o prensado y fibras artesanales; mostrar pliegues, cantos internos, uniones, aire y sombras físicas",
+        "sin violencia o sexualidad explícitas, desnudez, cuerpos vulnerados o sufrimiento gráfico",
+        "sin borde exterior, base, cartón, mesa ni estudio visibles; la escena continúa hasta los cuatro límites",
+        "profundidad 3D por capas físicas a distintas distancias, aire, oclusiones, cantos internos y sombras reales; nunca collage plano",
+        "sin aura, chispas, runas, ojos luminosos o humo místico genérico",
+        "sin patrones, kanas, marcas claniles, texto, etiquetas o símbolos decorativos inventados",
+        "conservar la carga exacta de la Imagen 1 y mostrar exactamente dos viajeros, sólo dos, juntos en un único instante de transformación: ambos cuerpos de papel siguen completos, con fibras flexibles arriba y capas minerales rígidas que ascienden desde pies y piernas; uno está un poco más avanzado que el otro",
+        "prohibido duplicar viajeros, repetir fases, formar un friso o añadir una tercera figura; la panela permanece marrón, flexible y separada; sin cadáveres, dolor gráfico, maldición racial, estatua heroica, aura, polvo mágico o luz sobrenatural"
+      ],
+      "status": "prepared"
+    },
+    {
+      "id": "los-dominios-de-juya__magia--regla",
+      "model_id": "los-dominios-de-juya__magia",
+      "view_id": "regla",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/biblia/wayuu-bible-05b-umbrales-magia-correction-medium/prompts/los-dominios-de-juya__magia--regla.prompt.txt",
+      "output_file": "output/imagegen/wayuu/wayuu-bible-05b-umbrales-magia-correction-medium/los-dominios-de-juya__magia--regla.jpeg",
+      "prompt_sha256": "292e8e81e1e534986640fd7fd556e9295813d21ae17476e92db11545b5118d80",
+      "provider": "OpenAI API",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "1536x1024",
+      "output_format": "jpeg",
+      "references": [
+        "los-dominios-de-juya__ancla:canon"
+      ],
+      "input_references": [
+        {
+          "role": "Imagen 1: ancla aprobada del dominio; conservar los tres intervalos de papel, recorrido, agua y serranías sin añadir arquitectura",
+          "path": "output/imagegen/wayuu/wayuu-bible-04b-umbrales-anclas-correction-medium/los-dominios-de-juya__ancla--canon.jpeg",
+          "status": "DIRECTION_CANDIDATE_PASS"
+        }
+      ],
+      "safeguards": [
+        "edición con una referencia generada por este pipeline, aprobada y necesaria para continuidad entre ancla y regla mágica",
+        "todo elemento está construido con papel cortado, plegado, enrollado o prensado y fibras artesanales; mostrar pliegues, cantos internos, uniones, aire y sombras físicas",
+        "sin violencia o sexualidad explícitas, desnudez, cuerpos vulnerados o sufrimiento gráfico",
+        "sin borde exterior, base, cartón, mesa ni estudio visibles; la escena continúa hasta los cuatro límites",
+        "profundidad 3D por capas físicas a distintas distancias, aire, oclusiones, cantos internos y sombras reales; nunca collage plano",
+        "sin aura, chispas, runas, ojos luminosos o humo místico genérico",
+        "sin patrones, kanas, marcas claniles, texto, etiquetas o símbolos decorativos inventados",
+        "conservar el dominio exacto de la Imagen 1 e integrar al propio terreno tres mecanismos de papel giratorios, no tarjetas de exhibición: una pieza banco-boa, una pieza planta-persona y una pieza presa-persona, cada una captada a mitad de giro con bisagra y ambos lados parcialmente legibles",
+        "los dos lados humanos son siluetas lisas de papel sin rostro, ojos, cabello, ropa, sexo, arma, herramienta, adorno o gesto cultural; cada pieza alterna lectura sin híbrido; Juyá permanece fuera de cuadro; sin arquitectura, base expositiva, mapa, palacio, aura o anatomía divina"
+      ],
+      "status": "prepared"
+    }
+  ]
+}

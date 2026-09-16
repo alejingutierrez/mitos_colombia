@@ -1,0 +1,473 @@
+{
+  "schema": "mitos-colombia-biblia-visual/v3",
+  "batch": {
+    "id": "wayuu-v3-production-04-el-indio-guerrero-ipuana-medium",
+    "myth_slug": "el-indio-guerrero-ipuana",
+    "model_ids": [
+      "guerrero_ipuana__identity_sheet",
+      "guerrero_ipuana__state_sheet",
+      "hijo_guerrero_ipuana__identity_sheet",
+      "hijo_guerrero_ipuana__state_sheet",
+      "majayura_sueno_ipuana__identity_sheet",
+      "arco_flechas__object_sheet"
+    ],
+    "quality": "medium",
+    "framing": "immersive_full_bleed",
+    "surface_finish": "layered_depth_no_exposed_support",
+    "generation_mode": "text_only_no_local_references",
+    "status": "frozen_ready_to_generate"
+  },
+  "inventory_approved_at": "2026-09-03",
+  "pilot_approved_at": "2026-09-03",
+  "source_snapshot_sha256": "6b5b1c5ebdb2524a7524b065d96c6d33ad6f5694db239a0d722ded8485f435f5",
+  "model_ids": [
+    "guerrero_ipuana__identity_sheet",
+    "guerrero_ipuana__state_sheet",
+    "hijo_guerrero_ipuana__state_sheet",
+    "arco_flechas__object_sheet"
+  ],
+  "models": {
+    "guerrero_ipuana__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "guerrero_ipuana"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "el-indio-guerrero-ipuana",
+          "field": "mito",
+          "note": "Retorna dos veces y muere cuando la violencia escala."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos. Entidad: Guerrero Ipuana. Funcion visual: Combatiente que retorna dos veces y cuya fama conduce a una escalada final.",
+        "materials": [
+          "papel mate de fibra visible",
+          "capas prensadas para cuerpo y vestuario",
+          "hilo solo cuando el relato lo exige"
+        ],
+        "palette_logic": "Arena, barro, carbon y fibras naturales; un acento propio de la entidad puede repetirse, sin patrones kanas o marcas claniles inventadas.",
+        "scale": "Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "continuity_markers": [
+          "nombre estable: Guerrero Ipuana",
+          "funcion estable: Combatiente que retorna dos veces y cuya fama conduce a una escalada final.",
+          "estados declarados: combatiente, primer_retorno, segundo_retorno, duelo"
+        ],
+        "documented_features": [
+          "Combatiente que retorna dos veces y cuya fama conduce a una escalada final."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para identity_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · identity_sheet",
+        "primary_request": "identidad corporal completa y legible para Guerrero Ipuana. Combatiente que retorna dos veces y cuya fama conduce a una escalada final.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel mate de fibra visible; capas prensadas para cuerpo y vestuario; hilo solo cuando el relato lo exige",
+        "constraints": [
+          "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos.",
+          "mostrar: Combatiente que retorna dos veces y cuya fama conduce a una escalada final.",
+          "estados autorizados: combatiente, primer_retorno, segundo_retorno, duelo",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "1:1",
+          "era": "historico_wayuu_segun_relato",
+          "states": [
+            "combatiente"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "guerrero_ipuana__state_sheet": {
+      "purpose": "state_sheet",
+      "entity_refs": [
+        "guerrero_ipuana"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "el-indio-guerrero-ipuana",
+          "field": "mito",
+          "note": "Retorna dos veces y muere cuando la violencia escala."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos. Entidad: Guerrero Ipuana. Funcion visual: Combatiente que retorna dos veces y cuya fama conduce a una escalada final.",
+        "materials": [
+          "papel mate de fibra visible",
+          "capas prensadas para cuerpo y vestuario",
+          "hilo solo cuando el relato lo exige"
+        ],
+        "palette_logic": "Arena, barro, carbon y fibras naturales; un acento propio de la entidad puede repetirse, sin patrones kanas o marcas claniles inventadas.",
+        "scale": "Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "continuity_markers": [
+          "nombre estable: Guerrero Ipuana",
+          "funcion estable: Combatiente que retorna dos veces y cuya fama conduce a una escalada final.",
+          "estados declarados: combatiente, primer_retorno, segundo_retorno, duelo"
+        ],
+        "documented_features": [
+          "Combatiente que retorna dos veces y cuya fama conduce a una escalada final."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para state_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · state_sheet",
+        "primary_request": "continuidad entre estados sin adelantar un keyframe para Guerrero Ipuana. Combatiente que retorna dos veces y cuya fama conduce a una escalada final.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel mate de fibra visible; capas prensadas para cuerpo y vestuario; hilo solo cuando el relato lo exige",
+        "constraints": [
+          "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos.",
+          "mostrar: Combatiente que retorna dos veces y cuya fama conduce a una escalada final.",
+          "estados autorizados: combatiente, primer_retorno, segundo_retorno, duelo",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "estados",
+          "view_type": "state_sequence",
+          "purpose": "continuidad entre estados sin adelantar un keyframe",
+          "aspect": "16:9",
+          "era": "historico_wayuu_segun_relato",
+          "states": [
+            "combatiente",
+            "primer_retorno",
+            "segundo_retorno",
+            "duelo"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "hijo_guerrero_ipuana__state_sheet": {
+      "purpose": "state_sheet",
+      "entity_refs": [
+        "hijo_guerrero_ipuana"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "el-indio-guerrero-ipuana",
+          "field": "mito",
+          "note": "Ignora el sueño y repite la incapacidad de detenerse."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos. Entidad: Hijo del guerrero Ipuana. Funcion visual: Joven que ignora una advertencia onirica y muere lejos de casa.",
+        "materials": [
+          "papel mate de fibra visible",
+          "capas prensadas para cuerpo y vestuario",
+          "hilo solo cuando el relato lo exige"
+        ],
+        "palette_logic": "Arena, barro, carbon y fibras naturales; un acento propio de la entidad puede repetirse, sin patrones kanas o marcas claniles inventadas.",
+        "scale": "Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "continuity_markers": [
+          "nombre estable: Hijo del guerrero Ipuana",
+          "funcion estable: Joven que ignora una advertencia onirica y muere lejos de casa.",
+          "estados declarados: cazador, soñante, ausente"
+        ],
+        "documented_features": [
+          "Joven que ignora una advertencia onirica y muere lejos de casa."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para state_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · state_sheet",
+        "primary_request": "continuidad entre estados sin adelantar un keyframe para Hijo del guerrero Ipuana. Joven que ignora una advertencia onirica y muere lejos de casa.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel mate de fibra visible; capas prensadas para cuerpo y vestuario; hilo solo cuando el relato lo exige",
+        "constraints": [
+          "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos.",
+          "mostrar: Joven que ignora una advertencia onirica y muere lejos de casa.",
+          "estados autorizados: cazador, soñante, ausente",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "estados",
+          "view_type": "state_sequence",
+          "purpose": "continuidad entre estados sin adelantar un keyframe",
+          "aspect": "16:9",
+          "era": "historico_wayuu_segun_relato",
+          "states": [
+            "cazador",
+            "soñante",
+            "ausente"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "arco_flechas__object_sheet": {
+      "purpose": "object_sheet",
+      "entity_refs": [
+        "arco_flechas"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "el-indio-guerrero-ipuana",
+          "field": "mito",
+          "note": "Armas de combate y caza."
+        },
+        {
+          "myth": "el-indio-jaichuasay",
+          "field": "mito",
+          "note": "La flecha inicia y precipita los cambios."
+        },
+        {
+          "myth": "los-dos-hermanos",
+          "field": "mito",
+          "note": "Objeto de competencia y venganza."
+        },
+        {
+          "myth": "ulepala",
+          "field": "mito",
+          "note": "Flecha de la consecuencia final."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Contorno, volumen, piezas y modo de uso claramente separables; evitar convertir utileria cotidiana en reliquia mistica. Entidad: Arco y flechas. Funcion visual: Armas de caza y conflicto con escala, material y desgaste historico coherentes.",
+        "materials": [
+          "papel, fibra, madera o mineral traducidos a paper craft",
+          "uniones y desgaste fisico",
+          "sombras proyectadas coherentes"
+        ],
+        "palette_logic": "Color propio del material y el estado; sin ornamentacion cultural no respaldada.",
+        "scale": "Escala demostrable mediante mano, suelo o arquitectura sin texto ni regla grafica.",
+        "continuity_markers": [
+          "nombre estable: Arco y flechas",
+          "funcion estable: Armas de caza y conflicto con escala, material y desgaste historico coherentes.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Armas de caza y conflicto con escala, material y desgaste historico coherentes."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para object_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · object_sheet",
+        "primary_request": "forma, escala, material y uso legibles para Arco y flechas. Armas de caza y conflicto con escala, material y desgaste historico coherentes.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Escala demostrable mediante mano, suelo o arquitectura sin texto ni regla grafica.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel, fibra, madera o mineral traducidos a paper craft; uniones y desgaste fisico; sombras proyectadas coherentes",
+        "constraints": [
+          "Contorno, volumen, piezas y modo de uso claramente separables; evitar convertir utileria cotidiana en reliquia mistica.",
+          "mostrar: Armas de caza y conflicto con escala, material y desgaste historico coherentes.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_object",
+          "purpose": "forma, escala, material y uso legibles",
+          "aspect": "1:1",
+          "era": "historico_wayuu_segun_relato",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    }
+  },
+  "entities": {
+    "guerrero_ipuana": {
+      "name": "Guerrero Ipuana",
+      "kind": "personaje",
+      "description": "Combatiente que retorna dos veces y cuya fama conduce a una escalada final.",
+      "aliases": [],
+      "states": [
+        "combatiente",
+        "primer_retorno",
+        "segundo_retorno",
+        "duelo"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "sensitive",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet",
+        "state_sheet"
+      ],
+      "model_refs": [
+        "guerrero_ipuana__identity_sheet",
+        "guerrero_ipuana__state_sheet"
+      ],
+      "legacy_model_refs": [
+        "el-indio-guerrero-ipuana__ancla"
+      ],
+      "myth_refs": [
+        "el-indio-guerrero-ipuana"
+      ],
+      "evidence": [
+        {
+          "myth": "el-indio-guerrero-ipuana",
+          "field": "mito",
+          "note": "Retorna dos veces y muere cuando la violencia escala."
+        }
+      ]
+    },
+    "hijo_guerrero_ipuana": {
+      "name": "Hijo del guerrero Ipuana",
+      "kind": "personaje",
+      "description": "Joven que ignora una advertencia onirica y muere lejos de casa.",
+      "aliases": [],
+      "states": [
+        "cazador",
+        "soñante",
+        "ausente"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "sensitive",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet",
+        "state_sheet"
+      ],
+      "model_refs": [
+        "hijo_guerrero_ipuana__identity_sheet",
+        "hijo_guerrero_ipuana__state_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-indio-guerrero-ipuana"
+      ],
+      "evidence": [
+        {
+          "myth": "el-indio-guerrero-ipuana",
+          "field": "mito",
+          "note": "Ignora el sueño y repite la incapacidad de detenerse."
+        }
+      ]
+    },
+    "arco_flechas": {
+      "name": "Arco y flechas",
+      "kind": "objeto",
+      "description": "Armas de caza y conflicto con escala, material y desgaste historico coherentes.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "object_sheet"
+      ],
+      "model_refs": [
+        "arco_flechas__object_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-indio-guerrero-ipuana",
+        "el-indio-jaichuasay",
+        "los-dos-hermanos",
+        "ulepala"
+      ],
+      "evidence": [
+        {
+          "myth": "el-indio-guerrero-ipuana",
+          "field": "mito",
+          "note": "Armas de combate y caza."
+        },
+        {
+          "myth": "el-indio-jaichuasay",
+          "field": "mito",
+          "note": "La flecha inicia y precipita los cambios."
+        },
+        {
+          "myth": "los-dos-hermanos",
+          "field": "mito",
+          "note": "Objeto de competencia y venganza."
+        },
+        {
+          "myth": "ulepala",
+          "field": "mito",
+          "note": "Flecha de la consecuencia final."
+        }
+      ]
+    }
+  }
+}

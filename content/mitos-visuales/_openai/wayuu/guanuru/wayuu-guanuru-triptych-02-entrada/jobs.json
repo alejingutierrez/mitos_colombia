@@ -1,0 +1,142 @@
+{
+  "schema": "mitos-openai-triptych/v1",
+  "batch_id": "wayuu-guanuru-triptych-02-entrada",
+  "created_at": "2026-09-06T17:53:59.627Z",
+  "account_source": "OPENAI_API_KEY from ignored .env",
+  "provider": "openai",
+  "model": "gpt-image-2",
+  "community": "wayuu",
+  "myth": "guanuru",
+  "plan": "content/mitos-visuales/wayuu.guanuru.triptico.v1.1-entrada.json",
+  "prompt_profile": "story_first_v3_symbolic_huella",
+  "plan_sha256": "2427f640dda7a2a9b62de00a69d12da3a207fdb5156c183cd83a44c4d47efb61",
+  "narrative_target_sha256": "543da024fcad6d8ed839c3a51b3b918201e07a3443f8fb3cbde4cd6c26de69ea",
+  "evidence": [
+    {
+      "id": "published_guanuru",
+      "type": "project_narrative",
+      "path": "content/mitos-visuales/production/wayuu-2026-09-05/narratives/guanuru.json",
+      "supports": "Relato editorial objetivo y distinción explícita de géneros y nombres.",
+      "limits": "Reconstrucción contemporánea, no cuento tradicional autónomo."
+    },
+    {
+      "id": "pineda_icanh",
+      "type": "primary_ethnographic_record",
+      "url": "https://publicaciones.icanh.gov.co/index.php/picanh/catalog/download/248/272/1634?inline=1",
+      "pages": "Impresas 80–82, 144, 147–149; PDF 85–87, 149, 152–154",
+      "supports": "Visitas, pasos, casas desocupadas, mariposa nocturna, sueño y traducciones inestables.",
+      "limits": "Registro histórico de 1947 con categorías del autor; no jerarquía universal ni ritual actual, no relato continuo de una familia."
+    },
+    {
+      "id": "bible_lot20",
+      "type": "internal_visual_research",
+      "path": "docs/wayuu-lote-20-guanuru-v3.md",
+      "supports": "Entidades separadas, prendas y materialidad.",
+      "limits": "Fichas editoriales generadas; no objetos ni retratos etnográficos."
+    }
+  ],
+  "visual_memory_library": "content/mitos-visuales/wayuu.visual-memory.v1.json",
+  "visual_memory_review": {
+    "reviewer": "agent_direct_visual_review",
+    "reviewed_at": "2026-09-06T17:46:17.596Z",
+    "reviewed_reference_ids": [
+      "0b77fdbfdfdff55c35ed",
+      "9ec7ff71b4245f8c73bf"
+    ],
+    "retained": [
+      "Interior en penumbra frente a territorio distante; capas físicas, ocre, índigo y crema.",
+      "Visita pequeña de alas blancas como motivo doméstico."
+    ],
+    "rejected": [
+      "Collage de mantis, cráneo, algodón y mariposas como supuesto ritual único.",
+      "Cama europea como sustituto del chinchorro; enjambre, insectos gigantes y textiles geométricos no específicos.",
+      "Fijar mariposa como cuerpo de Guanurú o atribuir causalidad única a enfermedad."
+    ],
+    "influence_by_act": {
+      "entrada": "Conservar casa y profundidad; vaciar acumulación de símbolos. Una huella de peso en chinchorro vacío vuelve perceptible la presencia sin darle cuerpo.",
+      "acto": "Conservar relación interior/otra distancia; sueño con pariente opaco y contraste noche/día, no espectro ni efecto saliendo de manos.",
+      "huella": "Conservar una única mariposa blanca, aislarla como gesto de acogida mediante ala entreabierta; sin paisaje ni objetos protectores combinados."
+    }
+  },
+  "bible_selection": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/accepted-selection.json",
+  "canonical_models": [
+    {
+      "model_id": "guanuru__presence_model",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-20-guanuru-medium/guanuru__presence_model--canon.jpeg",
+      "sha256": "2575b551d2b703dff69dd5c53ee53753672e12f15aa39c4adf756489e60ca93e",
+      "qa_status": "PASS"
+    },
+    {
+      "model_id": "familia_casa_guanuru__group_grammar",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-20-guanuru-medium-corrections-01/familia_casa_guanuru__group_grammar--canon.jpeg",
+      "sha256": "88146d9c252a20c224855d3e2722021fd0694a73823dffd8407655453c22d2c7",
+      "qa_status": "PASS_AFTER_CORRECTION_01"
+    },
+    {
+      "model_id": "pariente_muerto_guanuru__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-20-guanuru-medium-corrections-01/pariente_muerto_guanuru__identity_sheet--canon.jpeg",
+      "sha256": "a98daab625aed0385a7dfd543c39543cc6f8329ec6a52bec5482d24739cfc008",
+      "qa_status": "PASS_AFTER_CORRECTION_01"
+    },
+    {
+      "model_id": "casa_desocupada_guanuru__spatial_model",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-20-guanuru-medium-corrections-01/casa_desocupada_guanuru__spatial_model--canon.jpeg",
+      "sha256": "d3a4c25900cd31332a8dee4879184ff9973b8826c4f66ce99ad3e087f6290f6b",
+      "qa_status": "PASS_AFTER_CORRECTION_01"
+    },
+    {
+      "model_id": "mariposa_blanca_guanuru__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-20-guanuru-medium-corrections-01/mariposa_blanca_guanuru__identity_sheet--canon.jpeg",
+      "sha256": "27920574eb61d789d3acb73d30654f8174a9c7f0dc0c39c077b70af255c1e62a",
+      "qa_status": "PASS_AFTER_CORRECTION_01"
+    }
+  ],
+  "approval_gate": "Campaña completa autorizada; QA por orientación y publicación aditiva sin borrar versiones.",
+  "requested_acts": [
+    "entrada"
+  ],
+  "generation_mode": "text_only_no_local_references",
+  "framing": "immersive_full_bleed",
+  "surface_finish": "layered_depth_no_exposed_support",
+  "jobs": [
+    {
+      "act": "entrada",
+      "aspect_ratio": "16:9",
+      "size": "1536x864",
+      "quality": "high",
+      "api_method": "images.generate",
+      "composition": "profundidad_abierta",
+      "canon_model_ids": [
+        "guanuru__presence_model",
+        "familia_casa_guanuru__group_grammar",
+        "pariente_muerto_guanuru__identity_sheet",
+        "casa_desocupada_guanuru__spatial_model",
+        "mariposa_blanca_guanuru__identity_sheet"
+      ],
+      "refs": [],
+      "ref_paths": [],
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/guanuru/wayuu-guanuru-triptych-02-entrada/prompts/entrada.prompt.txt",
+      "prompt_sha256": "25fbd9d38bffae710a4fc909d0819365fc79eb43915a95dd4bf5f50da77d4101",
+      "narrative_event_ids": [
+        "presencia_casa"
+      ],
+      "editorial_translation": "El chinchorro vacío y las láminas del suelo se deforman hacia un punto sin cuerpo: metáfora editorial de la presencia doméstica, no fenómeno literal registrado.",
+      "magic_in_the_ordinary": {
+        "ordinary_anchor": "Un chinchorro doméstico vacío.",
+        "impossible_behavior": "Chinchorro y suelo se deforman en sentidos opuestos hacia un punto invisible, separados por aire.",
+        "narrative_effect": "Permite sentir una visita sin convertir lo desconocido en monstruo.",
+        "agency": "La presencia no recibe identidad; ninguna persona ejerce poder.",
+        "physical_translation": "Embudo localizado en tejido casi horizontal y tres láminas continuas de suelo levantadas, con vacío oscuro entre ambos.",
+        "visible_test": "¿El chinchorro vacío se hunde localmente mientras el suelo de papel se levanta hacia él, separados por un vacío sin cuerpo ni soporte?",
+        "event_ids": [
+          "presencia_casa"
+        ],
+        "provenance": "editorial_metaphor",
+        "temporal_role": "present"
+      },
+      "visual_function": "narrative_scene",
+      "output": "output/imagegen/wayuu/triptychs/wayuu-guanuru-triptych-02-entrada/entrada.jpeg",
+      "status": "prepared"
+    }
+  ]
+}

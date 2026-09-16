@@ -1,0 +1,221 @@
+{
+  "schema": "mitos-openai-triptych/v1",
+  "batch_id": "wayuu-serranias-triptych-01",
+  "created_at": "2026-09-07T15:16:58.568Z",
+  "account_source": "OPENAI_API_KEY from ignored .env",
+  "provider": "openai",
+  "model": "gpt-image-2",
+  "community": "wayuu",
+  "myth": "serranias-de-la-guajira",
+  "plan": "content/mitos-visuales/wayuu.serranias.triptico.v1.json",
+  "prompt_profile": "story_first_v3_symbolic_huella",
+  "plan_sha256": "16bd3d70cb7e1b992d7a5eed3c7e1334ecc761d4629a2602fb948f1040d396db",
+  "narrative_target_sha256": "69d91fe70a67c033c04e199b1a16060e76a033f3454c301ffcadbb75084cfcaa",
+  "evidence": [
+    {
+      "id": "chaves1946",
+      "type": "primary_narrative_edition",
+      "url": "https://publicaciones.icanh.gov.co/index.php/picanh/catalog/download/243/266/1579?inline=1",
+      "pages": "310–311, informantes316",
+      "supports": "Viajeros, transformación, honda, Kasuto, mar y pozos.",
+      "limits": "Registro castellano mediado por Chaves e intérprete; no cartografía exacta."
+    }
+  ],
+  "visual_memory_library": "content/mitos-visuales/wayuu.visual-memory.v1.json",
+  "visual_memory_review": {
+    "reviewer": "agent_direct_visual_review",
+    "reviewed_at": "2026-09-07T15:18:00Z",
+    "reviewed_reference_ids": [
+      "9a53f0a5b25c47cc62df",
+      "c501081f59be649a6ed9"
+    ],
+    "retained": [
+      "Capas de relieve y mar azul profundo; distancia territorial."
+    ],
+    "rejected": [
+      "Caras monumentales, Mareiwa genérico con tocado y estampados, mezcla de episodios, rosetas y arquitectura innecesaria."
+    ],
+    "influence_by_act": {
+      "entrada": "Trasladar profundidad a Wojoro convirtiéndose en loma baja, sin cabezas de piedra.",
+      "acto": "Mar y honda se aíslan de viajeros, animales y clanes.",
+      "huella": "Condensar caminante/relieve en una sandalia que se vuelve loma; no otra escena."
+    }
+  },
+  "bible_selection": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/accepted-selection.json",
+  "canonical_models": [
+    {
+      "model_id": "wojoro__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-25-serranias-de-la-guajira-medium-corrections-01/wojoro__identity_sheet--canon.jpeg",
+      "sha256": "3703e4cfcb92b706eff7bcb209ac399be94bfb3ff8cc9411ba6a5fb0f85366c4",
+      "qa_status": "PASS_AFTER_CORRECTION_01"
+    },
+    {
+      "model_id": "wojoro__state_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-25-serranias-de-la-guajira-medium-corrections-02/wojoro__state_sheet--estados.jpeg",
+      "sha256": "d8bfc115b49c7124abfe80f2ce40a47436ba13cd46e2aba6cc442233d7a61556",
+      "qa_status": "PASS_AFTER_CORRECTION_02"
+    },
+    {
+      "model_id": "transformacion_viajeros_serranias__phenomenon_rule",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-25-serranias-de-la-guajira-medium/transformacion_viajeros_serranias__phenomenon_rule--canon.jpeg",
+      "sha256": "b12e9e7a8a07990233feaa8633260b98097936067810428d34c1b54abe999e6e",
+      "qa_status": "PASS"
+    },
+    {
+      "model_id": "retiro_mar_serranias__phenomenon_rule",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-25-serranias-de-la-guajira-medium/retiro_mar_serranias__phenomenon_rule--canon.jpeg",
+      "sha256": "2903a7b32115251a1862cb8cfc1c55b902c01bb15c31f6378966e66eaffe6c90",
+      "qa_status": "PASS"
+    },
+    {
+      "model_id": "honda_piedra_mareiwa__object_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-10-maleiwa-medium-corrections-01/honda_piedra_mareiwa__object_sheet--canon.jpeg",
+      "sha256": "a86cb0407234f008e029451ca15ea2e06355781e34f15fd591045f5c73bb6bec",
+      "qa_status": "PASS_AFTER_CORRECTION_01"
+    },
+    {
+      "model_id": "pozos_salados_mareiwa__spatial_model",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-10-maleiwa-medium/pozos_salados_mareiwa__spatial_model--canon.jpeg",
+      "sha256": "2467aa28cb581aece0bba74ce2a6155bf0c40728839ed625fd3dbe9ea85d2574",
+      "qa_status": "PASS"
+    }
+  ],
+  "approval_gate": "Campaña completa autorizada; QA por orientación y publicación aditiva sin borrar versiones.",
+  "requested_acts": [
+    "entrada",
+    "acto",
+    "huella"
+  ],
+  "generation_mode": "text_only_no_local_references",
+  "framing": "immersive_full_bleed",
+  "surface_finish": "layered_depth_no_exposed_support",
+  "jobs": [
+    {
+      "act": "entrada",
+      "aspect_ratio": "16:9",
+      "size": "1536x864",
+      "quality": "high",
+      "api_method": "images.generate",
+      "composition": "profundidad_abierta",
+      "canon_model_ids": [
+        "wojoro__identity_sheet",
+        "wojoro__state_sheet",
+        "transformacion_viajeros_serranias__phenomenon_rule",
+        "retiro_mar_serranias__phenomenon_rule",
+        "honda_piedra_mareiwa__object_sheet",
+        "pozos_salados_mareiwa__spatial_model"
+      ],
+      "refs": [],
+      "ref_paths": [],
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/serranias-de-la-guajira/wayuu-serranias-triptych-01/prompts/entrada.prompt.txt",
+      "prompt_sha256": "ebe3e001591a1075972d9ac70b0739776b51e5d7e35a9fb05cb43a41357f475d",
+      "narrative_event_ids": [
+        "viajeros_cerros"
+      ],
+      "editorial_translation": "Acción del relato; continuidad de pliegues y escala son traducción editorial, no monumento real ni documentación etnográfica.",
+      "magic_in_the_ordinary": {
+        "ordinary_anchor": "Caminante, vestido envolvente y loma baja.",
+        "impossible_behavior": "Los pliegues de su ropa continúan físicamente como estratos del cerro.",
+        "narrative_effect": "El camino deja de avanzar y empieza a levantar tierra.",
+        "agency": "Mareiwa transforma el territorio según el relato; no un caminante controlando poderes.",
+        "physical_translation": "Capas continuas desde el dobladillo hasta el suelo.",
+        "visible_test": "¿Un viajero pequeño se vuelve una loma baja por continuidad material, sin estatua separada?",
+        "event_ids": [
+          "viajeros_cerros"
+        ],
+        "provenance": "editorial_metaphor",
+        "temporal_role": "present"
+      },
+      "visual_function": "narrative_scene",
+      "output": "output/imagegen/wayuu/triptychs/wayuu-serranias-triptych-01/entrada.jpeg",
+      "status": "prepared"
+    },
+    {
+      "act": "acto",
+      "aspect_ratio": "9:16",
+      "size": "864x1536",
+      "quality": "medium",
+      "api_method": "images.generate",
+      "composition": "profundidad_abierta",
+      "canon_model_ids": [
+        "wojoro__identity_sheet",
+        "wojoro__state_sheet",
+        "transformacion_viajeros_serranias__phenomenon_rule",
+        "retiro_mar_serranias__phenomenon_rule",
+        "honda_piedra_mareiwa__object_sheet",
+        "pozos_salados_mareiwa__spatial_model"
+      ],
+      "refs": [],
+      "ref_paths": [],
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/serranias-de-la-guajira/wayuu-serranias-triptych-01/prompts/acto.prompt.txt",
+      "prompt_sha256": "1c3cd8b27b579fbe326f03dcc8625692cea55cde91ea8dd56b07d7f48fe692ec",
+      "narrative_event_ids": [
+        "mar_retirado"
+      ],
+      "editorial_translation": "Acción del relato; continuidad de pliegues y escala son traducción editorial, no monumento real ni documentación etnográfica.",
+      "magic_in_the_ordinary": {
+        "ordinary_anchor": "Piedra, honda, costa y pozos salados.",
+        "impossible_behavior": "La lámina de mar se despega y se recoge hacia su horizonte dejando aire encima de tierra seca.",
+        "narrative_effect": "Una piedra abre lugar para la tierra.",
+        "agency": "Mareiwa transforma el territorio según el relato; no un caminante controlando poderes.",
+        "physical_translation": "Cinco láminas azules conectadas al mar distante y sombra del borde elevado.",
+        "visible_test": "¿La piedra queda en tierra seca ante un solo mar que se recoge, con pozos salados y sin camino entre dos muros?",
+        "event_ids": [
+          "mar_retirado"
+        ],
+        "provenance": "editorial_metaphor",
+        "temporal_role": "present"
+      },
+      "visual_function": "narrative_scene",
+      "output": "output/imagegen/wayuu/triptychs/wayuu-serranias-triptych-01/acto.jpeg",
+      "status": "prepared"
+    },
+    {
+      "act": "huella",
+      "aspect_ratio": "1:1",
+      "size": "1024x1024",
+      "quality": "medium",
+      "api_method": "images.generate",
+      "composition": "simbolo_central",
+      "canon_model_ids": [
+        "wojoro__identity_sheet",
+        "wojoro__state_sheet",
+        "transformacion_viajeros_serranias__phenomenon_rule",
+        "retiro_mar_serranias__phenomenon_rule",
+        "honda_piedra_mareiwa__object_sheet",
+        "pozos_salados_mareiwa__spatial_model"
+      ],
+      "refs": [],
+      "ref_paths": [],
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/serranias-de-la-guajira/wayuu-serranias-triptych-01/prompts/huella.prompt.txt",
+      "prompt_sha256": "697d1d730469421f5aea31c4d9c02e5ddce7005d3f1012ebb0de3bf0a0f76f38",
+      "narrative_event_ids": [
+        "viajeros_cerros"
+      ],
+      "editorial_translation": "Símbolo editorial de caminante/relieve, no objeto sagrado o emblema Wayúu existente.",
+      "magic_in_the_ordinary": {
+        "ordinary_anchor": "Sandalia del viaje y loma.",
+        "impossible_behavior": "Una sola suela conserva la forma de caminar y se levanta como relieve.",
+        "narrative_effect": "Caminar también puede ser quedarse.",
+        "agency": "Mareiwa transforma el territorio según el relato; no un caminante controlando poderes.",
+        "physical_translation": "La suela continua se desdobla en estratos.",
+        "visible_test": "¿Una única sandalia se vuelve relieve sin contener una escena?",
+        "event_ids": [
+          "viajeros_cerros"
+        ],
+        "provenance": "editorial_metaphor",
+        "temporal_role": "memory"
+      },
+      "visual_function": "symbolic_synthesis",
+      "symbolic_contract": {
+        "thesis": "El territorio conserva los pasos que ya no avanzan.",
+        "carrier": "Sandalia-relieve única.",
+        "operation": "La suela se eleva en loma de papel.",
+        "story_connection": "Viajeros transformados en cerros.",
+        "visible_test": "¿Una única sandalia se vuelve relieve sin contener una escena?"
+      },
+      "output": "output/imagegen/wayuu/triptychs/wayuu-serranias-triptych-01/huella.jpeg",
+      "status": "prepared"
+    }
+  ]
+}

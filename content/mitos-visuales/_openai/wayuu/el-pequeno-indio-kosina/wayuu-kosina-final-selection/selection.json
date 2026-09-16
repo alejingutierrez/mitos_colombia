@@ -1,0 +1,133 @@
+{
+  "schema": "mitos-triptych-selection/v2",
+  "myth": "el-pequeno-indio-kosina",
+  "title": "El pequeño indio Kosina",
+  "created_at": "2026-09-06T16:10:39.490Z",
+  "status": "approved_for_publication_under_campaign_authorization",
+  "approval_basis": "Campaña completa autorizada por el usuario; selección del agente tras investigación e inspección directa.",
+  "campaign_scope": "content/mitos-visuales/production/wayuu-2026-09-05/scope.json",
+  "narrative_target_sha256": "1e64f847e4e505f07e10ddce4e1ab058445edb5bb63c9c0413a8716be14faf4d",
+  "visual_memory_library": "content/mitos-visuales/wayuu.visual-memory.v1.json",
+  "visual_memory_review": {
+    "reviewer": "agent_direct_visual_review",
+    "reviewed_at": "2026-09-06T16:04:44.812Z",
+    "reviewed_reference_ids": [
+      "732145844ee6f8d036d3",
+      "2f5b2e80829e7607d8d3"
+    ],
+    "retained": [
+      "Papel recortado y relación entre ocres cálidos y cielo azul profundo.",
+      "Continuidad entre animal y territorio; crin de tiras de papel."
+    ],
+    "rejected": [
+      "Alas de Pegaso, jinete con lanza/arco en la carrera y ornamentos geométricos sin sustento.",
+      "Rostros volumétricos y personaje grande; cielos de espirales y gran disco solar.",
+      "Paisaje reducido a maqueta aislada y arquitectura no identificada por la fuente."
+    ],
+    "influence_by_act": {
+      "entrada": "Cambiar caballo alado por potro sin alas y rastro de cascos que mengua lateralmente; figuras pequeñas y distancia.",
+      "acto": "Mantener capas del terreno, convertirlas en entrada bajo tierra; no vuelo ni alas.",
+      "huella": "Conservar contraste ocre/azul; faja abierta y ausencia de caballo como síntesis del vínculo, sin jinete ni paisaje."
+    }
+  },
+  "selected": [
+    {
+      "act": "entrada",
+      "path": "output/imagegen/wayuu/triptychs/wayuu-kosina-triptych-02-entrada/entrada.jpeg",
+      "sha256": "37b4aaab08241d76300e1ccd11802e5a46a6c36e0859439f6b038d541546a857",
+      "width": 1536,
+      "height": 864,
+      "quality": "high",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/el-pequeno-indio-kosina/wayuu-kosina-triptych-02-entrada/prompts/entrada.prompt.txt",
+      "prompt_sha256": "022174b76eef0ee20978a9c53bdca3253f138aa59909c4cfca6dddc6af894629",
+      "visual_function": "narrative_scene",
+      "review": {
+        "observed": "Un joven de prendas completas y un potro crema sin alas en la derecha; cuatro impresiones únicas con muesca corta, decrecientes lateralmente, sin dividirse en dos dedos. Campo ocre abierto y colinas en planos azules de papel. Mayor huella desproporcionada respecto al potro.",
+        "limits": [
+          "La figura ronda un cuarto del alto, no los 100 píxeles pedidos; el título tiene amplio espacio libre.",
+          "La mancha óxido del caballo cae más arriba del hombro que en la ficha; mantiene una sola marca y misma paleta.",
+          "La magnitud y alineación de cascos son licencia editorial para visualizar el encogimiento; no huellas arqueológicas ni escala métrica."
+        ]
+      }
+    },
+    {
+      "act": "acto",
+      "path": "output/imagegen/wayuu/triptychs/wayuu-kosina-triptych-01/acto.jpeg",
+      "sha256": "e4af7a5b0187be4edb55a25aa9b87cdfc7b3874c261d27a6dd245829ac7388e2",
+      "width": 864,
+      "height": 1536,
+      "quality": "medium",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/el-pequeno-indio-kosina/wayuu-kosina-triptych-01/prompts/acto.prompt.txt",
+      "prompt_sha256": "d13543b1a6e4e07d354e240ab39fed96fd47e3e689f3eb39e8d5fdf1af20c087",
+      "visual_function": "narrative_scene",
+      "review": {
+        "observed": "Kosina pequeño de pie fuera; un caballo completo visible bajo la capa superficial de papel, sobre camino índigo descendente. Cuatro patas, cola y cabeza visibles; sin alas, silla, fuerza humana ni daño. Suelo continuo de capas con sombras y fondo de atardecer.",
+        "limits": [
+          "El interior subterráneo visible y Kosina como testigo son puesta en escena editorial.",
+          "Terreno profundo ocupa parte del tercio inferior; título móvil debe comprobarse antes del cierre.",
+          "La mancha óxido y crin mantienen continuidad cromática; rostro mínimo no retrato histórico."
+        ]
+      }
+    },
+    {
+      "act": "huella",
+      "path": "output/imagegen/wayuu/triptychs/wayuu-kosina-triptych-01/huella.jpeg",
+      "sha256": "87a3fc65a9551e4029799382ccceb13ebb12a31f53af018660d14312fe93ee63",
+      "width": 1024,
+      "height": 1024,
+      "quality": "medium",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/el-pequeno-indio-kosina/wayuu-kosina-triptych-01/prompts/huella.prompt.txt",
+      "prompt_sha256": "8d5b8c2de06c6c3669b1c691e9d448e822430695867629c0b06d54cfdf341dcf",
+      "visual_function": "symbolic_synthesis",
+      "review": {
+        "observed": "Una banda óxido abierta con silueta equina en negativo, cuatro patas y abertura junto al hocico; fondo azul visible a través de la ausencia, bordes internos y sombra material.",
+        "limits": [
+          "La banda sintetiza la faja sin intentar reproducir un tejido histórico.",
+          "Silueta deliberadamente emblemática: símbolo editorial, no logotipo de marca ni signo cultural atribuido.",
+          "No narra literalmente que Kosina recortara una faja o liberara al caballo de un nudo."
+        ]
+      }
+    }
+  ],
+  "generation": {
+    "provider": "OpenAI API",
+    "model": "gpt-image-2",
+    "mode": "text_only_no_local_references",
+    "unique_images": 4,
+    "by_act": {
+      "entrada": {
+        "unique_images": 2,
+        "preparation_rounds": 2,
+        "requested_alternatives": 0
+      },
+      "acto": {
+        "unique_images": 1,
+        "preparation_rounds": 1,
+        "requested_alternatives": 0
+      },
+      "huella": {
+        "unique_images": 1,
+        "preparation_rounds": 1,
+        "requested_alternatives": 0
+      }
+    },
+    "corrections": 1,
+    "cli_seconds": {
+      "entrada_01": 74.1,
+      "acto_01": 36.7,
+      "huella_01": 35.9,
+      "entrada_02": 72.2
+    },
+    "cost": null,
+    "request_ids": null
+  },
+  "excluded": [
+    {
+      "act": "entrada",
+      "path": "output/imagegen/wayuu/triptychs/wayuu-kosina-triptych-01/entrada.jpeg",
+      "sha256": "44f6a2816e3a570930c8ca30ff127ac3c87e942913db740a0dbc6fdbc9411baf",
+      "reason": "Personaje grande y huellas dentro del área de título; corrección de encuadre."
+    }
+  ],
+  "published": false
+}

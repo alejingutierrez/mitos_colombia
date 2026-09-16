@@ -1,0 +1,149 @@
+{
+  "schema": "mitos-openai-triptych/v1",
+  "batch_id": "wayuu-ulepala-triptych-03-entrada",
+  "created_at": "2026-09-06T17:03:56.015Z",
+  "account_source": "OPENAI_API_KEY from ignored .env",
+  "provider": "openai",
+  "model": "gpt-image-2",
+  "community": "wayuu",
+  "myth": "ulepala",
+  "plan": "content/mitos-visuales/wayuu.ulepala.triptico.v1.2-entrada.json",
+  "prompt_profile": "story_first_v3_symbolic_huella",
+  "plan_sha256": "a6f17ac9d0867e03a7430484060f3c7a20139a33ebac31d0e0cbcfbe173c624a",
+  "narrative_target_sha256": "d0ee7ef1040f93122f86d2b1aa4e69b40b4464d6d37be036e8c756cb7674199b",
+  "evidence": [
+    {
+      "id": "published_ulepala",
+      "type": "project_narrative",
+      "path": "content/mitos-visuales/production/wayuu-2026-09-05/narratives/ulepala.json",
+      "supports": "Versión pública objetivo conservada; aprendizaje y desenlace.",
+      "limits": "Edición interna, no fuente histórica independiente."
+    },
+    {
+      "id": "paz_finol",
+      "type": "primary_narrative_record",
+      "url": "https://www.joseenriquefinol.com/wp-content/uploads/2020/07/MITO-Y-CULTURA-GUAJIRA-Libro.pdf",
+      "pages": "177–207, especialmente 183, 193–194 y 207",
+      "supports": "Caverna bajo el mar, abrigo de la compañera, mujeres de solapas verdes y corazón convertido en cardenal.",
+      "limits": "Versión Paz Ipuana mediada por Finol. Caverna desarrolla el viaje resumido en la página; no importar cruce sobre el agua de Perrin."
+    },
+    {
+      "id": "bible_lot19",
+      "type": "internal_visual_research",
+      "path": "docs/wayuu-lote-19-ulepala-v3.md",
+      "supports": "Modelos de identidad y prendas completas.",
+      "limits": "Modelos generados, no iconografía histórica."
+    },
+    {
+      "id": "ebird_cardinal",
+      "type": "natural_history_reference",
+      "url": "https://ebird.org/species/vercar1",
+      "supports": "Cardenal regional: rojo, cresta puntiaguda, pico gris, negro pequeño en mentón.",
+      "limits": "Referencia naturalista textual, no imagen histórica del mito ni prueba sobre cada forma de Iisho."
+    }
+  ],
+  "visual_memory_library": "content/mitos-visuales/wayuu.visual-memory.v1.json",
+  "visual_memory_review": {
+    "reviewer": "agent_direct_visual_review",
+    "reviewed_at": "2026-09-06T17:00:30.275Z",
+    "reviewed_reference_ids": [
+      "5a06d296a1deb2ac4679",
+      "060442eeec694224f2f7"
+    ],
+    "retained": [
+      "Estratos de montañas y niebla, índigo y ocre; papel con sombras físicas.",
+      "Cardenal rojo como motivo propio del desenlace."
+    ],
+    "rejected": [
+      "Abrazo central que reduce el arco a romance y resta agencia a la compañera.",
+      "Mujer blanca translúcida, torsos descubiertos, barco y mariposas mezclados con episodios ajenos a cada escena.",
+      "Máscara negra extensa y pico rojo del cardenal: ajustar a la referencia regional, no copiar literalmente la ficha."
+    ],
+    "influence_by_act": {
+      "entrada": "Conservar profundidad de estratos, alejar pareja y sustituir abrazo por travesía subterránea guiada por ella.",
+      "acto": "Conservar terreno en capas; retirar pareja romántica y mostrar percepción de mujeres-auyamas mediante sombras anticipatorias.",
+      "huella": "Aislar ave roja y corazón como una sola operación simbólica; sin paisaje ni collage del viaje."
+    }
+  },
+  "bible_selection": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/accepted-selection.json",
+  "canonical_models": [
+    {
+      "model_id": "ulepala__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-19-ulepala-medium-corrections-01/ulepala__identity_sheet--canon.jpeg",
+      "sha256": "48a7443957a878d8d28d8db46941488f9b738857b35b4c67ca1ecdb0563ce4a8",
+      "qa_status": "PASS_AFTER_CORRECTION_01"
+    },
+    {
+      "model_id": "companera_muerta_ulepala__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-19-ulepala-medium-corrections-01/companera_muerta_ulepala__identity_sheet--canon.jpeg",
+      "sha256": "79ddfb2485bdfba0e2fc8cee0ed16848749af798930f70cd33bdcd71ed7f02b0",
+      "qa_status": "PASS_AFTER_CORRECTION_01"
+    },
+    {
+      "model_id": "caverna_submarina_ulepala__spatial_model",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-19-ulepala-medium/caverna_submarina_ulepala__spatial_model--canon.jpeg",
+      "sha256": "c08a7aa138c2c1e172d0888449173cd20cb155f5759c016cfeb52ee0aa36e0ae",
+      "qa_status": "PASS"
+    },
+    {
+      "model_id": "majayuras_ahuyamas_ulepala__group_grammar",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-19-ulepala-medium/majayuras_ahuyamas_ulepala__group_grammar--canon.jpeg",
+      "sha256": "ffe3d36b99ee27e4f7b016bb15324ab1d8ee3fe8b6dfb66fb74542fbb214fad1",
+      "qa_status": "PASS"
+    },
+    {
+      "model_id": "cardenal_ulepala__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-19-ulepala-medium/cardenal_ulepala__identity_sheet--canon.jpeg",
+      "sha256": "73879d61efd5f04b7e0cbf18428ee25e4ad53fe50ee6a5cee635508ce57541e9",
+      "qa_status": "PASS"
+    }
+  ],
+  "approval_gate": "Campaña completa autorizada; QA por orientación y publicación aditiva sin borrar versiones.",
+  "requested_acts": [
+    "entrada"
+  ],
+  "generation_mode": "text_only_no_local_references",
+  "framing": "immersive_full_bleed",
+  "surface_finish": "layered_depth_no_exposed_support",
+  "jobs": [
+    {
+      "act": "entrada",
+      "aspect_ratio": "16:9",
+      "size": "1536x864",
+      "quality": "high",
+      "api_method": "images.generate",
+      "composition": "profundidad_abierta",
+      "canon_model_ids": [
+        "ulepala__identity_sheet",
+        "companera_muerta_ulepala__identity_sheet",
+        "caverna_submarina_ulepala__spatial_model",
+        "majayuras_ahuyamas_ulepala__group_grammar",
+        "cardenal_ulepala__identity_sheet"
+      ],
+      "refs": [],
+      "ref_paths": [],
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/ulepala/wayuu-ulepala-triptych-03-entrada/prompts/entrada.prompt.txt",
+      "prompt_sha256": "05809545a92bcfb54403e5706a35b0cad0f49a16a7a5a80138d4768d89214713",
+      "narrative_event_ids": [
+        "caverna_abrigo"
+      ],
+      "editorial_translation": "La caverna y el abrigo están narrados. Ver simultáneamente mar y paso subterráneo es una traducción espacial editorial, no un plano geográfico.",
+      "magic_in_the_ordinary": {
+        "ordinary_anchor": "Caminar acompañado y abrigarse.",
+        "impossible_behavior": "Una caverna permite atravesar por debajo la extensión del mar.",
+        "narrative_effect": "Cruzar a otro dominio depende del cuidado y conocimiento de ella.",
+        "agency": "Ella guía y abriga; él la sigue.",
+        "physical_translation": "Bóvedas separadas bajo láminas marinas, pareja mínima unida por mano y abrigo.",
+        "provenance": "narrated_fact",
+        "temporal_role": "present",
+        "visible_test": "¿La pareja es pequeña y camina bajo el mar, con ella guiando y compartiendo abrigo?",
+        "event_ids": [
+          "caverna_abrigo"
+        ]
+      },
+      "visual_function": "narrative_scene",
+      "output": "output/imagegen/wayuu/triptychs/wayuu-ulepala-triptych-03-entrada/entrada.jpeg",
+      "status": "prepared"
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "schema": "mitos-triptych-iteration-audit/v1",
+  "audited_at": "2026-09-06T04:04:16.046Z",
+  "package_root": "content/mitos-visuales/_openai/wayuu/el-indio-jaichuasay",
+  "scope": "Artefactos locales referidos por jobs.json, deduplicados por SHA-256; no mide llamadas fallidas sin imagen ni facturación de API.",
+  "unique_images": 4,
+  "by_act": {
+    "entrada": {
+      "unique_images": 1,
+      "preparation_rounds": 1,
+      "requested_alternatives": 0
+    },
+    "acto": {
+      "unique_images": 2,
+      "preparation_rounds": 2,
+      "requested_alternatives": 0
+    },
+    "huella": {
+      "unique_images": 1,
+      "preparation_rounds": 1,
+      "requested_alternatives": 0
+    }
+  },
+  "prepared_without_output": 0,
+  "duplicates": 0,
+  "rows": [
+    {
+      "batch_id": "wayuu-jaichuasay-triptych-01",
+      "prepared_at": "2026-09-06T03:59:01.506Z",
+      "act": "entrada",
+      "purpose": "generation_or_revision",
+      "manifest": "content/mitos-visuales/_openai/wayuu/el-indio-jaichuasay/wayuu-jaichuasay-triptych-01/jobs.json",
+      "output": "output/imagegen/wayuu/triptychs/wayuu-jaichuasay-triptych-01/entrada.jpeg",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/el-indio-jaichuasay/wayuu-jaichuasay-triptych-01/prompts/entrada.prompt.txt",
+      "requested_size": "1536x864",
+      "requested_quality": "high",
+      "visual_function": "narrative_scene",
+      "status": "unique_generated_artifact",
+      "sha256": "8852829b42409b4a26a75126586853ae7da644403f2c48940196af0588a305f6",
+      "duplicate_of": null,
+      "width": 1536,
+      "height": 864,
+      "size_matches_request": true,
+      "prompt_sha256": "8c5b4e7f6c03bfdc5fb9dca5a57190ec9ff818402dec9739cc44270dbbffd821",
+      "prompt_hash_matches_manifest": true,
+      "prompt_integrity": "exact_bytes"
+    },
+    {
+      "batch_id": "wayuu-jaichuasay-triptych-01",
+      "prepared_at": "2026-09-06T03:59:01.506Z",
+      "act": "acto",
+      "purpose": "generation_or_revision",
+      "manifest": "content/mitos-visuales/_openai/wayuu/el-indio-jaichuasay/wayuu-jaichuasay-triptych-01/jobs.json",
+      "output": "output/imagegen/wayuu/triptychs/wayuu-jaichuasay-triptych-01/acto.jpeg",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/el-indio-jaichuasay/wayuu-jaichuasay-triptych-01/prompts/acto.prompt.txt",
+      "requested_size": "864x1536",
+      "requested_quality": "medium",
+      "visual_function": "narrative_scene",
+      "status": "unique_generated_artifact",
+      "sha256": "519bc9b0c7795cf785bf00ba7003eb86d14b4005bbac46e3b9f44337e573cccd",
+      "duplicate_of": null,
+      "width": 864,
+      "height": 1536,
+      "size_matches_request": true,
+      "prompt_sha256": "e59603b47ee5d623ee4a7e61fb029112aad61f1d42964f68d37d9257160550c1",
+      "prompt_hash_matches_manifest": true,
+      "prompt_integrity": "exact_bytes"
+    },
+    {
+      "batch_id": "wayuu-jaichuasay-triptych-01",
+      "prepared_at": "2026-09-06T03:59:01.506Z",
+      "act": "huella",
+      "purpose": "generation_or_revision",
+      "manifest": "content/mitos-visuales/_openai/wayuu/el-indio-jaichuasay/wayuu-jaichuasay-triptych-01/jobs.json",
+      "output": "output/imagegen/wayuu/triptychs/wayuu-jaichuasay-triptych-01/huella.jpeg",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/el-indio-jaichuasay/wayuu-jaichuasay-triptych-01/prompts/huella.prompt.txt",
+      "requested_size": "1024x1024",
+      "requested_quality": "medium",
+      "visual_function": "symbolic_synthesis",
+      "status": "unique_generated_artifact",
+      "sha256": "c0acf4c7c68e976cee85d736a79cb2db79dbb17f31c658cac065226d46686692",
+      "duplicate_of": null,
+      "width": 1024,
+      "height": 1024,
+      "size_matches_request": true,
+      "prompt_sha256": "de5db92dd230070d56331fd92552814909b9d98248309d8086ae142a16b57ea1",
+      "prompt_hash_matches_manifest": true,
+      "prompt_integrity": "exact_bytes"
+    },
+    {
+      "batch_id": "wayuu-jaichuasay-triptych-02-acto",
+      "prepared_at": "2026-09-06T04:01:56.272Z",
+      "act": "acto",
+      "purpose": "generation_or_revision",
+      "manifest": "content/mitos-visuales/_openai/wayuu/el-indio-jaichuasay/wayuu-jaichuasay-triptych-02-acto/jobs.json",
+      "output": "output/imagegen/wayuu/triptychs/wayuu-jaichuasay-triptych-02-acto/acto.jpeg",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/el-indio-jaichuasay/wayuu-jaichuasay-triptych-02-acto/prompts/acto.prompt.txt",
+      "requested_size": "864x1536",
+      "requested_quality": "medium",
+      "visual_function": "narrative_scene",
+      "status": "unique_generated_artifact",
+      "sha256": "08a21f162b2c89672feeee0b26dea8955586893e6e4fa601f299f42401b94ff0",
+      "duplicate_of": null,
+      "width": 864,
+      "height": 1536,
+      "size_matches_request": true,
+      "prompt_sha256": "0ec721d06d4bdde257e9dcf64f6363be1ce12cb91e516a15ec4a8106167f7d4a",
+      "prompt_hash_matches_manifest": true,
+      "prompt_integrity": "exact_bytes"
+    }
+  ]
+}

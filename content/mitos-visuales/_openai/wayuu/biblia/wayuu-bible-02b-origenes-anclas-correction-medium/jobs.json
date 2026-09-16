@@ -1,0 +1,45 @@
+{
+  "schema": "mitos-colombia-biblia-batch/v1",
+  "batch_id": "wayuu-bible-02b-origenes-anclas-correction-medium",
+  "asset_type": "bible",
+  "quality": "medium",
+  "framing": "immersive_full_bleed",
+  "surface_finish": "layered_depth_no_exposed_support",
+  "plan": "content/mitos-visuales/_openai/wayuu/biblia/wayuu-bible-02b-origenes-anclas-correction-medium/plan.snapshot.json",
+  "prepared_at": "2026-09-03",
+  "generation_scope": "Corrección textual del segundo lote en medium: recuperar el núcleo material de fuego Siki como objeto dominante y reducir Waleker a una única araña a escala natural junto a tejido liso. Sin referencias locales de entrada.",
+  "jobs": [
+    {
+      "id": "el-origen-del-fuego__ancla--canon",
+      "model_id": "el-origen-del-fuego__ancla",
+      "view_id": "canon",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/biblia/wayuu-bible-02b-origenes-anclas-correction-medium/prompts/el-origen-del-fuego__ancla--canon.prompt.txt",
+      "output_file": "output/imagegen/wayuu/wayuu-bible-02b-origenes-anclas-correction-medium/el-origen-del-fuego__ancla--canon.jpeg",
+      "prompt_sha256": "ef3f5382a88b3b6559b5e2e0c72898ccf1dea957ac56b3c16639ac0a2c853455",
+      "provider": "OpenAI API",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "1024x1024",
+      "output_format": "jpeg",
+      "references": [],
+      "input_references": [],
+      "status": "prepared"
+    },
+    {
+      "id": "waleker-el-origen-del-tejido__ancla--canon",
+      "model_id": "waleker-el-origen-del-tejido__ancla",
+      "view_id": "canon",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/biblia/wayuu-bible-02b-origenes-anclas-correction-medium/prompts/waleker-el-origen-del-tejido__ancla--canon.prompt.txt",
+      "output_file": "output/imagegen/wayuu/wayuu-bible-02b-origenes-anclas-correction-medium/waleker-el-origen-del-tejido__ancla--canon.jpeg",
+      "prompt_sha256": "d147cb626369d4c5019341de20ab8d0b67065a74ced09bea669cb636e5a91f4b",
+      "provider": "OpenAI API",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "1024x1536",
+      "output_format": "jpeg",
+      "references": [],
+      "input_references": [],
+      "status": "prepared"
+    }
+  ]
+}

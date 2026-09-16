@@ -1,6 +1,6 @@
 # Chiminigagua · chiminigagua
 
-**Modelo:** GPT Image 2 · **Resolución:** 2K · **Calidad:** high · **Unlimited ON**
+**Política vigente si se reanuda:** GPT Image 2 · entrada horizontal `high`; acto vertical y huella cuadrada `medium`. Este paquete histórico no autoriza `high` global.
 
 **Arco:** la luz sale de la noche (entrada) -> las aves cosen la luz sobre el mundo (acto) -> el vuelo sigue cruzando las madrugadas (huella)
 

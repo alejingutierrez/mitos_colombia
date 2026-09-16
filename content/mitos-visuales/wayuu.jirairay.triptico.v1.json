@@ -1,0 +1,270 @@
+{
+  "schema": "mitos-colombia-triptychs/v1.6",
+  "status": "production_and_publication_authorized",
+  "comunidad": "Wayúu",
+  "region": "Caribe",
+  "prompt_profile": "story_first_v3_symbolic_huella",
+  "generation_mode": "text_only_no_local_references",
+  "bible_selection": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/accepted-selection.json",
+  "campaign_scope": "content/mitos-visuales/production/wayuu-2026-09-05/scope.json",
+  "visual_memory_library": "content/mitos-visuales/wayuu.visual-memory.v1.json",
+  "approval_gate": "Campaña completa autorizada; QA por orientación y publicación aditiva sin borrar versiones.",
+  "output_sizes": {
+    "entrada": "1536x864",
+    "acto": "864x1536",
+    "huella": "1024x1024"
+  },
+  "quality_policy": {
+    "entrada": "high",
+    "acto": "medium",
+    "huella": "medium"
+  },
+  "mitos": {
+    "jirairay": {
+      "titulo": "Jirairay, canto para llamar a Wanurü",
+      "canon_models": [
+        "outsu_jirairay__identity_sheet",
+        "paciente_jirairay__identity_sheet",
+        "jirairay_canto__phenomenon_rule",
+        "maraca_outsu__object_sheet",
+        "chinchorro__object_sheet",
+        "rancheria_wayuu__spatial_model"
+      ],
+      "evidence": [
+        {
+          "id": "pineda_1950",
+          "type": "primary_source",
+          "title": "Aspectos de la magia en la Guajira",
+          "author": "Roberto Pineda Giraldo",
+          "year": 1950,
+          "url": "https://publicaciones.icanh.gov.co/index.php/picanh/catalog/download/248/272/1634?inline=1",
+          "locator": "p.25, índice PDF30, apartado Espíritus protectores de los piaches; matiz p.27, índice32.",
+          "supports": "Nombre cantado de invocación a Wanurü, relación de canto y auxiliares.",
+          "limits": "La propia fuente alterna términos en p.27; no es una taxonomía uniforme ni voz comunitaria actual. No reproducir instrucciones, promesas terapéuticas o categorías de demonio."
+        },
+        {
+          "id": "published_jirairay",
+          "type": "project_narrative",
+          "path": "content/mitos-visuales/production/wayuu-2026-09-05/narratives/jirairay.json",
+          "supports": "Reconstrucción editorial centrada en especialista, paciente, canto y continuidad del cuidado al amanecer.",
+          "limits": "No cuento autónomo atestiguado; no afirmar que Jirairay tenga un cuerpo o que la ceremonia garantice curación."
+        },
+        {
+          "id": "bible_jirairay",
+          "type": "internal_visual_research",
+          "path": "editorial/wayuu/production-direction-v3.mjs",
+          "supports": "Identidades individuales y regla material del canto.",
+          "limits": "Las fichas aisladas separan entidades por diseño; sus prohibiciones de reparto no se trasladan mecánicamente a escenas narrativas."
+        }
+      ],
+      "bible_overrides": [
+        {
+          "model_id": "outsu_jirairay__identity_sheet",
+          "decision": "Conservar edad, trenza gris y prenda carbón azul sobre crudo. Rostros pasan a recortes casi planos sin facetas. Canto en escena, no repetir pose aislada de ficha."
+        },
+        {
+          "model_id": "paciente_jirairay__identity_sheet",
+          "decision": "La postura erguida de ficha no es condición de la escena: reposo consciente en chinchorro y cuidado al amanecer, conservando camisa ocre, pantalón crudo y cabello corto."
+        },
+        {
+          "model_id": "jirairay_canto__phenomenon_rule",
+          "decision": "Incorporar contexto humano de la reconstrucción pública. Conservar fuerza sin anatomía, pulsos físicos y respuesta de fibras; no añadir presencias personificadas."
+        }
+      ],
+      "narrative_contract": {
+        "target_slug": "jirairay",
+        "target_snapshot": "content/mitos-visuales/production/wayuu-2026-09-05/narratives/jirairay.json",
+        "target_content_sha256": "de3208df9c1af40319a095634d8eaadcc54882c9c643eeb8d520140a3ee5d9e2",
+        "summary": "Reconstrucción editorial: una especialista canta Jirairay para invocar a Wanurü durante el cuidado de una persona enferma. Jirairay es nombre cantado, no personaje autónomo. Después de la noche la familia continúa el cuidado; no ilustrar curación milagrosa ni elaborar protocolo ritual.",
+        "events": [
+          {
+            "id": "llamada",
+            "provenance": "published_editorial_expansion",
+            "required": true,
+            "source": "published_jirairay",
+            "action": "La familia llama a la especialista junto a la persona en chinchorro."
+          },
+          {
+            "id": "invocacion",
+            "provenance": "historical_core",
+            "required": true,
+            "source": "pineda_1950",
+            "action": "Jirairay se relaciona con canto de invocación a Wanurü, no deidad independiente."
+          },
+          {
+            "id": "escucha",
+            "provenance": "historical_core",
+            "required": true,
+            "source": "pineda_1950",
+            "action": "La especialista escucha y responde; el canto no es una fuerza de voluntad unilateral."
+          },
+          {
+            "id": "cuidado",
+            "provenance": "published_editorial_expansion",
+            "required": true,
+            "source": "published_jirairay",
+            "action": "Al amanecer la persona vive y su familia sigue atendiéndola; no se demuestra curación."
+          },
+          {
+            "id": "nombre_sin_cuerpo",
+            "provenance": "published_editorial_expansion",
+            "required": true,
+            "source": "published_jirairay",
+            "action": "La edición devuelve el nombre al canto y evita convertirlo en personaje."
+          }
+        ],
+        "emotional_reading": "Concentración, fragilidad digna y continuidad del cuidado, sin victoria sobre un monstruo.",
+        "magic_reading": "El canto despliega la presión del espacio y deja un pliegue suspendido después de la noche. Una sombra de maraca adquiere ritmo material.",
+        "qa_method": "Sin prompt debe entenderse canto/cuidado, no batalla contra entidad con rostro. Dos escenas distintas y símbolo sin escena."
+      },
+      "visual_memory_review": {
+        "reviewer": "agent_direct_visual_review",
+        "reviewed_at": "2026-09-06T04:38:23.950Z",
+        "reviewed_reference_ids": [
+          "20c6db91c24b98b5932d",
+          "251bd6299a2e2abb5ddf"
+        ],
+        "retained": [
+          "Cielo azul estratificado y movimiento continuo de las tiras de papel.",
+          "Contraste entre intimidad humana y espacio nocturno; plantas laterales y arena mate."
+        ],
+        "rejected": [
+          "Figura encapuchada monumental y espíritus blancos con rostro, halos o coronas.",
+          "Sombrero y ropa de la figura central ajenos a la identidad aprobada; humo, llama, cráneo, oro y patrones sin anclaje.",
+          "Confundir canto con deidad, oscurecer al paciente o convertirlo en espectáculo."
+        ],
+        "influence_by_act": {
+          "entrada": "Traducir las curvas del cielo a una presión nocturna que el canto despliega fuera de la enramada, sin cuerpos sobrenaturales.",
+          "acto": "Conservar profundidad territorial pero cambiar el conjuro ilustrado por cuidado al amanecer y un último pliegue del canto suspendido.",
+          "huella": "Retener ritmo de curvas de papel como sombra imposible de una sola maraca; no escena, cara o fantasma."
+        }
+      },
+      "material_direction": "Fotografía de mundo hecho ENTERAMENTE de papel recortado mate teñido. Humanos casi planos, perfil en una hoja con nariz sólo como contorno y ojo mínimo; cabello y manos en pocas piezas. Mantas amplias de hombros a tobillos en dos o tres hojas. No rostros modelados ni facetados, no Pixar. El volumen está en seis planos del mundo separados por aire, oclusión y sombras reales: plantas, patio, postes, figuras, materia del canto y cielo. Suelo y arquitectura también son papel, no tierra ni madera fotográficas. Gran plano general; personas completas pequeñas, aproximadamente un sexto de la altura, nunca retrato. Inmersivo a sangre, sin marco, base, caja, cartón corrugado, mesa o soporte exterior. Magia física mate, no brillo ni efectos digitales.",
+      "paleta": "azul petróleo, añil, carbón, crudo, ocre cálido y arcilla; sombra fría y luz lateral legible",
+      "continuity_contract": [
+        "Arquitectura Wayúu: enramada abierta de postes sencillos y cubierta de fibras baja casi plana; patio árido, cardones y serranías bajas al fondo. No chozas cónicas ni casa europea.",
+        "Un chinchorro de fibras de papel con bandas amplias lisas crudo, arcilla y azul carbón, sin patrones geométricos ni signo clanil.",
+        "No atribuir cuerpo, rostro, sombra humana o voluntad individual a Jirairay. Lo invisible sólo cambia la materia, no aparece como personaje.",
+        "Cada escena contiene exclusivamente las personas y objetos indicados en su descripción. No trasladar instrumentos o familiares de un momento a otro."
+      ],
+      "avoid": [
+        "Pixar, ojos grandes, piel fotográfica, rostro facetado o cabeza modelada",
+        "busto, plano cerrado, figura gigante o cuerpo recortado",
+        "fantasma, demonio, encapuchado, calavera, halo, corona, plumas o entidad con ojos",
+        "símbolos, pintura facial, oro o patrones no documentados",
+        "dolor gráfico, heridas, cuerpo desnudo, cadáver o explotación de vulnerabilidad",
+        "curación milagrosa, postura de exorcismo, rayos, bolas de energía, portal, humo, chispas",
+        "notas musicales, partitura, letras, onda digital, diagrama o instrucciones",
+        "base exterior, borde de maqueta, cartón corrugado, madera o suelo real"
+      ],
+      "escenas": {
+        "entrada": {
+          "era": "historico_wayuu",
+          "refs": [],
+          "composicion": "profundidad_abierta",
+          "visual_function": "narrative_scene",
+          "narrative_event_ids": [
+            "llamada",
+            "invocacion",
+            "escucha"
+          ],
+          "beat": "Una voz humana pequeña obliga a la noche a escuchar.",
+          "escena": "Horizontal 16:9, extreme wide shot across a large open Wayuu ramada and its dry courtyard at night. Foreground is empty layered paper sand with sparse low cutpaper plants; one third of frame remains open ground. Only TWO humans, both entirely within the middle third and small. An older Wayuu woman with grey-black low braid, plain broad ankle-length blue-charcoal manta over cream underlayer and clay sandals stands in profile beside a hammock, mouth subtly open in song, not screaming. She holds ONE small plain clay-colored oval gourd rattle by its straight fiber-wrapped handle low beside her waist. In the hammock a conscious adult with short black nape-length hair, ochre long shirt, cream trousers and short blue-grey cloth across knees reclines comfortably with head visible; no distress. The impossible event is visible in the SPACE beyond them: from near the singer's lips, THREE very thin matte cream paper bands travel apart, low and nearly horizontal, toward the far open side of the ramada. At that exact meeting point a broad low layer of charcoal-blue NIGHT, previously compressed into parallel folds, is gently being UNFOLDED by their arrival, like pressure releasing in a sheet. This dark material has no contour of creature or human, no hole or portal; it remains a long low continuation of the layered sky outside. A thinner blue-grey band bends back toward the singer but stays away from the patient. The patient is NEVER attached to these bands. Hammock fringe and a few nearby paper leaves lean toward the returning band while other plants remain still, a small spatial response rather than windstorm. Post shadows, six depth planes, low roof across upper side, dry land and enormous dark teal sky beyond. Woman about ONE SIXTH of image height; wide view, not enlarged subjects. No family on screen, no humanoid spirit, no physical contact with patient, no smoke, no fire, no text.",
+          "editorial_translation": "Bandas y noche desplegada traducen canto, escucha y presión como licencia plástica, no rito tradicional ni efecto clínico. Dos personas condensan la reconstrucción editorial sin secuencia terapéutica.",
+          "visual_question": "¿Una mujer pequeña canta junto a alguien cuidado en chinchorro y la materia oscura se despliega donde llegan las bandas, sin espíritu con cuerpo ni hilos que extraigan un alma?",
+          "light": "Noche azul petróleo clara para leer la escena, luz oblicua cruda sobre manos y fibras, ninguna iluminación sobrenatural.",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Cantar y escuchar junto al chinchorro.",
+            "impossible_behavior": "Tres bandas de voz despliegan una presión de noche material; una respuesta vuelve.",
+            "narrative_effect": "La especialista participa en una relación y el misterio permanece sin personaje inventado.",
+            "agency": "La mujer canta, pero escucha una respuesta que no controla.",
+            "physical_translation": "Papel fino mate separado por aire, pliegues carbón largos y bajos, fibras inclinadas.",
+            "visible_test": "Origen cerca de boca y encuentro con pliegues; nada sale del paciente.",
+            "event_ids": [
+              "invocacion",
+              "escucha"
+            ],
+            "provenance": "editorial_metaphor",
+            "temporal_role": "present"
+          }
+        },
+        "acto": {
+          "era": "historico_wayuu",
+          "refs": [],
+          "composicion": "camino_vertical",
+          "visual_function": "narrative_scene",
+          "narrative_event_ids": [
+            "cuidado"
+          ],
+          "beat": "La noche termina; el cuidado no.",
+          "escena": "Vertical 9:16, very wide elevated view from deep in the open courtyard toward the same Wayuu ramada at pale dawn. The lower third is empty paper sand and sparse cutpaper agave; the roof and human action are in the upper middle with far low hills behind. Only TWO adults. The same patient, short black nape-length hair, plain ochre long shirt and cream trousers, remains resting semi-seated in a hammock woven in broad plain cream, clay and blue-charcoal bands. A short blue-grey cloth rests on their knees. Eyes quietly open, not cured heroically, hands relaxed. Beside them one adult woman of the family in a broad plain ankle-length terracotta manta over cream underlayer, black hair in a compact low bun and clay sandals gently arranges the edge of the short cloth with one hand; other hand rests on hammock edge. She is a caregiver, NOT the elder specialist; no rattle or instruments anywhere. Two humans no more than one fifth of frame height. The magic is a leftover of the night: high above this domestic care and below the ramada roof, ONE thin matte blue-grey strip of paper remains suspended in a long shallow three-fold rhythm, resembling a small piece of the earlier sound now retaining its shape in air. No visible strings hold it, no stars or symbols; its delicate shadow falls as three separate soft folds on an empty patch of ground far from the patient's body. Dawn lights the surrounding landscape, but this single folded paper retains the cool blue of night. It neither encloses nor touches anyone. Architecture all paper: four slender posts, flat low woven-paper canopy, open sides; layer after layer of dry countryside beyond. Full bleed, wide scale, quiet care. No elder specialist, no standing recovered patient, no spirits, offerings, medicine, smoke or instructions.",
+          "editorial_translation": "Cuidado al amanecer pertenece a la reconstrucción publicada. Un pliegue nocturno persistente materializa memoria del canto; no supone curación ni presencia autónoma.",
+          "visual_question": "¿Se ve cuidado doméstico continuado, con paciente aún descansando y una sola huella sonora suspendida, en lugar de un desenlace de curación milagrosa?",
+          "light": "Amanecer arena y crudo con cielo azul mineral; último pliegue azul gris mate, sin brillo propio.",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "La familia continúa cuidando al amanecer.",
+            "impossible_behavior": "Un pliegue del canto permanece en el aire cuando la luz ha cambiado.",
+            "narrative_effect": "La experiencia no se agota al terminar la ceremonia; el cuidado continúa.",
+            "agency": "La familiar cuida, no activa ni manipula la materia suspendida.",
+            "physical_translation": "Una sola tira de papel azul gris en tres pliegues a distinta profundidad.",
+            "visible_test": "Persona en reposo atendida; tira separada del cuerpo que conserva color nocturno.",
+            "event_ids": [
+              "cuidado"
+            ],
+            "provenance": "editorial_metaphor",
+            "temporal_role": "memory"
+          }
+        },
+        "huella": {
+          "era": "sintesis_editorial",
+          "refs": [],
+          "composicion": "simbolo_central",
+          "visual_function": "symbolic_synthesis",
+          "narrative_event_ids": [
+            "invocacion",
+            "nombre_sin_cuerpo"
+          ],
+          "beat": "El nombre vuelve a ser ritmo, no rostro.",
+          "escena": "Square 1:1, a single plain handmade paper GOURD RATTLE lies diagonally across an uninterrupted deep teal paper field. Oval clay-ochre head, narrow neck, straight cream fiber-wrapped handle; one instrument occupying around half the width, whole object visible with plenty of empty space. The impossible relationship: instead of a normal oval shadow, its shadow has become a narrow charcoal-paper ribbon that begins exactly at the lower contour of the gourd head and UNFOLDS away across the blue background into three broad separated accordion pleats. The pleated shadow is visibly physical cutpaper lifted just above the background with thin secondary contact shadows, a rhythmic absence that has no body or face. The shadow's first portion still follows the gourd contour, then changes into a measured folded ribbon; NO duplicate rattle, NO floating seeds, NO actual music notation or radio waves. The rattle itself stays closed and intact, with no decorations, feathers, face, writing or openings. Only this object and its impossible rhythmic shadow. Two subtle full-bleed background paper planes, no horizon, no landscape, no people, hands or ceremonial scene.",
+          "material_direction": "Objeto de papel mate con pocas capas legibles. Sombra de papel carbón plegada y separada del fondo petróleo por aire real; sin aspecto de dibujo plano, cartón corrugado, pedestal o marco.",
+          "continuity_contract": [
+            "Una sola maraca de calabazo oval lisa arcilla, mango recto de fibra cruda.",
+            "La sombra plegada significa ritmo editorial: Jirairay no recibe rostro, cuerpo ni iconografía tradicional."
+          ],
+          "editorial_translation": "La sombra rítmica es símbolo editorial del nombre cantado, no símbolo Wayúu certificado ni descripción de ceremonia.",
+          "visual_question": "¿Se reconoce una sola maraca cuya sombra se vuelve ritmo de papel, sin que aparezca un personaje ni una escena?",
+          "light": "Azul petróleo mate, maraca ocre arcilla, sombra carbón; luz lateral cruda y sombras físicas.",
+          "avoid": [
+            "personas, manos, cara, ojos o silueta humana",
+            "paisaje, horizonte, chinchorro, ritual o casa",
+            "más de una maraca, semillas, abertura del objeto o construcción técnica",
+            "letras, notas musicales, partitura, waveform digital, ondas concéntricas, logo",
+            "plumas, patrón, halo, humo, fuego, brillo, base, marco o cartón corrugado"
+          ],
+          "symbolic_contract": {
+            "thesis": "Una invocación adquiere sentido como ritmo, no como cuerpo de otro ser.",
+            "carrier": "Una maraca cerrada y su sombra.",
+            "operation": "La sombra se pliega en un ritmo material de papel.",
+            "story_connection": "Instrumento y canto de la reconstrucción pública; sin personificar Jirairay.",
+            "visible_test": "Objeto único reconocible, sombra físicamente plegada; no escena ni persona."
+          },
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "La maraca marca el tiempo del canto.",
+            "impossible_behavior": "Su sombra deja de copiar al objeto y se pliega como ritmo.",
+            "narrative_effect": "El nombre se devuelve al acto sonoro y no se convierte en deidad.",
+            "agency": "No hay humano; permanece una relación entre objeto y ritmo.",
+            "physical_translation": "Cinta carbón que nace en sombra de calabazo y se eleva en tres pliegues.",
+            "visible_test": "Maraca íntegra y única; sombra con continuidad inicial y transformación legible.",
+            "event_ids": [
+              "invocacion",
+              "nombre_sin_cuerpo"
+            ],
+            "provenance": "editorial_metaphor",
+            "temporal_role": "memory"
+          }
+        }
+      }
+    }
+  }
+}
+

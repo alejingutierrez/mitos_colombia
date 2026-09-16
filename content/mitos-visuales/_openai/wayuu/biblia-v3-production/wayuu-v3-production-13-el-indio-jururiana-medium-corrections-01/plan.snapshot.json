@@ -1,0 +1,556 @@
+{
+  "schema": "mitos-colombia-biblia-visual/v3",
+  "batch": {
+    "id": "wayuu-v3-production-13-el-indio-jururiana-medium",
+    "myth_slug": "el-indio-jururiana",
+    "model_ids": [
+      "jururiana__identity_sheet",
+      "jururiana__state_sheet",
+      "warir__identity_sheet",
+      "gran_lluvia_jururiana__phenomenon_rule",
+      "reservas_semillas_jururiana__object_sheet",
+      "animales_oscuros_jururiana__group_grammar",
+      "patsuo__spatial_model",
+      "habitacion_oscura_warir__spatial_model"
+    ],
+    "quality": "medium",
+    "framing": "immersive_full_bleed",
+    "surface_finish": "layered_depth_no_exposed_support",
+    "generation_mode": "text_only_no_local_references",
+    "status": "ready_for_generation"
+  },
+  "inventory_approved_at": "2026-09-03",
+  "pilot_approved_at": "2026-09-03",
+  "source_snapshot_sha256": "6b5b1c5ebdb2524a7524b065d96c6d33ad6f5694db239a0d722ded8485f435f5",
+  "model_ids": [
+    "jururiana__identity_sheet",
+    "jururiana__state_sheet",
+    "warir__identity_sheet",
+    "gran_lluvia_jururiana__phenomenon_rule",
+    "animales_oscuros_jururiana__group_grammar"
+  ],
+  "models": {
+    "jururiana__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "jururiana"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "el-indio-jururiana",
+          "field": "mito",
+          "note": "Anuncia, prepara, predice su muerte y deja continuidad."
+        },
+        {
+          "myth": "umarala",
+          "field": "mito",
+          "note": "Compañero nombrado del viaje final."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos. Entidad: Jururiana. Funcion visual: Mayor que anuncia un cambio de lluvia, pide reunir semillas y chivos negros, predice su muerte y deja continuidad de conocimiento.",
+        "materials": [
+          "papel mate de fibra visible",
+          "capas prensadas para cuerpo y vestuario",
+          "hilo solo cuando el relato lo exige"
+        ],
+        "palette_logic": "Arena, barro, carbon y fibras naturales; un acento propio de la entidad puede repetirse, sin patrones kanas o marcas claniles inventadas.",
+        "scale": "Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "continuity_markers": [
+          "nombre estable: Jururiana",
+          "funcion estable: Mayor que anuncia un cambio de lluvia, pide reunir semillas y chivos negros, predice su muerte y deja continuidad de conocimiento.",
+          "estados declarados: anunciante, cuidador, mayor"
+        ],
+        "documented_features": [
+          "Mayor que anuncia un cambio de lluvia, pide reunir semillas y chivos negros, predice su muerte y deja continuidad de conocimiento."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para identity_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · identity_sheet",
+        "primary_request": "identidad corporal completa y legible para Jururiana. Mayor que anuncia un cambio de lluvia, pide reunir semillas y chivos negros, predice su muerte y deja continuidad de conocimiento.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel mate de fibra visible; capas prensadas para cuerpo y vestuario; hilo solo cuando el relato lo exige",
+        "constraints": [
+          "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos.",
+          "mostrar: Mayor que anuncia un cambio de lluvia, pide reunir semillas y chivos negros, predice su muerte y deja continuidad de conocimiento.",
+          "estados autorizados: anunciante, cuidador, mayor",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "1:1",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "anunciante"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "jururiana__state_sheet": {
+      "purpose": "state_sheet",
+      "entity_refs": [
+        "jururiana"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "el-indio-jururiana",
+          "field": "mito",
+          "note": "Anuncia, prepara, predice su muerte y deja continuidad."
+        },
+        {
+          "myth": "umarala",
+          "field": "mito",
+          "note": "Compañero nombrado del viaje final."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos. Entidad: Jururiana. Funcion visual: Mayor que anuncia un cambio de lluvia, pide reunir semillas y chivos negros, predice su muerte y deja continuidad de conocimiento.",
+        "materials": [
+          "papel mate de fibra visible",
+          "capas prensadas para cuerpo y vestuario",
+          "hilo solo cuando el relato lo exige"
+        ],
+        "palette_logic": "Arena, barro, carbon y fibras naturales; un acento propio de la entidad puede repetirse, sin patrones kanas o marcas claniles inventadas.",
+        "scale": "Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "continuity_markers": [
+          "nombre estable: Jururiana",
+          "funcion estable: Mayor que anuncia un cambio de lluvia, pide reunir semillas y chivos negros, predice su muerte y deja continuidad de conocimiento.",
+          "estados declarados: anunciante, cuidador, mayor"
+        ],
+        "documented_features": [
+          "Mayor que anuncia un cambio de lluvia, pide reunir semillas y chivos negros, predice su muerte y deja continuidad de conocimiento."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para state_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · state_sheet",
+        "primary_request": "continuidad entre estados sin adelantar un keyframe para Jururiana. Mayor que anuncia un cambio de lluvia, pide reunir semillas y chivos negros, predice su muerte y deja continuidad de conocimiento.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel mate de fibra visible; capas prensadas para cuerpo y vestuario; hilo solo cuando el relato lo exige",
+        "constraints": [
+          "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos.",
+          "mostrar: Mayor que anuncia un cambio de lluvia, pide reunir semillas y chivos negros, predice su muerte y deja continuidad de conocimiento.",
+          "estados autorizados: anunciante, cuidador, mayor",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "estados",
+          "view_type": "state_sequence",
+          "purpose": "continuidad entre estados sin adelantar un keyframe",
+          "aspect": "16:9",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "anunciante",
+            "cuidador",
+            "mayor"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "warir__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "warir"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "el-indio-jururiana",
+          "field": "mito",
+          "note": "Estudia el tiempo y vincula sus secretos con Mma."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos. Entidad: Warir. Funcion visual: Nieto que estudia el tiempo, responde sobre la Tierra-abuela y continúa una forma de conocimiento sin omnisciencia.",
+        "materials": [
+          "papel mate de fibra visible",
+          "capas prensadas para cuerpo y vestuario",
+          "hilo solo cuando el relato lo exige"
+        ],
+        "palette_logic": "Arena, barro, carbon y fibras naturales; un acento propio de la entidad puede repetirse, sin patrones kanas o marcas claniles inventadas.",
+        "scale": "Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "continuity_markers": [
+          "nombre estable: Warir",
+          "funcion estable: Nieto que estudia el tiempo, responde sobre la Tierra-abuela y continúa una forma de conocimiento sin omnisciencia.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Nieto que estudia el tiempo, responde sobre la Tierra-abuela y continúa una forma de conocimiento sin omnisciencia."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para identity_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · identity_sheet",
+        "primary_request": "identidad corporal completa y legible para Warir. Nieto que estudia el tiempo, responde sobre la Tierra-abuela y continúa una forma de conocimiento sin omnisciencia.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel mate de fibra visible; capas prensadas para cuerpo y vestuario; hilo solo cuando el relato lo exige",
+        "constraints": [
+          "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos.",
+          "mostrar: Nieto que estudia el tiempo, responde sobre la Tierra-abuela y continúa una forma de conocimiento sin omnisciencia.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "1:1",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "gran_lluvia_jururiana__phenomenon_rule": {
+      "purpose": "phenomenon_rule",
+      "entity_refs": [
+        "gran_lluvia_jururiana"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "el-indio-jururiana",
+          "field": "mito",
+          "note": "Borra huellas sin convertirse en diluvio universal."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Secuencia material de causa, accion, limite y huella; debe entenderse sin texto, aura o particulas magicas genericas. Entidad: Lluvia advertida de Jururiana. Funcion visual: Chubasco localizado que borra huellas; la ampliacion a una lluvia prolongada pertenece a la sintesis editorial actual, no a la transcripcion de 1946.",
+        "materials": [
+          "papel y fibras que cambian de tension, humedad, luz o posicion",
+          "capas causales separadas",
+          "huella fisica persistente"
+        ],
+        "palette_logic": "El cambio cromatico nace de la materia afectada, nunca de un resplandor sobrenatural por defecto.",
+        "scale": "Escala definida por aquello que transforma, desde objeto hasta territorio.",
+        "continuity_markers": [
+          "nombre estable: Lluvia advertida de Jururiana",
+          "funcion estable: Chubasco localizado que borra huellas; la ampliacion a una lluvia prolongada pertenece a la sintesis editorial actual, no a la transcripcion de 1946.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Chubasco localizado que borra huellas; la ampliacion a una lluvia prolongada pertenece a la sintesis editorial actual, no a la transcripcion de 1946."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para phenomenon_rule",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · phenomenon_rule",
+        "primary_request": "entrada, accion, limite y huella del fenomeno para Lluvia advertida de Jururiana. Chubasco localizado que borra huellas; la ampliacion a una lluvia prolongada pertenece a la sintesis editorial actual, no a la transcripcion de 1946.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Escala definida por aquello que transforma, desde objeto hasta territorio.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel y fibras que cambian de tension, humedad, luz o posicion; capas causales separadas; huella fisica persistente",
+        "constraints": [
+          "Secuencia material de causa, accion, limite y huella; debe entenderse sin texto, aura o particulas magicas genericas.",
+          "mostrar: Chubasco localizado que borra huellas; la ampliacion a una lluvia prolongada pertenece a la sintesis editorial actual, no a la transcripcion de 1946.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "phenomenon_grammar",
+          "purpose": "entrada, accion, limite y huella del fenomeno",
+          "aspect": "16:9",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "animales_oscuros_jururiana__group_grammar": {
+      "purpose": "group_grammar",
+      "entity_refs": [
+        "animales_oscuros_jururiana"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "el-indio-jururiana",
+          "field": "mito",
+          "note": "Chivos negros nombrados de forma explicita, sin simbolismo cromatico añadido."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Morfologia zoologica reconocible, cuerpo completo cuando es individuo y variacion controlada cuando es grupo; sin hibridacion no documentada. Entidad: Chivos negros reunidos. Funcion visual: Chivos de color negro que Jururiana pide reunir y llevar a Patsuo, sin simbolismo cromatico añadido.",
+        "materials": [
+          "capas de papel recortado para anatomia",
+          "fibras finas para pelaje o pluma cuando corresponda",
+          "cantos internos y articulaciones fisicas"
+        ],
+        "palette_logic": "Color natural o explicitamente narrado; no usar brillo magico para señalar importancia.",
+        "scale": "Escala zoologica verificable frente al entorno y los personajes.",
+        "continuity_markers": [
+          "nombre estable: Chivos negros reunidos",
+          "funcion estable: Chivos de color negro que Jururiana pide reunir y llevar a Patsuo, sin simbolismo cromatico añadido.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Chivos de color negro que Jururiana pide reunir y llevar a Patsuo, sin simbolismo cromatico añadido."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para group_grammar",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · group_grammar",
+        "primary_request": "numero, relaciones, escala y variacion interna para Chivos negros reunidos. Chivos de color negro que Jururiana pide reunir y llevar a Patsuo, sin simbolismo cromatico añadido.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Escala zoologica verificable frente al entorno y los personajes.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "capas de papel recortado para anatomia; fibras finas para pelaje o pluma cuando corresponda; cantos internos y articulaciones fisicas",
+        "constraints": [
+          "Morfologia zoologica reconocible, cuerpo completo cuando es individuo y variacion controlada cuando es grupo; sin hibridacion no documentada.",
+          "mostrar: Chivos de color negro que Jururiana pide reunir y llevar a Patsuo, sin simbolismo cromatico añadido.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "group_grammar",
+          "purpose": "numero, relaciones, escala y variacion interna",
+          "aspect": "16:9",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    }
+  },
+  "entities": {
+    "jururiana": {
+      "name": "Jururiana",
+      "kind": "personaje",
+      "description": "Mayor que anuncia un cambio de lluvia, pide reunir semillas y chivos negros, predice su muerte y deja continuidad de conocimiento.",
+      "aliases": [],
+      "states": [
+        "anunciante",
+        "cuidador",
+        "mayor"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "contextual",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet",
+        "state_sheet"
+      ],
+      "model_refs": [
+        "jururiana__identity_sheet",
+        "jururiana__state_sheet"
+      ],
+      "legacy_model_refs": [
+        "el-indio-jururiana__ancla"
+      ],
+      "myth_refs": [
+        "el-indio-jururiana",
+        "umarala"
+      ],
+      "evidence": [
+        {
+          "myth": "el-indio-jururiana",
+          "field": "mito",
+          "note": "Anuncia, prepara, predice su muerte y deja continuidad."
+        },
+        {
+          "myth": "umarala",
+          "field": "mito",
+          "note": "Compañero nombrado del viaje final."
+        }
+      ]
+    },
+    "warir": {
+      "name": "Warir",
+      "kind": "personaje",
+      "description": "Nieto que estudia el tiempo, responde sobre la Tierra-abuela y continúa una forma de conocimiento sin omnisciencia.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet"
+      ],
+      "model_refs": [
+        "warir__identity_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-indio-jururiana"
+      ],
+      "evidence": [
+        {
+          "myth": "el-indio-jururiana",
+          "field": "mito",
+          "note": "Estudia el tiempo y vincula sus secretos con Mma."
+        }
+      ]
+    },
+    "gran_lluvia_jururiana": {
+      "name": "Lluvia advertida de Jururiana",
+      "kind": "fenomeno",
+      "description": "Chubasco localizado que borra huellas; la ampliacion a una lluvia prolongada pertenece a la sintesis editorial actual, no a la transcripcion de 1946.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "phenomenon_rule"
+      ],
+      "model_refs": [
+        "gran_lluvia_jururiana__phenomenon_rule"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-indio-jururiana"
+      ],
+      "evidence": [
+        {
+          "myth": "el-indio-jururiana",
+          "field": "mito",
+          "note": "Borra huellas sin convertirse en diluvio universal."
+        }
+      ]
+    },
+    "animales_oscuros_jururiana": {
+      "name": "Chivos negros reunidos",
+      "kind": "animal",
+      "description": "Chivos de color negro que Jururiana pide reunir y llevar a Patsuo, sin simbolismo cromatico añadido.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "group_grammar"
+      ],
+      "model_refs": [
+        "animales_oscuros_jururiana__group_grammar"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-indio-jururiana"
+      ],
+      "evidence": [
+        {
+          "myth": "el-indio-jururiana",
+          "field": "mito",
+          "note": "Chivos negros nombrados de forma explicita, sin simbolismo cromatico añadido."
+        }
+      ]
+    }
+  }
+}

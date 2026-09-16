@@ -1,0 +1,973 @@
+{
+  "schema": "mitos-colombia-biblia-visual/v3",
+  "batch": {
+    "id": "wayuu-v3-production-20-guanuru-medium",
+    "myth_slug": "guanuru",
+    "model_ids": [
+      "guanuru__presence_model",
+      "yoruja__presence_model",
+      "pariente_muerto_guanuru__identity_sheet",
+      "pariente_muerto_guanuru__state_sheet",
+      "mariposa_blanca_guanuru__identity_sheet",
+      "piache_guanuru__identity_sheet",
+      "habitante_enfermo_guanuru__identity_sheet",
+      "habitante_enfermo_guanuru__state_sheet",
+      "familia_casa_guanuru__group_grammar",
+      "casa_desocupada_guanuru__spatial_model",
+      "pasos_sin_huellas_guanuru__phenomenon_rule",
+      "craneo_caballo_proteccion__object_sheet",
+      "sepultura_guanuru__spatial_model"
+    ],
+    "quality": "medium",
+    "framing": "immersive_full_bleed",
+    "surface_finish": "layered_depth_no_exposed_support",
+    "generation_mode": "text_only_no_local_references",
+    "status": "prepared_after_primary_reaudit"
+  },
+  "inventory_approved_at": "2026-09-03",
+  "pilot_approved_at": "2026-09-03",
+  "source_snapshot_sha256": "6b5b1c5ebdb2524a7524b065d96c6d33ad6f5694db239a0d722ded8485f435f5",
+  "model_ids": [
+    "yoruja__presence_model",
+    "pariente_muerto_guanuru__identity_sheet",
+    "pariente_muerto_guanuru__state_sheet",
+    "mariposa_blanca_guanuru__identity_sheet",
+    "habitante_enfermo_guanuru__state_sheet",
+    "familia_casa_guanuru__group_grammar",
+    "casa_desocupada_guanuru__spatial_model",
+    "craneo_caballo_proteccion__object_sheet",
+    "sepultura_guanuru__spatial_model"
+  ],
+  "models": {
+    "yoruja__presence_model": {
+      "purpose": "presence_model",
+      "entity_refs": [
+        "yoruja"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "guanuru",
+          "field": "mito",
+          "note": "Nombre de traduccion que no se fija como jerarquia."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Silueta singular derivada de la accion y los estados documentados; si la forma no esta descrita, usar presencia y huella en vez de anatomia inventada. Entidad: Yorujá. Funcion visual: Nombre de traduccion variable que no debe colapsarse con Guanurú, Wanurü o yolujaa.",
+        "materials": [
+          "papel mate estratificado",
+          "fibras y pliegues con volumen fisico",
+          "superficies propias del estado narrativo"
+        ],
+        "palette_logic": "Contraste suficiente para continuidad, restringido a materiales y acciones del relato.",
+        "scale": "Escala declarada frente a una referencia material; evitar monstruosidad generica.",
+        "continuity_markers": [
+          "nombre estable: Yorujá",
+          "funcion estable: Nombre de traduccion variable que no debe colapsarse con Guanurú, Wanurü o yolujaa.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Nombre de traduccion variable que no debe colapsarse con Guanurú, Wanurü o yolujaa."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para presence_model",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · presence_model",
+        "primary_request": "accion y huella sin inventar anatomia para Yorujá. Nombre de traduccion variable que no debe colapsarse con Guanurú, Wanurü o yolujaa.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Escala declarada frente a una referencia material; evitar monstruosidad generica.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel mate estratificado; fibras y pliegues con volumen fisico; superficies propias del estado narrativo",
+        "constraints": [
+          "Silueta singular derivada de la accion y los estados documentados; si la forma no esta descrita, usar presencia y huella en vez de anatomia inventada.",
+          "mostrar: Nombre de traduccion variable que no debe colapsarse con Guanurú, Wanurü o yolujaa.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "presence_grammar",
+          "purpose": "accion y huella sin inventar anatomia",
+          "aspect": "16:9",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "pariente_muerto_guanuru__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "pariente_muerto_guanuru"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "guanuru",
+          "field": "mito",
+          "note": "Aparece en sueño con rostro conocido."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos. Entidad: Pariente muerto de la casa. Funcion visual: Familiar que aparece en sueño y cuestiona el trato dado a una visita.",
+        "materials": [
+          "papel mate de fibra visible",
+          "capas prensadas para cuerpo y vestuario",
+          "hilo solo cuando el relato lo exige"
+        ],
+        "palette_logic": "Arena, barro, carbon y fibras naturales; un acento propio de la entidad puede repetirse, sin patrones kanas o marcas claniles inventadas.",
+        "scale": "Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "continuity_markers": [
+          "nombre estable: Pariente muerto de la casa",
+          "funcion estable: Familiar que aparece en sueño y cuestiona el trato dado a una visita.",
+          "estados declarados: muerto_recordado, aparicion_en_sueno"
+        ],
+        "documented_features": [
+          "Familiar que aparece en sueño y cuestiona el trato dado a una visita."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para identity_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · identity_sheet",
+        "primary_request": "identidad corporal completa y legible para Pariente muerto de la casa. Familiar que aparece en sueño y cuestiona el trato dado a una visita.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel mate de fibra visible; capas prensadas para cuerpo y vestuario; hilo solo cuando el relato lo exige",
+        "constraints": [
+          "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos.",
+          "mostrar: Familiar que aparece en sueño y cuestiona el trato dado a una visita.",
+          "estados autorizados: muerto_recordado, aparicion_en_sueno",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "1:1",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "muerto_recordado"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "pariente_muerto_guanuru__state_sheet": {
+      "purpose": "state_sheet",
+      "entity_refs": [
+        "pariente_muerto_guanuru"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "guanuru",
+          "field": "mito",
+          "note": "Aparece en sueño con rostro conocido."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos. Entidad: Pariente muerto de la casa. Funcion visual: Familiar que aparece en sueño y cuestiona el trato dado a una visita.",
+        "materials": [
+          "papel mate de fibra visible",
+          "capas prensadas para cuerpo y vestuario",
+          "hilo solo cuando el relato lo exige"
+        ],
+        "palette_logic": "Arena, barro, carbon y fibras naturales; un acento propio de la entidad puede repetirse, sin patrones kanas o marcas claniles inventadas.",
+        "scale": "Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "continuity_markers": [
+          "nombre estable: Pariente muerto de la casa",
+          "funcion estable: Familiar que aparece en sueño y cuestiona el trato dado a una visita.",
+          "estados declarados: muerto_recordado, aparicion_en_sueno"
+        ],
+        "documented_features": [
+          "Familiar que aparece en sueño y cuestiona el trato dado a una visita."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para state_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · state_sheet",
+        "primary_request": "continuidad entre estados sin adelantar un keyframe para Pariente muerto de la casa. Familiar que aparece en sueño y cuestiona el trato dado a una visita.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel mate de fibra visible; capas prensadas para cuerpo y vestuario; hilo solo cuando el relato lo exige",
+        "constraints": [
+          "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos.",
+          "mostrar: Familiar que aparece en sueño y cuestiona el trato dado a una visita.",
+          "estados autorizados: muerto_recordado, aparicion_en_sueno",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "estados",
+          "view_type": "state_sequence",
+          "purpose": "continuidad entre estados sin adelantar un keyframe",
+          "aspect": "16:9",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "muerto_recordado",
+            "aparicion_en_sueno"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "mariposa_blanca_guanuru__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "mariposa_blanca_guanuru"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "guanuru",
+          "field": "mito",
+          "note": "Señal posible de visita, no identidad automatica."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Morfologia zoologica reconocible, cuerpo completo cuando es individuo y variacion controlada cuando es grupo; sin hibridacion no documentada. Entidad: Mariposa blanca visitante. Funcion visual: Mariposa asociada con visita de muertos sin afirmar que toda mariposa lo sea.",
+        "materials": [
+          "capas de papel recortado para anatomia",
+          "fibras finas para pelaje o pluma cuando corresponda",
+          "cantos internos y articulaciones fisicas"
+        ],
+        "palette_logic": "Color natural o explicitamente narrado; no usar brillo magico para señalar importancia.",
+        "scale": "Escala zoologica verificable frente al entorno y los personajes.",
+        "continuity_markers": [
+          "nombre estable: Mariposa blanca visitante",
+          "funcion estable: Mariposa asociada con visita de muertos sin afirmar que toda mariposa lo sea.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Mariposa asociada con visita de muertos sin afirmar que toda mariposa lo sea."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para identity_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · identity_sheet",
+        "primary_request": "identidad corporal completa y legible para Mariposa blanca visitante. Mariposa asociada con visita de muertos sin afirmar que toda mariposa lo sea.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Escala zoologica verificable frente al entorno y los personajes.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "capas de papel recortado para anatomia; fibras finas para pelaje o pluma cuando corresponda; cantos internos y articulaciones fisicas",
+        "constraints": [
+          "Morfologia zoologica reconocible, cuerpo completo cuando es individuo y variacion controlada cuando es grupo; sin hibridacion no documentada.",
+          "mostrar: Mariposa asociada con visita de muertos sin afirmar que toda mariposa lo sea.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "1:1",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "habitante_enfermo_guanuru__state_sheet": {
+      "purpose": "state_sheet",
+      "entity_refs": [
+        "habitante_enfermo_guanuru"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "guanuru",
+          "field": "mito",
+          "note": "Recibe cuidado durante la fiebre."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos. Entidad: Habitante enfermo de la casa. Funcion visual: Persona adulta que pasa de la vida domestica a fiebre y recuperacion mientras recibe cuidado, sin volver el cuerpo un sintoma espectacular.",
+        "materials": [
+          "papel mate de fibra visible",
+          "capas prensadas para cuerpo y vestuario",
+          "hilo solo cuando el relato lo exige"
+        ],
+        "palette_logic": "Arena, barro, carbon y fibras naturales; un acento propio de la entidad puede repetirse, sin patrones kanas o marcas claniles inventadas.",
+        "scale": "Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "continuity_markers": [
+          "nombre estable: Habitante enfermo de la casa",
+          "funcion estable: Persona adulta que pasa de la vida domestica a fiebre y recuperacion mientras recibe cuidado, sin volver el cuerpo un sintoma espectacular.",
+          "estados declarados: antes_de_la_fiebre, en_fiebre, recuperacion"
+        ],
+        "documented_features": [
+          "Persona adulta que pasa de la vida domestica a fiebre y recuperacion mientras recibe cuidado, sin volver el cuerpo un sintoma espectacular."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para state_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · state_sheet",
+        "primary_request": "continuidad entre estados sin adelantar un keyframe para Habitante enfermo de la casa. Persona adulta que pasa de la vida domestica a fiebre y recuperacion mientras recibe cuidado, sin volver el cuerpo un sintoma espectacular.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel mate de fibra visible; capas prensadas para cuerpo y vestuario; hilo solo cuando el relato lo exige",
+        "constraints": [
+          "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos.",
+          "mostrar: Persona adulta que pasa de la vida domestica a fiebre y recuperacion mientras recibe cuidado, sin volver el cuerpo un sintoma espectacular.",
+          "estados autorizados: antes_de_la_fiebre, en_fiebre, recuperacion",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "estados",
+          "view_type": "state_sequence",
+          "purpose": "continuidad entre estados sin adelantar un keyframe",
+          "aspect": "16:9",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "antes_de_la_fiebre",
+            "en_fiebre",
+            "recuperacion"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "familia_casa_guanuru__group_grammar": {
+      "purpose": "group_grammar",
+      "entity_refs": [
+        "familia_casa_guanuru"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "guanuru",
+          "field": "mito",
+          "note": "Interpreta, limpia y completa cuidados."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Conjunto legible como relacion, no multitud de clones: variacion de escala, postura y distancia sin convertir el grupo en tipo etnico generico. Entidad: Familia de la casa desocupada. Funcion visual: Grupo que regresa, protege la mariposa, consulta, limpia la vivienda, lleva alimentos y completa el cuidado de la sepultura; no puede quedar reducido a mobiliario del espacio.",
+        "materials": [
+          "figuras de papel individualizadas",
+          "planos separados",
+          "objetos relacionales solo si estan documentados"
+        ],
+        "palette_logic": "Familia cromatica compartida con variaciones internas; sin uniformes o emblemas inventados.",
+        "scale": "Numero y separacion suficientes para entender el grupo sin llenar la imagen de extras.",
+        "continuity_markers": [
+          "nombre estable: Familia de la casa desocupada",
+          "funcion estable: Grupo que regresa, protege la mariposa, consulta, limpia la vivienda, lleva alimentos y completa el cuidado de la sepultura; no puede quedar reducido a mobiliario del espacio.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Grupo que regresa, protege la mariposa, consulta, limpia la vivienda, lleva alimentos y completa el cuidado de la sepultura; no puede quedar reducido a mobiliario del espacio."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para group_grammar",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · group_grammar",
+        "primary_request": "numero, relaciones, escala y variacion interna para Familia de la casa desocupada. Grupo que regresa, protege la mariposa, consulta, limpia la vivienda, lleva alimentos y completa el cuidado de la sepultura; no puede quedar reducido a mobiliario del espacio.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Numero y separacion suficientes para entender el grupo sin llenar la imagen de extras.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "figuras de papel individualizadas; planos separados; objetos relacionales solo si estan documentados",
+        "constraints": [
+          "Conjunto legible como relacion, no multitud de clones: variacion de escala, postura y distancia sin convertir el grupo en tipo etnico generico.",
+          "mostrar: Grupo que regresa, protege la mariposa, consulta, limpia la vivienda, lleva alimentos y completa el cuidado de la sepultura; no puede quedar reducido a mobiliario del espacio.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "group_grammar",
+          "purpose": "numero, relaciones, escala y variacion interna",
+          "aspect": "16:9",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "casa_desocupada_guanuru__spatial_model": {
+      "purpose": "spatial_model",
+      "entity_refs": [
+        "casa_desocupada_guanuru"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "guanuru",
+          "field": "mito",
+          "note": "Espacio domestico de duelo y memoria."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Sistema constructivo legible por estructura, cubierta, cerramiento, vacios y relacion con senderos; no casa decorativa aislada. Entidad: Casa desocupada de Guanurú. Funcion visual: Vivienda de duelo con pasos, chinchorro, objetos y memoria.",
+        "materials": [
+          "yotojoro, madera, paja y barro cuando estan documentados",
+          "capas estructurales separadas",
+          "suelo fibroso continuo"
+        ],
+        "palette_logic": "Materiales mates de arena, madera y barro; sin patrones decorativos inventados.",
+        "scale": "Escala habitable demostrada por vanos, sombra y relaciones espaciales.",
+        "continuity_markers": [
+          "nombre estable: Casa desocupada de Guanurú",
+          "funcion estable: Vivienda de duelo con pasos, chinchorro, objetos y memoria.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Vivienda de duelo con pasos, chinchorro, objetos y memoria."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para spatial_model",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · spatial_model",
+        "primary_request": "relaciones espaciales, entradas, planos y escala para Casa desocupada de Guanurú. Vivienda de duelo con pasos, chinchorro, objetos y memoria.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Escala habitable demostrada por vanos, sombra y relaciones espaciales.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "yotojoro, madera, paja y barro cuando estan documentados; capas estructurales separadas; suelo fibroso continuo",
+        "constraints": [
+          "Sistema constructivo legible por estructura, cubierta, cerramiento, vacios y relacion con senderos; no casa decorativa aislada.",
+          "mostrar: Vivienda de duelo con pasos, chinchorro, objetos y memoria.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "spatial_grammar",
+          "purpose": "relaciones espaciales, entradas, planos y escala",
+          "aspect": "16:9",
+          "era": "territorial_documentado_no_fecha_unica",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "craneo_caballo_proteccion__object_sheet": {
+      "purpose": "object_sheet",
+      "entity_refs": [
+        "craneo_caballo_proteccion"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "guanuru",
+          "field": "mito",
+          "note": "Marca la entrada atendida sin poder autonomo."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Contorno, volumen, piezas y modo de uso claramente separables; evitar convertir utileria cotidiana en reliquia mistica. Entidad: Cráneo de caballo protector. Funcion visual: Objeto domestico registrado que marca una casa atendida, no amuleto universal.",
+        "materials": [
+          "papel, fibra, madera o mineral traducidos a paper craft",
+          "uniones y desgaste fisico",
+          "sombras proyectadas coherentes"
+        ],
+        "palette_logic": "Color propio del material y el estado; sin ornamentacion cultural no respaldada.",
+        "scale": "Escala demostrable mediante mano, suelo o arquitectura sin texto ni regla grafica.",
+        "continuity_markers": [
+          "nombre estable: Cráneo de caballo protector",
+          "funcion estable: Objeto domestico registrado que marca una casa atendida, no amuleto universal.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Objeto domestico registrado que marca una casa atendida, no amuleto universal."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para object_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · object_sheet",
+        "primary_request": "forma, escala, material y uso legibles para Cráneo de caballo protector. Objeto domestico registrado que marca una casa atendida, no amuleto universal.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Escala demostrable mediante mano, suelo o arquitectura sin texto ni regla grafica.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel, fibra, madera o mineral traducidos a paper craft; uniones y desgaste fisico; sombras proyectadas coherentes",
+        "constraints": [
+          "Contorno, volumen, piezas y modo de uso claramente separables; evitar convertir utileria cotidiana en reliquia mistica.",
+          "mostrar: Objeto domestico registrado que marca una casa atendida, no amuleto universal.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_object",
+          "purpose": "forma, escala, material y uso legibles",
+          "aspect": "1:1",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "sepultura_guanuru__spatial_model": {
+      "purpose": "spatial_model",
+      "entity_refs": [
+        "sepultura_guanuru"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "guanuru",
+          "field": "mito",
+          "note": "Lugar cuyo cuidado queda pendiente."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Umbral y organizacion espacial propios del relato; la geografia incierta se mantiene aproximada y nunca se publica como coordenada. Entidad: Sepultura atendida. Funcion visual: Lugar de cuidado familiar relacionado con el duelo.",
+        "materials": [
+          "estratos de papel y suelo prensado",
+          "elementos materiales citados por el relato",
+          "aire y oclusiones entre planos"
+        ],
+        "palette_logic": "Paleta territorial modulada por funcion, clima y estado narrativo.",
+        "scale": "Profundidad recorrible con primer plano, plano medio y fondo a distancias reales.",
+        "continuity_markers": [
+          "nombre estable: Sepultura atendida",
+          "funcion estable: Lugar de cuidado familiar relacionado con el duelo.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Lugar de cuidado familiar relacionado con el duelo."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para spatial_model",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · spatial_model",
+        "primary_request": "relaciones espaciales, entradas, planos y escala para Sepultura atendida. Lugar de cuidado familiar relacionado con el duelo.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Profundidad recorrible con primer plano, plano medio y fondo a distancias reales.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "estratos de papel y suelo prensado; elementos materiales citados por el relato; aire y oclusiones entre planos",
+        "constraints": [
+          "Umbral y organizacion espacial propios del relato; la geografia incierta se mantiene aproximada y nunca se publica como coordenada.",
+          "mostrar: Lugar de cuidado familiar relacionado con el duelo.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "spatial_grammar",
+          "purpose": "relaciones espaciales, entradas, planos y escala",
+          "aspect": "16:9",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    }
+  },
+  "entities": {
+    "yoruja": {
+      "name": "Yorujá",
+      "kind": "criatura",
+      "description": "Nombre de traduccion variable que no debe colapsarse con Guanurú, Wanurü o yolujaa.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "uncertain",
+      "sensitivity": "sensitive",
+      "visual_status": "required",
+      "model_requirements": [
+        "presence_model"
+      ],
+      "model_refs": [
+        "yoruja__presence_model"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "guanuru"
+      ],
+      "evidence": [
+        {
+          "myth": "guanuru",
+          "field": "mito",
+          "note": "Nombre de traduccion que no se fija como jerarquia."
+        }
+      ]
+    },
+    "pariente_muerto_guanuru": {
+      "name": "Pariente muerto de la casa",
+      "kind": "personaje",
+      "description": "Familiar que aparece en sueño y cuestiona el trato dado a una visita.",
+      "aliases": [],
+      "states": [
+        "muerto_recordado",
+        "aparicion_en_sueno"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "sensitive",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet",
+        "state_sheet"
+      ],
+      "model_refs": [
+        "pariente_muerto_guanuru__identity_sheet",
+        "pariente_muerto_guanuru__state_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "guanuru"
+      ],
+      "evidence": [
+        {
+          "myth": "guanuru",
+          "field": "mito",
+          "note": "Aparece en sueño con rostro conocido."
+        }
+      ]
+    },
+    "mariposa_blanca_guanuru": {
+      "name": "Mariposa blanca visitante",
+      "kind": "animal",
+      "description": "Mariposa asociada con visita de muertos sin afirmar que toda mariposa lo sea.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet"
+      ],
+      "model_refs": [
+        "mariposa_blanca_guanuru__identity_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "guanuru"
+      ],
+      "evidence": [
+        {
+          "myth": "guanuru",
+          "field": "mito",
+          "note": "Señal posible de visita, no identidad automatica."
+        }
+      ]
+    },
+    "habitante_enfermo_guanuru": {
+      "name": "Habitante enfermo de la casa",
+      "kind": "personaje",
+      "description": "Persona adulta que pasa de la vida domestica a fiebre y recuperacion mientras recibe cuidado, sin volver el cuerpo un sintoma espectacular.",
+      "aliases": [],
+      "states": [
+        "antes_de_la_fiebre",
+        "en_fiebre",
+        "recuperacion"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "sensitive",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet",
+        "state_sheet"
+      ],
+      "model_refs": [
+        "habitante_enfermo_guanuru__identity_sheet",
+        "habitante_enfermo_guanuru__state_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "guanuru"
+      ],
+      "evidence": [
+        {
+          "myth": "guanuru",
+          "field": "mito",
+          "note": "Recibe cuidado durante la fiebre."
+        }
+      ]
+    },
+    "familia_casa_guanuru": {
+      "name": "Familia de la casa desocupada",
+      "kind": "colectivo",
+      "description": "Grupo que regresa, protege la mariposa, consulta, limpia la vivienda, lleva alimentos y completa el cuidado de la sepultura; no puede quedar reducido a mobiliario del espacio.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "group_grammar"
+      ],
+      "model_refs": [
+        "familia_casa_guanuru__group_grammar"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "guanuru"
+      ],
+      "evidence": [
+        {
+          "myth": "guanuru",
+          "field": "mito",
+          "note": "Interpreta, limpia y completa cuidados."
+        }
+      ]
+    },
+    "casa_desocupada_guanuru": {
+      "name": "Casa desocupada de Guanurú",
+      "kind": "arquitectura",
+      "description": "Vivienda de duelo con pasos, chinchorro, objetos y memoria.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "spatial_model"
+      ],
+      "model_refs": [
+        "casa_desocupada_guanuru__spatial_model"
+      ],
+      "legacy_model_refs": [
+        "guanuru__ancla"
+      ],
+      "myth_refs": [
+        "guanuru"
+      ],
+      "evidence": [
+        {
+          "myth": "guanuru",
+          "field": "mito",
+          "note": "Espacio domestico de duelo y memoria."
+        }
+      ]
+    },
+    "craneo_caballo_proteccion": {
+      "name": "Cráneo de caballo protector",
+      "kind": "objeto",
+      "description": "Objeto domestico registrado que marca una casa atendida, no amuleto universal.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "sensitive",
+      "visual_status": "required",
+      "model_requirements": [
+        "object_sheet"
+      ],
+      "model_refs": [
+        "craneo_caballo_proteccion__object_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "guanuru"
+      ],
+      "evidence": [
+        {
+          "myth": "guanuru",
+          "field": "mito",
+          "note": "Marca la entrada atendida sin poder autonomo."
+        }
+      ]
+    },
+    "sepultura_guanuru": {
+      "name": "Sepultura atendida",
+      "kind": "lugar",
+      "description": "Lugar de cuidado familiar relacionado con el duelo.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "spatial_model"
+      ],
+      "model_refs": [
+        "sepultura_guanuru__spatial_model"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "guanuru"
+      ],
+      "evidence": [
+        {
+          "myth": "guanuru",
+          "field": "mito",
+          "note": "Lugar cuyo cuidado queda pendiente."
+        }
+      ]
+    }
+  }
+}

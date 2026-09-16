@@ -1,0 +1,127 @@
+{
+  "schema": "mitos-triptych-selection/v2",
+  "myth": "las-wanulus-y-el-valle-de-la-muerte",
+  "title": "Las Wanurü y el valle de la muerte",
+  "created_at": "2026-09-06T05:04:13.035Z",
+  "status": "approved_for_publication_under_campaign_authorization",
+  "approval_basis": "Usuario autorizó producción y publicación completa Wayúu; revisión de píxeles por agente, sin nueva aprobación individual.",
+  "campaign_scope": "content/mitos-visuales/production/wayuu-2026-09-05/scope.json",
+  "narrative_target_sha256": "3eee11b6d604732358d77a886820556e4fd05228ab6f38c2b14259998068fefb",
+  "visual_memory_library": "content/mitos-visuales/wayuu.visual-memory.v1.json",
+  "visual_memory_review": {
+    "reviewer": "agent_direct_visual_review",
+    "reviewed_at": "2026-09-06T04:59:44.726Z",
+    "reviewed_reference_ids": [
+      "a1d22e121d667b2c11ee",
+      "3cd0547f70f8fd93f0e6"
+    ],
+    "retained": [
+      "Noche azul, contraste arena y vegetación, planos de papel separados.",
+      "Escala del territorio y continuidad de una curva que conduce la mirada."
+    ],
+    "rejected": [
+      "Serpiente monumental erguida como monstruo y patrones geométricos sobre su cuerpo.",
+      "Repetir encuentro con serpiente en ambos formatos, vestuario uniforme e indeterminado, estrellas decorativas y rostros modelados."
+    ],
+    "influence_by_act": {
+      "entrada": "Noche y camino profundo; la orientación por estrellas se vuelve estrellas retenidas en huellas, sin serpiente monumental.",
+      "acto": "Curvas materiales del suelo y verde contenido se transforman en memoria del sueño alrededor de la parcela; ninguna segunda criatura.",
+      "huella": "La curva se abstrae en semillas y ausencia; símbolo de la parte de cosecha dejada sin tomar, no otra escena."
+    }
+  },
+  "selected": [
+    {
+      "act": "entrada",
+      "path": "output/imagegen/wayuu/triptychs/wayuu-valle-triptych-01/entrada.jpeg",
+      "sha256": "9c4d02af57f0cdab288aa19179c56ba2bb7ba86a6b3c65be81c320a8cb89353b",
+      "width": 1536,
+      "height": 864,
+      "quality": "high",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/las-wanulus-y-el-valle-de-la-muerte/wayuu-valle-triptych-01/prompts/entrada.prompt.txt",
+      "prompt_sha256": "3e5ca7a6ea3ce237ce25d030a7d8502368fa30951fdc7ee603dfdc454abc9178",
+      "visual_function": "narrative_scene",
+      "review": {
+        "observed": "Dos adultos completos de espaldas, camisas azul y cruda diferenciadas, sombrero sólo mayor. Valle ancho de capas mate; fragmentos crudos aparecen en huellas secas, cielo oscuro sin monstruo ni violencia. Zona izquierda tranquila para título.",
+        "limits": [
+          "Mayor ocupa aproximadamente 20% de altura, no el séptimo solicitado, pero sigue en plano general territorial.",
+          "Bolsa del mayor incorpora tira diagonal y los paños son más envolventes que la ficha. No se declara reproducción exacta de indumentaria."
+        ]
+      }
+    },
+    {
+      "act": "acto",
+      "path": "output/imagegen/wayuu/triptychs/wayuu-valle-triptych-01/acto.jpeg",
+      "sha256": "561a406f319936bb43aed4b6ebbff58758028e5b904d191612c7557e6293dea4",
+      "width": 864,
+      "height": 1536,
+      "quality": "medium",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/las-wanulus-y-el-valle-de-la-muerte/wayuu-valle-triptych-01/prompts/acto.prompt.txt",
+      "prompt_sha256": "8f11ba97ea1df2121b95aa6b7608c9a68696a0e1cc959b42e72a68f10e496c99",
+      "visual_function": "narrative_scene",
+      "review": {
+        "observed": "Casa rectangular, puerta con travesaños, hermanos pequeños en el alero, camisas distintas y rostros planos. Un surco con plantas queda suspendido con raíces y sombra; se identifica como tierra, no serpiente.",
+        "limits": [
+          "Paños frontales más amplios que la ficha; no inferir validez etnográfica del acabado.",
+          "No aparece la cocina exterior, fuera de este encuadre; el surco levantado es metáfora editorial, no episodio literal."
+        ]
+      }
+    },
+    {
+      "act": "huella",
+      "path": "output/imagegen/wayuu/triptychs/wayuu-valle-triptych-02-huella/huella.jpeg",
+      "sha256": "3653f0f61017d992b78792dedbaa99f4164a44f56b3d312da5855fbdf06f1c72",
+      "width": 1024,
+      "height": 1024,
+      "quality": "medium",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/las-wanulus-y-el-valle-de-la-muerte/wayuu-valle-triptych-02-huella/prompts/huella.prompt.txt",
+      "prompt_sha256": "d4c71b43db930c7ba8c7874f66a50a4425dc6e69ed00ddb996a2f723b01dd782",
+      "visual_function": "symbolic_synthesis",
+      "review": {
+        "observed": "Puñado de formas de grano plegadas, vacío diagonal añil, piezas elevadas con sombras y fondo verde a sangre. Desaparece la C de la versión anterior. No escena ni rostro.",
+        "limits": [
+          "Granos muy estilizados, algunos poliédricos: no identifica especie de cultivo.",
+          "La lectura de cosecha dejada exige el contexto del relato, como síntesis simbólica; no emblema tradicional."
+        ]
+      }
+    }
+  ],
+  "generation": {
+    "provider": "OpenAI API",
+    "model": "gpt-image-2",
+    "mode": "text_only_no_local_references",
+    "unique_images": 4,
+    "by_act": {
+      "entrada": {
+        "unique_images": 1,
+        "preparation_rounds": 1,
+        "requested_alternatives": 0
+      },
+      "acto": {
+        "unique_images": 1,
+        "preparation_rounds": 1,
+        "requested_alternatives": 0
+      },
+      "huella": {
+        "unique_images": 2,
+        "preparation_rounds": 2,
+        "requested_alternatives": 0
+      }
+    },
+    "corrections": 1,
+    "cli_seconds": {
+      "entrada": 74.9,
+      "acto": 34.8,
+      "huella_initial": 35.6,
+      "huella_revision": 33.7
+    },
+    "cost": null,
+    "request_ids": null
+  },
+  "excluded": [
+    {
+      "path": "output/imagegen/wayuu/triptychs/wayuu-valle-triptych-01/huella.jpeg",
+      "reason": "Vacío en forma de C y disposición circular demasiado próxima a monograma."
+    }
+  ],
+  "published": false
+}

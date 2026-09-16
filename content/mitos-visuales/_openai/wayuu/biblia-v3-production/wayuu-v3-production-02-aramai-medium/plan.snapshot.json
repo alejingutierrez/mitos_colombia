@@ -1,0 +1,949 @@
+{
+  "schema": "mitos-colombia-biblia-visual/v3",
+  "batch": {
+    "id": "wayuu-v3-production-02-aramai-medium",
+    "myth_slug": "aramai",
+    "model_ids": [
+      "aramai__identity_sheet",
+      "aramai__state_sheet",
+      "mareiwa__state_sheet",
+      "wanuru__presence_model",
+      "wanuru__state_sheet",
+      "epidemia_aramai__phenomenon_rule",
+      "jaguey__spatial_model"
+    ],
+    "quality": "medium",
+    "framing": "immersive_full_bleed",
+    "surface_finish": "layered_depth_no_exposed_support",
+    "generation_mode": "text_only_no_local_references",
+    "status": "frozen_ready_to_generate"
+  },
+  "inventory_approved_at": "2026-09-03",
+  "pilot_approved_at": "2026-09-03",
+  "source_snapshot_sha256": "6b5b1c5ebdb2524a7524b065d96c6d33ad6f5694db239a0d722ded8485f435f5",
+  "model_ids": [
+    "aramai__identity_sheet",
+    "aramai__state_sheet",
+    "mareiwa__state_sheet",
+    "wanuru__presence_model",
+    "wanuru__state_sheet",
+    "epidemia_aramai__phenomenon_rule",
+    "jaguey__spatial_model"
+  ],
+  "models": {
+    "aramai__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "aramai"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "aramai",
+          "field": "mito",
+          "note": "Solicita la enfermedad y luego intenta reparar."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos. Entidad: Arámai. Funcion visual: Hombre que solicita una enfermedad, reconoce su error y ayuda a sobrevivientes.",
+        "materials": [
+          "papel mate de fibra visible",
+          "capas prensadas para cuerpo y vestuario",
+          "hilo solo cuando el relato lo exige"
+        ],
+        "palette_logic": "Arena, barro, carbon y fibras naturales; un acento propio de la entidad puede repetirse, sin patrones kanas o marcas claniles inventadas.",
+        "scale": "Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "continuity_markers": [
+          "nombre estable: Arámai",
+          "funcion estable: Hombre que solicita una enfermedad, reconoce su error y ayuda a sobrevivientes.",
+          "estados declarados: antes_de_la_peticion, arrepentido, cuidador"
+        ],
+        "documented_features": [
+          "Hombre que solicita una enfermedad, reconoce su error y ayuda a sobrevivientes."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para identity_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · identity_sheet",
+        "primary_request": "identidad corporal completa y legible para Arámai. Hombre que solicita una enfermedad, reconoce su error y ayuda a sobrevivientes.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel mate de fibra visible; capas prensadas para cuerpo y vestuario; hilo solo cuando el relato lo exige",
+        "constraints": [
+          "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos.",
+          "mostrar: Hombre que solicita una enfermedad, reconoce su error y ayuda a sobrevivientes.",
+          "estados autorizados: antes_de_la_peticion, arrepentido, cuidador",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "1:1",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "antes_de_la_peticion"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "aramai__state_sheet": {
+      "purpose": "state_sheet",
+      "entity_refs": [
+        "aramai"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "aramai",
+          "field": "mito",
+          "note": "Solicita la enfermedad y luego intenta reparar."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos. Entidad: Arámai. Funcion visual: Hombre que solicita una enfermedad, reconoce su error y ayuda a sobrevivientes.",
+        "materials": [
+          "papel mate de fibra visible",
+          "capas prensadas para cuerpo y vestuario",
+          "hilo solo cuando el relato lo exige"
+        ],
+        "palette_logic": "Arena, barro, carbon y fibras naturales; un acento propio de la entidad puede repetirse, sin patrones kanas o marcas claniles inventadas.",
+        "scale": "Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "continuity_markers": [
+          "nombre estable: Arámai",
+          "funcion estable: Hombre que solicita una enfermedad, reconoce su error y ayuda a sobrevivientes.",
+          "estados declarados: antes_de_la_peticion, arrepentido, cuidador"
+        ],
+        "documented_features": [
+          "Hombre que solicita una enfermedad, reconoce su error y ayuda a sobrevivientes."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para state_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · state_sheet",
+        "primary_request": "continuidad entre estados sin adelantar un keyframe para Arámai. Hombre que solicita una enfermedad, reconoce su error y ayuda a sobrevivientes.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel mate de fibra visible; capas prensadas para cuerpo y vestuario; hilo solo cuando el relato lo exige",
+        "constraints": [
+          "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos.",
+          "mostrar: Hombre que solicita una enfermedad, reconoce su error y ayuda a sobrevivientes.",
+          "estados autorizados: antes_de_la_peticion, arrepentido, cuidador",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "estados",
+          "view_type": "state_sequence",
+          "purpose": "continuidad entre estados sin adelantar un keyframe",
+          "aspect": "16:9",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "antes_de_la_peticion",
+            "arrepentido",
+            "cuidador"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "mareiwa__state_sheet": {
+      "purpose": "state_sheet",
+      "entity_refs": [
+        "mareiwa"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "aramai",
+          "field": "mito",
+          "note": "Recibe la peticion sin quedar reducido a dios cristiano."
+        },
+        {
+          "myth": "creacion-wayuu",
+          "field": "mito",
+          "note": "Crea o transforma y diferencia personas y clanes."
+        },
+        {
+          "myth": "el-incesto",
+          "field": "mito",
+          "note": "Fuerza atribuida a la detencion de la primera fuga."
+        },
+        {
+          "myth": "el-origen-del-fuego",
+          "field": "mito",
+          "note": "Interviene en versiones de distribucion y castigo."
+        },
+        {
+          "myth": "la-india-worunka",
+          "field": "mito",
+          "note": "Interviene en cuerpo, alianzas y sequia."
+        },
+        {
+          "myth": "los-mellizos-transformadores",
+          "field": "mito",
+          "note": "Uno de los mellizos recibe este nombre en otra version."
+        },
+        {
+          "myth": "maleiwa",
+          "field": "mito",
+          "note": "Figura cambiante del ciclo."
+        },
+        {
+          "myth": "serranias-de-la-guajira",
+          "field": "mito",
+          "note": "Transforma viajeros, retira mar y organiza vida."
+        },
+        {
+          "myth": "ulepala",
+          "field": "mito",
+          "note": "Su flecha completa la consecuencia del secreto roto."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "No fijar cuerpo humano. La presencia se reconoce por una relacion irrepetible entre territorio, materia, clima, objeto, ausencia y huella. Entidad: Mareiwa. Funcion visual: Figura creadora, transformadora, organizadora y propiciadora cuyas versiones no forman una biografia unica.",
+        "materials": [
+          "papel territorial fibroso",
+          "capas de agua, suelo, aire o sombra segun evidencia",
+          "uniones fisicas visibles dentro del mundo"
+        ],
+        "palette_logic": "Color gobernado por la accion documentada de la fuerza; sin halo, aura, ojos luminosos o codigo religioso externo.",
+        "scale": "Escala relacional: puede atravesar varios planos sin convertirse en gigante antropomorfo.",
+        "continuity_markers": [
+          "nombre estable: Mareiwa",
+          "funcion estable: Figura creadora, transformadora, organizadora y propiciadora cuyas versiones no forman una biografia unica.",
+          "estados declarados: creador, transformador, propiciador_de_lluvia"
+        ],
+        "documented_features": [
+          "Figura creadora, transformadora, organizadora y propiciadora cuyas versiones no forman una biografia unica.",
+          "alias documentado: Maleiwa",
+          "alias documentado: Mareigua"
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para state_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · state_sheet",
+        "primary_request": "continuidad entre estados sin adelantar un keyframe para Mareiwa. Figura creadora, transformadora, organizadora y propiciadora cuyas versiones no forman una biografia unica.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Escala relacional: puede atravesar varios planos sin convertirse en gigante antropomorfo.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel territorial fibroso; capas de agua, suelo, aire o sombra segun evidencia; uniones fisicas visibles dentro del mundo",
+        "constraints": [
+          "No fijar cuerpo humano. La presencia se reconoce por una relacion irrepetible entre territorio, materia, clima, objeto, ausencia y huella.",
+          "mostrar: Figura creadora, transformadora, organizadora y propiciadora cuyas versiones no forman una biografia unica.",
+          "estados autorizados: creador, transformador, propiciador_de_lluvia",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "estados",
+          "view_type": "state_sequence",
+          "purpose": "continuidad entre estados sin adelantar un keyframe",
+          "aspect": "16:9",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "creador",
+            "transformador",
+            "propiciador_de_lluvia"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "wanuru__presence_model": {
+      "purpose": "presence_model",
+      "entity_refs": [
+        "wanuru"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "aramai",
+          "field": "mito",
+          "note": "Queda asociado con enfermedad y muerte."
+        },
+        {
+          "myth": "guanuru",
+          "field": "mito",
+          "note": "Relacion con enfermedad y muerte sin sinonimia."
+        },
+        {
+          "myth": "jirairay",
+          "field": "mito",
+          "note": "Entidad a la que se dirige el canto."
+        },
+        {
+          "myth": "las-wanulus-y-el-valle-de-la-muerte",
+          "field": "mito",
+          "note": "Categoria documentada que no se reduce a serpiente."
+        },
+        {
+          "myth": "los-mellizos-transformadores",
+          "field": "mito",
+          "note": "Relacion con la transformacion de perseguidores."
+        },
+        {
+          "myth": "umarala",
+          "field": "mito",
+          "note": "Presencia vinculada con la enfermedad."
+        },
+        {
+          "myth": "waleker-el-origen-del-tejido",
+          "field": "mito",
+          "note": "Enmarca el dominio de esos servidores."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "No fijar cuerpo humano. La presencia se reconoce por una relacion irrepetible entre territorio, materia, clima, objeto, ausencia y huella. Entidad: Wanurü. Funcion visual: Presencia o categoria vinculada con enfermedad, muerte y peligro, no demonio cristiano ni serpiente zoologica.",
+        "materials": [
+          "papel territorial fibroso",
+          "capas de agua, suelo, aire o sombra segun evidencia",
+          "uniones fisicas visibles dentro del mundo"
+        ],
+        "palette_logic": "Color gobernado por la accion documentada de la fuerza; sin halo, aura, ojos luminosos o codigo religioso externo.",
+        "scale": "Escala relacional: puede atravesar varios planos sin convertirse en gigante antropomorfo.",
+        "continuity_markers": [
+          "nombre estable: Wanurü",
+          "funcion estable: Presencia o categoria vinculada con enfermedad, muerte y peligro, no demonio cristiano ni serpiente zoologica.",
+          "estados declarados: presencia, forma_animal_posible"
+        ],
+        "documented_features": [
+          "Presencia o categoria vinculada con enfermedad, muerte y peligro, no demonio cristiano ni serpiente zoologica.",
+          "alias documentado: Wanülü"
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para presence_model",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · presence_model",
+        "primary_request": "accion y huella sin inventar anatomia para Wanurü. Presencia o categoria vinculada con enfermedad, muerte y peligro, no demonio cristiano ni serpiente zoologica.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Escala relacional: puede atravesar varios planos sin convertirse en gigante antropomorfo.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel territorial fibroso; capas de agua, suelo, aire o sombra segun evidencia; uniones fisicas visibles dentro del mundo",
+        "constraints": [
+          "No fijar cuerpo humano. La presencia se reconoce por una relacion irrepetible entre territorio, materia, clima, objeto, ausencia y huella.",
+          "mostrar: Presencia o categoria vinculada con enfermedad, muerte y peligro, no demonio cristiano ni serpiente zoologica.",
+          "estados autorizados: presencia, forma_animal_posible",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "presence_grammar",
+          "purpose": "accion y huella sin inventar anatomia",
+          "aspect": "16:9",
+          "era": "historico_wayuu_segun_relato",
+          "states": [
+            "presencia"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "wanuru__state_sheet": {
+      "purpose": "state_sheet",
+      "entity_refs": [
+        "wanuru"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "aramai",
+          "field": "mito",
+          "note": "Queda asociado con enfermedad y muerte."
+        },
+        {
+          "myth": "guanuru",
+          "field": "mito",
+          "note": "Relacion con enfermedad y muerte sin sinonimia."
+        },
+        {
+          "myth": "jirairay",
+          "field": "mito",
+          "note": "Entidad a la que se dirige el canto."
+        },
+        {
+          "myth": "las-wanulus-y-el-valle-de-la-muerte",
+          "field": "mito",
+          "note": "Categoria documentada que no se reduce a serpiente."
+        },
+        {
+          "myth": "los-mellizos-transformadores",
+          "field": "mito",
+          "note": "Relacion con la transformacion de perseguidores."
+        },
+        {
+          "myth": "umarala",
+          "field": "mito",
+          "note": "Presencia vinculada con la enfermedad."
+        },
+        {
+          "myth": "waleker-el-origen-del-tejido",
+          "field": "mito",
+          "note": "Enmarca el dominio de esos servidores."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "No fijar cuerpo humano. La presencia se reconoce por una relacion irrepetible entre territorio, materia, clima, objeto, ausencia y huella. Entidad: Wanurü. Funcion visual: Presencia o categoria vinculada con enfermedad, muerte y peligro, no demonio cristiano ni serpiente zoologica.",
+        "materials": [
+          "papel territorial fibroso",
+          "capas de agua, suelo, aire o sombra segun evidencia",
+          "uniones fisicas visibles dentro del mundo"
+        ],
+        "palette_logic": "Color gobernado por la accion documentada de la fuerza; sin halo, aura, ojos luminosos o codigo religioso externo.",
+        "scale": "Escala relacional: puede atravesar varios planos sin convertirse en gigante antropomorfo.",
+        "continuity_markers": [
+          "nombre estable: Wanurü",
+          "funcion estable: Presencia o categoria vinculada con enfermedad, muerte y peligro, no demonio cristiano ni serpiente zoologica.",
+          "estados declarados: presencia, forma_animal_posible"
+        ],
+        "documented_features": [
+          "Presencia o categoria vinculada con enfermedad, muerte y peligro, no demonio cristiano ni serpiente zoologica.",
+          "alias documentado: Wanülü"
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para state_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · state_sheet",
+        "primary_request": "continuidad entre estados sin adelantar un keyframe para Wanurü. Presencia o categoria vinculada con enfermedad, muerte y peligro, no demonio cristiano ni serpiente zoologica.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Escala relacional: puede atravesar varios planos sin convertirse en gigante antropomorfo.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel territorial fibroso; capas de agua, suelo, aire o sombra segun evidencia; uniones fisicas visibles dentro del mundo",
+        "constraints": [
+          "No fijar cuerpo humano. La presencia se reconoce por una relacion irrepetible entre territorio, materia, clima, objeto, ausencia y huella.",
+          "mostrar: Presencia o categoria vinculada con enfermedad, muerte y peligro, no demonio cristiano ni serpiente zoologica.",
+          "estados autorizados: presencia, forma_animal_posible",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "estados",
+          "view_type": "state_sequence",
+          "purpose": "continuidad entre estados sin adelantar un keyframe",
+          "aspect": "16:9",
+          "era": "historico_wayuu_segun_relato",
+          "states": [
+            "presencia",
+            "forma_animal_posible"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "epidemia_aramai__phenomenon_rule": {
+      "purpose": "phenomenon_rule",
+      "entity_refs": [
+        "epidemia_aramai"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "aramai",
+          "field": "mito",
+          "note": "La dolencia rebasa el calculo y cruza rancherias."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Secuencia material de causa, accion, limite y huella; debe entenderse sin texto, aura o particulas magicas genericas. Entidad: Enfermedad de Arámai. Funcion visual: Dolencia que cruza rancherias y excede toda cuenta o control.",
+        "materials": [
+          "papel y fibras que cambian de tension, humedad, luz o posicion",
+          "capas causales separadas",
+          "huella fisica persistente"
+        ],
+        "palette_logic": "El cambio cromatico nace de la materia afectada, nunca de un resplandor sobrenatural por defecto.",
+        "scale": "Escala definida por aquello que transforma, desde objeto hasta territorio.",
+        "continuity_markers": [
+          "nombre estable: Enfermedad de Arámai",
+          "funcion estable: Dolencia que cruza rancherias y excede toda cuenta o control.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Dolencia que cruza rancherias y excede toda cuenta o control."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para phenomenon_rule",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · phenomenon_rule",
+        "primary_request": "entrada, accion, limite y huella del fenomeno para Enfermedad de Arámai. Dolencia que cruza rancherias y excede toda cuenta o control.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Escala definida por aquello que transforma, desde objeto hasta territorio.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel y fibras que cambian de tension, humedad, luz o posicion; capas causales separadas; huella fisica persistente",
+        "constraints": [
+          "Secuencia material de causa, accion, limite y huella; debe entenderse sin texto, aura o particulas magicas genericas.",
+          "mostrar: Dolencia que cruza rancherias y excede toda cuenta o control.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "phenomenon_grammar",
+          "purpose": "entrada, accion, limite y huella del fenomeno",
+          "aspect": "16:9",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "jaguey__spatial_model": {
+      "purpose": "spatial_model",
+      "entity_refs": [
+        "jaguey"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "aramai",
+          "field": "mito",
+          "note": "La escasez de agua abre el conflicto."
+        },
+        {
+          "myth": "la-sed-da-los-civilizados",
+          "field": "mito",
+          "note": "Reserva cuyo limite condiciona hospitalidad."
+        },
+        {
+          "myth": "maleiwa",
+          "field": "mito",
+          "note": "Agua escasa del mundo habitable."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Umbral y organizacion espacial propios del relato; la geografia incierta se mantiene aproximada y nunca se publica como coordenada. Entidad: Jagüey y reserva de agua. Funcion visual: Deposito de agua y su relacion con sequia, recorridos y cuidado.",
+        "materials": [
+          "estratos de papel y suelo prensado",
+          "elementos materiales citados por el relato",
+          "aire y oclusiones entre planos"
+        ],
+        "palette_logic": "Paleta territorial modulada por funcion, clima y estado narrativo.",
+        "scale": "Profundidad recorrible con primer plano, plano medio y fondo a distancias reales.",
+        "continuity_markers": [
+          "nombre estable: Jagüey y reserva de agua",
+          "funcion estable: Deposito de agua y su relacion con sequia, recorridos y cuidado.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Deposito de agua y su relacion con sequia, recorridos y cuidado."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para spatial_model",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · spatial_model",
+        "primary_request": "relaciones espaciales, entradas, planos y escala para Jagüey y reserva de agua. Deposito de agua y su relacion con sequia, recorridos y cuidado.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Profundidad recorrible con primer plano, plano medio y fondo a distancias reales.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "estratos de papel y suelo prensado; elementos materiales citados por el relato; aire y oclusiones entre planos",
+        "constraints": [
+          "Umbral y organizacion espacial propios del relato; la geografia incierta se mantiene aproximada y nunca se publica como coordenada.",
+          "mostrar: Deposito de agua y su relacion con sequia, recorridos y cuidado.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "spatial_grammar",
+          "purpose": "relaciones espaciales, entradas, planos y escala",
+          "aspect": "16:9",
+          "era": "historico_wayuu_segun_relato",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    }
+  },
+  "entities": {
+    "aramai": {
+      "name": "Arámai",
+      "kind": "personaje",
+      "description": "Hombre que solicita una enfermedad, reconoce su error y ayuda a sobrevivientes.",
+      "aliases": [],
+      "states": [
+        "antes_de_la_peticion",
+        "arrepentido",
+        "cuidador"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "contextual",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet",
+        "state_sheet"
+      ],
+      "model_refs": [
+        "aramai__identity_sheet",
+        "aramai__state_sheet"
+      ],
+      "legacy_model_refs": [
+        "aramai__ancla"
+      ],
+      "myth_refs": [
+        "aramai"
+      ],
+      "evidence": [
+        {
+          "myth": "aramai",
+          "field": "mito",
+          "note": "Solicita la enfermedad y luego intenta reparar."
+        }
+      ]
+    },
+    "mareiwa": {
+      "name": "Mareiwa",
+      "kind": "deidad_fuerza",
+      "description": "Figura creadora, transformadora, organizadora y propiciadora cuyas versiones no forman una biografia unica.",
+      "aliases": [
+        "Maleiwa",
+        "Mareigua"
+      ],
+      "states": [
+        "creador",
+        "transformador",
+        "propiciador_de_lluvia"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "sensitive",
+      "visual_status": "required",
+      "model_requirements": [
+        "presence_model",
+        "state_sheet"
+      ],
+      "model_refs": [
+        "mareiwa__presence_model",
+        "mareiwa__state_sheet"
+      ],
+      "legacy_model_refs": [
+        "maleiwa__ancla"
+      ],
+      "myth_refs": [
+        "aramai",
+        "creacion-wayuu",
+        "el-incesto",
+        "el-origen-del-fuego",
+        "la-india-worunka",
+        "los-mellizos-transformadores",
+        "maleiwa",
+        "serranias-de-la-guajira",
+        "ulepala"
+      ],
+      "evidence": [
+        {
+          "myth": "aramai",
+          "field": "mito",
+          "note": "Recibe la peticion sin quedar reducido a dios cristiano."
+        },
+        {
+          "myth": "creacion-wayuu",
+          "field": "mito",
+          "note": "Crea o transforma y diferencia personas y clanes."
+        },
+        {
+          "myth": "el-incesto",
+          "field": "mito",
+          "note": "Fuerza atribuida a la detencion de la primera fuga."
+        },
+        {
+          "myth": "el-origen-del-fuego",
+          "field": "mito",
+          "note": "Interviene en versiones de distribucion y castigo."
+        },
+        {
+          "myth": "la-india-worunka",
+          "field": "mito",
+          "note": "Interviene en cuerpo, alianzas y sequia."
+        },
+        {
+          "myth": "los-mellizos-transformadores",
+          "field": "mito",
+          "note": "Uno de los mellizos recibe este nombre en otra version."
+        },
+        {
+          "myth": "maleiwa",
+          "field": "mito",
+          "note": "Figura cambiante del ciclo."
+        },
+        {
+          "myth": "serranias-de-la-guajira",
+          "field": "mito",
+          "note": "Transforma viajeros, retira mar y organiza vida."
+        },
+        {
+          "myth": "ulepala",
+          "field": "mito",
+          "note": "Su flecha completa la consecuencia del secreto roto."
+        }
+      ]
+    },
+    "wanuru": {
+      "name": "Wanurü",
+      "kind": "deidad_fuerza",
+      "description": "Presencia o categoria vinculada con enfermedad, muerte y peligro, no demonio cristiano ni serpiente zoologica.",
+      "aliases": [
+        "Wanülü"
+      ],
+      "states": [
+        "presencia",
+        "forma_animal_posible"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "sensitive",
+      "visual_status": "required",
+      "model_requirements": [
+        "presence_model",
+        "state_sheet"
+      ],
+      "model_refs": [
+        "wanuru__presence_model",
+        "wanuru__state_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "aramai",
+        "guanuru",
+        "jirairay",
+        "las-wanulus-y-el-valle-de-la-muerte",
+        "los-mellizos-transformadores",
+        "umarala",
+        "waleker-el-origen-del-tejido"
+      ],
+      "evidence": [
+        {
+          "myth": "aramai",
+          "field": "mito",
+          "note": "Queda asociado con enfermedad y muerte."
+        },
+        {
+          "myth": "guanuru",
+          "field": "mito",
+          "note": "Relacion con enfermedad y muerte sin sinonimia."
+        },
+        {
+          "myth": "jirairay",
+          "field": "mito",
+          "note": "Entidad a la que se dirige el canto."
+        },
+        {
+          "myth": "las-wanulus-y-el-valle-de-la-muerte",
+          "field": "mito",
+          "note": "Categoria documentada que no se reduce a serpiente."
+        },
+        {
+          "myth": "los-mellizos-transformadores",
+          "field": "mito",
+          "note": "Relacion con la transformacion de perseguidores."
+        },
+        {
+          "myth": "umarala",
+          "field": "mito",
+          "note": "Presencia vinculada con la enfermedad."
+        },
+        {
+          "myth": "waleker-el-origen-del-tejido",
+          "field": "mito",
+          "note": "Enmarca el dominio de esos servidores."
+        }
+      ]
+    },
+    "epidemia_aramai": {
+      "name": "Enfermedad de Arámai",
+      "kind": "fenomeno",
+      "description": "Dolencia que cruza rancherias y excede toda cuenta o control.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "sensitive",
+      "visual_status": "required",
+      "model_requirements": [
+        "phenomenon_rule"
+      ],
+      "model_refs": [
+        "epidemia_aramai__phenomenon_rule"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "aramai"
+      ],
+      "evidence": [
+        {
+          "myth": "aramai",
+          "field": "mito",
+          "note": "La dolencia rebasa el calculo y cruza rancherias."
+        }
+      ]
+    },
+    "jaguey": {
+      "name": "Jagüey y reserva de agua",
+      "kind": "lugar",
+      "description": "Deposito de agua y su relacion con sequia, recorridos y cuidado.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "spatial_model"
+      ],
+      "model_refs": [
+        "jaguey__spatial_model"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "aramai",
+        "la-sed-da-los-civilizados",
+        "maleiwa"
+      ],
+      "evidence": [
+        {
+          "myth": "aramai",
+          "field": "mito",
+          "note": "La escasez de agua abre el conflicto."
+        },
+        {
+          "myth": "la-sed-da-los-civilizados",
+          "field": "mito",
+          "note": "Reserva cuyo limite condiciona hospitalidad."
+        },
+        {
+          "myth": "maleiwa",
+          "field": "mito",
+          "note": "Agua escasa del mundo habitable."
+        }
+      ]
+    }
+  }
+}

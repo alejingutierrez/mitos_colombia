@@ -1,0 +1,251 @@
+{
+  "schema": "mitos-colombia-triptychs/v1.6",
+  "status": "production_and_publication_authorized",
+  "comunidad": "Wayúu",
+  "region": "Caribe",
+  "prompt_profile": "story_first_v3_symbolic_huella",
+  "generation_mode": "text_only_no_local_references",
+  "bible_selection": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/accepted-selection.json",
+  "campaign_scope": "content/mitos-visuales/production/wayuu-2026-09-05/scope.json",
+  "visual_memory_library": "content/mitos-visuales/wayuu.visual-memory.v1.json",
+  "approval_gate": "Campaña completa autorizada; QA por orientación y publicación aditiva sin borrar versiones.",
+  "output_sizes": {
+    "entrada": "1536x864",
+    "acto": "864x1536",
+    "huella": "1024x1024"
+  },
+  "quality_policy": {
+    "entrada": "high",
+    "acto": "medium",
+    "huella": "medium"
+  },
+  "mitos": {
+    "la-chama": {
+      "titulo": "La Chama",
+      "canon_models": [
+        "la_chama__identity_sheet",
+        "la_chama__state_sheet",
+        "hombre_caballos_chama__identity_sheet",
+        "hombre_caballos_chama__state_sheet",
+        "hijo_chama__identity_sheet",
+        "burro_chama__identity_sheet",
+        "ollas_mochilas_chama__object_sheet",
+        "manta_roja_chama__object_sheet",
+        "cueva_casa_chama__spatial_model",
+        "metamorfosis_chama__phenomenon_rule",
+        "transformacion_carga_chama__phenomenon_rule"
+      ],
+      "evidence": [
+        {
+          "id": "pineda_chama_1947",
+          "type": "primary_bibliographic_record",
+          "url": "https://www.bibliotecadigitaldebogota.gov.co/resources/2910662/",
+          "pages": "Revista de Folklore 2, 1947, 113–126",
+          "supports": "Identidad bibliográfica del artículo, no Chaves como autor principal.",
+          "limits": "Facsímil no recuperado legiblemente en esta consulta; la lectura narrativa se hace mediante compilación posterior y expediente de Biblia."
+        },
+        {
+          "id": "villa_posse_1993",
+          "type": "secondary_narrative_transcription",
+          "url": "https://studylib.es/doc/8316192/mitos-y-leyendas",
+          "pages": "Sección 4.7, pp. 84–87; transcripción atribuida a Pineda.",
+          "supports": "Partida con hijo y burro, transformación de carga y ropa, regreso y protección dentro de la cueva; repertorio huevo/flor.",
+          "limits": "Compilación posterior mediada, no testimonio oral nuevo. Lenguaje de época no trasladado a representación."
+        },
+        {
+          "id": "published_chama",
+          "type": "project_narrative",
+          "path": "content/mitos-visuales/production/wayuu-2026-09-05/narratives/la-chama.json",
+          "supports": "Relato objetivo: transformación, partida, refugio, ambivalencia y agencia.",
+          "limits": "Atribución principal y alias difieren del expediente; final de venganza no aparece en pasaje secundario revisado. No se ilustran discrepancias ni se modifica texto."
+        }
+      ],
+      "bible_overrides": [
+        {
+          "model_id": "hijo_chama__identity_sheet",
+          "decision": "Conservar camisa verde, base arena, si'ira arcilla y waireñas; eliminar ojos grandes, mejillas modeladas y estética Pixar. Niño pequeño de perfil, protegido sobre el burro."
+        },
+        {
+          "model_id": "la_chama__state_sheet",
+          "decision": "Una apariencia por escena: majayura en H, anciana en V. S usa sólo huevo/flor como síntesis editorial, no cinco entidades simultáneas."
+        },
+        {
+          "model_id": "ollas_mochilas_chama__object_sheet",
+          "decision": "Tres mochilas lisas con correa, sin patrón. La sombra antigua de ollas es traducción editorial de transformación, no cuatro objetos adicionales."
+        },
+        {
+          "model_id": "cueva_casa_chama__spatial_model",
+          "decision": "Reinterpretar roca mediante láminas amplias de papel con pliegue protector; sin textura pétrea fotográfica, fuego, leña ni utensilios de violencia."
+        }
+      ],
+      "narrative_contract": {
+        "target_slug": "la-chama",
+        "target_snapshot": "content/mitos-visuales/production/wayuu-2026-09-05/narratives/la-chama.json",
+        "target_content_sha256": "93461758732b5d6028affe6246ca8342486b5e9bb310cf0976ae15a07f72a627",
+        "summary": "La Chama abandona una relación junto a su hijo y transforma su carga gastada en bienes nuevos. Más tarde protege al hombre dentro de la cueva. Su apariencia no es única. El tríptico elige partida, refugio y síntesis de metamorfosis; no representa el desenlace violento.",
+        "events": [
+          {
+            "id": "partida_carga",
+            "action": "Viaja con hijo sobre burro; animales, objetos y ropa gastados se renuevan.",
+            "provenance": "historical_core",
+            "required": true,
+            "source": "villa_posse_1993"
+          },
+          {
+            "id": "refugio_cueva",
+            "action": "Tras el regreso del hombre, lo protege y esconde en un cuarto de la cueva.",
+            "provenance": "historical_core",
+            "required": true,
+            "source": "villa_posse_1993"
+          },
+          {
+            "id": "forma_cambiante",
+            "action": "Su repertorio incluye apariencias humanas, tigre, huevo y flor.",
+            "provenance": "historical_core",
+            "required": true,
+            "source": "villa_posse_1993"
+          }
+        ],
+        "emotional_reading": "Decisión propia, cuidado ambivalente y forma imposible de poseer.",
+        "magic_reading": "La carga cambia de naturaleza, la roca se recoge como refugio y un mismo pliegue contiene dos apariencias.",
+        "qa_method": "H mujer roja, niño seguro y un burro con mochilas cuya sombra recuerda ollas; V dos adultos pequeños dentro de roca plegada; S un motivo huevo/flor sin escena."
+      },
+      "visual_memory_review": {
+        "reviewer": "agent_direct_visual_review",
+        "reviewed_at": "2026-09-06T19:01:25.171Z",
+        "reviewed_reference_ids": [
+          "03b239b5132d895f4c18",
+          "fd86b4d337874421bcd6"
+        ],
+        "retained": [
+          "Estratos de roca y profundidad, contraste de ocres con azul profundo, cabello como continuidad entre apariencias.",
+          "Sensación de territorio vasto y presencia cambiante."
+        ],
+        "rejected": [
+          "Dos apariencias humanas simultáneas como si fueran dos personajes, espalda descubierta y pose de retrato de las imágenes previas.",
+          "Mar, vegetación en rosetas, luna decorativa y prendas estampadas no necesarios para el episodio.",
+          "Rostro y ojos grandes del modelo infantil: conservar conjunto verde/arena pero reducir a perfil de papel distante.",
+          "Kalamantuunay como alias de La Chama; venganza o persecución de familiares no sustentadas en el pasaje secundario revisado. No se edita el texto público."
+        ],
+        "influence_by_act": {
+          "entrada": "Recuperar territorio en capas y escala amplia; mostrar la partida con hijo y carga renovada, no dos mujeres junto al mar.",
+          "acto": "Conservar roca/cueva, sustituir retrato por acción de refugio y ocultamiento entre capas.",
+          "huella": "Sintetizar inestabilidad de forma con huevo y flor en una sola estructura de papel; sin escena ni catálogo de cinco figuras."
+        }
+      },
+      "material_direction": "Immersive full-bleed world entirely built from matte dyed CUT PAPER, broad sheets with crisp internal cut edges, air gaps and cast shadows at multiple physical depths. People are almost-flat side-profile paper cutouts with natural adult proportions, one tiny eye slit, nose only in outline, no modeled cheeks. Clothes are few broad folded paper pieces. Ground, rocks, sea and sky are paper too. No outer cardboard backing, base, pedestal, tabletop, frame, model island or stage edge.",
+      "paleta": "Arcilla roja, arena, carbón, azul petróleo y ocre tenue. Sombras físicas, luz lateral cálida sin aura ni partículas.",
+      "continuity_contract": [
+        "Cada escena contiene sólo su reparto y una apariencia de La Chama. Caras casi planas de perfil, figuras pequeñas; niño con proporciones infantiles sin ojos grandes.",
+        "Ropa larga de mangas completas, opaca y lisa, sin marcas claniles o pintura inventada. No confundir con Kalamantuunay, Puró o Pülowi.",
+        "Rocas y terreno enteramente de papel: continuo a sangre, capas orgánicas, sin esquinas de cartón ni soporte exterior."
+      ],
+      "avoid": [
+        "Pixar, Disney, large eyes, modeled cheeks, portrait, sculpted doll, photographic faces or rock",
+        "nudity, bare back, erotic pose, seductive witch, monstrous hag, demon, hybrid creature",
+        "death, corpse, blood, injuries, child in danger, violence, cannibalism, weapon, cooking pot with contents",
+        "medical procedure, hair remedy, treatment demonstration",
+        "saguaro, agave, aloe, yucca, spiky rosette flora; no vegetation needed",
+        "glowing eyes, aura, portal, beams, glitter, sacred glyph, patterned clothing, invented face paint",
+        "outer cardboard, detached rectangular sheet, pedestal, tabletop, model island, frame"
+      ],
+      "escenas": {
+        "entrada": {
+          "era": "historico_contacto_wayuu",
+          "refs": [],
+          "composicion": "profundidad_abierta",
+          "visual_function": "narrative_scene",
+          "narrative_event_ids": [
+            "partida_carga"
+          ],
+          "beat": "Se marcha con su hijo; lo gastado cambia de naturaleza a cada paso.",
+          "escena": "16:9 EXTREME WIDE elevated panoramic view across bare paper badlands of La Guajira at blue dusk. Vast layered ochre and dark petrol-blue rock ridges extend beyond all edges; NO sea, cactus, plants, moon, stars or buildings. The journey group is VERY SMALL and confined to RIGHT middle distance x72–89%,y30–50%. The adult woman must be NO MORE THAN 15% of image height, donkey and boy together NO MORE THAN 19%. Move camera twice as far away as a normal landscape scene: landscape dominates, not character illustration. ONE adult young Wayuu woman walks calmly to the right beside ONE healthy gray-sand donkey, holding a slack lead. Woman wears full wide ankle-length CLAY-RED Wayuushein, high small neck, LONG SLEEVES TO WRISTS, SAND pechera, pale strapped waireñas, black low braid; no decoration. ONE small boy sits securely on a plain new sand woven saddle mat on the donkey, both legs separated from the animal and hands resting safely; GREEN long-sleeved Kemiisa, opaque SAND lower garment, plain clay sash and ochre sandals. Child face tiny flat silhouette, no big eyes, not a miniadult. Donkey has long ears, short dark mane, pale muzzle, four normal legs, one small notch in left ear; matte paper facets, not hair or plastic. THREE simple soft NEW woven-paper MOCHILA bags hang from the side of its saddle, plain sand, clay and charcoal with loop straps, no patterns. THE IMPOSSIBILITY: although the physical bags are soft with straps, their THREE long CAST SHADOWS on the open sand below-left have the unmistakable silhouettes of squat ROUND COOKING POTS with open broad rims, not the silhouettes of bags. Shadows are flat opaque dark forms connected directly to the bags by low angled light, spaced apart and lying below the donkey at x62–85%,y51–60%. No actual pots in the landscape, no extra animal or person. New bags cast their old pot shapes: a quiet material memory of transformation. The woman casts a normal full-robed human shadow, child remains entirely safe and not falling. CRITICAL WEB FRAMING: lower 35% of image and left 55% are unoccupied quiet dark landscape for the title. All three pot-shaped shadows must remain ABOVE y60% and RIGHT of x60%. No shadow, person, donkey or bag can intrude into x0–55%,y60–100%. Do not enlarge the figures to make bags legible; prioritize small full figures and distinct simple pot-shaped shadows. Broad curved cut-paper terrain with five distinct physical depth planes and fine internal air gaps, no outer base, no panel strip or before-and-after diagram.",
+          "editorial_translation": "La transformación de carga procede del relato; sombras con forma anterior permiten leerla en una sola escena. No se afirma que las sombras se comporten así literalmente ni que los colores o número de bultos sean datos etnográficos. Corrección H: medición real de portada 1440×936 y título x47–719,y646–740 revela solapamiento probable de la primera sombra base; desplazar y reducir grupo y sombras hacia arriba/derecha.",
+          "visual_question": "¿Una madre y su hijo viajan con un burro y mochilas nuevas, mientras sus sombras conservan la forma de ollas?",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Mochilas transportadas en un burro.",
+            "impossible_behavior": "Las bolsas nuevas proyectan la forma de las ollas anteriores.",
+            "narrative_effect": "Hace visible una transformación durante la partida sin duplicar animales ni cuerpos.",
+            "agency": "La Chama decide y protege; no es un objeto poseído ni una caricatura de mujer Wayúu.",
+            "physical_translation": "Tres bolsas con correas y tres sombras de ollas vinculadas por luz rasante.",
+            "visible_test": "¿Una madre y su hijo viajan con un burro y mochilas nuevas, mientras sus sombras conservan la forma de ollas?",
+            "event_ids": [
+              "partida_carga"
+            ],
+            "provenance": "editorial_metaphor",
+            "temporal_role": "present"
+          }
+        },
+        "acto": {
+          "era": "historico_contacto_wayuu",
+          "refs": [],
+          "composicion": "profundidad_abierta",
+          "visual_function": "narrative_scene",
+          "narrative_event_ids": [
+            "refugio_cueva"
+          ],
+          "beat": "La misma figura capaz de transformar también construye un refugio.",
+          "escena": "9:16 EXTREME WIDE view from a cavern entrance deep into an immense cut-paper rocky interior. Warm ochre sandstone layers with charcoal shadowed undersides turn inward in at least SEVEN physical depths, entire cavern made of broad curved paper sheets, not photoreal stone. Only TWO adults, tiny in upper-middle of image. At x57%, y40–55% stands elderly La Chama, vigorous upright body, full plain CHARCOAL Wayuushein to ankles, small OCHRE pechera, long sleeves, charcoal strapped sandals. Her thick gray-black hair falls freely down her back TO ANKLES, eyes closed, face a simple flat profile. She faces the entrance with calm guarding posture, one palm gently resting on the edge of a rock layer. Behind her, further away at x72%,y40–46%, ONE adult man is seated safely in a small recess, body entirely clothed in long SAND Kotin over INDIGO long-sleeved Kemiisa, dark sandals, black wavy hair, no hat indoors. He is resting upright, no wounds, no bodily contact or procedure. THE IMPOSSIBILITY: the enormous STRATIFIED ROCK beside La Chama folds inward like a soft protective curtain, despite being the cave wall. Three broad rock-paper layers curl and overlap across the recess, partly hiding the seated man but leaving head and shoulder visible. Their physical folded edges and deep shadows close sightlines while leaving a warm air pocket; not a flat wall, solid door, magical portal or attack. The folds continue seamlessly into cavern walls beyond frame, never detached rectangular boards. An empty narrow sand passage bends around her toward the hidden recess; lower 30% quiet dark cave floor for mobile title. Subtle soft skylight from far upper slit, no fire, moon, people outside, child, family, bones, cookware, vegetation or animals.",
+          "editorial_translation": "Esconder al hombre en un cuarto de roca pertenece al relato. La pared que se pliega como cortina materializa el refugio; no describe arquitectura real ni invoca un portal.",
+          "visual_question": "¿La Chama protege el acceso a un hombre pequeño entre capas de roca que se repliegan, sin familia amenazante ni violencia?",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Pared estratificada de una cueva doméstica.",
+            "impossible_behavior": "La roca se vuelve pliegue que limita la mirada hacia el huésped.",
+            "narrative_effect": "Hace visible el acto protector de La Chama.",
+            "agency": "La Chama decide y protege; no es un objeto poseído ni una caricatura de mujer Wayúu.",
+            "physical_translation": "Tres capas curvas continuas se recogen frente al receso sin encerrar anatómicamente al hombre.",
+            "visible_test": "¿La Chama protege el acceso a un hombre pequeño entre capas de roca que se repliegan, sin familia amenazante ni violencia?",
+            "event_ids": [
+              "refugio_cueva"
+            ],
+            "provenance": "editorial_metaphor",
+            "temporal_role": "present"
+          }
+        },
+        "huella": {
+          "era": "sintesis_editorial",
+          "refs": [],
+          "composicion": "simbolo_central",
+          "visual_function": "symbolic_synthesis",
+          "narrative_event_ids": [
+            "forma_cambiante"
+          ],
+          "beat": "Ninguna apariencia la contiene por completo.",
+          "escena": "1:1 SYMBOLIC CUT-PAPER sculpture, one isolated integrated motif on flat muted PETROL-BLUE background, NO landscape. A small IVORY egg-shaped volume centered slightly below middle is made of five broad matte paper segments. Its uppermost segments gently turn OUTWARD, showing deep CLAY-RED reverse sides shaped like petals. One continuous folded-paper construction: lower half remains an unbroken cream OVOID, upper half opens into a restrained five-petal RED FLOWER, not a flower planted inside a shell. The same sheet changes silhouette and color by turning: no cracks, broken eggshell pieces, yolk, chick, face or embryo. Flower unspecified species, simple irregular broad petals, no decorative botanical pattern, no stem or leaves. Lower cream curves and upper red folds have real air gaps and soft cast shadows in three to five depths. Overall form fills central 55% of canvas with generous blank margins. Neither literal metamorphosis biology nor ritual emblem: a symbolic visual contradiction of closed and open, egg and flower in one material. No other objects, five-form lineup, human, animal, mask, eyes, hands, cave, magic aura, labels, pedestal or table. Elegant tactile cut paper, no shiny plastic, no photoreal flower.",
+          "editorial_translation": "Huevo y flor están en el repertorio atribuido a La Chama. Su unión en un pliegue único es editorial: no se inventa una secuencia huevo→flor dentro del relato ni un símbolo ritual.",
+          "visual_question": "¿Un mismo volumen de papel se lee como huevo cerrado y flor que se abre, sin convertirse en escena o catálogo?",
+          "material_direction": "Papel marfil y reverso rojo arcilla, mismo pliegue con aire y sombras; fondo azul petróleo plano sin horizonte ni base.",
+          "continuity_contract": [
+            "Un motivo simbólico, no escena ni inventario de todas las apariencias.",
+            "Forma de flor no especificada: no identificación botánica ni emblema cultural."
+          ],
+          "symbolic_contract": {
+            "thesis": "Una apariencia no agota la identidad.",
+            "carrier": "Un volumen de papel entre huevo y flor.",
+            "operation": "La superficie cerrada se vuelve pétalo al plegar su reverso.",
+            "story_connection": "Repertorio de formas cambiantes atribuido a La Chama.",
+            "visible_test": "¿Un mismo volumen de papel se lee como huevo cerrado y flor que se abre, sin convertirse en escena o catálogo?"
+          },
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Huevo y flor como apariencias reconocibles.",
+            "impossible_behavior": "Un mismo pliegue mantiene ambas lecturas.",
+            "narrative_effect": "Condensa una identidad que no se deja fijar.",
+            "agency": "La Chama decide y protege; no es un objeto poseído ni una caricatura de mujer Wayúu.",
+            "physical_translation": "Óvalo marfil continuo con segmentos que abren reverso rojo como pétalos.",
+            "visible_test": "¿Un mismo volumen de papel se lee como huevo cerrado y flor que se abre, sin convertirse en escena o catálogo?",
+            "event_ids": [
+              "forma_cambiante"
+            ],
+            "provenance": "editorial_metaphor",
+            "temporal_role": "memory"
+          }
+        }
+      }
+    }
+  },
+  "revision": {
+    "reason": "Proyección del encuadre cover real muestra que el título podría ocultar parte de la primera sombra de olla. Corregir sólo escala y posición H, conservar V/S.",
+    "replaces_only": "entrada",
+    "previous_plan": "content/mitos-visuales/wayuu.chama.triptico.v1.json"
+  }
+}

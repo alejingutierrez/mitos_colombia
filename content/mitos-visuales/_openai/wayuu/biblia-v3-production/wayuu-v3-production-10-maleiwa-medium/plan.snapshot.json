@@ -1,0 +1,1205 @@
+{
+  "schema": "mitos-colombia-biblia-visual/v3",
+  "batch": {
+    "id": "wayuu-v3-production-10-maleiwa-medium",
+    "myth_slug": "maleiwa",
+    "model_ids": [
+      "olivo_mareiwa__botanical_sheet",
+      "tormenta_nacimiento_mareiwa__phenomenon_rule",
+      "honda_piedra_mareiwa__object_sheet",
+      "pozos_salados_mareiwa__spatial_model",
+      "pava_semillera__identity_sheet",
+      "turpial_semillero__identity_sheet",
+      "paloma_semillera__identity_sheet",
+      "tuna_higo__botanical_sheet",
+      "primeros_wayuu__group_grammar",
+      "outsu_lluvia_mareiwa__group_grammar"
+    ],
+    "quality": "medium",
+    "framing": "immersive_full_bleed",
+    "surface_finish": "layered_depth_no_exposed_support",
+    "generation_mode": "text_only_no_local_references",
+    "status": "prepared_for_generation"
+  },
+  "inventory_approved_at": "2026-09-03",
+  "pilot_approved_at": "2026-09-03",
+  "source_snapshot_sha256": "6b5b1c5ebdb2524a7524b065d96c6d33ad6f5694db239a0d722ded8485f435f5",
+  "model_ids": [
+    "olivo_mareiwa__botanical_sheet",
+    "tormenta_nacimiento_mareiwa__phenomenon_rule",
+    "honda_piedra_mareiwa__object_sheet",
+    "pozos_salados_mareiwa__spatial_model",
+    "pava_semillera__identity_sheet",
+    "turpial_semillero__identity_sheet",
+    "paloma_semillera__identity_sheet",
+    "tuna_higo__botanical_sheet",
+    "primeros_wayuu__group_grammar",
+    "outsu_lluvia_mareiwa__group_grammar"
+  ],
+  "models": {
+    "olivo_mareiwa__botanical_sheet": {
+      "purpose": "botanical_sheet",
+      "entity_refs": [
+        "olivo_mareiwa"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "maleiwa",
+          "field": "mito",
+          "note": "Lugar vegetal de una version de nacimiento."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Morfologia botanica especifica en tallos, hojas, fruto y crecimiento; prohibida la sustitucion por cactus saguaro o flora desertica generica. Entidad: Olivo del nacimiento de Mareiwa. Funcion visual: Arbol resistente a la sequia presente en una variante de nacimiento.",
+        "materials": [
+          "papel recortado y plegado por organo vegetal",
+          "fibras visibles",
+          "volumen por capas y separacion real"
+        ],
+        "palette_logic": "Verdes, ocres y frutos localizados según especie y estado, sin saturacion tropical uniforme.",
+        "scale": "Altura y extension legibles frente a suelo, vivienda o figura secundaria.",
+        "continuity_markers": [
+          "nombre estable: Olivo del nacimiento de Mareiwa",
+          "funcion estable: Arbol resistente a la sequia presente en una variante de nacimiento.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Arbol resistente a la sequia presente en una variante de nacimiento."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para botanical_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · botanical_sheet",
+        "primary_request": "morfologia vegetal sin flora generica para Olivo del nacimiento de Mareiwa. Arbol resistente a la sequia presente en una variante de nacimiento.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Altura y extension legibles frente a suelo, vivienda o figura secundaria.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel recortado y plegado por organo vegetal; fibras visibles; volumen por capas y separacion real",
+        "constraints": [
+          "Morfologia botanica especifica en tallos, hojas, fruto y crecimiento; prohibida la sustitucion por cactus saguaro o flora desertica generica.",
+          "mostrar: Arbol resistente a la sequia presente en una variante de nacimiento.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_botanical",
+          "purpose": "morfologia vegetal sin flora generica",
+          "aspect": "1:1",
+          "era": "territorial_documentado_no_fecha_unica",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "tormenta_nacimiento_mareiwa__phenomenon_rule": {
+      "purpose": "phenomenon_rule",
+      "entity_refs": [
+        "tormenta_nacimiento_mareiwa"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "maleiwa",
+          "field": "mito",
+          "note": "Condicion de otra version de nacimiento."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Secuencia material de causa, accion, limite y huella; debe entenderse sin texto, aura o particulas magicas genericas. Entidad: Tormenta del nacimiento de Mareiwa. Funcion visual: Tormenta ligada a otra variante del origen de Mareiwa.",
+        "materials": [
+          "papel y fibras que cambian de tension, humedad, luz o posicion",
+          "capas causales separadas",
+          "huella fisica persistente"
+        ],
+        "palette_logic": "El cambio cromatico nace de la materia afectada, nunca de un resplandor sobrenatural por defecto.",
+        "scale": "Escala definida por aquello que transforma, desde objeto hasta territorio.",
+        "continuity_markers": [
+          "nombre estable: Tormenta del nacimiento de Mareiwa",
+          "funcion estable: Tormenta ligada a otra variante del origen de Mareiwa.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Tormenta ligada a otra variante del origen de Mareiwa."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para phenomenon_rule",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · phenomenon_rule",
+        "primary_request": "entrada, accion, limite y huella del fenomeno para Tormenta del nacimiento de Mareiwa. Tormenta ligada a otra variante del origen de Mareiwa.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Escala definida por aquello que transforma, desde objeto hasta territorio.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel y fibras que cambian de tension, humedad, luz o posicion; capas causales separadas; huella fisica persistente",
+        "constraints": [
+          "Secuencia material de causa, accion, limite y huella; debe entenderse sin texto, aura o particulas magicas genericas.",
+          "mostrar: Tormenta ligada a otra variante del origen de Mareiwa.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "phenomenon_grammar",
+          "purpose": "entrada, accion, limite y huella del fenomeno",
+          "aspect": "16:9",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "honda_piedra_mareiwa__object_sheet": {
+      "purpose": "object_sheet",
+      "entity_refs": [
+        "honda_piedra_mareiwa"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "maleiwa",
+          "field": "mito",
+          "note": "Retira el mar sin sustituir el cuerpo de Mareiwa."
+        },
+        {
+          "myth": "serranias-de-la-guajira",
+          "field": "mito",
+          "note": "Herramienta que retira el mar."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Contorno, volumen, piezas y modo de uso claramente separables; evitar convertir utileria cotidiana en reliquia mistica. Entidad: Honda y piedra de Mareiwa. Funcion visual: Herramientas con que el mar retrocede en versiones de Mareiwa y serranias.",
+        "materials": [
+          "papel, fibra, madera o mineral traducidos a paper craft",
+          "uniones y desgaste fisico",
+          "sombras proyectadas coherentes"
+        ],
+        "palette_logic": "Color propio del material y el estado; sin ornamentacion cultural no respaldada.",
+        "scale": "Escala demostrable mediante mano, suelo o arquitectura sin texto ni regla grafica.",
+        "continuity_markers": [
+          "nombre estable: Honda y piedra de Mareiwa",
+          "funcion estable: Herramientas con que el mar retrocede en versiones de Mareiwa y serranias.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Herramientas con que el mar retrocede en versiones de Mareiwa y serranias."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para object_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · object_sheet",
+        "primary_request": "forma, escala, material y uso legibles para Honda y piedra de Mareiwa. Herramientas con que el mar retrocede en versiones de Mareiwa y serranias.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Escala demostrable mediante mano, suelo o arquitectura sin texto ni regla grafica.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel, fibra, madera o mineral traducidos a paper craft; uniones y desgaste fisico; sombras proyectadas coherentes",
+        "constraints": [
+          "Contorno, volumen, piezas y modo de uso claramente separables; evitar convertir utileria cotidiana en reliquia mistica.",
+          "mostrar: Herramientas con que el mar retrocede en versiones de Mareiwa y serranias.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_object",
+          "purpose": "forma, escala, material y uso legibles",
+          "aspect": "1:1",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "pozos_salados_mareiwa__spatial_model": {
+      "purpose": "spatial_model",
+      "entity_refs": [
+        "pozos_salados_mareiwa"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "maleiwa",
+          "field": "mito",
+          "note": "Memoria de la extension del mar."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Umbral y organizacion espacial propios del relato; la geografia incierta se mantiene aproximada y nunca se publica como coordenada. Entidad: Pozos salados del mar retirado. Funcion visual: Huecos que conservan memoria de la extension anterior del mar.",
+        "materials": [
+          "estratos de papel y suelo prensado",
+          "elementos materiales citados por el relato",
+          "aire y oclusiones entre planos"
+        ],
+        "palette_logic": "Paleta territorial modulada por funcion, clima y estado narrativo.",
+        "scale": "Profundidad recorrible con primer plano, plano medio y fondo a distancias reales.",
+        "continuity_markers": [
+          "nombre estable: Pozos salados del mar retirado",
+          "funcion estable: Huecos que conservan memoria de la extension anterior del mar.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Huecos que conservan memoria de la extension anterior del mar."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para spatial_model",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · spatial_model",
+        "primary_request": "relaciones espaciales, entradas, planos y escala para Pozos salados del mar retirado. Huecos que conservan memoria de la extension anterior del mar.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Profundidad recorrible con primer plano, plano medio y fondo a distancias reales.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "estratos de papel y suelo prensado; elementos materiales citados por el relato; aire y oclusiones entre planos",
+        "constraints": [
+          "Umbral y organizacion espacial propios del relato; la geografia incierta se mantiene aproximada y nunca se publica como coordenada.",
+          "mostrar: Huecos que conservan memoria de la extension anterior del mar.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "spatial_grammar",
+          "purpose": "relaciones espaciales, entradas, planos y escala",
+          "aspect": "16:9",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "pava_semillera__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "pava_semillera"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "creacion-wayuu",
+          "field": "mito",
+          "note": "Dispersa semillas por la peninsula."
+        },
+        {
+          "myth": "maleiwa",
+          "field": "mito",
+          "note": "Dispersa semillas."
+        },
+        {
+          "myth": "serranias-de-la-guajira",
+          "field": "mito",
+          "note": "Transporta frutos."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Morfologia zoologica reconocible, cuerpo completo cuando es individuo y variacion controlada cuando es grupo; sin hibridacion no documentada. Entidad: Pava semillera. Funcion visual: Ave que transporta frutos y dispersa semillas sobre la peninsula.",
+        "materials": [
+          "capas de papel recortado para anatomia",
+          "fibras finas para pelaje o pluma cuando corresponda",
+          "cantos internos y articulaciones fisicas"
+        ],
+        "palette_logic": "Color natural o explicitamente narrado; no usar brillo magico para señalar importancia.",
+        "scale": "Escala zoologica verificable frente al entorno y los personajes.",
+        "continuity_markers": [
+          "nombre estable: Pava semillera",
+          "funcion estable: Ave que transporta frutos y dispersa semillas sobre la peninsula.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Ave que transporta frutos y dispersa semillas sobre la peninsula."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para identity_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · identity_sheet",
+        "primary_request": "identidad corporal completa y legible para Pava semillera. Ave que transporta frutos y dispersa semillas sobre la peninsula.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Escala zoologica verificable frente al entorno y los personajes.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "capas de papel recortado para anatomia; fibras finas para pelaje o pluma cuando corresponda; cantos internos y articulaciones fisicas",
+        "constraints": [
+          "Morfologia zoologica reconocible, cuerpo completo cuando es individuo y variacion controlada cuando es grupo; sin hibridacion no documentada.",
+          "mostrar: Ave que transporta frutos y dispersa semillas sobre la peninsula.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "1:1",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "turpial_semillero__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "turpial_semillero"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "creacion-wayuu",
+          "field": "mito",
+          "note": "Dispersa semillas por la peninsula."
+        },
+        {
+          "myth": "maleiwa",
+          "field": "mito",
+          "note": "Dispersa semillas."
+        },
+        {
+          "myth": "serranias-de-la-guajira",
+          "field": "mito",
+          "note": "Transporta frutos."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Morfologia zoologica reconocible, cuerpo completo cuando es individuo y variacion controlada cuando es grupo; sin hibridacion no documentada. Entidad: Turpial semillero. Funcion visual: Ave participante en la dispersion cosmogonica de semillas.",
+        "materials": [
+          "capas de papel recortado para anatomia",
+          "fibras finas para pelaje o pluma cuando corresponda",
+          "cantos internos y articulaciones fisicas"
+        ],
+        "palette_logic": "Color natural o explicitamente narrado; no usar brillo magico para señalar importancia.",
+        "scale": "Escala zoologica verificable frente al entorno y los personajes.",
+        "continuity_markers": [
+          "nombre estable: Turpial semillero",
+          "funcion estable: Ave participante en la dispersion cosmogonica de semillas.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Ave participante en la dispersion cosmogonica de semillas."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para identity_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · identity_sheet",
+        "primary_request": "identidad corporal completa y legible para Turpial semillero. Ave participante en la dispersion cosmogonica de semillas.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Escala zoologica verificable frente al entorno y los personajes.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "capas de papel recortado para anatomia; fibras finas para pelaje o pluma cuando corresponda; cantos internos y articulaciones fisicas",
+        "constraints": [
+          "Morfologia zoologica reconocible, cuerpo completo cuando es individuo y variacion controlada cuando es grupo; sin hibridacion no documentada.",
+          "mostrar: Ave participante en la dispersion cosmogonica de semillas.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "1:1",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "paloma_semillera__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "paloma_semillera"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "creacion-wayuu",
+          "field": "mito",
+          "note": "Dispersa semillas por la peninsula."
+        },
+        {
+          "myth": "maleiwa",
+          "field": "mito",
+          "note": "Dispersa semillas."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Morfologia zoologica reconocible, cuerpo completo cuando es individuo y variacion controlada cuando es grupo; sin hibridacion no documentada. Entidad: Paloma semillera. Funcion visual: Ave participante en la dispersion cosmogonica de semillas.",
+        "materials": [
+          "capas de papel recortado para anatomia",
+          "fibras finas para pelaje o pluma cuando corresponda",
+          "cantos internos y articulaciones fisicas"
+        ],
+        "palette_logic": "Color natural o explicitamente narrado; no usar brillo magico para señalar importancia.",
+        "scale": "Escala zoologica verificable frente al entorno y los personajes.",
+        "continuity_markers": [
+          "nombre estable: Paloma semillera",
+          "funcion estable: Ave participante en la dispersion cosmogonica de semillas.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Ave participante en la dispersion cosmogonica de semillas."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para identity_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · identity_sheet",
+        "primary_request": "identidad corporal completa y legible para Paloma semillera. Ave participante en la dispersion cosmogonica de semillas.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Escala zoologica verificable frente al entorno y los personajes.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "capas de papel recortado para anatomia; fibras finas para pelaje o pluma cuando corresponda; cantos internos y articulaciones fisicas",
+        "constraints": [
+          "Morfologia zoologica reconocible, cuerpo completo cuando es individuo y variacion controlada cuando es grupo; sin hibridacion no documentada.",
+          "mostrar: Ave participante en la dispersion cosmogonica de semillas.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "1:1",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "tuna_higo__botanical_sheet": {
+      "purpose": "botanical_sheet",
+      "entity_refs": [
+        "tuna_higo"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "creacion-wayuu",
+          "field": "mito",
+          "note": "Flora de subsistencia en las versiones."
+        },
+        {
+          "myth": "maleiwa",
+          "field": "mito",
+          "note": "Flora de alimento."
+        },
+        {
+          "myth": "serranias-de-la-guajira",
+          "field": "mito",
+          "note": "Flora dispersada."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Morfologia botanica especifica en tallos, hojas, fruto y crecimiento; prohibida la sustitucion por cactus saguaro o flora desertica generica. Entidad: Tuna-higo. Funcion visual: Cactus bajo de palas ovaladas, distinto de un saguaro.",
+        "materials": [
+          "papel recortado y plegado por organo vegetal",
+          "fibras visibles",
+          "volumen por capas y separacion real"
+        ],
+        "palette_logic": "Verdes, ocres y frutos localizados según especie y estado, sin saturacion tropical uniforme.",
+        "scale": "Altura y extension legibles frente a suelo, vivienda o figura secundaria.",
+        "continuity_markers": [
+          "nombre estable: Tuna-higo",
+          "funcion estable: Cactus bajo de palas ovaladas, distinto de un saguaro.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Cactus bajo de palas ovaladas, distinto de un saguaro."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para botanical_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · botanical_sheet",
+        "primary_request": "morfologia vegetal sin flora generica para Tuna-higo. Cactus bajo de palas ovaladas, distinto de un saguaro.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Altura y extension legibles frente a suelo, vivienda o figura secundaria.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel recortado y plegado por organo vegetal; fibras visibles; volumen por capas y separacion real",
+        "constraints": [
+          "Morfologia botanica especifica en tallos, hojas, fruto y crecimiento; prohibida la sustitucion por cactus saguaro o flora desertica generica.",
+          "mostrar: Cactus bajo de palas ovaladas, distinto de un saguaro.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_botanical",
+          "purpose": "morfologia vegetal sin flora generica",
+          "aspect": "1:1",
+          "era": "territorial_documentado_no_fecha_unica",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "primeros_wayuu__group_grammar": {
+      "purpose": "group_grammar",
+      "entity_refs": [
+        "primeros_wayuu"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "creacion-wayuu",
+          "field": "mito",
+          "note": "Personas diferenciadas por parentesco y territorio."
+        },
+        {
+          "myth": "maleiwa",
+          "field": "mito",
+          "note": "Personas y clanes organizados."
+        },
+        {
+          "myth": "serranias-de-la-guajira",
+          "field": "mito",
+          "note": "Personas reunidas en Arachí."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Conjunto legible como relacion, no multitud de clones: variacion de escala, postura y distancia sin convertir el grupo en tipo etnico generico. Entidad: Primeros Wayuu. Funcion visual: Personas diferenciadas por parentesco, territorio y acuerdos en versiones de origen.",
+        "materials": [
+          "figuras de papel individualizadas",
+          "planos separados",
+          "objetos relacionales solo si estan documentados"
+        ],
+        "palette_logic": "Familia cromatica compartida con variaciones internas; sin uniformes o emblemas inventados.",
+        "scale": "Numero y separacion suficientes para entender el grupo sin llenar la imagen de extras.",
+        "continuity_markers": [
+          "nombre estable: Primeros Wayuu",
+          "funcion estable: Personas diferenciadas por parentesco, territorio y acuerdos en versiones de origen.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Personas diferenciadas por parentesco, territorio y acuerdos en versiones de origen."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para group_grammar",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · group_grammar",
+        "primary_request": "numero, relaciones, escala y variacion interna para Primeros Wayuu. Personas diferenciadas por parentesco, territorio y acuerdos en versiones de origen.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Numero y separacion suficientes para entender el grupo sin llenar la imagen de extras.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "figuras de papel individualizadas; planos separados; objetos relacionales solo si estan documentados",
+        "constraints": [
+          "Conjunto legible como relacion, no multitud de clones: variacion de escala, postura y distancia sin convertir el grupo en tipo etnico generico.",
+          "mostrar: Personas diferenciadas por parentesco, territorio y acuerdos en versiones de origen.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "group_grammar",
+          "purpose": "numero, relaciones, escala y variacion interna",
+          "aspect": "16:9",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "outsu_lluvia_mareiwa__group_grammar": {
+      "purpose": "group_grammar",
+      "entity_refs": [
+        "outsu_lluvia_mareiwa"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "maleiwa",
+          "field": "mito",
+          "note": "Especialistas que cantan por lluvia."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Conjunto legible como relacion, no multitud de clones: variacion de escala, postura y distancia sin convertir el grupo en tipo etnico generico. Entidad: Piaches que llaman la lluvia. Funcion visual: Especialistas que cantan sin que su practica se convierta en coreografia inventada.",
+        "materials": [
+          "figuras de papel individualizadas",
+          "planos separados",
+          "objetos relacionales solo si estan documentados"
+        ],
+        "palette_logic": "Familia cromatica compartida con variaciones internas; sin uniformes o emblemas inventados.",
+        "scale": "Numero y separacion suficientes para entender el grupo sin llenar la imagen de extras.",
+        "continuity_markers": [
+          "nombre estable: Piaches que llaman la lluvia",
+          "funcion estable: Especialistas que cantan sin que su practica se convierta en coreografia inventada.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Especialistas que cantan sin que su practica se convierta en coreografia inventada."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para group_grammar",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · group_grammar",
+        "primary_request": "numero, relaciones, escala y variacion interna para Piaches que llaman la lluvia. Especialistas que cantan sin que su practica se convierta en coreografia inventada.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Numero y separacion suficientes para entender el grupo sin llenar la imagen de extras.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "figuras de papel individualizadas; planos separados; objetos relacionales solo si estan documentados",
+        "constraints": [
+          "Conjunto legible como relacion, no multitud de clones: variacion de escala, postura y distancia sin convertir el grupo en tipo etnico generico.",
+          "mostrar: Especialistas que cantan sin que su practica se convierta en coreografia inventada.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "group_grammar",
+          "purpose": "numero, relaciones, escala y variacion interna",
+          "aspect": "16:9",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    }
+  },
+  "entities": {
+    "olivo_mareiwa": {
+      "name": "Olivo del nacimiento de Mareiwa",
+      "kind": "planta",
+      "description": "Arbol resistente a la sequia presente en una variante de nacimiento.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "variant",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "botanical_sheet"
+      ],
+      "model_refs": [
+        "olivo_mareiwa__botanical_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "maleiwa"
+      ],
+      "evidence": [
+        {
+          "myth": "maleiwa",
+          "field": "mito",
+          "note": "Lugar vegetal de una version de nacimiento."
+        }
+      ]
+    },
+    "tormenta_nacimiento_mareiwa": {
+      "name": "Tormenta del nacimiento de Mareiwa",
+      "kind": "fenomeno",
+      "description": "Tormenta ligada a otra variante del origen de Mareiwa.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "variant",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "phenomenon_rule"
+      ],
+      "model_refs": [
+        "tormenta_nacimiento_mareiwa__phenomenon_rule"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "maleiwa"
+      ],
+      "evidence": [
+        {
+          "myth": "maleiwa",
+          "field": "mito",
+          "note": "Condicion de otra version de nacimiento."
+        }
+      ]
+    },
+    "honda_piedra_mareiwa": {
+      "name": "Honda y piedra de Mareiwa",
+      "kind": "objeto",
+      "description": "Herramientas con que el mar retrocede en versiones de Mareiwa y serranias.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "object_sheet"
+      ],
+      "model_refs": [
+        "honda_piedra_mareiwa__object_sheet"
+      ],
+      "legacy_model_refs": [
+        "maleiwa__ancla"
+      ],
+      "myth_refs": [
+        "maleiwa",
+        "serranias-de-la-guajira"
+      ],
+      "evidence": [
+        {
+          "myth": "maleiwa",
+          "field": "mito",
+          "note": "Retira el mar sin sustituir el cuerpo de Mareiwa."
+        },
+        {
+          "myth": "serranias-de-la-guajira",
+          "field": "mito",
+          "note": "Herramienta que retira el mar."
+        }
+      ]
+    },
+    "pozos_salados_mareiwa": {
+      "name": "Pozos salados del mar retirado",
+      "kind": "lugar",
+      "description": "Huecos que conservan memoria de la extension anterior del mar.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "spatial_model"
+      ],
+      "model_refs": [
+        "pozos_salados_mareiwa__spatial_model"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "maleiwa"
+      ],
+      "evidence": [
+        {
+          "myth": "maleiwa",
+          "field": "mito",
+          "note": "Memoria de la extension del mar."
+        }
+      ]
+    },
+    "pava_semillera": {
+      "name": "Pava semillera",
+      "kind": "animal",
+      "description": "Ave que transporta frutos y dispersa semillas sobre la peninsula.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet"
+      ],
+      "model_refs": [
+        "pava_semillera__identity_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "creacion-wayuu",
+        "maleiwa",
+        "serranias-de-la-guajira"
+      ],
+      "evidence": [
+        {
+          "myth": "creacion-wayuu",
+          "field": "mito",
+          "note": "Dispersa semillas por la peninsula."
+        },
+        {
+          "myth": "maleiwa",
+          "field": "mito",
+          "note": "Dispersa semillas."
+        },
+        {
+          "myth": "serranias-de-la-guajira",
+          "field": "mito",
+          "note": "Transporta frutos."
+        }
+      ]
+    },
+    "turpial_semillero": {
+      "name": "Turpial semillero",
+      "kind": "animal",
+      "description": "Ave participante en la dispersion cosmogonica de semillas.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet"
+      ],
+      "model_refs": [
+        "turpial_semillero__identity_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "creacion-wayuu",
+        "maleiwa",
+        "serranias-de-la-guajira"
+      ],
+      "evidence": [
+        {
+          "myth": "creacion-wayuu",
+          "field": "mito",
+          "note": "Dispersa semillas por la peninsula."
+        },
+        {
+          "myth": "maleiwa",
+          "field": "mito",
+          "note": "Dispersa semillas."
+        },
+        {
+          "myth": "serranias-de-la-guajira",
+          "field": "mito",
+          "note": "Transporta frutos."
+        }
+      ]
+    },
+    "paloma_semillera": {
+      "name": "Paloma semillera",
+      "kind": "animal",
+      "description": "Ave participante en la dispersion cosmogonica de semillas.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet"
+      ],
+      "model_refs": [
+        "paloma_semillera__identity_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "creacion-wayuu",
+        "maleiwa"
+      ],
+      "evidence": [
+        {
+          "myth": "creacion-wayuu",
+          "field": "mito",
+          "note": "Dispersa semillas por la peninsula."
+        },
+        {
+          "myth": "maleiwa",
+          "field": "mito",
+          "note": "Dispersa semillas."
+        }
+      ]
+    },
+    "tuna_higo": {
+      "name": "Tuna-higo",
+      "kind": "planta",
+      "description": "Cactus bajo de palas ovaladas, distinto de un saguaro.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "botanical_sheet"
+      ],
+      "model_refs": [
+        "tuna_higo__botanical_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "creacion-wayuu",
+        "maleiwa",
+        "serranias-de-la-guajira"
+      ],
+      "evidence": [
+        {
+          "myth": "creacion-wayuu",
+          "field": "mito",
+          "note": "Flora de subsistencia en las versiones."
+        },
+        {
+          "myth": "maleiwa",
+          "field": "mito",
+          "note": "Flora de alimento."
+        },
+        {
+          "myth": "serranias-de-la-guajira",
+          "field": "mito",
+          "note": "Flora dispersada."
+        }
+      ]
+    },
+    "primeros_wayuu": {
+      "name": "Primeros Wayuu",
+      "kind": "colectivo",
+      "description": "Personas diferenciadas por parentesco, territorio y acuerdos en versiones de origen.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "sensitive",
+      "visual_status": "required",
+      "model_requirements": [
+        "group_grammar"
+      ],
+      "model_refs": [
+        "primeros_wayuu__group_grammar"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "creacion-wayuu",
+        "maleiwa",
+        "serranias-de-la-guajira"
+      ],
+      "evidence": [
+        {
+          "myth": "creacion-wayuu",
+          "field": "mito",
+          "note": "Personas diferenciadas por parentesco y territorio."
+        },
+        {
+          "myth": "maleiwa",
+          "field": "mito",
+          "note": "Personas y clanes organizados."
+        },
+        {
+          "myth": "serranias-de-la-guajira",
+          "field": "mito",
+          "note": "Personas reunidas en Arachí."
+        }
+      ]
+    },
+    "outsu_lluvia_mareiwa": {
+      "name": "Piaches que llaman la lluvia",
+      "kind": "colectivo",
+      "description": "Especialistas que cantan sin que su practica se convierta en coreografia inventada.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "sensitive",
+      "visual_status": "required",
+      "model_requirements": [
+        "group_grammar"
+      ],
+      "model_refs": [
+        "outsu_lluvia_mareiwa__group_grammar"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "maleiwa"
+      ],
+      "evidence": [
+        {
+          "myth": "maleiwa",
+          "field": "mito",
+          "note": "Especialistas que cantan por lluvia."
+        }
+      ]
+    }
+  }
+}

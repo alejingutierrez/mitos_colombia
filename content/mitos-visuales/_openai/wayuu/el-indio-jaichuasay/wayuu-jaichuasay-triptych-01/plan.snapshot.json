@@ -1,0 +1,281 @@
+{
+  "schema": "mitos-colombia-triptychs/v1.6",
+  "status": "production_and_publication_authorized",
+  "comunidad": "Wayúu",
+  "region": "Caribe",
+  "prompt_profile": "story_first_v3_symbolic_huella",
+  "generation_mode": "text_only_no_local_references",
+  "bible_selection": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/accepted-selection.json",
+  "campaign_scope": "content/mitos-visuales/production/wayuu-2026-09-05/scope.json",
+  "visual_memory_library": "content/mitos-visuales/wayuu.visual-memory.v1.json",
+  "approval_gate": "Campaña completa autorizada; QA directo del agente y publicación aditiva sin borrar versiones previas.",
+  "output_sizes": {
+    "entrada": "1536x864",
+    "acto": "864x1536",
+    "huella": "1024x1024"
+  },
+  "quality_policy": {
+    "entrada": "high",
+    "acto": "medium",
+    "huella": "medium"
+  },
+  "mitos": {
+    "el-indio-jaichuasay": {
+      "titulo": "El indio Jaichuasay",
+      "canon_models": [
+        "jaichuasay__identity_sheet",
+        "venado_guia_jaichuasay__identity_sheet",
+        "serrania_transformacion_jaichuasay__spatial_model",
+        "rancheria_wayuu__spatial_model"
+      ],
+      "evidence": [
+        {
+          "id": "chaves_1946_jaichuasay",
+          "type": "primary_source",
+          "title": "Mitos, leyendas y cuentos de la Guajira, XI: El Indio Jaichuasay",
+          "author": "Milcíades Chaves Ch.",
+          "year": 1946,
+          "url": "https://publicaciones.icanh.gov.co/index.php/picanh/catalog/download/243/266/1579?inline=1",
+          "locator": "pp.319–320, índices PDF 15–16",
+          "supports": "Persecución, desorientación, alternancia humana-animal y reconocimiento final.",
+          "limits": "El venado inicial es también humano en la fuente; el relato público omite esa explicación. Las visitas y el final educativo tienen diferencias. No agregar Pülowi ni adjudicar informante sin certeza. Reedición de Villa Posse no equivale a otra versión independiente."
+        },
+        {
+          "id": "published_jaichuasay",
+          "type": "project_narrative",
+          "path": "content/mitos-visuales/production/wayuu-2026-09-05/narratives/el-indio-jaichuasay.json",
+          "supports": "Edición objetivo de la página: hombre en ranchería, venado en sabana, memoria del miedo de la presa.",
+          "limits": "El sueño inicial y enseñanza posterior son expansiones de esta edición. No cambiar contenido del sitio durante la campaña visual."
+        },
+        {
+          "id": "bible_jaichuasay",
+          "type": "internal_visual_research",
+          "path": "editorial/wayuu/production-direction-v3.mjs",
+          "supports": "Camisa oliva, pantalón arena, cola baja, venado natural sin astas en la ficha elegida y territorio seco estratificado.",
+          "limits": "Vestuario y color son dirección artística reversible; no reconstrucción de un traje ceremonial. La ficha de estados no se copia como tres cuerpos simultáneos."
+        },
+        {
+          "id": "clothing_wayuu",
+          "type": "internal_visual_research",
+          "path": "docs/wayuu-indumentaria-y-pintura-v3.md",
+          "supports": "Diversidad de vestuario y rechazo del taparrabos como única representación.",
+          "limits": "No inventar pintura facial, kanas o emblemas claniles."
+        }
+      ],
+      "bible_overrides": [
+        {
+          "model_id": "jaichuasay__identity_sheet",
+          "decision": "Conservar silueta y vestuario; sustituir rostro facetado por perfil mínimo casi plano y reducir escala humana para escenas amplias."
+        },
+        {
+          "model_id": "jaichuasay__state_sheet",
+          "decision": "No copiar la tira de estados ni anatomías mezcladas. Mostrar un único estado corporal en cada momento; expresar alternancia con huellas y espacio."
+        },
+        {
+          "model_id": "serrania_transformacion_jaichuasay__spatial_model",
+          "decision": "Conservar papel separado por aire y sendero entre estratos; no replicar el encuadre cerrado del modelo."
+        }
+      ],
+      "narrative_contract": {
+        "target_slug": "el-indio-jaichuasay",
+        "target_snapshot": "content/mitos-visuales/production/wayuu-2026-09-05/narratives/el-indio-jaichuasay.json",
+        "target_content_sha256": "f678153a5340e8286e8f32c9c664379b8dac6413a5f14e805785ca4623a17a6b",
+        "summary": "Jaichuasay sigue a un venado y se pierde en una serranía. Su vida comienza a alternar entre persona en la ranchería y venado en la sabana. La experiencia invierte la relación entre cazador y presa. Ilustrar seguimiento, retorno doméstico y doble identidad, sin mostrar disparos, heridas ni caza violenta.",
+        "events": [
+          {
+            "id": "seguimiento",
+            "provenance": "historical_core",
+            "required": true,
+            "source": "chaves_1946_jaichuasay",
+            "action": "Un venado guía la persecución hacia una serranía y desorienta al cazador."
+          },
+          {
+            "id": "alternancia",
+            "provenance": "historical_core",
+            "required": true,
+            "source": "chaves_1946_jaichuasay",
+            "action": "La identidad alterna entre cuerpo humano y venado según el territorio."
+          },
+          {
+            "id": "visita",
+            "provenance": "historical_core",
+            "required": true,
+            "source": "chaves_1946_jaichuasay",
+            "action": "Vuelve a visitar viviendas como humano, sin perder del todo la inquietud animal."
+          },
+          {
+            "id": "reconocimiento",
+            "provenance": "historical_core",
+            "required": true,
+            "source": "chaves_1946_jaichuasay",
+            "action": "Otros reconocen al humano en quien habían considerado presa. Representar la identidad compartida sólo como síntesis, no el daño."
+          },
+          {
+            "id": "memoria",
+            "provenance": "published_editorial_expansion",
+            "required": true,
+            "source": "published_jaichuasay",
+            "action": "La edición cierra con la memoria de haber habitado el cuerpo perseguido."
+          }
+        ],
+        "emotional_reading": "La curiosidad abre la pérdida de orientación; la cercanía de casa no borra el miedo del animal. La doble identidad invita a reconocer la vida perseguida.",
+        "magic_reading": "Un venado tiene sombra humana; pasos de pezuñas llegan hasta los pies de un hombre en casa; una silueta de venado guarda espacio humano. Gramática editorial de identidades completas, nunca híbridos ni efectos de energía.",
+        "qa_method": "Inspección sin prompt: persecución a distancia, retorno con huellas incompatibles, símbolo humano-animal. Verificar figuras planas, seis distancias materiales y símbolos sin tercera escena."
+      },
+      "visual_memory_review": {
+        "reviewer": "agent_direct_visual_review",
+        "reviewed_at": "2026-09-06T03:56:00Z",
+        "reviewed_reference_ids": [
+          "07cbe6fb59fd7f68efca",
+          "d12385cccde004f1f1bf"
+        ],
+        "retained": [
+          "Relación visual hombre-venado como motor, no decoración.",
+          "Contraste de azul profundo, verde seco y ocre; relieve por capas recortadas."
+        ],
+        "rejected": [
+          "Torso desnudo, cintillo y brazaletes con patrones no sustentados.",
+          "Doble busto monumental, rostro detallado, astas ornamentales, río sinuoso genérico y dispersión del cuerpo."
+        ],
+        "influence_by_act": {
+          "entrada": "Conservar contraste azul/ocre y relación hombre-venado, pero separarlos por un sendero profundo y dar al venado una sombra humana como anticipo editorial.",
+          "acto": "Transformar la antigua composición vertical de bustos en una visita a casa vista a distancia: las huellas animales continúan hasta los pies humanos.",
+          "huella": "Recuperar la unión visual entre identidades como un venado de papel con vacío humano; no bustos, armas cruzadas ni paisaje narrativo."
+        }
+      },
+      "material_direction": "Fotografía de un mundo enteramente construido en papel recortado y teñido mate. Personas y animales son recortes CASI PLANOS, de silueta natural, con dos o tres capas de hojas amplias; perfil sencillo, un ojo mínimo, nariz sólo en contorno, cabello como una pieza negra con cola baja. Sin cara modelada, facetada ni ilustrada. El volumen pertenece al paisaje: seis o más planos separados por aire, oclusiones, sombras reales y distancias grandes entre vegetación, suelos, roca, vivienda y cielo. TODO es papel, nunca piedra real, piel real, ramas reales o paisaje fotográfico. Gran plano general de cuerpo entero, humanos pequeños de hasta 18% de altura en escenas. Mundo a sangre sin marco, base exterior, cartón corrugado, mesa ni caja de maqueta. La magia usa la misma materia tangible, no brillos ni efectos gráficos.",
+      "paleta": "oliva gris, arena, ocre cálido, marrón venado y cielos azul petróleo; luz dorada contenida, sombra añil",
+      "continuity_contract": [
+        "Jaichuasay: hombre Wayúu adulto ligero, camisa lisa verde oliva grisáceo de manga corta, pantalón largo arena, sandalias carbón, cabello negro recogido en cola baja visible. Una correa ocre simple sostiene el carcaj. Rostro mínimo de perfil, sin retrato ni detalle de cejas. Sin cintillo, brazaletes decorados, tocado o pintura facial.",
+        "Venado: adulto esbelto de papel marrón cálido, pecho arena, cuatro patas completas, orejas alertas y pezuñas carbón; SIN ASTAS, igual que el modelo aprobado. Natural, no blanco, humanoide ni gigante.",
+        "Un cuerpo de Jaichuasay por escena: humano o venado, nunca dos cuerpos suyos, hombre con cabeza animal, astas humanas o anatomía de centauro. En la horizontal el venado guía es otro ser del relato, no el protagonista duplicado.",
+        "Arco cuando se vea siempre destensado y bajo, sin flecha montada ni arma en uso. El retorno vertical no necesita llevar arco.",
+        "Ranchería sólo en vertical: casa baja rectangular y enramada abierta de postes y techo plano de fibras; nada de tipi o choza cónica. Una familiar adulta puede recibirlo con manta Wayuushein amplia color arcilla, largo a tobillos, cabello negro descubierto; figura secundaria pequeña. La familiar es reparto editorial, no un nombre o parentesco inventado como hecho tradicional.",
+        "Serranía seca no identificada, matorral bajo y sabana; no atribuir Macuira exacta, río amplio, bosque tropical uniforme o cordillera fantástica. Sin violencia, heridas ni cuerpos caídos."
+      ],
+      "avoid": [
+        "caras Pixar, ojos grandes, muñecos CGI, low-poly facial o retrato",
+        "primer plano, cuerpos cortados, cabezas enormes",
+        "híbridos, hombre con astas, ciervo con cara humana, torso dividido",
+        "taparrabos, cintillos, plumas, pintura o emblemas inventados",
+        "armas en uso, herida, sangre, cadáver o flecha clavada",
+        "bosque europeo, ciervo de astas enormes, río caudaloso",
+        "marco, base, mesa, cartón corrugado, soporte exterior",
+        "texto, collage de paneles, numeración, logos",
+        "glow, chispas, portal, humo mágico o disolución corporal"
+      ],
+      "escenas": {
+        "entrada": {
+          "era": "historico_wayuu",
+          "refs": [],
+          "composicion": "profundidad_abierta",
+          "visual_function": "narrative_scene",
+          "narrative_event_ids": [
+            "seguimiento",
+            "alternancia"
+          ],
+          "beat": "El cazador sigue unas huellas y entra en un territorio cuya lógica aún no entiende.",
+          "escena": "Horizontal 16:9, gran plano general inmersivo de serranía seca al atardecer. Un sendero ocre entra entre estratos bajos de roca y matorrales y continúa muy lejos en seis distancias de papel. Jaichuasay, pequeño de cuerpo entero en tercio inferior, avanza cauteloso hacia un venado situado unos veinte pasos por delante, junto a la entrada sombreada del paso. Su arco está bajo y destensado. El venado permanece intacto, natural, pequeño, de perfil con cabeza vuelta al cazador. Lo imposible: DESDE LAS CUATRO PEZUÑAS DEL VENADO nace sobre el sendero una única sombra larga que tiene la silueta inequívoca de una PERSONA ERGUIDA de brazos bajos, NO sombra de animal; esta sombra oscura se prolonga hacia el cazador. Es una lámina casi plana de papel añil que sigue la irregularidad del suelo y tiene un pequeño borde de sombra física. El animal y la sombra se ven juntos y separados de Jaichuasay. El cazador conserva sombra normal corta; no proyecta otra figura animal. Dos seres vivos en total: un hombre y un venado. El cielo de capas azul petróleo y verde gris con luz ocre profunda ocupa espacio sobre una serranía baja; el paso es natural, no puerta ni portal. La escala y distancia hacen sentir desorientación silenciosa; personas y animal ocupan como máximo 18% de la altura. Mucho territorio abierto, ninguna casa, río, ataque o herida.",
+          "editorial_translation": "La persecución pertenece al relato objetivo. La sombra humana anticipa la alternancia mediante una licencia plástica; no añade una conversación, dios, ritual ni mecanismo literal de transformación.",
+          "visual_question": "¿Se ve un cazador pequeño siguiendo a un venado y, naciendo bajo ese venado, una sombra claramente humana dentro del paisaje profundo?",
+          "light": "Luz oblicua ocre de última tarde, cielo azul petróleo mate, sendero claro y sombra humana añil contrastada.",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Seguir un venado entre matorrales.",
+            "impossible_behavior": "El venado proyecta sombra humana erguida.",
+            "narrative_effect": "Anticipa que las identidades no coinciden siempre con los cuerpos visibles.",
+            "agency": "El cazador sigue; el territorio desorienta, el venado conserva iniciativa.",
+            "physical_translation": "Animal casi plano y sombra humana como hoja oscura sobre suelo estratificado.",
+            "visible_test": "Conexión de la sombra humana con pezuñas, no con los pies del cazador.",
+            "event_ids": [
+              "seguimiento",
+              "alternancia"
+            ],
+            "provenance": "editorial_metaphor",
+            "temporal_role": "anticipation"
+          }
+        },
+        "acto": {
+          "era": "historico_wayuu",
+          "refs": [],
+          "composicion": "camino_vertical",
+          "visual_function": "narrative_scene",
+          "narrative_event_ids": [
+            "alternancia",
+            "visita"
+          ],
+          "beat": "En casa vuelve a ser hombre, pero el camino recuerda el cuerpo con el que llegó.",
+          "escena": "Vertical 9:16, gran plano general desde el patio hacia un camino largo de sabana que retrocede hasta serranías bajas azul gris. Una enramada abierta y una vivienda rectangular baja ocupan un costado del plano medio; primer plano de arena y vegetación de papel, mucho cielo y territorio distante. Jaichuasay, humano adulto completo de camisa oliva, pantalón arena y cola baja negra, acaba de entrar al patio. Está de pie cerca de una familiar adulta pequeña vestida con manta amplia arcilla que le ofrece comida en una totuma baja. Él gira ligeramente la cabeza hacia el monte como si aún escuchara algo allí. Ningún venado ni segunda aparición del hombre. Lo imposible está en EL RASTRO: una línea única de HUELLAS DE PEZUÑAS HENDIDAS, cada impresión dos lóbulos estrechos oscuros claramente separados, baja desde el sendero hasta tocar el talón de la sandalia de Jaichuasay. No hay pasos humanos en ese tramo, ningún animal que los explique. Las últimas tres huellas, grandes sólo por perspectiva, se leen nítidas en arena vacía junto al hombre; las distantes se reducen. Son hendiduras recortadas en capas de papel arena con fondo añil y sombras de profundidad, nunca letras ni piedras. Sólo después de los pies humanos se insinúa UNA marca normal de sandalia hacia la casa: un cambio limpio de rastro, sin cuerpo híbrido ni disolución. Dos personas pequeñas en total, no más de 18% de la altura cada una. Techo de fibras casi plano, postes delgados, ningún tipi. Luz clara de madrugada, verde seco, arena, arcilla y cielo de hojas azul petróleo pálido. Ni cacería, herida, venda, arco disparado ni cadáver.",
+          "editorial_translation": "La visita humana y la alternancia constan en la tradición registrada y en la edición. Familiar, comida ofrecida y huellas como memoria son puesta en escena editorial, no afirmación de un episodio literal nuevo.",
+          "visual_question": "¿El rastro de pezuñas termina inequívocamente en los pies de un hombre junto a casa, sin otro animal visible? ¿La visita y el paisaje tienen prioridad sobre el retrato?",
+          "light": "Amanecer claro con sombras añil en huellas, arena crema, manta arcilla, camisa oliva y planos lejanos azul gris.",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Volver a casa y recibir comida.",
+            "impossible_behavior": "Las huellas animales terminan en pies humanos sin animal presente.",
+            "narrative_effect": "La vida doméstica no borra el cuerpo de presa ni su inquietud.",
+            "agency": "Jaichuasay entra a casa pero mira aún al monte; su rastro revela lo que no explica.",
+            "physical_translation": "Pezuñas hendidas cortadas en capas del suelo, conectadas hasta el talón del recorte humano.",
+            "visible_test": "Un único rastro animal y un único hombre al extremo; sin venado aparte.",
+            "event_ids": [
+              "alternancia",
+              "visita"
+            ],
+            "provenance": "editorial_metaphor",
+            "temporal_role": "memory"
+          }
+        },
+        "huella": {
+          "era": "sintesis_editorial",
+          "refs": [],
+          "composicion": "simbolo_central",
+          "visual_function": "symbolic_synthesis",
+          "narrative_event_ids": [
+            "alternancia",
+            "reconocimiento",
+            "memoria"
+          ],
+          "beat": "La vida perseguida guarda un espacio humano.",
+          "escena": "Imagen cuadrada 1:1 simbólica, sin escena. UN SOLO motivo central: la silueta entera de un venado sin astas vista de perfil, construida como recorte fino de papel marrón ocre mate, suspendido apenas sobre tres amplias capas añil y oliva. Dentro de la zona ancha del torso se abre UN VACÍO limpio con forma de persona completa ERGUIDA, de perfil mínimo y brazos bajos, de pies a cabeza. El fondo azul se ve a través de ese hueco. No hay persona dibujada, pegada, atrapada ni cuerpo dentro del animal: la identidad humana está hecha de AUSENCIA DE PAPEL. Es una construcción simbólica deliberada de formas completas, no animal real herido. Las cuatro patas del venado quedan enteras, orejas alertas y cuello natural; el vacío humano no invade patas, cabeza o contorno exterior. El animal ocupa aproximadamente 65% del ancho, dejando mucho espacio sereno alrededor. La hoja se separa pocos milímetros del fondo; luz lateral proyecta sombras reales en el borde exterior y en el borde del vacío humano, confirmando materialidad tridimensional. Dos o tres capas grandes de fondo sugieren profundidad, pero sin terreno, casas, senderos, montañas, sol ornamental ni vegetación. Sin arco, flecha, texto, sangre ni rostro. Leer primero venado y luego persona ausente en su interior, incluso en miniatura.",
+          "material_direction": "Recortes casi planos de papel teñido mate fotografiados con aire entre hojas y sombras reales. Silueta sencilla sin pelaje modelado, sin ilustración impresa ni escultura redondeada. Fondo de planos amplios a sangre, ningún marco, cartón, mesa, soporte o borde exterior de maqueta visible.",
+          "continuity_contract": [
+            "Venado sin astas, perfil natural, marrón cálido y arena del modelo.",
+            "Humano sólo como vacío geométrico de cuerpo completo, nunca retrato ni anatomía híbrida.",
+            "La figura humana es síntesis editorial del relato, no emblema tradicional Wayúu ni representación de todas las presas."
+          ],
+          "symbolic_contract": {
+            "thesis": "Quien persigue una vida puede reconocerse dentro de ella.",
+            "carrier": "Una silueta completa de venado con un vacío humano interior.",
+            "operation": "La identidad humana se revela por ausencia de material dentro de una forma animal íntegra.",
+            "story_connection": "Condensa alternancia, reconocimiento y memoria del cazador convertido en presa.",
+            "visible_test": "Un venado y un hueco claramente humano; nada de escena, doble busto, armas o collage."
+          },
+          "editorial_translation": "Síntesis editorial del intercambio cazador-presa; no pictograma histórico, símbolo clanil ni afirmación sobre todos los venados.",
+          "visual_question": "¿Se reconocen venado y vacío humano en una sola forma simbólica, sin leer un híbrido o una escena violenta?",
+          "light": "Ocre cálido sobre añil profundo y oliva gris, luz lateral suave que atraviesa el vacío y revela distancias entre hojas.",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "La silueta reconocible de un venado.",
+            "impossible_behavior": "Su interior ausente tiene contorno de persona completa.",
+            "narrative_effect": "Hace legible la identidad que el cazador no reconocía en la presa.",
+            "agency": "La operación pertenece al símbolo editorial, no a un poder o ritual del personaje.",
+            "physical_translation": "Troquel humano vacío dentro del recorte animal, fondo visible y sombras en ambos bordes.",
+            "visible_test": "Vacío con cabeza, brazos y piernas, animal intacto y ninguna persona adicional.",
+            "event_ids": [
+              "alternancia",
+              "reconocimiento",
+              "memoria"
+            ],
+            "provenance": "editorial_metaphor",
+            "temporal_role": "memory"
+          },
+          "avoid": [
+            "tercera escena narrativa, bosque, casa, sendero o paisaje",
+            "híbrido, cabeza humana en animal, astas humanas",
+            "venado herido, sangre, carne, huesos o agujero orgánico",
+            "persona dibujada o pegada sobre animal, retrato, doble busto",
+            "armas, adornos, runas, logos o texto",
+            "silueta plana digital sin aire ni sombras, soporte o marco visible"
+          ]
+        }
+      }
+    }
+  }
+}
