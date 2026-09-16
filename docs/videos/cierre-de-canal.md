@@ -200,6 +200,44 @@ come el resto del video y ese bloque no aparece nunca. Corregido con
 afectados. **Moraleja: un bug latente sólo se ve cuando cambia la forma del
 montaje, así que el primer video con cierre hay que verlo entero, no por encima.**
 
+### ⚠ El `voice_offset` del plan también se le aplica al cierre
+
+`voz-cierre.wav` **ya trae sus tiempos internos calculados para offset 0**: `build-cierre.mjs`
+coloca la primera línea en **0,45 s** y la segunda en **4,35 s** dentro del archivo
+(líneas 49-50), medidas contra el corte entre los dos planos. Pero el ensamblador no hace excepciones: cada bloque
+con `voice` se retrasa `plan.voice_offset` (por defecto **0,5 s**) —
+`assemble-video.mjs:61` y `:288`, `adelay` sobre TODAS las voces, el cierre incluido. Es
+media línea de código, pero se come el margen del final.
+
+Las cuentas, medidas sobre `bachue-final-v7-seleccion.mp4` (`plan-v7-seleccion.json`,
+`voice_offset: 0.5`):
+
+| | |
+|---|---|
+| `voz-cierre.wav` | 8,416667 s; el habla real acaba en **7,07 s** (`silencedetect` a −40 dB) |
+| El bloque 20 arranca en | 94,00 s (suma de los 19 anteriores) · total 102,42 s |
+| La voz se coloca en | 94,00 + **0,50** = 94,50 s → el habla acaba en **101,57 s** |
+| El fundido global de audio arranca en | `totalDur − 1` = **101,42 s** (`assemble-video.mjs:362` y `:364`, `afade=t=out:…:d=1`) |
+| Resultado | los últimos **~0,15 s** del último vocativo caen dentro del fundido: nivel medio −21,9 dB en 101,0-101,5 s frente a −43,0 dB en 101,5-102,0 s |
+
+Con `voice_offset` 0 el habla acabaría en 101,07 s, **0,35 s antes** de que empiece el
+fundido, que es para lo que se diseñó la pieza.
+
+**Nada lo avisa**: `validate-plan.mjs` lee `plan.voice_offset` (línea 45) y **no lo usa** —
+su comprobación de ventana es `habla + 0,3` (línea 110), así que ignora tanto el medio
+segundo que el ensamblador sí inserta como el fundido final. La ventana del cierre (8,42 s)
+pasa la validación igual.
+
+Qué hacer, por orden de menos riesgo:
+
+1. **Saberlo y mirarlo**: oír el final del máster entero (ley 11). Con 0,15 s el vocativo se
+   entiende; ⚠ no está comprobado si se nota al oído (sólo se midió el nivel).
+2. **Bajar `voice_offset` en el plan** cuesta una línea, pero es un campo global: retrasa o
+   adelanta TODAS las voces del video, no sólo la del cierre.
+3. **Recortar el silencio de cabeza de `voz-cierre.wav`** (los primeros 0,48 s son silencio
+   medido) cancelaría el offset casi exactamente. ⚠ Propuesta, no probada: obliga a rehacer
+   el máster suelto `cierre-canal-v1.mp4` y a re-medir sus sobreimpresos.
+
 ---
 
 ## Rehacerlo

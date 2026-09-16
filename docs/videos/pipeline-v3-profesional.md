@@ -1,5 +1,23 @@
 # Pipeline v3 profesional — mitos → video (2026-08-31)
 
+> ## ⚠ HISTÓRICO — ESTE CARRIL ESTÁ MUERTO
+>
+> Lo que describe este documento es el **carril v3: generar los clips por la WEB de
+> Higgsfield con el toggle *Unlimited***. Ese carril **murió el 1 de septiembre de 2026**:
+> la cola de navegador se degradó a una toma cada 29 min (1 h 44 min de espera) y el usuario
+> la canceló (`historia-audiovisual.md`, fila «Cola de navegador unlimited», 1 sep).
+>
+> **El carril vigente es v4 por MCP de Higgsfield con Seedance 2.5 a 1080p**, y está
+> documentado entero y verificado en **`docs/videos/MANUAL-DE-PRODUCCION.md`**:
+> §3 producir en Higgsfield · §4 sonido · §5 montaje y entregas · §6 QC · §7 costes.
+>
+> Este doc sirve para **reconstruir qué se hizo en la web a finales de agosto**, no para
+> producir. Dos cosas que aquí se declaran DEFINITIVAS y ya no lo son:
+> la **voz** (§0.3 y §3: `bNziytBsHtCSsgcPplG9` en `eleven_flash_v2_5`, superada el 9-sep —
+> manual §4.1 y ley 3 de `PRODUCCION-END-TO-END.md`) y las **entregas** (§8, ver §5.8 del
+> manual). Los avisos ⚠ de abajo marcan cada punto donde seguir el texto al pie de la letra
+> ejecutaría algo muerto.
+
 El runbook end-to-end de producción de videos del canal. Sustituye el flujo operativo de
 `proceso-mitos-a-video.md` (que queda como referencia histórica de v2 y de las lecciones
 verificadas); las doctrinas de detalle viven en sus docs y aquí solo se citan.
@@ -9,11 +27,20 @@ verificadas); las doctrinas de detalle viven en sus docs y aquí solo se citan.
 1. **Video con Seedance 2.5 unlimited 1080p vía la WEB de Higgsfield** (automatización de
    navegador con el arnés heredado de imágenes) — cero créditos por clip. El MCP queda solo
    para pruebas puntuales por créditos.
+   ⚠ **INVERTIDO desde el 1-sep-2026**: el carril web está muerto y el MCP es el estándar
+   (manual §3.1). Además el `unlim` del MCP tampoco cubre hoy este gasto: el saldo manda y
+   un clip de Seedance 2.5 a 1080p/5 s cuesta **45 cr** (`get_cost`, 16-sep, manual §7.1).
+   ⚠ Lo del `unlim` viene del último `balance` **registrado** (12-sep: 32 cr, plan `plus`,
+   `unlim` no disponible — manual §7.6); nadie lo ha vuelto a consultar contra la cuenta.
 2. **Solo cortes secos** — se eliminan los crossfades entre bloques. El ensamblador ya lo
    soporta: los planes v3 **no llevan `xfade` ni `transition_dur`** (`validate-plan.mjs
    --secos` lo vigila). Sobreviven: fade global de entrada/salida y el fade alpha de títulos.
 3. **Guiones de hasta ~2 minutos** (doctrina de guion 2.0, §2) con el narrador oficial
    **alejandro** (`bNziytBsHtCSsgcPplG9`, familia v2, st .5 / sim .8 / sp .97 — ver §3).
+   ⚠ **VOZ MUERTA.** Ese `voice_id` ya no existe en la cuenta (da `voice_not_found`); la voz
+   del canal desde el 9-sep es `alejandro_narracion` `9EHAKExD4lT2G6hPG74L` en
+   `eleven_multilingual_v2` con los settings de `src/lib/narration.js:19-36`
+   (st .35 / sim .9 / style .3 / speaker_boost / speed 1.05). Ver manual §4.1.
 4. **Prompts de movimiento por la doctrina v2** (`doctrina-movimiento-v2.md`): plantilla de
    7 líneas, beats cronometrados, amplitud declarada, cero órdenes de quietud.
 5. Todo lo demás se hereda de v2: biblia manda, gasto escalonado, checklist anti-nsfw,
@@ -72,6 +99,12 @@ nada de moralejas). Lo que cambia es el conteo y el arco:
   bloques. Veredictos 2026-08-31: Bochica-remake y El Dorado dan 2 min sobrados; Bachué
   extendida sí; Chibchacum 100-110 s (centrado en el dios, no en repetir la inundación);
   Huitaca 95-105 s.
+  ⚠ **Ruta muerta**: en este worktree no existe `data/` (el único `.db` del árbol,
+  `myths.db`, pesa 0 bytes), y el `data/mitos.sqlite` del repo principal es un snapshot
+  viejo: su tabla `myths` **no tiene columna `mito`** y sus slugs son los largos de SEO
+  (`bachue-madre-primigenia-de-iguaque`), no los cortos de los guiones. El canon vigente es
+  la columna `mito` de **Postgres** (`scripts/schema.pg.sql:28`; consulta real en
+  `scripts/mitos/generar-narracion.mjs`). Manual §2.1.
 - Cada ventana de guion se planifica para **2 clips de 5 s con corte seco** (clímax: 3).
   Con cortes secos no hay recorte-al-aire del ensamblador: el aire post-frase (≥0,3 s)
   se planifica en la ventana, no se improvisa.
@@ -84,12 +117,25 @@ nombra a ambos dioses en su propio título.
 
 ## 3. Paso 2 — Voz (alejandro)
 
+> ⚠ **SECCIÓN HISTÓRICA (31-ago-2026), SUPERADA EL 9-sep.** Lo «definitivo» de esta sección
+> duró nueve días. Nada de lo de abajo se ejecuta hoy tal cual: **la voz vigente del canal
+> está en `MANUAL-DE-PRODUCCION.md` §4.1 y en la ley 3 de `PRODUCCION-END-TO-END.md`**
+> (`alejandro_narracion` `9EHAKExD4lT2G6hPG74L`, `eleven_multilingual_v2`,
+> st .35 / sim .9 / style .3 / speaker_boost / speed 1.05, máster **WAV**).
+
 ```bash
 node scripts/videos/generate-voice-el.mjs --lines docs/videos/muiscas/mvp-guiones/<guion>.json --out-dir content/videos/muiscas/videos/<mito>/voces/
 ```
 
-- **Modelo DEFINITIVO del canal: `eleven_flash_v2_5`** (decisión del usuario 2026-08-31
+⚠ **A este comando le falta `--format wav`.** Verificado en `generate-voice-el.mjs:48`: el
+valor por defecto es `mp3`, así que copiarlo tal cual produce MP3, en contra de la ley 3
+(«máster WAV») y de todo lo producido desde el 2026-09-09.
+
+- ~~**Modelo DEFINITIVO del canal: `eleven_flash_v2_5`**~~ (decisión del usuario 2026-08-31
   tras A/B contra multilingual_v2 — "para las voces vamos a usar 2.5").
+  ⚠ **DEROGADO el 2026-09-09**: el modelo del canal es `eleven_multilingual_v2`, el mismo de
+  las narraciones del sitio (`src/lib/narration.js:19-36`), para que voz de la web y voz del
+  video sean la misma. `eleven_flash_v2_5` queda como voz muerta, igual que su `voice_id`.
 - **`eleven_v3` DESCARTADO para el canal (decisión del usuario, 2026-08-31)**: aunque
   genera con la voz sin fine-tuning y al mismo ritmo (~2,47 wps), el clon pierde el
   parecido con la voz real — en una professional voice clone la fidelidad al timbre
@@ -98,9 +144,17 @@ node scripts/videos/generate-voice-el.mjs --lines docs/videos/muiscas/mvp-guione
 - JSON de tomas: `voice_id` alejandro + `model_id` + settings del DNA (st .5 / sim .8 /
   sp .97); `previous_text`/`next_text` dan la prosodia continua (soportados en toda la
   familia v2); `window` = tope de habla por toma.
+  ⚠ Esos settings **no son los del canal**. Los vigentes: st .35 / sim .9 / style .3 /
+  `use_speaker_boost` / speed 1.05 (manual §4.1). `previous_text`/`next_text` sí siguen
+  siendo doctrina.
 - El script mide cada toma con silencedetect y reporta `SE PASA` → esa línea se REESCRIBE
   (nunca `atempo`). `--only N,M` regenera tomas sueltas.
 - 12 tomas ≈ 12 llamadas; cuota ElevenLabs plan Creator (300k chars/mes) sobra.
+  ⚠ **Contradicción sin resolver** sobre el plan: esta línea y `muiscas/channel-dna.json`
+  dicen «Creator 300k/mes»; `PRODUCCION-END-TO-END.md` §10 dice «Pro 610k/mes». Nadie ha
+  consultado la cuenta para dirimirlo (manual §4.1). Con cualquiera de los dos un video
+  entero cuesta menos de mil caracteres, así que la cuota no es el cuello de botella —
+  pero el número sigue siendo falso en uno de los dos sitios.
 
 ## 4. Paso 3 — Keyframes (imagen)
 
@@ -131,6 +185,14 @@ secciones lógicas; los tres beats temporales ocupan párrafos separados, por lo
 de Bochica v4 tiene ocho párrafos físicos por prompt.
 
 ## 6. Paso 5 — Generación web (Seedance 2.5 unlimited 1080p)
+
+> ⚠ **NO EJECUTAR: ESTE ES EL PASO MUERTO.** Toda esta sección (arnés de navegador, toggle
+> `Unlimited`, 1 en vuelo, descarga de `hf_*.mp4`) describe el carril que murió el
+> 1-sep-2026. Lo que la sustituye: **`MANUAL-DE-PRODUCCION.md` §3** — preflight (`balance` +
+> `generate_video` con `get_cost: true`), subida con `media_upload`/`subir-keyframes.mjs`/
+> `media_confirm`, `generate_video_batch` en olas de ~8 e importación con
+> `import-mcp-clips.mjs`. Lo único que sigue siendo útil aquí es el **registro de lo
+> observado en la web el 31-ago** (el bloque VERIFICADO de abajo), como historia.
 
 La doctrina completa heredada de imágenes está en `docs/mitos-produccion-imagenes.md`
 (§8 arnés, §9 Lexical, §12 bloqueos) — TODA aplica: **1 en vuelo** (el banner de la web ya
@@ -192,6 +254,11 @@ descarga del .mp4 resultante. Primera tanda corta (2-3 clips) y a mitad de ritmo
 
 ## 7. Paso 6 — Importar clips
 
+> ⚠ **`import-clips.mjs` existe, pero es el importador del carril MUERTO**: mapea los
+> `hf_*.mp4` que descargaba el navegador. En el carril vigente los clips se bajan por URL
+> desde `jobs.json` con **`scripts/videos/import-mcp-clips.mjs`**, que además verifica la
+> resolución (manual §3.7). No mezclar los dos.
+
 ```bash
 node scripts/videos/import-clips.mjs --in ~/Downloads --plan content/videos/muiscas/videos/<mito>/plan.json          # dry-run
 node scripts/videos/import-clips.mjs --in ~/Downloads --plan ... --apply   # copia y escribe clips/import-map.json
@@ -213,6 +280,10 @@ node scripts/videos/assemble-video.mjs --plan ... --out ...-final.mp4
 - **Plan v3**: igual al v2 pero SIN `xfade` ni `transition_dur` (el ensamblador cae a
   `concat` = corte seco, ya probado). Título de canal solo en bloque 1; cola still de
   3,5 s solo ambiente; sfx bajos (0,2-0,3; 0,4 si el agua es protagonista; música 0.12).
+  ⚠ La parte de sonido de este plan está **derogada por la ley 9**: los planes vivos llevan
+  `mix: "narracion"` (voz −16 LUFS / lecho −34, sin ducking), `music` apuntando a un
+  `lecho-vN.wav` de `build-lecho.mjs` y **cero campos `sfx`**. Omitir `mix` cae en silencio
+  al modo `canal` (ducking + `loudnorm`). Manual §4.3.
 - **Música**: la cama del pueblo (95 s) SE REUSA — el ensamblador la resuelve con fade
   en su final natural y el cierre queda solo con ambiente. **Video >105 s ⇒ cama nueva
   a duración exacta con Eleven Music (prompt de plantillas §4), PREVIA autorización del
@@ -224,7 +295,14 @@ node scripts/videos/assemble-video.mjs --plan ... --out ...-final.mp4
 - **Videos de 2 min**: sin límites duros en el ensamblador; vigilar el paso de subtítulos
   (un PNG-overlay por cue: a ~40-60 cues conviene trocear en tandas — cambio pendiente si
   el primer 2-min se atasca).
-- Entregas: máster CRF18 + social 1080p 8Mbps + preview 720p + .srt (igual que v2).
+- Entregas: máster CRF18 + social 1080p 8Mbps + preview 720p + .srt ~~(igual que v2)~~.
+  ⚠ «Igual que v2» remite a `proceso-mitos-a-video.md`, que es otro carril muerto y sólo
+  da **tamaños de archivo de agosto**, no especificación. La descripción operativa y
+  completa de las tres entregas (comandos ffmpeg exactos, `+faststart` sólo en los
+  derivados, y la regla de nombres) está en **`MANUAL-DE-PRODUCCION.md` §5.8**; las mismas
+  órdenes aparecen en `pipeline-v4-mcp.md` §2.10 y `PRODUCCION-END-TO-END.md` §8.
+  ⚠ Y el `.srt`: desde el 2026-09-09 los planes van con `burn_subtitles: false` y
+  `write_srt: false` (ley 10), así que **no hay subtítulos ni .srt** en las entregas.
 
 ## 9. QC final
 
@@ -232,6 +310,10 @@ node scripts/videos/assemble-video.mjs --plan ... --out ...-final.mp4
 2. **QC de movimiento** (doctrina v2): ninguna apertura congelada (frame 0 ≈ frame 12 =
    regenerar), cierre "settled ≠ frozen", peso del archivo como proxy (un clip vivo pesa
    ~2× uno tímido a igual códec).
+   ⚠ El proxy de peso **sólo vale dentro de una misma tanda y con el mismo códec**, y no
+   está implementado en ningún script. Medido en `bachue/clips-seleccion/` (máster v7, que
+   mezcla tandas): de 5.164.575 B (`c13`, Gemini) a 18.305.925 B (`c10`, grok reescalado de
+   720p) — la diferencia es de códec y de reencode, no de movimiento.
 3. Sync voz-imagen por bloque; subtítulos calzados; sin texto en pantalla.
 4. Cortes: secos y en el fin de ventana; ritmo de escalas alternadas (dirección §2).
 5. Actualizar `channel-dna.json` + lecciones aprendidas del video.
@@ -243,3 +325,10 @@ también ternas de clips) · `import-clips.mjs` nuevo.
 Pendientes: campo `stepped` en assemble-video.mjs (§8) · troceo de overlays de subtítulos
 para 2 min (§8) · arnés de navegador para video (tras la primera sesión, §6) · retirar
 `generate-voice.mjs` (legado OpenAI).
+
+⚠ **Estado real de esos pendientes al 16-sep-2026** (verificado en el árbol): el arnés de
+navegador **no se hará** — el carril murió. `scripts/videos/generate-voice.mjs` **sigue en
+el repo** sin retirar. Los subtítulos dejaron de importar por la ley 10 (no se queman). Del
+campo `stepped` no hay rastro en `assemble-video.mjs`. Lo que sí se construyó después y no
+aparece aquí: `import-mcp-clips.mjs`, `qc-sheet.mjs`, `build-lecho.mjs`, `build-cierre.mjs`,
+`render-text.swift` (manual §5.4 y §6.3).

@@ -6,6 +6,23 @@ video 2. Los números salen de los registros de la producción (`clips-v1*/jobs.
 
 Documentos hermanos: `PRODUCCION-END-TO-END.md` (las leyes), `pipeline-v4-mcp.md` (el paso a
 paso), `muiscas/channel-dna.json` (decisiones y estado por mito).
+El carril completo y verificado vive hoy en `MANUAL-DE-PRODUCCION.md`.
+
+> ## ⚠ Estado al 16 de septiembre de 2026: el plan v4.1 NO se ejecutó
+>
+> Lo medido (§1 tiempos, §3 fricciones) sigue siendo válido y es la única medición del
+> carril que existe. **Lo propuesto, no.** El plan de §5 se escribió para hacerse «antes del
+> video 2» y **no se construyó ninguna de sus siete tareas de código** (la octava, la poda de
+> documentos, se resolvió el 16-sep por otra vía). Mientras tanto se produjeron los
+> videos 2 (Tequendama), 3 (Bachué), 4 (El Dorado) y el remonte de Bachué v7, más Huitaca
+> por el carril de stop-motion. Verificado hoy en el árbol: **no existen** `qc-clips.mjs`,
+> `emit-batch.mjs`, `ledger.mjs`, `compose-prompts.mjs`, ningún directorio `rechazados/`,
+> ningún campo `lechos_por_acto` (sólo se nombra en este documento) ni el script npm
+> `video:mito`; `assemble-video.mjs` sigue sobre-escalando `zoompan` a 2× y sin caché de la
+> placa. Lo único que sí pasó es §4.I / §5 paso 8: la poda de documentos, resuelta el 16-sep
+> con `MANUAL-DE-PRODUCCION.md` como fuente única.
+>
+> Léelo como **lista de pendientes con evidencia**, no como plan en curso.
 
 ---
 
@@ -116,6 +133,13 @@ precio y modelo; A3 sólo como reserva para cuando no haya créditos.
 
 ### B. Gate de calidad automático antes de ensamblar (ataca F9)
 
+> ⚠ **`qc-clips.mjs` NO EXISTE. Es una propuesta, no una herramienta.** `scripts/videos/`
+> tiene `qc-sheet.mjs` (la hoja de contacto de 5 fotogramas, muestreo fijo a 0 / 1,25 / 2,5 /
+> 3,75 / 4,9 s) y nada más; `grep -rl "scene_score\|YDIF" scripts/` no devuelve **ningún**
+> archivo. El gate se propuso el 10-sep «antes del video 2» y desde entonces se han hecho
+> cuatro videos sin él, todos con QC a ojo. Si un documento te manda «pasar el gate
+> automático», no hay gate que pasar: mira las hojas de `qc-sheet.mjs` (manual §6.3).
+
 `qc-clips.mjs --plan …` que mide por clip, con ffmpeg: **`scene_score` máximo** (corte o
 giro brusco), **YDIF medio** (energía de movimiento) y **YDIF de los 12 primeros fotogramas**
 (apertura congelada), más resolución/duración. Sólo los marcados pasan a hoja de contactos.
@@ -131,9 +155,18 @@ Medido sobre esta producción:
 | seedance c15 v2 | 0,020 | 6,6 | bueno |
 | kling c15 | 0,019 | 1,8 | bueno |
 
+⚠ Las cifras de esa tabla se midieron **a mano con ffmpeg** en su momento y nadie dejó el
+comando escrito en un script; no se han vuelto a medir (los `scene_score` que citan
+`pipeline-v4-mcp.md` §9c y §9d salen del mismo procedimiento ad hoc). Trátalas como
+registro histórico, no como salida reproducible de una herramienta.
+
 Umbral propuesto: `scene_score > 0,08` ⇒ revisar. Atrapa 2 de los 3 defectos de esta
 producción y ninguno de los buenos; el tercero sigue necesitando ojos. Esfuerzo 1 h.
-**Recomendación: hacerlo antes del video 2.**
+~~**Recomendación: hacerlo antes del video 2.**~~ ⚠ **No se hizo.** El umbral 0,08 sigue
+siendo la mejor propuesta pendiente del carril y **lleva parado desde que se propuso**:
+este documento está fechado 2026-09-09/10 y su §6 consultó fuentes el 11-sep; hoy es el
+16-sep, con cuatro videos producidos por el medio. Nunca se ha validado
+contra un lote de clips buenos, así que su tasa de falsos positivos es desconocida.
 
 ### C. Una sola fuente para los prompts (ataca F6)
 
@@ -201,22 +234,28 @@ video del anterior**. Planear la cola así; no esperar a tener todos los keyfram
 
 ## 5. Plan v4.1 (antes del video 2), en orden
 
-| Paso | Qué | Esfuerzo | Ataca |
-|---|---|---|---|
-| 1 | `qc-clips.mjs` con gate `scene_score` / YDIF | 1 h | F9 |
-| 2 | `emit-batch.mjs` + `ledger.mjs` + sondeo por sleep | 1,5 h | F3, F4, F10 |
-| 3 | `beats` + `compose-prompts.mjs` + linter | 2 h | F6 |
-| 4 | Cache de la placa still | 0,5 h | F5 |
-| 5 | Rechazados a `rechazados/`; `lechos_por_acto` en el guion | 0,75 h | F8, F11 |
-| 6 | Orquestador `video:mito` | 2,5 h | todo |
-| 7 | Verificar API de Higgsfield (modelo, 1080p, precio, límites) y decidir A1 | 1 h | F13 |
-| 8 | Poda de docs a tres fuentes | 0,5 h | F12 |
+⚠ **Ninguno de estos pasos se hizo antes del video 2, y siguen sin hacerse.** La columna
+«Estado» es lo comprobado en el árbol el 16-sep-2026.
+
+| Paso | Qué | Esfuerzo | Ataca | Estado 16-sep |
+|---|---|---|---|---|
+| 1 | `qc-clips.mjs` con gate `scene_score` / YDIF | 1 h | F9 | ❌ **no existe** (ni el script ni `scene_score`/`YDIF` en `scripts/`) |
+| 2 | `emit-batch.mjs` + `ledger.mjs` + sondeo por sleep | 1,5 h | F3, F4, F10 | ❌ no existen. Cuidado con los `emit-*.mjs` de `scripts/mitos/`: `emit-tanda` y `emit-bootstrap*` escupen `hfStart`/`hfVideoSend` para pegar en la consola de higgsfield.ai (**carril web muerto**); `emit-prompts.mjs` es otra cosa y sí sirve — emite prompts de imagen para `generate_image_batch` |
+| 3 | `beats` + `compose-prompts.mjs` + linter | 2 h | F6 | ❌ no existe |
+| 4 | Cache de la placa still | 0,5 h | F5 | ❌ `assemble-video.mjs` sigue con `zoompan` a 2× y sin caché |
+| 5 | Rechazados a `rechazados/`; `lechos_por_acto` en el guion | 0,75 h | F8, F11 | ❌ ningún directorio `rechazados/` en `content/videos`; `lechos_por_acto` sólo aparece en este documento |
+| 6 | Orquestador `video:mito` | 2,5 h | todo | ❌ no hay script npm `video:mito` |
+| 7 | Verificar API de Higgsfield (modelo, 1080p, precio, límites) y decidir A1 | 1 h | F13 | ⚠ sin rastro en el repo; se siguió por MCP |
+| 8 | Poda de docs a tres fuentes | 0,5 h | F12 | ✅ por otra vía: `MANUAL-DE-PRODUCCION.md` (16-sep) como fuente única |
 
 ≈ 10 h de herramientas. Ahorro estimado por mito: de ~2,5 h de atención a ~1 h, y de 3
 defectos vistos a ojo a 1.
 
 **Métricas para saber si mejoró** (se apuntan en el DNA por mito): créditos, % a la primera,
 regeneraciones, minutos de atención, minutos de pared, defectos atrapados por el gate vs a ojo.
+⚠ La última métrica **no se puede reportar**: sin gate, todos los defectos de los cuatro
+videos siguientes se atraparon a ojo. Y la lección que dejó Huitaca (ley 11 del manual) va en
+sentido contrario a este plan: métricas verdes no son una entrega, son permiso para mirar.
 
 ---
 

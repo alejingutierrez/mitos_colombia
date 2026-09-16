@@ -1,6 +1,12 @@
 {
  "pueblo": "muiscas",
- "actualizado": "2026-09-12",
+ "actualizado": "2026-09-16",
+ "_como_leer": {
+  "vigente": "MODELO_ESTANDAR_V4, video, voz.VOZ_OFICIAL_CANAL, voz_v4, musica_v4, titulo_v4, subtitulos_v4, imagen_v5, cierre_canal, formato, alcance, y los bloques video_3b/video_4/video_5/video_6 (carril v4 por MCP, desde 2026-09-09).",
+  "historico": "video_historico, video_1, video_2, video_3, costos_reales_bachue, mvps_pendientes, ensamblaje y el resto del bloque voz describen el carril de agosto (grok + voces de casting) y NO se ejecutan hoy. Se conservan como historia; cada uno lleva su aviso dentro.",
+  "la_verdad_operativa": "docs/videos/MANUAL-DE-PRODUCCION.md. Este archivo es el ADN del canal, no el runbook: si los dos discrepan, manda el manual.",
+  "corregido": "2026-09-16 en dee51627 (.video, .voz.VOZ_OFICIAL_CANAL, .musica.cama_actual) y en la pasada de auditoría posterior (.formato, resto de .voz, .sfx, .musica, .musica_v4, estados de video_5 y video_6)."
+ },
  "estilo": {
   "nombre": "Maqueta de papel del sitio (studioPaperMaquette)",
   "imagen_modelo": "gpt-image-2",
@@ -10,28 +16,31 @@
  },
  "formato": {
   "aspecto": "9:16",
-  "clips_nativos": "720x1280 @ 24fps (grok)",
-  "entrega": "1080x1920 (upscale lanczos en ensamblaje local)"
+  "clips_nativos": "1080x1920 @ 24 fps — lo que devuelven seedance_2_5, kling3_0 y gemini_omni_flash_1_1 por el MCP (verificado con ffprobe 2026-09-16: las 18 tomas de bachue/clips-seleccion de ESTE worktree y las 17 de el-dorado/clips-v1, que NO están aquí sino en el worktree elegant-matsumoto-11a141). Los 720x1280 de grok son SÓLO las tandas de agosto: para mezclarlas con material nuevo hay que reescalarlas a 1080x1920 con lanczos, como se hizo en Bachué v7",
+  "entrega": "1080x1920 nativo; el upscale lanczos en el ensamblaje local hace falta únicamente para el material viejo de 720p"
  },
  "voz": {
+  "_aviso": "HISTÓRICO salvo `proveedor`, `api_key`, `prosodia` y `VOZ_OFICIAL_CANAL`. Todo lo demás de este bloque es el casting de agosto y quedó SUPERADO el 2026-09-09 por la voz clonada del usuario. Los parámetros vivos están en `voz_v4` y en MANUAL-DE-PRODUCCION.md §4. NO usar ninguna de las voces de `voces_colombianas`: sus ids ya no existen en la cuenta.",
   "proveedor": "ElevenLabs eleven_multilingual_v2 (scripts/videos/generate-voice-el.mjs); MIGRADO desde OpenAI ash 2026-08-20",
-  "api_key": "ELEVENLABS_API_KEY en .env del repo principal (gitignored); plan Creator 300k chars/mes",
-  "voces_colombianas": {
-   "amaf_femenina": "4kaLaTbziI05Jwh8zWad (melodica, registros fogon y mistico)",
-   "el_faraon_masculina": "W1hAcdh0RNsPYUA7fkJh (profunda, registro epico)",
-   "alejandro": "2HsKyIMt2fxFwsry7Nd6 — funciona con eleven_flash_v2_5 Y (desde 2026-08-21 tarde) con eleven_v3 (mas expresivo, ~25% mas lento, sin param speed); multilingual_v2/turbo siguen dando not_fine_tuned. Voz de Bochica."
+  "api_key": "ELEVENLABS_API_KEY en .env del repo principal (gitignored). ⚠ CONTRADICCIÓN SIN RESOLVER sobre el plan: aquí y en pipeline-v3-profesional.md dice «Creator 300k chars/mes», y PRODUCCION-END-TO-END.md dice «Pro 610k/mes» (sin número de línea a propósito: los dos documentos se están reescribiendo y las líneas se mueven). Nadie ha consultado la cuenta. Con cualquiera de los dos un video entero cuesta <1.000 caracteres, así que la cuota no es el cuello de botella",
+  "voces_colombianas_MUERTAS": {
+   "_aviso": "Ninguna sirve hoy: los ids de voz son por cuenta y estos tres se perdieron al cambiar de cuenta/plan. Se conservan para poder leer los guiones y planes de agosto.",
+   "amaf_femenina": "4kaLaTbziI05Jwh8zWad (melodica, registros fogon y mistico) — id muerto",
+   "el_faraon_masculina": "W1hAcdh0RNsPYUA7fkJh (profunda, registro epico) — id muerto",
+   "alejandro": "2HsKyIMt2fxFwsry7Nd6 — id MUERTO (ver voz_v4.nota). Era la voz de Bochica en agosto: eleven_flash_v2_5 y, desde 2026-08-21, eleven_v3. El usuario rechazó el registro de eleven_v3 («no se parece a mi voz»)"
   },
   "prosodia": "previous_text/next_text entre tomas para narracion continua",
-  "wps_real": "2,4-2,6 palabras/s -> 19 palabras por bloque caben holgadas",
-  "registros_guion": "GANADOR DEFINITIVO: fogon-visual-coloquial con voz E (Amaf); ver plantillas 3a y direccion-cinematografica.md",
-  "settings": "fogon st.5 sty.25 sp1.0 · epico st.55 sty.3 sp.98 · mistico st.35 sty.5 sp.92",
-  "nota_modelos": "Amaf/Faraon -> eleven_multilingual_v2; Alejandro -> eleven_flash_v2_5 o eleven_v3 (v3 mas expresivo y ~25% mas lento, sin speed)",
+  "wps_real": "2,1-3,5 palabras/s con la voz oficial a speed 1.05 (medido 2026-09-16 sobre las 9 tomas de bachue/voces-v4 contra guion-bachue-v4.json: 2,08-3,17 por duración de archivo, 2,08-3,53 descontando silencios de cabeza y cola). El viejo «2,4-2,6» es de la voz de agosto y estrecha de más la ventana. La doctrina de longitud vive en el guion, no aquí: 17-19 palabras por línea",
+  "registros_guion_HISTORICO": "Veredicto de agosto: «GANADOR DEFINITIVO: fogon-visual-coloquial con voz E (Amaf)». SUPERADO el 2026-09-09 por la voz clonada del usuario (el registro de fogón se conserva; la voz E no). Ver plantillas 3a y direccion-cinematografica.md",
+  "settings_HISTORICO": "Los tres registros de agosto, para las voces muertas: fogon st.5 sty.25 sp1.0 · epico st.55 sty.3 sp.98 · mistico st.35 sty.5 sp.92. NO son los del canal: los vigentes están en voz_v4.VOZ_OFICIAL_CANAL (st .35 / sim .9 / style .3 / speaker_boost / speed 1.05)",
+  "nota_modelos_HISTORICO": "Amaf/Faraon -> eleven_multilingual_v2; Alejandro -> eleven_flash_v2_5 o eleven_v3. Ya no aplica: hoy hay una sola voz y un solo modelo",
   "VOZ_OFICIAL_CANAL": "alejandro_narracion 9EHAKExD4lT2G6hPG74L con eleven_multilingual_v2 — la MISMA de las narraciones del sitio (DEFAULT_VOICE de src/lib/narration.js). Sustituye desde 2026-09-09 a la entrada anterior (Alejandro 2HsKyIMt… en eleven_v3), cuyos ids ya no existen."
  },
  "sfx": {
+  "_aviso": "NO se usan en el carril vigente: desde 2026-09-09 el ambiente viene dentro de los lechos y NINGÚN plan vivo lleva campos `sfx` (verificado 2026-09-16 en los planes de bachue v4…v7, bochica v5/v6, la-aparicion v1/v6, el-dorado v1 y huitaca v1: cero bloques con `sfx`). Los planes con SFX son SÓLO los de agosto —doce en total, contados 2026-09-16: bachue plan.json, plan-flash y plan-mvp-a…f y plan-v3.json (12 bloques con sfx cada uno), bochica plan.json y plan-flash (16) y bochica plan-v4.json (20).",
   "modelo": "mirelo_text_to_audio (2,5 cr por 10 s)",
-  "uso": "cama de ambiente por bloque via plan.json {sfx, sfx_vol~0.45}; loop+fades y ducking bajo la voz los hace assemble-video.mjs",
-  "biblioteca": "content/videos/muiscas/audio/sfx/ (sfx-laguna.mp3, sfx-fogon.mp3) (reusables en todos los videos; ampliar con viento-paramo y aldea)"
+  "uso": "cama de ambiente por bloque via plan.json {sfx, sfx_vol}; loop+fades los hace assemble-video.mjs. ⚠ El «ducking bajo la voz» (sidechaincompress) SÓLO existe en `mix: \"canal\"`; en `mix: \"narracion\"` —el de todos los planes vivos— no hay sidechain y el SFX entra a su `sfx_vol` crudo contra una voz normalizada a −16 LUFS, así que el 0,45 de agosto queda gritando. Si algún día vuelven los SFX en `narracion`, hay que recalibrar el volumen por oído (assemble-video.mjs:312-318 y 352-356)",
+  "biblioteca": "content/videos/muiscas/audio/sfx/ — CUATRO archivos de 10,0078 s cada uno (verificado con ffprobe 2026-09-16): sfx-laguna.mp3, sfx-fogon.mp3, sfx-cascada.mp3, sfx-lluvia.mp3. Reusables en todos los videos"
  },
  "musica": {
   "obligatoria": true,
@@ -40,9 +49,10 @@
   "cama_anterior_sonilo": "content/videos/muiscas/audio/musica-cama.m4a (archivada)",
   "mood": "dark-enchanted ambient: misteriosa, calma, cuerdas sostenidas suaves, arpa lejana, quena andina lejana y escasa, sin percusion, sin voces",
   "reuso": "la cama se REUSA entre videos muiscas; regenerar solo si el mito pide otro mood",
-  "volumen_en_mezcla": 0.09
+  "volumen_en_mezcla_HISTORICO": "0.09 — es el `music_vol` del carril viejo y el default de assemble-video.mjs:62, que SÓLO se aplica en `mix: \"canal\"`. En `mix: \"narracion\"` (todos los planes vivos) `music_vol` se IGNORA: el lecho se mide con ebur128 y se lleva a `music_lufs` −34, 18 dB por debajo de la voz (assemble-video.mjs:330-334). Ver musica_v4.mezcla"
  },
  "ensamblaje": {
+  "_aviso": "Descripción del carril de agosto. El script sigue siendo el mismo, pero hoy: 5 s uniformes por bloque (no 5-6 s), `mix: \"narracion\"`, lechos en vez de cama, SIN subtítulos quemados (ver subtitulos_v4) y título Asimovian por CoreText (ver titulo_v4). El montaje vigente está en MANUAL-DE-PRODUCCION.md §5.",
   "script": "scripts/videos/assemble-video.mjs v3 (local, gratis)",
   "estructura": "2 clips de 5-6s por bloque narrativo (grok cobra lineal: mas cortes, mismo costo); duraciones sugeridas por validate-plan.mjs --suggest; cola still 3,5s Ken Burns con solo ambiente",
   "montaje": "corte seco DENTRO del bloque, crossfade 0,4s ENTRE bloques (auto-recortado al aire de la narracion; sin aire = corte seco), fundidos globales 0,6/0,8s, titulo de canal en bloque 1 (title/title_sub), musica resuelve con fade 4s en su final natural",
@@ -63,6 +73,7 @@
   "balance": "1010 -> 849,66 (bachue) -> 673,51 (tras bake-off 32,5 + bochica 143,65)"
  },
  "video_1": {
+  "_aviso": "HISTÓRICO (agosto, carril grok). El máster vigente de Bachué es el de video_5.master_vigente. Los archivos de este bloque viven en el worktree myth-mobile-design-c8ea4f, no aquí.",
   "slug": "bachue",
   "final": "content/videos/muiscas/videos/bachue/bachue-final.mp4 (v3: guion fogon-visual-coloquial + Alejandro v3 + musica andina, 1:39; anteriores: bachue-v2-ash, bachue-v1)",
   "social": "content/videos/muiscas/videos/bachue/bachue-final-social.mp4",
@@ -76,6 +87,7 @@
  },
  "doctrina_direccion": "docs/videos/direccion-cinematografica.md (v1 2026-08-20: escalas alternadas, guion de luz por acto, objeto ancla+bookend, cita directa unica, checklist 8 puntos)",
  "video_2": {
+  "_aviso": "HISTÓRICO (agosto, carril grok). El máster vigente de este relato es el de video_4 (el-tequendama-final-v6-con-cierre.mp4). Los archivos de este bloque viven en el worktree myth-mobile-design-c8ea4f.",
   "slug": "bochica",
   "final": "content/videos/muiscas/videos/bochica/bochica-final.mp4 (1:31)",
   "plan": "content/videos/muiscas/videos/bochica/plan.json",
@@ -102,7 +114,7 @@
   "nota": "bNziytBsHtCSsgcPplG9 y 2HsKyIMt2fxFwsry7Nd6 ya no existen (ids por cuenta)"
  },
  "musica_v4": {
-  "fuente": "los LECHOS de las narraciones del sitio (tabla narration_beds, 24 piezas de 30 s a -24 LUFS en Blob), encadenados con scripts/videos/build-lecho.mjs como en generar-narracion.mjs (tramos iguales, acrossfade 4 s, fades 2/3 s)",
+  "fuente": "los LECHOS de las narraciones del sitio (tabla narration_beds, 40 piezas desde la cuarta tanda del 2026-09-12 —no las 24 que decía esta línea—, verificado en el commit b784d3c7 («Cuarta tanda de lechos»), cuyo catálogo va del slug 07 al 40 y cuyo mensaje declara 32 lechos antes de la tanda. ⚠ Lo que NO está re-verificado es el recuento de filas vivas de la tabla `narration_beds`: exige POSTGRES_URL. En ESTE worktree scripts/mitos/generar-lechos.mjs sólo llega al slug 32: la cuarta tanda 33-40 vive en el commit b784d3c7 de claude/elevenlabs-myth-narration-8de8a2, así que `--nuevos N` desde aquí no ve el catálogo completo), a 30 s y -24 LUFS en Blob, encadenados con scripts/videos/build-lecho.mjs como en generar-narracion.mjs (tramos iguales, acrossfade 4 s, fades 2/3 s)",
   "eleccion": "por ACTO y a mano con --lecho (el léxico automático se dispara con una palabra en guiones de 110 palabras); lecho-vN.wav.json deja constancia",
   "mezcla": "plan mix \"narracion\": voz -16 LUFS, lecho -34 LUFS (18 dB abajo), sin ducking, limitador -1,5 dBTP",
   "sfx": "no se usan aparte en v4 salvo que el mito lo pida; el ambiente viene dentro de los lechos"
@@ -165,7 +177,8 @@
   "slug": "bachue",
   "titulo_video": "Bachué",
   "titulo_canon": "Bachué, la madre de la humanidad",
-  "estado": "✅ ENTREGADO 2026-09-12 — máster oficial: content/videos/muiscas/videos/bachue/bachue-final-v5-seedance.mp4 (94 s, 1080x1920 24 fps, −16,2 LUFS, pico −1,3 dBFS, sin subtítulos, título Asimovian verificado por CoreText). Copia en ~/Downloads/bachue-seedance-1080p.mp4",
+  "estado": "✅ ENTREGADO 2026-09-12 como bachue-final-v5-seedance.mp4 (94 s, 1080x1920 24 fps, −16,2 LUFS, pico −1,3 dBFS, sin subtítulos, título Asimovian verificado por CoreText) y luego con cierre como bachue-final-v6-con-cierre.mp4. **SUPERADO el 2026-09-16: el máster vigente es `bachue-final-v7-seleccion.mp4`** — ver `master_vigente` abajo",
+  "master_vigente": "content/videos/muiscas/videos/bachue/bachue-final-v7-seleccion.mp4 (102,46 s; md5 0c67606ef851ff2164790635a1b49241), montado el 2026-09-16 con la selección escena por escena del usuario: 9 tomas grok de agosto reescaladas de 720p + 5 Seedance + 4 Gemini. Plan plan-v7-seleccion.json, elecciones seleccion-usuario.json, tomas normalizadas en clips-seleccion/. Mismo audio que la v6 (voces-v4, lecho-v6.wav, mezcla narracion). Copias de entrega en ~/Downloads (máster, -social y -preview, 2026-09-16 10:13, byte-idénticas). ⚠ Entregado pero SIN veredicto escrito del usuario. Primer máster del canal que mezcla tandas de modelos distintos",
   "ojo": "ESTE mito ya tenía un video v3 de 2026-08 (bachue-final.mp4, grok, voz eleven_v3). El v5 es el remake del carril v4 y lo reemplaza; el viejo queda como historia.",
   "guion": "docs/videos/muiscas/mvp-guiones/guion-bachue-v4.json (9 líneas de 18-19 palabras, doctrina de longitud del video 4)",
   "plan": "content/videos/muiscas/videos/bachue/plan-v5-seedance.json → clips-v5-seedance/",
@@ -227,7 +240,7 @@
   "slug": "el-dorado",
   "titulo_video": "El Dorado",
   "titulo_canon": "El Dorado (DB, slug `el-dorado`)",
-  "estado": "EN PRODUCCIÓN 2026-09-12",
+  "estado": "⚠️ ENSAMBLADO, SIN VISTO BUENO. El máster el-dorado-final-v1.mp4 (97,46 s, cierre incluido) existe desde el 2026-09-11 21:55 y hay copia de entrega en ~/Downloads, pero NADIE registró aprobación ni rechazo y el guion no tiene campo `aprobado`. El «EN PRODUCCIÓN 2026-09-12» que decía aquí era falso en las dos mitades: ni sigue en producción ni es el 12 (los docs van en UTC; la fecha local es el 11). Manda la cola de PRODUCCION-END-TO-END.md §9, fila 4. Hay que preguntarle al usuario",
   "guion": "docs/videos/muiscas/mvp-guiones/guion-el-dorado-v1.json — 9 líneas de 17-19 palabras sobre el canon de la DB: la investidura en Guatavita contada como entrega, no como tesoro",
   "keyframes": "17, con gpt-image-2.5-sunburst, spec scripts/videos/specs/muisca-eldorado-escenas.mjs; referencias de la biblia muisca que ya existía",
   "plan": "content/videos/muiscas/videos/el-dorado/plan-v1.json — 19 bloques, 97,42 s, con placa de cola y cierre de canal",
@@ -272,7 +285,7 @@
    "gemini_omni_flash_1_1": "22,5 cr"
   },
   "alternativas": {
-   "kling3_0": "8,75 cr/clip. Es el ÚNICO que acepta fotograma inicial Y final (roles start_image y end_image), 3-15 s: la vía para planos con estado final fijado.",
+   "kling3_0": "8,75 cr/clip, 3-15 s, acepta fotograma inicial Y final (roles start_image y end_image): la vía para planos con estado final fijado. ⚠ NO es el único: un `models_explore` del 2026-09-16 anotado por la auditoría del repo lista `end_image` también en `seedance_2_5` y `gemini_omni_flash_1_1` (no re-verificado en esta edición). Y ninguno de los videos del canal ha usado `end_image`: es capacidad disponible y sin probar, no un diferenciador de Kling.",
    "gemini_omni_flash_1_1": "DESCARTADO por el usuario 2026-09-11 («no me gusta»): 13/18 a la primera, deriva de plano y una salida horizontal pese a pedir 9:16."
   },
   "concurrencia": "tope real ~10 en vuelo; el siguiente request da 429 y no encola nada del lote",

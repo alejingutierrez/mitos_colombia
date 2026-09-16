@@ -1,6 +1,21 @@
 # Carril experimental: stop-motion por interpolación de fotogramas (gpt-image-2.5)
 
-**Fecha:** 2026-09-12 · **Estado:** laboratorio, 3 pruebas hechas, NO es todavía el carril de producción.
+> **⚠ ESTADO AL 16 DE SEPTIEMBRE DE 2026 — CARRIL PARADO, Y ESTO ES UN CUADERNO DE LABORATORIO.**
+> El único video producido por aquí (Huitaca v1, §12) fue **rechazado por el usuario el 2026-09-12**
+> («actualmente se ve desastroso»): un panel adversarial confirmó **20 defectos con 0 refutados**
+> (`content/videos/muiscas/videos/huitaca/qc/panel-resultado.json`). El rediseño que salió de ahí
+> está en `stopmotion-v2-rediseno.md`, y **también está parado**: las tres versiones de cadencia del
+> experimento E4 (`…/huitaca/v2/reel/reel-E4-a2.mp4`, `-a3.mp4`, `-continuo.mp4`, del 12-sep)
+> **llevan cuatro días esperando el veredicto del usuario**, y sin esa elección no se produce
+> Huitaca v2 aunque las métricas pasen. **Nada de este documento es el carril de producción del
+> canal**: el vigente es Seedance 2.5 por Higgsfield, descrito entero en
+> `MANUAL-DE-PRODUCCION.md` §3. Este documento sigue valiendo como **medición** (§1-11, §13-15):
+> los números son reales, las recetas no están aprobadas.
+
+**Fecha:** 2026-09-12, con anexos de esa misma noche (§13 commiteado a las 22:08, §14 a las 23:00) y
+de la madrugada del 13 (§15, 00:01) · **Estado:**
+laboratorio; cinco pruebas de método (§5), un video entero rechazado (§12) y tres carriles sucesivos
+(v2 §13, v3 §14, v3.2 §15). NO es el carril de producción.
 **Alternativa a:** Seedance 2.5 por Higgsfield (45 cr/clip), el estándar vigente del carril v4.
 
 La idea: en vez de darle un keyframe a un modelo de video y confiar en lo que invente,
@@ -14,13 +29,29 @@ puede mirar, rechazar y rehacer por 7 centavos.
 |---|---|
 | Modelos vivos | `gpt-image-2.5-sunburst` (edición fiel, el que usamos), `gpt-image-2.5-flare` (mitad de latencia), `gpt-image-2`, `gpt-image-1.5`, `1`, `1-mini` |
 | Endpoints | sólo `/v1/images/generations` y `/v1/images/edits`. **No** pasa por Responses ni Batch |
-| Tamaños | `WIDTHxHEIGHT` libre: múltiplos de 16, lado ≤ 3840, entre 0,65 y 8,29 Mpx. **`1088x1920` es 9:16 nativo** — se acabó el recorte desde 1024×1536 (el carril viejo tiraba el 25% del encuadre) |
+| Tamaños | `WIDTHxHEIGHT` libre: múltiplos de 16, lado ≤ 3840, entre 0,65 y 8,29 Mpx. **`1088x1920` es 9:16 nativo** — se acabó el recorte desde 1024×1536 (el carril viejo tira el **15,6 %** del ancho, ver nota) |
 | Calidades | `low, medium, high, xhigh, max, auto` |
 | `input_fidelity` | **no existe en 2.5** (sí en 1/1.5). El generador viejo lo manda y se cae al reintento: ruido, no error |
 | Tarifas | $5/M tokens de texto, **$8/M de imagen de entrada**, **$30/M de imagen de salida** |
 | Coste real 1088×1920 `high` | **$0,056** sin referencias · **$0,069** con dos referencias (las referencias son ~⅕ del recibo) |
 | Coste 1088×1920 `low` | $0,0044 (sirve para sondas, no para máster) |
 | Latencia | 27-35 s por imagen. Con `--concurrencia 6` no hubo un solo 429 |
+
+**Nota sobre el recorte del carril viejo (corregida el 16-sep).** La versión anterior de esta tabla
+decía «el 25 % del encuadre»; el número real es **15,6 %**, y sigue vigente porque el generador no
+ha cambiado. `scripts/videos/generate-keyframes.mjs:56` emite los verticales a `1024x1536`
+(`SIZES.vertical`) y la línea 242 hace `resize(1080, 1920, { fit: "cover", position: "centre" })`:
+`cover` escala por el lado largo (×1,25 → 1280×1920) y recorta **200 px de los 1280 de ancho =
+15,625 %**, es decir 160 px de los 1024 originales. Son justo los márgenes laterales que la propia
+spec pide proteger. El fondo del asunto está en `MANUAL-DE-PRODUCCION.md` §2.6.
+
+**⚠ Y la zona segura del prompt justifica algo que ya no existe.** El prompt que arma ese mismo
+script (línea 68) sigue diciendo que el 15 % inferior queda libre «**allí se sobreimprimen
+subtítulos**». Los subtítulos quemados se retiraron por decisión del usuario el 2026-09-09
+(`burn_subtitles: false` y `write_srt: false` en todos los planes desde esa fecha; el único
+`write_srt: true` que queda es `bochica/plan-v4.json`, anterior y superado). La zona segura puede
+quedarse —el encuadre vertical la agradece—, pero **la razón escrita es falsa**; corregirla es un
+arreglo de código pendiente, no de este documento.
 
 ## 2. El sistema, en el orden en que se ejecuta
 
@@ -285,7 +316,15 @@ de un sitio a otro y no vuelven.
 - **El deslinde del mito hay que meterlo en los invariantes.** Sin decirlo, la plaza apareció
   con una laguna al fondo — en un mito cuyo deslinde es «ni una gota de agua».
 - **`setsar=1`**: sin él, el camino de Ken Burns deja píxeles 136:135 y el concat del
-  ensamblador se niega a juntar los clips.
+  ensamblador se niega a juntar los clips. El mecanismo, reproducido: una fuente de 1088 px de
+  ancho escalada con `scale=3240:5760` fija SAR 136:135 (= 1088/1080) y DAR 17:30.
+  **Aviso que faltaba, y es el que muerde fuera de este carril:** lo aplican los **seis** scripts
+  de stop-motion (`montar.mjs:62`, `v2/posterizar.mjs`, `v2/quieto.mjs`, `v2/inserto.mjs`,
+  `v3/flipbook.mjs`, `v4/cadena.mjs`) y **`scripts/videos/assemble-video.mjs` no lo aplica en
+  ninguna de sus cadenas** (cero ocurrencias de `setsar` en todo el archivo). El ensamblador vive
+  de que sus entradas ya lleguen con píxel 1:1; ningún documento lo decía. Quien monte material
+  de 1088 px sin pasarlo antes por un script del carril, o quien añada una cadena nueva al
+  ensamblador, tiene que poner el `setsar=1` él. Ver `MANUAL-DE-PRODUCCION.md` §5.7.
 
 ## 13. Experimentos del rediseño v2 sin Higgsfield: E0, E2 y E4 (2026-09-12, noche)
 
@@ -382,7 +421,12 @@ Lo que falló y cómo se corrigió:
   celda 1 antes de redibujar, y regenerar la hoja si no cumple.
 - El criterio "el fotograma más parecido entre los anteriores debe ser el vecino" marca 4 regresiones
   que a la vista no lo son: con redibujos de cuadro completo es ruido. La monotonía contra la pose
-  final es el criterio que sirve.
+  final es el criterio que sirve. **Esto retracta media puerta G3 de `stopmotion-v2-rediseno.md` §5**:
+  de los tres criterios que allí se piden, el del argmin sobre los anteriores hay que descartarlo y
+  queda en pie sólo la monotonía de d(t) hacia B. Lo posterior es esto, y por poco: §5 se commiteó en
+  `e7c1283d` el 12-sep 21:43 y esta sección en `95efdc84` la misma noche, a las 23:00 (fechas de
+  commit, hora local −05). No fue un día de reflexión: fue hora y cuarto y una prueba nueva.
+  (§5 quedó sin actualizar hasta el 16-sep; ahora lo dice.)
 
 **Números del carril v3 por plano de 5 s:** 17 solicitudes ≈ $1,25 y ≈ 5 min de pared; con dos
 hojas (32 dibujos, 4 s de acción a 8/s) ≈ $2,4. Un video de 18 planos ≈ **$25-45** y 0 créditos.

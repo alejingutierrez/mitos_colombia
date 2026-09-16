@@ -9,15 +9,15 @@
 ## 1. Resumen en diez líneas
 
 1. Hay **6 másters vigentes de 5 mitos**, todos muiscas: Bachué, El salto del Tequendama (Bochica), La aparición del hombre, El Dorado y Huitaca — más el **cierre de canal** de 8,42 s que va pegado al final de todos.
-2. Para llegar ahí se montaron **30 másters distintos de más de 20 s** (79 archivos contando sus hermanos `-social` y `-preview`): 15 de Bachué, 8 de Bochica/Tequendama, 3 de La aparición, 1 de El Dorado, 1 de Huitaca, y 2 montajes de media película del bake-off de agosto.
-3. El archivo en movimiento son **389 .mp4**: 377 dentro del repositorio (375 piezas distintas — sólo el cierre de canal está duplicado entre worktrees) y 12 fuera, en `~/Downloads` (10 copias de entrega byte-idénticas y 2 tomas que no existen en el repo).
+2. Para llegar ahí se montaron **30 másters distintos de más de 20 s** (79 archivos contando sus hermanos `-social` y `-preview`): 15 de Bachué, 8 de Bochica/Tequendama, 3 de La aparición, 1 de El Dorado, 1 de Huitaca, y 2 montajes de media película del bake-off de agosto. *(Este recuento se cerró antes del montaje de Bachué v7 del 16 de septiembre: con ella son 31 másters, 16 de Bachué — ver §3.1 y §8.)*
+3. El archivo en movimiento son **389 .mp4**: 377 dentro del repositorio (375 piezas distintas — sólo el cierre de canal está duplicado entre worktrees) y 12 fuera, en `~/Downloads` (10 copias de entrega byte-idénticas y 2 tomas que no existen en el repo). *(Recuento de la mañana del 16 de septiembre. Contado de nuevo esa tarde: **562 dentro** y 15 fuera. Los 185 nuevos son todos copias de tomas que ya existían, para la mesa de montaje: 164 en `content/videos/muiscas/comparador/`, 18 normalizadas en `bachue/clips-seleccion/` y los 3 archivos de la v7 — §8.)*
 4. De esos 377: **203 tomas numeradas** repartidas en **13 tandas de producción**, 19 descargas crudas (los mismos bytes de una tanda antes de renombrar), 79 másters y hermanos, y **76 tomas de prueba** que nunca entraron en un video.
 5. Se han probado **siete carriles distintos**: grok por MCP (agosto), la web de Higgsfield con Seedance 2.5 "unlimited" (fin de agosto), Seedance/Kling/Gemini por MCP (septiembre, el estándar vigente), stop-motion dibujado v1/v2/v3/v4 (12-13 de septiembre), y una prueba suelta en ElevenLabs que nadie documentó.
 6. Hay **tres rechazos explícitos del usuario** en el archivo: la voz `eleven_v3` (21-31 de agosto), **Bachué v4-gemini** («no me gusta», 517,5 créditos) y **Huitaca v1** («actualmente se ve desastroso», con 20 defectos confirmados por un panel de 34 agentes y 0 refutados).
 7. Además hay **dos veredictos por toma** ya escritos y sin resolver: las dos tomas de El Dorado que se desviaron del prompt (c09 y c06) y la elección de cadencia del stop-motion (los tres reels E4), que el propio diseño declara "puerta humana" y nunca se cerró.
 8. **Cinco comunidades** tienen trabajo audiovisual: muiscas (5 videos), wayúu (27 guiones + 496 keyframes, 0 videos), nasa-páez (26 mitos + 270 keyframes, 0 videos), chimila (23 mitos + 157 keyframes, 0 videos) y huitoto (sólo biblia, aunque es la única con trípticos publicados en producción).
 9. **Nada de video desde el 31 de agosto está fusionado en `origin/main`**, y el repo principal está 45 commits atrás con 387 rutas sin trackear — ahí vive el carril entero de wayúu, nasa y chimila.
-10. El último archivo generado del proyecto es del **13 de septiembre a las 08:57**; después sólo hubo trabajo de sitio (narración, imagen de la ficha interna).
+10. El último archivo generado **con modelo** es del **13 de septiembre a las 08:57**; después sólo hubo trabajo de sitio (narración, imagen de la ficha interna) hasta el **16 de septiembre**, cuando se montó Bachué v7 con tomas que ya existían — cero créditos, cero llamadas de imagen (§8).
 
 ---
 
@@ -67,7 +67,7 @@
 
 ### 3.1 Bachué, la madre de la humanidad
 
-**Quince másters en tres tecnologías.** Los once primeros comparten exactamente el mismo metraje: lo que se estaba buscando en agosto era la voz, no la imagen.
+**Dieciséis másters en tres tecnologías** (el 16.º, la v7 del 16 de septiembre, se montó después de cerrar este inventario: ver §8). Los once primeros comparten exactamente el mismo metraje: lo que se estaba buscando en agosto era la voz, no la imagen.
 
 | # | Máster | Fecha | Dur. | Tanda que usa | Estado |
 |---|---|---|---|---|---|
@@ -85,9 +85,10 @@
 | 12 | `bachue-final-v1-no-title.mp4` | 1 sep 06:12 | 86,42 s | `clips-v1/` (Seedance web) | **sin veredicto** — el Bachué más corto; ningún doc lo menciona |
 | 13 | `bachue-final-v4-gemini.mp4` | 11 sep 20:16 | 94,00 s | `clips-v4/` (Gemini) | **RECHAZADA** — «no me gusta» |
 | 14 | `bachue-final-v5-seedance.mp4` | 11 sep 20:30 | 94,00 s | `clips-v5-seedance/` | superada por la v6 |
-| 15 | `bachue-final-v6-con-cierre.mp4` | 11 sep 21:19 | **102,46 s** | `clips-v5-seedance/` + cierre | **VIGENTE** |
+| 15 | `bachue-final-v6-con-cierre.mp4` | 11 sep 21:19 | **102,46 s** | `clips-v5-seedance/` + cierre | entregada — **superada por la v7** |
+| 16 | `bachue-final-v7-seleccion.mp4` | 16 sep 10:10 | **102,46 s** | `clips-seleccion/` (grok + Seedance + Gemini) + cierre | **VIGENTE** — ver §8 |
 
-Rutas: los 11 primeros en `/Users/alegut/MyApps/Personal/mitos_colombia/.claude/worktrees/myth-mobile-design-c8ea4f/content/videos/muiscas/videos/bachue/`; el 12 en `…/higgs-field-gpt2-2k-value-ef422e/content/videos/muiscas/videos/bachue/`; los 13-15 en `…/elegant-matsumoto-11a141/content/videos/muiscas/videos/bachue/`. Cada uno tiene su `-social` (1080x1920 recomprimido) y su `-preview` (720x1280) salvo los `-alejandro-v3-old`, que se archivaron antes de empaquetarse.
+Rutas: los 11 primeros en `/Users/alegut/MyApps/Personal/mitos_colombia/.claude/worktrees/myth-mobile-design-c8ea4f/content/videos/muiscas/videos/bachue/`; el 12 en `…/higgs-field-gpt2-2k-value-ef422e/content/videos/muiscas/videos/bachue/`; los 13-15 en `…/elegant-matsumoto-11a141/content/videos/muiscas/videos/bachue/`; **el 16 en `…/next-muisca-video-3e07cd/content/videos/muiscas/videos/bachue/`** (el único máster **de Bachué** montado desde este worktree; el otro máster que salió de aquí es Huitaca v1, §3.5). Cada uno tiene su `-social` (1080x1920 recomprimido) y su `-preview` (720x1280) salvo los `-alejandro-v3-old`, que se archivaron antes de empaquetarse.
 
 **Tandas de tomas de Bachué**
 
@@ -325,6 +326,17 @@ El lote congelado `video-batch-2026-08-31.json` (1 de septiembre, 03:50) tiene *
 
 (`el-bermejo-aspira-a-ser-rey` quedó **excluido** del lote con 6 keyframes y motivo `secuencia_incompleta`.) De esos 33, tres se produjeron después por el carril v4 (el-dorado, huitaca, la-aparicion-del-hombre): **quedan 30 mitos muiscas con material listo y sin una sola toma.**
 
+**¿Están completos esos paquetes? Sí — y aun así NO son reutilizables tal cual.** Medido el 16 de septiembre sobre `higgs-field-gpt2-2k-value-ef422e` (y contrastado con el repo principal, que da lo mismo):
+
+- **Completos, cero faltantes.** Los 33 tienen su `movimiento-v1.json`, su `voz-v1.json` y su `plan-v1-no-title.json` en disco, y **los 18 keyframes de cada uno existen** (17 en `los-cojines-del-zaque`): comprobado resolviendo uno por uno los `shots[].keyframe` de los 33 movimientos — **0 rutas rotas**.
+- **Lo que parece un agujero y no lo es.** En `keyframes/` faltan entre 1 y 4 archivos maestros `bNa.jpg` por mito (17 keyframes maestros en 9 mitos, 16 en 3, 15 en 20 y 14 en `los-cojines-del-zaque`). No falta nada: son los slots que `bloques.json` declara en `reusadas` y que cubren las placas del **tríptico** del mito. 9 mitos reúsan un slot (el `acto`), 3 reúsan dos y **21 reúsan los tres** (`entrada`, `acto`, `huella`). En el movimiento el slot reusado apunta directo a la placa (`../../mitos/<slug>/acto.crop-9x16.jpg`) o a una copia local `bNa.reuse.crop-9x16.jpg`. Es la misma excepción que en La aparición del hombre puso el `acto` en `c08` (§3.3). **Las 78 placas reusadas existen todas en disco** (78 de 78 comprobadas).
+- **El modelo que declaran está muerto.** Los 33 `movimiento-v1.json` dicen `"model": "Seedance 2.5 web unlimited"` — el carril web que murió el 1 de septiembre — y usan el esquema `{myth, shots:[…]}`, incompatible con el `{_notas, modelo, clips:{cNN}}` del carril v4 (comparado contra `el-dorado/movimiento-v1-seedance.json`).
+- **Las voces son de una tercera voz, también muerta.** Los 297 archivos de `voces-v1/` son `.mp3`, y los 33 `voz-v1.json` declaran `voice_id bNziytBsHtCSsgcPplG9` en `eleven_flash_v2_5` con `st .5 / sim .8 / speed .97`: ni la voz de agosto del ADN (`2HsKyIMt…`) ni la oficial de hoy (`9EHAKExD4lT2G6hPG74L` en `eleven_multilingual_v2`). Hay que regenerarlas, y en **WAV**.
+- **Los guiones son de la doctrina corta.** Las 297 líneas del lote (9 por mito, una por archivo de `voces-v1/`) miden 5-19 palabras, **media 13,2** — justo el registro que dejó al video 1 en 44 % de narración y 8 avisos de aire muerto. La banda vigente es 17-19.
+- **Los planes son del carril viejo.** Sin campo `mix` (o sea, modo «canal» con ducking), `music: ../../audio/musica-muisca-andina.mp3` con `music_vol 0.1` en vez de un lecho, y `transition_dur 0.45`.
+
+**Traducción práctica:** de cada paquete sobreviven **los keyframes y el reparto de planos**; el prompt de movimiento hay que reescribirlo al esquema v4, las voces regenerarlas con la voz oficial en WAV, el guion recortarlo a la banda de 17-19 palabras y el plan rehacerlo con `mix: "narracion"` y su lecho. Ningún documento decía esto hasta ahora. ⚠ No está medido cuánto trabajo es: nadie ha escrito ni probado un conversor.
+
 En el repo principal la cifra es todavía mayor: **41 carpetas de mito con keyframes**, 639 keyframes maestros (1.278 archivos contando los `.crop-9x16`), 39 `bloques.json` con el guion visual, y una biblia de 151 fichas.
 
 ---
@@ -385,15 +397,15 @@ Ninguna tiene un solo `.mp4` en el repositorio. Las cuatro se pararon **justo an
 | `…/.claude/worktrees/myth-mobile-design-c8ea4f` | `claude/muisca-myths-video-mvp-834b41` | **Era grok (agosto).** Bachué y Bochica completos, los 6 MVP de casting, los pilotos, las pruebas de modelo y el duelo del Tequendama. | 105 |
 | `…/.claude/worktrees/higgs-field-gpt2-2k-value-ef422e` | `video/bochica` en `ae39522f` | **Era web unlimited (fin de agosto).** Bochica v4 (3 rondas), Bachué v1-no-title, bochica-maestro, el lote congelado de 35 mitos y la bitácora de la cola de navegador. | 72 |
 | `…/.claude/worktrees/elegant-matsumoto-11a141` | `claude/muiscas-video-kling-first-161fc1` en `53ed9203` | **Era MCP (9-11 sep), la buena.** Los cuatro videos entregados, el cierre de canal, los `-v6`, el pipeline v4 y la retrospectiva. | **139** |
-| `…/.claude/worktrees/next-muisca-video-3e07cd` | `claude/next-muisca-video-3e07cd` en `531d76f6` | **Era stop-motion (12-13 sep).** Laboratorio, Huitaca v1 con su QC, el panel adversarial, v2/v3/v4 y el inventario mecánico. | 56 |
+| `…/.claude/worktrees/next-muisca-video-3e07cd` | `claude/next-muisca-video-3e07cd` en **`6acd5dfa`** (16 sep 10:35) | **Era stop-motion (12-13 sep) + la mesa de montaje (16 sep).** Laboratorio, Huitaca v1 con su QC, el panel adversarial, v2/v3/v4, el inventario mecánico, **Bachué v7** y los documentos nuevos (`MANUAL-DE-PRODUCCION.md`, `BITACORA.md`). El `531d76f6` que decía esta fila es del 13 de septiembre; desde entonces la rama avanzó (`e8f6e6b3` Bachué v7 → `dee51627` cola y ADN → `6acd5dfa` manual y bitácora). | **241** (eran 56: el 16 de septiembre entraron las **164 tomas comparables** de `content/videos/muiscas/comparador/`, las 18 de `clips-seleccion/` y los 3 archivos de la v7) |
 | `…/.claude/worktrees/eleven-labs-alejandro-v3-a413c9` | `claude/elevenlabs-myth-narration-8de8a2` | Carril de narración del sitio. Tiene `content/videos/muiscas` con los `.srt` y los planes de agosto, **cero .mp4**. | 0 |
 | `…/.claude/worktrees/myth-internal-image-quality-f935fe` | HEAD desprendido `24d0d484` | Calidad de imagen de la ficha interna. | 0 |
 | `…/.claude/worktrees/home-redesign-lost-changes-488e39` | `claude/home-redesign-lost-changes-488e39` | Sin `content/videos`. | 0 |
 | `…/.claude/worktrees/myth-internal-mobile-design-dba6fe` | `claude/myth-internal-mobile-design-dba6fe` | Sin `content/videos`. | 0 |
 | `/private/tmp/aramai-original-release.CJNUId` | `a167f068`, **prunable** | Worktree temporal sobre Arámai que **ya no existe en disco**. Conviene `git worktree prune`. | — |
-| `/Users/alegut/Downloads` | — | **Las entregas reales** y dos tomas que no están en el repo. | 12 |
+| `/Users/alegut/Downloads` | — | **Las entregas reales** y dos tomas que no están en el repo. | **15** (eran 12: el 16 de septiembre entraron los 3 archivos de Bachué v7) |
 
-**Qué hay exactamente en `~/Downloads`** (verificado: las 10 copias de entrega son **byte-idénticas** a su máster del worktree):
+**Qué hay exactamente en `~/Downloads`** (verificado: las **13** copias de entrega son **byte-idénticas** a su máster del worktree — las 10 de agosto y septiembre más las 3 de Bachué v7):
 
 | Archivo | Fecha de copia | Es |
 |---|---|---|
@@ -409,8 +421,13 @@ Ninguna tiene un solo `.mp4` en el repositorio. Las cuatro se pararon **justo an
 | `el-dorado-seedance-1080p-con-cierre.mp4` | 11 sep 21:55 | `el-dorado-final-v1` |
 | `ElevenLabs_video_seedance-2-5_…06_44_49.mp4` | 9 sep 01:45 | toma wayúu `b1a`, **no existe en el repo** |
 | `ElevenLabs_video_seedance-2-5_…06_45_27.mp4` | 9 sep 01:45 | toma wayúu `b1b`, **no existe en el repo** |
+| `bachue-final-v7-seleccion.mp4` | **16 sep 10:13** | el máster de Bachué v7 (md5 `0c67606e…`, byte-idéntico al del worktree) |
+| `bachue-final-v7-seleccion-social.mp4` | 16 sep 10:13 | su `-social` (md5 `8d891eb5…`, byte-idéntico) |
+| `bachue-final-v7-seleccion-preview.mp4` | 16 sep 10:13 | su `-preview` (md5 `d85fcdd9…`, byte-idéntico) — **es el primer entregable que conserva el nombre técnico del máster** en vez de un nombre editorial |
 
-También sueltos en `~/Downloads`: **2,5 GB de la grabación y masterización de la voz del usuario** (`alejandro_mitos.wav` 619 MB, dos proyectos `.aup4` de 1,25 GB cada uno y cuatro FLAC de la cadena de normalización y máster, del 22-23 de agosto). Es el material fuente de la identidad sonora del canal y **no está respaldado en ninguna parte del proyecto**.
+(Hay además tres `.mp4` sueltos en `~/Downloads` que no son del proyecto: dos de WhatsApp y `video-REG-2206.mp4`.)
+
+También sueltos en `~/Downloads`: **4,3 GB de la grabación y masterización de la voz del usuario** — medido el 16 de septiembre: `alejandro_mitos.wav` 619 MB, dos proyectos `.aup4` de 1,25 GB cada uno y cuatro FLAC (321 + 296 + 295 + 286 MB) de la cadena de normalización y máster, del 22-23 de agosto; 4.318.995.373 bytes en total. (El «2,5 GB» que decía esta línea sólo contaba los dos proyectos de Audacity.) Es el material fuente de la identidad sonora del canal y **no está respaldado en ninguna parte del proyecto**.
 
 ### Advertencia de versionado
 
@@ -440,11 +457,12 @@ También sueltos en `~/Downloads`: **2,5 GB de la grabación y masterización de
 | Contradicción | Qué dice el doc | Qué dice el disco | Resolución |
 |---|---|---|---|
 | Fechas del 11-12 de septiembre | La cola §9 y `channel-dna` fechan Bachué v5, el cierre, los tres `-v6` y El Dorado el **12 de septiembre** | `mtime` y `git log --date=iso-local` los ponen el **11 de septiembre**, 20:16–21:55 | **Resuelto:** los docs están en UTC (21:56 en Bogotá son las 02:56 UTC del 12). **La fecha buena para ordenar es la local, el 11.** |
-| Estado de El Dorado | La cola §9 dice «ensamblado, con cierre de canal» **sin ✅**; `channel-dna` dice «EN PRODUCCIÓN»; su guion **no tiene campo `aprobado`**, lo que por la ley 0b lo dejaría en borrador | El máster de 97,46 s está completo y **se copió a `~/Downloads` con nombre editorial** el 11 a las 21:55, igual que los tres aprobados | Se entregó. **No consta el veredicto.** Hay que preguntar. |
+| Estado de El Dorado | Tres fuentes decían tres cosas: la cola §9 «ensamblado, con cierre de canal» **sin ✅**; `channel-dna` «EN PRODUCCIÓN»; y su guion **sin campo `aprobado`**, lo que por la ley 0b lo dejaría en borrador | El máster de 97,46 s está completo y **se copió a `~/Downloads` con nombre editorial** el 11 a las 21:55, igual que los tres aprobados | Se entregó. **No consta el veredicto — hay que preguntar.** Las tres fuentes ya dicen lo mismo: la cola §9 lo marca «⚠️ ENSAMBLADO, SIN VISTO BUENO» desde `dee51627` y `channel-dna.video_6.estado` se corrigió igual el 16 de septiembre. Falta sólo el `aprobado` del guion, que sólo puede escribirse tras el veredicto. |
 | Bochica v4 r1 vs r2 | Dos fuentes lo dejaron como laguna: «duran lo mismo y se diferencian en 0,5 MB» | Medido: mismos 2.376 fotogramas, mismo audio, `.srt` idéntico, **PSNR medio 34,2 dB**; los fotogramas distintos calcan las marcas del subtítulo | **r2 quita los subtítulos quemados** y, de paso, su título sale en una grotesca pesada en vez de la versalita fina: es la firma exacta de la trampa de la fuente caída a Helvetica. Secuencia real: r1 con subtítulos y título fino → r2 sin subtítulos y con el título caído → r3 sin nada. |
 | Cuántos mitos muiscas tienen keyframes | Los docs del worktree dicen 35 (lote congelado) o «3 mitos listos» (pipeline v3) | El repo principal tiene **41 carpetas de mito** con 639 keyframes maestros y 39 `bloques.json` | 41. Las seis que faltaban en el recuento son `campos-eliseos, el-hijo-del-sol-goranchacha, el-primero-de-los-reyes, pacanchique, popon, el-bermejo-aspira-a-ser-rey`. |
 | Certificación vs. disco | El cierre del 26 de agosto certificó **536** imágenes de video cumplidas y 84 renunciadas | Hoy hay **639** keyframes en disco | ~100 se generaron **después** del cierre certificado, o la certificación contaba sólo los que pertenecían a un plan. Sin resolver. |
-| `channel-dna.json` | La clave `.voz.VOZ_OFICIAL_CANAL` sigue diciendo «Alejandro en `eleven_v3`» y `.video.modelo` sigue diciendo `grok_video` con `seedance_2_5` en la lista de descartados | La voz vigente es `alejandro_narracion` en `eleven_multilingual_v2` y el modelo es Seedance 2.5 | **El ADN contiene decisiones obsoletas sin marcar.** Es una trampa activa para cualquier agente que lo lea. |
+| `channel-dna.json` | Decía en `.voz.VOZ_OFICIAL_CANAL` «Alejandro en `eleven_v3`» y en `.video.modelo` `grok_video`, con `seedance_2_5` entre los descartados | La voz vigente es `alejandro_narracion` en `eleven_multilingual_v2` y el modelo es Seedance 2.5 | **RESUELTO el 16 de septiembre.** `dee51627` reescribió `.video` (Seedance con precios verificados; la sección de grok pasó íntegra a `.video_historico`), `.voz.VOZ_OFICIAL_CANAL` y `.musica.cama_actual`. La pasada posterior corrigió `.formato.clips_nativos` (era «720x1280 (grok)»), el resto de `.voz`, `.sfx` (decía dos archivos: son **cuatro**) y `.musica.volumen_en_mezcla`, y marcó como históricos los bloques de agosto. El ADN ya no envenena; la verdad operativa vive en `MANUAL-DE-PRODUCCION.md`. |
+| Los 33 paquetes «prepared» | Parecen incompletos: en `keyframes/` faltan entre 1 y 4 archivos maestros por mito | Medido: **no falta ninguno**. Son los slots que `bloques.json` declara en `reusadas` y que cubre una placa del tríptico (`entrada` / `acto` / `huella`); el `shots[].keyframe` apunta a la placa o a una copia `bNa.reuse.crop-9x16.jpg`. Resueltas las 593 rutas de los 33 movimientos (18 por mito, 17 en `los-cojines-del-zaque`): **0 rotas**; las 78 placas reusadas existen | **No es un agujero.** Lo que sí está mal en esos paquetes es otra cosa: modelo muerto, esquema viejo, voz muerta y guion corto — ver §3.8. |
 | Los tres flipbooks de P13 | Una fuente dice que `flipbook-36` pesa 5,4 MB y `flipbook-36b` 4,1 MB | Medido: `flipbook-36` = **4,1 MB**, `flipbook-36b` = **5,4 MB** | Vale el disco. La aprobada es `flipbook-36b`. |
 | Rechazos de la campaña nasa | Una fuente cuenta 21 keyframes rechazados | `verification.json` suma **24** | Vale el JSON. |
 | `huitaca-stopmotion-b1a-2s-v2` | Su README anuncia 24 exposiciones y dos .mp4 | 22 PNG, `delivery/` vacía, **cero .mp4** | La prueba nunca se montó. Con `assemble.sh` saldrían 1,83 s de los 2 s previstos, sin gastar nada. |
@@ -455,7 +473,7 @@ También sueltos en `~/Downloads`: **2,5 GB de la grabación y masterización de
 - **No hay veredicto del usuario para la mayoría de los másters de agosto.** Sólo se sabe que se le enviaron previews de 720x1280, y en `~/Downloads` sólo sobrevive el de Bachué v1.
 - **No se abrieron las sesiones de OpenAI Codex Desktop** (`/Users/alegut/.codex/sessions/2026/09/07-09/`), que son las que produjeron el carril wayúu entero y la certificación del 26 de agosto. Ahí estaría el diálogo real, mito por mito.
 - **Los 923 keyframes de wayuu, nasa y chimila no se miraron.** Para señalar cuáles no gustan hay visores ya hechos: `output/imagegen/wayuu/keyframes/<slug>-review-0N/index.html`, `output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/comunidad-nasa/index.html` y las láminas `secuencia-N.jpeg` de cada carpeta.
-- **No se comparó byte a byte** el árbol `content/videos/muiscas` del repo principal contra el de los cuatro worktrees: los `mtime` de los worktrees son de checkout y no sirven para decidir si algún keyframe difiere entre copias.
+- **No se comparó byte a byte** el árbol `content/videos/muiscas` del repo principal contra el de los cuatro worktrees: los `mtime` de los worktrees son de checkout y no sirven para decidir si algún keyframe difiere entre copias. *(Sí se comparó el **recuento** de keyframes de los 33 paquetes `prepared` entre el repo principal y `higgs-field-gpt2-2k-value-ef422e`: da exactamente lo mismo mito a mito, incluido `chaquon` con 15 en los dos. El contenido de los archivos sigue sin comprobarse por hash.)*
 - **Búsqueda de .mp4 limitada** a `/Users/alegut` hasta cuatro niveles, excluyendo `Library`. No se miraron volúmenes externos, iCloud/Drive, la papelera ni las cuentas de YouTube o Instagram.
 
 ---
@@ -489,6 +507,20 @@ El resto del montaje es el de siempre: voces v4, lecho v6 (01-flauta-de-niebla �
 → 06-laguna-de-iguaque), mezcla `narracion`, sin subtítulos, título Asimovian y el cierre de canal
 como bloque 20. Plan: `content/videos/muiscas/videos/bachue/plan-v7-seleccion.json`; elecciones:
 `seleccion-usuario.json`; tomas normalizadas: `clips-seleccion/`.
+
+**Dónde están las tomas que se compararon.** La mesa no salió de la nada: las **164 tomas comparables**
+están en disco, en `content/videos/muiscas/comparador/` de este worktree, copiadas el 16 de septiembre a
+las 10:02 desde los otros tres worktrees y agrupadas por mito y por tanda — Bachué 72 (`grok`, `web`,
+`gemini`, `seedance`, 18 cada una), el Tequendama 56 (`grok` 18, `v4` 19, `seedance` 19) y La aparición 36
+(`kling` 18, `seedance` 18) — con su `index.html`, `datos.json` y `meta.json` al lado. La carpeta está en
+`.gitignore` (línea 81), así que **no existe en ningún remoto**: si se borra este worktree, la mesa hay que
+rearmarla desde los cuatro árboles.
+
+**Entrega y veredicto.** Los tres archivos (máster, `-social` y `-preview`) se copiaron a `~/Downloads` el
+**16 de septiembre a las 10:13**, byte-idénticos a los del worktree (md5 del máster `0c67606ef851ff2164790635a1b49241`).
+La v7 **está entregada, no sólo montada**. Lo que no hay es veredicto: no existe campo `aprobado_video`
+en `plan-v7-seleccion.json` ni nota de visto bueno en ningún commit, así que por la ley de cierre el máster
+queda **entregado y sin cerrar**.
 
 **Advertencia de calidad:** la mitad del video viene de material 720p reescalado, así que junto a una
 toma Seedance nativa se nota la diferencia de nitidez. Es una decisión editorial del usuario, no un

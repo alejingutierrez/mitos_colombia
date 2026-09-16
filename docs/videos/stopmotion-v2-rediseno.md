@@ -1,12 +1,34 @@
 # Carril de stop-motion v2 — rediseño tras Huitaca v1
 
-**Fecha:** 2026-09-12 · **Estado:** E0, E2 y E4 ejecutados la misma noche (resultados en `stopmotion-interpolacion.md` §13); E1, E3 y E5 esperan créditos de Higgsfield · **Sustituye a:** `docs/videos/stopmotion-interpolacion.md` §12 como receta de producción (los §1-11 siguen valiendo como medición).
+> **⚠ ESTADO AL 16 DE SEPTIEMBRE DE 2026 — CARRIL PARADO, Y ESTE DOCUMENTO ES UNA PROPUESTA, NO UN
+> PROCEDIMIENTO.** Lo que sigue se diseñó el 12-sep y desde entonces no ha avanzado:
+> - **Huitaca v1 está rechazado** por el usuario (2026-09-12, «actualmente se ve desastroso»), y es
+>   el único mito con máster rechazado del canal.
+> - **La decisión de cadencia lleva cuatro días esperando.** Los tres reels de E4 existen desde el
+>   12-sep (`content/videos/muiscas/videos/huitaca/v2/reel/reel-E4-a2.mp4`, `-a3.mp4`,
+>   `-continuo.mp4`) y el propio §6 de este documento dice que **sin ese visto bueno no se produce
+>   el video aunque las métricas pasen**. Mientras siga abierta, Huitaca v2 no arranca.
+> - **E1, E3 y E5 nunca se corrieron**: exigen créditos de Higgsfield y no ha habido recarga.
+> - **Buena parte de las herramientas de §3 y de las puertas de §5 no existen todavía.** Cada punto
+>   lleva su aviso abajo; el inventario completo de qué corre y qué no está en
+>   `MANUAL-DE-PRODUCCION.md` §6.7.
+>
+> **El carril de producción del canal NO es éste**: es Seedance 2.5 por Higgsfield
+> (`MANUAL-DE-PRODUCCION.md` §3). Léase esto como el plan que se propuso, con lo que se llegó a
+> medir; no como algo que se pueda ejecutar hoy de arriba abajo.
+
+**Fecha:** 2026-09-12 · **Estado:** E0, E2 y E4 ejecutados la misma noche (resultados en `stopmotion-interpolacion.md` §13, y las evoluciones v3/v3.2 en §14-15); E1, E3 y E5 esperan créditos de Higgsfield · **Sustituye a:** `docs/videos/stopmotion-interpolacion.md` §12 como receta de producción (los §1-11 siguen valiendo como medición).
 
 **Verificado hoy antes de escribir esto (no leído de un doc):**
 
 - `models_explore get kling3_0`: `medias` con roles **`start_image` y `end_image`**, `duration` **3-15 s**, modos `std|pro|4k`, `sound on|off`. El fotograma final existe en el MCP.
 - `get_cost` de `kling3_0 pro 9:16 sound off`: **3 s = 5,25 cr · 5 s = 8,75 cr · 7 s = 12,25 cr** → factura **lineal a 1,75 cr/s**. Los clips cortos cuestan lo que duran.
-- `balance`: **32 créditos** (plan plus; `unlim` no disponible para esta cuenta).
+- `balance`: **32 créditos** (plan plus; `unlim` no disponible para esta cuenta). *(16-sep: el saldo
+  sigue siendo ése en el papel — el gasto de Higgsfield más reciente que registra el árbol es del
+  **11-sep 21:49 −05**, el último artefacto de la tanda de El Dorado, y desde entonces no se ha
+  encolado nada. ⚠ No está confirmado hoy contra la cuenta: hay que llamar a `balance` antes de
+  encolar. **El saldo no debe vivir enterrado en este doc del carril experimental**: el sitio único
+  es `MANUAL-DE-PRODUCCION.md` §7.6 y la cabecera de estado de `PRODUCCION-END-TO-END.md` §9.)*
 - Ledger real (`lab-stopmotion/ledger.jsonl`, 194 llamadas, $15,56 en total; Huitaca producción $4,60 en 58 llamadas): 1088×1920 high **$0,042** sin referencia, **$0,054** con una, **$0,068** con dos; hoja 2160×3840 **$0,117** con una referencia, **$0,126** con dos; plancha 2160×1712 $0,106.
 - Pausas reales de las 9 voces (`silencedetect −35 dB ≥ 0,18 s`): están en la tabla de montaje de §3.4; son las que fijan los cortes.
 - ffmpeg 8.1 local con `select, setpts, fps, noise, zoompan, xfade, lut3d, deflicker, minterpolate`. Sin GPU documentada; no se usa ninguna.
@@ -15,7 +37,7 @@
 
 ## 1. Diagnóstico: qué falló de verdad
 
-1. **El montador recorrió TODO en palíndromo** (`vaiven()` es el único modo de `montar.mjs`/`componer.mjs`): la gota de chicha cae y vuelve a subir (c10, columnas 13-16 sin gota y 17-20 con gota otra vez), la rueda de danza gira y desgira con periodo exacto de 48 fotogramas (c09, MAD lag 48 = 0,28), la marcha repite pierna dos de cada tres pasos (c02), la lechuza parpadea 2 veces por segundo (c17, periodo 24, MAD 0,05). Las hojas se escribieron como ciclos cerrados o acciones de una dirección y se reprodujeron ida y vuelta.
+1. **El montador recorrió TODO en palíndromo** (⚠ precisión del 16-sep: no porque `vaiven()` sea «el único modo» de `montar.mjs`/`componer.mjs` —los dos tienen reparto lineal y el palíndromo va tras `--ciclo`—, sino porque el orquestador `plano.mjs:176` se lo pasaba a cada plano que declarase `ciclo`, y porque los estados del plató de `componer.mjs:138` se recorren en vaivén **siempre**, sin flag que lo apague): la gota de chicha cae y vuelve a subir (c10, columnas 13-16 sin gota y 17-20 con gota otra vez), la rueda de danza gira y desgira con periodo exacto de 48 fotogramas (c09, MAD lag 48 = 0,28), la marcha repite pierna dos de cada tres pasos (c02), la lechuza parpadea 2 veces por segundo (c17, periodo 24, MAD 0,05). Las hojas se escribieron como ciclos cerrados o acciones de una dirección y se reprodujeron ida y vuelta.
 2. **Las hojas de un gesto narrativo se generaron en paralelo desde la misma maestra y sin fotograma final**: la vasija de c13 cae, toca el suelo (f0005-f0007) y a los 2,3 s está otra vez en el aire hasta el corte (f0008-f0015, «todo quieto» dibujado sobre una maestra con la vasija volando); Huitaca en c11 se vuelve bulto de plumas (f0011) y en f0012 está de pie otra vez con la vasija. El clímax se reinicia dos veces.
 3. **El compositor pega pegatinas**: escala por caja alfa (la lechuza dobla de tamaño cada medio segundo: 962×1381 → 1072×724 llevados a la misma altura, reescalado 90,7 % en b8a), sombra = rectángulo negro de bordes rectos con el 55 % por encima de los pies y presente bajo un ave en vuelo, contacto sobre una línea horizontal sin oclusores (garras que no agarran el anillo), recorte 5-434× más nítido que el plató (varianza del laplaciano b8a 3324 vs 8), y `plano.luz` vacío en los 18 planos.
 4. **Las caminatas patinan porque la traslación es una curva global y la figura es frontal**: c02 avanza 238 px en 5 s mientras las puntas de los pies saltan ±80 px por imagen; c01 avanza 32 px, no cambia de tamaño «alejándose» y mide como foto fija (MAD medio 0,08). El modelo ignoró «perfil tres cuartos» y nadie lo comprobó antes de componer.
@@ -24,7 +46,7 @@
 7. **No hay un mundo**: 15 de 18 maestras son render fotorrealista con bokeh; 6 se pidieron sin ninguna referencia y sólo las 3 que recibieron `plaza_fiesta_noche.jpg` se parecen a la biblia; `promptMaestraFigura` omite los invariantes (de ahí la laguna de c16), `promptMaestraCuadro` pega los positivos bajo «NUNCA:»; c08 es pleno día; la lechuza es Tyto, gavilán, búho y paloma en 40 s; las hojas nunca ven las fichas (`refs=[maestra]`).
 8. **El relato se ordenó después de fabricar los fotogramas**: `duration: 5` en los 18 bloques con voces de 5,5-7,4 s → los 9 cortes A→B caen a mitad de frase y cada clip B remata con 2-4 s de aire (≈27 s); la transformación se dibujó bajo la línea 6 y la palabra «quedó» llega 6 s después sobre una vasija; las manos tocan el tambor durante «soltaron»; dos quietos seguidos bajo la única cita directa.
 9. **El QC dio el visto bueno porque mide magnitud, no orden**: `qc.mjs` calcula deriva e irregularidad, no dirección, monotonía ni periodicidad; el manifiesto se escribió a mano (c12 y c13 figuran como «vaivén» sin serlo); `vista-todos.jpg` se hizo DESPUÉS de montar; nadie vio un clip en movimiento.
-10. **Causa raíz común**: el carril heredó la unidad de Seedance (línea = 2 clips × 5 s), generó cada plano aislado y confió al compositor lo que un rodaje de recortes da gratis (contacto, sombra, profundidad). 12 de los 17 defectos confirmados nacen de la cadena hojas-paralelas → vaivén → recorte-sobre-plató → registro/mediana. No se arreglan afinando esa cadena: se arreglan retirándola de donde no puede funcionar.
+10. **Causa raíz común**: el carril heredó la unidad de Seedance (línea = 2 clips × 5 s), generó cada plano aislado y confió al compositor lo que un rodaje de recortes da gratis (contacto, sombra, profundidad). 12 de los **20** defectos confirmados nacen de la cadena hojas-paralelas → vaivén → recorte-sobre-plató → registro/mediana (el panel cerró con **20 confirmados y 0 refutados**: `…/huitaca/qc/panel-resultado.json`; el «17» que decía este párrafo era un recuento congelado a mitad del panel. Los 12 son los cuatro de montaje/vaivén, los cuatro del compositor y los cuatro de registro/mediana; los 8 restantes son los de mundo y los de relato). No se arreglan afinando esa cadena: se arreglan retirándola de donde no puede funcionar.
 
 ---
 
@@ -51,6 +73,17 @@
 
 ### 3.1 Pasos comunes a todo plano
 
+> **⚠ Qué de esta sección es herramienta y qué es especificación (comprobado el 16-sep).** De los
+> nueve scripts «nuevos» que pide §3.3, **cinco existen** —`v2/lookdev.mjs`, `v2/anclas-ab.mjs`,
+> `v2/contacto.mjs`, `v2/inserto.mjs`, `v2/posterizar.mjs`, y además `v2/clavar-b.mjs`,
+> `v2/quieto.mjs` y `v2/comun.mjs` (este último es el módulo del bloque común, no un ejecutable),
+> que no estaban previstos— y **cuatro no se escribieron nunca**:
+> `cortes-por-voz.mjs`, `kling-ab.mjs`, **`qc-clip.mjs`** y `plan-desde-cartas.mjs` (`find` no los
+> encuentra en todo el repo; sólo aparecen nombrados aquí). Tampoco existen el orquestador
+> `plano-v2.mjs` (sigue `plano.mjs`, con las tres vías de v1) ni los modificadores que la tabla de
+> §3.3 encarga: `montar.mjs` no acepta `--carta` ni `--escalonado`, y `componer.mjs` no acepta
+> `--trayectoria`. Donde abajo se lee un nombre de script, compruébese primero que está.
+
 | Paso | Qué | Herramienta | Coste |
 |---|---|---|---|
 | 0 | **Guion gráfico y cartas** (`guion-grafico-vN.json`): por plano `tipo`, `escala`, `mirada`, `viaje`, `luz {fuente, altura, color}`, `modo`, `duracion`, texto absoluto de A y de B, `carta` si es dibujado. `cortes-por-voz.mjs` mide las pausas de cada WAV y propone duraciones; un lint rechaza escalas repetidas contiguas, dos quietos seguidos, ejes cruzados y un quieto que lleve el verbo de la frase. | `cortes-por-voz.mjs` (nuevo), lint dentro de `plan-desde-cartas.mjs` (nuevo) | 0 |
@@ -58,9 +91,9 @@
 | 2 | **Anclas**: A con refs `[lookdev, ficha personaje, ficha atrezo]` + `bloqueComun()`; B como EDICIÓN de A con refs `[A, fichas]`: «misma fotografía, cambia sólo la pose/posición y lo que arrastra: su sombra, el contacto de los pies, la luz del fogón sobre la manta». Quietos: sólo A. Insertos: A, B y plató. | `anclas-ab.mjs` (nuevo; sustituye a la maestra de `plano.mjs`) | $0,068 por imagen |
 | 3 | **Compuerta de mundo**: `contacto.mjs` genera la hoja de contacto de las A y de los pares A\|B con MAD de fondo y ratio de nitidez bajo cada celda; el agente responde el checklist por imagen (Read sobre la hoja) y escribe `contacto.json`; el usuario aprueba → `aprobado_anclas` en el guion gráfico. Una A rechazada se rehace con la vecina aprobada como referencia adicional ($0,07). | `contacto.mjs` (nuevo) | 0 |
 | 4 | **Producción por tipo** (3.2). | — | — |
-| 5 | **Posterizar + emulsión**: `select='not(mod(n,2))', setpts=N/(12*TB), noise=alls=6:allf=t+u` (grano nuevo por dibujo), `fps=24, setsar=1`; `--trim` y `--hold-tail`; viñeta suave; escribe el manifiesto real del clip (fotogramas, holds, cadencia, MADs). Los quietos y los insertos salen ya a 12 pasos/s y sólo se duplican. | `posterizar.mjs` (nuevo) | 0 |
+| 5 | **Posterizar + emulsión**: `select='not(mod(n,2))', setpts=N/(12*TB), noise=alls=6:allf=t+u` (grano nuevo por dibujo), `fps=24, setsar=1`; `--trim` y `--hold-tail`; viñeta suave; escribe el manifiesto real del clip (fotogramas, holds, cadencia, MADs). Los quietos y los insertos salen ya a 12 pasos/s y sólo se duplican. | `posterizar.mjs` **existe** (`scripts/videos/stopmotion/v2/posterizar.mjs`) pero **sólo hace la primera mitad**: acepta `--in --out --cadencia --grano` y encadena `fps=<cad>,noise,fps=24,setsar=1` — el «a dos» sale por construcción, no por `select`/`setpts`. ⚠ **`--trim`, `--hold-tail`, la viñeta y el manifiesto del clip no están escritos**, y como el script ignora los flags que no conoce, pasárselos **no da error: no hace nada** | 0 |
 | 6 | **Plan y ensamblado**: `plan-desde-cartas.mjs` escribe `plan-vN.json` con duraciones, `voice_delay`, `music_gain`, `trim`; `validate-plan.mjs --secos` + regla de pausas; `assemble-video.mjs` con `voice_delay`/`music_gain` por bloque y guardián «a dos» (rechaza clips cuyos fotogramas impares no sean idénticos a los pares). Lecho a la duración total con el cierre. | existentes, modificados | 0 |
-| 7 | **QC final humano**: hoja de contacto en orden (un fotograma por plano), tira de 24 f del primer segundo de cada plano, preview a 720p. Se ve ENTERO en movimiento antes de darlo por hecho. | `qc-sheet.mjs` (existente) + `qc-clip.mjs` (nuevo) | 0 |
+| 7 | **QC final humano**: hoja de contacto en orden (un fotograma por plano), tira de 24 f del primer segundo de cada plano, preview a 720p. Se ve ENTERO en movimiento antes de darlo por hecho. | `qc-sheet.mjs` (existente) + `qc-clip.mjs` **⚠ no existe; propuesta, no herramienta**. Lo que sí corre hoy sobre fotogramas dibujados es `stopmotion/v3/qc-flipbook.mjs` (silueta exacta contra el plató) y `stopmotion/v4/qc.mjs`; `qc-sheet.mjs` sólo muestrea bloques `type:"motion"` con `clip`, a tiempos fijos pensados para 5 s | 0 |
 
 ### 3.2 Por tipo de plano
 
@@ -70,7 +103,7 @@
 2. Subida con `subir-keyframes.mjs` (verificación N×HTTP 200 + `media_confirm`; nunca a mano en zsh).
 3. `generate_video_batch`: `{model:"kling3_0", mode:"pro", sound:"off", aspect_ratio:"9:16", duration:<segundos enteros del plano, 3-15>, medias:[{value:A, role:"start_image"},{value:B, role:"end_image"}], declined_preset_id:<el que devuelva>}`. Hasta 7-8 en vuelo (tope medido en El Dorado).
 4. Prompt en inglés derivado del spec: prefijo de estilo de la casa + acción con conteo y tiempo («she stops and points to the right in the first two seconds, then holds») + candado de orientación (video 1: «seen in three-quarter profile, head never turning toward the camera») + «ends exactly in the pose and position of the second image» + invariantes de `bloqueComun` traducidos + «ONE continuous locked-off take, no cuts, no close-up inserts, crisp, no motion blur».
-5. `import-mcp-clips.mjs` (guardián 1080×1920/24 fps) → `qc-clip.mjs` (G2, G3) → si falla, regeneración con el mismo par y prompt corregido; dos fallos → se rehace el par ($0,14), no se insiste.
+5. `import-mcp-clips.mjs` (guardián 1080×1920/24 fps — esto sí existe y sí corre) → `qc-clip.mjs` (G2, G3) **⚠ no existe; propuesta, no herramienta**: hoy G2 y G3 hay que pasarlas a ojo sobre una hoja de contacto, o el clip entra sin puerta → si falla, regeneración con el mismo par y prompt corregido; dos fallos → se rehace el par ($0,14), no se insiste. *(⚠ la regla de los «dos fallos» es una norma de presupuesto, no un hallazgo medido: en todo el historial del canal ningún clip necesitó un tercer intento.)*
 6. Envoltura: hold sobre A + clip + hold sobre B hasta la duración del plano (la duración deja de depender del modelo: P13 = 1,0 + 5 + 1,0; P16 = 0,75 + 5 + 0,75).
 7. `posterizar.mjs`.
 
@@ -80,10 +113,10 @@
 2. Una sola hoja 2×2 (celda 1080×1920 nativa) o 3×3 de RECORTES del objeto sobre alfa con refs `[A, B, ficha]` y texto «celda 1 = el estado de A, celda N = un paso antes de B»; una hoja, nunca varias (sin costuras).
 3. QC de hoja (G5): variación del tamaño del objeto entre celdas < 3 % (se mide el ancho del objeto en la máscara alfa, no la caja); una celda que retrocede → se regenera la hoja.
 4. Composición: UNA escala para toda la hoja, ancla declarada en el spec (`ancla: {x, y}` del punto de contacto o del centro del objeto), sin sombra sintética, desenfoque calibrado, erosión de alfa 1 px, sobre el plató.
-5. Secuencia = A (hold de anticipación) → recortes según `carta` (a dos; impacto a uno; espaciado creciente en caídas) → B (hold de remate 24-48 f). `montar.mjs --carta`.
+5. Secuencia = A (hold de anticipación) → recortes según `carta` (a dos; impacto a uno; espaciado creciente en caídas) → B (hold de remate 24-48 f). ~~`montar.mjs --carta`~~ **⚠ ese flag no existe; el sustituto real es `scripts/videos/stopmotion/v2/inserto.mjs`**, que sí lee la `carta` del spec (`[[img, fotogramas], …]`), monta con ella y escribe el manifiesto con la variación de tamaño de G5 medida. Es lo que se usó en E2.
 6. Sólo `una_pasada`. Tope 3 por video.
 
-**`quieto` — la frase soporta la quietud** (`montar.mjs --imagen --escalonado`)
+**`quieto` — la frase soporta la quietud** (~~`montar.mjs --imagen --escalonado`~~ **⚠ `--escalonado` no existe**: `montar.mjs` conoce `--imagen` pero no ese flag, y lo ignora en silencio. El sustituto real, escrito después, es **`scripts/videos/stopmotion/v2/quieto.mjs`**, que sí da los 12 pasos/s sostenidos a dos con amplitud `--zoom` por defecto 0,05 y recorre los estados de la plancha de fondo en orden aleatorio sin repetir vecino)
 
 - A aprobada; cámara escalonada: `zoompan` renderizado a 12 pasos/s y duplicado a 24, amplitud 4-6 % en todo el plano (v1: 12 % continuo), un solo sentido; P15 con CERO cámara.
 - Fuego vivo cuando lo hay: `fondo.mjs` (funciona: zona viva 11,2 %, deriva 0,01) con la regla de rechazo del alineador y los 4 estados recorridos **en orden aleatorio sin repetir vecino** (semilla fija), nunca en vaivén ni en bucle exacto; para P15 el prompt de la plancha conserva a las figuras detenidas y sólo mueve las llamas.
@@ -101,20 +134,20 @@
 | `plano.mjs` | Se retira como orquestador de producción. Lo sustituye `plano-v2.mjs`: lee el guion gráfico y despacha por `tipo`; no genera hojas en paralelo; el track `cuadro` desaparece de producción. |
 | `anclas.mjs` → `anclas-ab.mjs` | A con refs de mundo y bloque común; B como edición de A; escribe posiciones absolutas y refs en el ledger. |
 | `componer.mjs` | Sin `escala = altoRel*H/bh`; una escala por hoja; ancla declarada; sin sombra; desenfoque por laplaciano; erosión alfa; `--trayectoria`. Sólo lo llaman `inserto.mjs` y el planeo. |
-| `montar.mjs` | `vaiven()` deja de ser el defecto; `--carta` obligatoria para dibujados; se niega con hold > 4 f no declarado, < 12 img/s o imágenes descartadas; `--imagen --escalonado` (12 pasos/s, 4-6 %); manifiesto emitido desde la lista real. |
-| `qc.mjs` → `qc-clip.mjs` | Regresión (argmin MAD sobre anteriores = vecino), monotonía hacia B, periodicidad a lag 24/48, holds reales, extremos contra A/B, corte interno, banda superior, energía, «a dos», nitidez figura/plató; salida JSON bloqueante. |
+| `montar.mjs` | `vaiven()` deja de ser el defecto; `--carta` obligatoria para dibujados; se niega con hold > 4 f no declarado, < 12 img/s o imágenes descartadas; `--imagen --escalonado` (12 pasos/s, 4-6 %); manifiesto emitido desde la lista real. **⚠ Nada de esto está hecho, y la premisa está mal escrita:** en el código de hoy (sin tocar desde `cb4d80e5`, 12-sep) `vaiven()` **no es el defecto de `montar.mjs`**, es opcional tras `--ciclo` (línea 53: `ciclo ? vaiven(k) : reparto lineal`); lo mismo en `componer.mjs` para los recortes. Donde sí es incondicional el vaivén es en el **recorrido de los estados del plató** de `componer.mjs` (línea 138). Lo que hay que quitar, por tanto, no es un defecto: es el `--ciclo` de las llamadas y el vaivén del plató. Los flags `--carta` y `--escalonado` **no existen**. |
+| `qc.mjs` → `qc-clip.mjs` | Regresión (argmin MAD sobre anteriores = vecino), monotonía hacia B, periodicidad a lag 24/48, holds reales, extremos contra A/B, corte interno, banda superior, energía, «a dos», nitidez figura/plató; salida JSON bloqueante. **⚠ `qc-clip.mjs` no existe: es la especificación de una herramienta, no una herramienta.** `stopmotion/qc.mjs` sigue tal cual (mide magnitud, no orden: es la sonda que dio verde al desastre). Lo más parecido que se escribió después son `v3/qc-flipbook.mjs` y `v4/qc.mjs`, que ya cubren monotonía y retrocesos pero **no** son comparables entre sí ni con `qc.mjs` (cada una define «fondo» de otra manera: ver `MANUAL-DE-PRODUCCION.md` §6.6). Y el primer criterio de la lista —el argmin sobre los anteriores— **quedó retractado** por `stopmotion-interpolacion.md` §14: con redibujos de cuadro completo es ruido. |
 | `alinear.mjs` / `estabilizar.mjs` | Sólo dentro de `fondo.mjs`. Regla de rechazo (propuesta 3): se acepta la transformada sólo si el coste baja ≥ 20 % frente a la identidad y no toca el borde del rango; si no, identidad. Prohibidos sobre hojas de figura, objeto o multitud. |
 | `fondo.mjs` | Orden aleatorio sin vecinos repetidos; prompt que respeta figuras detenidas cuando las hay. |
 | `hoja-poses.mjs`, `plancha.mjs`, `tira.mjs`, `puente.mjs`, `escalera.mjs`, `claves.mjs`, `cadena.mjs`, `medio.mjs` | Quedan en el laboratorio. Ninguno toca un video. |
-| `assemble-video.mjs` | `voice_delay` y `music_gain` por bloque; guardián «a dos»; duración por bloque desde el plan generado (no 5 fijos). |
-| `validate-plan.mjs` | Regla nueva: cada corte a ≤ 0,15 s de una pausa medida o ≥ 0,4 s tras el fin de la frase; `--secos` sigue. |
-| `import-mcp-clips.mjs` | Llama a `qc-clip.mjs` tras el guardián de resolución. |
+| `assemble-video.mjs` | `voice_delay` y `music_gain` por bloque; guardián «a dos»; duración por bloque desde el plan generado (no 5 fijos). **⚠ Sin hacer, y es la trampa silenciosa de este documento:** hoy `assemble-video.mjs` sólo conoce un `voice_offset` **global** (línea 61) y no tiene ni `voice_delay` ni `music_gain` por bloque (cero ocurrencias en el archivo, y ninguna tampoco en `validate-plan.mjs`). Un plan escrito con la tabla de §3.4 al pie de la letra **no fallaría: ignoraría esos campos en silencio** y la voz caería donde no debe. |
+| `validate-plan.mjs` | Regla nueva: cada corte a ≤ 0,15 s de una pausa medida o ≥ 0,4 s tras el fin de la frase; `--secos` sigue. **⚠ La regla nueva sigue sin escribirse.** `--secos` sí existe (línea 22) y el validador ya usa `silencedetect −35 dB` (línea 53), pero **sólo para localizar el FIN del habla** de cada bloque y comprobar que la ventana alcanza; las pausas internas, que son las que fijarían los cortes, no las mira. Hoy G6 se cumple a mano. |
+| `import-mcp-clips.mjs` | Llama a `qc-clip.mjs` tras el guardián de resolución. **⚠ Sin hacer, y no se puede hacer mientras `qc-clip.mjs` no exista.** Hoy el importador trae el guardián de resolución/fps y nada más. |
 | Specs (`planos/*.json`) | Nuevo formato: `tipo`, `modo`, `escala`, `mirada`, `viaje`, `luz`, `A`, `B`, `ancla`, `carta`, `duracion`, `refs` obligatorias; `_comun.json` con `identico`/`nunca` separados y `paleta` leída de verdad. |
-| Nuevos | `cortes-por-voz.mjs`, `lookdev.mjs`, `anclas-ab.mjs`, `contacto.mjs`, `kling-ab.mjs`, `inserto.mjs`, `posterizar.mjs`, `qc-clip.mjs`, `plan-desde-cartas.mjs`. |
+| Nuevos | `cortes-por-voz.mjs`, `lookdev.mjs`, `anclas-ab.mjs`, `contacto.mjs`, `kling-ab.mjs`, `inserto.mjs`, `posterizar.mjs`, `qc-clip.mjs`, `plan-desde-cartas.mjs`. **Estado real al 16-sep:** escritos en `scripts/videos/stopmotion/v2/` → `lookdev.mjs`, `anclas-ab.mjs`, `contacto.mjs`, `inserto.mjs`, `posterizar.mjs`, **más** `clavar-b.mjs`, `comun.mjs` y `quieto.mjs`, que no estaban en esta lista. **⚠ Siguen sin existir: `cortes-por-voz.mjs`, `kling-ab.mjs`, `qc-clip.mjs` y `plan-desde-cartas.mjs`** — es decir, la medición de pausas, el encolado a Kling, la puerta de clip y el generador del plan. Los tres primeros sólo se han hecho a mano. |
 
 ### 3.4 Huitaca v2 — guion gráfico con cortes en las pausas medidas
 
-`voice_offset` 0,5 salvo `voice_delay` indicado. Los tiempos de pausa son los de `silencedetect` sobre `voces-v1`. Escalas contiguas siempre distintas (GG·PM·G·CEN·PMc·PD·PMc·PM·G·PD·G·PP·PM·PD·G·PM·GG·CP·GG).
+`voice_offset` 0,5 salvo `voice_delay` indicado. Los tiempos de pausa son los de `silencedetect` sobre `voces-v1`. **⚠ `voice_delay` y `music_gain` por bloque no existen en el ensamblador** (ver la fila de `assemble-video.mjs` en §3.3): esta tabla describe el montaje que se querría, no uno que `assemble-video.mjs` pueda ejecutar hoy. Hay que implementarlos antes, o resolver esos retardos partiendo los WAV (que es como se hizo el reel de E4). Escalas contiguas siempre distintas (GG·PM·G·CEN·PMc·PD·PMc·PM·G·PD·G·PP·PM·PD·G·PM·GG·CP·GG).
 
 | Bloque · voz | Plano · t (s) | Tipo · Kling | Escala | Qué pasa (A → B) | Corte |
 |---|---|---|---|---|---|
@@ -153,27 +186,49 @@ Totales: 81,0 s de cuerpo + 8,42 de cierre = **89,4 s**; narración 59,2 s = 73 
 | Clips presentables | 17-19 de 18-19 a la primera | 16/18 | 0/18 | por medir en E1-E4 |
 | Relación con el estándar | 1× | 0,2× | 0 cr, inutilizable | **≈ 8 % de los créditos de Seedance** |
 
-Notas: el precio en dólares del crédito no consta en el repo, así que las dos columnas no se suman. Con 32 cr de saldo caben los experimentos de §6 (15,75 cr base + regeneración) pero **no el video**: producir Huitaca v2 exige recargar ≈ 70 cr, y esa decisión se toma DESPUÉS de ver el reel de E4, no antes. Si Kling no respeta B en el clímax, el plan B de ese único plano es Seedance con el mismo par (45 cr) y quedaría registrado como excepción a D11.
+Notas: el precio en dólares del crédito no consta en el repo (⚠ sigue sin constar el 16-sep: no se puede traducir la recarga a dinero), así que las dos columnas no se suman. Con 32 cr de saldo caben los experimentos de §6 (15,75 cr base + regeneración) pero **no el video**: producir Huitaca v2 exige recargar ≈ 70 cr, y esa decisión se toma DESPUÉS de ver el reel de E4, no antes. **⚠ Ese «≈ 70» daba por gastados los 32 en los experimentos, y los experimentos con créditos nunca se corrieron: los 32 siguen ahí.** Contando con ellos, la recarga que falta hoy para Huitaca v2 es de **33-38 cr**, que es la cifra de `MANUAL-DE-PRODUCCION.md` §7.6. Las dos cifras no se contradicen, miden cosas distintas —total del carril contra recarga pendiente—, pero si alguien lee sólo esta línea pedirá el doble de lo necesario. Si Kling no respeta B en el clímax, el plan B de ese único plano es Seedance con el mismo par (45 cr) y quedaría registrado como excepción a D11.
 
 ---
 
 ## 5. Puertas de QC automáticas (y qué defecto de v1 habrían atrapado)
 
+> **⚠ «Automáticas» es el plan, no el estado. Comprobado el 16-sep: ninguna de estas ocho puertas se
+> ejecuta hoy con un comando de principio a fin.** G2, G3, G4 y G5 dependen todas de un
+> `qc-clip.mjs` **que no existe**; G7 nombra `vista-todos` como si fuera ejecutable y **tampoco
+> existe script con ese nombre** (`vista-todos.jpg` de Huitaca v1 se armó a mano y, además,
+> *después* de montar — que es justamente el defecto que la puerta pretende evitar). Lo que sí
+> corre: el guardián de resolución/fps de `import-mcp-clips.mjs` (un trozo de G2), `v2/contacto.mjs`
+> como sonda de G0/G1 (mide y rotula, pero no juzga: no imprime umbral ni sale con código ≠ 0), y
+> parte de G6 dentro de `validate-plan.mjs` (cortes secos, fin de voz, aire muerto; no las pausas
+> medidas ni las escalas ni los ejes). El estado puerta por puerta, actualizado, está en
+> `MANUAL-DE-PRODUCCION.md` §6.7; las sondas que sí existen, en §6.6.
+>
+> **⚠ Y ningún umbral de esta tabla se ha corrido nunca contra un lote de clips buenos**, así que no
+> se conoce su tasa de falsos positivos: son propuestas derivadas de mediciones ad hoc del panel de
+> Huitaca v1, no valores calibrados.
+
 | Puerta | Qué mide | Umbral | Defecto de v1 que habría parado |
 |---|---|---|---|
 | **G0 Mundo** (antes de hojas y de créditos) | Hoja de contacto de las A + checklist cerrado por imagen: agua/reflejo, día, luna a la izquierda o fotográfica, bokeh/render, figura mirando a cámara cuando el spec dice perfil, especie del ave (cara blanca en corazón = rechazo), nº de personas ≠ spec, arquitectura ajena | cualquier «sí» bloquea el plano | c08 pleno día; c16 laguna; lechuza Tyto/gavilán/paloma; 15/18 render; luna al otro lado en c16; marcha frontal de c02 |
 | **G1 Par A\|B** | MAD del fondo (216×384 gris, fuera de la unión de las cajas del sujeto estimadas por \|A−B\| > 24); ratio de varianza del laplaciano figura/anillo de fondo en A y en B; B en el estado absoluto declarado (checklist) | MAD fondo < 2,0 · nitidez < 3× | b7a «todo quieto» con la vasija en el aire (no había B); b6a hoja 3 de pie otra vez; escala +5 % por hoja |
-| **G2 Clip Kling** | MAD(primer fotograma, A) y MAD(último, B); salto máximo entre vecinos (corte interno); banda superior (22 % del cuadro) media y pico; energía media; 1080×1920 / 24 fps (ya existe) | < 6 · < 8 (bucle: MAD(primero, último) < 3) · vecinos ≤ 20 · banda < 1,5 media, < 4 pico · energía ≥ 0,8 | el corte interno de Seedance c15 (video 1); un clip congelado con A=B |
-| **G3 Monotonía** (`una_pasada`, transformación, también insertos) | d(t) = MAD(fotograma t, B) no sube más de 2 en ningún tramo de 12 f; para cada fotograma, el más parecido entre los anteriores es el vecino inmediato; centroide del objeto monótono en el eje declarado | 0 regresiones | c13 vasija que vuelve al aire (f0008); c11 f0011→f0012; c12 |
-| **G4 Textura de tiempo** (tras posterizar) | MAD a lag 24 y 48 en todo clip con movimiento; holds exactos de 2 (MAD = 0 dentro de cada pareja, > 0 entre parejas) salvo `hold_tail`/carta; ningún hold > 4 f no declarado; ≥ 12 imágenes distintas por segundo; en quietos, incremento de zoom constante entre pasos | lag 24/48 > 0,5 · desviación del paso de zoom < 5 % | c04/c07/c08/c10/c14/c17 (periodo 24 exacto), c09 (48), c09/c11/c13 a ocho, c12 holds 24-40, c05/c06/c18 zoom continuo |
-| **G5 Inserto dibujado** | Variación del tamaño del objeto entre celdas (máscara alfa, no caja); orientación y estado absoluto por celda (checklist); carta cumplida (holds reales = declarados); nitidez figura/plató; ribete alfa oscuro; deriva del ancla | < 3 % · ≤ 2× · < 0,5 % de píxeles opacos · ≤ 4 px/f | lechuza que bombea 90,7 %; pegatina 5-434×; ribete 1,9 % 20 % más oscuro; pies ±80 px |
+| **G2 Clip Kling** ⚠ *sin implementar salvo la resolución* | MAD(primer fotograma, A) y MAD(último, B); salto máximo entre vecinos (corte interno); banda superior (22 % del cuadro) media y pico; energía media; 1080×1920 / 24 fps (ya existe) | < 6 · < 8 (bucle: MAD(primero, último) < 3) · vecinos ≤ 20 · banda < 1,5 media, < 4 pico · energía ≥ 0,8 | el corte interno de Seedance c15 (video 1); un clip congelado con A=B |
+| **G3 Monotonía** (`una_pasada`, transformación, también insertos) ⚠ *sin implementar, y **parcialmente retractada*** | d(t) = MAD(fotograma t, B) no sube más de 2 en ningún tramo de 12 f; ~~para cada fotograma, el más parecido entre los anteriores es el vecino inmediato~~ **← este criterio se cae**: `stopmotion-interpolacion.md` §14 y §15, escritos DESPUÉS de esta tabla (§5 se commiteó en `e7c1283d` el 12-sep 21:43; §14 en `95efdc84` la misma noche a las 23:00 y §15 en `531d76f6` el 13-sep a las 00:01, hora local −05), lo probaron sobre redibujos de cuadro completo y marcó **4 falsas regresiones** — «es ruido». Queda en pie la monotonía de d(t) hacia la pose final, que es la que sí midió cero retrocesos (33 → 0) en la hoja de 36 poses; centroide del objeto monótono en el eje declarado | 0 regresiones | c13 vasija que vuelve al aire (f0008); c11 f0011→f0012; c12 |
+| **G4 Textura de tiempo** (tras posterizar) ⚠ *sin implementar; `v2/posterizar.mjs` impone el «a dos» por construcción, que es otra cosa que medirlo* | MAD a lag 24 y 48 en todo clip con movimiento; holds exactos de 2 (MAD = 0 dentro de cada pareja, > 0 entre parejas) salvo `hold_tail`/carta; ningún hold > 4 f no declarado; ≥ 12 imágenes distintas por segundo; en quietos, incremento de zoom constante entre pasos | lag 24/48 > 0,5 · desviación del paso de zoom < 5 % | c04/c07/c08/c10/c14/c17 (periodo 24 exacto), c09 (48), c09/c11/c13 a ocho, c12 holds 24-40, c05/c06/c18 zoom continuo |
+| **G5 Inserto dibujado** ⚠ *sin implementar como puerta; `v2/inserto.mjs` mide la variación de tamaño y la deja en el manifiesto, pero no aborta* | Variación del tamaño del objeto entre celdas (máscara alfa, no caja); orientación y estado absoluto por celda (checklist); carta cumplida (holds reales = declarados); nitidez figura/plató; ribete alfa oscuro; deriva del ancla | < 3 % · ≤ 2× · < 0,5 % de píxeles opacos · ≤ 4 px/f | lechuza que bombea 90,7 %; pegatina 5-434×; ribete 1,9 % 20 % más oscuro; pies ±80 px |
 | **G6 Montaje** (lint del plan) | Cada corte a ≤ 0,15 s de una pausa (`silencedetect −35 dB ≥ 0,18 s`) o ≥ 0,4 s tras el fin de la frase; fin de voz ≥ 0,6 s antes del fin del bloque; ninguna acción física más larga que su palabra + 1 s; nunca dos quietos contiguos; escalas distintas contiguas; eje del contraplano = dirección declarada del plano anterior; sólo cortes secos; manifiesto emitido por el montador y coincidente con el plan | binario | metrónomo de 5,0 s (9 cortes a mitad de frase); c05→c06 dos quietos; c02→c03 misma escala; manos tocando durante «soltaron»; c03 señala a la derecha y c04 mira a la izquierda; manifiesto a mano que decía «vaivén» en c12/c13 |
-| **G7 Video entero** | Hoja de contacto de un fotograma por plano en orden (`vista-todos` como PUERTA) + tira de 24 f del primer segundo por plano + preview; grano presente en todos los planos; luna en la misma posición y tamaño en todos los exteriores | varianza de alta frecuencia ±30 % entre planos · luna ±10 % | 18 dioramas de 18 maquetistas; c16 luna a la izquierda |
+| **G7 Video entero** ⚠ *la parte humana (ver el preview entero) es obligatoria y se cumple; la medida, sin implementar* | Hoja de contacto de un fotograma por plano en orden (**⚠ `vista-todos` NO es un script: no existe ningún ejecutable con ese nombre. `vista-todos.jpg` de Huitaca v1 se armó a mano y después de montar. Lo que se pide aquí —usarlo como PUERTA, antes— está sin construir**) + tira de 24 f del primer segundo por plano + preview; grano presente en todos los planos; luna en la misma posición y tamaño en todos los exteriores | varianza de alta frecuencia ±30 % entre planos · luna ±10 % | 18 dioramas de 18 maquetistas; c16 luna a la izquierda |
 | **Compuerta humana obligatoria** en tres puntos: hoja de contacto de anclas (G0), reel de 15 s de los experimentos (E4), y el preview entero en movimiento (§0b del playbook) | — | — | «Nadie vio el clip en movimiento» |
 
 ---
 
 ## 6. Plan de experimentos para mañana
+
+> **⚠ «Mañana» era el 13 de septiembre. Al 16-sep sólo se corrieron los tres que no cuestan créditos
+> —E0, E2 y E4— la misma noche del 12 (resultados en `stopmotion-interpolacion.md` §13; el 13 de
+> madrugada salieron además los carriles v3 y v3.2 de §14-15, que no estaban en este plan).
+> **E1, E3 y E5 siguen sin ejecutarse**: exigen créditos de Higgsfield y no ha habido recarga. Con
+> ello, la pregunta que este documento llama «la que decide el carril» —si Kling respeta el
+> fotograma final en el clímax (E1)— **sigue sin respuesta**.
 
 Orden: lo primero descarta lo más caro de equivocarse (que Kling no respete el fotograma final en el plano que sostiene el video); todo lo demás depende de eso. Presupuesto: **15,75 cr base + hasta 16,25 de regeneración ≤ 32**; ≈ $2,5 de OpenAI.
 
@@ -188,11 +243,13 @@ Orden: lo primero descarta lo más caro de equivocarse (que Kling no respete el 
 
 Al terminar el día: `docs/videos/stopmotion-interpolacion.md` §13 con los cuatro resultados y la cadencia elegida; decisión del usuario sobre la recarga (≈ 70 cr) para Huitaca v2.
 
+**⚠ Qué de esto pasó, al 16-sep.** §13 se escribió, con tres resultados de cuatro (falta E1). **La cadencia NO está elegida**: los tres reels se montaron y ahí siguen, sin veredicto, desde hace cuatro días. **La recarga tampoco está decidida.** Las dos son decisiones del usuario, cuestan cero créditos y bloquean todo lo demás; están listadas como abiertas en `MANUAL-DE-PRODUCCION.md` §8.6.
+
 ---
 
 ## 7. Qué se descarta explícitamente, y por qué
 
-- **El compositor de recortes como método de producción para figuras con contacto** (`componer.mjs` con escala por caja alfa, sombra sintética, ancla en línea recta): 12 de 17 defectos confirmados nacen ahí, y arreglarlo exige contacto sobre suelo en perspectiva, oclusores, sombra cizallada y desenfoque por profundidad —un departamento de VFX—. Sobrevive reducido para insertos ≤ 2 s y para el planeo sin contacto.
+- **El compositor de recortes como método de producción para figuras con contacto** (`componer.mjs` con escala por caja alfa, sombra sintética, ancla en línea recta): 12 de los **20** defectos confirmados nacen ahí (el panel cerró con 20 confirmados y 0 refutados; ver §1.10), y arreglarlo exige contacto sobre suelo en perspectiva, oclusores, sombra cizallada y desenfoque por profundidad —un departamento de VFX—. Sobrevive reducido para insertos ≤ 2 s y para el planeo sin contacto.
 - **El vaivén como modo de ciclo y los ciclos dibujados en general**: todo ciclo de v1 salió invertido o doblado; en v2 los ciclos los ejecuta el modelo de video con conteo, o el plano es quieto.
 - **Hojas de cuadro completo + alineador de máscara fija + mediana de 4 celdas** para objetos, manos y multitudes: el alineador empeora (19,6 → 27,9) y la mediana con n = 4 es un fantasma por construcción. `alinear.mjs`/`estabilizar.mjs` quedan sólo dentro de `fondo.mjs`, donde sí funcionan, con regla de rechazo.
 - **Hojas en paralelo desde la misma maestra para gestos narrativos** y, en general, **hojas encadenadas de 12-15 por plano** (propuesta 1): lo primero reinicia el gesto en cada hoja; lo segundo apuesta contra lo medido en §6 («encadenar hojas hizo crecer la figura») y contra 0/18, con $28-45 y 10-14 h por video. De la propuesta 1 se rescatan la carta de exposición como contrato y el manifiesto emitido desde la lista real.
