@@ -229,7 +229,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--ocre);outline-offse
     cero — y el botón cambia de <code>Generate ✦ 7</code> a <code>Unlimited ✦</code>, que es la única
     señal de que sigue gratis.</p>
     <p>Por eso el ritmo es contenido: dos generaciones en vuelo, que es la concurrencia real del bundle,
-    y pausas entre envíos. La cola gratuita va a unos 2,5 minutos por imagen.</p>
+    y pausas entre envíos. La cola compartida tarda alrededor de 5-8 minutos por par.</p>
     <p>El estado no se lleva en una lista aparte sino mirando el disco: si el archivo existe, el paso
     está hecho. Así no se puede desincronizar de lo que realmente hay.</p>
   </div>

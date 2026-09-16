@@ -16,6 +16,7 @@ import { mkdir, writeFile } from "node:fs/promises";
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import sharp from "sharp";
+import { IMAGE_QUALITY_POLICY, qualityForTriptychAct } from "../../src/lib/image-quality-policy.js";
 
 const args = Object.fromEntries(
   process.argv.slice(2).reduce((acc, a, i, arr) => {
@@ -33,7 +34,7 @@ const mito = plan.mitos[slug];
 if (!mito) throw new Error(`mito no está en el plan: ${slug}`);
 
 const FORMATO = { entrada: "horizontal", acto: "vertical", huella: "cuadrada" };
-const dir = join("content/videos", comunidad, "mitos", slug);
+const dir = join("content/videos", comunidad, "mitos", mito.carpeta || slug);
 await mkdir(dir, { recursive: true });
 
 const items = {};
@@ -66,6 +67,7 @@ for (const r of resultados) {
     composicion: escena.composicion,
     refs: escena.refs || [],
     escena: escena.escena,
+    quality: qualityForTriptychAct(r.acto),
   };
   console.log(`  ✔ ${r.acto.padEnd(8)} ${meta.width}x${meta.height}  ${escena.composicion}`);
 }
@@ -84,7 +86,7 @@ const manifest = {
   generado_en: "higgsfield",
   model: "gpt_image_2",
   resolution: "2k",
-  quality: "high",
+  image_quality: IMAGE_QUALITY_POLICY.triptych,
   fecha: args.fecha || new Date().toISOString().slice(0, 10),
   estrena: mito.estrena || [],
   items,

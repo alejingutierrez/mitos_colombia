@@ -26,6 +26,9 @@ export function ImageFrame({
   mobileSizes = "100vw",
   priority = false,
   quality = 75,
+  // Preserve an original artwork without recompressing the desktop source.
+  unoptimized = false,
+  mobileUnoptimized = false,
   fetchPriority = priority ? "high" : undefined,
   placeholderMotif = "jaguar",
   placeholderSize = 56,
@@ -41,6 +44,7 @@ export function ImageFrame({
         fill: true,
         sizes: mobileSizes,
         quality,
+        unoptimized: mobileUnoptimized,
       }).props
     : null;
 
@@ -79,6 +83,7 @@ export function ImageFrame({
             priority={priority && !hasMobileArtDirection}
             loading={priority && hasMobileArtDirection ? "eager" : undefined}
             quality={quality}
+            unoptimized={unoptimized}
             fetchPriority={fetchPriority}
             className={cn("object-cover", imgClassName)}
           />

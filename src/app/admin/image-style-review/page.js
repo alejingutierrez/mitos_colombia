@@ -480,7 +480,7 @@ export default function ImageStyleReviewPage() {
         <div className="grid gap-4 md:grid-cols-5">
           {[
             ["Modelo", data?.config?.model || "gpt-image-2"],
-            ["Calidad", data?.config?.quality || "high"],
+            ["Calidad", data?.config?.quality || "medium"],
             ["Formato", data?.config?.format || "jpeg"],
             ["Seed home", data?.currentHome?.seed ?? "..."],
             ["Rondas locales", data?.privateRounds?.length ?? "..."],

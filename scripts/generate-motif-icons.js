@@ -3,6 +3,7 @@ import OpenAI from "openai";
 import sharp from "sharp";
 import { mkdir, writeFile } from "node:fs/promises";
 import path from "node:path";
+import { IMAGE_QUALITY_POLICY } from "../src/lib/image-quality-policy.js";
 
 /**
  * Genera íconos-motivo del sistema de diseño (rediseño 2026) con OpenAI gpt-image-2.
@@ -81,7 +82,7 @@ async function main() {
     model,
     prompt: buildPrompt(subject),
     size: "1024x1024",
-    quality: "high",
+    quality: IMAGE_QUALITY_POLICY.other,
     moderation: "low",
     n: 1,
   });

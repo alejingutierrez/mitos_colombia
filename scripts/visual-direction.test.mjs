@@ -36,10 +36,15 @@ test("la época se deduce de la comunidad y separa los dos mundos", () => {
   assert.equal(inferEra(""), "indeterminado");
   // El mito puede forzar el registro cuando el relato ocurre en el contacto.
   assert.equal(inferEra("Muiscas", "colonial_rural"), "colonial_rural");
+  assert.equal(inferEra("Wayúu", "mitico_wayuu"), "mitico_wayuu");
+  assert.equal(inferEra("Wayúu", "historico_wayuu"), "historico_wayuu");
 
   // Cada registro prohíbe explícitamente el mundo material del otro.
   assert.match(getEraLines("prehispanico").join(" "), /cruz, iglesia|caballo/);
   assert.match(getEraLines("colonial_rural").join(" "), /malocas, tunjos/);
+  assert.match(getEraLines("mitico_wayuu").join(" "), /no fechado/);
+  assert.match(getEraLines("historico_wayuu").join(" "), /caballo, mula, ganado, panela/);
+  assert.doesNotMatch(getEraLines("historico_wayuu").join(" "), /mundo prehispánico/);
 });
 
 test("una comunidad sin entrada prohíbe inventar en vez de improvisar", () => {
@@ -52,6 +57,15 @@ test("una comunidad sin entrada prohíbe inventar en vez de improvisar", () => {
   assert.match(sinEntrada, /NO inventar simbolos/);
   assert.match(sinEntrada, /geografia de la region/);
   assert.equal(getCommunityCraft(""), "");
+});
+
+test("Wayúu sólo recibe el lenguaje territorial documentado por la Biblia V2", () => {
+  assert.equal(hasCommunityCraft("Wayúu"), true);
+  assert.match(getCommunityCraft("Wayúu"), /Macuira/);
+  assert.match(getCommunityCraft("Wayúu"), /yotojoro/);
+  assert.match(getCommunityCraft("Wayúu"), /nacidos en grupo desde la base/);
+  assert.match(getCommunityCraft("Wayúu"), /nunca tronco único.*saguaro/);
+  assert.match(getCommunityCraft("Wayúu"), /nunca como decoración genérica/);
 });
 
 test("el prompt del sitio incorpora composición y época", () => {

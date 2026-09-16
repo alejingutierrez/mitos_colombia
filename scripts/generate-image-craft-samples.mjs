@@ -9,6 +9,7 @@ import { put } from "@vercel/blob";
 import dotenv from "dotenv";
 import OpenAI from "openai";
 import sharp from "sharp";
+import { IMAGE_QUALITY_POLICY } from "../src/lib/image-quality-policy.js";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const rootDir = path.resolve(__dirname, "..");
@@ -20,7 +21,7 @@ const dbPath = process.env.MITOS_DB_PATH || path.join(rootDir, "data", "mitos.sq
 const outputDir = path.join(rootDir, "artifacts", "image-craft-samples");
 const model = process.env.IMAGE_GENERATION_MODEL || "gpt-image-2";
 const size = process.env.IMAGE_GENERATION_SIZE || "1536x1024";
-const quality = process.env.IMAGE_GENERATION_QUALITY || "high";
+const quality = process.env.IMAGE_GENERATION_QUALITY || IMAGE_QUALITY_POLICY.other;
 
 const sampleIds = [721, 32, 184, 869, 65];
 
@@ -78,10 +79,10 @@ function buildCraftPrompt(myth) {
 
 Tecnica central:
 - Fotografia de un trabajo real de papel artesanal, no ilustracion digital plana.
-- Paper cut, paper relief y paper quilling hechos a mano: capas fisicas, bordes de papel visibles, fibras, micro-sombras, dobleces finos, cortes precisos y volumen bajo.
+- Paper cut, paper relief y paper quilling hechos a mano: primer plano, plano medio y fondo fisicamente separados a distintas distancias, con cantos internos, fibras, aire, oclusiones, micro-sombras y volumen real; nunca collage plano.
 - Debe sentirse como una pieza construida manualmente por artistas, fotografiada en estudio con luz suave y controlada.
 - Profundidad real por capas de papel, pero sin verse como render 3D, sin plastico, sin glossy CGI, sin animacion, sin figuras flotando en perspectivas raras.
-- Composicion frontal, directa, estable, de borde a borde; el encuadre debe llenar toda la imagen, sin margenes blancos, sin mockup, sin marco, sin texto ni logos.
+- La camara esta dentro del diorama y recorta su perimetro; el mundo narrativo llega a los cuatro limites. Los cantos entre capas internas son visibles y necesarios, pero nunca el borde exterior, base, carton crudo o corrugado, mesa, estudio, ciclorama, margenes blancos, mockup, marco, texto ni logos.
 
 Identidad colombiana:
 - Region: ${myth.region}.

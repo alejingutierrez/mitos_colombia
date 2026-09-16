@@ -14,7 +14,7 @@
  *     --fichas "sogamoso_cacique=20260823|073438|983c...,ramiriqui_cacique=..."
  */
 import { mkdir, writeFile, readFile } from "node:fs/promises";
-import { readFileSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 import sharp from "sharp";
 
@@ -49,10 +49,27 @@ const idsPath = join(bibliaDir, "higgsfield-ids.json");
 const ids = JSON.parse(await readFile(idsPath, "utf8"));
 ids.pendientes_de_subir = ids.pendientes_de_subir || {};
 
-for (const par of String(args.fichas).split(",").map((s) => s.trim()).filter(Boolean)) {
+const fichas = String(args.fichas).split(",").map((s) => s.trim()).filter(Boolean).map((par) => {
   const [nombre, id] = par.split("=");
   const [duenoSlug, ficha] = duenoDe(nombre);
-  if (slug && slug !== duenoSlug) { console.log(`  · ${nombre} es de ${duenoSlug}, no de ${slug} — la salto`); continue; }
+  if (slug && slug !== duenoSlug) return { nombre, id, duenoSlug, ficha, omitir: true };
+  return { nombre, id, duenoSlug, ficha, omitir: false };
+});
+
+// La ingesta es aditiva: una ficha ya presente nunca se reemplaza por accidente.
+// Se valida la tanda completa antes de hacer la primera descarga para evitar
+// resultados parciales si uno de sus nombres ya existe.
+for (const { nombre, duenoSlug, omitir } of fichas) {
+  if (omitir) { console.log(`  · ${nombre} es de ${duenoSlug}, no de ${slug} — la salto`); continue; }
+  const jpgPath = join(bibliaDir, `${nombre}.jpg`);
+  const cropPath = join(bibliaDir, `${nombre}.crop-9x16.jpg`);
+  if (existsSync(jpgPath) || existsSync(cropPath) || manifest.items[nombre]) {
+    throw new Error(`la ficha "${nombre}" ya existe; la ingesta aditiva no reemplaza archivos ni manifiesto`);
+  }
+}
+
+for (const { nombre, id, duenoSlug, ficha, omitir } of fichas) {
+  if (omitir) continue;
 
   const [fecha, hora, job] = id.split("|");
   const res = await fetch(`${CDN}/${USER}/hf_${fecha}_${hora}_${job}.png`);

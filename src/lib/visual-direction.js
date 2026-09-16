@@ -55,6 +55,14 @@ export const COMPOSITION_SCHEMAS = {
       "La escala del territorio es el asunto de la imagen; la persona da la medida.",
     ],
   },
+  paisaje_abierto: {
+    label: "Paisaje abierto",
+    hint: "el territorio basta; ninguna figura compite con él",
+    lines: [
+      "COMPOSICIÓN «paisaje abierto»: el territorio ocupa todo el encuadre y no hay figuras humanas, animales ni utilería narrativa añadida.",
+      "La forma del agua, sendero, roca o relieve conduce la mirada; la escala y la materia del lugar son el asunto de la imagen.",
+    ],
+  },
   diagonal: {
     label: "Diagonal",
     hint: "la acción cruza el encuadre subiendo o bajando",
@@ -137,6 +145,30 @@ export const ERA_REGISTERS = {
       "Ante la duda, quitar el objeto en vez de inventarlo.",
     ],
   },
+  contemporaneo_wayuu: {
+    label: "Wayúu contemporáneo documentado",
+    lines: [
+      "ÉPOCA: vida Wayúu contemporánea documentada; no reconstrucción prehispánica ni escena campesina mestiza genérica.",
+      "Usar únicamente materiales y relaciones espaciales autorizados por la ficha: yotojoro, madera liviana, paja, barro, enramada, corral y senderos de una piichipala.",
+      "No añadir personas, vestuario, vehículos, antenas, plástico, lámina, concreto, símbolos, kanas o marcas claniles si la vista no los documenta expresamente.",
+    ],
+  },
+  mitico_wayuu: {
+    label: "Tiempo mítico Wayúu no fechado",
+    lines: [
+      "ÉPOCA: tiempo mítico Wayúu no fechado; no convertirlo automáticamente en reconstrucción prehispánica, escena colonial ni vida contemporánea.",
+      "Usar sólo los seres, objetos, materiales y relaciones nombrados por el expediente y por esta vista; la falta de fecha no autoriza llenar el mundo con utilería histórica genérica.",
+      "Caballo, mula, ganado, panela, metal, iglesia, vehículos, plástico o infraestructura moderna sólo pueden aparecer si el modelo los pide y usa un registro histórico o contemporáneo explícito.",
+    ],
+  },
+  historico_wayuu: {
+    label: "Wayúu histórico poscontacto",
+    lines: [
+      "ÉPOCA: mundo Wayúu histórico posterior al contacto, sin fijar un año que la fuente no entrega.",
+      "Pueden aparecer caballo, mula, ganado, panela u otros elementos introducidos únicamente cuando el relato o la vista los nombran; conservar territorio, arquitectura y relaciones Wayúu, no una escena campesina mestiza genérica.",
+      "No añadir por asociación iglesia, cruz, uniforme, armas de fuego, hacienda, carreta, pueblo colonial ni objetos modernos. Cada elemento fechado debe estar exigido por el expediente.",
+    ],
+  },
 };
 
 // Comunidades cuyo relato ocurre en el mundo campesino mestizo, no en el
@@ -170,7 +202,7 @@ export const REGION_CRAFT = {
   Andina:
     "paramo altoandino, laguna sagrada, frailejones, piedra gris humeda, niebla fria, oro mate y geometria muisca sobria cuando aplique",
   Caribe:
-    "luz de luna o sol costero, caminos de arena, cardones, salinas, mar lejano, arquitectura costera y patrones textiles caribenos o Wayuu cuando aplique",
+    "luz de luna o sol costero, caminos de arena, cardones, salinas y mar lejano; materiales, arquitectura y textiles sólo cuando estén documentados para la comunidad concreta, nunca por asociación regional",
   Amazonas:
     "rio profundo, chagra, maloca, hojas grandes, fibras de cumare, canoa, semillas, canastos y niebla verde de selva humeda",
   Amazonia:
@@ -197,12 +229,10 @@ export const REGION_CRAFT = {
  * prohíbe explícitamente inventar símbolos — sobrio antes que falso.
  */
 export const COMMUNITY_CRAFT = {
+  "Wayúu":
+    "lenguaje visual Wayúu documentado: planicie, costa y serranías de Alta Guajira; transición árido-húmeda de la Macuira; piichipala dispersa con vivienda baja, enramada y corral; yotojoro, madera, paja y barro. Cuando aparezca el cardón guajiro, usar varios tallos columnares acanalados nacidos en grupo desde la base; nunca tronco único con brazos simétricos levantados tipo saguaro. Textiles, kanas, marcas claniles, seres y gestos rituales sólo si el expediente del modelo los autoriza; nunca como decoración genérica",
   Muiscas:
     "lenguaje visual muisca: agua ceremonial, oro mate, piedra, tunjos sugeridos y textiles geometricos discretos",
-  "Wayúu":
-    "lenguaje visual Wayuu: tramas de mochila y manta reinterpretadas como capas de papel, arena, indigo, cardon y oro nocturno",
-  Wayuu:
-    "lenguaje visual Wayuu: tramas de mochila y manta reinterpretadas como capas de papel, arena, indigo, cardon y oro nocturno",
   Yukuna:
     "lenguaje visual amazonico Yukuna: maloca, fibras vegetales, canastos, semillas, rutas de rio y signos de viaje sin exotizar",
   Nasa: "lenguaje visual Nasa: montana, agua, carrizo, bastones, tejido geometrico sobrio y territorio vivo",

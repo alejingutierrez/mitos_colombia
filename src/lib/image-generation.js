@@ -5,12 +5,14 @@ import {
   getRegionCraft,
   inferEra,
 } from "./visual-direction.js";
+import { IMAGE_QUALITY_POLICY } from "./image-quality-policy.js";
+import { PAPER_CHARACTER_LINES, MAGIC_IN_THE_ORDINARY_LINES, buildNarrativeMagicLines } from "./narrative-magic.js";
 
 export const IMAGE_GENERATION_MODEL =
   process.env.IMAGE_GENERATION_MODEL || "gpt-image-2";
 
 export const IMAGE_GENERATION_QUALITY =
-  process.env.IMAGE_GENERATION_QUALITY || "high";
+  process.env.IMAGE_GENERATION_QUALITY || IMAGE_QUALITY_POLICY.other;
 
 export const IMAGE_GENERATION_FORMAT =
   process.env.IMAGE_GENERATION_FORMAT || "jpeg";
@@ -26,17 +28,18 @@ export const IMAGE_STYLE_PROFILES = {
   documentaryPaperArtifact: {
     label: "Artefacto documental",
     lines: [
-      "Tratamiento mas documental: pieza fisica sobre mesa de estudio o fondo material, con imperfecciones finas, fibras visibles y huella humana.",
-      "Menos fantasia, menos brillo, mas cercania a archivo cultural, maqueta artesanal y objeto fotografiado.",
+      "Tratamiento mas documental: escena física inmersiva con imperfecciones finas, fibras visibles y huella humana, sin mostrar mesa, base ni soporte.",
+      "Menos fantasia y brillo; mas cercania a archivo cultural y maqueta artesanal, sin convertirla en un objeto aislado fotografiado desde afuera.",
     ],
   },
   studioPaperMaquette: {
     label: "Maqueta fisica de estudio",
     lines: [
-      "Tratamiento de taller: maqueta artesanal fotografiada frontalmente sobre fondo mate, con cortes visibles, pegante sutil, bordes imperfectos y capas de papel reconocibles.",
-      "Menos epica, menos pintura, menos fantasia; mas objeto fisico, mesa de trabajo, relieve bajo, sombras reales y factura humana.",
-      "La escena debe parecer fotografiada despues de construirla con cartulinas, fibras, papeles texturados y pequenas piezas recortadas, no render ni ilustracion pulida.",
+      "Tratamiento inmersivo: la cámara entra en la maqueta y la escena continúa hasta los cuatro límites del encuadre.",
+      "Nunca mostrar la maqueta como objeto: sin base, cartón crudo, hojas sueltas, mesa, estudio, ciclorama, marco ni vacío exterior.",
+      "La escena debe parecer construida con papeles artesanales y fibras en planos físicos a distintas distancias, con aire, oclusiones y sombras reales entre capas, sin delatar el soporte exterior.",
       "Personajes como recortes o volumenes de papel integrados al diorama, con gesto sobrio; evitar drama facial hiperrealista, mascaras sobredimensionadas, violencia explicita y fantasia teatral.",
+      ...PAPER_CHARACTER_LINES,
     ],
   },
   cinematicPaperRelief: {
@@ -125,6 +128,12 @@ export function softenLegacyImagePrompt(value) {
     .replace(/\bEscena principal:\s*/gi, "Motivo central: ")
     .replace(/\bLa escena principal muestra\b/gi, "Motivo central sugerido:")
     .replace(/\bPersonaje:\s*/gi, "Presencia humana sugerida: ")
+    // Los prompts históricos pedían mostrar cantos y cartón. En el lenguaje
+    // vigente la materialidad sigue dentro de la escena, pero el soporte jamás
+    // aparece en el encuadre.
+    .replace(/\b(?:cart[oó]n|cartulinas?)\s+y\s+fibras\s+naturales\b/gi, "papeles artesanales y fibras naturales")
+    .replace(/\bbordes?\s+(?:de\s+papel\s+)?visibles\b/gi, "capas de papel superpuestas")
+    .replace(/\bmesa\s+de\s+(?:trabajo|estudio)\b/gi, "escena inmersiva")
     .replace(/\bdeath\b/gi, "mystery")
     .replace(/\bdeadly\b/gi, "haunting")
     .replace(/\bdoomed?\b/gi, "lost to legend")
@@ -174,6 +183,7 @@ export function buildCraftImagePrompt({
   composition = null,
   // Registro de época. Si no se pasa, se deduce de la comunidad.
   era = null,
+  narrativeMagic = null,
 } = {}) {
   const name = normalizeText(entity.name || entity.title || entity.slug || "");
   const region = normalizeText(entity.region || "Varios");
@@ -190,12 +200,12 @@ export function buildCraftImagePrompt({
     "",
     "Tecnica central:",
     "- Fotografia de un trabajo real de papel artesanal, no ilustracion digital plana.",
-    "- Paper cut, paper relief y paper quilling hechos a mano: capas fisicas, bordes de papel visibles, fibras, micro-sombras, dobleces finos, cortes precisos y volumen bajo.",
-    "- Debe sentirse como una pieza construida manualmente por artistas, fotografiada en estudio con luz suave y controlada.",
-    "- Profundidad real por capas de papel, pero sin verse como render 3D, sin plastico, sin glossy CGI, sin animacion y sin figuras flotando en perspectivas imposibles.",
+    "- Paper cut, paper relief y paper quilling hechos a mano: primer plano, plano medio y fondo físicamente separados a distintas distancias, con cantos internos, fibras, aire, oclusiones, micro-sombras y volumen real; nunca collage plano.",
+    "- Debe sentirse como una pieza construida manualmente por artistas, con luz suave y controlada; el estudio nunca entra en cuadro.",
+    "- Profundidad tridimensional real por capas escalonadas, con separación y sombras proyectadas entre ellas, sin verse como render 3D, sin plastico, sin glossy CGI ni animacion. Un comportamiento imposible del relato conserva la fabricación física del papel.",
     "- La camara puede bajar, subir o mirar a plomo cuando la composicion lo pida; lo que nunca cambia es que se fotografia una pieza fisica de papel, no un render.",
     `- ${getOrientationLine(orientation)}`,
-    "- Sin texto, sin letras, sin logos, sin marcas de agua, sin marco, sin borde decorativo.",
+    "- La cámara está dentro del diorama y recorta su perímetro: sin texto, letras, logos, marcas de agua, marco, borde exterior, base, cartón crudo o corrugado, mesa, estudio ni fondo ajeno al mundo narrativo. Los cantos entre capas internas sí son visibles y necesarios.",
     "",
     "Perfil de ronda visual:",
     ...styleProfileLines.map((line) => `- ${line}`),
@@ -215,6 +225,8 @@ export function buildCraftImagePrompt({
     "- Paleta editorial: verde selva, azul rio, dorado tierra, ocres minerales, piedra, fibras naturales y sombras organicas; usar acentos regionales, no una bandera literal.",
     "",
     "Contenido narrativo:",
+    ...(!narrativeMagic && (!entity.type || entity.type === "myth") ? MAGIC_IN_THE_ORDINARY_LINES : []),
+    ...buildNarrativeMagicLines(narrativeMagic),
     excerpt ? `- Resumen: ${excerpt}.` : null,
     sourcePrompt
       ? `- Materia narrativa del catalogo, solo como simbolos y escena base, no como instruccion de ilustracion literal: ${sourcePrompt}.`
@@ -222,7 +234,7 @@ export function buildCraftImagePrompt({
     "",
     "Composicion deseada:",
     "- Un solo tableau artesanal, limpio y poderoso, con jerarquia clara entre escena principal, geografia y simbolos culturales.",
-    "- Priorizar geografia, objetos, fauna/flora, arquitectura y simbolos del territorio sobre retratos genericos.",
+    "- Priorizar una acción o relación concreta del relato, situada mediante geografia, objetos, fauna/flora y arquitectura pertinentes; evitar retratos genericos y simbolos culturales añadidos como decoración.",
     "- Si hay personajes, deben ser respetuosos, estilizados, secundarios a la escena material y sin disfraces anacronicos.",
     "- Iluminacion fotografica lateral suave, sombras naturales de papel, textura tactil, acabado editorial de revista cultural.",
     "- Evitar aspecto infantil, caricatura, fantasy generico, pintura digital, poster plano, render 3D, plastico, neones y saturacion excesiva.",

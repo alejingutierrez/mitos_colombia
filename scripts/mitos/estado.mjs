@@ -26,9 +26,10 @@ const PASOS = ["personajes", "paisajes", "props", "triptico", "video"];
 const filas = [];
 
 for (const [slug, mito] of Object.entries(plan.mitos)) {
-  const dir = join("content/videos", comunidad, "mitos", slug);
-  // Dos mitos guardan su video en una carpeta con nombre viejo, de antes de
-  // este plan; se respeta para no romper rutas ya versionadas.
+  // Tres trípticos del ciclo de Bochica y dos videos conservan nombres de
+  // carpeta anteriores al plan. El propio plan los declara para que el estado
+  // físico no los marque como faltantes ni provoque regeneraciones duplicadas.
+  const dir = join("content/videos", comunidad, "mitos", mito.carpeta || slug);
   const kfDir = join("content/videos", comunidad, "videos", mito.carpeta_video || slug, "keyframes");
   const fichas = Object.entries(mito.biblia || {});
   const cuenta = (kind) => {
