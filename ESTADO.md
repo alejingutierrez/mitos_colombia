@@ -58,9 +58,13 @@ Auditado el 2026-09-16, pendiente de ejecutar:
 4. **`output/` mezcla salida con conocimiento.** `output/research/uitoto-*`,
    `output/references/chimila/` y los dos PDF de `output/pdf/` no son salida
    regenerable: son investigación. Su sitio es `content/` o `docs/`.
-5. **55 ramas sin fusionar**, entre ellas 25 `codex/*-editorial-review`, una
-   por comunidad. Son también la razón de que `.git` pese 6,2 GB con un HEAD de
-   240 MB: arrastran historia de binarios ya borrados.
+5. **55 ramas sin fusionar.** Auditadas el 2026-09-16 en
+   [`docs/ramas-sin-fusionar-2026-09-16.md`](docs/ramas-sin-fusionar-2026-09-16.md):
+   son dos cadenas y 14 duplicados, así que hay 9 decisiones, no 55. La más
+   grande es un tronco de 41 commits —los PR #44, #47, #48, #49 y #64— que
+   `main` nunca recibió y que fusiona con un solo conflicto. Son también la
+   razón de que `.git` pese 6,2 GB con un HEAD de 240 MB: arrastran historia de
+   binarios ya borrados.
 
 El destino acordado es un árbol único por comunidad:
 
