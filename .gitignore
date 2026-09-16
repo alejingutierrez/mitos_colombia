@@ -22,7 +22,6 @@ myths.db
 # Artefactos de ejecución de Playwright: logs de consola y capturas de prueba.
 # Las capturas de referencia de las plantillas viven en public/design-system/.
 .playwright-cli/
-output/playwright/
 
 # Volcados crudos de la investigación de keywords: los regeneran los scripts
 # de scripts/ads/. Sí se versionan los análisis (.md) y los payloads de
@@ -39,3 +38,17 @@ public/motifs/carousel/v1/
 
 # Payloads regenerables de las tandas de Higgsfield (se reemiten con mitos:tanda)
 scripts/tmp/
+
+# Binarios de salida de los pipelines de imagen y video. El espejo ligero
+# —planes, prompts, selecciones, manifiestos, revisiones— vive en content/
+# y sí se versiona. Aquí sólo quedan los jpeg/png que la tanda vuelve a
+# emitir. Si algo de output/ resulta ser conocimiento y no salida, su sitio
+# es content/ o docs/, no una excepción a esta regla.
+output/
+
+# Área de trabajo de una sesión: descargas, PDFs intermedios, payloads.
+tmp/
+
+# Worktrees de Claude Code: copias completas del repo. El trabajo vive en
+# la rama de cada uno, no en la copia.
+.claude/worktrees/
