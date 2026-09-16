@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "status": "prepared",
+  "scope": "Recreate only entrada and acto of existing myth352 triptych using new cast; retain huella unchanged; no other myth or public writes",
+  "myth_id": 352,
+  "title": "La Gran Cacica y el origen del agua",
+  "api_model": "gpt-image-2.5-sunburst",
+  "concurrency": 2,
+  "documentary_images_uploaded": 0,
+  "cast_source": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/revision-personajes-01/cacica-dos-hombres-v1.jpeg",
+  "retained_huella": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-01/el-agua/huella-v1.jpeg",
+  "jobs": [
+    {
+      "piece": "entrada",
+      "myth_id": 352,
+      "mode": "edit",
+      "model": "gpt-image-2.5-sunburst",
+      "quality": "high",
+      "size": "1536x1024",
+      "input_files": [
+        "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-01/el-agua/entrada-v1.jpeg",
+        "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/revision-personajes-01/cacica-dos-hombres-v1.jpeg"
+      ],
+      "previous_file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-01/el-agua/entrada-v1.jpeg",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-02/el-agua/entrada-elenco-v2.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/tripticos/produccion-api-02/prompts/el-agua-entrada-elenco-v2.txt"
+    },
+    {
+      "piece": "acto",
+      "myth_id": 352,
+      "mode": "edit",
+      "model": "gpt-image-2.5-sunburst",
+      "quality": "high",
+      "size": "1024x1536",
+      "input_files": [
+        "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-01/el-agua/acto-v2.jpeg",
+        "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/revision-personajes-01/cacica-dos-hombres-v1.jpeg"
+      ],
+      "previous_file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-01/el-agua/acto-v2.jpeg",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-02/el-agua/acto-elenco-v2.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/tripticos/produccion-api-02/prompts/el-agua-acto-elenco-v2.txt"
+    }
+  ]
+}
+

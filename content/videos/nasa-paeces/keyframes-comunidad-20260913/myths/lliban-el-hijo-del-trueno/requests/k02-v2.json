@@ -1,0 +1,34 @@
+{
+  "slug": "lliban-el-hijo-del-trueno",
+  "id": "k02",
+  "version": 2,
+  "created_at": "2026-09-13T21:39:47.100Z",
+  "plan_sha256": "92bccb669e4a088efb0ca46eaccd4937d2facd6687858d98bb9e7c5cb30d9a43",
+  "prompt_file": "content/videos/nasa-paeces/keyframes-comunidad-20260913/myths/lliban-el-hijo-del-trueno/prompts/k02-v2.txt",
+  "prompt_sha256": "aada1e26b3d5568962e6354961f2e53263fcb3d7c2129ea51e088f18b5a96acf",
+  "references": [
+    {
+      "path": "output/imagegen/nasa-paeces/tripticos/maqueta-3d-20260913/lliban-el-hijo-del-trueno/acto-v1.png",
+      "sha256": "206f9006449fb95c21b56dc431e791d02077d8df257c210df2a43df79ff9de34",
+      "role": "Tríptico acto: identidades, vestuario y escenario de ESTE mito; NO copia de composición."
+    },
+    {
+      "path": "output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b1b-maqueta-v2.png",
+      "sha256": "d7dc5d106daadbd61b032ae0b3bb0139806f2b49c82ad2e937157f84478e3f7f",
+      "role": "SOLO material físico de papel: no transferir personas, ropa, varas, laguna ni iluminación nocturna."
+    },
+    {
+      "path": "output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/comunidad-nasa/lliban-el-hijo-del-trueno/k01-v1.png",
+      "sha256": "4fd88e6ba1c3f9b60fb140ed7be578ccfd444221edcd75d317928ccbf1389f05",
+      "role": "Keyframe anterior k01: continuidad de identidades y lugares que coincidan, nunca importar acción u objetos ausentes en el nuevo plano."
+    }
+  ],
+  "request": {
+    "prompt": "Use case: illustration-story. Produce ONE portrait 9:16 cinematic KEYFRAME, a real-looking miniature built ENTIRELY from CUT AND FOLDED PAPER, photographed from INSIDE the set. Myth: Llíban, el hijo del Trueno. Frame k02.\n\nREFERENCE ROLES:\nImage 1: Tríptico acto: identidades, vestuario y escenario de ESTE mito; NO copia de composición.\nImage 2: SOLO material físico de papel: no transferir personas, ropa, varas, laguna ni iluminación nocturna.\nImage 3: Keyframe anterior k01: continuidad de identidades y lugares que coincidan, nunca importar acción u objetos ausentes en el nuevo plano.\n\nEXACT NEW SHOT, render only this moment, not an entire story or multi-panel sheet:\nMedio: ayudante joven adulto retrocede ante olla abierta con UNA culebra verde enrollada; Llíban aún fuera de cuadro.\n\nNARRATIVE CONTINUITY: Llíban P02 separado de Tama y Trueno. Niño cubierto; adulto según acto. Una culebra verde continua, sin alas ni patas. Combate fuera de campo.\nSelected account: Primera narración de la creciente, el niño y la culebra-boleadora. No añadir la huerta ni mandatos de otras variantes.\n\nPHYSICAL MATERIAL IS MANDATORY: separately cut, thick matte cardstock planes; deep air gaps and actual cast contact shadows; lifted edges, paper tabs, crisp folds and visibly attached garment panels. People are handmade folded-paper puppets with flat cut face planes, folded limbs and layered hands, never rounded dolls or illustrated skin. Rocks are angular folded cardstock, plants individual cut leaves bent from stems. Water is broad overlapping blue cardstock sheets, mist and clouds suspended paper cutouts. No painted textures pretending to be relief.\nCINEMATOGRAPHY: obey the shot's exact camera and time of day. Foreground paper edge/leaf/rock creates depth without hiding the main action; focal plane on action, optical miniature depth of field in near/far layers. Maintain identities, ages and clothes from the SAME myth references. Borderless immersive scene, no box, plinth, table, studio or collage. Frame extends edge to edge. Do NOT carry background objects from a previous scene into a new location.\nNo text, lettering, logo, watermark, symbols, sacred patterns, pan-Indigenous headdresses, golden jewelry, invented ritual, extra people or props. No brushwork, drawing outlines, flat illustration, realistic fabric/skin/liquid, plastic, clay or smooth CGI. Exactly ONE finished vertical 9:16 image. This is a new composition, not a crop of the reference.\n\nFINAL COMPOSITION OVERRIDE: Character names in continuity rules are NOT a cast list. Show ONLY the people/animals explicitly requested in THIS single shot. Do not add any reference person, animal, lake or staff just because it appears in a reference. Render precisely: Medio: ayudante joven adulto retrocede ante olla abierta con UNA culebra verde enrollada; Llíban aún fuera de cuadro.\nWhenever the scene explicitly calls for the servant/helper, he is a DISTINCT young adult: bare head with short straight black hair, plain OCHRE-BROWN short ruana, gray trousers, no white shoulder bag. NEVER give the helper Lliban's brimmed hat, sage-green ruana and ivory bag. Lliban retains exactly those reference features. Only show the helper if named in the shot. This reversible editorial costume distinction prevents mistaken identity.\nThis shot shows ONLY THE HELPER, not Lliban. Bare head, short hair, ochre-brown ruana, gray pants, NO HAT, NO BAG, no sage-green clothing. He recoils from one open pot and one green serpent. Lliban is completely absent.",
+    "referenced_image_paths": [
+      "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/maqueta-3d-20260913/lliban-el-hijo-del-trueno/acto-v1.png",
+      "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b1b-maqueta-v2.png",
+      "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/comunidad-nasa/lliban-el-hijo-del-trueno/k01-v1.png"
+    ]
+  }
+}

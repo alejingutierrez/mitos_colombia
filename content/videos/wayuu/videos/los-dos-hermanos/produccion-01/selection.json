@@ -1,0 +1,286 @@
+{
+  "schema": "wayuu-keyframe-selection/v1",
+  "slug": "los-dos-hermanos",
+  "title": "Los dos hermanos",
+  "status": "complete_pending_user_approval",
+  "plan": "content/videos/wayuu/videos/los-dos-hermanos/preproduccion-01/plan.json",
+  "script": "content/videos/wayuu/videos/los-dos-hermanos/preproduccion-01/GUION-TECNICO.md",
+  "research": "content/videos/wayuu/videos/los-dos-hermanos/preproduccion-01/INVESTIGACION.md",
+  "quality": "medium",
+  "generation": {
+    "provider": "OpenAI API",
+    "model": "gpt-image-2.5-sunburst",
+    "mode": "image_edit_with_two_prior_approved_keyframes_and_camera_breaks",
+    "api_request_size": "1024x1536",
+    "delivery_size": "864x1536",
+    "delivery_transform": "center_crop_864x1536",
+    "output_format": "jpeg",
+    "total_unique_generations": 16,
+    "selected_generations": 16,
+    "superseded_generations": 0,
+    "notes": [
+      "Matriz de dieciséis familias de cámara y ruptura obligatoria de altura, eje, escala o profundidad.",
+      "Los dos keyframes previos se usan sólo como continuidad causal; los descartes no alimentan la cadena.",
+      "Revisión visual realizada sobre la secuencia completa; no equivale a certificación etnográfica."
+    ]
+  },
+  "selected": [
+    {
+      "id": "b1a",
+      "version": "01",
+      "camera": "elevada oblicua desde una ladera; gran plano general territorial",
+      "path": "output/imagegen/wayuu/keyframes/los-dos-hermanos-preproduccion-01/b1a.jpeg",
+      "sha256": "2d0139d14bb47ad96b591ebd025b03ca064d337991dbbb7816231ad316313eb2",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "La mejor puntería: elevada oblicua desde una ladera; composición revisada dentro de la secuencia completa."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/los-dos-hermanos/preproduccion-01/prepared-b1a-01/prompts/b1a.txt",
+      "prompt_sha256": "2b0e295bb89b7cfa9f00677a6ccf04aed00ea5edb6f28cd331cdac1e75db4385"
+    },
+    {
+      "id": "b1b",
+      "version": "01",
+      "camera": "lateral a la altura de manos u objeto; macro narrativo sin rostro",
+      "path": "output/imagegen/wayuu/keyframes/los-dos-hermanos-preproduccion-01/b1b.jpeg",
+      "sha256": "fc589f8b5c9ae238121b99f95ff8304e4c1e82d86294f486f318416a7b18a136",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "La flecha en el blanco: lateral a la altura de manos u objeto; composición revisada dentro de la secuencia completa."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/los-dos-hermanos/preproduccion-01/prepared-b1b-01/prompts/b1b.txt",
+      "prompt_sha256": "3835cdcac02f113af7bba7621c0acbe76c3ee9c052bf29f3d1a7c34477b04037"
+    },
+    {
+      "id": "b2a",
+      "version": "01",
+      "camera": "contrapicado extremo desde el suelo; plano general bajo",
+      "path": "output/imagegen/wayuu/keyframes/los-dos-hermanos-preproduccion-01/b2a.jpeg",
+      "sha256": "9f282d5a5893d8ce6526aff398987fa55e29b375ba8345bd31ff03bf4c4e7cc9",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "El robo del rebaño: contrapicado extremo desde el suelo; composición revisada dentro de la secuencia completa."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/los-dos-hermanos/preproduccion-01/prepared-b2a-01/prompts/b2a.txt",
+      "prompt_sha256": "cb2971b44fde47c8df4c6e070d7b546d69a35286787e00d65970f00a47641303"
+    },
+    {
+      "id": "b2b",
+      "version": "01",
+      "camera": "cenital verdadero de 90 grados; detalle gráfico de suelo",
+      "path": "output/imagegen/wayuu/keyframes/los-dos-hermanos-preproduccion-01/b2b.jpeg",
+      "sha256": "4c9347ee9985a3954c1d2783fa17caf5b39e43f20f504be95fb211d0349e1f8a",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "El hermano parte: cenital verdadero de 90 grados; composición revisada dentro de la secuencia completa."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/los-dos-hermanos/preproduccion-01/prepared-b2b-01/prompts/b2b.txt",
+      "prompt_sha256": "862efbac9341c32927bae2533a87567c744333cf5ebf46ba6321ee5418a393cd"
+    },
+    {
+      "id": "b3a",
+      "version": "01",
+      "camera": "lateral teleobjetivo sin cielo; plano general comprimido",
+      "path": "output/imagegen/wayuu/keyframes/los-dos-hermanos-preproduccion-01/b3a.jpeg",
+      "sha256": "c7ca078762a0fb1d80bfd77cdcb0a241cb94036c9375a43461f4a788af7ebc6e",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "Regresan sin él: lateral teleobjetivo sin cielo; composición revisada dentro de la secuencia completa."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/los-dos-hermanos/preproduccion-01/prepared-b3a-01/prompts/b3a.txt",
+      "prompt_sha256": "02254384e1373a0957d5c476baa867bb58c52b63cc554709478166aa9fff568b"
+    },
+    {
+      "id": "b3b",
+      "version": "01",
+      "camera": "rasante a través de una grieta o vegetación; gran plano general de fuga",
+      "path": "output/imagegen/wayuu/keyframes/los-dos-hermanos-preproduccion-01/b3b.jpeg",
+      "sha256": "cdb4c52d076017a69dc07ba4749ea76f472db37e960d6d3b0a431718f6d33f75",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "La ausencia se entiende: rasante a través de una grieta o vegetación; composición revisada dentro de la secuencia completa."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/los-dos-hermanos/preproduccion-01/prepared-b3b-01/prompts/b3b.txt",
+      "prompt_sha256": "e8efdc3aea7fbac05dd60d00d50c7c4c970a6ca221ddf9d96dc88796d9fc7077"
+    },
+    {
+      "id": "b4a",
+      "version": "01",
+      "camera": "alta diagonal de 60 grados; plano conjunto arquitectónico",
+      "path": "output/imagegen/wayuu/keyframes/los-dos-hermanos-preproduccion-01/b4a.jpeg",
+      "sha256": "adad551a249ace5ef18c8131bfb4abb5d0eab975b38ed7fcae02b2ca6e1729e7",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "Seguir las huellas: alta diagonal de 60 grados; composición revisada dentro de la secuencia completa."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/los-dos-hermanos/preproduccion-01/prepared-b4a-01/prompts/b4a.txt",
+      "prompt_sha256": "70ef72f4d98442b88db2c73176fc822f842780a37c86dcef913e29540def957d"
+    },
+    {
+      "id": "b4b",
+      "version": "01",
+      "camera": "sobre el hombro con primer término dominante; plano medio ambiental",
+      "path": "output/imagegen/wayuu/keyframes/los-dos-hermanos-preproduccion-01/b4b.jpeg",
+      "sha256": "96bcf0d7cb0406d649d20b84bd86e45e0a7afc3264f103e3dc3f8fce99b1c047",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "Esperar antes de actuar: sobre el hombro con primer término dominante; composición revisada dentro de la secuencia completa."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/los-dos-hermanos/preproduccion-01/prepared-b4b-01/prompts/b4b.txt",
+      "prompt_sha256": "1f210937c82d53ac5d0eb40ce0674002cbd08cd5ff89f36427e0ffda45be41cb"
+    },
+    {
+      "id": "b5a",
+      "version": "01",
+      "camera": "subjetiva baja desde la sombra; plano general con primer término oscuro",
+      "path": "output/imagegen/wayuu/keyframes/los-dos-hermanos-preproduccion-01/b5a.jpeg",
+      "sha256": "c77a925e0b7908edccfc7f0f7c8148103e71cd19f3af3bc80ea18e1344847db3",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "La puntería desde la sombra: subjetiva baja desde la sombra; composición revisada dentro de la secuencia completa."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/los-dos-hermanos/preproduccion-01/prepared-b5a-01/prompts/b5a.txt",
+      "prompt_sha256": "843ae21879d26d599daf016002a5f9c4e6bd3660f77c43363667e36c22c3e3d4"
+    },
+    {
+      "id": "b5b",
+      "version": "01",
+      "camera": "perfil distante con horizonte desplazado; plano general lateral",
+      "path": "output/imagegen/wayuu/keyframes/los-dos-hermanos-preproduccion-01/b5b.jpeg",
+      "sha256": "d91f780824d955a307d2224abb9598924024f3d92b7337c9b1b40744daef5370",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "El ganado vuelve: perfil distante con horizonte desplazado; composición revisada dentro de la secuencia completa."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/los-dos-hermanos/preproduccion-01/prepared-b5b-01/prompts/b5b.txt",
+      "prompt_sha256": "d114e7cfae9b50b744f71e87d75d8ce453753007b164012288b470f9732a8c50"
+    },
+    {
+      "id": "b6a",
+      "version": "01",
+      "camera": "cenital diagonal amplio; plano de consecuencia",
+      "path": "output/imagegen/wayuu/keyframes/los-dos-hermanos-preproduccion-01/b6a.jpeg",
+      "sha256": "d50d629bfeb542768eed2d77d899bfe8c14bd9ab6e7b458f5d9f65b168a310eb",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "Riqueza y ausencia: cenital diagonal amplio; composición revisada dentro de la secuencia completa."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/los-dos-hermanos/preproduccion-01/prepared-b6a-01/prompts/b6a.txt",
+      "prompt_sha256": "3d1a6ead814d28c0be149d68110afc512f23f203268b7d3d03db1423afc6ab33"
+    },
+    {
+      "id": "b6b",
+      "version": "01",
+      "camera": "macro frontal de materia; primerísimo plano de objeto",
+      "path": "output/imagegen/wayuu/keyframes/los-dos-hermanos-preproduccion-01/b6b.jpeg",
+      "sha256": "e95e1639b4191304f98e265a7d0e11d77f54043690229f2da052b49ea3df28da",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "La flecha se curva: macro frontal de materia; composición revisada dentro de la secuencia completa."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/los-dos-hermanos/preproduccion-01/prepared-b6b-01/prompts/b6b.txt",
+      "prompt_sha256": "1743987a86600b127707bef3f4a515226577bea6743873a02bd6783f359722c8"
+    },
+    {
+      "id": "b7a",
+      "version": "01",
+      "camera": "contrapicado enmarcado entre postes o rocas; plano general enmarcado",
+      "path": "output/imagegen/wayuu/keyframes/los-dos-hermanos-preproduccion-01/b7a.jpeg",
+      "sha256": "94571fc3f53d74be61f73e2b42aa91ed215df299195855dc0f334660c1f2abc9",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "El duelo: contrapicado enmarcado entre postes o rocas; composición revisada dentro de la secuencia completa."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/los-dos-hermanos/preproduccion-01/prepared-b7a-01/prompts/b7a.txt",
+      "prompt_sha256": "8dfcf66065348e6ea98aa65ac3c0a4fe79d88a67c97d2a476121dc7d1861d196"
+    },
+    {
+      "id": "b7b",
+      "version": "01",
+      "camera": "teleobjetivo profundo a través de una abertura; plano largo comprimido",
+      "path": "output/imagegen/wayuu/keyframes/los-dos-hermanos-preproduccion-01/b7b.jpeg",
+      "sha256": "6dc8e99d0cb2990d453cbd854170f83e16119f52541dfab3837a950e33d69a86",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "Perro y mula permanecen: teleobjetivo profundo a través de una abertura; composición revisada dentro de la secuencia completa."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/los-dos-hermanos/preproduccion-01/prepared-b7b-01/prompts/b7b.txt",
+      "prompt_sha256": "b9fbf47ff1d7eae9d2490452af96c93b0ac5f65ee11a90a3814875a5bf938c5b"
+    },
+    {
+      "id": "b8a",
+      "version": "01",
+      "camera": "aérea oblicua desde atrás; gran plano general de relación",
+      "path": "output/imagegen/wayuu/keyframes/los-dos-hermanos-preproduccion-01/b8a.jpeg",
+      "sha256": "8602fd97465750acd70d6adc38ab429bb718c0bf235a808cfeebf0d0e3437817",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "Hablar entre familias: aérea oblicua desde atrás; composición revisada dentro de la secuencia completa."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/los-dos-hermanos/preproduccion-01/prepared-b8a-01/prompts/b8a.txt",
+      "prompt_sha256": "c8492c5e26fcb489489edcaac856e91f2b8bde229078cc18281a7af3c6d706f6"
+    },
+    {
+      "id": "b8b",
+      "version": "01",
+      "camera": "a ras del suelo mirando hacia la distancia; plano final de fuga",
+      "path": "output/imagegen/wayuu/keyframes/los-dos-hermanos-preproduccion-01/b8b.jpeg",
+      "sha256": "54ea73f13d1dfbb2414f38c68ef78ae64dcb05803654914a069df6a16cc12f6f",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "Dos verdades: a ras del suelo mirando hacia la distancia; composición revisada dentro de la secuencia completa."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/los-dos-hermanos/preproduccion-01/prepared-b8b-01/prompts/b8b.txt",
+      "prompt_sha256": "02d4a963580d8ba0a47306b3daba0521cc0e92e7790a56023f43556257677e6c"
+    }
+  ],
+  "superseded": []
+}

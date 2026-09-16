@@ -1,0 +1,69 @@
+{
+  "schema": "mitos-pilot-reference-review/v2",
+  "reviewed_at": "2026-09-07",
+  "cultural_authority": "none_from_image_alone",
+  "generation_mode": "new_compositions_text_only_no_uploads",
+  "prior_review": "content/videos/wayuu/videos/aramai/piloto-01/reference-review.json",
+  "references": [
+    {
+      "path": "output/imagegen/wayuu/triptychs/wayuu-aramai-triptych-15-selected/entrada.jpeg",
+      "sha256": "42964c2bfc4d1fb2e7440ff069b609e71f2d5a06fa70bca9cfe8528a8e68c28c",
+      "observed": "Enramada nocturna dentro de día, Arámai gris/arcilla, varias personas y vegetación abundante.",
+      "keep": "Noche profunda dentro de enramada, vida cotidiana alrededor, ritmo de postes y vegetación en distintos planos.",
+      "omit": "Caras demasiado ilustradas y acumulación de detalle sin jerarquía.",
+      "influence": [
+        "b2a",
+        "b2b"
+      ],
+      "review_status": "reinspected_this_turn"
+    },
+    {
+      "path": "output/imagegen/wayuu/triptychs/wayuu-aramai-magic-14-options-01/05-el-agua-recuerda-el-futuro.jpeg",
+      "sha256": "890d19ecc144dbc728129746643798ee9ae2b52fc1def86c94f8693ea912717d",
+      "observed": "Ranchería diurna con reflejo nocturno, reparto de agua y Arámai separado.",
+      "keep": "Día sobre jagüey y noche en el reflejo; acción humana ordinaria e imposible visible desde el inicio.",
+      "omit": "Hipótesis restrictiva de piloto01 que eliminaba todo reflejo nocturno. Aquí se declara anticipación visual, sin conectar agua a contagio.",
+      "influence": [
+        "b1a",
+        "b1b"
+      ],
+      "review_status": "reinspected_this_turn"
+    },
+    {
+      "path": "output/imagegen/wayuu/triptychs/wayuu-aramai-symbolic-16-01/huella.jpeg",
+      "sha256": "5e4cbe9a1ba7dbc7143ab5ebaec98b8d1a86a39ef453e12f0e7cdeeb4236f055",
+      "observed": "Chinchorro vacío contiene cavidad índigo, sobre fondo ocre sencillo.",
+      "keep": "La noche pesa en trama de chinchorro; transformación física inequívoca.",
+      "omit": "Objeto simbólico aislado; nuevo plano lo reintegra a la enramada, gesto de Arámai y territorio exterior.",
+      "influence": [
+        "b2b"
+      ],
+      "review_status": "reinspected_this_turn"
+    },
+    {
+      "path": "output/imagegen/wayuu/keyframes/aramai-piloto-01/b2a.jpeg",
+      "sha256": "3fc4044600cfed3fb6dc01e3fd670ef28252ad43e8666637f8bd5352289c497e",
+      "review_status": "reinspected_this_turn",
+      "observed": "Enramada aislada con mucha superficie vacía; noche parecida a panel azul.",
+      "keep": "Caras planas, papel con profundidad y continuidad de Arámai.",
+      "omit": "Exceso de vacío; riqueza dependiente sólo de franjas azules.",
+      "influence": [
+        "b2a"
+      ]
+    },
+    {
+      "path": "output/imagegen/wayuu/keyframes/aramai-piloto-01/b2b.jpeg",
+      "sha256": "a9f401611576f45b07c56c2655ffc3bd27ccebff050419f3491cdb4364941bc9",
+      "review_status": "reinspected_this_turn",
+      "observed": "Gran campo azul y persona diminuta; pocas relaciones cotidianas.",
+      "keep": "Caras planas, papel con profundidad y continuidad de Arámai.",
+      "omit": "Exceso de vacío; riqueza dependiente sólo de franjas azules.",
+      "influence": [
+        "b2b"
+      ]
+    }
+  ],
+  "unmodified_context": "Biblia y relato ya revisados en piloto01, conservados por referencia; no se afirma haber reinspeccionado todos los modelos esta vez.",
+  "scope": "El cambio del usuario se aplica a la misma muestra de cinco instantes. Ningún original se borra o sobrescribe."
+}
+

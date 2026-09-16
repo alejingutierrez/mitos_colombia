@@ -1,0 +1,114 @@
+{
+  "schema": "ette-keyframe-api-production/v1",
+  "myth_id": 352,
+  "myth": "el-agua",
+  "scope": [
+    "kf01",
+    "kf02"
+  ],
+  "authorization": "User requested starting keyframe creation, 2026-09-13; existing OpenAI key and Sunburst model previously selected",
+  "status": "pilot_two_frames_produced_review_pending",
+  "method": "official bundled imagegen CLI; no custom SDK runner",
+  "jobs": [
+    {
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-01/el-agua/kf01-v1.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-01/prompts/el-agua-kf01-v1.txt",
+      "sha256": "24b7aaeb7398c247283f8bf0b2786d392d06743f3703c6fa34f51e80567a3ba9",
+      "prompt_sha256": "3a52a5a29a3ca160d81bca713f3d6301134c4483a93030e5f5ad477fd4640b27",
+      "bytes": 305535,
+      "width": 1024,
+      "height": 1536,
+      "format": "jpeg",
+      "id": "kf01-v1",
+      "frame_id": "kf01",
+      "revision": 1,
+      "selected": false,
+      "inputs": [
+        {
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-06/el-agua/entrada-aire-paleta-v6.jpeg",
+          "sha256": "393e2b2c576e3b50670bce81e105c99c9e7fbf6e74daa929562a500545bcf83e",
+          "role": "primary paper technique, clothing and male identities"
+        },
+        {
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-07/p07-rostro-atuendo-v1.jpeg",
+          "sha256": "3748d29dfc3c99b04ff962e1b142c5692ef1aee6bfb2a1e0efe65f3ee5f03cc5",
+          "role": "female facial identity only; no realistic medium or long dress"
+        }
+      ],
+      "duration_seconds": 25,
+      "provider": "openai",
+      "model": "gpt-image-2.5-sunburst",
+      "quality": "medium",
+      "mode": "edit",
+      "requested_size": "1024x1536",
+      "status": "produced_visually_reviewed_editorial_candidate",
+      "user_approved": false,
+      "culturally_certified": false
+    },
+    {
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-01/el-agua/kf01-aire-v2.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-01/prompts/el-agua-kf01-aire-v2.txt",
+      "sha256": "72732b1ceb389d13784f43edc6dd40b1915d47d30135e29cb1b1d09eb55ef76b",
+      "prompt_sha256": "c7976eddece8584a964297a3619e45dfcedbc6aa0eb9868a29714f1155d1c210",
+      "bytes": 324144,
+      "width": 1024,
+      "height": 1536,
+      "format": "jpeg",
+      "id": "kf01-aire-v2",
+      "frame_id": "kf01",
+      "revision": 2,
+      "selected": true,
+      "inputs": [
+        {
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-01/el-agua/kf01-v1.jpeg",
+          "sha256": "24b7aaeb7398c247283f8bf0b2786d392d06743f3703c6fa34f51e80567a3ba9",
+          "role": "identity-preserving zoom-out target"
+        }
+      ],
+      "duration_seconds": 22.2,
+      "provider": "openai",
+      "model": "gpt-image-2.5-sunburst",
+      "quality": "medium",
+      "mode": "edit",
+      "requested_size": "1024x1536",
+      "status": "produced_visually_reviewed_editorial_candidate",
+      "user_approved": false,
+      "culturally_certified": false
+    },
+    {
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-01/el-agua/kf02-v1.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-01/prompts/el-agua-kf02-v1.txt",
+      "sha256": "91b051c48ad39759b235e267c0d12fc59bd7b599d9bcb3f85474842b4cff9564",
+      "prompt_sha256": "f4d44f26cc09fb60210a4efa2e3ce5f47eb68b6e6e94025e24ffe5c112e00c6d",
+      "bytes": 318801,
+      "width": 1024,
+      "height": 1536,
+      "format": "jpeg",
+      "id": "kf02-v1",
+      "frame_id": "kf02",
+      "revision": 1,
+      "selected": true,
+      "inputs": [
+        {
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-01/el-agua/kf01-aire-v2.jpeg",
+          "sha256": "72732b1ceb389d13784f43edc6dd40b1915d47d30135e29cb1b1d09eb55ef76b",
+          "role": "previous visually reviewed same-myth keyframe; identities, dress, terrain and material"
+        },
+        {
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-05/u03-macanas-util-excavacion-master-v1-refined.jpeg",
+          "sha256": "c1f027e7b76a78cb7aa2417c92b001af822ad0fb5e3556f9b0c1c66b832ced5d",
+          "role": "narrow digging tool only, not broad macana or weapon story"
+        }
+      ],
+      "duration_seconds": 21.8,
+      "provider": "openai",
+      "model": "gpt-image-2.5-sunburst",
+      "quality": "medium",
+      "mode": "edit",
+      "requested_size": "1024x1536",
+      "status": "produced_visually_reviewed_editorial_candidate",
+      "user_approved": false,
+      "culturally_certified": false
+    }
+  ]
+}

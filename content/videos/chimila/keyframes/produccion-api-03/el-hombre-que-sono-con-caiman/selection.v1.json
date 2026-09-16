@@ -1,0 +1,361 @@
+{
+  "schema": "ette-myth-keyframe-selection/v1",
+  "myth_id": 365,
+  "myth": "el-hombre-que-sono-con-caiman",
+  "myth_title": "El hombre que soñó con un caimán",
+  "narrative_sha256": "8f61ce31eab06cbd0bd58cab9db39099be2eac54b3c301d6d01da679b36e79e0",
+  "planned_count": 10,
+  "selected": [
+    {
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-hombre-que-sono-con-caiman/kf01-v1.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/el-hombre-que-sono-con-caiman-kf01-v1.txt",
+      "inputs": [
+        {
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/el-hombre-que-sono-con-caiman/entrada-v1.jpeg",
+          "role": "same-myth canonical triptych: materials and cast reference only, not automatic plot stage",
+          "sha256": "67e8ae71abbde1ee9c59099398bf5540714154c21baf9fd770dd5fa1bc696623"
+        },
+        {
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/el-hombre-que-sono-con-caiman/acto-cola-completa-v3.jpeg",
+          "role": "same-myth secondary cast/style reference only; do not import later action or symbolic arrows/suns",
+          "sha256": "08b8a642e8735052dc21ce0bfd4002d8f8993f3e91421aa67f484949a5cf3c50"
+        }
+      ],
+      "sha256": "7d3732588675f5750db12ea9cd2227fbe657f81ca7684faf4041177c9492cc06",
+      "prompt_sha256": "7a9f0764eaf8d5ffcff6f182c8cc0d45a9759eaef4334a81ba51a8f0a11c4d4c",
+      "bytes": 299000,
+      "width": 1024,
+      "height": 1536,
+      "format": "jpeg",
+      "myth_id": 365,
+      "slug": "el-hombre-que-sono-con-caiman",
+      "frame_id": "kf01",
+      "title": "El sueño y el temor",
+      "id": "kf01-v1",
+      "revision": 1,
+      "provider": "openai",
+      "model": "gpt-image-2.5-sunburst",
+      "quality": "medium",
+      "mode": "edit",
+      "selected": true,
+      "status": "produced_visually_reviewed_editorial_candidate",
+      "user_approved": false,
+      "culturally_certified": false,
+      "review_notes": "Dos hermanos adultos diferenciados: soñador de cabello oscuro hasta hombros a la izquierda y hermano rizado a la derecha. Conversación sobre sueño, sin caimán ni collage.",
+      "duration_seconds": 19.9
+    },
+    {
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-hombre-que-sono-con-caiman/kf02-v2.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/el-hombre-que-sono-con-caiman-kf02-v2.txt",
+      "inputs": [
+        {
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-hombre-que-sono-con-caiman/kf02-v1.jpeg",
+          "role": "only paper beach river palette; remove both men and giant egg",
+          "sha256": "fd029187eaf7d6301fdc1d82c3786f64514951dcbc43a6ed1c72da630b03dc8b"
+        }
+      ],
+      "sha256": "fd509f71eb79464ca6d58b920366a63ce708ad4113e2d2644579faf6433c9448",
+      "prompt_sha256": "ae0a07772af76852b35e93b266c0076baac2122b819271ae9f49b740820863bd",
+      "bytes": 314305,
+      "width": 1024,
+      "height": 1536,
+      "format": "jpeg",
+      "myth_id": 365,
+      "slug": "el-hombre-que-sono-con-caiman",
+      "frame_id": "kf02",
+      "title": "El huevo soñado",
+      "id": "kf02-v2",
+      "revision": 2,
+      "provider": "openai",
+      "model": "gpt-image-2.5-sunburst",
+      "quality": "medium",
+      "mode": "edit",
+      "selected": true,
+      "status": "produced_visually_reviewed_editorial_candidate",
+      "user_approved": false,
+      "culturally_certified": false,
+      "review_notes": "Playa soñada continua con un grupo de cinco huevos en la arena. Se retiraron los hermanos y el huevo gigante; sin burbuja ni caimán.",
+      "duration_seconds": 16.9
+    },
+    {
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-hombre-que-sono-con-caiman/kf03-v1.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/el-hombre-que-sono-con-caiman-kf03-v1.txt",
+      "inputs": [
+        {
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-hombre-que-sono-con-caiman/kf02-v2.jpeg",
+          "role": "previous visually reviewed same-myth frame; preserve cast, garment and spatial continuity",
+          "sha256": "fd509f71eb79464ca6d58b920366a63ce708ad4113e2d2644579faf6433c9448"
+        },
+        {
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-hombre-que-sono-con-caiman/kf01-v1.jpeg",
+          "role": "identity ONLY of same shoulder dark-haired dreaming man and curly brother; current action overrides, no duplicate, only current requested people",
+          "sha256": "7d3732588675f5750db12ea9cd2227fbe657f81ca7684faf4041177c9492cc06"
+        }
+      ],
+      "sha256": "2aceb85082640cb7d7a6ecb6191ce842bad4c3e6e8c7131c562021e74bef32c2",
+      "prompt_sha256": "6f105d1daac7b22ccbdc9578c17ec1b69ac54bfd46cb557300ab377414e95a95",
+      "bytes": 320096,
+      "width": 1024,
+      "height": 1536,
+      "format": "jpeg",
+      "myth_id": 365,
+      "slug": "el-hombre-que-sono-con-caiman",
+      "frame_id": "kf03",
+      "title": "Ir a pescar",
+      "id": "kf03-v1",
+      "revision": 1,
+      "provider": "openai",
+      "model": "gpt-image-2.5-sunburst",
+      "quality": "medium",
+      "mode": "edit",
+      "selected": true,
+      "status": "produced_visually_reviewed_editorial_candidate",
+      "user_approved": false,
+      "culturally_certified": false,
+      "review_notes": "Los mismos dos hermanos se acercan a la playa del río con arcos bajos, sin ataque ni caimán prematuro.",
+      "duration_seconds": 20.3
+    },
+    {
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-hombre-que-sono-con-caiman/kf04-v1.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/el-hombre-que-sono-con-caiman-kf04-v1.txt",
+      "inputs": [
+        {
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-hombre-que-sono-con-caiman/kf03-v1.jpeg",
+          "role": "previous visually reviewed same-myth frame; preserve cast, garment and spatial continuity",
+          "sha256": "2aceb85082640cb7d7a6ecb6191ce842bad4c3e6e8c7131c562021e74bef32c2"
+        }
+      ],
+      "sha256": "c7975ccbae8ac53f5d78039a29679e5e205a10196e566f78cd76753987fbb32d",
+      "prompt_sha256": "d3c476a48016eac9a86806ee48b3946491a8ca26c9a031fcb95cd4b34f6c1e00",
+      "bytes": 363093,
+      "width": 1024,
+      "height": 1536,
+      "format": "jpeg",
+      "myth_id": 365,
+      "slug": "el-hombre-que-sono-con-caiman",
+      "frame_id": "kf04",
+      "title": "El caimán aparece",
+      "id": "kf04-v1",
+      "revision": 1,
+      "provider": "openai",
+      "model": "gpt-image-2.5-sunburst",
+      "quality": "medium",
+      "mode": "edit",
+      "selected": true,
+      "status": "produced_visually_reviewed_editorial_candidate",
+      "user_approved": false,
+      "culturally_certified": false,
+      "review_notes": "Un caimán natural aparece desde el río mientras los dos hermanos permanecen separados en la orilla. Sin mandíbula alrededor de persona ni consumo visible.",
+      "duration_seconds": 20.9
+    },
+    {
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-hombre-que-sono-con-caiman/kf05-v1.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/el-hombre-que-sono-con-caiman-kf05-v1.txt",
+      "inputs": [
+        {
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-hombre-que-sono-con-caiman/kf04-v1.jpeg",
+          "role": "previous visually reviewed same-myth frame; preserve cast, garment and spatial continuity",
+          "sha256": "c7975ccbae8ac53f5d78039a29679e5e205a10196e566f78cd76753987fbb32d"
+        }
+      ],
+      "sha256": "95ebf4f007c332d6a62472822fc4eb73764728c13ea916e4cdbe584ea1aaa050",
+      "prompt_sha256": "6d4ae4e421265c29b4b83517b8cb5bc9da0cb6de2574331dcdf41d33b0295fc5",
+      "bytes": 364831,
+      "width": 1024,
+      "height": 1536,
+      "format": "jpeg",
+      "myth_id": 365,
+      "slug": "el-hombre-que-sono-con-caiman",
+      "frame_id": "kf05",
+      "title": "Oscuridad y día afuera",
+      "id": "kf05-v1",
+      "revision": 1,
+      "provider": "openai",
+      "model": "gpt-image-2.5-sunburst",
+      "quality": "medium",
+      "mode": "edit",
+      "selected": true,
+      "status": "produced_visually_reviewed_editorial_candidate",
+      "user_approved": false,
+      "culturally_certified": false,
+      "review_notes": "Caimán al amanecer con mono vocalizando arriba; ningún humano dentro del animal. La voz usa tres pequeñas piezas de papel sin texto, recurso editorial no literal.",
+      "duration_seconds": 18.4
+    },
+    {
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-hombre-que-sono-con-caiman/kf06-v2.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/el-hombre-que-sono-con-caiman-kf06-v2.txt",
+      "inputs": [
+        {
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-hombre-que-sono-con-caiman/kf06-v1.jpeg",
+          "role": "exact escaped man caiman paper landscape; correct only arrow jaw support and fit whole tail",
+          "sha256": "abc1ea75690802cd18096dc62e8aacc17d750163898d8384d1f4fdef158c745d"
+        }
+      ],
+      "sha256": "cb2a8ff1e79ff608fa9df01d4341434eed95b8da4c3d1ad28ae6b435993f8493",
+      "prompt_sha256": "3a730dd7f8cb39b12a98d6911ac74bdea02eca93c9aae85d7da2b4b0790b1697",
+      "bytes": 361431,
+      "width": 1024,
+      "height": 1536,
+      "format": "jpeg",
+      "myth_id": 365,
+      "slug": "el-hombre-que-sono-con-caiman",
+      "frame_id": "kf06",
+      "title": "La salida",
+      "id": "kf06-v2",
+      "revision": 2,
+      "provider": "openai",
+      "model": "gpt-image-2.5-sunburst",
+      "quality": "medium",
+      "mode": "edit",
+      "selected": true,
+      "status": "produced_visually_reviewed_editorial_candidate",
+      "user_approved": false,
+      "culturally_certified": false,
+      "review_notes": "Flecha única vertical sostiene claramente ambas mandíbulas. Mismo hombre ya fuera, caimán completo con punta de cola dentro del encuadre; sin consumo visible ni hermano duplicado.",
+      "duration_seconds": 20.7
+    },
+    {
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-hombre-que-sono-con-caiman/kf07-v1.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/el-hombre-que-sono-con-caiman-kf07-v1.txt",
+      "inputs": [
+        {
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-hombre-que-sono-con-caiman/kf06-v2.jpeg",
+          "role": "previous visually reviewed same-myth frame; preserve cast, garment and spatial continuity",
+          "sha256": "cb2a8ff1e79ff608fa9df01d4341434eed95b8da4c3d1ad28ae6b435993f8493"
+        }
+      ],
+      "sha256": "87d7ad1784daad408a95fe56b7d62e47b5cf818b6afc8a17a32c642e7f897fe7",
+      "prompt_sha256": "016ddfaaffcbea8c737365376a5345a0594155b8fda334b1f55533cc85664e13",
+      "bytes": 356047,
+      "width": 1024,
+      "height": 1536,
+      "format": "jpeg",
+      "myth_id": 365,
+      "slug": "el-hombre-que-sono-con-caiman",
+      "frame_id": "kf07",
+      "title": "Regresar enfermo",
+      "id": "kf07-v1",
+      "revision": 1,
+      "provider": "openai",
+      "model": "gpt-image-2.5-sunburst",
+      "quality": "medium",
+      "mode": "edit",
+      "selected": true,
+      "status": "produced_visually_reviewed_editorial_candidate",
+      "user_approved": false,
+      "culturally_certified": false,
+      "review_notes": "Mismo hombre vuelve indispuesto al poblado junto a adultos con chicha; no síntomas inventados, caimán ni escena de curación añadida.",
+      "duration_seconds": 19.5
+    },
+    {
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-hombre-que-sono-con-caiman/kf08-v1.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/el-hombre-que-sono-con-caiman-kf08-v1.txt",
+      "inputs": [
+        {
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-hombre-que-sono-con-caiman/kf07-v1.jpeg",
+          "role": "previous visually reviewed same-myth frame; preserve cast, garment and spatial continuity",
+          "sha256": "87d7ad1784daad408a95fe56b7d62e47b5cf818b6afc8a17a32c642e7f897fe7"
+        }
+      ],
+      "sha256": "d9f0e0119f7a6b0a50d5c798b922b2a3b72cebb1f22fc9050829a809f3d52171",
+      "prompt_sha256": "81df80551e1f598a49f2030e53247cdd828b6ce3c5cdea1416cb3d985ec17fe8",
+      "bytes": 383518,
+      "width": 1024,
+      "height": 1536,
+      "format": "jpeg",
+      "myth_id": 365,
+      "slug": "el-hombre-que-sono-con-caiman",
+      "frame_id": "kf08",
+      "title": "Retiro en el monte",
+      "id": "kf08-v1",
+      "revision": 1,
+      "provider": "openai",
+      "model": "gpt-image-2.5-sunburst",
+      "quality": "medium",
+      "mode": "edit",
+      "selected": true,
+      "status": "produced_visually_reviewed_editorial_candidate",
+      "user_approved": false,
+      "culturally_certified": false,
+      "review_notes": "Mismo hombre permanece solo en refugio sencillo de bosque, sin caimán, compañeros ni escena de curación. Papercut nocturno mate.",
+      "duration_seconds": 17.9
+    },
+    {
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-hombre-que-sono-con-caiman/kf09-v1.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/el-hombre-que-sono-con-caiman-kf09-v1.txt",
+      "inputs": [
+        {
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-hombre-que-sono-con-caiman/kf08-v1.jpeg",
+          "role": "previous visually reviewed same-myth frame; preserve cast, garment and spatial continuity",
+          "sha256": "d9f0e0119f7a6b0a50d5c798b922b2a3b72cebb1f22fc9050829a809f3d52171"
+        }
+      ],
+      "sha256": "90e2305cd4be6c35d6e384a871a2a406a4d38e3ab9e54ea36e25c84515c7252c",
+      "prompt_sha256": "d4bdfc8c0fa4e30081069d9e0cf6cac3ef2d8b2ef0447dbe7045bd8417369ba8",
+      "bytes": 373299,
+      "width": 1024,
+      "height": 1536,
+      "format": "jpeg",
+      "myth_id": 365,
+      "slug": "el-hombre-que-sono-con-caiman",
+      "frame_id": "kf09",
+      "title": "El silbido",
+      "id": "kf09-v1",
+      "revision": 1,
+      "provider": "openai",
+      "model": "gpt-image-2.5-sunburst",
+      "quality": "medium",
+      "mode": "edit",
+      "selected": true,
+      "status": "produced_visually_reviewed_editorial_candidate",
+      "user_approved": false,
+      "culturally_certified": false,
+      "review_notes": "Mismo hombre silba en refugio, dos adultos observan y animales de caza se aproximan. Sin armas activas, caimán ni clase ritual inventada.",
+      "duration_seconds": 21.9
+    },
+    {
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-hombre-que-sono-con-caiman/kf10-v2.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/el-hombre-que-sono-con-caiman-kf10-v2.txt",
+      "inputs": [
+        {
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-hombre-que-sono-con-caiman/kf10-v1.jpeg",
+          "role": "exact explanation scene preserve companions terrain positions",
+          "sha256": "5589fc0d8189e013580512c5792cc815f5cf9dbc0909650605108efb17964efc"
+        },
+        {
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-hombre-que-sono-con-caiman/kf08-v1.jpeg",
+          "role": "identity ONLY same BEARDLESS protagonist shoulder wavy dark hair",
+          "sha256": "d9f0e0119f7a6b0a50d5c798b922b2a3b72cebb1f22fc9050829a809f3d52171"
+        }
+      ],
+      "sha256": "6c404f8b04416d10a50a11ef61f8b3e068c82051309338203ed6691ca551b4d5",
+      "prompt_sha256": "30dd4279a2b744d0f88abc5100706bffe8626fc851755deff865649a9b6c1eca",
+      "bytes": 374812,
+      "width": 1024,
+      "height": 1536,
+      "format": "jpeg",
+      "myth_id": 365,
+      "slug": "el-hombre-que-sono-con-caiman",
+      "frame_id": "kf10",
+      "title": "Aprendido del caimán",
+      "id": "kf10-v2",
+      "revision": 2,
+      "provider": "openai",
+      "model": "gpt-image-2.5-sunburst",
+      "quality": "medium",
+      "mode": "edit",
+      "selected": true,
+      "status": "produced_visually_reviewed_editorial_candidate",
+      "user_approved": false,
+      "culturally_certified": false,
+      "review_notes": "Identidad corregida: protagonista imberbe de cabello oscuro ondulado explica a dos adultos junto al río. Sin barba nueva, animales extra ni aula.",
+      "duration_seconds": 17.7
+    }
+  ],
+  "remaining": [],
+  "status": "produced_all_frames_user_review_pending",
+  "native_size": "1024x1536",
+  "adaptation_9_16": false,
+  "animation": false,
+  "publication": false
+}

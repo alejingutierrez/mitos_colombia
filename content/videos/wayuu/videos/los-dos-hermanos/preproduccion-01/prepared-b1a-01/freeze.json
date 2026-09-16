@@ -1,0 +1,93 @@
+{
+  "schema": "wayuu-video-freeze/v1",
+  "created_at": "2026-09-09T23:01:41.824Z",
+  "plan": "content/videos/wayuu/videos/los-dos-hermanos/preproduccion-01/plan.json",
+  "plan_sha256": "4dc521d5d503ce9fb19f0075f8cebdb9ef141ba3dd8b658e3a3d420b7b727802",
+  "style": "content/videos/wayuu/channel-dna.v3.json",
+  "style_sha256": "20f876f10840d4e643f034ccc131ed184bbb7ee5d023a1d2d3c82899fcc93b8a",
+  "checks": {
+    "shots": 16,
+    "words": 191,
+    "estimated_seconds": 128,
+    "generated": 0,
+    "pending": 16,
+    "warnings": []
+  },
+  "files": {
+    "narrative_snapshot_verified": true,
+    "reference_checks": 14,
+    "public_freshness": "not_checked_by_offline_preparer"
+  },
+  "jobs": [
+    {
+      "id": "b1a",
+      "prompt_file": "content/videos/wayuu/videos/los-dos-hermanos/preproduccion-01/prepared-b1a-01/prompts/b1a.txt",
+      "prompt_sha256": "2b0e295bb89b7cfa9f00677a6ccf04aed00ea5edb6f28cd331cdac1e75db4385",
+      "model": "gpt-image-2.5-sunburst",
+      "allowed_models": [
+        "gpt-image-2.5-sunburst",
+        "gpt-image-2.5-flare",
+        "gpt-image-2"
+      ],
+      "fast_iteration_model": "gpt-image-2.5-flare",
+      "legacy_fallback_model": "gpt-image-2",
+      "one_model_per_myth": true,
+      "record_exact_model_and_snapshot": true,
+      "quality": "medium",
+      "size": "864x1536",
+      "api_request_size": "1024x1536",
+      "delivery_size": "864x1536",
+      "delivery_transform": "center_crop_864x1536",
+      "output_format": "jpeg",
+      "mode": "image_edit_with_prior_keyframes",
+      "input_images": [
+        {
+          "kind": "triptych",
+          "myth": "los-dos-hermanos",
+          "path": "output/imagegen/wayuu/triptychs/wayuu-hermanos-triptych-02-entrada/entrada.jpeg",
+          "sha256": "5bdabc9a4c9db28cb03e3e795b3b17f6b3008e232428d3cde56f9f790cc50247",
+          "approved": true,
+          "role": "Fijar identidad, paleta y material del mito desde la referencia 1; prohibido copiar su composición."
+        },
+        {
+          "kind": "triptych",
+          "myth": "los-dos-hermanos",
+          "path": "output/imagegen/wayuu/triptychs/wayuu-hermanos-triptych-01/acto.jpeg",
+          "sha256": "90e4946571b6a94a190d3773367f689ac0bc4c4d22f0421a77217a090a66f30c",
+          "approved": true,
+          "role": "Fijar identidad, paleta y material del mito desde la referencia 2; prohibido copiar su composición."
+        },
+        {
+          "kind": "canonical_model",
+          "myth": "los-dos-hermanos",
+          "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-06-los-dos-hermanos-medium/hermana_arquera__identity_sheet--canon.jpeg",
+          "sha256": "8269d19945532c1bd44bc22eab5f7c89deee2945794ff7fe2643a628ef6916db",
+          "approved": true,
+          "role": "Fijar el modelo canónico hermana_arquera__identity_sheet; preservar identidad y material sin copiar la composición."
+        },
+        {
+          "kind": "canonical_model",
+          "myth": "los-dos-hermanos",
+          "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-06-los-dos-hermanos-medium/hermana_arquera__state_sheet--estados.jpeg",
+          "sha256": "b4a452c9414aef4074d7afc9e05611ded814a75f350158f13a03558a0b24866d",
+          "approved": true,
+          "role": "Fijar el modelo canónico hermana_arquera__state_sheet; preservar identidad y material sin copiar la composición."
+        },
+        {
+          "kind": "canonical_model",
+          "myth": "los-dos-hermanos",
+          "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-06-los-dos-hermanos-medium/hermano_arquera__identity_sheet--canon.jpeg",
+          "sha256": "195e3144586c3cc2c0177cd62d3f78235560aacac02b08a3cfd9a60cbd6a3498",
+          "approved": true,
+          "role": "Fijar el modelo canónico hermano_arquera__identity_sheet; preservar identidad y material sin copiar la composición."
+        }
+      ],
+      "api_method": "images.edit",
+      "source_output": "output/imagegen/wayuu/keyframes/los-dos-hermanos-preproduccion-01/b1a.sunburst-master.jpeg",
+      "output": "output/imagegen/wayuu/keyframes/los-dos-hermanos-preproduccion-01/b1a.jpeg",
+      "status": "prepared_not_generated"
+    }
+  ],
+  "prior_candidates": [],
+  "no_api_calls": true
+}

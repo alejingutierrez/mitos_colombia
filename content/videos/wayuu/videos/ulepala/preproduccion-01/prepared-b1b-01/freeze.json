@@ -1,0 +1,93 @@
+{
+  "schema": "wayuu-video-freeze/v1",
+  "created_at": "2026-09-09T23:27:24.947Z",
+  "plan": "content/videos/wayuu/videos/ulepala/preproduccion-01/plan.json",
+  "plan_sha256": "a04e91eba92e8d2255ea92cec4930a93bd06ad6350eded9083af9ad0a953e8b3",
+  "style": "content/videos/wayuu/channel-dna.v3.json",
+  "style_sha256": "20f876f10840d4e643f034ccc131ed184bbb7ee5d023a1d2d3c82899fcc93b8a",
+  "checks": {
+    "shots": 16,
+    "words": 196,
+    "estimated_seconds": 128,
+    "generated": 1,
+    "pending": 15,
+    "warnings": []
+  },
+  "files": {
+    "narrative_snapshot_verified": true,
+    "reference_checks": 28,
+    "public_freshness": "not_checked_by_offline_preparer"
+  },
+  "jobs": [
+    {
+      "id": "b1b",
+      "prompt_file": "content/videos/wayuu/videos/ulepala/preproduccion-01/prepared-b1b-01/prompts/b1b.txt",
+      "prompt_sha256": "10b57570a4798dfb5983c6e56f5934a51a540c6bf0d030489836a3dc12b0952b",
+      "model": "gpt-image-2.5-sunburst",
+      "allowed_models": [
+        "gpt-image-2.5-sunburst",
+        "gpt-image-2.5-flare",
+        "gpt-image-2"
+      ],
+      "fast_iteration_model": "gpt-image-2.5-flare",
+      "legacy_fallback_model": "gpt-image-2",
+      "one_model_per_myth": true,
+      "record_exact_model_and_snapshot": true,
+      "quality": "medium",
+      "size": "864x1536",
+      "api_request_size": "1024x1536",
+      "delivery_size": "864x1536",
+      "delivery_transform": "center_crop_864x1536",
+      "output_format": "jpeg",
+      "mode": "image_edit_with_prior_keyframes",
+      "input_images": [
+        {
+          "kind": "prior_keyframe",
+          "frame_id": "b1a",
+          "myth": "ulepala",
+          "path": "output/imagegen/wayuu/keyframes/ulepala-preproduccion-01/b1a.jpeg",
+          "sha256": "8dc752f8c3b861d8ef815787c7a4f9fe5a74a5d3ce7a42e12103d3b413426e9b",
+          "approved": true,
+          "role": "Preservar continuidad causal de b1a: identidades, vestuario, paleta y material; prohibido repetir cámara o distribución."
+        },
+        {
+          "kind": "canonical_model",
+          "myth": "ulepala",
+          "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-19-ulepala-medium-corrections-01/ulepala__identity_sheet--canon.jpeg",
+          "sha256": "48a7443957a878d8d28d8db46941488f9b738857b35b4c67ca1ecdb0563ce4a8",
+          "approved": true,
+          "role": "Fijar el modelo canónico ulepala__identity_sheet; preservar identidad y material sin copiar la composición."
+        },
+        {
+          "kind": "canonical_model",
+          "myth": "ulepala",
+          "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-19-ulepala-medium/ulepala__state_sheet--estados.jpeg",
+          "sha256": "4ad8d1fbbe50d382d71e91c89c97b3227b4e3c83b9de60b9cd8e67c97fd018b9",
+          "approved": true,
+          "role": "Fijar el modelo canónico ulepala__state_sheet; preservar identidad y material sin copiar la composición."
+        },
+        {
+          "kind": "canonical_model",
+          "myth": "ulepala",
+          "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-19-ulepala-medium/companeros_dote_ulepala__group_grammar--canon.jpeg",
+          "sha256": "dd369323093c2b84e1f606af367c0837e8201f96277a815d46ce15c932af615b",
+          "approved": true,
+          "role": "Fijar el modelo canónico companeros_dote_ulepala__group_grammar; preservar identidad y material sin copiar la composición."
+        }
+      ],
+      "api_method": "images.edit",
+      "source_output": "output/imagegen/wayuu/keyframes/ulepala-preproduccion-01/b1b.sunburst-master.jpeg",
+      "output": "output/imagegen/wayuu/keyframes/ulepala-preproduccion-01/b1b.jpeg",
+      "status": "prepared_not_generated"
+    }
+  ],
+  "prior_candidates": [
+    {
+      "id": "b1a",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/ulepala-preproduccion-01/b1a.jpeg",
+      "sha256": "8dc752f8c3b861d8ef815787c7a4f9fe5a74a5d3ce7a42e12103d3b413426e9b"
+    }
+  ],
+  "no_api_calls": true
+}

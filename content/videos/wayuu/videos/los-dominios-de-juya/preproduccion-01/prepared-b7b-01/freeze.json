@@ -1,0 +1,166 @@
+{
+  "schema": "wayuu-video-freeze/v1",
+  "created_at": "2026-09-09T22:59:30.713Z",
+  "plan": "content/videos/wayuu/videos/los-dominios-de-juya/preproduccion-01/plan.json",
+  "plan_sha256": "f332c2178f96acde0d600e13108d6052bf14145652704140ec6a559d015432f0",
+  "style": "content/videos/wayuu/channel-dna.v3.json",
+  "style_sha256": "20f876f10840d4e643f034ccc131ed184bbb7ee5d023a1d2d3c82899fcc93b8a",
+  "checks": {
+    "shots": 16,
+    "words": 182,
+    "estimated_seconds": 128,
+    "generated": 13,
+    "pending": 3,
+    "warnings": []
+  },
+  "files": {
+    "narrative_snapshot_verified": true,
+    "reference_checks": 90,
+    "public_freshness": "not_checked_by_offline_preparer"
+  },
+  "jobs": [
+    {
+      "id": "b7b",
+      "prompt_file": "content/videos/wayuu/videos/los-dominios-de-juya/preproduccion-01/prepared-b7b-01/prompts/b7b.txt",
+      "prompt_sha256": "1c0b3084a773b1076bf14daea0cd116819abf4a7a1e1b1ed3fc0e6ad30d131c6",
+      "model": "gpt-image-2.5-sunburst",
+      "allowed_models": [
+        "gpt-image-2.5-sunburst",
+        "gpt-image-2.5-flare",
+        "gpt-image-2"
+      ],
+      "fast_iteration_model": "gpt-image-2.5-flare",
+      "legacy_fallback_model": "gpt-image-2",
+      "one_model_per_myth": true,
+      "record_exact_model_and_snapshot": true,
+      "quality": "medium",
+      "size": "864x1536",
+      "api_request_size": "1024x1536",
+      "delivery_size": "864x1536",
+      "delivery_transform": "center_crop_864x1536",
+      "output_format": "jpeg",
+      "mode": "image_edit_with_prior_keyframes",
+      "input_images": [
+        {
+          "kind": "prior_keyframe",
+          "frame_id": "b6b",
+          "myth": "los-dominios-de-juya",
+          "path": "output/imagegen/wayuu/keyframes/los-dominios-de-juya-preproduccion-01/b6b.jpeg",
+          "sha256": "e2f6ece6125429c8d0d1ac92b5e81bc6d1e34a90ea2f1be36d919d38549751cc",
+          "approved": true,
+          "role": "Preservar continuidad causal de b6b: identidades, vestuario, paleta y material; prohibido repetir cámara o distribución."
+        },
+        {
+          "kind": "prior_keyframe",
+          "frame_id": "b7a",
+          "myth": "los-dominios-de-juya",
+          "path": "output/imagegen/wayuu/keyframes/los-dominios-de-juya-preproduccion-01/b7a.jpeg",
+          "sha256": "bfda596d9810777da199e830719477a9817ab2ef7302694756022b0670b9a769",
+          "approved": true,
+          "role": "Preservar continuidad causal de b7a: identidades, vestuario, paleta y material; prohibido repetir cámara o distribución."
+        },
+        {
+          "kind": "canonical_model",
+          "myth": "los-dominios-de-juya",
+          "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-19-ulepala-medium-corrections-01/ulepala__identity_sheet--canon.jpeg",
+          "sha256": "48a7443957a878d8d28d8db46941488f9b738857b35b4c67ca1ecdb0563ce4a8",
+          "approved": true,
+          "role": "Fijar el modelo canónico ulepala__identity_sheet; preservar identidad y material sin copiar la composición."
+        },
+        {
+          "kind": "canonical_model",
+          "myth": "los-dominios-de-juya",
+          "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-19-ulepala-medium/estancia_juya_ulepala__spatial_model--canon.jpeg",
+          "sha256": "0a6d7696f319ddf33da49408d42e4af14529614df163078ba450db4b993fb112",
+          "approved": true,
+          "role": "Fijar el modelo canónico estancia_juya_ulepala__spatial_model; preservar identidad y material sin copiar la composición."
+        }
+      ],
+      "api_method": "images.edit",
+      "source_output": "output/imagegen/wayuu/keyframes/los-dominios-de-juya-preproduccion-01/b7b.sunburst-master.jpeg",
+      "output": "output/imagegen/wayuu/keyframes/los-dominios-de-juya-preproduccion-01/b7b.jpeg",
+      "status": "prepared_not_generated"
+    }
+  ],
+  "prior_candidates": [
+    {
+      "id": "b1a",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/los-dominios-de-juya-preproduccion-01/b1a.jpeg",
+      "sha256": "0cc99eacd99b5fce74b6b9eb4ea12ae0d4155a15f55aa1d509246b712c5634b8"
+    },
+    {
+      "id": "b1b",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/los-dominios-de-juya-preproduccion-01/b1b.jpeg",
+      "sha256": "21cbd5027b3be004f044d0423abdbca790f3c932f9f5de786e36db774df048d1"
+    },
+    {
+      "id": "b2a",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/los-dominios-de-juya-preproduccion-01/b2a.jpeg",
+      "sha256": "800dcfeb0a3c25248edd7646b3d032a0cea78c7cfcfea6f71cbcdfa33370984a"
+    },
+    {
+      "id": "b2b",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/los-dominios-de-juya-preproduccion-01/b2b.jpeg",
+      "sha256": "1f98af008613e6e914531669d0074345c783312dfc963950643966a6859d51eb"
+    },
+    {
+      "id": "b3a",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/los-dominios-de-juya-preproduccion-01/b3a.jpeg",
+      "sha256": "434d0a82b610f29f3487e44f550675137302bc551a853cf012e72a4f40c4cf77"
+    },
+    {
+      "id": "b3b",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/los-dominios-de-juya-preproduccion-01/b3b.jpeg",
+      "sha256": "8707e9c3f21fe21521c05ed7023b0728d4a3aca0dddce74a499ef2b52eb8ebbc"
+    },
+    {
+      "id": "b4a",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/los-dominios-de-juya-preproduccion-01/b4a.jpeg",
+      "sha256": "5a59e7885d5967d5923bbb653fdfbc6bf81965f34ad3789dd85545c6050e2136"
+    },
+    {
+      "id": "b4b",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/los-dominios-de-juya-preproduccion-01/b4b.jpeg",
+      "sha256": "00a688350ba40b10ef712506ecde13ce1b791830e7e3e00e02700b6e27827369"
+    },
+    {
+      "id": "b5a",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/los-dominios-de-juya-preproduccion-01/b5a.jpeg",
+      "sha256": "5bcc405a3ffaa43a3ac47ecddc5d0b259b7322c731bad73aba132bb0b22b5955"
+    },
+    {
+      "id": "b5b",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/los-dominios-de-juya-preproduccion-01/b5b.jpeg",
+      "sha256": "f30199c6ef1f8088535216a07ccc64b3cb8d10427bd6f2365d96624e088a16e9"
+    },
+    {
+      "id": "b6a",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/los-dominios-de-juya-preproduccion-01/b6a.jpeg",
+      "sha256": "0d5d1ff5befe633a6046465a160de31bdbb625bda793447577973d311153ab43"
+    },
+    {
+      "id": "b6b",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/los-dominios-de-juya-preproduccion-01/b6b.jpeg",
+      "sha256": "e2f6ece6125429c8d0d1ac92b5e81bc6d1e34a90ea2f1be36d919d38549751cc"
+    },
+    {
+      "id": "b7a",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/los-dominios-de-juya-preproduccion-01/b7a.jpeg",
+      "sha256": "bfda596d9810777da199e830719477a9817ab2ef7302694756022b0670b9a769"
+    }
+  ],
+  "no_api_calls": true
+}

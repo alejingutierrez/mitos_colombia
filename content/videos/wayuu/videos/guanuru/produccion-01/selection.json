@@ -1,0 +1,371 @@
+{
+  "schema": "wayuu-keyframe-selection/v1",
+  "slug": "guanuru",
+  "title": "Guanurú: la casa que todavía escucha",
+  "status": "complete_pending_user_approval",
+  "plan": "content/videos/wayuu/videos/guanuru/preproduccion-01/plan.json",
+  "quality": "medium",
+  "generation": {
+    "model": "gpt-image-2",
+    "size": "864x1536",
+    "output_format": "jpeg",
+    "mode": "text_only",
+    "input_images": [],
+    "total_unique_generations": 39,
+    "selected_generations": 20,
+    "superseded_generations": 19,
+    "batches": [
+      {
+        "label": "anclas-01",
+        "count": 5,
+        "path": "output/imagegen/wayuu/keyframes/guanuru-preproduccion-01-anclas"
+      },
+      {
+        "label": "correcciones-anclas-02",
+        "count": 3,
+        "path": "output/imagegen/wayuu/keyframes/guanuru-preproduccion-02-correcciones-anclas"
+      },
+      {
+        "label": "correccion-b3a-03",
+        "count": 1,
+        "path": "output/imagegen/wayuu/keyframes/guanuru-preproduccion-03-correccion-b3a"
+      },
+      {
+        "label": "resto-01",
+        "count": 15,
+        "path": "output/imagegen/wayuu/keyframes/guanuru-produccion-resto-01"
+      },
+      {
+        "label": "correcciones-secuencia-04",
+        "count": 12,
+        "path": "output/imagegen/wayuu/keyframes/guanuru-preproduccion-04-correcciones-secuencia"
+      },
+      {
+        "label": "correccion-b7b-05",
+        "count": 1,
+        "path": "output/imagegen/wayuu/keyframes/guanuru-preproduccion-05-correccion-b7b"
+      },
+      {
+        "label": "correccion-b7b-06",
+        "count": 1,
+        "path": "output/imagegen/wayuu/keyframes/guanuru-preproduccion-06-correccion-b7b"
+      },
+      {
+        "label": "correccion-b10b-07",
+        "count": 1,
+        "path": "output/imagegen/wayuu/keyframes/guanuru-preproduccion-07-correccion-b10b"
+      }
+    ]
+  },
+  "selected": [
+    {
+      "id": "b1a",
+      "version": "01",
+      "path": "output/imagegen/wayuu/keyframes/guanuru-produccion-resto-01/b1a.jpeg",
+      "sha256": "0b9e26bba9dc3b8fcad4168f3e52f18e420375c4c5eee251d8d5e6ce49536a65",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "Regreso amplio; cuatro habitantes correctos, casa cerrada y territorio papercut legible."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/guanuru/produccion-01/prompts-resto-01/b1a.txt",
+      "prompt_sha256": "627f14670dd0d03e7f4b5f4b82b46f64d43aec042accd17cdf6feabc6d7ebdd1"
+    },
+    {
+      "id": "b1b",
+      "version": "01",
+      "path": "output/imagegen/wayuu/keyframes/guanuru-preproduccion-01-anclas/b1b.jpeg",
+      "sha256": "a8d1d5c16c2901e8c475efc8731f27bed828d5355dd066be87de77dd0b2192c6",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "Tres respuestas domésticas sugieren pasos sin cuerpo; no hay huellas, sombra humana ni criatura."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/guanuru/preproduccion-01/prepared-01/prompts/b1b.txt",
+      "prompt_sha256": "021a250f2f5f4ebf66d93b08a9727ad332fd946b83ec8db249a827637cbee400"
+    },
+    {
+      "id": "b2a",
+      "version": "02",
+      "path": "output/imagegen/wayuu/keyframes/guanuru-preproduccion-02-correcciones-anclas/b2a.jpeg",
+      "sha256": "a0a6fd4f5b3f157273a99eb5b5289d1407caea80d34bde5247728d8f5c135ff0",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "Mariposa mínima y sombra alada amplia; exactamente cuatro habitantes y cielo sin puntos decorativos."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/guanuru/preproduccion-02/prompts/b2a.txt",
+      "prompt_sha256": "39297dc6b84c618547f411466c0c33d3b7c3fda43f5770c41d8322f021bd940f"
+    },
+    {
+      "id": "b2b",
+      "version": "04",
+      "path": "output/imagegen/wayuu/keyframes/guanuru-preproduccion-04-correcciones-secuencia/b2b.jpeg",
+      "sha256": "e65b5af4b2fea660e0e52dbc5c7f09ad29657537b54d1be57792a22396beb3b4",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "Gesto de apartar detenido por la mujer mayor; mariposa intacta y reparto completo."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/guanuru/preproduccion-04/prompts/b2b.txt",
+      "prompt_sha256": "c8d8891b6d05ce6f75e4fba2d71ccfa8936d5fbb3c5f99135f1e0cd1f4802eb5"
+    },
+    {
+      "id": "b3a",
+      "version": "03",
+      "path": "output/imagegen/wayuu/keyframes/guanuru-preproduccion-03-correccion-b3a/b3a.jpeg",
+      "sha256": "96923060451831d7c95a4fe6e347cfd2f3c54dfdf3f94a51738f3c69c85b4d9e",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "Un durmiente y un pariente opaco; segundo umbral profundo sin estrellas ni anatomía espectral."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/guanuru/preproduccion-03/prompts/b3a.txt",
+      "prompt_sha256": "1b3b2a4c2deee7cf8069ac91486e889d8268ea411a601ff511c309976ac9bff5"
+    },
+    {
+      "id": "b3b",
+      "version": "04",
+      "path": "output/imagegen/wayuu/keyframes/guanuru-preproduccion-04-correcciones-secuencia/b3b.jpeg",
+      "sha256": "4dde28c24440dafc478b6dfb8d4b9c28e5f2e5e65649c0c8b9ea5748a4215e04",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "La hoja curva sostiene la distancia de la pregunta; personajes separados y noche limpia."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/guanuru/preproduccion-04/prompts/b3b.txt",
+      "prompt_sha256": "69818c192be909f0f6152c8e6edd4c53c8600a6be8f1c0a8200cc0db8d5a0c07"
+    },
+    {
+      "id": "b4a",
+      "version": "04",
+      "path": "output/imagegen/wayuu/keyframes/guanuru-preproduccion-04-correcciones-secuencia/b4a.jpeg",
+      "sha256": "394adb8d7fe00e18be671ecdeef4183292438a5cb80f9e8ecee7dc875b979c00",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "Estado de fiebre exclusivo en el chinchorro; tres familiares cuidan sin duplicados ni utilería fantástica."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/guanuru/preproduccion-04/prompts/b4a.txt",
+      "prompt_sha256": "4f235197bbf7e053397629ca7edb5e170c863b41890dd1965a4fb7b858473e2e"
+    },
+    {
+      "id": "b4b",
+      "version": "01",
+      "path": "output/imagegen/wayuu/keyframes/guanuru-produccion-resto-01/b4b.jpeg",
+      "sha256": "872af4eaf4c38aeedf22bb81340bac15ef6077c28be59ba01e0c9c80dbdf3541",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "La piache llega con manos vacías; tres familiares y un paciente visibles en capas separadas."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/guanuru/produccion-01/prompts-resto-01/b4b.txt",
+      "prompt_sha256": "f3f5ca8ed9ca1f5d9f686ef353deb137f5e48cf0fa60fe99bee1e663bd4ecb78"
+    },
+    {
+      "id": "b5a",
+      "version": "04",
+      "path": "output/imagegen/wayuu/keyframes/guanuru-preproduccion-04-correcciones-secuencia/b5a.jpeg",
+      "sha256": "7d8d090f6df9071bd7721ea5bbb1c6f61dfe11c35c495de69675fd6a77b07488",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "Escucha colectiva con piache, familia y enfermo; vestuario completo y escena sin parafernalia."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/guanuru/preproduccion-04/prompts/b5a.txt",
+      "prompt_sha256": "12362b207c3166046074dbd56daf086ca5f05f2ce71cb4f5263f20894b78d64d"
+    },
+    {
+      "id": "b5b",
+      "version": "02",
+      "path": "output/imagegen/wayuu/keyframes/guanuru-preproduccion-02-correcciones-anclas/b5b.jpeg",
+      "sha256": "1fcc6b726e4e6d1b6ea198ce1e570171e65a36b8824131dd912c58184661db8a",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "Depresión, compresión y memoria humana se mantienen como tres fenómenos no corporales distintos."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/guanuru/preproduccion-02/prompts/b5b.txt",
+      "prompt_sha256": "22f86a972a1892c0d34927c43f8f03f5887339c7d6fef5b1cb7fb219f75a9c3d"
+    },
+    {
+      "id": "b6a",
+      "version": "01",
+      "path": "output/imagegen/wayuu/keyframes/guanuru-produccion-resto-01/b6a.jpeg",
+      "sha256": "90d2648d2b79dca1a6a335ee568a3c18d2bc29b1f8c6162ae84ca4bf06da8ffa",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "Hueco blanco y compresión doméstica permanecen separados; la piache no identifica mariposa con Guanurú."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/guanuru/produccion-01/prompts-resto-01/b6a.txt",
+      "prompt_sha256": "1de398d89f39c04d7f5efc6351f78a304d799b97030a6fba859241b2838d0af3"
+    },
+    {
+      "id": "b6b",
+      "version": "04",
+      "path": "output/imagegen/wayuu/keyframes/guanuru-preproduccion-04-correcciones-secuencia/b6b.jpeg",
+      "sha256": "a796e3c419158587bf914484db0654f381c2849e72d7495282bf3f6697139710",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "Cinco figuras exactas: paciente, tres familiares y piache; tres rutas domésticas de cuidado."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/guanuru/preproduccion-04/prompts/b6b.txt",
+      "prompt_sha256": "10e2c069f924b50cbdc602b55f38f7774c564d8d3e675dcfc978183f6116a6c9"
+    },
+    {
+      "id": "b7a",
+      "version": "04",
+      "path": "output/imagegen/wayuu/keyframes/guanuru-preproduccion-04-correcciones-secuencia/b7a.jpeg",
+      "sha256": "0f33392a597f241ed82cae699b4c7ed3952774957369d9c00794953de3c9d0de",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "Cuatro habitantes en tareas distintas; paciente aún febril y material papercut sostenido."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/guanuru/preproduccion-04/prompts/b7a.txt",
+      "prompt_sha256": "8452a239a0281681736bbdc39d0c62d78208b72528a02d3b874ea385b3dc0d11"
+    },
+    {
+      "id": "b7b",
+      "version": "06",
+      "path": "output/imagegen/wayuu/keyframes/guanuru-preproduccion-06-correccion-b7b/b7b.jpeg",
+      "sha256": "d366e3ee0b6b2846ea2ccfbc1bb05b7c4eb1a806061c2157741afc9fea6700fd",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "Exactamente cuatro personas, montículo bajo atendido y alimentos separados en el camino."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/guanuru/preproduccion-06/prompts/b7b.txt",
+      "prompt_sha256": "c56fa53bc3cc5edee448841d5756a28042fe709f2fd7b5235a411b3477526b5f"
+    },
+    {
+      "id": "b8a",
+      "version": "04",
+      "path": "output/imagegen/wayuu/keyframes/guanuru-preproduccion-04-correcciones-secuencia/b8a.jpeg",
+      "sha256": "a26afbd47ebba9700c71aa8767d9de449e9ed221ce1c0e8e9f25914d8404cf38",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "Cráneo equino sin cuernos, pequeño e inerte; familia completa y paciente en chinchorro."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/guanuru/preproduccion-04/prompts/b8a.txt",
+      "prompt_sha256": "364d12da1463efc7255fae6b0757d3ed4efdf9db65e0d624662bbefefad8ed58"
+    },
+    {
+      "id": "b8b",
+      "version": "04",
+      "path": "output/imagegen/wayuu/keyframes/guanuru-preproduccion-04-correcciones-secuencia/b8b.jpeg",
+      "sha256": "4a816f7812f5535073627526c588f93efacebca7497a5986358b1e1a22c2a89d",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "Casa vuelve a abrir sus capas; cráneo equino permanece opaco y no vence a ninguna entidad."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/guanuru/preproduccion-04/prompts/b8b.txt",
+      "prompt_sha256": "24bc9c69938a4c5286ae4a3db82a82aaf643c30e01b3e6e7cc6f642920637e27"
+    },
+    {
+      "id": "b9a",
+      "version": "04",
+      "path": "output/imagegen/wayuu/keyframes/guanuru-preproduccion-04-correcciones-secuencia/b9a.jpeg",
+      "sha256": "0e1da62a31b9b1c8416d829f5ca87d137b8a1bbfd9626e4d8ae18592b612837c",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "Estado recuperado exclusivo, sin compresa; la luz avanza sobre hojas de piso."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/guanuru/preproduccion-04/prompts/b9a.txt",
+      "prompt_sha256": "b2621c4632ea7e56bb8195657ee29a6b6b84d1d7d6edb60c0c85675d9c3ea521"
+    },
+    {
+      "id": "b9b",
+      "version": "04",
+      "path": "output/imagegen/wayuu/keyframes/guanuru-preproduccion-04-correcciones-secuencia/b9b.jpeg",
+      "sha256": "ebf396dda44c3eef96ded42a8a8356540b7312acfeb71fd78504bb095f5c4707",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "Cuatro familiares al atardecer; vuelo vacío, chinchorro frontal y cráneo equino pequeño."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/guanuru/preproduccion-04/prompts/b9b.txt",
+      "prompt_sha256": "1c4d90a0264fa48a6154ff4625caaa3d47ae067ee1c9d8a7ed5d7102e9cce302"
+    },
+    {
+      "id": "b10a",
+      "version": "04",
+      "path": "output/imagegen/wayuu/keyframes/guanuru-preproduccion-04-correcciones-secuencia/b10a.jpeg",
+      "sha256": "bfb07acabc926b4001cddc06675c0c4f57a46baf4a6f0af0e40c779e2df0ce26",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "Cuatro narradores y tres rastros murales que no se funden; noche sin iconografía estelar."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/guanuru/preproduccion-04/prompts/b10a.txt",
+      "prompt_sha256": "404f1a92ed7acaaa32d6f2dd7ce8c821852afbca9307c0c4c813404ef9ae9371"
+    },
+    {
+      "id": "b10b",
+      "version": "07",
+      "path": "output/imagegen/wayuu/keyframes/guanuru-preproduccion-07-correccion-b10b/b10b.jpeg",
+      "sha256": "1ca91caf3ddad59a78147f693ba82c339aa5c563d23bb05e952c5a6881948ba0",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "Cierre cotidiano amplio: familia recuperada, mariposa fuera, sepultura distante y casa atendida."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/guanuru/preproduccion-07/prompts/b10b.txt",
+      "prompt_sha256": "fb6f81c7b75dae6cd76d00622189178f8b5fe2fd64b8b3b37e121743b49e512f"
+    }
+  ],
+  "process_learning": [
+    "Separar sano, fiebre y recuperado evitó la contaminación de edad/estado que ocurrió en el mito anterior.",
+    "Las anclas expusieron pronto la tendencia del modelo a agregar rosetas, estrellas y utilería no inventariada.",
+    "El refuerzo textual global no bastó para vegetación y especie del cráneo; la revisión visual original por original fue indispensable.",
+    "El cráneo debe describirse anatómicamente como equino y sin cuernos, porque decir horse skull no evitó forma bovina.",
+    "Una corrección material puede crear duplicados humanos: cada nueva imagen se vuelve a auditar desde cero, incluso si el cambio pedido era vegetal.",
+    "El bloqueo Papercut V2 permaneció en las 39 instrucciones; las correcciones no usaron imágenes locales ni edición raster.",
+    "La revisión de láminas completas detectó una roseta residual en b10b que no era evidente al comparar los originales por grupos."
+  ]
+}

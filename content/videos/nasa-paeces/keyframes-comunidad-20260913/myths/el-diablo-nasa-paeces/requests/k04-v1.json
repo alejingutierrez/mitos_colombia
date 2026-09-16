@@ -1,0 +1,28 @@
+{
+  "slug": "el-diablo-nasa-paeces",
+  "id": "k04",
+  "version": 1,
+  "created_at": "2026-09-13T22:32:34.206Z",
+  "plan_sha256": "c56a1d0f0a5ebff339df8791a3bd7deab9431a025ea17db61300e294fbd85ce5",
+  "prompt_file": "content/videos/nasa-paeces/keyframes-comunidad-20260913/myths/el-diablo-nasa-paeces/prompts/k04-v1.txt",
+  "prompt_sha256": "6d2c2eaf48359387af11dcb70b9761a15f413fa4f9f9e1c717cf94c819d1846b",
+  "references": [
+    {
+      "path": "output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b1b-maqueta-v2.png",
+      "sha256": "d7dc5d106daadbd61b032ae0b3bb0139806f2b49c82ad2e937157f84478e3f7f",
+      "role": "SOLO material físico de papel: no transferir personas, ropa, varas, laguna ni iluminación nocturna."
+    },
+    {
+      "path": "output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/comunidad-nasa/el-diablo-nasa-paeces/k03-v1.png",
+      "sha256": "2bf3a9099a20affc34f40ea0b9ef7661928678e2b5bc4cd08d5641a24667ea38",
+      "role": "Keyframe anterior k03: continuidad de identidades y lugares que coincidan, nunca importar acción u objetos ausentes en el nuevo plano."
+    }
+  ],
+  "request": {
+    "prompt": "Use case: illustration-story. Produce ONE portrait 9:16 cinematic KEYFRAME, a real-looking miniature built ENTIRELY from CUT AND FOLDED PAPER, photographed from INSIDE the set. Myth: El diablo. Frame k04.\n\nREFERENCE ROLES:\nImage 1: SOLO material físico de papel: no transferir personas, ropa, varas, laguna ni iluminación nocturna.\nImage 2: Keyframe anterior k03: continuidad de identidades y lugares que coincidan, nunca importar acción u objetos ausentes en el nuevo plano.\n\nEXACT NEW SHOT, render only this moment, not an entire story or multi-panel sheet:\nDetalle: carga envuelta y sujeta al caballo del compadre; patas completas sobre senda, no bolsa colgando sobre agua.\n\nVISIBLE CONTENT RULE: The exact new shot above is the complete inventory for this one image. Later events, other characters and other props of the myth are absent unless explicitly named in this shot.\n\nPHYSICAL MATERIAL IS MANDATORY: separately cut, thick matte cardstock planes; deep air gaps and actual cast contact shadows; lifted edges, paper tabs, crisp folds and visibly attached garment panels. People are handmade folded-paper puppets with flat cut face planes, folded limbs and layered hands, never rounded dolls or illustrated skin. Rocks are angular folded cardstock, plants individual cut leaves bent from stems. Water is broad overlapping blue cardstock sheets, mist and clouds suspended paper cutouts. No painted textures pretending to be relief.\nCINEMATOGRAPHY: obey the shot's exact camera and time of day. Foreground paper edge/leaf/rock creates depth without hiding the main action; focal plane on action, optical miniature depth of field in near/far layers. Maintain identities, ages and clothes from the SAME myth references. Borderless immersive scene, no box, plinth, table, studio or collage. Frame extends edge to edge. Do NOT carry background objects from a previous scene into a new location.\nNo text, lettering, logo, watermark, symbols, sacred patterns, pan-Indigenous headdresses, golden jewelry, invented ritual, extra people or props. No brushwork, drawing outlines, flat illustration, realistic fabric/skin/liquid, plastic, clay or smooth CGI. Exactly ONE finished vertical 9:16 image. This is a new composition, not a crop of the reference.\n\nFINAL COMPOSITION OVERRIDE: Character names in continuity rules are NOT a cast list. Show ONLY the people/animals explicitly requested in THIS single shot. Do not add any reference person, animal, lake or staff just because it appears in a reference. Render precisely: Detalle: carga envuelta y sujeta al caballo del compadre; patas completas sobre senda, no bolsa colgando sobre agua.\nCAMERA LOCK: This is a CLOSE-UP INSERT. The specifically named hands, object, or head must fill at least 65% of the image. Do not turn it into a full-body group portrait or wide landscape. Only show the body parts explicitly needed for the insert.\n\nClose focus on wrapped cargo securely tied behind saddle of the SECOND BROWN HORSE ridden by ochre-clothed compadre. Show its complete legs standing on DRY path. Only this horse and partial rider needed, no father, son, water or black rider.",
+    "referenced_image_paths": [
+      "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b1b-maqueta-v2.png",
+      "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/comunidad-nasa/el-diablo-nasa-paeces/k03-v1.png"
+    ]
+  }
+}

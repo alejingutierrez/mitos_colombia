@@ -1,0 +1,40 @@
+{
+  "slug": "el-hombre-flaco",
+  "id": "k04",
+  "version": 1,
+  "created_at": "2026-09-13T22:16:12.354Z",
+  "plan_sha256": "ebe86a9abb3e80e41c4c72a85c437b888004aee26ee55c4474bbe2020c73a12f",
+  "prompt_file": "content/videos/nasa-paeces/keyframes-comunidad-20260913/myths/el-hombre-flaco/prompts/k04-v1.txt",
+  "prompt_sha256": "6cf66de69a4a9494d64ddc2ee2b8b685dad2dd5afdc1aa8b049332cd1f31cf3f",
+  "references": [
+    {
+      "path": "output/imagegen/nasa-paeces/tripticos/maqueta-3d-20260913/el-hombre-flaco/entrada-v1.png",
+      "sha256": "dd628c553491e562d4b5d08a7aeb287bb6bf534efea8e674bf8bfeaf54a8eba3",
+      "role": "Tríptico entrada: identidades, vestuario y escenario de ESTE mito; NO copia de composición."
+    },
+    {
+      "path": "output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b1b-maqueta-v2.png",
+      "sha256": "d7dc5d106daadbd61b032ae0b3bb0139806f2b49c82ad2e937157f84478e3f7f",
+      "role": "SOLO material físico de papel: no transferir personas, ropa, varas, laguna ni iluminación nocturna."
+    },
+    {
+      "path": "output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/comunidad-nasa/el-hombre-flaco/k02-v1.png",
+      "sha256": "823e4cd718c7b3582adc4b219280ad82df2bbd20afa0e8d6f3555296f8840976",
+      "role": "Keyframe anterior k02: continuidad de identidades y lugares que coincidan, nunca importar acción u objetos ausentes en el nuevo plano."
+    },
+    {
+      "path": "output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/comunidad-nasa/el-hombre-flaco/k03-v1.png",
+      "sha256": "8c2f2596a9e34c8a6aef2e4ea7653fe8e1944a05a1caf731b88df0265f9e7213",
+      "role": "Keyframe anterior k03: continuidad de identidades y lugares que coincidan, nunca importar acción u objetos ausentes en el nuevo plano."
+    }
+  ],
+  "request": {
+    "prompt": "Use case: illustration-story. Produce ONE portrait 9:16 cinematic KEYFRAME, a real-looking miniature built ENTIRELY from CUT AND FOLDED PAPER, photographed from INSIDE the set. Myth: El hombre flaco. Frame k04.\n\nREFERENCE ROLES:\nImage 1: Tríptico entrada: identidades, vestuario y escenario de ESTE mito; NO copia de composición.\nImage 2: SOLO material físico de papel: no transferir personas, ropa, varas, laguna ni iluminación nocturna.\nImage 3: Keyframe anterior k02: continuidad de identidades y lugares que coincidan, nunca importar acción u objetos ausentes en el nuevo plano.\nImage 4: Keyframe anterior k03: continuidad de identidades y lugares que coincidan, nunca importar acción u objetos ausentes en el nuevo plano.\n\nEXACT NEW SHOT, render only this moment, not an entire story or multi-panel sheet:\nGeneral: hombre flaco de cabeza descubierta sentado sobre piedra; viajero se detiene ante él, luz tenue los separa del bosque.\n\nVISIBLE CONTENT RULE: The exact new shot above is the complete inventory for this one image. Later events, other characters and other props of the myth are absent unless explicitly named in this shot.\n\nPHYSICAL MATERIAL IS MANDATORY: separately cut, thick matte cardstock planes; deep air gaps and actual cast contact shadows; lifted edges, paper tabs, crisp folds and visibly attached garment panels. People are handmade folded-paper puppets with flat cut face planes, folded limbs and layered hands, never rounded dolls or illustrated skin. Rocks are angular folded cardstock, plants individual cut leaves bent from stems. Water is broad overlapping blue cardstock sheets, mist and clouds suspended paper cutouts. No painted textures pretending to be relief.\nCINEMATOGRAPHY: obey the shot's exact camera and time of day. Foreground paper edge/leaf/rock creates depth without hiding the main action; focal plane on action, optical miniature depth of field in near/far layers. Maintain identities, ages and clothes from the SAME myth references. Borderless immersive scene, no box, plinth, table, studio or collage. Frame extends edge to edge. Do NOT carry background objects from a previous scene into a new location.\nNo text, lettering, logo, watermark, symbols, sacred patterns, pan-Indigenous headdresses, golden jewelry, invented ritual, extra people or props. No brushwork, drawing outlines, flat illustration, realistic fabric/skin/liquid, plastic, clay or smooth CGI. Exactly ONE finished vertical 9:16 image. This is a new composition, not a crop of the reference.\n\nFINAL COMPOSITION OVERRIDE: Character names in continuity rules are NOT a cast list. Show ONLY the people/animals explicitly requested in THIS single shot. Do not add any reference person, animal, lake or staff just because it appears in a reference. Render precisely: General: hombre flaco de cabeza descubierta sentado sobre piedra; viajero se detiene ante él, luz tenue los separa del bosque.\n\n\n",
+    "referenced_image_paths": [
+      "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/maqueta-3d-20260913/el-hombre-flaco/entrada-v1.png",
+      "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b1b-maqueta-v2.png",
+      "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/comunidad-nasa/el-hombre-flaco/k02-v1.png",
+      "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/comunidad-nasa/el-hombre-flaco/k03-v1.png"
+    ]
+  }
+}

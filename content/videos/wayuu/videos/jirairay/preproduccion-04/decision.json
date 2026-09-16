@@ -1,0 +1,17 @@
+{
+  "schema": "wayuu-anchor-correction/v1",
+  "slug": "jirairay",
+  "version": "preproduccion-04",
+  "source_batch": "output/imagegen/wayuu/keyframes/jirairay-preproduccion-03-anclas-corrected",
+  "status": "prepared_not_generated",
+  "preserve": ["b1a"],
+  "correct": ["b3b", "b5b", "b8b", "b10b"],
+  "decisions": {
+    "b3b": ["restore_rich_shelter_depth", "remove_all_radial_vegetation", "preserve_small_people_and_distinct_rhythms"],
+    "b5b": ["avoid_excessive_minimalism", "include_architecture_and_six_depth_planes", "keep_all_people_in_middle_distance"],
+    "b8b": ["avoid_excessive_minimalism", "restore_shelter_and_layered_terrain", "keep_wanuru_low_horizontal_and_small"],
+    "b10b": ["restore_rich_architecture_and_foreground_archive", "plain_clothes", "exact_four_fibres_no_radial_plants"]
+  },
+  "generation": { "model": "gpt-image-2", "quality": "medium", "size": "864x1536", "output_format": "jpeg", "mode": "text_only", "input_images": [] },
+  "no_reference_uploads": true
+}

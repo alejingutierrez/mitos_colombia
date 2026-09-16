@@ -1,0 +1,51 @@
+{
+  "schema": "mitos-video-pilot-dispatch/v1",
+  "created_at": "2026-09-07T16:20:08.876Z",
+  "frozen_package": "content/videos/wayuu/videos/aramai/piloto-01/freeze.json",
+  "provider": "OpenAI API",
+  "model": "gpt-image-2",
+  "quality": "medium",
+  "size": "864x1536",
+  "input_images": [],
+  "jobs": [
+    {
+      "id": "b1a",
+      "prompt_sha256": "b5a0c84e5df79bf66e365cb7dbaf69dd63d0575169ec4df4026d6c1ff46d4137",
+      "output_file": "output/imagegen/wayuu/keyframes/aramai-piloto-01/b1a.jpeg",
+      "exec_session_id": 63843,
+      "status": "dispatched"
+    },
+    {
+      "id": "b1b",
+      "prompt_sha256": "49dc29c44fa1ad95140cc89e62e8ac13738a4815e1b56e5f503ff14a75621f16",
+      "output_file": "output/imagegen/wayuu/keyframes/aramai-piloto-01/b1b.jpeg",
+      "exec_session_id": 60413,
+      "status": "dispatched"
+    },
+    {
+      "id": "b2a",
+      "prompt_sha256": "e964f67e3aee5a80e0584363b03e07d59a3458d5b0ed07281e54a383916b0742",
+      "output_file": "output/imagegen/wayuu/keyframes/aramai-piloto-01/b2a.jpeg",
+      "exec_session_id": 8867,
+      "status": "dispatched"
+    },
+    {
+      "id": "b2b",
+      "prompt_sha256": "0a6d608aa04d66f74a4775e690cd6d29cc0ec4eb3f57590cb157bde6418cc59f",
+      "output_file": "output/imagegen/wayuu/keyframes/aramai-piloto-01/b2b.jpeg",
+      "exec_session_id": 13439,
+      "status": "dispatched"
+    },
+    {
+      "id": "b3a",
+      "prompt_sha256": "aa5fdcf4e0178340dd2bc80cf644ab3aef9e32aadc951653bdf22114082a4caa",
+      "output_file": "output/imagegen/wayuu/keyframes/aramai-piloto-01/b3a.jpeg",
+      "exec_session_id": 55116,
+      "status": "dispatched"
+    }
+  ],
+  "counting_rule": "Count locally persisted distinct generated outputs separately from CLI invocations; provider internal retries and billing are not exposed by this CLI.",
+  "no_publication": true,
+  "no_animation": true
+}
+

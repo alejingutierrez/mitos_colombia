@@ -1,0 +1,126 @@
+{
+  "schema": "wayuu-video-freeze/v1",
+  "created_at": "2026-09-09T20:43:50.749Z",
+  "plan": "content/videos/wayuu/videos/la-sed-da-los-civilizados/preproduccion-01/plan.json",
+  "plan_sha256": "e51c7089f800757155d3d6488d9d0fb4417071c1cba73ebaba5d5b9b98b0963c",
+  "style": "content/videos/wayuu/channel-dna.v3.json",
+  "style_sha256": "665cac6e3cd24ce51bee1196ddd9c89f32a6845a0424580778059170967b1984",
+  "checks": {
+    "shots": 16,
+    "words": 238,
+    "estimated_seconds": 128,
+    "generated": 9,
+    "pending": 7,
+    "warnings": []
+  },
+  "files": {
+    "narrative_snapshot_verified": true,
+    "reference_checks": 46,
+    "public_freshness": "not_checked_by_offline_preparer"
+  },
+  "jobs": [
+    {
+      "id": "b5b",
+      "prompt_file": "content/videos/wayuu/videos/la-sed-da-los-civilizados/prepared-10/prompts/b5b.txt",
+      "prompt_sha256": "544e00493ffa5d220ad949a2ade28a5b16bca96ec42c4937541c24ba34b0cf4c",
+      "model": "gpt-image-2.5-sunburst",
+      "allowed_models": [
+        "gpt-image-2.5-sunburst",
+        "gpt-image-2.5-flare",
+        "gpt-image-2"
+      ],
+      "fast_iteration_model": "gpt-image-2.5-flare",
+      "legacy_fallback_model": "gpt-image-2",
+      "one_model_per_myth": true,
+      "record_exact_model_and_snapshot": true,
+      "quality": "medium",
+      "size": "864x1536",
+      "api_request_size": "1024x1536",
+      "delivery_size": "864x1536",
+      "delivery_transform": "center_crop_864x1536",
+      "output_format": "jpeg",
+      "mode": "image_edit_with_prior_keyframes",
+      "input_images": [
+        {
+          "kind": "prior_keyframe",
+          "frame_id": "b4b",
+          "myth": "la-sed-da-los-civilizados",
+          "path": "output/imagegen/wayuu/keyframes/la-sed-da-los-civilizados-preproduccion-01/b4b.jpeg",
+          "sha256": "a11936e8f4579b5ad02dfe540ba46be3a26379cc39c38d3247b33ec46dc956f5",
+          "approved": true,
+          "role": "Antecedente inmediato 1: conservar las dos posturas, identidades y cargas completas."
+        },
+        {
+          "kind": "prior_keyframe",
+          "frame_id": "b5a",
+          "myth": "la-sed-da-los-civilizados",
+          "path": "output/imagegen/wayuu/keyframes/la-sed-da-los-civilizados-preproduccion-01/b5a.jpeg",
+          "sha256": "1dc4bbb977e49e75fe2e218b65b4028bd9472404864c89e58294cceb081c132d",
+          "approved": true,
+          "role": "Antecedente inmediato 2: prolongar exactamente los dos contactos de pliegue ya aprobados sin alterar torsos."
+        }
+      ],
+      "api_method": "images.edit",
+      "source_output": "output/imagegen/wayuu/keyframes/la-sed-da-los-civilizados-preproduccion-01/b5b.sunburst-master.jpeg",
+      "output": "output/imagegen/wayuu/keyframes/la-sed-da-los-civilizados-preproduccion-01/b5b.jpeg",
+      "status": "prepared_not_generated"
+    }
+  ],
+  "prior_candidates": [
+    {
+      "id": "b1a",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/la-sed-da-los-civilizados-preproduccion-01/b1a.jpeg",
+      "sha256": "e0f14c6e8609a645b3829f06cf12bd556c84cab684139543b962f3c3ce72188f"
+    },
+    {
+      "id": "b1b",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/la-sed-da-los-civilizados-preproduccion-01/b1b.jpeg",
+      "sha256": "5af9bd1f4d5db193175dca0e4acb56dbb91c85da671f08ce7d52f81fdf3e32d3"
+    },
+    {
+      "id": "b2a",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/la-sed-da-los-civilizados-preproduccion-01/b2a.jpeg",
+      "sha256": "0567f2a0f1d339bf3a08bf7ccdbc7fb3b8f7bec99d1b38e246b0244e72850699"
+    },
+    {
+      "id": "b2b",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/la-sed-da-los-civilizados-preproduccion-01/b2b.jpeg",
+      "sha256": "eac8578fcf6cd74bad7e4228ebba94f54458b3d21c9bdd910477822e3fdbbc4a"
+    },
+    {
+      "id": "b3a",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/la-sed-da-los-civilizados-preproduccion-01/b3a.jpeg",
+      "sha256": "8f43e4f56861955f48641957c6e11651f763e580da90e7abd12a0302e6a73741"
+    },
+    {
+      "id": "b3b",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/la-sed-da-los-civilizados-preproduccion-01/b3b.jpeg",
+      "sha256": "f9b79d1766fc873d8a5cbd3b767f6f41636a36a4739af89f379b54f2bd321010"
+    },
+    {
+      "id": "b4a",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/la-sed-da-los-civilizados-preproduccion-01/b4a.jpeg",
+      "sha256": "3d0c283ce2e945b9044dd9987d99010790294efe5d05ab4ad490b7778f10538a"
+    },
+    {
+      "id": "b4b",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/la-sed-da-los-civilizados-preproduccion-01/b4b.jpeg",
+      "sha256": "a11936e8f4579b5ad02dfe540ba46be3a26379cc39c38d3247b33ec46dc956f5"
+    },
+    {
+      "id": "b5a",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/la-sed-da-los-civilizados-preproduccion-01/b5a.jpeg",
+      "sha256": "1dc4bbb977e49e75fe2e218b65b4028bd9472404864c89e58294cceb081c132d"
+    }
+  ],
+  "no_api_calls": true
+}

@@ -1,0 +1,35 @@
+{
+  "schema": "wayuu-video-reference-inventory/v1",
+  "myth_slug": "jirairay",
+  "reviewed_at": "2026-09-08",
+  "narrative_snapshot": "content/mitos-visuales/production/wayuu-2026-09-05/narratives/jirairay.json",
+  "narrative_sha256": "de3208df9c1af40319a095634d8eaadcc54882c9c643eeb8d520140a3ee5d9e2",
+  "canonical_models": [
+    { "model_id": "jirairay_canto__phenomenon_rule", "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-07-jirairay-medium/jirairay_canto__phenomenon_rule--canon.jpeg", "sha256": "d9f0afc0a540e9a8045a87cedd57e8633704a7b094bbc652040c7b424421fa41", "reviewed": true },
+    { "model_id": "outsu_jirairay__identity_sheet", "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-07-jirairay-medium/outsu_jirairay__identity_sheet--canon.jpeg", "sha256": "3ca7447f476275e1409ed76648603282b43c0f88f829a99f742b27fd24300c60", "reviewed": true },
+    { "model_id": "paciente_jirairay__identity_sheet", "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-07-jirairay-medium-corrections-01/paciente_jirairay__identity_sheet--canon.jpeg", "sha256": "9b4636285690518cc1b51980c084e28094a736f7a1f751bc2d9da767f1c3fef9", "reviewed": true },
+    { "model_id": "maraca_outsu__object_sheet", "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-07-jirairay-medium/maraca_outsu__object_sheet--canon.jpeg", "sha256": "d6f40968f33d6f9d4e8b3cb54dfc7af10d56d688f40ff42642fdb3943cbd8e91", "reviewed": true },
+    { "model_id": "tabaco_ritual__object_sheet", "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-07-jirairay-medium/tabaco_ritual__object_sheet--canon.jpeg", "sha256": "2aef0e10346c7514a62fc071fb630d5d921fa7e991adc4a691ed64b6a2671bbd", "reviewed": true },
+    { "model_id": "alimentos_ceremonia__object_sheet", "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-07-jirairay-medium/alimentos_ceremonia__object_sheet--canon.jpeg", "sha256": "9dc51ec929aa41fc97d5cffb3a76cfe73049fbddd05b142a921c1f9c518fb576", "reviewed": true },
+    { "model_id": "wanuru__presence_model", "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-02-aramai-medium-corrections-02/wanuru__presence_model--canon.jpeg", "sha256": "c8406e27227a5dc245346be4465b977665190a4f5e89e12153545cb832a68f30", "reviewed": true },
+    { "model_id": "wanuru__state_sheet", "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-02-aramai-medium/wanuru__state_sheet--estados.jpeg", "sha256": "3396142c7ff0487ffd3261e40a6001c7842b96a86a637ab90351167ed0738a19", "reviewed": true },
+    { "model_id": "chinchorro__object_sheet", "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-06-los-dos-hermanos-medium/chinchorro__object_sheet--canon.jpeg", "sha256": "29a9ee12acd56ae11fde72343c34ac2b52521571cf60faa53aae2954de4b1b15", "reviewed": true },
+    { "model_id": "rancheria_wayuu__spatial_model", "path": "output/imagegen/wayuu-v3/wayuu-v3-pilot-03-corrections-medium/rancheria_wayuu__spatial_model--canon.jpeg", "sha256": "273831e777e2bf8615f5640f626204fac4b96ea268e55d4215f991d2a6012464", "reviewed": true }
+  ],
+  "triptych_references": [
+    { "path": "output/imagegen/wayuu/triptychs/wayuu-jirairay-triptych-02-entrada/entrada.jpeg", "sha256": "b15b70da6dba1e0a6644e8b90cea298b0c1ebd88d97b437b112e4a59ab4ff0c9", "reviewed": true, "role": "same_myth_direction_reference" },
+    { "path": "output/imagegen/wayuu/triptychs/wayuu-jirairay-triptych-01/acto.jpeg", "sha256": "d269ab3242251137aadd1303c72216b0430f32f6628a4bc1d777183284aecbf8", "reviewed": true, "role": "same_myth_direction_reference" },
+    { "path": "output/imagegen/wayuu/triptychs/wayuu-jirairay-triptych-01/huella.jpeg", "sha256": "6ad1875a618d3ed3cab7dd82452f193413cd5660ae83c9df47f607b4bd11c1a3", "reviewed": true, "role": "same_myth_direction_reference" }
+  ],
+  "review_notes": [
+    "Los diez modelos y los tres originales de tríptico se inspeccionaron visualmente.",
+    "Identidad y objetos se conservan; caras facetadas, volumen grueso, suelo fotográfico y textura de fibras reales quedan vetados.",
+    "Jirairay se representa sólo como canto; Wanurü sólo como presión separada.",
+    "No se enviarán referencias locales a OpenAI."
+  ],
+  "state_separation": {
+    "patient": ["paciente_fiebre", "paciente_amanecer"],
+    "phenomena": ["jirairay_canto", "wanuru_presencia", "auxiliares_escucha", "archivo_sin_texto"],
+    "rule": "Los estados del paciente y los fenómenos nunca se mezclan ni se personifican."
+  }
+}

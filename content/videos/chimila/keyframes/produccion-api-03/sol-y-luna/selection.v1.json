@@ -1,0 +1,264 @@
+{
+  "schema": "ette-myth-keyframe-selection/v1",
+  "myth_id": 347,
+  "myth": "sol-y-luna",
+  "myth_title": "Sol y Luna",
+  "narrative_sha256": "58ba480bf2f956aa95477c132a698cb3108bee2bf5da24ab0545a47121196d97",
+  "planned_count": 6,
+  "selected": [
+    {
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/sol-y-luna/kf01-v1.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/sol-y-luna-kf01-v1.txt",
+      "inputs": [
+        {
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/sol-y-luna/entrada-v1.jpeg",
+          "role": "same-myth canonical triptych: materials and cast reference only, not automatic plot stage",
+          "sha256": "a88f05cee8b48841d603d3fd288a6779e6627a58ba4075eb479ba60163128407"
+        },
+        {
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/sol-y-luna/acto-v1.jpeg",
+          "role": "same-myth secondary cast/style reference only; do not import later action or symbolic arrows/suns",
+          "sha256": "a77d357b31c080518df6c39c4fce0898354c0599285cd53d738edb26a75f1e59"
+        }
+      ],
+      "sha256": "028ca74e2896cea5f2d6d914a32232a174e73364f067235c69f545c26d62fe87",
+      "prompt_sha256": "7dc8f0961c963cf221058fc3ca6be2f02c9f3544e68e2889e2369e6d96d75aa1",
+      "bytes": 293541,
+      "width": 1024,
+      "height": 1536,
+      "format": "jpeg",
+      "myth_id": 347,
+      "slug": "sol-y-luna",
+      "frame_id": "kf01",
+      "title": "Hermana Sol, hermano Luna",
+      "id": "kf01-v1",
+      "revision": 1,
+      "provider": "openai",
+      "model": "gpt-image-2.5-sunburst",
+      "quality": "medium",
+      "mode": "edit",
+      "selected": true,
+      "status": "produced_visually_reviewed_editorial_candidate",
+      "user_approved": false,
+      "culturally_certified": false,
+      "review_notes": "Una hermana Sol y un hermano Luna, dos adultos distintos; sin danza, tercera persona ni soles extra. Rostros y prendas próximos al tríptico, continuidad aproximada.",
+      "duration_seconds": 23
+    },
+    {
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/sol-y-luna/kf02-solo-paisaje-v2.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/sol-y-luna-kf02-solo-paisaje-v2.txt",
+      "inputs": [
+        {
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/sol-y-luna/kf02-v1.jpeg",
+          "role": "target: remove both people and night sky; retain one earlier sun landscape",
+          "sha256": "40ba483984efbde65881791926a80b3dd428e3e62c93ee3791e3bb1bf68c9405"
+        }
+      ],
+      "sha256": "974b799c3b8ee9f8a6640f027dc1d20464f96ba492f9ae336f3699dfb2d2c050",
+      "prompt_sha256": "6dd0b3a124158978f67049a1a62a6e6fe04499d8aecd4711db16d5d3560a8238",
+      "bytes": 275923,
+      "width": 1024,
+      "height": 1536,
+      "format": "jpeg",
+      "myth_id": 347,
+      "slug": "sol-y-luna",
+      "frame_id": "kf02",
+      "title": "La primera hermana solar",
+      "id": "kf02-v2",
+      "revision": 2,
+      "provider": "openai",
+      "model": "gpt-image-2.5-sunburst",
+      "quality": "medium",
+      "mode": "edit",
+      "selected": true,
+      "status": "produced_visually_reviewed_editorial_candidate",
+      "user_approved": false,
+      "culturally_certified": false,
+      "review_notes": "Revisión focalizada elimina ambas personas y cielo nocturno; un solo Sol en paisaje de la primera edad. No se reusa como retrato de hermanos.",
+      "duration_seconds": 18.2
+    },
+    {
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/sol-y-luna/kf03-v1.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/sol-y-luna-kf03-v1.txt",
+      "inputs": [
+        {
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/sol-y-luna/kf01-v1.jpeg",
+          "role": "previous visually reviewed same-myth frame; preserve cast, garment and spatial continuity",
+          "sha256": "028ca74e2896cea5f2d6d914a32232a174e73364f067235c69f545c26d62fe87"
+        },
+        {
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/sol-y-luna/kf02-solo-paisaje-v2.jpeg",
+          "role": "previous visually reviewed same-myth frame; preserve cast, garment and spatial continuity",
+          "sha256": "974b799c3b8ee9f8a6640f027dc1d20464f96ba492f9ae336f3699dfb2d2c050"
+        },
+        {
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/sol-y-luna/entrada-v1.jpeg",
+          "role": "same-myth canonical triptych: materials and cast reference only, not automatic plot stage",
+          "sha256": "a88f05cee8b48841d603d3fd288a6779e6627a58ba4075eb479ba60163128407"
+        },
+        {
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/sol-y-luna/acto-v1.jpeg",
+          "role": "same-myth secondary cast/style reference only; do not import later action or symbolic arrows/suns",
+          "sha256": "a77d357b31c080518df6c39c4fce0898354c0599285cd53d738edb26a75f1e59"
+        }
+      ],
+      "sha256": "b48a6e6356e872b03164f572e05ba471b00dbbc0f7ddcc73d204e52737c38c4d",
+      "prompt_sha256": "d2aa6d30b53d2e87a5be2f6a2f5055952eed67a311dae9234f082bee572ec9d4",
+      "bytes": 328721,
+      "width": 1024,
+      "height": 1536,
+      "format": "jpeg",
+      "myth_id": 347,
+      "slug": "sol-y-luna",
+      "frame_id": "kf03",
+      "title": "Días muy largos",
+      "id": "kf03-v1",
+      "revision": 1,
+      "provider": "openai",
+      "model": "gpt-image-2.5-sunburst",
+      "quality": "medium",
+      "mode": "edit",
+      "selected": true,
+      "status": "produced_visually_reviewed_editorial_candidate",
+      "user_approved": false,
+      "culturally_certified": false,
+      "review_notes": "Dos adultos trabajan bajo el único Sol de la primera edad; sin Luna, etiquetas temporales o soles adicionales. El encuadre comprime el tiempo mediante trabajo cotidiano, no prueba astronómica.",
+      "duration_seconds": 26
+    },
+    {
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/sol-y-luna/kf04-v1.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/sol-y-luna-kf04-v1.txt",
+      "inputs": [
+        {
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/sol-y-luna/kf02-solo-paisaje-v2.jpeg",
+          "role": "previous visually reviewed same-myth frame; preserve cast, garment and spatial continuity",
+          "sha256": "974b799c3b8ee9f8a6640f027dc1d20464f96ba492f9ae336f3699dfb2d2c050"
+        },
+        {
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/sol-y-luna/kf03-v1.jpeg",
+          "role": "previous visually reviewed same-myth frame; preserve cast, garment and spatial continuity",
+          "sha256": "b48a6e6356e872b03164f572e05ba471b00dbbc0f7ddcc73d204e52737c38c4d"
+        },
+        {
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/sol-y-luna/entrada-v1.jpeg",
+          "role": "same-myth canonical triptych: materials and cast reference only, not automatic plot stage",
+          "sha256": "a88f05cee8b48841d603d3fd288a6779e6627a58ba4075eb479ba60163128407"
+        },
+        {
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/sol-y-luna/acto-v1.jpeg",
+          "role": "same-myth secondary cast/style reference only; do not import later action or symbolic arrows/suns",
+          "sha256": "a77d357b31c080518df6c39c4fce0898354c0599285cd53d738edb26a75f1e59"
+        }
+      ],
+      "sha256": "007f98c68102649b367dbcde584d2b6730479efc015bfb2b9f9f35975e3af5c6",
+      "prompt_sha256": "1d4f31691726a8cedc8490c293f56885d0a94f6ea6e385366a79fa5b5d89bac8",
+      "bytes": 284515,
+      "width": 1024,
+      "height": 1536,
+      "format": "jpeg",
+      "myth_id": 347,
+      "slug": "sol-y-luna",
+      "frame_id": "kf04",
+      "title": "La segunda hermana",
+      "id": "kf04-v1",
+      "revision": 1,
+      "provider": "openai",
+      "model": "gpt-image-2.5-sunburst",
+      "quality": "medium",
+      "mode": "edit",
+      "selected": true,
+      "status": "produced_visually_reviewed_editorial_candidate",
+      "user_approved": false,
+      "culturally_certified": false,
+      "review_notes": "Un único segundo Sol detrás de las cumbres de Sierra Nevada; dos testigos celestes conservan sus identidades. Sin soles extra ni transición violenta; testigos son recurso editorial de continuidad.",
+      "duration_seconds": 21.2
+    },
+    {
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/sol-y-luna/kf05-v1.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/sol-y-luna-kf05-v1.txt",
+      "inputs": [
+        {
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/sol-y-luna/kf03-v1.jpeg",
+          "role": "previous visually reviewed same-myth frame; preserve cast, garment and spatial continuity",
+          "sha256": "b48a6e6356e872b03164f572e05ba471b00dbbc0f7ddcc73d204e52737c38c4d"
+        },
+        {
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/sol-y-luna/kf04-v1.jpeg",
+          "role": "previous visually reviewed same-myth frame; preserve cast, garment and spatial continuity",
+          "sha256": "007f98c68102649b367dbcde584d2b6730479efc015bfb2b9f9f35975e3af5c6"
+        },
+        {
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/sol-y-luna/entrada-v1.jpeg",
+          "role": "same-myth canonical triptych: materials and cast reference only, not automatic plot stage",
+          "sha256": "a88f05cee8b48841d603d3fd288a6779e6627a58ba4075eb479ba60163128407"
+        },
+        {
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/sol-y-luna/acto-v1.jpeg",
+          "role": "same-myth secondary cast/style reference only; do not import later action or symbolic arrows/suns",
+          "sha256": "a77d357b31c080518df6c39c4fce0898354c0599285cd53d738edb26a75f1e59"
+        }
+      ],
+      "sha256": "ae345bdeb3c42f4c6ec1bcaf19aa53e1c363f35fafc3aefa8411538a63c699be",
+      "prompt_sha256": "2fbf4eeeabaeb7806eb56ab6ad8078b1dcad09f5a147374c7c8f1e610b200838",
+      "bytes": 288357,
+      "width": 1024,
+      "height": 1536,
+      "format": "jpeg",
+      "myth_id": 347,
+      "slug": "sol-y-luna",
+      "frame_id": "kf05",
+      "title": "La hermana actual",
+      "id": "kf05-v1",
+      "revision": 1,
+      "provider": "openai",
+      "model": "gpt-image-2.5-sunburst",
+      "quality": "medium",
+      "mode": "edit",
+      "selected": true,
+      "status": "produced_visually_reviewed_editorial_candidate",
+      "user_approved": false,
+      "culturally_certified": false,
+      "review_notes": "Sol actual único, salida cambiada respecto a cuadro4. Hermanos observan, sin tercer Sol o cambio de género; personajes como testigos editoriales.",
+      "duration_seconds": 19.9
+    },
+    {
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/sol-y-luna/kf06-luna-sin-hermana-v2.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/sol-y-luna-kf06-luna-sin-hermana-v2.txt",
+      "inputs": [
+        {
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/sol-y-luna/kf06-v1.jpeg",
+          "role": "target: remove sister Sol entirely from nighttime view",
+          "sha256": "ef32e172bd99222859c55615afcb1e28dc0152ff6118e1fad938239ff5cc8a7a"
+        }
+      ],
+      "sha256": "a1fd71198eaa45fce88f0614d96bbb5b42ee7a47a40d42bcfa91e017a6d598e6",
+      "prompt_sha256": "e827a06a47dbf8e3ae825528464375c20b897c80f347079079bb9f1cbcf286df",
+      "bytes": 280150,
+      "width": 1024,
+      "height": 1536,
+      "format": "jpeg",
+      "myth_id": 347,
+      "slug": "sol-y-luna",
+      "frame_id": "kf06",
+      "title": "Noche y ausencia",
+      "id": "kf06-v2",
+      "revision": 2,
+      "provider": "openai",
+      "model": "gpt-image-2.5-sunburst",
+      "quality": "medium",
+      "mode": "edit",
+      "selected": true,
+      "status": "produced_visually_reviewed_editorial_candidate",
+      "user_approved": false,
+      "culturally_certified": false,
+      "review_notes": "Corrección elimina la hermana Sol de la noche; queda sólo Luna masculino y una Luna visible sobre el paisaje habitado.",
+      "duration_seconds": 19.3
+    }
+  ],
+  "remaining": [],
+  "status": "produced_all_frames_user_review_pending",
+  "native_size": "1024x1536",
+  "adaptation_9_16": false,
+  "animation": false,
+  "publication": false
+}

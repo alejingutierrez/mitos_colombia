@@ -1,0 +1,34 @@
+{
+  "slug": "el-hombre-y-el-perro-flaco",
+  "id": "k10",
+  "version": 1,
+  "created_at": "2026-09-13T23:14:07.352Z",
+  "plan_sha256": "f5ab0ae06af11c0f4decb848c9e7ef701f69d3c4ad645ef97d5f12d4b653059d",
+  "prompt_file": "content/videos/nasa-paeces/keyframes-comunidad-20260913/myths/el-hombre-y-el-perro-flaco/prompts/k10-v1.txt",
+  "prompt_sha256": "ac981cad476123f4d1171107cd1e68dae5ff31520f1b587172198293b083e416",
+  "references": [
+    {
+      "path": "output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b1b-maqueta-v2.png",
+      "sha256": "d7dc5d106daadbd61b032ae0b3bb0139806f2b49c82ad2e937157f84478e3f7f",
+      "role": "SOLO material físico de papel: no transferir personas, ropa, varas, laguna ni iluminación nocturna."
+    },
+    {
+      "path": "output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/comunidad-nasa/el-hombre-y-el-perro-flaco/k08-v1.png",
+      "sha256": "543aecbb41ac282f46df59d69e0d4010d43034341a108811ab82b9f031091c61",
+      "role": "Keyframe anterior k08: continuidad de identidades y lugares que coincidan, nunca importar acción u objetos ausentes en el nuevo plano."
+    },
+    {
+      "path": "output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/comunidad-nasa/el-hombre-y-el-perro-flaco/k09-v1.png",
+      "sha256": "cc6ab9463683df158eb23f352aefd515364c58596947abc6da1fc8f1337c11bd",
+      "role": "Keyframe anterior k09: continuidad de identidades y lugares que coincidan, nunca importar acción u objetos ausentes en el nuevo plano."
+    }
+  ],
+  "request": {
+    "prompt": "Use case: illustration-story. Produce ONE portrait 9:16 cinematic KEYFRAME, a real-looking miniature built ENTIRELY from CUT AND FOLDED PAPER, photographed from INSIDE the set. Myth: El hombre y el perro flaco. Frame k10.\n\nREFERENCE ROLES:\nImage 1: SOLO material físico de papel: no transferir personas, ropa, varas, laguna ni iluminación nocturna.\nImage 2: Keyframe anterior k08: continuidad de identidades y lugares que coincidan, nunca importar acción u objetos ausentes en el nuevo plano.\nImage 3: Keyframe anterior k09: continuidad de identidades y lugares que coincidan, nunca importar acción u objetos ausentes en el nuevo plano.\n\nEXACT NEW SHOT, render only this moment, not an entire story or multi-panel sheet:\nMismo detalle de apertura al amanecer: flores machacadas y huellas de suelo; ninguna explicación visual nueva.\n\nVISIBLE CONTENT RULE: The exact new shot above is the complete inventory for this one image. Later events, other characters and other props of the myth are absent unless explicitly named in this shot.\n\nPHYSICAL MATERIAL IS MANDATORY: separately cut, thick matte cardstock planes; deep air gaps and actual cast contact shadows; lifted edges, paper tabs, crisp folds and visibly attached garment panels. People are handmade folded-paper puppets with flat cut face planes, folded limbs and layered hands, never rounded dolls or illustrated skin. Rocks are angular folded cardstock, plants individual cut leaves bent from stems. Water is broad overlapping blue cardstock sheets, mist and clouds suspended paper cutouts. No painted textures pretending to be relief.\nCINEMATOGRAPHY: obey the shot's exact camera and time of day. Foreground paper edge/leaf/rock creates depth without hiding the main action; focal plane on action, optical miniature depth of field in near/far layers. Maintain identities, ages and clothes from the SAME myth references. Borderless immersive scene, no box, plinth, table, studio or collage. Frame extends edge to edge. Do NOT carry background objects from a previous scene into a new location.\nNo text, lettering, logo, watermark, symbols, sacred patterns, pan-Indigenous headdresses, golden jewelry, invented ritual, extra people or props. No brushwork, drawing outlines, flat illustration, realistic fabric/skin/liquid, plastic, clay or smooth CGI. Exactly ONE finished vertical 9:16 image. This is a new composition, not a crop of the reference.\n\nFINAL COMPOSITION OVERRIDE: Character names in continuity rules are NOT a cast list. Show ONLY the people/animals explicitly requested in THIS single shot. Do not add any reference person, animal, lake or staff just because it appears in a reference. Render precisely: Mismo detalle de apertura al amanecer: flores machacadas y huellas de suelo; ninguna explicación visual nueva.\n\n\nFINAL AMANECER: flores APLASTADAS suaves y marcas en suelo de papel al borde del mismo camino, luz temprana. Únicamente paisaje y flores, ningún durmiente, perro, corazón o fuete añadido.",
+    "referenced_image_paths": [
+      "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b1b-maqueta-v2.png",
+      "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/comunidad-nasa/el-hombre-y-el-perro-flaco/k08-v1.png",
+      "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/comunidad-nasa/el-hombre-y-el-perro-flaco/k09-v1.png"
+    ]
+  }
+}

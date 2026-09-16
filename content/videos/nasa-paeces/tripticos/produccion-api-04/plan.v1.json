@@ -1,0 +1,315 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-12",
+  "community": "Nasa–Paeces",
+  "status": "prepared_for_production",
+  "myth_ids": [
+    440,
+    441,
+    442,
+    443,
+    444
+  ],
+  "new_triptychs": 5,
+  "new_images": 15,
+  "total_when_complete": 16,
+  "bible_selection": "content/videos/nasa-paeces/biblia/produccion-api-02/selection.v2.json",
+  "source_snapshot": "content/videos/nasa-paeces/biblia/research/corpus-snapshot-20260912.json",
+  "previous_selections": [
+    "content/videos/nasa-paeces/tripticos/produccion-api-01/el-trueno.selection.v1.json",
+    "content/videos/nasa-paeces/tripticos/produccion-api-02/selection.v1.json",
+    "content/videos/nasa-paeces/tripticos/produccion-api-03/selection.v1.json"
+  ],
+  "max_concurrency": 4,
+  "publication_authorized": true,
+  "jobs": [
+    {
+      "myth_id": 440,
+      "slug": "santo-tomas",
+      "title": "Santo Tomás",
+      "variant": "Núcleo de María y el encierro en cajones de bronce; no fusionar con la captura en Lame y el árbol tachi.",
+      "role": "entrada",
+      "label": "entrada",
+      "refs": [
+        "P08",
+        "P09",
+        "L03"
+      ],
+      "scene": "Exactly TWO full-body adults on a dry highland path: Santo Tomás in the ADULT ragged pre-capture state from P08 listens while María in the adult blue/cream state from P09 addresses him with one restrained open hand. No infant, disease, halo, stone human, giant deity or Tomás Dimales. Ordinary folded-paper crags and modest close ridges; calm confrontation before confinement.",
+      "model": "gpt-image-2.5-sunburst",
+      "size": "1536x1024",
+      "quality": "high",
+      "prompt": "Use case: illustration-story. Produce ONE new finished edge-to-edge illustration, NOT a pasted identity sheet. No panels, contact sheet, border or catalogue.\nMATERIAL LOCK: matte cut-paper Colombian highland craft, broad flat cut shapes, visible paper edges, folded strata, cast shadows BETWEEN layers. Water, mist and cloud are also broad flat PAPER SHAPES, never photographic water, cotton, wool or realistic vapor. Earth and stones are broad paper sheets, not gritty particles. No display base, plinth, table frame, clay dolls, shiny CGI or realistic skin.\nInput images are supporting identity, prop and material references, NOT targets to paste. Select ONLY the named state/objects. Preserve approved identity, age, hair, clothing and palette. Clothing and staging are reversible editorial adaptations, not a universal Nasa uniform or verified reconstruction.\nZERO text, letters, titles, captions, labels, watermark or logos. No invented sacred patterns, crowns, headdresses, armor, ritual instructions, maps, shrines, deity faces or emblems from other peoples. No blood, injury, corpses, exposed organs, anatomical transformation spectacle, nudity, violence or animal-human hybrids. Exactly TWO arms and TWO hands connected to wrists per visible human; coherent body and feet supported on dry ground. Symbolic square must be an ABSTRACT MATERIAL METAPHOR, not a third scenic landscape or cultural emblem.\n\nNarrative lock: Núcleo de María y el encierro en cajones de bronce; no fusionar con la captura en Lame y el árbol tachi.\n\nImage 1: P08 supporting reference; select only the state specified below.\nImage 2: P09 supporting reference; select only the state specified below.\nImage 3: L03 supporting reference; select only the state specified below.\nExactly TWO full-body adults on a dry highland path: Santo Tomás in the ADULT ragged pre-capture state from P08 listens while María in the adult blue/cream state from P09 addresses him with one restrained open hand. No infant, disease, halo, stone human, giant deity or Tomás Dimales. Ordinary folded-paper crags and modest close ridges; calm confrontation before confinement.\n",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/nasa-paeces/tripticos/produccion-api-04/prompts/santo-tomas-entrada-v1.txt",
+      "out": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-04/santo-tomas/entrada-v1.jpeg"
+    },
+    {
+      "myth_id": 440,
+      "slug": "santo-tomas",
+      "title": "Santo Tomás",
+      "variant": "Núcleo de María y el encierro en cajones de bronce; no fusionar con la captura en Lame y el árbol tachi.",
+      "role": "acto",
+      "label": "acto",
+      "refs": [
+        "U04",
+        "L03"
+      ],
+      "scene": "Exactly ONE CLOSED BRONZE-COLORED matte PAPER BOX, select the small closed metal-colored box from U04, NOT its open wooden chest. Vertical immersive view into deep folded ochre-earth strata where the closed box is contained; compact confinement under the earth, no human body visible. Broad shifted layers suggest the narrated tremor without destruction. No tachi tree, bird, Lame setting, gold treasure, inscriptions, diagram, cutaway labels or archaeological excavation.",
+      "model": "gpt-image-2.5-sunburst",
+      "size": "1024x1536",
+      "quality": "medium",
+      "prompt": "Use case: illustration-story. Produce ONE new finished edge-to-edge illustration, NOT a pasted identity sheet. No panels, contact sheet, border or catalogue.\nMATERIAL LOCK: matte cut-paper Colombian highland craft, broad flat cut shapes, visible paper edges, folded strata, cast shadows BETWEEN layers. Water, mist and cloud are also broad flat PAPER SHAPES, never photographic water, cotton, wool or realistic vapor. Earth and stones are broad paper sheets, not gritty particles. No display base, plinth, table frame, clay dolls, shiny CGI or realistic skin.\nInput images are supporting identity, prop and material references, NOT targets to paste. Select ONLY the named state/objects. Preserve approved identity, age, hair, clothing and palette. Clothing and staging are reversible editorial adaptations, not a universal Nasa uniform or verified reconstruction.\nZERO text, letters, titles, captions, labels, watermark or logos. No invented sacred patterns, crowns, headdresses, armor, ritual instructions, maps, shrines, deity faces or emblems from other peoples. No blood, injury, corpses, exposed organs, anatomical transformation spectacle, nudity, violence or animal-human hybrids. Exactly TWO arms and TWO hands connected to wrists per visible human; coherent body and feet supported on dry ground. Symbolic square must be an ABSTRACT MATERIAL METAPHOR, not a third scenic landscape or cultural emblem.\n\nNarrative lock: Núcleo de María y el encierro en cajones de bronce; no fusionar con la captura en Lame y el árbol tachi.\n\nImage 1: U04 supporting reference; select only the state specified below.\nImage 2: L03 supporting reference; select only the state specified below.\nExactly ONE CLOSED BRONZE-COLORED matte PAPER BOX, select the small closed metal-colored box from U04, NOT its open wooden chest. Vertical immersive view into deep folded ochre-earth strata where the closed box is contained; compact confinement under the earth, no human body visible. Broad shifted layers suggest the narrated tremor without destruction. No tachi tree, bird, Lame setting, gold treasure, inscriptions, diagram, cutaway labels or archaeological excavation.\n",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/nasa-paeces/tripticos/produccion-api-04/prompts/santo-tomas-acto-v1.txt",
+      "out": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-04/santo-tomas/acto-v1.jpeg"
+    },
+    {
+      "myth_id": 440,
+      "slug": "santo-tomas",
+      "title": "Santo Tomás",
+      "variant": "Núcleo de María y el encierro en cajones de bronce; no fusionar con la captura en Lame y el árbol tachi.",
+      "role": "huella",
+      "label": "huella",
+      "refs": [
+        "U04"
+      ],
+      "scene": "Square ABSTRACT MATERIAL METAPHOR: one compact closed olive-bronze paper cuboid held tightly between large compressed ochre folds, with a slight offset between adjacent layers. Restrained pressure and movement, no scenic horizon, tree, landscape, coffin, person, map, ritual seal or metallic shine.",
+      "model": "gpt-image-2.5-sunburst",
+      "size": "1024x1024",
+      "quality": "medium",
+      "prompt": "Use case: illustration-story. Produce ONE new finished edge-to-edge illustration, NOT a pasted identity sheet. No panels, contact sheet, border or catalogue.\nMATERIAL LOCK: matte cut-paper Colombian highland craft, broad flat cut shapes, visible paper edges, folded strata, cast shadows BETWEEN layers. Water, mist and cloud are also broad flat PAPER SHAPES, never photographic water, cotton, wool or realistic vapor. Earth and stones are broad paper sheets, not gritty particles. No display base, plinth, table frame, clay dolls, shiny CGI or realistic skin.\nInput images are supporting identity, prop and material references, NOT targets to paste. Select ONLY the named state/objects. Preserve approved identity, age, hair, clothing and palette. Clothing and staging are reversible editorial adaptations, not a universal Nasa uniform or verified reconstruction.\nZERO text, letters, titles, captions, labels, watermark or logos. No invented sacred patterns, crowns, headdresses, armor, ritual instructions, maps, shrines, deity faces or emblems from other peoples. No blood, injury, corpses, exposed organs, anatomical transformation spectacle, nudity, violence or animal-human hybrids. Exactly TWO arms and TWO hands connected to wrists per visible human; coherent body and feet supported on dry ground. Symbolic square must be an ABSTRACT MATERIAL METAPHOR, not a third scenic landscape or cultural emblem.\n\nNarrative lock: Núcleo de María y el encierro en cajones de bronce; no fusionar con la captura en Lame y el árbol tachi.\n\nImage 1: U04 supporting reference; select only the state specified below.\nSquare ABSTRACT MATERIAL METAPHOR: one compact closed olive-bronze paper cuboid held tightly between large compressed ochre folds, with a slight offset between adjacent layers. Restrained pressure and movement, no scenic horizon, tree, landscape, coffin, person, map, ritual seal or metallic shine.\n",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/nasa-paeces/tripticos/produccion-api-04/prompts/santo-tomas-huella-v1.txt",
+      "out": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-04/santo-tomas/huella-v1.jpeg"
+    },
+    {
+      "myth_id": 441,
+      "slug": "la-casa-de-fiesta-petrificada",
+      "title": "La casa de fiesta petrificada",
+      "variant": "Episodio de Uikuet: niño harapiento pide comida; elegir el rechazo previo y la casa ya detenida, sin espectáculo corporal.",
+      "role": "entrada",
+      "label": "entrada",
+      "refs": [
+        "P08",
+        "C04",
+        "L06",
+        "U10"
+      ],
+      "scene": "Exactly THREE people: the hungry CHILD state of Santo Tomás from lower-left P08 stands fully clothed outside the doorway of one ordinary party house. Inside stand exactly TWO adult hosts selected from C04 top-left blue-shawl woman and top-middle light-clothed man. The woman refuses with a restrained palm; the man watches. A serving pot and two ordinary food bowls suggest the gathering. No added children, monsters, weapons, halo, adult Santo Tomás, stone bodies or injuries. Warm modest domestic scale, clear threshold and dry footing.",
+      "model": "gpt-image-2.5-sunburst",
+      "size": "1536x1024",
+      "quality": "high",
+      "prompt": "Use case: illustration-story. Produce ONE new finished edge-to-edge illustration, NOT a pasted identity sheet. No panels, contact sheet, border or catalogue.\nMATERIAL LOCK: matte cut-paper Colombian highland craft, broad flat cut shapes, visible paper edges, folded strata, cast shadows BETWEEN layers. Water, mist and cloud are also broad flat PAPER SHAPES, never photographic water, cotton, wool or realistic vapor. Earth and stones are broad paper sheets, not gritty particles. No display base, plinth, table frame, clay dolls, shiny CGI or realistic skin.\nInput images are supporting identity, prop and material references, NOT targets to paste. Select ONLY the named state/objects. Preserve approved identity, age, hair, clothing and palette. Clothing and staging are reversible editorial adaptations, not a universal Nasa uniform or verified reconstruction.\nZERO text, letters, titles, captions, labels, watermark or logos. No invented sacred patterns, crowns, headdresses, armor, ritual instructions, maps, shrines, deity faces or emblems from other peoples. No blood, injury, corpses, exposed organs, anatomical transformation spectacle, nudity, violence or animal-human hybrids. Exactly TWO arms and TWO hands connected to wrists per visible human; coherent body and feet supported on dry ground. Symbolic square must be an ABSTRACT MATERIAL METAPHOR, not a third scenic landscape or cultural emblem.\n\nNarrative lock: Episodio de Uikuet: niño harapiento pide comida; elegir el rechazo previo y la casa ya detenida, sin espectáculo corporal.\n\nImage 1: P08 supporting reference; select only the state specified below.\nImage 2: C04 supporting reference; select only the state specified below.\nImage 3: L06 supporting reference; select only the state specified below.\nImage 4: U10 supporting reference; select only the state specified below.\nExactly THREE people: the hungry CHILD state of Santo Tomás from lower-left P08 stands fully clothed outside the doorway of one ordinary party house. Inside stand exactly TWO adult hosts selected from C04 top-left blue-shawl woman and top-middle light-clothed man. The woman refuses with a restrained palm; the man watches. A serving pot and two ordinary food bowls suggest the gathering. No added children, monsters, weapons, halo, adult Santo Tomás, stone bodies or injuries. Warm modest domestic scale, clear threshold and dry footing.\n",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/nasa-paeces/tripticos/produccion-api-04/prompts/la-casa-de-fiesta-petrificada-entrada-v1.txt",
+      "out": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-04/la-casa-de-fiesta-petrificada/entrada-v1.jpeg"
+    },
+    {
+      "myth_id": 441,
+      "slug": "la-casa-de-fiesta-petrificada",
+      "title": "La casa de fiesta petrificada",
+      "variant": "Episodio de Uikuet: niño harapiento pide comida; elegir el rechazo previo y la casa ya detenida, sin espectáculo corporal.",
+      "role": "acto",
+      "label": "acto",
+      "refs": [
+        "V08"
+      ],
+      "scene": "ONE vertical narrative scene AFTER the word has petrified the party house: immersive interior of the modest house rendered entirely in gray folded PAPER strata, preserving one doorway and EXACTLY THREE suspended pot-like gray forms at differing heights as the instant remains still. No living people, anatomical statues, stone faces, frozen suffering or archaeological claim. Broad paper walls, beams and floor, no chapel, cemetery, gravestones, candle shrine or visual labels.",
+      "model": "gpt-image-2.5-sunburst",
+      "size": "1024x1536",
+      "quality": "medium",
+      "prompt": "Use case: illustration-story. Produce ONE new finished edge-to-edge illustration, NOT a pasted identity sheet. No panels, contact sheet, border or catalogue.\nMATERIAL LOCK: matte cut-paper Colombian highland craft, broad flat cut shapes, visible paper edges, folded strata, cast shadows BETWEEN layers. Water, mist and cloud are also broad flat PAPER SHAPES, never photographic water, cotton, wool or realistic vapor. Earth and stones are broad paper sheets, not gritty particles. No display base, plinth, table frame, clay dolls, shiny CGI or realistic skin.\nInput images are supporting identity, prop and material references, NOT targets to paste. Select ONLY the named state/objects. Preserve approved identity, age, hair, clothing and palette. Clothing and staging are reversible editorial adaptations, not a universal Nasa uniform or verified reconstruction.\nZERO text, letters, titles, captions, labels, watermark or logos. No invented sacred patterns, crowns, headdresses, armor, ritual instructions, maps, shrines, deity faces or emblems from other peoples. No blood, injury, corpses, exposed organs, anatomical transformation spectacle, nudity, violence or animal-human hybrids. Exactly TWO arms and TWO hands connected to wrists per visible human; coherent body and feet supported on dry ground. Symbolic square must be an ABSTRACT MATERIAL METAPHOR, not a third scenic landscape or cultural emblem.\n\nNarrative lock: Episodio de Uikuet: niño harapiento pide comida; elegir el rechazo previo y la casa ya detenida, sin espectáculo corporal.\n\nImage 1: V08 supporting reference; select only the state specified below.\nONE vertical narrative scene AFTER the word has petrified the party house: immersive interior of the modest house rendered entirely in gray folded PAPER strata, preserving one doorway and EXACTLY THREE suspended pot-like gray forms at differing heights as the instant remains still. No living people, anatomical statues, stone faces, frozen suffering or archaeological claim. Broad paper walls, beams and floor, no chapel, cemetery, gravestones, candle shrine or visual labels.\n",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/nasa-paeces/tripticos/produccion-api-04/prompts/la-casa-de-fiesta-petrificada-acto-v1.txt",
+      "out": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-04/la-casa-de-fiesta-petrificada/acto-v1.jpeg"
+    },
+    {
+      "myth_id": 441,
+      "slug": "la-casa-de-fiesta-petrificada",
+      "title": "La casa de fiesta petrificada",
+      "variant": "Episodio de Uikuet: niño harapiento pide comida; elegir el rechazo previo y la casa ya detenida, sin espectáculo corporal.",
+      "role": "huella",
+      "label": "huella",
+      "refs": [
+        "U10",
+        "V08"
+      ],
+      "scene": "Square ABSTRACT MATERIAL METAPHOR: one small gray paper serving bowl hangs just beyond a narrow empty gray doorway-shaped fold in a broad ochre sheet; stillness and an unoffered portion. No literal house scene, people, faces, map, monument, emblem or text.",
+      "model": "gpt-image-2.5-sunburst",
+      "size": "1024x1024",
+      "quality": "medium",
+      "prompt": "Use case: illustration-story. Produce ONE new finished edge-to-edge illustration, NOT a pasted identity sheet. No panels, contact sheet, border or catalogue.\nMATERIAL LOCK: matte cut-paper Colombian highland craft, broad flat cut shapes, visible paper edges, folded strata, cast shadows BETWEEN layers. Water, mist and cloud are also broad flat PAPER SHAPES, never photographic water, cotton, wool or realistic vapor. Earth and stones are broad paper sheets, not gritty particles. No display base, plinth, table frame, clay dolls, shiny CGI or realistic skin.\nInput images are supporting identity, prop and material references, NOT targets to paste. Select ONLY the named state/objects. Preserve approved identity, age, hair, clothing and palette. Clothing and staging are reversible editorial adaptations, not a universal Nasa uniform or verified reconstruction.\nZERO text, letters, titles, captions, labels, watermark or logos. No invented sacred patterns, crowns, headdresses, armor, ritual instructions, maps, shrines, deity faces or emblems from other peoples. No blood, injury, corpses, exposed organs, anatomical transformation spectacle, nudity, violence or animal-human hybrids. Exactly TWO arms and TWO hands connected to wrists per visible human; coherent body and feet supported on dry ground. Symbolic square must be an ABSTRACT MATERIAL METAPHOR, not a third scenic landscape or cultural emblem.\n\nNarrative lock: Episodio de Uikuet: niño harapiento pide comida; elegir el rechazo previo y la casa ya detenida, sin espectáculo corporal.\n\nImage 1: U10 supporting reference; select only the state specified below.\nImage 2: V08 supporting reference; select only the state specified below.\nSquare ABSTRACT MATERIAL METAPHOR: one small gray paper serving bowl hangs just beyond a narrow empty gray doorway-shaped fold in a broad ochre sheet; stillness and an unoffered portion. No literal house scene, people, faces, map, monument, emblem or text.\n",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/nasa-paeces/tripticos/produccion-api-04/prompts/la-casa-de-fiesta-petrificada-huella-v1.txt",
+      "out": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-04/la-casa-de-fiesta-petrificada/huella-v1.jpeg"
+    },
+    {
+      "myth_id": 442,
+      "slug": "las-piedra-de-chaikin",
+      "title": "Las piedras de Chaikin",
+      "variant": "Dos caminantes con caña y Chautéh libre; no mezclar las piedras de Chaikin con Piedra Alta ni Uikuet.",
+      "role": "entrada",
+      "label": "entrada",
+      "refs": [
+        "P05",
+        "C05",
+        "U05",
+        "L03"
+      ],
+      "scene": "Exactly THREE full-body adults on a modest dry mountain path: ONE free pre-capture Chautéh selected from the upper P05 views, TWO healthy eyes and long untidy black hair, asks with a quiet open palm; TWO female travelers selected from C05 upper-left blue-shawl adult woman and upper-right gray-blue adult woman each carries ONE modest tied cane bundle from U05. They continue walking without handing cane. No rope shin wraps, shrine, serpent, extra people, stone bodies, sacred costume or prolonged violent confrontation.",
+      "model": "gpt-image-2.5-sunburst",
+      "size": "1536x1024",
+      "quality": "high",
+      "prompt": "Use case: illustration-story. Produce ONE new finished edge-to-edge illustration, NOT a pasted identity sheet. No panels, contact sheet, border or catalogue.\nMATERIAL LOCK: matte cut-paper Colombian highland craft, broad flat cut shapes, visible paper edges, folded strata, cast shadows BETWEEN layers. Water, mist and cloud are also broad flat PAPER SHAPES, never photographic water, cotton, wool or realistic vapor. Earth and stones are broad paper sheets, not gritty particles. No display base, plinth, table frame, clay dolls, shiny CGI or realistic skin.\nInput images are supporting identity, prop and material references, NOT targets to paste. Select ONLY the named state/objects. Preserve approved identity, age, hair, clothing and palette. Clothing and staging are reversible editorial adaptations, not a universal Nasa uniform or verified reconstruction.\nZERO text, letters, titles, captions, labels, watermark or logos. No invented sacred patterns, crowns, headdresses, armor, ritual instructions, maps, shrines, deity faces or emblems from other peoples. No blood, injury, corpses, exposed organs, anatomical transformation spectacle, nudity, violence or animal-human hybrids. Exactly TWO arms and TWO hands connected to wrists per visible human; coherent body and feet supported on dry ground. Symbolic square must be an ABSTRACT MATERIAL METAPHOR, not a third scenic landscape or cultural emblem.\n\nNarrative lock: Dos caminantes con caña y Chautéh libre; no mezclar las piedras de Chaikin con Piedra Alta ni Uikuet.\n\nImage 1: P05 supporting reference; select only the state specified below.\nImage 2: C05 supporting reference; select only the state specified below.\nImage 3: U05 supporting reference; select only the state specified below.\nImage 4: L03 supporting reference; select only the state specified below.\nExactly THREE full-body adults on a modest dry mountain path: ONE free pre-capture Chautéh selected from the upper P05 views, TWO healthy eyes and long untidy black hair, asks with a quiet open palm; TWO female travelers selected from C05 upper-left blue-shawl adult woman and upper-right gray-blue adult woman each carries ONE modest tied cane bundle from U05. They continue walking without handing cane. No rope shin wraps, shrine, serpent, extra people, stone bodies, sacred costume or prolonged violent confrontation.\n",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/nasa-paeces/tripticos/produccion-api-04/prompts/las-piedra-de-chaikin-entrada-v1.txt",
+      "out": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-04/las-piedra-de-chaikin/entrada-v1.jpeg"
+    },
+    {
+      "myth_id": 442,
+      "slug": "las-piedra-de-chaikin",
+      "title": "Las piedras de Chaikin",
+      "variant": "Dos caminantes con caña y Chautéh libre; no mezclar las piedras de Chaikin con Piedra Alta ni Uikuet.",
+      "role": "acto",
+      "label": "acto",
+      "refs": [
+        "V07",
+        "U05"
+      ],
+      "scene": "ONE vertical narrative view of exactly TWO upright asymmetrical folded-paper stones beside a dry highland footpath. Each stone incorporates a restrained narrow cane-bundle-shaped folded strip; shapes recall two laden travelers WITHOUT carved faces, human skin, limbs, statue anatomy or transformation spectacle. Source-inspired Chaikin approximation, not precise topography; no Chautéh, third peña, sanctuary, signage or archaeologists.",
+      "model": "gpt-image-2.5-sunburst",
+      "size": "1024x1536",
+      "quality": "medium",
+      "prompt": "Use case: illustration-story. Produce ONE new finished edge-to-edge illustration, NOT a pasted identity sheet. No panels, contact sheet, border or catalogue.\nMATERIAL LOCK: matte cut-paper Colombian highland craft, broad flat cut shapes, visible paper edges, folded strata, cast shadows BETWEEN layers. Water, mist and cloud are also broad flat PAPER SHAPES, never photographic water, cotton, wool or realistic vapor. Earth and stones are broad paper sheets, not gritty particles. No display base, plinth, table frame, clay dolls, shiny CGI or realistic skin.\nInput images are supporting identity, prop and material references, NOT targets to paste. Select ONLY the named state/objects. Preserve approved identity, age, hair, clothing and palette. Clothing and staging are reversible editorial adaptations, not a universal Nasa uniform or verified reconstruction.\nZERO text, letters, titles, captions, labels, watermark or logos. No invented sacred patterns, crowns, headdresses, armor, ritual instructions, maps, shrines, deity faces or emblems from other peoples. No blood, injury, corpses, exposed organs, anatomical transformation spectacle, nudity, violence or animal-human hybrids. Exactly TWO arms and TWO hands connected to wrists per visible human; coherent body and feet supported on dry ground. Symbolic square must be an ABSTRACT MATERIAL METAPHOR, not a third scenic landscape or cultural emblem.\n\nNarrative lock: Dos caminantes con caña y Chautéh libre; no mezclar las piedras de Chaikin con Piedra Alta ni Uikuet.\n\nImage 1: V07 supporting reference; select only the state specified below.\nImage 2: U05 supporting reference; select only the state specified below.\nONE vertical narrative view of exactly TWO upright asymmetrical folded-paper stones beside a dry highland footpath. Each stone incorporates a restrained narrow cane-bundle-shaped folded strip; shapes recall two laden travelers WITHOUT carved faces, human skin, limbs, statue anatomy or transformation spectacle. Source-inspired Chaikin approximation, not precise topography; no Chautéh, third peña, sanctuary, signage or archaeologists.\n",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/nasa-paeces/tripticos/produccion-api-04/prompts/las-piedra-de-chaikin-acto-v1.txt",
+      "out": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-04/las-piedra-de-chaikin/acto-v1.jpeg"
+    },
+    {
+      "myth_id": 442,
+      "slug": "las-piedra-de-chaikin",
+      "title": "Las piedras de Chaikin",
+      "variant": "Dos caminantes con caña y Chautéh libre; no mezclar las piedras de Chaikin con Piedra Alta ni Uikuet.",
+      "role": "huella",
+      "label": "huella",
+      "refs": [
+        "U05",
+        "V07"
+      ],
+      "scene": "Square ABSTRACT MATERIAL METAPHOR: EXACTLY TWO separate gray upright paper folds, each crossed by a few simple green cane-paper strips, with a small empty gap between them. Repeated burden and withheld sharing; neutral continuous ochre paper, no human bodies, scenic landscape, map, carving or ritual emblem.",
+      "model": "gpt-image-2.5-sunburst",
+      "size": "1024x1024",
+      "quality": "medium",
+      "prompt": "Use case: illustration-story. Produce ONE new finished edge-to-edge illustration, NOT a pasted identity sheet. No panels, contact sheet, border or catalogue.\nMATERIAL LOCK: matte cut-paper Colombian highland craft, broad flat cut shapes, visible paper edges, folded strata, cast shadows BETWEEN layers. Water, mist and cloud are also broad flat PAPER SHAPES, never photographic water, cotton, wool or realistic vapor. Earth and stones are broad paper sheets, not gritty particles. No display base, plinth, table frame, clay dolls, shiny CGI or realistic skin.\nInput images are supporting identity, prop and material references, NOT targets to paste. Select ONLY the named state/objects. Preserve approved identity, age, hair, clothing and palette. Clothing and staging are reversible editorial adaptations, not a universal Nasa uniform or verified reconstruction.\nZERO text, letters, titles, captions, labels, watermark or logos. No invented sacred patterns, crowns, headdresses, armor, ritual instructions, maps, shrines, deity faces or emblems from other peoples. No blood, injury, corpses, exposed organs, anatomical transformation spectacle, nudity, violence or animal-human hybrids. Exactly TWO arms and TWO hands connected to wrists per visible human; coherent body and feet supported on dry ground. Symbolic square must be an ABSTRACT MATERIAL METAPHOR, not a third scenic landscape or cultural emblem.\n\nNarrative lock: Dos caminantes con caña y Chautéh libre; no mezclar las piedras de Chaikin con Piedra Alta ni Uikuet.\n\nImage 1: U05 supporting reference; select only the state specified below.\nImage 2: V07 supporting reference; select only the state specified below.\nSquare ABSTRACT MATERIAL METAPHOR: EXACTLY TWO separate gray upright paper folds, each crossed by a few simple green cane-paper strips, with a small empty gap between them. Repeated burden and withheld sharing; neutral continuous ochre paper, no human bodies, scenic landscape, map, carving or ritual emblem.\n",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/nasa-paeces/tripticos/produccion-api-04/prompts/las-piedra-de-chaikin-huella-v1.txt",
+      "out": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-04/las-piedra-de-chaikin/huella-v1.jpeg"
+    },
+    {
+      "myth_id": 443,
+      "slug": "la-madre-de-la-sal",
+      "title": "La madre de la sal",
+      "variant": "Fragmento de reconocimiento de la anciana con moños de sal. No inventar un viaje, don material escenificado, mina o santuario.",
+      "role": "entrada",
+      "label": "entrada",
+      "refs": [
+        "P13"
+      ],
+      "scene": "Exactly ONE small elderly woman matching P13, TWO rounded pale salt-like hair buns, cream shawl and subdued dark full skirt, modest shoes and kind restrained face. Full body in a quiet broad off-white/ochre layered-paper space, no specific house or geographic location because the source does not identify one. Calm frontal-oblique recognition, not a character sheet. No crown, halos, mines, fire stick, magical rays, offering ritual, giver pose or extra people.",
+      "model": "gpt-image-2.5-sunburst",
+      "size": "1536x1024",
+      "quality": "high",
+      "prompt": "Use case: illustration-story. Produce ONE new finished edge-to-edge illustration, NOT a pasted identity sheet. No panels, contact sheet, border or catalogue.\nMATERIAL LOCK: matte cut-paper Colombian highland craft, broad flat cut shapes, visible paper edges, folded strata, cast shadows BETWEEN layers. Water, mist and cloud are also broad flat PAPER SHAPES, never photographic water, cotton, wool or realistic vapor. Earth and stones are broad paper sheets, not gritty particles. No display base, plinth, table frame, clay dolls, shiny CGI or realistic skin.\nInput images are supporting identity, prop and material references, NOT targets to paste. Select ONLY the named state/objects. Preserve approved identity, age, hair, clothing and palette. Clothing and staging are reversible editorial adaptations, not a universal Nasa uniform or verified reconstruction.\nZERO text, letters, titles, captions, labels, watermark or logos. No invented sacred patterns, crowns, headdresses, armor, ritual instructions, maps, shrines, deity faces or emblems from other peoples. No blood, injury, corpses, exposed organs, anatomical transformation spectacle, nudity, violence or animal-human hybrids. Exactly TWO arms and TWO hands connected to wrists per visible human; coherent body and feet supported on dry ground. Symbolic square must be an ABSTRACT MATERIAL METAPHOR, not a third scenic landscape or cultural emblem.\n\nNarrative lock: Fragmento de reconocimiento de la anciana con moños de sal. No inventar un viaje, don material escenificado, mina o santuario.\n\nImage 1: P13 supporting reference; select only the state specified below.\nExactly ONE small elderly woman matching P13, TWO rounded pale salt-like hair buns, cream shawl and subdued dark full skirt, modest shoes and kind restrained face. Full body in a quiet broad off-white/ochre layered-paper space, no specific house or geographic location because the source does not identify one. Calm frontal-oblique recognition, not a character sheet. No crown, halos, mines, fire stick, magical rays, offering ritual, giver pose or extra people.\n",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/nasa-paeces/tripticos/produccion-api-04/prompts/la-madre-de-la-sal-entrada-v1.txt",
+      "out": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-04/la-madre-de-la-sal/entrada-v1.jpeg"
+    },
+    {
+      "myth_id": 443,
+      "slug": "la-madre-de-la-sal",
+      "title": "La madre de la sal",
+      "variant": "Fragmento de reconocimiento de la anciana con moños de sal. No inventar un viaje, don material escenificado, mina o santuario.",
+      "role": "acto",
+      "label": "acto",
+      "refs": [
+        "P13",
+        "U05"
+      ],
+      "scene": "Exactly ONE same small elderly woman with TWO pale rounded salt-like hair buns, fully clothed, viewed in quiet three-quarter profile and modest human scale. The two compact buns of broad pale paper are the visual focus while hands remain naturally resting together; continuous softly folded neutral cream environment. DIFFERENT camera from the entrance, no invented gifting action, ritual, kitchen, dish held, mine, salt lake, burning fire, crown or additional people. The scene is recognition of her narrated appearance, not a new event.",
+      "model": "gpt-image-2.5-sunburst",
+      "size": "1024x1536",
+      "quality": "medium",
+      "prompt": "Use case: illustration-story. Produce ONE new finished edge-to-edge illustration, NOT a pasted identity sheet. No panels, contact sheet, border or catalogue.\nMATERIAL LOCK: matte cut-paper Colombian highland craft, broad flat cut shapes, visible paper edges, folded strata, cast shadows BETWEEN layers. Water, mist and cloud are also broad flat PAPER SHAPES, never photographic water, cotton, wool or realistic vapor. Earth and stones are broad paper sheets, not gritty particles. No display base, plinth, table frame, clay dolls, shiny CGI or realistic skin.\nInput images are supporting identity, prop and material references, NOT targets to paste. Select ONLY the named state/objects. Preserve approved identity, age, hair, clothing and palette. Clothing and staging are reversible editorial adaptations, not a universal Nasa uniform or verified reconstruction.\nZERO text, letters, titles, captions, labels, watermark or logos. No invented sacred patterns, crowns, headdresses, armor, ritual instructions, maps, shrines, deity faces or emblems from other peoples. No blood, injury, corpses, exposed organs, anatomical transformation spectacle, nudity, violence or animal-human hybrids. Exactly TWO arms and TWO hands connected to wrists per visible human; coherent body and feet supported on dry ground. Symbolic square must be an ABSTRACT MATERIAL METAPHOR, not a third scenic landscape or cultural emblem.\n\nNarrative lock: Fragmento de reconocimiento de la anciana con moños de sal. No inventar un viaje, don material escenificado, mina o santuario.\n\nImage 1: P13 supporting reference; select only the state specified below.\nImage 2: U05 supporting reference; select only the state specified below.\nExactly ONE same small elderly woman with TWO pale rounded salt-like hair buns, fully clothed, viewed in quiet three-quarter profile and modest human scale. The two compact buns of broad pale paper are the visual focus while hands remain naturally resting together; continuous softly folded neutral cream environment. DIFFERENT camera from the entrance, no invented gifting action, ritual, kitchen, dish held, mine, salt lake, burning fire, crown or additional people. The scene is recognition of her narrated appearance, not a new event.\n",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/nasa-paeces/tripticos/produccion-api-04/prompts/la-madre-de-la-sal-acto-v1.txt",
+      "out": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-04/la-madre-de-la-sal/acto-v1.jpeg"
+    },
+    {
+      "myth_id": 443,
+      "slug": "la-madre-de-la-sal",
+      "title": "La madre de la sal",
+      "variant": "Fragmento de reconocimiento de la anciana con moños de sal. No inventar un viaje, don material escenificado, mina o santuario.",
+      "role": "huella",
+      "label": "huella",
+      "refs": [
+        "U05"
+      ],
+      "scene": "Square ABSTRACT MATERIAL METAPHOR: exactly TWO rounded compact pale salt-paper clusters near one small ordinary ochre dish containing a few pale paper pieces. Neutral continuous cream paper with generous empty space; no human, hair face, salinas landscape, photographic crystals, mine, cult, scenic horizon or emblems.",
+      "model": "gpt-image-2.5-sunburst",
+      "size": "1024x1024",
+      "quality": "medium",
+      "prompt": "Use case: illustration-story. Produce ONE new finished edge-to-edge illustration, NOT a pasted identity sheet. No panels, contact sheet, border or catalogue.\nMATERIAL LOCK: matte cut-paper Colombian highland craft, broad flat cut shapes, visible paper edges, folded strata, cast shadows BETWEEN layers. Water, mist and cloud are also broad flat PAPER SHAPES, never photographic water, cotton, wool or realistic vapor. Earth and stones are broad paper sheets, not gritty particles. No display base, plinth, table frame, clay dolls, shiny CGI or realistic skin.\nInput images are supporting identity, prop and material references, NOT targets to paste. Select ONLY the named state/objects. Preserve approved identity, age, hair, clothing and palette. Clothing and staging are reversible editorial adaptations, not a universal Nasa uniform or verified reconstruction.\nZERO text, letters, titles, captions, labels, watermark or logos. No invented sacred patterns, crowns, headdresses, armor, ritual instructions, maps, shrines, deity faces or emblems from other peoples. No blood, injury, corpses, exposed organs, anatomical transformation spectacle, nudity, violence or animal-human hybrids. Exactly TWO arms and TWO hands connected to wrists per visible human; coherent body and feet supported on dry ground. Symbolic square must be an ABSTRACT MATERIAL METAPHOR, not a third scenic landscape or cultural emblem.\n\nNarrative lock: Fragmento de reconocimiento de la anciana con moños de sal. No inventar un viaje, don material escenificado, mina o santuario.\n\nImage 1: U05 supporting reference; select only the state specified below.\nSquare ABSTRACT MATERIAL METAPHOR: exactly TWO rounded compact pale salt-paper clusters near one small ordinary ochre dish containing a few pale paper pieces. Neutral continuous cream paper with generous empty space; no human, hair face, salinas landscape, photographic crystals, mine, cult, scenic horizon or emblems.\n",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/nasa-paeces/tripticos/produccion-api-04/prompts/la-madre-de-la-sal-huella-v1.txt",
+      "out": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-04/la-madre-de-la-sal/huella-v1.jpeg"
+    },
+    {
+      "myth_id": 444,
+      "slug": "la-candela",
+      "title": "La candela",
+      "variant": "Versión de la niña y la anciana: tomar el tizón y compartir desde la paja en Ipikué. No mezclar María, río, Pijao ni misioneros.",
+      "role": "entrada",
+      "label": "entrada",
+      "refs": [
+        "P14",
+        "C04",
+        "U06",
+        "L06"
+      ],
+      "scene": "Exactly TWO people: ONE elderly owner of fire P14 with long loose gray hair and dark skirt, and ONE fully dressed young girl selected from C04 lower-middle green dress/cream shawl. At the doorway of one modest highland house the elder hands the girl ONE tiny weak ember stick held away from clothes. The child receives carefully with a quiet gesture. Low hearth behind, no big fire, body flames, theft event, salt buns, María, priests or ethnic markers. Both full bodies and dry footing, no extra hands.",
+      "model": "gpt-image-2.5-sunburst",
+      "size": "1536x1024",
+      "quality": "high",
+      "prompt": "Use case: illustration-story. Produce ONE new finished edge-to-edge illustration, NOT a pasted identity sheet. No panels, contact sheet, border or catalogue.\nMATERIAL LOCK: matte cut-paper Colombian highland craft, broad flat cut shapes, visible paper edges, folded strata, cast shadows BETWEEN layers. Water, mist and cloud are also broad flat PAPER SHAPES, never photographic water, cotton, wool or realistic vapor. Earth and stones are broad paper sheets, not gritty particles. No display base, plinth, table frame, clay dolls, shiny CGI or realistic skin.\nInput images are supporting identity, prop and material references, NOT targets to paste. Select ONLY the named state/objects. Preserve approved identity, age, hair, clothing and palette. Clothing and staging are reversible editorial adaptations, not a universal Nasa uniform or verified reconstruction.\nZERO text, letters, titles, captions, labels, watermark or logos. No invented sacred patterns, crowns, headdresses, armor, ritual instructions, maps, shrines, deity faces or emblems from other peoples. No blood, injury, corpses, exposed organs, anatomical transformation spectacle, nudity, violence or animal-human hybrids. Exactly TWO arms and TWO hands connected to wrists per visible human; coherent body and feet supported on dry ground. Symbolic square must be an ABSTRACT MATERIAL METAPHOR, not a third scenic landscape or cultural emblem.\n\nNarrative lock: Versión de la niña y la anciana: tomar el tizón y compartir desde la paja en Ipikué. No mezclar María, río, Pijao ni misioneros.\n\nImage 1: P14 supporting reference; select only the state specified below.\nImage 2: C04 supporting reference; select only the state specified below.\nImage 3: U06 supporting reference; select only the state specified below.\nImage 4: L06 supporting reference; select only the state specified below.\nExactly TWO people: ONE elderly owner of fire P14 with long loose gray hair and dark skirt, and ONE fully dressed young girl selected from C04 lower-middle green dress/cream shawl. At the doorway of one modest highland house the elder hands the girl ONE tiny weak ember stick held away from clothes. The child receives carefully with a quiet gesture. Low hearth behind, no big fire, body flames, theft event, salt buns, María, priests or ethnic markers. Both full bodies and dry footing, no extra hands.\n",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/nasa-paeces/tripticos/produccion-api-04/prompts/la-candela-entrada-v1.txt",
+      "out": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-04/la-candela/entrada-v1.jpeg"
+    },
+    {
+      "myth_id": 444,
+      "slug": "la-candela",
+      "title": "La candela",
+      "variant": "Versión de la niña y la anciana: tomar el tizón y compartir desde la paja en Ipikué. No mezclar María, río, Pijao ni misioneros.",
+      "role": "acto",
+      "label": "acto",
+      "refs": [
+        "C04",
+        "U06",
+        "L07"
+      ],
+      "scene": "Exactly THREE people at a modest open dry village edge: same fully dressed green-dress young girl C04 lower-middle stands safely aside; TWO adults selected C04 blue-shawl woman and light-clothed man approach one small dry STRAW PATCH bearing a few broad orange paper flame shapes. The thick ember stick rests on this patch; adults reach their unlit small twigs toward it at a safe distance. Communal access AFTER the chase, not fire instruction. No burning buildings, huge wildfire, injured child, owner engulfed, river, María, missionaries, salt, weapons or invented ceremony.",
+      "model": "gpt-image-2.5-sunburst",
+      "size": "1024x1536",
+      "quality": "medium",
+      "prompt": "Use case: illustration-story. Produce ONE new finished edge-to-edge illustration, NOT a pasted identity sheet. No panels, contact sheet, border or catalogue.\nMATERIAL LOCK: matte cut-paper Colombian highland craft, broad flat cut shapes, visible paper edges, folded strata, cast shadows BETWEEN layers. Water, mist and cloud are also broad flat PAPER SHAPES, never photographic water, cotton, wool or realistic vapor. Earth and stones are broad paper sheets, not gritty particles. No display base, plinth, table frame, clay dolls, shiny CGI or realistic skin.\nInput images are supporting identity, prop and material references, NOT targets to paste. Select ONLY the named state/objects. Preserve approved identity, age, hair, clothing and palette. Clothing and staging are reversible editorial adaptations, not a universal Nasa uniform or verified reconstruction.\nZERO text, letters, titles, captions, labels, watermark or logos. No invented sacred patterns, crowns, headdresses, armor, ritual instructions, maps, shrines, deity faces or emblems from other peoples. No blood, injury, corpses, exposed organs, anatomical transformation spectacle, nudity, violence or animal-human hybrids. Exactly TWO arms and TWO hands connected to wrists per visible human; coherent body and feet supported on dry ground. Symbolic square must be an ABSTRACT MATERIAL METAPHOR, not a third scenic landscape or cultural emblem.\n\nNarrative lock: Versión de la niña y la anciana: tomar el tizón y compartir desde la paja en Ipikué. No mezclar María, río, Pijao ni misioneros.\n\nImage 1: C04 supporting reference; select only the state specified below.\nImage 2: U06 supporting reference; select only the state specified below.\nImage 3: L07 supporting reference; select only the state specified below.\nExactly THREE people at a modest open dry village edge: same fully dressed green-dress young girl C04 lower-middle stands safely aside; TWO adults selected C04 blue-shawl woman and light-clothed man approach one small dry STRAW PATCH bearing a few broad orange paper flame shapes. The thick ember stick rests on this patch; adults reach their unlit small twigs toward it at a safe distance. Communal access AFTER the chase, not fire instruction. No burning buildings, huge wildfire, injured child, owner engulfed, river, María, missionaries, salt, weapons or invented ceremony.\n",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/nasa-paeces/tripticos/produccion-api-04/prompts/la-candela-acto-v1.txt",
+      "out": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-04/la-candela/acto-v1.jpeg"
+    },
+    {
+      "myth_id": 444,
+      "slug": "la-candela",
+      "title": "La candela",
+      "variant": "Versión de la niña y la anciana: tomar el tizón y compartir desde la paja en Ipikué. No mezclar María, río, Pijao ni misioneros.",
+      "role": "huella",
+      "label": "huella",
+      "refs": [
+        "U06"
+      ],
+      "scene": "Square ABSTRACT MATERIAL METAPHOR: one broad flat orange-red paper flame divides into three smaller warm paper tongues above three modest dry straw-paper strips. Continuous neutral ochre paper, restrained warmth suggesting fire becomes shareable, no match instructions, hand, person, house, landscape, emblem or real combustion.",
+      "model": "gpt-image-2.5-sunburst",
+      "size": "1024x1024",
+      "quality": "medium",
+      "prompt": "Use case: illustration-story. Produce ONE new finished edge-to-edge illustration, NOT a pasted identity sheet. No panels, contact sheet, border or catalogue.\nMATERIAL LOCK: matte cut-paper Colombian highland craft, broad flat cut shapes, visible paper edges, folded strata, cast shadows BETWEEN layers. Water, mist and cloud are also broad flat PAPER SHAPES, never photographic water, cotton, wool or realistic vapor. Earth and stones are broad paper sheets, not gritty particles. No display base, plinth, table frame, clay dolls, shiny CGI or realistic skin.\nInput images are supporting identity, prop and material references, NOT targets to paste. Select ONLY the named state/objects. Preserve approved identity, age, hair, clothing and palette. Clothing and staging are reversible editorial adaptations, not a universal Nasa uniform or verified reconstruction.\nZERO text, letters, titles, captions, labels, watermark or logos. No invented sacred patterns, crowns, headdresses, armor, ritual instructions, maps, shrines, deity faces or emblems from other peoples. No blood, injury, corpses, exposed organs, anatomical transformation spectacle, nudity, violence or animal-human hybrids. Exactly TWO arms and TWO hands connected to wrists per visible human; coherent body and feet supported on dry ground. Symbolic square must be an ABSTRACT MATERIAL METAPHOR, not a third scenic landscape or cultural emblem.\n\nNarrative lock: Versión de la niña y la anciana: tomar el tizón y compartir desde la paja en Ipikué. No mezclar María, río, Pijao ni misioneros.\n\nImage 1: U06 supporting reference; select only the state specified below.\nSquare ABSTRACT MATERIAL METAPHOR: one broad flat orange-red paper flame divides into three smaller warm paper tongues above three modest dry straw-paper strips. Continuous neutral ochre paper, restrained warmth suggesting fire becomes shareable, no match instructions, hand, person, house, landscape, emblem or real combustion.\n",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/nasa-paeces/tripticos/produccion-api-04/prompts/la-candela-huella-v1.txt",
+      "out": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-04/la-candela/huella-v1.jpeg"
+    }
+  ]
+}

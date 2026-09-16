@@ -1,0 +1,130 @@
+{
+  "schema_version": 1,
+  "run_id": "nasa-biblia-produccion-api-01",
+  "date": "2026-09-09",
+  "corpus_manifest": "content/videos/nasa-paeces/biblia/corpus-manifest.v1.json",
+  "corpus_digest": "967750618150fd26c0087402136d9a0a3c615ffdc8d201612c02155a4fd49533",
+  "provider": "OpenAI Image API",
+  "endpoint": "/v1/images/generations and /v1/images/edits",
+  "model": "gpt-image-2.5-sunburst",
+  "quality": "medium",
+  "request_size": "1024x1536",
+  "output_format": "jpeg",
+  "output_compression": 92,
+  "credential": {
+    "env_var": "OPENAI_API_KEY",
+    "local_file": ".env",
+    "secret_recorded": false,
+    "git_ignored_verified": true,
+    "tracked": false,
+    "file_mode": "600"
+  },
+  "concurrency_evidence": {
+    "wave_1": {
+      "requests": 3,
+      "concurrency": 3,
+      "completed": 3,
+      "failed": 0,
+      "retries": 0,
+      "wall_seconds": 21.2
+    },
+    "wave_2": {
+      "requests": 3,
+      "concurrency": 3,
+      "completed": 3,
+      "failed": 0,
+      "retries": 0,
+      "wall_seconds": 18.1,
+      "methods": ["generate", "edit_with_one_reference"]
+    },
+    "decision": "Keep concurrency at 3 until at least 20 consecutive requests complete without 429 or unstable visual QA."
+  },
+  "assets": [
+    {
+      "id": "personaje-juan-tama-adulto",
+      "path": "output/imagegen/nasa-paeces/biblia/produccion-api-01/personaje-juan-tama-adulto-master-v1.jpeg",
+      "sha256": "19cc97f629a2d630b0b46618afa13322e5eea2261a706a09306d6a7225ad1472",
+      "dimensions": "1024x1536",
+      "status": "technical_candidate",
+      "qa": [
+        "Consistent front, profile and back identity.",
+        "Sober silhouette without weapons, headdress or fantasy rank.",
+        "Review facial rigidity, footwear and authority-staff semantics before canonical approval."
+      ]
+    },
+    {
+      "id": "entidad-lliban-culebra-rayo",
+      "path": "output/imagegen/nasa-paeces/biblia/produccion-api-01/entidad-lliban-culebra-rayo-master-v1.jpeg",
+      "sha256": "1d573ca21851f86ba2fbe5687fb89fbdd0122fa3b8ae3fd16b126a6a1e84d00a",
+      "dimensions": "1024x1536",
+      "status": "rejected",
+      "qa": [
+        "Unrequested typography and invented symbols.",
+        "Dragon morphology overrides the non-zoological lightning-serpent brief.",
+        "Must never be used as a continuity reference."
+      ]
+    },
+    {
+      "id": "paisaje-paramo-laguna",
+      "path": "output/imagegen/nasa-paeces/biblia/produccion-api-01/paisaje-paramo-laguna-master-v1.jpeg",
+      "sha256": "83f69c3761b3088ef1a0e45d36ab01e12375a3a811269676e7dbd153a27e9752",
+      "dimensions": "1024x1536",
+      "status": "rejected",
+      "qa": [
+        "Territorial depth and cold highland ecology are legible.",
+        "Water, fog and ground are too photorealistic and the result reads as a generic alpine diorama.",
+        "Must never be used as a continuity reference."
+      ]
+    },
+    {
+      "id": "personaje-chauteh",
+      "path": "output/imagegen/nasa-paeces/biblia/produccion-api-01/personaje-chauteh-master-v1.jpeg",
+      "sha256": "872ea48514adb24b7dba7ff7a4e552844c999e1af6f318ffc6094f7c902ce3b2",
+      "dimensions": "1024x1536",
+      "status": "technical_candidate",
+      "qa": [
+        "Removes the unsupported Mesoamerican headdress seen in the published image.",
+        "Nonfunctional eye is visible without wound or spectacle.",
+        "Verify footwear and exact eye-side continuity; cultural approval remains pending."
+      ]
+    },
+    {
+      "id": "paisaje-camino-nocturno",
+      "path": "output/imagegen/nasa-paeces/biblia/produccion-api-01/paisaje-camino-nocturno-master-v1.jpeg",
+      "sha256": "42cc1185664983133f06c66558dad1510c7118c2925d780e2e458a56869ebd74",
+      "dimensions": "1024x1536",
+      "status": "direction_candidate",
+      "qa": [
+        "Strong navigable road, ditch, creek and layered-night composition.",
+        "No apparition was invented, so the landscape remains reusable across the nocturnal cycle.",
+        "Central wet ground remains too realistic and requires a papercut correction before canonical approval."
+      ]
+    },
+    {
+      "id": "personaje-juan-tama-nino",
+      "path": "output/imagegen/nasa-paeces/biblia/produccion-api-01/personaje-juan-tama-nino-master-v1.jpeg",
+      "sha256": "2b0f7ba9dc765f121c4972b4c3a7468802b363a466f4746966e3e221808d4535",
+      "dimensions": "1024x1536",
+      "status": "technical_candidate",
+      "reference_inputs": [
+        {
+          "path": "output/imagegen/nasa-paeces/biblia/produccion-api-01/personaje-juan-tama-adulto-master-v1.jpeg",
+          "sha256": "19cc97f629a2d630b0b46618afa13322e5eea2261a706a09306d6a7225ad1472",
+          "role": "Material vocabulary, restrained palette and family resemblance only."
+        }
+      ],
+      "qa": [
+        "Clearly separate infant state with coherent family and material direction.",
+        "The version-sensitive title book was correctly excluded from the identity sheet.",
+        "Chumbe construction requires cultural review before canonical approval."
+      ]
+    }
+  ],
+  "counts": {
+    "generated": 6,
+    "technical_candidates": 3,
+    "direction_candidates": 1,
+    "rejected": 2,
+    "canonical_approved": 0
+  }
+}

@@ -1,0 +1,158 @@
+{
+  "schema": "wayuu-video-freeze/v1",
+  "created_at": "2026-09-09T23:19:00.918Z",
+  "plan": "content/videos/wayuu/videos/maleiwa/preproduccion-01/plan.json",
+  "plan_sha256": "29489e3cdfb270dfbed8cd53d8210dab202c3b581af9b256cef97fd186a0437a",
+  "style": "content/videos/wayuu/channel-dna.v3.json",
+  "style_sha256": "20f876f10840d4e643f034ccc131ed184bbb7ee5d023a1d2d3c82899fcc93b8a",
+  "checks": {
+    "shots": 16,
+    "words": 185,
+    "estimated_seconds": 128,
+    "generated": 13,
+    "pending": 3,
+    "warnings": []
+  },
+  "files": {
+    "narrative_snapshot_verified": true,
+    "reference_checks": 73,
+    "public_freshness": "not_checked_by_offline_preparer"
+  },
+  "jobs": [
+    {
+      "id": "b7b",
+      "prompt_file": "content/videos/wayuu/videos/maleiwa/preproduccion-01/prepared-b7b-01/prompts/b7b.txt",
+      "prompt_sha256": "7204d0e427f5151604f0c14feb89d10d86d1fb135294bd4f944b27d2a88f6211",
+      "model": "gpt-image-2.5-sunburst",
+      "allowed_models": [
+        "gpt-image-2.5-sunburst",
+        "gpt-image-2.5-flare",
+        "gpt-image-2"
+      ],
+      "fast_iteration_model": "gpt-image-2.5-flare",
+      "legacy_fallback_model": "gpt-image-2",
+      "one_model_per_myth": true,
+      "record_exact_model_and_snapshot": true,
+      "quality": "medium",
+      "size": "864x1536",
+      "api_request_size": "1024x1536",
+      "delivery_size": "864x1536",
+      "delivery_transform": "center_crop_864x1536",
+      "output_format": "jpeg",
+      "mode": "image_edit_with_prior_keyframes",
+      "input_images": [
+        {
+          "kind": "prior_keyframe",
+          "frame_id": "b6b",
+          "myth": "maleiwa",
+          "path": "output/imagegen/wayuu/keyframes/maleiwa-preproduccion-01/b6b.jpeg",
+          "sha256": "5075b8fb312bf8d786d2caa180f4fdc1f638abfe1a4482b50184d78cbe6f7c3a",
+          "approved": true,
+          "role": "Preservar continuidad causal de b6b: identidades, vestuario, paleta y material; prohibido repetir cámara o distribución."
+        },
+        {
+          "kind": "prior_keyframe",
+          "frame_id": "b7a",
+          "myth": "maleiwa",
+          "path": "output/imagegen/wayuu/keyframes/maleiwa-preproduccion-01/b7a.jpeg",
+          "sha256": "6915b1ca05d1a7734b5d2f6f87a46e4f8bb83f6263724e166802d608dea02e8b",
+          "approved": true,
+          "role": "Preservar continuidad causal de b7a: identidades, vestuario, paleta y material; prohibido repetir cámara o distribución."
+        },
+        {
+          "kind": "canonical_model",
+          "myth": "maleiwa",
+          "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-10-maleiwa-medium-corrections-02/primeros_wayuu__group_grammar--canon.jpeg",
+          "sha256": "d8de2021bdc7cb22c2f271f872f442b6ec6dfa4de717c95ced8cd5c9c5c968a5",
+          "approved": true,
+          "role": "Fijar el modelo canónico primeros_wayuu__group_grammar; preservar identidad y material sin copiar la composición."
+        }
+      ],
+      "api_method": "images.edit",
+      "source_output": "output/imagegen/wayuu/keyframes/maleiwa-preproduccion-01/b7b.sunburst-master.jpeg",
+      "output": "output/imagegen/wayuu/keyframes/maleiwa-preproduccion-01/b7b.jpeg",
+      "status": "prepared_not_generated"
+    }
+  ],
+  "prior_candidates": [
+    {
+      "id": "b1a",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/maleiwa-preproduccion-01/b1a.jpeg",
+      "sha256": "37ad4338b549f06d86c1c26a87c7f38d62719b6b77f989410ea29e09e7d32c20"
+    },
+    {
+      "id": "b1b",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/maleiwa-preproduccion-01/b1b.jpeg",
+      "sha256": "5a63399f878c10c45e51f37e450f9a8eb1c46be3bb8eb5586eb3056a4a152bb2"
+    },
+    {
+      "id": "b2a",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/maleiwa-preproduccion-01/b2a.jpeg",
+      "sha256": "9ddd672642f9b2154eb8ef74e10ea4e90800072ebdd16e05e669e4a107375066"
+    },
+    {
+      "id": "b2b",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/maleiwa-preproduccion-01/b2b.jpeg",
+      "sha256": "f856ab0f71545467aaf44a5b09eae20eb9122745c08a83453888a8b57e3e0ae3"
+    },
+    {
+      "id": "b3a",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/maleiwa-preproduccion-01/b3a.jpeg",
+      "sha256": "a853c453f63ea0cfe409550eedd5236beb091f9c01e581433f4989fc2f5ac2df"
+    },
+    {
+      "id": "b3b",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/maleiwa-preproduccion-01/b3b.jpeg",
+      "sha256": "eadec208c54c61875da4710d2bf2628860716fda7f3b619b42f5a19092682b22"
+    },
+    {
+      "id": "b4a",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/maleiwa-preproduccion-01/b4a.jpeg",
+      "sha256": "b2d84d1656d1714d42128bcfcf5690145d591e1ca3c44c814488e129485dfc20"
+    },
+    {
+      "id": "b4b",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/maleiwa-preproduccion-01/b4b.jpeg",
+      "sha256": "860348110910d1601ff4a68ea9cdfb0d94ba8d6317b5c844f097ec5f8f8529b1"
+    },
+    {
+      "id": "b5a",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/maleiwa-preproduccion-01/b5a.jpeg",
+      "sha256": "5b26a5cb27a9489e0b3c5906e9ffb0ea6c3cb32bbf1cd85cc76489a87436cc04"
+    },
+    {
+      "id": "b5b",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/maleiwa-preproduccion-01/b5b.jpeg",
+      "sha256": "8035deb8c29f1a79b15ce80e18a2a542c090d5ceb318d9534855e0497883e0d8"
+    },
+    {
+      "id": "b6a",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/maleiwa-preproduccion-01/b6a.jpeg",
+      "sha256": "265be60d641b4a87c42520dc9e0616ec4fc897a5c728c1b1ccbfea3d960f562b"
+    },
+    {
+      "id": "b6b",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/maleiwa-preproduccion-01/b6b.jpeg",
+      "sha256": "5075b8fb312bf8d786d2caa180f4fdc1f638abfe1a4482b50184d78cbe6f7c3a"
+    },
+    {
+      "id": "b7a",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/maleiwa-preproduccion-01/b7a.jpeg",
+      "sha256": "6915b1ca05d1a7734b5d2f6f87a46e4f8bb83f6263724e166802d608dea02e8b"
+    }
+  ],
+  "no_api_calls": true
+}

@@ -1,0 +1,294 @@
+{
+  "selected": {
+    "430_entrada": "entrada-v1.jpeg",
+    "430_acto": "acto-v1.jpeg",
+    "430_huella": "huella-v1.jpeg",
+    "431_entrada": "entrada-v1.jpeg",
+    "431_huella": "huella-v1.jpeg",
+    "432_entrada": "entrada-v1.jpeg",
+    "432_acto": "acto-v1.jpeg",
+    "432_huella": "huella-v1.jpeg",
+    "433_entrada": "entrada-v1.jpeg",
+    "431_acto": "acto-v2.jpeg",
+    "433_acto": "acto-v1.jpeg",
+    "434_entrada": "entrada-v1.jpeg",
+    "434_acto": "acto-v1.jpeg",
+    "434_huella": "huella-v1.jpeg",
+    "433_huella": "huella-v2.jpeg"
+  },
+  "qa": [
+    {
+      "key": "430_entrada",
+      "file": "entrada-v1.jpeg",
+      "status": "accepted",
+      "checks": "Dos jóvenes adultos conversan, vestuario gris-verde y chal óxido coherentes; cuerpos completos sobre sendero, montañas y niebla de papel sin texto ni atribución divina."
+    },
+    {
+      "key": "430_acto",
+      "file": "acto-v1.jpeg",
+      "status": "accepted",
+      "checks": "Una nube oscura continua se aleja sobre cuenca casi seca y laguna distante; paisaje único sin personas, daño ni paneles, relieve y sombras de papel legibles."
+    },
+    {
+      "key": "430_huella",
+      "file": "huella-v1.jpeg",
+      "status": "accepted",
+      "checks": "Una hamaca vacía verde-azul con dos extremos sujetos; concavidad y pliegues claros, metáfora de ausencia sin bebé, habitación ni ritual añadido."
+    },
+    {
+      "key": "431_entrada",
+      "file": "entrada-v1.jpeg",
+      "status": "accepted",
+      "checks": "Dos adultos sostienen a un bebé tranquilo sobre orilla seca; un sombrero dorado sencillo, agua estratificada de papel, sin peligro, cadáveres ni escena de lactancia."
+    },
+    {
+      "key": "431_acto",
+      "file": "acto-v1.jpeg",
+      "status": "rejected",
+      "checks": "La escena muestra una tercera mano bajo la serpiente y varias ollas accesorias; corregir anatomía y dejar una sola olla principal."
+    },
+    {
+      "key": "431_huella",
+      "file": "huella-v1.jpeg",
+      "status": "accepted",
+      "checks": "Una sola culebra verde continua con cabeza cerrada y cola legible emerge de una olla pequeña; sombras y pliegues de papel, símbolo sin gente ni violencia."
+    },
+    {
+      "key": "432_entrada",
+      "file": "entrada-v1.jpeg",
+      "status": "accepted",
+      "checks": "Madre y adolescente humano junto a un felino tawny tranquilo; dos personas completas, ruana azul y chal verde, bosque profundo sin hibridación ni violencia."
+    },
+    {
+      "key": "432_acto",
+      "file": "acto-v1.jpeg",
+      "status": "accepted",
+      "checks": "Juan adulto sin sombrero y con ruana azul aconseja a dos habitantes sobre tierra seca; tres cuerpos legibles, laguna remota y niebla de papel, sin Llíban ni batalla."
+    },
+    {
+      "key": "432_huella",
+      "file": "huella-v1.jpeg",
+      "status": "accepted",
+      "checks": "Una cornisa de papel sobre agua oscura y una pequeña esquirla suspendida sintetizan vigilancia territorial; sin personas, impacto, mapa ni iconografía ritual."
+    },
+    {
+      "key": "433_entrada",
+      "file": "entrada-v1.jpeg",
+      "status": "accepted",
+      "checks": "Dos autoridades adultas iguales conversan: Llíban verde con sombrero sencillo y Chiracol azul sin sombrero; cuatro manos coherentes, paisaje continuo sin batalla."
+    },
+    {
+      "key": "431_acto",
+      "file": "acto-v2.jpeg",
+      "status": "accepted",
+      "checks": "Corrección aceptada: exactamente dos manos conectadas a sus brazos y dos pies completos; una sola olla y culebra verde continua, Llíban calmado sin combate."
+    },
+    {
+      "key": "433_acto",
+      "file": "acto-v1.jpeg",
+      "status": "accepted",
+      "checks": "Dos adultos de espaldas recorren caminos distintos hacia dos lagunas separadas; identidades verde/sombrero y azul/sin sombrero coherentes. Bastón de marcha es detalle escenográfico, no insignia ritual ni dato documental."
+    },
+    {
+      "key": "433_huella",
+      "file": "huella-v1.jpeg",
+      "status": "rejected",
+      "checks": "Dos lagunas separadas correctas, pero la composición es otro paisaje panorámico y no la síntesis material abstracta prevista; simplificar a macro de papel y pliegue."
+    },
+    {
+      "key": "434_entrada",
+      "file": "entrada-v1.jpeg",
+      "status": "accepted",
+      "checks": "Niña humana completamente vestida y dos cuidadores de camino a iglesia pequeña; arroyo de papel, tres cuerpos coherentes antes de transformación, sin violencia."
+    },
+    {
+      "key": "434_acto",
+      "file": "acto-v1.jpeg",
+      "status": "accepted",
+      "checks": "Una serpiente arcoíris intacta, cabeza azul con dos orejas y cola azul, rodea iglesia pequeña; exactamente dos águilas se acercan antes del daño. No personas, heridas ni duplicación de niña."
+    },
+    {
+      "key": "434_huella",
+      "file": "huella-v1.jpeg",
+      "status": "accepted",
+      "checks": "Una serpiente arcoíris continua se entrelaza con un chal gris-azul de papel; cabeza con dos orejas y cola azul coherentes con la referencia. Síntesis sin humanos, iglesia, daño ni emblema ritual."
+    },
+    {
+      "key": "433_huella",
+      "file": "huella-v2.jpeg",
+      "status": "accepted",
+      "checks": "Macro material corregido: exactamente dos concavidades azules desiguales separadas por franja ocre continua; relieve y sombra de papel, sin paisaje literal, horizonte ni emblema."
+    }
+  ],
+  "runs": [
+    {
+      "myth_id": 430,
+      "role": "entrada",
+      "chunk_id": "35666a",
+      "wall_time_seconds": 1.25e-7,
+      "exit_code": 0,
+      "original_token_count": 45,
+      "output": "Edit completed in 38.4s.\nWrote /Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-02/la-visita-del-joven-desconocido/entrada-v1.jpeg\n"
+    },
+    {
+      "myth_id": 430,
+      "role": "acto",
+      "chunk_id": "6f6b43",
+      "wall_time_seconds": 0.000001084,
+      "exit_code": 0,
+      "original_token_count": 45,
+      "output": "Edit completed in 17.9s.\nWrote /Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-02/la-visita-del-joven-desconocido/acto-v1.jpeg\n"
+    },
+    {
+      "myth_id": 430,
+      "role": "huella",
+      "chunk_id": "d97ef7",
+      "wall_time_seconds": 3.75e-7,
+      "exit_code": 0,
+      "original_token_count": 45,
+      "output": "Edit completed in 18.1s.\nWrote /Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-02/la-visita-del-joven-desconocido/huella-v1.jpeg\n"
+    },
+    {
+      "myth_id": 431,
+      "role": "entrada",
+      "chunk_id": "3caaf9",
+      "wall_time_seconds": 1.25e-7,
+      "exit_code": 0,
+      "original_token_count": 44,
+      "output": "Edit completed in 40.0s.\nWrote /Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-02/lliban-el-hijo-del-trueno/entrada-v1.jpeg\n"
+    },
+    {
+      "myth_id": 431,
+      "role": "acto",
+      "chunk_id": "5bb335",
+      "wall_time_seconds": 2.9340625,
+      "exit_code": 0,
+      "original_token_count": 43,
+      "output": "Edit completed in 21.7s.\nWrote /Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-02/lliban-el-hijo-del-trueno/acto-v1.jpeg\n"
+    },
+    {
+      "myth_id": 431,
+      "role": "huella",
+      "chunk_id": "7dc58a",
+      "wall_time_seconds": 3.765839625,
+      "exit_code": 0,
+      "original_token_count": 44,
+      "output": "Edit completed in 21.4s.\nWrote /Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-02/lliban-el-hijo-del-trueno/huella-v1.jpeg\n"
+    },
+    {
+      "myth_id": 432,
+      "role": "entrada",
+      "chunk_id": "30376b",
+      "wall_time_seconds": 0.000001083,
+      "exit_code": 0,
+      "original_token_count": 41,
+      "output": "Edit completed in 37.5s.\nWrote /Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-02/juan-chiracol/entrada-v1.jpeg\n"
+    },
+    {
+      "myth_id": 432,
+      "role": "acto",
+      "chunk_id": "ff0139",
+      "wall_time_seconds": 3.75e-7,
+      "exit_code": 0,
+      "original_token_count": 40,
+      "output": "Edit completed in 23.0s.\nWrote /Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-02/juan-chiracol/acto-v1.jpeg\n"
+    },
+    {
+      "myth_id": 433,
+      "role": "entrada",
+      "version": 1,
+      "chunk_id": "6bf659",
+      "wall_time_seconds": 0.000002625,
+      "exit_code": 0,
+      "original_token_count": 43,
+      "output": "Edit completed in 34.8s.\nWrote /Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-02/lliban-y-juan-chiracol/entrada-v1.jpeg\n"
+    },
+    {
+      "myth_id": 432,
+      "role": "huella",
+      "version": 1,
+      "chunk_id": "d8a94c",
+      "wall_time_seconds": 0.000002125,
+      "exit_code": 0,
+      "original_token_count": 41,
+      "output": "Edit completed in 20.6s.\nWrote /Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-02/juan-chiracol/huella-v1.jpeg\n"
+    },
+    {
+      "myth_id": 431,
+      "role": "acto",
+      "version": 2,
+      "chunk_id": "019191",
+      "wall_time_seconds": 8.33e-7,
+      "exit_code": 0,
+      "original_token_count": 43,
+      "output": "Edit completed in 22.0s.\nWrote /Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-02/lliban-el-hijo-del-trueno/acto-v2.jpeg\n"
+    },
+    {
+      "myth_id": 433,
+      "role": "acto",
+      "version": 1,
+      "chunk_id": "2ce31a",
+      "wall_time_seconds": 1.66e-7,
+      "exit_code": 0,
+      "original_token_count": 42,
+      "output": "Edit completed in 22.1s.\nWrote /Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-02/lliban-y-juan-chiracol/acto-v1.jpeg\n"
+    },
+    {
+      "myth_id": 434,
+      "role": "entrada",
+      "version": 1,
+      "chunk_id": "7f5de4",
+      "wall_time_seconds": 0.000002834,
+      "exit_code": 0,
+      "original_token_count": 45,
+      "output": "Edit completed in 40.4s.\nWrote /Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-02/la-nina-que-se-volvio-serpiente/entrada-v1.jpeg\n"
+    },
+    {
+      "myth_id": 433,
+      "role": "huella",
+      "version": 1,
+      "chunk_id": "470235",
+      "wall_time_seconds": 6.67e-7,
+      "exit_code": 0,
+      "original_token_count": 43,
+      "output": "Edit completed in 25.5s.\nWrote /Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-02/lliban-y-juan-chiracol/huella-v1.jpeg\n"
+    },
+    {
+      "myth_id": 434,
+      "role": "acto",
+      "version": 1,
+      "chunk_id": "aad9be",
+      "wall_time_seconds": 5.41e-7,
+      "exit_code": 0,
+      "original_token_count": 45,
+      "output": "Edit completed in 21.6s.\nWrote /Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-02/la-nina-que-se-volvio-serpiente/acto-v1.jpeg\n"
+    },
+    {
+      "myth_id": 434,
+      "role": "huella",
+      "version": 1,
+      "chunk_id": "747a66",
+      "wall_time_seconds": 0.0000015,
+      "exit_code": 0,
+      "original_token_count": 45,
+      "output": "Edit completed in 19.4s.\nWrote /Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-02/la-nina-que-se-volvio-serpiente/huella-v1.jpeg\n"
+    },
+    {
+      "myth_id": 433,
+      "role": "huella",
+      "version": 2,
+      "chunk_id": "8b11d4",
+      "wall_time_seconds": 0.000001084,
+      "exit_code": 0,
+      "original_token_count": 43,
+      "output": "Edit completed in 25.5s.\nWrote /Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-02/lliban-y-juan-chiracol/huella-v2.jpeg\n"
+    }
+  ],
+  "sequence_qa": {
+    "430": "Encuentro, partida ambiental y ausencia: tres relaciones distintas; paleta y material de papel coherentes.",
+    "431": "Rescate, poder contenido y símbolo: estado infantil y adulto diferenciados, anatomía corregida, culebra única.",
+    "432": "Cuidado, palabra y vigilancia: continuidad adolescente/adulto, felino solo en origen, huella sin personajes.",
+    "433": "Conversación y separación territorial sintetizadas por dos concavidades; mismas identidades, símbolo no ritual.",
+    "434": "Estado humano, transformación antes del daño y chal-memoria: colores y orejas coherentes, sin fusionar con la culebra de Llíban."
+  }
+}

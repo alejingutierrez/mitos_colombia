@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "status": "produced_reviewed_pilot_candidate",
+  "myth_id": 352,
+  "piece": "entrada",
+  "model": "gpt-image-2.5-sunburst",
+  "api_calls": 2,
+  "concurrency": 1,
+  "photos_uploaded": 0,
+  "user_approved": false,
+  "culturally_certified": false,
+  "published": false,
+  "selected_file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-04/el-agua/entrada-quilling-v4-refined.jpeg",
+  "applied_to_triptych_selection": false,
+  "applied_to_bible_selection": false,
+  "entries": [
+    {
+      "schema_version": 1,
+      "status": "retained_intermediate_facetado",
+      "myth_id": 352,
+      "piece": "entrada",
+      "mode": "edit",
+      "model": "gpt-image-2.5-sunburst",
+      "quality": "high",
+      "size": "1536x1024",
+      "input_files": [
+        "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-03/el-agua/entrada-maqueta-v3.jpeg"
+      ],
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-04/el-agua/entrada-quilling-v4.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/tripticos/produccion-api-04/prompts/entrada-quilling-v4.txt",
+      "prompt": "Use case: style-transfer.\nAsset: one narrative scene photographed as a handmade PAPER QUILLING + PAPER CUT + LOW PAPER RELIEF artwork.\nImage1 is the EDIT TARGET for the three characters, garment shapes, poses, exactly three empty wells and sunset landscape arrangement. It is NOT a material/style reference. Its polygonal 3D mannequin style was rejected. Completely discard that rendering language while keeping the story and recognizable fictional cast.\nPRIMARY MATERIAL: visible narrow paper strips standing ON EDGE, curled by hand into loose spirals, tight coils, open S-scrolls and pinched leaf/teardrop loops; each strip edge has real thickness, little gaps between turns, imperfect hand curvature, exposed ends and actual shadows. Combine these with irregular scissor-cut paper sheets physically spaced apart. This must look like a MACRO PHOTOGRAPH OF PAPER CRAFT, not a drawing or a digital 3D render.\nPeople: low-relief layered cut-paper silhouettes, rounded natural outlines, NOT faceted polygonal sculptures. Faces retain the same age, broader mature Cacica cheeks, stockier older man and slender younger man; build features from a FEW separate rounded paper cutouts with raised nose bridge and tiny cut eyes/lips, without printed portraits, drawn faces, skin rendering or triangular cheek planes. Black hair made of many distinct narrow paper strips following hair growth, with open curled ends and visible edge shadows. Some skin contours gently follow raised brown paper strips, NOT decorative face tattoos. Bodies combine cut paper silhouettes and low relief, no smooth organic CGI modeling.\nClothes: cream rectangular cut-paper upper piece on Cacica, two narrow shoulder ties, cream hip wrap with waist cord. Show broad scissor-cut panels with a few curled paper-strip pleats and small visible quilled scrolls at natural folds; not patterned cloth, sequins or sacred motifs. Both men bare upper torsos represented by brown matte paper cutouts and cream hip wraps, no shirts or blue stripe.\nEnvironment: shrubs constructed from unmistakable GREEN QUILLING leaves: open pinched loops and rolled spirals with holes between the turns, combined with cut-paper stems. Soil from much FEWER broad torn/cut ochre paper layers with stepped relief and visible inner edges, not hundreds of low-poly rock triangles. Wells are excavated hollows in the stacked EARTH paper layers, irregular torn lips and dark interiors, no regular stone masonry rings. Rounded topographic paper-cut hills physically separated in depth, no triangular mountain facets. Cut-paper sun/clouds raised from plain colored paper sky.\nPhotographic proof: warm raking side light creates distinct small shadows under each strip, loop, overlap and inner cut edge. Macro craft photography, front/middle in focus and subtle background falloff. Show genuine paper fibers, cut thickness and air gaps; no fake texture overlay. The craft construction must be unmistakable even at thumbnail scale. Frame the entire scene edge to edge with no visible outer base, table, frame or studio.\nStory invariants: exactly three adults, Cacica front looking down into nearest empty well; older man behind left with hand at head, younger man behind right arms crossed; exactly three EMPTY wells, no water, no new characters, props, hats, symbols, rain or text. Preserve approximate placement and sunset palette. Quilling coils are material technique, not new cultural ornaments.\nAVOID: illustration, painted scenery, brush shading, printed paper texture, vector art, 3D low-poly models, polygonal heads, clay, plastic, fabric, real skin, photographic people, beads masquerading as quilling, fantasy spirals unrelated to objects.",
+      "photos_uploaded": 0,
+      "intent": "piloto tecnico; no sustituye automaticamente las tres escenas seleccionadas",
+      "sha256": "7ffd5a47ab2a95569cf059c6c44eb44368fe9fcd0d42249450006e6bdcf15f79",
+      "bytes": 348277,
+      "width": 1536,
+      "height": 1024,
+      "exit_code": 0,
+      "elapsed_ms": 46282
+    },
+    {
+      "schema_version": 1,
+      "status": "selected_pilot_pending_user",
+      "myth_id": 352,
+      "piece": "entrada",
+      "mode": "edit",
+      "model": "gpt-image-2.5-sunburst",
+      "quality": "high",
+      "size": "1536x1024",
+      "input_files": [
+        "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-04/el-agua/entrada-quilling-v4.jpeg"
+      ],
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-04/el-agua/entrada-quilling-v4-refined.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/tripticos/produccion-api-04/prompts/entrada-quilling-v4-refined.txt",
+      "prompt": "Use case: precise-object-edit.\nImage1: current paper-quilling scene, EDIT TARGET.\nChange ONLY the construction of the THREE PEOPLE, especially exposed faces, shoulders, arms and torsos. Keep the quilled foliage, terrain, exactly three dry wells, sunset, palette, camera, identities, poses, full-body framing and clothing silhouettes.\nThe remaining polygonal paper mannequins are explicitly rejected. REPLACE them with rounded SCISSOR-CUT PAPER HUMAN SILHOUETTES built in LOW RELIEF from thin matte colored sheets. Bodies are nearly flat assembled cutouts with actual visible sheet edges and overlap shadows; dimensionality comes from spacing and paper layering, NEVER triangulated geometric body volumes.\nEach face uses rounded contour cutouts: one tan/brown face silhouette, gently curved raised nose cutout, tiny dark paper eye shapes and lip shape, one or two softer overlapping cheek cutouts. No triangular cheeks, sharp angular jaw facets, polygonal foreheads or wedges. Same mature fuller Cacica face, mature stockier man's face and younger narrower man's face, dignified recognizable identity adaptations, not generic identical faces. NO ink-drawn or printed portraits and NO smooth realistic CGI skin.\nArms, torsos and legs use a few overlapping CURVED PAPER CUTOUTS with sheet-thin edges, not angular folded prisms. Rounded simple outlines, natural age/body proportions, minimal paper relief. Hair is actual narrow curled black paper strips, visibly separated and standing on edge in some places, NOT a low-poly wig.\nPreserve both men's cream waist wraps and no shirts. Preserve Cacica's separate rectangular cream torso cloth and two shoulder ties, BUT let its lower edge overlap the hip wrap so there is no crop-top/midriff gap. Twisted or curled paper-strip ties belong to the construction, not decorative brooches: avoid added round floral buttons at shoulder/waist. Garment folds are a FEW thin curled overlapping paper panels, not simulated fabric.\nPhysical paper craftsmanship and macro photograph lighting remain clear. Keep all quilled coils and open pinched loops in foliage exactly as they are. No extra props/people, no water, no hats, no text. No illustration brushwork, 3D mannequin, clay, plastic, photographic skin or facial triangulation.\nThis is a targeted correction of people only; keep the background paper-quilling craft scene unchanged as closely as possible.",
+      "photos_uploaded": 0,
+      "intent": "refinamiento de los personajes del unico piloto",
+      "sha256": "291ec910db634c152c0490a9a9f6f444f29804d891ef90f4795f5f98305409f7",
+      "bytes": 322086,
+      "width": 1536,
+      "height": 1024,
+      "exit_code": 0,
+      "elapsed_ms": 36291
+    }
+  ],
+  "cost_verified": false
+}

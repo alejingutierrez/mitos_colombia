@@ -1,0 +1,93 @@
+{
+  "schema": "wayuu-video-freeze/v1",
+  "created_at": "2026-09-09T23:40:24.432Z",
+  "plan": "content/videos/wayuu/videos/waleker-el-origen-del-tejido/preproduccion-01/plan.json",
+  "plan_sha256": "db702a3cab7b0ba6b5692f1d6b78e2398460738306b8378c44dad6970b2b6164",
+  "style": "content/videos/wayuu/channel-dna.v3.json",
+  "style_sha256": "20f876f10840d4e643f034ccc131ed184bbb7ee5d023a1d2d3c82899fcc93b8a",
+  "checks": {
+    "shots": 16,
+    "words": 181,
+    "estimated_seconds": 128,
+    "generated": 0,
+    "pending": 16,
+    "warnings": []
+  },
+  "files": {
+    "narrative_snapshot_verified": true,
+    "reference_checks": 26,
+    "public_freshness": "not_checked_by_offline_preparer"
+  },
+  "jobs": [
+    {
+      "id": "b1a",
+      "prompt_file": "content/videos/wayuu/videos/waleker-el-origen-del-tejido/preproduccion-01/prepared-b1a-01/prompts/b1a.txt",
+      "prompt_sha256": "0ec2b89051f3e5aa4b38eafc92081cc3737be696739e933741049d1b607e63f8",
+      "model": "gpt-image-2.5-sunburst",
+      "allowed_models": [
+        "gpt-image-2.5-sunburst",
+        "gpt-image-2.5-flare",
+        "gpt-image-2"
+      ],
+      "fast_iteration_model": "gpt-image-2.5-flare",
+      "legacy_fallback_model": "gpt-image-2",
+      "one_model_per_myth": true,
+      "record_exact_model_and_snapshot": true,
+      "quality": "medium",
+      "size": "864x1536",
+      "api_request_size": "1024x1536",
+      "delivery_size": "864x1536",
+      "delivery_transform": "center_crop_864x1536",
+      "output_format": "jpeg",
+      "mode": "image_edit_with_prior_keyframes",
+      "input_images": [
+        {
+          "kind": "triptych",
+          "myth": "waleker-el-origen-del-tejido",
+          "path": "output/imagegen/wayuu/triptychs/wayuu-waleker-triptych-02-distancia/entrada.jpeg",
+          "sha256": "bb23cd7a41c543a890db8892a007cee4fe7c948c461da68a9515c8aa3b5b29ea",
+          "approved": true,
+          "role": "Fijar identidad, paleta y material del mito desde la referencia 1; prohibido copiar su composición."
+        },
+        {
+          "kind": "triptych",
+          "myth": "waleker-el-origen-del-tejido",
+          "path": "output/imagegen/wayuu/triptychs/wayuu-waleker-triptych-02-distancia/acto.jpeg",
+          "sha256": "a2a853a5d832cb9c18a8a5644cf35b089e60edf8fa5e4eb0373014887fc94cf9",
+          "approved": true,
+          "role": "Fijar identidad, paleta y material del mito desde la referencia 2; prohibido copiar su composición."
+        },
+        {
+          "kind": "canonical_model",
+          "myth": "waleker-el-origen-del-tejido",
+          "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-26-waleker-el-origen-del-tejido-medium-correction-01/waleker__identity_sheet--canon.jpeg",
+          "sha256": "c566e79698145009c4dff815686fdd1da8ddf7f2e6f6f3043568971b67174e82",
+          "approved": true,
+          "role": "Fijar el modelo canónico waleker__identity_sheet; preservar identidad y material sin copiar la composición."
+        },
+        {
+          "kind": "canonical_model",
+          "myth": "waleker-el-origen-del-tejido",
+          "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-26-waleker-el-origen-del-tejido-medium/waleker__state_sheet--estados.jpeg",
+          "sha256": "4401ef8bf37460fe3481e95d513f2cb3264667f38584d7b807f387686efccfe2",
+          "approved": true,
+          "role": "Fijar el modelo canónico waleker__state_sheet; preservar identidad y material sin copiar la composición."
+        },
+        {
+          "kind": "canonical_model",
+          "myth": "waleker-el-origen-del-tejido",
+          "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-26-waleker-el-origen-del-tejido-medium-correction-01/irunuu__identity_sheet--canon.jpeg",
+          "sha256": "a363a7551b896b80c6bfd625a31c4957d6771a02247fa62413280fcb460f32ce",
+          "approved": true,
+          "role": "Fijar el modelo canónico irunuu__identity_sheet; preservar identidad y material sin copiar la composición."
+        }
+      ],
+      "api_method": "images.edit",
+      "source_output": "output/imagegen/wayuu/keyframes/waleker-el-origen-del-tejido-preproduccion-01/b1a.sunburst-master.jpeg",
+      "output": "output/imagegen/wayuu/keyframes/waleker-el-origen-del-tejido-preproduccion-01/b1a.jpeg",
+      "status": "prepared_not_generated"
+    }
+  ],
+  "prior_candidates": [],
+  "no_api_calls": true
+}

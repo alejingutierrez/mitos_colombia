@@ -1,0 +1,773 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-12",
+  "status": "complete_editorial_selection_ready_for_authorized_publication",
+  "community": "Nasa–Paeces",
+  "new_triptychs": 5,
+  "new_selected_images": 15,
+  "total_triptychs_with_previous": 26,
+  "total_selected_images_with_previous": 78,
+  "corpus_digest": "967750618150fd26c0087402136d9a0a3c615ffdc8d201612c02155a4fd49533",
+  "source_snapshot": "content/videos/nasa-paeces/biblia/research/corpus-snapshot-20260912.json",
+  "source_snapshot_sha256": "5911cfcdcf89dc4f1e71d30999d3adfae0d75f152667645cba2d680d93711477",
+  "previous_selections": [
+    "content/videos/nasa-paeces/tripticos/produccion-api-01/el-trueno.selection.v1.json",
+    "content/videos/nasa-paeces/tripticos/produccion-api-02/selection.v1.json",
+    "content/videos/nasa-paeces/tripticos/produccion-api-03/selection.v1.json",
+    "content/videos/nasa-paeces/tripticos/produccion-api-04/selection.v1.json",
+    "content/videos/nasa-paeces/tripticos/produccion-api-05/selection.v1.json"
+  ],
+  "myths": [
+    {
+      "myth_id": 450,
+      "slug": "la-cabeza",
+      "title": "La cabeza",
+      "narrative_sha256": "248b0b9e65ec9385333876bed9e34d37b1b0e85f2288a6952e74ae270e41712f",
+      "variant": "Cabeza autónoma con una oreja y un diente, encuentro previo al golpe y refugio en árbol antes del amanecer; sin gore.",
+      "assets": [
+        "output/imagegen/nasa-paeces/tripticos/produccion-api-06/la-cabeza/entrada-v1.jpeg",
+        "output/imagegen/nasa-paeces/tripticos/produccion-api-06/la-cabeza/acto-v1.jpeg",
+        "output/imagegen/nasa-paeces/tripticos/produccion-api-06/la-cabeza/huella-v1.jpeg"
+      ]
+    },
+    {
+      "myth_id": 451,
+      "slug": "los-animales",
+      "title": "Los animales",
+      "narrative_sha256": "f3c86f62bbba67d418e57d1d3e119e7c4ff7057b20719d9c6e9fe461fef7faf1",
+      "variant": "Presencias nocturnas invisibles, rescate por pariente y su hija con bagazo encendido; no fijar especies ni confundir percepción del hombre con visión compartida.",
+      "assets": [
+        "output/imagegen/nasa-paeces/tripticos/produccion-api-06/los-animales/entrada-v1.jpeg",
+        "output/imagegen/nasa-paeces/tripticos/produccion-api-06/los-animales/acto-v1.jpeg",
+        "output/imagegen/nasa-paeces/tripticos/produccion-api-06/los-animales/huella-v1.jpeg"
+      ]
+    },
+    {
+      "myth_id": 452,
+      "slug": "el-dalo",
+      "title": "El dalo",
+      "narrative_sha256": "e447339a9aa716f8e2ce3d71ba955acebe35e1534cf55703cc5ac9f0baa3be1f",
+      "variant": "Testimonio individual de una experiencia cercana a la muerte: senda que se cierra y María con Niño. No mapa doctrinal Nasa ni diablo-jinete.",
+      "assets": [
+        "output/imagegen/nasa-paeces/tripticos/produccion-api-06/el-dalo/entrada-v1.jpeg",
+        "output/imagegen/nasa-paeces/tripticos/produccion-api-06/el-dalo/acto-v1.jpeg",
+        "output/imagegen/nasa-paeces/tripticos/produccion-api-06/el-dalo/huella-v1.jpeg"
+      ]
+    },
+    {
+      "myth_id": 453,
+      "slug": "origen-de-las-plantas",
+      "title": "Origen de las plantas",
+      "narrative_sha256": "438e3e3b2d7af1600e2a728947437064da83ffe00ca731b6eaec7ac61627a525",
+      "variant": "María entrega semillas como herencia; semillas sostenidas en manos sobre cuerpo cubierto. No asegurar la dudosa creación de culebras por Santo Tomás.",
+      "assets": [
+        "output/imagegen/nasa-paeces/tripticos/produccion-api-06/origen-de-las-plantas/entrada-v1.jpeg",
+        "output/imagegen/nasa-paeces/tripticos/produccion-api-06/origen-de-las-plantas/acto-v1.jpeg",
+        "output/imagegen/nasa-paeces/tripticos/produccion-api-06/origen-de-las-plantas/huella-v1.jpeg"
+      ]
+    },
+    {
+      "myth_id": 553,
+      "slug": "juan-tama",
+      "title": "Juan Tama de la Estrella",
+      "narrative_sha256": "218ab7d1501dd12e69e9edd9044f9e0c5ce66724cd40694a100e3c509974f133",
+      "variant": "Nacimiento acuático protegido con chumbe y libro de títulos en la versión incluida; adulto orienta comunidades. No fundir lagunas o adversarios ni fabricar escritura o emblemas.",
+      "assets": [
+        "output/imagegen/nasa-paeces/tripticos/produccion-api-06/juan-tama/entrada-v1.jpeg",
+        "output/imagegen/nasa-paeces/tripticos/produccion-api-06/juan-tama/acto-v1.jpeg",
+        "output/imagegen/nasa-paeces/tripticos/produccion-api-06/juan-tama/huella-v1.jpeg"
+      ]
+    }
+  ],
+  "records": [
+    {
+      "myth_id": 450,
+      "slug": "la-cabeza",
+      "title": "La cabeza",
+      "variant": "Cabeza autónoma con una oreja y un diente, encuentro previo al golpe y refugio en árbol antes del amanecer; sin gore.",
+      "role": "entrada",
+      "label": "entrada",
+      "file": "output/imagegen/nasa-paeces/tripticos/produccion-api-06/la-cabeza/entrada-v1.jpeg",
+      "sha256": "b4cf9f5662ce0b60bf3e3fbde94ace543e0d1281596f6f0f640111ab59596841",
+      "width": 1536,
+      "height": 1024,
+      "model_requested": "gpt-image-2.5-sunburst",
+      "quality_requested": "high",
+      "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-06/prompts/la-cabeza-entrada-v1.txt",
+      "prompt_sha256": "51ff8417f7bbb9f596206743e0b9ea50b836612bc32e5d610db5586402299dcc",
+      "references": [
+        {
+          "unit_id": "E01",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/e01-master-v4.jpeg",
+          "sha256": "6e8f33200a4461be5e7a3383c03166bffc552ac250c8b6f8106cf6a36ee968e5"
+        },
+        {
+          "unit_id": "C05",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/c05-master-v2.jpeg",
+          "sha256": "f2f408eb35b12b88d22ade21f955477a3f5afa9e5a60453d90467cdc6c649c11"
+        },
+        {
+          "unit_id": "U08",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/u08-master-v2.jpeg",
+          "sha256": "43dc1123db3772e5de295d7126381ccf47f8d00554d8e7cc5677da39b52d1dc7"
+        },
+        {
+          "unit_id": "L08",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/l08-master-v2.jpeg",
+          "sha256": "e85cf534a3c8dd6947c2a38a9e156ac2c9c7ece35512d5cf45903ca754532340"
+        }
+      ],
+      "qa": "Un viajero de ruana gris con bordón y una cabeza autónoma de papel con una oreja y un diente; base cerrada sin anatomía cortada o lesión.",
+      "retained_predecessors": []
+    },
+    {
+      "myth_id": 450,
+      "slug": "la-cabeza",
+      "title": "La cabeza",
+      "variant": "Cabeza autónoma con una oreja y un diente, encuentro previo al golpe y refugio en árbol antes del amanecer; sin gore.",
+      "role": "acto",
+      "label": "acto",
+      "file": "output/imagegen/nasa-paeces/tripticos/produccion-api-06/la-cabeza/acto-v1.jpeg",
+      "sha256": "f52c711460cab0e4ba8261ef856daf1ff8d290667694f9c666d5512c9bb77156",
+      "width": 1024,
+      "height": 1536,
+      "model_requested": "gpt-image-2.5-sunburst",
+      "quality_requested": "medium",
+      "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-06/prompts/la-cabeza-acto-v1.txt",
+      "prompt_sha256": "efe540de007253623a46c040762bb14c117cfa7f61b0484d4b2fa6a8ffacef2c",
+      "references": [
+        {
+          "unit_id": "E01",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/e01-master-v4.jpeg",
+          "sha256": "6e8f33200a4461be5e7a3383c03166bffc552ac250c8b6f8106cf6a36ee968e5"
+        },
+        {
+          "unit_id": "C05",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/c05-master-v2.jpeg",
+          "sha256": "f2f408eb35b12b88d22ade21f955477a3f5afa9e5a60453d90467cdc6c649c11"
+        },
+        {
+          "unit_id": "L04",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/l04-master-v2.jpeg",
+          "sha256": "bf20ef46ce52b9ec0872a8a41619ceb9494ca35553c32a4910db79474600a9ce"
+        }
+      ],
+      "qa": "Viajero completo sentado y sostenido en horqueta del árbol; misma cabeza de papel espera al pie con una oreja y un diente, sin golpes ni heridas.",
+      "retained_predecessors": []
+    },
+    {
+      "myth_id": 450,
+      "slug": "la-cabeza",
+      "title": "La cabeza",
+      "variant": "Cabeza autónoma con una oreja y un diente, encuentro previo al golpe y refugio en árbol antes del amanecer; sin gore.",
+      "role": "huella",
+      "label": "huella",
+      "file": "output/imagegen/nasa-paeces/tripticos/produccion-api-06/la-cabeza/huella-v1.jpeg",
+      "sha256": "5f01af6011ec202d4fd64e9763fc7c9bc08ea5d220ebf4b87c6fa14eccaecc2d",
+      "width": 1024,
+      "height": 1024,
+      "model_requested": "gpt-image-2.5-sunburst",
+      "quality_requested": "medium",
+      "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-06/prompts/la-cabeza-huella-v1.txt",
+      "prompt_sha256": "7b3c4fa3fa2dd5c5bf0b7a26d6f2e0e8f45d658ae8692c9b4abf9be8f8238615",
+      "references": [
+        {
+          "unit_id": "E07",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/e07-master-v3.jpeg",
+          "sha256": "57974d0c6e22dfda979c86d2ff770dffa8e34cfbeabcb4d8b38ede5e77dc2475"
+        },
+        {
+          "unit_id": "L04",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/l04-master-v2.jpeg",
+          "sha256": "bf20ef46ce52b9ec0872a8a41619ceb9494ca35553c32a4910db79474600a9ce"
+        }
+      ],
+      "qa": "Recorte de gallo aislado junto a banda de tronco oscuro y pliegue claro del alba; sin cabeza retratada, paisaje completo ni anatomía.",
+      "retained_predecessors": []
+    },
+    {
+      "myth_id": 451,
+      "slug": "los-animales",
+      "title": "Los animales",
+      "variant": "Presencias nocturnas invisibles, rescate por pariente y su hija con bagazo encendido; no fijar especies ni confundir percepción del hombre con visión compartida.",
+      "role": "entrada",
+      "label": "entrada",
+      "file": "output/imagegen/nasa-paeces/tripticos/produccion-api-06/los-animales/entrada-v1.jpeg",
+      "sha256": "53b34026bd5bc318b0c7f45171a08db7163c594e5e096a4c7a1098ce40b65b08",
+      "width": 1536,
+      "height": 1024,
+      "model_requested": "gpt-image-2.5-sunburst",
+      "quality_requested": "high",
+      "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-06/prompts/los-animales-entrada-v1.txt",
+      "prompt_sha256": "08f1f7a8102d9692dc6844732f71a8a5e9b126fd452d7d3f527334e93ab5ed9c",
+      "references": [
+        {
+          "unit_id": "C05",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/c05-master-v2.jpeg",
+          "sha256": "f2f408eb35b12b88d22ade21f955477a3f5afa9e5a60453d90467cdc6c649c11"
+        },
+        {
+          "unit_id": "L08",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/l08-master-v2.jpeg",
+          "sha256": "e85cf534a3c8dd6947c2a38a9e156ac2c9c7ece35512d5cf45903ca754532340"
+        }
+      ],
+      "qa": "Un único viajero gris escucha el camino nocturno; ninguna especie u ojos inventados y sin armas, ataque o daño.",
+      "retained_predecessors": []
+    },
+    {
+      "myth_id": 451,
+      "slug": "los-animales",
+      "title": "Los animales",
+      "variant": "Presencias nocturnas invisibles, rescate por pariente y su hija con bagazo encendido; no fijar especies ni confundir percepción del hombre con visión compartida.",
+      "role": "acto",
+      "label": "acto",
+      "file": "output/imagegen/nasa-paeces/tripticos/produccion-api-06/los-animales/acto-v1.jpeg",
+      "sha256": "679f596d93c74bdef7156d9594d2f12b9985b80a070f06d7a166f1559ccc4115",
+      "width": 1024,
+      "height": 1536,
+      "model_requested": "gpt-image-2.5-sunburst",
+      "quality_requested": "medium",
+      "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-06/prompts/los-animales-acto-v1.txt",
+      "prompt_sha256": "c0e0b34afbbe8f03c2efbde76c32663a4ee6342147d3797145035ba55d044f44",
+      "references": [
+        {
+          "unit_id": "C03",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/c03-master-v2.jpeg",
+          "sha256": "94bf56ac6b3bb98d7158f6dceea760d41f8781f55837637592768abf37aabf61"
+        },
+        {
+          "unit_id": "C04",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/c04-master-v2.jpeg",
+          "sha256": "d401ec12652af5545f4ce33481eb7fd35c2c41d783d9f2fc9ce8b4564b843772"
+        },
+        {
+          "unit_id": "C05",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/c05-master-v2.jpeg",
+          "sha256": "f2f408eb35b12b88d22ade21f955477a3f5afa9e5a60453d90467cdc6c649c11"
+        },
+        {
+          "unit_id": "U06",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/u06-master-v2.jpeg",
+          "sha256": "63c64d20488b4082d7565ee1c617210be217ec3eece5d1a6ac33ddb9b718dd3e"
+        },
+        {
+          "unit_id": "L08",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/l08-master-v2.jpeg",
+          "sha256": "e85cf534a3c8dd6947c2a38a9e156ac2c9c7ece35512d5cf45903ca754532340"
+        }
+      ],
+      "qa": "Una mujer adulta azul y su hija vestida verde-azul guían con bagazo encendido al viajero gris, exactamente tres personas; anatomía, suelo y papel coherentes sin criaturas visibles.",
+      "retained_predecessors": []
+    },
+    {
+      "myth_id": 451,
+      "slug": "los-animales",
+      "title": "Los animales",
+      "variant": "Presencias nocturnas invisibles, rescate por pariente y su hija con bagazo encendido; no fijar especies ni confundir percepción del hombre con visión compartida.",
+      "role": "huella",
+      "label": "huella",
+      "file": "output/imagegen/nasa-paeces/tripticos/produccion-api-06/los-animales/huella-v1.jpeg",
+      "sha256": "9eff464aa5fb095216583498b46cee081b7934224d1b4e7e3506581e327c8d31",
+      "width": 1024,
+      "height": 1024,
+      "model_requested": "gpt-image-2.5-sunburst",
+      "quality_requested": "medium",
+      "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-06/prompts/los-animales-huella-v1.txt",
+      "prompt_sha256": "4004e1914fb434e66e866650a7eef7dcd9ddaa63b1510f710b9a93f6df92b23e",
+      "references": [
+        {
+          "unit_id": "U06",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/u06-master-v2.jpeg",
+          "sha256": "63c64d20488b4082d7565ee1c617210be217ec3eece5d1a6ac33ddb9b718dd3e"
+        },
+        {
+          "unit_id": "L08",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/l08-master-v2.jpeg",
+          "sha256": "e85cf534a3c8dd6947c2a38a9e156ac2c9c7ece35512d5cf45903ca754532340"
+        }
+      ],
+      "qa": "Una brasa de bagazo abre banda clara entre pliegues índigo; sin especies, ojos brillantes, personas o paisaje inventado.",
+      "retained_predecessors": []
+    },
+    {
+      "myth_id": 452,
+      "slug": "el-dalo",
+      "title": "El dalo",
+      "variant": "Testimonio individual de una experiencia cercana a la muerte: senda que se cierra y María con Niño. No mapa doctrinal Nasa ni diablo-jinete.",
+      "role": "entrada",
+      "label": "entrada",
+      "file": "output/imagegen/nasa-paeces/tripticos/produccion-api-06/el-dalo/entrada-v1.jpeg",
+      "sha256": "d9c9fcf415bf60cb51c23b44a2813c55b3237c312ae1a466dd4337e77bcc9862",
+      "width": 1536,
+      "height": 1024,
+      "model_requested": "gpt-image-2.5-sunburst",
+      "quality_requested": "high",
+      "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-06/prompts/el-dalo-entrada-v1.txt",
+      "prompt_sha256": "7fbccd33465247164aed4c8861aef768aba02f6a638fecd0a814eef550963219",
+      "references": [
+        {
+          "unit_id": "C05",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/c05-master-v2.jpeg",
+          "sha256": "f2f408eb35b12b88d22ade21f955477a3f5afa9e5a60453d90467cdc6c649c11"
+        },
+        {
+          "unit_id": "L09",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/l09-master-v2.jpeg",
+          "sha256": "ec6f88c2964ac6f112d3e0e05335aa3feabcaa5ce25d2e19012b4e82dde986f7"
+        }
+      ],
+      "qa": "Un viajero gris recorre camino que se estrecha hacia vegetación y luz; adaptación del viaje relatado, sin cadáver, catedral ni cartografía del más allá.",
+      "retained_predecessors": []
+    },
+    {
+      "myth_id": 452,
+      "slug": "el-dalo",
+      "title": "El dalo",
+      "variant": "Testimonio individual de una experiencia cercana a la muerte: senda que se cierra y María con Niño. No mapa doctrinal Nasa ni diablo-jinete.",
+      "role": "acto",
+      "label": "acto",
+      "file": "output/imagegen/nasa-paeces/tripticos/produccion-api-06/el-dalo/acto-v1.jpeg",
+      "sha256": "7e570d6a9412a994cb2d677b8bf5bd4f4295dd15b741026117dc60b4eb6a9d69",
+      "width": 1024,
+      "height": 1536,
+      "model_requested": "gpt-image-2.5-sunburst",
+      "quality_requested": "medium",
+      "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-06/prompts/el-dalo-acto-v1.txt",
+      "prompt_sha256": "63c8fc753bb6636766dc5de9db8a4864caa3f745cf7c134b95476c486f809422",
+      "references": [
+        {
+          "unit_id": "P09",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/p09-master-v2.jpeg",
+          "sha256": "0c8c2be7371f4db1850aa41a6b3694a50743bfb5618f80114c71c6a81adb4ed9"
+        },
+        {
+          "unit_id": "C05",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/c05-master-v2.jpeg",
+          "sha256": "f2f408eb35b12b88d22ade21f955477a3f5afa9e5a60453d90467cdc6c649c11"
+        },
+        {
+          "unit_id": "L09",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/l09-master-v2.jpeg",
+          "sha256": "ec6f88c2964ac6f112d3e0e05335aa3feabcaa5ce25d2e19012b4e82dde986f7"
+        }
+      ],
+      "qa": "María de manto azul y un único bebé cubierto reciben al viajero gris; tres cuerpos con niño envuelto, sin halos, órganos, catedral ni cuerpo moribundo.",
+      "retained_predecessors": []
+    },
+    {
+      "myth_id": 452,
+      "slug": "el-dalo",
+      "title": "El dalo",
+      "variant": "Testimonio individual de una experiencia cercana a la muerte: senda que se cierra y María con Niño. No mapa doctrinal Nasa ni diablo-jinete.",
+      "role": "huella",
+      "label": "huella",
+      "file": "output/imagegen/nasa-paeces/tripticos/produccion-api-06/el-dalo/huella-v1.jpeg",
+      "sha256": "41db028be92dc7244ceefd6c8ddd8bb2d3c8ede3b16cab1bcbf5ea51143648b4",
+      "width": 1024,
+      "height": 1024,
+      "model_requested": "gpt-image-2.5-sunburst",
+      "quality_requested": "medium",
+      "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-06/prompts/el-dalo-huella-v1.txt",
+      "prompt_sha256": "afe45a68b973f1ae7d0ca1631726aba7b28f34ab2f048f3dd1f51b4fae719f22",
+      "references": [
+        {
+          "unit_id": "L09",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/l09-master-v2.jpeg",
+          "sha256": "ec6f88c2964ac6f112d3e0e05335aa3feabcaa5ce25d2e19012b4e82dde986f7"
+        }
+      ],
+      "qa": "Banda clara entre hojas oscuras recortadas sintetiza tránsito y apertura; macro de papel sin humano, paisaje completo, portal religioso o mapa.",
+      "retained_predecessors": []
+    },
+    {
+      "myth_id": 453,
+      "slug": "origen-de-las-plantas",
+      "title": "Origen de las plantas",
+      "variant": "María entrega semillas como herencia; semillas sostenidas en manos sobre cuerpo cubierto. No asegurar la dudosa creación de culebras por Santo Tomás.",
+      "role": "entrada",
+      "label": "entrada",
+      "file": "output/imagegen/nasa-paeces/tripticos/produccion-api-06/origen-de-las-plantas/entrada-v1.jpeg",
+      "sha256": "8d5ab37f7ef8d52399312425861560b69941d83ad711b90ae67e942213b898da",
+      "width": 1536,
+      "height": 1024,
+      "model_requested": "gpt-image-2.5-sunburst",
+      "quality_requested": "high",
+      "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-06/prompts/origen-de-las-plantas-entrada-v1.txt",
+      "prompt_sha256": "e8c501f4a975badf793abbdbbd90d462e8c53c1adf2d7ca60b83b981b3e6908e",
+      "references": [
+        {
+          "unit_id": "P09",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/p09-master-v2.jpeg",
+          "sha256": "0c8c2be7371f4db1850aa41a6b3694a50743bfb5618f80114c71c6a81adb4ed9"
+        },
+        {
+          "unit_id": "C05",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/c05-master-v2.jpeg",
+          "sha256": "f2f408eb35b12b88d22ade21f955477a3f5afa9e5a60453d90467cdc6c649c11"
+        },
+        {
+          "unit_id": "U07",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/u07-master-v2.jpeg",
+          "sha256": "cec3b081dcd91fa203fb1e5d43afb6a17ba06d34f22893f7ee8117db12df3b70"
+        },
+        {
+          "unit_id": "L05",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/l05-master-v3.jpeg",
+          "sha256": "16f855818c0fa6e277327d66f61226612c4f9a29568d59ddc7b83af83ee13bac"
+        }
+      ],
+      "qa": "María azul ofrece semillas en mano abierta ante campesina azul oscuro de vestido completo; dos mujeres identificables y ninguna exposición corporal.",
+      "retained_predecessors": []
+    },
+    {
+      "myth_id": 453,
+      "slug": "origen-de-las-plantas",
+      "title": "Origen de las plantas",
+      "variant": "María entrega semillas como herencia; semillas sostenidas en manos sobre cuerpo cubierto. No asegurar la dudosa creación de culebras por Santo Tomás.",
+      "role": "acto",
+      "label": "acto",
+      "file": "output/imagegen/nasa-paeces/tripticos/produccion-api-06/origen-de-las-plantas/acto-v1.jpeg",
+      "sha256": "5941124ab2c1657a4c3c00558b053c0542974262a9d50e8160dbc22826f3aad8",
+      "width": 1024,
+      "height": 1536,
+      "model_requested": "gpt-image-2.5-sunburst",
+      "quality_requested": "medium",
+      "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-06/prompts/origen-de-las-plantas-acto-v1.txt",
+      "prompt_sha256": "1a73190d0ba639c77e64d7cfa1f4d00e5670418671ab0d9073741659bd6d0bf0",
+      "references": [
+        {
+          "unit_id": "P09",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/p09-master-v2.jpeg",
+          "sha256": "0c8c2be7371f4db1850aa41a6b3694a50743bfb5618f80114c71c6a81adb4ed9"
+        },
+        {
+          "unit_id": "C05",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/c05-master-v2.jpeg",
+          "sha256": "f2f408eb35b12b88d22ade21f955477a3f5afa9e5a60453d90467cdc6c649c11"
+        },
+        {
+          "unit_id": "U07",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/u07-master-v2.jpeg",
+          "sha256": "cec3b081dcd91fa203fb1e5d43afb6a17ba06d34f22893f7ee8117db12df3b70"
+        },
+        {
+          "unit_id": "L05",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/l05-master-v3.jpeg",
+          "sha256": "16f855818c0fa6e277327d66f61226612c4f9a29568d59ddc7b83af83ee13bac"
+        }
+      ],
+      "qa": "La misma campesina arrodillada siembra semillas en suelo mientras María observa detrás; continuidad de dos mujeres, sin origen corporal explícito, serpiente o Tomás añadido.",
+      "retained_predecessors": []
+    },
+    {
+      "myth_id": 453,
+      "slug": "origen-de-las-plantas",
+      "title": "Origen de las plantas",
+      "variant": "María entrega semillas como herencia; semillas sostenidas en manos sobre cuerpo cubierto. No asegurar la dudosa creación de culebras por Santo Tomás.",
+      "role": "huella",
+      "label": "huella",
+      "file": "output/imagegen/nasa-paeces/tripticos/produccion-api-06/origen-de-las-plantas/huella-v1.jpeg",
+      "sha256": "dd8926f5c13a4a843e1cafe1a94129caa7bdd8547c49b8448aff616fe49249d7",
+      "width": 1024,
+      "height": 1024,
+      "model_requested": "gpt-image-2.5-sunburst",
+      "quality_requested": "medium",
+      "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-06/prompts/origen-de-las-plantas-huella-v1.txt",
+      "prompt_sha256": "2da0bc6d54e6460bf54ee6ea21411b0a1621492827147a110b0ce411434a736b",
+      "references": [
+        {
+          "unit_id": "U07",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/u07-master-v2.jpeg",
+          "sha256": "cec3b081dcd91fa203fb1e5d43afb6a17ba06d34f22893f7ee8117db12df3b70"
+        }
+      ],
+      "qa": "Cuatro semillas recortadas y dos brotes sobre banda ocre sintetizan origen y siembra, sin anatomía, mapas, personajes o paisaje repetido.",
+      "retained_predecessors": []
+    },
+    {
+      "myth_id": 553,
+      "slug": "juan-tama",
+      "title": "Juan Tama de la Estrella",
+      "variant": "Nacimiento acuático protegido con chumbe y libro de títulos en la versión incluida; adulto orienta comunidades. No fundir lagunas o adversarios ni fabricar escritura o emblemas.",
+      "role": "entrada",
+      "label": "entrada",
+      "file": "output/imagegen/nasa-paeces/tripticos/produccion-api-06/juan-tama/entrada-v1.jpeg",
+      "sha256": "e03b49c63a51dc943bead0f641d194c7bb67abdbf5fb024cdc894cd5e196dfc4",
+      "width": 1536,
+      "height": 1024,
+      "model_requested": "gpt-image-2.5-sunburst",
+      "quality_requested": "high",
+      "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-06/prompts/juan-tama-entrada-v1.txt",
+      "prompt_sha256": "e0a3498e04720696b747c654f94a5cad3a46ca04109506ab9e4a98c38d00b8b9",
+      "references": [
+        {
+          "unit_id": "P04",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/p04-master-v2.jpeg",
+          "sha256": "6dd289ad961673e48fd579142cc0e7ed61fd17f891d4bb6cc65bc0786318e4f9"
+        },
+        {
+          "unit_id": "C01",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/c01-master-v2.jpeg",
+          "sha256": "b51c579a194d2d1e43eca669032307e214ad7f5dfd14ba511799991ca1bf6d2a"
+        },
+        {
+          "unit_id": "U03",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/u03-master-v2.jpeg",
+          "sha256": "36e8cde31f768c2decb0f047617a8f5022d919d3aee06cca8c3b69c119c92247"
+        },
+        {
+          "unit_id": "L01",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/l01-master-v3.jpeg",
+          "sha256": "730a4a163c026e588267a4ab5de2460a339c6d6043766346df00ac2e678c296d"
+        }
+      ],
+      "qa": "Dos figuras mayores acompañan a un único bebé envuelto sobre libro cerrado sin texto en borde seco de una laguna; chumbe sobrio, anatomía segura, sin aguas múltiples o iconos prestados.",
+      "retained_predecessors": []
+    },
+    {
+      "myth_id": 553,
+      "slug": "juan-tama",
+      "title": "Juan Tama de la Estrella",
+      "variant": "Nacimiento acuático protegido con chumbe y libro de títulos en la versión incluida; adulto orienta comunidades. No fundir lagunas o adversarios ni fabricar escritura o emblemas.",
+      "role": "acto",
+      "label": "acto",
+      "file": "output/imagegen/nasa-paeces/tripticos/produccion-api-06/juan-tama/acto-v1.jpeg",
+      "sha256": "99a939c135793f151b1a2bd89f62c90ab2807e4a16967076026f6a4d139040b1",
+      "width": 1024,
+      "height": 1536,
+      "model_requested": "gpt-image-2.5-sunburst",
+      "quality_requested": "medium",
+      "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-06/prompts/juan-tama-acto-v1.txt",
+      "prompt_sha256": "43025bb5974bba66ac472b1c3f01aebc425ac926b14abf9c0609c85b72d26731",
+      "references": [
+        {
+          "unit_id": "P04",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/p04-master-v2.jpeg",
+          "sha256": "6dd289ad961673e48fd579142cc0e7ed61fd17f891d4bb6cc65bc0786318e4f9"
+        },
+        {
+          "unit_id": "C02",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/c02-master-v2.jpeg",
+          "sha256": "83fc70ce950b96d5f5bf31128e995d90e0aacf56e0485ed77e906609ccc0503d"
+        },
+        {
+          "unit_id": "U01",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/u01-master-v3.jpeg",
+          "sha256": "48b101e67253c20d4754307d7b784b1fd6f9b5b80d0eb285e15e41db33c467f5"
+        },
+        {
+          "unit_id": "L03",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/l03-master-v2.jpeg",
+          "sha256": "6060d7eebec26229864f08c8d00dc549e7628d9ef867cc97f3da88fdeea59738"
+        }
+      ],
+      "qa": "Juan Tama adulto de capa carbón y bastón conversa con dos autoridades, mujer verde y hombre azul-gris; tres cuerpos completos sin armas, enfrentamiento o retratos de personas reales.",
+      "retained_predecessors": []
+    },
+    {
+      "myth_id": 553,
+      "slug": "juan-tama",
+      "title": "Juan Tama de la Estrella",
+      "variant": "Nacimiento acuático protegido con chumbe y libro de títulos en la versión incluida; adulto orienta comunidades. No fundir lagunas o adversarios ni fabricar escritura o emblemas.",
+      "role": "huella",
+      "label": "huella",
+      "file": "output/imagegen/nasa-paeces/tripticos/produccion-api-06/juan-tama/huella-v1.jpeg",
+      "sha256": "88326ccaf7aa74765ded0f59de76a20ccb113a2cbf8920916b5c010e36fae217",
+      "width": 1024,
+      "height": 1024,
+      "model_requested": "gpt-image-2.5-sunburst",
+      "quality_requested": "medium",
+      "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-06/prompts/juan-tama-huella-v1.txt",
+      "prompt_sha256": "46b8778bee9f082a352b6eb96eb69d48dbd9612254051e30388ed45d4b99ef49",
+      "references": [
+        {
+          "unit_id": "U03",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/u03-master-v2.jpeg",
+          "sha256": "36e8cde31f768c2decb0f047617a8f5022d919d3aee06cca8c3b69c119c92247"
+        },
+        {
+          "unit_id": "U01",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/u01-master-v3.jpeg",
+          "sha256": "48b101e67253c20d4754307d7b784b1fd6f9b5b80d0eb285e15e41db33c467f5"
+        },
+        {
+          "unit_id": "L01",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/l01-master-v3.jpeg",
+          "sha256": "730a4a163c026e588267a4ab5de2460a339c6d6043766346df00ac2e678c296d"
+        }
+      ],
+      "qa": "Libro cerrado sin escritura sujeto con banda de papel sobria, cinta azul y bastón abstracto; motivo editorial de cuidado y memoria, sin convertirlo en emblema ritual universal.",
+      "retained_predecessors": []
+    }
+  ],
+  "execution": [
+    {
+      "myth_id": 450,
+      "role": "acto",
+      "version": 1,
+      "session_id": 28957,
+      "chunk_id": "e14cb8",
+      "wall_time_seconds": 3.75e-7,
+      "exit_code": 0,
+      "original_token_count": 39,
+      "output": "Edit completed in 23.6s.\nWrote /Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-06/la-cabeza/acto-v1.jpeg\n"
+    },
+    {
+      "myth_id": 450,
+      "role": "entrada",
+      "version": 1,
+      "session_id": 51522,
+      "chunk_id": "fb018b",
+      "wall_time_seconds": 3.6366465,
+      "exit_code": 0,
+      "original_token_count": 40,
+      "output": "Edit completed in 34.6s.\nWrote /Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-06/la-cabeza/entrada-v1.jpeg\n"
+    },
+    {
+      "myth_id": 450,
+      "role": "huella",
+      "version": 1,
+      "session_id": 33642,
+      "chunk_id": "4b269c",
+      "wall_time_seconds": 3.8173777920000003,
+      "exit_code": 0,
+      "original_token_count": 40,
+      "output": "Edit completed in 21.4s.\nWrote /Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-06/la-cabeza/huella-v1.jpeg\n"
+    },
+    {
+      "myth_id": 451,
+      "role": "huella",
+      "version": 1,
+      "session_id": 66158,
+      "chunk_id": "b82aa1",
+      "wall_time_seconds": 3.943778416,
+      "exit_code": 0,
+      "original_token_count": 40,
+      "output": "Edit completed in 19.7s.\nWrote /Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-06/los-animales/huella-v1.jpeg\n"
+    },
+    {
+      "myth_id": 451,
+      "role": "entrada",
+      "version": 1,
+      "session_id": 85069,
+      "chunk_id": "a8b853",
+      "wall_time_seconds": 0.00000125,
+      "exit_code": 0,
+      "original_token_count": 41,
+      "output": "Edit completed in 33.5s.\nWrote /Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-06/los-animales/entrada-v1.jpeg\n"
+    },
+    {
+      "myth_id": 451,
+      "role": "acto",
+      "version": 1,
+      "session_id": 80644,
+      "chunk_id": "3fa105",
+      "wall_time_seconds": 2.92e-7,
+      "exit_code": 0,
+      "original_token_count": 40,
+      "output": "Edit completed in 21.9s.\nWrote /Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-06/los-animales/acto-v1.jpeg\n"
+    },
+    {
+      "myth_id": 452,
+      "role": "acto",
+      "version": 1,
+      "session_id": 37657,
+      "chunk_id": "999438",
+      "wall_time_seconds": 4.365740916,
+      "exit_code": 0,
+      "original_token_count": 39,
+      "output": "Edit completed in 23.4s.\nWrote /Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-06/el-dalo/acto-v1.jpeg\n"
+    },
+    {
+      "myth_id": 452,
+      "role": "entrada",
+      "version": 1,
+      "session_id": 39996,
+      "chunk_id": "c3eaff",
+      "wall_time_seconds": 0.000001375,
+      "exit_code": 0,
+      "original_token_count": 39,
+      "output": "Edit completed in 39.5s.\nWrote /Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-06/el-dalo/entrada-v1.jpeg\n"
+    },
+    {
+      "myth_id": 452,
+      "role": "huella",
+      "version": 1,
+      "session_id": 95121,
+      "chunk_id": "58db7c",
+      "wall_time_seconds": 9.17e-7,
+      "exit_code": 0,
+      "original_token_count": 39,
+      "output": "Edit completed in 19.2s.\nWrote /Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-06/el-dalo/huella-v1.jpeg\n"
+    },
+    {
+      "myth_id": 453,
+      "role": "acto",
+      "version": 1,
+      "session_id": 17071,
+      "chunk_id": "102215",
+      "wall_time_seconds": 2.5e-7,
+      "exit_code": 0,
+      "original_token_count": 42,
+      "output": "Edit completed in 25.7s.\nWrote /Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-06/origen-de-las-plantas/acto-v1.jpeg\n"
+    },
+    {
+      "myth_id": 453,
+      "role": "entrada",
+      "version": 1,
+      "session_id": 65183,
+      "chunk_id": "864aa2",
+      "wall_time_seconds": 2.08e-7,
+      "exit_code": 0,
+      "original_token_count": 43,
+      "output": "Edit completed in 36.2s.\nWrote /Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-06/origen-de-las-plantas/entrada-v1.jpeg\n"
+    },
+    {
+      "myth_id": 453,
+      "role": "huella",
+      "version": 1,
+      "session_id": 56299,
+      "chunk_id": "32a7e6",
+      "wall_time_seconds": 0.0000015,
+      "exit_code": 0,
+      "original_token_count": 43,
+      "output": "Edit completed in 17.9s.\nWrote /Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-06/origen-de-las-plantas/huella-v1.jpeg\n"
+    },
+    {
+      "myth_id": 553,
+      "role": "huella",
+      "version": 1,
+      "session_id": 60395,
+      "chunk_id": "5fdcee",
+      "wall_time_seconds": 0.000001042,
+      "exit_code": 0,
+      "original_token_count": 40,
+      "output": "Edit completed in 20.9s.\nWrote /Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-06/juan-tama/huella-v1.jpeg\n"
+    },
+    {
+      "myth_id": 553,
+      "role": "acto",
+      "version": 1,
+      "session_id": 54681,
+      "chunk_id": "4e3793",
+      "wall_time_seconds": 0.000001,
+      "exit_code": 0,
+      "original_token_count": 39,
+      "output": "Edit completed in 19.7s.\nWrote /Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-06/juan-tama/acto-v1.jpeg\n"
+    },
+    {
+      "myth_id": 553,
+      "role": "entrada",
+      "version": 1,
+      "session_id": 19964,
+      "exit_code": 0,
+      "output": "Edit completed in 34.7s; wrote entrada-v1.jpeg (final output polled directly)."
+    }
+  ],
+  "max_concurrency_requested": 4,
+  "publication_authorized": true,
+  "publication": false,
+  "keyframes": false,
+  "cultural_certification": false
+}

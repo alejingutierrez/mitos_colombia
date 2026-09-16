@@ -1,0 +1,15 @@
+{
+  "schema": "wayuu-anchor-correction/v1",
+  "slug": "jirairay",
+  "version": "preproduccion-05",
+  "source_batch": "output/imagegen/wayuu/keyframes/jirairay-preproduccion-04-anclas-corrected",
+  "status": "prepared_not_generated",
+  "preserve": ["b1a", "b8b", "b10b"],
+  "correct": ["b3b", "b5b"],
+  "decisions": {
+    "b3b": ["wanuru_as_shallow_torn_depression_in_one_ground_sheet", "no_separate_charcoal_objects", "keep_rich_architecture_and_return_rhythm"],
+    "b5b": ["wanuru_as_shallow_torn_depression_in_one_ground_sheet", "no_stack_or_totem", "outbound_and_return_rhythms_separated_by_empty_interval"]
+  },
+  "generation": { "model": "gpt-image-2", "quality": "medium", "size": "864x1536", "output_format": "jpeg", "mode": "text_only", "input_images": [] },
+  "no_reference_uploads": true
+}

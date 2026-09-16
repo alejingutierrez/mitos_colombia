@@ -1,0 +1,286 @@
+{
+  "schema": "wayuu-keyframe-selection/v1",
+  "slug": "maleiwa",
+  "title": "Mareiwa",
+  "status": "complete_pending_user_approval",
+  "plan": "content/videos/wayuu/videos/maleiwa/preproduccion-01/plan.json",
+  "script": "content/videos/wayuu/videos/maleiwa/preproduccion-01/GUION-TECNICO.md",
+  "research": "content/videos/wayuu/videos/maleiwa/preproduccion-01/INVESTIGACION.md",
+  "quality": "medium",
+  "generation": {
+    "provider": "OpenAI API",
+    "model": "gpt-image-2.5-sunburst",
+    "mode": "image_edit_with_two_prior_approved_keyframes_and_camera_breaks",
+    "api_request_size": "1024x1536",
+    "delivery_size": "864x1536",
+    "delivery_transform": "center_crop_864x1536",
+    "output_format": "jpeg",
+    "total_unique_generations": 16,
+    "selected_generations": 16,
+    "superseded_generations": 0,
+    "notes": [
+      "Matriz de dieciséis familias de cámara y ruptura obligatoria de altura, eje, escala o profundidad.",
+      "Los dos keyframes previos se usan sólo como continuidad causal; los descartes no alimentan la cadena.",
+      "Revisión visual realizada sobre la secuencia completa; no equivale a certificación etnográfica."
+    ]
+  },
+  "selected": [
+    {
+      "id": "b1a",
+      "version": "01",
+      "camera": "elevada oblicua desde una ladera; gran plano general territorial",
+      "path": "output/imagegen/wayuu/keyframes/maleiwa-preproduccion-01/b1a.jpeg",
+      "sha256": "37ad4338b549f06d86c1c26a87c7f38d62719b6b77f989410ea29e09e7d32c20",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "Bajo el olivo: elevada oblicua desde una ladera; composición revisada dentro de la secuencia completa."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/maleiwa/preproduccion-01/prepared-b1a-01/prompts/b1a.txt",
+      "prompt_sha256": "7be94085360822ac534f313c9976e20c087ce681cd607d5c70ad77109bec9fae"
+    },
+    {
+      "id": "b1b",
+      "version": "01",
+      "camera": "lateral a la altura de manos u objeto; macro narrativo sin rostro",
+      "path": "output/imagegen/wayuu/keyframes/maleiwa-preproduccion-01/b1b.jpeg",
+      "sha256": "5a63399f878c10c45e51f37e450f9a8eb1c46be3bb8eb5586eb3056a4a152bb2",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "La versión de la tormenta: lateral a la altura de manos u objeto; composición revisada dentro de la secuencia completa."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/maleiwa/preproduccion-01/prepared-b1b-01/prompts/b1b.txt",
+      "prompt_sha256": "f256bef0be6dd6a788c31ebadf7250eacfd7b0dc13814e633953b67ef1f8990d"
+    },
+    {
+      "id": "b2a",
+      "version": "01",
+      "camera": "contrapicado extremo desde el suelo; plano general bajo",
+      "path": "output/imagegen/wayuu/keyframes/maleiwa-preproduccion-01/b2a.jpeg",
+      "sha256": "9ddd672642f9b2154eb8ef74e10ea4e90800072ebdd16e05e669e4a107375066",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "La península cubierta: contrapicado extremo desde el suelo; composición revisada dentro de la secuencia completa."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/maleiwa/preproduccion-01/prepared-b2a-01/prompts/b2a.txt",
+      "prompt_sha256": "b3a3a295eb8b8dad1ddcc5de8f44158e52857ca9b7c99ec83174844de144d71d"
+    },
+    {
+      "id": "b2b",
+      "version": "01",
+      "camera": "cenital verdadero de 90 grados; detalle gráfico de suelo",
+      "path": "output/imagegen/wayuu/keyframes/maleiwa-preproduccion-01/b2b.jpeg",
+      "sha256": "f856ab0f71545467aaf44a5b09eae20eb9122745c08a83453888a8b57e3e0ae3",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "Una piedra en la honda: cenital verdadero de 90 grados; composición revisada dentro de la secuencia completa."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/maleiwa/preproduccion-01/prepared-b2b-01/prompts/b2b.txt",
+      "prompt_sha256": "96dcabadf12caafd0d73c93ce1213c6b1dbc4f4740a20c2a5e162699c433e220"
+    },
+    {
+      "id": "b3a",
+      "version": "01",
+      "camera": "lateral teleobjetivo sin cielo; plano general comprimido",
+      "path": "output/imagegen/wayuu/keyframes/maleiwa-preproduccion-01/b3a.jpeg",
+      "sha256": "a853c453f63ea0cfe409550eedd5236beb091f9c01e581433f4989fc2f5ac2df",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "El lanzamiento: lateral teleobjetivo sin cielo; composición revisada dentro de la secuencia completa."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/maleiwa/preproduccion-01/prepared-b3a-01/prompts/b3a.txt",
+      "prompt_sha256": "28d40937468f5fa7b46509308811f7c7834f91fd71b33ed3e3ca51fe498c6ffe"
+    },
+    {
+      "id": "b3b",
+      "version": "01",
+      "camera": "rasante a través de una grieta o vegetación; gran plano general de fuga",
+      "path": "output/imagegen/wayuu/keyframes/maleiwa-preproduccion-01/b3b.jpeg",
+      "sha256": "eadec208c54c61875da4710d2bf2628860716fda7f3b619b42f5a19092682b22",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "El mar retrocede: rasante a través de una grieta o vegetación; composición revisada dentro de la secuencia completa."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/maleiwa/preproduccion-01/prepared-b3b-01/prompts/b3b.txt",
+      "prompt_sha256": "2c7c6c763995e3bd535abfaa4ea41698ca38ae3c9bcfbd6b37119a47258436ba"
+    },
+    {
+      "id": "b4a",
+      "version": "01",
+      "camera": "alta diagonal de 60 grados; plano conjunto arquitectónico",
+      "path": "output/imagegen/wayuu/keyframes/maleiwa-preproduccion-01/b4a.jpeg",
+      "sha256": "b2d84d1656d1714d42128bcfcf5690145d591e1ca3c44c814488e129485dfc20",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "Pozos de memoria: alta diagonal de 60 grados; composición revisada dentro de la secuencia completa."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/maleiwa/preproduccion-01/prepared-b4a-01/prompts/b4a.txt",
+      "prompt_sha256": "4ce6e1e2649301d57b20944d21a8d96139519f1d0db75f8f563e1b1f6aa1cd2c"
+    },
+    {
+      "id": "b4b",
+      "version": "01",
+      "camera": "sobre el hombro con primer término dominante; plano medio ambiental",
+      "path": "output/imagegen/wayuu/keyframes/maleiwa-preproduccion-01/b4b.jpeg",
+      "sha256": "860348110910d1601ff4a68ea9cdfb0d94ba8d6317b5c844f097ec5f8f8529b1",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "Reunir a las aves: sobre el hombro con primer término dominante; composición revisada dentro de la secuencia completa."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/maleiwa/preproduccion-01/prepared-b4b-01/prompts/b4b.txt",
+      "prompt_sha256": "82dea9a208ccdf194c6bd4cf7a565287265f050293a9c4deddedd47bb181d399"
+    },
+    {
+      "id": "b5a",
+      "version": "01",
+      "camera": "subjetiva baja desde la sombra; plano general con primer término oscuro",
+      "path": "output/imagegen/wayuu/keyframes/maleiwa-preproduccion-01/b5a.jpeg",
+      "sha256": "5b26a5cb27a9489e0b3c5906e9ffb0ea6c3cb32bbf1cd85cc76489a87436cc04",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "Volar lejos: subjetiva baja desde la sombra; composición revisada dentro de la secuencia completa."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/maleiwa/preproduccion-01/prepared-b5a-01/prompts/b5a.txt",
+      "prompt_sha256": "319f8fd22873e690b3c98fbdeff466cae4ff5cd227a43e66d70c396d5e2c154f"
+    },
+    {
+      "id": "b5b",
+      "version": "01",
+      "camera": "perfil distante con horizonte desplazado; plano general lateral",
+      "path": "output/imagegen/wayuu/keyframes/maleiwa-preproduccion-01/b5b.jpeg",
+      "sha256": "8035deb8c29f1a79b15ce80e18a2a542c090d5ceb318d9534855e0497883e0d8",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "Caen las semillas: perfil distante con horizonte desplazado; composición revisada dentro de la secuencia completa."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/maleiwa/preproduccion-01/prepared-b5b-01/prompts/b5b.txt",
+      "prompt_sha256": "21bd9518861525ff9878a4cc4584bd3c10401036784a7a532950b4ebcba78702"
+    },
+    {
+      "id": "b6a",
+      "version": "01",
+      "camera": "cenital diagonal amplio; plano de consecuencia",
+      "path": "output/imagegen/wayuu/keyframes/maleiwa-preproduccion-01/b6a.jpeg",
+      "sha256": "265be60d641b4a87c42520dc9e0616ec4fc897a5c728c1b1ccbfea3d960f562b",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "La península reverdece por manchas: cenital diagonal amplio; composición revisada dentro de la secuencia completa."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/maleiwa/preproduccion-01/prepared-b6a-01/prompts/b6a.txt",
+      "prompt_sha256": "ee0de19917f06665f19d2ddee86cb12122a9c03ebd7a9472d376597ddd686c1b"
+    },
+    {
+      "id": "b6b",
+      "version": "01",
+      "camera": "macro frontal de materia; primerísimo plano de objeto",
+      "path": "output/imagegen/wayuu/keyframes/maleiwa-preproduccion-01/b6b.jpeg",
+      "sha256": "5075b8fb312bf8d786d2caa180f4fdc1f638abfe1a4482b50184d78cbe6f7c3a",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "Un fruto resistente: macro frontal de materia; composición revisada dentro de la secuencia completa."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/maleiwa/preproduccion-01/prepared-b6b-01/prompts/b6b.txt",
+      "prompt_sha256": "935c5f89a504c4ade44a464610500a40759f55dbab34f63c25af9fbc56434eff"
+    },
+    {
+      "id": "b7a",
+      "version": "01",
+      "camera": "contrapicado enmarcado entre postes o rocas; plano general enmarcado",
+      "path": "output/imagegen/wayuu/keyframes/maleiwa-preproduccion-01/b7a.jpeg",
+      "sha256": "6915b1ca05d1a7734b5d2f6f87a46e4f8bb83f6263724e166802d608dea02e8b",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "Reunir a los primeros Wayuu: contrapicado enmarcado entre postes o rocas; composición revisada dentro de la secuencia completa."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/maleiwa/preproduccion-01/prepared-b7a-01/prompts/b7a.txt",
+      "prompt_sha256": "3719ec50c3bf488018ccf846414f73ace3184148c584dafe9d2191400d529a59"
+    },
+    {
+      "id": "b7b",
+      "version": "01",
+      "camera": "teleobjetivo profundo a través de una abertura; plano largo comprimido",
+      "path": "output/imagegen/wayuu/keyframes/maleiwa-preproduccion-01/b7b.jpeg",
+      "sha256": "ad3c6b868cccf625e90aa3b26bd2127ab767df2297763a7f3a5e806514826d26",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "Territorios y relaciones: teleobjetivo profundo a través de una abertura; composición revisada dentro de la secuencia completa."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/maleiwa/preproduccion-01/prepared-b7b-01/prompts/b7b.txt",
+      "prompt_sha256": "7204d0e427f5151604f0c14feb89d10d86d1fb135294bd4f944b27d2a88f6211"
+    },
+    {
+      "id": "b8a",
+      "version": "01",
+      "camera": "aérea oblicua desde atrás; gran plano general de relación",
+      "path": "output/imagegen/wayuu/keyframes/maleiwa-preproduccion-01/b8a.jpeg",
+      "sha256": "e716f12dfc7d11a7ecb7f2d1161e12536f5fa8181c8906c4647c6eaec01e5260",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "Llamar la lluvia: aérea oblicua desde atrás; composición revisada dentro de la secuencia completa."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/maleiwa/preproduccion-01/prepared-b8a-01/prompts/b8a.txt",
+      "prompt_sha256": "41cbb9830edd732fd9728881c4abbcecbedddc60113ed6b8a468f79d694ead9b"
+    },
+    {
+      "id": "b8b",
+      "version": "01",
+      "camera": "a ras del suelo mirando hacia la distancia; plano final de fuga",
+      "path": "output/imagegen/wayuu/keyframes/maleiwa-preproduccion-01/b8b.jpeg",
+      "sha256": "953cbccfadbd73f32b7a82ef6fddba07819ff85e6be6832efcf012702c6487b4",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "Agua que llega y se va: a ras del suelo mirando hacia la distancia; composición revisada dentro de la secuencia completa."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/maleiwa/preproduccion-01/prepared-b8b-01/prompts/b8b.txt",
+      "prompt_sha256": "1041fe33fcc2905131cb0426502a5585df45c2ff54aa986d2c8c8a7197404584"
+    }
+  ],
+  "superseded": []
+}

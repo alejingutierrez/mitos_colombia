@@ -1,0 +1,97 @@
+{
+  "schema": "mitos-pilot-reference-review/v1",
+  "reviewed_at": "2026-09-07",
+  "method": "Local originals visually inspected using view_image; text-derived continuity; no uploads",
+  "cultural_authority": "none_from_image_alone",
+  "does_not_replace_global_decisions": true,
+  "references": [
+    {
+      "path": "output/imagegen/wayuu/triptychs/wayuu-aramai-triptych-15-selected/entrada.jpeg",
+      "sha256": "42964c2bfc4d1fb2e7440ff069b609e71f2d5a06fa70bca9cfe8528a8e68c28c",
+      "observed": "Enramada nocturna dentro de día, Arámai gris/arcilla, varias personas y vegetación abundante.",
+      "keep": "Noche contenida, escala ambiental, contraste térmico, continuidad de Arámai.",
+      "omit": "Casas repetidas, multitud, abundancia vegetal y caras modeladas.",
+      "influence": [
+        "b2a",
+        "b2b"
+      ]
+    },
+    {
+      "path": "output/imagegen/wayuu/triptychs/wayuu-aramai-triptych-15-selected/acto.jpeg",
+      "sha256": "6c562c8d966918fe80ce4f62c697324caec4b34946bbac683f783b3f597128d4",
+      "observed": "Varios umbrales con estrellas, figuras pequeñas vestidas en arcilla y azul, planos superpuestos.",
+      "keep": "Repetición contenida de noche en umbral, ropa completa y profundidad.",
+      "omit": "Múltiples casas y plantas por plano; proximidad de figura de primer término.",
+      "influence": [
+        "b1b",
+        "b3a"
+      ]
+    },
+    {
+      "path": "output/imagegen/wayuu/triptychs/wayuu-aramai-symbolic-16-01/huella.jpeg",
+      "sha256": "5e4cbe9a1ba7dbc7143ab5ebaec98b8d1a86a39ef453e12f0e7cdeeb4236f055",
+      "observed": "Chinchorro vacío contiene cavidad índigo, sobre fondo ocre sencillo.",
+      "keep": "Pocas formas y gran riqueza por separación real de capas.",
+      "omit": "Convertir cada keyframe en símbolo aislado; chinchorro reservado para b4b, fuera de los cinco autorizados.",
+      "influence": [
+        "b2b",
+        "future_b4b_not_generated"
+      ]
+    },
+    {
+      "path": "output/imagegen/wayuu/triptychs/wayuu-aramai-magic-14-options-01/05-el-agua-recuerda-el-futuro.jpeg",
+      "sha256": "890d19ecc144dbc728129746643798ee9ae2b52fc1def86c94f8693ea912717d",
+      "observed": "Ranchería diurna con reflejo nocturno, reparto de agua y Arámai separado.",
+      "keep": "Quietud de lo imposible, contraste entre lo cotidiano y otra profundidad.",
+      "omit": "Reflejo nocturno en agua en esta secuencia para no sugerir un vector epidemiológico; saturación de props.",
+      "influence": [
+        "b1a",
+        "b1b",
+        "b2a"
+      ]
+    },
+    {
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-02-aramai-medium-corrections-02/aramai__identity_sheet--canon.jpeg",
+      "sha256": "ec13d40a57184f34fa89e3c7d7546968134222f3cd8635d023f1c4e429fcc52a",
+      "observed": "Hombre adulto cabello oscuro, ropa arena, sandalias dos tiras; rostro demasiado modelado para dirección actual.",
+      "keep": "Cuerpo adulto sobrio, mandíbula estrecha, sandalias y postura contenida.",
+      "omit": "Rostro volumétrico y ropa de ficha antigua: prevalece continuidad posterior del tríptico, edad mayor/cabello gris/Kemiisa arcilla/Kotin carbón.",
+      "influence": [
+        "b2a",
+        "b2b"
+      ]
+    },
+    {
+      "path": "output/imagegen/wayuu-v3/wayuu-v3-pilot-03-corrections-medium/rancheria_wayuu__spatial_model--canon.jpeg",
+      "sha256": "273831e777e2bf8615f5640f626204fac4b96ea268e55d4215f991d2a6012464",
+      "observed": "Postes separados, fibras y sombra, vivienda de techo inclinado, numerosos detalles.",
+      "keep": "Enramada abierta, postes y separación física de planos.",
+      "omit": "Cubierta alta y exceso de fibras/vegetación; usar vivienda rectilínea baja ya trasladada al tríptico.",
+      "influence": [
+        "b2a",
+        "b2b",
+        "b3a"
+      ]
+    },
+    {
+      "path": "output/imagegen/wayuu-v3/wayuu-v3-pilot-02-remaining-categories-medium/territorio_alta_guajira__environment_model--canon.jpeg",
+      "sha256": "61165dcf1259b472dda699a7ec9311f91b927f0b63f91063ce18b9b71cda7f5e",
+      "observed": "Costa y serranías con muchos planos y facetas, vegetación abundante.",
+      "keep": "Tierra cálida, distancia azul y terreno material.",
+      "omit": "Costa, grandes montañas facetadas y miniaturas numerosas: no hacen falta para este jagüey interior.",
+      "influence": [
+        "b1a",
+        "b1b",
+        "b2a",
+        "b3a"
+      ]
+    }
+  ],
+  "limits": [
+    "Imágenes generadas no prueban costumbre ni autoridad cultural.",
+    "Se inspeccionaron siete originales locales; no se afirma revisar todo el inventario.",
+    "Fuente histórica textual contrastada; no se presenta como referencia iconográfica histórica.",
+    "No se han alterado las selecciones previas ni el relato público."
+  ]
+}
+

@@ -1,0 +1,40 @@
+{
+  "slug": "formacion-del-rio-paez",
+  "id": "k04",
+  "version": 1,
+  "created_at": "2026-09-13T21:54:44.451Z",
+  "plan_sha256": "a6fd707f187001502eb42190c46a6ad473e7394d3baabee19e229bc5193b8eb5",
+  "prompt_file": "content/videos/nasa-paeces/keyframes-comunidad-20260913/myths/formacion-del-rio-paez/prompts/k04-v1.txt",
+  "prompt_sha256": "e50cde0a5df8a22be59b3c28d9a10be002431a42572a149cfdddc863bc12ac47",
+  "references": [
+    {
+      "path": "output/imagegen/nasa-paeces/tripticos/maqueta-3d-20260913/formacion-del-rio-paez/entrada-v1.png",
+      "sha256": "530f3d53778f1774c7b64d4fb996a7ae25d150366ae1996da6b59297f1332874",
+      "role": "Tríptico entrada: identidades, vestuario y escenario de ESTE mito; NO copia de composición."
+    },
+    {
+      "path": "output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b1b-maqueta-v2.png",
+      "sha256": "d7dc5d106daadbd61b032ae0b3bb0139806f2b49c82ad2e937157f84478e3f7f",
+      "role": "SOLO material físico de papel: no transferir personas, ropa, varas, laguna ni iluminación nocturna."
+    },
+    {
+      "path": "output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/comunidad-nasa/formacion-del-rio-paez/k02-v1.png",
+      "sha256": "c3362ea730725bd071152f8142ac504d5dec7ee3fb1e85f09038fd273acd0e11",
+      "role": "Keyframe anterior k02: continuidad de identidades y lugares que coincidan, nunca importar acción u objetos ausentes en el nuevo plano."
+    },
+    {
+      "path": "output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/comunidad-nasa/formacion-del-rio-paez/k03-v2.png",
+      "sha256": "e9e1f51dda74a34b623b04f53828aa61f62bb5c2357f0b6ba018081b05df0fd6",
+      "role": "Keyframe anterior k03: continuidad de identidades y lugares que coincidan, nunca importar acción u objetos ausentes en el nuevo plano."
+    }
+  ],
+  "request": {
+    "prompt": "Use case: illustration-story. Produce ONE portrait 9:16 cinematic KEYFRAME, a real-looking miniature built ENTIRELY from CUT AND FOLDED PAPER, photographed from INSIDE the set. Myth: Formación del río Páez. Frame k04.\n\nREFERENCE ROLES:\nImage 1: Tríptico entrada: identidades, vestuario y escenario de ESTE mito; NO copia de composición.\nImage 2: SOLO material físico de papel: no transferir personas, ropa, varas, laguna ni iluminación nocturna.\nImage 3: Keyframe anterior k02: continuidad de identidades y lugares que coincidan, nunca importar acción u objetos ausentes en el nuevo plano.\nImage 4: Keyframe anterior k03: continuidad de identidades y lugares que coincidan, nunca importar acción u objetos ausentes en el nuevo plano.\n\nEXACT NEW SHOT, render only this moment, not an entire story or multi-panel sheet:\nDetalle lateral: bebe mediante un carrizo simple; agua construida con tiras de papel azul, sin líquido real.\n\nNARRATIVE CONTINUITY: Chautéh libre con DOS ojos sanos. Carrizo, pantano, árbol, zigzags y confluencia. No baúl, ojo perdido, Virgen ni piedras de Chaikin.\nSelected account: Único episodio de Chautéh y el origen del Páez; ruta aproximada, sin mapa inventado.\n\nPHYSICAL MATERIAL IS MANDATORY: separately cut, thick matte cardstock planes; deep air gaps and actual cast contact shadows; lifted edges, paper tabs, crisp folds and visibly attached garment panels. People are handmade folded-paper puppets with flat cut face planes, folded limbs and layered hands, never rounded dolls or illustrated skin. Rocks are angular folded cardstock, plants individual cut leaves bent from stems. Water is broad overlapping blue cardstock sheets, mist and clouds suspended paper cutouts. No painted textures pretending to be relief.\nCINEMATOGRAPHY: obey the shot's exact camera and time of day. Foreground paper edge/leaf/rock creates depth without hiding the main action; focal plane on action, optical miniature depth of field in near/far layers. Maintain identities, ages and clothes from the SAME myth references. Borderless immersive scene, no box, plinth, table, studio or collage. Frame extends edge to edge. Do NOT carry background objects from a previous scene into a new location.\nNo text, lettering, logo, watermark, symbols, sacred patterns, pan-Indigenous headdresses, golden jewelry, invented ritual, extra people or props. No brushwork, drawing outlines, flat illustration, realistic fabric/skin/liquid, plastic, clay or smooth CGI. Exactly ONE finished vertical 9:16 image. This is a new composition, not a crop of the reference.\n\nFINAL COMPOSITION OVERRIDE: Character names in continuity rules are NOT a cast list. Show ONLY the people/animals explicitly requested in THIS single shot. Do not add any reference person, animal, lake or staff just because it appears in a reference. Render precisely: Detalle lateral: bebe mediante un carrizo simple; agua construida con tiras de papel azul, sin líquido real.\nCAMERA LOCK: This is a CLOSE-UP INSERT. The specifically named hands, object, or head must fill at least 65% of the image. Do not turn it into a full-body group portrait or wide landscape. Only show the body parts explicitly needed for the insert.\n\n",
+    "referenced_image_paths": [
+      "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/maqueta-3d-20260913/formacion-del-rio-paez/entrada-v1.png",
+      "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b1b-maqueta-v2.png",
+      "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/comunidad-nasa/formacion-del-rio-paez/k02-v1.png",
+      "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/comunidad-nasa/formacion-del-rio-paez/k03-v2.png"
+    ]
+  }
+}

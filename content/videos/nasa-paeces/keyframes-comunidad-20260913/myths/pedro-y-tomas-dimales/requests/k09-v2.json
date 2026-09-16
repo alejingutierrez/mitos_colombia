@@ -1,0 +1,28 @@
+{
+  "slug": "pedro-y-tomas-dimales",
+  "id": "k09",
+  "version": 2,
+  "created_at": "2026-09-13T22:55:16.464Z",
+  "plan_sha256": "bd9e7cdc730c1bc9ca7b72569c2b11d5b39358ae47681c36d369d03e85f5921b",
+  "prompt_file": "content/videos/nasa-paeces/keyframes-comunidad-20260913/myths/pedro-y-tomas-dimales/prompts/k09-v2.txt",
+  "prompt_sha256": "db6a1f7949bf555f954e665beb4fc3adfe69d96ec9ced572ec31e1794116516a",
+  "references": [
+    {
+      "path": "output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b1b-maqueta-v2.png",
+      "sha256": "d7dc5d106daadbd61b032ae0b3bb0139806f2b49c82ad2e937157f84478e3f7f",
+      "role": "SOLO material físico de papel: no transferir personas, ropa, varas, laguna ni iluminación nocturna."
+    },
+    {
+      "path": "output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/comunidad-nasa/pedro-y-tomas-dimales/k08-v1.png",
+      "sha256": "489ad44c2d46294208f0db593856090023a024828b951c35c94c469fcd967ea5",
+      "role": "Keyframe anterior k08: continuidad de identidades y lugares que coincidan, nunca importar acción u objetos ausentes en el nuevo plano."
+    }
+  ],
+  "request": {
+    "prompt": "Use case: illustration-story. Produce ONE portrait 9:16 cinematic KEYFRAME, a real-looking miniature built ENTIRELY from CUT AND FOLDED PAPER, photographed from INSIDE the set. Myth: Pedro y Tomás Dimales. Frame k09.\n\nREFERENCE ROLES:\nImage 1: SOLO material físico de papel: no transferir personas, ropa, varas, laguna ni iluminación nocturna.\nImage 2: Keyframe anterior k08: continuidad de identidades y lugares que coincidan, nunca importar acción u objetos ausentes en el nuevo plano.\n\nEXACT NEW SHOT, render only this moment, not an entire story or multi-panel sheet:\nPlano de dos: hermanos separados por cultivo dañado, luz de tarde tranquila, sin petrificación.\n\nVISIBLE CONTENT RULE: The exact new shot above is the complete inventory for this one image. Later events, other characters and other props of the myth are absent unless explicitly named in this shot.\n\nPHYSICAL MATERIAL IS MANDATORY: separately cut, thick matte cardstock planes; deep air gaps and actual cast contact shadows; lifted edges, paper tabs, crisp folds and visibly attached garment panels. People are handmade folded-paper puppets with flat cut face planes, folded limbs and layered hands, never rounded dolls or illustrated skin. Rocks are angular folded cardstock, plants individual cut leaves bent from stems. Water is broad overlapping blue cardstock sheets, mist and clouds suspended paper cutouts. No painted textures pretending to be relief.\nCINEMATOGRAPHY: obey the shot's exact camera and time of day. Foreground paper edge/leaf/rock creates depth without hiding the main action; focal plane on action, optical miniature depth of field in near/far layers. Maintain identities, ages and clothes from the SAME myth references. Borderless immersive scene, no box, plinth, table, studio or collage. Frame extends edge to edge. Do NOT carry background objects from a previous scene into a new location.\nNo text, lettering, logo, watermark, symbols, sacred patterns, pan-Indigenous headdresses, golden jewelry, invented ritual, extra people or props. No brushwork, drawing outlines, flat illustration, realistic fabric/skin/liquid, plastic, clay or smooth CGI. Exactly ONE finished vertical 9:16 image. This is a new composition, not a crop of the reference.\n\nFINAL COMPOSITION OVERRIDE: Character names in continuity rules are NOT a cast list. Show ONLY the people/animals explicitly requested in THIS single shot. Do not add any reference person, animal, lake or staff just because it appears in a reference. Render precisely: Plano de dos: hermanos separados por cultivo dañado, luz de tarde tranquila, sin petrificación.\n\n\nCORREGIR ANATOMÍA: exactamente DOS hermanos con DOS brazos y DOS manos CADA UNO. Pedro OCRE gorro marrón tiene AMBAS MANOS RELAJADAS ABAJO a lados; Tomás AZUL GRIS coleta sin sombrero también manos abajo. Se miran separados por maíz dañado, luz de tarde. Ninguna mano flotante ni tercer brazo.",
+    "referenced_image_paths": [
+      "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b1b-maqueta-v2.png",
+      "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/comunidad-nasa/pedro-y-tomas-dimales/k08-v1.png"
+    ]
+  }
+}

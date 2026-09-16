@@ -1,0 +1,39 @@
+{
+  "schema": "wayuu-video-freeze/v1",
+  "created_at": "2026-09-09T01:55:06.556Z",
+  "plan": "content/videos/wayuu/videos/el-viaje-del-mas-alla/preproduccion-03/plan.json",
+  "plan_sha256": "53d62635d41b9f7d816b60064bac5832438707c5632d2d6f0799ec21594cff9d",
+  "style": "content/videos/wayuu/channel-dna.v2.json",
+  "style_sha256": "da3aa36702f381654441c018622e5ccf66ea217b5a420a83093620a8758a2912",
+  "checks": {
+    "shots": 1,
+    "words": 29,
+    "estimated_seconds": 14,
+    "generated": 0,
+    "pending": 1,
+    "warnings": []
+  },
+  "files": {
+    "narrative_snapshot_verified": true,
+    "reference_checks": 7,
+    "public_freshness": "not_checked_by_offline_preparer"
+  },
+  "jobs": [
+    {
+      "id": "b12b",
+      "prompt_file": "content/videos/wayuu/videos/el-viaje-del-mas-alla/preproduccion-03/prepared-01/prompts/b12b.txt",
+      "prompt_sha256": "1a4e0902ce04cb45688e6b92b35de4ce498c8a9861d7b3cf5d6771aea4b404ce",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "864x1536",
+      "output_format": "jpeg",
+      "mode": "text_only",
+      "input_images": [],
+      "api_method": "images.generate",
+      "output": "output/imagegen/wayuu/keyframes/el-viaje-del-mas-alla-preproduccion-03-correccion-patilla/b12b.jpeg",
+      "status": "prepared_not_generated"
+    }
+  ],
+  "prior_candidates": [],
+  "no_api_calls": true
+}

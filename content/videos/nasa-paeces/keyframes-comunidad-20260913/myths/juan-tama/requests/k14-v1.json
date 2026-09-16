@@ -1,0 +1,28 @@
+{
+  "slug": "juan-tama",
+  "id": "k14",
+  "version": 1,
+  "created_at": "2026-09-13T23:34:06.966Z",
+  "plan_sha256": "0d7c0b9f42c20b9afe8abcd88443fec3d04d8dfa09caec14159c2ea1b1720aeb",
+  "prompt_file": "content/videos/nasa-paeces/keyframes-comunidad-20260913/myths/juan-tama/prompts/k14-v1.txt",
+  "prompt_sha256": "52d2fae89c742d313d8f2c51f38a57830ad96d217a106d97d6d2725c4565564c",
+  "references": [
+    {
+      "path": "output/imagegen/nasa-paeces/tripticos/maqueta-3d-20260913/juan-tama/entrada-v1.png",
+      "sha256": "af5fa7506eebc2da466a3c49bd68ec74418d24b5ad2b793eb0fbb5e321380fa4",
+      "role": "Tríptico entrada: identidades, vestuario y escenario de ESTE mito; NO copia de composición."
+    },
+    {
+      "path": "output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b1b-maqueta-v2.png",
+      "sha256": "d7dc5d106daadbd61b032ae0b3bb0139806f2b49c82ad2e937157f84478e3f7f",
+      "role": "SOLO material físico de papel: no transferir personas, ropa, varas, laguna ni iluminación nocturna."
+    }
+  ],
+  "request": {
+    "prompt": "Use case: illustration-story. Produce ONE portrait 9:16 cinematic KEYFRAME, a real-looking miniature built ENTIRELY from CUT AND FOLDED PAPER, photographed from INSIDE the set. Myth: Juan Tama de la Estrella. Frame k14.\n\nREFERENCE ROLES:\nImage 1: Tríptico entrada: identidades, vestuario y escenario de ESTE mito; NO copia de composición.\nImage 2: SOLO material físico de papel: no transferir personas, ropa, varas, laguna ni iluminación nocturna.\n\nEXACT NEW SHOT, render only this moment, not an entire story or multi-panel sheet:\nDetalle editorial de cierre: libro cerrado y banda de papel sobria junto a vara, memoria del nacimiento y la autoridad, sin inscripción ni símbolo universal.\n\nVISIBLE CONTENT RULE: The exact new shot above is the complete inventory for this one image. Later events, other characters and other props of the myth are absent unless explicitly named in this shot.\n\nPHYSICAL MATERIAL IS MANDATORY: separately cut, thick matte cardstock planes; deep air gaps and actual cast contact shadows; lifted edges, paper tabs, crisp folds and visibly attached garment panels. People are handmade folded-paper puppets with flat cut face planes, folded limbs and layered hands, never rounded dolls or illustrated skin. Rocks are angular folded cardstock, plants individual cut leaves bent from stems. Water is broad overlapping blue cardstock sheets, mist and clouds suspended paper cutouts. No painted textures pretending to be relief.\nCINEMATOGRAPHY: obey the shot's exact camera and time of day. Foreground paper edge/leaf/rock creates depth without hiding the main action; focal plane on action, optical miniature depth of field in near/far layers. Maintain identities, ages and clothes from the SAME myth references. Borderless immersive scene, no box, plinth, table, studio or collage. Frame extends edge to edge. Do NOT carry background objects from a previous scene into a new location.\nNo text, lettering, logo, watermark, symbols, sacred patterns, pan-Indigenous headdresses, golden jewelry, invented ritual, extra people or props. No brushwork, drawing outlines, flat illustration, realistic fabric/skin/liquid, plastic, clay or smooth CGI. Exactly ONE finished vertical 9:16 image. This is a new composition, not a crop of the reference.\n\nFINAL COMPOSITION OVERRIDE: Character names in continuity rules are NOT a cast list. Show ONLY the people/animals explicitly requested in THIS single shot. Do not add any reference person, animal, lake or staff just because it appears in a reference. Render precisely: Detalle editorial de cierre: libro cerrado y banda de papel sobria junto a vara, memoria del nacimiento y la autoridad, sin inscripción ni símbolo universal.\nCAMERA LOCK: This is a CLOSE-UP INSERT. The specifically named hands, object, or head must fill at least 65% of the image. Do not turn it into a full-body group portrait or wide landscape. Only show the body parts explicitly needed for the insert.\n\nMACRO de naturaleza muerta editorial: exactamente UN LIBRO CERRADO de tapa gruesa VERDE GRIS OSCURO mate, páginas color CREMA sin palabras; UNA BANDA sobria de tiras paralelas AZUL MARINO, AZUL GRIS y OCRE, flojamente plegada junto al libro; y UN BASTÓN sencillo MARRÓN de papel doblado, apoyado en diagonal al lado. Banda de papel remite al chumbe del nacimiento sin afirmar un símbolo sagrado; sin rombos, letras, cruces, sellos ni iconos. Objetos grandes ocupan 75% de imagen, sobre una piedra plana hecha de cartulina plegada al borde del sendero. Luz lateral calma de memoria editorial. CERO personas, manos, bebés, cuerpos, caras, apariciones o animales. Todos los objetos están secos, no flotan. El libro es verde gris con páginas crema como el libro bajo el niño de los planos de nacimiento.",
+    "referenced_image_paths": [
+      "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/maqueta-3d-20260913/juan-tama/entrada-v1.png",
+      "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b1b-maqueta-v2.png"
+    ]
+  }
+}

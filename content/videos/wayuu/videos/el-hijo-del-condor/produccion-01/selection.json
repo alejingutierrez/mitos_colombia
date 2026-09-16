@@ -1,0 +1,244 @@
+{
+  "schema": "wayuu-video-keyframe-selection/v1",
+  "slug": "el-hijo-del-condor",
+  "status": "script_and_keyframes_complete_editorial_selection_with_notes",
+  "selected_at": "2026-09-07",
+  "plan": "content/videos/wayuu/videos/el-hijo-del-condor/preproduccion-01/plan.json",
+  "freeze": "content/videos/wayuu/videos/el-hijo-del-condor/preproduccion-01/prepared-01/freeze.json",
+  "quality": "medium",
+  "generation_mode": "openai_official_imagegen_cli_text_only",
+  "source_verified_live": {
+    "method": "Neon read-only myths.content SHA-256",
+    "date": "2026-09-07",
+    "matches": true,
+    "sha256": "82d3c04ab01a5cbb8e81991d03a12aaded2ddb90ce31244d12ec669b5bc3991b"
+  },
+  "counts": {
+    "storyboard_instants": 20,
+    "selected": 20,
+    "prior_pilot_generations": 0,
+    "new_base_generations": 20,
+    "new_correction_generations": 3,
+    "total_successful_generations": 23,
+    "superseded_not_deleted": 3,
+    "new_images_this_goal": 23
+  },
+  "style_review": {
+    "contract": "content/videos/wayuu/channel-dna.v2.json",
+    "anchors": [
+      "b2a",
+      "b7b",
+      "b8b"
+    ],
+    "comparison": [
+      "b1b",
+      "b2a",
+      "b4a",
+      "b6b",
+      "b8b",
+      "b9b",
+      "b10b"
+    ],
+    "method": "Direct original inspection and start-middle-end sequence comparison; not automatic visual certification.",
+    "result": "Cut-paper consistency maintained after rejecting a late realistic horse. Residual framing, hairstyle and prop variations are recorded."
+  },
+  "corrections": [
+    {
+      "id": "b7b",
+      "reason": "Restitution shadows were blank ramps; changed to readable human silhouettes.",
+      "prompt": "content/videos/wayuu/videos/el-hijo-del-condor/produccion-01/corrections-01/b7b.txt"
+    },
+    {
+      "id": "b6b",
+      "reason": "Guide/follower reversed; now Jujia leads to the exit.",
+      "prompt": "content/videos/wayuu/videos/el-hijo-del-condor/produccion-01/corrections-02/b6b.txt"
+    },
+    {
+      "id": "b9b",
+      "reason": "Distant horse drifted from papercut; replaced with explicitly flat cut-paper silhouette.",
+      "prompt": "content/videos/wayuu/videos/el-hijo-del-condor/produccion-01/corrections-02/b9b.txt"
+    }
+  ],
+  "selected": [
+    {
+      "id": "b1a",
+      "path": "output/imagegen/wayuu/keyframes/el-hijo-del-condor-preproduccion-01/b1a.jpeg",
+      "sha256": "71b10429b091de959feb46c5936cc7b489c74d04067d005d8fcc9fa8388a4b6b",
+      "reviewed": true,
+      "notes": [
+        "Juramía pequeño, cabeza desnuda rojiza y collar claro; piedra cierra la cueva alta. Papel inequívoco de pájaro, acantilado y cielo; no se representa el rapto. No certificación zoológica de la denominación histórica."
+      ]
+    },
+    {
+      "id": "b1b",
+      "path": "output/imagegen/wayuu/keyframes/el-hijo-del-condor-preproduccion-01/b1b.jpeg",
+      "sha256": "32f08df0a37ace1309966726f93763532782ca645afc9229261dffa9b9f128c5",
+      "reviewed": true,
+      "notes": [
+        "Dos personas y sombra pequeña de proporción infantil ligada al hijo adulto: crecimiento temporal legible sin duplicar cuerpos. Madre remienda con ropa completa. Cabeza mínima y papel mantenido."
+      ]
+    },
+    {
+      "id": "b2a",
+      "path": "output/imagegen/wayuu/keyframes/el-hijo-del-condor-preproduccion-01/b2a.jpeg",
+      "sha256": "47d1affc9ee1d509069efa2068930b38aaf075567f116af3abedc3f0cca77826",
+      "reviewed": true,
+      "notes": [
+        "Mano coincide con el abanico de piedra abierto; madre separada, salida caminable. José Juan se ve algo menor que la madre por escala/profundidad: identidad por ropa, no continuidad biométrica perfecta."
+      ]
+    },
+    {
+      "id": "b2b",
+      "path": "output/imagegen/wayuu/keyframes/el-hijo-del-condor-preproduccion-01/b2b.jpeg",
+      "sha256": "0e27610413b22c4552225f8f940e833fd822e6b2d9aa4def18d4fe9012bcafd6",
+      "reviewed": true,
+      "notes": [
+        "Madre al frente e hijo detrás, puerta abierta y horizonte amplio. La piedra aparece de nuevo como placa simple, no abanico: variación geométrica que deberá resolverse por corte, no morphing continuo."
+      ]
+    },
+    {
+      "id": "b3a",
+      "path": "output/imagegen/wayuu/keyframes/el-hijo-del-condor-preproduccion-01/b3a.jpeg",
+      "sha256": "c5715ce43fe025f3d2a2b9dfb07e13fb2fd0bfdb05fd5f0d738992f0c68b58dc",
+      "reviewed": true,
+      "notes": [
+        "Madre junto a puerta abierta, hijo se aleja por camino. Casa y suelo de papel; prenda que sostiene más grande que un parche, compatible con ropa doméstica."
+      ]
+    },
+    {
+      "id": "b3b",
+      "path": "output/imagegen/wayuu/keyframes/el-hijo-del-condor-preproduccion-01/b3b.jpeg",
+      "sha256": "f3c7c61bf6c67d6b2e530eaa0e2ed9503d447f8ac3bbf2cfcf14d224f4da33db",
+      "reviewed": true,
+      "notes": [
+        "Tres trabajadores diferenciados por prenda y dos azadas en reposo; materia clara en surcos y cuerpos. Encuadre más próximo de lo planeado y cabello del hijo más rizado; se registra sin cambiar identidad editorial."
+      ]
+    },
+    {
+      "id": "b4a",
+      "path": "output/imagegen/wayuu/keyframes/el-hijo-del-condor-preproduccion-01/b4a.jpeg",
+      "sha256": "3f0e412e718be660d2171f71a561593610c1bdc2bd439812057243bf0c3f6898",
+      "reviewed": true,
+      "notes": [
+        "Jujía, un peón y cinco cuencos (dos sostenidos, tres en suelo) con olla: no pelea. Los recipientes tienen superficies curvas más lisas, pero bordes finos y construcción ensamblada de papel. Peinado de Jujía varía a trenza baja."
+      ]
+    },
+    {
+      "id": "b4b",
+      "path": "output/imagegen/wayuu/keyframes/el-hijo-del-condor-preproduccion-01/b4b.jpeg",
+      "sha256": "4112c83667b4a32d3061e1469a9a52a2f6041b7aeb3a3d7b4ecabac17a99bd7c",
+      "reviewed": true,
+      "notes": [
+        "Jujía delante e hijo detrás, manos vacías, cueva baja distinta de la alta. Cocina ocupa más primer término que la descripción; no heridas ni armas. Papel sostenido."
+      ]
+    },
+    {
+      "id": "b5a",
+      "path": "output/imagegen/wayuu/keyframes/el-hijo-del-condor-preproduccion-01/b5a.jpeg",
+      "sha256": "f699bc1cefd92057435a872e72c4f3afa5594a11b1b0c97f0cb36cc266d2409f",
+      "reviewed": true,
+      "notes": [
+        "Dos serpientes completas, separadas y sin ataque. José Juan aparece ya más adentro de la entrada que antes de cruzarla; es pausa ante el dominio, no coreografía literal. Escamas planas, suelo/rocas de papel."
+      ]
+    },
+    {
+      "id": "b5b",
+      "path": "output/imagegen/wayuu/keyframes/el-hijo-del-condor-preproduccion-01/b5b.jpeg",
+      "sha256": "f302189f818b1406c7c9c0f148b1220ff2ae15925772b423859992362815fac3",
+      "reviewed": true,
+      "notes": [
+        "Dos mujeres salen por sí mismas, José Juan y Jujía a lados separados. Cámara interior hacia afuera, distinta del exterior previsto, pero conserva la acción. Peinado gris varía; no atribuirlo a estado cultural nuevo."
+      ]
+    },
+    {
+      "id": "b6a",
+      "path": "output/imagegen/wayuu/keyframes/el-hijo-del-condor-preproduccion-01/b6a.jpeg",
+      "sha256": "0c6db8ed4de0e4a3db5da2c2be6399851612eefa40f4e25d003dceb0e36c3544",
+      "reviewed": true,
+      "notes": [
+        "Cuerda cortada inalcanzable, hijo de pie libre y pequeño, bobina suelta. Profundidad legible sin ataduras ni violencia. Vegetación interior estilizada no equivale a ecología certificada."
+      ]
+    },
+    {
+      "id": "b6b",
+      "path": "output/imagegen/wayuu/keyframes/el-hijo-del-condor-corrections-02/b6b.jpeg",
+      "sha256": "202e1fa517812fe9b9e1468a419d20969facc366fbb7b718d1265c9521c030d7",
+      "reviewed": true,
+      "notes": [
+        "Corrección seleccionada: Jujía delante y más cerca de la salida, José Juan siguiéndola; sendero continuo y pequeño pliegue ante la guía. Mantiene papel en todos los elementos. El original invertía el orden y queda fuera."
+      ]
+    },
+    {
+      "id": "b7a",
+      "path": "output/imagegen/wayuu/keyframes/el-hijo-del-condor-preproduccion-01/b7a.jpeg",
+      "sha256": "ddc1b82a9d6de2ac6795216fc8f890dd621946a230de15632b90afea16193e55",
+      "reviewed": true,
+      "notes": [
+        "Elipsis de violencia sin personas, dos herramientas en reposo y vacío del trabajo. Fogón salió con llama pequeña y dos cuencos, no apagado y tres como se pidió; se conserva como interrupción reciente, no violencia visible. Material de papel conservado."
+      ]
+    },
+    {
+      "id": "b7b",
+      "path": "output/imagegen/wayuu/keyframes/el-hijo-del-condor-corrections-01/b7b.jpeg",
+      "sha256": "aced9c73a479b5124c67e09a98f858ecf50e0f4bf0b2cc95eff9530ea1fb571b",
+      "reviewed": true,
+      "notes": [
+        "Corrección seleccionada: dos sombras con cabezas y perfiles reconocibles se levantan del papel, tres hombres intactos y separados. También hay proyección plana delante de las sombras levantadas: duplicación gráfica de sombra, no dos personas adicionales. Mejora la metáfora frente a rampas sin forma; original conservado."
+      ]
+    },
+    {
+      "id": "b8a",
+      "path": "output/imagegen/wayuu/keyframes/el-hijo-del-condor-preproduccion-01/b8a.jpeg",
+      "sha256": "6d811bef4c842fa0f3614b2fd123fc52b48304279d112c60cd27bd9fd7d6dda5",
+      "reviewed": true,
+      "notes": [
+        "José Juan y caballo tranquilos con cuerda floja, sin golpes. Ambas siluetas de papel, cuatro patas legibles; no sustituye la prueba por combate ni importa el caballo hablante de Kosina."
+      ]
+    },
+    {
+      "id": "b8b",
+      "path": "output/imagegen/wayuu/keyframes/el-hijo-del-condor-preproduccion-01/b8b.jpeg",
+      "sha256": "90b4a0823a81ee8c8ce617ecce2d42e87923b6c693a5487f99a89774557e12bc",
+      "reviewed": true,
+      "notes": [
+        "Caballo y jinete de recortes, proporciones naturales y descenso de láminas conectadas. El pliegue empieza delante del casco y es muy empinado, no una rampa físicamente transitable certificada. Mostrar como transición mágica, no prometer una animación automática caminable."
+      ]
+    },
+    {
+      "id": "b9a",
+      "path": "output/imagegen/wayuu/keyframes/el-hijo-del-condor-preproduccion-01/b9a.jpeg",
+      "sha256": "9d3b2489d9b39c90238145deed1168319e75df25b82faff2d2411da88cce62ec",
+      "reviewed": true,
+      "notes": [
+        "José Juan, caballo e hija separados en rutas abiertas, sin boda o entrega. Cola del caballo cerca del borde izquierdo y cabeza del joven algo más voluminosa que ancla, aunque mantiene contorno de recorte. No se presenta esta relación editorial como final literal de Chaves."
+      ]
+    },
+    {
+      "id": "b9b",
+      "path": "output/imagegen/wayuu/keyframes/el-hijo-del-condor-corrections-02/b9b.jpeg",
+      "sha256": "243d8c709d6e9eba0fbe004a350eda266c8b0c51166fbabf256f5edfad2b71a1",
+      "reviewed": true,
+      "notes": [
+        "Corrección seleccionada: caballo diminuto de torso plano uniforme, crin en cortes y patas por siluetas; recupera claramente el papel frente al original más realista. Geología y suelo conservan láminas separadas. No se infiere parallax animable de este JPEG."
+      ]
+    },
+    {
+      "id": "b10a",
+      "path": "output/imagegen/wayuu/keyframes/el-hijo-del-condor-preproduccion-01/b10a.jpeg",
+      "sha256": "5d30711ace4379edf776fb0b9d58a9caaad8b52684d6343b0648422eaff9c59f",
+      "reviewed": true,
+      "notes": [
+        "Madre remendando, puerta abierta y misma manta/braza; recortes visibles en casa, ropa, cara, plantas y suelo. Taburete doméstico añadido no se convierte en modelo canónico. No se narra una espera del hijo."
+      ]
+    },
+    {
+      "id": "b10b",
+      "path": "output/imagegen/wayuu/keyframes/el-hijo-del-condor-preproduccion-01/b10b.jpeg",
+      "sha256": "ed6ff1bc62eceee2c4eb5268b27e039709d37840911cd2e4a5c4fbe549603d8b",
+      "reviewed": true,
+      "notes": [
+        "Madre pequeña camina por sí misma al territorio, composición amplia y papel mantenido en todos los planos. Se añadió ribete marfil diagonal, cuenco y vasija domésticos; variaciones de continuidad registradas, no ornamentos culturales certificados."
+      ]
+    }
+  ]
+}

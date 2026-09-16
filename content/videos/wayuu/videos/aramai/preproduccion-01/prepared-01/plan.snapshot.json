@@ -1,0 +1,1412 @@
+{
+  "schema": "wayuu-video-preproduction/v1",
+  "slug": "aramai",
+  "title": "Arámai · La noche que escucha",
+  "version": "preproduccion-01",
+  "palette": "Arcilla cálida y arena dorada bajo luz diurna; noche índigo profunda con bordes petróleo y turquesa contenidos, oliva puntual en vegetación. Sombras físicas, sin neón, purpurina o brillo de portal.",
+  "status": "script_storyboard_ready_not_generated",
+  "style": "content/videos/wayuu/channel-dna.v1.json",
+  "generation": {
+    "model": "gpt-image-2",
+    "quality": "medium",
+    "size": "864x1536",
+    "output_format": "jpeg",
+    "mode": "text_only",
+    "input_images": []
+  },
+  "narrative": {
+    "snapshot": "content/mitos-visuales/production/wayuu-2026-09-05/narratives/aramai.json",
+    "content_sha256": "a949509df6e51454154a33e3e11979dc5a236ea8065cc1af1aa3d2eba5a0db1d",
+    "source_url": "https://publicaciones.icanh.gov.co/index.php/picanh/catalog/download/243/266/1579?inline=1",
+    "source_locator": "Milcíades Chaves, 1946, VI Aramai, printed p.314 / PDF page index 10",
+    "source_read_at": "2026-09-07",
+    "historical_core": [
+      "escasez",
+      "petición de enfermedades",
+      "respuesta de Mareiwa",
+      "Wanurü recorre La Guajira",
+      "reproche de la gente"
+    ],
+    "published_editorial_expansion": [
+      "arrepentimiento y segunda petición",
+      "cuidado",
+      "cese de fiebre",
+      "reflexión final"
+    ],
+    "visual_license": "Noche contenida en reflejo de agua, cuenco, enramada, chinchorro y umbrales: traducciones editoriales del mismo motivo, no sucesos literales adicionales ni iconografía cultural canónica. Los reflejos tempranos son anticipación para el espectador, no profecía del personaje ni contaminación. La causa narrativa sigue siendo la petición.",
+    "events": [
+      {
+        "id": "escasez",
+        "provenance": "historical_core",
+        "required": true,
+        "source": "chaves_1946_aramai",
+        "action": "La falta de recursos motiva una decisión humana."
+      },
+      {
+        "id": "peticion",
+        "provenance": "historical_core",
+        "required": true,
+        "source": "chaves_1946_aramai",
+        "action": "Arámai pide a Mareiwa una reducción de personas mediante enfermedad."
+      },
+      {
+        "id": "respuesta",
+        "provenance": "historical_core",
+        "required": true,
+        "source": "chaves_1946_aramai",
+        "action": "Mareiwa atiende la petición."
+      },
+      {
+        "id": "recorrido",
+        "provenance": "historical_core",
+        "required": true,
+        "source": "chaves_1946_aramai",
+        "action": "Wanurü recorre La Guajira; conserva agencia propia."
+      },
+      {
+        "id": "reproche",
+        "provenance": "historical_core",
+        "required": true,
+        "source": "chaves_1946_aramai",
+        "action": "La comunidad responsabiliza a Arámai."
+      },
+      {
+        "id": "cese",
+        "provenance": "published_editorial_expansion",
+        "required": true,
+        "source": "published_aramai_20260905",
+        "action": "Arámai vuelve a pedir que termine lo que solicitó."
+      },
+      {
+        "id": "cuidado",
+        "provenance": "published_editorial_expansion",
+        "required": true,
+        "source": "published_aramai_20260905",
+        "action": "Arámai reparte agua y acompaña; la ayuda no revierte las pérdidas."
+      },
+      {
+        "id": "perdida",
+        "provenance": "published_editorial_expansion",
+        "source": "published_aramai_20260905",
+        "required": true,
+        "action": "Ausencias rompen tareas y relaciones familiares."
+      },
+      {
+        "id": "recuperacion",
+        "provenance": "published_editorial_expansion",
+        "source": "published_aramai_20260905",
+        "required": true,
+        "action": "La fiebre cede, la actividad retorna sin recuperar las vidas perdidas."
+      },
+      {
+        "id": "cierre",
+        "provenance": "published_editorial_expansion",
+        "source": "published_aramai_20260905",
+        "required": true,
+        "action": "La pregunta cambia hacia sostener las vidas."
+      }
+    ]
+  },
+  "research_status": "existing_sources_reviewed_no_new_web_research",
+  "duration": {
+    "target_seconds": 90,
+    "measured": false,
+    "voice_words": 169
+  },
+  "story_thesis": "La petición promete resolver la escasez y produce una ausencia que el cuidado no puede reparar.",
+  "continuity_rules": [
+    "Arámai es un hombre Wayúu mayor y delgado, proporciones adultas naturales, cabeza pequeña de perfil y cabello corto gris oscuro de papel recortado. Camisa Kemiisa arcilla de mangas, manto Kotin carbón sobre los hombros sin cubrir la cabeza, faja S'ira arena y sandalias waireñas. Identidad por silueta, edad, ropa y postura; no por arrugas ni gesticulación facial. Pantalón largo holgado color arena. Cara casi plana de perfil, sin arrugas ni pómulos modelados.",
+    "Mujeres Wayúu con Wayuushein de una sola silueta AMPLIA Y SUELTA, mangas anchas, hasta los tobillos, sin cintura ceñida, color azul mineral o arcilla; cabello negro y cabeza descubierta; sandalias waireñas. Hombres con camisa de mangas, manta exterior completa, faja y sandalias. Figuras sobrias de papel, sin capuchas, velos, hábitos ni sombreros.",
+    "Rancherías dispersas, viviendas bajas rectilíneas, enramadas abiertas de postes, arena, arbustos espinosos bajos y cardones de varios tallos que nacen desde la base. No agaves, rosetas ni cactus saguaro. Puesta en escena Wayúu editorial para tiempo mítico indeterminado, no reconstrucción prehispánica.",
+    "Arámai pide a Mareiwa, quien atiende. Wanurü tiene agencia propia en lo enviado, no es poder controlado por Arámai. Las soluciones plásticas propuestas aquí no fijan apariencias tradicionales ni se trasladan a otros mitos.",
+    "Continuidad del tríptico: mismos tonos arcilla en la Kemiisa de Arámai, Kotin gris carbón abierto en hombros, faja arena y waireñas; pelo corto gris oscuro, adulto mayor sobrio. Mujeres de mantas Wayuushein azul mineral y arcilla. Casas bajas de papel arcilla, postes de tiras de papel, techo de yotojoro interpretado con tiras recortadas, cardones de tallos desde la base y arena de hojas mates.",
+    "Mareiwa y Wanurü no son personajes visibles. Las noches son metáforas editoriales; ninguna imagen acredita símbolos culturales."
+  ],
+  "inventory": [
+    {
+      "id": "aramai",
+      "type": "person",
+      "desc": "Arámai es un hombre Wayúu mayor y delgado, proporciones adultas naturales, cabeza pequeña de perfil y cabello corto gris oscuro de papel recortado. Camisa Kemiisa arcilla de mangas, manto Kotin carbón sobre los hombros sin cubrir la cabeza, faja S'ira arena y sandalias waireñas. Identidad por silueta, edad, ropa y postura; no por arrugas ni gesticulación facial. Pantalón largo holgado color arena. Cara casi plana de perfil, sin arrugas ni pómulos modelados.",
+      "model_ids": [
+        "aramai__identity_sheet"
+      ]
+    },
+    {
+      "id": "mujeres",
+      "type": "supporting_people",
+      "desc": "Mujeres Wayúu con Wayuushein de una sola silueta AMPLIA Y SUELTA, mangas anchas, hasta los tobillos, sin cintura ceñida, color azul mineral o arcilla; cabello negro y cabeza descubierta; sandalias waireñas. Hombres con camisa de mangas, manta exterior completa, faja y sandalias. Figuras sobrias de papel, sin capuchas, velos, hábitos ni sombreros.",
+      "model_ids": [],
+      "source": "Puesta en escena de familias y cuidado del relato publicado; no nombres nuevos."
+    },
+    {
+      "id": "rancheria",
+      "type": "environment",
+      "desc": "Rancherías dispersas, viviendas bajas rectilíneas, enramadas abiertas de postes, arena, arbustos espinosos bajos y cardones de varios tallos que nacen desde la base. No agaves, rosetas ni cactus saguaro. Puesta en escena Wayúu editorial para tiempo mítico indeterminado, no reconstrucción prehispánica. Incluye casas rectilíneas, enramada, postes, estera, tinaja lisa y sombras diurnas.",
+      "model_ids": [
+        "rancheria_wayuu__spatial_model",
+        "territorio_alta_guajira__environment_model"
+      ]
+    },
+    {
+      "id": "jaguey",
+      "type": "object_environment",
+      "desc": "Jagüey casi seco; la noche reflejada es sólo una anticipación editorial.",
+      "model_ids": []
+    },
+    {
+      "id": "cuenco",
+      "type": "prop",
+      "desc": "Cuenco liso arcilla para agua o medida de alimento, sin patrones añadidos.",
+      "model_ids": []
+    },
+    {
+      "id": "chinchorro",
+      "type": "prop",
+      "desc": "Trama cálida de cintas de papel, vacío y suspendido entre postes; no signos funerarios.",
+      "model_ids": []
+    },
+    {
+      "id": "cardon",
+      "type": "plant",
+      "desc": "Cardones de tallos que nacen desde la base, no saguaro ni agave de roseta.",
+      "model_ids": []
+    },
+    {
+      "id": "rebanos",
+      "type": "animals",
+      "desc": "Pequeño rebaño doméstico distante del relato público, no fauna mítica inventada.",
+      "model_ids": []
+    },
+    {
+      "id": "provisiones",
+      "type": "prop",
+      "desc": "Pequeña cesta o fardo de alimento, sin especie nueva protagonista.",
+      "model_ids": []
+    },
+    {
+      "id": "mareiwa",
+      "type": "unseen_agent",
+      "desc": "Destinatario de la petición; sin cuerpo inventado en estas imágenes.",
+      "model_ids": []
+    },
+    {
+      "id": "wanuru",
+      "type": "unseen_agent",
+      "desc": "Agencia ligada al recorrido de enfermedad, sin anatomía inventada ni vector de contagio.",
+      "model_ids": []
+    }
+  ],
+  "canonical_models": [
+    {
+      "model_id": "aramai__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-02-aramai-medium-corrections-02/aramai__identity_sheet--canon.jpeg",
+      "sha256": "ec13d40a57184f34fa89e3c7d7546968134222f3cd8635d023f1c4e429fcc52a",
+      "qa_status": "PASS_AFTER_CORRECTION_02"
+    },
+    {
+      "model_id": "rancheria_wayuu__spatial_model",
+      "path": "output/imagegen/wayuu-v3/wayuu-v3-pilot-03-corrections-medium/rancheria_wayuu__spatial_model--canon.jpeg",
+      "sha256": "273831e777e2bf8615f5640f626204fac4b96ea268e55d4215f991d2a6012464",
+      "qa_status": "DIRECTION_CANDIDATE_PASS"
+    },
+    {
+      "model_id": "territorio_alta_guajira__environment_model",
+      "path": "output/imagegen/wayuu-v3/wayuu-v3-pilot-02-remaining-categories-medium/territorio_alta_guajira__environment_model--canon.jpeg",
+      "sha256": "61165dcf1259b472dda699a7ec9311f91b927f0b63f91063ce18b9b71cda7f5e",
+      "qa_status": "DIRECTION_CANDIDATE_PASS"
+    }
+  ],
+  "reference_review": {
+    "date": "2026-09-07",
+    "method": "Inspección directa de los cinco JPEG del piloto02 en esta fase; conservar dirección, no convertir adornos en canon.",
+    "sources": [
+      {
+        "id": "b1a",
+        "path": "output/imagegen/wayuu/keyframes/aramai-piloto-02/b1a.jpeg",
+        "sha256": "4a9866cc87beae485ccc2466650c9b8fbe0fc602e742174f4e16c4c914ce222b",
+        "role": "same_myth_direction_reference",
+        "reviewed": true,
+        "notes": [
+          "El reflejo sí conserva figuras: no pasó la subcondición de gente ausente. No presentar esa ausencia como conseguida.",
+          "Agua ocupa una parte grande del encuadre; la escasez depende de orilla seca y VO.",
+          "Aparecieron flores, adornos geométricos y detalles de vestuario no pedidos; no se convierten en canon cultural ni se certifican por la imagen."
+        ]
+      },
+      {
+        "id": "b1b",
+        "path": "output/imagegen/wayuu/keyframes/aramai-piloto-02/b1b.jpeg",
+        "sha256": "1e9ea6b8d66b92f262233a8346ae951a4348885d725874c379866971ba5a68bc",
+        "role": "same_myth_direction_reference",
+        "reviewed": true,
+        "notes": [
+          "Recipiente más grande y mujeres más próximas de lo sugerido; conserva cuerpos arrodillados enteros, no retratos.",
+          "La tinaja, tela y bordes de ropa adquirieron geometría decorativa no solicitada. No constituye referencia etnográfica verificada."
+        ]
+      },
+      {
+        "id": "b2a",
+        "path": "output/imagegen/wayuu/keyframes/aramai-piloto-02/b2a.jpeg",
+        "sha256": "02f10330fff73ff87e839c7fabdaeffce118704f159985cd9c9330d469e540dd",
+        "role": "same_myth_direction_reference",
+        "reviewed": true,
+        "notes": [
+          "Arámai ocupa aproximadamente 38–40% de la altura, por encima del objetivo de 20%; estimación visual, no medición automática. Encuadre a revisar según preferencia del usuario.",
+          "La cara sigue siendo recorte, pero tiene algo más de detalle que en piloto01. No declarar continuidad pixel-perfect."
+        ]
+      },
+      {
+        "id": "b2b",
+        "path": "output/imagegen/wayuu/keyframes/aramai-piloto-02/b2b.jpeg",
+        "sha256": "d49d90469a570948490c0f1024cc85de07fcb047398a323c5e206c0d64923009",
+        "role": "same_myth_direction_reference",
+        "reviewed": true,
+        "notes": [
+          "Techo y suelo tienen más fragmentación de papel que la intención de formas amplias. Podría moderarse sin volver al vacío.",
+          "La vegetación de fondo incluye cactus de silueta genérica; verificar/simplificar si se elige para producción definitiva."
+        ]
+      },
+      {
+        "id": "b3a",
+        "path": "output/imagegen/wayuu/keyframes/aramai-piloto-02/b3a.jpeg",
+        "sha256": "e1463b44afc54eb4b643ff92143bf120a9559576b987921514b387425233baba",
+        "role": "same_myth_direction_reference",
+        "reviewed": true,
+        "notes": [
+          "Cara de la mujer tiene más modelado y figura mayor que el objetivo inicial de escala.",
+          "Vasija y textil presentan patrones generados, sin atribución documental. No promover esos diseños a símbolos culturales."
+        ]
+      }
+    ]
+  },
+  "blocks": [
+    {
+      "id": "b1",
+      "time_seconds": [
+        0,
+        10
+      ],
+      "voice_over": "En La Guajira, Arámai veía crecer las familias. El alimento faltaba y los jagüeyes guardaban cada vez menos agua.",
+      "word_count": 19,
+      "delivery": "Voz externa sobria; dejar respiración, no sincronía labial",
+      "keyframes": [
+        {
+          "id": "b1a",
+          "title": "El agua guarda otra noche",
+          "time_seconds": [
+            0,
+            5
+          ],
+          "visual": "Plano abierto del jagüey rodeado de orillas secas, vida cotidiana y vegetación puntual. Sólo su reflejo contiene noche: anticipación visual, no agua enferma.",
+          "suggested_motion_not_generated": "Descenso oblicuo hacia el reflejo; parallax de cardón cercano, orilla, personas y fondo.",
+          "provenance": "editorial_magic_license",
+          "produce_now": false,
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Jagüey y ranchería",
+            "impossible_behavior": "El agua escasa refleja noche y casas vacías bajo un cielo diurno.",
+            "narrative_effect": "Plano abierto del jagüey rodeado de orillas secas, vida cotidiana y vegetación puntual. Sólo su reflejo contiene noche: anticipación visual, no agua enferma.",
+            "agency": "Mareiwa atiende la petición; Arámai pide pero no controla poderes; cuidadores realizan acciones cotidianas.",
+            "physical_translation": "Recortes de papel a diferentes distancias, trama y oclusión; el mundo ordinario comparte la materia del prodigio.",
+            "visible_test": "El agua escasa refleja noche y casas vacías bajo un cielo diurno.",
+            "event_ids": [
+              "escasez"
+            ],
+            "provenance": "editorial_metaphor",
+            "temporal_role": "anticipation"
+          },
+          "entity_ids": [
+            "mujeres",
+            "rancheria",
+            "jaguey",
+            "cuenco",
+            "cardon",
+            "rebanos"
+          ],
+          "event_ids": [
+            "escasez"
+          ],
+          "shot_scale": "environmental_full_body",
+          "angle": "elevated_wide",
+          "scene_role": "visible_magic",
+          "depth_planes": [
+            "primer plano: borde de techo, rama o suelo según escena",
+            "plano medio: gesto o ausencia y objeto cotidiano",
+            "fondo: arquitectura y territorio separados por aire"
+          ],
+          "continuity_from": null,
+          "transition_to_next": "Corte por relación de gesto, lugar o motivo; no interpolar automáticamente entre estos dos encuadres.",
+          "motion_contract": {
+            "camera": "Descenso oblicuo hacia el reflejo; parallax de cardón cercano, orilla, personas y fondo.",
+            "allowed": "Sólo desplazamiento corto que revele profundidad y pequeños gestos descritos; no lipsync.",
+            "forbidden": "No morphing de caras, cambio de vestuario, figuras nuevas, estrellas que salgan de manos, ni transformación del relato.",
+            "execution": "not_selected_not_generated",
+            "parallax": "El JPEG está aplanado; profundidad visual no significa capas separadas disponibles."
+          },
+          "asset": {
+            "status": "existing_pilot_candidate_not_final",
+            "path": "output/imagegen/wayuu/keyframes/aramai-piloto-02/b1a.jpeg",
+            "sha256": "4a9866cc87beae485ccc2466650c9b8fbe0fc602e742174f4e16c4c914ce222b",
+            "qa_notes": [
+              "El reflejo sí conserva figuras: no pasó la subcondición de gente ausente. No presentar esa ausencia como conseguida.",
+              "Agua ocupa una parte grande del encuadre; la escasez depende de orilla seca y VO.",
+              "Aparecieron flores, adornos geométricos y detalles de vestuario no pedidos; no se convierten en canon cultural ni se certifican por la imagen."
+            ]
+          },
+          "qa_status": "pending_sequence_review"
+        },
+        {
+          "id": "b1b",
+          "title": "Una noche en el cuenco",
+          "time_seconds": [
+            5,
+            10
+          ],
+          "visual": "Dos mujeres adultas arrodilladas reparten una medida de agua. Entre ellas, el cuenco contiene un cielo nocturno físicamente imposible; gesto cotidiano y futuro en tensión.",
+          "suggested_motion_not_generated": "Acercamiento oblicuo al cuenco, manteniendo manos y entorno; no retrato.",
+          "provenance": "editorial_magic_license",
+          "produce_now": false,
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Medida compartida de agua",
+            "impossible_behavior": "Un recipiente pequeño contiene profundidad nocturna mayor que su volumen físico.",
+            "narrative_effect": "Dos mujeres adultas arrodilladas reparten una medida de agua. Entre ellas, el cuenco contiene un cielo nocturno físicamente imposible; gesto cotidiano y futuro en tensión.",
+            "agency": "Mareiwa atiende la petición; Arámai pide pero no controla poderes; cuidadores realizan acciones cotidianas.",
+            "physical_translation": "Recortes de papel a diferentes distancias, trama y oclusión; el mundo ordinario comparte la materia del prodigio.",
+            "visible_test": "Un recipiente pequeño contiene profundidad nocturna mayor que su volumen físico.",
+            "event_ids": [
+              "escasez"
+            ],
+            "provenance": "editorial_metaphor",
+            "temporal_role": "anticipation"
+          },
+          "entity_ids": [
+            "mujeres",
+            "jaguey",
+            "cuenco",
+            "rancheria"
+          ],
+          "event_ids": [
+            "escasez"
+          ],
+          "shot_scale": "environmental_full_body",
+          "angle": "oblique_group",
+          "scene_role": "visible_magic",
+          "depth_planes": [
+            "primer plano: borde de techo, rama o suelo según escena",
+            "plano medio: gesto o ausencia y objeto cotidiano",
+            "fondo: arquitectura y territorio separados por aire"
+          ],
+          "continuity_from": "b1a",
+          "transition_to_next": "Corte por relación de gesto, lugar o motivo; no interpolar automáticamente entre estos dos encuadres.",
+          "motion_contract": {
+            "camera": "Acercamiento oblicuo al cuenco, manteniendo manos y entorno; no retrato.",
+            "allowed": "Sólo desplazamiento corto que revele profundidad y pequeños gestos descritos; no lipsync.",
+            "forbidden": "No morphing de caras, cambio de vestuario, figuras nuevas, estrellas que salgan de manos, ni transformación del relato.",
+            "execution": "not_selected_not_generated",
+            "parallax": "El JPEG está aplanado; profundidad visual no significa capas separadas disponibles."
+          },
+          "asset": {
+            "status": "existing_pilot_candidate_not_final",
+            "path": "output/imagegen/wayuu/keyframes/aramai-piloto-02/b1b.jpeg",
+            "sha256": "1e9ea6b8d66b92f262233a8346ae951a4348885d725874c379866971ba5a68bc",
+            "qa_notes": [
+              "Recipiente más grande y mujeres más próximas de lo sugerido; conserva cuerpos arrodillados enteros, no retratos.",
+              "La tinaja, tela y bordes de ropa adquirieron geometría decorativa no solicitada. No constituye referencia etnográfica verificada."
+            ]
+          },
+          "qa_status": "pending_sequence_review"
+        }
+      ],
+      "event_ids": [
+        "escasez"
+      ],
+      "voice_provenance": "historical_core_paraphrase",
+      "timing_status": "estimated_pending_recorded_voice"
+    },
+    {
+      "id": "b2",
+      "time_seconds": [
+        10,
+        20
+      ],
+      "voice_over": "Arámai llamó a Mareiwa. No pidió alimento: pidió enfermedades para que murieran personas y hubiera espacio para quienes quedaran.",
+      "word_count": 19,
+      "delivery": "Voz externa sobria; dejar respiración, no sincronía labial",
+      "keyframes": [
+        {
+          "id": "b2a",
+          "title": "La enramada escucha",
+          "time_seconds": [
+            10,
+            15
+          ],
+          "visual": "Arámai pide ante una enramada viva en el territorio. Su interior revela una extensión de noche sostenida por postes que se pierden en profundidad.",
+          "suggested_motion_not_generated": "Desplazamiento lateral desde ramas cercanas al vano; permitir descubrir múltiples distancias.",
+          "provenance": "editorial_magic_license",
+          "produce_now": false,
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Petición de Arámai en una enramada",
+            "impossible_behavior": "Un techo bajo contiene postes y territorio nocturno que se prolongan más allá de su tamaño.",
+            "narrative_effect": "Arámai pide ante una enramada viva en el territorio. Su interior revela una extensión de noche sostenida por postes que se pierden en profundidad.",
+            "agency": "Mareiwa atiende la petición; Arámai pide pero no controla poderes; cuidadores realizan acciones cotidianas.",
+            "physical_translation": "Recortes de papel a diferentes distancias, trama y oclusión; el mundo ordinario comparte la materia del prodigio.",
+            "visible_test": "Un techo bajo contiene postes y territorio nocturno que se prolongan más allá de su tamaño.",
+            "event_ids": [
+              "peticion"
+            ],
+            "provenance": "editorial_metaphor",
+            "temporal_role": "present"
+          },
+          "entity_ids": [
+            "aramai",
+            "rancheria",
+            "cuenco"
+          ],
+          "event_ids": [
+            "peticion"
+          ],
+          "shot_scale": "environmental_full_body",
+          "angle": "wide_three_quarter",
+          "scene_role": "visible_magic",
+          "depth_planes": [
+            "primer plano: borde de techo, rama o suelo según escena",
+            "plano medio: gesto o ausencia y objeto cotidiano",
+            "fondo: arquitectura y territorio separados por aire"
+          ],
+          "continuity_from": "b1b",
+          "transition_to_next": "Corte por relación de gesto, lugar o motivo; no interpolar automáticamente entre estos dos encuadres.",
+          "motion_contract": {
+            "camera": "Desplazamiento lateral desde ramas cercanas al vano; permitir descubrir múltiples distancias.",
+            "allowed": "Sólo desplazamiento corto que revele profundidad y pequeños gestos descritos; no lipsync.",
+            "forbidden": "No morphing de caras, cambio de vestuario, figuras nuevas, estrellas que salgan de manos, ni transformación del relato.",
+            "execution": "not_selected_not_generated",
+            "parallax": "El JPEG está aplanado; profundidad visual no significa capas separadas disponibles."
+          },
+          "asset": {
+            "status": "existing_pilot_candidate_not_final",
+            "path": "output/imagegen/wayuu/keyframes/aramai-piloto-02/b2a.jpeg",
+            "sha256": "02f10330fff73ff87e839c7fabdaeffce118704f159985cd9c9330d469e540dd",
+            "qa_notes": [
+              "Arámai ocupa aproximadamente 38–40% de la altura, por encima del objetivo de 20%; estimación visual, no medición automática. Encuadre a revisar según preferencia del usuario.",
+              "La cara sigue siendo recorte, pero tiene algo más de detalle que en piloto01. No declarar continuidad pixel-perfect."
+            ]
+          },
+          "qa_status": "pending_sequence_review"
+        },
+        {
+          "id": "b2b",
+          "title": "El peso de la palabra",
+          "time_seconds": [
+            15,
+            20
+          ],
+          "visual": "Dentro de la misma enramada, un chinchorro vacío cede bajo una noche de capas, aunque nadie esté acostado. Arámai permanece pequeño ante el día exterior.",
+          "suggested_motion_not_generated": "Recorrido lateral bajo la trama suspendida; la profundidad se revela con oclusiones, no destellos.",
+          "provenance": "editorial_magic_license",
+          "produce_now": false,
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Chinchorro cotidiano dentro de la enramada",
+            "impossible_behavior": "Un chinchorro vacío sostiene el peso espacial de una noche entera.",
+            "narrative_effect": "Dentro de la misma enramada, un chinchorro vacío cede bajo una noche de capas, aunque nadie esté acostado. Arámai permanece pequeño ante el día exterior.",
+            "agency": "Mareiwa atiende la petición; Arámai pide pero no controla poderes; cuidadores realizan acciones cotidianas.",
+            "physical_translation": "Recortes de papel a diferentes distancias, trama y oclusión; el mundo ordinario comparte la materia del prodigio.",
+            "visible_test": "Un chinchorro vacío sostiene el peso espacial de una noche entera.",
+            "event_ids": [
+              "peticion"
+            ],
+            "provenance": "editorial_metaphor",
+            "temporal_role": "anticipation"
+          },
+          "entity_ids": [
+            "aramai",
+            "rancheria",
+            "chinchorro"
+          ],
+          "event_ids": [
+            "peticion"
+          ],
+          "shot_scale": "environmental_full_body",
+          "angle": "interior_reverse",
+          "scene_role": "visible_magic",
+          "depth_planes": [
+            "primer plano: borde de techo, rama o suelo según escena",
+            "plano medio: gesto o ausencia y objeto cotidiano",
+            "fondo: arquitectura y territorio separados por aire"
+          ],
+          "continuity_from": "b2a",
+          "transition_to_next": "Corte por relación de gesto, lugar o motivo; no interpolar automáticamente entre estos dos encuadres.",
+          "motion_contract": {
+            "camera": "Recorrido lateral bajo la trama suspendida; la profundidad se revela con oclusiones, no destellos.",
+            "allowed": "Sólo desplazamiento corto que revele profundidad y pequeños gestos descritos; no lipsync.",
+            "forbidden": "No morphing de caras, cambio de vestuario, figuras nuevas, estrellas que salgan de manos, ni transformación del relato.",
+            "execution": "not_selected_not_generated",
+            "parallax": "El JPEG está aplanado; profundidad visual no significa capas separadas disponibles."
+          },
+          "asset": {
+            "status": "existing_pilot_candidate_not_final",
+            "path": "output/imagegen/wayuu/keyframes/aramai-piloto-02/b2b.jpeg",
+            "sha256": "d49d90469a570948490c0f1024cc85de07fcb047398a323c5e206c0d64923009",
+            "qa_notes": [
+              "Techo y suelo tienen más fragmentación de papel que la intención de formas amplias. Podría moderarse sin volver al vacío.",
+              "La vegetación de fondo incluye cactus de silueta genérica; verificar/simplificar si se elige para producción definitiva."
+            ]
+          },
+          "qa_status": "pending_sequence_review"
+        }
+      ],
+      "event_ids": [
+        "peticion"
+      ],
+      "voice_provenance": "historical_core_paraphrase",
+      "timing_status": "estimated_pending_recorded_voice"
+    },
+    {
+      "id": "b3",
+      "time_seconds": [
+        20,
+        30
+      ],
+      "voice_over": "Mareiwa atendió su petición. Wanurü recorrió La Guajira, y la enfermedad llegó a las rancherías sin distinguir entre familias.",
+      "word_count": 19,
+      "delivery": "Voz externa sobria; dejar respiración, no sincronía labial",
+      "keyframes": [
+        {
+          "id": "b3a",
+          "title": "La noche llega a las casas",
+          "time_seconds": [
+            20,
+            25
+          ],
+          "visual": "Patio diurno en varios planos: una mujer se detiene ante una casa cuyo umbral abre un paisaje nocturno con chinchorro vacío; otro umbral distante repite la huella, sin conector.",
+          "suggested_motion_not_generated": "Travelling corto por el patio; tejado cercano y plantas revelan la segunda casa sin unir los fenómenos.",
+          "provenance": "editorial_magic_license",
+          "produce_now": false,
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Umbrales de ranchería y ausencia",
+            "impossible_behavior": "Casas pequeñas contienen patios nocturnos y distancias que no cabrían dentro de ellas.",
+            "narrative_effect": "Patio diurno en varios planos: una mujer se detiene ante una casa cuyo umbral abre un paisaje nocturno con chinchorro vacío; otro umbral distante repite la huella, sin conector.",
+            "agency": "Mareiwa atiende la petición; Arámai pide pero no controla poderes; cuidadores realizan acciones cotidianas.",
+            "physical_translation": "Recortes de papel a diferentes distancias, trama y oclusión; el mundo ordinario comparte la materia del prodigio.",
+            "visible_test": "Casas pequeñas contienen patios nocturnos y distancias que no cabrían dentro de ellas.",
+            "event_ids": [
+              "respuesta",
+              "recorrido"
+            ],
+            "provenance": "editorial_metaphor",
+            "temporal_role": "present"
+          },
+          "entity_ids": [
+            "mujeres",
+            "rancheria",
+            "cuenco",
+            "chinchorro"
+          ],
+          "event_ids": [
+            "respuesta",
+            "recorrido"
+          ],
+          "shot_scale": "environmental_full_body",
+          "angle": "courtyard_wide",
+          "scene_role": "visible_magic",
+          "depth_planes": [
+            "primer plano: borde de techo, rama o suelo según escena",
+            "plano medio: gesto o ausencia y objeto cotidiano",
+            "fondo: arquitectura y territorio separados por aire"
+          ],
+          "continuity_from": "b2b",
+          "transition_to_next": "Corte por relación de gesto, lugar o motivo; no interpolar automáticamente entre estos dos encuadres.",
+          "motion_contract": {
+            "camera": "Travelling corto por el patio; tejado cercano y plantas revelan la segunda casa sin unir los fenómenos.",
+            "allowed": "Sólo desplazamiento corto que revele profundidad y pequeños gestos descritos; no lipsync.",
+            "forbidden": "No morphing de caras, cambio de vestuario, figuras nuevas, estrellas que salgan de manos, ni transformación del relato.",
+            "execution": "not_selected_not_generated",
+            "parallax": "El JPEG está aplanado; profundidad visual no significa capas separadas disponibles."
+          },
+          "asset": {
+            "status": "existing_pilot_candidate_not_final",
+            "path": "output/imagegen/wayuu/keyframes/aramai-piloto-02/b3a.jpeg",
+            "sha256": "e1463b44afc54eb4b643ff92143bf120a9559576b987921514b387425233baba",
+            "qa_notes": [
+              "Cara de la mujer tiene más modelado y figura mayor que el objetivo inicial de escala.",
+              "Vasija y textil presentan patrones generados, sin atribución documental. No promover esos diseños a símbolos culturales."
+            ]
+          },
+          "qa_status": "pending_sequence_review"
+        },
+        {
+          "id": "b3b",
+          "title": "El alcance",
+          "time_seconds": [
+            25,
+            30
+          ],
+          "visual": "Gran plano general elevado en diagonal sobre dos patios separados por suelo diurno. Tejados, cerca baja, cardones desde la base y sombras de arbustos construyen seis distancias. Dos casas pequeñas contienen paisajes nocturnos profundos independientes, no paneles ni manchas negras. Una mujer azul lleva su cuenco por el patio lejano; otra adulta arcilla se detiene ante el otro umbral. Ninguna franja de agua, humo o luz conecta las casas. El recorrido se revela por montaje, no por un vector médico inventado.",
+          "suggested_motion_not_generated": "Panorámica corta que revela la segunda vivienda.",
+          "provenance": "editorial_magic_license",
+          "produce_now": false,
+          "entity_ids": [
+            "mujeres",
+            "rancheria",
+            "cuenco",
+            "cardon"
+          ],
+          "event_ids": [
+            "respuesta",
+            "recorrido"
+          ],
+          "shot_scale": "environmental_full_body",
+          "angle": "elevated_wide",
+          "scene_role": "visible_magic",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Ranchería, patio y enramada",
+            "impossible_behavior": "Un volumen doméstico pequeño contiene profundidad nocturna imposible",
+            "narrative_effect": "Mareiwa atendió su petición. Wanurü recorrió La Guajira, y la enfermedad llegó a las rancherías sin distinguir entre familias.",
+            "agency": "Consecuencia autónoma; Arámai no controla noche, agua o enfermedad.",
+            "physical_translation": "Hojas índigo separadas por aire dentro de arquitectura o trama de papel cálido; sombras y oclusión.",
+            "visible_test": "Noche profunda permanece en espacio pequeño durante el día",
+            "event_ids": [
+              "respuesta",
+              "recorrido"
+            ],
+            "provenance": "editorial_metaphor",
+            "temporal_role": "present"
+          },
+          "depth_planes": [
+            "primer plano: borde de techo, rama o suelo según escena",
+            "plano medio: gesto o ausencia y objeto cotidiano",
+            "fondo: arquitectura y territorio separados por aire"
+          ],
+          "continuity_from": "b3a",
+          "transition_to_next": "Corte por relación de gesto, lugar o motivo; no interpolar automáticamente entre estos dos encuadres.",
+          "motion_contract": {
+            "camera": "Panorámica corta que revela la segunda vivienda.",
+            "allowed": "Sólo desplazamiento corto que revele profundidad y pequeños gestos descritos; no lipsync.",
+            "forbidden": "No morphing de caras, cambio de vestuario, figuras nuevas, estrellas que salgan de manos, ni transformación del relato.",
+            "execution": "not_selected_not_generated",
+            "parallax": "El JPEG está aplanado; profundidad visual no significa capas separadas disponibles."
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "qa_status": "pending_sequence_review"
+        }
+      ],
+      "event_ids": [
+        "respuesta",
+        "recorrido"
+      ],
+      "voice_provenance": "historical_core_paraphrase",
+      "timing_status": "estimated_pending_recorded_voice"
+    },
+    {
+      "id": "b4",
+      "time_seconds": [
+        30,
+        40
+      ],
+      "voice_over": "Los patios quedaron silenciosos. Faltaron quienes traían agua, cuidaban rebaños y contaban los nombres que sostenían a cada familia.",
+      "word_count": 19,
+      "delivery": "Voz externa sobria; dejar respiración, no sincronía labial",
+      "keyframes": [
+        {
+          "id": "b4a",
+          "title": "El patio",
+          "time_seconds": [
+            30,
+            35
+          ],
+          "visual": "Plano general bajo y oblicuo de un patio sin ocupantes. Cuenco de agua liso sobre una estera, una tinaja y la sombra dentada del techo señalan tareas interrumpidas. La puerta deja ver postes y un chinchorro vacío a distancia, sin cadáver ni figura oculta. Luz cálida, tramas de papel en diferentes planos y hojas de suelo amplias; la ausencia es relacional, no medio cuadro vacío. No prodigio nuevo: el ritmo descansa para escuchar las consecuencias.",
+          "suggested_motion_not_generated": "Deslizamiento bajo entre tierra, cuenco y puerta.",
+          "provenance": "published_editorial_expansion",
+          "produce_now": false,
+          "entity_ids": [
+            "rancheria",
+            "cuenco",
+            "chinchorro"
+          ],
+          "event_ids": [
+            "perdida"
+          ],
+          "shot_scale": "environmental_full_body",
+          "angle": "low_environment",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "depth_planes": [
+            "primer plano: borde de techo, rama o suelo según escena",
+            "plano medio: gesto o ausencia y objeto cotidiano",
+            "fondo: arquitectura y territorio separados por aire"
+          ],
+          "continuity_from": "b3b",
+          "transition_to_next": "Corte por relación de gesto, lugar o motivo; no interpolar automáticamente entre estos dos encuadres.",
+          "motion_contract": {
+            "camera": "Deslizamiento bajo entre tierra, cuenco y puerta.",
+            "allowed": "Sólo desplazamiento corto que revele profundidad y pequeños gestos descritos; no lipsync.",
+            "forbidden": "No morphing de caras, cambio de vestuario, figuras nuevas, estrellas que salgan de manos, ni transformación del relato.",
+            "execution": "not_selected_not_generated",
+            "parallax": "El JPEG está aplanado; profundidad visual no significa capas separadas disponibles."
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "qa_status": "pending_sequence_review"
+        },
+        {
+          "id": "b4b",
+          "title": "El chinchorro",
+          "time_seconds": [
+            35,
+            40
+          ],
+          "visual": "Plano ambiental desde un lateral del mismo patio mirando bajo la enramada. Un chinchorro completo y vacío sujeto a postes cede con hojas de noche profunda en su vientre. El suelo cálido, la estera y el borde de la casa continúan alrededor, no símbolo aislado de estudio. Se ve aire debajo y sombra física de las cintas. Nadie acostado, sin bulto humano ni alma; la profundidad imposible pesa y no se derrama como líquido.",
+          "suggested_motion_not_generated": "Balanceo mínimo de una sola capa colgante.",
+          "provenance": "editorial_magic_license",
+          "produce_now": false,
+          "entity_ids": [
+            "rancheria",
+            "chinchorro"
+          ],
+          "event_ids": [
+            "perdida"
+          ],
+          "shot_scale": "environmental_full_body",
+          "angle": "side_environment",
+          "scene_role": "visible_magic",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Chinchorro vacío",
+            "impossible_behavior": "El chinchorro vacío sostiene noche profunda",
+            "narrative_effect": "Los patios quedaron silenciosos. Faltaron quienes traían agua, cuidaban rebaños y contaban los nombres que sostenían a cada familia.",
+            "agency": "Consecuencia autónoma; Arámai no controla noche, agua o enfermedad.",
+            "physical_translation": "Hojas índigo separadas por aire dentro de arquitectura o trama de papel cálido; sombras y oclusión.",
+            "visible_test": "Noche profunda permanece en espacio pequeño durante el día",
+            "event_ids": [
+              "perdida"
+            ],
+            "provenance": "editorial_metaphor",
+            "temporal_role": "present"
+          },
+          "depth_planes": [
+            "primer plano: borde de techo, rama o suelo según escena",
+            "plano medio: gesto o ausencia y objeto cotidiano",
+            "fondo: arquitectura y territorio separados por aire"
+          ],
+          "continuity_from": "b4a",
+          "transition_to_next": "Corte por relación de gesto, lugar o motivo; no interpolar automáticamente entre estos dos encuadres.",
+          "motion_contract": {
+            "camera": "Balanceo mínimo de una sola capa colgante.",
+            "allowed": "Sólo desplazamiento corto que revele profundidad y pequeños gestos descritos; no lipsync.",
+            "forbidden": "No morphing de caras, cambio de vestuario, figuras nuevas, estrellas que salgan de manos, ni transformación del relato.",
+            "execution": "not_selected_not_generated",
+            "parallax": "El JPEG está aplanado; profundidad visual no significa capas separadas disponibles."
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "qa_status": "pending_sequence_review"
+        }
+      ],
+      "event_ids": [
+        "perdida"
+      ],
+      "voice_provenance": "published_editorial_expansion",
+      "timing_status": "estimated_pending_recorded_voice"
+    },
+    {
+      "id": "b5",
+      "time_seconds": [
+        40,
+        50
+      ],
+      "voice_over": "La gente culpó a Arámai. Entonces comprendió que ninguna de aquellas vidas había sobrado en la tierra que compartían.",
+      "word_count": 19,
+      "delivery": "Voz externa sobria; dejar respiración, no sincronía labial",
+      "keyframes": [
+        {
+          "id": "b5a",
+          "title": "La responsabilidad",
+          "time_seconds": [
+            40,
+            45
+          ],
+          "visual": "Plano general a través de un poste y ramas finas cercanas. Arámai pequeño, entero, cabeza gris y manto carbón, frente a dos personas adultas de shein azul y arcilla separadas por un cuenco sin recoger. Una mira al hombre y la otra al umbral oscuro; gestos sobrios, sin acusación teatral. Una casa y la enramada conservan su distancia. El reproche se expresa en la separación entre personas; ningún nuevo efecto mágico, caras mínimas.",
+          "suggested_motion_not_generated": "Plano sostenido, cambio leve de distancia por cámara.",
+          "provenance": "historical_core_editorial_staging",
+          "produce_now": false,
+          "entity_ids": [
+            "aramai",
+            "mujeres",
+            "rancheria",
+            "cuenco"
+          ],
+          "event_ids": [
+            "reproche"
+          ],
+          "shot_scale": "environmental_full_body",
+          "angle": "group_wide",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "depth_planes": [
+            "primer plano: borde de techo, rama o suelo según escena",
+            "plano medio: gesto o ausencia y objeto cotidiano",
+            "fondo: arquitectura y territorio separados por aire"
+          ],
+          "continuity_from": "b4b",
+          "transition_to_next": "Corte por relación de gesto, lugar o motivo; no interpolar automáticamente entre estos dos encuadres.",
+          "motion_contract": {
+            "camera": "Plano sostenido, cambio leve de distancia por cámara.",
+            "allowed": "Sólo desplazamiento corto que revele profundidad y pequeños gestos descritos; no lipsync.",
+            "forbidden": "No morphing de caras, cambio de vestuario, figuras nuevas, estrellas que salgan de manos, ni transformación del relato.",
+            "execution": "not_selected_not_generated",
+            "parallax": "El JPEG está aplanado; profundidad visual no significa capas separadas disponibles."
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "qa_status": "pending_sequence_review"
+        },
+        {
+          "id": "b5b",
+          "title": "Lo que no sobraba",
+          "time_seconds": [
+            45,
+            50
+          ],
+          "visual": "Plano general oblicuo desde detrás del hombro de un poste, no del personaje. Arámai entero en distancia media baja su mano frente al sitio donde antes se compartía agua: la estera y dos cuencos permanecen, falta el gesto. Su manto y una cuerda del chinchorro recortan diagonales sobre tierra con sombras. Cielo necesario, suelo habitado por tareas interrumpidas, no vacío total. Nada cambia de forma o resucita.",
+          "suggested_motion_not_generated": "Retirada de cámara, aumentando el vacío.",
+          "provenance": "published_editorial_expansion",
+          "produce_now": false,
+          "entity_ids": [
+            "aramai",
+            "rancheria",
+            "cuenco",
+            "chinchorro"
+          ],
+          "event_ids": [
+            "reproche"
+          ],
+          "shot_scale": "environmental_full_body",
+          "angle": "rear_environment",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "depth_planes": [
+            "primer plano: borde de techo, rama o suelo según escena",
+            "plano medio: gesto o ausencia y objeto cotidiano",
+            "fondo: arquitectura y territorio separados por aire"
+          ],
+          "continuity_from": "b5a",
+          "transition_to_next": "Corte por relación de gesto, lugar o motivo; no interpolar automáticamente entre estos dos encuadres.",
+          "motion_contract": {
+            "camera": "Retirada de cámara, aumentando el vacío.",
+            "allowed": "Sólo desplazamiento corto que revele profundidad y pequeños gestos descritos; no lipsync.",
+            "forbidden": "No morphing de caras, cambio de vestuario, figuras nuevas, estrellas que salgan de manos, ni transformación del relato.",
+            "execution": "not_selected_not_generated",
+            "parallax": "El JPEG está aplanado; profundidad visual no significa capas separadas disponibles."
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "qa_status": "pending_sequence_review"
+        }
+      ],
+      "event_ids": [
+        "reproche"
+      ],
+      "voice_provenance": "historical_core_with_editorial_reflection",
+      "timing_status": "estimated_pending_recorded_voice"
+    },
+    {
+      "id": "b6",
+      "time_seconds": [
+        50,
+        60
+      ],
+      "voice_over": "Volvió a llamar a Mareiwa para que todo terminara. Pero su nueva petición no pudo recoger la primera.",
+      "word_count": 18,
+      "delivery": "Voz externa sobria; dejar respiración, no sincronía labial",
+      "keyframes": [
+        {
+          "id": "b6a",
+          "title": "La segunda petición",
+          "time_seconds": [
+            50,
+            55
+          ],
+          "visual": "La misma enramada de la petición, vista en plano general retirado desde el lado opuesto del patio. Arámai pequeño y entero, sin nuevo atuendo, mantiene ambas manos bajas abiertas hacia el interior deshabitado. El volumen bajo el techo todavía contiene noche y postes a distancia imposible, mientras la cara exterior sigue al sol. Cuenco liso sin brillo junto al poste. La segunda petición es impotente; no brota luz de su cuerpo.",
+          "suggested_motion_not_generated": "Acercamiento detenido antes del umbral.",
+          "provenance": "published_editorial_expansion",
+          "produce_now": false,
+          "entity_ids": [
+            "aramai",
+            "rancheria",
+            "cuenco"
+          ],
+          "event_ids": [
+            "cese"
+          ],
+          "shot_scale": "environmental_full_body",
+          "angle": "wide_reverse",
+          "scene_role": "visible_magic",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Ranchería, patio y enramada",
+            "impossible_behavior": "Un volumen doméstico pequeño contiene profundidad nocturna imposible",
+            "narrative_effect": "Volvió a llamar a Mareiwa para que todo terminara. Pero su nueva petición no pudo recoger la primera.",
+            "agency": "Consecuencia autónoma; Arámai no controla noche, agua o enfermedad.",
+            "physical_translation": "Hojas índigo separadas por aire dentro de arquitectura o trama de papel cálido; sombras y oclusión.",
+            "visible_test": "Noche profunda permanece en espacio pequeño durante el día",
+            "event_ids": [
+              "cese"
+            ],
+            "provenance": "editorial_metaphor",
+            "temporal_role": "present"
+          },
+          "depth_planes": [
+            "primer plano: borde de techo, rama o suelo según escena",
+            "plano medio: gesto o ausencia y objeto cotidiano",
+            "fondo: arquitectura y territorio separados por aire"
+          ],
+          "continuity_from": "b5b",
+          "transition_to_next": "Corte por relación de gesto, lugar o motivo; no interpolar automáticamente entre estos dos encuadres.",
+          "motion_contract": {
+            "camera": "Acercamiento detenido antes del umbral.",
+            "allowed": "Sólo desplazamiento corto que revele profundidad y pequeños gestos descritos; no lipsync.",
+            "forbidden": "No morphing de caras, cambio de vestuario, figuras nuevas, estrellas que salgan de manos, ni transformación del relato.",
+            "execution": "not_selected_not_generated",
+            "parallax": "El JPEG está aplanado; profundidad visual no significa capas separadas disponibles."
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "qa_status": "pending_sequence_review"
+        },
+        {
+          "id": "b6b",
+          "title": "La palabra no vuelve",
+          "time_seconds": [
+            55,
+            60
+          ],
+          "visual": "Contraplano ambiental desde la sombra de la enramada: trama del techo cercana arriba, un poste intermedio, Arámai ya pequeño de espaldas caminando hacia el patio de día. A un lado permanece visible la profundidad índigo entre postes, que no lo sigue ni retrocede. Chinchorro vacío y suelo continuo afirman que es el mismo lugar. Sin despedida triunfal, sin letra o palabra flotante; la magia conserva autonomía.",
+          "suggested_motion_not_generated": "Plano fijo y separación de figura; sin letras flotantes.",
+          "provenance": "editorial_magic_license",
+          "produce_now": false,
+          "entity_ids": [
+            "aramai",
+            "rancheria",
+            "chinchorro"
+          ],
+          "event_ids": [
+            "cese"
+          ],
+          "shot_scale": "environmental_full_body",
+          "angle": "interior_reverse",
+          "scene_role": "visible_magic",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Ranchería, patio y enramada",
+            "impossible_behavior": "Un volumen doméstico pequeño contiene profundidad nocturna imposible",
+            "narrative_effect": "Volvió a llamar a Mareiwa para que todo terminara. Pero su nueva petición no pudo recoger la primera.",
+            "agency": "Consecuencia autónoma; Arámai no controla noche, agua o enfermedad.",
+            "physical_translation": "Hojas índigo separadas por aire dentro de arquitectura o trama de papel cálido; sombras y oclusión.",
+            "visible_test": "Noche profunda permanece en espacio pequeño durante el día",
+            "event_ids": [
+              "cese"
+            ],
+            "provenance": "editorial_metaphor",
+            "temporal_role": "present"
+          },
+          "depth_planes": [
+            "primer plano: borde de techo, rama o suelo según escena",
+            "plano medio: gesto o ausencia y objeto cotidiano",
+            "fondo: arquitectura y territorio separados por aire"
+          ],
+          "continuity_from": "b6a",
+          "transition_to_next": "Corte por relación de gesto, lugar o motivo; no interpolar automáticamente entre estos dos encuadres.",
+          "motion_contract": {
+            "camera": "Plano fijo y separación de figura; sin letras flotantes.",
+            "allowed": "Sólo desplazamiento corto que revele profundidad y pequeños gestos descritos; no lipsync.",
+            "forbidden": "No morphing de caras, cambio de vestuario, figuras nuevas, estrellas que salgan de manos, ni transformación del relato.",
+            "execution": "not_selected_not_generated",
+            "parallax": "El JPEG está aplanado; profundidad visual no significa capas separadas disponibles."
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "qa_status": "pending_sequence_review"
+        }
+      ],
+      "event_ids": [
+        "cese"
+      ],
+      "voice_provenance": "published_editorial_expansion",
+      "timing_status": "estimated_pending_recorded_voice"
+    },
+    {
+      "id": "b7",
+      "time_seconds": [
+        60,
+        70
+      ],
+      "voice_over": "Arámai llevó agua y alimentos. Acompañó a las familias, aunque ningún cuidado podía devolverles a quienes ya habían perdido.",
+      "word_count": 19,
+      "delivery": "Voz externa sobria; dejar respiración, no sincronía labial",
+      "keyframes": [
+        {
+          "id": "b7a",
+          "title": "El cuidado",
+          "time_seconds": [
+            60,
+            65
+          ],
+          "visual": "Plano general lateral en un camino entre casas: Arámai completo en distancia media lleva un cuenco de agua con ambas manos y un pequeño fardo de provisiones colgado al hombro. Mujer azul junto al patio destino; casa lejana con interior nocturno todavía presente. Tierra cálida, sombra de cardón, trama de fardo y postes en distintas distancias. El agua transportada es ordinaria, no una cura mágica ni noche contaminante. Gesto de cuidado, no procesión.",
+          "suggested_motion_not_generated": "Seguimiento lateral discreto.",
+          "provenance": "published_editorial_expansion",
+          "produce_now": false,
+          "entity_ids": [
+            "aramai",
+            "mujeres",
+            "rancheria",
+            "cuenco",
+            "provisiones",
+            "cardon"
+          ],
+          "event_ids": [
+            "cuidado"
+          ],
+          "shot_scale": "environmental_full_body",
+          "angle": "lateral_wide",
+          "scene_role": "visible_magic",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Ranchería, patio y enramada",
+            "impossible_behavior": "Un volumen doméstico pequeño contiene profundidad nocturna imposible",
+            "narrative_effect": "Arámai llevó agua y alimentos. Acompañó a las familias, aunque ningún cuidado podía devolverles a quienes ya habían perdido.",
+            "agency": "Consecuencia autónoma; Arámai no controla noche, agua o enfermedad.",
+            "physical_translation": "Hojas índigo separadas por aire dentro de arquitectura o trama de papel cálido; sombras y oclusión.",
+            "visible_test": "Noche profunda permanece en espacio pequeño durante el día",
+            "event_ids": [
+              "cuidado"
+            ],
+            "provenance": "editorial_metaphor",
+            "temporal_role": "present"
+          },
+          "depth_planes": [
+            "primer plano: borde de techo, rama o suelo según escena",
+            "plano medio: gesto o ausencia y objeto cotidiano",
+            "fondo: arquitectura y territorio separados por aire"
+          ],
+          "continuity_from": "b6b",
+          "transition_to_next": "Corte por relación de gesto, lugar o motivo; no interpolar automáticamente entre estos dos encuadres.",
+          "motion_contract": {
+            "camera": "Seguimiento lateral discreto.",
+            "allowed": "Sólo desplazamiento corto que revele profundidad y pequeños gestos descritos; no lipsync.",
+            "forbidden": "No morphing de caras, cambio de vestuario, figuras nuevas, estrellas que salgan de manos, ni transformación del relato.",
+            "execution": "not_selected_not_generated",
+            "parallax": "El JPEG está aplanado; profundidad visual no significa capas separadas disponibles."
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "qa_status": "pending_sequence_review"
+        },
+        {
+          "id": "b7b",
+          "title": "Acompañar",
+          "time_seconds": [
+            65,
+            70
+          ],
+          "visual": "Plano general oblicuo elevado, las tres figuras pequeñas dentro del patio. Arámai ofrece cuenco a una mujer azul sentada en estera y otra adulta arcilla la acompaña. Manos mínimas legibles por contraste, cuerpos enteros y rostros casi planos. Al fondo el chinchorro vacío se ve a través del umbral con su profundidad azul; nadie ocupa de pronto ese lugar. Sin rito, remedio inventado o nuevo prodigio.",
+          "suggested_motion_not_generated": "Deslizamiento suave centrado en manos pequeñas dentro de plano amplio.",
+          "provenance": "published_editorial_expansion",
+          "produce_now": false,
+          "entity_ids": [
+            "aramai",
+            "mujeres",
+            "rancheria",
+            "cuenco",
+            "chinchorro"
+          ],
+          "event_ids": [
+            "cuidado"
+          ],
+          "shot_scale": "environmental_full_body",
+          "angle": "oblique_group",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "depth_planes": [
+            "primer plano: borde de techo, rama o suelo según escena",
+            "plano medio: gesto o ausencia y objeto cotidiano",
+            "fondo: arquitectura y territorio separados por aire"
+          ],
+          "continuity_from": "b7a",
+          "transition_to_next": "Corte por relación de gesto, lugar o motivo; no interpolar automáticamente entre estos dos encuadres.",
+          "motion_contract": {
+            "camera": "Deslizamiento suave centrado en manos pequeñas dentro de plano amplio.",
+            "allowed": "Sólo desplazamiento corto que revele profundidad y pequeños gestos descritos; no lipsync.",
+            "forbidden": "No morphing de caras, cambio de vestuario, figuras nuevas, estrellas que salgan de manos, ni transformación del relato.",
+            "execution": "not_selected_not_generated",
+            "parallax": "El JPEG está aplanado; profundidad visual no significa capas separadas disponibles."
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "qa_status": "pending_sequence_review"
+        }
+      ],
+      "event_ids": [
+        "cuidado"
+      ],
+      "voice_provenance": "published_editorial_expansion",
+      "timing_status": "estimated_pending_recorded_voice"
+    },
+    {
+      "id": "b8",
+      "time_seconds": [
+        70,
+        80
+      ],
+      "voice_over": "Al ceder la fiebre, regresaron los pasos entre rancherías. Persistieron la escasez y la memoria de aquella petición.",
+      "word_count": 18,
+      "delivery": "Voz externa sobria; dejar respiración, no sincronía labial",
+      "keyframes": [
+        {
+          "id": "b8a",
+          "title": "Los pasos regresan",
+          "time_seconds": [
+            70,
+            75
+          ],
+          "visual": "Gran plano general retirado de la ranchería, con dos adultos caminando en rutas distintas entre casas. Un pequeño rebaño permanece lejos, no animal fantástico. Sombras de postes, cardón de tallos desde la base y capas de arena dan una diagonal viva. El jagüey sigue escaso: no verdor súbito ni abundancia milagrosa. La actividad retorna sin borrar la pérdida ni convertir la enfermedad en equilibrio.",
+          "suggested_motion_not_generated": "Plano general con parallax lento.",
+          "provenance": "published_editorial_expansion",
+          "produce_now": false,
+          "entity_ids": [
+            "mujeres",
+            "rancheria",
+            "jaguey",
+            "cardon",
+            "rebanos"
+          ],
+          "event_ids": [
+            "recuperacion"
+          ],
+          "shot_scale": "environmental_full_body",
+          "angle": "elevated_wide",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "depth_planes": [
+            "primer plano: borde de techo, rama o suelo según escena",
+            "plano medio: gesto o ausencia y objeto cotidiano",
+            "fondo: arquitectura y territorio separados por aire"
+          ],
+          "continuity_from": "b7b",
+          "transition_to_next": "Corte por relación de gesto, lugar o motivo; no interpolar automáticamente entre estos dos encuadres.",
+          "motion_contract": {
+            "camera": "Plano general con parallax lento.",
+            "allowed": "Sólo desplazamiento corto que revele profundidad y pequeños gestos descritos; no lipsync.",
+            "forbidden": "No morphing de caras, cambio de vestuario, figuras nuevas, estrellas que salgan de manos, ni transformación del relato.",
+            "execution": "not_selected_not_generated",
+            "parallax": "El JPEG está aplanado; profundidad visual no significa capas separadas disponibles."
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "qa_status": "pending_sequence_review"
+        },
+        {
+          "id": "b8b",
+          "title": "La memoria persiste",
+          "time_seconds": [
+            75,
+            80
+          ],
+          "visual": "Regreso al mismo umbral de b3a desde una distancia un poco mayor. La mujer azul ahora pasa con un cuenco ordinario; otra adulta arcilla trabaja a distancia. Dentro continúa vacío el chinchorro y persiste una capa profunda de índigo más retirada, mientras el patio mantiene su actividad diurna. No se cierra un portal, no sale espíritu y no cambia el color por un gesto humano. Memoria espacial, no enfermedad aún activa certificada.",
+          "suggested_motion_not_generated": "Acercamiento ligero a la franja; sin borrado mágico de pérdidas.",
+          "provenance": "editorial_magic_license",
+          "produce_now": false,
+          "entity_ids": [
+            "mujeres",
+            "rancheria",
+            "cuenco",
+            "chinchorro"
+          ],
+          "event_ids": [
+            "recuperacion"
+          ],
+          "shot_scale": "environmental_full_body",
+          "angle": "courtyard_wide",
+          "scene_role": "visible_magic",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Ranchería, patio y enramada",
+            "impossible_behavior": "Un volumen doméstico pequeño contiene profundidad nocturna imposible",
+            "narrative_effect": "Al ceder la fiebre, regresaron los pasos entre rancherías. Persistieron la escasez y la memoria de aquella petición.",
+            "agency": "Consecuencia autónoma; Arámai no controla noche, agua o enfermedad.",
+            "physical_translation": "Hojas índigo separadas por aire dentro de arquitectura o trama de papel cálido; sombras y oclusión.",
+            "visible_test": "Noche profunda permanece en espacio pequeño durante el día",
+            "event_ids": [
+              "recuperacion"
+            ],
+            "provenance": "editorial_metaphor",
+            "temporal_role": "memory"
+          },
+          "depth_planes": [
+            "primer plano: borde de techo, rama o suelo según escena",
+            "plano medio: gesto o ausencia y objeto cotidiano",
+            "fondo: arquitectura y territorio separados por aire"
+          ],
+          "continuity_from": "b8a",
+          "transition_to_next": "Corte por relación de gesto, lugar o motivo; no interpolar automáticamente entre estos dos encuadres.",
+          "motion_contract": {
+            "camera": "Acercamiento ligero a la franja; sin borrado mágico de pérdidas.",
+            "allowed": "Sólo desplazamiento corto que revele profundidad y pequeños gestos descritos; no lipsync.",
+            "forbidden": "No morphing de caras, cambio de vestuario, figuras nuevas, estrellas que salgan de manos, ni transformación del relato.",
+            "execution": "not_selected_not_generated",
+            "parallax": "El JPEG está aplanado; profundidad visual no significa capas separadas disponibles."
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "qa_status": "pending_sequence_review"
+        }
+      ],
+      "event_ids": [
+        "recuperacion"
+      ],
+      "voice_provenance": "published_editorial_expansion",
+      "timing_status": "estimated_pending_recorded_voice"
+    },
+    {
+      "id": "b9",
+      "time_seconds": [
+        80,
+        90
+      ],
+      "voice_over": "Arámai había pedido más espacio. El silencio le enseñó otra pregunta: cómo sostener la vida, sin decidir quién sobra.",
+      "word_count": 19,
+      "delivery": "Voz externa sobria; dejar respiración, no sincronía labial",
+      "keyframes": [
+        {
+          "id": "b9a",
+          "title": "Más espacio",
+          "time_seconds": [
+            80,
+            85
+          ],
+          "visual": "Gran plano general ligeramente elevado del reparto junto al jagüey. Arámai y una persona adulta comparten una pequeña medida de alimento con otra mujer al fondo, en el mismo territorio seco. Gestos pequeños rodeados de techos trenzados, suelo estratificado y sombras finas. Una enramada lejana conserva profundidad nocturna apenas legible. La imagen reúne vida y falta sin fiesta, perdón automático o victoria del protagonista.",
+          "suggested_motion_not_generated": "Alejamiento lento que conserva legible la relación.",
+          "provenance": "published_editorial_expansion",
+          "produce_now": false,
+          "entity_ids": [
+            "aramai",
+            "mujeres",
+            "rancheria",
+            "cuenco",
+            "jaguey",
+            "provisiones"
+          ],
+          "event_ids": [
+            "cierre"
+          ],
+          "shot_scale": "environmental_full_body",
+          "angle": "elevated_wide",
+          "scene_role": "visible_magic",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Ranchería, patio y enramada",
+            "impossible_behavior": "Un volumen doméstico pequeño contiene profundidad nocturna imposible",
+            "narrative_effect": "Arámai había pedido más espacio. El silencio le enseñó otra pregunta: cómo sostener la vida, sin decidir quién sobra.",
+            "agency": "Consecuencia autónoma; Arámai no controla noche, agua o enfermedad.",
+            "physical_translation": "Hojas índigo separadas por aire dentro de arquitectura o trama de papel cálido; sombras y oclusión.",
+            "visible_test": "Noche profunda permanece en espacio pequeño durante el día",
+            "event_ids": [
+              "cierre"
+            ],
+            "provenance": "editorial_metaphor",
+            "temporal_role": "memory"
+          },
+          "depth_planes": [
+            "primer plano: borde de techo, rama o suelo según escena",
+            "plano medio: gesto o ausencia y objeto cotidiano",
+            "fondo: arquitectura y territorio separados por aire"
+          ],
+          "continuity_from": "b8b",
+          "transition_to_next": "Corte por relación de gesto, lugar o motivo; no interpolar automáticamente entre estos dos encuadres.",
+          "motion_contract": {
+            "camera": "Alejamiento lento que conserva legible la relación.",
+            "allowed": "Sólo desplazamiento corto que revele profundidad y pequeños gestos descritos; no lipsync.",
+            "forbidden": "No morphing de caras, cambio de vestuario, figuras nuevas, estrellas que salgan de manos, ni transformación del relato.",
+            "execution": "not_selected_not_generated",
+            "parallax": "El JPEG está aplanado; profundidad visual no significa capas separadas disponibles."
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "qa_status": "pending_sequence_review"
+        },
+        {
+          "id": "b9b",
+          "title": "Sostener la vida",
+          "time_seconds": [
+            85,
+            90
+          ],
+          "visual": "Plano conjunto oblicuo de dos adultos completos, Arámai y la mujer azul, sosteniendo juntos un cuenco ordinario entre ambos, no macro de manos ni objeto de estudio. El borde de agua del jagüey ocupa una franja lateral y refleja otra hora en profundidad índigo aunque arriba sea de día. Mantener figuras pequeñas, tierra cálida y capas distantes. Cierre circular con b1a: cambia el acto de compartir, no desaparece la ausencia. No magia curativa, letra final o resurrección.",
+          "suggested_motion_not_generated": "Sostener sin logotipo, frase escrita ni estallido de luz.",
+          "provenance": "published_editorial_expansion",
+          "produce_now": false,
+          "entity_ids": [
+            "aramai",
+            "mujeres",
+            "cuenco",
+            "jaguey",
+            "rancheria"
+          ],
+          "event_ids": [
+            "cierre"
+          ],
+          "shot_scale": "environmental_full_body",
+          "angle": "oblique_group",
+          "scene_role": "visible_magic",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Cuenco compartido y agua de jagüey",
+            "impossible_behavior": "El agua refleja noche mientras fuera es día",
+            "narrative_effect": "Arámai había pedido más espacio. El silencio le enseñó otra pregunta: cómo sostener la vida, sin decidir quién sobra.",
+            "agency": "Consecuencia autónoma; Arámai no controla noche, agua o enfermedad.",
+            "physical_translation": "Hojas índigo separadas por aire dentro de arquitectura o trama de papel cálido; sombras y oclusión.",
+            "visible_test": "Noche en reflejo y día en cielo, gesto ordinario de compartir",
+            "event_ids": [
+              "cierre"
+            ],
+            "provenance": "editorial_metaphor",
+            "temporal_role": "memory"
+          },
+          "depth_planes": [
+            "primer plano: borde de techo, rama o suelo según escena",
+            "plano medio: gesto o ausencia y objeto cotidiano",
+            "fondo: arquitectura y territorio separados por aire"
+          ],
+          "continuity_from": "b9a",
+          "transition_to_next": "Corte por relación de gesto, lugar o motivo; no interpolar automáticamente entre estos dos encuadres.",
+          "motion_contract": {
+            "camera": "Sostener sin logotipo, frase escrita ni estallido de luz.",
+            "allowed": "Sólo desplazamiento corto que revele profundidad y pequeños gestos descritos; no lipsync.",
+            "forbidden": "No morphing de caras, cambio de vestuario, figuras nuevas, estrellas que salgan de manos, ni transformación del relato.",
+            "execution": "not_selected_not_generated",
+            "parallax": "El JPEG está aplanado; profundidad visual no significa capas separadas disponibles."
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "qa_status": "pending_sequence_review"
+        }
+      ],
+      "event_ids": [
+        "cierre"
+      ],
+      "voice_provenance": "published_editorial_expansion",
+      "timing_status": "estimated_pending_recorded_voice"
+    }
+  ],
+  "permissions": {
+    "triptych_changes": false,
+    "image_calls_this_stage": false,
+    "animation": false,
+    "audio": false,
+    "publication": false
+  },
+  "handoff": "Completar y revisar primero guion y continuidad; producir 13 instantes faltantes en tandas, preservando 5 candidatos piloto y corrigiendo sólo los que falle QA, antes de animar."
+}

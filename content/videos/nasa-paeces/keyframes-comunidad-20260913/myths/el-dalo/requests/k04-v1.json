@@ -1,0 +1,34 @@
+{
+  "slug": "el-dalo",
+  "id": "k04",
+  "version": 1,
+  "created_at": "2026-09-13T22:32:34.296Z",
+  "plan_sha256": "868ae5da0ce171d254a8b5ea4f45cfc30b4fbbf27f52def6029c971aa4b3f110",
+  "prompt_file": "content/videos/nasa-paeces/keyframes-comunidad-20260913/myths/el-dalo/prompts/k04-v1.txt",
+  "prompt_sha256": "e5b6424fee896448421781e05ff6d85387a085d4893d12531b6921501f0b4a67",
+  "references": [
+    {
+      "path": "output/imagegen/nasa-paeces/tripticos/maqueta-3d-20260913/el-dalo/acto-v1.png",
+      "sha256": "144d630088d7d4767af2283acf445e62482107fa79ff5f016e1119d05630bc80",
+      "role": "Tríptico acto: identidades, vestuario y escenario de ESTE mito; NO copia de composición."
+    },
+    {
+      "path": "output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b1b-maqueta-v2.png",
+      "sha256": "d7dc5d106daadbd61b032ae0b3bb0139806f2b49c82ad2e937157f84478e3f7f",
+      "role": "SOLO material físico de papel: no transferir personas, ropa, varas, laguna ni iluminación nocturna."
+    },
+    {
+      "path": "output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/comunidad-nasa/el-dalo/k03-v1.png",
+      "sha256": "7623ac071ad15348162cef8efeb3cc9868c3c2504b0410e0da24ad2785a5f77c",
+      "role": "Keyframe anterior k03: continuidad de identidades y lugares que coincidan, nunca importar acción u objetos ausentes en el nuevo plano."
+    }
+  ],
+  "request": {
+    "prompt": "Use case: illustration-story. Produce ONE portrait 9:16 cinematic KEYFRAME, a real-looking miniature built ENTIRELY from CUT AND FOLDED PAPER, photographed from INSIDE the set. Myth: El dalo. Frame k04.\n\nREFERENCE ROLES:\nImage 1: Tríptico acto: identidades, vestuario y escenario de ESTE mito; NO copia de composición.\nImage 2: SOLO material físico de papel: no transferir personas, ropa, varas, laguna ni iluminación nocturna.\nImage 3: Keyframe anterior k03: continuidad de identidades y lugares que coincidan, nunca importar acción u objetos ausentes en el nuevo plano.\n\nEXACT NEW SHOT, render only this moment, not an entire story or multi-panel sheet:\nMedio: María azul-crema con Niño cubierto habla al viajero y señala terreno, no documento ni límite dibujado.\n\nVISIBLE CONTENT RULE: The exact new shot above is the complete inventory for this one image. Later events, other characters and other props of the myth are absent unless explicitly named in this shot.\n\nPHYSICAL MATERIAL IS MANDATORY: separately cut, thick matte cardstock planes; deep air gaps and actual cast contact shadows; lifted edges, paper tabs, crisp folds and visibly attached garment panels. People are handmade folded-paper puppets with flat cut face planes, folded limbs and layered hands, never rounded dolls or illustrated skin. Rocks are angular folded cardstock, plants individual cut leaves bent from stems. Water is broad overlapping blue cardstock sheets, mist and clouds suspended paper cutouts. No painted textures pretending to be relief.\nCINEMATOGRAPHY: obey the shot's exact camera and time of day. Foreground paper edge/leaf/rock creates depth without hiding the main action; focal plane on action, optical miniature depth of field in near/far layers. Maintain identities, ages and clothes from the SAME myth references. Borderless immersive scene, no box, plinth, table, studio or collage. Frame extends edge to edge. Do NOT carry background objects from a previous scene into a new location.\nNo text, lettering, logo, watermark, symbols, sacred patterns, pan-Indigenous headdresses, golden jewelry, invented ritual, extra people or props. No brushwork, drawing outlines, flat illustration, realistic fabric/skin/liquid, plastic, clay or smooth CGI. Exactly ONE finished vertical 9:16 image. This is a new composition, not a crop of the reference.\n\nFINAL COMPOSITION OVERRIDE: Character names in continuity rules are NOT a cast list. Show ONLY the people/animals explicitly requested in THIS single shot. Do not add any reference person, animal, lake or staff just because it appears in a reference. Render precisely: Medio: María azul-crema con Niño cubierto habla al viajero y señala terreno, no documento ni límite dibujado.\n\n\nExactly THREE individuals: traveler blue-gray ruana/cream trousers/ivory bag and MARIA blue mantle cream dress, holding ONE fully wrapped BABY on left arm; her free right hand points toward land. No paper document, boundary or halo.",
+    "referenced_image_paths": [
+      "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/maqueta-3d-20260913/el-dalo/acto-v1.png",
+      "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b1b-maqueta-v2.png",
+      "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/comunidad-nasa/el-dalo/k03-v1.png"
+    ]
+  }
+}

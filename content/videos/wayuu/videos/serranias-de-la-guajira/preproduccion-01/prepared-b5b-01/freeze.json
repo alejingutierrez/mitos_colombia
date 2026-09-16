@@ -1,0 +1,150 @@
+{
+  "schema": "wayuu-video-freeze/v1",
+  "created_at": "2026-09-09T23:23:51.616Z",
+  "plan": "content/videos/wayuu/videos/serranias-de-la-guajira/preproduccion-01/plan.json",
+  "plan_sha256": "1865022737e4989b282cc269f84b1cad428acf0f90ef4fab5a5730731e7bca10",
+  "style": "content/videos/wayuu/channel-dna.v3.json",
+  "style_sha256": "20f876f10840d4e643f034ccc131ed184bbb7ee5d023a1d2d3c82899fcc93b8a",
+  "checks": {
+    "shots": 16,
+    "words": 178,
+    "estimated_seconds": 128,
+    "generated": 9,
+    "pending": 7,
+    "warnings": []
+  },
+  "files": {
+    "narrative_snapshot_verified": true,
+    "reference_checks": 75,
+    "public_freshness": "not_checked_by_offline_preparer"
+  },
+  "jobs": [
+    {
+      "id": "b5b",
+      "prompt_file": "content/videos/wayuu/videos/serranias-de-la-guajira/preproduccion-01/prepared-b5b-01/prompts/b5b.txt",
+      "prompt_sha256": "cc962afe8d2e204c0c636e8170541a3f65a2c26e7967ed0b73ea8d59b4b7fb6b",
+      "model": "gpt-image-2.5-sunburst",
+      "allowed_models": [
+        "gpt-image-2.5-sunburst",
+        "gpt-image-2.5-flare",
+        "gpt-image-2"
+      ],
+      "fast_iteration_model": "gpt-image-2.5-flare",
+      "legacy_fallback_model": "gpt-image-2",
+      "one_model_per_myth": true,
+      "record_exact_model_and_snapshot": true,
+      "quality": "medium",
+      "size": "864x1536",
+      "api_request_size": "1024x1536",
+      "delivery_size": "864x1536",
+      "delivery_transform": "center_crop_864x1536",
+      "output_format": "jpeg",
+      "mode": "image_edit_with_prior_keyframes",
+      "input_images": [
+        {
+          "kind": "prior_keyframe",
+          "frame_id": "b4b",
+          "myth": "serranias-de-la-guajira",
+          "path": "output/imagegen/wayuu/keyframes/serranias-de-la-guajira-preproduccion-01/b4b.jpeg",
+          "sha256": "bef584e9261b72e9233a8a464472c59205fdc8f835c525020579fdfcc54ffb93",
+          "approved": true,
+          "role": "Preservar continuidad causal de b4b: identidades, vestuario, paleta y material; prohibido repetir cámara o distribución."
+        },
+        {
+          "kind": "prior_keyframe",
+          "frame_id": "b5a",
+          "myth": "serranias-de-la-guajira",
+          "path": "output/imagegen/wayuu/keyframes/serranias-de-la-guajira-preproduccion-01/b5a.jpeg",
+          "sha256": "f822ab5cd9e92f0f73d6b1aa1884bab13715d5927771a26ef75bbfa9e7905d09",
+          "approved": true,
+          "role": "Preservar continuidad causal de b5a: identidades, vestuario, paleta y material; prohibido repetir cámara o distribución."
+        },
+        {
+          "kind": "canonical_model",
+          "myth": "serranias-de-la-guajira",
+          "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-25-serranias-de-la-guajira-medium-corrections-01/wojoro__identity_sheet--canon.jpeg",
+          "sha256": "3703e4cfcb92b706eff7bcb209ac399be94bfb3ff8cc9411ba6a5fb0f85366c4",
+          "approved": true,
+          "role": "Fijar el modelo canónico wojoro__identity_sheet; preservar identidad y material sin copiar la composición."
+        },
+        {
+          "kind": "canonical_model",
+          "myth": "serranias-de-la-guajira",
+          "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-25-serranias-de-la-guajira-medium-corrections-01/epits__identity_sheet--canon.jpeg",
+          "sha256": "36c9c93765ff7751193cd5638c867443400d2cea23cbadfd2d2eb53997585685",
+          "approved": true,
+          "role": "Fijar el modelo canónico epits__identity_sheet; preservar identidad y material sin copiar la composición."
+        },
+        {
+          "kind": "canonical_model",
+          "myth": "serranias-de-la-guajira",
+          "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-25-serranias-de-la-guajira-medium-corrections-01/wososopo__identity_sheet--canon.jpeg",
+          "sha256": "bf7afe8ce1041fb4bf20b0bbf8c466b294711d1cc3bd04e31ff51bd06cc27a61",
+          "approved": true,
+          "role": "Fijar el modelo canónico wososopo__identity_sheet; preservar identidad y material sin copiar la composición."
+        }
+      ],
+      "api_method": "images.edit",
+      "source_output": "output/imagegen/wayuu/keyframes/serranias-de-la-guajira-preproduccion-01/b5b.sunburst-master.jpeg",
+      "output": "output/imagegen/wayuu/keyframes/serranias-de-la-guajira-preproduccion-01/b5b.jpeg",
+      "status": "prepared_not_generated"
+    }
+  ],
+  "prior_candidates": [
+    {
+      "id": "b1a",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/serranias-de-la-guajira-preproduccion-01/b1a.jpeg",
+      "sha256": "b18bdfcdf7fe7a634d18540a3f8bae3d7e5fc9314a2b7ce8ee016aee289866a3"
+    },
+    {
+      "id": "b1b",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/serranias-de-la-guajira-preproduccion-01/b1b.jpeg",
+      "sha256": "d9b9abd746ad33ea54e2f2cf7a2c1cc5c708bed9d7c97991210bb0084739534d"
+    },
+    {
+      "id": "b2a",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/serranias-de-la-guajira-preproduccion-01/b2a.jpeg",
+      "sha256": "9651af8b412c0e2926088a7bc962c28594c1ac4d547912ac80bc6f3aaec9bc48"
+    },
+    {
+      "id": "b2b",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/serranias-de-la-guajira-preproduccion-01/b2b.jpeg",
+      "sha256": "6bcb634a7031957101823c08b5351c822aa4ef1371d9ec52935d0a1af83bf3f8"
+    },
+    {
+      "id": "b3a",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/serranias-de-la-guajira-preproduccion-01/b3a.jpeg",
+      "sha256": "ad62d013391f88032dea5d86f389819a0d60e44ed4f181f8c441ed4ba3b76af8"
+    },
+    {
+      "id": "b3b",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/serranias-de-la-guajira-preproduccion-01/b3b.jpeg",
+      "sha256": "5aabfe55d4de7a987624b167d5d85ca2748a46187d65787f0e33eb6c8237f15e"
+    },
+    {
+      "id": "b4a",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/serranias-de-la-guajira-preproduccion-01/b4a.jpeg",
+      "sha256": "d8f7695051c8fdee725139ae4c3772ccd7a853e7febcc5c23944f87146a0327f"
+    },
+    {
+      "id": "b4b",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/serranias-de-la-guajira-preproduccion-01/b4b.jpeg",
+      "sha256": "bef584e9261b72e9233a8a464472c59205fdc8f835c525020579fdfcc54ffb93"
+    },
+    {
+      "id": "b5a",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/serranias-de-la-guajira-preproduccion-01/b5a.jpeg",
+      "sha256": "f822ab5cd9e92f0f73d6b1aa1884bab13715d5927771a26ef75bbfa9e7905d09"
+    }
+  ],
+  "no_api_calls": true
+}

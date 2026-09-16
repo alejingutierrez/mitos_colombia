@@ -1,0 +1,92 @@
+{
+  "schema": "wayuu-video-freeze/v1",
+  "created_at": "2026-09-09T21:53:30.943Z",
+  "plan": "content/videos/wayuu/videos/las-wanulus-y-el-valle-de-la-muerte/preproduccion-01/plan.json",
+  "plan_sha256": "f627dd36252c99d6e84ab13a547a1c7c4615c667f592ae023b28823e38c7c4b9",
+  "style": "content/videos/wayuu/channel-dna.v3.json",
+  "style_sha256": "20f876f10840d4e643f034ccc131ed184bbb7ee5d023a1d2d3c82899fcc93b8a",
+  "checks": {
+    "shots": 20,
+    "words": 272,
+    "estimated_seconds": 160,
+    "generated": 2,
+    "pending": 18,
+    "warnings": []
+  },
+  "files": {
+    "narrative_snapshot_verified": true,
+    "reference_checks": 25,
+    "public_freshness": "not_checked_by_offline_preparer"
+  },
+  "jobs": [
+    {
+      "id": "b2a",
+      "prompt_file": "content/videos/wayuu/videos/las-wanulus-y-el-valle-de-la-muerte/preproduccion-01/prepared-03/prompts/b2a.txt",
+      "prompt_sha256": "4500a2d85c2e3532e189c2f05a9ebaa7429d5a54b73055c140220f8689542107",
+      "model": "gpt-image-2.5-sunburst",
+      "allowed_models": [
+        "gpt-image-2.5-sunburst",
+        "gpt-image-2.5-flare",
+        "gpt-image-2"
+      ],
+      "fast_iteration_model": "gpt-image-2.5-flare",
+      "legacy_fallback_model": "gpt-image-2",
+      "one_model_per_myth": true,
+      "record_exact_model_and_snapshot": true,
+      "quality": "medium",
+      "size": "864x1536",
+      "api_request_size": "1024x1536",
+      "delivery_size": "864x1536",
+      "delivery_transform": "center_crop_864x1536",
+      "output_format": "jpeg",
+      "mode": "image_edit_with_prior_keyframes",
+      "input_images": [
+        {
+          "kind": "prior_keyframe",
+          "frame_id": "b1a",
+          "myth": "las-wanulus-y-el-valle-de-la-muerte",
+          "path": "output/imagegen/wayuu/keyframes/las-wanulus-y-el-valle-de-la-muerte-preproduccion-01/b1a.jpeg",
+          "sha256": "f2e284ee4e660d6204c043c5bdc7cdfbb8ee3c4d99efd51c0a91cef52f258468",
+          "approved": true,
+          "role": "Preservar continuidad de b1a: identidades, vestuario, paleta y material; prohibido copiar su cámara o distribución."
+        },
+        {
+          "kind": "prior_keyframe",
+          "frame_id": "b1b",
+          "myth": "las-wanulus-y-el-valle-de-la-muerte",
+          "path": "output/imagegen/wayuu/keyframes/las-wanulus-y-el-valle-de-la-muerte-preproduccion-01/b1b.jpeg",
+          "sha256": "bb5f2d120cf26eb481879563d9ca2ab08f0a501581a9a69cd238a61aa570f750",
+          "approved": true,
+          "role": "Preservar continuidad de b1b: identidades, vestuario, paleta y material; prohibido copiar su cámara o distribución."
+        },
+        {
+          "kind": "canonical_model",
+          "myth": "las-wanulus-y-el-valle-de-la-muerte",
+          "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-08-las-wanulus-y-el-valle-de-la-muerte-medium/valle_documentacion_pendiente__environment_model--canon.jpeg",
+          "sha256": "3bad401eb17eef25d53f8cce8121388d52ef1614c15240d1775d4033f292115d",
+          "approved": true,
+          "role": "Fijar el modelo canónico valle_documentacion_pendiente__environment_model; no copiar la composición de la ficha."
+        }
+      ],
+      "api_method": "images.edit",
+      "source_output": "output/imagegen/wayuu/keyframes/las-wanulus-y-el-valle-de-la-muerte-preproduccion-01/b2a.sunburst-master.jpeg",
+      "output": "output/imagegen/wayuu/keyframes/las-wanulus-y-el-valle-de-la-muerte-preproduccion-01/b2a.jpeg",
+      "status": "prepared_not_generated"
+    }
+  ],
+  "prior_candidates": [
+    {
+      "id": "b1a",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/las-wanulus-y-el-valle-de-la-muerte-preproduccion-01/b1a.jpeg",
+      "sha256": "f2e284ee4e660d6204c043c5bdc7cdfbb8ee3c4d99efd51c0a91cef52f258468"
+    },
+    {
+      "id": "b1b",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/las-wanulus-y-el-valle-de-la-muerte-preproduccion-01/b1b.jpeg",
+      "sha256": "bb5f2d120cf26eb481879563d9ca2ab08f0a501581a9a69cd238a61aa570f750"
+    }
+  ],
+  "no_api_calls": true
+}

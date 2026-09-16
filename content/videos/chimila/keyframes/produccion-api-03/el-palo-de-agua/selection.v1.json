@@ -1,0 +1,257 @@
+{
+  "schema": "ette-myth-keyframe-selection/v1",
+  "myth_id": 356,
+  "myth": "el-palo-de-agua",
+  "myth_title": "El palo que abrió el agua",
+  "narrative_sha256": "06834228303049d98b8e7a4216366e2ad86b1c4efe695146c3f4225294e782e7",
+  "planned_count": 7,
+  "selected": [
+    {
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-palo-de-agua/kf01-v1.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/el-palo-de-agua-kf01-v1.txt",
+      "inputs": [
+        {
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/el-palo-de-agua/entrada-v1.jpeg",
+          "role": "same-myth canonical triptych: materials and cast reference only, not automatic plot stage",
+          "sha256": "400e7cc416bd27715e5b1965fd10b922851f33bdb13584e4129bcf1620c2cf87"
+        },
+        {
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/el-palo-de-agua/acto-ajuste-v2.jpeg",
+          "role": "same-myth secondary cast/style reference only; do not import later action or symbolic arrows/suns",
+          "sha256": "f893ed9109d388fc375ef80f354cf3b48653aaa68420f6e42ddb556363f152aa"
+        }
+      ],
+      "sha256": "bcc1ae36f92149b9d83bba144a4c60a9414723e03f5071468d9fc8af5d9fbba0",
+      "prompt_sha256": "240a2c352619804ab384a7944a0adcec156aa0b2fba08d3198b1af2cda20370d",
+      "bytes": 321842,
+      "width": 1024,
+      "height": 1536,
+      "format": "jpeg",
+      "myth_id": 356,
+      "slug": "el-palo-de-agua",
+      "frame_id": "kf01",
+      "title": "Cortar el palo",
+      "id": "kf01-v1",
+      "revision": 1,
+      "provider": "openai",
+      "model": "gpt-image-2.5-sunburst",
+      "quality": "medium",
+      "mode": "edit",
+      "selected": true,
+      "status": "produced_visually_reviewed_editorial_candidate",
+      "user_approved": false,
+      "culturally_certified": false,
+      "review_notes": "Padre adulto solo corta/prepara palo en bosque; no hijos, manantial o ropa festiva.",
+      "duration_seconds": 23.7
+    },
+    {
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-palo-de-agua/kf02-padre-solo-v2.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/el-palo-de-agua-kf02-padre-solo-v2.txt",
+      "inputs": [
+        {
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-palo-de-agua/kf02-v1.jpeg",
+          "role": "exact planting-stick target",
+          "sha256": "291a2b996dcd62e2a1628f2040921292e1ff94e068a0e63925837f08d9be880d"
+        }
+      ],
+      "sha256": "9b9dfcbf5adbd99a7f981caa5052c3c56f1971ba13a49d0db6997bb33d1bf967",
+      "prompt_sha256": "4b70db4da72d29a90e9cb9a562272a142250209572d022fe2eed2e1abbef84ed",
+      "bytes": 306924,
+      "width": 1024,
+      "height": 1536,
+      "format": "jpeg",
+      "myth_id": 356,
+      "slug": "el-palo-de-agua",
+      "frame_id": "kf02",
+      "title": "Clavarlo profundo",
+      "id": "kf02-v2",
+      "revision": 2,
+      "provider": "openai",
+      "model": "gpt-image-2.5-sunburst",
+      "quality": "medium",
+      "mode": "edit",
+      "selected": true,
+      "status": "produced_visually_reviewed_editorial_candidate",
+      "user_approved": false,
+      "culturally_certified": false,
+      "review_notes": "Padre solo hunde palo en tierra seca; retirados los tres hijos hasta la convocatoria siguiente.",
+      "duration_seconds": 19.4
+    },
+    {
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-palo-de-agua/kf03-v1.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/el-palo-de-agua-kf03-v1.txt",
+      "inputs": [
+        {
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-palo-de-agua/kf02-padre-solo-v2.jpeg",
+          "role": "previous visually reviewed same-myth frame; preserve cast, garment and spatial continuity",
+          "sha256": "9b9dfcbf5adbd99a7f981caa5052c3c56f1971ba13a49d0db6997bb33d1bf967"
+        },
+        {
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/el-palo-de-agua/entrada-v1.jpeg",
+          "role": "identity ONLY of the three DISTINCT adult sons with dark hair, all three plus SAME gray-haired father; exactly FOUR people around planted stick, no pulling or water yet",
+          "sha256": "400e7cc416bd27715e5b1965fd10b922851f33bdb13584e4129bcf1620c2cf87"
+        }
+      ],
+      "sha256": "e50df614a1920bff4eb900a8af9426a8d3682f708e940b55fd0508b0aca7ef68",
+      "prompt_sha256": "1f80798ce92514bcba08c956d2eb8e5bfc145fbb0a6bdbadd6e1bbadb42ac067",
+      "bytes": 313597,
+      "width": 1024,
+      "height": 1536,
+      "format": "jpeg",
+      "myth_id": 356,
+      "slug": "el-palo-de-agua",
+      "frame_id": "kf03",
+      "title": "La prueba familiar",
+      "id": "kf03-v1",
+      "revision": 1,
+      "provider": "openai",
+      "model": "gpt-image-2.5-sunburst",
+      "quality": "medium",
+      "mode": "edit",
+      "selected": true,
+      "status": "produced_visually_reviewed_editorial_candidate",
+      "user_approved": false,
+      "culturally_certified": false,
+      "review_notes": "Padre convoca exactamente tres hijos adultos distintos alrededor del palo plantado; aún nadie tira ni aparece agua.",
+      "duration_seconds": 24.1
+    },
+    {
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-palo-de-agua/kf04-v1.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/el-palo-de-agua-kf04-v1.txt",
+      "inputs": [
+        {
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-palo-de-agua/kf03-v1.jpeg",
+          "role": "previous visually reviewed same-myth frame; preserve cast, garment and spatial continuity",
+          "sha256": "e50df614a1920bff4eb900a8af9426a8d3682f708e940b55fd0508b0aca7ef68"
+        }
+      ],
+      "sha256": "fe2a2370e7b273900655ad83ae47e15001536022e30c460326134e7b844ea886",
+      "prompt_sha256": "6c516253321d11448216d99b3878f0a7acf78735bc5d88df026f1989c7ef9958",
+      "bytes": 303484,
+      "width": 1024,
+      "height": 1536,
+      "format": "jpeg",
+      "myth_id": 356,
+      "slug": "el-palo-de-agua",
+      "frame_id": "kf04",
+      "title": "Primer intento",
+      "id": "kf04-v1",
+      "revision": 1,
+      "provider": "openai",
+      "model": "gpt-image-2.5-sunburst",
+      "quality": "medium",
+      "mode": "edit",
+      "selected": true,
+      "status": "produced_visually_reviewed_editorial_candidate",
+      "user_approved": false,
+      "culturally_certified": false,
+      "review_notes": "Primer hijo adulto intenta extraer palo fijo; padre y otros dos observan, sin agua ni burlas.",
+      "duration_seconds": 19.7
+    },
+    {
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-palo-de-agua/kf05-v2.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/el-palo-de-agua-kf05-v2.txt",
+      "inputs": [
+        {
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-palo-de-agua/kf05-v1.jpeg",
+          "role": "exact target, preserve material, cast and setting; correct ONLY specified actor/action",
+          "sha256": "9fa1c1ef115c09173e70b5731f4fcd2c0136a690f817a78cd71fde49d23ee9a1"
+        }
+      ],
+      "sha256": "a5d35ac5deb70865d99e08b5fb94ebd7fdd005c2e10812bc506d6e5f28e8a8a9",
+      "prompt_sha256": "0084d6e7627b31cf08746f34d62b68a17b79759b93553f7d7eeb10b4300e6e60",
+      "bytes": 310041,
+      "width": 1024,
+      "height": 1536,
+      "format": "jpeg",
+      "myth_id": 356,
+      "slug": "el-palo-de-agua",
+      "frame_id": "kf05",
+      "title": "Segundo intento",
+      "id": "kf05-v2",
+      "revision": 2,
+      "provider": "openai",
+      "model": "gpt-image-2.5-sunburst",
+      "quality": "medium",
+      "mode": "edit",
+      "selected": true,
+      "status": "produced_visually_reviewed_editorial_candidate",
+      "user_approved": false,
+      "culturally_certified": false,
+      "review_notes": "Second straight-haired son now sole puller, first son withdrawn, gray father and third son watching; four people, stick fixed and dry.",
+      "duration_seconds": 20.4
+    },
+    {
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-palo-de-agua/kf06-v2.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/el-palo-de-agua-kf06-v2.txt",
+      "inputs": [
+        {
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-palo-de-agua/kf06-v1.jpeg",
+          "role": "target scene preserve all except exact correction",
+          "sha256": "613b6bbcd240d14f33be5fdb23f934de9577b63f85ddf7bd15d13b977871b82a"
+        }
+      ],
+      "sha256": "a2a485d87e62105f0eae5bf30141e6a1fa630b6465c6393a970ea1c55aeffb89",
+      "prompt_sha256": "6c8f947e3159fe1bc1eb0bd84066b700d891aa4a6df3c9a305e079b02803a04f",
+      "bytes": 299903,
+      "width": 1024,
+      "height": 1536,
+      "format": "jpeg",
+      "myth_id": 356,
+      "slug": "el-palo-de-agua",
+      "frame_id": "kf06",
+      "title": "El tercer hijo",
+      "id": "kf06-v2",
+      "revision": 2,
+      "provider": "openai",
+      "model": "gpt-image-2.5-sunburst",
+      "quality": "medium",
+      "mode": "edit",
+      "selected": true,
+      "status": "produced_visually_reviewed_editorial_candidate",
+      "user_approved": false,
+      "culturally_certified": false,
+      "review_notes": "Broad-wavy third son holds extracted stick with small spring; second withdrawn, gray father and first watching; exact four.",
+      "duration_seconds": 20.4
+    },
+    {
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-palo-de-agua/kf07-v1.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/el-palo-de-agua-kf07-v1.txt",
+      "inputs": [
+        {
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-palo-de-agua/kf06-v2.jpeg",
+          "role": "previous visually reviewed same-myth frame; preserve cast, garment and spatial continuity",
+          "sha256": "a2a485d87e62105f0eae5bf30141e6a1fa630b6465c6393a970ea1c55aeffb89"
+        }
+      ],
+      "sha256": "a4562691fc04b8e6ed24224a2411f35c38b6144e231423005aeee8673feb5653",
+      "prompt_sha256": "147c637a5cf893c151e6bfe13d380a1bec2fc40834fd9fb20de05eeb6298242f",
+      "bytes": 318575,
+      "width": 1024,
+      "height": 1536,
+      "format": "jpeg",
+      "myth_id": 356,
+      "slug": "el-palo-de-agua",
+      "frame_id": "kf07",
+      "title": "El brote",
+      "id": "kf07-v1",
+      "revision": 1,
+      "provider": "openai",
+      "model": "gpt-image-2.5-sunburst",
+      "quality": "medium",
+      "mode": "edit",
+      "selected": true,
+      "status": "produced_visually_reviewed_editorial_candidate",
+      "user_approved": false,
+      "culturally_certified": false,
+      "review_notes": "Four established men watch abundant spring, third keeps uprooted stick; no extra cast.",
+      "duration_seconds": 17.3
+    }
+  ],
+  "remaining": [],
+  "status": "produced_all_frames_user_review_pending",
+  "native_size": "1024x1536",
+  "adaptation_9_16": false,
+  "animation": false,
+  "publication": false
+}

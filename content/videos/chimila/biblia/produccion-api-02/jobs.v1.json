@@ -1,0 +1,119 @@
+{
+  "schema_version": 1,
+  "batch": "produccion-api-02",
+  "revision_of": "produccion-api-01",
+  "community_id": 29,
+  "community": "Ette Ennaka",
+  "date": "2026-09-12",
+  "model": "gpt-image-2.5-sunburst",
+  "mode": "OpenAI API via bundled imagegen CLI repeated supported edit calls",
+  "endpoint": "/v1/images/edits",
+  "settings": {
+    "size": "1024x1536",
+    "quality": "medium",
+    "output_format": "jpeg",
+    "output_compression": 92,
+    "no_augment": true
+  },
+  "credential": "existing ignored .env; reuse already confirmed; value never recorded",
+  "concurrency_independent_edits": 3,
+  "dependency": "V01 after inspection/selection of new L01",
+  "inventory_sha256": "f27b8eea9b77b2b0887bddbac12ed73eefc06effb4456dcf98669e5e9c20db09",
+  "snapshot_sha256": "0d71be61ef3538d2daa00949a5cdeed4fc005d82ca9abac0a71340abbcd4d758",
+  "scope_sha256": "69c9d919deb00e1df62dbac9a3c06d6dae748e4de1d2ddc1c8f2202aeface4fc",
+  "entries": [
+    {
+      "unit_id": "P07",
+      "label": "Gran Cacica",
+      "previous_file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-01/p07-gran-cacica-master-v1.jpeg",
+      "previous_sha256": "595d21af814b140e586145e5196b20ef7a7783977a0f97fa5f16190ef39337ed",
+      "input_file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-01/p07-gran-cacica-master-v1.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/biblia/produccion-api-02/p07.prompt.txt",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-02/p07-gran-cacica-master-v2.jpeg",
+      "status": "prepared",
+      "user_approved": false,
+      "culturally_certified": false,
+      "scope_notes": [
+        "Exact age, hair and garment cut are fictional adaptation; not community-certified."
+      ]
+    },
+    {
+      "unit_id": "H01",
+      "label": "Cuatro adultos de apoyo",
+      "previous_file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-01/h01-cuatro-adultos-master-v1.jpeg",
+      "previous_sha256": "85ff968afc05644a2c232ed3f4251a8e6cb968be1ed197876e956e4c442739a7",
+      "input_file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-01/h01-cuatro-adultos-master-v1.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/biblia/produccion-api-02/h01.prompt.txt",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-02/h01-cuatro-adultos-master-v2.jpeg",
+      "status": "prepared",
+      "user_approved": false,
+      "culturally_certified": false,
+      "scope_notes": [
+        "Not a canonical family or recurring four people.",
+        "Clothing is restrained adaptation, not universal Ette uniform."
+      ]
+    },
+    {
+      "unit_id": "A09",
+      "label": "Morrocoyo con caparazón",
+      "previous_file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-01/a09-morrocoyo-master-v1.jpeg",
+      "previous_sha256": "9a8d485fc85bf692b822613bc7029e56d5b9ad32f850a788124e1d8c97bf38f1",
+      "input_file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-01/a09-morrocoyo-master-v1.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/biblia/produccion-api-02/a09.prompt.txt",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-02/a09-morrocoyo-master-v2.jpeg",
+      "status": "prepared",
+      "user_approved": false,
+      "culturally_certified": false,
+      "scope_notes": [
+        "Species not asserted; shell segmentation simplified for stylization."
+      ]
+    },
+    {
+      "unit_id": "L01",
+      "label": "Monte, camino y claro",
+      "previous_file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-01/l01-monte-camino-claro-master-v1.jpeg",
+      "previous_sha256": "a15b470a6d425572ae9ac66e894b2f86ba8d4be77afa9c7c4bd27bb1f2cdf130",
+      "input_file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-01/l01-monte-camino-claro-master-v1.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/biblia/produccion-api-02/l01.prompt.txt",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-02/l01-monte-camino-claro-master-v2.jpeg",
+      "status": "prepared",
+      "user_approved": false,
+      "culturally_certified": false,
+      "scope_notes": [
+        "Fictional coherent location, not cartographic reconstruction.",
+        "Views are design anchors, not proof of a named sacred site."
+      ]
+    },
+    {
+      "unit_id": "U07",
+      "label": "Mochilas: algodón y fique",
+      "previous_file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-01/u07-mochilas-algodon-fique-master-v1.jpeg",
+      "previous_sha256": "92e8aaf29d51216c3e437ae465ecd3bae99331adca11b45c520758bf52be4ca4",
+      "input_file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-01/u07-mochilas-algodon-fique-master-v1.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/biblia/produccion-api-02/u07.prompt.txt",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-02/u07-mochilas-algodon-fique-master-v2.jpeg",
+      "status": "prepared",
+      "user_approved": false,
+      "culturally_certified": false,
+      "scope_notes": [
+        "Fique pouch silhouette/closure provisional; direct attributed historical reference still missing."
+      ]
+    },
+    {
+      "unit_id": "V01",
+      "label": "Monte inundado",
+      "previous_file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-01/v01-monte-inundado-v1.jpeg",
+      "previous_sha256": "4881036fd279c37ef03574f7bb0ea6c56745129a079f168bb946e137420d4c1f",
+      "input_file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-02/l01-monte-camino-claro-master-v2.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/biblia/produccion-api-02/v01.prompt.txt",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-02/v01-monte-inundado-v2.jpeg",
+      "status": "prepared",
+      "user_approved": false,
+      "culturally_certified": false,
+      "scope_notes": [
+        "This flood-state plate covers L01 only; other planned base environments are not yet produced.",
+        "No claim of historical/cartographic or community certification."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "status": "prepared_not_generated",
+  "myth_id": 352,
+  "title": "La Gran Cacica y el origen del agua",
+  "scope": "one myth; three independent complete artworks; no publication, app, database or keyframes",
+  "model": "gpt-image-2.5-sunburst",
+  "concurrency": 3,
+  "documentary_images_uploaded": 0,
+  "source": "content/videos/chimila/investigacion-01/corpus-snapshot-20260912.json",
+  "narrative_sha256": "4de565ae3fa4c4eb0ae1cb9e6a7579c5a60eb60b97244ca445ff7eb141ef54a8",
+  "mapping_notes": [
+    "L07 vivienda y U03 macana disponibles en la matriz de biblia, omitidas en estas cámaras exteriores postexcavación: el relato no describe herramientas ni arquitectura.",
+    "Dos comprobaciones fallidas se condensan en entrada; las tres piezas no pretenden ser storyboard exhaustivo.",
+    "Huella sin personajes es una lectura editorial del resultado al amanecer."
+  ],
+  "jobs": [
+    {
+      "piece": "entrada",
+      "size": "1536x1024",
+      "unit_ids": [
+        "P07",
+        "H01",
+        "L04"
+      ],
+      "brief": "Input images by order: Image1 P07 fictional Cacica identity and clothing reference, use one instance only; Image2 H01 support character identities, use ONLY the TWO adult men in the upper row; Image3 L04 landscape/material reference, use its DRY states only, never copy its four-panel layout.\nScene: late-afternoon ochre mountainous Caribbean terrain, low wooded slopes and distant blue-gray ridges. Exactly three deep dry earth wells lie along a winding path from foreground toward background, freshly disturbed irregular earthen rims without masonry. Exactly three adult humans: the Cacica stands beside the nearest opening checking its dark dry depth; two exhausted adult men stand behind her after excavation, watching her and the empty holes. Natural restrained concern, not heroic poses or ritual performance. Both men retain their respective H01 identities and modest cotton hip wraps; no additional people. Do not show water or rain.\nComposition: wide environmental establishing shot, gently elevated oblique camera. Entire figures and feet supported by dry ground, humans roughly one fifth of image height, not foreground portraits. Wells and terrain dominate with real depth. Keep the Cacica's face readable in three-quarter view, one hand indicating the dry opening. Muted ochre, dry olive vegetation, cream cotton and dusty blue mountain paper. Warm long late-afternoon shadows.",
+      "myth_id": 352,
+      "model": "gpt-image-2.5-sunburst",
+      "mode": "edit",
+      "quality": "high",
+      "input_files": [
+        "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-07/p07-rostro-atuendo-v1.jpeg",
+        "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-04/h01-cuatro-adultos-rostros-v3.jpeg",
+        "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-05/l04-terreno-pozos-secos-llenos-master-v1-refined.jpeg"
+      ],
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-01/el-agua/entrada-v1.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/tripticos/produccion-api-01/prompts/el-agua-entrada-v1.txt"
+    },
+    {
+      "piece": "acto",
+      "size": "1024x1536",
+      "unit_ids": [
+        "P07",
+        "L04"
+      ],
+      "brief": "Input images by order: Image1 P07 fictional Cacica identity and clothing reference, use ONLY one adult woman; Image2 L04 landscape/material reference, use DRY well states only, never copy the sheet layout.\nScene: the SAME ochre mountainous terrain and winding path at night, colored deep charcoal-blue under subdued natural moonlight. Exactly three deep DRY irregular earth wells recede along the path. The Cacica is ALONE, bending from the waist beside the nearest well with BOTH feet safely supported on dry ground outside its rim. Her face in readable three-quarter profile looks down into the opening. Lips slightly parted as she calls the water. ONE very small pale matte paper droplet of saliva falls from below her mouth toward the dark well opening; it is a modest tiny bodily gesture, not a luminous magic stream, fountain, necklace or object held in the hand. Arms relaxed by her sides, no staff or vessel. Do not show water yet. No second Cacica, other people or reflections resembling faces.\nComposition: vertical medium-wide environmental illustration, full body from head to feet visible, Cacica around one third of frame height. Nearest open well in lower half, path and two smaller wells behind her, layered wooded hills rising into dark sky. No giant close-up face, no cross-section diagram. Quiet and intimate nocturnal intervention; retain same cotton construction, cord, facial identity and shoulder-length dark hair. Subtle moonlit cream cotton against blue-charcoal and earth paper.",
+      "myth_id": 352,
+      "model": "gpt-image-2.5-sunburst",
+      "mode": "edit",
+      "quality": "high",
+      "input_files": [
+        "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-07/p07-rostro-atuendo-v1.jpeg",
+        "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-05/l04-terreno-pozos-secos-llenos-master-v1-refined.jpeg"
+      ],
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-01/el-agua/acto-v1.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/tripticos/produccion-api-01/prompts/el-agua-acto-v1.txt"
+    },
+    {
+      "piece": "huella",
+      "size": "1024x1024",
+      "unit_ids": [
+        "L04"
+      ],
+      "brief": "Input images by order: Image1 L04 landscape/material reference, use its FILLED wells states, never reproduce the reference contact sheet.\nScene: the SAME winding path among ochre mountainous earth and subdued olive vegetation at early morning. Exactly three irregular earth wells now filled with blue-gray water, largest in foreground, two receding into the terrain. Each well has a separate quiet inset surface of layered flat paper with a few restrained pale-paper ripples. Water stays INSIDE each well; wells are not connected by a river. Slight gold dawn light on ochre paper and muted blue-gray ridges. No rain, waterfall, fountain, wet flooded land, springs from sticks or false lush jungle transformation.\nComposition: square close environmental still-life of the collective work's lasting result. No people, no tools, no detached objects, no icon or symbolic glyph. Continuous land, not a plinth. Deep irregular earthy rims reveal the excavation, never stone rings or built brick wells. The three separate waters are the outcome of the tale, not a sacred emblem. Make the contrast between dry ground and available water clear using crisp paper planes and shallow cast shadows.",
+      "myth_id": 352,
+      "model": "gpt-image-2.5-sunburst",
+      "mode": "edit",
+      "quality": "high",
+      "input_files": [
+        "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-05/l04-terreno-pozos-secos-llenos-master-v1-refined.jpeg"
+      ],
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-01/el-agua/huella-v1.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/tripticos/produccion-api-01/prompts/el-agua-huella-v1.txt"
+    }
+  ]
+}
+

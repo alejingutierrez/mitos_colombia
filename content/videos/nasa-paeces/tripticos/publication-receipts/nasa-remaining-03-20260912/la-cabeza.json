@@ -1,0 +1,119 @@
+{
+  "schema": "mitos-colombia-triptych-publication-v1",
+  "publication_id": "nasa-remaining-03-20260912",
+  "status": "published",
+  "started_at": "2026-09-13T02:24:16.337Z",
+  "myth": {
+    "id": 450,
+    "title": "La cabeza",
+    "slug": "la-cabeza"
+  },
+  "local": {
+    "horizontal": {
+      "path": "output/imagegen/nasa-paeces/tripticos/produccion-api-06/la-cabeza/entrada-v1.jpeg",
+      "bytes": 302838,
+      "sha256": "b4cf9f5662ce0b60bf3e3fbde94ace543e0d1281596f6f0f640111ab59596841",
+      "source": {
+        "width": 1536,
+        "height": 1024
+      },
+      "published": {
+        "width": 1536,
+        "height": 1024
+      }
+    },
+    "vertical": {
+      "path": "output/imagegen/nasa-paeces/tripticos/produccion-api-06/la-cabeza/acto-v1.jpeg",
+      "bytes": 343688,
+      "sha256": "f52c711460cab0e4ba8261ef856daf1ff8d290667694f9c666d5512c9bb77156",
+      "source": {
+        "width": 1024,
+        "height": 1536
+      },
+      "published": {
+        "width": 1024,
+        "height": 1536
+      }
+    },
+    "cuadrada": {
+      "path": "output/imagegen/nasa-paeces/tripticos/produccion-api-06/la-cabeza/huella-v1.jpeg",
+      "bytes": 207213,
+      "sha256": "5f01af6011ec202d4fd64e9763fc7c9bc08ea5d220ebf4b87c6fa14eccaecc2d",
+      "source": {
+        "width": 1024,
+        "height": 1024
+      },
+      "published": {
+        "width": 1024,
+        "height": 1024
+      }
+    }
+  },
+  "selection": "content/videos/nasa-paeces/tripticos/publication-selection/remaining-last-five/la-cabeza.json",
+  "narrative_target_sha256": "e7c8e0f7e0f140fa74065e32b581db21caf5b27bba421e044b3587dd47147857",
+  "preserve_original_bytes": true,
+  "before": {
+    "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/la-cabeza-1784767787005.jpg",
+    "vertical_image": {
+      "id": 469,
+      "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/la-cabeza-1784912444102.jpg",
+      "updated_at": "2026-07-24T17:00:47.532Z"
+    },
+    "square_image_url": null,
+    "updated_at": "2026-07-28T02:38:18.058Z",
+    "image_prompt_horizontal": null,
+    "image_prompt_vertical": null,
+    "image_prompt_square": null
+  },
+  "preservation": {
+    "blob_uploads_use_new_random_suffixes": true,
+    "previous_blob_urls_are_not_deleted": true,
+    "previous_vertical_database_row_is_not_updated_or_deleted": true
+  },
+  "uploads": {
+    "horizontal": {
+      "url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/la-cabeza-1789266256338-IDm5cRxQwkwrncazrgZ9pJYLveYsj9.jpg",
+      "sha256": "b4cf9f5662ce0b60bf3e3fbde94ace543e0d1281596f6f0f640111ab59596841",
+      "bytes": 302838,
+      "width": 1536,
+      "height": 1024
+    },
+    "vertical": {
+      "url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/la-cabeza-1789266257067-Ym2kGyUUkwofrZTsaPE9P4S2ivE8Ta.jpg",
+      "sha256": "f52c711460cab0e4ba8261ef856daf1ff8d290667694f9c666d5512c9bb77156",
+      "bytes": 343688,
+      "width": 1024,
+      "height": 1536
+    },
+    "cuadrada": {
+      "url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/square/myth/la-cabeza-1789266257447-KYRy6VkAEF83ie5s1LfmfJo2ySVIqF.jpg",
+      "sha256": "5f01af6011ec202d4fd64e9763fc7c9bc08ea5d220ebf4b87c6fa14eccaecc2d",
+      "bytes": 207213,
+      "width": 1024,
+      "height": 1024
+    }
+  },
+  "remote_history_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/triptych-history/la-cabeza/nasa-remaining-03-20260912-qcnaOpKMKTjgLcuQG3MxZvJudHFDoH.json",
+  "vertical_version_inserted": {
+    "action": "creada",
+    "id": 708
+  },
+  "completed_at": "2026-09-13T02:24:19.527Z",
+  "after": {
+    "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/la-cabeza-1789266256338-IDm5cRxQwkwrncazrgZ9pJYLveYsj9.jpg",
+    "vertical_image": {
+      "id": 708,
+      "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/la-cabeza-1789266257067-Ym2kGyUUkwofrZTsaPE9P4S2ivE8Ta.jpg",
+      "updated_at": "2026-09-13T02:24:17.981Z"
+    },
+    "square_image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/square/myth/la-cabeza-1789266257447-KYRy6VkAEF83ie5s1LfmfJo2ySVIqF.jpg"
+  },
+  "revalidation": {
+    "ok": true,
+    "status": 200,
+    "paths": [
+      "/mitos/la-cabeza",
+      "/mitos"
+    ]
+  }
+}

@@ -1,0 +1,212 @@
+{
+  "schema": "wayuu-keyframe-selection/v1",
+  "slug": "jirairay",
+  "title": "Jirairay: el nombre que regresó al canto",
+  "status": "complete_pending_user_approval",
+  "plan": "content/videos/wayuu/videos/jirairay/preproduccion-01/plan.json",
+  "quality": "medium",
+  "generation": {
+    "model": "gpt-image-2",
+    "size": "864x1536",
+    "output_format": "jpeg",
+    "mode": "text_only",
+    "input_images": [],
+    "total_unique_generations": 45,
+    "selected_generations": 20,
+    "superseded_generations": 25,
+    "batches": [
+      {"label": "anclas-01", "count": 5, "path": "output/imagegen/wayuu/keyframes/jirairay-preproduccion-01-anclas"},
+      {"label": "anclas-corregidas-02", "count": 5, "path": "output/imagegen/wayuu/keyframes/jirairay-preproduccion-02-anclas-corrected"},
+      {"label": "anclas-corregidas-03", "count": 5, "path": "output/imagegen/wayuu/keyframes/jirairay-preproduccion-03-anclas-corrected"},
+      {"label": "anclas-corregidas-04", "count": 4, "path": "output/imagegen/wayuu/keyframes/jirairay-preproduccion-04-anclas-corrected"},
+      {"label": "anclas-corregidas-05", "count": 2, "path": "output/imagegen/wayuu/keyframes/jirairay-preproduccion-05-anclas-corrected"},
+      {"label": "ancla-corregida-06", "count": 1, "path": "output/imagegen/wayuu/keyframes/jirairay-preproduccion-06-anchor-corrected"},
+      {"label": "resto-01", "count": 15, "path": "output/imagegen/wayuu/keyframes/jirairay-produccion-resto-01"},
+      {"label": "correcciones-01", "count": 5, "path": "output/imagegen/wayuu/keyframes/jirairay-produccion-correcciones-01"},
+      {"label": "correcciones-02", "count": 2, "path": "output/imagegen/wayuu/keyframes/jirairay-produccion-correcciones-02"},
+      {"label": "correccion-b5a", "count": 1, "path": "output/imagegen/wayuu/keyframes/jirairay-produccion-correccion-b5a"}
+    ]
+  },
+  "selected": [
+    {
+      "id": "b1a", "version": "03",
+      "path": "output/imagegen/wayuu/keyframes/jirairay-preproduccion-03-anclas-corrected/b1a.jpeg",
+      "sha256": "5e952c493054f411465402a72f8912123714bb7ea64cc7b904bc824eea93cac4",
+      "width": 864, "height": 1536, "format": "jpeg", "reviewed": true,
+      "notes": ["Paciente y tres familiares exactos abren el relato en una ranchería papercut profunda y sobria."],
+      "prompt_file": "content/videos/wayuu/videos/jirairay/preproduccion-03/prompts/b1a.txt",
+      "prompt_sha256": "afef5a9ef115610d17ce2d69dfd524b10ab950b1fc94233893c1a7dd4052a22e"
+    },
+    {
+      "id": "b1b", "version": "03",
+      "path": "output/imagegen/wayuu/keyframes/jirairay-produccion-correcciones-02/001-un-keyframe-cinematogr-fico-vertical-9-16-plano-general-ampl.jpeg",
+      "sha256": "3f11a00429c095324c76d662974d681723e7eb7af565f8557c530aa0451260e7",
+      "width": 864, "height": 1536, "format": "jpeg", "reviewed": true,
+      "notes": ["El espacio preparado conserva cuatro personas, manos vacías, sendero vacío y vegetación de ramas, sin utilería añadida."],
+      "prompt_file": "content/videos/wayuu/videos/jirairay/produccion-03/prompts/b1b.txt",
+      "prompt_sha256": "89740d28c7209f28fa6a5390ee7b21901c3294f4f9f2639bd43577a560ccbeac"
+    },
+    {
+      "id": "b2a", "version": "01",
+      "path": "output/imagegen/wayuu/keyframes/jirairay-produccion-resto-01/b2a.jpeg",
+      "sha256": "717adee368b06c42125773c6346407fe356d956ea0ae4dda6eb5ed76779c7e34",
+      "width": 864, "height": 1536, "format": "jpeg", "reviewed": true,
+      "notes": ["La outsü entra pequeña por el sendero; la familia, el paciente y los bienes cerrados permanecen separados."],
+      "prompt_file": "content/videos/wayuu/videos/jirairay/preproduccion-01/prepared-01/prompts/b2a.txt",
+      "prompt_sha256": "b2b3bbd55c77629c395b8ebe28e8d5156106e56dc8a85acd3a3d7cfd05481da8"
+    },
+    {
+      "id": "b2b", "version": "02",
+      "path": "output/imagegen/wayuu/keyframes/jirairay-produccion-correcciones-01/002-un-keyframe-cinematogr-fico-vertical-9-16-plano-conjunto-amb.jpeg",
+      "sha256": "4f98eeb8f13b6ca090221fc7217215887c8bca5b8709fb9aae419bc8bcddd6c8",
+      "width": 864, "height": 1536, "format": "jpeg", "reviewed": true,
+      "notes": ["Un único pulso crema dobla una fibra; Wanurü todavía no aparece y el reparto permanece completo."],
+      "prompt_file": "content/videos/wayuu/videos/jirairay/produccion-02/prompts/b2b.txt",
+      "prompt_sha256": "dcd82b9a29b89d810a415d2f737306debb528e261badddb4e3690c223d0910f7"
+    },
+    {
+      "id": "b3a", "version": "01",
+      "path": "output/imagegen/wayuu/keyframes/jirairay-produccion-resto-01/b3a.jpeg",
+      "sha256": "927e83de0e9af7432c70a6581f3db6b5e232c705faf1f1ebaef086f7377b11d7",
+      "width": 864, "height": 1536, "format": "jpeg", "reviewed": true,
+      "notes": ["Tres pulsos atraviesan fibras suspendidas sin formar texto, cuerpo ni iconografía."],
+      "prompt_file": "content/videos/wayuu/videos/jirairay/preproduccion-01/prepared-01/prompts/b3a.txt",
+      "prompt_sha256": "8e5a4308264b05b85c5699b7dc10f0e37b613b41f47d0cc3e2479cfd44a22198"
+    },
+    {
+      "id": "b3b", "version": "04",
+      "path": "output/imagegen/wayuu/keyframes/jirairay-preproduccion-04-anclas-corrected/b3b.jpeg",
+      "sha256": "ac1ff19d415c123f816690475ac52a8879149f776c779331ef85b29d53d1cf79",
+      "width": 864, "height": 1536, "format": "jpeg", "reviewed": true,
+      "notes": ["El canto ocupa la arquitectura y encuentra una presión distante, sin convertir el nombre en personaje."],
+      "prompt_file": "content/videos/wayuu/videos/jirairay/preproduccion-04/prompts/b3b.txt",
+      "prompt_sha256": "56a014d16f26e16fc5dd37ff5fb23fae5d7307bf0ab4c0b84d375f0e8780889b"
+    },
+    {
+      "id": "b4a", "version": "01",
+      "path": "output/imagegen/wayuu/keyframes/jirairay-produccion-resto-01/b4a.jpeg",
+      "sha256": "fdd3f0a63f9b6a89236f3f6589dbe24c33cee45a976afb383e7f9af9552b49b3",
+      "width": 864, "height": 1536, "format": "jpeg", "reviewed": true,
+      "notes": ["Los postes ocultan partes del canto y hacen visible la escucha incompleta sin fabricar una criatura."],
+      "prompt_file": "content/videos/wayuu/videos/jirairay/preproduccion-01/prepared-01/prompts/b4a.txt",
+      "prompt_sha256": "9bdf8505e25c4d9e129422ed564429bdedb94adb0ac948a8f5cdc58f31c391ea"
+    },
+    {
+      "id": "b4b", "version": "01",
+      "path": "output/imagegen/wayuu/keyframes/jirairay-produccion-resto-01/b4b.jpeg",
+      "sha256": "fa0e2afc4d225f615a12eb189cabcc6a68f0bad4893a8c7d726be75ca144ee81",
+      "width": 864, "height": 1536, "format": "jpeg", "reviewed": true,
+      "notes": ["El archivo prensa sólo un segmento del canto en una etiqueta vacía; la banda continúa curva a ambos lados."],
+      "prompt_file": "content/videos/wayuu/videos/jirairay/preproduccion-01/prepared-01/prompts/b4b.txt",
+      "prompt_sha256": "b83d086c0b400d16d75f5716abafd93bc8cf9068f721aa30a7db429c43140942"
+    },
+    {
+      "id": "b5a", "version": "04",
+      "path": "output/imagegen/wayuu/keyframes/jirairay-produccion-correccion-b5a/001-un-keyframe-cinematogr-fico-vertical-9-16-gran-plano-general.jpeg",
+      "sha256": "b3103b9bc76eab29463bc05df4432c3dc4b1d6f4b4d337a8e20ecb2a3cbe66e3",
+      "width": 864, "height": 1536, "format": "jpeg", "reviewed": true,
+      "notes": ["Tres bandas contables se detienen antes de una única compresión carbón aislada; el paciente queda fuera de contacto."],
+      "prompt_file": "content/videos/wayuu/videos/jirairay/produccion-04/prompts/b5a.txt",
+      "prompt_sha256": "eb159e7e0657a71afdda7f4b1d0dd98e98dcc73a6184c726dd0a9c59f50ae507"
+    },
+    {
+      "id": "b5b", "version": "06",
+      "path": "output/imagegen/wayuu/keyframes/jirairay-preproduccion-06-anchor-corrected/b5b.jpeg",
+      "sha256": "5a558ad5ad08344ddf474d15d4e1947c74f76e4c3b085d3a300938025e2837e0",
+      "width": 864, "height": 1536, "format": "jpeg", "reviewed": true,
+      "notes": ["Cinco bandas y tres pliegues de respuesta sostienen una negociación espacial sin choque ni cuerpo sobrenatural."],
+      "prompt_file": "content/videos/wayuu/videos/jirairay/preproduccion-06/prompts/b5b.txt",
+      "prompt_sha256": "e61178050596aacc34004f4fa6fc2dce83c7b7c2a387587c41d9bc0b04d66af8"
+    },
+    {
+      "id": "b6a", "version": "01",
+      "path": "output/imagegen/wayuu/keyframes/jirairay-produccion-resto-01/b6a.jpeg",
+      "sha256": "0d3caeff55477c0a3e856654f03597a76aa328bd8d8bd6faaca164ee6e2912c5",
+      "width": 864, "height": 1536, "format": "jpeg", "reviewed": true,
+      "notes": ["Cuatro pestañas a distintas profundidades representan respuestas sin ojos, anatomía ni especie inventada."],
+      "prompt_file": "content/videos/wayuu/videos/jirairay/preproduccion-01/prepared-01/prompts/b6a.txt",
+      "prompt_sha256": "083f912cebf427255458fc2cfb7dec2367d63fe00dc3cfe611010917a56b016a"
+    },
+    {
+      "id": "b6b", "version": "02",
+      "path": "output/imagegen/wayuu/keyframes/jirairay-produccion-correcciones-01/004-un-keyframe-cinematogr-fico-vertical-9-16-plano-general-ntim.jpeg",
+      "sha256": "fb09bfaa0f437f26e61bd124a24611b3de59980be377f80a276e11552f44678e",
+      "width": 864, "height": 1536, "format": "jpeg", "reviewed": true,
+      "notes": ["Un único hilo responde a cuatro pestañas; el plano índigo repite la curva del soporte, no el cuerpo del paciente."],
+      "prompt_file": "content/videos/wayuu/videos/jirairay/produccion-02/prompts/b6b.txt",
+      "prompt_sha256": "fec9f3bb4ed6d55e311ad21119d183ef9f0c2f5eb85d2439c11c37a60ed865a9"
+    },
+    {
+      "id": "b7a", "version": "01",
+      "path": "output/imagegen/wayuu/keyframes/jirairay-produccion-resto-01/b7a.jpeg",
+      "sha256": "768584a62bf91d015ec5771dc6e23b0d321d6753b54d656e7b2157e12240f5f8",
+      "width": 864, "height": 1536, "format": "jpeg", "reviewed": true,
+      "notes": ["Cuatro bienes cerrados permanecen bajos y ordinarios; no hay altar, destinatario sobrenatural ni alimento inventado."],
+      "prompt_file": "content/videos/wayuu/videos/jirairay/preproduccion-01/prepared-01/prompts/b7a.txt",
+      "prompt_sha256": "b38a6d58af4ca64ed795732e07835542cb2b882e7dea07f7e5a7448c19671754"
+    },
+    {
+      "id": "b7b", "version": "01",
+      "path": "output/imagegen/wayuu/keyframes/jirairay-produccion-resto-01/b7b.jpeg",
+      "sha256": "003e75a1e6291c8b408ff7ad8b8a6f1e42d6828cfc3bfe50c0a9be9948b6e25c",
+      "width": 864, "height": 1536, "format": "jpeg", "reviewed": true,
+      "notes": ["La banda relaciona islas de cuidado pero queda abierta y asimétrica, sin mandala ni símbolo ritual inventado."],
+      "prompt_file": "content/videos/wayuu/videos/jirairay/preproduccion-01/prepared-01/prompts/b7b.txt",
+      "prompt_sha256": "3f296f89313c91d5915e7b5c6215891d3efaca39a87c1091957cb4281602069d"
+    },
+    {
+      "id": "b8a", "version": "01",
+      "path": "output/imagegen/wayuu/keyframes/jirairay-produccion-resto-01/b8a.jpeg",
+      "sha256": "5957eb77716339ad4628bbe4f21cf4dc176a77ad6f4d5a7a424f86bc7592eb0f",
+      "width": 864, "height": 1536, "format": "jpeg", "reviewed": true,
+      "notes": ["Tres pulsos quedan muy separados y la presión baja sigue presente; nadie celebra ni se promete una cura."],
+      "prompt_file": "content/videos/wayuu/videos/jirairay/preproduccion-01/prepared-01/prompts/b8a.txt",
+      "prompt_sha256": "75996c59a54ec142fa03dfa03363af0a8e8c0a665332517f57af8ce97bc1373d"
+    },
+    {
+      "id": "b8b", "version": "04",
+      "path": "output/imagegen/wayuu/keyframes/jirairay-preproduccion-04-anclas-corrected/b8b.jpeg",
+      "sha256": "5a34ec9280b0272a02c119b6a083d4cf7024b69d3ec320d64ac147721b29c1fb",
+      "width": 864, "height": 1536, "format": "jpeg", "reviewed": true,
+      "notes": ["El último pulso cruza el vacío mientras la presión se abre en capas, sin derrota, cuerpo ni milagro."],
+      "prompt_file": "content/videos/wayuu/videos/jirairay/preproduccion-04/prompts/b8b.txt",
+      "prompt_sha256": "f83fcf0bf38cf879276c86770fb34a3670ca8134aa5b774a944c408672e107d9"
+    },
+    {
+      "id": "b9a", "version": "01",
+      "path": "output/imagegen/wayuu/keyframes/jirairay-produccion-resto-01/b9a.jpeg",
+      "sha256": "c1a10704d634ed2b9ca0f739620fae6ba8af6dc10897e0736639df94dbe836d6",
+      "width": 864, "height": 1536, "format": "jpeg", "reviewed": true,
+      "notes": ["El amanecer continúa con agua y cuidado familiar; la outsü descansa y no aparece causalidad milagrosa."],
+      "prompt_file": "content/videos/wayuu/videos/jirairay/preproduccion-01/prepared-01/prompts/b9a.txt",
+      "prompt_sha256": "d4b85d491e4ac040de25eeedd045b5eeae8921969a823ab25320e1ef473464fd"
+    },
+    {
+      "id": "b9b", "version": "01",
+      "path": "output/imagegen/wayuu/keyframes/jirairay-produccion-resto-01/b9b.jpeg",
+      "sha256": "a7bcdb5b78276ae686a7edd9d9cab6a4c81ce3d6a66637ebae8da8a6a123fc0c",
+      "width": 864, "height": 1536, "format": "jpeg", "reviewed": true,
+      "notes": ["Los gestos de cuidado quedan repartidos y la outsü se aleja; ninguna causa ocupa el centro."],
+      "prompt_file": "content/videos/wayuu/videos/jirairay/preproduccion-01/prepared-01/prompts/b9b.txt",
+      "prompt_sha256": "29f520d0597208cea271fb4d77064d63f6fbbd194eee901fa22da5d6e04e6556"
+    },
+    {
+      "id": "b10a", "version": "02",
+      "path": "output/imagegen/wayuu/keyframes/jirairay-produccion-correcciones-01/005-un-keyframe-cinematogr-fico-vertical-9-16-plano-general-simb.jpeg",
+      "sha256": "757e233b7d5f7a82dbb17de38c56db0b5c85b6f5ed24d3936fa036bac17ef530",
+      "width": 864, "height": 1536, "format": "jpeg", "reviewed": true,
+      "notes": ["Siete etiquetas irregulares dejan vacío el centro y no llegan a construir una silueta humana sólida."],
+      "prompt_file": "content/videos/wayuu/videos/jirairay/produccion-02/prompts/b10a.txt",
+      "prompt_sha256": "8c5b8fcb23e6c8a3c32bfece1daaee57eabd5b3c5c579bc227ea2485230911ab"
+    },
+    {
+      "id": "b10b", "version": "04",
+      "path": "output/imagegen/wayuu/keyframes/jirairay-preproduccion-04-anclas-corrected/b10b.jpeg",
+      "sha256": "9047bd4f11148478ac90da9ee13ac9df8a15a416918f037f5b57e2176cf2342a",
+      "width": 864, "height": 1536, "format": "jpeg", "reviewed": true,
+      "notes": ["La banda vuelve desde las hojas vacías al espacio compartido por la voz y tres oyentes, sin cuerpo autónomo."],
+      "prompt_file": "content/videos/wayuu/videos/jirairay/preproduccion-04/prompts/b10b.txt",
+      "prompt_sha256": "eed09bfe97f1c6cb2ed86e810482dd8cb1676110552961c805d05d3d960cabd7"
+    }
+  ]
+}

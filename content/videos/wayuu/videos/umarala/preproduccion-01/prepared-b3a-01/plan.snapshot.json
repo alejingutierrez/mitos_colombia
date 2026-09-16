@@ -1,0 +1,1369 @@
+{
+  "schema": "wayuu-video-preproduction/v1",
+  "version": "preproduccion-01",
+  "slug": "umarala",
+  "title": "Umaralá",
+  "status": "ready_for_sunburst_16_keyframes",
+  "duration": {
+    "target_seconds": 128,
+    "voice_words": 193,
+    "measured": false
+  },
+  "narrative": {
+    "snapshot": "content/mitos-visuales/production/wayuu-2026-09-05/narratives/umarala.json",
+    "content_sha256": "71517b0486e08baa34cdba4f1b92627ddb82b5df9022ac0db6a5dd39ba66af71",
+    "source_url": null,
+    "source_locator": "Relato público y expediente editorial existentes. La curación se presenta según la lógica del relato y no como resultado médico comprobado; Jirairay es nombre de invocación y no un antagonista independiente.",
+    "live_hash_verified": false,
+    "events": [
+      {
+        "id": "e1",
+        "description": "Durante una epidemia, Umaralá enfermó con gravedad. Su tía, una piache reconocida, cantó junto al chinchorro y llamó a sus auxiliares con la maraca.",
+        "required": true,
+        "provenance": "historical_core",
+        "source": "Narración pública congelada y expediente editorial del mito; La curación se presenta según la lógica del relato y no como resultado médico comprobado; Jirairay es nombre de invocación y no un antagonista independiente."
+      },
+      {
+        "id": "e2",
+        "description": "Dentro del canto apareció el nombre Jirairay. No era otro espíritu combatiente, sino una forma histórica de invocar a Wanurü durante la ceremonia.",
+        "required": true,
+        "provenance": "historical_core",
+        "source": "Narración pública congelada y expediente editorial del mito; La curación se presenta según la lógica del relato y no como resultado médico comprobado; Jirairay es nombre de invocación y no un antagonista independiente."
+      },
+      {
+        "id": "e3",
+        "description": "La tía comprendió que salvar al sobrino exigía una pérdida. Puso maraca y capote sobre él, continuó cantando y entregó su propia vida.",
+        "required": true,
+        "provenance": "historical_core",
+        "source": "Narración pública congelada y expediente editorial del mito; La curación se presenta según la lógica del relato y no como resultado médico comprobado; Jirairay es nombre de invocación y no un antagonista independiente."
+      },
+      {
+        "id": "e4",
+        "description": "Umaralá despertó y encontró la ausencia de quien lo había criado. La enterró cerca de Maiceo y encendió fuego junto a la sepultura.",
+        "required": true,
+        "provenance": "historical_core",
+        "source": "Narración pública congelada y expediente editorial del mito; La curación se presenta según la lógica del relato y no como resultado médico comprobado; Jirairay es nombre de invocación y no un antagonista independiente."
+      },
+      {
+        "id": "e5",
+        "description": "En sueño, la tía le ordenó ir a Jarara, tomar sus instrumentos y atender a quienes lo buscaran. También le dio el nombre Umaralá.",
+        "required": true,
+        "provenance": "historical_core",
+        "source": "Narración pública congelada y expediente editorial del mito; La curación se presenta según la lógica del relato y no como resultado médico comprobado; Jirairay es nombre de invocación y no un antagonista independiente."
+      },
+      {
+        "id": "e6",
+        "description": "Una familia pidió ayuda para una mujer grave. Umaralá caminó hasta la casa, cantó durante la noche y al amanecer ella respiraba con más calma.",
+        "required": true,
+        "provenance": "historical_core",
+        "source": "Narración pública congelada y expediente editorial del mito; La curación se presenta según la lógica del relato y no como resultado médico comprobado; Jirairay es nombre de invocación y no un antagonista independiente."
+      },
+      {
+        "id": "e7",
+        "description": "Con los años advirtió que imitar una maraca no reproduce una relación de aprendizaje. Su autoridad permanecía ligada a la tía y al deber de cuidado.",
+        "required": true,
+        "provenance": "historical_core",
+        "source": "Narración pública congelada y expediente editorial del mito; La curación se presenta según la lógica del relato y no como resultado médico comprobado; Jirairay es nombre de invocación y no un antagonista independiente."
+      },
+      {
+        "id": "e8",
+        "description": "Al final partió con Jururiana y otro compañero. No volvió como antes. Su nombre quedó en algunos cantos y cada curación recordó una deuda heredada.",
+        "required": true,
+        "provenance": "historical_core",
+        "source": "Narración pública congelada y expediente editorial del mito; La curación se presenta según la lógica del relato y no como resultado médico comprobado; Jirairay es nombre de invocación y no un antagonista independiente."
+      }
+    ]
+  },
+  "story_thesis": "Sobrevivir y recibir un saber heredado obliga a cuidar, no autoriza a reclamar poder personal sobre la vida de otros.",
+  "style": "content/videos/wayuu/channel-dna.v3.json",
+  "palette": "Índigo de canto, crudo de chinchorro, terracota, verde Jarara, ámbar de fuego y azul lluvia; sin aura médica, sangre o santidad dorada.",
+  "generation": {
+    "model": "gpt-image-2.5-sunburst",
+    "allowed_models": [
+      "gpt-image-2.5-sunburst",
+      "gpt-image-2.5-flare",
+      "gpt-image-2"
+    ],
+    "fast_iteration_model": "gpt-image-2.5-flare",
+    "legacy_fallback_model": "gpt-image-2",
+    "one_model_per_myth": true,
+    "record_exact_model_and_snapshot": true,
+    "quality": "medium",
+    "size": "864x1536",
+    "api_request_size": "1024x1536",
+    "delivery_size": "864x1536",
+    "delivery_transform": "center_crop_864x1536",
+    "output_format": "jpeg",
+    "mode": "image_edit_with_prior_keyframes",
+    "input_images": "declared_per_keyframe_and_frozen_with_sha256"
+  },
+  "shared_scene_continuity": [
+    "Todo visible está construido con hojas mate recortadas, cantos internos, aire y sombras físicas; nunca suelo realista ni personajes modelados.",
+    "Las referencias fijan identidad, vestuario, paleta y materia, pero jamás autorizan copiar su cámara o distribución.",
+    "No repetir en keyframes adyacentes altura, escala, horizonte ni ubicación de sujetos; cada bloque cambia al menos dos variables.",
+    "La curación se presenta según la lógica del relato y no como resultado médico comprobado; Jirairay es nombre de invocación y no un antagonista independiente.",
+    "Violencia, enfermedad, duelo y transformación se muestran sin sangre, heridas, cadáveres expuestos, sexualización o triunfo espectacular."
+  ],
+  "continuity_rules": [
+    "Usar exactamente el reparto inventariado por toma y conservar identidades desde los modelos aprobados.",
+    "Desde el tercer frame, los dos antecedentes aprobados inmediatos entran primero y en orden.",
+    "Macros sólo para manos, objetos, fibras, huellas o materia; nunca para rostros.",
+    "Un descarte no alimenta ningún frame posterior; toda corrección obliga a rehacer sus descendientes si cambiaron los antecedentes.",
+    "La curación se presenta según la lógica del relato y no como resultado médico comprobado; Jirairay es nombre de invocación y no un antagonista independiente."
+  ],
+  "reference_review": {
+    "sources": [
+      {
+        "path": "output/imagegen/wayuu/triptychs/wayuu-umarala-triptych-01/entrada.jpeg",
+        "sha256": "43bfe843b61e36da318e4c1198332ddab4ab385d90ccef6542bd1b75f56c4f50",
+        "reviewed": true,
+        "role": "same_myth_direction_reference"
+      },
+      {
+        "path": "output/imagegen/wayuu/triptychs/wayuu-umarala-triptych-03-acto/acto.jpeg",
+        "sha256": "d23e5fba8be2b7a49a4fc9d40f3203ee0db88932018bea53e9962c7b924d5bc9",
+        "reviewed": true,
+        "role": "same_myth_direction_reference"
+      },
+      {
+        "path": "output/imagegen/wayuu/triptychs/wayuu-umarala-triptych-01/huella.jpeg",
+        "sha256": "f26b68ff36f01bba162dd4885e0053fc719e8ba4dddba3913af1b9cf56c88d78",
+        "reviewed": true,
+        "role": "same_myth_direction_reference"
+      }
+    ],
+    "notes": [
+      "Tríptico final y modelos de Biblia V3 reutilizados con sus hashes de selección.",
+      "La curación se presenta según la lógica del relato y no como resultado médico comprobado; Jirairay es nombre de invocación y no un antagonista independiente.",
+      "La composición se rediseña para video y variedad de cámara; no replica los trípticos."
+    ]
+  },
+  "canonical_models": [
+    {
+      "model_id": "umarala__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-22-umarala-medium/umarala__identity_sheet--canon.jpeg",
+      "sha256": "5f0479ac0c23d918897f2bc68d5a7e4f7db287386b33bb311578477982dbce33"
+    },
+    {
+      "model_id": "umarala__state_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-22-umarala-medium/umarala__state_sheet--estados.jpeg",
+      "sha256": "4ecb3646117e63998ea341b98fe6ea7e1356659da4373a0e34dce06dac1f4e1b"
+    },
+    {
+      "model_id": "tia_outsu_umarala__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-22-umarala-medium-corrections-01/tia_outsu_umarala__identity_sheet--canon.jpeg",
+      "sha256": "b5c3f1d305438a5719c47127beffad7d6d597c8b656174ada5dd1828534710c1"
+    },
+    {
+      "model_id": "tia_outsu_umarala__state_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-22-umarala-medium-corrections-02/tia_outsu_umarala__state_sheet--estados.jpeg",
+      "sha256": "eac157395f3d438ae3d55db34fd91dfb9fc6672b8cf37f18f4b587ea53434e25"
+    },
+    {
+      "model_id": "paciente_umarala__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-22-umarala-medium/paciente_umarala__identity_sheet--canon.jpeg",
+      "sha256": "ab71d3ccbc93fe9d0b0e1642728e6554bc013416f308503c75b769daeeb19241"
+    },
+    {
+      "model_id": "paciente_umarala__state_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-22-umarala-medium/paciente_umarala__state_sheet--estados.jpeg",
+      "sha256": "12f07b891a385cf69087494c8fa930e6b05e8b1bae91a2169be19e373df7b51b"
+    },
+    {
+      "model_id": "jumajule_umarala__presence_model",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-22-umarala-medium/jumajule_umarala__presence_model--canon.jpeg",
+      "sha256": "7101fec1b35452186cd12e99ba95218db6322f6f7565897c3949b137091f42d8"
+    },
+    {
+      "model_id": "capote_umarala__object_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-22-umarala-medium-corrections-01/capote_umarala__object_sheet--canon.jpeg",
+      "sha256": "4c7fe237d564e7d55d504a193d46bc6686550f10591bc57b3549cfe9caae58cc"
+    },
+    {
+      "model_id": "servidor_umarala__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-22-umarala-medium-corrections-01/servidor_umarala__identity_sheet--canon.jpeg",
+      "sha256": "f569a50206b828c0e3391e1d25ce2ecc6b1c8cd203ab86c99afa33a13169c12c"
+    },
+    {
+      "model_id": "maiceo__spatial_model",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-22-umarala-medium-corrections-02/maiceo__spatial_model--canon.jpeg",
+      "sha256": "152c12a5d3f5e0a19220bb434f36244e88f58cd6b7bc802c3c1e7ab9a2de04a0"
+    },
+    {
+      "model_id": "jarara__spatial_model",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-22-umarala-medium-corrections-01/jarara__spatial_model--canon.jpeg",
+      "sha256": "44cc2cc3e7483e0906538a956932f3bdd2611ed3a65852d6bc3f48018016566a"
+    },
+    {
+      "model_id": "transmision_vida_nombre_umarala__phenomenon_rule",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-22-umarala-medium-corrections-01/transmision_vida_nombre_umarala__phenomenon_rule--canon.jpeg",
+      "sha256": "8e22a2a12a4be9e057017c71be9b49a82a7e78910d5c0f47fe35d2a591976ef0"
+    },
+    {
+      "model_id": "curacion_nocturna_umarala__phenomenon_rule",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-22-umarala-medium-corrections-02/curacion_nocturna_umarala__phenomenon_rule--canon.jpeg",
+      "sha256": "805649658969f1a0175816af3a2c6312abc290e618de5b9b217ab02b118754c1"
+    },
+    {
+      "model_id": "partida_occidente_umarala__phenomenon_rule",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-22-umarala-medium-corrections-01/partida_occidente_umarala__phenomenon_rule--canon.jpeg",
+      "sha256": "cb0541eab2fa4ec24be3f0e451d6e8366ca568463921e935f7a1671449f918d2"
+    },
+    {
+      "model_id": "jururiana__state_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-22-umarala-medium-corrections-02/jururiana__state_sheet--estados.jpeg",
+      "sha256": "82bca8a9501c2e646f9c56f0e56d8c5a1c2007c2330f250ee395723a040f7605"
+    }
+  ],
+  "inventory": [
+    {
+      "id": "umarala",
+      "type": "person",
+      "desc": "Umaralá adulto en estados joven, aprendiz, especialista mayor y viajero final; ropa completa según modelos.",
+      "model_ids": [
+        "umarala__identity_sheet",
+        "umarala__state_sheet"
+      ]
+    },
+    {
+      "id": "tia",
+      "type": "person",
+      "desc": "Tía piache adulta, maestra y cuidadora; autoridad propia, vestuario completo y sin cuerpo inerte mostrado.",
+      "model_ids": [
+        "tia_outsu_umarala__identity_sheet",
+        "tia_outsu_umarala__state_sheet"
+      ]
+    },
+    {
+      "id": "paciente",
+      "type": "person",
+      "desc": "Mujer adulta enferma representada en reposo digno y luego con respiración calma; no diagnóstico visual.",
+      "model_ids": [
+        "paciente_umarala__identity_sheet",
+        "paciente_umarala__state_sheet"
+      ]
+    },
+    {
+      "id": "canto",
+      "type": "magic_subject",
+      "desc": "Jirairay como pulso dentro del canto y auxiliares como cortes de presencia; nunca criatura enemiga.",
+      "model_ids": [
+        "jumajule_umarala__presence_model",
+        "transmision_vida_nombre_umarala__phenomenon_rule"
+      ]
+    },
+    {
+      "id": "instrumentos",
+      "type": "object",
+      "desc": "Maraca y capote heredados como objetos concretos, no credencial automática de poder.",
+      "model_ids": [
+        "capote_umarala__object_sheet"
+      ]
+    },
+    {
+      "id": "chinchorro",
+      "type": "object",
+      "desc": "Chinchorro de reposo y cuidado, tejido de papel con separación entre fibras.",
+      "model_ids": []
+    },
+    {
+      "id": "territorio",
+      "type": "setting",
+      "desc": "Maiceo y Jarara como lugares aproximados de crianza, entierro y aprendizaje.",
+      "model_ids": [
+        "maiceo__spatial_model",
+        "jarara__spatial_model"
+      ]
+    },
+    {
+      "id": "curacion",
+      "type": "magic_subject",
+      "desc": "Noche de canto seguida por calma al amanecer, sin promesa clínica ni espectáculo.",
+      "model_ids": [
+        "curacion_nocturna_umarala__phenomenon_rule"
+      ]
+    },
+    {
+      "id": "viajeros",
+      "type": "supporting_people",
+      "desc": "Umaralá mayor, Jururiana y un hombre vestido con piel de venado: exactamente tres viajeros adultos.",
+      "model_ids": [
+        "jururiana__state_sheet"
+      ]
+    },
+    {
+      "id": "servidor",
+      "type": "person",
+      "desc": "Servidor adulto que observa la partida y obedece no seguir; sin castigo visual.",
+      "model_ids": [
+        "servidor_umarala__identity_sheet"
+      ]
+    },
+    {
+      "id": "partida",
+      "type": "magic_subject",
+      "desc": "Ausencia final de Umaralá y transformación abierta de sus compañeros, sin ascensión literal.",
+      "model_ids": [
+        "partida_occidente_umarala__phenomenon_rule"
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "id": "b1",
+      "voice_over": "Durante una epidemia, Umaralá enfermó con gravedad. Su tía, una piache reconocida, cantó junto al chinchorro y llamó a sus auxiliares con la maraca.",
+      "voice_provenance": "Síntesis audiovisual fiel a la narración congelada; La curación se presenta según la lógica del relato y no como resultado médico comprobado; Jirairay es nombre de invocación y no un antagonista independiente.",
+      "word_count": 24,
+      "time_seconds": [
+        0,
+        16
+      ],
+      "event_ids": [
+        "e1"
+      ],
+      "keyframes": [
+        {
+          "id": "b1a",
+          "title": "La tía junto al chinchorro",
+          "visual": "La tía canta pequeña junto al joven en reposo; patio y familia quedan fuera, concentrando el cuidado. COMPOSICIÓN OBLIGATORIA: elevada oblicua desde una ladera, gran plano general territorial; no copiar la altura, horizonte ni distribución del keyframe anterior.",
+          "time_seconds": [
+            0,
+            8
+          ],
+          "entity_ids": [
+            "umarala",
+            "tia",
+            "chinchorro",
+            "instrumentos",
+            "territorio"
+          ],
+          "event_ids": [
+            "e1"
+          ],
+          "angle": "elevada oblicua desde una ladera",
+          "shot_scale": "gran plano general territorial",
+          "depth_planes": [
+            "papel cercano",
+            "sujetos pequeños",
+            "sendero diagonal",
+            "territorio medio",
+            "cielo recortado"
+          ],
+          "continuity_from": null,
+          "transition_to_next": "Corte de eje, altura y escala hacia el siguiente instante.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Movimiento mínimo compatible con elevada oblicua desde una ladera.",
+            "allowed": "Sólo el gesto o cambio material descrito en este instante.",
+            "forbidden": "Repetir la composición anterior, añadir reparto, texto, sangre, ceremonia o utilería no inventariada."
+          },
+          "asset": {
+            "status": "approved_keyframe",
+            "path": "output/imagegen/wayuu/keyframes/umarala-preproduccion-01/b1a.jpeg",
+            "sha256": "7558bd78410e648ed7ef0da7071435a4db970bf5a6119f3fecab43087788a7a5"
+          },
+          "generation_inputs": [
+            {
+              "kind": "triptych",
+              "myth": "umarala",
+              "path": "output/imagegen/wayuu/triptychs/wayuu-umarala-triptych-01/entrada.jpeg",
+              "sha256": "43bfe843b61e36da318e4c1198332ddab4ab385d90ccef6542bd1b75f56c4f50",
+              "approved": true,
+              "role": "Fijar identidad, paleta y material del mito desde la referencia 1; prohibido copiar su composición."
+            },
+            {
+              "kind": "triptych",
+              "myth": "umarala",
+              "path": "output/imagegen/wayuu/triptychs/wayuu-umarala-triptych-03-acto/acto.jpeg",
+              "sha256": "d23e5fba8be2b7a49a4fc9d40f3203ee0db88932018bea53e9962c7b924d5bc9",
+              "approved": true,
+              "role": "Fijar identidad, paleta y material del mito desde la referencia 2; prohibido copiar su composición."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "umarala",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-22-umarala-medium/umarala__identity_sheet--canon.jpeg",
+              "sha256": "5f0479ac0c23d918897f2bc68d5a7e4f7db287386b33bb311578477982dbce33",
+              "approved": true,
+              "role": "Fijar el modelo canónico umarala__identity_sheet; preservar identidad y material sin copiar la composición."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "umarala",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-22-umarala-medium/umarala__state_sheet--estados.jpeg",
+              "sha256": "4ecb3646117e63998ea341b98fe6ea7e1356659da4373a0e34dce06dac1f4e1b",
+              "approved": true,
+              "role": "Fijar el modelo canónico umarala__state_sheet; preservar identidad y material sin copiar la composición."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "umarala",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-22-umarala-medium-corrections-01/tia_outsu_umarala__identity_sheet--canon.jpeg",
+              "sha256": "b5c3f1d305438a5719c47127beffad7d6d597c8b656174ada5dd1828534710c1",
+              "approved": true,
+              "role": "Fijar el modelo canónico tia_outsu_umarala__identity_sheet; preservar identidad y material sin copiar la composición."
+            }
+          ]
+        },
+        {
+          "id": "b1b",
+          "title": "Maraca y capote",
+          "visual": "Macro lateral de la maraca y el capote suspendidos sobre el chinchorro, sin tocar el rostro ni mostrar síntomas. COMPOSICIÓN OBLIGATORIA: lateral a la altura de manos u objeto, macro narrativo sin rostro; no copiar la altura, horizonte ni distribución del keyframe anterior.",
+          "time_seconds": [
+            8,
+            16
+          ],
+          "entity_ids": [
+            "umarala",
+            "tia",
+            "instrumentos",
+            "chinchorro"
+          ],
+          "event_ids": [
+            "e1"
+          ],
+          "angle": "lateral a la altura de manos u objeto",
+          "shot_scale": "macro narrativo sin rostro",
+          "depth_planes": [
+            "borde cercano",
+            "manos u objeto",
+            "ropa parcial",
+            "suelo medio",
+            "fondo desenfocado"
+          ],
+          "continuity_from": "b1a",
+          "transition_to_next": "Corte de eje, altura y escala hacia el siguiente instante.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Movimiento mínimo compatible con lateral a la altura de manos u objeto.",
+            "allowed": "Sólo el gesto o cambio material descrito en este instante.",
+            "forbidden": "Repetir la composición anterior, añadir reparto, texto, sangre, ceremonia o utilería no inventariada."
+          },
+          "asset": {
+            "status": "approved_keyframe",
+            "path": "output/imagegen/wayuu/keyframes/umarala-preproduccion-01/b1b.jpeg",
+            "sha256": "ca324bec3fe0efe9cbde2a0423d91e24f1f614fda6d904eb98fd7810de581717"
+          },
+          "generation_inputs": [
+            {
+              "kind": "prior_keyframe",
+              "frame_id": "b1a",
+              "myth": "umarala",
+              "path": "output/imagegen/wayuu/keyframes/umarala-preproduccion-01/b1a.jpeg",
+              "sha256": "7558bd78410e648ed7ef0da7071435a4db970bf5a6119f3fecab43087788a7a5",
+              "approved": true,
+              "role": "Preservar continuidad causal de b1a: identidades, vestuario, paleta y material; prohibido repetir cámara o distribución."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "umarala",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-22-umarala-medium/umarala__identity_sheet--canon.jpeg",
+              "sha256": "5f0479ac0c23d918897f2bc68d5a7e4f7db287386b33bb311578477982dbce33",
+              "approved": true,
+              "role": "Fijar el modelo canónico umarala__identity_sheet; preservar identidad y material sin copiar la composición."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "umarala",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-22-umarala-medium/umarala__state_sheet--estados.jpeg",
+              "sha256": "4ecb3646117e63998ea341b98fe6ea7e1356659da4373a0e34dce06dac1f4e1b",
+              "approved": true,
+              "role": "Fijar el modelo canónico umarala__state_sheet; preservar identidad y material sin copiar la composición."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "umarala",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-22-umarala-medium-corrections-01/tia_outsu_umarala__identity_sheet--canon.jpeg",
+              "sha256": "b5c3f1d305438a5719c47127beffad7d6d597c8b656174ada5dd1828534710c1",
+              "approved": true,
+              "role": "Fijar el modelo canónico tia_outsu_umarala__identity_sheet; preservar identidad y material sin copiar la composición."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "b2",
+      "voice_over": "Dentro del canto apareció el nombre Jirairay. No era otro espíritu combatiente, sino una forma histórica de invocar a Wanurü durante la ceremonia.",
+      "voice_provenance": "Síntesis audiovisual fiel a la narración congelada; La curación se presenta según la lógica del relato y no como resultado médico comprobado; Jirairay es nombre de invocación y no un antagonista independiente.",
+      "word_count": 23,
+      "time_seconds": [
+        16,
+        32
+      ],
+      "event_ids": [
+        "e2"
+      ],
+      "keyframes": [
+        {
+          "id": "b2a",
+          "title": "Jirairay dentro del canto",
+          "visual": "Desde el suelo, pulsos índigo de papel recorren las fibras del chinchorro y vuelven a la maraca; sin cuerpo enemigo. COMPOSICIÓN OBLIGATORIA: contrapicado extremo desde el suelo, plano general bajo; no copiar la altura, horizonte ni distribución del keyframe anterior.",
+          "time_seconds": [
+            16,
+            24
+          ],
+          "entity_ids": [
+            "umarala",
+            "tia",
+            "canto",
+            "instrumentos"
+          ],
+          "event_ids": [
+            "e2"
+          ],
+          "angle": "contrapicado extremo desde el suelo",
+          "shot_scale": "plano general bajo",
+          "depth_planes": [
+            "materia rasante",
+            "pies o base",
+            "cuerpos completos",
+            "relieve",
+            "cielo amplio"
+          ],
+          "continuity_from": "b1b",
+          "transition_to_next": "Corte de eje, altura y escala hacia el siguiente instante.",
+          "scene_role": "visible_magic",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Los elementos cotidianos inventariados en Jirairay dentro del canto.",
+            "impossible_behavior": "Desde el suelo, pulsos índigo de papel recorren las fibras del chinchorro y vuelven a la maraca; sin cuerpo enemigo.",
+            "narrative_effect": "Hace visible el cambio de relación narrado en el evento e2.",
+            "agency": "La transformación pertenece al relato o a su traducción editorial; las personas no la controlan como superpoder.",
+            "physical_translation": "Hojas mate separadas cambian de silueta, posición o continuidad mediante pliegues y vacíos; sin partículas CGI.",
+            "visible_test": "La contradicción material debe entenderse en una sola imagen sin texto ni duplicación de personajes.",
+            "provenance": "narrated_fact",
+            "temporal_role": "present",
+            "event_ids": [
+              "e2"
+            ]
+          },
+          "motion_contract": {
+            "camera": "Movimiento mínimo compatible con contrapicado extremo desde el suelo.",
+            "allowed": "Sólo el gesto o cambio material descrito en este instante.",
+            "forbidden": "Repetir la composición anterior, añadir reparto, texto, sangre, ceremonia o utilería no inventariada."
+          },
+          "asset": {
+            "status": "approved_keyframe",
+            "path": "output/imagegen/wayuu/keyframes/umarala-preproduccion-01/b2a.jpeg",
+            "sha256": "a69129bbabebdd22d03b58923ea54a8e537506e5f7ca82f65cb3807213ce933f"
+          },
+          "generation_inputs": [
+            {
+              "kind": "prior_keyframe",
+              "frame_id": "b1a",
+              "myth": "umarala",
+              "path": "output/imagegen/wayuu/keyframes/umarala-preproduccion-01/b1a.jpeg",
+              "sha256": "7558bd78410e648ed7ef0da7071435a4db970bf5a6119f3fecab43087788a7a5",
+              "approved": true,
+              "role": "Preservar continuidad causal de b1a: identidades, vestuario, paleta y material; prohibido repetir cámara o distribución."
+            },
+            {
+              "kind": "prior_keyframe",
+              "frame_id": "b1b",
+              "myth": "umarala",
+              "path": "output/imagegen/wayuu/keyframes/umarala-preproduccion-01/b1b.jpeg",
+              "sha256": "ca324bec3fe0efe9cbde2a0423d91e24f1f614fda6d904eb98fd7810de581717",
+              "approved": true,
+              "role": "Preservar continuidad causal de b1b: identidades, vestuario, paleta y material; prohibido repetir cámara o distribución."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "umarala",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-22-umarala-medium/umarala__identity_sheet--canon.jpeg",
+              "sha256": "5f0479ac0c23d918897f2bc68d5a7e4f7db287386b33bb311578477982dbce33",
+              "approved": true,
+              "role": "Fijar el modelo canónico umarala__identity_sheet; preservar identidad y material sin copiar la composición."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "umarala",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-22-umarala-medium/umarala__state_sheet--estados.jpeg",
+              "sha256": "4ecb3646117e63998ea341b98fe6ea7e1356659da4373a0e34dce06dac1f4e1b",
+              "approved": true,
+              "role": "Fijar el modelo canónico umarala__state_sheet; preservar identidad y material sin copiar la composición."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "umarala",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-22-umarala-medium-corrections-01/tia_outsu_umarala__identity_sheet--canon.jpeg",
+              "sha256": "b5c3f1d305438a5719c47127beffad7d6d597c8b656174ada5dd1828534710c1",
+              "approved": true,
+              "role": "Fijar el modelo canónico tia_outsu_umarala__identity_sheet; preservar identidad y material sin copiar la composición."
+            }
+          ]
+        },
+        {
+          "id": "b2b",
+          "title": "Una vida sostiene otra",
+          "visual": "Cenital: dos sombras humanas se conectan por maraca y capote; una se vuelve tenue mientras la otra recupera densidad. COMPOSICIÓN OBLIGATORIA: cenital verdadero de 90 grados, detalle gráfico de suelo; no copiar la altura, horizonte ni distribución del keyframe anterior.",
+          "time_seconds": [
+            24,
+            32
+          ],
+          "entity_ids": [
+            "umarala",
+            "tia",
+            "canto",
+            "instrumentos"
+          ],
+          "event_ids": [
+            "e2"
+          ],
+          "angle": "cenital verdadero de 90 grados",
+          "shot_scale": "detalle gráfico de suelo",
+          "depth_planes": [
+            "borde superior",
+            "acción central",
+            "huellas u objetos",
+            "sombras planas",
+            "estratos inferiores"
+          ],
+          "continuity_from": "b2a",
+          "transition_to_next": "Corte de eje, altura y escala hacia el siguiente instante.",
+          "scene_role": "visible_magic",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Los elementos cotidianos inventariados en Una vida sostiene otra.",
+            "impossible_behavior": "Cenital: dos sombras humanas se conectan por maraca y capote; una se vuelve tenue mientras la otra recupera densidad.",
+            "narrative_effect": "Hace visible el cambio de relación narrado en el evento e2.",
+            "agency": "La transformación pertenece al relato o a su traducción editorial; las personas no la controlan como superpoder.",
+            "physical_translation": "Hojas mate separadas cambian de silueta, posición o continuidad mediante pliegues y vacíos; sin partículas CGI.",
+            "visible_test": "La contradicción material debe entenderse en una sola imagen sin texto ni duplicación de personajes.",
+            "provenance": "narrated_fact",
+            "temporal_role": "present",
+            "event_ids": [
+              "e2"
+            ]
+          },
+          "motion_contract": {
+            "camera": "Movimiento mínimo compatible con cenital verdadero de 90 grados.",
+            "allowed": "Sólo el gesto o cambio material descrito en este instante.",
+            "forbidden": "Repetir la composición anterior, añadir reparto, texto, sangre, ceremonia o utilería no inventariada."
+          },
+          "asset": {
+            "status": "approved_keyframe",
+            "path": "output/imagegen/wayuu/keyframes/umarala-preproduccion-01/b2b.jpeg",
+            "sha256": "d1a0bbee6f16ae698cd8448a2f832819c840a2d3fbc5e5a5d9a2825c6436e84e"
+          },
+          "generation_inputs": [
+            {
+              "kind": "prior_keyframe",
+              "frame_id": "b1b",
+              "myth": "umarala",
+              "path": "output/imagegen/wayuu/keyframes/umarala-preproduccion-01/b1b.jpeg",
+              "sha256": "ca324bec3fe0efe9cbde2a0423d91e24f1f614fda6d904eb98fd7810de581717",
+              "approved": true,
+              "role": "Preservar continuidad causal de b1b: identidades, vestuario, paleta y material; prohibido repetir cámara o distribución."
+            },
+            {
+              "kind": "prior_keyframe",
+              "frame_id": "b2a",
+              "myth": "umarala",
+              "path": "output/imagegen/wayuu/keyframes/umarala-preproduccion-01/b2a.jpeg",
+              "sha256": "a69129bbabebdd22d03b58923ea54a8e537506e5f7ca82f65cb3807213ce933f",
+              "approved": true,
+              "role": "Preservar continuidad causal de b2a: identidades, vestuario, paleta y material; prohibido repetir cámara o distribución."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "umarala",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-22-umarala-medium/umarala__identity_sheet--canon.jpeg",
+              "sha256": "5f0479ac0c23d918897f2bc68d5a7e4f7db287386b33bb311578477982dbce33",
+              "approved": true,
+              "role": "Fijar el modelo canónico umarala__identity_sheet; preservar identidad y material sin copiar la composición."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "umarala",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-22-umarala-medium/umarala__state_sheet--estados.jpeg",
+              "sha256": "4ecb3646117e63998ea341b98fe6ea7e1356659da4373a0e34dce06dac1f4e1b",
+              "approved": true,
+              "role": "Fijar el modelo canónico umarala__state_sheet; preservar identidad y material sin copiar la composición."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "umarala",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-22-umarala-medium-corrections-01/tia_outsu_umarala__identity_sheet--canon.jpeg",
+              "sha256": "b5c3f1d305438a5719c47127beffad7d6d597c8b656174ada5dd1828534710c1",
+              "approved": true,
+              "role": "Fijar el modelo canónico tia_outsu_umarala__identity_sheet; preservar identidad y material sin copiar la composición."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "b3",
+      "voice_over": "La tía comprendió que salvar al sobrino exigía una pérdida. Puso maraca y capote sobre él, continuó cantando y entregó su propia vida.",
+      "voice_provenance": "Síntesis audiovisual fiel a la narración congelada; La curación se presenta según la lógica del relato y no como resultado médico comprobado; Jirairay es nombre de invocación y no un antagonista independiente.",
+      "word_count": 23,
+      "time_seconds": [
+        32,
+        48
+      ],
+      "event_ids": [
+        "e3"
+      ],
+      "keyframes": [
+        {
+          "id": "b3a",
+          "title": "Umaralá despierta",
+          "visual": "Plano tele lateral sin cielo: el joven se incorpora y el lugar de la tía queda vacío junto a los instrumentos. COMPOSICIÓN OBLIGATORIA: lateral teleobjetivo sin cielo, plano general comprimido; no copiar la altura, horizonte ni distribución del keyframe anterior.",
+          "time_seconds": [
+            32,
+            40
+          ],
+          "entity_ids": [
+            "umarala",
+            "tia",
+            "chinchorro",
+            "instrumentos"
+          ],
+          "event_ids": [
+            "e3"
+          ],
+          "angle": "lateral teleobjetivo sin cielo",
+          "shot_scale": "plano general comprimido",
+          "depth_planes": [
+            "franja cercana",
+            "sujeto uno",
+            "acción media",
+            "sujeto dos",
+            "bandas comprimidas"
+          ],
+          "continuity_from": "b2b",
+          "transition_to_next": "Corte de eje, altura y escala hacia el siguiente instante.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Movimiento mínimo compatible con lateral teleobjetivo sin cielo.",
+            "allowed": "Sólo el gesto o cambio material descrito en este instante.",
+            "forbidden": "Repetir la composición anterior, añadir reparto, texto, sangre, ceremonia o utilería no inventariada."
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "generation_inputs": [
+            {
+              "kind": "prior_keyframe",
+              "frame_id": "b2a",
+              "myth": "umarala",
+              "path": "output/imagegen/wayuu/keyframes/umarala-preproduccion-01/b2a.jpeg",
+              "sha256": "a69129bbabebdd22d03b58923ea54a8e537506e5f7ca82f65cb3807213ce933f",
+              "approved": true,
+              "role": "Preservar continuidad causal de b2a: identidades, vestuario, paleta y material; prohibido repetir cámara o distribución."
+            },
+            {
+              "kind": "prior_keyframe",
+              "frame_id": "b2b",
+              "myth": "umarala",
+              "path": "output/imagegen/wayuu/keyframes/umarala-preproduccion-01/b2b.jpeg",
+              "sha256": "d1a0bbee6f16ae698cd8448a2f832819c840a2d3fbc5e5a5d9a2825c6436e84e",
+              "approved": true,
+              "role": "Preservar continuidad causal de b2b: identidades, vestuario, paleta y material; prohibido repetir cámara o distribución."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "umarala",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-22-umarala-medium/umarala__identity_sheet--canon.jpeg",
+              "sha256": "5f0479ac0c23d918897f2bc68d5a7e4f7db287386b33bb311578477982dbce33",
+              "approved": true,
+              "role": "Fijar el modelo canónico umarala__identity_sheet; preservar identidad y material sin copiar la composición."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "umarala",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-22-umarala-medium/umarala__state_sheet--estados.jpeg",
+              "sha256": "4ecb3646117e63998ea341b98fe6ea7e1356659da4373a0e34dce06dac1f4e1b",
+              "approved": true,
+              "role": "Fijar el modelo canónico umarala__state_sheet; preservar identidad y material sin copiar la composición."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "umarala",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-22-umarala-medium-corrections-01/tia_outsu_umarala__identity_sheet--canon.jpeg",
+              "sha256": "b5c3f1d305438a5719c47127beffad7d6d597c8b656174ada5dd1828534710c1",
+              "approved": true,
+              "role": "Fijar el modelo canónico tia_outsu_umarala__identity_sheet; preservar identidad y material sin copiar la composición."
+            }
+          ]
+        },
+        {
+          "id": "b3b",
+          "title": "Fuego junto a Maiceo",
+          "visual": "A ras del suelo, un fuego doméstico pequeño arde junto a una sepultura cerrada; Umaralá queda distante y no hay cuerpo. COMPOSICIÓN OBLIGATORIA: rasante a través de una grieta o vegetación, gran plano general de fuga; no copiar la altura, horizonte ni distribución del keyframe anterior.",
+          "time_seconds": [
+            40,
+            48
+          ],
+          "entity_ids": [
+            "umarala",
+            "tia",
+            "territorio"
+          ],
+          "event_ids": [
+            "e3"
+          ],
+          "angle": "rasante a través de una grieta o vegetación",
+          "shot_scale": "gran plano general de fuga",
+          "depth_planes": [
+            "recorte extremo",
+            "vacío cercano",
+            "acción distante",
+            "territorio",
+            "franja de salida"
+          ],
+          "continuity_from": "b3a",
+          "transition_to_next": "Corte de eje, altura y escala hacia el siguiente instante.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Movimiento mínimo compatible con rasante a través de una grieta o vegetación.",
+            "allowed": "Sólo el gesto o cambio material descrito en este instante.",
+            "forbidden": "Repetir la composición anterior, añadir reparto, texto, sangre, ceremonia o utilería no inventariada."
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "generation_inputs": []
+        }
+      ]
+    },
+    {
+      "id": "b4",
+      "voice_over": "Umaralá despertó y encontró la ausencia de quien lo había criado. La enterró cerca de Maiceo y encendió fuego junto a la sepultura.",
+      "voice_provenance": "Síntesis audiovisual fiel a la narración congelada; La curación se presenta según la lógica del relato y no como resultado médico comprobado; Jirairay es nombre de invocación y no un antagonista independiente.",
+      "word_count": 23,
+      "time_seconds": [
+        48,
+        64
+      ],
+      "event_ids": [
+        "e4"
+      ],
+      "keyframes": [
+        {
+          "id": "b4a",
+          "title": "La maestra vuelve en sueño",
+          "visual": "Vista alta diagonal del joven dormido y la tía como silueta de fibras que señala un sendero hacia Jarara. COMPOSICIÓN OBLIGATORIA: alta diagonal de 60 grados, plano conjunto arquitectónico; no copiar la altura, horizonte ni distribución del keyframe anterior.",
+          "time_seconds": [
+            48,
+            56
+          ],
+          "entity_ids": [
+            "umarala",
+            "tia",
+            "canto",
+            "territorio"
+          ],
+          "event_ids": [
+            "e4"
+          ],
+          "angle": "alta diagonal de 60 grados",
+          "shot_scale": "plano conjunto arquitectónico",
+          "depth_planes": [
+            "trama cercana",
+            "acción uno",
+            "estructura central",
+            "acción dos",
+            "horizonte mínimo"
+          ],
+          "continuity_from": "b3b",
+          "transition_to_next": "Corte de eje, altura y escala hacia el siguiente instante.",
+          "scene_role": "visible_magic",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Los elementos cotidianos inventariados en La maestra vuelve en sueño.",
+            "impossible_behavior": "Vista alta diagonal del joven dormido y la tía como silueta de fibras que señala un sendero hacia Jarara.",
+            "narrative_effect": "Hace visible el cambio de relación narrado en el evento e4.",
+            "agency": "La transformación pertenece al relato o a su traducción editorial; las personas no la controlan como superpoder.",
+            "physical_translation": "Hojas mate separadas cambian de silueta, posición o continuidad mediante pliegues y vacíos; sin partículas CGI.",
+            "visible_test": "La contradicción material debe entenderse en una sola imagen sin texto ni duplicación de personajes.",
+            "provenance": "narrated_fact",
+            "temporal_role": "present",
+            "event_ids": [
+              "e4"
+            ]
+          },
+          "motion_contract": {
+            "camera": "Movimiento mínimo compatible con alta diagonal de 60 grados.",
+            "allowed": "Sólo el gesto o cambio material descrito en este instante.",
+            "forbidden": "Repetir la composición anterior, añadir reparto, texto, sangre, ceremonia o utilería no inventariada."
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "generation_inputs": []
+        },
+        {
+          "id": "b4b",
+          "title": "Recibir nombre e instrumentos",
+          "visual": "Sobre el hombro de la visión, Umaralá toma maraca y capote; el sendero se abre al fondo, sin texto escrito. COMPOSICIÓN OBLIGATORIA: sobre el hombro con primer término dominante, plano medio ambiental; no copiar la altura, horizonte ni distribución del keyframe anterior.",
+          "time_seconds": [
+            56,
+            64
+          ],
+          "entity_ids": [
+            "umarala",
+            "tia",
+            "instrumentos",
+            "territorio"
+          ],
+          "event_ids": [
+            "e4"
+          ],
+          "angle": "sobre el hombro con primer término dominante",
+          "shot_scale": "plano medio ambiental",
+          "depth_planes": [
+            "hombro o marco",
+            "gesto",
+            "objeto o sujeto central",
+            "fondo activo",
+            "territorio"
+          ],
+          "continuity_from": "b4a",
+          "transition_to_next": "Corte de eje, altura y escala hacia el siguiente instante.",
+          "scene_role": "visible_magic",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Los elementos cotidianos inventariados en Recibir nombre e instrumentos.",
+            "impossible_behavior": "Sobre el hombro de la visión, Umaralá toma maraca y capote; el sendero se abre al fondo, sin texto escrito.",
+            "narrative_effect": "Hace visible el cambio de relación narrado en el evento e4.",
+            "agency": "La transformación pertenece al relato o a su traducción editorial; las personas no la controlan como superpoder.",
+            "physical_translation": "Hojas mate separadas cambian de silueta, posición o continuidad mediante pliegues y vacíos; sin partículas CGI.",
+            "visible_test": "La contradicción material debe entenderse en una sola imagen sin texto ni duplicación de personajes.",
+            "provenance": "narrated_fact",
+            "temporal_role": "present",
+            "event_ids": [
+              "e4"
+            ]
+          },
+          "motion_contract": {
+            "camera": "Movimiento mínimo compatible con sobre el hombro con primer término dominante.",
+            "allowed": "Sólo el gesto o cambio material descrito en este instante.",
+            "forbidden": "Repetir la composición anterior, añadir reparto, texto, sangre, ceremonia o utilería no inventariada."
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "generation_inputs": []
+        }
+      ]
+    },
+    {
+      "id": "b5",
+      "voice_over": "En sueño, la tía le ordenó ir a Jarara, tomar sus instrumentos y atender a quienes lo buscaran. También le dio el nombre Umaralá.",
+      "voice_provenance": "Síntesis audiovisual fiel a la narración congelada; La curación se presenta según la lógica del relato y no como resultado médico comprobado; Jirairay es nombre de invocación y no un antagonista independiente.",
+      "word_count": 24,
+      "time_seconds": [
+        64,
+        80
+      ],
+      "event_ids": [
+        "e5"
+      ],
+      "keyframes": [
+        {
+          "id": "b5a",
+          "title": "Caminar hacia quien lo busca",
+          "visual": "Desde una sombra, Umaralá adulto camina con los instrumentos hacia otra casa; rechaza una montura fuera de cuadro. COMPOSICIÓN OBLIGATORIA: subjetiva baja desde la sombra, plano general con primer término oscuro; no copiar la altura, horizonte ni distribución del keyframe anterior.",
+          "time_seconds": [
+            64,
+            72
+          ],
+          "entity_ids": [
+            "umarala",
+            "instrumentos",
+            "paciente",
+            "territorio"
+          ],
+          "event_ids": [
+            "e5"
+          ],
+          "angle": "subjetiva baja desde la sombra",
+          "shot_scale": "plano general con primer término oscuro",
+          "depth_planes": [
+            "sombra cercana",
+            "señal",
+            "acción media",
+            "figuras",
+            "arquitectura o paisaje"
+          ],
+          "continuity_from": "b4b",
+          "transition_to_next": "Corte de eje, altura y escala hacia el siguiente instante.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Movimiento mínimo compatible con subjetiva baja desde la sombra.",
+            "allowed": "Sólo el gesto o cambio material descrito en este instante.",
+            "forbidden": "Repetir la composición anterior, añadir reparto, texto, sangre, ceremonia o utilería no inventariada."
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "generation_inputs": []
+        },
+        {
+          "id": "b5b",
+          "title": "La noche de cuidado",
+          "visual": "Perfil distante: Umaralá canta fuera del círculo del chinchorro de la paciente; la familia queda detrás de una pared. COMPOSICIÓN OBLIGATORIA: perfil distante con horizonte desplazado, plano general lateral; no copiar la altura, horizonte ni distribución del keyframe anterior.",
+          "time_seconds": [
+            72,
+            80
+          ],
+          "entity_ids": [
+            "umarala",
+            "paciente",
+            "instrumentos",
+            "chinchorro",
+            "curacion"
+          ],
+          "event_ids": [
+            "e5"
+          ],
+          "angle": "perfil distante con horizonte desplazado",
+          "shot_scale": "plano general lateral",
+          "depth_planes": [
+            "materia cercana",
+            "sujeto lateral",
+            "acción",
+            "segundo sujeto",
+            "horizonte alto"
+          ],
+          "continuity_from": "b5a",
+          "transition_to_next": "Corte de eje, altura y escala hacia el siguiente instante.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Movimiento mínimo compatible con perfil distante con horizonte desplazado.",
+            "allowed": "Sólo el gesto o cambio material descrito en este instante.",
+            "forbidden": "Repetir la composición anterior, añadir reparto, texto, sangre, ceremonia o utilería no inventariada."
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "generation_inputs": []
+        }
+      ]
+    },
+    {
+      "id": "b6",
+      "voice_over": "Una familia pidió ayuda para una mujer grave. Umaralá caminó hasta la casa, cantó durante la noche y al amanecer ella respiraba con más calma.",
+      "voice_provenance": "Síntesis audiovisual fiel a la narración congelada; La curación se presenta según la lógica del relato y no como resultado médico comprobado; Jirairay es nombre de invocación y no un antagonista independiente.",
+      "word_count": 25,
+      "time_seconds": [
+        80,
+        96
+      ],
+      "event_ids": [
+        "e6"
+      ],
+      "keyframes": [
+        {
+          "id": "b6a",
+          "title": "Respirar con más calma",
+          "visual": "Cenital diagonal de la paciente en reposo al amanecer; fibras del chinchorro se abren regularmente, sin aura o diagnóstico. COMPOSICIÓN OBLIGATORIA: cenital diagonal amplio, plano de consecuencia; no copiar la altura, horizonte ni distribución del keyframe anterior.",
+          "time_seconds": [
+            80,
+            88
+          ],
+          "entity_ids": [
+            "paciente",
+            "chinchorro",
+            "curacion"
+          ],
+          "event_ids": [
+            "e6"
+          ],
+          "angle": "cenital diagonal amplio",
+          "shot_scale": "plano de consecuencia",
+          "depth_planes": [
+            "sombra",
+            "objeto central",
+            "figuras parciales",
+            "trama territorial",
+            "borde de salida"
+          ],
+          "continuity_from": "b5b",
+          "transition_to_next": "Corte de eje, altura y escala hacia el siguiente instante.",
+          "scene_role": "visible_magic",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Los elementos cotidianos inventariados en Respirar con más calma.",
+            "impossible_behavior": "Cenital diagonal de la paciente en reposo al amanecer; fibras del chinchorro se abren regularmente, sin aura o diagnóstico.",
+            "narrative_effect": "Hace visible el cambio de relación narrado en el evento e6.",
+            "agency": "La transformación pertenece al relato o a su traducción editorial; las personas no la controlan como superpoder.",
+            "physical_translation": "Hojas mate separadas cambian de silueta, posición o continuidad mediante pliegues y vacíos; sin partículas CGI.",
+            "visible_test": "La contradicción material debe entenderse en una sola imagen sin texto ni duplicación de personajes.",
+            "provenance": "narrated_fact",
+            "temporal_role": "present",
+            "event_ids": [
+              "e6"
+            ]
+          },
+          "motion_contract": {
+            "camera": "Movimiento mínimo compatible con cenital diagonal amplio.",
+            "allowed": "Sólo el gesto o cambio material descrito en este instante.",
+            "forbidden": "Repetir la composición anterior, añadir reparto, texto, sangre, ceremonia o utilería no inventariada."
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "generation_inputs": []
+        },
+        {
+          "id": "b6b",
+          "title": "Una maraca no basta",
+          "visual": "Macro de dos maracas: una unida por fibras a la memoria de la tía y otra aislada; no juzgar especialistas actuales. COMPOSICIÓN OBLIGATORIA: macro frontal de materia, primerísimo plano de objeto; no copiar la altura, horizonte ni distribución del keyframe anterior.",
+          "time_seconds": [
+            88,
+            96
+          ],
+          "entity_ids": [
+            "tia",
+            "instrumentos",
+            "canto"
+          ],
+          "event_ids": [
+            "e6"
+          ],
+          "angle": "macro frontal de materia",
+          "shot_scale": "primerísimo plano de objeto",
+          "depth_planes": [
+            "fibra cercana",
+            "objeto",
+            "cambio material",
+            "sombra interna",
+            "fondo abstracto"
+          ],
+          "continuity_from": "b6a",
+          "transition_to_next": "Corte de eje, altura y escala hacia el siguiente instante.",
+          "scene_role": "visible_magic",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Los elementos cotidianos inventariados en Una maraca no basta.",
+            "impossible_behavior": "Macro de dos maracas: una unida por fibras a la memoria de la tía y otra aislada; no juzgar especialistas actuales.",
+            "narrative_effect": "Hace visible el cambio de relación narrado en el evento e6.",
+            "agency": "La transformación pertenece al relato o a su traducción editorial; las personas no la controlan como superpoder.",
+            "physical_translation": "Hojas mate separadas cambian de silueta, posición o continuidad mediante pliegues y vacíos; sin partículas CGI.",
+            "visible_test": "La contradicción material debe entenderse en una sola imagen sin texto ni duplicación de personajes.",
+            "provenance": "narrated_fact",
+            "temporal_role": "present",
+            "event_ids": [
+              "e6"
+            ]
+          },
+          "motion_contract": {
+            "camera": "Movimiento mínimo compatible con macro frontal de materia.",
+            "allowed": "Sólo el gesto o cambio material descrito en este instante.",
+            "forbidden": "Repetir la composición anterior, añadir reparto, texto, sangre, ceremonia o utilería no inventariada."
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "generation_inputs": []
+        }
+      ]
+    },
+    {
+      "id": "b7",
+      "voice_over": "Con los años advirtió que imitar una maraca no reproduce una relación de aprendizaje. Su autoridad permanecía ligada a la tía y al deber de cuidado.",
+      "voice_provenance": "Síntesis audiovisual fiel a la narración congelada; La curación se presenta según la lógica del relato y no como resultado médico comprobado; Jirairay es nombre de invocación y no un antagonista independiente.",
+      "word_count": 26,
+      "time_seconds": [
+        96,
+        112
+      ],
+      "event_ids": [
+        "e7"
+      ],
+      "keyframes": [
+        {
+          "id": "b7a",
+          "title": "Preparar el viaje final",
+          "visual": "Entre postes, Umaralá mayor reúne una manta y maraca mientras dos compañeros esperan en el exterior. COMPOSICIÓN OBLIGATORIA: contrapicado enmarcado entre postes o rocas, plano general enmarcado; no copiar la altura, horizonte ni distribución del keyframe anterior.",
+          "time_seconds": [
+            96,
+            104
+          ],
+          "entity_ids": [
+            "umarala",
+            "viajeros",
+            "instrumentos",
+            "partida"
+          ],
+          "event_ids": [
+            "e7"
+          ],
+          "angle": "contrapicado enmarcado entre postes o rocas",
+          "shot_scale": "plano general enmarcado",
+          "depth_planes": [
+            "marco cercano",
+            "umbral",
+            "sujetos pequeños",
+            "acción",
+            "paisaje estrecho"
+          ],
+          "continuity_from": "b6b",
+          "transition_to_next": "Corte de eje, altura y escala hacia el siguiente instante.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Movimiento mínimo compatible con contrapicado enmarcado entre postes o rocas.",
+            "allowed": "Sólo el gesto o cambio material descrito en este instante.",
+            "forbidden": "Repetir la composición anterior, añadir reparto, texto, sangre, ceremonia o utilería no inventariada."
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "generation_inputs": []
+        },
+        {
+          "id": "b7b",
+          "title": "Tres viajeros",
+          "visual": "A través del umbral, exactamente tres adultos parten en profundidad; uno es Jururiana y otro lleva piel de venado. COMPOSICIÓN OBLIGATORIA: teleobjetivo profundo a través de una abertura, plano largo comprimido; no copiar la altura, horizonte ni distribución del keyframe anterior.",
+          "time_seconds": [
+            104,
+            112
+          ],
+          "entity_ids": [
+            "umarala",
+            "viajeros",
+            "servidor",
+            "territorio"
+          ],
+          "event_ids": [
+            "e7"
+          ],
+          "angle": "teleobjetivo profundo a través de una abertura",
+          "shot_scale": "plano largo comprimido",
+          "depth_planes": [
+            "abertura cercana",
+            "vacío",
+            "acción lejana",
+            "capas medias",
+            "fondo comprimido"
+          ],
+          "continuity_from": "b7a",
+          "transition_to_next": "Corte de eje, altura y escala hacia el siguiente instante.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Movimiento mínimo compatible con teleobjetivo profundo a través de una abertura.",
+            "allowed": "Sólo el gesto o cambio material descrito en este instante.",
+            "forbidden": "Repetir la composición anterior, añadir reparto, texto, sangre, ceremonia o utilería no inventariada."
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "generation_inputs": []
+        }
+      ]
+    },
+    {
+      "id": "b8",
+      "voice_over": "Al final partió con Jururiana y otro compañero. No volvió como antes. Su nombre quedó en algunos cantos y cada curación recordó una deuda heredada.",
+      "voice_provenance": "Síntesis audiovisual fiel a la narración congelada; La curación se presenta según la lógica del relato y no como resultado médico comprobado; Jirairay es nombre de invocación y no un antagonista independiente.",
+      "word_count": 25,
+      "time_seconds": [
+        112,
+        128
+      ],
+      "event_ids": [
+        "e8"
+      ],
+      "keyframes": [
+        {
+          "id": "b8a",
+          "title": "El servidor no los sigue",
+          "visual": "Vista aérea desde atrás del servidor: los tres viajeros se alejan por rutas que comienzan a separarse. COMPOSICIÓN OBLIGATORIA: aérea oblicua desde atrás, gran plano general de relación; no copiar la altura, horizonte ni distribución del keyframe anterior.",
+          "time_seconds": [
+            112,
+            120
+          ],
+          "entity_ids": [
+            "viajeros",
+            "servidor",
+            "partida",
+            "territorio"
+          ],
+          "event_ids": [
+            "e8"
+          ],
+          "angle": "aérea oblicua desde atrás",
+          "shot_scale": "gran plano general de relación",
+          "depth_planes": [
+            "estructura cercana",
+            "sujetos",
+            "trayectoria",
+            "territorio amplio",
+            "cielo mínimo"
+          ],
+          "continuity_from": "b7b",
+          "transition_to_next": "Corte de eje, altura y escala hacia el siguiente instante.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Movimiento mínimo compatible con aérea oblicua desde atrás.",
+            "allowed": "Sólo el gesto o cambio material descrito en este instante.",
+            "forbidden": "Repetir la composición anterior, añadir reparto, texto, sangre, ceremonia o utilería no inventariada."
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "generation_inputs": []
+        },
+        {
+          "id": "b8b",
+          "title": "El nombre permanece",
+          "visual": "Desde el suelo, lluvia y raíces aparecen lejos donde estuvo Jururiana; el sendero de Umaralá queda vacío, sin ascensión. COMPOSICIÓN OBLIGATORIA: a ras del suelo mirando hacia la distancia, plano final de fuga; no copiar la altura, horizonte ni distribución del keyframe anterior.",
+          "time_seconds": [
+            120,
+            128
+          ],
+          "entity_ids": [
+            "umarala",
+            "viajeros",
+            "canto",
+            "partida",
+            "territorio"
+          ],
+          "event_ids": [
+            "e8"
+          ],
+          "angle": "a ras del suelo mirando hacia la distancia",
+          "shot_scale": "plano final de fuga",
+          "depth_planes": [
+            "materia muy cercana",
+            "sendero",
+            "figuras pequeñas",
+            "paisaje",
+            "horizonte"
+          ],
+          "continuity_from": "b8a",
+          "transition_to_next": "Corte de eje, altura y escala hacia el siguiente instante.",
+          "scene_role": "visible_magic",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Los elementos cotidianos inventariados en El nombre permanece.",
+            "impossible_behavior": "Desde el suelo, lluvia y raíces aparecen lejos donde estuvo Jururiana; el sendero de Umaralá queda vacío, sin ascensión.",
+            "narrative_effect": "Hace visible el cambio de relación narrado en el evento e8.",
+            "agency": "La transformación pertenece al relato o a su traducción editorial; las personas no la controlan como superpoder.",
+            "physical_translation": "Hojas mate separadas cambian de silueta, posición o continuidad mediante pliegues y vacíos; sin partículas CGI.",
+            "visible_test": "La contradicción material debe entenderse en una sola imagen sin texto ni duplicación de personajes.",
+            "provenance": "narrated_fact",
+            "temporal_role": "present",
+            "event_ids": [
+              "e8"
+            ]
+          },
+          "motion_contract": {
+            "camera": "Movimiento mínimo compatible con a ras del suelo mirando hacia la distancia.",
+            "allowed": "Sólo el gesto o cambio material descrito en este instante.",
+            "forbidden": "Repetir la composición anterior, añadir reparto, texto, sangre, ceremonia o utilería no inventariada."
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "generation_inputs": []
+        }
+      ]
+    }
+  ]
+}

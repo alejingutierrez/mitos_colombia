@@ -1,0 +1,947 @@
+{
+  "schema": "huitoto-bible-review-assets/v2",
+  "canonical": false,
+  "user_art_approved": false,
+  "community_validation": false,
+  "selection_path": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/huitotos/biblia/tanda-01-revision-02/selection.v2.json",
+  "selection_sha256": "645cf4afb0819e6582521ddd28fa93617cafa98622d5fe4fd8cacf77c03527f7",
+  "images": [
+    {
+      "id": "P04",
+      "title": "Nofïdeño — identidad y sostén",
+      "group": "Personas",
+      "provider": "OpenAI paid API",
+      "model": "gpt-image-2.5-sunburst",
+      "quality": "high",
+      "endpoint": "/v1/images/edits",
+      "size": "1024x1536",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "bytes": 384384,
+      "output_file": "p04-revision-02-v3.jpeg",
+      "output_sha256": "cef200ba144c506fa337512b24979709f870bb23bca874ccd27a37bbbde0ac79",
+      "prompt_file": "prompts/p04-revision-02-v3.prompt.txt",
+      "prompt_sha256": "e16d23af6ab2ed4f29becb36043620f3d76cd275e5b665b6c20ec20eed902702",
+      "inputs": [
+        {
+          "path": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/huitotos/biblia/tanda-01-piloto/p04-master-v1.jpeg",
+          "role": "edit_target",
+          "sha256": "4fd2dd0d28c6b70af9087f1fe99ec09438ffd2d946fabcb4406031501e8952db"
+        },
+        {
+          "path": "/Users/alegut/Downloads/huitotos (1).jpg",
+          "role": "user_reference_or_documentary_construction",
+          "sha256": "7b3655ab7594a5a25ff65b0a3d6c809cc21915ea18fb50aaaf9e9461cc66ce77"
+        },
+        {
+          "path": "/Users/alegut/MyApps/Personal/mitos_colombia/output/research/uitoto-revision-fidelidad-2026-09-14/referencias/rostro-adulta-historico-cara.png",
+          "role": "user_reference_or_documentary_construction",
+          "sha256": "198ea70651a927e8cb1fd705e683e44b74a0fe030bbfc2b7aae1c75c7f2ffede"
+        }
+      ],
+      "sources": [
+        "S01",
+        "S02",
+        "S03",
+        "S04",
+        "S06",
+        "U03"
+      ],
+      "decision": "Se adapta prenda de fibra visible en foto U03: forma recta, borde irregular, disposición angular del frente. Dorso inventado sin dibujo. Atribución/fecha/material exacto pendientes, sin afirmar vestido canónico de la Madre.",
+      "remaining_limits": "Prenda adaptada de U03; atribución, fecha y material exacto pendientes. El vestido de Nofïdeño no está descrito. Dorso sin dibujo y paisaje sobre hombro son elecciones artísticas.",
+      "visual_review": "Tres vistas completas. Prenda fibrosa clara y flecos; dorso sin patrón inventado. Cabello y proporciones coherentes, mundo apoyado en hombro.",
+      "parent_output_file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/huitotos/biblia/tanda-01-piloto/p04-master-v1.jpeg",
+      "parent_output_sha256": "4fd2dd0d28c6b70af9087f1fe99ec09438ffd2d946fabcb4406031501e8952db",
+      "preview": "review/p04-after.jpeg",
+      "before_preview": "review/p04-before.jpeg",
+      "contract_file": "p04-contract.revision-final.json",
+      "contract_sha256": "4e1583e4272adfe580d6876a783f337f2dd5f2793e9facee99d741248bbe4015",
+      "evidence": [
+        {
+          "myth_id": 40,
+          "title": "Nofïdeño, la Madre que sostiene la tierra",
+          "reviewed_fields": [
+            "mito",
+            "historia",
+            "versiones",
+            "research_notes"
+          ],
+          "field_sha256": {
+            "mito": "827269617176f276883a28666b30a89e7d26867ffb75a18b0487a20888aa7f07",
+            "historia": "37765b824efa7a1ba5f221072c9179fe64ce13f485498dd150160674efe61a9f",
+            "versiones": "c5c311de2a198d01508450159dfc6992112d3e87ba5efc75083e3190797371a0",
+            "research_notes": "fff1eeebed6233c7af3b64f9028d5c28beae7ad5c789941ef9882929d41ae2b4"
+          },
+          "narrative": "La Madre precede a la tierra y cambia el mundo de hombro; los nombres del capítulo son aspectos, no diosas separadas.",
+          "localized_credit": "Urbina, Las palabras del origen, pp. 48–51; Jitoma Naïre, La Samaritana, 1971; traducción Jitoma Zafiama."
+        }
+      ],
+      "user_art_approved": false,
+      "community_validation": false
+    },
+    {
+      "id": "P11",
+      "title": "Dïïjoma — identidad humana",
+      "group": "Personas",
+      "provider": "OpenAI paid API",
+      "model": "gpt-image-2.5-sunburst",
+      "quality": "high",
+      "endpoint": "/v1/images/edits",
+      "size": "1024x1536",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "bytes": 339988,
+      "output_file": "p11-revision-02-v4.jpeg",
+      "output_sha256": "e91d089ee42263f882a343e2638581f6f51e806ad5a7c22c54f63600c78948bc",
+      "prompt_file": "prompts/p11-revision-02-v4.prompt.txt",
+      "prompt_sha256": "d5f327ebd732acf46d46bf0cc37e3b6a8ff6a462ffb7c6ee4d0984f9ae367a37",
+      "inputs": [
+        {
+          "path": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/huitotos/biblia/tanda-01-piloto/p11-master-v1.jpeg",
+          "role": "edit_target",
+          "sha256": "4f52035d4d2737b73ea967bd7cd5b20e66cde43bcf049a0e075f92ed696bf98e"
+        }
+      ],
+      "sources": [
+        "S01",
+        "S03",
+        "S04",
+        "S06",
+        "U02",
+        "U06"
+      ],
+      "decision": "Rostros y cabello contrastados con adultos aportados; balaca sencilla inspirada en Pablo. Taparrabo antiguo documentado, sin transferir su pintura, collar o rol ceremonial a la identidad base.",
+      "remaining_limits": "Taparrabo con respaldo histórico; facciones, edad y balaca propuestas. No hay un rostro canónico de Dïïjoma ni vestuario descrito para esta identidad base.",
+      "visual_review": "Tres cuerpos completos, tira de corteza y balaca consistentes; desaparece la túnica verde. Frente, perfil y espalda revisados.",
+      "parent_output_file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/huitotos/biblia/tanda-01-piloto/p11-master-v1.jpeg",
+      "parent_output_sha256": "4f52035d4d2737b73ea967bd7cd5b20e66cde43bcf049a0e075f92ed696bf98e",
+      "preview": "review/p11-after.jpeg",
+      "before_preview": "review/p11-before.jpeg",
+      "contract_file": "p11-contract.revision-final.json",
+      "contract_sha256": "ebf0a0dc04751e24011dd4afc2a8e2866c4b60ddf51b3f7b68ef8e6dbe31068a",
+      "evidence": [
+        {
+          "myth_id": 44,
+          "title": "Dïïjoma, hombre-serpiente y águila",
+          "reviewed_fields": [
+            "mito",
+            "historia",
+            "versiones",
+            "research_notes"
+          ],
+          "field_sha256": {
+            "mito": "1f519b0e93c7633bfba2b148c6cc8ca33d887bee661c043a2ef8831c7db7a0d9",
+            "historia": "573dfc1915cbbf48a2118698c3b4644a3bc517065ca404ad79d6ca6317e7f66e",
+            "versiones": "1349bea746e78cc6716b2117c7ad7512572a1fa4b34f76f2a64a84cce871ddb5",
+            "research_notes": "5efa342fe5fa96a9ae65c4f7057cd5439eac2ec87db664e6e66e453dcb486a45"
+          },
+          "narrative": "Hombre que cría una boa exteriorizada de su poder; entra en ella y posteriormente se transforma en águila. No fusionar base y estados.",
+          "localized_credit": "Urbina, pp. 105–113; Moisés Tejada, El Encanto / Caraparaná, 1979; traducción Eudocio Becerra y Jitoma Zafiama."
+        }
+      ],
+      "user_art_approved": false,
+      "community_validation": false
+    },
+    {
+      "id": "H03",
+      "title": "Humanidad — gramática de participación",
+      "group": "Personas",
+      "provider": "OpenAI paid API",
+      "model": "gpt-image-2.5-sunburst",
+      "quality": "high",
+      "endpoint": "/v1/images/edits",
+      "size": "1536x1024",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "bytes": 289801,
+      "output_file": "h03-revision-02-v5.jpeg",
+      "output_sha256": "499c67ad5d2f9d70797bd54df0a98ae51dd463d9f7242983409fae8634f932d7",
+      "prompt_file": "prompts/h03-revision-02-v5.prompt.txt",
+      "prompt_sha256": "bfc8114ea1ffaa6c29c354151b516d5199bf8309e121753b6b1b9c882685d1f6",
+      "inputs": [
+        {
+          "path": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/huitotos/biblia/tanda-01-revision-02/h03-revision-02-v4.jpeg",
+          "role": "self_generated_revision_edit_target",
+          "sha256": "a657caa2f82533f70f380a74ca62e6b2bef0da763652be58c9a23dcc5752d29e"
+        }
+      ],
+      "sources": [
+        "S01",
+        "S02",
+        "S03",
+        "S04",
+        "S05",
+        "U02",
+        "U03",
+        "U06"
+      ],
+      "decision": "Estado de vestuario propuesto a partir de prendas fotografiadas U03 y construcción de coronas/collar U06. Se declara adaptación; no ritual exacto ni uniforme de todos los personajes. Rostros de las tres mujeres diferenciados en edades adultas propuestas (28/48/68).",
+      "remaining_limits": "Vestuario colectivo propuesto desde fotos; significado de marcas y ritual sin verificar. Edades, rostros y manos enlazadas son composición artística; no canon de personas o ceremonia.",
+      "visual_review": "Seis adultos completos con variación de edades/rostros femeninos, prendas fibrosas propuestas, dos coronas pequeñas y collar. Se retiró la ropa comercial.",
+      "parent_output_file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/huitotos/biblia/tanda-01-piloto/h03-master-v1.jpeg",
+      "parent_output_sha256": "98377b89a3b5d19b89d705257102c7e275e9c2543fa8a8e55151a9fd477b615f",
+      "preview": "review/h03-after.jpeg",
+      "before_preview": "review/h03-before.jpeg",
+      "contract_file": "h03-contract.revision-final.json",
+      "contract_sha256": "c33f922be07633c0380be2f05ae20b204b1fa8c1cbe7d9b82cb6b9aa83e31a05",
+      "evidence": [
+        {
+          "myth_id": 46,
+          "title": "El diluvio y el origen de los bailes",
+          "reviewed_fields": [
+            "mito",
+            "historia",
+            "versiones",
+            "research_notes"
+          ],
+          "field_sha256": {
+            "mito": "c8d3154f3a455a4bfd28d9fc90c3576b4e7a1b599d733a892d95a0634a15e0aa",
+            "historia": "9b24db36a63bf18e89e2090bdfffc339352b6b3f15deedbb0c9c0d35c7fa8b44",
+            "versiones": "323113badedecbfc2ecba5e9128eb10c0a7ef4abeb2d7ac7c1b3e390a2e21f68",
+            "research_notes": "1ed62c5e99a01c59a82eac690a7e19a138bf7adb88dab3c262010974c44b2127"
+          },
+          "narrative": "El ciclo termina en reconstrucción colectiva, trabajo, alimentos y bailes; el vestuario de la humanidad mítica no se describe.",
+          "localized_credit": "Corpus del mito 46; comparación visual contemporánea delimitada: Tobón y María Kuiro Castro, ClimaCom 2020, figura 6, fotografías de 2014 y 2015."
+        }
+      ],
+      "user_art_approved": false,
+      "community_validation": false
+    },
+    {
+      "id": "V07",
+      "title": "Dïïjoma — águila de yarumo",
+      "group": "Fauna",
+      "provider": "OpenAI paid API",
+      "model": "gpt-image-2.5-sunburst",
+      "quality": "high",
+      "endpoint": "/v1/images/edits",
+      "size": "1536x1024",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "bytes": 391911,
+      "output_file": "v07-revision-02-v1.jpeg",
+      "output_sha256": "1320a132d8f3bffadebf5c5c4ea76b01ddde7ba1522d5a43489c47d3be6d481d",
+      "prompt_file": "prompts/v07-revision-02-v1.prompt.txt",
+      "prompt_sha256": "f0bb85d58d81f25471654a0f265123e5ce2bbe78339f661d816511b5192dff51",
+      "inputs": [
+        {
+          "path": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/huitotos/biblia/tanda-01-piloto/v07-master-v2.jpeg",
+          "role": "edit_target",
+          "sha256": "8b765debbbf5e29bd72f74975227f3a2c9039724f9a68e200d2b291124738c87"
+        },
+        {
+          "path": "/private/tmp/uitoto-harpia-ML245402661.jpeg",
+          "role": "documentary_morphology_reference",
+          "sha256": "f68252310e9c2b49e9c8f69c1c65a507855550ccfb074e558cfbf2cae8e7c244"
+        },
+        {
+          "path": "/Users/alegut/MyApps/Personal/mitos_colombia/output/research/uitoto-revision-fidelidad-2026-09-14/referencias/rio-igaraparana.png",
+          "role": "documentary_morphology_reference",
+          "sha256": "93670dfdfec47fa31208a85700640fd1c7e6e4d1b65fe8451862d09b42ccf879"
+        }
+      ],
+      "sources": [
+        "S01",
+        "S07",
+        "S08",
+        "S06"
+      ],
+      "decision": "La nota del relato identifica arpía; se corrigen anatomía adulta, banda pectoral y alas. La transformación de yarumo se conserva como recurso narrativo discreto.",
+      "remaining_limits": "Adulto de arpía como comparación. Cabeza y cresta siguen estilizadas; traducción del yarumo es una regla editorial, no iconografía comunitaria validada.",
+      "visual_review": "Dos aves completas, banda pectoral oscura, cola barrada, patas fuertes y estudio vegetal. Alas dentro del encuadre.",
+      "parent_output_file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/huitotos/biblia/tanda-01-piloto/v07-master-v2.jpeg",
+      "parent_output_sha256": "8b765debbbf5e29bd72f74975227f3a2c9039724f9a68e200d2b291124738c87",
+      "preview": "review/v07-after.jpeg",
+      "before_preview": "review/v07-before.jpeg",
+      "contract_file": "v07-contract.revision-final.json",
+      "contract_sha256": "6783ef43073b3c8c229fd99ca93cf0ba7e0a00de98997e47fabcf34e121fb239",
+      "evidence": [
+        {
+          "myth_id": 44,
+          "title": "Dïïjoma, hombre-serpiente y águila",
+          "reviewed_fields": [
+            "mito",
+            "historia",
+            "versiones",
+            "research_notes"
+          ],
+          "field_sha256": {
+            "mito": "1f519b0e93c7633bfba2b148c6cc8ca33d887bee661c043a2ef8831c7db7a0d9",
+            "historia": "573dfc1915cbbf48a2118698c3b4644a3bc517065ca404ad79d6ca6317e7f66e",
+            "versiones": "1349bea746e78cc6716b2117c7ad7512572a1fa4b34f76f2a64a84cce871ddb5",
+            "research_notes": "5efa342fe5fa96a9ae65c4f7057cd5439eac2ec87db664e6e66e453dcb486a45"
+          },
+          "narrative": "Hoja de yarumo convertida en alas y raíz en garras; carbón alrededor de ojos; la nota de Urbina identifica májaño como gran arpía cazadora de monos.",
+          "localized_credit": "Urbina, p. 112 y nota; taxón documentado aquí, sin presentar una transformación fantástica como lámina zoológica de un ejemplar natural."
+        }
+      ],
+      "user_art_approved": false,
+      "community_validation": false
+    },
+    {
+      "id": "V06",
+      "title": "Dïïjoma — boa exteriorizada",
+      "group": "Fauna",
+      "provider": "OpenAI paid API",
+      "model": "gpt-image-2.5-sunburst",
+      "quality": "high",
+      "endpoint": "/v1/images/edits",
+      "size": "1536x1024",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "bytes": 352504,
+      "output_file": "v06-revision-02-v1.jpeg",
+      "output_sha256": "5807179724bd6378908e1b5dbb98b5b274a464a5930df5c0fdee26103bf6eb71",
+      "prompt_file": "prompts/v06-revision-02-v1.prompt.txt",
+      "prompt_sha256": "0ef2ab8e4fc88621d98c4d35c2afc6658f0649b57c2e5ed34b60bc491a9b892d",
+      "inputs": [
+        {
+          "path": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/huitotos/biblia/tanda-01-piloto/v06-master-v2.jpeg",
+          "role": "edit_target",
+          "sha256": "97c7f1a8d732d746369a95d5e8bd0aabfcf5f2a08fa77bba3e87c4233e4263cf"
+        },
+        {
+          "path": "/private/tmp/uitoto-anaconda-NZP-20160216-194CTW.jpeg",
+          "role": "documentary_morphology_reference",
+          "sha256": "e3d68821873178e572278e0dd94d612540cdc92dbb85dc0d717486fdb021429e"
+        },
+        {
+          "path": "/Users/alegut/MyApps/Personal/mitos_colombia/output/research/uitoto-revision-fidelidad-2026-09-14/referencias/rio-igaraparana.png",
+          "role": "documentary_morphology_reference",
+          "sha256": "93670dfdfec47fa31208a85700640fd1c7e6e4d1b65fe8451862d09b42ccf879"
+        }
+      ],
+      "sources": [
+        "S01",
+        "S09",
+        "S06"
+      ],
+      "decision": "Boa del relato con anaconda como anclaje editorial de morfología acuática; no se convierte esta elección en especie tradicional demostrada.",
+      "remaining_limits": "Anaconda como comparación, sin especie del mito determinada. El ojo y algunas manchas aún quedan simplificados y sobredimensionados para lectura.",
+      "visual_review": "Cría en olla, etapa intermedia y gran cuerpo completos. Se rebaja relieve de ribera; ojo grande permanece como límite.",
+      "parent_output_file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/huitotos/biblia/tanda-01-piloto/v06-master-v2.jpeg",
+      "parent_output_sha256": "97c7f1a8d732d746369a95d5e8bd0aabfcf5f2a08fa77bba3e87c4233e4263cf",
+      "preview": "review/v06-after.jpeg",
+      "before_preview": "review/v06-before.jpeg",
+      "contract_file": "v06-contract.revision-final.json",
+      "contract_sha256": "fb2b6c66d38c5a33a0030ee0c1b7cacdf704b4b79389c01711f5df7f7e982f6c",
+      "evidence": [
+        {
+          "myth_id": 44,
+          "title": "Dïïjoma, hombre-serpiente y águila",
+          "reviewed_fields": [
+            "mito",
+            "historia",
+            "versiones",
+            "research_notes"
+          ],
+          "field_sha256": {
+            "mito": "1f519b0e93c7633bfba2b148c6cc8ca33d887bee661c043a2ef8831c7db7a0d9",
+            "historia": "573dfc1915cbbf48a2118698c3b4644a3bc517065ca404ad79d6ca6317e7f66e",
+            "versiones": "1349bea746e78cc6716b2117c7ad7512572a1fa4b34f76f2a64a84cce871ddb5",
+            "research_notes": "5efa342fe5fa96a9ae65c4f7057cd5439eac2ec87db664e6e66e453dcb486a45"
+          },
+          "narrative": "La cría se captura en una ollita, crece con el agua, ensancha la laguna y tiene escala formidable; es exteriorización del poder del hombre, no una mascota autónoma ajena al ciclo.",
+          "localized_credit": "Urbina, pp. 106–111; misma versión de Moisés Tejada. Taxón específico de la boa no fijado para este modelo."
+        }
+      ],
+      "user_art_approved": false,
+      "community_validation": false
+    },
+    {
+      "id": "L01",
+      "title": "Maloca — exterior e interior",
+      "group": "Entorno",
+      "provider": "OpenAI paid API",
+      "model": "gpt-image-2.5-sunburst",
+      "quality": "high",
+      "endpoint": "/v1/images/edits",
+      "size": "1536x1024",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "bytes": 479711,
+      "output_file": "l01-revision-02-v1.jpeg",
+      "output_sha256": "d3ce7c6f9fbf220726639aff4d26de19285512e7185e81c0004e5ebe9a97e791",
+      "prompt_file": "prompts/l01-revision-02-v1.prompt.txt",
+      "prompt_sha256": "17c6f9af625d5dc7852eaee999cf1173bf1c8c35ffbcb827ba9044898ee5f74d",
+      "inputs": [
+        {
+          "path": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/huitotos/biblia/tanda-01-piloto/l01-master-v1.jpeg",
+          "role": "edit_target",
+          "sha256": "086d3cd6cbd8b035c649004d57dcbde0816a7478287d3e4a8e115ec152d14ee8"
+        },
+        {
+          "path": "/Users/alegut/MyApps/Personal/mitos_colombia/output/research/uitoto-revision-fidelidad-2026-09-14/referencias/maloca-geometria.png",
+          "role": "documentary_morphology_reference",
+          "sha256": "c0e3820240d43a66e585c468e4d44a8a0e0006b2b65dc56602ce795af5b56f37"
+        },
+        {
+          "path": "/Users/alegut/MyApps/Personal/mitos_colombia/output/research/uitoto-revision-fidelidad-2026-09-14/referencias/maloca-pdf-057.png",
+          "role": "documentary_morphology_reference",
+          "sha256": "76b8540367cc849dd97aaa2c3e463e9cd5e75ff3faebd09a3a0cc45d064156e8"
+        },
+        {
+          "path": "/Users/alegut/MyApps/Personal/mitos_colombia/output/research/uitoto-revision-fidelidad-2026-09-14/referencias/maloca-pdf-061.png",
+          "role": "documentary_morphology_reference",
+          "sha256": "663fb11af8d967a170535ea072f714fe3547e3c44c06d2abd01b3f35bd2ff1ec"
+        }
+      ],
+      "sources": [
+        "S05",
+        "S06"
+      ],
+      "decision": "Se corrige masa y estructura con caso UGC km. 11; paños casi hasta suelo se apoyan en testimonio histórico del estudio. No es un plano universal o arqueológico.",
+      "remaining_limits": "Geometría tomada de un caso localizado, con cerramiento vegetal reconstruido. La correspondencia completa de planta, cuatro apoyos y ambas vistas necesita revisión arquitectónica.",
+      "visual_review": "Dos vistas con caballete recto y grandes faldones, apoyos principales diferenciados, piso de tierra y terreno de bosque. Desaparece cubierta de punta única.",
+      "parent_output_file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/huitotos/biblia/tanda-01-piloto/l01-master-v1.jpeg",
+      "parent_output_sha256": "086d3cd6cbd8b035c649004d57dcbde0816a7478287d3e4a8e115ec152d14ee8",
+      "preview": "review/l01-after.jpeg",
+      "before_preview": "review/l01-before.jpeg",
+      "contract_file": "l01-contract.revision-final.json",
+      "contract_sha256": "5df2455f64cd6d513cbf0943714cb807402585813056383404949e0d3a25d098",
+      "evidence": [
+        {
+          "myth_id": 44,
+          "title": "Dïïjoma, hombre-serpiente y águila",
+          "reviewed_fields": [
+            "mito",
+            "historia",
+            "versiones",
+            "research_notes"
+          ],
+          "field_sha256": {
+            "mito": "1f519b0e93c7633bfba2b148c6cc8ca33d887bee661c043a2ef8831c7db7a0d9",
+            "historia": "573dfc1915cbbf48a2118698c3b4644a3bc517065ca404ad79d6ca6317e7f66e",
+            "versiones": "1349bea746e78cc6716b2117c7ad7512572a1fa4b34f76f2a64a84cce871ddb5",
+            "research_notes": "5efa342fe5fa96a9ae65c4f7057cd5439eac2ec87db664e6e66e453dcb486a45"
+          },
+          "narrative": "Casa colectiva y espacio de encuentro, protección y renovación; las malocas de los relatos son instancias, no un único edificio.",
+          "localized_credit": "Corpus y referencia localizada Tukunare, Caucaya / Puerto Leguízamo, Radio Nacional de Colombia, 15-01-2024: cubierta muy alta de fibras vegetales y cerramiento de tablas verticales."
+        },
+        {
+          "myth_id": 46,
+          "title": "El diluvio y el origen de los bailes",
+          "reviewed_fields": [
+            "mito",
+            "historia",
+            "versiones",
+            "research_notes"
+          ],
+          "field_sha256": {
+            "mito": "c8d3154f3a455a4bfd28d9fc90c3576b4e7a1b599d733a892d95a0634a15e0aa",
+            "historia": "9b24db36a63bf18e89e2090bdfffc339352b6b3f15deedbb0c9c0d35c7fa8b44",
+            "versiones": "323113badedecbfc2ecba5e9128eb10c0a7ef4abeb2d7ac7c1b3e390a2e21f68",
+            "research_notes": "1ed62c5e99a01c59a82eac690a7e19a138bf7adb88dab3c262010974c44b2127"
+          },
+          "narrative": "Casa colectiva y espacio de encuentro, protección y renovación; las malocas de los relatos son instancias, no un único edificio.",
+          "localized_credit": "Corpus y referencia localizada Tukunare, Caucaya / Puerto Leguízamo, Radio Nacional de Colombia, 15-01-2024: cubierta muy alta de fibras vegetales y cerramiento de tablas verticales."
+        },
+        {
+          "myth_id": 48,
+          "title": "Yiida Buinama y el origen del maguaré",
+          "reviewed_fields": [
+            "mito",
+            "historia",
+            "versiones",
+            "research_notes"
+          ],
+          "field_sha256": {
+            "mito": "800a8d36ede3f5ee36a3276dba7cfb084f3352bb23eaad1aac6b756e456887ee",
+            "historia": "7799b0612f5bcab4bd26bc146d4afd047a8d5819bc172bc29dbaa790c7c17b72",
+            "versiones": "3b8636bf9a85b9bb0a1718277ac92dca7d6da2e75ac31a1b7d52274dd053f51b",
+            "research_notes": "f36e5f2dbdcc5c1cb9e5b43800d6b679029f015239197b3ce27e59defdb7196d"
+          },
+          "narrative": "Casa colectiva y espacio de encuentro, protección y renovación; las malocas de los relatos son instancias, no un único edificio.",
+          "localized_credit": "Corpus y referencia localizada Tukunare, Caucaya / Puerto Leguízamo, Radio Nacional de Colombia, 15-01-2024: cubierta muy alta de fibras vegetales y cerramiento de tablas verticales."
+        }
+      ],
+      "user_art_approved": false,
+      "community_validation": false
+    },
+    {
+      "id": "L02",
+      "title": "Chagra — claros, cultivos y recorridos",
+      "group": "Entorno",
+      "provider": "OpenAI paid API",
+      "model": "gpt-image-2.5-sunburst",
+      "quality": "high",
+      "endpoint": "/v1/images/edits",
+      "size": "1536x1024",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "bytes": 547852,
+      "output_file": "l02-revision-02-v1.jpeg",
+      "output_sha256": "38470934eb4cd663d96aa25c8d39c157a90f21b6f4fb2ccaa7f31d90157f7dd1",
+      "prompt_file": "prompts/l02-revision-02-v2.prompt.txt",
+      "prompt_sha256": "5549fdee74e0a26cd2ef5be26eca5d66fb3e088525ebb01492d048087c651031",
+      "inputs": [
+        {
+          "path": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/huitotos/biblia/tanda-01-piloto/l02-master-v1.jpeg",
+          "role": "edit_target",
+          "sha256": "9586a0fc8c94452a21d22e55700346908c9c59fb770a453fba43a4dbecd13e27"
+        },
+        {
+          "path": "/Users/alegut/MyApps/Personal/mitos_colombia/output/research/uitoto-revision-fidelidad-2026-09-14/referencias/chagra-nueva.png",
+          "role": "documentary_morphology_reference",
+          "sha256": "0515d52c56a1358b4bd7c6acaeea200b7315ec225aa32e92cf5b040581eacd47"
+        },
+        {
+          "path": "/Users/alegut/MyApps/Personal/mitos_colombia/output/research/uitoto-revision-fidelidad-2026-09-14/referencias/chagra-pdf-087.png",
+          "role": "documentary_morphology_reference",
+          "sha256": "eb8900c8f038cea919ee4276e3929276d3778c81a504e6318a0f0fbb9714f497"
+        }
+      ],
+      "sources": [
+        "S06"
+      ],
+      "decision": "Troncos de la tumba, claros y policultivo irregular sustituyen jardín en filas. Estado joven/productivo combinado para lectura; se declara composición editorial.",
+      "remaining_limits": "Composición editorial de chagra joven/productiva, con residuos de tumba. No representa una parcela, un calendario o todos los pueblos del estudio SINCHI.",
+      "visual_review": "Tocones, troncos y plantas de alturas distintas dentro de claro irregular. Se elimina río de fondo y distribución ornamental en filas.",
+      "parent_output_file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/huitotos/biblia/tanda-01-piloto/l02-master-v1.jpeg",
+      "parent_output_sha256": "9586a0fc8c94452a21d22e55700346908c9c59fb770a453fba43a4dbecd13e27",
+      "preview": "review/l02-after.jpeg",
+      "before_preview": "review/l02-before.jpeg",
+      "contract_file": "l02-contract.revision-final.json",
+      "contract_sha256": "d1456a9db5d20464f9679d176de5f79aca5f4020a8189784e8e904d9c1b7b2ff",
+      "evidence": [
+        {
+          "myth_id": 40,
+          "title": "Nofïdeño, la Madre que sostiene la tierra",
+          "reviewed_fields": [
+            "mito",
+            "historia",
+            "versiones",
+            "research_notes"
+          ],
+          "field_sha256": {
+            "mito": "827269617176f276883a28666b30a89e7d26867ffb75a18b0487a20888aa7f07",
+            "historia": "37765b824efa7a1ba5f221072c9179fe64ce13f485498dd150160674efe61a9f",
+            "versiones": "c5c311de2a198d01508450159dfc6992112d3e87ba5efc75083e3190797371a0",
+            "research_notes": "fff1eeebed6233c7af3b64f9028d5c28beae7ad5c789941ef9882929d41ae2b4"
+          },
+          "narrative": "Herencia de cultivos y cuidado; no existe en el corpus una única distribución válida de chagra.",
+          "localized_credit": "Mito 40; introducción y metadatos de La chagra en La Chorrera, SINCHI/AZICATCH 2011. No se afirma lectura de su PDF completo."
+        }
+      ],
+      "user_art_approved": false,
+      "community_validation": false
+    },
+    {
+      "id": "B01",
+      "title": "Yuca — planta, raíz y almidón",
+      "group": "Planta y objetos",
+      "provider": "OpenAI paid API",
+      "model": "gpt-image-2.5-sunburst",
+      "quality": "high",
+      "endpoint": "/v1/images/edits",
+      "size": "1024x1536",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "bytes": 456598,
+      "output_file": "b01-revision-02-v1.jpeg",
+      "output_sha256": "216c91bb4ff7aa76116253dd53399e62adf20fd2fa7425310de598a1923d9129",
+      "prompt_file": "prompts/b01-revision-02-v1.prompt.txt",
+      "prompt_sha256": "355c4236df575dc3bd9e8519a42d46cbfe305b1ecec54caf12f06675e860fa67",
+      "inputs": [
+        {
+          "path": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/huitotos/biblia/tanda-01-piloto/b01-master-v2.jpeg",
+          "role": "edit_target",
+          "sha256": "4830cdff88803d3b149c93aff523d322c5b9115e4e811db39f4f494677462600"
+        },
+        {
+          "path": "/Users/alegut/MyApps/Personal/mitos_colombia/output/research/uitoto-revision-fidelidad-2026-09-14/referencias/chagra-nueva.png",
+          "role": "documentary_morphology_reference",
+          "sha256": "0515d52c56a1358b4bd7c6acaeea200b7315ec225aa32e92cf5b040581eacd47"
+        }
+      ],
+      "sources": [
+        "S01",
+        "S06"
+      ],
+      "decision": "Se ajusta contexto de chagra y lectura botánica; no se afirma variedad dulce/brava por la imagen.",
+      "remaining_limits": "La imagen no permite distinguir yuca brava/dulce ni certifica una variedad local. Botánica simplificada en papel.",
+      "visual_review": "Planta conectada a raíces, hoja y cortes legibles, contexto con residuos de chagra. Todo cabe en marco.",
+      "parent_output_file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/huitotos/biblia/tanda-01-piloto/b01-master-v2.jpeg",
+      "parent_output_sha256": "4830cdff88803d3b149c93aff523d322c5b9115e4e811db39f4f494677462600",
+      "preview": "review/b01-after.jpeg",
+      "before_preview": "review/b01-before.jpeg",
+      "contract_file": "b01-contract.revision-final.json",
+      "contract_sha256": "774384c5879f28af95a47cf6fa0af5f85f1f279fca8148706d1186d0e24dc938",
+      "evidence": [
+        {
+          "myth_id": 40,
+          "title": "Nofïdeño, la Madre que sostiene la tierra",
+          "reviewed_fields": [
+            "mito",
+            "historia",
+            "versiones",
+            "research_notes"
+          ],
+          "field_sha256": {
+            "mito": "827269617176f276883a28666b30a89e7d26867ffb75a18b0487a20888aa7f07",
+            "historia": "37765b824efa7a1ba5f221072c9179fe64ce13f485498dd150160674efe61a9f",
+            "versiones": "c5c311de2a198d01508450159dfc6992112d3e87ba5efc75083e3190797371a0",
+            "research_notes": "fff1eeebed6233c7af3b64f9028d5c28beae7ad5c789941ef9882929d41ae2b4"
+          },
+          "narrative": "Yuca brava y dulce como herencia; almidón alimenta la boa; ramas de yuca se vinculan a bailes. La ficha no distingue variedades por una geometría inventada.",
+          "localized_credit": "Corpus de los mitos 40, 44 y 46, capítulos correspondientes de Urbina. Morfología general de Manihot esculenta usada como anclaje botánico, no variedad local identificada."
+        },
+        {
+          "myth_id": 44,
+          "title": "Dïïjoma, hombre-serpiente y águila",
+          "reviewed_fields": [
+            "mito",
+            "historia",
+            "versiones",
+            "research_notes"
+          ],
+          "field_sha256": {
+            "mito": "1f519b0e93c7633bfba2b148c6cc8ca33d887bee661c043a2ef8831c7db7a0d9",
+            "historia": "573dfc1915cbbf48a2118698c3b4644a3bc517065ca404ad79d6ca6317e7f66e",
+            "versiones": "1349bea746e78cc6716b2117c7ad7512572a1fa4b34f76f2a64a84cce871ddb5",
+            "research_notes": "5efa342fe5fa96a9ae65c4f7057cd5439eac2ec87db664e6e66e453dcb486a45"
+          },
+          "narrative": "Yuca brava y dulce como herencia; almidón alimenta la boa; ramas de yuca se vinculan a bailes. La ficha no distingue variedades por una geometría inventada.",
+          "localized_credit": "Corpus de los mitos 40, 44 y 46, capítulos correspondientes de Urbina. Morfología general de Manihot esculenta usada como anclaje botánico, no variedad local identificada."
+        },
+        {
+          "myth_id": 46,
+          "title": "El diluvio y el origen de los bailes",
+          "reviewed_fields": [
+            "mito",
+            "historia",
+            "versiones",
+            "research_notes"
+          ],
+          "field_sha256": {
+            "mito": "c8d3154f3a455a4bfd28d9fc90c3576b4e7a1b599d733a892d95a0634a15e0aa",
+            "historia": "9b24db36a63bf18e89e2090bdfffc339352b6b3f15deedbb0c9c0d35c7fa8b44",
+            "versiones": "323113badedecbfc2ecba5e9128eb10c0a7ef4abeb2d7ac7c1b3e390a2e21f68",
+            "research_notes": "1ed62c5e99a01c59a82eac690a7e19a138bf7adb88dab3c262010974c44b2127"
+          },
+          "narrative": "Yuca brava y dulce como herencia; almidón alimenta la boa; ramas de yuca se vinculan a bailes. La ficha no distingue variedades por una geometría inventada.",
+          "localized_credit": "Corpus de los mitos 40, 44 y 46, capítulos correspondientes de Urbina. Morfología general de Manihot esculenta usada como anclaje botánico, no variedad local identificada."
+        }
+      ],
+      "user_art_approved": false,
+      "community_validation": false
+    },
+    {
+      "id": "O02",
+      "title": "Canastos — tres funciones",
+      "group": "Planta y objetos",
+      "provider": "OpenAI paid API",
+      "model": "gpt-image-2.5-sunburst",
+      "quality": "high",
+      "endpoint": "/v1/images/edits",
+      "size": "1536x1024",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "bytes": 305432,
+      "output_file": "o02-revision-02-v1.jpeg",
+      "output_sha256": "769ef9e91dc49d2fdbb3ebe4a90358a2dc0f01def48b8091501ce699b316684a",
+      "prompt_file": "prompts/o02-revision-02-v1.prompt.txt",
+      "prompt_sha256": "c7376a7eb0b0b7f5c4c2aea7c8b1eda4fd523e62586ad336da049decd42f4c7d",
+      "inputs": [
+        {
+          "path": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/huitotos/biblia/tanda-01-piloto/o02-master-v2.jpeg",
+          "role": "edit_target",
+          "sha256": "344ef48e4ae9632fb9594f04944b24bc268d73e5278404216604f6f4e32d3399"
+        },
+        {
+          "path": "/Users/alegut/MyApps/Personal/mitos_colombia/output/research/uitoto-revision-fidelidad-2026-09-14/referencias/maloca-geometria.png",
+          "role": "documentary_morphology_reference",
+          "sha256": "c0e3820240d43a66e585c468e4d44a8a0e0006b2b65dc56602ce795af5b56f37"
+        }
+      ],
+      "sources": [
+        "S10",
+        "S05"
+      ],
+      "decision": "Se conservan funciones/trama contrastada y se corrige fondo histórico. Formas de catálogo actual no se venden como fechado precolonial.",
+      "remaining_limits": "Formas funcionales propuestas y trama comparada con catálogo actual; no fecha precolonial de los tres canastos. Se conserva la utilería original.",
+      "visual_review": "Tres canastos y trama diagonal; se retira muestra flotante. Interior vegetal, postes y entrada con bosque bajo.",
+      "parent_output_file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/huitotos/biblia/tanda-01-piloto/o02-master-v2.jpeg",
+      "parent_output_sha256": "344ef48e4ae9632fb9594f04944b24bc268d73e5278404216604f6f4e32d3399",
+      "preview": "review/o02-after.jpeg",
+      "before_preview": "review/o02-before.jpeg",
+      "contract_file": "o02-contract.revision-final.json",
+      "contract_sha256": "f78804595d74157d84b387f60fc29af8e92a537adfd64cdf46dcfd411dbb3f72",
+      "evidence": [
+        {
+          "myth_id": 41,
+          "title": "El rafue Uuikï, corazón del Padre",
+          "reviewed_fields": [
+            "mito",
+            "historia",
+            "versiones",
+            "research_notes"
+          ],
+          "field_sha256": {
+            "mito": "c770700612db9958c4bfc2b1942cd8d7867fa9248afa1f22cf6961897724efbc",
+            "historia": "e7dcb8534b8f4742b1476a6b8457e56640553c8cb48f59c73865d8eae70adcbd",
+            "versiones": "4f7dc6f506a7aeff3e3ed95091e0b264803087f65f72fcf19b67de9da4850435",
+            "research_notes": "be6449b76bd0f3ec40522ab972e934ed3162f8cee0793f42eff1abf507e0a023"
+          },
+          "narrative": "Canasto sin rendijas que abriga Uuikï; canasto de hojas llevado a maloca; canastos de presentes preparados para visitantes. No equivalencia visual de todos los tipos.",
+          "localized_credit": "Mitos 41, 47 y 54; referencia de cestería de Ismuina: catálogo y fichas de Artesanías de Colombia de diciembre de 2017, piezas Ibigat y Gebebogat."
+        },
+        {
+          "myth_id": 47,
+          "title": "Buinaiño y el origen de la coca",
+          "reviewed_fields": [
+            "mito",
+            "historia",
+            "versiones",
+            "research_notes"
+          ],
+          "field_sha256": {
+            "mito": "e2aa36d44d6a4981747abf74863e52c7f6bc326967d39614d048f1c2996520bf",
+            "historia": "1771f91790a2a9b705687aebb146fb058283ff73af924e78142adf208c3199da",
+            "versiones": "6e121abbbb187da997ceae729b1a0ff0f6c856cc43c13c16351633e49030aa86",
+            "research_notes": "f602f360ca8195b42610e5a574d77820eb2c9eafee17a2e6912e4740654a1045"
+          },
+          "narrative": "Canasto sin rendijas que abriga Uuikï; canasto de hojas llevado a maloca; canastos de presentes preparados para visitantes. No equivalencia visual de todos los tipos.",
+          "localized_credit": "Mitos 41, 47 y 54; referencia de cestería de Ismuina: catálogo y fichas de Artesanías de Colombia de diciembre de 2017, piezas Ibigat y Gebebogat."
+        },
+        {
+          "myth_id": 54,
+          "title": "Jadomacuriño y Guyataiba",
+          "reviewed_fields": [
+            "mito",
+            "historia",
+            "versiones",
+            "research_notes"
+          ],
+          "field_sha256": {
+            "mito": "56107248cdb4417e41c46600d76d8b4c718bc3061c1986a643bb4b5ad9a06c05",
+            "historia": "2463cf0c6ab1017d938690ac7ba7fb59f9901033bf02929939e7684760079c4d",
+            "versiones": "050abc3404c84f39dca894baaced0be1f4d4f9f674d33b9c3309a10a33cb5fb2",
+            "research_notes": "863021ab75d0463308fbd8ecbb63662d6fafa800259254c8d6bf1ee395f8ab53"
+          },
+          "narrative": "Canasto sin rendijas que abriga Uuikï; canasto de hojas llevado a maloca; canastos de presentes preparados para visitantes. No equivalencia visual de todos los tipos.",
+          "localized_credit": "Mitos 41, 47 y 54; referencia de cestería de Ismuina: catálogo y fichas de Artesanías de Colombia de diciembre de 2017, piezas Ibigat y Gebebogat."
+        }
+      ],
+      "user_art_approved": false,
+      "community_validation": false
+    },
+    {
+      "id": "O07",
+      "title": "Maguaré — dos cuerpos sonoros",
+      "group": "Planta y objetos",
+      "provider": "OpenAI paid API",
+      "model": "gpt-image-2.5-sunburst",
+      "quality": "high",
+      "endpoint": "/v1/images/edits",
+      "size": "1536x1024",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "bytes": 315889,
+      "output_file": "o07-revision-02-v1.jpeg",
+      "output_sha256": "b3665d82761d989671f3d99324ab34db507500c12675ecba553f77e47df458c4",
+      "prompt_file": "prompts/o07-revision-02-v1.prompt.txt",
+      "prompt_sha256": "2b7e2195cf92927919e6146deb82608732cd5afd52dfbade7b3f70cafa55aa85",
+      "inputs": [
+        {
+          "path": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/huitotos/biblia/tanda-01-piloto/o07-master-v1.jpeg",
+          "role": "edit_target",
+          "sha256": "79dd2fba593856e9d5f516d407cbe6ab5adc406b86cbd465a25b6dd7d17236ac"
+        },
+        {
+          "path": "/Users/alegut/MyApps/Personal/mitos_colombia/output/research/uitoto-revision-fidelidad-2026-09-14/referencias/maloca-geometria.png",
+          "role": "documentary_morphology_reference",
+          "sha256": "c0e3820240d43a66e585c468e4d44a8a0e0006b2b65dc56602ce795af5b56f37"
+        }
+      ],
+      "sources": [
+        "S01",
+        "S05"
+      ],
+      "decision": "Objetos del relato preservados; material y espacio se corrigen, soporte exacto permanece reconstrucción.",
+      "remaining_limits": "Soporte, inclinación y corte son reconstrucción; no código sonoro, proceso ritual o detalle constructivo certificado.",
+      "visual_review": "Dos troncos ranurados y dos mazos, sin membranas. Espacio interior vegetal y bosque bajo; montaje exacto sigue propuesto.",
+      "parent_output_file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/huitotos/biblia/tanda-01-piloto/o07-master-v1.jpeg",
+      "parent_output_sha256": "79dd2fba593856e9d5f516d407cbe6ab5adc406b86cbd465a25b6dd7d17236ac",
+      "preview": "review/o07-after.jpeg",
+      "before_preview": "review/o07-before.jpeg",
+      "contract_file": "o07-contract.revision-final.json",
+      "contract_sha256": "4cf1e58b10f52f9b0be3e383fd6208bd81330f4d2bca08698e7587b630b7bbec",
+      "evidence": [
+        {
+          "myth_id": 48,
+          "title": "Yiida Buinama y el origen del maguaré",
+          "reviewed_fields": [
+            "mito",
+            "historia",
+            "versiones",
+            "research_notes"
+          ],
+          "field_sha256": {
+            "mito": "800a8d36ede3f5ee36a3276dba7cfb084f3352bb23eaad1aac6b756e456887ee",
+            "historia": "7799b0612f5bcab4bd26bc146d4afd047a8d5819bc172bc29dbaa790c7c17b72",
+            "versiones": "3b8636bf9a85b9bb0a1718277ac92dca7d6da2e75ac31a1b7d52274dd053f51b",
+            "research_notes": "f36e5f2dbdcc5c1cb9e5b43800d6b679029f015239197b3ce27e59defdb7196d"
+          },
+          "narrative": "Dos troncos ahuecados con mazos de madera, caucho y cumare. Soporte y dos voces, no membranas de cuero ni un tambor único.",
+          "localized_credit": "Urbina, pp. 155–156 y 171, Julio Ribera (Muinane), Araracuara 1985, traducción Ismael Mendoza 1987; registro primario del artículo de 2000 en Cervantes/Banrepcultural. Disposición inclinada como opción documentada en Fundación BAT, sin fijar modelo de todas las comunidades."
+        }
+      ],
+      "user_art_approved": false,
+      "community_validation": false
+    },
+    {
+      "id": "L04",
+      "title": "Laguna — crecimiento y retirada",
+      "group": "Entorno",
+      "provider": "OpenAI paid API",
+      "model": "gpt-image-2.5-sunburst",
+      "quality": "high",
+      "endpoint": "/v1/images/edits",
+      "size": "1536x1024",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "bytes": 452357,
+      "output_file": "l04-revision-02-v1.jpeg",
+      "output_sha256": "e1b554d9fe9096ee69de79a784fe22cb9bc2d3aa50ed4e438b87917576e756be",
+      "prompt_file": "prompts/l04-revision-02-v1.prompt.txt",
+      "prompt_sha256": "2218459ec6c0c02e12c06a1d23730faf8d48fcd679828e92a97ea8383cca2ac4",
+      "inputs": [
+        {
+          "path": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/huitotos/biblia/tanda-01-piloto/l04-master-v1.jpeg",
+          "role": "edit_target",
+          "sha256": "0705e51907166a1241095574533a977801c810d94a45a783ebf6191a86d2f9d1"
+        },
+        {
+          "path": "/Users/alegut/MyApps/Personal/mitos_colombia/output/research/uitoto-revision-fidelidad-2026-09-14/referencias/rio-igaraparana.png",
+          "role": "documentary_morphology_reference",
+          "sha256": "93670dfdfec47fa31208a85700640fd1c7e6e4d1b65fe8451862d09b42ccf879"
+        }
+      ],
+      "sources": [
+        "S01",
+        "S06",
+        "S09"
+      ],
+      "decision": "Laguna ficticia del ciclo, con configuración de ribera baja e inundación; fases narrativas no se confunden con cartografía de Igaraparaná.",
+      "remaining_limits": "Laguna ficticia de ribera baja; no cartografía de Igaraparaná. Continuidad de vegetación/agua sigue adaptación narrativa.",
+      "visual_review": "Tres estados de la misma laguna, árbol bifurcado y ascenso/retirada del agua legibles. Suelo húmedo con hojas.",
+      "parent_output_file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/huitotos/biblia/tanda-01-piloto/l04-master-v1.jpeg",
+      "parent_output_sha256": "0705e51907166a1241095574533a977801c810d94a45a783ebf6191a86d2f9d1",
+      "preview": "review/l04-after.jpeg",
+      "before_preview": "review/l04-before.jpeg",
+      "contract_file": "l04-contract.revision-final.json",
+      "contract_sha256": "e7dc30a52597240fb0519d69badbe93a436f43750d25da2c0406510ce6dad981",
+      "evidence": [
+        {
+          "myth_id": 44,
+          "title": "Dïïjoma, hombre-serpiente y águila",
+          "reviewed_fields": [
+            "mito",
+            "historia",
+            "versiones",
+            "research_notes"
+          ],
+          "field_sha256": {
+            "mito": "1f519b0e93c7633bfba2b148c6cc8ca33d887bee661c043a2ef8831c7db7a0d9",
+            "historia": "573dfc1915cbbf48a2118698c3b4644a3bc517065ca404ad79d6ca6317e7f66e",
+            "versiones": "1349bea746e78cc6716b2117c7ad7512572a1fa4b34f76f2a64a84cce871ddb5",
+            "research_notes": "5efa342fe5fa96a9ae65c4f7057cd5439eac2ec87db664e6e66e453dcb486a45"
+          },
+          "narrative": "La laguna aumenta con la boa y se seca tras su partida; retorna el agua cuando vuelve. Son fases de un mismo lugar, no tres lagunas nuevas.",
+          "localized_credit": "Urbina, pp. 107–109, misma versión de Moisés Tejada. Ubicación cartográfica no fijada."
+        }
+      ],
+      "user_art_approved": false,
+      "community_validation": false
+    },
+    {
+      "id": "R03",
+      "title": "Diluvio — agua hirviente y recomposición",
+      "group": "Entorno",
+      "provider": "OpenAI paid API",
+      "model": "gpt-image-2.5-sunburst",
+      "quality": "high",
+      "endpoint": "/v1/images/edits",
+      "size": "1536x1024",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "bytes": 477128,
+      "output_file": "r03-revision-02-v1.jpeg",
+      "output_sha256": "1b825fa1dfceabf909ce43f8c15b2f1b05d7929f2cb3d91ca204b4daff36f98e",
+      "prompt_file": "prompts/r03-revision-02-v1.prompt.txt",
+      "prompt_sha256": "c406ba29be740c1b8d5e1618761fdf9291138cbe2f94677c1fa8b2a064df47d4",
+      "inputs": [
+        {
+          "path": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/huitotos/biblia/tanda-01-piloto/r03-master-v1.jpeg",
+          "role": "edit_target",
+          "sha256": "f70f05e51d69c59eaaab3e7672741d077ce0b033a1d468344fbee05dacc0fd56"
+        },
+        {
+          "path": "/Users/alegut/MyApps/Personal/mitos_colombia/output/research/uitoto-revision-fidelidad-2026-09-14/referencias/rio-igaraparana.png",
+          "role": "documentary_morphology_reference",
+          "sha256": "93670dfdfec47fa31208a85700640fd1c7e6e4d1b65fe8451862d09b42ccf879"
+        }
+      ],
+      "sources": [
+        "S01",
+        "S06"
+      ],
+      "decision": "Se conserva agua hirviente del relato y se sustituye paisaje montañoso/torrente por llanura baja ficticia.",
+      "remaining_limits": "Agua hirviente procede del relato; no temperatura ordinaria de una inundación amazónica. Bosque recompuesto es propuesta visual.",
+      "visual_review": "Tres fases, expansión de agua entre árboles y vapor de papel. Se retiran grandes rocas y paisaje montañoso.",
+      "parent_output_file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/huitotos/biblia/tanda-01-piloto/r03-master-v1.jpeg",
+      "parent_output_sha256": "f70f05e51d69c59eaaab3e7672741d077ce0b033a1d468344fbee05dacc0fd56",
+      "preview": "review/r03-after.jpeg",
+      "before_preview": "review/r03-before.jpeg",
+      "contract_file": "r03-contract.revision-final.json",
+      "contract_sha256": "58f21668674cc5ae87e3b859b1fb9f6374ca2403dfa1524897750335bb983815",
+      "evidence": [
+        {
+          "myth_id": 46,
+          "title": "El diluvio y el origen de los bailes",
+          "reviewed_fields": [
+            "mito",
+            "historia",
+            "versiones",
+            "research_notes"
+          ],
+          "field_sha256": {
+            "mito": "c8d3154f3a455a4bfd28d9fc90c3576b4e7a1b599d733a892d95a0634a15e0aa",
+            "historia": "9b24db36a63bf18e89e2090bdfffc339352b6b3f15deedbb0c9c0d35c7fa8b44",
+            "versiones": "323113badedecbfc2ecba5e9128eb10c0a7ef4abeb2d7ac7c1b3e390a2e21f68",
+            "research_notes": "1ed62c5e99a01c59a82eac690a7e19a138bf7adb88dab3c262010974c44b2127"
+          },
+          "narrative": "Inundación de agua hirviente que deshace el mundo; retorno de gente húmeda, fría y sin habla; renovación colectiva posterior. No equivale al origen literario de Jutíñamúi.",
+          "localized_credit": "Urbina, pp. 121–140; Jitoma Zafiama, La Samaritana / Puerto Leguízamo, 1971."
+        }
+      ],
+      "user_art_approved": false,
+      "community_validation": false
+    }
+  ]
+}

@@ -1,0 +1,2505 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-13",
+  "community": "Ette Ennaka / Chimila",
+  "community_id": 29,
+  "model": "gpt-image-2.5-sunburst",
+  "status": "production_complete_editorial_candidates_not_cultural_certification",
+  "user_approved": false,
+  "culturally_certified": false,
+  "total_selected": 54,
+  "remaining_master_ids": 0,
+  "category_counts": {
+    "P": 10,
+    "H": 6,
+    "A": 10,
+    "L": 12,
+    "U": 10,
+    "V": 6
+  },
+  "entries": [
+    {
+      "unit_id": "P01",
+      "label": "Papá Grande",
+      "myth_ids": [
+        346,
+        347,
+        348,
+        355
+      ],
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-04/p01-papa-grande-rostro-v2-refined.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/biblia/produccion-api-04/p01.refinement.prompt.txt",
+      "mode": "edit",
+      "input_files": [
+        "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-04/p01-papa-grande-rostro-v2.jpeg"
+      ],
+      "status": "produced_reviewed_editorial_candidate",
+      "user_approved": false,
+      "culturally_certified": false,
+      "sha256": "356ada71555f11e2408e9d2781b203018c92e3a17f6afea709382930e6e66c1d",
+      "bytes": 159743,
+      "width": 1024,
+      "height": 1536,
+      "format": "jpeg",
+      "prompt_sha256": "0ffb95151e000d07aa09b3103faa3a59b2281245bfeb14cce03a16e56217951e",
+      "inputs": [
+        {
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-04/p01-papa-grande-rostro-v2.jpeg",
+          "sha256": "147aafcf9df97ff6cf6da6b3f4f824f4c50d079e823c488854154cb77d90abf7"
+        }
+      ],
+      "inventory_label": "Papá Grande",
+      "endpoint": "/v1/images/edits",
+      "derived_from": [
+        "P01@produccion-api-03",
+        "P01@produccion-api-04-first-pass"
+      ],
+      "scope_notes": [
+        "Apariencia y edad son adaptación original, no descritas para Papá Grande. No equiparar con Yaau.",
+        "Tres vistas de identidad y dos gestos narrativos; telas rectangulares y cordón sin insignias rituales.",
+        "Rostro rediseñado como identidad ficticia, no retrato documental ni fenotipo universal. Sólo revisión editorial pendiente de evaluación del usuario."
+      ],
+      "previous_selected_file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-03/p01-papa-grande-master-v1.jpeg",
+      "previous_selected_sha256": "873bb139325098d732af3dfd2a2d2da2537000a9b55a6064040060ddba3ac08c",
+      "input_file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-04/p01-papa-grande-rostro-v2.jpeg",
+      "input_sha256": "147aafcf9df97ff6cf6da6b3f4f824f4c50d079e823c488854154cb77d90abf7",
+      "revision_action": "regenerated_facial_redesign",
+      "new_api_request_in_this_revision": true,
+      "category": "P",
+      "source_batch": "produccion-api-04",
+      "planned_states": [
+        "modela greda",
+        "indica direcciones",
+        "entrega semilla"
+      ],
+      "research_gates": [
+        "Apariencia no descrita; no inventar uniforme ritual."
+      ]
+    },
+    {
+      "unit_id": "P02",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-05/p02-primer-hombre-master-v1.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/biblia/produccion-api-05/p02.prompt.txt",
+      "mode": "edit",
+      "input_files": [
+        "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-04/p01-papa-grande-rostro-v2-refined.jpeg"
+      ],
+      "sha256": "2420f6fab88369e0aa76bc2941ea20619d9682dcf9bb6325e288feaa4cf18b8f",
+      "bytes": 142030,
+      "width": 1024,
+      "height": 1536,
+      "format": "jpeg",
+      "prompt_sha256": "569436086b14dd1905be6d2cb736f9e006db2512411aaf07cd312ee32892d9ee",
+      "inputs": [
+        {
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-04/p01-papa-grande-rostro-v2-refined.jpeg",
+          "sha256": "356ada71555f11e2408e9d2781b203018c92e3a17f6afea709382930e6e66c1d"
+        }
+      ],
+      "label": "Huhun Krukroring Merana: primer hombre",
+      "category": "P",
+      "myth_ids": [
+        346,
+        355
+      ],
+      "covered_myth_ids": [
+        346,
+        355
+      ],
+      "reference_ids": [
+        "V11-P073-I00"
+      ],
+      "scope_notes": [
+        "Una identidad nueva en cinco vistas; P01 se usó sólo como referencia de estilo, no como identidad.",
+        "Primer hombre de 346 y don inicial de semillas de 355; no se identifica con Huhum ni con el anfitrión Ette posterior de 355.",
+        "Edad, rostro, peinado y franjas de tela son propuestas editoriales. Rasgos todavía estilizados; no fenotipo universal ni retrato documental."
+      ],
+      "status": "produced_reviewed_editorial_candidate",
+      "user_approved": false,
+      "culturally_certified": false,
+      "derived_from": [
+        "P01@produccion-api-04-style-only-new-identity"
+      ],
+      "endpoint": "/v1/images/edits",
+      "source_batch": "produccion-api-05",
+      "planned_states": [
+        "antes del descenso",
+        "en tierra"
+      ],
+      "research_gates": []
+    },
+    {
+      "unit_id": "P03",
+      "label": "Soving Kranyaring Ovokeya: primera compañera",
+      "category": "P",
+      "myth_ids": [
+        346
+      ],
+      "mode": "edit",
+      "quality": "high",
+      "input_files": [
+        "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-04/p07-gran-cacica-rostro-v3.jpeg"
+      ],
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-06/p03-master-v1.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/biblia/produccion-api-06/p03.prompt.txt",
+      "sha256": "f0731189623b7d7ab077aeb2067b265e4dbc7353a5a449f395106212c8825ad5",
+      "bytes": 154949,
+      "width": 1024,
+      "height": 1536,
+      "format": "jpeg",
+      "prompt_sha256": "cebae21e1eb9342ec84e4f4209090d1ab6f52d92f891fa43b3d1a8db1a742dc5",
+      "inputs": [
+        {
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-04/p07-gran-cacica-rostro-v3.jpeg",
+          "sha256": "a581fee90c9e924d6de9de31d71daa550bb1e7868ee947aa5145c555c1b2cd0d"
+        }
+      ],
+      "source_batch": "produccion-api-06",
+      "status": "produced_reviewed_editorial_candidate",
+      "user_approved": false,
+      "culturally_certified": false,
+      "reference_ids": [
+        "V11-P075-I00"
+      ],
+      "research_gates": [],
+      "derived_from": [],
+      "planned_states": [
+        "figura base"
+      ],
+      "state_coverage_status": "master_available_not_all_story_states_verified",
+      "scope_notes": [
+        "Una identidad original en frente/perfil/espalda, tres cuerpos completos, ropa/cordón simple. Rasgos estilizados, propuesta de la primera compañera."
+      ]
+    },
+    {
+      "unit_id": "P04",
+      "label": "Sol: hermana actual",
+      "category": "P",
+      "myth_ids": [
+        347,
+        350
+      ],
+      "mode": "edit",
+      "quality": "high",
+      "input_files": [
+        "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-06/p04-master-v1.jpeg"
+      ],
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-06/p04-master-v1-refined.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/biblia/produccion-api-06/p04.refinement.prompt.txt",
+      "sha256": "57bb42ddd5a22f1b7fa130dd5fec0d8b155225f7d8311a20d65a72e60c233231",
+      "bytes": 164400,
+      "width": 1024,
+      "height": 1536,
+      "format": "jpeg",
+      "prompt_sha256": "7b382bed05e35173e76f1dc11762b8072f994de8d72ee8241bc3dc349200c47a",
+      "inputs": [
+        {
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-06/p04-master-v1.jpeg",
+          "sha256": "e4f2fea524f0ec1a07a0daefd58d0f10f35ae3cd176f8b8f801a3f4abb019059"
+        }
+      ],
+      "source_batch": "produccion-api-06",
+      "status": "produced_reviewed_editorial_candidate",
+      "user_approved": false,
+      "culturally_certified": false,
+      "reference_ids": [],
+      "research_gates": [
+        "Rostro figurativo no es dato etnográfico."
+      ],
+      "derived_from": [],
+      "planned_states": [
+        "vigilia",
+        "reposo",
+        "ausencia de luz"
+      ],
+      "state_coverage_status": "master_available_not_all_story_states_verified",
+      "scope_notes": [
+        "Refinamiento revisado: Sol mujer adulta joven de pelo oscuro, más joven que Luna; dos vistas humanas y dos estados del paisaje. Edad concreta, cara y ropa son adaptación."
+      ]
+    },
+    {
+      "unit_id": "P05",
+      "label": "Luna: hermano mayor",
+      "category": "P",
+      "myth_ids": [
+        347,
+        350
+      ],
+      "mode": "edit",
+      "quality": "high",
+      "input_files": [
+        "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-05/p02-primer-hombre-master-v1.jpeg"
+      ],
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-06/p05-master-v1.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/biblia/produccion-api-06/p05.prompt.txt",
+      "sha256": "22fdb250d4ad299777050ac75df5edb87debe8f1a19065fa2fb93ec69541bbb7",
+      "bytes": 178543,
+      "width": 1024,
+      "height": 1536,
+      "format": "jpeg",
+      "prompt_sha256": "3b4f8a0d66bebbc6c54dc6d0d7a810e688e23bcfb69c07a60fe92c7623ec44bc",
+      "inputs": [
+        {
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-05/p02-primer-hombre-master-v1.jpeg",
+          "sha256": "2420f6fab88369e0aa76bc2941ea20619d9682dcf9bb6325e288feaa4cf18b8f"
+        }
+      ],
+      "source_batch": "produccion-api-06",
+      "status": "produced_reviewed_editorial_candidate",
+      "user_approved": false,
+      "culturally_certified": false,
+      "reference_ids": [],
+      "research_gates": [
+        "No importar emblemas de otra comunidad."
+      ],
+      "derived_from": [],
+      "planned_states": [
+        "presencia nocturna"
+      ],
+      "state_coverage_status": "master_available_not_all_story_states_verified",
+      "scope_notes": [
+        "Dos vistas masculinas y astro nocturno; edad relativa mayor propuesta. No emblemas ni pareja romántica."
+      ]
+    },
+    {
+      "unit_id": "P06",
+      "label": "Huhum: brujo que trae el fuego",
+      "category": "P",
+      "myth_ids": [
+        351
+      ],
+      "mode": "edit",
+      "quality": "high",
+      "input_files": [
+        "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-05/p02-primer-hombre-master-v1.jpeg"
+      ],
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-06/p06-master-v1.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/biblia/produccion-api-06/p06.prompt.txt",
+      "sha256": "ad5a66da07cbd84516849e434a6ad09933d61944005444ad17ae0ee25741e728",
+      "bytes": 149074,
+      "width": 1024,
+      "height": 1536,
+      "format": "jpeg",
+      "prompt_sha256": "3c2711fa46f081c8c4ad1a518b14acc7238c95ddc31b532f044f57c3268eed14",
+      "inputs": [
+        {
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-05/p02-primer-hombre-master-v1.jpeg",
+          "sha256": "2420f6fab88369e0aa76bc2941ea20619d9682dcf9bb6325e288feaa4cf18b8f"
+        }
+      ],
+      "source_batch": "produccion-api-06",
+      "status": "produced_reviewed_editorial_candidate",
+      "user_approved": false,
+      "culturally_certified": false,
+      "reference_ids": [
+        "V11-P072-I00"
+      ],
+      "research_gates": [],
+      "derived_from": [],
+      "planned_states": [
+        "humano antes del viaje"
+      ],
+      "state_coverage_status": "master_available_not_all_story_states_verified",
+      "scope_notes": [
+        "Tres vistas de Huhum humano, sin híbrido; pelo corto y cuerpo ordinario, ropa propuesta."
+      ]
+    },
+    {
+      "unit_id": "P07",
+      "label": "Gran Cacica",
+      "previous_file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-01/p07-gran-cacica-master-v1.jpeg",
+      "previous_sha256": "595d21af814b140e586145e5196b20ef7a7783977a0f97fa5f16190ef39337ed",
+      "input_file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-02/p07-gran-cacica-master-v2.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/biblia/produccion-api-04/p07.prompt.txt",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-04/p07-gran-cacica-rostro-v3.jpeg",
+      "status": "produced_reviewed_editorial_candidate",
+      "user_approved": false,
+      "culturally_certified": false,
+      "scope_notes": [
+        "Rectángulos de algodón, falda corta y cordón apoyados por archivo1946; fijación exacta de tela superior, edad y peinado siguen siendo adaptación.",
+        "Una identidad original en cinco vistas; sin copiar a la mujer del archivo ni inventar insignias de autoridad.",
+        "Rostro rediseñado como identidad ficticia, no retrato documental ni fenotipo universal. Sólo revisión editorial pendiente de evaluación del usuario."
+      ],
+      "sha256": "a581fee90c9e924d6de9de31d71daa550bb1e7868ee947aa5145c555c1b2cd0d",
+      "bytes": 131208,
+      "width": 1024,
+      "height": 1536,
+      "format": "jpeg",
+      "prompt_sha256": "81d409b868c39c2635d37cc75ea6c35944e5865b61c5ffb44f72a3ae78615463",
+      "input_sha256": "62d263a33482d587e15fa5e1e84674541836acf7a13b491a3fb50a6178bc2da1",
+      "endpoint": "/v1/images/edits",
+      "derived_from": [
+        "P07@produccion-api-02"
+      ],
+      "previous_selected_file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-02/p07-gran-cacica-master-v2.jpeg",
+      "previous_selected_sha256": "62d263a33482d587e15fa5e1e84674541836acf7a13b491a3fb50a6178bc2da1",
+      "input_files": [
+        "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-02/p07-gran-cacica-master-v2.jpeg"
+      ],
+      "inputs": [
+        {
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-02/p07-gran-cacica-master-v2.jpeg",
+          "sha256": "62d263a33482d587e15fa5e1e84674541836acf7a13b491a3fb50a6178bc2da1"
+        }
+      ],
+      "mode": "edit",
+      "revision_action": "regenerated_facial_redesign",
+      "new_api_request_in_this_revision": true,
+      "category": "P",
+      "myth_ids": [
+        352
+      ],
+      "source_batch": "produccion-api-04",
+      "planned_states": [
+        "ordena el trabajo",
+        "visita nocturna"
+      ],
+      "research_gates": [
+        "Edad y atuendo exactos no están descritos."
+      ]
+    },
+    {
+      "unit_id": "P08",
+      "label": "Yunari Kraari",
+      "category": "P",
+      "myth_ids": [
+        579,
+        580
+      ],
+      "mode": "edit",
+      "quality": "high",
+      "input_files": [
+        "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-04/p07-gran-cacica-rostro-v3.jpeg"
+      ],
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-06/p08-master-v1.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/biblia/produccion-api-06/p08.prompt.txt",
+      "sha256": "72b491c957e279e5d4e40c07a648be84a383669bb49bc5d0bdb05f063d7b221c",
+      "bytes": 238014,
+      "width": 1024,
+      "height": 1536,
+      "format": "jpeg",
+      "prompt_sha256": "73a81643ccc0c988f3387112678a96ae15f1c5dd11fadd2e2dfea9cb2e705f11",
+      "inputs": [
+        {
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-04/p07-gran-cacica-rostro-v3.jpeg",
+          "sha256": "a581fee90c9e924d6de9de31d71daa550bb1e7868ee947aa5145c555c1b2cd0d"
+        }
+      ],
+      "source_batch": "produccion-api-06",
+      "status": "produced_reviewed_editorial_candidate",
+      "user_approved": false,
+      "culturally_certified": false,
+      "reference_ids": [
+        "V06-P059-I00"
+      ],
+      "research_gates": [
+        "Personificación editorial; mantener atribuida la cosmología contemporánea."
+      ],
+      "derived_from": [],
+      "planned_states": [
+        "figura ancestral",
+        "cuerpo-territorio"
+      ],
+      "state_coverage_status": "master_available_not_all_story_states_verified",
+      "scope_notes": [
+        "Tres vistas anciana/frontperfil/cuerpo-territorio; rostro mayor y corrientes azules. Manto añadido es propuesta, no prenda descrita para Yunari."
+      ]
+    },
+    {
+      "unit_id": "P09",
+      "label": "Yaau",
+      "category": "P",
+      "myth_ids": [
+        579,
+        580
+      ],
+      "mode": "edit",
+      "quality": "high",
+      "input_files": [
+        "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-05/p02-primer-hombre-master-v1.jpeg"
+      ],
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-06/p09-master-v1.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/biblia/produccion-api-06/p09.prompt.txt",
+      "sha256": "de03f288ea3d9da218a0f0b3ed95f776bfaa8cd93708af64dc7491d19a065686",
+      "bytes": 158594,
+      "width": 1024,
+      "height": 1536,
+      "format": "jpeg",
+      "prompt_sha256": "4987f983322381b7932eeb4f602823ceffccef0a80710c9fef7a2401753bab84",
+      "inputs": [
+        {
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-05/p02-primer-hombre-master-v1.jpeg",
+          "sha256": "2420f6fab88369e0aa76bc2941ea20619d9682dcf9bb6325e288feaa4cf18b8f"
+        }
+      ],
+      "source_batch": "produccion-api-06",
+      "status": "produced_reviewed_editorial_candidate",
+      "user_approved": false,
+      "culturally_certified": false,
+      "reference_ids": [],
+      "research_gates": [
+        "Apariencia no certificada; no tomar retrato de autoridad viva."
+      ],
+      "derived_from": [],
+      "planned_states": [
+        "descenso",
+        "creación con mazorca"
+      ],
+      "state_coverage_status": "master_available_not_all_story_states_verified",
+      "scope_notes": [
+        "Tres vistas de Yaau, una mazorca sólo como prop en tercera. Identidad gráfica emparentada con plantilla pero no Papá Grande; orientación derecha es convención de pantalla."
+      ]
+    },
+    {
+      "unit_id": "P10",
+      "label": "Numirinta",
+      "category": "P",
+      "myth_ids": [
+        579,
+        580
+      ],
+      "mode": "edit",
+      "quality": "high",
+      "input_files": [
+        "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-04/p07-gran-cacica-rostro-v3.jpeg"
+      ],
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-06/p10-master-v1.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/biblia/produccion-api-06/p10.prompt.txt",
+      "sha256": "b0362d7a27ead6bf00fc7931b1bf29ec3dc638af807c5e84d74c17308a2f5286",
+      "bytes": 167112,
+      "width": 1024,
+      "height": 1536,
+      "format": "jpeg",
+      "prompt_sha256": "5828ea7da9ca90c9a60dd9d14437b8c2d1e4a89214e9c3f0c484e69fdc5fc5ec",
+      "inputs": [
+        {
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-04/p07-gran-cacica-rostro-v3.jpeg",
+          "sha256": "a581fee90c9e924d6de9de31d71daa550bb1e7868ee947aa5145c555c1b2cd0d"
+        }
+      ],
+      "source_batch": "produccion-api-06",
+      "status": "produced_reviewed_editorial_candidate",
+      "user_approved": false,
+      "culturally_certified": false,
+      "reference_ids": [
+        "V02-IMG02"
+      ],
+      "research_gates": [
+        "No deducir vestido o glifo del significado del algodón."
+      ],
+      "derived_from": [],
+      "planned_states": [
+        "descenso",
+        "creación con mazorca"
+      ],
+      "state_coverage_status": "master_available_not_all_story_states_verified",
+      "scope_notes": [
+        "Numirinta: tres vistas de la misma mujer adulta, una mazorca; anatomía y manos legibles. Rostro y ropa son decisiones artísticas, no retrato etnográfico."
+      ]
+    },
+    {
+      "unit_id": "H01",
+      "label": "Cuatro adultos de apoyo",
+      "previous_file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-01/h01-cuatro-adultos-master-v1.jpeg",
+      "previous_sha256": "85ff968afc05644a2c232ed3f4251a8e6cb968be1ed197876e956e4c442739a7",
+      "input_file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-02/h01-cuatro-adultos-master-v2-refined.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/biblia/produccion-api-04/h01.prompt.txt",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-04/h01-cuatro-adultos-rostros-v3.jpeg",
+      "status": "produced_reviewed_editorial_candidate",
+      "user_approved": false,
+      "culturally_certified": false,
+      "scope_notes": [
+        "Cuatro adultos de apoyo, no una familia canónica ni uniforme universal.",
+        "Dos mujeres corregidas a largo inmediatamente bajo rodillas; construcción y fijación exactas de las telas superiores son propuestas, no reproducción certificada.",
+        "Rostro rediseñado como identidad ficticia, no retrato documental ni fenotipo universal. Sólo revisión editorial pendiente de evaluación del usuario."
+      ],
+      "sha256": "acac3d2e043e29d524fda68afa0f068ba471463c8c7138750a5adf7d7aa581e7",
+      "bytes": 111970,
+      "width": 1024,
+      "height": 1536,
+      "format": "jpeg",
+      "prompt_sha256": "87bf78bc632d1b004555c881bb2f8e05eb8a3896c137fc73a479f2bcd569f9eb",
+      "input_sha256": "b03ddfbf86ce57d582cbb1dce65928a05883d0aadf467491806f236d6eac90f3",
+      "endpoint": "/v1/images/edits",
+      "derived_from": [
+        "H01@produccion-api-02"
+      ],
+      "previous_selected_file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-02/h01-cuatro-adultos-master-v2-refined.jpeg",
+      "previous_selected_sha256": "b03ddfbf86ce57d582cbb1dce65928a05883d0aadf467491806f236d6eac90f3",
+      "input_files": [
+        "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-02/h01-cuatro-adultos-master-v2-refined.jpeg"
+      ],
+      "inputs": [
+        {
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-02/h01-cuatro-adultos-master-v2-refined.jpeg",
+          "sha256": "b03ddfbf86ce57d582cbb1dce65928a05883d0aadf467491806f236d6eac90f3"
+        }
+      ],
+      "mode": "edit",
+      "revision_action": "regenerated_facial_redesign",
+      "new_api_request_in_this_revision": true,
+      "category": "H",
+      "myth_ids": [
+        346,
+        348,
+        349,
+        351,
+        352,
+        353,
+        354,
+        355,
+        358,
+        361,
+        365,
+        366,
+        579,
+        580
+      ],
+      "source_batch": "produccion-api-04",
+      "planned_states": [
+        "cuatro siluetas base; manos de trabajo"
+      ],
+      "research_gates": [
+        "Ropa por época; asignar instancias distintas por cuento."
+      ]
+    },
+    {
+      "unit_id": "H02",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-05/h02-padre-tres-hijos-master-v1.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/biblia/produccion-api-05/h02.prompt.txt",
+      "mode": "edit",
+      "input_files": [
+        "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-04/h01-cuatro-adultos-rostros-v3.jpeg"
+      ],
+      "sha256": "8671f24a551a0cd0f3e5122ffbaba7ebad350985cd3c5f75f1be63037446d672",
+      "bytes": 121293,
+      "width": 1024,
+      "height": 1536,
+      "format": "jpeg",
+      "prompt_sha256": "55f9d677c406684c22c2bbcd9bdfee82420368ebd17b19bee62a5947fc164c31",
+      "inputs": [
+        {
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-04/h01-cuatro-adultos-rostros-v3.jpeg",
+          "sha256": "acac3d2e043e29d524fda68afa0f068ba471463c8c7138750a5adf7d7aa581e7"
+        }
+      ],
+      "label": "Padre y tres hijos de la prueba",
+      "category": "H",
+      "myth_ids": [
+        356
+      ],
+      "covered_myth_ids": [
+        356
+      ],
+      "reference_ids": [
+        "V11-P073-I00"
+      ],
+      "scope_notes": [
+        "Cuatro identidades nuevas: padre y tres hijos; manos vacías, sin títulos ni insignias de autoridad.",
+        "Edades adultas propuestas para el reparto, no establecidas en el relato 356. H01 se usó sólo como referencia de estilo.",
+        "Diferenciación facial moderada; parecido familiar editorial. No certificación anatómica o cultural."
+      ],
+      "status": "produced_reviewed_editorial_candidate",
+      "user_approved": false,
+      "culturally_certified": false,
+      "derived_from": [
+        "H01@produccion-api-04-style-only-new-identities"
+      ],
+      "endpoint": "/v1/images/edits",
+      "source_batch": "produccion-api-05",
+      "planned_states": [
+        "padre",
+        "hijo 1",
+        "hijo 2",
+        "hijo 3"
+      ],
+      "research_gates": []
+    },
+    {
+      "unit_id": "H03",
+      "label": "Cazadores y viajeros",
+      "myth_ids": [
+        357,
+        358,
+        359,
+        360,
+        361,
+        363,
+        364,
+        365,
+        366
+      ],
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-04/h03-cazadores-viajeros-rostros-v2-refined.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/biblia/produccion-api-04/h03.refinement.prompt.txt",
+      "mode": "edit",
+      "input_files": [
+        "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-04/h03-cazadores-viajeros-rostros-v2.jpeg"
+      ],
+      "status": "produced_reviewed_editorial_candidate",
+      "user_approved": false,
+      "culturally_certified": false,
+      "sha256": "1a1a69e2f62ef412c22e3657fc530c615923d9e9c5455d25854b2cee360c645e",
+      "bytes": 130156,
+      "width": 1024,
+      "height": 1536,
+      "format": "jpeg",
+      "prompt_sha256": "2c0e6ae3755dcd5075290ab63a7fc888b58652dfc00ea1d59550ed17e5d68e87",
+      "inputs": [
+        {
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-04/h03-cazadores-viajeros-rostros-v2.jpeg",
+          "sha256": "a4c940aa8ff9360b1fb26a55b28e2d6a224a106e04ad0b69521b464130b6e780"
+        }
+      ],
+      "inventory_label": "Cazadores y viajeros: tres modelos",
+      "endpoint": "/v1/images/edits",
+      "derived_from": [
+        "H03@produccion-api-03",
+        "H03@produccion-api-04-first-pass"
+      ],
+      "scope_notes": [
+        "Tres prototipos adultos, no un trío fijo para todos los relatos.",
+        "Maestro final con tres arcos y manos vacías del otro lado; flechas se insertarán desde U02. Tres intermedios conservados, no seleccionados.",
+        "Rasgos y cortes son propuestas editoriales; no retratos de archivo ni indumentaria universal.",
+        "Rostro rediseñado como identidad ficticia, no retrato documental ni fenotipo universal. Sólo revisión editorial pendiente de evaluación del usuario."
+      ],
+      "previous_selected_file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-03/h03-cazadores-viajeros-bows-only-v1.jpeg",
+      "previous_selected_sha256": "c588b61dbac731824e9845e4c86a6cd6006a57e98065c986f3ded8bcf9859c70",
+      "input_file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-04/h03-cazadores-viajeros-rostros-v2.jpeg",
+      "input_sha256": "a4c940aa8ff9360b1fb26a55b28e2d6a224a106e04ad0b69521b464130b6e780",
+      "revision_action": "regenerated_facial_redesign",
+      "new_api_request_in_this_revision": true,
+      "category": "H",
+      "source_batch": "produccion-api-04",
+      "planned_states": [
+        "tres adultos diferenciados; arco y manos"
+      ],
+      "research_gates": []
+    },
+    {
+      "unit_id": "H04",
+      "label": "Anciano, esposa y menor anónimo",
+      "category": "H",
+      "myth_ids": [
+        357,
+        361
+      ],
+      "mode": "edit",
+      "quality": "high",
+      "input_files": [
+        "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-04/h01-cuatro-adultos-rostros-v3.jpeg"
+      ],
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-06/h04-master-v1.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/biblia/produccion-api-06/h04.prompt.txt",
+      "sha256": "1958a7010723d4487f889db96997341dfabea4c179688528822912add4b22023",
+      "bytes": 146379,
+      "width": 1024,
+      "height": 1536,
+      "format": "jpeg",
+      "prompt_sha256": "bbcbe028488ab947c40dd6a80282a676f98f8ae8ff474451ec5dd6d409a49143",
+      "inputs": [
+        {
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-04/h01-cuatro-adultos-rostros-v3.jpeg",
+          "sha256": "acac3d2e043e29d524fda68afa0f068ba471463c8c7138750a5adf7d7aa581e7"
+        }
+      ],
+      "source_batch": "produccion-api-06",
+      "status": "produced_reviewed_editorial_candidate",
+      "user_approved": false,
+      "culturally_certified": false,
+      "reference_ids": [
+        "V11-P075-I00"
+      ],
+      "research_gates": [
+        "No representar cadáveres ni lesiones; no tomar niños reales como identidad ficticia."
+      ],
+      "derived_from": [],
+      "planned_states": [
+        "anciano vivo",
+        "esposa",
+        "menor anónimo en contexto no violento"
+      ],
+      "state_coverage_status": "master_available_not_all_story_states_verified",
+      "scope_notes": [
+        "Tres roles distintos: anciano sentado, esposa adulta y niño anónimo. No convertirlos en familia del mismo relato; vestimenta y banco son provisionales."
+      ]
+    },
+    {
+      "unit_id": "H05",
+      "label": "Familia superviviente del diluvio",
+      "category": "H",
+      "myth_ids": [
+        350
+      ],
+      "mode": "edit",
+      "quality": "high",
+      "input_files": [
+        "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-04/h01-cuatro-adultos-rostros-v3.jpeg"
+      ],
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-06/h05-master-v1.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/biblia/produccion-api-06/h05.prompt.txt",
+      "sha256": "8498b7ce4cc144d606809041f2093355ecc51e153ad2f711ca97f036ae891f5d",
+      "bytes": 147575,
+      "width": 1024,
+      "height": 1536,
+      "format": "jpeg",
+      "prompt_sha256": "656d6597c48a56880a2c0615386d3b2c8f1dec936fe180f7c2262904a781bb12",
+      "inputs": [
+        {
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-04/h01-cuatro-adultos-rostros-v3.jpeg",
+          "sha256": "acac3d2e043e29d524fda68afa0f068ba471463c8c7138750a5adf7d7aa581e7"
+        }
+      ],
+      "source_batch": "produccion-api-06",
+      "status": "produced_reviewed_editorial_candidate",
+      "user_approved": false,
+      "culturally_certified": false,
+      "reference_ids": [
+        "V11-P073-I00",
+        "V11-P075-I00"
+      ],
+      "research_gates": [],
+      "derived_from": [],
+      "planned_states": [
+        "constructor",
+        "mujer antes de volverse lechuza"
+      ],
+      "state_coverage_status": "master_available_not_all_story_states_verified",
+      "scope_notes": [
+        "Dos anclas adultas del hogar constructor: hombre y mujer. No fija el total de hijos ni el parentesco con H04. Rostros de ficción; sin ornamentos carnavalescos."
+      ]
+    },
+    {
+      "unit_id": "H06",
+      "label": "Especialistas, autoridades y visitante",
+      "category": "H",
+      "myth_ids": [
+        349,
+        355,
+        359,
+        360,
+        361
+      ],
+      "mode": "edit",
+      "quality": "high",
+      "input_files": [
+        "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-04/h01-cuatro-adultos-rostros-v3.jpeg"
+      ],
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-06/h06-master-v1.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/biblia/produccion-api-06/h06.prompt.txt",
+      "sha256": "a2987c4ae6e5566f0bedb9dadefff441a47b022bc8cb621167d9b9b5ca4403d0",
+      "bytes": 137390,
+      "width": 1024,
+      "height": 1536,
+      "format": "jpeg",
+      "prompt_sha256": "e900005ff6ceba1ec7277db6925bca028e353d18a95a0a5fe40ec817b22063a9",
+      "inputs": [
+        {
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-04/h01-cuatro-adultos-rostros-v3.jpeg",
+          "sha256": "acac3d2e043e29d524fda68afa0f068ba471463c8c7138750a5adf7d7aa581e7"
+        }
+      ],
+      "source_batch": "produccion-api-06",
+      "status": "produced_reviewed_editorial_candidate",
+      "user_approved": false,
+      "culturally_certified": false,
+      "reference_ids": [],
+      "research_gates": [
+        "Indumentaria del visitante y de pueblos nombrados requiere investigación propia; no copiar imágenes vecinas por aspecto."
+      ],
+      "derived_from": [],
+      "planned_states": [
+        "cuatro roles; no jerarquía por apariencia"
+      ],
+      "state_coverage_status": "master_available_not_all_story_states_verified",
+      "scope_notes": [
+        "Cuatro roles separados; curador, autoridad del Gran Río, autoridad del episodio del crimen y visitante arhuaco. Manto, barba y túnica del visitante son propuestas no documentales; no reutilizar como traje tradicional."
+      ]
+    },
+    {
+      "unit_id": "A01",
+      "label": "Mamu: sapo de Huhum",
+      "category": "A",
+      "myth_ids": [
+        351
+      ],
+      "mode": "generate",
+      "quality": "medium",
+      "input_files": [],
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-06/a01-master-v1.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/biblia/produccion-api-06/a01.prompt.txt",
+      "sha256": "61526aaee882919bd721c8233832be07adad7292843c80cb4a9e65224ef440fb",
+      "bytes": 286679,
+      "width": 1024,
+      "height": 1536,
+      "format": "jpeg",
+      "prompt_sha256": "34bc33107ff6bd504f831d65910ab40546fc4460c8b85e737357a3488db462ed",
+      "inputs": [],
+      "source_batch": "produccion-api-06",
+      "status": "produced_reviewed_editorial_candidate",
+      "user_approved": false,
+      "culturally_certified": false,
+      "reference_ids": [],
+      "research_gates": [
+        "Especie y escala deben confirmarse; V06-P154-I02 es grillo, NO referencia de sapo."
+      ],
+      "derived_from": [
+        "P06"
+      ],
+      "planned_states": [
+        "reposo",
+        "salto/nado",
+        "brasa en boca"
+      ],
+      "state_coverage_status": "master_available_not_all_story_states_verified",
+      "scope_notes": [
+        "Tres estudios del sapo, cuatro extremidades, sin cola; una brasa al salir de boca. Ojos estilizados grandes, no taxón confirmado."
+      ]
+    },
+    {
+      "unit_id": "A02",
+      "label": "Felino",
+      "myth_ids": [
+        346,
+        359,
+        362
+      ],
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-03/a02-felino-master-v1.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/biblia/produccion-api-03/a02.prompt.txt",
+      "mode": "generate",
+      "input_files": [],
+      "status": "produced_reviewed_editorial_candidate",
+      "user_approved": false,
+      "culturally_certified": false,
+      "sha256": "265d27731d105c83ee650282c4294d93834626927ee7e960eb350cd52e5337fb",
+      "bytes": 278388,
+      "width": 1024,
+      "height": 1536,
+      "format": "jpeg",
+      "prompt_sha256": "0b47b5bb1d1bbb2ceb91dc0f9784ee3cc4eac88396ff99aa77b1d7db5d929b8c",
+      "inputs": [],
+      "inventory_label": "Tigre/felino",
+      "endpoint": "/v1/images/generations",
+      "derived_from": [],
+      "scope_notes": [
+        "Anatomía y rosetas de felino como propuesta referencial, sin certificar especie del tigre narrado.",
+        "Cuatro vistas, incluida luz nocturna; sin rasgos demoníacos que resuelvan la duda del relato359."
+      ],
+      "revision_action": "retained_unchanged_nonhuman",
+      "retained_from": "produccion-api-03",
+      "new_api_request_in_this_revision": false,
+      "category": "A",
+      "source_batch": "produccion-api-05",
+      "planned_states": [
+        "normal",
+        "grande",
+        "nocturno"
+      ],
+      "research_gates": [
+        "Foto anatómica en cautiverio; tigre narrado no identifica una especie exacta."
+      ]
+    },
+    {
+      "unit_id": "A03",
+      "label": "Lechuza",
+      "category": "A",
+      "myth_ids": [
+        350
+      ],
+      "mode": "generate",
+      "quality": "medium",
+      "input_files": [],
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-06/a03-master-v1.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/biblia/produccion-api-06/a03.prompt.txt",
+      "sha256": "e76217615a18094b879949fadecab352aeb76b023a5b64a9d914dfda7e860aa9",
+      "bytes": 276833,
+      "width": 1024,
+      "height": 1536,
+      "format": "jpeg",
+      "prompt_sha256": "e4d9dc2ba35e2c8ed4de9a47cdd709d45712e580589d3c8ae2e17492c4a253b4",
+      "inputs": [],
+      "source_batch": "produccion-api-06",
+      "status": "produced_reviewed_editorial_candidate",
+      "user_approved": false,
+      "culturally_certified": false,
+      "reference_ids": [],
+      "research_gates": [
+        "Identificación zoológica pendiente."
+      ],
+      "derived_from": [
+        "H05"
+      ],
+      "planned_states": [
+        "posada",
+        "vuelo",
+        "canto nocturno"
+      ],
+      "state_coverage_status": "master_available_not_all_story_states_verified",
+      "scope_notes": [
+        "Tres estudios de ave no híbrida; disco facial claro y vuelo; identificación exacta no cerrada."
+      ]
+    },
+    {
+      "unit_id": "A04",
+      "label": "Karau",
+      "category": "A",
+      "myth_ids": [
+        350
+      ],
+      "mode": "generate",
+      "quality": "medium",
+      "input_files": [],
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-06/a04-master-v1.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/biblia/produccion-api-06/a04.prompt.txt",
+      "sha256": "f341daf360a31bd10c0d7a5558a3a49d16d171e323f07dadd2e8a06e4629bdb1",
+      "bytes": 192810,
+      "width": 1024,
+      "height": 1536,
+      "format": "jpeg",
+      "prompt_sha256": "e91d784600720bd8d120405263e73c039466a07529c222ecb7d503d471658372",
+      "inputs": [],
+      "source_batch": "produccion-api-06",
+      "status": "produced_reviewed_editorial_candidate",
+      "user_approved": false,
+      "culturally_certified": false,
+      "reference_ids": [],
+      "research_gates": [
+        "Nombre, especie y anatomía requieren resolución antes de generar."
+      ],
+      "derived_from": [],
+      "planned_states": [
+        "en rama",
+        "anuncia lluvia"
+      ],
+      "state_coverage_status": "master_available_not_all_story_states_verified",
+      "scope_notes": [
+        "Dos siluetas no diagnósticas posada/canto; no especie identificada. Recurso provisional apto sólo para plano distante."
+      ],
+      "specificity": "silhouette_only_unresolved_taxon",
+      "allowed_use": "distant anonymous bird; no close-up or named species",
+      "gate_override": "No taxonomic identity or diagnostic anatomy generated; silhouette-only provisional proposal explicitly requested within full-bible production."
+    },
+    {
+      "unit_id": "A05",
+      "label": "Nuti/rabipelado",
+      "category": "A",
+      "myth_ids": [
+        350
+      ],
+      "mode": "generate",
+      "quality": "medium",
+      "input_files": [],
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-06/a05-master-v2.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/biblia/produccion-api-06/a05.retry.prompt.txt",
+      "sha256": "a4950ef939fa73218fe4ca26ed01e277cb8d8400954ac6506a84eab9b3df3114",
+      "bytes": 274804,
+      "width": 1024,
+      "height": 1536,
+      "format": "jpeg",
+      "prompt_sha256": "a3a9d967292c596f96b1b56f540827688cb179392b24f71a3f87c2a51e86d8ad",
+      "inputs": [],
+      "source_batch": "produccion-api-06",
+      "status": "produced_reviewed_editorial_candidate",
+      "user_approved": false,
+      "culturally_certified": false,
+      "reference_ids": [],
+      "research_gates": [
+        "Taxonomía exacta pendiente."
+      ],
+      "derived_from": [],
+      "planned_states": [
+        "en rama",
+        "colgado de cola",
+        "cola pelada final"
+      ],
+      "state_coverage_status": "master_available_not_all_story_states_verified",
+      "scope_notes": [
+        "Tres estados del rabipelado no humano: caminar, suspensión natural por cola prensil y apoyo en rama; cuatro patas y cola continua, sin cuerdas ni daño. Identificación específica no certificada."
+      ]
+    },
+    {
+      "unit_id": "A06",
+      "label": "Mono",
+      "category": "A",
+      "myth_ids": [
+        362,
+        363,
+        365
+      ],
+      "mode": "edit",
+      "quality": "medium",
+      "input_files": [
+        "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-06/a06-master-v1.jpeg"
+      ],
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-06/a06-master-v1-refined.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/biblia/produccion-api-06/a06.refinement.prompt.txt",
+      "sha256": "607a7089752ed690607717b0d30dc53a5972b9796a379d032803029097b13a13",
+      "bytes": 200197,
+      "width": 1024,
+      "height": 1536,
+      "format": "jpeg",
+      "prompt_sha256": "a7da7df7a0e243b4b9331934e171a64431f10cbeb775d1a8af9ced677f8f62d0",
+      "inputs": [
+        {
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-06/a06-master-v1.jpeg",
+          "sha256": "ef69860e4938e76c6a8f2bba3412e53f4eafe55dabf0e115be2d0d9ec61ba26f"
+        }
+      ],
+      "source_batch": "produccion-api-06",
+      "status": "produced_reviewed_editorial_candidate",
+      "user_approved": false,
+      "culturally_certified": false,
+      "reference_ids": [
+        "V14-IMG20",
+        "V15-IMG18"
+      ],
+      "research_gates": [
+        "Las fotos muestran posibles especies distintas; elegir anatomía tras validar el nombre narrado."
+      ],
+      "derived_from": [],
+      "planned_states": [
+        "canta",
+        "sostiene flecha",
+        "trepa"
+      ],
+      "state_coverage_status": "master_available_not_all_story_states_verified",
+      "scope_notes": [
+        "Refinamiento revisado: punta pétrea eliminada; flecha sencilla de madera, tres estados del mono. Taxón no certificado."
+      ]
+    },
+    {
+      "unit_id": "A07",
+      "label": "Danta",
+      "category": "A",
+      "myth_ids": [
+        357,
+        362,
+        364,
+        365
+      ],
+      "mode": "generate",
+      "quality": "medium",
+      "input_files": [],
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-06/a07-master-v1.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/biblia/produccion-api-06/a07.prompt.txt",
+      "sha256": "62f449c05361aa26234216a23e60460ed90a10cb6f5efacf5fabbf4cfefb0350",
+      "bytes": 284507,
+      "width": 1024,
+      "height": 1536,
+      "format": "jpeg",
+      "prompt_sha256": "697f29f01a7b36dde06be63e8bb0f3fec1c9664322f8c2732b3d44f11f728f6f",
+      "inputs": [],
+      "source_batch": "produccion-api-06",
+      "status": "produced_reviewed_editorial_candidate",
+      "user_approved": false,
+      "culturally_certified": false,
+      "reference_ids": [],
+      "research_gates": [
+        "Fotografía apropiada todavía pendiente."
+      ],
+      "derived_from": [],
+      "planned_states": [
+        "camina",
+        "llama a otras",
+        "perfil bajo tronco sin lesión"
+      ],
+      "state_coverage_status": "master_available_not_all_story_states_verified",
+      "scope_notes": [
+        "Tres estudios de danta viva, sin lesión, perfil bajo tronco con espacio libre; no especie del mito certificada."
+      ]
+    },
+    {
+      "unit_id": "A08",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-05/a08-caiman-master-v1.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/biblia/produccion-api-05/a08.prompt.txt",
+      "mode": "generate",
+      "input_files": [],
+      "sha256": "11e3dabf080c17aa2be389e4b690a189f01a57a32afc740b5eeaa0718ba57ac7",
+      "bytes": 197866,
+      "width": 1024,
+      "height": 1536,
+      "format": "jpeg",
+      "prompt_sha256": "a7917f945d9196b90c001de0e4cffb52b874215d8cf3def20cc45ca24fa6348f",
+      "inputs": [],
+      "label": "Caimán",
+      "category": "A",
+      "myth_ids": [
+        365
+      ],
+      "covered_myth_ids": [
+        365
+      ],
+      "reference_ids": [
+        "V14-IMG16",
+        "V15-IMG12",
+        "V15-IMG13"
+      ],
+      "scope_notes": [
+        "Tres estados del animal y un huevo grande del sueño narrado en 365: tierra, nado y boca abierta.",
+        "Referencias de crocodiliano sólo apoyan anatomía externa; no certifican especie del caimán del relato.",
+        "Sin interior anatómico, persona devorada o gore; piel y ojos simplificados como capas de papel."
+      ],
+      "status": "produced_reviewed_editorial_candidate",
+      "user_approved": false,
+      "culturally_certified": false,
+      "derived_from": [],
+      "endpoint": "/v1/images/generations",
+      "source_batch": "produccion-api-05",
+      "planned_states": [
+        "orilla",
+        "nado",
+        "mandíbulas abiertas",
+        "huevo del sueño"
+      ],
+      "research_gates": [
+        "Caimán aguja fotografiado no determina la especie del mito; no anatomía médica del interior."
+      ]
+    },
+    {
+      "unit_id": "A09",
+      "label": "Morrocoyo con caparazón",
+      "previous_file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-01/a09-morrocoyo-master-v1.jpeg",
+      "previous_sha256": "9a8d485fc85bf692b822613bc7029e56d5b9ad32f850a788124e1d8c97bf38f1",
+      "input_file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-01/a09-morrocoyo-master-v1.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/biblia/produccion-api-02/a09.prompt.txt",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-02/a09-morrocoyo-master-v2.jpeg",
+      "status": "produced_reviewed_editorial_candidate",
+      "user_approved": false,
+      "culturally_certified": false,
+      "scope_notes": [
+        "Patrón oscuro/ocre y proporciones ajustados a las referencias de fauna; especie del mito no certificada.",
+        "Caparazón final solamente; segmentación de papel simplificada, sin transformación previa."
+      ],
+      "sha256": "fc43ab74c88cab65a1f4e7986307d7176398e29c599ad2480cbd8ab571ed02de",
+      "bytes": 201468,
+      "width": 1024,
+      "height": 1536,
+      "format": "jpeg",
+      "prompt_sha256": "2d7e9d9d323d6a1d1536d1f7fef31e1b95a0032ddceaffa9ef59bf01aaed33a5",
+      "input_sha256": "9a8d485fc85bf692b822613bc7029e56d5b9ad32f850a788124e1d8c97bf38f1",
+      "endpoint": "/v1/images/edits",
+      "derived_from": [
+        "A09@produccion-api-01"
+      ],
+      "revision_action": "retained_unchanged_nonhuman",
+      "retained_from": "produccion-api-02",
+      "new_api_request_in_this_revision": false,
+      "category": "A",
+      "myth_ids": [
+        362,
+        366
+      ],
+      "source_batch": "produccion-api-05",
+      "planned_states": [
+        "estado final",
+        "cerca del agua"
+      ],
+      "research_gates": [
+        "No añadir Wuacha o Jacinto; especie final y figuración previa requieren revisión."
+      ]
+    },
+    {
+      "unit_id": "A10",
+      "label": "Fauna secundaria: seis estudios",
+      "category": "A",
+      "myth_ids": [
+        362,
+        365
+      ],
+      "mode": "generate",
+      "quality": "medium",
+      "input_files": [],
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-06/a10-master-v1.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/biblia/produccion-api-06/a10.prompt.txt",
+      "sha256": "30575170986616a44f600bd3f4f1bc1ef05ba7e72b15fcaf845aac9a02eab230",
+      "bytes": 260853,
+      "width": 1024,
+      "height": 1536,
+      "format": "jpeg",
+      "prompt_sha256": "5d976461bc685a4d2ba48a5f9089a79a35fa498b923de23638af26bbcf4acc4e",
+      "inputs": [],
+      "source_batch": "produccion-api-06",
+      "status": "produced_reviewed_editorial_candidate",
+      "user_approved": false,
+      "culturally_certified": false,
+      "reference_ids": [
+        "V14-IMG14"
+      ],
+      "research_gates": [
+        "Taxonomía y posible equivalencia entre nombres locales pendientes; no fusionarlos anticipadamente."
+      ],
+      "derived_from": [],
+      "planned_states": [
+        "seis perfiles comparables; sin cacería gráfica"
+      ],
+      "state_coverage_status": "master_available_not_all_story_states_verified",
+      "scope_notes": [
+        "Seis roles diferenciados en2x3; venado moteado juvenil y aves genéricas no identifican taxón. Tatabro/zaino no fusionados."
+      ]
+    },
+    {
+      "unit_id": "L01",
+      "label": "Monte, camino y claro",
+      "previous_file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-01/l01-monte-camino-claro-master-v1.jpeg",
+      "previous_sha256": "a15b470a6d425572ae9ac66e894b2f86ba8d4be77afa9c7c4bd27bb1f2cdf130",
+      "input_file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-01/l01-monte-camino-claro-master-v1.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/biblia/produccion-api-02/l01.prompt.txt",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-02/l01-monte-camino-claro-master-v2.jpeg",
+      "status": "produced_reviewed_editorial_candidate",
+      "user_approved": false,
+      "culturally_certified": false,
+      "scope_notes": [
+        "Borde de monte/regeneración ficticio de horizonte bajo; no reconstrucción cartográfica ni equivalencia de paisajes actuales con bosque histórico.",
+        "Tres encuadres con tronco inclinado, arbustos, sendero estrecho y roca pequeña como anclas; follaje aún estilizado, sin identificar especies por forma."
+      ],
+      "sha256": "3659d3a8c7bb1e23c1d680e6c1429cacc4ea37c6c88087d444972cd28e94b0bd",
+      "bytes": 449641,
+      "width": 1024,
+      "height": 1536,
+      "format": "jpeg",
+      "prompt_sha256": "cfef2de0ef48d44a70f32982c3d211aeff23d06dc8e3c77d2bc0879b0a9cb9aa",
+      "input_sha256": "a15b470a6d425572ae9ac66e894b2f86ba8d4be77afa9c7c4bd27bb1f2cdf130",
+      "endpoint": "/v1/images/edits",
+      "derived_from": [
+        "L01@produccion-api-01"
+      ],
+      "revision_action": "retained_unchanged_nonhuman",
+      "retained_from": "produccion-api-02",
+      "new_api_request_in_this_revision": false,
+      "category": "L",
+      "myth_ids": [
+        347,
+        349,
+        351,
+        353,
+        354,
+        356,
+        357,
+        358,
+        359,
+        360,
+        361,
+        362,
+        363,
+        364,
+        365,
+        366
+      ],
+      "source_batch": "produccion-api-05",
+      "planned_states": [
+        "camino",
+        "borde de monte",
+        "claro"
+      ],
+      "research_gates": []
+    },
+    {
+      "unit_id": "L02",
+      "label": "Sabana y laguna de San Ángel",
+      "category": "L",
+      "myth_ids": [
+        346,
+        348,
+        350,
+        580
+      ],
+      "mode": "generate",
+      "quality": "medium",
+      "input_files": [],
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-06/l02-master-v1.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/biblia/produccion-api-06/l02.prompt.txt",
+      "sha256": "ccdf2f468fb941c63e1172223f18542a6e4ef173f682d33add85fe4e7800c434",
+      "bytes": 311266,
+      "width": 1024,
+      "height": 1536,
+      "format": "jpeg",
+      "prompt_sha256": "30c2e5737866f8e678f168a46c004fd2e82d6604733196171fba331e844c16a8",
+      "inputs": [],
+      "source_batch": "produccion-api-06",
+      "status": "produced_reviewed_editorial_candidate",
+      "user_approved": false,
+      "culturally_certified": false,
+      "reference_ids": [
+        "V06-P049-I00",
+        "V06-P050-I00"
+      ],
+      "research_gates": [
+        "No afirmar que una foto genérica identifique la laguna exacta."
+      ],
+      "derived_from": [],
+      "planned_states": [
+        "sabana",
+        "loma alta",
+        "borde de laguna"
+      ],
+      "state_coverage_status": "master_available_not_all_story_states_verified",
+      "scope_notes": [
+        "Tres paisajes sabana/loma/laguna; sin Guatapurí ni playa marítima. Relieve/horizonte ficticios."
+      ]
+    },
+    {
+      "unit_id": "L03",
+      "label": "Gran Río: dos riberas",
+      "category": "L",
+      "myth_ids": [
+        348,
+        351,
+        361,
+        365
+      ],
+      "mode": "generate",
+      "quality": "medium",
+      "input_files": [],
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-06/l03-master-v1.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/biblia/produccion-api-06/l03.prompt.txt",
+      "sha256": "c31ea60cbbaf7c0ad9c3e02274f965b0242fd29f767d40447ab1bb8df0bcf7ae",
+      "bytes": 314050,
+      "width": 1024,
+      "height": 1536,
+      "format": "jpeg",
+      "prompt_sha256": "7d5e2f79bba054bc67264488de5feb7a7d65bfd05097a2184da1fb4ac8a0b1df",
+      "inputs": [],
+      "source_batch": "produccion-api-06",
+      "status": "produced_reviewed_editorial_candidate",
+      "user_approved": false,
+      "culturally_certified": false,
+      "reference_ids": [
+        "V06-P110-I01",
+        "V06-P113-I01"
+      ],
+      "research_gates": [
+        "Referencia de ciénaga sólo apoya agua/horizonte; no identifica el río del cuento."
+      ],
+      "derived_from": [],
+      "planned_states": [
+        "dos riberas",
+        "playa fluvial"
+      ],
+      "state_coverage_status": "master_available_not_all_story_states_verified",
+      "scope_notes": [
+        "Dos vistas de río amplio con ambas orillas; no identificación geográfica."
+      ]
+    },
+    {
+      "unit_id": "L04",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-05/l04-terreno-pozos-secos-llenos-master-v1-refined.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/biblia/produccion-api-05/l04.refinement.prompt.txt",
+      "mode": "edit",
+      "input_files": [
+        "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-05/l04-terreno-pozos-secos-llenos-master-v1.jpeg"
+      ],
+      "sha256": "57731d548dc69fe487356e3e3450f893ea528a13a2689f4b603bcb93384f1807",
+      "bytes": 308243,
+      "width": 1024,
+      "height": 1536,
+      "format": "jpeg",
+      "prompt_sha256": "a32e7af53cda9a2c47a844d4293defba10e7dda2298b683e928ce0cc87e5a475",
+      "inputs": [
+        {
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-05/l04-terreno-pozos-secos-llenos-master-v1.jpeg",
+          "sha256": "997e3ce6664cc5aaa1d393e1f054f442835b7217cf76352b31082f6c0e471323"
+        }
+      ],
+      "label": "Terreno montañoso y pozos",
+      "category": "L",
+      "myth_ids": [
+        352,
+        356
+      ],
+      "covered_myth_ids": [
+        352
+      ],
+      "reference_ids": [
+        "V06-P048-I00",
+        "V06-P059-I00"
+      ],
+      "scope_notes": [
+        "Cuatro cuadros: dos cámaras con tres pozos secos arriba y llenos abajo. Cantidad de tres elegida para composición, no número sagrado del relato.",
+        "QA redujo los collares de mampostería a bordes terrosos irregulares; capas internas de papel aún escalonadas.",
+        "Cubre los pozos de 352, no estaca/manantial del Palo de Agua 356. Paisaje ficticio, no cartografía."
+      ],
+      "status": "produced_reviewed_editorial_candidate",
+      "user_approved": false,
+      "culturally_certified": false,
+      "derived_from": [],
+      "endpoint": "/v1/images/edits",
+      "source_batch": "produccion-api-05",
+      "planned_states": [
+        "pozos secos",
+        "pozos llenos",
+        "brote por extracción de palo"
+      ],
+      "research_gates": []
+    },
+    {
+      "unit_id": "L05",
+      "label": "Roza y tronco de reserva",
+      "myth_ids": [
+        350,
+        353,
+        354,
+        357
+      ],
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-03/l05-roza-tronco-reserva-master-v1.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/biblia/produccion-api-03/l05.prompt.txt",
+      "mode": "generate",
+      "input_files": [],
+      "status": "produced_reviewed_editorial_candidate",
+      "user_approved": false,
+      "culturally_certified": false,
+      "sha256": "53f0dcb68456b473e88a767f40b16de4122320de58f29e0970a69e84b362bf17",
+      "bytes": 416943,
+      "width": 1024,
+      "height": 1536,
+      "format": "jpeg",
+      "prompt_sha256": "3e26936836e9f2fe75e4f991faf26e072469f1f0853be329f4e75e33ea2bb12b",
+      "inputs": [],
+      "inventory_label": "Roza y tronco de reserva",
+      "endpoint": "/v1/images/generations",
+      "derived_from": [],
+      "scope_notes": [
+        "Roza ficticia de maíz y yuca; fotos contemporáneas no reconstruyen una parcela mítica exacta.",
+        "Tronco bajo de reserva distinto de ceiba; no tiene germinación de recuperación incorporada. Tres encuadres reutilizables."
+      ],
+      "revision_action": "retained_unchanged_nonhuman",
+      "retained_from": "produccion-api-03",
+      "new_api_request_in_this_revision": false,
+      "category": "L",
+      "source_batch": "produccion-api-05",
+      "planned_states": [
+        "roza fértil",
+        "tronco para semilla"
+      ],
+      "research_gates": []
+    },
+    {
+      "unit_id": "L06",
+      "label": "Quebrada y recogida de agua",
+      "category": "L",
+      "myth_ids": [
+        350,
+        362,
+        363,
+        366
+      ],
+      "mode": "generate",
+      "quality": "medium",
+      "input_files": [],
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-06/l06-master-v1.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/biblia/produccion-api-06/l06.prompt.txt",
+      "sha256": "4b6b047485e497590324beed19ce5620a8107b410209533daeef9b84c9e57416",
+      "bytes": 391811,
+      "width": 1024,
+      "height": 1536,
+      "format": "jpeg",
+      "prompt_sha256": "834c1e68c159a8d00b8987a6355ac8d7e4318ab4fabb122446cc7bf0c9d82741",
+      "inputs": [],
+      "source_batch": "produccion-api-06",
+      "status": "produced_reviewed_editorial_candidate",
+      "user_approved": false,
+      "culturally_certified": false,
+      "reference_ids": [
+        "V06-P111-I00",
+        "V06-P113-I00"
+      ],
+      "research_gates": [
+        "No usar rótulo geográfico dudoso de V06-P112-I01 como ubicación confirmada."
+      ],
+      "derived_from": [],
+      "planned_states": [
+        "cauce",
+        "orilla de recogida"
+      ],
+      "state_coverage_status": "master_available_not_all_story_states_verified",
+      "scope_notes": [
+        "Dos vistas de cauce pequeño y orilla accesible, sin obras modernas."
+      ]
+    },
+    {
+      "unit_id": "L07",
+      "label": "Vivienda y asentamiento doméstico",
+      "category": "L",
+      "myth_ids": [
+        350,
+        351,
+        352,
+        353,
+        355,
+        357,
+        358,
+        360,
+        361,
+        365,
+        366
+      ],
+      "mode": "generate",
+      "quality": "medium",
+      "input_files": [],
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-06/l07-master-v1.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/biblia/produccion-api-06/l07.prompt.txt",
+      "sha256": "dbbe191c4a347603c137483640870ad30963c5913b7082991a90fd9b71f07a8a",
+      "bytes": 372459,
+      "width": 1024,
+      "height": 1536,
+      "format": "jpeg",
+      "prompt_sha256": "8e1147f522dfa86caafbd9dfc3f2aeefba123c8d2f7be1e18c6fc6defffb8075",
+      "inputs": [],
+      "source_batch": "produccion-api-06",
+      "status": "produced_reviewed_editorial_candidate",
+      "user_approved": false,
+      "culturally_certified": false,
+      "reference_ids": [
+        "V06-P090-I00",
+        "V05-IMG26"
+      ],
+      "research_gates": [
+        "Arquitectura histórica por completar; no trasladar cubierta metálica o mobiliario plástico al tiempo mítico."
+      ],
+      "derived_from": [],
+      "planned_states": [
+        "exterior",
+        "interior",
+        "patio"
+      ],
+      "state_coverage_status": "master_available_not_all_story_states_verified",
+      "scope_notes": [
+        "Tres vistas exterior/interior/patio; abrigo continuo de palma abierto, chinchorro simple, postes y amarres. Marco frontal triangular es reconstrucción geométrica editorial, no medida histórica exacta."
+      ]
+    },
+    {
+      "unit_id": "L08",
+      "label": "Casa de los muertos",
+      "category": "L",
+      "myth_ids": [
+        358
+      ],
+      "mode": "generate",
+      "quality": "medium",
+      "input_files": [],
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-06/l08-master-v1.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/biblia/produccion-api-06/l08.prompt.txt",
+      "sha256": "1dd53cfb1660c06116f09dcf6d82c7bc8c48b35d5374b31bf49be1b098e10a95",
+      "bytes": 351241,
+      "width": 1024,
+      "height": 1536,
+      "format": "jpeg",
+      "prompt_sha256": "ea7e3f8cad1392701baf7d147c1a1200f3a8ef590a177d1f823c084769e0aa0c",
+      "inputs": [],
+      "source_batch": "produccion-api-06",
+      "status": "produced_reviewed_editorial_candidate",
+      "user_approved": false,
+      "culturally_certified": false,
+      "reference_ids": [],
+      "research_gates": [
+        "No convertirla en la casa del enterrado del 359."
+      ],
+      "derived_from": [],
+      "planned_states": [
+        "exterior",
+        "interior; umbral"
+      ],
+      "state_coverage_status": "master_available_not_all_story_states_verified",
+      "scope_notes": [
+        "Dos encuadres, tres habitantes adultos sentados sin rasgos de monstruo. Arquitectura de antecámara y ropa son propuestas, no retratos. Hay utilería secundaria añadida; no equivalente exacto a casa funeraria vacía histórica."
+      ]
+    },
+    {
+      "unit_id": "L09",
+      "label": "Casa redonda con enterramiento",
+      "category": "L",
+      "myth_ids": [
+        359
+      ],
+      "mode": "generate",
+      "quality": "medium",
+      "input_files": [],
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-06/l09-master-v1.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/biblia/produccion-api-06/l09.prompt.txt",
+      "sha256": "3438dcf641ffd7b489a9ff9db97bbb2524c1a5989242ba42ca0197b3b58e8bc0",
+      "bytes": 288613,
+      "width": 1024,
+      "height": 1536,
+      "format": "jpeg",
+      "prompt_sha256": "dcb554f26c01724f256f3788a411ed4c3177dd84b866f82d52ab894cb0741d73",
+      "inputs": [],
+      "source_batch": "produccion-api-06",
+      "status": "produced_reviewed_editorial_candidate",
+      "user_approved": false,
+      "culturally_certified": false,
+      "reference_ids": [],
+      "research_gates": [
+        "Tipología situada en un relato; no casa Ette universal."
+      ],
+      "derived_from": [],
+      "planned_states": [
+        "exterior",
+        "interior nocturno"
+      ],
+      "state_coverage_status": "master_available_not_all_story_states_verified",
+      "scope_notes": [
+        "Casa circular de palma, central y espacio nocturno, parche de tierra sobrio sin cuerpo; geometría propuesta."
+      ]
+    },
+    {
+      "unit_id": "L10",
+      "label": "Refugio subterráneo del diluvio",
+      "category": "L",
+      "myth_ids": [
+        350
+      ],
+      "mode": "generate",
+      "quality": "medium",
+      "input_files": [],
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-06/l10-master-v1.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/biblia/produccion-api-06/l10.prompt.txt",
+      "sha256": "d82daf7a29f7cfdf33c55dc57319714f01d2e12a1548d6cf4fa7aad26d9c5063",
+      "bytes": 353298,
+      "width": 1024,
+      "height": 1536,
+      "format": "jpeg",
+      "prompt_sha256": "cfc901c324360cb5eac11321e71f29d8990beee4d61a1496f74ab32460f2e74b",
+      "inputs": [],
+      "source_batch": "produccion-api-06",
+      "status": "produced_reviewed_editorial_candidate",
+      "user_approved": false,
+      "culturally_certified": false,
+      "reference_ids": [],
+      "research_gates": [
+        "La geometría no descrita debe rotularse reconstrucción editorial; no arca ni pirámide."
+      ],
+      "derived_from": [],
+      "planned_states": [
+        "exterior y abertura de piedra",
+        "corte de cuartos superpuestos"
+      ],
+      "state_coverage_status": "master_available_not_all_story_states_verified",
+      "scope_notes": [
+        "Dos vistas, acceso y corte con dos cuartos apilados. Mampostería, escalones y mobiliario son propuestas editoriales, no ingeniería históricamente certificada."
+      ]
+    },
+    {
+      "unit_id": "L11",
+      "label": "Oscuridad interior del caimán",
+      "category": "L",
+      "myth_ids": [
+        365
+      ],
+      "mode": "edit",
+      "quality": "medium",
+      "input_files": [
+        "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-06/l11-master-v1.jpeg"
+      ],
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-06/l11-master-v1-refined.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/biblia/produccion-api-06/l11.refinement.prompt.txt",
+      "sha256": "51fb686ba91156c0c6d06795e4a8fff4edf217a34ffecf10900bd19abbbef7ed",
+      "bytes": 159080,
+      "width": 1024,
+      "height": 1536,
+      "format": "jpeg",
+      "prompt_sha256": "e9b29608891eaf3ceccc991552ee6bca36008d3e4e470927c32b9a82ffbaee14",
+      "inputs": [
+        {
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-06/l11-master-v1.jpeg",
+          "sha256": "e2f67a32c4e3edaf390889ba54666f586b70c3a5bfbd555cbbc318652bb484a0"
+        }
+      ],
+      "source_batch": "produccion-api-06",
+      "status": "produced_reviewed_editorial_candidate",
+      "user_approved": false,
+      "culturally_certified": false,
+      "reference_ids": [],
+      "research_gates": [
+        "Reconstrucción artística explícita; no anatomía zoológica real."
+      ],
+      "derived_from": [],
+      "planned_states": [
+        "oscuridad",
+        "dirección del canto exterior",
+        "salida hacia luz"
+      ],
+      "state_coverage_status": "master_available_not_all_story_states_verified",
+      "scope_notes": [
+        "Refinamiento revisado: tres espacios abstractos de papel oscuro y salida luminosa, sin humanos ni órganos anatómicos. No identifica arquitectura subterránea real."
+      ]
+    },
+    {
+      "unit_id": "L12",
+      "label": "Tierras cosmológicas y cuerpo-territorio",
+      "category": "L",
+      "myth_ids": [
+        579
+      ],
+      "mode": "generate",
+      "quality": "medium",
+      "input_files": [],
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-06/l12-master-v1.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/biblia/produccion-api-06/l12.prompt.txt",
+      "sha256": "f46d4bd7b757c44408f555169f7e3383edfceeff4bfffeb2d0c2bc37174b6ee8",
+      "bytes": 320558,
+      "width": 1024,
+      "height": 1536,
+      "format": "jpeg",
+      "prompt_sha256": "15a46204bcbab1ee37746484dc4eb04a0a664bf915475dce2517dcfd1eee1fc6",
+      "inputs": [],
+      "source_batch": "produccion-api-06",
+      "status": "produced_reviewed_editorial_candidate",
+      "user_approved": false,
+      "culturally_certified": false,
+      "reference_ids": [],
+      "research_gates": [
+        "Representar sólo relaciones expresas; no inventar cinco planetas ni un pueblo zoológico a partir de gente con caparazón."
+      ],
+      "derived_from": [],
+      "planned_states": [
+        "cuerpo-territorio",
+        "relaciones entre tierras y agua",
+        "inversión de día y noche"
+      ],
+      "state_coverage_status": "master_available_not_all_story_states_verified",
+      "scope_notes": [
+        "Tres estudios metafóricos de cuerpo-territorio y cuarta/quinta regiones con agua debajo; sin planetas. Viviendas y paisaje propuestos no reconstrucción sagrada."
+      ]
+    },
+    {
+      "unit_id": "U01",
+      "label": "Greda y piedra de moler",
+      "category": "U",
+      "myth_ids": [
+        346,
+        349,
+        351
+      ],
+      "mode": "generate",
+      "quality": "medium",
+      "input_files": [],
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-06/u01-master-v1.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/biblia/produccion-api-06/u01.prompt.txt",
+      "sha256": "60b9157d552da0a52dc94cf90ed1a091c31a666cbb2ca11b9045df34a0a27ab0",
+      "bytes": 278352,
+      "width": 1024,
+      "height": 1536,
+      "format": "jpeg",
+      "prompt_sha256": "456cc9edcbeb8c0e2aa78de323c7ad9e4373fe817d2650b4ea2a865de7b0c280",
+      "inputs": [],
+      "source_batch": "produccion-api-06",
+      "status": "produced_reviewed_editorial_candidate",
+      "user_approved": false,
+      "culturally_certified": false,
+      "reference_ids": [
+        "V06-P032-I00"
+      ],
+      "research_gates": [
+        "No convertir función doméstica en altar."
+      ],
+      "derived_from": [],
+      "planned_states": [
+        "greda",
+        "piedra de moler",
+        "superficie de calentamiento"
+      ],
+      "state_coverage_status": "master_available_not_all_story_states_verified",
+      "scope_notes": [
+        "Tres materiales distintos: greda, molienda, superficie de calentamiento solar; alimentos propuestos sin altar."
+      ]
+    },
+    {
+      "unit_id": "U02",
+      "label": "Arcos, flechas y maná",
+      "myth_ids": [
+        348,
+        349,
+        357,
+        361,
+        363,
+        364,
+        365,
+        366
+      ],
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-03/u02-arcos-flechas-mana-master-v1.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/biblia/produccion-api-03/u02.prompt.txt",
+      "mode": "generate",
+      "input_files": [],
+      "status": "produced_reviewed_editorial_candidate",
+      "user_approved": false,
+      "culturally_certified": false,
+      "sha256": "b8cd6d0593578985f6647047e9f4ef317030eb389b818384e4d0c44aeb5e5669",
+      "bytes": 91498,
+      "width": 1024,
+      "height": 1536,
+      "format": "jpeg",
+      "prompt_sha256": "9c64bae762130b07ae5ecc1026508d8e214dffe85d23ab80068aae4e2b8fafd5",
+      "inputs": [],
+      "inventory_label": "Arco, flechas y caña maná",
+      "endpoint": "/v1/images/generations",
+      "derived_from": [],
+      "scope_notes": [
+        "Equipo ordinario basado parcialmente en archivo1946: sección plana, puntas diferenciadas y flechas sin emplumado.",
+        "Arco iris y trío de maná separados como propuesta narrativa; botánica y medidas de maná siguen pendientes."
+      ],
+      "revision_action": "retained_unchanged_nonhuman",
+      "retained_from": "produccion-api-03",
+      "new_api_request_in_this_revision": false,
+      "category": "U",
+      "source_batch": "produccion-api-05",
+      "planned_states": [
+        "arco ordinario",
+        "arco iris",
+        "maná; tres flechas"
+      ],
+      "research_gates": [
+        "Botánica de maná y dimensiones pendientes."
+      ]
+    },
+    {
+      "unit_id": "U03",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-05/u03-macanas-util-excavacion-master-v1-refined.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/biblia/produccion-api-05/u03.refinement.prompt.txt",
+      "mode": "edit",
+      "input_files": [
+        "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-05/u03-macanas-util-excavacion-master-v1.jpeg"
+      ],
+      "sha256": "c1f027e7b76a78cb7aa2417c92b001af822ad0fb5e3556f9b0c1c66b832ced5d",
+      "bytes": 89806,
+      "width": 1024,
+      "height": 1536,
+      "format": "jpeg",
+      "prompt_sha256": "ad7e9d165d50435d287c067b209fd5deeb34e68154b12f31ab377f7b4e297322",
+      "inputs": [
+        {
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-05/u03-macanas-util-excavacion-master-v1.jpeg",
+          "sha256": "a647bc4b97fe31d351fb9b25f29a88d754477a231ecc03ef77dc5bf294ecb451"
+        }
+      ],
+      "label": "Macana y útiles de trabajo",
+      "category": "U",
+      "myth_ids": [
+        349,
+        352,
+        353,
+        356,
+        357,
+        360,
+        361
+      ],
+      "covered_myth_ids": [
+        349,
+        352,
+        353,
+        356,
+        357,
+        360,
+        361
+      ],
+      "reference_ids": [
+        "V11-P067-I00",
+        "V03-IMG01"
+      ],
+      "scope_notes": [
+        "Cinco estudios de tres prototipos: macana grande (frente/canto), pequeña (frente/canto), palo de trabajo provisional.",
+        "QA cambió hoja lanceolada por tabla ensanchada y punta corta proyectada; cantos simplificados, no planos técnicos.",
+        "Archivo1946 apoya macanas distintas de tamaño y función. Palo de excavación no confirmado para pozos o ceiba; no usarlo como hecho cultural."
+      ],
+      "status": "produced_reviewed_editorial_candidate",
+      "user_approved": false,
+      "culturally_certified": false,
+      "derived_from": [],
+      "endpoint": "/v1/images/edits",
+      "source_batch": "produccion-api-05",
+      "planned_states": [
+        "macana",
+        "útil de excavar",
+        "útil de corte"
+      ],
+      "research_gates": [
+        "Tipo y material de herramienta de pozos/ceiba no especificados."
+      ]
+    },
+    {
+      "unit_id": "U04",
+      "label": "Palo de Agua",
+      "category": "U",
+      "myth_ids": [
+        356
+      ],
+      "mode": "edit",
+      "quality": "medium",
+      "input_files": [
+        "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-06/u04-master-v1.jpeg"
+      ],
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-06/u04-master-v1-refined.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/biblia/produccion-api-06/u04.refinement.prompt.txt",
+      "sha256": "d0dea2e4a03d2212c89c11cc8e250d70731a8718f4de8e9649bef241d982a15a",
+      "bytes": 207328,
+      "width": 1024,
+      "height": 1536,
+      "format": "jpeg",
+      "prompt_sha256": "8c9232fcccda1261f27436cd413fc33e7232cc3a644bcd694ae404cc513cb9d5",
+      "inputs": [
+        {
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-06/u04-master-v1.jpeg",
+          "sha256": "61016f3df5daae1c88588b0556efcb8fe959b8d53b1ed1982f713fb8523e5984"
+        }
+      ],
+      "source_batch": "produccion-api-06",
+      "status": "produced_reviewed_editorial_candidate",
+      "user_approved": false,
+      "culturally_certified": false,
+      "reference_ids": [],
+      "research_gates": [],
+      "derived_from": [],
+      "planned_states": [
+        "cortado",
+        "clavado",
+        "extraído"
+      ],
+      "state_coverage_status": "master_available_not_all_story_states_verified",
+      "scope_notes": [
+        "Refinamiento revisado: agua brota del hueco en tierra, palo elevado seco; conserva corte/plantado/retirado."
+      ]
+    },
+    {
+      "unit_id": "U05",
+      "label": "Maíz: tusa, granos y dos mazorcas",
+      "category": "U",
+      "myth_ids": [
+        353,
+        354,
+        580
+      ],
+      "mode": "generate",
+      "quality": "medium",
+      "input_files": [],
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-06/u05-master-v1.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/biblia/produccion-api-06/u05.prompt.txt",
+      "sha256": "1fc5c47a665c82d4274896aa16fac73772f9a902e55dd29ac8fd7607bdd6d8f7",
+      "bytes": 231654,
+      "width": 1024,
+      "height": 1536,
+      "format": "jpeg",
+      "prompt_sha256": "8595b8366b871ea06357c3ac8ef54ec564f4a48f6fd01960236c427ad4e758ea",
+      "inputs": [],
+      "source_batch": "produccion-api-06",
+      "status": "produced_reviewed_editorial_candidate",
+      "user_approved": false,
+      "culturally_certified": false,
+      "reference_ids": [],
+      "research_gates": [
+        "Color/variedad y grafía deben contrastarse con fuentes; no copiar otra variedad por disponibilidad."
+      ],
+      "derived_from": [],
+      "planned_states": [
+        "tusa",
+        "granos",
+        "dos mazorcas de maíz cariaco"
+      ],
+      "state_coverage_status": "master_available_not_all_story_states_verified",
+      "scope_notes": [
+        "Tusa, granos y exactamente dos mazorcas; tono crema provisional, no certificación de variedad."
+      ]
+    },
+    {
+      "unit_id": "U06",
+      "label": "Algodón: semilla, fibra y tejido",
+      "category": "U",
+      "myth_ids": [
+        355,
+        580
+      ],
+      "mode": "edit",
+      "quality": "medium",
+      "input_files": [
+        "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-06/u06-master-v1.jpeg"
+      ],
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-06/u06-master-v1-refined.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/biblia/produccion-api-06/u06.refinement.prompt.txt",
+      "sha256": "2c2f96485be5fd5bfd97ba5a32227cdee363228d3846861bdf8aaf361c483e4d",
+      "bytes": 182198,
+      "width": 1024,
+      "height": 1536,
+      "format": "jpeg",
+      "prompt_sha256": "54ae0ec9d4715b40bc660e14edcc19b201cfbd8c5809b524f896d139031835b0",
+      "inputs": [
+        {
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-06/u06-master-v1.jpeg",
+          "sha256": "b6557ba2f73e7dd342f34bb3672dadae4c9ff483d1115b31eb8e29ac8fd40ab0"
+        }
+      ],
+      "source_batch": "produccion-api-06",
+      "status": "produced_reviewed_editorial_candidate",
+      "user_approved": false,
+      "culturally_certified": false,
+      "reference_ids": [
+        "V02-IMG03",
+        "V02-IMG04",
+        "V06-P151-I01"
+      ],
+      "research_gates": [],
+      "derived_from": [],
+      "planned_states": [
+        "semilla",
+        "planta y fibra",
+        "huso e hilo"
+      ],
+      "state_coverage_status": "master_available_not_all_story_states_verified",
+      "scope_notes": [
+        "Refinamiento revisado: hojas lobuladas de algodón, semillas, cápsulas, fibra e hilo/huso separados; variedad local no certificada."
+      ]
+    },
+    {
+      "unit_id": "U07",
+      "label": "Mochilas: algodón y fique",
+      "previous_file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-01/u07-mochilas-algodon-fique-master-v1.jpeg",
+      "previous_sha256": "92e8aaf29d51216c3e437ae465ecd3bae99331adca11b45c520758bf52be4ca4",
+      "input_file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-02/u07-mochilas-algodon-fique-master-v2.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/biblia/produccion-api-02/u07.refinement.prompt.txt",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-02/u07-mochilas-algodon-fique-master-v2-refined.jpeg",
+      "status": "produced_reviewed_editorial_candidate",
+      "user_approved": false,
+      "culturally_certified": false,
+      "scope_notes": [
+        "Algodón: construcción contemporánea referencial; geometría y cierre del fique aún provisionales por falta de referente directo atribuido.",
+        "Tejido fino y correas anchas; se descartó la primera revisión con aspecto de cesta enrollada.",
+        "Errata bibliográfica del prompt inicial: V02 corresponde a British Council Colombia, no Banco de la República; prompt efectivo conservado."
+      ],
+      "sha256": "e1bdfb78a6096e2a8912968a9a1eef3be7a13d06dbc057646669b2c367cf2309",
+      "bytes": 223538,
+      "width": 1024,
+      "height": 1536,
+      "format": "jpeg",
+      "prompt_sha256": "eaff908885b40d73fecd1b94ed3d806343747e3b93a573c51be59606da3add3d",
+      "input_sha256": "e58d504c81af87f180fa62b0b2162d065d51a8a76f178cf0ebca1bd2af9f5a56",
+      "endpoint": "/v1/images/edits",
+      "derived_from": [
+        "U07@produccion-api-02-intermediate",
+        "U07@produccion-api-01"
+      ],
+      "revision_action": "retained_unchanged_nonhuman",
+      "retained_from": "produccion-api-02",
+      "new_api_request_in_this_revision": false,
+      "category": "U",
+      "myth_ids": [
+        354,
+        355
+      ],
+      "source_batch": "produccion-api-05",
+      "planned_states": [
+        "algodón",
+        "fique"
+      ],
+      "research_gates": [
+        "Referencia específica de fique pendiente; no sustituirlo silenciosamente por algodón."
+      ]
+    },
+    {
+      "unit_id": "U08",
+      "label": "Ceiba del maíz y totumo",
+      "category": "U",
+      "myth_ids": [
+        350,
+        353
+      ],
+      "mode": "edit",
+      "quality": "medium",
+      "input_files": [
+        "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-06/u08-master-v1.jpeg"
+      ],
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-06/u08-master-v1-refined.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/biblia/produccion-api-06/u08.refinement.prompt.txt",
+      "sha256": "00bb8cab0b559f5f346c76e089d806ea9202b9b7aa7fbadb74c81eca7e083eff",
+      "bytes": 299123,
+      "width": 1024,
+      "height": 1536,
+      "format": "jpeg",
+      "prompt_sha256": "b4eee6b4cfccd6fbb0782fdf687065d9f064af9c8dc64209b0587f1a0313a50e",
+      "inputs": [
+        {
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-06/u08-master-v1.jpeg",
+          "sha256": "cd9f9fc2a41da573d571e4c8e01d3e173d43f9dbc17515692e6d04536ff5f759"
+        }
+      ],
+      "source_batch": "produccion-api-06",
+      "status": "produced_reviewed_editorial_candidate",
+      "user_approved": false,
+      "culturally_certified": false,
+      "reference_ids": [],
+      "research_gates": [
+        "Ceiba viva y totumo requieren referencias; foto de bonga muerta no valida copa."
+      ],
+      "derived_from": [],
+      "planned_states": [
+        "ceiba entera",
+        "ceiba cortada/reparada/caída",
+        "totumo y frutos"
+      ],
+      "state_coverage_status": "master_available_not_all_story_states_verified",
+      "scope_notes": [
+        "Refinamiento revisado: ceiba caída con extremo cortado y pequeño tocón, no arrancada; totumo y frutos separados. Botánica estilizada, no espécimen identificado."
+      ]
+    },
+    {
+      "unit_id": "U09",
+      "label": "Brasa, leña y fogón",
+      "category": "U",
+      "myth_ids": [
+        350,
+        351,
+        360,
+        366
+      ],
+      "mode": "generate",
+      "quality": "medium",
+      "input_files": [],
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-06/u09-master-v1.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/biblia/produccion-api-06/u09.prompt.txt",
+      "sha256": "1f5633016ae301e87b5058fc7c417026f2d66bfbd2c0835849308c86f9c047bf",
+      "bytes": 228514,
+      "width": 1024,
+      "height": 1536,
+      "format": "jpeg",
+      "prompt_sha256": "139bca3fc1a58629f6e4aae14a302e3bc117c8d23eb73f23760c8a0b1275e999",
+      "inputs": [],
+      "source_batch": "produccion-api-06",
+      "status": "produced_reviewed_editorial_candidate",
+      "user_approved": false,
+      "culturally_certified": false,
+      "reference_ids": [],
+      "research_gates": [
+        "Técnica histórica del fogón pendiente; ningún mango de maraca sirve como prueba de encendido."
+      ],
+      "derived_from": [],
+      "planned_states": [
+        "brasa",
+        "leña",
+        "fogón"
+      ],
+      "state_coverage_status": "master_available_not_all_story_states_verified",
+      "scope_notes": [
+        "Brasa, leña y fogón de tres piedras, sin consumo humano; fogón propuesto no tecnología histórica certificada."
+      ]
+    },
+    {
+      "unit_id": "U10",
+      "label": "Recipientes, chicha y alimentos",
+      "category": "U",
+      "myth_ids": [
+        351,
+        360,
+        365,
+        366
+      ],
+      "mode": "generate",
+      "quality": "medium",
+      "input_files": [],
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-06/u10-master-v1.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/biblia/produccion-api-06/u10.prompt.txt",
+      "sha256": "c8f3c78149918528565379da88e69d3645877589624bd9e78be5f401274200e1",
+      "bytes": 189306,
+      "width": 1024,
+      "height": 1536,
+      "format": "jpeg",
+      "prompt_sha256": "4e953978abee0eb2757a46f58e09ea76739b2a00cea2d0054334f7823751fb61",
+      "inputs": [],
+      "source_batch": "produccion-api-06",
+      "status": "produced_reviewed_editorial_candidate",
+      "user_approved": false,
+      "culturally_certified": false,
+      "reference_ids": [
+        "V06-P033-I00",
+        "V11-P063-I00"
+      ],
+      "research_gates": [
+        "Excluir copiar incisiones de pieza aportada sin procedencia exacta."
+      ],
+      "derived_from": [],
+      "planned_states": [
+        "recipiente vegetal",
+        "recipiente cerámico",
+        "bebida/alimentos"
+      ],
+      "state_coverage_status": "master_available_not_all_story_states_verified",
+      "scope_notes": [
+        "Cuatro grupos diferenciados: totuma/cerámica/bebida/alimentos vegetales; jarra sin incisiones."
+      ]
+    },
+    {
+      "unit_id": "V01",
+      "label": "Monte inundado",
+      "previous_file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-01/v01-monte-inundado-v1.jpeg",
+      "previous_sha256": "4881036fd279c37ef03574f7bb0ea6c56745129a079f168bb946e137420d4c1f",
+      "input_file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-02/l01-monte-camino-claro-master-v2.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/biblia/produccion-api-02/v01.prompt.txt",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-02/v01-monte-inundado-v2.jpeg",
+      "status": "produced_reviewed_editorial_candidate",
+      "user_approved": false,
+      "culturally_certified": false,
+      "scope_notes": [
+        "Sólo variante de L01v2 para mito350, sin fusionar cosmología579 ni otras bases aún no producidas.",
+        "Tres encuadres y anclas reconocibles; sendero/claro sumergidos. No certificación cultural o cartográfica."
+      ],
+      "sha256": "75eb8661c859627ef8b71426b2965a0809354144132bb6f18b6dbe0d1489ee4b",
+      "bytes": 363203,
+      "width": 1024,
+      "height": 1536,
+      "format": "jpeg",
+      "prompt_sha256": "1cc2b45186275c95ecb1cc3d5c6ddf3b5560aeb4d91f127283498bcbd1c7f998",
+      "input_sha256": "3659d3a8c7bb1e23c1d680e6c1429cacc4ea37c6c88087d444972cd28e94b0bd",
+      "endpoint": "/v1/images/edits",
+      "derived_from": [
+        "L01@produccion-api-02"
+      ],
+      "revision_action": "retained_unchanged_nonhuman",
+      "retained_from": "produccion-api-02",
+      "new_api_request_in_this_revision": false,
+      "category": "V",
+      "myth_ids": [
+        350,
+        579
+      ],
+      "source_batch": "produccion-api-05",
+      "planned_states": [
+        "inundación"
+      ],
+      "research_gates": [
+        "No muertos visibles."
+      ]
+    },
+    {
+      "unit_id": "V02",
+      "label": "Roza en sequía",
+      "myth_ids": [
+        354,
+        359
+      ],
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-03/v02-roza-sequia-v1.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/biblia/produccion-api-03/v02.prompt.txt",
+      "mode": "edit",
+      "input_files": [
+        "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-03/l05-roza-tronco-reserva-master-v1.jpeg"
+      ],
+      "status": "produced_reviewed_editorial_candidate",
+      "user_approved": false,
+      "culturally_certified": false,
+      "sha256": "ba0d0b737ff4e8aff3b3a6bcf35f7f4b9b3e70693039e67a695e338d93f533da",
+      "bytes": 388151,
+      "width": 1024,
+      "height": 1536,
+      "format": "jpeg",
+      "prompt_sha256": "4d3825512a417c6bd58691891ae4ef3a209a979810d3f9c7ee38381bfe1930f5",
+      "inputs": [
+        {
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-03/l05-roza-tronco-reserva-master-v1.jpeg",
+          "sha256": "53f0dcb68456b473e88a767f40b16de4122320de58f29e0970a69e84b362bf17"
+        }
+      ],
+      "inventory_label": "Sequía prolongada",
+      "endpoint": "/v1/images/edits",
+      "derived_from": [
+        "L05@produccion-api-03"
+      ],
+      "scope_notes": [
+        "Sequía narrativa del354 editada sobre L05, con tres encuadres y anclas reconocibles.",
+        "Cubre L05 solamente, no L01 ni cauce seco; no confundir con lluvia del brujo359 o cosmología579."
+      ],
+      "revision_action": "retained_unchanged_nonhuman",
+      "retained_from": "produccion-api-03",
+      "new_api_request_in_this_revision": false,
+      "category": "V",
+      "source_batch": "produccion-api-05",
+      "planned_states": [
+        "suelo caliente",
+        "roza perdida",
+        "cauce seco"
+      ],
+      "research_gates": [
+        "Las referencias de patios actuales no prueban sequía prolongada; falta referencia ambiental específica."
+      ]
+    },
+    {
+      "unit_id": "V03",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-05/v03-incendio-terreno-posterior-l01-v1-refined.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/biblia/produccion-api-05/v03.refinement.prompt.txt",
+      "mode": "edit",
+      "input_files": [
+        "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-05/v03-incendio-terreno-posterior-l01-v1.jpeg"
+      ],
+      "sha256": "a1932afd9e93f26db2969d22f417a3c0bdf676c468d5bf2d86df1e3a77a509fd",
+      "bytes": 478266,
+      "width": 1024,
+      "height": 1536,
+      "format": "jpeg",
+      "prompt_sha256": "d3194f52359934f423b518778555f28e359be51f3a0e33873352ddd008b3cc92",
+      "inputs": [
+        {
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-05/v03-incendio-terreno-posterior-l01-v1.jpeg",
+          "sha256": "b6e6dbc8d3fe107a86ed4527679e7e2349e779a87298de5ba4d864ca4d113676"
+        }
+      ],
+      "label": "Incendio y terreno posterior",
+      "category": "V",
+      "myth_ids": [
+        350,
+        579,
+        580
+      ],
+      "covered_myth_ids": [
+        350
+      ],
+      "reference_ids": [],
+      "scope_notes": [
+        "Cuatro cuadros: incendio arriba y terreno sin llamas abajo, derivados del espacio L01 para 350.",
+        "Tronco inclinado, roca y sendero reconocibles; cámaras/composición aproximadas, no correspondencia geométrica exacta entre estados.",
+        "No cubre casas L02, roza L05 ni cosmologías 579/580; conserva follaje seco estilizado y no representa recuperación completa."
+      ],
+      "status": "produced_reviewed_editorial_candidate",
+      "user_approved": false,
+      "culturally_certified": false,
+      "derived_from": [
+        "L01@produccion-api-02-spatial-parent"
+      ],
+      "endpoint": "/v1/images/edits",
+      "source_batch": "produccion-api-05",
+      "planned_states": [
+        "fuego por viento",
+        "terreno después"
+      ],
+      "research_gates": [
+        "Adaptación no gráfica; agua/fuego no equivalen a explicación geológica."
+      ]
+    },
+    {
+      "unit_id": "V04",
+      "label": "Padre fallecido: aparición festiva",
+      "category": "V",
+      "myth_ids": [
+        357
+      ],
+      "mode": "edit",
+      "quality": "medium",
+      "input_files": [
+        "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-06/h04-master-v1.jpeg"
+      ],
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-06/v04-master-v1.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/biblia/produccion-api-06/v04.prompt.txt",
+      "sha256": "2cebe150a05c1c19f863cab3ca6b484279588a5e6bd72a898dd6f42ce64a0970",
+      "bytes": 173765,
+      "width": 1024,
+      "height": 1536,
+      "format": "jpeg",
+      "prompt_sha256": "d4f8296c255a2cbcf11a0300b932716c32356ad1bb4cd1dd36771f469ed227c0",
+      "inputs": [
+        {
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-06/h04-master-v1.jpeg",
+          "sha256": "1958a7010723d4487f889db96997341dfabea4c179688528822912add4b22023"
+        }
+      ],
+      "source_batch": "produccion-api-06",
+      "status": "produced_reviewed_editorial_candidate",
+      "user_approved": false,
+      "culturally_certified": false,
+      "reference_ids": [
+        "V11-P068-I00"
+      ],
+      "research_gates": [
+        "No tomar lentejuelas del carnaval; patrones no descritos permanecen ausentes."
+      ],
+      "derived_from": [
+        "H04"
+      ],
+      "planned_states": [
+        "aparición renovada",
+        "gesto de entrega de macana"
+      ],
+      "state_coverage_status": "master_available_not_all_story_states_verified",
+      "scope_notes": [
+        "Dos vistas del mismo anciano H04 renovado, achiote, cinta de pecho, hilos y plumas rojo/amarillo; macana, arco y tres flechas separados. La cola de guacamaya y diseño exacto de plumas no se distinguen taxonómicamente; no tratar como ficha ritual certificada."
+      ]
+    },
+    {
+      "unit_id": "V05",
+      "label": "Tres edades de la luz",
+      "category": "V",
+      "myth_ids": [
+        347
+      ],
+      "mode": "generate",
+      "quality": "medium",
+      "input_files": [],
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-06/v05-master-v1.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/biblia/produccion-api-06/v05.prompt.txt",
+      "sha256": "5dc1add2b4d967436bbd12dc46a727f0bde329e9c2ae59aae0b7b6a6e6bb89af",
+      "bytes": 199024,
+      "width": 1024,
+      "height": 1536,
+      "format": "jpeg",
+      "prompt_sha256": "6d50b7ce50cc209fe5b694e1a9ace0867de1553e4723f795623cf856b7363de1",
+      "inputs": [],
+      "source_batch": "produccion-api-06",
+      "status": "produced_reviewed_editorial_candidate",
+      "user_approved": false,
+      "culturally_certified": false,
+      "reference_ids": [],
+      "research_gates": [
+        "Duración extraordinaria narrativa, no modelo astronómico."
+      ],
+      "derived_from": [
+        "P04",
+        "P05"
+      ],
+      "planned_states": [
+        "primera luz",
+        "segunda luz",
+        "tercera luz actual"
+      ],
+      "state_coverage_status": "master_available_not_all_story_states_verified",
+      "scope_notes": [
+        "Tres horizontes/orientaciones de salida solar, sin retratos ni números astronómicos; orientación en pantalla es convención editorial."
+      ]
+    },
+    {
+      "unit_id": "V06",
+      "label": "Morrocoyo antes del caparazón",
+      "category": "V",
+      "myth_ids": [
+        366
+      ],
+      "mode": "edit",
+      "quality": "high",
+      "input_files": [
+        "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-06/v06-master-v1.jpeg"
+      ],
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-06/v06-master-v1-refined.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/biblia/produccion-api-06/v06.refinement.prompt.txt",
+      "sha256": "20413ccfeb0cb3e57643a91a0818a385638d401a3baabeb35e62b56f34aa9ec2",
+      "bytes": 177342,
+      "width": 1024,
+      "height": 1536,
+      "format": "jpeg",
+      "prompt_sha256": "003255105fe366034d2b22d1f4ae36f6c642f6eb9b7d4a6fb3bfda1374c56abd",
+      "inputs": [
+        {
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-06/v06-master-v1.jpeg",
+          "sha256": "7904e19bb961c35736cbffa682a79a867c703b8906babb4a3592649877b98fea"
+        }
+      ],
+      "source_batch": "produccion-api-06",
+      "status": "produced_reviewed_editorial_candidate",
+      "user_approved": false,
+      "culturally_certified": false,
+      "reference_ids": [],
+      "research_gates": [
+        "Anatomía previa no detallada: propuesta artística explícita y pendiente de revisión."
+      ],
+      "derived_from": [
+        "A09"
+      ],
+      "planned_states": [
+        "antes",
+        "cola corta sin lesión visible",
+        "estado final por referencia a A09"
+      ],
+      "state_coverage_status": "master_available_not_all_story_states_verified",
+      "scope_notes": [
+        "Refinamiento revisado: dos estados imaginarios SIN concha con torso suave continuo, cola larga en rama y corta intacta en tierra; tercer estado con concha conserva A09. No reconstrucción zoológica ni lesiones."
+      ]
+    }
+  ]
+}

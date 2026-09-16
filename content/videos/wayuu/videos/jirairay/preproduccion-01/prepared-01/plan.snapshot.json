@@ -1,0 +1,1509 @@
+{
+  "schema": "wayuu-video-preproduction/v1",
+  "slug": "jirairay",
+  "title": "Jirairay: el nombre que regresó al canto",
+  "version": "preproduccion-01",
+  "status": "script_ready_pending_anchor_production",
+  "duration": {
+    "target_seconds": 160,
+    "voice_words": 341,
+    "measured": false
+  },
+  "generation": {
+    "model": "gpt-image-2",
+    "quality": "medium",
+    "size": "864x1536",
+    "output_format": "jpeg",
+    "mode": "text_only",
+    "input_images": []
+  },
+  "style": "content/videos/wayuu/channel-dna.v2.json",
+  "palette": "Warm sand, muted clay, pale ochre, raw cream, smoky blue and deep indigo paper. Night grows from layered indigo rather than black. Charcoal is reserved for Wanurü pressure and archive error; cream bands carry the chant. Dawn is muted blue and pale sand, never miraculous gold. No glow, glitter, neon, colorful aura or generic magical particles.",
+  "story_thesis": "Una palabra ritual pierde su verdad cuando se arranca de la voz, la relación y el cuidado que le daban sentido.",
+  "narrative": {
+    "snapshot": "content/mitos-visuales/production/wayuu-2026-09-05/narratives/jirairay.json",
+    "content_sha256": "de3208df9c1af40319a095634d8eaadcc54882c9c643eeb8d520140a3ee5d9e2",
+    "source_url": "https://publicaciones.icanh.gov.co/index.php/picanh/catalog/download/248/272/1634?inline=1",
+    "source_locator": "Pineda Giraldo, Aspectos de la magia en la Guajira, p. 25 impresa / PDF 30 y alternancia en p. 27 impresa / PDF 32; contexto de Umaralá en p. 42 PDF.",
+    "live_hash_verified": true,
+    "events": [
+      {
+        "id": "fiebre-y-llamado",
+        "description": "Una persona con fiebre permanece en el chinchorro; la familia prepara el espacio y llama a una outsü.",
+        "required": true,
+        "provenance": "published_editorial_expansion",
+        "source": "Relato publicado; reconstrucción editorial explicativa basada en prácticas descritas por Pineda Giraldo."
+      },
+      {
+        "id": "inicio-del-canto",
+        "description": "La outsü llega con maraca y comienza a cantar; el tabaco se menciona sin reconstruir su uso.",
+        "required": true,
+        "provenance": "historical_core",
+        "source": "Pineda Giraldo documenta maraca, tabaco e invocaciones; la adaptación evita instrucciones rituales."
+      },
+      {
+        "id": "jirairay-cantado",
+        "description": "Jirairay se repite dentro del canto como fenómeno sonoro sin cuerpo.",
+        "required": true,
+        "provenance": "historical_core",
+        "source": "Pineda Giraldo, p. 25 impresa / PDF 30: Wanurü es llamado con el nombre de jirairay dentro de un canto."
+      },
+      {
+        "id": "confusion-del-nombre",
+        "description": "Oyentes y archivos separan el nombre de su música y lo convierten erróneamente en entidad autónoma.",
+        "required": true,
+        "provenance": "published_editorial_expansion",
+        "source": "Explicación editorial publicada sobre el error de transmisión."
+      },
+      {
+        "id": "distincion-jirairay-wanuru",
+        "description": "El canto o nombre Jirairay se dirige a Wanurü para preguntar, negociar o pedir que se retire.",
+        "required": true,
+        "provenance": "historical_core",
+        "source": "Distinción terminológica de Pineda Giraldo y cautela por alternancias posteriores del autor."
+      },
+      {
+        "id": "escucha-y-respuesta",
+        "description": "Maraca y voz marcan el tiempo; la outsü escucha auxiliares y responde mientras el paciente permanece entre sueño y vigilia.",
+        "required": true,
+        "provenance": "published_editorial_expansion",
+        "source": "Relato publicado sintetizado desde descripciones etnográficas; auxiliares sin anatomía inventada."
+      },
+      {
+        "id": "bienes-y-relacion",
+        "description": "La familia reúne alimentos y objetos como obligaciones relacionales, no pago a un demonio.",
+        "required": true,
+        "provenance": "published_editorial_expansion",
+        "source": "Relato publicado con traducción incompleta y negativa explícita de lectura cristiana simplista."
+      },
+      {
+        "id": "aflojamiento",
+        "description": "El canto cambia, Jirairay se oye menos y la outsü anuncia que Wanurü afloja su dominio.",
+        "required": true,
+        "provenance": "published_editorial_expansion",
+        "source": "Reconstrucción editorial publicada; no prueba eficacia médica."
+      },
+      {
+        "id": "amanecer-y-cuidado",
+        "description": "La persona sigue viva al amanecer y la familia continúa cuidándola sin atribuir recuperación a una sola causa.",
+        "required": true,
+        "provenance": "published_editorial_expansion",
+        "source": "Relato publicado y límite clínico explícito."
+      },
+      {
+        "id": "devolver-al-canto",
+        "description": "El archivo convirtió el nombre en personaje; la corrección lo devuelve a la relación ritual sin borrar el misterio.",
+        "required": true,
+        "provenance": "published_editorial_expansion",
+        "source": "Tesis editorial de la página vigente."
+      }
+    ]
+  },
+  "inventory": [
+    {
+      "id": "familia_tres",
+      "type": "supporting_people",
+      "desc": "Exactly THREE adult Wayuu relatives, recurring and distinct: older woman in a full ankle-length MUTED CLAY manta with broad CREAM shoulder panel and black low bun; adult woman in a full ankle-length SMOKY BLUE manta with narrow OCHRE shoulder yoke and one long dark braid; older man in a full CREAM long shirt over RUST ankle-length trousers, short grey hair, narrow sand sash. Dark waireña-style sandals, nearly flat cut-paper profiles, restrained care gestures. Never loincloth-only, face paint, jewelry, feathers or duplicates.",
+      "model_ids": []
+    },
+    {
+      "id": "paciente_fiebre",
+      "type": "person",
+      "desc": "THE SAME adult Wayuu man during fever: short black hair, full PALE OCHRE long shirt, CREAM ankle-length trousers, dark sandals, one SMOKY BLUE folded cloth resting across his abdomen. Reclined inside ONE hammock, tired but conscious, complete body visible when composition allows. No wounds, convulsions, sweat droplets, horror, possession, exposed torso or duplicate self.",
+      "model_ids": [
+        "paciente_jirairay__identity_sheet"
+      ]
+    },
+    {
+      "id": "paciente_amanecer",
+      "type": "person",
+      "desc": "THE SAME adult Wayuu man at dawn: short black hair, full PALE OCHRE long shirt, CREAM ankle-length trousers, dark sandals and the SAME SMOKY BLUE cloth across his lap. More upright but still being cared for; no miraculous glow, instant cure, healthy duplicate or triumphant pose.",
+      "model_ids": [
+        "paciente_jirairay__identity_sheet"
+      ]
+    },
+    {
+      "id": "outsu",
+      "type": "person",
+      "desc": "ONE older adult Wayuu woman, outsü, with short-jawed mature face rendered as a nearly flat cut-paper profile, high cheekbones, attentive eyes, black hair with grey strands in one low braid. Full ankle-length smooth CHARCOAL-BLUE garment over a narrow RAW-CREAM underlayer and dark sandals. Holds ONE plain maraca only when listed. No headdress, face paint, necklaces, feathers, staff, fantasy jewelry or witch stereotype.",
+      "model_ids": [
+        "outsu_jirairay__identity_sheet"
+      ]
+    },
+    {
+      "id": "jirairay_canto",
+      "type": "object_or_phenomenon",
+      "desc": "Jirairay is ONLY a directed sonic phenomenon, never a being or written word: separate very thin RAW-CREAM paper bands leave the singer at unequal intervals, bend suspended fibres and travel toward Wanurü pressure; some return with a different fold rhythm. No face, body, silhouette, letters, musical notation, aura, portal or glowing wave.",
+      "model_ids": [
+        "jirairay_canto__phenomenon_rule"
+      ]
+    },
+    {
+      "id": "wanuru_presencia",
+      "type": "object_or_phenomenon",
+      "desc": "Wanurü has NO body. It appears only as a small asymmetric CHARCOAL compression in low paper layers near but never touching the hammock: torn matte sheets pull inward around an empty point. It can loosen by becoming shallower and more separated. Never demon, person, animal, smoke, liquid, hole, snake, eyes, limbs or contagious beam.",
+      "model_ids": [
+        "wanuru__presence_model",
+        "wanuru__state_sheet"
+      ]
+    },
+    {
+      "id": "auxiliares_escucha",
+      "type": "object_or_phenomenon",
+      "desc": "Auxiliaries remain without anatomy. Their presence is suggested only by FOUR small suspended paper tabs at different depths responding one after another while the outsü listens. No bodies, masks, faces, shadows, sprites, stars or named species.",
+      "model_ids": []
+    },
+    {
+      "id": "maraca",
+      "type": "object_or_phenomenon",
+      "desc": "ONE plain closed oval maraca made from smooth matte OCHRE paper with a narrow wrapped handle. Hand-sized, no painting, pattern, feathers, face, lettering or duplicate. It may be held low or upright but never becomes a magical weapon.",
+      "model_ids": [
+        "maraca_outsu__object_sheet"
+      ]
+    },
+    {
+      "id": "tabaco_cerrado",
+      "type": "object_or_phenomenon",
+      "desc": "One small tied bundle and one closed charcoal paper container placed at the side as non-instructional context. No hand reaches for them; no ingestion, preparation, smoke, dosage, liquid, flame or demonstration.",
+      "model_ids": [
+        "tabaco_ritual__object_sheet"
+      ]
+    },
+    {
+      "id": "bienes_cerrados",
+      "type": "object_or_phenomenon",
+      "desc": "Exactly FOUR modest closed goods: two lidded shallow round containers, one lidded rounded vessel and one tied rectangular bundle, all plain cream and sand paper. Contents, quantities and obligations remain unspecified. No altar, feast, blood, animal, branded package or offering to a visible being.",
+      "model_ids": [
+        "alimentos_ceremonia__object_sheet"
+      ]
+    },
+    {
+      "id": "chinchorro",
+      "type": "object_or_phenomenon",
+      "desc": "ONE broad suspended hammock translated into layered matte paper bands in deep indigo, muted clay and cream, attached between two flat paper posts. The patient remains supported inside it. No woven photoreal fibre, duplicate hammock, bed, blanket pile or exposed cardboard.",
+      "model_ids": [
+        "chinchorro__object_sheet"
+      ]
+    },
+    {
+      "id": "rancheria",
+      "type": "environment",
+      "desc": "ONE Wayuu dwelling and open shaded work area in a dry low Guajira plain: broad thin sand and ochre paper walls, narrow strip-paper roof, flat posts, sparse thorn shrubs and distant low rust ridges. No high mountains, lush forest, ocean, agave rosettes, decorated zigzag trim, photographic dirt, visible diorama base or box frame.",
+      "model_ids": [
+        "rancheria_wayuu__spatial_model"
+      ]
+    },
+    {
+      "id": "archivo_sin_texto",
+      "type": "object_or_phenomenon",
+      "desc": "An editorial archive represented without readable writing: several flat charcoal and cream paper leaves, one thin cream rhythm band gradually pressed into an isolated rigid rectangular label-shape with NO letters. It visualizes decontextualization, not a historical Wayuu object or traditional symbol.",
+      "model_ids": []
+    },
+    {
+      "id": "agua_cuidado",
+      "type": "object_or_phenomenon",
+      "desc": "ONE small plain cream paper cup held by a family member at dawn, ordinary care only. No medicine, herbs, spoon, bottle, label or implication of cure.",
+      "model_ids": []
+    }
+  ],
+  "canonical_models": [
+    {
+      "model_id": "jirairay_canto__phenomenon_rule",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-07-jirairay-medium/jirairay_canto__phenomenon_rule--canon.jpeg",
+      "sha256": "d9f0afc0a540e9a8045a87cedd57e8633704a7b094bbc652040c7b424421fa41",
+      "qa_status": "PASS",
+      "batch_id": "wayuu-v3-production-07-jirairay-medium",
+      "selection_source": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/wayuu-v3-production-07-jirairay-medium/selection.json"
+    },
+    {
+      "model_id": "outsu_jirairay__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-07-jirairay-medium/outsu_jirairay__identity_sheet--canon.jpeg",
+      "sha256": "3ca7447f476275e1409ed76648603282b43c0f88f829a99f742b27fd24300c60",
+      "qa_status": "PASS_WITH_FLAT_FACE_VETO",
+      "batch_id": "wayuu-v3-production-07-jirairay-medium",
+      "selection_source": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/wayuu-v3-production-07-jirairay-medium/selection.json"
+    },
+    {
+      "model_id": "paciente_jirairay__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-07-jirairay-medium-corrections-01/paciente_jirairay__identity_sheet--canon.jpeg",
+      "sha256": "9b4636285690518cc1b51980c084e28094a736f7a1f751bc2d9da767f1c3fef9",
+      "qa_status": "PASS_AFTER_CORRECTION_WITH_FLAT_FACE_VETO",
+      "batch_id": "wayuu-v3-production-07-jirairay-medium-corrections-01",
+      "selection_source": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/wayuu-v3-production-07-jirairay-medium/selection.json"
+    },
+    {
+      "model_id": "maraca_outsu__object_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-07-jirairay-medium/maraca_outsu__object_sheet--canon.jpeg",
+      "sha256": "d6f40968f33d6f9d4e8b3cb54dfc7af10d56d688f40ff42642fdb3943cbd8e91",
+      "qa_status": "PASS",
+      "batch_id": "wayuu-v3-production-07-jirairay-medium",
+      "selection_source": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/wayuu-v3-production-07-jirairay-medium/selection.json"
+    },
+    {
+      "model_id": "tabaco_ritual__object_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-07-jirairay-medium/tabaco_ritual__object_sheet--canon.jpeg",
+      "sha256": "2aef0e10346c7514a62fc071fb630d5d921fa7e991adc4a691ed64b6a2671bbd",
+      "qa_status": "PASS_NON_INSTRUCTIONAL",
+      "batch_id": "wayuu-v3-production-07-jirairay-medium",
+      "selection_source": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/wayuu-v3-production-07-jirairay-medium/selection.json"
+    },
+    {
+      "model_id": "alimentos_ceremonia__object_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-07-jirairay-medium/alimentos_ceremonia__object_sheet--canon.jpeg",
+      "sha256": "9dc51ec929aa41fc97d5cffb3a76cfe73049fbddd05b142a921c1f9c518fb576",
+      "qa_status": "PASS_CLOSED_GOODS",
+      "batch_id": "wayuu-v3-production-07-jirairay-medium",
+      "selection_source": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/wayuu-v3-production-07-jirairay-medium/selection.json"
+    },
+    {
+      "model_id": "wanuru__presence_model",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-02-aramai-medium-corrections-02/wanuru__presence_model--canon.jpeg",
+      "sha256": "c8406e27227a5dc245346be4465b977665190a4f5e89e12153545cb832a68f30",
+      "qa_status": "PASS_REUSED",
+      "batch_id": "wayuu-v3-production-02-aramai-medium-corrections-02",
+      "selection_source": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/wayuu-v3-production-07-jirairay-medium/selection.json"
+    },
+    {
+      "model_id": "wanuru__state_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-02-aramai-medium/wanuru__state_sheet--estados.jpeg",
+      "sha256": "3396142c7ff0487ffd3261e40a6001c7842b96a86a637ab90351167ed0738a19",
+      "qa_status": "PASS_REUSED",
+      "batch_id": "wayuu-v3-production-02-aramai-medium",
+      "selection_source": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/wayuu-v3-production-07-jirairay-medium/selection.json"
+    },
+    {
+      "model_id": "chinchorro__object_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-06-los-dos-hermanos-medium/chinchorro__object_sheet--canon.jpeg",
+      "sha256": "29a9ee12acd56ae11fde72343c34ac2b52521571cf60faa53aae2954de4b1b15",
+      "qa_status": "PASS_REUSED",
+      "batch_id": "wayuu-v3-production-06-los-dos-hermanos-medium",
+      "selection_source": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/wayuu-v3-production-07-jirairay-medium/selection.json"
+    },
+    {
+      "model_id": "rancheria_wayuu__spatial_model",
+      "path": "output/imagegen/wayuu-v3/wayuu-v3-pilot-03-corrections-medium/rancheria_wayuu__spatial_model--canon.jpeg",
+      "sha256": "273831e777e2bf8615f5640f626204fac4b96ea268e55d4215f991d2a6012464",
+      "qa_status": "DIRECTION_CANDIDATE_PASS_REUSED_WITH_PHOTOREAL_GROUND_VETO",
+      "batch_id": "wayuu-v3-pilot-03-corrections-medium",
+      "selection_source": "content/mitos-visuales/_openai/wayuu/biblia-v3/pilot-selection.json"
+    }
+  ],
+  "reference_review": {
+    "sources": [
+      {
+        "path": "output/imagegen/wayuu/triptychs/wayuu-jirairay-triptych-02-entrada/entrada.jpeg",
+        "sha256": "b15b70da6dba1e0a6644e8b90cea298b0c1ebd88d97b437b112e4a59ab4ff0c9",
+        "reviewed": true,
+        "role": "same_myth_direction_reference"
+      },
+      {
+        "path": "output/imagegen/wayuu/triptychs/wayuu-jirairay-triptych-01/acto.jpeg",
+        "sha256": "d269ab3242251137aadd1303c72216b0430f32f6628a4bc1d777183284aecbf8",
+        "reviewed": true,
+        "role": "same_myth_direction_reference"
+      },
+      {
+        "path": "output/imagegen/wayuu/triptychs/wayuu-jirairay-triptych-01/huella.jpeg",
+        "sha256": "6ad1875a618d3ed3cab7dd82452f193413cd5660ae83c9df47f607b4bd11c1a3",
+        "reviewed": true,
+        "role": "same_myth_direction_reference"
+      }
+    ],
+    "notes": [
+      "Diez modelos canónicos, el tablero de biblia y los tres trípticos fueron inspeccionados visualmente.",
+      "Las fichas fijan identidad, ropa, objetos y relación espacial, pero sus caras facetadas, suelos fotográficos y objetos volumétricos no pasan al video.",
+      "El tríptico aporta la mejor regla: bandas claras de canto encuentran presión índigo-carbón sin formar cuerpo; los keyframes amplían esa gramática con ida, retorno, silencio y archivo.",
+      "Jirairay nunca es persona, dios, fantasma, silueta ni palabra visible; Wanurü tampoco recibe anatomía.",
+      "No se sube ninguna referencia local al proveedor; todo se reconstruye mediante texto."
+    ]
+  },
+  "continuity_rules": [
+    "El paciente es una sola persona: durante la noche permanece reclinado y al amanecer sólo se incorpora un poco. Nunca duplicarlo ni mostrar curación milagrosa.",
+    "La outsü conserva el mismo rostro plano, trenza baja, prenda carbón-azul completa y una sola maraca. No añadir pintura facial, tocado o parafernalia.",
+    "La familia consta exactamente de tres adultos recurrentes; con paciente y outsü hay como máximo cinco personas, según cada plano.",
+    "Jirairay siempre es canto material dirigido. Wanurü siempre es presión material separada. Nunca fundirlos ni crear un antagonista corporal.",
+    "Los auxiliares carecen de cuerpo y se sugieren sólo mediante cuatro pequeñas respuestas de papel; no hacer criaturas.",
+    "Tabaco y bienes permanecen cerrados y sin manipulación. No reconstruir procedimiento, dosis, consumo, altar u ofrenda a un ser visible.",
+    "La progresión nocturna se cuenta con densidad de pulsos: frecuente en b3-b6, más espaciada en b8, casi ausente al amanecer.",
+    "Ningún plano muestra violencia, sexualidad, cadáver, herida, posesión, convulsión, terror corporal, diagnóstico o promesa médica."
+  ],
+  "shared_scene_continuity": [
+    "ALL PEOPLE are nearly FLAT cut-paper silhouettes with natural adult proportions, contour-profile noses, tiny cut eyes and NO faceted, sculpted, doll-like or Pixar heads.",
+    "Full adult figures remain complete inside frame and usually 10–24% of image height. Compose rich environmental depth with foreground, action plane, architecture and distant territory; never default to portrait close-ups.",
+    "EVERY visible surface belongs to the papercut world: broad thin matte paper sheets, crisp cut edges, narrow physical air gaps and real cast shadows BETWEEN layers. No photoreal soil, skin, wood, fibre, pottery or straw.",
+    "Depth comes from flat planes held at different distances, never thick folded cardboard sculptures. No visible diorama base, external frame, raw cardboard edge, corrugated board, glue, studio table or miniature-box presentation.",
+    "Only listed entities may appear. Traditional clothing is complete and varied; no loincloth-only styling, generic tribal costume, invented face paint or fantasy jewelry.",
+    "Magic is the story-specific physical behavior of chant, listening, pressure, silence and archive. No sparkles, glowing dust, constellations, portals, halos, smoke creatures or mystical UI symbols."
+  ],
+  "blocks": [
+    {
+      "id": "b1",
+      "voice_over": "Durante una temporada de fiebre, una persona permanecía entre sueño y vigilia. Su familia preparó el espacio alrededor del chinchorro y llamó a una outsü para que escuchara lo que ellos no podían comprender.",
+      "voice_provenance": "Reconstrucción editorial publicada: fiebre, cuidado familiar, chinchorro y llamado a especialista; no describe diagnóstico ni procedimiento clínico.",
+      "word_count": 34,
+      "time_seconds": [
+        0,
+        16
+      ],
+      "event_ids": [
+        "fiebre-y-llamado"
+      ],
+      "keyframes": [
+        {
+          "id": "b1a",
+          "title": "La fiebre bajo la enramada",
+          "visual": "WIDE blue-hour interior-exterior cutaway. The feverish adult man reclines inside ONE indigo-clay-cream hammock. Exactly THREE relatives prepare the open shaded space: one adjusts a plain floor sheet, one waits with empty hands, one opens a clear path toward the dwelling entrance. Everyone is complete and small. No outsü yet, no maraca, no chant, no Wanurü.",
+          "time_seconds": [
+            0,
+            8
+          ],
+          "entity_ids": [
+            "familia_tres",
+            "paciente_fiebre",
+            "chinchorro",
+            "rancheria"
+          ],
+          "event_ids": [
+            "fiebre-y-llamado"
+          ],
+          "angle": "cámara oblicua ambiental desde el borde de la enramada, con aire alrededor del chinchorro",
+          "shot_scale": "gran plano general íntimo; personas completas pequeñas, sin retrato",
+          "depth_planes": [
+            "Hojas de terreno y un poste lateral en primer término",
+            "Familia y chinchorro suspendido en planos separados",
+            "Paredes abiertas, cielo azul y crestas bajas al fondo"
+          ],
+          "continuity_from": null,
+          "transition_to_next": "Corte por continuidad espacial o cambio de tiempo; no morph ni interpolación automática.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Desplazamiento lento opcional por definir después de aprobar los originales.",
+            "allowed": "Paralaje sólo entre planos físicamente separados; respiración mínima del espacio sin cambiar identidades.",
+            "forbidden": "Morph de cuerpos, caras, ropa, objetos o arquitectura; añadir reparto; tratar el JPEG como capas editables.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "produce_now": true,
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "b1b",
+          "title": "El espacio se dispone",
+          "visual": "Same wide shelter minutes later. The THREE relatives have cleared a generous semicircle around the hammock; the patient remains reclined and conscious. At the far entrance, the empty path is framed by two flat posts and layered evening sky, anticipating an arrival without showing anyone. No magical phenomenon and no medical equipment.",
+          "time_seconds": [
+            8,
+            16
+          ],
+          "entity_ids": [
+            "familia_tres",
+            "paciente_fiebre",
+            "chinchorro",
+            "rancheria"
+          ],
+          "event_ids": [
+            "fiebre-y-llamado"
+          ],
+          "angle": "vista longitudinal baja a través de tres planos de la enramada",
+          "shot_scale": "plano general amplio con vacío protagonista",
+          "depth_planes": [
+            "Recortes de suelo y poste cercano",
+            "Chinchorro con cuatro habitantes distribuidos",
+            "Sendero vacío entre umbral y horizonte"
+          ],
+          "continuity_from": "b1a",
+          "transition_to_next": "Corte por continuidad espacial o cambio de tiempo; no morph ni interpolación automática.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Desplazamiento lento opcional por definir después de aprobar los originales.",
+            "allowed": "Paralaje sólo entre planos físicamente separados; microgestos de espera.",
+            "forbidden": "Morph, zoom de retrato, nueva persona, utilería médica o fenómeno sobrenatural.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "produce_now": false,
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "b2",
+      "voice_over": "La especialista llegó con su maraca. El relato recuerda también el tabaco, pero esta historia no convierte esos objetos en instrucciones. Aquí importan la atención, el ritmo y una voz que comienza a abrir la noche.",
+      "voice_provenance": "Relato publicado y Pineda Giraldo: maraca, tabaco y canto; adaptación no instructiva.",
+      "word_count": 36,
+      "time_seconds": [
+        16,
+        32
+      ],
+      "event_ids": [
+        "inicio-del-canto"
+      ],
+      "keyframes": [
+        {
+          "id": "b2a",
+          "title": "La llegada de la outsü",
+          "visual": "WIDE night threshold. The older outsü enters from the distant path, full body small, holding ONE plain maraca low. Inside, the patient remains in the hammock and THREE relatives make room without kneeling. A closed tobacco bundle and container sit far to one side, untouched. No chant bands yet and no supernatural body.",
+          "time_seconds": [
+            16,
+            24
+          ],
+          "entity_ids": [
+            "outsu",
+            "maraca",
+            "familia_tres",
+            "paciente_fiebre",
+            "chinchorro",
+            "tabaco_cerrado",
+            "rancheria"
+          ],
+          "event_ids": [
+            "inicio-del-canto"
+          ],
+          "angle": "cámara desde dentro hacia el umbral nocturno, manteniendo distancia humana",
+          "shot_scale": "plano general profundo, llegada pequeña en el tercio superior",
+          "depth_planes": [
+            "Poste y recipiente cerrado a un lado",
+            "Paciente y familiares alrededor del vacío central",
+            "Outsü pequeña ante sendero y cielo índigo"
+          ],
+          "continuity_from": "b1b",
+          "transition_to_next": "Corte por continuidad espacial o cambio de tiempo; no morph ni interpolación automática.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Desplazamiento lento opcional por definir después de aprobar los originales.",
+            "allowed": "Paralaje ambiental y paso contenido de la outsü.",
+            "forbidden": "Consumir tabaco, agitar objetos mágicos, añadir asistentes o cambiar vestuario.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "produce_now": false,
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "b2b",
+          "title": "El primer ritmo",
+          "visual": "Same shelter from a diagonal wide angle. The outsü sits or stands beside, never over, the hammock and raises ONE plain maraca to chest height. A single thin cream paper band leaves the space before her mouth and bends ONE suspended fibre; it is the beginning of a voice, not a beam. Family remains still at the perimeter.",
+          "time_seconds": [
+            24,
+            32
+          ],
+          "entity_ids": [
+            "outsu",
+            "maraca",
+            "familia_tres",
+            "paciente_fiebre",
+            "chinchorro",
+            "jirairay_canto",
+            "rancheria"
+          ],
+          "event_ids": [
+            "inicio-del-canto"
+          ],
+          "angle": "oblicua amplia con la outsü de perfil y el paciente separado por aire",
+          "shot_scale": "plano conjunto ambiental; ninguna cara domina",
+          "depth_planes": [
+            "Fibras colgantes y borde del chinchorro",
+            "Outsü, paciente y familia en semicírculo",
+            "Techo, pared abierta y noche profunda"
+          ],
+          "continuity_from": "b2a",
+          "transition_to_next": "Corte por continuidad espacial o cambio de tiempo; no morph ni interpolación automática.",
+          "scene_role": "visible_magic",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Una voz y una maraca comienzan junto al chinchorro",
+            "impossible_behavior": "Un único pulso de papel dobla una fibra suspendida sin tocar a nadie",
+            "narrative_effect": "La noche empieza a organizarse alrededor de la escucha",
+            "agency": "La outsü canta; el pulso viaja sin convertirse en poder corporal",
+            "physical_translation": "Una banda crema delgada cruza dos planos con un pequeño pliegue y una sombra real",
+            "visible_test": "Debe verse una sola banda, una sola fibra doblada y ningún rayo, letra o aura",
+            "provenance": "editorial_metaphor",
+            "temporal_role": "present",
+            "event_ids": [
+              "inicio-del-canto"
+            ]
+          },
+          "motion_contract": {
+            "camera": "Desplazamiento lento opcional por definir después de aprobar los originales.",
+            "allowed": "Paralaje de capas y oscilación mínima de una fibra.",
+            "forbidden": "Morph, lip-sync inventado, halo, humo, rayo o duplicación de maraca.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "produce_now": false,
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "b3",
+      "voice_over": "Dentro del canto se repetía una palabra: Jirairay. No aparecía un cuerpo. El nombre viajaba en pulsos, doblaba fibras suspendidas y hacía que la oscuridad pareciera responder desde una distancia imposible.",
+      "voice_provenance": "Núcleo terminológico de Pineda Giraldo y metáfora visual editorial; Jirairay permanece como canto, nunca entidad.",
+      "word_count": 31,
+      "time_seconds": [
+        32,
+        48
+      ],
+      "event_ids": [
+        "jirairay-cantado"
+      ],
+      "keyframes": [
+        {
+          "id": "b3a",
+          "title": "La palabra sin letras",
+          "visual": "WIDE layered night interior. Three separated cream chant bands leave the small profile of the outsü at unequal heights. Each band passes through a different narrow air gap and bends a different hanging paper fibre. The patient and family stay complete and small below. No written word, musical notes, body in the darkness or charcoal pressure yet.",
+          "time_seconds": [
+            32,
+            40
+          ],
+          "entity_ids": [
+            "outsu",
+            "maraca",
+            "familia_tres",
+            "paciente_fiebre",
+            "chinchorro",
+            "jirairay_canto",
+            "rancheria"
+          ],
+          "event_ids": [
+            "jirairay-cantado"
+          ],
+          "angle": "cámara lateral amplia que deja leer recorrido, capas y vacío",
+          "shot_scale": "gran plano general interior; humanos por debajo de un cuarto de altura",
+          "depth_planes": [
+            "Una banda y fibras cercanas",
+            "Outsü, familia y chinchorro en planos independientes",
+            "Dos bandas atraviesan pared y noche al fondo"
+          ],
+          "continuity_from": "b2b",
+          "transition_to_next": "Corte por continuidad espacial o cambio de tiempo; no morph ni interpolación automática.",
+          "scene_role": "visible_magic",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Una mujer canta mientras su familia escucha",
+            "impossible_behavior": "Tres pulsos separados atraviesan distintos niveles del espacio y doblan fibras sin viento",
+            "narrative_effect": "Jirairay se vuelve visible como relación sonora y no como ser",
+            "agency": "La voz inicia el recorrido; las capas responden sin obedecer como arma",
+            "physical_translation": "Tres bandas crema finas suspendidas a distancias reales con sombras estrechas",
+            "visible_test": "Tres pulsos, tres fibras alteradas, cero letras, rostros ocultos o siluetas sobrenaturales",
+            "provenance": "editorial_metaphor",
+            "temporal_role": "present",
+            "event_ids": [
+              "jirairay-cantado"
+            ]
+          },
+          "motion_contract": {
+            "camera": "Desplazamiento lento opcional por definir después de aprobar los originales.",
+            "allowed": "Paralaje y mínima ondulación de bandas sin cambio de forma.",
+            "forbidden": "Convertir banda en texto, serpiente, espíritu, humo o energía digital.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "produce_now": false,
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "b3b",
+          "title": "La noche responde",
+          "visual": "VERY WIDE interior-to-exterior composition. The outsü is small at lower left; patient and family form a quiet low arc. Four cream bands travel across hanging fibres toward a distant charcoal fold hidden between two indigo night sheets. Two much thinner fibres return from that distance with a different spacing. NOTHING forms a person, face, animal or doorway.",
+          "time_seconds": [
+            40,
+            48
+          ],
+          "entity_ids": [
+            "outsu",
+            "maraca",
+            "familia_tres",
+            "paciente_fiebre",
+            "chinchorro",
+            "jirairay_canto",
+            "wanuru_presencia",
+            "rancheria"
+          ],
+          "event_ids": [
+            "jirairay-cantado"
+          ],
+          "angle": "vista ambiental larga a ras de las capas, del canto al vacío distante",
+          "shot_scale": "gran plano general cinematográfico, espacio dominante",
+          "depth_planes": [
+            "Borde de chinchorro y primera banda",
+            "Pequeñas figuras completas y fibras intermedias",
+            "Pliegue carbón lejano entre dos hojas índigo"
+          ],
+          "continuity_from": "b3a",
+          "transition_to_next": "Corte por continuidad espacial o cambio de tiempo; no morph ni interpolación automática.",
+          "scene_role": "visible_magic",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "El canto cruza una enramada nocturna",
+            "impossible_behavior": "Los pulsos llegan a una presión lejana y dos fibras regresan con otro ritmo",
+            "narrative_effect": "La respuesta conserva misterio sin fabricar otro personaje",
+            "agency": "El canto viaja; la presión responde desde su propio lugar",
+            "physical_translation": "Bandas de ida y fibras de retorno separadas por aire real y sombras estrechas",
+            "visible_test": "Debe leerse ida y retorno hacia una presión pequeña sin cuerpo ni conexión con el paciente",
+            "provenance": "editorial_metaphor",
+            "temporal_role": "present",
+            "event_ids": [
+              "jirairay-cantado"
+            ]
+          },
+          "motion_contract": {
+            "camera": "Desplazamiento lento opcional por definir después de aprobar los originales.",
+            "allowed": "Paralaje largo entre acción, bandas y presión distante.",
+            "forbidden": "Acercar la cámara, crear monstruo, portal, líquido, rayo o contacto corporal.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "produce_now": true,
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "b4",
+      "voice_over": "Quienes escuchaban desde afuera imaginaron que ese debía ser el nombre de otro espíritu. Mucho después, al quedar separado de su música, Jirairay fue copiado como dios de la enfermedad y la muerte.",
+      "voice_provenance": "Reconstrucción editorial de la confusión transmitida; no afirma un testimonio literal de oyentes específicos.",
+      "word_count": 33,
+      "time_seconds": [
+        48,
+        64
+      ],
+      "event_ids": [
+        "confusion-del-nombre"
+      ],
+      "keyframes": [
+        {
+          "id": "b4a",
+          "title": "Escuchar desde afuera",
+          "visual": "WIDE exterior night. The THREE relatives are seen in profile at different depths outside the open shelter while the outsü and patient remain small inside. Cream chant bands are partly hidden by posts and wall layers, so only disconnected segments are visible from this angle. One charcoal fold lies far beyond, still abstract. No extra listeners and no body named Jirairay.",
+          "time_seconds": [
+            48,
+            56
+          ],
+          "entity_ids": [
+            "familia_tres",
+            "outsu",
+            "maraca",
+            "paciente_fiebre",
+            "chinchorro",
+            "jirairay_canto",
+            "wanuru_presencia",
+            "rancheria"
+          ],
+          "event_ids": [
+            "confusion-del-nombre"
+          ],
+          "angle": "oblicua exterior con postes que interrumpen deliberadamente la lectura del canto",
+          "shot_scale": "plano general de observación; figuras completas pequeñas",
+          "depth_planes": [
+            "Arbustos planos y un familiar cercano",
+            "Postes con otros dos familiares y fragmentos de banda",
+            "Ceremonia distante y presión carbón fuera de eje"
+          ],
+          "continuity_from": "b3b",
+          "transition_to_next": "Corte por continuidad conceptual; no morph ni interpolación automática.",
+          "scene_role": "visible_magic",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "La familia oye la ceremonia desde fuera",
+            "impossible_behavior": "Los postes ocultan el canto y convierten un recorrido continuo en fragmentos aislados",
+            "narrative_effect": "La posición parcial del oyente hace posible confundir nombre y presencia",
+            "agency": "Nadie crea el error a voluntad; nace de una escucha incompleta",
+            "physical_translation": "Interponer tres capas de postes delante de bandas continuas para cortar su lectura",
+            "visible_test": "Las bandas deben estar físicamente ocultas por capas, no cortadas en letras ni convertidas en figura",
+            "provenance": "editorial_metaphor",
+            "temporal_role": "present",
+            "event_ids": [
+              "confusion-del-nombre"
+            ]
+          },
+          "motion_contract": {
+            "camera": "Desplazamiento lento opcional por definir después de aprobar los originales.",
+            "allowed": "Paralaje que revela y vuelve a ocultar segmentos del canto.",
+            "forbidden": "Crear fantasma por pareidolia, texto, símbolo religioso o multitudes.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "produce_now": false,
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "b4b",
+          "title": "El nombre prensado",
+          "visual": "Symbolic editorial space, NO PEOPLE and NO readable text. A long flexible cream rhythm band enters from the left across several separated indigo paper planes. At center, stacked charcoal archive leaves press one short segment into a rigid blank rectangular label-shape; the remaining band continues beyond it, still curved. No book title, letters, deity, face, icon or historical artifact claim.",
+          "time_seconds": [
+            56,
+            64
+          ],
+          "entity_ids": [
+            "jirairay_canto",
+            "archivo_sin_texto"
+          ],
+          "event_ids": [
+            "confusion-del-nombre"
+          ],
+          "angle": "vista oblicua de instalación de papel, no cenital plana ni macro",
+          "shot_scale": "plano general simbólico con amplio vacío alrededor",
+          "depth_planes": [
+            "Extremo flexible del canto delante",
+            "Hojas de archivo presionando un segmento",
+            "Continuación curva de la banda entre planos índigo"
+          ],
+          "continuity_from": "b4a",
+          "transition_to_next": "Corte por contraste entre archivo y ceremonia; no morph.",
+          "scene_role": "visible_magic",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Un archivo conserva una banda de papel",
+            "impossible_behavior": "Sólo el fragmento prensado pierde ritmo y adopta una rigidez de etiqueta vacía",
+            "narrative_effect": "Separar el nombre de la música fabrica una identidad falsa",
+            "agency": "El archivo comprime; el canto completo permanece fuera de esa reducción",
+            "physical_translation": "Una banda curva atraviesa hojas separadas y un tramo queda aplanado en rectángulo sin letras",
+            "visible_test": "Debe verse continuidad antes y después de la prensa, sin escritura ni silueta de ser",
+            "provenance": "editorial_metaphor",
+            "temporal_role": "memory",
+            "event_ids": [
+              "confusion-del-nombre"
+            ]
+          },
+          "motion_contract": {
+            "camera": "Desplazamiento lento opcional por definir después de aprobar los originales.",
+            "allowed": "Paralaje entre banda, hojas y etiqueta vacía.",
+            "forbidden": "Escribir Jirairay, mostrar glosario legible, imprenta moderna o personaje emergente.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "produce_now": false,
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "b5",
+      "voice_over": "La fuente más clara distingue otra cosa. Jirairay era el canto, o el nombre bajo el cual se llamaba a Wanurü. La voz preguntaba, negociaba y buscaba que la presión de la enfermedad aflojara.",
+      "voice_provenance": "Pineda Giraldo, Aspectos de la magia en la Guajira, pasaje localizado en página PDF 30 y alternancia terminológica posterior.",
+      "word_count": 34,
+      "time_seconds": [
+        64,
+        80
+      ],
+      "event_ids": [
+        "distincion-jirairay-wanuru"
+      ],
+      "keyframes": [
+        {
+          "id": "b5a",
+          "title": "Dos cosas distintas",
+          "visual": "WIDE split-depth composition inside the same shelter, without graphic panels. At near left, the outsü sings and holds the maraca; three thin cream bands move away from her. At far right, a small isolated charcoal compression rests between two floor layers, several body lengths from the hammock. The bands pass above the patient and NEVER touch him. No labels or symmetry.",
+          "time_seconds": [
+            64,
+            72
+          ],
+          "entity_ids": [
+            "outsu",
+            "maraca",
+            "paciente_fiebre",
+            "chinchorro",
+            "jirairay_canto",
+            "wanuru_presencia",
+            "rancheria"
+          ],
+          "event_ids": [
+            "distincion-jirairay-wanuru"
+          ],
+          "angle": "oblicua lateral muy amplia que separa origen, paciente y destino",
+          "shot_scale": "gran plano general relacional; figuras pequeñas",
+          "depth_planes": [
+            "Outsü y primer pulso cerca",
+            "Paciente en chinchorro bajo las bandas",
+            "Presión carbón aislada en piso profundo"
+          ],
+          "continuity_from": "b4b",
+          "transition_to_next": "Corte por aproximación espacial al recorrido; no morph.",
+          "scene_role": "visible_magic",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Una mujer canta junto a una persona cuidada",
+            "impossible_behavior": "El canto pasa por encima sin tocar al paciente y se dirige a una presión separada",
+            "narrative_effect": "La composición distingue la invocación de aquello a lo que se dirige",
+            "agency": "La outsü emite el canto; Wanurü ocupa otro lugar y no es controlado como objeto",
+            "physical_translation": "Tres bandas crema elevadas y una depresión carbón baja, separadas por varios planos",
+            "visible_test": "Origen, paciente y destino deben leerse distintos; ninguna banda toca el cuerpo",
+            "provenance": "editorial_metaphor",
+            "temporal_role": "present",
+            "event_ids": [
+              "distincion-jirairay-wanuru"
+            ]
+          },
+          "motion_contract": {
+            "camera": "Desplazamiento lento opcional por definir después de aprobar los originales.",
+            "allowed": "Paralaje entre tres zonas y microoscilación de bandas.",
+            "forbidden": "Fusionar canto y Wanurü, tocar al paciente, crear cuerpo o dividir en paneles.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "produce_now": false,
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "b5b",
+          "title": "La negociación de los pliegues",
+          "visual": "VERY WIDE night tableau. Five cream bands arrive at the distant charcoal compression at different heights; none enters it. Three charcoal-adjacent fibres answer backward with tighter folds and stop halfway, leaving a broad empty interval between both systems. The outsü, hammock and family remain tiny but visible at the opposite end. Rich layered shelter, no tunnel or portal.",
+          "time_seconds": [
+            72,
+            80
+          ],
+          "entity_ids": [
+            "outsu",
+            "maraca",
+            "familia_tres",
+            "paciente_fiebre",
+            "chinchorro",
+            "jirairay_canto",
+            "wanuru_presencia",
+            "rancheria"
+          ],
+          "event_ids": [
+            "distincion-jirairay-wanuru"
+          ],
+          "angle": "cámara longitudinal muy distante, a altura de las bandas",
+          "shot_scale": "gran plano general épico y contenido, espacio mayor que personajes",
+          "depth_planes": [
+            "Cinco bandas de ida cruzando aire",
+            "Intervalo vacío sobre el paciente y la familia",
+            "Presión carbón y tres respuestas plegadas al fondo"
+          ],
+          "continuity_from": "b5a",
+          "transition_to_next": "Corte por ritmo de maraca hacia una escucha más íntima pero aún amplia.",
+          "scene_role": "visible_magic",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Canto y maraca sostienen una conversación ritual",
+            "impossible_behavior": "Dos frecuencias físicas de papel se aproximan, responden y se detienen sin tocarse",
+            "narrative_effect": "La negociación aparece como relación y distancia, nunca combate entre personajes",
+            "agency": "Cada sistema conserva dirección propia; la outsü media, no domina",
+            "physical_translation": "Bandas lisas de ida y fibras con pliegue corto de retorno, separadas por un vacío central",
+            "visible_test": "Deben distinguirse dos ritmos y un intervalo; cero choque, rayo, criatura o contacto humano",
+            "provenance": "editorial_metaphor",
+            "temporal_role": "present",
+            "event_ids": [
+              "distincion-jirairay-wanuru"
+            ]
+          },
+          "motion_contract": {
+            "camera": "Desplazamiento lento opcional por definir después de aprobar los originales.",
+            "allowed": "Paralaje profundo y pulsación mínima sin cambio de identidad.",
+            "forbidden": "Batalla, explosión, aura, portal, cuerpo, serpiente o dramatización médica.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "produce_now": true,
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "b6",
+      "voice_over": "La maraca marcaba el tiempo. La outsü escuchaba a sus auxiliares y respondía con frases que la familia no siempre entendía. En el chinchorro, la persona enferma sudaba sin abandonar del todo la vigilia.",
+      "voice_provenance": "Relato publicado: ritmo, escucha, respuestas y estado liminar del paciente; no visualiza anatomía para los auxiliares.",
+      "word_count": 34,
+      "time_seconds": [
+        80,
+        96
+      ],
+      "event_ids": [
+        "escucha-y-respuesta"
+      ],
+      "keyframes": [
+        {
+          "id": "b6a",
+          "title": "Escuchar lo que no tiene cuerpo",
+          "visual": "WIDE interior. The outsü lowers the maraca and turns her attentive profile toward FOUR small suspended paper tabs placed at four distinct depths. The tabs tilt one after another without forming eyes or figures. The patient rests awake in the hammock; THREE relatives remain behind him. Chant bands pause completely in this instant.",
+          "time_seconds": [
+            80,
+            88
+          ],
+          "entity_ids": [
+            "outsu",
+            "maraca",
+            "auxiliares_escucha",
+            "familia_tres",
+            "paciente_fiebre",
+            "chinchorro",
+            "rancheria"
+          ],
+          "event_ids": [
+            "escucha-y-respuesta"
+          ],
+          "angle": "oblicua amplia con cuatro profundidades de escucha claramente separadas",
+          "shot_scale": "plano conjunto ambiental, cuerpo completo de la outsü",
+          "depth_planes": [
+            "Primera pestaña suspendida y poste",
+            "Outsü escuchando junto al chinchorro",
+            "Tres pestañas sucesivas y familia al fondo"
+          ],
+          "continuity_from": "b5b",
+          "transition_to_next": "Corte por respuesta de la voz; no morph.",
+          "scene_role": "visible_magic",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "La especialista detiene el canto para escuchar",
+            "impossible_behavior": "Cuatro pequeñas pestañas de papel responden en profundidad sin viento ni cuerpos",
+            "narrative_effect": "Los auxiliares permanecen relacionales e incompletos, no especies inventadas",
+            "agency": "La outsü escucha; las respuestas aparecen desde lugares distintos",
+            "physical_translation": "Cuatro pestañas mate separadas, cada una con inclinación y sombra diferentes",
+            "visible_test": "Exactamente cuatro pestañas, cero ojos, caras, sombras humanas, estrellas o figuras",
+            "provenance": "editorial_metaphor",
+            "temporal_role": "present",
+            "event_ids": [
+              "escucha-y-respuesta"
+            ]
+          },
+          "motion_contract": {
+            "camera": "Desplazamiento lento opcional por definir después de aprobar los originales.",
+            "allowed": "Pequeña inclinación secuencial de pestañas y paralaje.",
+            "forbidden": "Crear criaturas auxiliares, pose de trance, close-up o cambio de ropa.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "produce_now": false,
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "b6b",
+          "title": "Entre sueño y vigilia",
+          "visual": "WIDE low side view along the hammock. The patient remains fully clothed and awake with tired eyes, small within the frame. Behind separated hammock bands, the outsü resumes one thin cream reply toward the four tabs; family silhouettes stay still. A second offset indigo paper plane behind the patient echoes his posture WITHOUT forming a duplicate body or shadow-person.",
+          "time_seconds": [
+            88,
+            96
+          ],
+          "entity_ids": [
+            "outsu",
+            "maraca",
+            "auxiliares_escucha",
+            "familia_tres",
+            "paciente_fiebre",
+            "chinchorro",
+            "jirairay_canto",
+            "rancheria"
+          ],
+          "event_ids": [
+            "escucha-y-respuesta"
+          ],
+          "angle": "lateral baja y distante siguiendo las capas del chinchorro",
+          "shot_scale": "plano general íntimo, no primer plano del paciente",
+          "depth_planes": [
+            "Bandas de chinchorro cercanas",
+            "Paciente completo en vigilia y plano índigo desplazado",
+            "Outsü, familia y cuatro respuestas al fondo"
+          ],
+          "continuity_from": "b6a",
+          "transition_to_next": "Corte hacia objetos cerrados; no morph.",
+          "scene_role": "visible_magic",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Una persona enferma permanece despierta mientras escucha",
+            "impossible_behavior": "Un plano índigo vacío repite sólo la inclinación del chinchorro, no la anatomía del paciente",
+            "narrative_effect": "Sueño y vigilia coexisten sin mostrar delirio, alma o posesión",
+            "agency": "El paciente conserva presencia; el espacio refleja un estado liminar",
+            "physical_translation": "Una hoja índigo desplazada replica la curva del soporte con aire entre capas",
+            "visible_test": "Debe repetirse la curva del chinchorro, nunca cara, cuerpo, fantasma o doble humano",
+            "provenance": "editorial_metaphor",
+            "temporal_role": "present",
+            "event_ids": [
+              "escucha-y-respuesta"
+            ]
+          },
+          "motion_contract": {
+            "camera": "Desplazamiento lento opcional por definir después de aprobar los originales.",
+            "allowed": "Paralaje entre soporte, persona y hoja índigo.",
+            "forbidden": "Doble del paciente, transparencia, sudor explícito, convulsión, herida o terror.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "produce_now": false,
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "b7",
+      "voice_over": "La especialista pidió alimentos y objetos para cumplir obligaciones de la ceremonia. No eran tributo para un demonio. Unían a la familia, la especialista y las presencias dentro de una relación que las traducciones dejaron incompleta.",
+      "voice_provenance": "Relato publicado y cautela editorial frente a categorías cristianas y obligaciones específicas no verificadas.",
+      "word_count": 36,
+      "time_seconds": [
+        96,
+        112
+      ],
+      "event_ids": [
+        "bienes-y-relacion"
+      ],
+      "keyframes": [
+        {
+          "id": "b7a",
+          "title": "Cuatro bienes cerrados",
+          "visual": "WIDE shelter interior. Exactly FOUR closed cream-and-sand goods occupy a low mat in the middle ground. One family woman places the tied bundle at the edge; her hand has already released it. The outsü stands several steps away with maraca lowered; patient remains in hammock, two other relatives behind. No altar, open food, tobacco use or supernatural recipient.",
+          "time_seconds": [
+            96,
+            104
+          ],
+          "entity_ids": [
+            "bienes_cerrados",
+            "familia_tres",
+            "outsu",
+            "maraca",
+            "paciente_fiebre",
+            "chinchorro",
+            "rancheria"
+          ],
+          "event_ids": [
+            "bienes-y-relacion"
+          ],
+          "angle": "oblicua amplia con objetos bajos y personas completas en planos posteriores",
+          "shot_scale": "plano general relacional; no bodegón macro",
+          "depth_planes": [
+            "Borde de estera y un bien cerrado",
+            "Cuatro bienes con familiar que se retira",
+            "Outsü, paciente y dos familiares separados"
+          ],
+          "continuity_from": "b6b",
+          "transition_to_next": "Corte por relación espacial, no transformación.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Desplazamiento lento opcional por definir después de aprobar los originales.",
+            "allowed": "Paralaje suave y retirada mínima de una mano vacía.",
+            "forbidden": "Abrir bienes, mostrar alimento específico, ofrenda a entidad, humo, altar o nueva persona.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "produce_now": false,
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "b7b",
+          "title": "La relación incompleta",
+          "visual": "VERY WIDE overhead-oblique view, not a diagram. Outsü, patient in hammock, THREE relatives and the FOUR closed goods occupy separate paper islands with narrow air gaps. One incomplete cream chant band curves among the islands but deliberately stops before closing a loop. A distant charcoal compression remains outside the arrangement. No circle, ritual symbol, arrows or labels.",
+          "time_seconds": [
+            104,
+            112
+          ],
+          "entity_ids": [
+            "bienes_cerrados",
+            "familia_tres",
+            "outsu",
+            "maraca",
+            "paciente_fiebre",
+            "chinchorro",
+            "jirairay_canto",
+            "wanuru_presencia",
+            "rancheria"
+          ],
+          "event_ids": [
+            "bienes-y-relacion"
+          ],
+          "angle": "vista elevada oblicua que conserva volumen escénico, nunca infografía cenital",
+          "shot_scale": "gran plano general de conjunto completo",
+          "depth_planes": [
+            "Isla de bienes y suelo cercano",
+            "Familia, outsü y chinchorro en islas separadas",
+            "Banda incompleta y presión carbón distante"
+          ],
+          "continuity_from": "b7a",
+          "transition_to_next": "Corte por el hueco de la banda hacia el silencio nocturno.",
+          "scene_role": "visible_magic",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Personas y bienes ocupan un mismo espacio de cuidado",
+            "impossible_behavior": "Una banda de canto intenta relacionar los planos pero deja deliberadamente un tramo abierto",
+            "narrative_effect": "La traducción incompleta se vuelve un vínculo que no podemos cerrar",
+            "agency": "Las personas cumplen obligaciones; la imagen no decide el significado total",
+            "physical_translation": "Curvar una sola banda fina entre planos sin formar círculo ni tocar la presión",
+            "visible_test": "El recorrido debe quedar abierto y asimétrico, sin icono, mandala, flechas o demonio",
+            "provenance": "editorial_metaphor",
+            "temporal_role": "present",
+            "event_ids": [
+              "bienes-y-relacion"
+            ]
+          },
+          "motion_contract": {
+            "camera": "Desplazamiento lento opcional por definir después de aprobar los originales.",
+            "allowed": "Paralaje entre islas físicas y leve continuidad de la banda.",
+            "forbidden": "Diagrama, círculo ritual, símbolo inventado, ofrenda visible o cuerpo de Wanurü.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "produce_now": false,
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "b8",
+      "voice_over": "Durante la noche el canto cambió. Jirairay dejó de repetirse con tanta frecuencia. Entre cada pulso apareció más silencio, y la outsü anunció que Wanurü aflojaba su dominio sobre la persona atendida.",
+      "voice_provenance": "Reconstrucción publicada: cambio del canto y anuncio de menor dominio; la imagen no promete efecto clínico.",
+      "word_count": 32,
+      "time_seconds": [
+        112,
+        128
+      ],
+      "event_ids": [
+        "aflojamiento"
+      ],
+      "keyframes": [
+        {
+          "id": "b8a",
+          "title": "Más espacio entre pulsos",
+          "visual": "WIDE same night shelter. Only THREE cream chant bands remain, now separated by very large empty intervals. The outsü stands still with maraca low between beats. The charcoal compression is shallower but still present far from the hammock. Patient and THREE relatives remain unchanged; no one celebrates.",
+          "time_seconds": [
+            112,
+            120
+          ],
+          "entity_ids": [
+            "outsu",
+            "maraca",
+            "familia_tres",
+            "paciente_fiebre",
+            "chinchorro",
+            "jirairay_canto",
+            "wanuru_presencia",
+            "rancheria"
+          ],
+          "event_ids": [
+            "aflojamiento"
+          ],
+          "angle": "lateral amplia que privilegia intervalos vacíos sobre personas",
+          "shot_scale": "gran plano general nocturno, arquitectura y silencio dominantes",
+          "depth_planes": [
+            "Primer intervalo vacío entre fibras",
+            "Personas completas y tres pulsos muy separados",
+            "Presión carbón baja entre hojas del fondo"
+          ],
+          "continuity_from": "b7b",
+          "transition_to_next": "Corte por ampliación del silencio, no morph.",
+          "scene_role": "visible_magic",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "El canto continúa durante la noche",
+            "impossible_behavior": "Los intervalos vacíos crecen físicamente mientras la presión carbón pierde profundidad",
+            "narrative_effect": "El cambio se percibe como aflojamiento, no como victoria ni cura",
+            "agency": "El canto cambia y Wanurü afloja sin quedar destruido",
+            "physical_translation": "Separar tres bandas por grandes distancias y reducir la depresión carbón a pocas hojas",
+            "visible_test": "Más vacío que banda; presión aún visible; ningún brillo, explosión, desaparición o gesto triunfal",
+            "provenance": "editorial_metaphor",
+            "temporal_role": "present",
+            "event_ids": [
+              "aflojamiento"
+            ]
+          },
+          "motion_contract": {
+            "camera": "Desplazamiento lento opcional por definir después de aprobar los originales.",
+            "allowed": "Paralaje muy lento y respiración espacial entre pulsos.",
+            "forbidden": "Curación súbita, presión evaporándose, festejo, aura o tocar al paciente.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "produce_now": false,
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "b8b",
+          "title": "La presión afloja",
+          "visual": "VERY WIDE pre-dawn interior. ONE last cream band crosses a large indigo void and stops before a now shallow, fragmented charcoal fold whose layers have separated enough for a thin line of ordinary blue night to pass between them. The outsü and family are tiny at the opposite side; patient remains reclined. No sunrise glow yet.",
+          "time_seconds": [
+            120,
+            128
+          ],
+          "entity_ids": [
+            "outsu",
+            "maraca",
+            "familia_tres",
+            "paciente_fiebre",
+            "chinchorro",
+            "jirairay_canto",
+            "wanuru_presencia",
+            "rancheria"
+          ],
+          "event_ids": [
+            "aflojamiento"
+          ],
+          "angle": "vista longitudinal extrema entre último pulso y presión distante",
+          "shot_scale": "gran plano general contemplativo con figuras diminutas",
+          "depth_planes": [
+            "Última banda aislada en primer plano",
+            "Gran vacío sobre la familia y el chinchorro",
+            "Capas carbón separadas por una línea azul al fondo"
+          ],
+          "continuity_from": "b8a",
+          "transition_to_next": "Corte de noche a amanecer por continuidad del chinchorro.",
+          "scene_role": "visible_magic",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Un último pulso antecede al amanecer",
+            "impossible_behavior": "La presión no desaparece: sus hojas se separan y dejan pasar aire nocturno",
+            "narrative_effect": "Wanurü afloja sin ser vencido ni convertido en objeto",
+            "agency": "La presencia cambia desde su propio plano; nadie la toca",
+            "physical_translation": "Abrir pequeños espacios entre fragmentos carbón y detener la banda antes del contacto",
+            "visible_test": "Una banda, una presión fragmentada, aire azul visible y cero cuerpo, luz sagrada o explosión",
+            "provenance": "editorial_metaphor",
+            "temporal_role": "present",
+            "event_ids": [
+              "aflojamiento"
+            ]
+          },
+          "motion_contract": {
+            "camera": "Desplazamiento lento opcional por definir después de aprobar los originales.",
+            "allowed": "Paralaje mínimo que revele aire entre capas carbón.",
+            "forbidden": "Desintegración digital, humo, criatura derrotada, milagro o paciente incorporado.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "produce_now": true,
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "b9",
+      "voice_over": "Al amanecer, la persona seguía viva. La familia continuó cuidándola, acercó agua y acomodó el chinchorro. El registro no permite asegurar que una sola acción causara una recuperación ni repetir la ceremonia como tratamiento.",
+      "voice_provenance": "Relato publicado: supervivencia y cuidado continuado, con límite médico explícito.",
+      "word_count": 34,
+      "time_seconds": [
+        128,
+        144
+      ],
+      "event_ids": [
+        "amanecer-y-cuidado"
+      ],
+      "keyframes": [
+        {
+          "id": "b9a",
+          "title": "El amanecer continúa el cuidado",
+          "visual": "WIDE pale dawn. The SAME patient is slightly more upright inside the hammock, still wearing the ochre shirt and cream trousers with blue cloth across lap. The older clay-clad woman offers ONE plain cup while another relative adjusts one hammock edge; the third relative watches. Outsü rests several steps away with maraca lowered. No chant bands or charcoal pressure visible.",
+          "time_seconds": [
+            128,
+            136
+          ],
+          "entity_ids": [
+            "paciente_amanecer",
+            "familia_tres",
+            "outsu",
+            "maraca",
+            "agua_cuidado",
+            "chinchorro",
+            "rancheria"
+          ],
+          "event_ids": [
+            "amanecer-y-cuidado"
+          ],
+          "angle": "oblicua amplia desde el patio hacia la enramada iluminada",
+          "shot_scale": "plano general de cuidado; todos completos y pequeños",
+          "depth_planes": [
+            "Hojas pálidas de patio y sombra de poste",
+            "Paciente, taza y familiar junto al chinchorro",
+            "Outsü y otros dos familiares ante cielo de amanecer"
+          ],
+          "continuity_from": "b8b",
+          "transition_to_next": "Corte por continuidad de cuidado, no elipsis milagrosa.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Desplazamiento lento opcional por definir después de aprobar los originales.",
+            "allowed": "Paralaje suave y microgesto de acercar la taza.",
+            "forbidden": "Paciente sano de pie, resplandor, medicamento, botella, nueva ropa o duplicados.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "produce_now": false,
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "b9b",
+          "title": "Ninguna causa ocupa el centro",
+          "visual": "VERY WIDE dawn tableau. The patient remains supported in the hammock at center but still small. Around him, care actions are spatially separate: plain cup set down, one relative holding the hammock band, another opening the shade, the older man seated nearby, outsü leaving along the path with maraca low. Wide ordinary air fills the center; no single object or person is highlighted.",
+          "time_seconds": [
+            136,
+            144
+          ],
+          "entity_ids": [
+            "paciente_amanecer",
+            "familia_tres",
+            "outsu",
+            "maraca",
+            "agua_cuidado",
+            "chinchorro",
+            "rancheria"
+          ],
+          "event_ids": [
+            "amanecer-y-cuidado"
+          ],
+          "angle": "frontal oblicua muy abierta con salida hacia el sendero",
+          "shot_scale": "gran plano general coral, sin héroe central",
+          "depth_planes": [
+            "Taza y hojas de suelo delante",
+            "Paciente y tres gestos de cuidado separados",
+            "Outsü pequeña alejándose hacia crestas bajas"
+          ],
+          "continuity_from": "b9a",
+          "transition_to_next": "Corte conceptual al archivo; no morph.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Desplazamiento lento opcional por definir después de aprobar los originales.",
+            "allowed": "Paralaje coral y salida lenta de la outsü.",
+            "forbidden": "Montaje médico, causa resaltada, victoria, abrazo multitudinario o nuevos objetos.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "produce_now": false,
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "b10",
+      "voice_over": "Lo que sobrevivió fue el nombre, convertido por el archivo en personaje. Devolver Jirairay al canto no elimina el misterio: recuerda que una palabra tiene fuerza por la relación donde se pronuncia, no por inventarle un rostro.",
+      "voice_provenance": "Cierre editorial publicado: corrección de archivo, no nueva teología ni deidad.",
+      "word_count": 37,
+      "time_seconds": [
+        144,
+        160
+      ],
+      "event_ids": [
+        "devolver-al-canto"
+      ],
+      "keyframes": [
+        {
+          "id": "b10a",
+          "title": "La falsa figura del archivo",
+          "visual": "Symbolic archive space, NO PEOPLE and NO readable text. Several rigid blank charcoal label-shapes stand upright between stacked paper leaves, arranged so their combined negative space ALMOST suggests a person from one angle but remains visibly empty and collapses into unrelated rectangles. A flexible cream chant band lies outside the stack. No literal silhouette, face, statue, book title or Wayuu symbol.",
+          "time_seconds": [
+            144,
+            152
+          ],
+          "entity_ids": [
+            "archivo_sin_texto",
+            "jirairay_canto"
+          ],
+          "event_ids": [
+            "devolver-al-canto"
+          ],
+          "angle": "oblicua lateral que muestra la ilusión y los huecos físicos a la vez",
+          "shot_scale": "plano general simbólico con mucho espacio negativo",
+          "depth_planes": [
+            "Banda flexible fuera del archivo",
+            "Etiquetas rígidas a distancias irregulares",
+            "Hojas apiladas y fondo índigo vacío"
+          ],
+          "continuity_from": "b9b",
+          "transition_to_next": "Corte por liberación de la banda, no morph corporal.",
+          "scene_role": "visible_magic",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Etiquetas sin texto se acumulan en un archivo",
+            "impossible_behavior": "Su espacio negativo casi fabrica una figura, pero los huecos revelan que nunca existió un cuerpo",
+            "narrative_effect": "La clasificación errónea produce la ilusión de una deidad autónoma",
+            "agency": "El archivo organiza la apariencia; no hay ser actuando dentro",
+            "physical_translation": "Separar rectángulos rígidos para una pareidolia incompleta que se contradice con sus sombras",
+            "visible_test": "Debe leerse primero archivo y vacío; jamás un humano sólido, rostro, dios o fantasma",
+            "provenance": "editorial_metaphor",
+            "temporal_role": "memory",
+            "event_ids": [
+              "devolver-al-canto"
+            ]
+          },
+          "motion_contract": {
+            "camera": "Desplazamiento lateral opcional por definir después de aprobar los originales.",
+            "allowed": "Paralaje que deshace la pareidolia sin transformar objetos.",
+            "forbidden": "Formar cuerpo completo, mostrar letras, iconografía religiosa, museo o pantalla digital.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "produce_now": false,
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "b10b",
+          "title": "El nombre vuelve a la voz",
+          "visual": "VERY WIDE final blue-hour memory of the shelter. No patient and no Wanurü pressure. The outsü stands small at one edge with maraca lowered; THREE relatives listen at separate depths. One flexible cream band, freed from rigid archive leaves lying open and blank in the foreground, crosses the ordinary air and bends four hanging fibres before dissolving into the indigo night as paper edges, not light. No face or being appears.",
+          "time_seconds": [
+            152,
+            160
+          ],
+          "entity_ids": [
+            "outsu",
+            "maraca",
+            "familia_tres",
+            "jirairay_canto",
+            "archivo_sin_texto",
+            "rancheria"
+          ],
+          "event_ids": [
+            "devolver-al-canto"
+          ],
+          "angle": "gran vista diagonal desde hojas de archivo abiertas hacia la voz distante",
+          "shot_scale": "gran plano general final, arquitectura y vacío dominantes",
+          "depth_planes": [
+            "Hojas de archivo abiertas y vacías delante",
+            "Banda flexible cruzando cuatro fibras",
+            "Outsü y tres oyentes pequeños ante la noche profunda"
+          ],
+          "continuity_from": "b10a",
+          "transition_to_next": "Final estable para fundido editorial posterior; no morph.",
+          "scene_role": "visible_magic",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Una voz vuelve a ser escuchada dentro de una relación",
+            "impossible_behavior": "La banda recupera flexibilidad al salir del archivo y sólo existe mientras atraviesa el espacio compartido",
+            "narrative_effect": "Jirairay regresa al canto sin perder misterio ni adquirir rostro",
+            "agency": "La outsü pronuncia; la familia escucha; el canto vive entre ambos",
+            "physical_translation": "Una banda crema continua sale junto a hojas planas y dobla cuatro fibras suspendidas",
+            "visible_test": "Banda flexible, cuatro oyentes y cero ser autónomo, escritura, brillo o presión carbón",
+            "provenance": "editorial_metaphor",
+            "temporal_role": "memory",
+            "event_ids": [
+              "devolver-al-canto"
+            ]
+          },
+          "motion_contract": {
+            "camera": "Desplazamiento lento opcional por definir después de aprobar los originales.",
+            "allowed": "Paralaje final entre archivo, banda, oyentes y noche.",
+            "forbidden": "Cuerpo de Jirairay, aparición de Wanurü, texto, aura, final triunfal o nuevas personas.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "produce_now": true,
+          "qa_status": "not_generated"
+        }
+      ]
+    }
+  ]
+}

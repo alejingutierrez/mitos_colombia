@@ -1,0 +1,162 @@
+{
+  "myth_id": 453,
+  "slug": "origen-de-las-plantas",
+  "title": "Origen de las plantas",
+  "variant": "Núcleo de María que entrega semillas y hermano incapaz. Culebras queda duda del narrador y no se convierte en hecho visual.",
+  "rules": "María vestida azul-crema, gesto a altura del vientre sin exposición corporal. Semillas de papel. Hermano Santo Tomás distinto de Dimales.",
+  "source": {
+    "path": "content/videos/nasa-paeces/keyframes-comunidad-20260913/myths/origen-de-las-plantas/source.snapshot.json",
+    "sha256": "25249875cbb8ac05e4822af4a3cc0879d91f74425b4d1cbcb2f4a86dcac70c55",
+    "narrative_sha256": "438e3e3b2d7af1600e2a728947437064da83ffe00ca731b6eaec7ac61627a525"
+  },
+  "references": {
+    "entrada": {
+      "path": "output/imagegen/nasa-paeces/tripticos/maqueta-3d-20260913/origen-de-las-plantas/entrada-v1.png",
+      "sha256": "b0bb9c89fcb9942b58b7cbcce547954ce17a5879daaa1cfd0eac1b657c0fa799"
+    },
+    "acto": {
+      "path": "output/imagegen/nasa-paeces/tripticos/maqueta-3d-20260913/origen-de-las-plantas/acto-v1.png",
+      "sha256": "719057007c139de2943b02702e7f28b4f1e2a2283ba472134e9d06cb67632096"
+    }
+  },
+  "expected_frames": 8,
+  "estimated_seconds": 46,
+  "timing_status": "provisional_pending_recorded_voice",
+  "voice_words": 69,
+  "blocks": [
+    {
+      "id": "b1",
+      "voice_over": "Las semillas eran una herencia. Los mayores decían que María las había entregado para que pudieran mantenerse.",
+      "word_count": 17,
+      "time_seconds": [
+        0,
+        11
+      ],
+      "shots": [
+        {
+          "id": "k01",
+          "time_seconds": [
+            0,
+            6
+          ],
+          "scene": "Detalle: manos de María vestida sostienen semillas de papel a altura del abdomen, ropa cubre totalmente cuerpo.",
+          "refs": [
+            "entrada"
+          ]
+        },
+        {
+          "id": "k02",
+          "time_seconds": [
+            6,
+            11
+          ],
+          "scene": "Medio: María ofrece semillas a dos adultos agricultores, manos separadas y ninguna ceremonia añadida.",
+          "refs": [
+            "entrada"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "b2",
+      "voice_over": "Las sacaba de su vientre y las ponía en otras manos. Allí comenzaba la posibilidad de una cosecha.",
+      "word_count": 18,
+      "time_seconds": [
+        11,
+        23
+      ],
+      "shots": [
+        {
+          "id": "k03",
+          "time_seconds": [
+            11,
+            17
+          ],
+          "scene": "Detalle gesto editorial: manos cerradas cerca del vientre CUBIERTO por manto se abren con semillas, sin anatomía visible.",
+          "refs": [
+            "entrada"
+          ]
+        },
+        {
+          "id": "k04",
+          "time_seconds": [
+            17,
+            23
+          ],
+          "scene": "Cenital: semillas pasan de manos de María a manos de agricultora sobre tela de papel, sin multiplicación mágica.",
+          "refs": [
+            "entrada"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "b3",
+      "voice_over": "Su hermano también quería dar semillas y animales, pero no podía. Esa diferencia le provocaba rabia.",
+      "word_count": 16,
+      "time_seconds": [
+        23,
+        34
+      ],
+      "shots": [
+        {
+          "id": "k05",
+          "time_seconds": [
+            23,
+            29
+          ],
+          "scene": "Medio: Santo Tomás adulto mira sus manos vacías, María al fondo conserva semillas; no serpientes ni animales creados.",
+          "refs": [
+            "entrada",
+            "acto"
+          ]
+        },
+        {
+          "id": "k06",
+          "time_seconds": [
+            29,
+            34
+          ],
+          "scene": "General: Santo Tomás se aparta del lugar de entrega; María y dos receptores permanecen, enojo contenido.",
+          "refs": [
+            "entrada",
+            "acto"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "b4",
+      "voice_over": "El don quedaba en manos de quienes sembraban. Recibirlo abría un trabajo: cuidarlo hasta que volviera a alimentar.",
+      "word_count": 18,
+      "time_seconds": [
+        34,
+        46
+      ],
+      "shots": [
+        {
+          "id": "k07",
+          "time_seconds": [
+            34,
+            40
+          ],
+          "scene": "Detalle: manos adultas colocan semillas separadas en surco de papel, transición editorial hacia cultivo.",
+          "refs": [
+            "acto"
+          ]
+        },
+        {
+          "id": "k08",
+          "time_seconds": [
+            40,
+            46
+          ],
+          "scene": "General final: dos agricultores cuidan pequeños brotes en ladera; María no como gigante en cielo, luz de mañana.",
+          "refs": [
+            "acto"
+          ]
+        }
+      ]
+    }
+  ]
+}

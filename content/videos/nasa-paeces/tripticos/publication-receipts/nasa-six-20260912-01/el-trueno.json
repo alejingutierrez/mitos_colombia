@@ -1,0 +1,119 @@
+{
+  "schema": "mitos-colombia-triptych-publication-v1",
+  "publication_id": "nasa-six-20260912-01",
+  "status": "published",
+  "started_at": "2026-09-13T01:52:36.425Z",
+  "myth": {
+    "id": 429,
+    "title": "El Trueno",
+    "slug": "el-trueno"
+  },
+  "local": {
+    "horizontal": {
+      "path": "output/imagegen/nasa-paeces/tripticos/produccion-api-01/el-trueno/entrada-v1.jpeg",
+      "bytes": 395903,
+      "sha256": "fd8c955803d7f78df62ba0e01ad82e745e926fbc721989af383bdc151cdae60e",
+      "source": {
+        "width": 1536,
+        "height": 1024
+      },
+      "published": {
+        "width": 1536,
+        "height": 1024
+      }
+    },
+    "vertical": {
+      "path": "output/imagegen/nasa-paeces/tripticos/produccion-api-01/el-trueno/acto-v2.jpeg",
+      "bytes": 317185,
+      "sha256": "6cc688227c38155c1c1b233315a4997f0e2d9e2324719e8804d4f08d9cf98c60",
+      "source": {
+        "width": 1024,
+        "height": 1536
+      },
+      "published": {
+        "width": 1024,
+        "height": 1536
+      }
+    },
+    "cuadrada": {
+      "path": "output/imagegen/nasa-paeces/tripticos/produccion-api-01/el-trueno/huella-v1.jpeg",
+      "bytes": 194023,
+      "sha256": "3c14e86c83b4904088ed5df29e42211231a137e4fb42e27163ae66a20a3455e0",
+      "source": {
+        "width": 1024,
+        "height": 1024
+      },
+      "published": {
+        "width": 1024,
+        "height": 1024
+      }
+    }
+  },
+  "selection": "content/videos/nasa-paeces/tripticos/publication-selection/existing-six/el-trueno.json",
+  "narrative_target_sha256": "b614e85866570485df0e729fee0b8e885033fa2ef3f4526014143e270b0a04d2",
+  "preserve_original_bytes": true,
+  "before": {
+    "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/el-trueno-1784767608535.jpg",
+    "vertical_image": {
+      "id": 448,
+      "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/el-trueno-1784912209240.jpg",
+      "updated_at": "2026-07-24T16:56:51.068Z"
+    },
+    "square_image_url": null,
+    "updated_at": "2026-07-28T02:38:08.937Z",
+    "image_prompt_horizontal": null,
+    "image_prompt_vertical": null,
+    "image_prompt_square": null
+  },
+  "preservation": {
+    "blob_uploads_use_new_random_suffixes": true,
+    "previous_blob_urls_are_not_deleted": true,
+    "previous_vertical_database_row_is_not_updated_or_deleted": true
+  },
+  "uploads": {
+    "horizontal": {
+      "url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/el-trueno-1789264356428-lhGOpy4f0APzhb2TdY0mjFUaMYWeQ9.jpg",
+      "sha256": "fd8c955803d7f78df62ba0e01ad82e745e926fbc721989af383bdc151cdae60e",
+      "bytes": 395903,
+      "width": 1536,
+      "height": 1024
+    },
+    "vertical": {
+      "url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/el-trueno-1789264357582-S6ibrB4sRfTPPVCXyQZHod0MeaKQbh.jpg",
+      "sha256": "6cc688227c38155c1c1b233315a4997f0e2d9e2324719e8804d4f08d9cf98c60",
+      "bytes": 317185,
+      "width": 1024,
+      "height": 1536
+    },
+    "cuadrada": {
+      "url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/square/myth/el-trueno-1789264357878-vvJNZMyeWI8n9LROimK11SqD8pYsN8.jpg",
+      "sha256": "3c14e86c83b4904088ed5df29e42211231a137e4fb42e27163ae66a20a3455e0",
+      "bytes": 194023,
+      "width": 1024,
+      "height": 1024
+    }
+  },
+  "remote_history_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/triptych-history/el-trueno/nasa-six-20260912-01-fDqMqvqtvZR1LcetrkzLDCuhucT3UR.json",
+  "vertical_version_inserted": {
+    "action": "creada",
+    "id": 685
+  },
+  "completed_at": "2026-09-13T01:52:40.081Z",
+  "after": {
+    "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/el-trueno-1789264356428-lhGOpy4f0APzhb2TdY0mjFUaMYWeQ9.jpg",
+    "vertical_image": {
+      "id": 685,
+      "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/el-trueno-1789264357582-S6ibrB4sRfTPPVCXyQZHod0MeaKQbh.jpg",
+      "updated_at": "2026-09-13T01:52:38.343Z"
+    },
+    "square_image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/square/myth/el-trueno-1789264357878-vvJNZMyeWI8n9LROimK11SqD8pYsN8.jpg"
+  },
+  "revalidation": {
+    "ok": true,
+    "status": 200,
+    "paths": [
+      "/mitos/el-trueno",
+      "/mitos"
+    ]
+  }
+}

@@ -1,0 +1,184 @@
+{
+  "schema": "wayuu-video-preproduction/v1",
+  "slug": "el-viaje-del-mas-alla",
+  "title": "El viaje del más allá",
+  "version": "preproduccion-03-correccion-patilla",
+  "status": "one_targeted_shape_correction",
+  "style": "content/videos/wayuu/channel-dna.v2.json",
+  "generation": {
+    "model": "gpt-image-2",
+    "quality": "medium",
+    "size": "864x1536",
+    "output_format": "jpeg",
+    "mode": "text_only",
+    "input_images": []
+  },
+  "palette": "Índigo, arena, carbón, óxido, crema y verde oliva en papel mate; lluvia azul y vegetación verde en capas.",
+  "story_thesis": "Una patilla reconocible sustituye a la apariencia humana sin convertirse en calabaza.",
+  "shared_scene_continuity": [
+    "Todo es papel recortado casi plano y mate, separado físicamente en profundidad.",
+    "Viudo joven: pelo negro a la nuca y barba corta negra; rostro de pocas piezas.",
+    "Un solo fruto redondo u ovalado corto; no forma alargada."
+  ],
+  "continuity_rules": [
+    "Una sola patilla, no calabaza ni auyama.",
+    "Ninguna persona salvo el viudo; cero canas.",
+    "Conservar el original rechazado y escribir una versión nueva."
+  ],
+  "duration": {
+    "voice_words": 29,
+    "target_seconds": 14,
+    "measured": false,
+    "method": "Toma de corrección aislada; no duración final."
+  },
+  "narrative": {
+    "snapshot": "content/mitos-visuales/production/wayuu-2026-09-05/narratives/el-viaje-del-mas-alla.json",
+    "content_sha256": "622df3cb2717f9ac9b95398d1351094121e5b354e18cb4cc48290c0330fe5101",
+    "source_url": "https://www.designisfels.net/wp-content/uploads/2021/05/MITO-Y-CULTURA-GUAJIRA-Libro.pdf",
+    "source_locator": "Perrin V2 reproducida por Finol, pp. 208–220.",
+    "live_hash_verified": true,
+    "events": [
+      {
+        "id": "e12",
+        "description": "Las patillas hablaban y parecían familias. El viudo las escuchó antes de reconocer el fruto. Ni siquiera el alimento conservaba una sola apariencia para quien llegaba de otro mundo.",
+        "required": true,
+        "provenance": "historical_core",
+        "source": "Narrativa publicada verificada y Perrin V2 en Finol, pp. 208–220; adaptación original."
+      }
+    ]
+  },
+  "inventory": [
+    {
+      "id": "viudo",
+      "type": "person",
+      "desc": "Hombre adulto Wayuu de perfil plano: pelo negro ondulado a la nuca, barba corta, sombrero de paja, manta-capa óxido sobre prendas carbón, faja óxido y sandalias oscuras. En el regreso conserva ropa e identidad, pero lleva pelo y barba largos grises. Sin rostro modelado.",
+      "model_ids": [
+        "viudo_viaje_mas_alla__identity_sheet",
+        "viudo_viaje_mas_alla__state_sheet"
+      ]
+    },
+    {
+      "id": "familia_patilla",
+      "type": "supporting_people",
+      "desc": "Familia de adultos completamente vestidos en verde, crema y carbón; su correspondencia es una patilla verde rayada. No niños, caras sobre frutas ni personas cortadas.",
+      "model_ids": [
+        "patilla__state_sheet",
+        "patilla__botanical_sheet"
+      ]
+    }
+  ],
+  "canonical_models": [
+    {
+      "model_id": "viudo_viaje_mas_alla__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-18-el-viaje-del-mas-alla-medium/viudo_viaje_mas_alla__identity_sheet--canon.jpeg",
+      "sha256": "74bc465196c1da6997a71a7d436bbca4f90e23591753a545d4b7d52b8383efae"
+    },
+    {
+      "model_id": "viudo_viaje_mas_alla__state_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-18-el-viaje-del-mas-alla-medium/viudo_viaje_mas_alla__state_sheet--estados.jpeg",
+      "sha256": "117462a3cf635de034923f82da9ddc40c6800b3d5c619e036cc94e570e6a65e9"
+    },
+    {
+      "model_id": "patilla__state_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-18-el-viaje-del-mas-alla-medium-corrections-01/patilla__state_sheet--estados.jpeg",
+      "sha256": "5952bc1fa982b6b037ccb1a10e1c6eb6fb7e7e03c9881e7ea60e88f78ca751dd"
+    },
+    {
+      "model_id": "patilla__botanical_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-17-el-pequeno-indio-kosina-medium/patilla__botanical_sheet--canon.jpeg",
+      "sha256": "199c12b131ac104832b6ac1e7359952464bcc00582c9034b3036f369cdcdfad7"
+    }
+  ],
+  "reference_review": {
+    "status": "complete",
+    "sources": [
+      {
+        "path": "output/imagegen/wayuu/triptychs/wayuu-viaje-triptych-02-entrada/entrada.jpeg",
+        "sha256": "8ba6da4f6a78d3217a515974ffd953e009ffc7cb58928945ecb8219fadf5d9e1",
+        "reviewed": true,
+        "role": "same_myth_direction_reference",
+        "notes": "Conservar escala ambiental, ondas de papel y pareja pequeña."
+      },
+      {
+        "path": "output/imagegen/wayuu/triptychs/wayuu-viaje-triptych-01/acto.jpeg",
+        "sha256": "5d8dd751cb4e308bee589db7d36afe3f518214d1c6bb9dcd2ee97744730ba0f4",
+        "reviewed": true,
+        "role": "same_myth_direction_reference",
+        "notes": "Conservar boa-banco continua y amplitud espacial; no copiar rigidez del personaje."
+      },
+      {
+        "path": "output/imagegen/wayuu/triptychs/wayuu-viaje-triptych-01/huella.jpeg",
+        "sha256": "a1af8b997a49d1fe94badf7ccd2bd50fe1fb62a254980b24d226fdec3c2d7c29",
+        "reviewed": true,
+        "role": "same_myth_direction_reference",
+        "notes": "Usar tensión simbólica de una continuidad que se rompe, no repetir la composición literalmente."
+      }
+    ]
+  },
+  "blocks": [
+    {
+      "id": "b12",
+      "title": "Las patillas",
+      "time_seconds": [
+        0,
+        14
+      ],
+      "event_ids": [
+        "e12"
+      ],
+      "voice_over": "Las patillas hablaban y parecían familias. El viudo las escuchó antes de reconocer el fruto. Ni siquiera el alimento conservaba una sola apariencia para quien llegaba de otro mundo.",
+      "voice_provenance": "Adaptación original basada en narrativa publicada y contraste Perrin V2.",
+      "word_count": 29,
+      "keyframes": [
+        {
+          "id": "b12b",
+          "time_seconds": [
+            0,
+            14
+          ],
+          "event_ids": [
+            "e12"
+          ],
+          "entity_ids": [
+            "viudo",
+            "familia_patilla"
+          ],
+          "scene_role": "visible_magic",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Una familia conversa en un cultivo",
+            "impossible_behavior": "La presencia familiar se condensa en un fruto sin rostro",
+            "narrative_effect": "Ni siquiera el alimento conserva una sola apariencia",
+            "agency": "El fruto habla según la voz; el viudo no lo convierte",
+            "physical_translation": "Una patilla de bandas de papel y ecos cromáticos en hojas cercanas",
+            "visible_test": "Un fruto único sustituye al grupo, sin cortar ni esconder personas",
+            "provenance": "narrated_fact",
+            "temporal_role": "present",
+            "event_ids": [
+              "e12"
+            ]
+          },
+          "visual": "El viudo todavía joven, con pelo negro ondulado a la nuca y barba corta negra, observa UNA sola PATILLA o sandía reconocible: fruto grande REDONDO A OVALADO CORTO, verde con franjas verticales verde oscuro. Prohibido fruto alargado, calabaza, auyama, pepino, botella o pera. No hay personas ni otros frutos.",
+          "shot_scale": "plano general medio",
+          "angle": "mismo eje del plano anterior",
+          "depth_planes": [
+            "hojas rayadas",
+            "patilla central",
+            "cultivo y viudo distante"
+          ],
+          "continuity_from": null,
+          "transition_to_next": "Corte directo al siguiente instante; conservar identidad y material, sin morphing.",
+          "motion_contract": {
+            "camera": "Parallax suave entre las capas descritas; movimiento lento y legible, sin inventar acciones.",
+            "forbidden": "No morphing, paneo que revele bordes de maqueta, partículas genéricas, movimientos de boca ni acciones fuera del instante."
+          },
+          "asset": {
+            "status": "not_generated",
+            "path": null,
+            "sha256": null,
+            "qa_notes": []
+          }
+        }
+      ]
+    }
+  ]
+}

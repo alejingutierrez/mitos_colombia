@@ -1,0 +1,21 @@
+{
+  "schema": "wayuu-keyframe-correction/v1",
+  "slug": "jirairay",
+  "version": "produccion-04",
+  "source_batch": "output/imagegen/wayuu/keyframes/jirairay-produccion-correcciones-02",
+  "status": "generated_and_reviewed",
+  "preserve": ["b1b"],
+  "correct": ["b5a"],
+  "decisions": {
+    "b5a": ["restore_visible_isolated_wanuru_fold", "ground_remains_sand_and_ochre", "keep_exactly_three_bands_and_large_gap", "restore_rich_six_plane_scene"]
+  },
+  "generation": {
+    "model": "gpt-image-2",
+    "quality": "medium",
+    "size": "864x1536",
+    "output_format": "jpeg",
+    "mode": "text_only",
+    "input_images": []
+  },
+  "no_reference_uploads": true
+}

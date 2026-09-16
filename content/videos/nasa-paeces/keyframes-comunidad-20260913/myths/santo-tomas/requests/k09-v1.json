@@ -1,0 +1,28 @@
+{
+  "slug": "santo-tomas",
+  "id": "k09",
+  "version": 1,
+  "created_at": "2026-09-13T22:55:16.482Z",
+  "plan_sha256": "fb7ad4089d9320ae054166b59806a6f844136bb254f3e8e1ebad93aa5ed7e423",
+  "prompt_file": "content/videos/nasa-paeces/keyframes-comunidad-20260913/myths/santo-tomas/prompts/k09-v1.txt",
+  "prompt_sha256": "fcb61f1f32488b3e0f81bf3d46d7bd09f533c665d2b741e6ffd1146c873773c2",
+  "references": [
+    {
+      "path": "output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b1b-maqueta-v2.png",
+      "sha256": "d7dc5d106daadbd61b032ae0b3bb0139806f2b49c82ad2e937157f84478e3f7f",
+      "role": "SOLO material físico de papel: no transferir personas, ropa, varas, laguna ni iluminación nocturna."
+    },
+    {
+      "path": "output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/comunidad-nasa/santo-tomas/k08-v1.png",
+      "sha256": "6a75e7dabe87c694f552e56bbbd407ac7fb262140023eb3392649b28df0d05f4",
+      "role": "Keyframe anterior k08: continuidad de identidades y lugares que coincidan, nunca importar acción u objetos ausentes en el nuevo plano."
+    }
+  ],
+  "request": {
+    "prompt": "Use case: illustration-story. Produce ONE portrait 9:16 cinematic KEYFRAME, a real-looking miniature built ENTIRELY from CUT AND FOLDED PAPER, photographed from INSIDE the set. Myth: Santo Tomás. Frame k09.\n\nREFERENCE ROLES:\nImage 1: SOLO material físico de papel: no transferir personas, ropa, varas, laguna ni iluminación nocturna.\nImage 2: Keyframe anterior k08: continuidad de identidades y lugares que coincidan, nunca importar acción u objetos ausentes en el nuevo plano.\n\nEXACT NEW SHOT, render only this moment, not an entire story or multi-panel sheet:\nCenital: caja exterior de bronce entre pliegues comprimidos de tierra, pequeñas separaciones en capas sin destrucción humana.\n\nVISIBLE CONTENT RULE: The exact new shot above is the complete inventory for this one image. Later events, other characters and other props of the myth are absent unless explicitly named in this shot.\n\nPHYSICAL MATERIAL IS MANDATORY: separately cut, thick matte cardstock planes; deep air gaps and actual cast contact shadows; lifted edges, paper tabs, crisp folds and visibly attached garment panels. People are handmade folded-paper puppets with flat cut face planes, folded limbs and layered hands, never rounded dolls or illustrated skin. Rocks are angular folded cardstock, plants individual cut leaves bent from stems. Water is broad overlapping blue cardstock sheets, mist and clouds suspended paper cutouts. No painted textures pretending to be relief.\nCINEMATOGRAPHY: obey the shot's exact camera and time of day. Foreground paper edge/leaf/rock creates depth without hiding the main action; focal plane on action, optical miniature depth of field in near/far layers. Maintain identities, ages and clothes from the SAME myth references. Borderless immersive scene, no box, plinth, table, studio or collage. Frame extends edge to edge. Do NOT carry background objects from a previous scene into a new location.\nNo text, lettering, logo, watermark, symbols, sacred patterns, pan-Indigenous headdresses, golden jewelry, invented ritual, extra people or props. No brushwork, drawing outlines, flat illustration, realistic fabric/skin/liquid, plastic, clay or smooth CGI. Exactly ONE finished vertical 9:16 image. This is a new composition, not a crop of the reference.\n\nFINAL COMPOSITION OVERRIDE: Character names in continuity rules are NOT a cast list. Show ONLY the people/animals explicitly requested in THIS single shot. Do not add any reference person, animal, lake or staff just because it appears in a reference. Render precisely: Cenital: caja exterior de bronce entre pliegues comprimidos de tierra, pequeñas separaciones en capas sin destrucción humana.\n\n\nCENITAL de MISMA única caja BRONCE MATE CERRADA encajada entre capas comprimidas de tierra ocre de cartulina; pequeños espacios de presión en estratos. Sin gente, sin edificios ni destrucción.",
+    "referenced_image_paths": [
+      "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b1b-maqueta-v2.png",
+      "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/comunidad-nasa/santo-tomas/k08-v1.png"
+    ]
+  }
+}

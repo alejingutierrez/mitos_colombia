@@ -1,0 +1,1462 @@
+{
+  "schema_version": 2,
+  "date": "2026-09-12",
+  "community": "Nasa–Paeces",
+  "expected_count": 60,
+  "counts": {
+    "personajes": 17,
+    "entidades": 7,
+    "paisajes_maestros": 10,
+    "variaciones": 8,
+    "utilerias": 12,
+    "elencos": 6
+  },
+  "corpus_ids": [
+    429,
+    430,
+    431,
+    432,
+    433,
+    434,
+    435,
+    436,
+    437,
+    438,
+    439,
+    440,
+    441,
+    442,
+    443,
+    444,
+    445,
+    446,
+    447,
+    448,
+    449,
+    450,
+    451,
+    452,
+    453,
+    553
+  ],
+  "production_canon_definition": "Selección editorial para continuidad audiovisual; NO certificación cultural/comunitaria ni permiso de publicación.",
+  "sources": [
+    {
+      "id": "S01",
+      "title": "Bernal Villa 1953, cotejado en reedición de Villa Posse 1993",
+      "url": "https://www.flacso.edu.ec/biblio/catalog/resGet.php?resId=58546",
+      "function": "narrativa histórica primaria, mediante reedición",
+      "locator": "PDF pp. 62–79, sección Mitología y cuentos; página impresa 53 en adelante",
+      "lineage": "Una sola transmisión; Villa Posse no se cuenta como testimonio independiente.",
+      "status": "consulted",
+      "limitation": "Traducción y categorías de 1953; no existe relato nasa yuwe grabado en este registro. Original ICANH devolvió 403 en este corte."
+    },
+    {
+      "id": "S02",
+      "title": "Caracterización del pueblo Nasa, Procuraduría/Red Colombia Verde",
+      "url": "https://www.procuraduria.gov.co/portal/media/docs/CaracterizacionNASAYUWE.pdf",
+      "function": "territorio, vivienda, agricultura y contexto material",
+      "locator": "PDF pp. 3,5,7–9,12–14",
+      "status": "consulted",
+      "limitation": "Síntesis amplia, no determina vestuario de cada personaje ni topónimo local exacto. No se adopta su afirmación anacrónica Felipe II/1700."
+    },
+    {
+      "id": "S03",
+      "title": "Lenguas nasa yuwe y namtrik, Ministerio de Cultura y equipo sociolingüístico",
+      "url": "https://mng.mincultura.gov.co/areas/poblaciones/APP-de-lenguas-nativas/Documents/Biblioteca-Lenguas-Vivas-De-Colombia/VOL.%20IV%20TOMO%20I%20-%20Lenguas%20nasa%20yuwa%20y%20namtrik.pdf",
+      "function": "lengua, conceptos, territorio y organización",
+      "locator": "PDF pp. 50–54, participantes pp. 134",
+      "status": "consulted",
+      "limitation": "El archivo contiene edición/datos previos; no se atribuye 2024 como fecha del estudio por la sola URL de publicación."
+    },
+    {
+      "id": "S04",
+      "title": "El tejido, la esencia del pueblo Nasa, CRIC",
+      "url": "https://www.cric-colombia.org/portal/el-tejido-la-esencia-del-pueblo-nasa/",
+      "date": "2021-08-21",
+      "function": "voz comunitaria y cultura material viva",
+      "status": "consulted",
+      "limitation": "No autoriza copiar símbolos ni convertir una práctica actual en uniforme de todas las capas históricas."
+    },
+    {
+      "id": "S05",
+      "title": "Territorio ancestral del pueblo Nasa entre el riesgo y la resistencia, CRIC",
+      "url": "https://www.cric-colombia.org/portal/territorio-ancestral-del-pueblo-nasa-entre-el-riesgo-y-la-resistencia/",
+      "date": "2011-01-03",
+      "function": "memoria territorial comunitaria",
+      "status": "consulted",
+      "limitation": "Marco político-territorial contemporáneo, no prueba cada escena del corpus."
+    },
+    {
+      "id": "S06",
+      "title": "El chumbe. Los hilos del arcoíris, colección etnográfica ICANH",
+      "url": "https://colecciones.icanh.gov.co/articulos/chumbe.php",
+      "function": "objeto y variantes de Juan Tama",
+      "status": "consulted",
+      "limitation": "Reúne Nasa, Misak e Inga; no se trasladan símbolos Inga a personajes Nasa. Faja estrecha de 5–10 cm; no manta gigante."
+    },
+    {
+      "id": "S07",
+      "title": "Simone Ferrari, Palabrandar el mito, Orillas 11",
+      "url": "https://www.orillas.net/orillas/index.php/orillas/article/download/445/450/1544",
+      "date": "2022",
+      "function": "crítica de variantes y mediación visual",
+      "locator": "PDF pp. 9–11 y análisis de Gustavo Yonda",
+      "status": "consulted",
+      "limitation": "Estudio de mediaciones, no permiso de imitar el arte de Yonda ni autoridad para fijar canon cultural único."
+    },
+    {
+      "id": "S08",
+      "title": "Posicionamiento político autoridades indígenas Asociación Juan Tama, CRIC",
+      "url": "https://www.cric-colombia.org/portal/posicionamiento-politico-autoridades-indigenas-de-la-asociacion-juan-tama/",
+      "date": "2024-01-16",
+      "function": "gobierno propio actual y distinción histórica",
+      "status": "consulted",
+      "limitation": "No se proyectan organizaciones o insignias actuales a las oposiciones históricas."
+    },
+    {
+      "id": "F01",
+      "title": "Perfil ONIC Nasa legado",
+      "url": "https://www.onic.org.co/pueblos/2095-nasa",
+      "status": "failed_redirect_to_home",
+      "limitation": "No se cuenta como fuente consultable útil en este corte."
+    }
+  ],
+  "units": [
+    {
+      "id": "P01",
+      "label": "K’pish / el Trueno",
+      "category": "personaje",
+      "myth_ids": [
+        429,
+        431,
+        433,
+        553
+      ],
+      "brief": "One robust elderly highland man with a large plain plant-fiber hat and a broad dark cape, calm heavy stance, short gray hair. Three full-body front/profile/back views. Below, one smaller atmospheric state made of broad storm-cloud and forked-lightning paper shapes, without assigning him a new emblem or face in the sky.",
+      "states": [
+        "anciano",
+        "fuerza atmosférica"
+      ],
+      "base_unit": null,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S04",
+        "S05"
+      ],
+      "evidence_note": "Los rasgos narrativos vienen del corpus; rostro, edad exacta, color, distribución y ropa no descrita son decisiones de adaptación reversibles, nunca atributos tradicionales inventados."
+    },
+    {
+      "id": "P02",
+      "label": "Llíban",
+      "category": "personaje",
+      "myth_ids": [
+        431,
+        433
+      ],
+      "brief": "One lean adult cacique/healer, short black hair, simple muted river-green capisayo, ankle trousers, plain pindo hat and modest jigra. Front/profile/back full bodies, one chonta authority staff. Below, two small views of his covered infant state wrapped in a plain protective woven band. No warrior costume and no snake on this sheet.",
+      "states": [
+        "niño de la creciente",
+        "cacique/médico adulto"
+      ],
+      "base_unit": null,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S04",
+        "S05"
+      ],
+      "evidence_note": "Los rasgos narrativos vienen del corpus; rostro, edad exacta, color, distribución y ropa no descrita son decisiones de adaptación reversibles, nunca atributos tradicionales inventados."
+    },
+    {
+      "id": "P03",
+      "label": "Juan Chiracol",
+      "category": "personaje",
+      "myth_ids": [
+        432,
+        433
+      ],
+      "brief": "One alert tall adult territorial authority, medium black hair, simple dark-blue wool ruana, plain light shirt, ankle trousers and a simple shoulder bag. Front/profile/back full bodies. Below, one smaller young-adolescent state wearing the same restrained color family. Entirely human, no feline ears, skin, claws or jewelry.",
+      "states": [
+        "joven",
+        "cacique vigilante"
+      ],
+      "base_unit": null,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S04",
+        "S05"
+      ],
+      "evidence_note": "Los rasgos narrativos vienen del corpus; rostro, edad exacta, color, distribución y ropa no descrita son decisiones de adaptación reversibles, nunca atributos tradicionales inventados."
+    },
+    {
+      "id": "P04",
+      "label": "Juan Tama",
+      "category": "personaje",
+      "myth_ids": [
+        553
+      ],
+      "brief": "One composed adult territorial authority with shoulder-length straight black hair, charcoal capisayo, plain light shirt, ankle trousers, modest fiber bag and one dark chonta authority staff without ornate symbols. Front/profile/back at equal scale. Below, two smaller front/side views of the same identity as a fully covered infant: plain blanket protected by a long narrow woven chumbe band, not an enormous scarf. Minimal restrained bands, no sacred patterns and no title book on the identity sheet.",
+      "states": [
+        "adulto",
+        "niño protegido con chumbe"
+      ],
+      "base_unit": null,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S04",
+        "S05",
+        "S06",
+        "S07"
+      ],
+      "evidence_note": "Los rasgos narrativos vienen del corpus; rostro, edad exacta, color, distribución y ropa no descrita son decisiones de adaptación reversibles, nunca atributos tradicionales inventados."
+    },
+    {
+      "id": "P05",
+      "label": "Chautéh",
+      "category": "personaje",
+      "myth_ids": [
+        435,
+        436,
+        442
+      ],
+      "brief": "One adult transformer, long untidy black hair, angular face, unmarked cold-highland dark wool layers, ordinary plain ankle trousers and unadorned soft footwear. Main front/profile/back show his FREE PRE-CAPTURE state with TWO functioning eyes. Below, a smaller front seated CAPTIVE POST-CAPTURE state shows only his right eye calmly closed and nonfunctional (viewer-left in front view), no wound or blood. Same body, face and clothes in all states. No headdress, no belts or shin wraps made of rope, no box on this identity sheet.",
+      "states": [
+        "libre antes del encierro",
+        "cautivo tuerto"
+      ],
+      "base_unit": null,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S04",
+        "S05"
+      ],
+      "evidence_note": "Los rasgos narrativos vienen del corpus; rostro, edad exacta, color, distribución y ropa no descrita son decisiones de adaptación reversibles, nunca atributos tradicionales inventados."
+    },
+    {
+      "id": "P06",
+      "label": "Pedro Dimales",
+      "category": "personaje",
+      "myth_ids": [
+        437,
+        438,
+        439
+      ],
+      "brief": "One adult highland working man, rounder shoulders, short wavy dark hair, ochre-brown plain capisayo, light shirt, dark ankle trousers, worn plain footwear. Front/profile/back. Below, two smaller whole-body poses: offering help with open empty hands, and pointing at a distant place. No moral caricature, halo, sinister facial features or farming tools on this identity sheet.",
+      "states": [
+        "trabajador",
+        "gesto de palabra/indicación"
+      ],
+      "base_unit": null,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S04",
+        "S05"
+      ],
+      "evidence_note": "Los rasgos narrativos vienen del corpus; rostro, edad exacta, color, distribución y ropa no descrita son decisiones de adaptación reversibles, nunca atributos tradicionales inventados."
+    },
+    {
+      "id": "P07",
+      "label": "Tomás Dimales",
+      "category": "personaje",
+      "myth_ids": [
+        437,
+        438,
+        439
+      ],
+      "brief": "One adult highland working man related but not identical to Pedro: taller narrower stance, straight dark hair tied simply, muted slate-blue plain ruana, light shirt and dark ankle trousers. Front/profile/back. Below, two smaller whole-body poses: attentive listening and inspecting an empty palm as a seed gesture. No apostle robe, halo or moral caricature; this identity stays separate from Santo Tomas.",
+      "states": [
+        "trabajador",
+        "observador"
+      ],
+      "base_unit": null,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S04",
+        "S05"
+      ],
+      "evidence_note": "Los rasgos narrativos vienen del corpus; rostro, edad exacta, color, distribución y ropa no descrita son decisiones de adaptación reversibles, nunca atributos tradicionales inventados."
+    },
+    {
+      "id": "P08",
+      "label": "Santo Tomás",
+      "category": "personaje",
+      "myth_ids": [
+        440,
+        441,
+        437,
+        439,
+        453
+      ],
+      "brief": "One distinct adult syncretic narrative transformer, NOT a portrait of the historical apostle. Weathered unkempt dark hair with some gray, shabby fully covering plain wool and cloth layers, no visible disease or body humiliation. Front/profile/back. Below, two whole-body states of the same identity: ragged hungry child and adult curled asleep in a confined pose. No box, crucifix, halo, armor or medical lesions on this identity sheet.",
+      "states": [
+        "adulto",
+        "niño harapiento",
+        "pose de cautivo"
+      ],
+      "base_unit": null,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S04",
+        "S05"
+      ],
+      "evidence_note": "Los rasgos narrativos vienen del corpus; rostro, edad exacta, color, distribución y ropa no descrita son decisiones de adaptación reversibles, nunca atributos tradicionales inventados."
+    },
+    {
+      "id": "P09",
+      "label": "María Santísima",
+      "category": "personaje",
+      "myth_ids": [
+        434,
+        440,
+        444,
+        452,
+        453
+      ],
+      "brief": "One serene adult woman in the documented Catholic-syncretic narrative layer, simply draped muted blue cloth-paper mantle and full cream garment, no crown, gold jewelry or copied famous painting. Front/profile/back. Below, two small full-body states: carrying a fully wrapped infant and offering a few seeds in one cupped hand. Seeds are held, not emerging from an exposed body. No theatrical rays or universal Nasa goddess claim.",
+      "states": [
+        "adulta",
+        "con Niño",
+        "don de semillas"
+      ],
+      "base_unit": null,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S04",
+        "S05"
+      ],
+      "evidence_note": "Los rasgos narrativos vienen del corpus; rostro, edad exacta, color, distribución y ropa no descrita son decisiones de adaptación reversibles, nunca atributos tradicionales inventados."
+    },
+    {
+      "id": "P10",
+      "label": "Joven desconocido",
+      "category": "personaje",
+      "myth_ids": [
+        430
+      ],
+      "brief": "Exactly two full-body views, front and side, of one unnamed young adult man: modest highland clothes in gray-green, short dark hair, neutral posture, no staff or rank. Keep his identity unexplained; do not draw reptile scales, worms, supernatural insignia or a traditional name.",
+      "states": [
+        "joven adulto anónimo"
+      ],
+      "base_unit": null,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S04",
+        "S05"
+      ],
+      "evidence_note": "Los rasgos narrativos vienen del corpus; rostro, edad exacta, color, distribución y ropa no descrita son decisiones de adaptación reversibles, nunca atributos tradicionales inventados."
+    },
+    {
+      "id": "P11",
+      "label": "Joven que desaparece en la laguna",
+      "category": "personaje",
+      "myth_ids": [
+        430
+      ],
+      "brief": "Exactly two full-body front/side views of one young adult woman, the mother who disappears into the lagoon in the story of the unknown youth. Fully covering plain ankle-length dark skirt, modest cream blouse and muted rust shawl, simple tied hair, no child or ritual objects. She is not a siren or a generic water goddess.",
+      "states": [
+        "joven madre"
+      ],
+      "base_unit": null,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S04",
+        "S05"
+      ],
+      "evidence_note": "Los rasgos narrativos vienen del corpus; rostro, edad exacta, color, distribución y ropa no descrita son decisiones de adaptación reversibles, nunca atributos tradicionales inventados."
+    },
+    {
+      "id": "P12",
+      "label": "Niña que se vuelve serpiente",
+      "category": "personaje",
+      "myth_ids": [
+        434
+      ],
+      "brief": "One fully dressed ordinary child girl in a worn modest plain garment and old shawl, shown front and side. Below, the same identity's mythic serpent form: one very long broad flat rainbow-colored serpentine body with exactly TWO donkey-like ears, small simple head and restrained blue head/tail accents. No wings, horns, feathers, fangs, adult sexualization or Asian-dragon features. The source-specific transformation remains distinct from Lliban's green lightning-serpent.",
+      "states": [
+        "niña con pañolón",
+        "serpiente larga con dos orejas"
+      ],
+      "base_unit": null,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S04",
+        "S05"
+      ],
+      "evidence_note": "Los rasgos narrativos vienen del corpus; rostro, edad exacta, color, distribución y ropa no descrita son decisiones de adaptación reversibles, nunca atributos tradicionales inventados."
+    },
+    {
+      "id": "P13",
+      "label": "Madre de la sal",
+      "category": "personaje",
+      "myth_ids": [
+        443
+      ],
+      "brief": "Exactly two full-body front/side views of one small elderly woman with compact stature and gray hair gathered in TWO rounded salt-like hair buns, simple fully covering muted cream and brown clothing. Buns are matte pale layered paper, not a crown. No mine, cult, sanctuary, magic jewelry or conflation with the owner of fire.",
+      "states": [
+        "anciana pequeña con moños de sal"
+      ],
+      "base_unit": null,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S04",
+        "S05"
+      ],
+      "evidence_note": "Los rasgos narrativos vienen del corpus; rostro, edad exacta, color, distribución y ropa no descrita son decisiones de adaptación reversibles, nunca atributos tradicionales inventados."
+    },
+    {
+      "id": "P14",
+      "label": "Anciana dueña de la candela",
+      "category": "personaje",
+      "myth_ids": [
+        444
+      ],
+      "brief": "Exactly two full-body front/side views of one elderly gray-haired woman with long loose gray hair, plain full dark-earth skirt and layered shawl, one ordinary thick ember stick held away from her body. She is the fire-owning elder of one narrative version, not an ethnic caricature. No enlarged monster face, flames covering her body, ritual paint or affiliation marker.",
+      "states": [
+        "anciana con tizón"
+      ],
+      "base_unit": null,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S04",
+        "S05"
+      ],
+      "evidence_note": "Los rasgos narrativos vienen del corpus; rostro, edad exacta, color, distribución y ropa no descrita son decisiones de adaptación reversibles, nunca atributos tradicionales inventados."
+    },
+    {
+      "id": "P15",
+      "label": "Hombre flaco protector",
+      "category": "personaje",
+      "myth_ids": [
+        446
+      ],
+      "brief": "Exactly two full-body front/side views of one very slender but anatomically dignified silent adult presence, pale cream layered-paper face and fully covering simple pale-gray cloak/garment. Below a third small seated pose. He carries one modest soft cut-paper light with no identified lamp design. No skeleton, floating organs, nun habit or claim explaining the source's comparison to the Madres.",
+      "states": [
+        "acompañante silencioso",
+        "sentado"
+      ],
+      "base_unit": null,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S04",
+        "S05"
+      ],
+      "evidence_note": "Los rasgos narrativos vienen del corpus; rostro, edad exacta, color, distribución y ropa no descrita son decisiones de adaptación reversibles, nunca atributos tradicionales inventados."
+    },
+    {
+      "id": "P16",
+      "label": "Jinete inferido como diablo",
+      "category": "personaje",
+      "myth_ids": [
+        447,
+        452
+      ],
+      "brief": "Exactly two separated full rider-and-horse side views of the same ordinary adult man in a plain black rain cape on a black horse with a SHORT TAIL: one standing quietly, one moving at a restrained trot. Face obscured naturally by the cape, no horns, hooves on man, flame, red eyes or demonic morphology. The source calls him devil by a witness inference, not visible monster anatomy.",
+      "states": [
+        "jinete",
+        "caballo negro colimocho",
+        "silueta separada con dos garabatos para 452, no identidad fusionada con el jinete"
+      ],
+      "base_unit": null,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S04",
+        "S05"
+      ],
+      "evidence_note": "Los rasgos narrativos vienen del corpus; rostro, edad exacta, color, distribución y ropa no descrita son decisiones de adaptación reversibles, nunca atributos tradicionales inventados. El dalo se resuelve con figura anónima diferenciada, no mezcla con 447."
+    },
+    {
+      "id": "P17",
+      "label": "Hombre tigre",
+      "category": "personaje",
+      "myth_ids": [
+        448
+      ],
+      "brief": "Two whole-body states of one unnamed adult highland man: ordinary front/side human in plain brown-green full clothes with one sheathed peinilla, and below a broad generic local mountain big-cat silhouette as transformation. The feline species stays UNSPECIFIED, no Asian-tiger stripes or factual zoology claim. No furry half-human, claws on man, supernatural ethnic stereotype or gold adornment.",
+      "states": [
+        "hombre",
+        "forma felina no taxonómica"
+      ],
+      "base_unit": null,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S04",
+        "S05"
+      ],
+      "evidence_note": "Los rasgos narrativos vienen del corpus; rostro, edad exacta, color, distribución y ropa no descrita son decisiones de adaptación reversibles, nunca atributos tradicionales inventados."
+    },
+    {
+      "id": "E01",
+      "label": "Cabeza autónoma",
+      "category": "entidad",
+      "myth_ids": [
+        450
+      ],
+      "brief": "Exactly two separated front/side views of one autonomous animated paper head without body: ONE visible ear and ONE tooth, expressive but not grotesque. Rounded closed paper construction at the bottom, absolutely no exposed neck, blood, wound or gore. Below one small low rolling orientation. No relation to a real corpse.",
+      "states": [
+        "frente",
+        "perfil",
+        "movimiento"
+      ],
+      "base_unit": null,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S04",
+        "S05"
+      ],
+      "evidence_note": "Los rasgos narrativos vienen del corpus; rostro, edad exacta, color, distribución y ropa no descrita son decisiones de adaptación reversibles, nunca atributos tradicionales inventados."
+    },
+    {
+      "id": "E02",
+      "label": "Armadillo de mina",
+      "category": "entidad",
+      "myth_ids": [
+        445
+      ],
+      "brief": "One unspecified armadillo identity in three separated states: ordinary side silhouette, same body with a broad cut-paper light beam rising upward, and same body becoming layered matte gold-paper plates. Low flat armored back and short legs remain consistent. No species claim, excavation, gore, coins pouring from body or jewelry.",
+      "states": [
+        "animal",
+        "luz",
+        "oro"
+      ],
+      "base_unit": null,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S04",
+        "S05"
+      ],
+      "evidence_note": "Los rasgos narrativos vienen del corpus; rostro, edad exacta, color, distribución y ropa no descrita son decisiones de adaptación reversibles, nunca atributos tradicionales inventados."
+    },
+    {
+      "id": "E03",
+      "label": "Culebra/rayo de Llíban",
+      "category": "entidad",
+      "myth_ids": [
+        431,
+        433
+      ],
+      "brief": "Exactly THREE separated full silhouettes of ONE ENORMOUS GREEN SNAKE: resting coil, rising curve, and body bent into a forked lightning path. Broad plain leaf-green paper body, simple SMALL CLOSED SNAKE HEAD with no external ears, horns, mane or teeth. At most three broad paper bands define body; NO tiny decorative scales. Its third state expresses the narrated possibility that the snake is lightning. No dragon and no graphic logo.",
+      "states": [
+        "culebra verde",
+        "culebra-boleadora",
+        "rayo"
+      ],
+      "base_unit": null,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S04",
+        "S05"
+      ],
+      "evidence_note": "Los rasgos narrativos vienen del corpus; rostro, edad exacta, color, distribución y ropa no descrita son decisiones de adaptación reversibles, nunca atributos tradicionales inventados."
+    },
+    {
+      "id": "E04",
+      "label": "Gran felino de monte",
+      "category": "entidad",
+      "myth_ids": [
+        432,
+        448
+      ],
+      "brief": "Exactly three separated views, side/front/back, of one generic large local mountain FELINE, matte earthy tawny paper with understated non-specific mottling. Ordinary cat head, ears, paws and long tail; no Asian-tiger stripes. Do not label or claim jaguar/puma species because the historical source only says tigre. No human baby or attacking prey.",
+      "states": [
+        "felino no taxonómico"
+      ],
+      "base_unit": null,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S04",
+        "S05"
+      ],
+      "evidence_note": "Los rasgos narrativos vienen del corpus; rostro, edad exacta, color, distribución y ropa no descrita son decisiones de adaptación reversibles, nunca atributos tradicionales inventados."
+    },
+    {
+      "id": "E05",
+      "label": "Dos águilas",
+      "category": "entidad",
+      "myth_ids": [
+        434
+      ],
+      "brief": "Exactly TWO eagles in complementary full-body states: one wings open in flight, one wings partially folded and looking down. Flat layered dark-brown and cream paper feathers with few broad pieces, small beaks. Their paired identity must be clear; no prey, gore, heraldry or sacred-emblem claims.",
+      "states": [
+        "pareja",
+        "vuelo"
+      ],
+      "base_unit": null,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S04",
+        "S05"
+      ],
+      "evidence_note": "Los rasgos narrativos vienen del corpus; rostro, edad exacta, color, distribución y ropa no descrita son decisiones de adaptación reversibles, nunca atributos tradicionales inventados."
+    },
+    {
+      "id": "E06",
+      "label": "Pájaro carpintero",
+      "category": "entidad",
+      "myth_ids": [
+        436
+      ],
+      "brief": "One generic woodpecker identity in three complementary full-body views: side perched, wings open, and beak touching one narrow cut-paper trunk segment. Broad black/cream feather pieces and a restrained dark-red crown accent, no species claim. No anthropomorphic carpenter clothes.",
+      "states": [
+        "ave",
+        "vuelo",
+        "perforación"
+      ],
+      "base_unit": null,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S04",
+        "S05"
+      ],
+      "evidence_note": "Los rasgos narrativos vienen del corpus; rostro, edad exacta, color, distribución y ropa no descrita son decisiones de adaptación reversibles, nunca atributos tradicionales inventados."
+    },
+    {
+      "id": "E07",
+      "label": "Paquete nocturno",
+      "category": "entidad",
+      "myth_ids": [
+        449,
+        450,
+        451
+      ],
+      "brief": "Perro flaco, gallo, dos ojos sin especie inventada y aparición humana flaca del 449 con corazón simbólico de papel exterior; distinta de P15, sin gore.",
+      "states": [
+        "perro flaco",
+        "gallo",
+        "ojos sin cuerpo fijado",
+        "aparición humana con corazón simbólico exterior"
+      ],
+      "base_unit": null,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S04",
+        "S05"
+      ],
+      "evidence_note": "Los rasgos narrativos vienen del corpus; rostro, edad exacta, color, distribución y ropa no descrita son decisiones de adaptación reversibles, nunca atributos tradicionales inventados."
+    },
+    {
+      "id": "L01",
+      "label": "Páramo, niebla y laguna",
+      "category": "paisaje",
+      "myth_ids": [
+        429,
+        431,
+        434,
+        435,
+        553
+      ],
+      "brief": "Immersive moderately elevated oblique highland panorama: a SMALL lagoon nested among steep close ridges, narrow valleys, sparse highland grasses and paper frailejon-like rosettes. Water is overlapping broad flat blue paper shapes, fog is broad translucent-looking WHITE PAPER CUTOUTS with sparse wool accents, never fluid photo or smoke. No people or buildings. No Swiss Alpine, Patagonia or snowpeak postcard.",
+      "states": [],
+      "base_unit": null,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S04",
+        "S05"
+      ],
+      "evidence_note": "Los rasgos narrativos vienen del corpus; rostro, edad exacta, color, distribución y ropa no descrita son decisiones de adaptación reversibles, nunca atributos tradicionales inventados."
+    },
+    {
+      "id": "L02",
+      "label": "Río/quebrada, cañón y creciente",
+      "category": "paisaje",
+      "myth_ids": [
+        430,
+        431,
+        434,
+        435,
+        447,
+        451,
+        553
+      ],
+      "brief": "Low oblique view across a steep narrow highland canyon with a vigorous river built from broad overlapping pale-blue and dark-blue PAPER RIBBONS. Close paper-stratum banks, sparse flat-cut mountain plants and one open bank for staging. No dam, coast, bridge, people, houses or realistic foamy water.",
+      "states": [],
+      "base_unit": null,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S04",
+        "S05"
+      ],
+      "evidence_note": "Los rasgos narrativos vienen del corpus; rostro, edad exacta, color, distribución y ropa no descrita son decisiones de adaptación reversibles, nunca atributos tradicionales inventados."
+    },
+    {
+      "id": "L03",
+      "label": "Filos, linderos y alta peña",
+      "category": "paisaje",
+      "myth_ids": [
+        429,
+        430,
+        432,
+        433,
+        438,
+        448
+      ],
+      "brief": "Elevated lateral view along a narrow highland RIDGELINE and plain walking boundary, tall folded-paper crags to one side, small terraces below, close blue-green ridges behind. No modern survey signs, flags, monuments, map symbols, fence posts or human figure.",
+      "states": [],
+      "base_unit": null,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S04",
+        "S05"
+      ],
+      "evidence_note": "Los rasgos narrativos vienen del corpus; rostro, edad exacta, color, distribución y ropa no descrita son decisiones de adaptación reversibles, nunca atributos tradicionales inventados."
+    },
+    {
+      "id": "L04",
+      "label": "Monte/bosque de montaña",
+      "category": "paisaje",
+      "myth_ids": [
+        435,
+        436,
+        445,
+        448,
+        451
+      ],
+      "brief": "Eye-level interior of a damp Colombian highland mountain forest: close broad flat-cut trunk silhouettes, paper leaf clusters, one traversable irregular path, small understory clearing and steep layered ground. Dappled restrained gray-green light; no tropical palms, vines spectacle, jungle waterfall, animals or characters.",
+      "states": [],
+      "base_unit": null,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S04",
+        "S05"
+      ],
+      "evidence_note": "Los rasgos narrativos vienen del corpus; rostro, edad exacta, color, distribución y ropa no descrita son decisiones de adaptación reversibles, nunca atributos tradicionales inventados."
+    },
+    {
+      "id": "L05",
+      "label": "Papal, maizal y huerta en ladera",
+      "category": "paisaje",
+      "myth_ids": [
+        429,
+        431,
+        439,
+        453
+      ],
+      "brief": "Oblique gently elevated small irregular hillside cultivation, distinct compact potato beds, maize rows and mixed vegetable plots. Plain narrow path and slope contours, modest scale, no giant Inca terraces or industrial agriculture. Crops consist of broad flat-cut leaves and stems, earth consists of overlapping flat ochre-paper pieces, no granular soil, no people.",
+      "states": [],
+      "base_unit": null,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S04",
+        "S05"
+      ],
+      "evidence_note": "Los rasgos narrativos vienen del corpus; rostro, edad exacta, color, distribución y ropa no descrita son decisiones de adaptación reversibles, nunca atributos tradicionales inventados."
+    },
+    {
+      "id": "L06",
+      "label": "Casa de Calderas, fogón y hamaca",
+      "category": "paisaje",
+      "myth_ids": [
+        430,
+        436,
+        441,
+        443,
+        444,
+        445,
+        446,
+        449,
+        453
+      ],
+      "brief": "Immersive interior of one modest highland rural house, visible broad assembled-paper walls and supports, central low hearth made from folded paper pieces, a simple fiber-paper hammock to one side, a few ordinary matte-paper pots, and a doorway toward misty slopes. No museum exhibit, ritual altar, skull, modern electric appliance, exterior base or table framing. Architecture is a cautious narrative approximation, not a reconstruction of an identified site.",
+      "states": [],
+      "base_unit": null,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S04",
+        "S05"
+      ],
+      "evidence_note": "Los rasgos narrativos vienen del corpus; rostro, edad exacta, color, distribución y ropa no descrita son decisiones de adaptación reversibles, nunca atributos tradicionales inventados. Para 443, La madre de la sal, este interior es únicamente un escenario opcional de adaptación: el fragmento no especifica lugar, casa, fogón, mina ni santuario; también puede usarse un fondo neutro."
+    },
+    {
+      "id": "L07",
+      "label": "Plaza, iglesia y casa de fiesta",
+      "category": "paisaje",
+      "myth_ids": [
+        432,
+        434,
+        441,
+        444
+      ],
+      "brief": "Oblique environmental view of a modest highland village open space with one simple mission-era plain church door and low rural houses, narrow slopes behind. No monumental cathedral, Mesoamerican temple, archaeological tomb painting or ceremonial plaza iconography. Ordinary humble paper-built architecture, no people or flags.",
+      "states": [],
+      "base_unit": null,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S04",
+        "S05"
+      ],
+      "evidence_note": "Los rasgos narrativos vienen del corpus; rostro, edad exacta, color, distribución y ropa no descrita son decisiones de adaptación reversibles, nunca atributos tradicionales inventados."
+    },
+    {
+      "id": "L08",
+      "label": "Camino nocturno y quebrada de El Tablón",
+      "category": "paisaje",
+      "myth_ids": [
+        446,
+        447,
+        449,
+        450,
+        451
+      ],
+      "brief": "Low oblique view of a narrow wet mountain footpath descending diagonally beside a shallow ditch toward a small creek crossing. Close ridges and sparse paper mountain plants, one very small distant amber home-light. Every wet surface is broad flat reflective-looking BLUE PAPER SHEETS, no realistic puddle, gritty mud or stone texture. Navigable indigo darkness, no characters, doors, eyes, ghosts or cemetery.",
+      "states": [],
+      "base_unit": null,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S04",
+        "S05"
+      ],
+      "evidence_note": "Los rasgos narrativos vienen del corpus; rostro, edad exacta, color, distribución y ropa no descrita son decisiones de adaptación reversibles, nunca atributos tradicionales inventados."
+    },
+    {
+      "id": "L09",
+      "label": "Planicie/camino del más allá",
+      "category": "paisaje",
+      "myth_ids": [
+        452
+      ],
+      "brief": "Interpretive visual environment of a narrator's near-death vision, NOT a general Nasa theological map: a very broad pale plain, forest at its entrance, and a good path progressively closing under cut-paper vegetation toward a distant soft luminous house-like destination without an elaborate palace. No people, angels, stairs to heaven, diagrams, crosses or doctrinal symbols.",
+      "states": [],
+      "base_unit": null,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S04",
+        "S05"
+      ],
+      "evidence_note": "Los rasgos narrativos vienen del corpus; rostro, edad exacta, color, distribución y ropa no descrita son decisiones de adaptación reversibles, nunca atributos tradicionales inventados."
+    },
+    {
+      "id": "L10",
+      "label": "Mar como destino del agua",
+      "category": "paisaje",
+      "myth_ids": [
+        437
+      ],
+      "brief": "Broad immense calm SEA as the narrative destination of a river, horizon almost unbounded, foreground river ribbons meeting wide overlapping deep-blue paper planes. No tropical beach, local Calderas mountains on the coast, exact coastline claim, boats or people. The still paper planes retain a subtle flowing direction.",
+      "states": [],
+      "base_unit": null,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S04",
+        "S05"
+      ],
+      "evidence_note": "Los rasgos narrativos vienen del corpus; rostro, edad exacta, color, distribución y ropa no descrita son decisiones de adaptación reversibles, nunca atributos tradicionales inventados."
+    },
+    {
+      "id": "V01",
+      "label": "Vichaguau",
+      "category": "variacion",
+      "myth_ids": [
+        429
+      ],
+      "brief": "Reconfigure the base paramo-lagoon into a darker SMALL remote high lagoon enclosed by a higher paper rim and a quiet shore for authority gathering. No new sacred architecture, figures, title or map claim. It is a narrative approximation of Vichaguau, not verified cartography.",
+      "states": [],
+      "base_unit": "L01",
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S04",
+        "S05"
+      ],
+      "evidence_note": "Los rasgos narrativos vienen del corpus; rostro, edad exacta, color, distribución y ropa no descrita son decisiones de adaptación reversibles, nunca atributos tradicionales inventados."
+    },
+    {
+      "id": "V02",
+      "label": "Eshufi Ik",
+      "category": "variacion",
+      "myth_ids": [
+        431,
+        433
+      ],
+      "brief": "Reconfigure the base small paramo-lagoon with ONE modest adjacent hillside garden of potato, maize, pea and cabbage, a narrow open staging shore and steep close folded-paper slopes. No bear figure despite the translated lagoon name. No people, hut, labels or cartographic reconstruction.",
+      "states": [],
+      "base_unit": "L01",
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S04",
+        "S05"
+      ],
+      "evidence_note": "Los rasgos narrativos vienen del corpus; rostro, edad exacta, color, distribución y ropa no descrita son decisiones de adaptación reversibles, nunca atributos tradicionales inventados."
+    },
+    {
+      "id": "V03",
+      "label": "El Caspe",
+      "category": "variacion",
+      "myth_ids": [
+        432,
+        433
+      ],
+      "brief": "Reconfigure the base lagoon into a larger distant fierce dark lagoon toward steep linderos, a few unstable leaning tree-paper silhouettes and one folded-paper crag suggesting possible fall. Water remains flat paper. No magic faces, feline, people or verified place reconstruction.",
+      "states": [],
+      "base_unit": "L01",
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S04",
+        "S05"
+      ],
+      "evidence_note": "Los rasgos narrativos vienen del corpus; rostro, edad exacta, color, distribución y ropa no descrita son decisiones de adaptación reversibles, nunca atributos tradicionales inventados."
+    },
+    {
+      "id": "V04",
+      "label": "Calderas / Santa Rosa",
+      "category": "variacion",
+      "myth_ids": [
+        430,
+        444
+      ],
+      "brief": "Create a TWO-VIEW environmental variation of the base village: above a modest wet Calderas highland hamlet with a nearby lagoon margin; below another similar-scale Santa Rosa narrative water setting with a dark cloud paper strip linking the atmosphere visually, NOT a route map. No people, names, arrows or exact reconstruction.",
+      "states": [],
+      "base_unit": "L07",
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S04",
+        "S05"
+      ],
+      "evidence_note": "Los rasgos narrativos vienen del corpus; rostro, edad exacta, color, distribución y ropa no descrita son decisiones de adaptación reversibles, nunca atributos tradicionales inventados."
+    },
+    {
+      "id": "V05",
+      "label": "Nacimiento y curvas del Páez",
+      "category": "variacion",
+      "myth_ids": [
+        435
+      ],
+      "brief": "Create a TWO-VIEW variation of the base river: above a modest marsh source opened by a single reed-like plain cut-paper stem; below the river in broad highly legible zigzag and curved PAPER RIBBONS between narrow hills, finally meeting a wider river. No human, exact hydrographic map, labels or coastline.",
+      "states": [],
+      "base_unit": "L02",
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S04",
+        "S05"
+      ],
+      "evidence_note": "Los rasgos narrativos vienen del corpus; rostro, edad exacta, color, distribución y ropa no descrita son decisiones de adaptación reversibles, nunca atributos tradicionales inventados."
+    },
+    {
+      "id": "V06",
+      "label": "Piedra Alta",
+      "category": "variacion",
+      "myth_ids": [
+        438
+      ],
+      "brief": "Reconfigure the base ridgeline into a once-flat modest ground from which ONE very high folded and stacked PAPER CRAG rises sharply, with a clear empty viewing path in front. No face carved in rock, sacred geometry, modern climbing markers or identified modern rock claim.",
+      "states": [],
+      "base_unit": "L03",
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S04",
+        "S05"
+      ],
+      "evidence_note": "Los rasgos narrativos vienen del corpus; rostro, edad exacta, color, distribución y ropa no descrita son decisiones de adaptación reversibles, nunca atributos tradicionales inventados."
+    },
+    {
+      "id": "V07",
+      "label": "Chaikin",
+      "category": "variacion",
+      "myth_ids": [
+        442
+      ],
+      "brief": "Reconfigure the base ridgeline path with exactly TWO upright folded-paper stones whose restrained asymmetrical shapes recall two fully clothed travelers carrying cane, without carved human faces. Small cane-shaped PAPER STRIPS are integrated in each stone silhouette. No people, text, shrine or exact archaeological reconstruction.",
+      "states": [],
+      "base_unit": "L03",
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S04",
+        "S05"
+      ],
+      "evidence_note": "Los rasgos narrativos vienen del corpus; rostro, edad exacta, color, distribución y ropa no descrita son decisiones de adaptación reversibles, nunca atributos tradicionales inventados."
+    },
+    {
+      "id": "V08",
+      "label": "Uikuet petrificado",
+      "category": "variacion",
+      "myth_ids": [
+        440,
+        441
+      ],
+      "brief": "Transform the base modest rural house into a single PETRIFIED PARTY HOUSE made of gray folded-paper strata, preserving its ordinary doorway, walls and exactly three suspended pot-like gray paper forms, with a few small indistinct petrified attendee silhouettes inside, no gore or anatomical statue spectacle. The place is a narrative approximation, not archaeological proof.",
+      "states": [],
+      "base_unit": "L06",
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S04",
+        "S05"
+      ],
+      "evidence_note": "Los rasgos narrativos vienen del corpus; rostro, edad exacta, color, distribución y ropa no descrita son decisiones de adaptación reversibles, nunca atributos tradicionales inventados."
+    },
+    {
+      "id": "U01",
+      "label": "Autoridad y medicina",
+      "category": "utileria",
+      "myth_ids": [
+        429,
+        431,
+        433,
+        553
+      ],
+      "brief": "Separated object pack of exactly FOUR motifs: one plain dark chonta authority staff, one modest fiber jigra, one small paper-leaf bundle associated with the narrated preparation (not instruction), and one plain restrained gold-paper HAT as a specifically narrated historical variant from Lliban. No invented sacred glyphs, ritual diagram or ornate treasure.",
+      "states": [],
+      "base_unit": null,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S04",
+        "S05"
+      ],
+      "evidence_note": "Los rasgos narrativos vienen del corpus; rostro, edad exacta, color, distribución y ropa no descrita son decisiones de adaptación reversibles, nunca atributos tradicionales inventados."
+    },
+    {
+      "id": "U02",
+      "label": "Agua y trueno",
+      "category": "utileria",
+      "myth_ids": [
+        429,
+        431,
+        435
+      ],
+      "brief": "Separated object pack of exactly FOUR motifs: one ordinary olla with clearly assembled PAPER rim, one compact ordinary boleadora of broad paper pieces, one simple hollow reed/carrizo, and one broad forked-lightning PAPER STRIP. No dragon, human, decorative emblem or instructions for weapon use.",
+      "states": [],
+      "base_unit": null,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S04",
+        "S05"
+      ],
+      "evidence_note": "Los rasgos narrativos vienen del corpus; rostro, edad exacta, color, distribución y ropa no descrita son decisiones de adaptación reversibles, nunca atributos tradicionales inventados."
+    },
+    {
+      "id": "U03",
+      "label": "Nacimiento de Juan Tama",
+      "category": "utileria",
+      "myth_ids": [
+        553
+      ],
+      "brief": "Separated object pack of exactly THREE motifs: one long NARROW woven protective chumbe band, one plain soft infant blanket-paper wrap, and one closed plain old book of territorial titles without any readable text, crest or invented seal. The book is a version-sensitive prop, not a universal emblem. No baby or sacred pattern.",
+      "states": [],
+      "base_unit": null,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S04",
+        "S05"
+      ],
+      "evidence_note": "Los rasgos narrativos vienen del corpus; rostro, edad exacta, color, distribución y ropa no descrita son decisiones de adaptación reversibles, nunca atributos tradicionales inventados."
+    },
+    {
+      "id": "U04",
+      "label": "Carpintería y cajas",
+      "category": "utileria",
+      "myth_ids": [
+        436,
+        440,
+        445
+      ],
+      "brief": "Separated object pack of exactly FOUR motifs: one large ordinary empty paper-built wooden-colored baul with open lid, one plain closed bronze-colored PAPER BOX as the separate Santo Tomas variant, one simple escoplo/chisel and one small orderly row of paper nail silhouettes. No captive figure, injury, labels or real wood/metal texture.",
+      "states": [],
+      "base_unit": null,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S04",
+        "S05"
+      ],
+      "evidence_note": "Los rasgos narrativos vienen del corpus; rostro, edad exacta, color, distribución y ropa no descrita son decisiones de adaptación reversibles, nunca atributos tradicionales inventados."
+    },
+    {
+      "id": "U05",
+      "label": "Caña y sal",
+      "category": "utileria",
+      "myth_ids": [
+        442,
+        443
+      ],
+      "brief": "Separated object pack of exactly THREE motifs: one short tied bundle of cut-paper sugar cane, one pair of compact pale salt-ball motifs and one small ordinary paper dish with matte paper salt pieces. No salt mine, crystal photography, shrine or treasure.",
+      "states": [],
+      "base_unit": null,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S04",
+        "S05"
+      ],
+      "evidence_note": "Los rasgos narrativos vienen del corpus; rostro, edad exacta, color, distribución y ropa no descrita son decisiones de adaptación reversibles, nunca atributos tradicionales inventados."
+    },
+    {
+      "id": "U06",
+      "label": "Candela y bagazo",
+      "category": "utileria",
+      "myth_ids": [
+        444,
+        451
+      ],
+      "brief": "Separated object pack of exactly FOUR motifs: one thick ember stick with broad flat orange-paper flame, one weak tiny ember on a smaller stick, one compact dry bagasse bundle and one dry straw patch bearing a few broad paper flames. No realistic combustion, smoke photography, people, fire rituals or dangerous instructions.",
+      "states": [],
+      "base_unit": null,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S04",
+        "S05"
+      ],
+      "evidence_note": "Los rasgos narrativos vienen del corpus; rostro, edad exacta, color, distribución y ropa no descrita son decisiones de adaptación reversibles, nunca atributos tradicionales inventados."
+    },
+    {
+      "id": "U07",
+      "label": "Semillas y labranza",
+      "category": "utileria",
+      "myth_ids": [
+        431,
+        439,
+        453
+      ],
+      "brief": "Separated object pack of exactly FOUR motifs: a small orderly group of maize seed PAPER SHAPES, one compact potato seed/tuber group, one shallow plain paper seed vessel and one ordinary hoe-like agricultural tool. All seeds and earth are broad matte shapes; no labeled taxonomy, human body or sacred origin illustration.",
+      "states": [],
+      "base_unit": null,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S04",
+        "S05"
+      ],
+      "evidence_note": "Los rasgos narrativos vienen del corpus; rostro, edad exacta, color, distribución y ropa no descrita son decisiones de adaptación reversibles, nunca atributos tradicionales inventados."
+    },
+    {
+      "id": "U08",
+      "label": "Viaje nocturno",
+      "category": "utileria",
+      "myth_ids": [
+        446,
+        447,
+        449,
+        450,
+        451
+      ],
+      "brief": "Separated object pack of exactly FOUR motifs: one ordinary paper olla with simple carrying band, one plain bordon/walking staff, one coiled ordinary fuete/rejo, and one small open matchbox with ONE unlit match. No branding, weapon demonstration, ghost or realistic ceramic.",
+      "states": [],
+      "base_unit": null,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S04",
+        "S05"
+      ],
+      "evidence_note": "Los rasgos narrativos vienen del corpus; rostro, edad exacta, color, distribución y ropa no descrita son decisiones de adaptación reversibles, nunca atributos tradicionales inventados."
+    },
+    {
+      "id": "U09",
+      "label": "Armadillo/mina",
+      "category": "utileria",
+      "myth_ids": [
+        445
+      ],
+      "brief": "Separated object pack of exactly FOUR motifs: one folded NEW plain handkerchief, one modest pair of old MONEY PAPER RECTANGLES without text or denomination, one small group of maize grains and one broad matte gold-paper stratum. The money represents the narrated fifty-or-hundred-peso condition without inventing a period banknote. No armadillo or mining excavation.",
+      "states": [],
+      "base_unit": null,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S04",
+        "S05"
+      ],
+      "evidence_note": "Los rasgos narrativos vienen del corpus; rostro, edad exacta, color, distribución y ropa no descrita son decisiones de adaptación reversibles, nunca atributos tradicionales inventados."
+    },
+    {
+      "id": "U10",
+      "label": "Casa y fiesta",
+      "category": "utileria",
+      "myth_ids": [
+        441,
+        444,
+        449
+      ],
+      "brief": "Separated object pack of exactly FOUR motifs: one ordinary broad paper serving olla, one smaller paper food bowl, one plain pitcher associated with chicha and one restrained food portion in a leaf-like paper support. No ceremonial marks, modern packaging, explicit drinking instruction or party people.",
+      "states": [],
+      "base_unit": null,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S04",
+        "S05"
+      ],
+      "evidence_note": "Los rasgos narrativos vienen del corpus; rostro, edad exacta, color, distribución y ropa no descrita son decisiones de adaptación reversibles, nunca atributos tradicionales inventados."
+    },
+    {
+      "id": "U11",
+      "label": "Armas y herramientas de caza",
+      "category": "utileria",
+      "myth_ids": [
+        432,
+        434,
+        448,
+        451
+      ],
+      "brief": "Separated object pack of exactly FOUR historical narrative motifs: one plain sheathed peinilla, one ordinary old single-barrel shotgun shown inert, one simple sheathed sword as a version-specific prop, and one compact stone-tool silhouette. No person, ammunition detail, instructions, heraldry, ornate gold or gore.",
+      "states": [],
+      "base_unit": null,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S04",
+        "S05"
+      ],
+      "evidence_note": "Los rasgos narrativos vienen del corpus; rostro, edad exacta, color, distribución y ropa no descrita son decisiones de adaptación reversibles, nunca atributos tradicionales inventados."
+    },
+    {
+      "id": "U12",
+      "label": "Objetos domésticos",
+      "category": "utileria",
+      "myth_ids": [
+        430,
+        436,
+        441,
+        446
+      ],
+      "brief": "Separated object pack of exactly FOUR motifs: one simple paper-fiber hammock, one small folded plain cloth, one modest woven carry basket and one ordinary matte-paper cooking pot. No ritual altar, sacred geometry, electric appliance or realistic pottery.",
+      "states": [],
+      "base_unit": null,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S04",
+        "S05"
+      ],
+      "evidence_note": "Los rasgos narrativos vienen del corpus; rostro, edad exacta, color, distribución y ropa no descrita son decisiones de adaptación reversibles, nunca atributos tradicionales inventados."
+    },
+    {
+      "id": "C01",
+      "label": "Thê’jwala / médicos",
+      "category": "elenco",
+      "myth_ids": [
+        429,
+        430,
+        431,
+        553
+      ],
+      "brief": "Exactly FOUR distinct adult/elder generic SABEDOR figures, two men and two women, all full body, evenly spaced, calm listening and preparation gestures. Plain contextual dark wool/cloth-paper highland clothes and modest bags, one plain authority staff. No performed ritual, special costume, headdress, sacred glyph, facial paint or claims portraying a named living healer.",
+      "states": [],
+      "base_unit": null,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S04",
+        "S05"
+      ],
+      "evidence_note": "Los rasgos narrativos vienen del corpus; rostro, edad exacta, color, distribución y ropa no descrita son decisiones de adaptación reversibles, nunca atributos tradicionales inventados."
+    },
+    {
+      "id": "C02",
+      "label": "Autoridades de cabildo / cacicas",
+      "category": "elenco",
+      "myth_ids": [
+        429,
+        431,
+        433,
+        553
+      ],
+      "brief": "Exactly FOUR distinct full-body generic adult authority figures, TWO women and TWO men, different ages and builds, sober highland layers with modest jigras and plain chonta staffs. Women's full plain skirts and shawls, men's simple ruanas and ankle trousers. No crown, armor, ethnic caricature, flags or institutional emblems.",
+      "states": [],
+      "base_unit": null,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S04",
+        "S05"
+      ],
+      "evidence_note": "Los rasgos narrativos vienen del corpus; rostro, edad exacta, color, distribución y ropa no descrita son decisiones de adaptación reversibles, nunca atributos tradicionales inventados."
+    },
+    {
+      "id": "C03",
+      "label": "Mujeres mayores y cuidadoras",
+      "category": "elenco",
+      "myth_ids": [
+        430,
+        431,
+        432,
+        434,
+        444,
+        451,
+        553
+      ],
+      "brief": "Exactly FOUR distinct fully clothed women: elderly grandmother, mature caregiver, young adult caregiver and another elder with a simple woven carry cloth. Full-body separated neutral poses, modest contextual highland skirts/blouses/shawls in distinct earth tones. No infant, nursing scene, sexualization, ritual costume, sacred motifs or named living person.",
+      "states": [],
+      "base_unit": null,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S04",
+        "S05"
+      ],
+      "evidence_note": "Los rasgos narrativos vienen del corpus; rostro, edad exacta, color, distribución y ropa no descrita son decisiones de adaptación reversibles, nunca atributos tradicionales inventados."
+    },
+    {
+      "id": "C04",
+      "label": "Familias y fiesta",
+      "category": "elenco",
+      "myth_ids": [
+        430,
+        434,
+        441,
+        444,
+        449,
+        450
+      ],
+      "brief": "Exactly SIX separate generic full-body figures: two adult women, two adult men and two appropriately fully dressed children of different ages. Small restrained varied everyday highland clothes, relaxed listening/social poses without props. Do not turn the group into a ceremonial performance, identical uniform, caricature or named clan.",
+      "states": [],
+      "base_unit": null,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S04",
+        "S05"
+      ],
+      "evidence_note": "Los rasgos narrativos vienen del corpus; rostro, edad exacta, color, distribución y ropa no descrita son decisiones de adaptación reversibles, nunca atributos tradicionales inventados."
+    },
+    {
+      "id": "C05",
+      "label": "Agricultores, cazadores y viajeros",
+      "category": "elenco",
+      "myth_ids": [
+        429,
+        435,
+        439,
+        445,
+        446,
+        448,
+        449,
+        451
+      ],
+      "brief": "Exactly SIX distinct generic full-body adult travelers/workers, THREE women and THREE men, varied ages, builds, plain highland everyday layers, two modest shoulder bags and one ordinary empty carrying cloth. No exposed weapons, generic warriors, ritual rank, facial paint, ethnic badges or dramatic action.",
+      "states": [],
+      "base_unit": null,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S04",
+        "S05"
+      ],
+      "evidence_note": "Los rasgos narrativos vienen del corpus; rostro, edad exacta, color, distribución y ropa no descrita son decisiones de adaptación reversibles, nunca atributos tradicionales inventados."
+    },
+    {
+      "id": "C06",
+      "label": "Adversarios históricos por variante",
+      "category": "elenco",
+      "myth_ids": [
+        429,
+        431,
+        432,
+        433,
+        448,
+        553
+      ],
+      "brief": "Exactly SIX DISTANT SMALL HUMAN SILHOUETTES separated into THREE pairs with generous blank space, ordinary fully covering unmarked practical cloth-paper garments, no faces detailed. The three pairs are reversible staging casts for DIFFERENT source-attributed opposition variants, not a visual claim identifying Pijao, Misak or Spanish ethnicity. No animal-like anatomy, giant bodies, savage traits, headdress, facial paint, uniform tribal dress, ethnic symbols, battle, flags or explicit weapons. Never merge the source-attributed adversary names in metadata.",
+      "states": [],
+      "base_unit": null,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S04",
+        "S05"
+      ],
+      "evidence_note": "Los rasgos narrativos vienen del corpus; rostro, edad exacta, color, distribución y ropa no descrita son decisiones de adaptación reversibles, nunca atributos tradicionales inventados."
+    }
+  ]
+}

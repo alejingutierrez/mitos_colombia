@@ -1,0 +1,37 @@
+{
+  "id": "b7a",
+  "created_at": "2026-09-13T13:54:28.251Z",
+  "tool": "image_gen.imagegen",
+  "request": {
+    "prompt": "Create ONE finished cinematic vertical 9:16 narrative keyframe for the Nasa–Paeces film El Trueno, ideally 864x1536. No sheet, collage, border, lettering, title, captions, watermark or logo. Use the supplied images only for their stated continuity roles, never copy their sheet layout. Same world as the approved Nasa triptych: immersive Colombian highland CUT-PAPER scenery, matte broad flat faces, internal cut edges, folded rock, overlapping planes at three distances, physical occlusion and cast shadows. Figures have simplified almost-flat paper faces, not rounded clay dolls, CGI or photographic skin. Water, clouds and mist are flat cut-paper shapes too, never cotton or smoke. Frame extends edge to edge, no display base, table, studio or diorama box. Preserve precise age, clothing, hat, material and scale of the reference identities. Do not import objects, people or actions from preceding shots unless specifically listed below. No pan-Indigenous costumes, copied sacred patterns, gold, crowns, feathers, magical beams or invented ritual. Selected narrative: Martín Kuskue's first El Trueno account via Bernal 1953; the elder appearance is a declared editorial convention retained from the approved triptych, not claimed as wording of this version.\n\nSHOT b7a — La laguna permanece\nBLUE NIGHT. A contemplative distant view from the SAME dry near shore into Vichaguau. Empty ochre shoreline lower left where the two authorities formerly stood, small still indigo lagoon between close dark folded ridges, restrained white paper mist. No people, no staffs, no footprints, no objects left behind, no spirit emerging. Multiple rich paper layers with air and shadows, borderless immersive world. The scene is calm yet powerful; unchanged water after the human relationship has changed.\n\nINPUT REFERENCES IN ORDER:\n1. approved preceding keyframe b6a: material, palette, spatial continuity ONLY; do not import unlisted subjects/props\n2. approved preceding keyframe b6b: material, palette, spatial continuity ONLY; do not import unlisted subjects/props\n3. CANONICAL V01: Vichaguau\n4. CANONICAL acto: selected triptych: two C02 authorities, dry shoreline, night water",
+    "referenced_image_paths": [
+      "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b6a-v2.png",
+      "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b6b-v1.png",
+      "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/biblia/produccion-api-02/v01-master-v3.jpeg",
+      "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-01/el-trueno/acto-v2.jpeg"
+    ]
+  },
+  "references": [
+    {
+      "path": "output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b6a-v2.png",
+      "sha256": "fa46adea52f08884cd351771709805e19bd9409201a74eedc595cc8d6994d9c4",
+      "role": "approved preceding keyframe b6a: material, palette, spatial continuity ONLY; do not import unlisted subjects/props"
+    },
+    {
+      "path": "output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b6b-v1.png",
+      "sha256": "b2ee0e78f50a8ec5dd272872ed7a3e7cc5156d3c355cd188f0b4ca3f9ba4268c",
+      "role": "approved preceding keyframe b6b: material, palette, spatial continuity ONLY; do not import unlisted subjects/props"
+    },
+    {
+      "path": "output/imagegen/nasa-paeces/biblia/produccion-api-02/v01-master-v3.jpeg",
+      "sha256": "4fc78dd2981514ac5a4b238cf7e40c15169d30adfee2d99dd61c99d2f906b157",
+      "role": "CANONICAL V01: Vichaguau"
+    },
+    {
+      "path": "output/imagegen/nasa-paeces/tripticos/produccion-api-01/el-trueno/acto-v2.jpeg",
+      "role": "CANONICAL acto: selected triptych: two C02 authorities, dry shoreline, night water",
+      "sha256": "6cc688227c38155c1c1b233315a4997f0e2d9e2324719e8804d4f08d9cf98c60"
+    }
+  ],
+  "prompt_sha256": "0453a36f0f4e13884bbd5473d0af658b8f07c30f88754ea9d5cd572a441d8a85"
+}

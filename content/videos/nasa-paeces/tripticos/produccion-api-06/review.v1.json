@@ -1,0 +1,286 @@
+{
+  "selected": {
+    "450_entrada": "entrada-v1.jpeg",
+    "450_acto": "acto-v1.jpeg",
+    "450_huella": "huella-v1.jpeg",
+    "451_huella": "huella-v1.jpeg",
+    "451_entrada": "entrada-v1.jpeg",
+    "451_acto": "acto-v1.jpeg",
+    "452_acto": "acto-v1.jpeg",
+    "452_entrada": "entrada-v1.jpeg",
+    "452_huella": "huella-v1.jpeg",
+    "453_entrada": "entrada-v1.jpeg",
+    "453_acto": "acto-v1.jpeg",
+    "453_huella": "huella-v1.jpeg",
+    "553_entrada": "entrada-v1.jpeg",
+    "553_acto": "acto-v1.jpeg",
+    "553_huella": "huella-v1.jpeg"
+  },
+  "qa": [
+    {
+      "key": "450_entrada",
+      "file": "entrada-v1.jpeg",
+      "status": "accepted",
+      "checks": "Un viajero de ruana gris con bordón y una cabeza autónoma de papel con una oreja y un diente; base cerrada sin anatomía cortada o lesión."
+    },
+    {
+      "key": "450_acto",
+      "file": "acto-v1.jpeg",
+      "status": "accepted",
+      "checks": "Viajero completo sentado y sostenido en horqueta del árbol; misma cabeza de papel espera al pie con una oreja y un diente, sin golpes ni heridas."
+    },
+    {
+      "key": "450_huella",
+      "file": "huella-v1.jpeg",
+      "status": "accepted",
+      "checks": "Recorte de gallo aislado junto a banda de tronco oscuro y pliegue claro del alba; sin cabeza retratada, paisaje completo ni anatomía."
+    },
+    {
+      "key": "451_huella",
+      "file": "huella-v1.jpeg",
+      "status": "accepted",
+      "checks": "Una brasa de bagazo abre banda clara entre pliegues índigo; sin especies, ojos brillantes, personas o paisaje inventado."
+    },
+    {
+      "key": "451_entrada",
+      "file": "entrada-v1.jpeg",
+      "status": "accepted",
+      "checks": "Un único viajero gris escucha el camino nocturno; ninguna especie u ojos inventados y sin armas, ataque o daño."
+    },
+    {
+      "key": "451_acto",
+      "file": "acto-v1.jpeg",
+      "status": "accepted",
+      "checks": "Una mujer adulta azul y su hija vestida verde-azul guían con bagazo encendido al viajero gris, exactamente tres personas; anatomía, suelo y papel coherentes sin criaturas visibles."
+    },
+    {
+      "key": "452_acto",
+      "file": "acto-v1.jpeg",
+      "status": "accepted",
+      "checks": "María de manto azul y un único bebé cubierto reciben al viajero gris; tres cuerpos con niño envuelto, sin halos, órganos, catedral ni cuerpo moribundo."
+    },
+    {
+      "key": "452_entrada",
+      "file": "entrada-v1.jpeg",
+      "status": "accepted",
+      "checks": "Un viajero gris recorre camino que se estrecha hacia vegetación y luz; adaptación del viaje relatado, sin cadáver, catedral ni cartografía del más allá."
+    },
+    {
+      "key": "452_huella",
+      "file": "huella-v1.jpeg",
+      "status": "accepted",
+      "checks": "Banda clara entre hojas oscuras recortadas sintetiza tránsito y apertura; macro de papel sin humano, paisaje completo, portal religioso o mapa."
+    },
+    {
+      "key": "453_entrada",
+      "file": "entrada-v1.jpeg",
+      "status": "accepted",
+      "checks": "María azul ofrece semillas en mano abierta ante campesina azul oscuro de vestido completo; dos mujeres identificables y ninguna exposición corporal."
+    },
+    {
+      "key": "453_acto",
+      "file": "acto-v1.jpeg",
+      "status": "accepted",
+      "checks": "La misma campesina arrodillada siembra semillas en suelo mientras María observa detrás; continuidad de dos mujeres, sin origen corporal explícito, serpiente o Tomás añadido."
+    },
+    {
+      "key": "453_huella",
+      "file": "huella-v1.jpeg",
+      "status": "accepted",
+      "checks": "Cuatro semillas recortadas y dos brotes sobre banda ocre sintetizan origen y siembra, sin anatomía, mapas, personajes o paisaje repetido."
+    },
+    {
+      "key": "553_entrada",
+      "file": "entrada-v1.jpeg",
+      "status": "accepted",
+      "checks": "Dos figuras mayores acompañan a un único bebé envuelto sobre libro cerrado sin texto en borde seco de una laguna; chumbe sobrio, anatomía segura, sin aguas múltiples o iconos prestados."
+    },
+    {
+      "key": "553_acto",
+      "file": "acto-v1.jpeg",
+      "status": "accepted",
+      "checks": "Juan Tama adulto de capa carbón y bastón conversa con dos autoridades, mujer verde y hombre azul-gris; tres cuerpos completos sin armas, enfrentamiento o retratos de personas reales."
+    },
+    {
+      "key": "553_huella",
+      "file": "huella-v1.jpeg",
+      "status": "accepted",
+      "checks": "Libro cerrado sin escritura sujeto con banda de papel sobria, cinta azul y bastón abstracto; motivo editorial de cuidado y memoria, sin convertirlo en emblema ritual universal."
+    }
+  ],
+  "runs": [
+    {
+      "myth_id": 450,
+      "role": "acto",
+      "version": 1,
+      "session_id": 28957,
+      "chunk_id": "e14cb8",
+      "wall_time_seconds": 3.75e-7,
+      "exit_code": 0,
+      "original_token_count": 39,
+      "output": "Edit completed in 23.6s.\nWrote /Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-06/la-cabeza/acto-v1.jpeg\n"
+    },
+    {
+      "myth_id": 450,
+      "role": "entrada",
+      "version": 1,
+      "session_id": 51522,
+      "chunk_id": "fb018b",
+      "wall_time_seconds": 3.6366465,
+      "exit_code": 0,
+      "original_token_count": 40,
+      "output": "Edit completed in 34.6s.\nWrote /Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-06/la-cabeza/entrada-v1.jpeg\n"
+    },
+    {
+      "myth_id": 450,
+      "role": "huella",
+      "version": 1,
+      "session_id": 33642,
+      "chunk_id": "4b269c",
+      "wall_time_seconds": 3.8173777920000003,
+      "exit_code": 0,
+      "original_token_count": 40,
+      "output": "Edit completed in 21.4s.\nWrote /Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-06/la-cabeza/huella-v1.jpeg\n"
+    },
+    {
+      "myth_id": 451,
+      "role": "huella",
+      "version": 1,
+      "session_id": 66158,
+      "chunk_id": "b82aa1",
+      "wall_time_seconds": 3.943778416,
+      "exit_code": 0,
+      "original_token_count": 40,
+      "output": "Edit completed in 19.7s.\nWrote /Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-06/los-animales/huella-v1.jpeg\n"
+    },
+    {
+      "myth_id": 451,
+      "role": "entrada",
+      "version": 1,
+      "session_id": 85069,
+      "chunk_id": "a8b853",
+      "wall_time_seconds": 0.00000125,
+      "exit_code": 0,
+      "original_token_count": 41,
+      "output": "Edit completed in 33.5s.\nWrote /Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-06/los-animales/entrada-v1.jpeg\n"
+    },
+    {
+      "myth_id": 451,
+      "role": "acto",
+      "version": 1,
+      "session_id": 80644,
+      "chunk_id": "3fa105",
+      "wall_time_seconds": 2.92e-7,
+      "exit_code": 0,
+      "original_token_count": 40,
+      "output": "Edit completed in 21.9s.\nWrote /Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-06/los-animales/acto-v1.jpeg\n"
+    },
+    {
+      "myth_id": 452,
+      "role": "acto",
+      "version": 1,
+      "session_id": 37657,
+      "chunk_id": "999438",
+      "wall_time_seconds": 4.365740916,
+      "exit_code": 0,
+      "original_token_count": 39,
+      "output": "Edit completed in 23.4s.\nWrote /Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-06/el-dalo/acto-v1.jpeg\n"
+    },
+    {
+      "myth_id": 452,
+      "role": "entrada",
+      "version": 1,
+      "session_id": 39996,
+      "chunk_id": "c3eaff",
+      "wall_time_seconds": 0.000001375,
+      "exit_code": 0,
+      "original_token_count": 39,
+      "output": "Edit completed in 39.5s.\nWrote /Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-06/el-dalo/entrada-v1.jpeg\n"
+    },
+    {
+      "myth_id": 452,
+      "role": "huella",
+      "version": 1,
+      "session_id": 95121,
+      "chunk_id": "58db7c",
+      "wall_time_seconds": 9.17e-7,
+      "exit_code": 0,
+      "original_token_count": 39,
+      "output": "Edit completed in 19.2s.\nWrote /Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-06/el-dalo/huella-v1.jpeg\n"
+    },
+    {
+      "myth_id": 453,
+      "role": "acto",
+      "version": 1,
+      "session_id": 17071,
+      "chunk_id": "102215",
+      "wall_time_seconds": 2.5e-7,
+      "exit_code": 0,
+      "original_token_count": 42,
+      "output": "Edit completed in 25.7s.\nWrote /Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-06/origen-de-las-plantas/acto-v1.jpeg\n"
+    },
+    {
+      "myth_id": 453,
+      "role": "entrada",
+      "version": 1,
+      "session_id": 65183,
+      "chunk_id": "864aa2",
+      "wall_time_seconds": 2.08e-7,
+      "exit_code": 0,
+      "original_token_count": 43,
+      "output": "Edit completed in 36.2s.\nWrote /Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-06/origen-de-las-plantas/entrada-v1.jpeg\n"
+    },
+    {
+      "myth_id": 453,
+      "role": "huella",
+      "version": 1,
+      "session_id": 56299,
+      "chunk_id": "32a7e6",
+      "wall_time_seconds": 0.0000015,
+      "exit_code": 0,
+      "original_token_count": 43,
+      "output": "Edit completed in 17.9s.\nWrote /Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-06/origen-de-las-plantas/huella-v1.jpeg\n"
+    },
+    {
+      "myth_id": 553,
+      "role": "huella",
+      "version": 1,
+      "session_id": 60395,
+      "chunk_id": "5fdcee",
+      "wall_time_seconds": 0.000001042,
+      "exit_code": 0,
+      "original_token_count": 40,
+      "output": "Edit completed in 20.9s.\nWrote /Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-06/juan-tama/huella-v1.jpeg\n"
+    },
+    {
+      "myth_id": 553,
+      "role": "acto",
+      "version": 1,
+      "session_id": 54681,
+      "chunk_id": "4e3793",
+      "wall_time_seconds": 0.000001,
+      "exit_code": 0,
+      "original_token_count": 39,
+      "output": "Edit completed in 19.7s.\nWrote /Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-06/juan-tama/acto-v1.jpeg\n"
+    },
+    {
+      "myth_id": 553,
+      "role": "entrada",
+      "version": 1,
+      "session_id": 19964,
+      "exit_code": 0,
+      "output": "Edit completed in 34.7s; wrote entrada-v1.jpeg (final output polled directly)."
+    }
+  ],
+  "sequence_qa": {
+    "450": "Encuentro entre viajero y cabeza autónoma pasa a espera al pie del árbol y gallo del alba; una oreja y un diente, sin violencia ni anatomía de decapitación.",
+    "451": "Camino nocturno sin especies inventadas, rescate por mujer e hija con bagazo, brasa que abre pliegues índigo; personajes contados y sin armas.",
+    "452": "Viaje por camino vegetal a bienvenida de María con niño cubierto; huella de tránsito sin geografía precisa del más allá ni universalizar testimonio de experiencia individual.",
+    "453": "Entrega sobria de semillas en palma y siembra por campesina acompañada; dos brotes y semillas sintetizan crecimiento sin exposición corporal o fusiones.",
+    "553": "Infante cubierto con libro y chumbe en una laguna, adulto conversa con dos autoridades, síntesis de libro protegido; no batalla, ritual universal, retrato real o lagunas fusionadas."
+  },
+  "execution_notes": [
+    "Quince originales seleccionados manualmente; seis instrucciones de huella refinadas antes de llamadas, cinco corresponden a esta tanda. Referencias bíblicas, digest del corpus e imágenes anteriores intactos.",
+    "Las indumentarias y motivos son adaptaciones editoriales reversibles, no certificaciones etnográficas."
+  ]
+}

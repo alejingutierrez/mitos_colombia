@@ -1,0 +1,486 @@
+{
+  "schema": "wayuu-video-selection/v1",
+  "slug": "el-viaje-del-mas-alla",
+  "title": "El viaje del más allá",
+  "status": "script_and_keyframes_complete_editorial_selection_with_notes",
+  "plan": "content/videos/wayuu/videos/el-viaje-del-mas-alla/preproduccion-01/plan.json",
+  "quality": "medium",
+  "generation": {
+    "provider": "OpenAI API",
+    "tool": "official_imagegen_cli",
+    "model": "gpt-image-2",
+    "quality": "medium",
+    "size": "864x1536",
+    "output_format": "jpeg",
+    "mode": "text_only",
+    "input_images": [],
+    "unique_images": 49,
+    "distinct_shots_generated": 28,
+    "corrections": 21,
+    "cost": null,
+    "http_attempts": null,
+    "selected_images": 28,
+    "superseded_images": 21,
+    "by_shot": {
+      "b1a": 2,
+      "b1b": 2,
+      "b2a": 2,
+      "b2b": 2,
+      "b3a": 1,
+      "b4a": 1,
+      "b5a": 2,
+      "b6a": 1,
+      "b6b": 2,
+      "b7a": 2,
+      "b7b": 2,
+      "b8a": 1,
+      "b8b": 2,
+      "b9a": 3,
+      "b10a": 2,
+      "b10b": 2,
+      "b11a": 2,
+      "b11b": 2,
+      "b12a": 2,
+      "b12b": 3,
+      "b13a": 2,
+      "b14a": 1,
+      "b14b": 2,
+      "b15a": 1,
+      "b15b": 1,
+      "b16a": 1,
+      "b17a": 1,
+      "b18a": 2
+    }
+  },
+  "process_learning": {
+    "root_cause": "El inventario original reunía en una sola entidad los estados joven y envejecido del viudo; el modelo adelantó el estado tardío en planos tempranos.",
+    "permanent_rule": "Separar en entidades o descripciones exclusivas todo cambio de edad, vestuario, materia o forma antes de congelar prompts; cada keyframe sólo puede recibir el estado vigente.",
+    "secondary_fixes": [
+      "No transferir utilería de un encuentro al siguiente.",
+      "Describir equivalencias humano-animal o humano-fruto como sustitución o sombra, nunca como cuerpos híbridos."
+    ]
+  },
+  "selected": [
+    {
+      "id": "b1a",
+      "version": "04",
+      "path": "output/imagegen/wayuu/keyframes/el-viaje-del-mas-alla-preproduccion-04-correcciones-continuidad-joven/b1a.jpeg",
+      "sha256": "77e92b9d405e68e3a4111af9e29ade00339f4a750da615d8184cd85da7d5c5ae",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "Duelo nocturno sobrio; viudo joven de pelo y barba negros, chinchorro vacío y mundo íntegramente papercut."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/el-viaje-del-mas-alla/preproduccion-04/prepared-01/prompts/b1a.txt",
+      "prompt_sha256": "3fb26975bd7ffb9b0da29e2660950469906c88c06f0410be870cd605b84c65f1"
+    },
+    {
+      "id": "b1b",
+      "version": "04",
+      "path": "output/imagegen/wayuu/keyframes/el-viaje-del-mas-alla-preproduccion-04-correcciones-continuidad-joven/b1b.jpeg",
+      "sha256": "e5bda35718a30e1a4828d2f1d82ffa163b3395b80a80195669753fddcd7d7e31",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "El sendero se alarga de forma imposible entre la esposa y el viudo joven; distancia y capas legibles."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/el-viaje-del-mas-alla/preproduccion-04/prepared-01/prompts/b1b.txt",
+      "prompt_sha256": "6246aabda3a5936b8e104020513bb95b6c3107f94e9b3d7731518f6b65449c85"
+    },
+    {
+      "id": "b2a",
+      "version": "04",
+      "path": "output/imagegen/wayuu/keyframes/el-viaje-del-mas-alla-preproduccion-04-correcciones-continuidad-joven/b2a.jpeg",
+      "sha256": "2baa942353563fdc186718a2dbd985b574d8712449972f8837a2deb53421bcc7",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "La esposa decide e invita desde una capa separada; ambos adultos completos y sin contacto posesivo."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/el-viaje-del-mas-alla/preproduccion-04/prepared-01/prompts/b2a.txt",
+      "prompt_sha256": "8f8c3d987298a41f76a01152180f6684710f9696561adf874a916533bb5ce799"
+    },
+    {
+      "id": "b2b",
+      "version": "04",
+      "path": "output/imagegen/wayuu/keyframes/el-viaje-del-mas-alla-preproduccion-04-correcciones-continuidad-joven/b2b.jpeg",
+      "sha256": "a7687dc4a51b0631530ecb5ff75f2a647d4ac6eef8edb93b00e6db46693d3252",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "La esposa carga al viudo adulto en la costa; anatomía clara, escala ambiental y ropa completa."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/el-viaje-del-mas-alla/preproduccion-04/prepared-01/prompts/b2b.txt",
+      "prompt_sha256": "1bd70193189e1f54830eb2922f34bf057b8ecec9857af0399a17389ff7bf35a7"
+    },
+    {
+      "id": "b3a",
+      "version": "01",
+      "path": "output/imagegen/wayuu/keyframes/el-viaje-del-mas-alla-preproduccion-01/b3a.jpeg",
+      "sha256": "c9c74203cdccf27b4d6e7a8a655c2b5ac3e1a86641826bbe9d0c9db079c3e1c2",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "La pareja atraviesa el mar caminando sobre ondas de papel; no bote, alas ni portal."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/el-viaje-del-mas-alla/preproduccion-01/prepared-01/prompts/b3a.txt",
+      "prompt_sha256": "a1030443fcd6d6d13b7b0bf76a65f888c7be4b1444d174e331334ac23708aa92"
+    },
+    {
+      "id": "b4a",
+      "version": "01",
+      "path": "output/imagegen/wayuu/keyframes/el-viaje-del-mas-alla-preproduccion-01/b4a.jpeg",
+      "sha256": "d67c234ed74a0eeb5776ba09c2d17626ff28edbbb01ee79fe318b662392f45aa",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "Alcaraván completo custodia el agua; el viudo bebe y la esposa espera, con profundidad material sostenida."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/el-viaje-del-mas-alla/preproduccion-01/prepared-01/prompts/b4a.txt",
+      "prompt_sha256": "f8609e190a685deda07526f244607132fbb4eacb2ebf48991e096ce3932485b0"
+    },
+    {
+      "id": "b5a",
+      "version": "04",
+      "path": "output/imagegen/wayuu/keyframes/el-viaje-del-mas-alla-preproduccion-04-correcciones-continuidad-joven/b5a.jpeg",
+      "sha256": "ba85aec07da24fe5b3bc0362a49d7b552ca147264cfea19682670768ca9d3382",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "Reencuentro coral en Jepira; esposa separada y viudo joven consistente."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/el-viaje-del-mas-alla/preproduccion-04/prepared-01/prompts/b5a.txt",
+      "prompt_sha256": "ebc0d7be27f7debf49afad3bb3dbfa77d50d8734f1687fff3276efb904def439"
+    },
+    {
+      "id": "b6a",
+      "version": "01",
+      "path": "output/imagegen/wayuu/keyframes/el-viaje-del-mas-alla-preproduccion-01/b6a.jpeg",
+      "sha256": "0df1cba8ae63f221800c2727c431118d5eb7b94bbfdbb445dd691dea65f5b785",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "Yonna roja integrada al paisaje y tambor alto; viudo fuera del círculo, con papel recortado legible."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/el-viaje-del-mas-alla/preproduccion-01/prepared-01/prompts/b6a.txt",
+      "prompt_sha256": "e4c7b9d13a38b3c0be9e4df276dcd1d5df8b90b3569476d9c0ec88488f965ed5"
+    },
+    {
+      "id": "b6b",
+      "version": "04",
+      "path": "output/imagegen/wayuu/keyframes/el-viaje-del-mas-alla-preproduccion-04-correcciones-continuidad-joven/b6b.jpeg",
+      "sha256": "4849649f155e5db1e15f137167eb0a9512974160c63c712d7de2aaed2d4f028d",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "La esposa continúa la danza a distancia; viudo joven en primer plano y separación espacial clara."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/el-viaje-del-mas-alla/preproduccion-04/prepared-01/prompts/b6b.txt",
+      "prompt_sha256": "182e6eb6e88e7e3d36808a850f75fbb53bd3a10d47107802625eb010c259fe0c"
+    },
+    {
+      "id": "b7a",
+      "version": "04",
+      "path": "output/imagegen/wayuu/keyframes/el-viaje-del-mas-alla-preproduccion-04-correcciones-continuidad-joven/b7a.jpeg",
+      "sha256": "e5162d82ff47c420e867112296d520afe479d13ff4ba8396a57264e059e86df2",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "Bifurcación en Y claramente legible; viudo joven solo y rama húmeda diferenciada."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/el-viaje-del-mas-alla/preproduccion-04/prepared-01/prompts/b7a.txt",
+      "prompt_sha256": "d552f4ecabd57e3ad406ff185f8299af451cf34a61b9683546f6a5e14d43ad96"
+    },
+    {
+      "id": "b7b",
+      "version": "04",
+      "path": "output/imagegen/wayuu/keyframes/el-viaje-del-mas-alla-preproduccion-04-correcciones-continuidad-joven/b7b.jpeg",
+      "sha256": "4c35e388a94b822a6f39794af14a1de352197049737c8611e9d174daafd795bc",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "Una sola vaca guía al viudo joven hacia la casa bajo lluvia; cuerpos completos y escala amplia."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/el-viaje-del-mas-alla/preproduccion-04/prepared-01/prompts/b7b.txt",
+      "prompt_sha256": "120849c2627cdd33ad7735c4229fd0472b666a5bde30ed86c089b4223246976d"
+    },
+    {
+      "id": "b8a",
+      "version": "01",
+      "path": "output/imagegen/wayuu/keyframes/el-viaje-del-mas-alla-preproduccion-01/b8a.jpeg",
+      "sha256": "d3addca774a2796db7cdf726e9e2a468c1248ee5adb713e4937fa0b7763f8426",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "Juyá aparece como lluvia que recibe, sin cuerpo humano; una única boa-banco espera bajo cubierta."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/el-viaje-del-mas-alla/preproduccion-01/prepared-01/prompts/b8a.txt",
+      "prompt_sha256": "9e7c8402ba1f566c09d640e8c0a8986166c6b900bd3821cc50e1578008ede934"
+    },
+    {
+      "id": "b8b",
+      "version": "02",
+      "path": "output/imagegen/wayuu/keyframes/el-viaje-del-mas-alla-preproduccion-02-correcciones-anclas/b8b.jpeg",
+      "sha256": "9fb14d129ffdef6ce76cee867e9c14a10f32dc22f5e94a9ed852d6fffe40c8d7",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "Boa-banco continua, cabeza integrada y viudo joven sentado con cautela; sin segundo mueble."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/el-viaje-del-mas-alla/preproduccion-02/prepared-01/prompts/b8b.txt",
+      "prompt_sha256": "5750a9bfff2259ae691745f701dbf48510683ede71062e7596a30bcbfd693eae"
+    },
+    {
+      "id": "b9a",
+      "version": "05",
+      "path": "output/imagegen/wayuu/keyframes/el-viaje-del-mas-alla-preproduccion-05-correcciones-flecha/b9a.jpeg",
+      "sha256": "abb9416aa2a82be43e4e1bdf6b647dcb89b1979db8c574fe566cd2ab8aacdb40",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "El otro adulto sostiene una flecha delgada; el viudo tiene manos vacías y el corzo existe sólo como sombra."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/el-viaje-del-mas-alla/preproduccion-05/prepared-01/prompts/b9a.txt",
+      "prompt_sha256": "5b399eca70c5b39d17c24accd0a3199e76dc57d7e22fda3c6313902e082620dc"
+    },
+    {
+      "id": "b10a",
+      "version": "05",
+      "path": "output/imagegen/wayuu/keyframes/el-viaje-del-mas-alla-preproduccion-05-correcciones-flecha/b10a.jpeg",
+      "sha256": "d1916a5f220e3024a6d52311dddf5bf67cba63ee7d7e1d6c8f5381020c66d273",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "Encuentro con el hombre ocre; manos vacías y venado presente únicamente como sombra."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/el-viaje-del-mas-alla/preproduccion-05/prepared-01/prompts/b10a.txt",
+      "prompt_sha256": "e317fe3011ec0ec09765bf0926ae9193a2cb9ed426e1c23010ef8936411a9257"
+    },
+    {
+      "id": "b10b",
+      "version": "04",
+      "path": "output/imagegen/wayuu/keyframes/el-viaje-del-mas-alla-preproduccion-04-correcciones-continuidad-joven/b10b.jpeg",
+      "sha256": "1d2c5a1289cc343fe5605faf966dbac0f3fe404b1aa154804924cda2968930e4",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "Tras la caza elidida, venado intacto y viudo joven con arco bajo; sin sangre ni cuerpo humano."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/el-viaje-del-mas-alla/preproduccion-04/prepared-01/prompts/b10b.txt",
+      "prompt_sha256": "bd249d9564a6839ac1daee2bee16ec89e6555ad0f7ccd880441d31f97452c13e"
+    },
+    {
+      "id": "b11a",
+      "version": "04",
+      "path": "output/imagegen/wayuu/keyframes/el-viaje-del-mas-alla-preproduccion-04-correcciones-continuidad-joven/b11a.jpeg",
+      "sha256": "d2b8d0bd66e6d2c62d75e103f440dc70372075855fabac8945208d0beb90b909",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "Adultos vestidos juegan con dos lianas; viudo joven observa desde el borde, sin mecánica inventada."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/el-viaje-del-mas-alla/preproduccion-04/prepared-01/prompts/b11a.txt",
+      "prompt_sha256": "318de592668686a3c24adf67cc95ae6fabc5cb804b0340577e8f51e6ce60a36d"
+    },
+    {
+      "id": "b11b",
+      "version": "04",
+      "path": "output/imagegen/wayuu/keyframes/el-viaje-del-mas-alla-preproduccion-04-correcciones-continuidad-joven/b11b.jpeg",
+      "sha256": "5c5aef90b9b66c47629afe54937b9152b052a8ec291b9889ffede4f85ce7397d",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "Conejos animales sin ropa sustituyen a los jugadores; permanecen dos lianas y no hay cuerpos humanos."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/el-viaje-del-mas-alla/preproduccion-04/prepared-01/prompts/b11b.txt",
+      "prompt_sha256": "6720719e3444d9a7669dabf0a964451ef81e719c070b1bdad3d01707d6878b47"
+    },
+    {
+      "id": "b12a",
+      "version": "02",
+      "path": "output/imagegen/wayuu/keyframes/el-viaje-del-mas-alla-preproduccion-02-correcciones-anclas/b12a.jpeg",
+      "sha256": "0252cafb0f52e8c8f079319f7d958278dd34b90816fe1cff0f99f88e08254ff4",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "Familia adulta conversa entre hojas; viudo joven a distancia, sin patillas visibles."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/el-viaje-del-mas-alla/preproduccion-02/prepared-01/prompts/b12a.txt",
+      "prompt_sha256": "6c9be55e7f86f82f600d6d7be6c76abce35ce9ba465e5a6833951cf23de83985"
+    },
+    {
+      "id": "b12b",
+      "version": "03",
+      "path": "output/imagegen/wayuu/keyframes/el-viaje-del-mas-alla-preproduccion-03-correccion-patilla/b12b.jpeg",
+      "sha256": "ab8433316358f1a14f183a3215b5854c0a2414161e2dd3fba019cf5176aa882b",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "Una única patilla redonda y rayada sustituye al grupo; viudo joven, sin personas añadidas."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/el-viaje-del-mas-alla/preproduccion-03/prepared-01/prompts/b12b.txt",
+      "prompt_sha256": "1a4e0902ce04cb45688e6b92b35de4ce498c8a9861d7b3cf5d6771aea4b404ce"
+    },
+    {
+      "id": "b13a",
+      "version": "04",
+      "path": "output/imagegen/wayuu/keyframes/el-viaje-del-mas-alla-preproduccion-04-correcciones-continuidad-joven/b13a.jpeg",
+      "sha256": "956fea038363266a1eead589dd8cbcfc8c2714fb738b264bab58b1687614ba74",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "Tres adultos de anatomía normal proyectan sombras de ahuyama; no frutos físicos, cuerpos abultados ni híbridos."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/el-viaje-del-mas-alla/preproduccion-04/prepared-01/prompts/b13a.txt",
+      "prompt_sha256": "3fa886ea1f26f82877a9fe1e2395dc7baba45e24f046bd00910200790a151128"
+    },
+    {
+      "id": "b14a",
+      "version": "01",
+      "path": "output/imagegen/wayuu/keyframes/el-viaje-del-mas-alla-preproduccion-01/b14a.jpeg",
+      "sha256": "d3ab022d316ab5152378bd5ed241cc007a86d2b4242ad2767dcee9f105ccdd2f",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "La lluvia de Juyá se detiene en un límite nítido ante la casa; Pülowi permanece fuera de campo."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/el-viaje-del-mas-alla/preproduccion-01/prepared-01/prompts/b14a.txt",
+      "prompt_sha256": "14a7de672b94ec0e810163a1041d91ac86a3f2e179aac1cf1e119069ad197bff"
+    },
+    {
+      "id": "b14b",
+      "version": "04",
+      "path": "output/imagegen/wayuu/keyframes/el-viaje-del-mas-alla-preproduccion-04-correcciones-continuidad-joven/b14b.jpeg",
+      "sha256": "6c5b8b354a4100c8bb13ee3f18122a29a468eea717c9b369ff25634335cc9036",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "Viudo joven yace vestido y sin heridas; abertura negra, sin cuerpo atribuido a Pülowi."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/el-viaje-del-mas-alla/preproduccion-04/prepared-01/prompts/b14b.txt",
+      "prompt_sha256": "f3a3ba781968584ca60e3f7da1e8fe2288e6d909ac91d343c40a9edeb8d53903"
+    },
+    {
+      "id": "b15a",
+      "version": "01",
+      "path": "output/imagegen/wayuu/keyframes/el-viaje-del-mas-alla-preproduccion-01/b15a.jpeg",
+      "sha256": "f55bbc6ed82b9f42bf0b3f137021eb7fa004a68f0bd7d6dca826cf845f886110",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "Anciana humana ayuda al viudo; ocho patas aparecen sólo como sombra de la manta, sin criatura separada."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/el-viaje-del-mas-alla/preproduccion-01/prepared-01/prompts/b15a.txt",
+      "prompt_sha256": "032c28cec21340acbdef1fbb3702cd973d4ab205fab13376319884f99a036cb3"
+    },
+    {
+      "id": "b15b",
+      "version": "01",
+      "path": "output/imagegen/wayuu/keyframes/el-viaje-del-mas-alla-preproduccion-01/b15b.jpeg",
+      "sha256": "4d6896c9909238bb993aaa976bd9fdee42bf5e2fd8376d646a18eee2cbfe2eb0",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "Descenso por una sola línea continua; anciana y viudo jóvenes pequeños entre capas profundas."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/el-viaje-del-mas-alla/preproduccion-01/prepared-01/prompts/b15b.txt",
+      "prompt_sha256": "3e54743ffda2d493937e3d7a0939cf6deb2498f05ba1641c250f95e6de9154b6"
+    },
+    {
+      "id": "b16a",
+      "version": "01",
+      "path": "output/imagegen/wayuu/keyframes/el-viaje-del-mas-alla-preproduccion-01/b16a.jpeg",
+      "sha256": "fe5155c10494d752337808f0a1561cc26e534a1006706f6ba345a9cc72bd8611",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "Regreso: primer plano del estado envejecido con pelo y barba largos grises; madre y hermana lo reconocen."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/el-viaje-del-mas-alla/preproduccion-01/prepared-01/prompts/b16a.txt",
+      "prompt_sha256": "f7a58fc143dc18b7d2f7c8c0c165178ef3de1768b303165267a4e3130b8e506b"
+    },
+    {
+      "id": "b17a",
+      "version": "01",
+      "path": "output/imagegen/wayuu/keyframes/el-viaje-del-mas-alla-preproduccion-01/b17a.jpeg",
+      "sha256": "c3d83b70f2b4b75a6aa744dba6ebffb294701ce48101e3e297ae266aaf0cda4f",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "Silencio familiar bajo la enramada; estado envejecido consistente y ausencia de magia añadida."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/el-viaje-del-mas-alla/preproduccion-01/prepared-01/prompts/b17a.txt",
+      "prompt_sha256": "435ccbc57feebf4c807e5bb08652f4fdeafd125db2039687be9626b35e3f3cd4"
+    },
+    {
+      "id": "b18a",
+      "version": "02",
+      "path": "output/imagegen/wayuu/keyframes/el-viaje-del-mas-alla-preproduccion-02-correcciones-anclas/b18a.jpeg",
+      "sha256": "a4093c031de4a42c4905488fd1c289dd95dd00f0cee23c0704e6417c0f8bd701",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "El viudo envejecido cuenta el viaje; su sombra óxido camina hacia Jepira como metáfora final."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/el-viaje-del-mas-alla/preproduccion-02/prepared-01/prompts/b18a.txt",
+      "prompt_sha256": "2bc525665c0be336ba2805273ecc2b01d979b5dee44efce0658ea18d7867a342"
+    }
+  ]
+}
+

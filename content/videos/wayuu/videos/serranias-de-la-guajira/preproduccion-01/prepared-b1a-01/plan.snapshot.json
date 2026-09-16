@@ -1,0 +1,1129 @@
+{
+  "schema": "wayuu-video-preproduction/v1",
+  "version": "preproduccion-01",
+  "slug": "serranias-de-la-guajira",
+  "title": "Serranías de La Guajira",
+  "status": "ready_for_sunburst_16_keyframes",
+  "duration": {
+    "target_seconds": 128,
+    "voice_words": 178,
+    "measured": false
+  },
+  "narrative": {
+    "snapshot": "content/mitos-visuales/production/wayuu-2026-09-05/narratives/serranias-de-la-guajira.json",
+    "content_sha256": "69d91fe70a67c033c04e199b1a16060e76a033f3454c301ffcadbb75084cfcaa",
+    "source_url": null,
+    "source_locator": "Relato público y expediente editorial existentes. Los nombres y lugares siguen la versión reauditorada de Juancito Iguarán; no se inventan especies, marcas claniles o fronteras.",
+    "live_hash_verified": false,
+    "events": [
+      {
+        "id": "e1",
+        "description": "Varios hombres salieron de Uchi Juroteka hacia el norte por encargo de Mareiwa. Llevaban agua, sandalias y la confianza de quienes aún no conocían aquella sed.",
+        "required": true,
+        "provenance": "historical_core",
+        "source": "Narración pública congelada y expediente editorial del mito; Los nombres y lugares siguen la versión reauditorada de Juancito Iguarán; no se inventan especies, marcas claniles o fronteras."
+      },
+      {
+        "id": "e2",
+        "description": "Wojoro fue el primero en detenerse. Después cedieron Epits, Wososopo, Juyouirá y Tsitsi, cada uno en un punto distinto del camino.",
+        "required": true,
+        "provenance": "historical_core",
+        "source": "Narración pública congelada y expediente editorial del mito; Los nombres y lugares siguen la versión reauditorada de Juancito Iguarán; no se inventan especies, marcas claniles o fronteras."
+      },
+      {
+        "id": "e3",
+        "description": "Itojoro seguía delante y prometía una tierra mejor. Los Monkii alcanzaron el mar; Guarapú se tendió a descansar y quedó dormido.",
+        "required": true,
+        "provenance": "historical_core",
+        "source": "Narración pública congelada y expediente editorial del mito; Los nombres y lugares siguen la versión reauditorada de Juancito Iguarán; no se inventan especies, marcas claniles o fronteras."
+      },
+      {
+        "id": "e4",
+        "description": "Al final Itojoro también se detuvo, con los pies heridos cerca de una mata de ita. La marcha no alcanzó el destino anunciado.",
+        "required": true,
+        "provenance": "historical_core",
+        "source": "Narración pública congelada y expediente editorial del mito; Los nombres y lugares siguen la versión reauditorada de Juancito Iguarán; no se inventan especies, marcas claniles o fronteras."
+      },
+      {
+        "id": "e5",
+        "description": "Mareiwa contempló el camino incompleto. Los viajeros no serían borrados: sus cuerpos dejaron de ser figuras y levantaron un sistema de cerros y morros.",
+        "required": true,
+        "provenance": "historical_core",
+        "source": "Narración pública congelada y expediente editorial del mito; Los nombres y lugares siguen la versión reauditorada de Juancito Iguarán; no se inventan especies, marcas claniles o fronteras."
+      },
+      {
+        "id": "e6",
+        "description": "Desde Tsitsi, Mareiwa lanzó una piedra hacia Kasuto. El mar retrocedió, descubrió la península y dejó pozos salados como memoria.",
+        "required": true,
+        "provenance": "historical_core",
+        "source": "Narración pública congelada y expediente editorial del mito; Los nombres y lugares siguen la versión reauditorada de Juancito Iguarán; no se inventan especies, marcas claniles o fronteras."
+      },
+      {
+        "id": "e7",
+        "description": "Luego envió aves a buscar frutos. Las semillas dispersas hicieron nacer cardones, iguarayas y plantas capaces de resistir el verano.",
+        "required": true,
+        "provenance": "historical_core",
+        "source": "Narración pública congelada y expediente editorial del mito; Los nombres y lugares siguen la versión reauditorada de Juancito Iguarán; no se inventan especies, marcas claniles o fronteras."
+      },
+      {
+        "id": "e8",
+        "description": "Entre las piedras de Arachí reunió a los primeros Wayuu. Desde entonces las serranías son relieve, nombres y viajeros que aprendieron a permanecer.",
+        "required": true,
+        "provenance": "historical_core",
+        "source": "Narración pública congelada y expediente editorial del mito; Los nombres y lugares siguen la versión reauditorada de Juancito Iguarán; no se inventan especies, marcas claniles o fronteras."
+      }
+    ]
+  },
+  "story_thesis": "Los viajeros detenidos permanecen como serranías, memoria territorial de una marcha incompleta y de la tarea creadora de Mareiwa.",
+  "style": "content/videos/wayuu/channel-dna.v3.json",
+  "palette": "Arena ceniza, carbón, azul mar, verde ita, ocre caminante y blanco ave; transformación mineral sobria, sin monumentos humanos realistas.",
+  "generation": {
+    "model": "gpt-image-2.5-sunburst",
+    "allowed_models": [
+      "gpt-image-2.5-sunburst",
+      "gpt-image-2.5-flare",
+      "gpt-image-2"
+    ],
+    "fast_iteration_model": "gpt-image-2.5-flare",
+    "legacy_fallback_model": "gpt-image-2",
+    "one_model_per_myth": true,
+    "record_exact_model_and_snapshot": true,
+    "quality": "medium",
+    "size": "864x1536",
+    "api_request_size": "1024x1536",
+    "delivery_size": "864x1536",
+    "delivery_transform": "center_crop_864x1536",
+    "output_format": "jpeg",
+    "mode": "image_edit_with_prior_keyframes",
+    "input_images": "declared_per_keyframe_and_frozen_with_sha256"
+  },
+  "shared_scene_continuity": [
+    "Todo visible está construido con hojas mate recortadas, cantos internos, aire y sombras físicas; nunca suelo realista ni personajes modelados.",
+    "Las referencias fijan identidad, vestuario, paleta y materia, pero jamás autorizan copiar su cámara o distribución.",
+    "No repetir en keyframes adyacentes altura, escala, horizonte ni ubicación de sujetos; cada bloque cambia al menos dos variables.",
+    "Los nombres y lugares siguen la versión reauditorada de Juancito Iguarán; no se inventan especies, marcas claniles o fronteras.",
+    "Violencia, enfermedad, duelo y transformación se muestran sin sangre, heridas, cadáveres expuestos, sexualización o triunfo espectacular."
+  ],
+  "continuity_rules": [
+    "Usar exactamente el reparto inventariado por toma y conservar identidades desde los modelos aprobados.",
+    "Desde el tercer frame, los dos antecedentes aprobados inmediatos entran primero y en orden.",
+    "Macros sólo para manos, objetos, fibras, huellas o materia; nunca para rostros.",
+    "Un descarte no alimenta ningún frame posterior; toda corrección obliga a rehacer sus descendientes si cambiaron los antecedentes.",
+    "Los nombres y lugares siguen la versión reauditorada de Juancito Iguarán; no se inventan especies, marcas claniles o fronteras."
+  ],
+  "reference_review": {
+    "sources": [
+      {
+        "path": "output/imagegen/wayuu/triptychs/wayuu-serranias-triptych-01/entrada.jpeg",
+        "sha256": "986f87e1be60cfb02d8658ec8a1d7982fa3b8427b4ded6087eeb37da6405ccd6",
+        "reviewed": true,
+        "role": "same_myth_direction_reference"
+      },
+      {
+        "path": "output/imagegen/wayuu/triptychs/wayuu-serranias-triptych-01/acto.jpeg",
+        "sha256": "8df54ddfd286c03ea5e194c04c2b67de652da6003fbb7908851719bc76cc4300",
+        "reviewed": true,
+        "role": "same_myth_direction_reference"
+      },
+      {
+        "path": "output/imagegen/wayuu/triptychs/wayuu-serranias-triptych-01/huella.jpeg",
+        "sha256": "18b221fc0c2752ad7f84feef1910bd03714c5d0bef39f1cede41a2b4c1d562eb",
+        "reviewed": true,
+        "role": "same_myth_direction_reference"
+      }
+    ],
+    "notes": [
+      "Tríptico final y modelos de Biblia V3 reutilizados con sus hashes de selección.",
+      "Los nombres y lugares siguen la versión reauditorada de Juancito Iguarán; no se inventan especies, marcas claniles o fronteras.",
+      "La composición se rediseña para video y variedad de cámara; no replica los trípticos."
+    ]
+  },
+  "canonical_models": [
+    {
+      "model_id": "wojoro__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-25-serranias-de-la-guajira-medium-corrections-01/wojoro__identity_sheet--canon.jpeg",
+      "sha256": "3703e4cfcb92b706eff7bcb209ac399be94bfb3ff8cc9411ba6a5fb0f85366c4"
+    },
+    {
+      "model_id": "epits__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-25-serranias-de-la-guajira-medium-corrections-01/epits__identity_sheet--canon.jpeg",
+      "sha256": "36c9c93765ff7751193cd5638c867443400d2cea23cbadfd2d2eb53997585685"
+    },
+    {
+      "model_id": "wososopo__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-25-serranias-de-la-guajira-medium-corrections-01/wososopo__identity_sheet--canon.jpeg",
+      "sha256": "bf7afe8ce1041fb4bf20b0bbf8c466b294711d1cc3bd04e31ff51bd06cc27a61"
+    },
+    {
+      "model_id": "juyouira__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-25-serranias-de-la-guajira-medium/juyouira__identity_sheet--canon.jpeg",
+      "sha256": "f61bb74eda97ce437f24096b8137cd948c027fcec2e20a30719078f2a1fbaf0b"
+    },
+    {
+      "model_id": "tsitsi__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-25-serranias-de-la-guajira-medium/tsitsi__identity_sheet--canon.jpeg",
+      "sha256": "133ff9f3a10c9d987f350cb223e7b45b565914f15ef1b6857fc477d1f1603aa1"
+    },
+    {
+      "model_id": "itojoro__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-25-serranias-de-la-guajira-medium-corrections-01/itojoro__identity_sheet--canon.jpeg",
+      "sha256": "e3bafcca2a07b1414f9e977362ac282e267384a64ab9b4a1a2748fad82c84af7"
+    },
+    {
+      "model_id": "guarapu__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-25-serranias-de-la-guajira-medium/guarapu__identity_sheet--canon.jpeg",
+      "sha256": "2746eac8ba6e0ec99eb3bdb1ad71da4e4b7f96ea61b29205d28200926bbdcb7a"
+    },
+    {
+      "model_id": "monkii__group_grammar",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-25-serranias-de-la-guajira-medium-corrections-01/monkii__group_grammar--canon.jpeg",
+      "sha256": "5e473cdfb053ee357f6cdc24e29395a544f52814c0886831420c8157c6e452ed"
+    },
+    {
+      "model_id": "transformacion_viajeros_serranias__phenomenon_rule",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-25-serranias-de-la-guajira-medium/transformacion_viajeros_serranias__phenomenon_rule--canon.jpeg",
+      "sha256": "b12e9e7a8a07990233feaa8633260b98097936067810428d34c1b54abe999e6e"
+    },
+    {
+      "model_id": "retiro_mar_serranias__phenomenon_rule",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-25-serranias-de-la-guajira-medium/retiro_mar_serranias__phenomenon_rule--canon.jpeg",
+      "sha256": "2903a7b32115251a1862cb8cfc1c55b902c01bb15c31f6378966e66eaffe6c90"
+    },
+    {
+      "model_id": "dispersion_semillas_aves_serranias__phenomenon_rule",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-25-serranias-de-la-guajira-medium-corrections-01/dispersion_semillas_aves_serranias__phenomenon_rule--canon.jpeg",
+      "sha256": "6ec33bab1675d34f4033b70f985f7b0d864ab9c96354bddd8f6fe1ea4ee5d21b"
+    },
+    {
+      "model_id": "organizacion_vida_serranias__phenomenon_rule",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-25-serranias-de-la-guajira-medium-corrections-02/organizacion_vida_serranias__phenomenon_rule--canon.jpeg",
+      "sha256": "fffc81e404773860aef6c7e5d8bd57a919bab3e649782d7ade66044ad95a4397"
+    },
+    {
+      "model_id": "uchi_juroteka__spatial_model",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-25-serranias-de-la-guajira-medium-corrections-01/uchi_juroteka__spatial_model--canon.jpeg",
+      "sha256": "715d7a8ee3aad4fdcf857760d707fa274eefaf5d63f92d385dcd3403e0ac54d8"
+    },
+    {
+      "model_id": "akuwa__spatial_model",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-25-serranias-de-la-guajira-medium/akuwa__spatial_model--canon.jpeg",
+      "sha256": "15eaf69381005b4139725d07e58e0b26f26840879b8842d2f8252113001a5bfc"
+    }
+  ],
+  "inventory": [
+    {
+      "id": "viajeros",
+      "type": "supporting_people",
+      "desc": "Grupo de viajeros adultos diferenciados, con ropa completa y reservas pequeñas; cansancio sin agonía gráfica.",
+      "model_ids": [
+        "wojoro__identity_sheet",
+        "epits__identity_sheet",
+        "wososopo__identity_sheet",
+        "juyouira__identity_sheet",
+        "tsitsi__identity_sheet",
+        "itojoro__identity_sheet",
+        "guarapu__identity_sheet",
+        "monkii__group_grammar"
+      ]
+    },
+    {
+      "id": "itojoro",
+      "type": "person",
+      "desc": "Itojoro como guía adulto que avanza delante y también queda en el paisaje.",
+      "model_ids": [
+        "itojoro__identity_sheet"
+      ]
+    },
+    {
+      "id": "mareiwa",
+      "type": "person",
+      "desc": "Mareiwa adulto y pequeño frente al territorio; sin corona ni escala divina.",
+      "model_ids": []
+    },
+    {
+      "id": "ruta",
+      "type": "setting",
+      "desc": "Ruta desde Uchi Juroteka hacia norte, con Maiceo, Akuwa y mar como referencias aproximadas.",
+      "model_ids": [
+        "uchi_juroteka__spatial_model",
+        "akuwa__spatial_model"
+      ]
+    },
+    {
+      "id": "serranias",
+      "type": "magic_subject",
+      "desc": "Transformación de figuras en lomas mediante capas minerales, sin estatuas anatómicas.",
+      "model_ids": [
+        "transformacion_viajeros_serranias__phenomenon_rule"
+      ]
+    },
+    {
+      "id": "mar",
+      "type": "setting",
+      "desc": "Mar que retrocede y deja pozos salados; agua de papel, no mapa.",
+      "model_ids": [
+        "retiro_mar_serranias__phenomenon_rule"
+      ]
+    },
+    {
+      "id": "honda",
+      "type": "object",
+      "desc": "Honda y una piedra de Mareiwa, usadas hacia el horizonte vacío.",
+      "model_ids": []
+    },
+    {
+      "id": "aves",
+      "type": "animal",
+      "desc": "Bandadas de aves sembradoras naturales, sin especies adicionales afirmadas.",
+      "model_ids": [
+        "dispersion_semillas_aves_serranias__phenomenon_rule"
+      ]
+    },
+    {
+      "id": "plantas",
+      "type": "plant",
+      "desc": "Cardones, iguarayas, ita y plantas resistentes según modelos; no selva.",
+      "model_ids": []
+    },
+    {
+      "id": "primeros",
+      "type": "supporting_people",
+      "desc": "Primeros Wayuu reunidos entre piedras, vestidos, sin marcas claniles inventadas.",
+      "model_ids": [
+        "organizacion_vida_serranias__phenomenon_rule"
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "id": "b1",
+      "voice_over": "Varios hombres salieron de Uchi Juroteka hacia el norte por encargo de Mareiwa. Llevaban agua, sandalias y la confianza de quienes aún no conocían aquella sed.",
+      "voice_provenance": "Síntesis audiovisual fiel a la narración congelada; Los nombres y lugares siguen la versión reauditorada de Juancito Iguarán; no se inventan especies, marcas claniles o fronteras.",
+      "word_count": 26,
+      "time_seconds": [
+        0,
+        16
+      ],
+      "event_ids": [
+        "e1"
+      ],
+      "keyframes": [
+        {
+          "id": "b1a",
+          "title": "Salida de Uchi Juroteka",
+          "visual": "Un grupo de viajeros sale en diagonal desde un asentamiento mínimo; Itojoro abre la marcha y todos llevan ropa completa. COMPOSICIÓN OBLIGATORIA: elevada oblicua desde una ladera, gran plano general territorial; no copiar la altura, horizonte ni distribución del keyframe anterior.",
+          "time_seconds": [
+            0,
+            8
+          ],
+          "entity_ids": [
+            "viajeros",
+            "itojoro",
+            "ruta"
+          ],
+          "event_ids": [
+            "e1"
+          ],
+          "angle": "elevada oblicua desde una ladera",
+          "shot_scale": "gran plano general territorial",
+          "depth_planes": [
+            "papel cercano",
+            "sujetos pequeños",
+            "sendero diagonal",
+            "territorio medio",
+            "cielo recortado"
+          ],
+          "continuity_from": null,
+          "transition_to_next": "Corte de eje, altura y escala hacia el siguiente instante.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Movimiento mínimo compatible con elevada oblicua desde una ladera.",
+            "allowed": "Sólo el gesto o cambio material descrito en este instante.",
+            "forbidden": "Repetir la composición anterior, añadir reparto, texto, sangre, ceremonia o utilería no inventariada."
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "generation_inputs": [
+            {
+              "kind": "triptych",
+              "myth": "serranias-de-la-guajira",
+              "path": "output/imagegen/wayuu/triptychs/wayuu-serranias-triptych-01/entrada.jpeg",
+              "sha256": "986f87e1be60cfb02d8658ec8a1d7982fa3b8427b4ded6087eeb37da6405ccd6",
+              "approved": true,
+              "role": "Fijar identidad, paleta y material del mito desde la referencia 1; prohibido copiar su composición."
+            },
+            {
+              "kind": "triptych",
+              "myth": "serranias-de-la-guajira",
+              "path": "output/imagegen/wayuu/triptychs/wayuu-serranias-triptych-01/acto.jpeg",
+              "sha256": "8df54ddfd286c03ea5e194c04c2b67de652da6003fbb7908851719bc76cc4300",
+              "approved": true,
+              "role": "Fijar identidad, paleta y material del mito desde la referencia 2; prohibido copiar su composición."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "serranias-de-la-guajira",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-25-serranias-de-la-guajira-medium-corrections-01/wojoro__identity_sheet--canon.jpeg",
+              "sha256": "3703e4cfcb92b706eff7bcb209ac399be94bfb3ff8cc9411ba6a5fb0f85366c4",
+              "approved": true,
+              "role": "Fijar el modelo canónico wojoro__identity_sheet; preservar identidad y material sin copiar la composición."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "serranias-de-la-guajira",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-25-serranias-de-la-guajira-medium-corrections-01/epits__identity_sheet--canon.jpeg",
+              "sha256": "36c9c93765ff7751193cd5638c867443400d2cea23cbadfd2d2eb53997585685",
+              "approved": true,
+              "role": "Fijar el modelo canónico epits__identity_sheet; preservar identidad y material sin copiar la composición."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "serranias-de-la-guajira",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-25-serranias-de-la-guajira-medium-corrections-01/wososopo__identity_sheet--canon.jpeg",
+              "sha256": "bf7afe8ce1041fb4bf20b0bbf8c466b294711d1cc3bd04e31ff51bd06cc27a61",
+              "approved": true,
+              "role": "Fijar el modelo canónico wososopo__identity_sheet; preservar identidad y material sin copiar la composición."
+            }
+          ]
+        },
+        {
+          "id": "b1b",
+          "title": "Agua y sandalias",
+          "visual": "Macro lateral de una reserva pequeña y varias sandalias distintas; ninguna herida o gesto de agonía. COMPOSICIÓN OBLIGATORIA: lateral a la altura de manos u objeto, macro narrativo sin rostro; no copiar la altura, horizonte ni distribución del keyframe anterior.",
+          "time_seconds": [
+            8,
+            16
+          ],
+          "entity_ids": [
+            "viajeros",
+            "ruta"
+          ],
+          "event_ids": [
+            "e1"
+          ],
+          "angle": "lateral a la altura de manos u objeto",
+          "shot_scale": "macro narrativo sin rostro",
+          "depth_planes": [
+            "borde cercano",
+            "manos u objeto",
+            "ropa parcial",
+            "suelo medio",
+            "fondo desenfocado"
+          ],
+          "continuity_from": "b1a",
+          "transition_to_next": "Corte de eje, altura y escala hacia el siguiente instante.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Movimiento mínimo compatible con lateral a la altura de manos u objeto.",
+            "allowed": "Sólo el gesto o cambio material descrito en este instante.",
+            "forbidden": "Repetir la composición anterior, añadir reparto, texto, sangre, ceremonia o utilería no inventariada."
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "generation_inputs": []
+        }
+      ]
+    },
+    {
+      "id": "b2",
+      "voice_over": "Wojoro fue el primero en detenerse. Después cedieron Epits, Wososopo, Juyouirá y Tsitsi, cada uno en un punto distinto del camino.",
+      "voice_provenance": "Síntesis audiovisual fiel a la narración congelada; Los nombres y lugares siguen la versión reauditorada de Juancito Iguarán; no se inventan especies, marcas claniles o fronteras.",
+      "word_count": 21,
+      "time_seconds": [
+        16,
+        32
+      ],
+      "event_ids": [
+        "e2"
+      ],
+      "keyframes": [
+        {
+          "id": "b2a",
+          "title": "Wojoro se detiene",
+          "visual": "Desde el suelo, un viajero queda sentado junto al camino mientras el grupo continúa pequeño hacia el horizonte. COMPOSICIÓN OBLIGATORIA: contrapicado extremo desde el suelo, plano general bajo; no copiar la altura, horizonte ni distribución del keyframe anterior.",
+          "time_seconds": [
+            16,
+            24
+          ],
+          "entity_ids": [
+            "viajeros",
+            "ruta"
+          ],
+          "event_ids": [
+            "e2"
+          ],
+          "angle": "contrapicado extremo desde el suelo",
+          "shot_scale": "plano general bajo",
+          "depth_planes": [
+            "materia rasante",
+            "pies o base",
+            "cuerpos completos",
+            "relieve",
+            "cielo amplio"
+          ],
+          "continuity_from": "b1b",
+          "transition_to_next": "Corte de eje, altura y escala hacia el siguiente instante.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Movimiento mínimo compatible con contrapicado extremo desde el suelo.",
+            "allowed": "Sólo el gesto o cambio material descrito en este instante.",
+            "forbidden": "Repetir la composición anterior, añadir reparto, texto, sangre, ceremonia o utilería no inventariada."
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "generation_inputs": []
+        },
+        {
+          "id": "b2b",
+          "title": "Otros puntos del camino",
+          "visual": "Cenital del sendero con cuatro pausas separadas marcadas por sandalias, sombra y recipientes vacíos, sin cuerpos caídos. COMPOSICIÓN OBLIGATORIA: cenital verdadero de 90 grados, detalle gráfico de suelo; no copiar la altura, horizonte ni distribución del keyframe anterior.",
+          "time_seconds": [
+            24,
+            32
+          ],
+          "entity_ids": [
+            "viajeros",
+            "ruta"
+          ],
+          "event_ids": [
+            "e2"
+          ],
+          "angle": "cenital verdadero de 90 grados",
+          "shot_scale": "detalle gráfico de suelo",
+          "depth_planes": [
+            "borde superior",
+            "acción central",
+            "huellas u objetos",
+            "sombras planas",
+            "estratos inferiores"
+          ],
+          "continuity_from": "b2a",
+          "transition_to_next": "Corte de eje, altura y escala hacia el siguiente instante.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Movimiento mínimo compatible con cenital verdadero de 90 grados.",
+            "allowed": "Sólo el gesto o cambio material descrito en este instante.",
+            "forbidden": "Repetir la composición anterior, añadir reparto, texto, sangre, ceremonia o utilería no inventariada."
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "generation_inputs": []
+        }
+      ]
+    },
+    {
+      "id": "b3",
+      "voice_over": "Itojoro seguía delante y prometía una tierra mejor. Los Monkii alcanzaron el mar; Guarapú se tendió a descansar y quedó dormido.",
+      "voice_provenance": "Síntesis audiovisual fiel a la narración congelada; Los nombres y lugares siguen la versión reauditorada de Juancito Iguarán; no se inventan especies, marcas claniles o fronteras.",
+      "word_count": 21,
+      "time_seconds": [
+        32,
+        48
+      ],
+      "event_ids": [
+        "e3"
+      ],
+      "keyframes": [
+        {
+          "id": "b3a",
+          "title": "Itojoro sigue delante",
+          "visual": "Perfil teleobjetivo: Itojoro llama desde una cresta y el grupo queda distribuido en cinco planos, sin amontonarse. COMPOSICIÓN OBLIGATORIA: lateral teleobjetivo sin cielo, plano general comprimido; no copiar la altura, horizonte ni distribución del keyframe anterior.",
+          "time_seconds": [
+            32,
+            40
+          ],
+          "entity_ids": [
+            "viajeros",
+            "itojoro",
+            "ruta"
+          ],
+          "event_ids": [
+            "e3"
+          ],
+          "angle": "lateral teleobjetivo sin cielo",
+          "shot_scale": "plano general comprimido",
+          "depth_planes": [
+            "franja cercana",
+            "sujeto uno",
+            "acción media",
+            "sujeto dos",
+            "bandas comprimidas"
+          ],
+          "continuity_from": "b2b",
+          "transition_to_next": "Corte de eje, altura y escala hacia el siguiente instante.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Movimiento mínimo compatible con lateral teleobjetivo sin cielo.",
+            "allowed": "Sólo el gesto o cambio material descrito en este instante.",
+            "forbidden": "Repetir la composición anterior, añadir reparto, texto, sangre, ceremonia o utilería no inventariada."
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "generation_inputs": []
+        },
+        {
+          "id": "b3b",
+          "title": "Los Monkii llegan al mar",
+          "visual": "Rasante entre rocas hacia varias figuras pequeñas que alcanzan la costa; el agua ocupa una franja distante. COMPOSICIÓN OBLIGATORIA: rasante a través de una grieta o vegetación, gran plano general de fuga; no copiar la altura, horizonte ni distribución del keyframe anterior.",
+          "time_seconds": [
+            40,
+            48
+          ],
+          "entity_ids": [
+            "viajeros",
+            "mar",
+            "ruta"
+          ],
+          "event_ids": [
+            "e3"
+          ],
+          "angle": "rasante a través de una grieta o vegetación",
+          "shot_scale": "gran plano general de fuga",
+          "depth_planes": [
+            "recorte extremo",
+            "vacío cercano",
+            "acción distante",
+            "territorio",
+            "franja de salida"
+          ],
+          "continuity_from": "b3a",
+          "transition_to_next": "Corte de eje, altura y escala hacia el siguiente instante.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Movimiento mínimo compatible con rasante a través de una grieta o vegetación.",
+            "allowed": "Sólo el gesto o cambio material descrito en este instante.",
+            "forbidden": "Repetir la composición anterior, añadir reparto, texto, sangre, ceremonia o utilería no inventariada."
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "generation_inputs": []
+        }
+      ]
+    },
+    {
+      "id": "b4",
+      "voice_over": "Al final Itojoro también se detuvo, con los pies heridos cerca de una mata de ita. La marcha no alcanzó el destino anunciado.",
+      "voice_provenance": "Síntesis audiovisual fiel a la narración congelada; Los nombres y lugares siguen la versión reauditorada de Juancito Iguarán; no se inventan especies, marcas claniles o fronteras.",
+      "word_count": 23,
+      "time_seconds": [
+        48,
+        64
+      ],
+      "event_ids": [
+        "e4"
+      ],
+      "keyframes": [
+        {
+          "id": "b4a",
+          "title": "El sueño de Guarapú",
+          "visual": "Vista alta de un viajero que descansa bajo una sombra plana mientras las huellas del grupo continúan. COMPOSICIÓN OBLIGATORIA: alta diagonal de 60 grados, plano conjunto arquitectónico; no copiar la altura, horizonte ni distribución del keyframe anterior.",
+          "time_seconds": [
+            48,
+            56
+          ],
+          "entity_ids": [
+            "viajeros",
+            "ruta",
+            "plantas"
+          ],
+          "event_ids": [
+            "e4"
+          ],
+          "angle": "alta diagonal de 60 grados",
+          "shot_scale": "plano conjunto arquitectónico",
+          "depth_planes": [
+            "trama cercana",
+            "acción uno",
+            "estructura central",
+            "acción dos",
+            "horizonte mínimo"
+          ],
+          "continuity_from": "b3b",
+          "transition_to_next": "Corte de eje, altura y escala hacia el siguiente instante.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Movimiento mínimo compatible con alta diagonal de 60 grados.",
+            "allowed": "Sólo el gesto o cambio material descrito en este instante.",
+            "forbidden": "Repetir la composición anterior, añadir reparto, texto, sangre, ceremonia o utilería no inventariada."
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "generation_inputs": []
+        },
+        {
+          "id": "b4b",
+          "title": "Itojoro junto a la ita",
+          "visual": "Sobre el hombro del guía, una mata de ita y Akuwa cierran el trayecto; su mano baja hacia la sandalia. COMPOSICIÓN OBLIGATORIA: sobre el hombro con primer término dominante, plano medio ambiental; no copiar la altura, horizonte ni distribución del keyframe anterior.",
+          "time_seconds": [
+            56,
+            64
+          ],
+          "entity_ids": [
+            "itojoro",
+            "ruta",
+            "plantas"
+          ],
+          "event_ids": [
+            "e4"
+          ],
+          "angle": "sobre el hombro con primer término dominante",
+          "shot_scale": "plano medio ambiental",
+          "depth_planes": [
+            "hombro o marco",
+            "gesto",
+            "objeto o sujeto central",
+            "fondo activo",
+            "territorio"
+          ],
+          "continuity_from": "b4a",
+          "transition_to_next": "Corte de eje, altura y escala hacia el siguiente instante.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Movimiento mínimo compatible con sobre el hombro con primer término dominante.",
+            "allowed": "Sólo el gesto o cambio material descrito en este instante.",
+            "forbidden": "Repetir la composición anterior, añadir reparto, texto, sangre, ceremonia o utilería no inventariada."
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "generation_inputs": []
+        }
+      ]
+    },
+    {
+      "id": "b5",
+      "voice_over": "Mareiwa contempló el camino incompleto. Los viajeros no serían borrados: sus cuerpos dejaron de ser figuras y levantaron un sistema de cerros y morros.",
+      "voice_provenance": "Síntesis audiovisual fiel a la narración congelada; Los nombres y lugares siguen la versión reauditorada de Juancito Iguarán; no se inventan especies, marcas claniles o fronteras.",
+      "word_count": 24,
+      "time_seconds": [
+        64,
+        80
+      ],
+      "event_ids": [
+        "e5"
+      ],
+      "keyframes": [
+        {
+          "id": "b5a",
+          "title": "Mareiwa mira la marcha",
+          "visual": "Desde una sombra mineral, Mareiwa observa todos los puntos detenidos como pequeñas formas distribuidas. COMPOSICIÓN OBLIGATORIA: subjetiva baja desde la sombra, plano general con primer término oscuro; no copiar la altura, horizonte ni distribución del keyframe anterior.",
+          "time_seconds": [
+            64,
+            72
+          ],
+          "entity_ids": [
+            "mareiwa",
+            "viajeros",
+            "ruta"
+          ],
+          "event_ids": [
+            "e5"
+          ],
+          "angle": "subjetiva baja desde la sombra",
+          "shot_scale": "plano general con primer término oscuro",
+          "depth_planes": [
+            "sombra cercana",
+            "señal",
+            "acción media",
+            "figuras",
+            "arquitectura o paisaje"
+          ],
+          "continuity_from": "b4b",
+          "transition_to_next": "Corte de eje, altura y escala hacia el siguiente instante.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Movimiento mínimo compatible con subjetiva baja desde la sombra.",
+            "allowed": "Sólo el gesto o cambio material descrito en este instante.",
+            "forbidden": "Repetir la composición anterior, añadir reparto, texto, sangre, ceremonia o utilería no inventariada."
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "generation_inputs": []
+        },
+        {
+          "id": "b5b",
+          "title": "Los cuerpos dejan de ser cuerpos",
+          "visual": "Perfil distante: siluetas sentadas se pliegan en estratos de cerro sin rostros de piedra ni monumentos. COMPOSICIÓN OBLIGATORIA: perfil distante con horizonte desplazado, plano general lateral; no copiar la altura, horizonte ni distribución del keyframe anterior.",
+          "time_seconds": [
+            72,
+            80
+          ],
+          "entity_ids": [
+            "viajeros",
+            "serranias",
+            "ruta"
+          ],
+          "event_ids": [
+            "e5"
+          ],
+          "angle": "perfil distante con horizonte desplazado",
+          "shot_scale": "plano general lateral",
+          "depth_planes": [
+            "materia cercana",
+            "sujeto lateral",
+            "acción",
+            "segundo sujeto",
+            "horizonte alto"
+          ],
+          "continuity_from": "b5a",
+          "transition_to_next": "Corte de eje, altura y escala hacia el siguiente instante.",
+          "scene_role": "visible_magic",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Los elementos cotidianos inventariados en Los cuerpos dejan de ser cuerpos.",
+            "impossible_behavior": "Perfil distante: siluetas sentadas se pliegan en estratos de cerro sin rostros de piedra ni monumentos.",
+            "narrative_effect": "Hace visible el cambio de relación narrado en el evento e5.",
+            "agency": "La transformación pertenece al relato o a su traducción editorial; las personas no la controlan como superpoder.",
+            "physical_translation": "Hojas mate separadas cambian de silueta, posición o continuidad mediante pliegues y vacíos; sin partículas CGI.",
+            "visible_test": "La contradicción material debe entenderse en una sola imagen sin texto ni duplicación de personajes.",
+            "provenance": "narrated_fact",
+            "temporal_role": "present",
+            "event_ids": [
+              "e5"
+            ]
+          },
+          "motion_contract": {
+            "camera": "Movimiento mínimo compatible con perfil distante con horizonte desplazado.",
+            "allowed": "Sólo el gesto o cambio material descrito en este instante.",
+            "forbidden": "Repetir la composición anterior, añadir reparto, texto, sangre, ceremonia o utilería no inventariada."
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "generation_inputs": []
+        }
+      ]
+    },
+    {
+      "id": "b6",
+      "voice_over": "Desde Tsitsi, Mareiwa lanzó una piedra hacia Kasuto. El mar retrocedió, descubrió la península y dejó pozos salados como memoria.",
+      "voice_provenance": "Síntesis audiovisual fiel a la narración congelada; Los nombres y lugares siguen la versión reauditorada de Juancito Iguarán; no se inventan especies, marcas claniles o fronteras.",
+      "word_count": 20,
+      "time_seconds": [
+        80,
+        96
+      ],
+      "event_ids": [
+        "e6"
+      ],
+      "keyframes": [
+        {
+          "id": "b6a",
+          "title": "Un sistema de alturas",
+          "visual": "Cenital diagonal de lomas nuevas conectadas por el antiguo sendero; las figuras humanas ya no están presentes. COMPOSICIÓN OBLIGATORIA: cenital diagonal amplio, plano de consecuencia; no copiar la altura, horizonte ni distribución del keyframe anterior.",
+          "time_seconds": [
+            80,
+            88
+          ],
+          "entity_ids": [
+            "serranias",
+            "ruta"
+          ],
+          "event_ids": [
+            "e6"
+          ],
+          "angle": "cenital diagonal amplio",
+          "shot_scale": "plano de consecuencia",
+          "depth_planes": [
+            "sombra",
+            "objeto central",
+            "figuras parciales",
+            "trama territorial",
+            "borde de salida"
+          ],
+          "continuity_from": "b5b",
+          "transition_to_next": "Corte de eje, altura y escala hacia el siguiente instante.",
+          "scene_role": "visible_magic",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Los elementos cotidianos inventariados en Un sistema de alturas.",
+            "impossible_behavior": "Cenital diagonal de lomas nuevas conectadas por el antiguo sendero; las figuras humanas ya no están presentes.",
+            "narrative_effect": "Hace visible el cambio de relación narrado en el evento e6.",
+            "agency": "La transformación pertenece al relato o a su traducción editorial; las personas no la controlan como superpoder.",
+            "physical_translation": "Hojas mate separadas cambian de silueta, posición o continuidad mediante pliegues y vacíos; sin partículas CGI.",
+            "visible_test": "La contradicción material debe entenderse en una sola imagen sin texto ni duplicación de personajes.",
+            "provenance": "narrated_fact",
+            "temporal_role": "present",
+            "event_ids": [
+              "e6"
+            ]
+          },
+          "motion_contract": {
+            "camera": "Movimiento mínimo compatible con cenital diagonal amplio.",
+            "allowed": "Sólo el gesto o cambio material descrito en este instante.",
+            "forbidden": "Repetir la composición anterior, añadir reparto, texto, sangre, ceremonia o utilería no inventariada."
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "generation_inputs": []
+        },
+        {
+          "id": "b6b",
+          "title": "La piedra hacia Kasuto",
+          "visual": "Macro de la honda tensada sobre la cima de Tsitsi, con una piedra y horizonte vacío. COMPOSICIÓN OBLIGATORIA: macro frontal de materia, primerísimo plano de objeto; no copiar la altura, horizonte ni distribución del keyframe anterior.",
+          "time_seconds": [
+            88,
+            96
+          ],
+          "entity_ids": [
+            "mareiwa",
+            "serranias",
+            "honda",
+            "mar"
+          ],
+          "event_ids": [
+            "e6"
+          ],
+          "angle": "macro frontal de materia",
+          "shot_scale": "primerísimo plano de objeto",
+          "depth_planes": [
+            "fibra cercana",
+            "objeto",
+            "cambio material",
+            "sombra interna",
+            "fondo abstracto"
+          ],
+          "continuity_from": "b6a",
+          "transition_to_next": "Corte de eje, altura y escala hacia el siguiente instante.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Movimiento mínimo compatible con macro frontal de materia.",
+            "allowed": "Sólo el gesto o cambio material descrito en este instante.",
+            "forbidden": "Repetir la composición anterior, añadir reparto, texto, sangre, ceremonia o utilería no inventariada."
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "generation_inputs": []
+        }
+      ]
+    },
+    {
+      "id": "b7",
+      "voice_over": "Luego envió aves a buscar frutos. Las semillas dispersas hicieron nacer cardones, iguarayas y plantas capaces de resistir el verano.",
+      "voice_provenance": "Síntesis audiovisual fiel a la narración congelada; Los nombres y lugares siguen la versión reauditorada de Juancito Iguarán; no se inventan especies, marcas claniles o fronteras.",
+      "word_count": 20,
+      "time_seconds": [
+        96,
+        112
+      ],
+      "event_ids": [
+        "e7"
+      ],
+      "keyframes": [
+        {
+          "id": "b7a",
+          "title": "El mar deja la tierra",
+          "visual": "Entre dos morros, las bandas de agua se retiran y revelan pozos salados separados. COMPOSICIÓN OBLIGATORIA: contrapicado enmarcado entre postes o rocas, plano general enmarcado; no copiar la altura, horizonte ni distribución del keyframe anterior.",
+          "time_seconds": [
+            96,
+            104
+          ],
+          "entity_ids": [
+            "mareiwa",
+            "serranias",
+            "mar"
+          ],
+          "event_ids": [
+            "e7"
+          ],
+          "angle": "contrapicado enmarcado entre postes o rocas",
+          "shot_scale": "plano general enmarcado",
+          "depth_planes": [
+            "marco cercano",
+            "umbral",
+            "sujetos pequeños",
+            "acción",
+            "paisaje estrecho"
+          ],
+          "continuity_from": "b6b",
+          "transition_to_next": "Corte de eje, altura y escala hacia el siguiente instante.",
+          "scene_role": "visible_magic",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Los elementos cotidianos inventariados en El mar deja la tierra.",
+            "impossible_behavior": "Entre dos morros, las bandas de agua se retiran y revelan pozos salados separados.",
+            "narrative_effect": "Hace visible el cambio de relación narrado en el evento e7.",
+            "agency": "La transformación pertenece al relato o a su traducción editorial; las personas no la controlan como superpoder.",
+            "physical_translation": "Hojas mate separadas cambian de silueta, posición o continuidad mediante pliegues y vacíos; sin partículas CGI.",
+            "visible_test": "La contradicción material debe entenderse en una sola imagen sin texto ni duplicación de personajes.",
+            "provenance": "narrated_fact",
+            "temporal_role": "present",
+            "event_ids": [
+              "e7"
+            ]
+          },
+          "motion_contract": {
+            "camera": "Movimiento mínimo compatible con contrapicado enmarcado entre postes o rocas.",
+            "allowed": "Sólo el gesto o cambio material descrito en este instante.",
+            "forbidden": "Repetir la composición anterior, añadir reparto, texto, sangre, ceremonia o utilería no inventariada."
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "generation_inputs": []
+        },
+        {
+          "id": "b7b",
+          "title": "Aves con semillas",
+          "visual": "A través de una abertura rocosa, una bandada cruza en profundidad llevando semillas pequeñas. COMPOSICIÓN OBLIGATORIA: teleobjetivo profundo a través de una abertura, plano largo comprimido; no copiar la altura, horizonte ni distribución del keyframe anterior.",
+          "time_seconds": [
+            104,
+            112
+          ],
+          "entity_ids": [
+            "aves",
+            "plantas",
+            "serranias"
+          ],
+          "event_ids": [
+            "e7"
+          ],
+          "angle": "teleobjetivo profundo a través de una abertura",
+          "shot_scale": "plano largo comprimido",
+          "depth_planes": [
+            "abertura cercana",
+            "vacío",
+            "acción lejana",
+            "capas medias",
+            "fondo comprimido"
+          ],
+          "continuity_from": "b7a",
+          "transition_to_next": "Corte de eje, altura y escala hacia el siguiente instante.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Movimiento mínimo compatible con teleobjetivo profundo a través de una abertura.",
+            "allowed": "Sólo el gesto o cambio material descrito en este instante.",
+            "forbidden": "Repetir la composición anterior, añadir reparto, texto, sangre, ceremonia o utilería no inventariada."
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "generation_inputs": []
+        }
+      ]
+    },
+    {
+      "id": "b8",
+      "voice_over": "Entre las piedras de Arachí reunió a los primeros Wayuu. Desde entonces las serranías son relieve, nombres y viajeros que aprendieron a permanecer.",
+      "voice_provenance": "Síntesis audiovisual fiel a la narración congelada; Los nombres y lugares siguen la versión reauditorada de Juancito Iguarán; no se inventan especies, marcas claniles o fronteras.",
+      "word_count": 23,
+      "time_seconds": [
+        112,
+        128
+      ],
+      "event_ids": [
+        "e8"
+      ],
+      "keyframes": [
+        {
+          "id": "b8a",
+          "title": "Arachí reúne la vida",
+          "visual": "Vista aérea de familias y animales reunidos entre grandes piedras; no hay marcas o fronteras dibujadas. COMPOSICIÓN OBLIGATORIA: aérea oblicua desde atrás, gran plano general de relación; no copiar la altura, horizonte ni distribución del keyframe anterior.",
+          "time_seconds": [
+            112,
+            120
+          ],
+          "entity_ids": [
+            "mareiwa",
+            "primeros",
+            "serranias"
+          ],
+          "event_ids": [
+            "e8"
+          ],
+          "angle": "aérea oblicua desde atrás",
+          "shot_scale": "gran plano general de relación",
+          "depth_planes": [
+            "estructura cercana",
+            "sujetos",
+            "trayectoria",
+            "territorio amplio",
+            "cielo mínimo"
+          ],
+          "continuity_from": "b7b",
+          "transition_to_next": "Corte de eje, altura y escala hacia el siguiente instante.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Movimiento mínimo compatible con aérea oblicua desde atrás.",
+            "allowed": "Sólo el gesto o cambio material descrito en este instante.",
+            "forbidden": "Repetir la composición anterior, añadir reparto, texto, sangre, ceremonia o utilería no inventariada."
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "generation_inputs": []
+        },
+        {
+          "id": "b8b",
+          "title": "Viajeros que permanecen",
+          "visual": "Desde el suelo, una cadena de serranías ocupa el horizonte y el viejo sendero termina en ellas; ningún cuerpo humano visible. COMPOSICIÓN OBLIGATORIA: a ras del suelo mirando hacia la distancia, plano final de fuga; no copiar la altura, horizonte ni distribución del keyframe anterior.",
+          "time_seconds": [
+            120,
+            128
+          ],
+          "entity_ids": [
+            "serranias",
+            "ruta",
+            "plantas"
+          ],
+          "event_ids": [
+            "e8"
+          ],
+          "angle": "a ras del suelo mirando hacia la distancia",
+          "shot_scale": "plano final de fuga",
+          "depth_planes": [
+            "materia muy cercana",
+            "sendero",
+            "figuras pequeñas",
+            "paisaje",
+            "horizonte"
+          ],
+          "continuity_from": "b8a",
+          "transition_to_next": "Corte de eje, altura y escala hacia el siguiente instante.",
+          "scene_role": "visible_magic",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Los elementos cotidianos inventariados en Viajeros que permanecen.",
+            "impossible_behavior": "Desde el suelo, una cadena de serranías ocupa el horizonte y el viejo sendero termina en ellas; ningún cuerpo humano visible.",
+            "narrative_effect": "Hace visible el cambio de relación narrado en el evento e8.",
+            "agency": "La transformación pertenece al relato o a su traducción editorial; las personas no la controlan como superpoder.",
+            "physical_translation": "Hojas mate separadas cambian de silueta, posición o continuidad mediante pliegues y vacíos; sin partículas CGI.",
+            "visible_test": "La contradicción material debe entenderse en una sola imagen sin texto ni duplicación de personajes.",
+            "provenance": "narrated_fact",
+            "temporal_role": "present",
+            "event_ids": [
+              "e8"
+            ]
+          },
+          "motion_contract": {
+            "camera": "Movimiento mínimo compatible con a ras del suelo mirando hacia la distancia.",
+            "allowed": "Sólo el gesto o cambio material descrito en este instante.",
+            "forbidden": "Repetir la composición anterior, añadir reparto, texto, sangre, ceremonia o utilería no inventariada."
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "generation_inputs": []
+        }
+      ]
+    }
+  ]
+}

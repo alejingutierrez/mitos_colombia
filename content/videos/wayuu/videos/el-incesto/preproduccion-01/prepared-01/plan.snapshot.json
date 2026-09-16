@@ -1,0 +1,1065 @@
+{
+  "schema": "wayuu-video-preproduction/v1",
+  "slug": "el-incesto",
+  "title": "El incesto · Lo que el paisaje no responde",
+  "version": "preproduccion-01",
+  "status": "script_storyboard_ready_not_generated",
+  "style": "content/videos/wayuu/channel-dna.v2.json",
+  "generation": {
+    "model": "gpt-image-2",
+    "quality": "medium",
+    "size": "864x1536",
+    "output_format": "jpeg",
+    "mode": "text_only",
+    "input_images": []
+  },
+  "palette": "Primer episodio: verde petróleo, ocre litoral, azul marino, gris mineral. Segundo: ocre rojizo, gris cálido, azul pálido; no verde. Luz diurna lateral en ambos, no noche heredada de Arámai.",
+  "shared_scene_continuity": [
+    "Todo visible de hojas mate cortadas con aire y sombras; personajes casi planos, no realismo de maqueta.",
+    "Primera casa costera y segunda casa interior distintas: no fusionar episodios.",
+    "Sin cuerpos heridos, métodos de suicidio, figuras colgadas o intimidad sexual. No representar la muerte como alivio o triunfo.",
+    "No añadir motivos claniles, pinturas faciales, flora ornamental o ritos sin fuente; no bordes exteriores de cartón."
+  ],
+  "continuity_rules": [
+    "Vestuario verde para hermana; ocre rojizo para hija, nunca intercambiarlos.",
+    "Hermano no se transforma; padre no reaparece como héroe ni víctima.",
+    "Mareiwa agencia sin forma visual en ambos episodios; no ocultar diferencia del snapshot.",
+    "Revisar b1a, b4b y b8b como anclas y todos los originales contra contrato material idéntico."
+  ],
+  "narrative": {
+    "snapshot": "content/mitos-visuales/production/wayuu-2026-09-05/narratives/el-incesto.json",
+    "content_sha256": "9491938e8823d014380f75ac41188ca4ff644735a7d9dd41e147bbcf41ff9ef0",
+    "source_url": "https://publicaciones.icanh.gov.co/index.php/picanh/catalog/download/243/266/1579?inline=1",
+    "source_locator": "Chaves, sección III, pp.311–312, PDF índices7–8, extracción líneas234–250.",
+    "source_read_at": "2026-09-07",
+    "nature": "Adaptación audiovisual de la fuente primaria contrastada con snapshot público; discrepancias explícitas en INVESTIGACION.md.",
+    "chosen_variant": "Chaves III, dos episodios distintos. No usar huida conjunta ni doble petrificación del snapshot. Suicidio elidido visualmente y sin método en VO. Cierre crítico editorial propio.",
+    "visual_license": "Casting adulto sin afirmar edades históricas; pliegues verde/ocre y casas son decisiones de puesta en escena, no hechos o símbolos tradicionales certificados.",
+    "events": [
+      {
+        "id": "e1",
+        "provenance": "historical_core",
+        "action": "Hermana embarazada de su hermano; angustia.",
+        "source": "Chaves III pp.311–312; snapshot Mito 1–2 como contraste.",
+        "required": true
+      },
+      {
+        "id": "e2",
+        "provenance": "historical_core",
+        "action": "Hermana asociada al mar y convertida en piedra por Mareiwa; elidir autolesión y método.",
+        "source": "Chaves III p.312, primer episodio.",
+        "required": true
+      },
+      {
+        "id": "e3",
+        "provenance": "published_editorial_expansion",
+        "action": "Reconocer el silencio sobre el destino del hermano sin inventar una petrificación conjunta.",
+        "source": "Lectura crítica nueva del contraste Chaves III / snapshot; compatible con pregunta editorial por responsabilidad.",
+        "required": true
+      },
+      {
+        "id": "e4",
+        "provenance": "historical_core",
+        "action": "Segundo episodio: embarazo de hija por padre, relación de poder desigual.",
+        "source": "Chaves III p.312; lectura de poder del snapshot Historia.",
+        "required": true
+      },
+      {
+        "id": "e5",
+        "provenance": "historical_core",
+        "action": "Señalamiento social y muerte por suicidio de la hija, sin método visual o narrado.",
+        "source": "Chaves III p.312, segundo episodio.",
+        "required": true
+      },
+      {
+        "id": "e6",
+        "provenance": "historical_core",
+        "action": "Mareiwa transforma a la hija en cerro Katetamana; imagen de territorio no anatómico.",
+        "source": "Chaves III p.312, segundo episodio; figuración corporal omitida deliberadamente.",
+        "required": true
+      },
+      {
+        "id": "e7",
+        "provenance": "published_editorial_expansion",
+        "action": "Cierre por responsabilidad y cuidado, sin repartir culpa por igual ni presentar castigo como verdad total.",
+        "source": "Snapshot Mito, Historia y Lección; adaptación editorial declarada.",
+        "required": true
+      }
+    ]
+  },
+  "research_status": "primary_passage_rechecked_public_snapshot_divergence_documented_not_publication_revision",
+  "source_verified_live": {
+    "date": "2026-09-07",
+    "method": "SELECT slug,content FROM myths WHERE slug=$1 y SHA256; lectura sin escritura",
+    "matches": true,
+    "sha256": "9491938e8823d014380f75ac41188ca4ff644735a7d9dd41e147bbcf41ff9ef0"
+  },
+  "duration": {
+    "target_seconds": 128,
+    "measured": false,
+    "voice_words": 217
+  },
+  "story_thesis": "El territorio guarda memoria, pero no puede responder por quienes debían cuidar ni igualar relaciones de poder distintas.",
+  "inventory": [
+    {
+      "id": "hermana",
+      "type": "person",
+      "desc": "Mujer joven representada adulta por decisión de casting, no edad histórica certificada. Silueta casi plana, manta Wayúu cerrada verde petróleo de cuello sencillo hasta tobillos; sombrero womu de hoja beige, cabello negro liso y waireñas. Sin detalles de anatomía ni pintura facial no documentada.",
+      "model_ids": [
+        "hermana_litoral__identity_sheet",
+        "hermana_litoral__state_sheet"
+      ]
+    },
+    {
+      "id": "hermano",
+      "type": "person",
+      "desc": "Hombre joven de silueta plana; camisa cruda de manga larga, wayuco azul oscuro de panel estrecho según Biblia, faja ocre, womu beige y waireñas. Sin contacto romántico ni petrificación inventada.",
+      "model_ids": [
+        "hermano_litoral__identity_sheet",
+        "hermano_litoral__state_sheet"
+      ]
+    },
+    {
+      "id": "hija",
+      "type": "person",
+      "desc": "Hija de Katetamana representada adulta por casting editorial sin afirmar edad en fuente; manta cerrada ocre rojiza hasta tobillos, interior cuello gris oscuro, trenza negra y waireñas. Cuerpo casi plano con rostro de contorno; sin maquillaje o símbolos agregados.",
+      "model_ids": [
+        "hija_katetamana__identity_sheet",
+        "hija_katetamana__state_sheet"
+      ]
+    },
+    {
+      "id": "padre",
+      "type": "person",
+      "desc": "Hombre mayor en silueta plana, camisa oscura manga larga, wayuco beige estrecho, faja discreta, sombrero oscuro y waireñas según ficha. Sin contacto físico, gesto sexual, abrazo ni glorificación.",
+      "model_ids": [
+        "padre_katetamana__identity_sheet"
+      ]
+    },
+    {
+      "id": "costa",
+      "type": "place",
+      "desc": "Litoral editorial guajiro: suelo en grandes recortes ocres, mar de bandas azul profundo separadas por aire; roca baja estratificada gris. Veta verde únicamente después de la transformación. No precisión cartográfica, arena granular, vegetación inventada ni petrificación del hermano.",
+      "model_ids": []
+    },
+    {
+      "id": "cerro",
+      "type": "place",
+      "desc": "Katetamana interpretado como relieve no anatómico de hojas grises estratificadas con veta ocre rojiza; sin asignar coordenadas ni contorno humano. La veta es metáfora editorial de memoria, no topónimo o símbolo explicado.",
+      "model_ids": [
+        "cerro_katetamana__spatial_model"
+      ]
+    },
+    {
+      "id": "casa",
+      "type": "place",
+      "desc": "Ranchería editorial de alero sencillo y postes planos de papel, patio abierto de hojas amplias; sin base exterior. Primera casa costera; segunda tierra adentro. Sin puertas cerradas, cárcel o utilería ritual. Modelo de puesta en escena provisional, no arquitectura reconstruida arqueológicamente.",
+      "model_ids": []
+    },
+    {
+      "id": "vecinos",
+      "type": "supporting_people",
+      "desc": "Dos personas adultas vecinas en siluetas planas pequeñas: una manta cerrada azul gris y una camisa cruda con prendas completas sencillas; waireñas. Sin rasgos claniles ni gestos agresivos exagerados; representan el señalamiento registrado, no toda la comunidad.",
+      "model_ids": []
+    },
+    {
+      "id": "mareiwa",
+      "type": "unseen_agent",
+      "desc": "Agencia narrativa de la transformación, sin figura humana, manos gigantes, ojos en el cielo, rayos ni presencia corporal inventada.",
+      "model_ids": []
+    }
+  ],
+  "canonical_models": [
+    {
+      "model_id": "hermana_litoral__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-12-el-incesto-medium-corrections-01/hermana_litoral__identity_sheet--canon.jpeg",
+      "sha256": "97142510cb983ba1e7c605bed4ce5ef112195f75dd081aecd5276ec37dc948f4",
+      "qa_status": "PASS_AFTER_CORRECTION_01"
+    },
+    {
+      "model_id": "hermana_litoral__state_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-12-el-incesto-medium-corrections-02/hermana_litoral__state_sheet--estados.jpeg",
+      "sha256": "97d74a23f307b0997982bb56e25b7cd6f30a36bbac5e8c6bfc0d5b325fb70bda",
+      "qa_status": "PASS_AFTER_CORRECTION_02"
+    },
+    {
+      "model_id": "hermano_litoral__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-12-el-incesto-medium-corrections-01/hermano_litoral__identity_sheet--canon.jpeg",
+      "sha256": "ee22fa0e79489cee991d0b7d13baeb315d165e0dc743339eba35ee7c50ccbdc9",
+      "qa_status": "PASS_AFTER_CORRECTION_01"
+    },
+    {
+      "model_id": "hermano_litoral__state_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-12-el-incesto-medium-corrections-02/hermano_litoral__state_sheet--estados.jpeg",
+      "sha256": "a0ca0fbfe09e9b8678c81dd231a8bcf47a4cdd3033a12390de1f6b3429d4cc7c",
+      "qa_status": "PASS_AFTER_CORRECTION_02"
+    },
+    {
+      "model_id": "padre_katetamana__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-12-el-incesto-medium-corrections-01/padre_katetamana__identity_sheet--canon.jpeg",
+      "sha256": "85f7148cf393ca6e7de7aa3a720f3c5b951f930064fa9a56743939a804ed9868",
+      "qa_status": "PASS_AFTER_CORRECTION_01"
+    },
+    {
+      "model_id": "hija_katetamana__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-12-el-incesto-medium-corrections-01/hija_katetamana__identity_sheet--canon.jpeg",
+      "sha256": "9ff524860c5d45c628a6713732009c45e556aaeca1d0512cf2ab3159710fe807",
+      "qa_status": "PASS_AFTER_CORRECTION_01"
+    },
+    {
+      "model_id": "hija_katetamana__state_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-12-el-incesto-medium/hija_katetamana__state_sheet--estados.jpeg",
+      "sha256": "27b0fd3df630174c57e1fdb90e0eb9507dee18112d1ea0ded21d5f43ab913d7b",
+      "qa_status": "PASS"
+    },
+    {
+      "model_id": "cerro_katetamana__spatial_model",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-12-el-incesto-medium/cerro_katetamana__spatial_model--canon.jpeg",
+      "sha256": "118b88a4076fb674f751a3de9360fa6902bf2ada7fb7d40d4597de51a7c9ed40",
+      "qa_status": "PASS"
+    }
+  ],
+  "reference_review": {
+    "date": "2026-09-07",
+    "method": "Inspección de tres originales del tríptico y hoja de contacto de ocho fichas de Biblia; fichas no usadas como evidencia cultural ni cargadas al proveedor.",
+    "sources": [
+      {
+        "path": "output/imagegen/wayuu/triptychs/wayuu-incesto-triptych-03-entrada/entrada.jpeg",
+        "sha256": "8eb3abbb06ec9763a0d19d6d7f5e8cd240460ded54de956c99edd98807510b50",
+        "role": "same_myth_direction_reference",
+        "reviewed": true
+      },
+      {
+        "path": "output/imagegen/wayuu/triptychs/wayuu-incesto-triptych-01/acto.jpeg",
+        "sha256": "71db9e682000c54055fa5a82abd1e71f911fcba9eb7d79e4cae76279b90619c7",
+        "role": "same_myth_direction_reference",
+        "reviewed": true
+      },
+      {
+        "path": "output/imagegen/wayuu/triptychs/wayuu-incesto-triptych-01/huella.jpeg",
+        "sha256": "d0e3ec918225716bea1bb24401a677260a30bb1356db2c012c1a8bcc7e0566ff",
+        "role": "same_myth_direction_reference",
+        "reviewed": true
+      }
+    ],
+    "decisions": [
+      "Retener paleta verde/ocre diferenciada y magia de pliegue dentro de estrato.",
+      "Aplanar rostros, suelo y vegetación de Biblia; no copiar su modelado realista.",
+      "No copiar textura mineral fotográfica de huella; todos los estratos son hojas visibles.",
+      "Katetamana no anatómico; no repetir figuras suspendidas descartadas previamente."
+    ]
+  },
+  "blocks": [
+    {
+      "id": "b1",
+      "time_seconds": [
+        0,
+        16
+      ],
+      "voice_over": "Dos hermanos vivían junto al mar. Cuando se supo que ella estaba embarazada de él, el miedo ocupó el espacio que debía ofrecerle amparo.",
+      "word_count": 24,
+      "voice_provenance": "Adaptación de Chaves III con elipsis no gráfica; lectura crítica distinguida en matriz.",
+      "timing_status": "estimated_pending_recorded_voice",
+      "delivery": "Español sobrio, sin voz acusatoria ni imitación de acento; pausa al cambio de episodio.",
+      "event_ids": [
+        "e1"
+      ],
+      "keyframes": [
+        {
+          "id": "b1a",
+          "title": "La casa y la distancia",
+          "time_seconds": [
+            0,
+            8
+          ],
+          "visual": "La hermana de manta verde está en el umbral abierto de una ranchería costera. Su hermano permanece muy lejos, en el extremo opuesto del patio. Ambos vestidos, sin tocarse ni miradas románticas. La construcción atraviesa varias distancias; el mar se entrevé entre dos postes planos.",
+          "entity_ids": [
+            "hermana",
+            "hermano",
+            "casa",
+            "costa"
+          ],
+          "event_ids": [
+            "e1"
+          ],
+          "angle": "general ambiental lateral",
+          "depth_planes": [
+            "poste plano cercano",
+            "patio de hojas con dos figuras separadas",
+            "mar de tiras tras la casa"
+          ],
+          "shot_scale": "general ambiental lateral",
+          "continuity_from": null,
+          "transition_to_next": "Corte por relación de acción, color o ausencia; no morph automático.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Desplazamiento lento propuesto; requiere elección de técnica posterior.",
+            "allowed": "Movimiento leve de cámara, conservar siluetas y separación material.",
+            "forbidden": "No animar autolesión, caídas, cuerdas, ahogamiento, sexualidad, cuerpos rotos, morph humano a cerro o figuras nuevas. No afirmar que JPEG contiene capas.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "produce_now": true,
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "b1b",
+          "title": "El umbral",
+          "time_seconds": [
+            8,
+            16
+          ],
+          "visual": "La hermana está sola sentada junto al umbral, cuerpo entero pequeño y manos en el regazo, gesto contenido. Manta cerrada holgada sin subrayar anatomía. Sombras de aleros recortados atraviesan las hojas del patio, pero el paso permanece abierto. Nada de jaula ni prisión.",
+          "entity_ids": [
+            "hermana",
+            "casa",
+            "costa"
+          ],
+          "event_ids": [
+            "e1"
+          ],
+          "angle": "general oblicuo a la altura del patio",
+          "depth_planes": [
+            "borde de alero en papel",
+            "mujer y umbral",
+            "patio abierto y horizonte marino"
+          ],
+          "shot_scale": "general oblicuo a la altura del patio",
+          "continuity_from": "b1a",
+          "transition_to_next": "Corte por relación de acción, color o ausencia; no morph automático.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Desplazamiento lento propuesto; requiere elección de técnica posterior.",
+            "allowed": "Movimiento leve de cámara, conservar siluetas y separación material.",
+            "forbidden": "No animar autolesión, caídas, cuerdas, ahogamiento, sexualidad, cuerpos rotos, morph humano a cerro o figuras nuevas. No afirmar que JPEG contiene capas.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "produce_now": true,
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "b2",
+      "time_seconds": [
+        16,
+        32
+      ],
+      "voice_over": "La historia la lleva hasta el agua. Allí, Mareiwa detiene su movimiento: la mujer se vuelve piedra. El mar sigue moviéndose alrededor de su presencia inmóvil.",
+      "word_count": 26,
+      "voice_provenance": "Adaptación de Chaves III con elipsis no gráfica; lectura crítica distinguida en matriz.",
+      "timing_status": "estimated_pending_recorded_voice",
+      "delivery": "Español sobrio, sin voz acusatoria ni imitación de acento; pausa al cambio de episodio.",
+      "event_ids": [
+        "e2"
+      ],
+      "keyframes": [
+        {
+          "id": "b2a",
+          "title": "La materia cambia",
+          "time_seconds": [
+            16,
+            24
+          ],
+          "visual": "La hermana se mantiene de pie en tierra firme, lejos del borde del agua. Desde la parte trasera inferior de su manta verde sale una única hoja continua que entra en los estratos de una roca baja adyacente. Unión material inequívoca; pies sobre suelo seco, nada de caída, inmersión o ataduras. Mareiwa sin cuerpo visible.",
+          "entity_ids": [
+            "hermana",
+            "costa",
+            "mareiwa"
+          ],
+          "event_ids": [
+            "e2"
+          ],
+          "angle": "general amplio tres cuartos",
+          "depth_planes": [
+            "hojas ocres amplias del suelo",
+            "figura verde conectada a estrato gris",
+            "bandas marinas azul profundo"
+          ],
+          "shot_scale": "general amplio tres cuartos",
+          "continuity_from": "b1b",
+          "transition_to_next": "Corte por relación de acción, color o ausencia; no morph automático.",
+          "scene_role": "visible_magic",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "manta verde y roca costera",
+            "impossible_behavior": "una sola hoja de la manta entra continuamente en el estrato mineral",
+            "narrative_effect": "mostrar transformación sin daño corporal ni inmersión",
+            "agency": "Mareiwa según episodio; la mujer no lanza poderes",
+            "physical_translation": "hoja verde unida entre ropa y estrato gris, con aire y sombra",
+            "visible_test": "se puede seguir una única pieza entre prenda y roca",
+            "event_ids": [
+              "e2"
+            ],
+            "provenance": "editorial_metaphor",
+            "temporal_role": "present"
+          },
+          "motion_contract": {
+            "camera": "Desplazamiento lento propuesto; requiere elección de técnica posterior.",
+            "allowed": "Movimiento leve de cámara, conservar siluetas y separación material.",
+            "forbidden": "No animar autolesión, caídas, cuerdas, ahogamiento, sexualidad, cuerpos rotos, morph humano a cerro o figuras nuevas. No afirmar que JPEG contiene capas.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "produce_now": true,
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "b2b",
+          "title": "Lo que permanece",
+          "time_seconds": [
+            24,
+            32
+          ],
+          "visual": "Ya no hay personas: una roca baja de estratos grises guarda un pliegue verde curvado entre sus hojas. El mar de cintas recortadas la rodea a distancia, sin oleaje realista. No silueta humana ni cuerpo atrapado; forma enteramente no anatómica. El verde permanece vivo dentro del estrato rígido.",
+          "entity_ids": [
+            "costa",
+            "mareiwa"
+          ],
+          "event_ids": [
+            "e2"
+          ],
+          "angle": "general a baja altura mirando a través de las tiras",
+          "depth_planes": [
+            "una tira marina cercana elevada",
+            "roca gris con pliegue verde",
+            "mar y nubes recortadas"
+          ],
+          "shot_scale": "general a baja altura mirando a través de las tiras",
+          "continuity_from": "b2a",
+          "transition_to_next": "Corte por relación de acción, color o ausencia; no morph automático.",
+          "scene_role": "visible_magic",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "roca del litoral",
+            "impossible_behavior": "un pliegue verde flexible permanece entre estratos rígidos",
+            "narrative_effect": "memoria material de la hermana, no del hermano",
+            "agency": "consecuencia de Mareiwa; licencia plástica del pliegue",
+            "physical_translation": "estratos grises recortados y una hoja verde curvada insertada",
+            "visible_test": "blandura visible dentro de roca, no pintura verde superficial",
+            "event_ids": [
+              "e2"
+            ],
+            "provenance": "editorial_metaphor",
+            "temporal_role": "memory"
+          },
+          "motion_contract": {
+            "camera": "Desplazamiento lento propuesto; requiere elección de técnica posterior.",
+            "allowed": "Movimiento leve de cámara, conservar siluetas y separación material.",
+            "forbidden": "No animar autolesión, caídas, cuerdas, ahogamiento, sexualidad, cuerpos rotos, morph humano a cerro o figuras nuevas. No afirmar que JPEG contiene capas.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "produce_now": true,
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "b3",
+      "time_seconds": [
+        32,
+        48
+      ],
+      "voice_over": "No sabemos qué ocurrió después con el hermano. La memoria se queda con ella, fijada al litoral. Ese silencio también forma parte de lo que escuchamos.",
+      "word_count": 26,
+      "voice_provenance": "Lectura editorial propia; no cita ni doctrina comunitaria.",
+      "timing_status": "estimated_pending_recorded_voice",
+      "delivery": "Español sobrio, sin voz acusatoria ni imitación de acento; pausa al cambio de episodio.",
+      "event_ids": [
+        "e3"
+      ],
+      "keyframes": [
+        {
+          "id": "b3a",
+          "title": "La costa sin respuesta",
+          "time_seconds": [
+            32,
+            40
+          ],
+          "visual": "Costa amplia vacía; una roca baja conserva la veta verde, ahora sin deformación nueva. Las tiras de mar se escalonan al fondo; tierra de hojas ocres ocupa varias distancias sin arena granular. No otra piedra humana, no hermano petrificado, no figura añadida.",
+          "entity_ids": [
+            "costa"
+          ],
+          "event_ids": [
+            "e3"
+          ],
+          "angle": "gran general elevado con diagonal litoral",
+          "depth_planes": [
+            "recortes de suelo ocre",
+            "roca baja de veta verde",
+            "bandas de mar y horizonte"
+          ],
+          "shot_scale": "gran general elevado con diagonal litoral",
+          "continuity_from": "b2b",
+          "transition_to_next": "Corte por relación de acción, color o ausencia; no morph automático.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Desplazamiento lento propuesto; requiere elección de técnica posterior.",
+            "allowed": "Movimiento leve de cámara, conservar siluetas y separación material.",
+            "forbidden": "No animar autolesión, caídas, cuerdas, ahogamiento, sexualidad, cuerpos rotos, morph humano a cerro o figuras nuevas. No afirmar que JPEG contiene capas.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "produce_now": true,
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "b3b",
+          "title": "La casa después",
+          "time_seconds": [
+            40,
+            48
+          ],
+          "visual": "Regreso a la misma ranchería vacía y el mismo umbral abierto del inicio. Sombras cortadas cruzan el patio; no ropa abandonada, objetos fúnebres o cuerpo. La luz es más lateral y cálida. Es una elipsis editorial, no afirmación de que todos abandonaron la vivienda.",
+          "entity_ids": [
+            "casa",
+            "costa"
+          ],
+          "event_ids": [
+            "e3"
+          ],
+          "angle": "general desde el exterior oblicuo",
+          "depth_planes": [
+            "hojas y poste plano cercanos",
+            "umbral vacío",
+            "patio y mar distante"
+          ],
+          "shot_scale": "general desde el exterior oblicuo",
+          "continuity_from": "b3a",
+          "transition_to_next": "Corte claro a otra vivienda: separar los episodios.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Desplazamiento lento propuesto; requiere elección de técnica posterior.",
+            "allowed": "Movimiento leve de cámara, conservar siluetas y separación material.",
+            "forbidden": "No animar autolesión, caídas, cuerdas, ahogamiento, sexualidad, cuerpos rotos, morph humano a cerro o figuras nuevas. No afirmar que JPEG contiene capas.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "produce_now": true,
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "b4",
+      "time_seconds": [
+        48,
+        64
+      ],
+      "voice_over": "Otra historia habla de un padre y su hija. Ella queda embarazada. Él tenía una autoridad que ella no compartía; no podemos repartir la responsabilidad como si fueran iguales.",
+      "word_count": 29,
+      "voice_provenance": "Adaptación de Chaves III con elipsis no gráfica; lectura crítica distinguida en matriz.",
+      "timing_status": "estimated_pending_recorded_voice",
+      "delivery": "Español sobrio, sin voz acusatoria ni imitación de acento; pausa al cambio de episodio.",
+      "event_ids": [
+        "e4"
+      ],
+      "keyframes": [
+        {
+          "id": "b4a",
+          "title": "Otra casa, otra relación",
+          "time_seconds": [
+            48,
+            56
+          ],
+          "visual": "Segunda ranchería tierra adentro, distinta de la costa. La hija de manta ocre rojiza y trenza negra está sola en el patio, figura completa pequeña y porte digno. Alero de papel oblicuo organiza el espacio; no mar, no roca verde, no arma, embarazo no enfatizado visualmente.",
+          "entity_ids": [
+            "hija",
+            "casa"
+          ],
+          "event_ids": [
+            "e4"
+          ],
+          "angle": "general diagonal desde el patio",
+          "depth_planes": [
+            "borde de alero en hojas",
+            "joven de manta ocre",
+            "llanura seca de hojas grises"
+          ],
+          "shot_scale": "general diagonal desde el patio",
+          "continuity_from": "b3b",
+          "transition_to_next": "Corte por relación de acción, color o ausencia; no morph automático.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Desplazamiento lento propuesto; requiere elección de técnica posterior.",
+            "allowed": "Movimiento leve de cámara, conservar siluetas y separación material.",
+            "forbidden": "No animar autolesión, caídas, cuerdas, ahogamiento, sexualidad, cuerpos rotos, morph humano a cerro o figuras nuevas. No afirmar que JPEG contiene capas.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "produce_now": true,
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "b4b",
+          "title": "La autoridad no es igualdad",
+          "time_seconds": [
+            56,
+            64
+          ],
+          "visual": "Plano abierto de la segunda casa. Padre mayor vestido de oscuro bajo el alero al fondo izquierdo; hija de ocre al otro extremo del patio, más cerca de cámara pero pequeña en el paisaje. No contacto ni gesto sexual ni agresión representada. La diferencia de posición y espacio muestra distancia, no intimidad.",
+          "entity_ids": [
+            "padre",
+            "hija",
+            "casa"
+          ],
+          "event_ids": [
+            "e4"
+          ],
+          "angle": "general frontal con amplios intervalos laterales",
+          "depth_planes": [
+            "suelo de recortes grises",
+            "hija a un lado del patio",
+            "padre y alero en plano distante"
+          ],
+          "shot_scale": "general frontal con amplios intervalos laterales",
+          "continuity_from": "b4a",
+          "transition_to_next": "Corte por relación de acción, color o ausencia; no morph automático.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Desplazamiento lento propuesto; requiere elección de técnica posterior.",
+            "allowed": "Movimiento leve de cámara, conservar siluetas y separación material.",
+            "forbidden": "No animar autolesión, caídas, cuerdas, ahogamiento, sexualidad, cuerpos rotos, morph humano a cerro o figuras nuevas. No afirmar que JPEG contiene capas.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "produce_now": true,
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "b5",
+      "time_seconds": [
+        64,
+        80
+      ],
+      "voice_over": "Las voces a su alrededor la señalan. La joven no encuentra protección. El relato cuenta su muerte por suicidio; aquí no la convertimos en espectáculo ni en destino inevitable.",
+      "word_count": 29,
+      "voice_provenance": "Adaptación de Chaves III con elipsis no gráfica; lectura crítica distinguida en matriz.",
+      "timing_status": "estimated_pending_recorded_voice",
+      "delivery": "Español sobrio, sin voz acusatoria ni imitación de acento; pausa al cambio de episodio.",
+      "event_ids": [
+        "e5"
+      ],
+      "keyframes": [
+        {
+          "id": "b5a",
+          "title": "Las miradas",
+          "time_seconds": [
+            64,
+            72
+          ],
+          "visual": "La hija camina despacio por suelo firme y llano frente a la casa, nunca cerca de altura. Dos personas adultas vecinas muy distantes se vuelven hacia ella desde otro plano, sin acercarse ni acosarla físicamente. Sus posturas contenidas y la separación expresan presión social. No símbolos flotantes ni palabras.",
+          "entity_ids": [
+            "hija",
+            "vecinos",
+            "casa"
+          ],
+          "event_ids": [
+            "e5"
+          ],
+          "angle": "general lateral a distancia",
+          "depth_planes": [
+            "hojas de suelo en sombra",
+            "hija caminando erguida",
+            "dos vecinos y alero distante"
+          ],
+          "shot_scale": "general lateral a distancia",
+          "continuity_from": "b4b",
+          "transition_to_next": "Corte por relación de acción, color o ausencia; no morph automático.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Desplazamiento lento propuesto; requiere elección de técnica posterior.",
+            "allowed": "Movimiento leve de cámara, conservar siluetas y separación material.",
+            "forbidden": "No animar autolesión, caídas, cuerdas, ahogamiento, sexualidad, cuerpos rotos, morph humano a cerro o figuras nuevas. No afirmar que JPEG contiene capas.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "produce_now": true,
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "b5b",
+          "title": "La ausencia",
+          "time_seconds": [
+            72,
+            80
+          ],
+          "visual": "Plano fijo amplio del patio completamente vacío de la segunda casa. La sombra del alero ocupa una franja, dejando un umbral iluminado y abierto. No personas, prendas colgadas, cuerdas, cuerpo ni instrumentos. Elipsis de la muerte; no reconstrucción, nada suspendido con forma humana.",
+          "entity_ids": [
+            "casa"
+          ],
+          "event_ids": [
+            "e5"
+          ],
+          "angle": "general frontal ligeramente lateral",
+          "depth_planes": [
+            "hojas grises cercanas",
+            "patio vacío y sombra",
+            "umbral abierto y cielo de papel"
+          ],
+          "shot_scale": "general frontal ligeramente lateral",
+          "continuity_from": "b5a",
+          "transition_to_next": "Corte por relación de acción, color o ausencia; no morph automático.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Desplazamiento lento propuesto; requiere elección de técnica posterior.",
+            "allowed": "Movimiento leve de cámara, conservar siluetas y separación material.",
+            "forbidden": "No animar autolesión, caídas, cuerdas, ahogamiento, sexualidad, cuerpos rotos, morph humano a cerro o figuras nuevas. No afirmar que JPEG contiene capas.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "produce_now": true,
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "b6",
+      "time_seconds": [
+        80,
+        96
+      ],
+      "voice_over": "Su memoria queda ligada a Katetamana. La narración atribuye a Mareiwa la transformación en cerro. Nosotros conservamos el nombre y la huella, sin darle al relieve la forma de un cuerpo.",
+      "word_count": 31,
+      "voice_provenance": "Adaptación de Chaves III con elipsis no gráfica; lectura crítica distinguida en matriz.",
+      "timing_status": "estimated_pending_recorded_voice",
+      "delivery": "Español sobrio, sin voz acusatoria ni imitación de acento; pausa al cambio de episodio.",
+      "event_ids": [
+        "e6"
+      ],
+      "keyframes": [
+        {
+          "id": "b6a",
+          "title": "Katetamana",
+          "time_seconds": [
+            80,
+            88
+          ],
+          "visual": "Cerro no anatómico enteramente de estratos finos de papel gris, sin personas ni perfil corporal. Una veta ocre rojiza del propio cerro se abre en un pliegue blando de papel, fijo en ambos extremos dentro de la montaña. Imposibilidad de una tela blanda que persiste en piedra; ningún vestido colgado ni formas humanas.",
+          "entity_ids": [
+            "cerro",
+            "mareiwa"
+          ],
+          "event_ids": [
+            "e6"
+          ],
+          "angle": "gran general oblicuo",
+          "depth_planes": [
+            "hojas grises de terreno cercano",
+            "estratos y pliegue ocre del cerro",
+            "cielo azulado en plano lejano"
+          ],
+          "shot_scale": "gran general oblicuo",
+          "continuity_from": "b5b",
+          "transition_to_next": "Corte por relación de acción, color o ausencia; no morph automático.",
+          "scene_role": "visible_magic",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "estratos del cerro",
+            "impossible_behavior": "veta ocre se pliega como hoja blanda dentro del relieve rígido",
+            "narrative_effect": "memoria de la hija sin reproducir el cuerpo o la muerte",
+            "agency": "Mareiwa pertenece a la fuente; pliegue es interpretación editorial",
+            "physical_translation": "hoja ocre unida en ambos extremos a estratos, sombras por aire",
+            "visible_test": "pliegue integrado al cerro, no vestido separado o colgado",
+            "event_ids": [
+              "e6"
+            ],
+            "provenance": "editorial_metaphor",
+            "temporal_role": "memory"
+          },
+          "motion_contract": {
+            "camera": "Desplazamiento lento propuesto; requiere elección de técnica posterior.",
+            "allowed": "Movimiento leve de cámara, conservar siluetas y separación material.",
+            "forbidden": "No animar autolesión, caídas, cuerdas, ahogamiento, sexualidad, cuerpos rotos, morph humano a cerro o figuras nuevas. No afirmar que JPEG contiene capas.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "produce_now": true,
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "b6b",
+          "title": "El nombre en el paisaje",
+          "time_seconds": [
+            88,
+            96
+          ],
+          "visual": "Vista amplia lateral de Katetamana, la misma veta ocre alojada entre estratos, ahora quieta. Planos de suelo gris y ocre se intercalan en diagonales. No anatomía, figura, texto, cementerio, subida humana ni escenificación de muerte. La montaña se lee como territorio, no monumento triunfal.",
+          "entity_ids": [
+            "cerro"
+          ],
+          "event_ids": [
+            "e6"
+          ],
+          "angle": "gran general lateral bajo",
+          "depth_planes": [
+            "hojas anchas inclinadas",
+            "cerro estratificado con veta ocre",
+            "nubes de papel separadas"
+          ],
+          "shot_scale": "gran general lateral bajo",
+          "continuity_from": "b6a",
+          "transition_to_next": "Corte por relación de acción, color o ausencia; no morph automático.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Desplazamiento lento propuesto; requiere elección de técnica posterior.",
+            "allowed": "Movimiento leve de cámara, conservar siluetas y separación material.",
+            "forbidden": "No animar autolesión, caídas, cuerdas, ahogamiento, sexualidad, cuerpos rotos, morph humano a cerro o figuras nuevas. No afirmar que JPEG contiene capas.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "produce_now": true,
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "b7",
+      "time_seconds": [
+        96,
+        112
+      ],
+      "voice_over": "Mar y cerro guardan historias diferentes. Llamarlas solamente castigo deja una pregunta sin responder: ¿quién debía cuidar de ellas, y dónde estaba cuando lo necesitaron?",
+      "word_count": 25,
+      "voice_provenance": "Lectura editorial propia; no cita ni doctrina comunitaria.",
+      "timing_status": "estimated_pending_recorded_voice",
+      "delivery": "Español sobrio, sin voz acusatoria ni imitación de acento; pausa al cambio de episodio.",
+      "event_ids": [
+        "e7"
+      ],
+      "keyframes": [
+        {
+          "id": "b7a",
+          "title": "Memoria verde",
+          "time_seconds": [
+            96,
+            104
+          ],
+          "visual": "Retorno visual a la roca litoral del primer episodio. El pliegue verde interno conserva una curvatura flexible mientras los estratos grises quedan inmóviles. Mar cercano azul oscuro, horizonte abierto. No cerro ocre ni segunda víctima en esta imagen: memoria específica de la hermana.",
+          "entity_ids": [
+            "costa"
+          ],
+          "event_ids": [
+            "e7"
+          ],
+          "angle": "general oblicuo con aire alrededor de roca y mar",
+          "depth_planes": [
+            "cinta azul marina cercana",
+            "roca y pliegue verde",
+            "costa distante de hojas ocres"
+          ],
+          "shot_scale": "general oblicuo con aire alrededor de roca y mar",
+          "continuity_from": "b6b",
+          "transition_to_next": "Corte por relación de acción, color o ausencia; no morph automático.",
+          "scene_role": "visible_magic",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "roca del litoral",
+            "impossible_behavior": "un pliegue verde flexible permanece entre estratos rígidos",
+            "narrative_effect": "memoria material de la hermana, no del hermano",
+            "agency": "consecuencia de Mareiwa; licencia plástica del pliegue",
+            "physical_translation": "estratos grises recortados y una hoja verde curvada insertada",
+            "visible_test": "blandura visible dentro de roca, no pintura verde superficial",
+            "event_ids": [
+              "e7"
+            ],
+            "provenance": "editorial_metaphor",
+            "temporal_role": "memory"
+          },
+          "motion_contract": {
+            "camera": "Desplazamiento lento propuesto; requiere elección de técnica posterior.",
+            "allowed": "Movimiento leve de cámara, conservar siluetas y separación material.",
+            "forbidden": "No animar autolesión, caídas, cuerdas, ahogamiento, sexualidad, cuerpos rotos, morph humano a cerro o figuras nuevas. No afirmar que JPEG contiene capas.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "produce_now": true,
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "b7b",
+          "title": "Memoria ocre",
+          "time_seconds": [
+            104,
+            112
+          ],
+          "visual": "Retorno a la veta ocre rojiza dentro del cerro del segundo episodio, plano ambiental con varias lomas de hojas superpuestas. La veta guarda un pliegue suave unido al relieve, no un cuerpo. No mar ni verde. Ambas historias se relacionan mediante el corte, no se fusionan en el mismo lugar.",
+          "entity_ids": [
+            "cerro"
+          ],
+          "event_ids": [
+            "e7"
+          ],
+          "angle": "general elevado en diagonal",
+          "depth_planes": [
+            "hojas grises de una loma cercana",
+            "pliegue ocre unido al cerro",
+            "otras lomas y cielo"
+          ],
+          "shot_scale": "general elevado en diagonal",
+          "continuity_from": "b7a",
+          "transition_to_next": "Corte por relación de acción, color o ausencia; no morph automático.",
+          "scene_role": "visible_magic",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "estratos del cerro",
+            "impossible_behavior": "veta ocre se pliega como hoja blanda dentro del relieve rígido",
+            "narrative_effect": "memoria de la hija sin reproducir el cuerpo o la muerte",
+            "agency": "Mareiwa pertenece a la fuente; pliegue es interpretación editorial",
+            "physical_translation": "hoja ocre unida en ambos extremos a estratos, sombras por aire",
+            "visible_test": "pliegue integrado al cerro, no vestido separado o colgado",
+            "event_ids": [
+              "e7"
+            ],
+            "provenance": "editorial_metaphor",
+            "temporal_role": "memory"
+          },
+          "motion_contract": {
+            "camera": "Desplazamiento lento propuesto; requiere elección de técnica posterior.",
+            "allowed": "Movimiento leve de cámara, conservar siluetas y separación material.",
+            "forbidden": "No animar autolesión, caídas, cuerdas, ahogamiento, sexualidad, cuerpos rotos, morph humano a cerro o figuras nuevas. No afirmar que JPEG contiene capas.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "produce_now": true,
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "b8",
+      "time_seconds": [
+        112,
+        128
+      ],
+      "voice_over": "La piedra puede guardar una ausencia. Escuchar exige algo más: reconocer el poder, preguntar por el cuidado y no dejar toda la carga sobre quien necesitaba protección.",
+      "word_count": 27,
+      "voice_provenance": "Lectura editorial propia; no cita ni doctrina comunitaria.",
+      "timing_status": "estimated_pending_recorded_voice",
+      "delivery": "Español sobrio, sin voz acusatoria ni imitación de acento; pausa al cambio de episodio.",
+      "event_ids": [
+        "e7"
+      ],
+      "keyframes": [
+        {
+          "id": "b8a",
+          "title": "Un paso que no se cierra",
+          "time_seconds": [
+            112,
+            120
+          ],
+          "visual": "Patio de la segunda casa, sin personas. Un umbral permanece abierto entre planos de sombra y luz cálida. Suelo hecho de grandes hojas visibles que conducen hacia la abertura. No puerta mágica, no resurrección ni personaje nuevo que resuelva lo que el relato dejó pendiente.",
+          "entity_ids": [
+            "casa"
+          ],
+          "event_ids": [
+            "e7"
+          ],
+          "angle": "general desde un lateral del patio",
+          "depth_planes": [
+            "hojas cercanas de suelo",
+            "umbral abierto y sombra de alero",
+            "franja de cielo cálido"
+          ],
+          "shot_scale": "general desde un lateral del patio",
+          "continuity_from": "b7b",
+          "transition_to_next": "Corte por relación de acción, color o ausencia; no morph automático.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Desplazamiento lento propuesto; requiere elección de técnica posterior.",
+            "allowed": "Movimiento leve de cámara, conservar siluetas y separación material.",
+            "forbidden": "No animar autolesión, caídas, cuerdas, ahogamiento, sexualidad, cuerpos rotos, morph humano a cerro o figuras nuevas. No afirmar que JPEG contiene capas.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "produce_now": true,
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "b8b",
+          "title": "El paisaje no responde por nosotros",
+          "time_seconds": [
+            120,
+            128
+          ],
+          "visual": "Cierre amplio en Katetamana no anatómico: veta ocre finísima entre grandes estratos de hojas grises y horizonte azul claro. La luz lateral revela aire entre todas las capas. No nueva transformación, cuerpo, tumba ni texto. La montaña permanece sin cerrar la pregunta editorial.",
+          "entity_ids": [
+            "cerro"
+          ],
+          "event_ids": [
+            "e7"
+          ],
+          "angle": "gran general desde baja altura distante",
+          "depth_planes": [
+            "hojas grises cortadas en primer plano",
+            "cerro con veta ocre discreta",
+            "cielo de papel azul claro"
+          ],
+          "shot_scale": "gran general desde baja altura distante",
+          "continuity_from": "b8a",
+          "transition_to_next": "Sostener y cerrar sin resolver artificialmente la pregunta.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Desplazamiento lento propuesto; requiere elección de técnica posterior.",
+            "allowed": "Movimiento leve de cámara, conservar siluetas y separación material.",
+            "forbidden": "No animar autolesión, caídas, cuerdas, ahogamiento, sexualidad, cuerpos rotos, morph humano a cerro o figuras nuevas. No afirmar que JPEG contiene capas.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "produce_now": true,
+          "qa_status": "not_generated"
+        }
+      ]
+    }
+  ],
+  "permissions": {
+    "triptych_changes": false,
+    "image_calls_this_stage": true,
+    "animation": false,
+    "audio": false,
+    "publication": false
+  },
+  "handoff": "Validar y congelar. Generar anclas b1a,b4b,b8b en medium mediante CLI oficial autorizado; inspeccionar originales antes del resto. No llamar imágenes a los prompts ni publicar corrección del relato."
+}

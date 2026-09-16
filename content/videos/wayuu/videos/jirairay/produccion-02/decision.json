@@ -1,0 +1,25 @@
+{
+  "schema": "wayuu-keyframe-correction/v1",
+  "slug": "jirairay",
+  "version": "produccion-02",
+  "source_batch": "output/imagegen/wayuu/keyframes/jirairay-produccion-resto-01",
+  "status": "generated_and_reviewed",
+  "preserve": ["b2a", "b3a", "b4a", "b4b", "b6a", "b7a", "b7b", "b8a", "b9a", "b9b"],
+  "correct": ["b1b", "b2b", "b5a", "b6b", "b10a"],
+  "decisions": {
+    "b1b": ["remove_unrequested_bowl", "exactly_three_relatives_and_patient", "empty_hands_and_empty_path"],
+    "b2b": ["remove_premature_wanuru", "exactly_one_chant_band", "bend_exactly_one_hanging_fibre"],
+    "b5a": ["separate_chant_from_wanuru", "bands_stop_before_charcoal_fold", "nothing_touches_patient"],
+    "b6b": ["exactly_one_reply_band", "exactly_four_bodyless_tabs", "indigo_plane_echoes_hammock_not_person"],
+    "b10a": ["remove_literal_human_silhouette", "archive_first_and_empty_space_second", "pareidolia_incomplete_from_irregular_rectangles"]
+  },
+  "generation": {
+    "model": "gpt-image-2",
+    "quality": "medium",
+    "size": "864x1536",
+    "output_format": "jpeg",
+    "mode": "text_only",
+    "input_images": []
+  },
+  "no_reference_uploads": true
+}

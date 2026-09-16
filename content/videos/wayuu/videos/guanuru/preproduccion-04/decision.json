@@ -1,0 +1,75 @@
+{
+  "schema": "wayuu-keyframe-correction-batch/v1",
+  "slug": "guanuru",
+  "version": "preproduccion-04",
+  "source_batch": "output/imagegen/wayuu/keyframes/guanuru-produccion-resto-01",
+  "status": "prepared_not_generated",
+  "correct": [
+    "b2b",
+    "b3b",
+    "b4a",
+    "b5a",
+    "b6b",
+    "b7a",
+    "b7b",
+    "b8a",
+    "b8b",
+    "b9a",
+    "b9b",
+    "b10a"
+  ],
+  "accepted_unchanged": [
+    "b1a",
+    "b1b",
+    "b2a",
+    "b3a",
+    "b4b",
+    "b5b",
+    "b6a",
+    "b10b"
+  ],
+  "qa_findings": {
+    "vegetation_contamination": [
+      "b2b",
+      "b3b",
+      "b4a",
+      "b5a",
+      "b6b",
+      "b7a",
+      "b7b",
+      "b8a",
+      "b8b",
+      "b9a",
+      "b9b",
+      "b10a"
+    ],
+    "star_dot_contamination": [
+      "b2b",
+      "b3b",
+      "b10a"
+    ],
+    "missing_piache": [
+      "b6b"
+    ],
+    "grave_and_food_relation": [
+      "b7b"
+    ],
+    "wrong_bovine_skull": [
+      "b8a",
+      "b8b",
+      "b9b"
+    ],
+    "unauthorized_fan": [
+      "b4a"
+    ]
+  },
+  "generation": {
+    "model": "gpt-image-2",
+    "quality": "medium",
+    "size": "864x1536",
+    "output_format": "jpeg",
+    "mode": "text_only",
+    "input_images": []
+  }
+}
+

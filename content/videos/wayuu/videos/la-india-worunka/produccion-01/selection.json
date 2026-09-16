@@ -1,0 +1,431 @@
+{
+  "schema": "wayuu-keyframe-selection/v1",
+  "slug": "la-india-worunka",
+  "title": "Worunka: la mujer que carga las explicaciones",
+  "status": "complete_pending_user_approval",
+  "quality": "medium",
+  "plan": "content/videos/wayuu/videos/la-india-worunka/preproduccion-01/plan.json",
+  "generation": {
+    "provider": "OpenAI API",
+    "model": "gpt-image-2",
+    "size": "864x1536",
+    "output_format": "jpeg",
+    "mode": "text_only",
+    "input_images": [],
+    "total_unique_generations": 28,
+    "selected_generations": 24,
+    "superseded_generations": 4,
+    "batches": [
+      {
+        "label": "anchors-01",
+        "count": 5,
+        "path": "output/imagegen/wayuu/keyframes/la-india-worunka-preproduccion-01-anchors-01"
+      },
+      {
+        "label": "corrections-01",
+        "count": 1,
+        "path": "output/imagegen/wayuu/keyframes/la-india-worunka-preproduccion-01-corrections-01"
+      },
+      {
+        "label": "remainder-01",
+        "count": 19,
+        "path": "output/imagegen/wayuu/keyframes/la-india-worunka-preproduccion-01-resto-01"
+      },
+      {
+        "label": "corrections-02",
+        "count": 3,
+        "path": "output/imagegen/wayuu/keyframes/la-india-worunka-preproduccion-01-corrections-02"
+      }
+    ]
+  },
+  "selected": [
+    {
+      "id": "b1a",
+      "version": "01",
+      "batch": "remainder-01",
+      "path": "output/imagegen/wayuu/keyframes/la-india-worunka-preproduccion-01-resto-01/b1a.jpeg",
+      "sha256": "2ed47b700b47b2df847497b603c9538a4abd947160ae7b9ffc4f32ef8c5e8d10",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "La Macuira contiene el descenso: original 864x1536 inspeccionado; fidelidad narrativa, conteos, vestuario y papercut V2 aprobados."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/la-india-worunka/preproduccion-01/prepared-01/prompts/b1a.txt",
+      "prompt_sha256": "310181cb542215887c00a105d27a90e1133d7fb6de672f62bee16018b33bffeb"
+    },
+    {
+      "id": "b1b",
+      "version": "02",
+      "batch": "corrections-02",
+      "path": "output/imagegen/wayuu/keyframes/la-india-worunka-preproduccion-01-corrections-02/b1b.jpeg",
+      "sha256": "ef3f874aa28e56ef328ec7384b4cc5799e9cb31bde8f2f2bdbcc7567e14b06f7",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "La montaña abre un cauce: original 864x1536 inspeccionado; fidelidad narrativa, conteos, vestuario y papercut V2 aprobados."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/la-india-worunka/preproduccion-01/prepared-01/prompts/b1b.txt",
+      "prompt_sha256": "3bf039234c14baffb1625f822daac8ee1de68f25a28ec226692a12e3ea8b2570",
+      "prompt_correction_file": "content/videos/wayuu/videos/la-india-worunka/preproduccion-01/corrections-02/b1b.override.txt"
+    },
+    {
+      "id": "b2a",
+      "version": "02",
+      "batch": "corrections-02",
+      "path": "output/imagegen/wayuu/keyframes/la-india-worunka-preproduccion-01-corrections-02/b2a.jpeg",
+      "sha256": "d9039d9674d846d7ece647daa97b2495b6c0abce48957ae7189f99ad33f4ec88",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "La dificultad queda fuera del cuerpo: original 864x1536 inspeccionado; fidelidad narrativa, conteos, vestuario y papercut V2 aprobados."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/la-india-worunka/preproduccion-01/prepared-01/prompts/b2a.txt",
+      "prompt_sha256": "c2a0a42d5475ec8f413848be6f3a53e43d71cddad178018c29c82e382cfbdf04",
+      "prompt_correction_file": "content/videos/wayuu/videos/la-india-worunka/preproduccion-01/corrections-02/b2a.override.txt"
+    },
+    {
+      "id": "b2b",
+      "version": "01",
+      "batch": "remainder-01",
+      "path": "output/imagegen/wayuu/keyframes/la-india-worunka-preproduccion-01-resto-01/b2b.jpeg",
+      "sha256": "53917c1eb8f29d8561d18ed5dc0db70d42cab511ed17c798ce300c64c802bc0d",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "Un obstáculo cerrado en el agua: original 864x1536 inspeccionado; fidelidad narrativa, conteos, vestuario y papercut V2 aprobados."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/la-india-worunka/preproduccion-01/prepared-01/prompts/b2b.txt",
+      "prompt_sha256": "af1754dd0476fc84558aa5c9dfbca539f33dfa46d9e9ce09cee11a057c33598e"
+    },
+    {
+      "id": "b3a",
+      "version": "01",
+      "batch": "remainder-01",
+      "path": "output/imagegen/wayuu/keyframes/la-india-worunka-preproduccion-01-resto-01/b3a.jpeg",
+      "sha256": "b86d74bc5ee37ed0c136ed8a94b6b489448e6eb7b3bad170afc0fd9a93bbeca6",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "Mareiwa llega al arroyo: original 864x1536 inspeccionado; fidelidad narrativa, conteos, vestuario y papercut V2 aprobados."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/la-india-worunka/preproduccion-01/prepared-01/prompts/b3a.txt",
+      "prompt_sha256": "00d1d7bc92a31f454047abddc8d07dc8a31426836a421b3b5206a073673e504e"
+    },
+    {
+      "id": "b3b",
+      "version": "01",
+      "batch": "anchors-01",
+      "path": "output/imagegen/wayuu/keyframes/la-india-worunka-preproduccion-01-anchors-01/b3b.jpeg",
+      "sha256": "498b287408ae27ae2180f071eb0f668dcc7529803ddd014466654916ef503673",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "La piedra abre el anillo: original 864x1536 inspeccionado; fidelidad narrativa, conteos, vestuario y papercut V2 aprobados."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/la-india-worunka/preproduccion-01/prepared-01/prompts/b3b.txt",
+      "prompt_sha256": "8eb3e0e4ad129c4da912cb1156ca16e5b6c9a94fc4474316de4129726239f0df"
+    },
+    {
+      "id": "b4a",
+      "version": "01",
+      "batch": "remainder-01",
+      "path": "output/imagegen/wayuu/keyframes/la-india-worunka-preproduccion-01-resto-01/b4a.jpeg",
+      "sha256": "3b02803c4f2a0a12da77e34f6354d627204d142e6d3d365ef38893ec331f4bc5",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "El rojo entra en el arroyo: original 864x1536 inspeccionado; fidelidad narrativa, conteos, vestuario y papercut V2 aprobados."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/la-india-worunka/preproduccion-01/prepared-01/prompts/b4a.txt",
+      "prompt_sha256": "b6e96dad196c9517f88d49b62f125545f878788585f7dbf2175deac34810bc2e"
+    },
+    {
+      "id": "b4b",
+      "version": "01",
+      "batch": "anchors-01",
+      "path": "output/imagegen/wayuu/keyframes/la-india-worunka-preproduccion-01-anchors-01/b4b.jpeg",
+      "sha256": "1395eba8db22cc907889b452cd2f201ffe9ea70f2cc07a863d63b1a9d6d77ee3",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "Tres aves reciben el color: original 864x1536 inspeccionado; fidelidad narrativa, conteos, vestuario y papercut V2 aprobados."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/la-india-worunka/preproduccion-01/prepared-01/prompts/b4b.txt",
+      "prompt_sha256": "3ddb9ed305ce8a39bf88e50bb6e19d542844743286d69455fa925d9e40e9ca2c"
+    },
+    {
+      "id": "b5a",
+      "version": "01",
+      "batch": "remainder-01",
+      "path": "output/imagegen/wayuu/keyframes/la-india-worunka-preproduccion-01-resto-01/b5a.jpeg",
+      "sha256": "95dd5ef3f001b0a7e1d5212c1e5322b3fcc9f455817788733671d53cb1d033d0",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "Dos apoyos esperan entre las figuras: original 864x1536 inspeccionado; fidelidad narrativa, conteos, vestuario y papercut V2 aprobados."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/la-india-worunka/preproduccion-01/prepared-01/prompts/b5a.txt",
+      "prompt_sha256": "26c7afe7a4d7ca6aa9f0118df5d04aa262e4ccacd74c15a31dc1fba77d90bd5e"
+    },
+    {
+      "id": "b5b",
+      "version": "01",
+      "batch": "anchors-01",
+      "path": "output/imagegen/wayuu/keyframes/la-india-worunka-preproduccion-01-anchors-01/b5b.jpeg",
+      "sha256": "cc4adf124692853e80df836a2f4075d97ff2a961a99f9915ede53e4e071ef8aa",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "Dos arcos sostienen cuerpo y territorio: original 864x1536 inspeccionado; fidelidad narrativa, conteos, vestuario y papercut V2 aprobados."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/la-india-worunka/preproduccion-01/prepared-01/prompts/b5b.txt",
+      "prompt_sha256": "8b8760fd9c2cce10a78e1c0b645cd793b690a2fc8304120e485d9e24b3bb1a95"
+    },
+    {
+      "id": "b6a",
+      "version": "01",
+      "batch": "remainder-01",
+      "path": "output/imagegen/wayuu/keyframes/la-india-worunka-preproduccion-01-resto-01/b6a.jpeg",
+      "sha256": "ac79a9c3c7a162a80a0c3eddc4039217fb3695716193aa0ea038f617d71e25b6",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "Seis personas ante un camino: original 864x1536 inspeccionado; fidelidad narrativa, conteos, vestuario y papercut V2 aprobados."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/la-india-worunka/preproduccion-01/prepared-01/prompts/b6a.txt",
+      "prompt_sha256": "ee848e6d72afaef2981b10eacd88c9fd9bd19da2850b693599cff57d3b120c5a"
+    },
+    {
+      "id": "b6b",
+      "version": "01",
+      "batch": "remainder-01",
+      "path": "output/imagegen/wayuu/keyframes/la-india-worunka-preproduccion-01-resto-01/b6b.jpeg",
+      "sha256": "3204f23de86f500b52f2a3421fc1d51d0f9f2f27013879700930c3d057023069",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "Los bienes cambian de dirección: original 864x1536 inspeccionado; fidelidad narrativa, conteos, vestuario y papercut V2 aprobados."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/la-india-worunka/preproduccion-01/prepared-01/prompts/b6b.txt",
+      "prompt_sha256": "96868df73034c096b2080aaaf3e9992f12b25bdfb0f3a2eb50aade395ed369e8"
+    },
+    {
+      "id": "b7a",
+      "version": "01",
+      "batch": "remainder-01",
+      "path": "output/imagegen/wayuu/keyframes/la-india-worunka-preproduccion-01-resto-01/b7a.jpeg",
+      "sha256": "33075ee5c9427f6edbe4455e31d9eef9a732c0632ea67b39949973ec577767c8",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "Dos viajeros entran en el camino: original 864x1536 inspeccionado; fidelidad narrativa, conteos, vestuario y papercut V2 aprobados."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/la-india-worunka/preproduccion-01/prepared-01/prompts/b7a.txt",
+      "prompt_sha256": "2bddf68159f97f239bfd52800bf9ba9cf522354e315023426bb9dd1aa06f3351"
+    },
+    {
+      "id": "b7b",
+      "version": "01",
+      "batch": "remainder-01",
+      "path": "output/imagegen/wayuu/keyframes/la-india-worunka-preproduccion-01-resto-01/b7b.jpeg",
+      "sha256": "b7e88af08c087f3ad7c0507d12672c4a75d094fa51c69464fc770157a15e4fbc",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "Los frutos aparecen al final del camino: original 864x1536 inspeccionado; fidelidad narrativa, conteos, vestuario y papercut V2 aprobados."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/la-india-worunka/preproduccion-01/prepared-01/prompts/b7b.txt",
+      "prompt_sha256": "a712f2303c194f6a4d9613c102fff34f947a71eae820eaf7343d3a37b3ee9e6b"
+    },
+    {
+      "id": "b8a",
+      "version": "01",
+      "batch": "remainder-01",
+      "path": "output/imagegen/wayuu/keyframes/la-india-worunka-preproduccion-01-resto-01/b8a.jpeg",
+      "sha256": "a3f4862f8c4bb041caa82d58df2fa94fddcec213dac41c26ff56a39f67fc0a17",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "Seis tumas dentro de los frutos: original 864x1536 inspeccionado; fidelidad narrativa, conteos, vestuario y papercut V2 aprobados."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/la-india-worunka/preproduccion-01/prepared-01/prompts/b8a.txt",
+      "prompt_sha256": "22725ff30381489f6e1eecbf01a0706ff9446c02b3a4b983a460102d0066aed3"
+    },
+    {
+      "id": "b8b",
+      "version": "01",
+      "batch": "anchors-01",
+      "path": "output/imagegen/wayuu/keyframes/la-india-worunka-preproduccion-01-anchors-01/b8b.jpeg",
+      "sha256": "ae5a4d80e5cec943672dbfe63273b9af441eed3e385d61cd6d7bd38d20b1ab1f",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "La tierra guarda seis tumas: original 864x1536 inspeccionado; fidelidad narrativa, conteos, vestuario y papercut V2 aprobados."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/la-india-worunka/preproduccion-01/prepared-01/prompts/b8b.txt",
+      "prompt_sha256": "36a775aec6ef6b4175f2e24eb83a26125c031c932db9b5161a2eedebb892abe3"
+    },
+    {
+      "id": "b9a",
+      "version": "01",
+      "batch": "remainder-01",
+      "path": "output/imagegen/wayuu/keyframes/la-india-worunka-preproduccion-01-resto-01/b9a.jpeg",
+      "sha256": "b8e313fe9bbb1a561d9fb7b030b951ef3f047a45f716b7fa49251c41c7c5d406",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "Cuatro familias de semilla: original 864x1536 inspeccionado; fidelidad narrativa, conteos, vestuario y papercut V2 aprobados."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/la-india-worunka/preproduccion-01/prepared-01/prompts/b9a.txt",
+      "prompt_sha256": "c09aeff9b8da18f27a45796e67338e727b6e36a0859f16b0b08c1e9b0ead83ab"
+    },
+    {
+      "id": "b9b",
+      "version": "01",
+      "batch": "remainder-01",
+      "path": "output/imagegen/wayuu/keyframes/la-india-worunka-preproduccion-01-resto-01/b9b.jpeg",
+      "sha256": "3cbc4f70c599be689a6f3ac6626e73343af19a5df5949fe9ae5e7203ff53ef8f",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "Cuatro surcos despliegan la cosecha: original 864x1536 inspeccionado; fidelidad narrativa, conteos, vestuario y papercut V2 aprobados."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/la-india-worunka/preproduccion-01/prepared-01/prompts/b9b.txt",
+      "prompt_sha256": "a1e430a6fc9370c02a67153e8df23c83feb68d38b79ab2d7a33e049ab48e5d91"
+    },
+    {
+      "id": "b10a",
+      "version": "01",
+      "batch": "remainder-01",
+      "path": "output/imagegen/wayuu/keyframes/la-india-worunka-preproduccion-01-resto-01/b10a.jpeg",
+      "sha256": "79c8adfc50aa6683eff9abd4d1aae9ffc601aa5c137066cb102fbd62455d5515",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "Seis tareas sostienen la cosecha: original 864x1536 inspeccionado; fidelidad narrativa, conteos, vestuario y papercut V2 aprobados."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/la-india-worunka/preproduccion-01/prepared-01/prompts/b10a.txt",
+      "prompt_sha256": "041f354c7ec23075a6d352ea085b9ed801aa500a47b34b96bdb7ab1b37285513"
+    },
+    {
+      "id": "b10b",
+      "version": "01",
+      "batch": "remainder-01",
+      "path": "output/imagegen/wayuu/keyframes/la-india-worunka-preproduccion-01-resto-01/b10b.jpeg",
+      "sha256": "98df894076dbd5f3969996777e2b56710a5e8938429d4bdc2ed30970d58bdbd2",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "La abundancia llega a una vasija cerrada: original 864x1536 inspeccionado; fidelidad narrativa, conteos, vestuario y papercut V2 aprobados."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/la-india-worunka/preproduccion-01/prepared-01/prompts/b10b.txt",
+      "prompt_sha256": "0afc32970e816d8ed36eb7137fa4dcd8b9b512b18e2d193cddc77962583f74f0"
+    },
+    {
+      "id": "b11a",
+      "version": "01",
+      "batch": "remainder-01",
+      "path": "output/imagegen/wayuu/keyframes/la-india-worunka-preproduccion-01-resto-01/b11a.jpeg",
+      "sha256": "bf359ddd621bb33aaa95dc50f81c541a214bbe1beeadca87e3af983b31366bd6",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "Seis tumas bajan con la abundancia: original 864x1536 inspeccionado; fidelidad narrativa, conteos, vestuario y papercut V2 aprobados."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/la-india-worunka/preproduccion-01/prepared-01/prompts/b11a.txt",
+      "prompt_sha256": "5da3bb7183c9db09124d0cc8ea3a94a2ee470dc470b4a8c5d50c32c00bcf0187"
+    },
+    {
+      "id": "b11b",
+      "version": "01",
+      "batch": "remainder-01",
+      "path": "output/imagegen/wayuu/keyframes/la-india-worunka-preproduccion-01-resto-01/b11b.jpeg",
+      "sha256": "be42c5d4b47ba190a7fb188e2f6c73ac7e1a7be39fa8792dbf21c32f27ea95ec",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "La lluvia vuelve sólo en una franja: original 864x1536 inspeccionado; fidelidad narrativa, conteos, vestuario y papercut V2 aprobados."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/la-india-worunka/preproduccion-01/prepared-01/prompts/b11b.txt",
+      "prompt_sha256": "70e2b5250f5d9f070b4424e4a51e7fac0f5dc337ae0ada22cdff67e85756a643"
+    },
+    {
+      "id": "b12a",
+      "version": "02",
+      "batch": "corrections-02",
+      "path": "output/imagegen/wayuu/keyframes/la-india-worunka-preproduccion-01-corrections-02/b12a.jpeg",
+      "sha256": "7a4e8eaf560bedb3a0d1e1ef067e3ee1e2d54f53d35cfb400031a02d6152be07",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "Worunka permanece junto al arroyo: original 864x1536 inspeccionado; fidelidad narrativa, conteos, vestuario y papercut V2 aprobados."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/la-india-worunka/preproduccion-01/prepared-01/prompts/b12a.txt",
+      "prompt_sha256": "0a2125a078542233af9944c0f4dd0ad6f2b34c945c5081020e856be74d677df7",
+      "prompt_correction_file": "content/videos/wayuu/videos/la-india-worunka/preproduccion-01/corrections-02/b12a.override.txt"
+    },
+    {
+      "id": "b12b",
+      "version": "02",
+      "batch": "corrections-01",
+      "path": "output/imagegen/wayuu/keyframes/la-india-worunka-preproduccion-01-corrections-01/b12b.jpeg",
+      "sha256": "354d350c599fe451ef1845a2de0ac4792c9d59800a0d565d15cde25ab9ac16e3",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "Una piedra sostiene demasiadas explicaciones: original 864x1536 inspeccionado; fidelidad narrativa, conteos, vestuario y papercut V2 aprobados."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/la-india-worunka/preproduccion-01/prepared-01/prompts/b12b.txt",
+      "prompt_sha256": "3b9ab9b760888d306e0f08364349e0f3a4d8933875581dbaf446b4941204e7ce",
+      "prompt_correction_file": "content/videos/wayuu/videos/la-india-worunka/preproduccion-01/corrections-01/b12b.override.txt"
+    }
+  ]
+}

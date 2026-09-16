@@ -1,0 +1,92 @@
+{
+  "schema": "wayuu-video-freeze/v1",
+  "created_at": "2026-09-09T19:48:40.992Z",
+  "plan": "content/videos/wayuu/videos/la-majayura-que-pierde-a-los-hombres/preproduccion-01/plan.json",
+  "plan_sha256": "0c8ec9bbbe5503953e0bb766f3009161bcab57075a73852ee3c96e442d34591b",
+  "style": "content/videos/wayuu/channel-dna.v3.json",
+  "style_sha256": "665cac6e3cd24ce51bee1196ddd9c89f32a6845a0424580778059170967b1984",
+  "checks": {
+    "shots": 16,
+    "words": 236,
+    "estimated_seconds": 128,
+    "generated": 2,
+    "pending": 14,
+    "warnings": []
+  },
+  "files": {
+    "narrative_snapshot_verified": true,
+    "reference_checks": 20,
+    "public_freshness": "not_checked_by_offline_preparer"
+  },
+  "jobs": [
+    {
+      "id": "b2a",
+      "prompt_file": "content/videos/wayuu/videos/la-majayura-que-pierde-a-los-hombres/preproduccion-01/prepared-03/prompts/b2a.txt",
+      "prompt_sha256": "148fbe2ab09350ae3a2d36ad14efb5baf182acaf0a34af925bebf0bd3d15646e",
+      "model": "gpt-image-2.5-sunburst",
+      "allowed_models": [
+        "gpt-image-2.5-sunburst",
+        "gpt-image-2.5-flare",
+        "gpt-image-2"
+      ],
+      "fast_iteration_model": "gpt-image-2.5-flare",
+      "legacy_fallback_model": "gpt-image-2",
+      "one_model_per_myth": true,
+      "record_exact_model_and_snapshot": true,
+      "quality": "medium",
+      "size": "864x1536",
+      "api_request_size": "1024x1536",
+      "delivery_size": "864x1536",
+      "delivery_transform": "center_crop_864x1536",
+      "output_format": "jpeg",
+      "mode": "image_edit_with_prior_keyframes",
+      "input_images": [
+        {
+          "kind": "prior_keyframe",
+          "frame_id": "b1a",
+          "myth": "la-majayura-que-pierde-a-los-hombres",
+          "path": "output/imagegen/wayuu/keyframes/la-majayura-que-pierde-a-los-hombres-preproduccion-01/b1a.jpeg",
+          "sha256": "77c639a41832148e7bd3f6d52469999483299759f7eb3be69d12488cc5e5ebab",
+          "approved": true,
+          "role": "Antecedente inmediato 1: conservar mundo, luz diurna y materialidad; no copiar el encuadre."
+        },
+        {
+          "kind": "prior_keyframe",
+          "frame_id": "b1b",
+          "myth": "la-majayura-que-pierde-a-los-hombres",
+          "path": "output/imagegen/wayuu/keyframes/la-majayura-que-pierde-a-los-hombres-preproduccion-01/b1b.jpeg",
+          "sha256": "96ee99a8cbd1e8850f6ac355d9b9b07e3635a983e996fc8241debb0dd9d3e972",
+          "approved": true,
+          "role": "Antecedente inmediato 2: conservar estratos y paleta; retirar la cueva del nuevo plano."
+        },
+        {
+          "kind": "canonical_model",
+          "myth": "la-majayura-que-pierde-a-los-hombres",
+          "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-21-la-majayura-que-pierde-a-los-hombres-medium-corrections-01/majayura_puro__identity_sheet--canon.jpeg",
+          "sha256": "0f2046f0937c29434ee437040b6f49507cb4841d4c7fa32af792ab973c2c926d",
+          "approved": true,
+          "role": "Introducir la identidad y el vestuario completos de la majayura, reduciendo su escala y aplanando el rostro."
+        }
+      ],
+      "api_method": "images.edit",
+      "source_output": "output/imagegen/wayuu/keyframes/la-majayura-que-pierde-a-los-hombres-preproduccion-01/b2a.sunburst-master.jpeg",
+      "output": "output/imagegen/wayuu/keyframes/la-majayura-que-pierde-a-los-hombres-preproduccion-01/b2a.jpeg",
+      "status": "prepared_not_generated"
+    }
+  ],
+  "prior_candidates": [
+    {
+      "id": "b1a",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/la-majayura-que-pierde-a-los-hombres-preproduccion-01/b1a.jpeg",
+      "sha256": "77c639a41832148e7bd3f6d52469999483299759f7eb3be69d12488cc5e5ebab"
+    },
+    {
+      "id": "b1b",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/la-majayura-que-pierde-a-los-hombres-preproduccion-01/b1b.jpeg",
+      "sha256": "96ee99a8cbd1e8850f6ac355d9b9b07e3635a983e996fc8241debb0dd9d3e972"
+    }
+  ],
+  "no_api_calls": true
+}

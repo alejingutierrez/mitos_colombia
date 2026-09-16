@@ -1,0 +1,306 @@
+{
+  "selected": {
+    "440_entrada": "entrada-v1.jpeg",
+    "440_acto": "acto-v1.jpeg",
+    "440_huella": "huella-v1.jpeg",
+    "441_entrada": "entrada-v1.jpeg",
+    "441_acto": "acto-v1.jpeg",
+    "442_entrada": "entrada-v1.jpeg",
+    "442_acto": "acto-v1.jpeg",
+    "442_huella": "huella-v1.jpeg",
+    "441_huella": "huella-v2.jpeg",
+    "443_entrada": "entrada-v1.jpeg",
+    "443_acto": "acto-v1.jpeg",
+    "443_huella": "huella-v1.jpeg",
+    "444_entrada": "entrada-v1.jpeg",
+    "444_acto": "acto-v1.jpeg",
+    "444_huella": "huella-v1.jpeg"
+  },
+  "qa": [
+    {
+      "key": "440_entrada",
+      "file": "entrada-v1.jpeg",
+      "status": "accepted",
+      "checks": "María y Santo Tomás adulto conservan identidades diferenciadas; diálogo sobrio con dos cuerpos completos, sin enfermedad visible ni petrificación corporal."
+    },
+    {
+      "key": "440_acto",
+      "file": "acto-v1.jpeg",
+      "status": "accepted",
+      "checks": "Una única caja cerrada color bronce contenida entre estratos de papel; sin baúl de madera, árbol tachi, cuerpo cautivo o mezcla con la variante de Lame."
+    },
+    {
+      "key": "440_huella",
+      "file": "huella-v1.jpeg",
+      "status": "accepted",
+      "checks": "Caja compacta color bronce entre pliegues comprimidos; metáfora material de contención y movimiento, sin paisaje adicional ni emblema."
+    },
+    {
+      "key": "441_entrada",
+      "file": "entrada-v1.jpeg",
+      "status": "accepted",
+      "checks": "Un niño harapiento y dos anfitriones, sin personajes adicionales; rechazo visible en el umbral y comida disponible, cuerpos y manos coherentes."
+    },
+    {
+      "key": "441_acto",
+      "file": "acto-v1.jpeg",
+      "status": "accepted",
+      "checks": "Casa gris de papel detenida y exactamente tres recipientes suspendidos; sin personas lesionadas, estatua anatómica ni afirmación arqueológica."
+    },
+    {
+      "key": "441_huella",
+      "file": "huella-v1.jpeg",
+      "status": "rejected",
+      "checks": "Rechazada: la imagen repite una escena con niño y asistentes e introduce un marco independiente; no cumple la huella abstracta solicitada."
+    },
+    {
+      "key": "442_entrada",
+      "file": "entrada-v1.jpeg",
+      "status": "accepted",
+      "checks": "Chautéh libre con dos ojos sanos y dos caminantes distintas; cada mujer lleva una carga de caña, tres cuerpos completos y sin agresión visible."
+    },
+    {
+      "key": "442_acto",
+      "file": "acto-v1.jpeg",
+      "status": "accepted",
+      "checks": "Dos piedras asimétricas de papel con carga de caña integrada, sin rostros tallados ni cuerpos en transformación; geografía tratada como aproximación."
+    },
+    {
+      "key": "442_huella",
+      "file": "huella-v1.jpeg",
+      "status": "accepted",
+      "checks": "Dos pliegues grises separados con repetición de cargas de caña; metáfora limpia sobre papel neutro, sin personas, mapa o emblema."
+    },
+    {
+      "key": "441_huella",
+      "file": "huella-v2.jpeg",
+      "status": "accepted",
+      "checks": "Corrección aceptada: un solo cuenco gris junto a un pliegue vacío integrado en papel ocre; sin niño, asistentes, escena repetida ni marco independiente."
+    },
+    {
+      "key": "443_entrada",
+      "file": "entrada-v1.jpeg",
+      "status": "accepted",
+      "checks": "Anciana pequeña con dos moños claros de sal, vestuario de la biblia y manos relajadas; fondo neutro de papel, sin mina, culto o don inventado."
+    },
+    {
+      "key": "443_acto",
+      "file": "acto-v1.jpeg",
+      "status": "accepted",
+      "checks": "Misma anciana en perfil de reconocimiento, no una acción nueva; ropa y moños coherentes sobre pliegues claros de papel sin ubicación identificada."
+    },
+    {
+      "key": "443_huella",
+      "file": "huella-v1.jpeg",
+      "status": "accepted",
+      "checks": "Dos grupos redondos claros y un cuenco pequeño de sal de papel; síntesis sin paisaje, personas, cristales fotográficos ni iconografía ritual."
+    },
+    {
+      "key": "444_entrada",
+      "file": "entrada-v1.jpeg",
+      "status": "accepted",
+      "checks": "Anciana y niña comparten un tizón pequeño en el umbral; dos cuerpos completos, llama de papel lejos del vestido y sin versiones fusionadas."
+    },
+    {
+      "key": "444_acto",
+      "file": "acto-v1.jpeg",
+      "status": "accepted",
+      "checks": "La misma niña y dos adultos junto a una pequeña paja encendida; acceso compartido a la candela sin incendio, persecución violenta ni personajes extra."
+    },
+    {
+      "key": "444_huella",
+      "file": "huella-v1.jpeg",
+      "status": "accepted",
+      "checks": "Una llama de papel se reparte en tres prolongaciones sobre paja; síntesis material de fuego compartido sin personas, paisaje, instrucciones ni emblemas."
+    }
+  ],
+  "runs": [
+    {
+      "myth_id": 440,
+      "role": "acto",
+      "session_id": 23263,
+      "version": 1,
+      "chunk_id": "504e1c",
+      "wall_time_seconds": 1.018696375,
+      "exit_code": 0,
+      "original_token_count": 40,
+      "output": "Edit completed in 19.3s.\nWrote /Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-04/santo-tomas/acto-v1.jpeg\n"
+    },
+    {
+      "myth_id": 440,
+      "role": "entrada",
+      "session_id": 43322,
+      "version": 1,
+      "chunk_id": "59e05d",
+      "wall_time_seconds": 0.000001125,
+      "exit_code": 0,
+      "original_token_count": 40,
+      "output": "Edit completed in 39.3s.\nWrote /Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-04/santo-tomas/entrada-v1.jpeg\n"
+    },
+    {
+      "myth_id": 440,
+      "role": "huella",
+      "session_id": 72066,
+      "version": 1,
+      "chunk_id": "bbb2e6",
+      "wall_time_seconds": 3.75e-7,
+      "exit_code": 0,
+      "original_token_count": 40,
+      "output": "Edit completed in 15.8s.\nWrote /Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-04/santo-tomas/huella-v1.jpeg\n"
+    },
+    {
+      "myth_id": 441,
+      "role": "acto",
+      "session_id": 37573,
+      "version": 1,
+      "chunk_id": "d91b55",
+      "wall_time_seconds": 1.67e-7,
+      "exit_code": 0,
+      "original_token_count": 44,
+      "output": "Edit completed in 23.0s.\nWrote /Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-04/la-casa-de-fiesta-petrificada/acto-v1.jpeg\n"
+    },
+    {
+      "myth_id": 441,
+      "role": "entrada",
+      "session_id": 1268,
+      "version": 1,
+      "chunk_id": "a1817d",
+      "wall_time_seconds": 0.655604417,
+      "exit_code": 1,
+      "original_token_count": 58,
+      "output": "Edit completed in 36.3s.\nError: Output already exists: /Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-04/la-casa-de-fiesta-petrificada/entrada-v1.jpeg (use --force to overwrite)\n"
+    },
+    {
+      "myth_id": 442,
+      "role": "entrada",
+      "session_id": 34974,
+      "version": 1,
+      "chunk_id": "2ca885",
+      "wall_time_seconds": 8.34e-7,
+      "exit_code": 0,
+      "original_token_count": 43,
+      "output": "Edit completed in 34.7s.\nWrote /Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-04/las-piedra-de-chaikin/entrada-v1.jpeg\n"
+    },
+    {
+      "myth_id": 442,
+      "role": "huella",
+      "session_id": 84529,
+      "version": 1,
+      "chunk_id": "5b266e",
+      "wall_time_seconds": 3.75e-7,
+      "exit_code": 0,
+      "original_token_count": 43,
+      "output": "Edit completed in 20.0s.\nWrote /Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-04/las-piedra-de-chaikin/huella-v1.jpeg\n"
+    },
+    {
+      "myth_id": 441,
+      "role": "huella",
+      "session_id": 39682,
+      "version": 1,
+      "chunk_id": "5356da",
+      "wall_time_seconds": 1.25e-7,
+      "exit_code": 0,
+      "original_token_count": 45,
+      "output": "Edit completed in 22.9s.\nWrote /Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-04/la-casa-de-fiesta-petrificada/huella-v1.jpeg\n"
+    },
+    {
+      "myth_id": 442,
+      "role": "acto",
+      "session_id": 21896,
+      "version": 1,
+      "chunk_id": "3fe280",
+      "wall_time_seconds": 4.17e-7,
+      "exit_code": 0,
+      "original_token_count": 42,
+      "output": "Edit completed in 23.9s.\nWrote /Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-04/las-piedra-de-chaikin/acto-v1.jpeg\n"
+    },
+    {
+      "myth_id": 443,
+      "role": "acto",
+      "session_id": 2624,
+      "version": 1,
+      "chunk_id": "bc3220",
+      "wall_time_seconds": 0.000001,
+      "exit_code": 0,
+      "original_token_count": 41,
+      "output": "Edit completed in 18.5s.\nWrote /Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-04/la-madre-de-la-sal/acto-v1.jpeg\n"
+    },
+    {
+      "myth_id": 443,
+      "role": "huella",
+      "session_id": 95359,
+      "version": 1,
+      "chunk_id": "939575",
+      "wall_time_seconds": 6.25e-7,
+      "exit_code": 0,
+      "original_token_count": 42,
+      "output": "Edit completed in 15.6s.\nWrote /Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-04/la-madre-de-la-sal/huella-v1.jpeg\n"
+    },
+    {
+      "myth_id": 443,
+      "role": "entrada",
+      "session_id": 86124,
+      "version": 1,
+      "chunk_id": "df68a1",
+      "wall_time_seconds": 0.000001083,
+      "exit_code": 0,
+      "original_token_count": 42,
+      "output": "Edit completed in 29.4s.\nWrote /Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-04/la-madre-de-la-sal/entrada-v1.jpeg\n"
+    },
+    {
+      "myth_id": 444,
+      "role": "entrada",
+      "session_id": 18009,
+      "version": 1,
+      "chunk_id": "28655f",
+      "wall_time_seconds": 2.91e-7,
+      "exit_code": 0,
+      "original_token_count": 40,
+      "output": "Edit completed in 33.6s.\nWrote /Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-04/la-candela/entrada-v1.jpeg\n"
+    },
+    {
+      "myth_id": 441,
+      "role": "huella",
+      "version": 2,
+      "session_id": 8525,
+      "chunk_id": "aa7640",
+      "wall_time_seconds": 8.3e-8,
+      "exit_code": 0,
+      "original_token_count": 45,
+      "output": "Edit completed in 18.4s.\nWrote /Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-04/la-casa-de-fiesta-petrificada/huella-v2.jpeg\n"
+    },
+    {
+      "myth_id": 444,
+      "role": "acto",
+      "version": 1,
+      "session_id": 8408,
+      "chunk_id": "b6d91b",
+      "wall_time_seconds": 1.66e-7,
+      "exit_code": 0,
+      "original_token_count": 39,
+      "output": "Edit completed in 24.9s.\nWrote /Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-04/la-candela/acto-v1.jpeg\n"
+    },
+    {
+      "myth_id": 444,
+      "role": "huella",
+      "version": 1,
+      "session_id": 74795,
+      "chunk_id": "d5f913",
+      "wall_time_seconds": 4.444482792,
+      "exit_code": 0,
+      "original_token_count": 40,
+      "output": "Edit completed in 19.2s.\nWrote /Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-04/la-candela/huella-v1.jpeg\n"
+    }
+  ],
+  "execution_notes": [
+    "Una solicitud fue detenida por revisión de seguridad; se verificó que las referencias son ilustraciones ficticias de papel, no datos personales, y se autorizó el envío.",
+    "Una ejecución de entrada 441 quedó sin recibo de sesión tras la interrupción de la orquestación; el archivo existente se conservó. Un segundo envío devolvió Output already exists y no sobrescribió el primero; posible coste adicional no disponible."
+  ],
+  "sequence_qa": {
+    "440": "Diálogo, contención de bronce, presión abstracta; no Lame ni árbol tachi.",
+    "441": "Rechazo en umbral, casa detenida con tres ollas, cuenco y pliegue abstractos; v1 de huella rechazada y conservada.",
+    "442": "Tres protagonistas, dos piedras con cargas, duplicidad abstracta; no Piedra Alta.",
+    "443": "Reconocimiento de la anciana desde dos cámaras, sal abstracta; no don ni lugar inventado.",
+    "444": "Tizón débil, fuego compartido después de persecución, distribución abstracta; una sola versión."
+  }
+}

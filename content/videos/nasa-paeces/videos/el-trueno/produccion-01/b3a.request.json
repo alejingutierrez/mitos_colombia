@@ -1,0 +1,43 @@
+{
+  "id": "b3a",
+  "created_at": "2026-09-13T13:38:15.251Z",
+  "tool": "image_gen.imagegen",
+  "request": {
+    "prompt": "Create ONE finished cinematic vertical 9:16 narrative keyframe for the Nasa–Paeces film El Trueno, ideally 864x1536. No sheet, collage, border, lettering, title, captions, watermark or logo. Use the supplied images only for their stated continuity roles, never copy their sheet layout. Same world as the approved Nasa triptych: immersive Colombian highland CUT-PAPER scenery, matte broad flat faces, internal cut edges, folded rock, overlapping planes at three distances, physical occlusion and cast shadows. Figures have simplified almost-flat paper faces, not rounded clay dolls, CGI or photographic skin. Water, clouds and mist are flat cut-paper shapes too, never cotton or smoke. Frame extends edge to edge, no display base, table, studio or diorama box. Preserve precise age, clothing, hat, material and scale of the reference identities. Do not import objects, people or actions from preceding shots unless specifically listed below. No pan-Indigenous costumes, copied sacred patterns, gold, crowns, feathers, magical beams or invented ritual. Selected narrative: Martín Kuskue's first El Trueno account via Bernal 1953; the elder appearance is a declared editorial convention retained from the approved triptych, not claimed as wording of this version.\n\nSHOT b3a — El aviso\nDAYLIGHT on the ridge, medium-wide GROUP shot, a different intimate camera from the triptych. Exactly THREE fully clothed adults: P01 Trueno upper right on modest natural ledge, and the C01 leftmost older man and blue-shawl woman lower left listening, identical to entrada. Trueno has one relaxed open advising hand, no weapon or staff. The C01 man has ONE plain staff and a modest fiber bag; blue-shawl woman has bag, no staff. Bodies occupy about one third frame height, faces made of flat layered paper. Foreground side of rock, three people in middle plane, very distant cultivated slopes beyond. No mouth speech posing, no new magic.\n\nINPUT REFERENCES IN ORDER:\n1. approved preceding keyframe b2a: material, palette, spatial continuity ONLY; do not import unlisted subjects/props\n2. approved preceding keyframe b2b: material, palette, spatial continuity ONLY; do not import unlisted subjects/props\n3. CANONICAL entrada: selected triptych: P01 and C01 identities, paper landscape\n4. CANONICAL P01: K’pish / el Trueno\n5. CANONICAL C01: Thê’jwala / médicos",
+    "referenced_image_paths": [
+      "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b2a-v1.png",
+      "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b2b-v1.png",
+      "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-01/el-trueno/entrada-v1.jpeg",
+      "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/biblia/produccion-api-02/p01-master-v2.jpeg",
+      "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/biblia/produccion-api-02/c01-master-v2.jpeg"
+    ]
+  },
+  "references": [
+    {
+      "path": "output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b2a-v1.png",
+      "sha256": "67ab49b7db68324ed2aba84789a81467a2ba63f95ecd0c5a19905a0d1619b646",
+      "role": "approved preceding keyframe b2a: material, palette, spatial continuity ONLY; do not import unlisted subjects/props"
+    },
+    {
+      "path": "output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b2b-v1.png",
+      "sha256": "ad4b362c91b8e4c8f2f86031396bb2770fe60ad0ecb131d17ab76a4a8bea0037",
+      "role": "approved preceding keyframe b2b: material, palette, spatial continuity ONLY; do not import unlisted subjects/props"
+    },
+    {
+      "path": "output/imagegen/nasa-paeces/tripticos/produccion-api-01/el-trueno/entrada-v1.jpeg",
+      "role": "CANONICAL entrada: selected triptych: P01 and C01 identities, paper landscape",
+      "sha256": "fd8c955803d7f78df62ba0e01ad82e745e926fbc721989af383bdc151cdae60e"
+    },
+    {
+      "path": "output/imagegen/nasa-paeces/biblia/produccion-api-02/p01-master-v2.jpeg",
+      "sha256": "feec09fd4599f2c2d8c1fc366f6d48e3df871d3447d54af37e45bfaf5b82c0b3",
+      "role": "CANONICAL P01: K’pish / el Trueno"
+    },
+    {
+      "path": "output/imagegen/nasa-paeces/biblia/produccion-api-02/c01-master-v2.jpeg",
+      "sha256": "b51c579a194d2d1e43eca669032307e214ad7f5dfd14ba511799991ca1bf6d2a",
+      "role": "CANONICAL C01: Thê’jwala / médicos"
+    }
+  ],
+  "prompt_sha256": "407c98f9d62904f66896480831ca88d532b9c52fce31c529ced389c7e85f814a"
+}

@@ -1,0 +1,77 @@
+{
+  "schema": "wayuu-video-reference-inventory/v1",
+  "slug": "la-india-worunka",
+  "status": "frozen_for_preproduction_01",
+  "narrative": {
+    "path": "content/mitos-visuales/production/wayuu-2026-09-05/narratives/la-india-worunka.json",
+    "sha256": "9774ed6faf8a41db00c0496ff597e3093f69bc727491d62a5f347238b9308b6d",
+    "live_hash_verified": true
+  },
+  "primary_sources": [
+    {
+      "title": "La India Worunka",
+      "author": "Milcíades Chaves",
+      "publication": "Relato publicado en 1946, pp. 312-314 del volumen digital del ICANH",
+      "url": "https://publicaciones.icanh.gov.co/index.php/picanh/catalog/download/243/266/1579?inline=1",
+      "role": "primary_record"
+    },
+    {
+      "title": "Trabajo académico sobre organización social Wayuu",
+      "author": "Weildler Guerra",
+      "url": "https://repositorio.uniandes.edu.co/server/api/core/bitstreams/1eb4793b-7ba7-45c2-9ee3-1df8a6414968/content",
+      "role": "contemporary_social_context"
+    },
+    {
+      "title": "Documento técnico territorial de la Macuira",
+      "url": "https://corpoguajira.gov.co/wp/wp-content/uploads/2022/10/3._Documento-tecnico-Nuevo-Espinal-1.pdf",
+      "role": "territorial_context"
+    }
+  ],
+  "cultural_guardrails": [
+    "El texto español es una versión mediada por informante, intérprete e investigador; no una transcripción literal en wayuunaiki.",
+    "El episodio sexual y de parto se narra sin anatomía, herida, sangre corporal ni procedimiento visible.",
+    "Las costillas son dos apoyos externos; ningún cuerpo se abre o pierde partes.",
+    "La alianza no se presenta como compraventa de mujeres, ley actual ni aprobación patriarcal.",
+    "La bebida no se convierte en espectáculo de embriaguez.",
+    "No se inventan pintura facial, tocados, símbolos, rituales ni patrones kanaas.",
+    "El arroyo carece de coordenada pública segura y la piedra final no es una reproducción arqueológica."
+  ],
+  "canonical_models_source": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/wayuu-v3-production-24-la-india-worunka-medium/selection.json",
+  "canonical_model_ids": [
+    "worunka__identity_sheet",
+    "worunka__state_sheet",
+    "sangre_toro__identity_sheet",
+    "carpintero_rojo__identity_sheet",
+    "guacamayo_rojo__identity_sheet",
+    "color_aves_worunka__phenomenon_rule",
+    "piedra_worunka__object_sheet",
+    "transformaciones_cuerpo_worunka__phenomenon_rule",
+    "cambio_alianzas_worunka__phenomenon_rule",
+    "viajeros_semillas_worunka__group_grammar",
+    "matas_fruto_rojo_worunka__botanical_sheet",
+    "origen_tumas_worunka__phenomenon_rule",
+    "semillas_alimento_worunka__object_sheet",
+    "siembra_cosecha_worunka__phenomenon_rule",
+    "comunidad_cosecha_worunka__group_grammar",
+    "bebida_cosecha_worunka__object_sheet",
+    "arroyo_worunka__spatial_model",
+    "sequia_worunka__phenomenon_rule"
+  ],
+  "triptych_references": [
+    { "path": "output/imagegen/wayuu/triptychs/wayuu-worunka-triptych-02-escenas/entrada.jpeg", "sha256": "0e66315f2e601bb5de66e594f427888a53ec912120a8fefdb9fbfc8a46f44195", "reviewed": true, "role": "same_myth_direction_reference" },
+    { "path": "output/imagegen/wayuu/triptychs/wayuu-worunka-triptych-02-escenas/acto.jpeg", "sha256": "a8567c43d31f34ba08d672eccf5e932101cc4a557bf598bb97b56d25c0e7bdeb", "reviewed": true, "role": "same_myth_direction_reference" },
+    { "path": "output/imagegen/wayuu/triptychs/wayuu-worunka-triptych-01/huella.jpeg", "sha256": "6563858f8998b44a2fcdefc988163df0f1b24cfec1cb960fdf8e5f1b85ca0ffe", "reviewed": true, "role": "same_myth_direction_reference" }
+  ],
+  "direct_visual_review": {
+    "reviewed_originals": 21,
+    "bible_models": 18,
+    "triptych_images": 3,
+    "decision": "Use as semantic and continuity contracts only; rebuild all video frames from text under Papercut V2.",
+    "known_old_style_limits": [
+      "Several identity and phenomenon sheets are volumetric or photoreal.",
+      "Some sheets repeat a character, bird or object as multiple study views.",
+      "The old tuma phenomenon sheet has incorrect counts; the video rule overrides it with exactly six in two groups of three.",
+      "The travelers sheet shows repeated views; video scenes always contain exactly two people."
+    ]
+  }
+}

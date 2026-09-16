@@ -1,0 +1,53 @@
+{
+  "date": "2026-09-12",
+  "community_id": 29,
+  "batch": "produccion-api-02",
+  "selected_units": [
+    "P07",
+    "H01",
+    "A09",
+    "L01",
+    "U07",
+    "V01"
+  ],
+  "checks": {
+    "six_distinct_units": true,
+    "one_per_category": true,
+    "selection_hashes_match": true,
+    "effective_prompt_hashes_match": true,
+    "input_hashes_match": true,
+    "dimensions_and_format": true,
+    "first_batch_originals_preserved": true,
+    "old_contact_preserved": true,
+    "frozen_inventory_unchanged": true,
+    "corpus_snapshot_unchanged": true,
+    "fifteen_documentary_references_preserved": true,
+    "variant_parent_is_new_L01": true,
+    "zero_documentary_inputs": true,
+    "all_candidates_not_user_approved": true,
+    "no_secret_key_patterns_in_batch": true
+  },
+  "contact_sheet": {
+    "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-02/review-contact-sheet-v2.png",
+    "sha256": "db0d028682007487d8625a97eced2b1b9801b3d297c617f85cda9261803ace90",
+    "width": 1264,
+    "height": 1328,
+    "reviewed_visually": true,
+    "labels_only_in_derivative": true
+  },
+  "scope": {
+    "produced_distinct_units": 6,
+    "inventory_total": 54,
+    "remaining": 48,
+    "successful_edit_requests": 8,
+    "qa_corrected_intermediates": 2,
+    "concurrency_cap": 3,
+    "maximum_account_concurrency_tested": false,
+    "community_certified": false,
+    "catalog_database_deployment_changed": false
+  },
+  "limits": [
+    "Structural and editorial evidence only, not cultural/user approval.",
+    "Fique silhouette/closure and exact Cacica costume remain provisional."
+  ]
+}

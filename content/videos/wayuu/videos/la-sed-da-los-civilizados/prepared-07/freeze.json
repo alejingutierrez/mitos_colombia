@@ -1,0 +1,108 @@
+{
+  "schema": "wayuu-video-freeze/v1",
+  "created_at": "2026-09-09T20:40:58.133Z",
+  "plan": "content/videos/wayuu/videos/la-sed-da-los-civilizados/preproduccion-01/plan.json",
+  "plan_sha256": "e75068527d0cafd837fc0642fda02cfa0cb9d8bdd1117bd3ae3620d5f354650c",
+  "style": "content/videos/wayuu/channel-dna.v3.json",
+  "style_sha256": "665cac6e3cd24ce51bee1196ddd9c89f32a6845a0424580778059170967b1984",
+  "checks": {
+    "shots": 16,
+    "words": 238,
+    "estimated_seconds": 128,
+    "generated": 6,
+    "pending": 10,
+    "warnings": []
+  },
+  "files": {
+    "narrative_snapshot_verified": true,
+    "reference_checks": 35,
+    "public_freshness": "not_checked_by_offline_preparer"
+  },
+  "jobs": [
+    {
+      "id": "b4a",
+      "prompt_file": "content/videos/wayuu/videos/la-sed-da-los-civilizados/prepared-07/prompts/b4a.txt",
+      "prompt_sha256": "a81cb8c1e34ca1ee84301b0850983ca58452011405fefaad183ff7f8d6d57e82",
+      "model": "gpt-image-2.5-sunburst",
+      "allowed_models": [
+        "gpt-image-2.5-sunburst",
+        "gpt-image-2.5-flare",
+        "gpt-image-2"
+      ],
+      "fast_iteration_model": "gpt-image-2.5-flare",
+      "legacy_fallback_model": "gpt-image-2",
+      "one_model_per_myth": true,
+      "record_exact_model_and_snapshot": true,
+      "quality": "medium",
+      "size": "864x1536",
+      "api_request_size": "1024x1536",
+      "delivery_size": "864x1536",
+      "delivery_transform": "center_crop_864x1536",
+      "output_format": "jpeg",
+      "mode": "image_edit_with_prior_keyframes",
+      "input_images": [
+        {
+          "kind": "prior_keyframe",
+          "frame_id": "b3a",
+          "myth": "la-sed-da-los-civilizados",
+          "path": "output/imagegen/wayuu/keyframes/la-sed-da-los-civilizados-preproduccion-01/b3a.jpeg",
+          "sha256": "8f43e4f56861955f48641957c6e11651f763e580da90e7abd12a0302e6a73741",
+          "approved": true,
+          "role": "Antecedente inmediato 1: conservar dos hombres detenidos y dos cargas."
+        },
+        {
+          "kind": "prior_keyframe",
+          "frame_id": "b3b",
+          "myth": "la-sed-da-los-civilizados",
+          "path": "output/imagegen/wayuu/keyframes/la-sed-da-los-civilizados-preproduccion-01/b3b.jpeg",
+          "sha256": "f9b79d1766fc873d8a5cbd3b767f6f41636a36a4739af89f379b54f2bd321010",
+          "approved": true,
+          "role": "Antecedente inmediato 2: conservar identidades y cargas; retirar el fenómeno de sombras al cambiar de plano."
+        }
+      ],
+      "api_method": "images.edit",
+      "source_output": "output/imagegen/wayuu/keyframes/la-sed-da-los-civilizados-preproduccion-01/b4a.sunburst-master.jpeg",
+      "output": "output/imagegen/wayuu/keyframes/la-sed-da-los-civilizados-preproduccion-01/b4a.jpeg",
+      "status": "prepared_not_generated"
+    }
+  ],
+  "prior_candidates": [
+    {
+      "id": "b1a",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/la-sed-da-los-civilizados-preproduccion-01/b1a.jpeg",
+      "sha256": "e0f14c6e8609a645b3829f06cf12bd556c84cab684139543b962f3c3ce72188f"
+    },
+    {
+      "id": "b1b",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/la-sed-da-los-civilizados-preproduccion-01/b1b.jpeg",
+      "sha256": "5af9bd1f4d5db193175dca0e4acb56dbb91c85da671f08ce7d52f81fdf3e32d3"
+    },
+    {
+      "id": "b2a",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/la-sed-da-los-civilizados-preproduccion-01/b2a.jpeg",
+      "sha256": "0567f2a0f1d339bf3a08bf7ccdbc7fb3b8f7bec99d1b38e246b0244e72850699"
+    },
+    {
+      "id": "b2b",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/la-sed-da-los-civilizados-preproduccion-01/b2b.jpeg",
+      "sha256": "eac8578fcf6cd74bad7e4228ebba94f54458b3d21c9bdd910477822e3fdbbc4a"
+    },
+    {
+      "id": "b3a",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/la-sed-da-los-civilizados-preproduccion-01/b3a.jpeg",
+      "sha256": "8f43e4f56861955f48641957c6e11651f763e580da90e7abd12a0302e6a73741"
+    },
+    {
+      "id": "b3b",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/la-sed-da-los-civilizados-preproduccion-01/b3b.jpeg",
+      "sha256": "f9b79d1766fc873d8a5cbd3b767f6f41636a36a4739af89f379b54f2bd321010"
+    }
+  ],
+  "no_api_calls": true
+}

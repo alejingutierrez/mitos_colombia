@@ -1,0 +1,1774 @@
+{
+  "schema": "wayuu-video-preproduction/v1",
+  "version": "preproduccion-01",
+  "slug": "los-mellizos-transformadores",
+  "title": "Los mellizos transformadores",
+  "status": "ready_for_sunburst_16_keyframes",
+  "duration": {
+    "target_seconds": 128,
+    "voice_words": 195,
+    "measured": false
+  },
+  "narrative": {
+    "snapshot": "content/mitos-visuales/production/wayuu-2026-09-05/narratives/los-mellizos-transformadores.json",
+    "content_sha256": "43e7c6a2dfcc83a7d4f49bcb2eb94d6117305002cfed920bbf4b05f4634d9688",
+    "source_url": null,
+    "source_locator": "Relato público y expediente editorial existentes. Las versiones de Paz Ipuana y Perrin se distinguen; que un mellizo reciba el nombre Maleiwa en otra versión no fija una genealogía única.",
+    "live_hash_verified": false,
+    "events": [
+      {
+        "id": "e1",
+        "description": "Manna, hija de la Tierra y del Rocío de las Nieblas, vivía cerca de los morros y el mar. Tras un encuentro narrado de formas distintas, huyó embarazada.",
+        "required": true,
+        "provenance": "historical_core",
+        "source": "Narración pública congelada y expediente editorial del mito; Las versiones de Paz Ipuana y Perrin se distinguen; que un mellizo reciba el nombre Maleiwa en otra versión no fija una genealogía única."
+      },
+      {
+        "id": "e2",
+        "description": "Llegó a la casa de Kalamantuunay. La anciana intentó ocultarla en una tinaja cuando regresaron sus hijos, hombres-tigre que percibían una presencia extraña.",
+        "required": true,
+        "provenance": "historical_core",
+        "source": "Narración pública congelada y expediente editorial del mito; Las versiones de Paz Ipuana y Perrin se distinguen; que un mellizo reciba el nombre Maleiwa en otra versión no fija una genealogía única."
+      },
+      {
+        "id": "e3",
+        "description": "Manna no sobrevivió. El relato describe que los mellizos Tumaju’le y Peeliyuu persistieron mediante restos y transformación; aquí la violencia permanece fuera de campo.",
+        "required": true,
+        "provenance": "historical_core",
+        "source": "Narración pública congelada y expediente editorial del mito; Las versiones de Paz Ipuana y Perrin se distinguen; que un mellizo reciba el nombre Maleiwa en otra versión no fija una genealogía única."
+      },
+      {
+        "id": "e4",
+        "description": "Kalamantuunay los crió como nietos. Los niños aprendieron a cazar y superaron a los hombres-tigre por rapidez e ingenio, no por fuerza espectacular.",
+        "required": true,
+        "provenance": "historical_core",
+        "source": "Narración pública congelada y expediente editorial del mito; Las versiones de Paz Ipuana y Perrin se distinguen; que un mellizo reciba el nombre Maleiwa en otra versión no fija una genealogía única."
+      },
+      {
+        "id": "e5",
+        "description": "Aáner y otras aves hicieron dudar a los mellizos. Al buscar pruebas, comprendieron que la historia sobre su madre ocultaba la responsabilidad de aquella casa.",
+        "required": true,
+        "provenance": "historical_core",
+        "source": "Narración pública congelada y expediente editorial del mito; Las versiones de Paz Ipuana y Perrin se distinguen; que un mellizo reciba el nombre Maleiwa en otra versión no fija una genealogía única."
+      },
+      {
+        "id": "e6",
+        "description": "Los mellizos prepararon una venganza. No mostramos cuerpos ni antropofagia: la mesa vacía y la persecución señalan el descubrimiento y sus consecuencias.",
+        "required": true,
+        "provenance": "historical_core",
+        "source": "Narración pública congelada y expediente editorial del mito; Las versiones de Paz Ipuana y Perrin se distinguen; que un mellizo reciba el nombre Maleiwa en otra versión no fija una genealogía única."
+      },
+      {
+        "id": "e7",
+        "description": "Durante la huida, uno se volvió nube. Los perseguidores perdieron su forma y quedaron relacionados con Wanurü, fuerzas dañinas que acompañarían el mundo humano.",
+        "required": true,
+        "provenance": "historical_core",
+        "source": "Narración pública congelada y expediente editorial del mito; Las versiones de Paz Ipuana y Perrin se distinguen; que un mellizo reciba el nombre Maleiwa en otra versión no fija una genealogía única."
+      },
+      {
+        "id": "e8",
+        "description": "La victoria no restauró a Manna. Los mellizos siguieron transformando la península; en otra versión uno recibe el nombre Maleiwa y se acerca al origen humano.",
+        "required": true,
+        "provenance": "historical_core",
+        "source": "Narración pública congelada y expediente editorial del mito; Las versiones de Paz Ipuana y Perrin se distinguen; que un mellizo reciba el nombre Maleiwa en otra versión no fija una genealogía única."
+      }
+    ]
+  },
+  "story_thesis": "Los mellizos reorganizan el mundo sin borrar el daño de origen ni dividir sus acciones en bondad y crueldad simples.",
+  "style": "content/videos/wayuu/channel-dna.v3.json",
+  "palette": "Azul marino, niebla gris, arena cálida, verde Macuira, terracota y blanco nube; índigo para Wanurü, sin sangre ni naranja de espectáculo.",
+  "generation": {
+    "model": "gpt-image-2.5-sunburst",
+    "allowed_models": [
+      "gpt-image-2.5-sunburst",
+      "gpt-image-2.5-flare",
+      "gpt-image-2"
+    ],
+    "fast_iteration_model": "gpt-image-2.5-flare",
+    "legacy_fallback_model": "gpt-image-2",
+    "one_model_per_myth": true,
+    "record_exact_model_and_snapshot": true,
+    "quality": "medium",
+    "size": "864x1536",
+    "api_request_size": "1024x1536",
+    "delivery_size": "864x1536",
+    "delivery_transform": "center_crop_864x1536",
+    "output_format": "jpeg",
+    "mode": "image_edit_with_prior_keyframes",
+    "input_images": "declared_per_keyframe_and_frozen_with_sha256"
+  },
+  "shared_scene_continuity": [
+    "Todo visible está construido con hojas mate recortadas, cantos internos, aire y sombras físicas; nunca suelo realista ni personajes modelados.",
+    "Las referencias fijan identidad, vestuario, paleta y materia, pero jamás autorizan copiar su cámara o distribución.",
+    "No repetir en keyframes adyacentes altura, escala, horizonte ni ubicación de sujetos; cada bloque cambia al menos dos variables.",
+    "Las versiones de Paz Ipuana y Perrin se distinguen; que un mellizo reciba el nombre Maleiwa en otra versión no fija una genealogía única.",
+    "Violencia, enfermedad, duelo y transformación se muestran sin sangre, heridas, cadáveres expuestos, sexualización o triunfo espectacular."
+  ],
+  "continuity_rules": [
+    "Usar exactamente el reparto inventariado por toma y conservar identidades desde los modelos aprobados.",
+    "Desde el tercer frame, los dos antecedentes aprobados inmediatos entran primero y en orden.",
+    "Macros sólo para manos, objetos, fibras, huellas o materia; nunca para rostros.",
+    "Un descarte no alimenta ningún frame posterior; toda corrección obliga a rehacer sus descendientes si cambiaron los antecedentes.",
+    "Las versiones de Paz Ipuana y Perrin se distinguen; que un mellizo reciba el nombre Maleiwa en otra versión no fija una genealogía única."
+  ],
+  "reference_review": {
+    "sources": [
+      {
+        "path": "output/imagegen/wayuu/triptychs/wayuu-mellizos-triptych-02-entrada/entrada.jpeg",
+        "sha256": "862d09db149c6663d5ede79fe9962eaea4618a33f756a939d637ef1917894955",
+        "reviewed": true,
+        "role": "same_myth_direction_reference"
+      },
+      {
+        "path": "output/imagegen/wayuu/triptychs/wayuu-mellizos-triptych-01/acto.jpeg",
+        "sha256": "e4ec2ef2e2c019f4e6cc6559bd85d73f2330d9ce7853d22f6d2523000ce84309",
+        "reviewed": true,
+        "role": "same_myth_direction_reference"
+      },
+      {
+        "path": "output/imagegen/wayuu/triptychs/wayuu-mellizos-triptych-01/huella.jpeg",
+        "sha256": "7ab196fbb2a27fdf6c18adccc490e0e24025bd61c624c22a0cb07e1401185b8c",
+        "reviewed": true,
+        "role": "same_myth_direction_reference"
+      }
+    ],
+    "notes": [
+      "Tríptico final y modelos de Biblia V3 reutilizados con sus hashes de selección.",
+      "Las versiones de Paz Ipuana y Perrin se distinguen; que un mellizo reciba el nombre Maleiwa en otra versión no fija una genealogía única.",
+      "La composición se rediseña para video y variedad de cámara; no replica los trípticos."
+    ]
+  },
+  "canonical_models": [
+    {
+      "model_id": "manna__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-09-los-mellizos-transformadores-medium-corrections-02/manna__identity_sheet--canon.jpeg",
+      "sha256": "0eece7173489a4db1206455980713ca33eb96a48ec5e2f7444d687b1fe79ebeb"
+    },
+    {
+      "model_id": "manna__state_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-09-los-mellizos-transformadores-medium-corrections-02/manna__state_sheet--estados.jpeg",
+      "sha256": "35b3515eceb35c478534997eb8ddd9d2a901c57127dbc9c241ccfbc6ea9c4bc9"
+    },
+    {
+      "model_id": "kalamantuunay__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-09-los-mellizos-transformadores-medium/kalamantuunay__identity_sheet--canon.jpeg",
+      "sha256": "64fa5761a8fd0adc37989a9ba5a22264f0398ae33f21de2d8a9f763d5f32489b"
+    },
+    {
+      "model_id": "hombres_tigre__group_grammar",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-09-los-mellizos-transformadores-medium-corrections-01/hombres_tigre__group_grammar--canon.jpeg",
+      "sha256": "0b0bb42c6f74da3d6164aaf25e59b70943c9d5e2b561041b84978c9c3153d0dd"
+    },
+    {
+      "model_id": "tumajule__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-09-los-mellizos-transformadores-medium/tumajule__identity_sheet--canon.jpeg",
+      "sha256": "89264c83039de108b995eb7749ad3cc9a6e5e05416c7841ce7c56ac00b116d71"
+    },
+    {
+      "model_id": "tumajule__state_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-09-los-mellizos-transformadores-medium/tumajule__state_sheet--estados.jpeg",
+      "sha256": "f067ac27dcb2eca82514bf0d142b57365d743c565a142cb1c3ea27619dd4a200"
+    },
+    {
+      "model_id": "peeliyuu__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-09-los-mellizos-transformadores-medium/peeliyuu__identity_sheet--canon.jpeg",
+      "sha256": "d6d4a67e552f7485c727724e0e97caaf710e2ee18e3b1620b407c71785379033"
+    },
+    {
+      "model_id": "peeliyuu__state_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-09-los-mellizos-transformadores-medium/peeliyuu__state_sheet--estados.jpeg",
+      "sha256": "5bc3dfe87866d6cdbdc72cd5766e2fe6d74ce8cb68953ebf89b5eac01c4ba647"
+    },
+    {
+      "model_id": "aaner__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-09-los-mellizos-transformadores-medium/aaner__identity_sheet--canon.jpeg",
+      "sha256": "9b9785ad509127d38f7056a14c9d32f9697e63dec54642890fc07d8ee09ca3b4"
+    },
+    {
+      "model_id": "tinaja_manna__object_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-09-los-mellizos-transformadores-medium/tinaja_manna__object_sheet--canon.jpeg",
+      "sha256": "7f0780622bec7c8c719db0af00b33b2cda4f776038ec8037bda5ca7d59e71f71"
+    },
+    {
+      "model_id": "costa_mar_guajira__environment_model",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-09-los-mellizos-transformadores-medium/costa_mar_guajira__environment_model--canon.jpeg",
+      "sha256": "0f6d686bc3c825bdeb6e1b120277d64edca91fb06f2257c677d87f9cfdbaa6dc"
+    }
+  ],
+  "inventory": [
+    {
+      "id": "manna",
+      "type": "person",
+      "desc": "Manna adulta, madre en huida, vestida completamente y nunca sexualizada ni mostrada herida.",
+      "model_ids": [
+        "manna__identity_sheet",
+        "manna__state_sheet"
+      ]
+    },
+    {
+      "id": "mellizos",
+      "type": "person",
+      "desc": "Tumaju’le y Peeliyuu como dos niños diferenciados, vestidos y pequeños; ingenio sin caricatura corporal.",
+      "model_ids": [
+        "tumajule__identity_sheet",
+        "tumajule__state_sheet",
+        "peeliyuu__identity_sheet",
+        "peeliyuu__state_sheet"
+      ]
+    },
+    {
+      "id": "kalamantuunay",
+      "type": "person",
+      "desc": "Anciana Kalamantuunay con identidad aprobada; cuidadora ambigua y adversaria, sin bruja europea.",
+      "model_ids": [
+        "kalamantuunay__identity_sheet"
+      ]
+    },
+    {
+      "id": "tigres",
+      "type": "supporting_people",
+      "desc": "Hombres-tigre adultos en ropa completa con rasgos felinos materiales contenidos; sin gore.",
+      "model_ids": [
+        "hombres_tigre__group_grammar"
+      ]
+    },
+    {
+      "id": "aaner",
+      "type": "animal",
+      "desc": "Aáner, una paloma de papel que revela el origen sin hablar mediante texto.",
+      "model_ids": [
+        "aaner__identity_sheet"
+      ]
+    },
+    {
+      "id": "tinaja",
+      "type": "object",
+      "desc": "Tinaja ensamblada de papel usada como escondite; nunca cerámica realista.",
+      "model_ids": [
+        "tinaja_manna__object_sheet"
+      ]
+    },
+    {
+      "id": "territorio",
+      "type": "setting",
+      "desc": "Morros, costa y mar de Alta Guajira como marco aproximado del ciclo.",
+      "model_ids": [
+        "costa_mar_guajira__environment_model"
+      ]
+    },
+    {
+      "id": "nube",
+      "type": "magic_subject",
+      "desc": "Transformación de uno de los mellizos en nube de hojas blancas separadas; el otro sigue visible como niño.",
+      "model_ids": []
+    },
+    {
+      "id": "wanuru",
+      "type": "magic_subject",
+      "desc": "Pérdida de forma de los perseguidores asociada con Wanurü como cortes índigo sin cuerpos monstruosos nuevos.",
+      "model_ids": []
+    },
+    {
+      "id": "memoria",
+      "type": "object",
+      "desc": "Restos no anatómicos de manta, fibra y huellas que permiten comprender la ausencia de Manna sin representar violencia.",
+      "model_ids": []
+    }
+  ],
+  "blocks": [
+    {
+      "id": "b1",
+      "voice_over": "Manna, hija de la Tierra y del Rocío de las Nieblas, vivía cerca de los morros y el mar. Tras un encuentro narrado de formas distintas, huyó embarazada.",
+      "voice_provenance": "Síntesis audiovisual fiel a la narración congelada; Las versiones de Paz Ipuana y Perrin se distinguen; que un mellizo reciba el nombre Maleiwa en otra versión no fija una genealogía única.",
+      "word_count": 28,
+      "time_seconds": [
+        0,
+        16
+      ],
+      "event_ids": [
+        "e1"
+      ],
+      "keyframes": [
+        {
+          "id": "b1a",
+          "title": "Manna entre morros y mar",
+          "visual": "Manna camina pequeña entre costa y morros; dos capas abstractas de tierra y niebla enmarcan su origen sin cuerpos divinos. COMPOSICIÓN OBLIGATORIA: elevada oblicua desde una ladera, gran plano general territorial; no copiar la altura, horizonte ni distribución del keyframe anterior.",
+          "time_seconds": [
+            0,
+            8
+          ],
+          "entity_ids": [
+            "manna",
+            "territorio"
+          ],
+          "event_ids": [
+            "e1"
+          ],
+          "angle": "elevada oblicua desde una ladera",
+          "shot_scale": "gran plano general territorial",
+          "depth_planes": [
+            "papel cercano",
+            "sujetos pequeños",
+            "sendero diagonal",
+            "territorio medio",
+            "cielo recortado"
+          ],
+          "continuity_from": null,
+          "transition_to_next": "Corte de eje, altura y escala hacia el siguiente instante.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Movimiento mínimo compatible con elevada oblicua desde una ladera.",
+            "allowed": "Sólo el gesto o cambio material descrito en este instante.",
+            "forbidden": "Repetir la composición anterior, añadir reparto, texto, sangre, ceremonia o utilería no inventariada."
+          },
+          "asset": {
+            "status": "approved_keyframe",
+            "path": "output/imagegen/wayuu/keyframes/los-mellizos-transformadores-preproduccion-01/b1a.jpeg",
+            "sha256": "5abc44132cd798e29790766ef1ccf4765ce6032f81c3c01cb2bf29d8a0d11492"
+          },
+          "generation_inputs": [
+            {
+              "kind": "triptych",
+              "myth": "los-mellizos-transformadores",
+              "path": "output/imagegen/wayuu/triptychs/wayuu-mellizos-triptych-02-entrada/entrada.jpeg",
+              "sha256": "862d09db149c6663d5ede79fe9962eaea4618a33f756a939d637ef1917894955",
+              "approved": true,
+              "role": "Fijar identidad, paleta y material del mito desde la referencia 1; prohibido copiar su composición."
+            },
+            {
+              "kind": "triptych",
+              "myth": "los-mellizos-transformadores",
+              "path": "output/imagegen/wayuu/triptychs/wayuu-mellizos-triptych-01/acto.jpeg",
+              "sha256": "e4ec2ef2e2c019f4e6cc6559bd85d73f2330d9ce7853d22f6d2523000ce84309",
+              "approved": true,
+              "role": "Fijar identidad, paleta y material del mito desde la referencia 2; prohibido copiar su composición."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "los-mellizos-transformadores",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-09-los-mellizos-transformadores-medium-corrections-02/manna__identity_sheet--canon.jpeg",
+              "sha256": "0eece7173489a4db1206455980713ca33eb96a48ec5e2f7444d687b1fe79ebeb",
+              "approved": true,
+              "role": "Fijar el modelo canónico manna__identity_sheet; preservar identidad y material sin copiar la composición."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "los-mellizos-transformadores",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-09-los-mellizos-transformadores-medium-corrections-02/manna__state_sheet--estados.jpeg",
+              "sha256": "35b3515eceb35c478534997eb8ddd9d2a901c57127dbc9c241ccfbc6ea9c4bc9",
+              "approved": true,
+              "role": "Fijar el modelo canónico manna__state_sheet; preservar identidad y material sin copiar la composición."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "los-mellizos-transformadores",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-09-los-mellizos-transformadores-medium/costa_mar_guajira__environment_model--canon.jpeg",
+              "sha256": "0f6d686bc3c825bdeb6e1b120277d64edca91fb06f2257c677d87f9cfdbaa6dc",
+              "approved": true,
+              "role": "Fijar el modelo canónico costa_mar_guajira__environment_model; preservar identidad y material sin copiar la composición."
+            }
+          ]
+        },
+        {
+          "id": "b1b",
+          "title": "Habla con quienes lleva dentro",
+          "visual": "Macro de sus manos sobre la manta cerrada; dos pequeños pliegues internos responden sin anatomía ni sexualización. COMPOSICIÓN OBLIGATORIA: lateral a la altura de manos u objeto, macro narrativo sin rostro; no copiar la altura, horizonte ni distribución del keyframe anterior.",
+          "time_seconds": [
+            8,
+            16
+          ],
+          "entity_ids": [
+            "manna",
+            "territorio"
+          ],
+          "event_ids": [
+            "e1"
+          ],
+          "angle": "lateral a la altura de manos u objeto",
+          "shot_scale": "macro narrativo sin rostro",
+          "depth_planes": [
+            "borde cercano",
+            "manos u objeto",
+            "ropa parcial",
+            "suelo medio",
+            "fondo desenfocado"
+          ],
+          "continuity_from": "b1a",
+          "transition_to_next": "Corte de eje, altura y escala hacia el siguiente instante.",
+          "scene_role": "visible_magic",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Los elementos cotidianos inventariados en Habla con quienes lleva dentro.",
+            "impossible_behavior": "Macro de sus manos sobre la manta cerrada; dos pequeños pliegues internos responden sin anatomía ni sexualización.",
+            "narrative_effect": "Hace visible el cambio de relación narrado en el evento e1.",
+            "agency": "La transformación pertenece al relato o a su traducción editorial; las personas no la controlan como superpoder.",
+            "physical_translation": "Hojas mate separadas cambian de silueta, posición o continuidad mediante pliegues y vacíos; sin partículas CGI.",
+            "visible_test": "La contradicción material debe entenderse en una sola imagen sin texto ni duplicación de personajes.",
+            "provenance": "narrated_fact",
+            "temporal_role": "present",
+            "event_ids": [
+              "e1"
+            ]
+          },
+          "motion_contract": {
+            "camera": "Movimiento mínimo compatible con lateral a la altura de manos u objeto.",
+            "allowed": "Sólo el gesto o cambio material descrito en este instante.",
+            "forbidden": "Repetir la composición anterior, añadir reparto, texto, sangre, ceremonia o utilería no inventariada."
+          },
+          "asset": {
+            "status": "approved_keyframe",
+            "path": "output/imagegen/wayuu/keyframes/los-mellizos-transformadores-preproduccion-01/b1b.jpeg",
+            "sha256": "3518136255a584ec14cfcb0c8088005a14792bf7ee3b19d66c8489fbeb2a21c0"
+          },
+          "generation_inputs": [
+            {
+              "kind": "prior_keyframe",
+              "frame_id": "b1a",
+              "myth": "los-mellizos-transformadores",
+              "path": "output/imagegen/wayuu/keyframes/los-mellizos-transformadores-preproduccion-01/b1a.jpeg",
+              "sha256": "5abc44132cd798e29790766ef1ccf4765ce6032f81c3c01cb2bf29d8a0d11492",
+              "approved": true,
+              "role": "Preservar continuidad causal de b1a: identidades, vestuario, paleta y material; prohibido repetir cámara o distribución."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "los-mellizos-transformadores",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-09-los-mellizos-transformadores-medium-corrections-02/manna__identity_sheet--canon.jpeg",
+              "sha256": "0eece7173489a4db1206455980713ca33eb96a48ec5e2f7444d687b1fe79ebeb",
+              "approved": true,
+              "role": "Fijar el modelo canónico manna__identity_sheet; preservar identidad y material sin copiar la composición."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "los-mellizos-transformadores",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-09-los-mellizos-transformadores-medium-corrections-02/manna__state_sheet--estados.jpeg",
+              "sha256": "35b3515eceb35c478534997eb8ddd9d2a901c57127dbc9c241ccfbc6ea9c4bc9",
+              "approved": true,
+              "role": "Fijar el modelo canónico manna__state_sheet; preservar identidad y material sin copiar la composición."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "los-mellizos-transformadores",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-09-los-mellizos-transformadores-medium/costa_mar_guajira__environment_model--canon.jpeg",
+              "sha256": "0f6d686bc3c825bdeb6e1b120277d64edca91fb06f2257c677d87f9cfdbaa6dc",
+              "approved": true,
+              "role": "Fijar el modelo canónico costa_mar_guajira__environment_model; preservar identidad y material sin copiar la composición."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "b2",
+      "voice_over": "Llegó a la casa de Kalamantuunay. La anciana intentó ocultarla en una tinaja cuando regresaron sus hijos, hombres-tigre que percibían una presencia extraña.",
+      "voice_provenance": "Síntesis audiovisual fiel a la narración congelada; Las versiones de Paz Ipuana y Perrin se distinguen; que un mellizo reciba el nombre Maleiwa en otra versión no fija una genealogía única.",
+      "word_count": 23,
+      "time_seconds": [
+        16,
+        32
+      ],
+      "event_ids": [
+        "e2"
+      ],
+      "keyframes": [
+        {
+          "id": "b2a",
+          "title": "La casa de Kalamantuunay",
+          "visual": "Manna se acerca a la casa mientras la anciana abre el umbral y la tinaja queda visible dentro. COMPOSICIÓN OBLIGATORIA: contrapicado extremo desde el suelo, plano general bajo; no copiar la altura, horizonte ni distribución del keyframe anterior.",
+          "time_seconds": [
+            16,
+            24
+          ],
+          "entity_ids": [
+            "manna",
+            "kalamantuunay",
+            "tinaja",
+            "territorio"
+          ],
+          "event_ids": [
+            "e2"
+          ],
+          "angle": "contrapicado extremo desde el suelo",
+          "shot_scale": "plano general bajo",
+          "depth_planes": [
+            "materia rasante",
+            "pies o base",
+            "cuerpos completos",
+            "relieve",
+            "cielo amplio"
+          ],
+          "continuity_from": "b1b",
+          "transition_to_next": "Corte de eje, altura y escala hacia el siguiente instante.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Movimiento mínimo compatible con contrapicado extremo desde el suelo.",
+            "allowed": "Sólo el gesto o cambio material descrito en este instante.",
+            "forbidden": "Repetir la composición anterior, añadir reparto, texto, sangre, ceremonia o utilería no inventariada."
+          },
+          "asset": {
+            "status": "approved_keyframe",
+            "path": "output/imagegen/wayuu/keyframes/los-mellizos-transformadores-preproduccion-01/b2a.jpeg",
+            "sha256": "65c3fe950555ebea850796c9c0c4ad2326dbd46b69a7c05f38623b49b9f11b71"
+          },
+          "generation_inputs": [
+            {
+              "kind": "prior_keyframe",
+              "frame_id": "b1a",
+              "myth": "los-mellizos-transformadores",
+              "path": "output/imagegen/wayuu/keyframes/los-mellizos-transformadores-preproduccion-01/b1a.jpeg",
+              "sha256": "5abc44132cd798e29790766ef1ccf4765ce6032f81c3c01cb2bf29d8a0d11492",
+              "approved": true,
+              "role": "Preservar continuidad causal de b1a: identidades, vestuario, paleta y material; prohibido repetir cámara o distribución."
+            },
+            {
+              "kind": "prior_keyframe",
+              "frame_id": "b1b",
+              "myth": "los-mellizos-transformadores",
+              "path": "output/imagegen/wayuu/keyframes/los-mellizos-transformadores-preproduccion-01/b1b.jpeg",
+              "sha256": "3518136255a584ec14cfcb0c8088005a14792bf7ee3b19d66c8489fbeb2a21c0",
+              "approved": true,
+              "role": "Preservar continuidad causal de b1b: identidades, vestuario, paleta y material; prohibido repetir cámara o distribución."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "los-mellizos-transformadores",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-09-los-mellizos-transformadores-medium-corrections-02/manna__identity_sheet--canon.jpeg",
+              "sha256": "0eece7173489a4db1206455980713ca33eb96a48ec5e2f7444d687b1fe79ebeb",
+              "approved": true,
+              "role": "Fijar el modelo canónico manna__identity_sheet; preservar identidad y material sin copiar la composición."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "los-mellizos-transformadores",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-09-los-mellizos-transformadores-medium-corrections-02/manna__state_sheet--estados.jpeg",
+              "sha256": "35b3515eceb35c478534997eb8ddd9d2a901c57127dbc9c241ccfbc6ea9c4bc9",
+              "approved": true,
+              "role": "Fijar el modelo canónico manna__state_sheet; preservar identidad y material sin copiar la composición."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "los-mellizos-transformadores",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-09-los-mellizos-transformadores-medium/kalamantuunay__identity_sheet--canon.jpeg",
+              "sha256": "64fa5761a8fd0adc37989a9ba5a22264f0398ae33f21de2d8a9f763d5f32489b",
+              "approved": true,
+              "role": "Fijar el modelo canónico kalamantuunay__identity_sheet; preservar identidad y material sin copiar la composición."
+            }
+          ]
+        },
+        {
+          "id": "b2b",
+          "title": "El escondite",
+          "visual": "Cenital de la tinaja cerrada y tres sombras felinas entrando desde bordes distintos; ningún cuerpo dentro visible. COMPOSICIÓN OBLIGATORIA: cenital verdadero de 90 grados, detalle gráfico de suelo; no copiar la altura, horizonte ni distribución del keyframe anterior.",
+          "time_seconds": [
+            24,
+            32
+          ],
+          "entity_ids": [
+            "manna",
+            "kalamantuunay",
+            "tigres",
+            "tinaja"
+          ],
+          "event_ids": [
+            "e2"
+          ],
+          "angle": "cenital verdadero de 90 grados",
+          "shot_scale": "detalle gráfico de suelo",
+          "depth_planes": [
+            "borde superior",
+            "acción central",
+            "huellas u objetos",
+            "sombras planas",
+            "estratos inferiores"
+          ],
+          "continuity_from": "b2a",
+          "transition_to_next": "Corte de eje, altura y escala hacia el siguiente instante.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Movimiento mínimo compatible con cenital verdadero de 90 grados.",
+            "allowed": "Sólo el gesto o cambio material descrito en este instante.",
+            "forbidden": "Repetir la composición anterior, añadir reparto, texto, sangre, ceremonia o utilería no inventariada."
+          },
+          "asset": {
+            "status": "approved_keyframe",
+            "path": "output/imagegen/wayuu/keyframes/los-mellizos-transformadores-preproduccion-01/b2b.jpeg",
+            "sha256": "9bcddbebff7160c79d6754231e3f736a9464b58158f48acd9d679eccd8502772"
+          },
+          "generation_inputs": [
+            {
+              "kind": "prior_keyframe",
+              "frame_id": "b1b",
+              "myth": "los-mellizos-transformadores",
+              "path": "output/imagegen/wayuu/keyframes/los-mellizos-transformadores-preproduccion-01/b1b.jpeg",
+              "sha256": "3518136255a584ec14cfcb0c8088005a14792bf7ee3b19d66c8489fbeb2a21c0",
+              "approved": true,
+              "role": "Preservar continuidad causal de b1b: identidades, vestuario, paleta y material; prohibido repetir cámara o distribución."
+            },
+            {
+              "kind": "prior_keyframe",
+              "frame_id": "b2a",
+              "myth": "los-mellizos-transformadores",
+              "path": "output/imagegen/wayuu/keyframes/los-mellizos-transformadores-preproduccion-01/b2a.jpeg",
+              "sha256": "65c3fe950555ebea850796c9c0c4ad2326dbd46b69a7c05f38623b49b9f11b71",
+              "approved": true,
+              "role": "Preservar continuidad causal de b2a: identidades, vestuario, paleta y material; prohibido repetir cámara o distribución."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "los-mellizos-transformadores",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-09-los-mellizos-transformadores-medium-corrections-02/manna__identity_sheet--canon.jpeg",
+              "sha256": "0eece7173489a4db1206455980713ca33eb96a48ec5e2f7444d687b1fe79ebeb",
+              "approved": true,
+              "role": "Fijar el modelo canónico manna__identity_sheet; preservar identidad y material sin copiar la composición."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "los-mellizos-transformadores",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-09-los-mellizos-transformadores-medium-corrections-02/manna__state_sheet--estados.jpeg",
+              "sha256": "35b3515eceb35c478534997eb8ddd9d2a901c57127dbc9c241ccfbc6ea9c4bc9",
+              "approved": true,
+              "role": "Fijar el modelo canónico manna__state_sheet; preservar identidad y material sin copiar la composición."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "los-mellizos-transformadores",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-09-los-mellizos-transformadores-medium/kalamantuunay__identity_sheet--canon.jpeg",
+              "sha256": "64fa5761a8fd0adc37989a9ba5a22264f0398ae33f21de2d8a9f763d5f32489b",
+              "approved": true,
+              "role": "Fijar el modelo canónico kalamantuunay__identity_sheet; preservar identidad y material sin copiar la composición."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "b3",
+      "voice_over": "Manna no sobrevivió. El relato describe que los mellizos Tumaju’le y Peeliyuu persistieron mediante restos y transformación; aquí la violencia permanece fuera de campo.",
+      "voice_provenance": "Síntesis audiovisual fiel a la narración congelada; Las versiones de Paz Ipuana y Perrin se distinguen; que un mellizo reciba el nombre Maleiwa en otra versión no fija una genealogía única.",
+      "word_count": 24,
+      "time_seconds": [
+        32,
+        48
+      ],
+      "event_ids": [
+        "e3"
+      ],
+      "keyframes": [
+        {
+          "id": "b3a",
+          "title": "Después de la violencia",
+          "visual": "La casa queda sin Manna; dos pequeños envoltorios de fibra reposan separados junto a un jirón de manta, sin restos anatómicos. COMPOSICIÓN OBLIGATORIA: lateral teleobjetivo sin cielo, plano general comprimido; no copiar la altura, horizonte ni distribución del keyframe anterior.",
+          "time_seconds": [
+            32,
+            40
+          ],
+          "entity_ids": [
+            "mellizos",
+            "memoria",
+            "kalamantuunay"
+          ],
+          "event_ids": [
+            "e3"
+          ],
+          "angle": "lateral teleobjetivo sin cielo",
+          "shot_scale": "plano general comprimido",
+          "depth_planes": [
+            "franja cercana",
+            "sujeto uno",
+            "acción media",
+            "sujeto dos",
+            "bandas comprimidas"
+          ],
+          "continuity_from": "b2b",
+          "transition_to_next": "Corte de eje, altura y escala hacia el siguiente instante.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Movimiento mínimo compatible con lateral teleobjetivo sin cielo.",
+            "allowed": "Sólo el gesto o cambio material descrito en este instante.",
+            "forbidden": "Repetir la composición anterior, añadir reparto, texto, sangre, ceremonia o utilería no inventariada."
+          },
+          "asset": {
+            "status": "approved_keyframe",
+            "path": "output/imagegen/wayuu/keyframes/los-mellizos-transformadores-preproduccion-01/b3a.jpeg",
+            "sha256": "0add5f8f694931fceaaa7ed697c7c0bdcda0ee6aff5db131e5621c52ac5c7a8e"
+          },
+          "generation_inputs": [
+            {
+              "kind": "prior_keyframe",
+              "frame_id": "b2a",
+              "myth": "los-mellizos-transformadores",
+              "path": "output/imagegen/wayuu/keyframes/los-mellizos-transformadores-preproduccion-01/b2a.jpeg",
+              "sha256": "65c3fe950555ebea850796c9c0c4ad2326dbd46b69a7c05f38623b49b9f11b71",
+              "approved": true,
+              "role": "Preservar continuidad causal de b2a: identidades, vestuario, paleta y material; prohibido repetir cámara o distribución."
+            },
+            {
+              "kind": "prior_keyframe",
+              "frame_id": "b2b",
+              "myth": "los-mellizos-transformadores",
+              "path": "output/imagegen/wayuu/keyframes/los-mellizos-transformadores-preproduccion-01/b2b.jpeg",
+              "sha256": "9bcddbebff7160c79d6754231e3f736a9464b58158f48acd9d679eccd8502772",
+              "approved": true,
+              "role": "Preservar continuidad causal de b2b: identidades, vestuario, paleta y material; prohibido repetir cámara o distribución."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "los-mellizos-transformadores",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-09-los-mellizos-transformadores-medium/tumajule__identity_sheet--canon.jpeg",
+              "sha256": "89264c83039de108b995eb7749ad3cc9a6e5e05416c7841ce7c56ac00b116d71",
+              "approved": true,
+              "role": "Fijar el modelo canónico tumajule__identity_sheet; preservar identidad y material sin copiar la composición."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "los-mellizos-transformadores",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-09-los-mellizos-transformadores-medium/tumajule__state_sheet--estados.jpeg",
+              "sha256": "f067ac27dcb2eca82514bf0d142b57365d743c565a142cb1c3ea27619dd4a200",
+              "approved": true,
+              "role": "Fijar el modelo canónico tumajule__state_sheet; preservar identidad y material sin copiar la composición."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "los-mellizos-transformadores",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-09-los-mellizos-transformadores-medium/peeliyuu__identity_sheet--canon.jpeg",
+              "sha256": "d6d4a67e552f7485c727724e0e97caaf710e2ee18e3b1620b407c71785379033",
+              "approved": true,
+              "role": "Fijar el modelo canónico peeliyuu__identity_sheet; preservar identidad y material sin copiar la composición."
+            }
+          ]
+        },
+        {
+          "id": "b3b",
+          "title": "La anciana los encuentra",
+          "visual": "Desde una grieta baja, Kalamantuunay se inclina a distancia hacia los dos envoltorios que comienzan a abrirse. COMPOSICIÓN OBLIGATORIA: rasante a través de una grieta o vegetación, gran plano general de fuga; no copiar la altura, horizonte ni distribución del keyframe anterior.",
+          "time_seconds": [
+            40,
+            48
+          ],
+          "entity_ids": [
+            "mellizos",
+            "kalamantuunay",
+            "memoria"
+          ],
+          "event_ids": [
+            "e3"
+          ],
+          "angle": "rasante a través de una grieta o vegetación",
+          "shot_scale": "gran plano general de fuga",
+          "depth_planes": [
+            "recorte extremo",
+            "vacío cercano",
+            "acción distante",
+            "territorio",
+            "franja de salida"
+          ],
+          "continuity_from": "b3a",
+          "transition_to_next": "Corte de eje, altura y escala hacia el siguiente instante.",
+          "scene_role": "visible_magic",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Los elementos cotidianos inventariados en La anciana los encuentra.",
+            "impossible_behavior": "Desde una grieta baja, Kalamantuunay se inclina a distancia hacia los dos envoltorios que comienzan a abrirse.",
+            "narrative_effect": "Hace visible el cambio de relación narrado en el evento e3.",
+            "agency": "La transformación pertenece al relato o a su traducción editorial; las personas no la controlan como superpoder.",
+            "physical_translation": "Hojas mate separadas cambian de silueta, posición o continuidad mediante pliegues y vacíos; sin partículas CGI.",
+            "visible_test": "La contradicción material debe entenderse en una sola imagen sin texto ni duplicación de personajes.",
+            "provenance": "narrated_fact",
+            "temporal_role": "present",
+            "event_ids": [
+              "e3"
+            ]
+          },
+          "motion_contract": {
+            "camera": "Movimiento mínimo compatible con rasante a través de una grieta o vegetación.",
+            "allowed": "Sólo el gesto o cambio material descrito en este instante.",
+            "forbidden": "Repetir la composición anterior, añadir reparto, texto, sangre, ceremonia o utilería no inventariada."
+          },
+          "asset": {
+            "status": "approved_keyframe",
+            "path": "output/imagegen/wayuu/keyframes/los-mellizos-transformadores-preproduccion-01/b3b.jpeg",
+            "sha256": "6d51d0333b73c2a173dc291b416de59594cb1c8df72e99cc34900afdb9fbe675"
+          },
+          "generation_inputs": [
+            {
+              "kind": "prior_keyframe",
+              "frame_id": "b2b",
+              "myth": "los-mellizos-transformadores",
+              "path": "output/imagegen/wayuu/keyframes/los-mellizos-transformadores-preproduccion-01/b2b.jpeg",
+              "sha256": "9bcddbebff7160c79d6754231e3f736a9464b58158f48acd9d679eccd8502772",
+              "approved": true,
+              "role": "Preservar continuidad causal de b2b: identidades, vestuario, paleta y material; prohibido repetir cámara o distribución."
+            },
+            {
+              "kind": "prior_keyframe",
+              "frame_id": "b3a",
+              "myth": "los-mellizos-transformadores",
+              "path": "output/imagegen/wayuu/keyframes/los-mellizos-transformadores-preproduccion-01/b3a.jpeg",
+              "sha256": "0add5f8f694931fceaaa7ed697c7c0bdcda0ee6aff5db131e5621c52ac5c7a8e",
+              "approved": true,
+              "role": "Preservar continuidad causal de b3a: identidades, vestuario, paleta y material; prohibido repetir cámara o distribución."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "los-mellizos-transformadores",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-09-los-mellizos-transformadores-medium/tumajule__identity_sheet--canon.jpeg",
+              "sha256": "89264c83039de108b995eb7749ad3cc9a6e5e05416c7841ce7c56ac00b116d71",
+              "approved": true,
+              "role": "Fijar el modelo canónico tumajule__identity_sheet; preservar identidad y material sin copiar la composición."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "los-mellizos-transformadores",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-09-los-mellizos-transformadores-medium/tumajule__state_sheet--estados.jpeg",
+              "sha256": "f067ac27dcb2eca82514bf0d142b57365d743c565a142cb1c3ea27619dd4a200",
+              "approved": true,
+              "role": "Fijar el modelo canónico tumajule__state_sheet; preservar identidad y material sin copiar la composición."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "los-mellizos-transformadores",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-09-los-mellizos-transformadores-medium/peeliyuu__identity_sheet--canon.jpeg",
+              "sha256": "d6d4a67e552f7485c727724e0e97caaf710e2ee18e3b1620b407c71785379033",
+              "approved": true,
+              "role": "Fijar el modelo canónico peeliyuu__identity_sheet; preservar identidad y material sin copiar la composición."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "b4",
+      "voice_over": "Kalamantuunay los crió como nietos. Los niños aprendieron a cazar y superaron a los hombres-tigre por rapidez e ingenio, no por fuerza espectacular.",
+      "voice_provenance": "Síntesis audiovisual fiel a la narración congelada; Las versiones de Paz Ipuana y Perrin se distinguen; que un mellizo reciba el nombre Maleiwa en otra versión no fija una genealogía única.",
+      "word_count": 23,
+      "time_seconds": [
+        48,
+        64
+      ],
+      "event_ids": [
+        "e4"
+      ],
+      "keyframes": [
+        {
+          "id": "b4a",
+          "title": "Criados como nietos",
+          "visual": "Vista alta de los dos niños diferenciados aprendiendo a tender una pequeña trampa mientras la anciana observa. COMPOSICIÓN OBLIGATORIA: alta diagonal de 60 grados, plano conjunto arquitectónico; no copiar la altura, horizonte ni distribución del keyframe anterior.",
+          "time_seconds": [
+            48,
+            56
+          ],
+          "entity_ids": [
+            "mellizos",
+            "kalamantuunay",
+            "territorio"
+          ],
+          "event_ids": [
+            "e4"
+          ],
+          "angle": "alta diagonal de 60 grados",
+          "shot_scale": "plano conjunto arquitectónico",
+          "depth_planes": [
+            "trama cercana",
+            "acción uno",
+            "estructura central",
+            "acción dos",
+            "horizonte mínimo"
+          ],
+          "continuity_from": "b3b",
+          "transition_to_next": "Corte de eje, altura y escala hacia el siguiente instante.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Movimiento mínimo compatible con alta diagonal de 60 grados.",
+            "allowed": "Sólo el gesto o cambio material descrito en este instante.",
+            "forbidden": "Repetir la composición anterior, añadir reparto, texto, sangre, ceremonia o utilería no inventariada."
+          },
+          "asset": {
+            "status": "approved_keyframe",
+            "path": "output/imagegen/wayuu/keyframes/los-mellizos-transformadores-preproduccion-01/b4a.jpeg",
+            "sha256": "da8fb5d53f48d7990b03e8b6094f158f4f0bea4e558374abe6b2fa0447567c47"
+          },
+          "generation_inputs": [
+            {
+              "kind": "prior_keyframe",
+              "frame_id": "b3a",
+              "myth": "los-mellizos-transformadores",
+              "path": "output/imagegen/wayuu/keyframes/los-mellizos-transformadores-preproduccion-01/b3a.jpeg",
+              "sha256": "0add5f8f694931fceaaa7ed697c7c0bdcda0ee6aff5db131e5621c52ac5c7a8e",
+              "approved": true,
+              "role": "Preservar continuidad causal de b3a: identidades, vestuario, paleta y material; prohibido repetir cámara o distribución."
+            },
+            {
+              "kind": "prior_keyframe",
+              "frame_id": "b3b",
+              "myth": "los-mellizos-transformadores",
+              "path": "output/imagegen/wayuu/keyframes/los-mellizos-transformadores-preproduccion-01/b3b.jpeg",
+              "sha256": "6d51d0333b73c2a173dc291b416de59594cb1c8df72e99cc34900afdb9fbe675",
+              "approved": true,
+              "role": "Preservar continuidad causal de b3b: identidades, vestuario, paleta y material; prohibido repetir cámara o distribución."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "los-mellizos-transformadores",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-09-los-mellizos-transformadores-medium/tumajule__identity_sheet--canon.jpeg",
+              "sha256": "89264c83039de108b995eb7749ad3cc9a6e5e05416c7841ce7c56ac00b116d71",
+              "approved": true,
+              "role": "Fijar el modelo canónico tumajule__identity_sheet; preservar identidad y material sin copiar la composición."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "los-mellizos-transformadores",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-09-los-mellizos-transformadores-medium/tumajule__state_sheet--estados.jpeg",
+              "sha256": "f067ac27dcb2eca82514bf0d142b57365d743c565a142cb1c3ea27619dd4a200",
+              "approved": true,
+              "role": "Fijar el modelo canónico tumajule__state_sheet; preservar identidad y material sin copiar la composición."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "los-mellizos-transformadores",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-09-los-mellizos-transformadores-medium/peeliyuu__identity_sheet--canon.jpeg",
+              "sha256": "d6d4a67e552f7485c727724e0e97caaf710e2ee18e3b1620b407c71785379033",
+              "approved": true,
+              "role": "Fijar el modelo canónico peeliyuu__identity_sheet; preservar identidad y material sin copiar la composición."
+            }
+          ]
+        },
+        {
+          "id": "b4b",
+          "title": "Aáner contradice la historia",
+          "visual": "Sobre el hombro de un mellizo, Aáner ocupa una rama baja y señala con el vuelo un jirón de la manta de Manna. COMPOSICIÓN OBLIGATORIA: sobre el hombro con primer término dominante, plano medio ambiental; no copiar la altura, horizonte ni distribución del keyframe anterior.",
+          "time_seconds": [
+            56,
+            64
+          ],
+          "entity_ids": [
+            "mellizos",
+            "aaner",
+            "memoria"
+          ],
+          "event_ids": [
+            "e4"
+          ],
+          "angle": "sobre el hombro con primer término dominante",
+          "shot_scale": "plano medio ambiental",
+          "depth_planes": [
+            "hombro o marco",
+            "gesto",
+            "objeto o sujeto central",
+            "fondo activo",
+            "territorio"
+          ],
+          "continuity_from": "b4a",
+          "transition_to_next": "Corte de eje, altura y escala hacia el siguiente instante.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Movimiento mínimo compatible con sobre el hombro con primer término dominante.",
+            "allowed": "Sólo el gesto o cambio material descrito en este instante.",
+            "forbidden": "Repetir la composición anterior, añadir reparto, texto, sangre, ceremonia o utilería no inventariada."
+          },
+          "asset": {
+            "status": "approved_keyframe",
+            "path": "output/imagegen/wayuu/keyframes/los-mellizos-transformadores-preproduccion-01/b4b.jpeg",
+            "sha256": "b809eced7dfd69cc507dcac260b5ce6c3b5b586e7de450ed2f0a0fb4b9ee14fe"
+          },
+          "generation_inputs": [
+            {
+              "kind": "prior_keyframe",
+              "frame_id": "b3b",
+              "myth": "los-mellizos-transformadores",
+              "path": "output/imagegen/wayuu/keyframes/los-mellizos-transformadores-preproduccion-01/b3b.jpeg",
+              "sha256": "6d51d0333b73c2a173dc291b416de59594cb1c8df72e99cc34900afdb9fbe675",
+              "approved": true,
+              "role": "Preservar continuidad causal de b3b: identidades, vestuario, paleta y material; prohibido repetir cámara o distribución."
+            },
+            {
+              "kind": "prior_keyframe",
+              "frame_id": "b4a",
+              "myth": "los-mellizos-transformadores",
+              "path": "output/imagegen/wayuu/keyframes/los-mellizos-transformadores-preproduccion-01/b4a.jpeg",
+              "sha256": "da8fb5d53f48d7990b03e8b6094f158f4f0bea4e558374abe6b2fa0447567c47",
+              "approved": true,
+              "role": "Preservar continuidad causal de b4a: identidades, vestuario, paleta y material; prohibido repetir cámara o distribución."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "los-mellizos-transformadores",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-09-los-mellizos-transformadores-medium/tumajule__identity_sheet--canon.jpeg",
+              "sha256": "89264c83039de108b995eb7749ad3cc9a6e5e05416c7841ce7c56ac00b116d71",
+              "approved": true,
+              "role": "Fijar el modelo canónico tumajule__identity_sheet; preservar identidad y material sin copiar la composición."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "los-mellizos-transformadores",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-09-los-mellizos-transformadores-medium/tumajule__state_sheet--estados.jpeg",
+              "sha256": "f067ac27dcb2eca82514bf0d142b57365d743c565a142cb1c3ea27619dd4a200",
+              "approved": true,
+              "role": "Fijar el modelo canónico tumajule__state_sheet; preservar identidad y material sin copiar la composición."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "los-mellizos-transformadores",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-09-los-mellizos-transformadores-medium/peeliyuu__identity_sheet--canon.jpeg",
+              "sha256": "d6d4a67e552f7485c727724e0e97caaf710e2ee18e3b1620b407c71785379033",
+              "approved": true,
+              "role": "Fijar el modelo canónico peeliyuu__identity_sheet; preservar identidad y material sin copiar la composición."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "b5",
+      "voice_over": "Aáner y otras aves hicieron dudar a los mellizos. Al buscar pruebas, comprendieron que la historia sobre su madre ocultaba la responsabilidad de aquella casa.",
+      "voice_provenance": "Síntesis audiovisual fiel a la narración congelada; Las versiones de Paz Ipuana y Perrin se distinguen; que un mellizo reciba el nombre Maleiwa en otra versión no fija una genealogía única.",
+      "word_count": 25,
+      "time_seconds": [
+        64,
+        80
+      ],
+      "event_ids": [
+        "e5"
+      ],
+      "keyframes": [
+        {
+          "id": "b5a",
+          "title": "Buscar pruebas",
+          "visual": "Desde la sombra de la casa, los mellizos levantan dos fibras iguales a la manta, sin abrir recipientes ni mostrar restos. COMPOSICIÓN OBLIGATORIA: subjetiva baja desde la sombra, plano general con primer término oscuro; no copiar la altura, horizonte ni distribución del keyframe anterior.",
+          "time_seconds": [
+            64,
+            72
+          ],
+          "entity_ids": [
+            "mellizos",
+            "memoria",
+            "kalamantuunay"
+          ],
+          "event_ids": [
+            "e5"
+          ],
+          "angle": "subjetiva baja desde la sombra",
+          "shot_scale": "plano general con primer término oscuro",
+          "depth_planes": [
+            "sombra cercana",
+            "señal",
+            "acción media",
+            "figuras",
+            "arquitectura o paisaje"
+          ],
+          "continuity_from": "b4b",
+          "transition_to_next": "Corte de eje, altura y escala hacia el siguiente instante.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Movimiento mínimo compatible con subjetiva baja desde la sombra.",
+            "allowed": "Sólo el gesto o cambio material descrito en este instante.",
+            "forbidden": "Repetir la composición anterior, añadir reparto, texto, sangre, ceremonia o utilería no inventariada."
+          },
+          "asset": {
+            "status": "approved_keyframe",
+            "path": "output/imagegen/wayuu/keyframes/los-mellizos-transformadores-preproduccion-01/b5a.jpeg",
+            "sha256": "b086bf46589480bd30db06023578a0682f50c99a310d3fc0f3238f160cfea98f"
+          },
+          "generation_inputs": [
+            {
+              "kind": "prior_keyframe",
+              "frame_id": "b4a",
+              "myth": "los-mellizos-transformadores",
+              "path": "output/imagegen/wayuu/keyframes/los-mellizos-transformadores-preproduccion-01/b4a.jpeg",
+              "sha256": "da8fb5d53f48d7990b03e8b6094f158f4f0bea4e558374abe6b2fa0447567c47",
+              "approved": true,
+              "role": "Preservar continuidad causal de b4a: identidades, vestuario, paleta y material; prohibido repetir cámara o distribución."
+            },
+            {
+              "kind": "prior_keyframe",
+              "frame_id": "b4b",
+              "myth": "los-mellizos-transformadores",
+              "path": "output/imagegen/wayuu/keyframes/los-mellizos-transformadores-preproduccion-01/b4b.jpeg",
+              "sha256": "b809eced7dfd69cc507dcac260b5ce6c3b5b586e7de450ed2f0a0fb4b9ee14fe",
+              "approved": true,
+              "role": "Preservar continuidad causal de b4b: identidades, vestuario, paleta y material; prohibido repetir cámara o distribución."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "los-mellizos-transformadores",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-09-los-mellizos-transformadores-medium/tumajule__identity_sheet--canon.jpeg",
+              "sha256": "89264c83039de108b995eb7749ad3cc9a6e5e05416c7841ce7c56ac00b116d71",
+              "approved": true,
+              "role": "Fijar el modelo canónico tumajule__identity_sheet; preservar identidad y material sin copiar la composición."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "los-mellizos-transformadores",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-09-los-mellizos-transformadores-medium/tumajule__state_sheet--estados.jpeg",
+              "sha256": "f067ac27dcb2eca82514bf0d142b57365d743c565a142cb1c3ea27619dd4a200",
+              "approved": true,
+              "role": "Fijar el modelo canónico tumajule__state_sheet; preservar identidad y material sin copiar la composición."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "los-mellizos-transformadores",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-09-los-mellizos-transformadores-medium/peeliyuu__identity_sheet--canon.jpeg",
+              "sha256": "d6d4a67e552f7485c727724e0e97caaf710e2ee18e3b1620b407c71785379033",
+              "approved": true,
+              "role": "Fijar el modelo canónico peeliyuu__identity_sheet; preservar identidad y material sin copiar la composición."
+            }
+          ]
+        },
+        {
+          "id": "b5b",
+          "title": "Preparar la respuesta",
+          "visual": "Perfil distante de los dos niños organizando una mesa y una salida; la anciana queda fuera de cuadro. COMPOSICIÓN OBLIGATORIA: perfil distante con horizonte desplazado, plano general lateral; no copiar la altura, horizonte ni distribución del keyframe anterior.",
+          "time_seconds": [
+            72,
+            80
+          ],
+          "entity_ids": [
+            "mellizos",
+            "kalamantuunay"
+          ],
+          "event_ids": [
+            "e5"
+          ],
+          "angle": "perfil distante con horizonte desplazado",
+          "shot_scale": "plano general lateral",
+          "depth_planes": [
+            "materia cercana",
+            "sujeto lateral",
+            "acción",
+            "segundo sujeto",
+            "horizonte alto"
+          ],
+          "continuity_from": "b5a",
+          "transition_to_next": "Corte de eje, altura y escala hacia el siguiente instante.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Movimiento mínimo compatible con perfil distante con horizonte desplazado.",
+            "allowed": "Sólo el gesto o cambio material descrito en este instante.",
+            "forbidden": "Repetir la composición anterior, añadir reparto, texto, sangre, ceremonia o utilería no inventariada."
+          },
+          "asset": {
+            "status": "approved_keyframe",
+            "path": "output/imagegen/wayuu/keyframes/los-mellizos-transformadores-preproduccion-01/b5b.jpeg",
+            "sha256": "76ba5011f8ac98b3d8ae5453ddea226a45cddf29551aaf67a9927f9cf7b460ad"
+          },
+          "generation_inputs": [
+            {
+              "kind": "prior_keyframe",
+              "frame_id": "b4b",
+              "myth": "los-mellizos-transformadores",
+              "path": "output/imagegen/wayuu/keyframes/los-mellizos-transformadores-preproduccion-01/b4b.jpeg",
+              "sha256": "b809eced7dfd69cc507dcac260b5ce6c3b5b586e7de450ed2f0a0fb4b9ee14fe",
+              "approved": true,
+              "role": "Preservar continuidad causal de b4b: identidades, vestuario, paleta y material; prohibido repetir cámara o distribución."
+            },
+            {
+              "kind": "prior_keyframe",
+              "frame_id": "b5a",
+              "myth": "los-mellizos-transformadores",
+              "path": "output/imagegen/wayuu/keyframes/los-mellizos-transformadores-preproduccion-01/b5a.jpeg",
+              "sha256": "b086bf46589480bd30db06023578a0682f50c99a310d3fc0f3238f160cfea98f",
+              "approved": true,
+              "role": "Preservar continuidad causal de b5a: identidades, vestuario, paleta y material; prohibido repetir cámara o distribución."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "los-mellizos-transformadores",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-09-los-mellizos-transformadores-medium/tumajule__identity_sheet--canon.jpeg",
+              "sha256": "89264c83039de108b995eb7749ad3cc9a6e5e05416c7841ce7c56ac00b116d71",
+              "approved": true,
+              "role": "Fijar el modelo canónico tumajule__identity_sheet; preservar identidad y material sin copiar la composición."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "los-mellizos-transformadores",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-09-los-mellizos-transformadores-medium/tumajule__state_sheet--estados.jpeg",
+              "sha256": "f067ac27dcb2eca82514bf0d142b57365d743c565a142cb1c3ea27619dd4a200",
+              "approved": true,
+              "role": "Fijar el modelo canónico tumajule__state_sheet; preservar identidad y material sin copiar la composición."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "los-mellizos-transformadores",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-09-los-mellizos-transformadores-medium/peeliyuu__identity_sheet--canon.jpeg",
+              "sha256": "d6d4a67e552f7485c727724e0e97caaf710e2ee18e3b1620b407c71785379033",
+              "approved": true,
+              "role": "Fijar el modelo canónico peeliyuu__identity_sheet; preservar identidad y material sin copiar la composición."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "b6",
+      "voice_over": "Los mellizos prepararon una venganza. No mostramos cuerpos ni antropofagia: la mesa vacía y la persecución señalan el descubrimiento y sus consecuencias.",
+      "voice_provenance": "Síntesis audiovisual fiel a la narración congelada; Las versiones de Paz Ipuana y Perrin se distinguen; que un mellizo reciba el nombre Maleiwa en otra versión no fija una genealogía única.",
+      "word_count": 22,
+      "time_seconds": [
+        80,
+        96
+      ],
+      "event_ids": [
+        "e6"
+      ],
+      "keyframes": [
+        {
+          "id": "b6a",
+          "title": "La mesa revela la ausencia",
+          "visual": "Cenital diagonal de una mesa vacía con un asiento de la anciana y tres sombras de hombres-tigre que se detienen. COMPOSICIÓN OBLIGATORIA: cenital diagonal amplio, plano de consecuencia; no copiar la altura, horizonte ni distribución del keyframe anterior.",
+          "time_seconds": [
+            80,
+            88
+          ],
+          "entity_ids": [
+            "kalamantuunay",
+            "tigres",
+            "memoria"
+          ],
+          "event_ids": [
+            "e6"
+          ],
+          "angle": "cenital diagonal amplio",
+          "shot_scale": "plano de consecuencia",
+          "depth_planes": [
+            "sombra",
+            "objeto central",
+            "figuras parciales",
+            "trama territorial",
+            "borde de salida"
+          ],
+          "continuity_from": "b5b",
+          "transition_to_next": "Corte de eje, altura y escala hacia el siguiente instante.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Movimiento mínimo compatible con cenital diagonal amplio.",
+            "allowed": "Sólo el gesto o cambio material descrito en este instante.",
+            "forbidden": "Repetir la composición anterior, añadir reparto, texto, sangre, ceremonia o utilería no inventariada."
+          },
+          "asset": {
+            "status": "approved_keyframe",
+            "path": "output/imagegen/wayuu/keyframes/los-mellizos-transformadores-preproduccion-01/b6a.jpeg",
+            "sha256": "2ac45e355eddc00b6d0669df02350e3ff0a38ee6808584074c9ab1c507ae7488"
+          },
+          "generation_inputs": [
+            {
+              "kind": "prior_keyframe",
+              "frame_id": "b5a",
+              "myth": "los-mellizos-transformadores",
+              "path": "output/imagegen/wayuu/keyframes/los-mellizos-transformadores-preproduccion-01/b5a.jpeg",
+              "sha256": "b086bf46589480bd30db06023578a0682f50c99a310d3fc0f3238f160cfea98f",
+              "approved": true,
+              "role": "Preservar continuidad causal de b5a: identidades, vestuario, paleta y material; prohibido repetir cámara o distribución."
+            },
+            {
+              "kind": "prior_keyframe",
+              "frame_id": "b5b",
+              "myth": "los-mellizos-transformadores",
+              "path": "output/imagegen/wayuu/keyframes/los-mellizos-transformadores-preproduccion-01/b5b.jpeg",
+              "sha256": "76ba5011f8ac98b3d8ae5453ddea226a45cddf29551aaf67a9927f9cf7b460ad",
+              "approved": true,
+              "role": "Preservar continuidad causal de b5b: identidades, vestuario, paleta y material; prohibido repetir cámara o distribución."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "los-mellizos-transformadores",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-09-los-mellizos-transformadores-medium/kalamantuunay__identity_sheet--canon.jpeg",
+              "sha256": "64fa5761a8fd0adc37989a9ba5a22264f0398ae33f21de2d8a9f763d5f32489b",
+              "approved": true,
+              "role": "Fijar el modelo canónico kalamantuunay__identity_sheet; preservar identidad y material sin copiar la composición."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "los-mellizos-transformadores",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-09-los-mellizos-transformadores-medium-corrections-01/hombres_tigre__group_grammar--canon.jpeg",
+              "sha256": "0b0bb42c6f74da3d6164aaf25e59b70943c9d5e2b561041b84978c9c3153d0dd",
+              "approved": true,
+              "role": "Fijar el modelo canónico hombres_tigre__group_grammar; preservar identidad y material sin copiar la composición."
+            }
+          ]
+        },
+        {
+          "id": "b6b",
+          "title": "La persecución empieza",
+          "visual": "Macro de huellas pequeñas que se bifurcan mientras huellas felinas adultas llegan detrás; ninguna persona visible. COMPOSICIÓN OBLIGATORIA: macro frontal de materia, primerísimo plano de objeto; no copiar la altura, horizonte ni distribución del keyframe anterior.",
+          "time_seconds": [
+            88,
+            96
+          ],
+          "entity_ids": [
+            "mellizos",
+            "tigres",
+            "territorio"
+          ],
+          "event_ids": [
+            "e6"
+          ],
+          "angle": "macro frontal de materia",
+          "shot_scale": "primerísimo plano de objeto",
+          "depth_planes": [
+            "fibra cercana",
+            "objeto",
+            "cambio material",
+            "sombra interna",
+            "fondo abstracto"
+          ],
+          "continuity_from": "b6a",
+          "transition_to_next": "Corte de eje, altura y escala hacia el siguiente instante.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Movimiento mínimo compatible con macro frontal de materia.",
+            "allowed": "Sólo el gesto o cambio material descrito en este instante.",
+            "forbidden": "Repetir la composición anterior, añadir reparto, texto, sangre, ceremonia o utilería no inventariada."
+          },
+          "asset": {
+            "status": "approved_keyframe",
+            "path": "output/imagegen/wayuu/keyframes/los-mellizos-transformadores-preproduccion-01/b6b.jpeg",
+            "sha256": "bc5924e2ea234c6e6076656d14a7c9b54e59ff8788f43837551b493ae51b5764"
+          },
+          "generation_inputs": [
+            {
+              "kind": "prior_keyframe",
+              "frame_id": "b5b",
+              "myth": "los-mellizos-transformadores",
+              "path": "output/imagegen/wayuu/keyframes/los-mellizos-transformadores-preproduccion-01/b5b.jpeg",
+              "sha256": "76ba5011f8ac98b3d8ae5453ddea226a45cddf29551aaf67a9927f9cf7b460ad",
+              "approved": true,
+              "role": "Preservar continuidad causal de b5b: identidades, vestuario, paleta y material; prohibido repetir cámara o distribución."
+            },
+            {
+              "kind": "prior_keyframe",
+              "frame_id": "b6a",
+              "myth": "los-mellizos-transformadores",
+              "path": "output/imagegen/wayuu/keyframes/los-mellizos-transformadores-preproduccion-01/b6a.jpeg",
+              "sha256": "2ac45e355eddc00b6d0669df02350e3ff0a38ee6808584074c9ab1c507ae7488",
+              "approved": true,
+              "role": "Preservar continuidad causal de b6a: identidades, vestuario, paleta y material; prohibido repetir cámara o distribución."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "los-mellizos-transformadores",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-09-los-mellizos-transformadores-medium/tumajule__identity_sheet--canon.jpeg",
+              "sha256": "89264c83039de108b995eb7749ad3cc9a6e5e05416c7841ce7c56ac00b116d71",
+              "approved": true,
+              "role": "Fijar el modelo canónico tumajule__identity_sheet; preservar identidad y material sin copiar la composición."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "los-mellizos-transformadores",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-09-los-mellizos-transformadores-medium/tumajule__state_sheet--estados.jpeg",
+              "sha256": "f067ac27dcb2eca82514bf0d142b57365d743c565a142cb1c3ea27619dd4a200",
+              "approved": true,
+              "role": "Fijar el modelo canónico tumajule__state_sheet; preservar identidad y material sin copiar la composición."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "los-mellizos-transformadores",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-09-los-mellizos-transformadores-medium/peeliyuu__identity_sheet--canon.jpeg",
+              "sha256": "d6d4a67e552f7485c727724e0e97caaf710e2ee18e3b1620b407c71785379033",
+              "approved": true,
+              "role": "Fijar el modelo canónico peeliyuu__identity_sheet; preservar identidad y material sin copiar la composición."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "b7",
+      "voice_over": "Durante la huida, uno se volvió nube. Los perseguidores perdieron su forma y quedaron relacionados con Wanurü, fuerzas dañinas que acompañarían el mundo humano.",
+      "voice_provenance": "Síntesis audiovisual fiel a la narración congelada; Las versiones de Paz Ipuana y Perrin se distinguen; que un mellizo reciba el nombre Maleiwa en otra versión no fija una genealogía única.",
+      "word_count": 24,
+      "time_seconds": [
+        96,
+        112
+      ],
+      "event_ids": [
+        "e7"
+      ],
+      "keyframes": [
+        {
+          "id": "b7a",
+          "title": "Uno se vuelve nube",
+          "visual": "Entre rocas, un niño permanece visible y el otro se desarma en hojas blancas de nube que cruzan el paso. COMPOSICIÓN OBLIGATORIA: contrapicado enmarcado entre postes o rocas, plano general enmarcado; no copiar la altura, horizonte ni distribución del keyframe anterior.",
+          "time_seconds": [
+            96,
+            104
+          ],
+          "entity_ids": [
+            "mellizos",
+            "nube",
+            "territorio"
+          ],
+          "event_ids": [
+            "e7"
+          ],
+          "angle": "contrapicado enmarcado entre postes o rocas",
+          "shot_scale": "plano general enmarcado",
+          "depth_planes": [
+            "marco cercano",
+            "umbral",
+            "sujetos pequeños",
+            "acción",
+            "paisaje estrecho"
+          ],
+          "continuity_from": "b6b",
+          "transition_to_next": "Corte de eje, altura y escala hacia el siguiente instante.",
+          "scene_role": "visible_magic",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Los elementos cotidianos inventariados en Uno se vuelve nube.",
+            "impossible_behavior": "Entre rocas, un niño permanece visible y el otro se desarma en hojas blancas de nube que cruzan el paso.",
+            "narrative_effect": "Hace visible el cambio de relación narrado en el evento e7.",
+            "agency": "La transformación pertenece al relato o a su traducción editorial; las personas no la controlan como superpoder.",
+            "physical_translation": "Hojas mate separadas cambian de silueta, posición o continuidad mediante pliegues y vacíos; sin partículas CGI.",
+            "visible_test": "La contradicción material debe entenderse en una sola imagen sin texto ni duplicación de personajes.",
+            "provenance": "narrated_fact",
+            "temporal_role": "present",
+            "event_ids": [
+              "e7"
+            ]
+          },
+          "motion_contract": {
+            "camera": "Movimiento mínimo compatible con contrapicado enmarcado entre postes o rocas.",
+            "allowed": "Sólo el gesto o cambio material descrito en este instante.",
+            "forbidden": "Repetir la composición anterior, añadir reparto, texto, sangre, ceremonia o utilería no inventariada."
+          },
+          "asset": {
+            "status": "approved_keyframe",
+            "path": "output/imagegen/wayuu/keyframes/los-mellizos-transformadores-preproduccion-01/b7a.jpeg",
+            "sha256": "8ec38d8c1c09794adaf389c2294ba91f5749e1a893244541c50c2a4e71c8f580"
+          },
+          "generation_inputs": [
+            {
+              "kind": "prior_keyframe",
+              "frame_id": "b6a",
+              "myth": "los-mellizos-transformadores",
+              "path": "output/imagegen/wayuu/keyframes/los-mellizos-transformadores-preproduccion-01/b6a.jpeg",
+              "sha256": "2ac45e355eddc00b6d0669df02350e3ff0a38ee6808584074c9ab1c507ae7488",
+              "approved": true,
+              "role": "Preservar continuidad causal de b6a: identidades, vestuario, paleta y material; prohibido repetir cámara o distribución."
+            },
+            {
+              "kind": "prior_keyframe",
+              "frame_id": "b6b",
+              "myth": "los-mellizos-transformadores",
+              "path": "output/imagegen/wayuu/keyframes/los-mellizos-transformadores-preproduccion-01/b6b.jpeg",
+              "sha256": "bc5924e2ea234c6e6076656d14a7c9b54e59ff8788f43837551b493ae51b5764",
+              "approved": true,
+              "role": "Preservar continuidad causal de b6b: identidades, vestuario, paleta y material; prohibido repetir cámara o distribución."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "los-mellizos-transformadores",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-09-los-mellizos-transformadores-medium/tumajule__identity_sheet--canon.jpeg",
+              "sha256": "89264c83039de108b995eb7749ad3cc9a6e5e05416c7841ce7c56ac00b116d71",
+              "approved": true,
+              "role": "Fijar el modelo canónico tumajule__identity_sheet; preservar identidad y material sin copiar la composición."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "los-mellizos-transformadores",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-09-los-mellizos-transformadores-medium/tumajule__state_sheet--estados.jpeg",
+              "sha256": "f067ac27dcb2eca82514bf0d142b57365d743c565a142cb1c3ea27619dd4a200",
+              "approved": true,
+              "role": "Fijar el modelo canónico tumajule__state_sheet; preservar identidad y material sin copiar la composición."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "los-mellizos-transformadores",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-09-los-mellizos-transformadores-medium/peeliyuu__identity_sheet--canon.jpeg",
+              "sha256": "d6d4a67e552f7485c727724e0e97caaf710e2ee18e3b1620b407c71785379033",
+              "approved": true,
+              "role": "Fijar el modelo canónico peeliyuu__identity_sheet; preservar identidad y material sin copiar la composición."
+            }
+          ]
+        },
+        {
+          "id": "b7b",
+          "title": "Los perseguidores pierden forma",
+          "visual": "A través de una abertura, las siluetas adultas se fragmentan en cortes índigo sin formar nuevas criaturas. COMPOSICIÓN OBLIGATORIA: teleobjetivo profundo a través de una abertura, plano largo comprimido; no copiar la altura, horizonte ni distribución del keyframe anterior.",
+          "time_seconds": [
+            104,
+            112
+          ],
+          "entity_ids": [
+            "tigres",
+            "wanuru",
+            "territorio"
+          ],
+          "event_ids": [
+            "e7"
+          ],
+          "angle": "teleobjetivo profundo a través de una abertura",
+          "shot_scale": "plano largo comprimido",
+          "depth_planes": [
+            "abertura cercana",
+            "vacío",
+            "acción lejana",
+            "capas medias",
+            "fondo comprimido"
+          ],
+          "continuity_from": "b7a",
+          "transition_to_next": "Corte de eje, altura y escala hacia el siguiente instante.",
+          "scene_role": "visible_magic",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Los elementos cotidianos inventariados en Los perseguidores pierden forma.",
+            "impossible_behavior": "A través de una abertura, las siluetas adultas se fragmentan en cortes índigo sin formar nuevas criaturas.",
+            "narrative_effect": "Hace visible el cambio de relación narrado en el evento e7.",
+            "agency": "La transformación pertenece al relato o a su traducción editorial; las personas no la controlan como superpoder.",
+            "physical_translation": "Hojas mate separadas cambian de silueta, posición o continuidad mediante pliegues y vacíos; sin partículas CGI.",
+            "visible_test": "La contradicción material debe entenderse en una sola imagen sin texto ni duplicación de personajes.",
+            "provenance": "narrated_fact",
+            "temporal_role": "present",
+            "event_ids": [
+              "e7"
+            ]
+          },
+          "motion_contract": {
+            "camera": "Movimiento mínimo compatible con teleobjetivo profundo a través de una abertura.",
+            "allowed": "Sólo el gesto o cambio material descrito en este instante.",
+            "forbidden": "Repetir la composición anterior, añadir reparto, texto, sangre, ceremonia o utilería no inventariada."
+          },
+          "asset": {
+            "status": "approved_keyframe",
+            "path": "output/imagegen/wayuu/keyframes/los-mellizos-transformadores-preproduccion-01/b7b.jpeg",
+            "sha256": "a12ad555e400be9461728d2cf03e27b5de984d48263a183fc38aed4d783483ee"
+          },
+          "generation_inputs": [
+            {
+              "kind": "prior_keyframe",
+              "frame_id": "b6b",
+              "myth": "los-mellizos-transformadores",
+              "path": "output/imagegen/wayuu/keyframes/los-mellizos-transformadores-preproduccion-01/b6b.jpeg",
+              "sha256": "bc5924e2ea234c6e6076656d14a7c9b54e59ff8788f43837551b493ae51b5764",
+              "approved": true,
+              "role": "Preservar continuidad causal de b6b: identidades, vestuario, paleta y material; prohibido repetir cámara o distribución."
+            },
+            {
+              "kind": "prior_keyframe",
+              "frame_id": "b7a",
+              "myth": "los-mellizos-transformadores",
+              "path": "output/imagegen/wayuu/keyframes/los-mellizos-transformadores-preproduccion-01/b7a.jpeg",
+              "sha256": "8ec38d8c1c09794adaf389c2294ba91f5749e1a893244541c50c2a4e71c8f580",
+              "approved": true,
+              "role": "Preservar continuidad causal de b7a: identidades, vestuario, paleta y material; prohibido repetir cámara o distribución."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "los-mellizos-transformadores",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-09-los-mellizos-transformadores-medium-corrections-01/hombres_tigre__group_grammar--canon.jpeg",
+              "sha256": "0b0bb42c6f74da3d6164aaf25e59b70943c9d5e2b561041b84978c9c3153d0dd",
+              "approved": true,
+              "role": "Fijar el modelo canónico hombres_tigre__group_grammar; preservar identidad y material sin copiar la composición."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "los-mellizos-transformadores",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-09-los-mellizos-transformadores-medium/costa_mar_guajira__environment_model--canon.jpeg",
+              "sha256": "0f6d686bc3c825bdeb6e1b120277d64edca91fb06f2257c677d87f9cfdbaa6dc",
+              "approved": true,
+              "role": "Fijar el modelo canónico costa_mar_guajira__environment_model; preservar identidad y material sin copiar la composición."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "b8",
+      "voice_over": "La victoria no restauró a Manna. Los mellizos siguieron transformando la península; en otra versión uno recibe el nombre Maleiwa y se acerca al origen humano.",
+      "voice_provenance": "Síntesis audiovisual fiel a la narración congelada; Las versiones de Paz Ipuana y Perrin se distinguen; que un mellizo reciba el nombre Maleiwa en otra versión no fija una genealogía única.",
+      "word_count": 26,
+      "time_seconds": [
+        112,
+        128
+      ],
+      "event_ids": [
+        "e8"
+      ],
+      "keyframes": [
+        {
+          "id": "b8a",
+          "title": "Recorrer la península",
+          "visual": "Los dos mellizos vuelven a verse como niños y atraviesan un territorio amplio con huellas de cambios materiales detrás. COMPOSICIÓN OBLIGATORIA: aérea oblicua desde atrás, gran plano general de relación; no copiar la altura, horizonte ni distribución del keyframe anterior.",
+          "time_seconds": [
+            112,
+            120
+          ],
+          "entity_ids": [
+            "mellizos",
+            "territorio",
+            "memoria"
+          ],
+          "event_ids": [
+            "e8"
+          ],
+          "angle": "aérea oblicua desde atrás",
+          "shot_scale": "gran plano general de relación",
+          "depth_planes": [
+            "estructura cercana",
+            "sujetos",
+            "trayectoria",
+            "territorio amplio",
+            "cielo mínimo"
+          ],
+          "continuity_from": "b7b",
+          "transition_to_next": "Corte de eje, altura y escala hacia el siguiente instante.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Movimiento mínimo compatible con aérea oblicua desde atrás.",
+            "allowed": "Sólo el gesto o cambio material descrito en este instante.",
+            "forbidden": "Repetir la composición anterior, añadir reparto, texto, sangre, ceremonia o utilería no inventariada."
+          },
+          "asset": {
+            "status": "approved_keyframe",
+            "path": "output/imagegen/wayuu/keyframes/los-mellizos-transformadores-preproduccion-01/b8a.jpeg",
+            "sha256": "62e6f3ba72f3b383cde09f7a487e15b7ddfed26dceeef93085192e8939e73916"
+          },
+          "generation_inputs": [
+            {
+              "kind": "prior_keyframe",
+              "frame_id": "b7a",
+              "myth": "los-mellizos-transformadores",
+              "path": "output/imagegen/wayuu/keyframes/los-mellizos-transformadores-preproduccion-01/b7a.jpeg",
+              "sha256": "8ec38d8c1c09794adaf389c2294ba91f5749e1a893244541c50c2a4e71c8f580",
+              "approved": true,
+              "role": "Preservar continuidad causal de b7a: identidades, vestuario, paleta y material; prohibido repetir cámara o distribución."
+            },
+            {
+              "kind": "prior_keyframe",
+              "frame_id": "b7b",
+              "myth": "los-mellizos-transformadores",
+              "path": "output/imagegen/wayuu/keyframes/los-mellizos-transformadores-preproduccion-01/b7b.jpeg",
+              "sha256": "a12ad555e400be9461728d2cf03e27b5de984d48263a183fc38aed4d783483ee",
+              "approved": true,
+              "role": "Preservar continuidad causal de b7b: identidades, vestuario, paleta y material; prohibido repetir cámara o distribución."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "los-mellizos-transformadores",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-09-los-mellizos-transformadores-medium/tumajule__identity_sheet--canon.jpeg",
+              "sha256": "89264c83039de108b995eb7749ad3cc9a6e5e05416c7841ce7c56ac00b116d71",
+              "approved": true,
+              "role": "Fijar el modelo canónico tumajule__identity_sheet; preservar identidad y material sin copiar la composición."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "los-mellizos-transformadores",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-09-los-mellizos-transformadores-medium/tumajule__state_sheet--estados.jpeg",
+              "sha256": "f067ac27dcb2eca82514bf0d142b57365d743c565a142cb1c3ea27619dd4a200",
+              "approved": true,
+              "role": "Fijar el modelo canónico tumajule__state_sheet; preservar identidad y material sin copiar la composición."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "los-mellizos-transformadores",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-09-los-mellizos-transformadores-medium/peeliyuu__identity_sheet--canon.jpeg",
+              "sha256": "d6d4a67e552f7485c727724e0e97caaf710e2ee18e3b1620b407c71785379033",
+              "approved": true,
+              "role": "Fijar el modelo canónico peeliyuu__identity_sheet; preservar identidad y material sin copiar la composición."
+            }
+          ]
+        },
+        {
+          "id": "b8b",
+          "title": "Figuras de paso",
+          "visual": "Desde el suelo, los mellizos se alejan entre una franja humana distante y nubes; no se identifica a uno definitivamente con Mareiwa. COMPOSICIÓN OBLIGATORIA: a ras del suelo mirando hacia la distancia, plano final de fuga; no copiar la altura, horizonte ni distribución del keyframe anterior.",
+          "time_seconds": [
+            120,
+            128
+          ],
+          "entity_ids": [
+            "mellizos",
+            "territorio",
+            "nube"
+          ],
+          "event_ids": [
+            "e8"
+          ],
+          "angle": "a ras del suelo mirando hacia la distancia",
+          "shot_scale": "plano final de fuga",
+          "depth_planes": [
+            "materia muy cercana",
+            "sendero",
+            "figuras pequeñas",
+            "paisaje",
+            "horizonte"
+          ],
+          "continuity_from": "b8a",
+          "transition_to_next": "Corte de eje, altura y escala hacia el siguiente instante.",
+          "scene_role": "visible_magic",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Los elementos cotidianos inventariados en Figuras de paso.",
+            "impossible_behavior": "Desde el suelo, los mellizos se alejan entre una franja humana distante y nubes; no se identifica a uno definitivamente con Mareiwa.",
+            "narrative_effect": "Hace visible el cambio de relación narrado en el evento e8.",
+            "agency": "La transformación pertenece al relato o a su traducción editorial; las personas no la controlan como superpoder.",
+            "physical_translation": "Hojas mate separadas cambian de silueta, posición o continuidad mediante pliegues y vacíos; sin partículas CGI.",
+            "visible_test": "La contradicción material debe entenderse en una sola imagen sin texto ni duplicación de personajes.",
+            "provenance": "narrated_fact",
+            "temporal_role": "present",
+            "event_ids": [
+              "e8"
+            ]
+          },
+          "motion_contract": {
+            "camera": "Movimiento mínimo compatible con a ras del suelo mirando hacia la distancia.",
+            "allowed": "Sólo el gesto o cambio material descrito en este instante.",
+            "forbidden": "Repetir la composición anterior, añadir reparto, texto, sangre, ceremonia o utilería no inventariada."
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "generation_inputs": [
+            {
+              "kind": "prior_keyframe",
+              "frame_id": "b7b",
+              "myth": "los-mellizos-transformadores",
+              "path": "output/imagegen/wayuu/keyframes/los-mellizos-transformadores-preproduccion-01/b7b.jpeg",
+              "sha256": "a12ad555e400be9461728d2cf03e27b5de984d48263a183fc38aed4d783483ee",
+              "approved": true,
+              "role": "Preservar continuidad causal de b7b: identidades, vestuario, paleta y material; prohibido repetir cámara o distribución."
+            },
+            {
+              "kind": "prior_keyframe",
+              "frame_id": "b8a",
+              "myth": "los-mellizos-transformadores",
+              "path": "output/imagegen/wayuu/keyframes/los-mellizos-transformadores-preproduccion-01/b8a.jpeg",
+              "sha256": "62e6f3ba72f3b383cde09f7a487e15b7ddfed26dceeef93085192e8939e73916",
+              "approved": true,
+              "role": "Preservar continuidad causal de b8a: identidades, vestuario, paleta y material; prohibido repetir cámara o distribución."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "los-mellizos-transformadores",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-09-los-mellizos-transformadores-medium/tumajule__identity_sheet--canon.jpeg",
+              "sha256": "89264c83039de108b995eb7749ad3cc9a6e5e05416c7841ce7c56ac00b116d71",
+              "approved": true,
+              "role": "Fijar el modelo canónico tumajule__identity_sheet; preservar identidad y material sin copiar la composición."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "los-mellizos-transformadores",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-09-los-mellizos-transformadores-medium/tumajule__state_sheet--estados.jpeg",
+              "sha256": "f067ac27dcb2eca82514bf0d142b57365d743c565a142cb1c3ea27619dd4a200",
+              "approved": true,
+              "role": "Fijar el modelo canónico tumajule__state_sheet; preservar identidad y material sin copiar la composición."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "los-mellizos-transformadores",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-09-los-mellizos-transformadores-medium/peeliyuu__identity_sheet--canon.jpeg",
+              "sha256": "d6d4a67e552f7485c727724e0e97caaf710e2ee18e3b1620b407c71785379033",
+              "approved": true,
+              "role": "Fijar el modelo canónico peeliyuu__identity_sheet; preservar identidad y material sin copiar la composición."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

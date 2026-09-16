@@ -1,0 +1,132 @@
+{
+  "schema": "wayuu-video-freeze/v1",
+  "created_at": "2026-09-09T23:42:35.555Z",
+  "plan": "content/videos/wayuu/videos/waleker-el-origen-del-tejido/preproduccion-01/plan.json",
+  "plan_sha256": "6a6bd4fda4e569643f4a70b261e1c2fa1e6f08c03fb9517b3f81bb2c04ebfa57",
+  "style": "content/videos/wayuu/channel-dna.v3.json",
+  "style_sha256": "20f876f10840d4e643f034ccc131ed184bbb7ee5d023a1d2d3c82899fcc93b8a",
+  "checks": {
+    "shots": 16,
+    "words": 181,
+    "estimated_seconds": 128,
+    "generated": 6,
+    "pending": 10,
+    "warnings": []
+  },
+  "files": {
+    "narrative_snapshot_verified": true,
+    "reference_checks": 61,
+    "public_freshness": "not_checked_by_offline_preparer"
+  },
+  "jobs": [
+    {
+      "id": "b4a",
+      "prompt_file": "content/videos/wayuu/videos/waleker-el-origen-del-tejido/preproduccion-01/prepared-b4a-01/prompts/b4a.txt",
+      "prompt_sha256": "38c6390c3c14bdaecebedba8815b52be2e9c0a9c0342eb9be3a536a0b6d0f5c3",
+      "model": "gpt-image-2.5-sunburst",
+      "allowed_models": [
+        "gpt-image-2.5-sunburst",
+        "gpt-image-2.5-flare",
+        "gpt-image-2"
+      ],
+      "fast_iteration_model": "gpt-image-2.5-flare",
+      "legacy_fallback_model": "gpt-image-2",
+      "one_model_per_myth": true,
+      "record_exact_model_and_snapshot": true,
+      "quality": "medium",
+      "size": "864x1536",
+      "api_request_size": "1024x1536",
+      "delivery_size": "864x1536",
+      "delivery_transform": "center_crop_864x1536",
+      "output_format": "jpeg",
+      "mode": "image_edit_with_prior_keyframes",
+      "input_images": [
+        {
+          "kind": "prior_keyframe",
+          "frame_id": "b3a",
+          "myth": "waleker-el-origen-del-tejido",
+          "path": "output/imagegen/wayuu/keyframes/waleker-el-origen-del-tejido-preproduccion-01/b3a.jpeg",
+          "sha256": "84eae4b445d1ee86fa8e91733122cd2eab74e508876fe2f89ed1f2d15dc14efd",
+          "approved": true,
+          "role": "Preservar continuidad causal de b3a: identidades, vestuario, paleta y material; prohibido repetir cámara o distribución."
+        },
+        {
+          "kind": "prior_keyframe",
+          "frame_id": "b3b",
+          "myth": "waleker-el-origen-del-tejido",
+          "path": "output/imagegen/wayuu/keyframes/waleker-el-origen-del-tejido-preproduccion-01/b3b.jpeg",
+          "sha256": "b860d6e939e22622c7328b143fdafac00f0edadd6de2f05032c7552b07f7165f",
+          "approved": true,
+          "role": "Preservar continuidad causal de b3b: identidades, vestuario, paleta y material; prohibido repetir cámara o distribución."
+        },
+        {
+          "kind": "canonical_model",
+          "myth": "waleker-el-origen-del-tejido",
+          "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-26-waleker-el-origen-del-tejido-medium-correction-01/irunuu__identity_sheet--canon.jpeg",
+          "sha256": "a363a7551b896b80c6bfd625a31c4957d6771a02247fa62413280fcb460f32ce",
+          "approved": true,
+          "role": "Fijar el modelo canónico irunuu__identity_sheet; preservar identidad y material sin copiar la composición."
+        },
+        {
+          "kind": "canonical_model",
+          "myth": "waleker-el-origen-del-tejido",
+          "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-26-waleker-el-origen-del-tejido-medium-correction-01/irunuu__state_sheet--estados.jpeg",
+          "sha256": "60a923e3b8caf21c23ebe0957f02137f5455c2e24ff1e3850c77aa1dbbcaa691",
+          "approved": true,
+          "role": "Fijar el modelo canónico irunuu__state_sheet; preservar identidad y material sin copiar la composición."
+        },
+        {
+          "kind": "canonical_model",
+          "myth": "waleker-el-origen-del-tejido",
+          "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-26-waleker-el-origen-del-tejido-medium-corrections-02/tejidos_waleker__object_sheet--canon.jpeg",
+          "sha256": "dbeb7574e11e1155001ce16678daf028e87444fb910d3bf57c9267348d0dd600",
+          "approved": true,
+          "role": "Fijar el modelo canónico tejidos_waleker__object_sheet; preservar identidad y material sin copiar la composición."
+        }
+      ],
+      "api_method": "images.edit",
+      "source_output": "output/imagegen/wayuu/keyframes/waleker-el-origen-del-tejido-preproduccion-01/b4a.sunburst-master.jpeg",
+      "output": "output/imagegen/wayuu/keyframes/waleker-el-origen-del-tejido-preproduccion-01/b4a.jpeg",
+      "status": "prepared_not_generated"
+    }
+  ],
+  "prior_candidates": [
+    {
+      "id": "b1a",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/waleker-el-origen-del-tejido-preproduccion-01/b1a.jpeg",
+      "sha256": "81c0898732af0a6b99629f7ded22187242b1c910855ea3393a50d52e2f1015eb"
+    },
+    {
+      "id": "b1b",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/waleker-el-origen-del-tejido-preproduccion-01/b1b.jpeg",
+      "sha256": "c4e38c27a07d358d0256a6ae6e8eb57fd176daa4a3123be401890ba9b6e47a76"
+    },
+    {
+      "id": "b2a",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/waleker-el-origen-del-tejido-preproduccion-01/b2a.jpeg",
+      "sha256": "06ce61617b1b52f24eed657d6d96935a6ff8780016666642d6ef57e4b7a069b9"
+    },
+    {
+      "id": "b2b",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/waleker-el-origen-del-tejido-preproduccion-01/b2b.jpeg",
+      "sha256": "83202917b842196b6680b657dc72fff52675f7725ae7119ba44e91c50dedcc1d"
+    },
+    {
+      "id": "b3a",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/waleker-el-origen-del-tejido-preproduccion-01/b3a.jpeg",
+      "sha256": "84eae4b445d1ee86fa8e91733122cd2eab74e508876fe2f89ed1f2d15dc14efd"
+    },
+    {
+      "id": "b3b",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/waleker-el-origen-del-tejido-preproduccion-01/b3b.jpeg",
+      "sha256": "b860d6e939e22622c7328b143fdafac00f0edadd6de2f05032c7552b07f7165f"
+    }
+  ],
+  "no_api_calls": true
+}

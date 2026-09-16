@@ -1,0 +1,68 @@
+{
+  "schema": "wayuu-video-additional-model-briefs/v1",
+  "slug": "el-indio-guerrero-ipuana",
+  "status": "designed_not_generated",
+  "status_scope": "Historical design brief; generated outputs are tracked separately without replacing this brief.",
+  "production_selection": "content/videos/wayuu/videos/el-indio-guerrero-ipuana/biblia-adicional-01/selection.json",
+  "source": "Chaves XII pp.320–321; tres animales y botella omitidos del snapshot, detectados antes de producir.",
+  "material_contract": "content/videos/wayuu/channel-dna.v2.json#paper_lock",
+  "role": "Identidades específicas para este mito; no reutilizar identidades mágicas de otros relatos.",
+  "models": [
+    {
+      "id": "caballo_hijo_ipuana",
+      "type": "animal",
+      "description": "Caballo ordinario de pelaje castaño uniforme, crin negra, patas completas casi planas en papel; aparejo sencillo sin adornos, silla de pocas hojas mate. Decisión editorial de color, no dato de la fuente. Nada de caballo blanco mágico, habla o transformación.",
+      "states": [
+        "quieto en la casa encontrado por el hijo",
+        "caminando con jinete adulto y perra pequeña en la parte trasera, apoyo plausible",
+        "detenido vivo y sin jinete al final"
+      ],
+      "source_fact": "Caballo buscado y encontrado, montura de caza y sobreviviente.",
+      "needs_identity_reference": true
+    },
+    {
+      "id": "perra_cazadora_ipuana",
+      "type": "animal",
+      "description": "Perra común pequeña de pelo corto representado por una única silueta marrón gris, hocico y orejas triangulares discretos. Sin collar ornamentado ni raza moderna afirmada; género en relato, no anatomía enfatizada. Textura y volumen sólo papel, sin pelos renderizados.",
+      "states": [
+        "reposo estable en la parte trasera del caballo",
+        "acompañante en salida de caza"
+      ],
+      "source_fact": "El hijo lleva una perra cazadora sobre el anca del caballo.",
+      "needs_identity_reference": true
+    },
+    {
+      "id": "venado_caceria_ipuana",
+      "type": "animal",
+      "description": "Venado ordinario pequeño de silueta ocre claro, orejas largas y patas finas de papel. No fijar especie zoológica ni sexo no descritos; sin cornamenta fantástica, brillo o sombra humana. No es Jaichuasay ni otra entidad transformista.",
+      "states": [
+        "de pie atravesando el cauce",
+        "alejándose a distancia antes del accidente, sin impacto"
+      ],
+      "source_fact": "Venado perseguido cerca de Wina y arroyo.",
+      "needs_identity_reference": true
+    },
+    {
+      "id": "botella_parlante_ipuana",
+      "type": "object",
+      "description": "Botella de ron ordinaria de contorno ámbar oscuro, cuello estrecho y base sencilla, construida con dos hojas planas mate y borde interno fino; cero vidrio realista, marca o etiqueta legible. Sin boca, ojos, cara o consumo. La voz se traduce en una sola cinta de papel que sale del cuello, licencia editorial.",
+      "states": [
+        "quieta junto al umbral",
+        "cinta-voz curvada en dirección al caballo dentro de la casa"
+      ],
+      "source_fact": "Botella que habla durante la búsqueda; no inventar propietario o poder adicional.",
+      "needs_identity_reference": true
+    }
+  ],
+  "generation_policy": {
+    "quality": "medium",
+    "reference_uploads": false,
+    "status": "not_requested_yet"
+  },
+  "qa": [
+    "Hojas mate con aire, no miniaturas realistas.",
+    "Animales diferentes de los seres transformistas de otros mitos.",
+    "Mantener roles y no omitir perra o botella.",
+    "Cualquier simplificación de escala/raza/color permanece decisión editorial."
+  ]
+}

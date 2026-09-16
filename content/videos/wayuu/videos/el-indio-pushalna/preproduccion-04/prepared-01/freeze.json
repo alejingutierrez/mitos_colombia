@@ -1,0 +1,223 @@
+{
+  "schema": "wayuu-video-freeze/v1",
+  "created_at": "2026-09-07T22:27:58.458Z",
+  "plan": "content/videos/wayuu/videos/el-indio-pushalna/preproduccion-04/plan.json",
+  "plan_sha256": "22e3a7df002bd79d810ae5e9eecd8355f6f4fc6c7a0ce92943b8a8989d67d712",
+  "style": "content/videos/wayuu/channel-dna.v2.json",
+  "style_sha256": "da3aa36702f381654441c018622e5ccf66ea217b5a420a83093620a8758a2912",
+  "checks": {
+    "shots": 18,
+    "words": 271,
+    "estimated_seconds": 144,
+    "generated": 14,
+    "pending": 4,
+    "warnings": [
+      "b1a: candidato piloto con notas visuales; no aprobación final",
+      "b1b: candidato piloto con notas visuales; no aprobación final",
+      "b2a: candidato piloto con notas visuales; no aprobación final",
+      "b2b: candidato piloto con notas visuales; no aprobación final",
+      "b3a: candidato piloto con notas visuales; no aprobación final",
+      "b4a: candidato piloto con notas visuales; no aprobación final",
+      "b4b: candidato piloto con notas visuales; no aprobación final",
+      "b5a: candidato piloto con notas visuales; no aprobación final",
+      "b5b: candidato piloto con notas visuales; no aprobación final",
+      "b6a: candidato piloto con notas visuales; no aprobación final",
+      "b6b: candidato piloto con notas visuales; no aprobación final",
+      "b8a: candidato piloto con notas visuales; no aprobación final",
+      "b8b: candidato piloto con notas visuales; no aprobación final",
+      "b9b: candidato piloto con notas visuales; no aprobación final"
+    ]
+  },
+  "files": {
+    "narrative_snapshot_verified": true,
+    "reference_checks": 28,
+    "public_freshness": "not_checked_by_offline_preparer"
+  },
+  "jobs": [
+    {
+      "id": "b3b",
+      "prompt_file": "content/videos/wayuu/videos/el-indio-pushalna/preproduccion-04/prepared-01/prompts/b3b.txt",
+      "prompt_sha256": "2ea8063614ff6dff8aa751cb4e869a2c37b21b9db4951366721543339e3348ee",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "864x1536",
+      "output_format": "jpeg",
+      "mode": "text_only",
+      "input_images": [],
+      "api_method": "images.generate",
+      "output": "output/imagegen/wayuu/keyframes/el-indio-pushalna-preproduccion-04/b3b.jpeg",
+      "status": "prepared_not_generated"
+    },
+    {
+      "id": "b7a",
+      "prompt_file": "content/videos/wayuu/videos/el-indio-pushalna/preproduccion-04/prepared-01/prompts/b7a.txt",
+      "prompt_sha256": "4074e10d5e728d4e638c8a52d9dcb885c8ba04cd82d6db3e8ab0543219d81421",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "864x1536",
+      "output_format": "jpeg",
+      "mode": "text_only",
+      "input_images": [],
+      "api_method": "images.generate",
+      "output": "output/imagegen/wayuu/keyframes/el-indio-pushalna-preproduccion-04/b7a.jpeg",
+      "status": "prepared_not_generated"
+    },
+    {
+      "id": "b7b",
+      "prompt_file": "content/videos/wayuu/videos/el-indio-pushalna/preproduccion-04/prepared-01/prompts/b7b.txt",
+      "prompt_sha256": "ecb31fc23cec46146bce2a1c5998c78749293c287c53500973ee4b8e4056bd44",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "864x1536",
+      "output_format": "jpeg",
+      "mode": "text_only",
+      "input_images": [],
+      "api_method": "images.generate",
+      "output": "output/imagegen/wayuu/keyframes/el-indio-pushalna-preproduccion-04/b7b.jpeg",
+      "status": "prepared_not_generated"
+    },
+    {
+      "id": "b9a",
+      "prompt_file": "content/videos/wayuu/videos/el-indio-pushalna/preproduccion-04/prepared-01/prompts/b9a.txt",
+      "prompt_sha256": "9ce8d8b7354d858b02f9b76a1747dffceedbabe9f1111fa93961a28c430efcdb",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "864x1536",
+      "output_format": "jpeg",
+      "mode": "text_only",
+      "input_images": [],
+      "api_method": "images.generate",
+      "output": "output/imagegen/wayuu/keyframes/el-indio-pushalna-preproduccion-04/b9a.jpeg",
+      "status": "prepared_not_generated"
+    }
+  ],
+  "prior_candidates": [
+    {
+      "id": "b1a",
+      "status": "existing_pilot_candidate_not_final",
+      "path": "output/imagegen/wayuu/keyframes/el-indio-pushalna-preproduccion-01/b1a.jpeg",
+      "sha256": "dbb55858f34fa95dde4df87b72d48ddca7f950ea3cd481591f39d9282d865539",
+      "qa_notes": [
+        "Papel claro, caballo completo, piedra y curva reconocibles. Plantas simplificadas sin identificación botánica. Sin marca blanca de pata garantizada."
+      ]
+    },
+    {
+      "id": "b1b",
+      "status": "existing_pilot_candidate_not_final",
+      "path": "output/imagegen/wayuu/keyframes/el-indio-pushalna-preproduccion-03/b1b.jpeg",
+      "sha256": "6c04e362564cc08040fed5a9a95522bd4d9d2b652c197b6762cce0433f89f05a",
+      "qa_notes": [
+        "Retorno y cuatro personas legibles, sin violencia ni rito. Pushaina sin sombrero en interior; dos trenzas de hija se solapan. Prendas y perfiles se mantienen."
+      ]
+    },
+    {
+      "id": "b2a",
+      "status": "existing_pilot_candidate_not_final",
+      "path": "output/imagegen/wayuu/keyframes/el-indio-pushalna-preproduccion-03/b2a.jpeg",
+      "sha256": "c3c3c41db0f7cac2e222d8c2e901ce96d613c33344455eb013b5d5af0c74003a",
+      "qa_notes": [
+        "Hija ofrece plato en manos, gesto cotidiano, papel conservado. Sólo dos porciones claramente separadas, no tres; primer alimento no debe interpolarse al plato nocturno. Figuras más grandes que objetivo."
+      ]
+    },
+    {
+      "id": "b2b",
+      "status": "existing_pilot_candidate_not_final",
+      "path": "output/imagegen/wayuu/keyframes/el-indio-pushalna-preproduccion-03/b2b.jpeg",
+      "sha256": "d12009d324f8ea38ebef27009ae44cd948962a95a329834aed029cfa2ff3208d",
+      "qa_notes": [
+        "Escucha nocturna con tres hojas suspendidas. Alimento lleno, conteo de porciones no inequívoco; ojos más marcados y cielo con luna/estrellas incidentales, no efecto mágico."
+      ]
+    },
+    {
+      "id": "b3a",
+      "status": "existing_pilot_candidate_not_final",
+      "path": "output/imagegen/wayuu/keyframes/el-indio-pushalna-preproduccion-01/b3a.jpeg",
+      "sha256": "4fa42f95c79876d40df594f253bdd87476b778a6374e8c5674370b7d4d55b845",
+      "qa_notes": [
+        "Papel claro, plato protagonista vacío y tres hojas de aire. Figura mayor que objetivo y pequeño recipiente incidental al fondo; no se considera parte de la demanda."
+      ]
+    },
+    {
+      "id": "b4a",
+      "status": "existing_pilot_candidate_not_final",
+      "path": "output/imagegen/wayuu/keyframes/el-indio-pushalna-preproduccion-02/b4a.jpeg",
+      "sha256": "53f6bc0dd77c56a19af20b30a6720cc9d39b6f9ee5bf5334c14562b3eeffe293",
+      "qa_notes": [
+        "Aro pequeño ahora reconocible, rostro casi plano, pared abre sin manos. Figura mayor que escala objetivo; solapa colgante adherida arriba funciona como licencia."
+      ]
+    },
+    {
+      "id": "b4b",
+      "status": "existing_pilot_candidate_not_final",
+      "path": "output/imagegen/wayuu/keyframes/el-indio-pushalna-preproduccion-03/b4b.jpeg",
+      "sha256": "9fcfec103f98c9bd711fabb06218276fc9db2c04cfe093b3dd12abefe0c21765",
+      "qa_notes": [
+        "Cuatro adultos completos, sin adoración; hija al margen con agencia de testigo. Cuerpos más grandes que objetivo; rostros recortados y materiales coherentes."
+      ]
+    },
+    {
+      "id": "b5a",
+      "status": "existing_pilot_candidate_not_final",
+      "path": "output/imagegen/wayuu/keyframes/el-indio-pushalna-preproduccion-03/b5a.jpeg",
+      "sha256": "0c3a016910913d98e75d734738dfaa69d47521c9da05c41738e760bd7a0a770d",
+      "qa_notes": [
+        "Sombra continua nace en sandalias y toma forma de ave. Sombra óptica secundaria distinta; utensilios incidentales en casa y faja rojiza en vez de oscura. Sin nueva entidad."
+      ]
+    },
+    {
+      "id": "b5b",
+      "status": "existing_pilot_candidate_not_final",
+      "path": "output/imagegen/wayuu/keyframes/el-indio-pushalna-preproduccion-03/b5b.jpeg",
+      "sha256": "49a509e9bd9458adfbb61ecd3c1002f996193a55c1648dea05e20e6dfb451e95",
+      "qa_notes": [
+        "Ciempiés pequeño reconocible y ambiente vacío. Más de 7% del ancho, pero no gigante respecto a puerta; patas finas no perfectamente planas."
+      ]
+    },
+    {
+      "id": "b6a",
+      "status": "existing_pilot_candidate_not_final",
+      "path": "output/imagegen/wayuu/keyframes/el-indio-pushalna-preproduccion-02/b6a.jpeg",
+      "sha256": "49190db2221bc01975d1c8c3c71767aebcfe912bc861d6c943c45e594fe4e5f3",
+      "qa_notes": [
+        "Sandalias corregidas, tres porciones y aire separado; postura cansada. Asiento y vasija incidental no pedidos aparecieron; no se atribuye significado cultural ni papel narrativo."
+      ]
+    },
+    {
+      "id": "b6b",
+      "status": "existing_pilot_candidate_not_final",
+      "path": "output/imagegen/wayuu/keyframes/el-indio-pushalna-preproduccion-03/b6b.jpeg",
+      "sha256": "ff26154970462d9f910cd1550dbe2c68714faa67d6935a871093f3bcb137ba89",
+      "qa_notes": [
+        "Jinete y caballo enteros se alejan, dirección de salida correcta, material claro. Arquitectura tiene techo más horizontal y planta simplificada."
+      ]
+    },
+    {
+      "id": "b8a",
+      "status": "existing_pilot_candidate_not_final",
+      "path": "output/imagegen/wayuu/keyframes/el-indio-pushalna-preproduccion-02/b8a.jpeg",
+      "sha256": "1495da5b75cd2e971cdad607d857c74825fc09241d3780ac1e1ac707242d77c6",
+      "qa_notes": [
+        "Sin hija añadida; una porción en pico y dos en plato. Material recortado sostenido. Cola del caballo llega al borde izquierdo; margen imperfecto y piedra de forma más ancha que en apertura."
+      ]
+    },
+    {
+      "id": "b8b",
+      "status": "existing_pilot_candidate_not_final",
+      "path": "output/imagegen/wayuu/keyframes/el-indio-pushalna-preproduccion-03/b8b.jpeg",
+      "sha256": "d6e1fc799668624851a2701615d1498c4a5fb458e7aee03549acbce7dc35bf7d",
+      "qa_notes": [
+        "Ciempiés atraviesa el hueco con cabeza fuera, no entrando como pedido; cumple cruce bajo piedra del relato. Plato conserva dos porciones. Hueco regular, piedra más redonda, no geometría idéntica."
+      ]
+    },
+    {
+      "id": "b9b",
+      "status": "existing_pilot_candidate_not_final",
+      "path": "output/imagegen/wayuu/keyframes/el-indio-pushalna-preproduccion-01/b9b.jpeg",
+      "sha256": "aa6829909f739701474ea68ca058b7fed01c4a343f78a8b01a08aab732d16b36",
+      "qa_notes": [
+        "Papel sostenido, dos perfiles completos, vestuario reconocible. Figuras mayores que objetivo; arquitectura simplificada, no restitución exacta."
+      ]
+    }
+  ],
+  "no_api_calls": true
+}

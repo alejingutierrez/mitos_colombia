@@ -1,0 +1,34 @@
+{
+  "slug": "el-diablo-nasa-paeces",
+  "id": "k02",
+  "version": 1,
+  "created_at": "2026-09-13T21:54:44.697Z",
+  "plan_sha256": "c56a1d0f0a5ebff339df8791a3bd7deab9431a025ea17db61300e294fbd85ce5",
+  "prompt_file": "content/videos/nasa-paeces/keyframes-comunidad-20260913/myths/el-diablo-nasa-paeces/prompts/k02-v1.txt",
+  "prompt_sha256": "b31b142e804f79227ca954843cf7216ba0a40e8e088c3082f022d5ae19ac6a01",
+  "references": [
+    {
+      "path": "output/imagegen/nasa-paeces/tripticos/maqueta-3d-20260913/el-diablo-nasa-paeces/acto-v1.png",
+      "sha256": "0a7dacc30dbd4b004c6872d8af66f54706bf3433ee2eb3233c29a2e84680147f",
+      "role": "Tríptico acto: identidades, vestuario y escenario de ESTE mito; NO copia de composición."
+    },
+    {
+      "path": "output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b1b-maqueta-v2.png",
+      "sha256": "d7dc5d106daadbd61b032ae0b3bb0139806f2b49c82ad2e937157f84478e3f7f",
+      "role": "SOLO material físico de papel: no transferir personas, ropa, varas, laguna ni iluminación nocturna."
+    },
+    {
+      "path": "output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/comunidad-nasa/el-diablo-nasa-paeces/k01-v1.png",
+      "sha256": "883b301b7025bbac600dbf32f06c5332e2680585d9633681b3d19a6ff37eb0b3",
+      "role": "Keyframe anterior k01: continuidad de identidades y lugares que coincidan, nunca importar acción u objetos ausentes en el nuevo plano."
+    }
+  ],
+  "request": {
+    "prompt": "Use case: illustration-story. Produce ONE portrait 9:16 cinematic KEYFRAME, a real-looking miniature built ENTIRELY from CUT AND FOLDED PAPER, photographed from INSIDE the set. Myth: El diablo. Frame k02.\n\nREFERENCE ROLES:\nImage 1: Tríptico acto: identidades, vestuario y escenario de ESTE mito; NO copia de composición.\nImage 2: SOLO material físico de papel: no transferir personas, ropa, varas, laguna ni iluminación nocturna.\nImage 3: Keyframe anterior k01: continuidad de identidades y lugares que coincidan, nunca importar acción u objetos ausentes en el nuevo plano.\n\nEXACT NEW SHOT, render only this moment, not an entire story or multi-panel sheet:\nDetalle: mano del padre sobre puerta cerrada, sin luz detrás ni cerradura sobrenatural.\n\nNARRATIVE CONTINUITY: Jinete desconocido en caballo negro de cola corta y capa negra. Padre, hijo y compadre separados. Sin cuernos, infierno, portales luminosos o huellas inventadas.\nSelected account: Testimonio familiar de El Tablón. Diablo es inferencia del padre, no identificación visual demostrada.\n\nPHYSICAL MATERIAL IS MANDATORY: separately cut, thick matte cardstock planes; deep air gaps and actual cast contact shadows; lifted edges, paper tabs, crisp folds and visibly attached garment panels. People are handmade folded-paper puppets with flat cut face planes, folded limbs and layered hands, never rounded dolls or illustrated skin. Rocks are angular folded cardstock, plants individual cut leaves bent from stems. Water is broad overlapping blue cardstock sheets, mist and clouds suspended paper cutouts. No painted textures pretending to be relief.\nCINEMATOGRAPHY: obey the shot's exact camera and time of day. Foreground paper edge/leaf/rock creates depth without hiding the main action; focal plane on action, optical miniature depth of field in near/far layers. Maintain identities, ages and clothes from the SAME myth references. Borderless immersive scene, no box, plinth, table, studio or collage. Frame extends edge to edge. Do NOT carry background objects from a previous scene into a new location.\nNo text, lettering, logo, watermark, symbols, sacred patterns, pan-Indigenous headdresses, golden jewelry, invented ritual, extra people or props. No brushwork, drawing outlines, flat illustration, realistic fabric/skin/liquid, plastic, clay or smooth CGI. Exactly ONE finished vertical 9:16 image. This is a new composition, not a crop of the reference.\n\nFINAL COMPOSITION OVERRIDE: Character names in continuity rules are NOT a cast list. Show ONLY the people/animals explicitly requested in THIS single shot. Do not add any reference person, animal, lake or staff just because it appears in a reference. Render precisely: Detalle: mano del padre sobre puerta cerrada, sin luz detrás ni cerradura sobrenatural.\nCAMERA LOCK: This is a CLOSE-UP INSERT. The specifically named hands, object, or head must fill at least 65% of the image. Do not turn it into a full-body group portrait or wide landscape. Only show the body parts explicitly needed for the insert.\n\n",
+    "referenced_image_paths": [
+      "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/maqueta-3d-20260913/el-diablo-nasa-paeces/acto-v1.png",
+      "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b1b-maqueta-v2.png",
+      "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/comunidad-nasa/el-diablo-nasa-paeces/k01-v1.png"
+    ]
+  }
+}

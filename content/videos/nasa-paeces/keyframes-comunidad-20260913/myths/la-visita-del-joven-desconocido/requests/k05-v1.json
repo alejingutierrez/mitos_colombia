@@ -1,0 +1,40 @@
+{
+  "slug": "la-visita-del-joven-desconocido",
+  "id": "k05",
+  "version": 1,
+  "created_at": "2026-09-13T21:54:44.369Z",
+  "plan_sha256": "17e1cb3a502fc1073aac0f1c5269b10afc17ef1607619b43737002329c2538ef",
+  "prompt_file": "content/videos/nasa-paeces/keyframes-comunidad-20260913/myths/la-visita-del-joven-desconocido/prompts/k05-v1.txt",
+  "prompt_sha256": "51d5a39ab08e1bf5e7eadab6140f83eae77a55a61948489c993eee1cf436c0aa",
+  "references": [
+    {
+      "path": "output/imagegen/nasa-paeces/tripticos/maqueta-3d-20260913/la-visita-del-joven-desconocido/entrada-v1.png",
+      "sha256": "785392aa967cc0122f1cb4b2475dbfa90da7a2e5b17e37978c5f2eccd3ebe18c",
+      "role": "Tríptico entrada: identidades, vestuario y escenario de ESTE mito; NO copia de composición."
+    },
+    {
+      "path": "output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b1b-maqueta-v2.png",
+      "sha256": "d7dc5d106daadbd61b032ae0b3bb0139806f2b49c82ad2e937157f84478e3f7f",
+      "role": "SOLO material físico de papel: no transferir personas, ropa, varas, laguna ni iluminación nocturna."
+    },
+    {
+      "path": "output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/comunidad-nasa/la-visita-del-joven-desconocido/k03-v1.png",
+      "sha256": "bb83dbe2f954a21c8aca941363b227d60c652ee95f4471964d104da988b27c5f",
+      "role": "Keyframe anterior k03: continuidad de identidades y lugares que coincidan, nunca importar acción u objetos ausentes en el nuevo plano."
+    },
+    {
+      "path": "output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/comunidad-nasa/la-visita-del-joven-desconocido/k04-v1.png",
+      "sha256": "ee3900282c239dcb8e6c2e7b61b465102fc049a63789171475d11d2557e72498",
+      "role": "Keyframe anterior k04: continuidad de identidades y lugares que coincidan, nunca importar acción u objetos ausentes en el nuevo plano."
+    }
+  ],
+  "request": {
+    "prompt": "Use case: illustration-story. Produce ONE portrait 9:16 cinematic KEYFRAME, a real-looking miniature built ENTIRELY from CUT AND FOLDED PAPER, photographed from INSIDE the set. Myth: La visita del joven desconocido. Frame k05.\n\nREFERENCE ROLES:\nImage 1: Tríptico entrada: identidades, vestuario y escenario de ESTE mito; NO copia de composición.\nImage 2: SOLO material físico de papel: no transferir personas, ropa, varas, laguna ni iluminación nocturna.\nImage 3: Keyframe anterior k03: continuidad de identidades y lugares que coincidan, nunca importar acción u objetos ausentes en el nuevo plano.\nImage 4: Keyframe anterior k04: continuidad de identidades y lugares que coincidan, nunca importar acción u objetos ausentes en el nuevo plano.\n\nEXACT NEW SHOT, render only this moment, not an entire story or multi-panel sheet:\nMedio interior de día: joven madre sostiene al bebé completamente envuelto en manta; abuela escucha.\n\nNARRATIVE CONTINUITY: Dos jóvenes adultos distintos del Trueno. Madre con chal óxido, joven gris-verde. Recién nacido siempre cubierto; muerte fuera de campo. No monstruo, sangre ni anatomía expuesta.\nSelected account: Juan Petins; núcleo de la visita y la fuga acuática. El procedimiento fallido se elide visualmente sin inventar otro.\n\nPHYSICAL MATERIAL IS MANDATORY: separately cut, thick matte cardstock planes; deep air gaps and actual cast contact shadows; lifted edges, paper tabs, crisp folds and visibly attached garment panels. People are handmade folded-paper puppets with flat cut face planes, folded limbs and layered hands, never rounded dolls or illustrated skin. Rocks are angular folded cardstock, plants individual cut leaves bent from stems. Water is broad overlapping blue cardstock sheets, mist and clouds suspended paper cutouts. No painted textures pretending to be relief.\nCINEMATOGRAPHY: obey the shot's exact camera and time of day. Foreground paper edge/leaf/rock creates depth without hiding the main action; focal plane on action, optical miniature depth of field in near/far layers. Maintain identities, ages and clothes from the SAME myth references. Borderless immersive scene, no box, plinth, table, studio or collage. Frame extends edge to edge. Do NOT carry background objects from a previous scene into a new location.\nNo text, lettering, logo, watermark, symbols, sacred patterns, pan-Indigenous headdresses, golden jewelry, invented ritual, extra people or props. No brushwork, drawing outlines, flat illustration, realistic fabric/skin/liquid, plastic, clay or smooth CGI. Exactly ONE finished vertical 9:16 image. This is a new composition, not a crop of the reference.\n\nFINAL COMPOSITION OVERRIDE: Character names in continuity rules are NOT a cast list. Show ONLY the people/animals explicitly requested in THIS single shot. Do not add any reference person, animal, lake or staff just because it appears in a reference. Render precisely: Medio interior de día: joven madre sostiene al bebé completamente envuelto en manta; abuela escucha.\n\n\n",
+    "referenced_image_paths": [
+      "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/maqueta-3d-20260913/la-visita-del-joven-desconocido/entrada-v1.png",
+      "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b1b-maqueta-v2.png",
+      "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/comunidad-nasa/la-visita-del-joven-desconocido/k03-v1.png",
+      "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/comunidad-nasa/la-visita-del-joven-desconocido/k04-v1.png"
+    ]
+  }
+}

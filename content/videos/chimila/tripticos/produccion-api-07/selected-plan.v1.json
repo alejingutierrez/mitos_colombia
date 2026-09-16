@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "status": "prepared",
+  "myth_id": 352,
+  "title": "La Gran Cacica y el origen del agua",
+  "jobs": [
+    {
+      "piece": "entrada",
+      "myth_id": 352,
+      "size": "1536x1024",
+      "mode": "retained_byte_for_byte",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-06/el-agua/entrada-aire-paleta-v6.jpeg",
+      "new_api_call": false
+    },
+    {
+      "piece": "acto",
+      "size": "1024x1536",
+      "input_files": [
+        "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-03/el-agua/acto-maqueta-v3.jpeg",
+        "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-06/el-agua/entrada-aire-paleta-v6.jpeg"
+      ],
+      "prompt": "Use case: style-transfer.\nImage1: old ACTO scene EDIT TARGET for the night narrative and bending action ONLY. Its faceted characters and vivid warm soil are NOT a style reference.\nImage2: CURRENT ENTRANCE, the definitive paper-cut material, Cacica face/hair/clothing, roomy framing, terrain and muted palette reference. Take the foreground Cacica's same identity and simple rectangular cream torso cloth with TWO plain narrow shoulder ties and separate hip wrap, flat waist ties, no diagonal toga or round brooch. Do not copy the other two men.\nPrimary request: recreate the nighttime ACTO as one spacious PORTRAIT scene, with EXACTLY ONE PERSON, the same mature Cacica from Image2. She is alone at the nearest of exactly THREE DEEP EMPTY wells, bending forward to call the water and let a little saliva fall inside. Feet supported firmly on solid ground outside the rim. Her HEAD and MOUTH extend inward over the opening: a single tiny distinct ivory cut-paper teardrop immediately below the mouth must fall over the dark INTERIOR of the nearest well, NOT over soil or rim. Clear readable mouth-to-hole relation, no long thread, no stream, no water yet. Hands lowered naturally, no staff.\nNight palette: muted slate blue-gray paper sky with a small ivory cut-paper moon, soft gray-olive foliage, subdued kraft/taupe/ochre soil, warm off-white clothes and natural muted brown paper skin. NO saturated orange earth or intense blue sky. Soft cool nocturnal illumination with enough light to see cut edges, face, drop and well depth; do not make a sunset or daytime scene.\nCacica approximately 45 percent of frame height, full body visible and face still readable, generous terrain around her, background well and mountains spaced in depth. Preserve Image2's rounded paper-cut facial landmarks, age and proportions without redesigning identity. Show the two further dry wells receding into the same proposed mountain landscape, no men present.\nMaterial lock: PURE PAPER CUT ONLY, physically stacked matte scissor-cut paper sheets in low relief, visible internal cut edges, gaps, slight hand-cut imperfections and contact shadows. Rounded nearly-flat cut-paper human silhouettes and faces, not folded polygonal mannequins or painted portraits. Hair as flat black paper slivers. Vegetation as solid flat cut-paper leaves; no paper quilling, coils, spirals, hollow ribbon loops, rosettes or rolled paper. No clay, plastic, CGI skin, cloth rendering or illustration texture overlay. Depth comes from physically spaced paper layers. Photography-like capture of handmade paper craft, not brush-shaded illustration. No frame, table, external base, captions or montage.\nComposition lock: keep the more spacious zoomed-out scenic feeling of Image2 where applicable, moderate scale of characters/wells, generous visible terrain and sky, no crowding against edges. Readable narrative, subtle background focus falloff. Exactly three separate EARTH wells cut through irregular paper strata, not stone-built masonry rings. No added props, hats, cultural ornaments, rivers, rain, magical light rays or new characters.\n",
+      "myth_id": 352,
+      "mode": "edit",
+      "model": "gpt-image-2.5-sunburst",
+      "quality": "high",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-07/el-agua/acto-papercut-paleta-v7.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/tripticos/produccion-api-07/prompts/acto-papercut-paleta-v7.txt"
+    },
+    {
+      "piece": "huella",
+      "size": "1024x1024",
+      "input_files": [
+        "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-06/el-agua/entrada-aire-paleta-v6.jpeg"
+      ],
+      "prompt": "Use case: precise-object-edit.\nImage1: CURRENT ENTRANCE EDIT TARGET for the exact paper-cut technique, gentle muted palette and scenic landscape. Remove ALL THREE people without adding replacement figures. Recompose as one spacious SQUARE HUella scene of the same place, not a crop that cuts off the nearest well.\nPrimary request: morning after the nighttime action, EXACTLY THREE separate wells now containing good sweet water. ZERO people or animals. The water is represented ONLY by inset matte dusty blue-gray cut-paper discs with a FEW thin FLAT cut-paper ripple arcs physically superposed. No rolled or quilled ripples, no real liquid or glossy reflections.\nPreserve the irregular soil lips and stacked paper strata of the three excavated holes, the broad mountain sequence, leafy paper vegetation and relation of wells receding into distance. All three openings clearly visible, nearest complete opening kept comfortably within the frame, generous surrounding ground and sky. No connected river/lake, flood, extra wells, props, tools, ruins or masonry rings.\nMorning palette: warm soft cream and pale dusty blue sky, a restrained pale-gold sun low at horizon, sand/kraft muted ochres, dusty terracotta accents, gray-olive/sage green leaves and slate blue-gray mountains. Match the subdued chroma of Image1, not vivid orange/yellow. Water muted blue, not electric cyan. Gentle daylight revealing contact shadows between paper layers.\nMaterial lock: PURE PAPER CUT ONLY, physically stacked matte scissor-cut paper sheets in low relief, visible internal cut edges, gaps, slight hand-cut imperfections and contact shadows. Rounded nearly-flat cut-paper human silhouettes and faces, not folded polygonal mannequins or painted portraits. Hair as flat black paper slivers. Vegetation as solid flat cut-paper leaves; no paper quilling, coils, spirals, hollow ribbon loops, rosettes or rolled paper. No clay, plastic, CGI skin, cloth rendering or illustration texture overlay. Depth comes from physically spaced paper layers. Photography-like capture of handmade paper craft, not brush-shaded illustration. No frame, table, external base, captions or montage.\nComposition lock: keep the more spacious zoomed-out scenic feeling of Image1 where applicable, moderate scale of characters/wells, generous visible terrain and sky, no crowding against edges. Readable narrative, subtle background focus falloff. Exactly three separate EARTH wells cut through irregular paper strata, not stone-built masonry rings. No added props, hats, cultural ornaments, rivers, rain, magical light rays or new characters.\n\nThis is the HUella after the water arrives, not another dry-well entrance. No people, faces, hats, text or ornaments.",
+      "myth_id": 352,
+      "mode": "edit",
+      "model": "gpt-image-2.5-sunburst",
+      "quality": "high",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-07/el-agua/huella-papercut-paleta-v7.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/tripticos/produccion-api-07/prompts/huella-papercut-paleta-v7.txt"
+    }
+  ]
+}

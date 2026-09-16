@@ -1,0 +1,19 @@
+{
+  "schema": "wayuu-anchor-correction/v1",
+  "slug": "jirairay",
+  "version": "preproduccion-02",
+  "source_plan": "content/videos/wayuu/videos/jirairay/preproduccion-01/plan.json",
+  "source_batch": "output/imagegen/wayuu/keyframes/jirairay-preproduccion-01-anclas",
+  "status": "prepared_not_generated",
+  "preserve": [],
+  "correct": ["b1a", "b3b", "b5b", "b8b", "b10b"],
+  "decisions": {
+    "b1a": ["remove_agave_rosettes", "preserve_exact_three_relatives_and_patient", "preserve_environmental_papercut_depth"],
+    "b3b": ["replace_vortex_with_small_shallow_ground_compression", "make_return_fibres_readable", "remove_rosette_vegetation"],
+    "b5b": ["remove_moon_and_star_dots", "replace_radial_portal_with_small_asymmetric_ground_pressure", "separate_outbound_bands_from_return_fibres"],
+    "b8b": ["reduce_wanuru_scale", "place_pressure_low_and_far_from_patient", "remove_rosette_vegetation"],
+    "b10b": ["remove_star_dots", "remove_bird_like_fragments", "keep_one_unbroken_flexible_band_and_exactly_four_fibres"]
+  },
+  "generation": { "model": "gpt-image-2", "quality": "medium", "size": "864x1536", "output_format": "jpeg", "mode": "text_only", "input_images": [] },
+  "no_reference_uploads": true
+}

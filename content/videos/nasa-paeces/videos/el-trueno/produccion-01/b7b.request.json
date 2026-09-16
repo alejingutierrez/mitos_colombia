@@ -1,0 +1,37 @@
+{
+  "id": "b7b",
+  "created_at": "2026-09-13T13:55:28.963Z",
+  "tool": "image_gen.imagegen",
+  "request": {
+    "prompt": "Create ONE finished cinematic vertical 9:16 narrative keyframe for the Nasa–Paeces film El Trueno, ideally 864x1536. No sheet, collage, border, lettering, title, captions, watermark or logo. Use the supplied images only for their stated continuity roles, never copy their sheet layout. Same world as the approved Nasa triptych: immersive Colombian highland CUT-PAPER scenery, matte broad flat faces, internal cut edges, folded rock, overlapping planes at three distances, physical occlusion and cast shadows. Figures have simplified almost-flat paper faces, not rounded clay dolls, CGI or photographic skin. Water, clouds and mist are flat cut-paper shapes too, never cotton or smoke. Frame extends edge to edge, no display base, table, studio or diorama box. Preserve precise age, clothing, hat, material and scale of the reference identities. Do not import objects, people or actions from preceding shots unless specifically listed below. No pan-Indigenous costumes, copied sacred patterns, gold, crowns, feathers, magical beams or invented ritual. Selected narrative: Martín Kuskue's first El Trueno account via Bernal 1953; the elder appearance is a declared editorial convention retained from the approved triptych, not claimed as wording of this version.\n\nSHOT b7b — Agua sin varas\nFINAL bookend, same overhead camera and same shore wedge as b5b, but BOTH STAFFS ARE ABSENT. Only an ochre cut-paper shore wedge at top left and layered matte dark-indigo water filling the frame. The previous circular contact ripples have settled into broad quiet irregular blue paper sheets. Near sheet edges cast subtle shallow shadows onto farther layers. No object, person, hand, face, text, glow, symbol or new magical event. Tactile, cinematic, restrained, frame filled completely with the physical paper water surface.\n\nINPUT REFERENCES IN ORDER:\n1. approved preceding keyframe b6b: material, palette, spatial continuity ONLY; do not import unlisted subjects/props\n2. approved preceding keyframe b7a: material, palette, spatial continuity ONLY; do not import unlisted subjects/props\n3. BOOKEND COMPOSITION ANCHOR b5b: match THIS camera, shoreline wedge and water scale, but REMOVE BOTH STAFFS, their reflections and all circular ripples. Other refs only constrain material; this image controls the closing composition.\n4. CANONICAL acto: selected triptych: two C02 authorities, dry shoreline, night water",
+    "referenced_image_paths": [
+      "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b6b-v1.png",
+      "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b7a-v1.png",
+      "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b5b-v1.png",
+      "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-01/el-trueno/acto-v2.jpeg"
+    ]
+  },
+  "references": [
+    {
+      "path": "output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b6b-v1.png",
+      "sha256": "b2ee0e78f50a8ec5dd272872ed7a3e7cc5156d3c355cd188f0b4ca3f9ba4268c",
+      "role": "approved preceding keyframe b6b: material, palette, spatial continuity ONLY; do not import unlisted subjects/props"
+    },
+    {
+      "path": "output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b7a-v1.png",
+      "sha256": "d5c39d774bd7dcd9bdd07e0e8f887d050d80b2fe808800375e5187b3d2b6c682",
+      "role": "approved preceding keyframe b7a: material, palette, spatial continuity ONLY; do not import unlisted subjects/props"
+    },
+    {
+      "path": "output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b5b-v1.png",
+      "sha256": "b14a7b3b4764fa8b080755606cdffdc29ada5a48a6ded5489b35e901e3f0624b",
+      "role": "BOOKEND COMPOSITION ANCHOR b5b: match THIS camera, shoreline wedge and water scale, but REMOVE BOTH STAFFS, their reflections and all circular ripples. Other refs only constrain material; this image controls the closing composition."
+    },
+    {
+      "path": "output/imagegen/nasa-paeces/tripticos/produccion-api-01/el-trueno/acto-v2.jpeg",
+      "role": "CANONICAL acto: selected triptych: two C02 authorities, dry shoreline, night water",
+      "sha256": "6cc688227c38155c1c1b233315a4997f0e2d9e2324719e8804d4f08d9cf98c60"
+    }
+  ],
+  "prompt_sha256": "76e760add22a726831b320d008a6fe98117b303257fb9c31725499a352c5d505"
+}

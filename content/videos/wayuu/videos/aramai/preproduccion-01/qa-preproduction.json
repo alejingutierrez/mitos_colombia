@@ -1,0 +1,51 @@
+{
+  "schema": "wayuu-video-preproduction-qa/v1",
+  "date": "2026-09-07",
+  "status": "offline_preproduction_verified_not_generated",
+  "current_package": "prepared-03",
+  "campaign": {
+    "local_narrative_snapshots_verified": 27,
+    "scripts_and_storyboards_prepared": 1,
+    "other_myths_pending_video_adaptation": 26,
+    "public_narrative_freshness": "not_checked_this_stage",
+    "triptych_reproduction": "cancelled_by_user_keep_current_versions"
+  },
+  "aramai": {
+    "blocks": 9,
+    "storyboard_instants": 18,
+    "voiceover_words": 169,
+    "estimated_seconds": 90,
+    "voice_duration_measured": false,
+    "prior_pilot_candidates_preserved_and_visually_inspected": 5,
+    "prior_candidates_final_approval": false,
+    "missing_instants_with_frozen_prompts": 13,
+    "current_plan_style_and_prompt_hashes_verified": true,
+    "next_five": ["b3b", "b4a", "b4b", "b5a", "b5b"]
+  },
+  "generation_policy": {
+    "quality": "medium",
+    "size": "864x1536",
+    "output_format": "jpeg",
+    "input_images": []
+  },
+  "verification": {
+    "automated_tests_passed": 40,
+    "automated_tests_failed": 0,
+    "test_command": "node --test scripts/videos/wayuu-preproduction.test.mjs scripts/mitos/triptych-story-direction.test.mjs scripts/image-quality-policy.test.mjs",
+    "docker_compose_rebuilt_and_container_started": true,
+    "superseded_preparation_versions": ["prepared-01", "prepared-02"],
+    "prompt_corrections_before_generation": [
+      "Separate world continuity from cast and wardrobe; empty shots must remain empty.",
+      "Assign reflection timing per shot; opening anticipation must not contradict closing memory.",
+      "Keep palette decisions specific to each myth, not inherited from Aramai."
+    ]
+  },
+  "actions_this_stage": {
+    "image_api_calls": 0,
+    "new_images": 0,
+    "existing_triptych_images_modified": 0,
+    "animation": false,
+    "voice_or_music_generation": false,
+    "publication": false
+  }
+}

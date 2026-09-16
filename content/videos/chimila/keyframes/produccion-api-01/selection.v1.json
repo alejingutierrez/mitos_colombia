@@ -1,0 +1,84 @@
+{
+  "schema": "ette-keyframe-selection/v1",
+  "myth_id": 352,
+  "myth": "el-agua",
+  "selected": [
+    {
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-01/el-agua/kf01-aire-v2.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-01/prompts/el-agua-kf01-aire-v2.txt",
+      "sha256": "72732b1ceb389d13784f43edc6dd40b1915d47d30135e29cb1b1d09eb55ef76b",
+      "prompt_sha256": "c7976eddece8584a964297a3619e45dfcedbc6aa0eb9868a29714f1155d1c210",
+      "bytes": 324144,
+      "width": 1024,
+      "height": 1536,
+      "format": "jpeg",
+      "id": "kf01-aire-v2",
+      "frame_id": "kf01",
+      "revision": 2,
+      "selected": true,
+      "inputs": [
+        {
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-01/el-agua/kf01-v1.jpeg",
+          "sha256": "24b7aaeb7398c247283f8bf0b2786d392d06743f3703c6fa34f51e80567a3ba9",
+          "role": "identity-preserving zoom-out target"
+        }
+      ],
+      "duration_seconds": 22.2,
+      "provider": "openai",
+      "model": "gpt-image-2.5-sunburst",
+      "quality": "medium",
+      "mode": "edit",
+      "requested_size": "1024x1536",
+      "status": "produced_visually_reviewed_editorial_candidate",
+      "user_approved": false,
+      "culturally_certified": false
+    },
+    {
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-01/el-agua/kf02-v1.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-01/prompts/el-agua-kf02-v1.txt",
+      "sha256": "91b051c48ad39759b235e267c0d12fc59bd7b599d9bcb3f85474842b4cff9564",
+      "prompt_sha256": "f4d44f26cc09fb60210a4efa2e3ce5f47eb68b6e6e94025e24ffe5c112e00c6d",
+      "bytes": 318801,
+      "width": 1024,
+      "height": 1536,
+      "format": "jpeg",
+      "id": "kf02-v1",
+      "frame_id": "kf02",
+      "revision": 1,
+      "selected": true,
+      "inputs": [
+        {
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-01/el-agua/kf01-aire-v2.jpeg",
+          "sha256": "72732b1ceb389d13784f43edc6dd40b1915d47d30135e29cb1b1d09eb55ef76b",
+          "role": "previous visually reviewed same-myth keyframe; identities, dress, terrain and material"
+        },
+        {
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-05/u03-macanas-util-excavacion-master-v1-refined.jpeg",
+          "sha256": "c1f027e7b76a78cb7aa2417c92b001af822ad0fb5e3556f9b0c1c66b832ced5d",
+          "role": "narrow digging tool only, not broad macana or weapon story"
+        }
+      ],
+      "duration_seconds": 21.8,
+      "provider": "openai",
+      "model": "gpt-image-2.5-sunburst",
+      "quality": "medium",
+      "mode": "edit",
+      "requested_size": "1024x1536",
+      "status": "produced_visually_reviewed_editorial_candidate",
+      "user_approved": false,
+      "culturally_certified": false
+    }
+  ],
+  "selected_count": 2,
+  "planned_pilot_frame_count": 8,
+  "pending_pilot_frames": [
+    "kf03",
+    "kf04",
+    "kf05",
+    "kf06",
+    "kf07",
+    "kf08"
+  ],
+  "user_approved": false,
+  "publication": false
+}

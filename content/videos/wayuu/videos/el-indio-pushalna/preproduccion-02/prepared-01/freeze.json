@@ -1,0 +1,267 @@
+{
+  "schema": "wayuu-video-freeze/v1",
+  "created_at": "2026-09-07T22:22:04.854Z",
+  "plan": "content/videos/wayuu/videos/el-indio-pushalna/preproduccion-02/plan.json",
+  "plan_sha256": "6991c03026d4f78efa9c46d39a382b2a29c802b6fb8bf9d5aaf33ee6531c6c55",
+  "style": "content/videos/wayuu/channel-dna.v2.json",
+  "style_sha256": "da3aa36702f381654441c018622e5ccf66ea217b5a420a83093620a8758a2912",
+  "checks": {
+    "shots": 18,
+    "words": 271,
+    "estimated_seconds": 144,
+    "generated": 3,
+    "pending": 15,
+    "warnings": [
+      "b1a: candidato piloto con notas visuales; no aprobación final",
+      "b3a: candidato piloto con notas visuales; no aprobación final",
+      "b9b: candidato piloto con notas visuales; no aprobación final"
+    ]
+  },
+  "files": {
+    "narrative_snapshot_verified": true,
+    "reference_checks": 17,
+    "public_freshness": "not_checked_by_offline_preparer"
+  },
+  "jobs": [
+    {
+      "id": "b1b",
+      "prompt_file": "content/videos/wayuu/videos/el-indio-pushalna/preproduccion-02/prepared-01/prompts/b1b.txt",
+      "prompt_sha256": "0b8059428d93eebc20c7aa6d021f31e304c1e38a31d3adcafc06cc9922c181f4",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "864x1536",
+      "output_format": "jpeg",
+      "mode": "text_only",
+      "input_images": [],
+      "api_method": "images.generate",
+      "output": "output/imagegen/wayuu/keyframes/el-indio-pushalna-preproduccion-02/b1b.jpeg",
+      "status": "prepared_not_generated"
+    },
+    {
+      "id": "b2a",
+      "prompt_file": "content/videos/wayuu/videos/el-indio-pushalna/preproduccion-02/prepared-01/prompts/b2a.txt",
+      "prompt_sha256": "8ef0ca8b3515abeff79bd9eeb5d129901293c26ee5bf2c08c4d1865193ed1a2b",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "864x1536",
+      "output_format": "jpeg",
+      "mode": "text_only",
+      "input_images": [],
+      "api_method": "images.generate",
+      "output": "output/imagegen/wayuu/keyframes/el-indio-pushalna-preproduccion-02/b2a.jpeg",
+      "status": "prepared_not_generated"
+    },
+    {
+      "id": "b2b",
+      "prompt_file": "content/videos/wayuu/videos/el-indio-pushalna/preproduccion-02/prepared-01/prompts/b2b.txt",
+      "prompt_sha256": "e860b7b6e739a7d19c79aede7013e7141730b23e8fc6552c2178d1316992e0e9",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "864x1536",
+      "output_format": "jpeg",
+      "mode": "text_only",
+      "input_images": [],
+      "api_method": "images.generate",
+      "output": "output/imagegen/wayuu/keyframes/el-indio-pushalna-preproduccion-02/b2b.jpeg",
+      "status": "prepared_not_generated"
+    },
+    {
+      "id": "b3b",
+      "prompt_file": "content/videos/wayuu/videos/el-indio-pushalna/preproduccion-02/prepared-01/prompts/b3b.txt",
+      "prompt_sha256": "956d751be566d305302db25226f1b1f3402661677316968d417eb29ee091279b",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "864x1536",
+      "output_format": "jpeg",
+      "mode": "text_only",
+      "input_images": [],
+      "api_method": "images.generate",
+      "output": "output/imagegen/wayuu/keyframes/el-indio-pushalna-preproduccion-02/b3b.jpeg",
+      "status": "prepared_not_generated"
+    },
+    {
+      "id": "b4a",
+      "prompt_file": "content/videos/wayuu/videos/el-indio-pushalna/preproduccion-02/prepared-01/prompts/b4a.txt",
+      "prompt_sha256": "3e43352172cbab3d834aa8158b0c9d36c9ab28c8736254ad2ce08f8096ce4a27",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "864x1536",
+      "output_format": "jpeg",
+      "mode": "text_only",
+      "input_images": [],
+      "api_method": "images.generate",
+      "output": "output/imagegen/wayuu/keyframes/el-indio-pushalna-preproduccion-02/b4a.jpeg",
+      "status": "prepared_not_generated"
+    },
+    {
+      "id": "b4b",
+      "prompt_file": "content/videos/wayuu/videos/el-indio-pushalna/preproduccion-02/prepared-01/prompts/b4b.txt",
+      "prompt_sha256": "85deb4617f209dfb197cb8d09eec1fccfb82289a190323e80cc3f82b8a0b38bf",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "864x1536",
+      "output_format": "jpeg",
+      "mode": "text_only",
+      "input_images": [],
+      "api_method": "images.generate",
+      "output": "output/imagegen/wayuu/keyframes/el-indio-pushalna-preproduccion-02/b4b.jpeg",
+      "status": "prepared_not_generated"
+    },
+    {
+      "id": "b5a",
+      "prompt_file": "content/videos/wayuu/videos/el-indio-pushalna/preproduccion-02/prepared-01/prompts/b5a.txt",
+      "prompt_sha256": "0e7002a50884ef49ac0146774ed05cc877db63a9c584b3e5305cfbee29d1e214",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "864x1536",
+      "output_format": "jpeg",
+      "mode": "text_only",
+      "input_images": [],
+      "api_method": "images.generate",
+      "output": "output/imagegen/wayuu/keyframes/el-indio-pushalna-preproduccion-02/b5a.jpeg",
+      "status": "prepared_not_generated"
+    },
+    {
+      "id": "b5b",
+      "prompt_file": "content/videos/wayuu/videos/el-indio-pushalna/preproduccion-02/prepared-01/prompts/b5b.txt",
+      "prompt_sha256": "aef900e0b6922cbcaf4e62f108b74c6ec893fdb43ad946464f4b824392fc93c3",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "864x1536",
+      "output_format": "jpeg",
+      "mode": "text_only",
+      "input_images": [],
+      "api_method": "images.generate",
+      "output": "output/imagegen/wayuu/keyframes/el-indio-pushalna-preproduccion-02/b5b.jpeg",
+      "status": "prepared_not_generated"
+    },
+    {
+      "id": "b6a",
+      "prompt_file": "content/videos/wayuu/videos/el-indio-pushalna/preproduccion-02/prepared-01/prompts/b6a.txt",
+      "prompt_sha256": "8eb9291bbd3244d09ac435ae93c7af240fd07c1df8c0c9a01c523be999d053d9",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "864x1536",
+      "output_format": "jpeg",
+      "mode": "text_only",
+      "input_images": [],
+      "api_method": "images.generate",
+      "output": "output/imagegen/wayuu/keyframes/el-indio-pushalna-preproduccion-02/b6a.jpeg",
+      "status": "prepared_not_generated"
+    },
+    {
+      "id": "b6b",
+      "prompt_file": "content/videos/wayuu/videos/el-indio-pushalna/preproduccion-02/prepared-01/prompts/b6b.txt",
+      "prompt_sha256": "97c8eb89c673926eb86d881fb40fc3011ef9a63fd586634ee8f567d0f4c4ffa6",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "864x1536",
+      "output_format": "jpeg",
+      "mode": "text_only",
+      "input_images": [],
+      "api_method": "images.generate",
+      "output": "output/imagegen/wayuu/keyframes/el-indio-pushalna-preproduccion-02/b6b.jpeg",
+      "status": "prepared_not_generated"
+    },
+    {
+      "id": "b7a",
+      "prompt_file": "content/videos/wayuu/videos/el-indio-pushalna/preproduccion-02/prepared-01/prompts/b7a.txt",
+      "prompt_sha256": "68c842f75f64398c4a174a97399e41a5da46599ff00c98d4d98d431fc5d75361",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "864x1536",
+      "output_format": "jpeg",
+      "mode": "text_only",
+      "input_images": [],
+      "api_method": "images.generate",
+      "output": "output/imagegen/wayuu/keyframes/el-indio-pushalna-preproduccion-02/b7a.jpeg",
+      "status": "prepared_not_generated"
+    },
+    {
+      "id": "b7b",
+      "prompt_file": "content/videos/wayuu/videos/el-indio-pushalna/preproduccion-02/prepared-01/prompts/b7b.txt",
+      "prompt_sha256": "932cb40dcfbce64a371ebb8496022142bbb45edc09bfc839e7d13503f9b60a4a",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "864x1536",
+      "output_format": "jpeg",
+      "mode": "text_only",
+      "input_images": [],
+      "api_method": "images.generate",
+      "output": "output/imagegen/wayuu/keyframes/el-indio-pushalna-preproduccion-02/b7b.jpeg",
+      "status": "prepared_not_generated"
+    },
+    {
+      "id": "b8a",
+      "prompt_file": "content/videos/wayuu/videos/el-indio-pushalna/preproduccion-02/prepared-01/prompts/b8a.txt",
+      "prompt_sha256": "7290a69d7b1352cf3de668c2737e73bfd3d9dbdc875a6cc8a3bf1d2b19f48638",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "864x1536",
+      "output_format": "jpeg",
+      "mode": "text_only",
+      "input_images": [],
+      "api_method": "images.generate",
+      "output": "output/imagegen/wayuu/keyframes/el-indio-pushalna-preproduccion-02/b8a.jpeg",
+      "status": "prepared_not_generated"
+    },
+    {
+      "id": "b8b",
+      "prompt_file": "content/videos/wayuu/videos/el-indio-pushalna/preproduccion-02/prepared-01/prompts/b8b.txt",
+      "prompt_sha256": "12df4a7f53d5d0b6be635b02d077518684f9d64a7fee31a9b53b4108cdf175d3",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "864x1536",
+      "output_format": "jpeg",
+      "mode": "text_only",
+      "input_images": [],
+      "api_method": "images.generate",
+      "output": "output/imagegen/wayuu/keyframes/el-indio-pushalna-preproduccion-02/b8b.jpeg",
+      "status": "prepared_not_generated"
+    },
+    {
+      "id": "b9a",
+      "prompt_file": "content/videos/wayuu/videos/el-indio-pushalna/preproduccion-02/prepared-01/prompts/b9a.txt",
+      "prompt_sha256": "ca291c503b903d9a7c3f6e417c3c3c8e915e6d695c129aa503e9fa2dad392341",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "864x1536",
+      "output_format": "jpeg",
+      "mode": "text_only",
+      "input_images": [],
+      "api_method": "images.generate",
+      "output": "output/imagegen/wayuu/keyframes/el-indio-pushalna-preproduccion-02/b9a.jpeg",
+      "status": "prepared_not_generated"
+    }
+  ],
+  "prior_candidates": [
+    {
+      "id": "b1a",
+      "status": "existing_pilot_candidate_not_final",
+      "path": "output/imagegen/wayuu/keyframes/el-indio-pushalna-preproduccion-01/b1a.jpeg",
+      "sha256": "dbb55858f34fa95dde4df87b72d48ddca7f950ea3cd481591f39d9282d865539",
+      "qa_notes": [
+        "Papel claro, caballo completo, piedra y curva reconocibles. Plantas simplificadas sin identificación botánica. Sin marca blanca de pata garantizada."
+      ]
+    },
+    {
+      "id": "b3a",
+      "status": "existing_pilot_candidate_not_final",
+      "path": "output/imagegen/wayuu/keyframes/el-indio-pushalna-preproduccion-01/b3a.jpeg",
+      "sha256": "4fa42f95c79876d40df594f253bdd87476b778a6374e8c5674370b7d4d55b845",
+      "qa_notes": [
+        "Papel claro, plato protagonista vacío y tres hojas de aire. Figura mayor que objetivo y pequeño recipiente incidental al fondo; no se considera parte de la demanda."
+      ]
+    },
+    {
+      "id": "b9b",
+      "status": "existing_pilot_candidate_not_final",
+      "path": "output/imagegen/wayuu/keyframes/el-indio-pushalna-preproduccion-01/b9b.jpeg",
+      "sha256": "aa6829909f739701474ea68ca058b7fed01c4a343f78a8b01a08aab732d16b36",
+      "qa_notes": [
+        "Papel sostenido, dos perfiles completos, vestuario reconocible. Figuras mayores que objetivo; arquitectura simplificada, no restitución exacta."
+      ]
+    }
+  ],
+  "no_api_calls": true
+}

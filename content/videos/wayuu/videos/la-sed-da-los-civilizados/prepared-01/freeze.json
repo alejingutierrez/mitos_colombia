@@ -1,0 +1,93 @@
+{
+  "schema": "wayuu-video-freeze/v1",
+  "created_at": "2026-09-09T20:31:17.265Z",
+  "plan": "content/videos/wayuu/videos/la-sed-da-los-civilizados/preproduccion-01/plan.json",
+  "plan_sha256": "c981ac8a9f01d64c2021c25305dade95128bc1da709c30b16f081390275d4532",
+  "style": "content/videos/wayuu/channel-dna.v3.json",
+  "style_sha256": "665cac6e3cd24ce51bee1196ddd9c89f32a6845a0424580778059170967b1984",
+  "checks": {
+    "shots": 16,
+    "words": 238,
+    "estimated_seconds": 128,
+    "generated": 0,
+    "pending": 16,
+    "warnings": []
+  },
+  "files": {
+    "narrative_snapshot_verified": true,
+    "reference_checks": 14,
+    "public_freshness": "not_checked_by_offline_preparer"
+  },
+  "jobs": [
+    {
+      "id": "b1a",
+      "prompt_file": "content/videos/wayuu/videos/la-sed-da-los-civilizados/prepared-01/prompts/b1a.txt",
+      "prompt_sha256": "2cb9c9b0747bd3c2e4c1b9b8b7f7755c8bd808c51602a78002e99358ba05c521",
+      "model": "gpt-image-2.5-sunburst",
+      "allowed_models": [
+        "gpt-image-2.5-sunburst",
+        "gpt-image-2.5-flare",
+        "gpt-image-2"
+      ],
+      "fast_iteration_model": "gpt-image-2.5-flare",
+      "legacy_fallback_model": "gpt-image-2",
+      "one_model_per_myth": true,
+      "record_exact_model_and_snapshot": true,
+      "quality": "medium",
+      "size": "864x1536",
+      "api_request_size": "1024x1536",
+      "delivery_size": "864x1536",
+      "delivery_transform": "center_crop_864x1536",
+      "output_format": "jpeg",
+      "mode": "image_edit_with_prior_keyframes",
+      "input_images": [
+        {
+          "kind": "triptych",
+          "myth": "la-sed-da-los-civilizados",
+          "path": "output/imagegen/wayuu/triptychs/wayuu-sed-triptych-02-hs/entrada.jpeg",
+          "sha256": "98f23cd7da709af4b16fbe2959bcb8e8526a0f345bea0d79262470086151f2f1",
+          "approved": true,
+          "role": "Fijar la entrada territorial, escala humana pequeña y gramática de papel; no copiar el encuadre."
+        },
+        {
+          "kind": "canonical_model",
+          "myth": "la-sed-da-los-civilizados",
+          "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-16-la-sed-de-los-forasteros-medium-qa-correction-01/comerciante_alijuna_1__identity_sheet--canon.jpeg",
+          "sha256": "cd96b13fc355cfc1af686ef89d880d6e705273df0803920c697c5556e82b6c0e",
+          "approved": true,
+          "role": "Reproducir exactamente identidad y vestuario del comerciante 1, no la cuadrícula de ficha."
+        },
+        {
+          "kind": "canonical_model",
+          "myth": "la-sed-da-los-civilizados",
+          "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-16-la-sed-de-los-forasteros-medium-culture-scope-fix-01/comerciante_alijuna_2__identity_sheet--canon.jpeg",
+          "sha256": "cc9385123d6d42c46b00ca45105c0270fccb31d29af3c18f7a51078359c79da5",
+          "approved": true,
+          "role": "Reproducir exactamente identidad y vestuario del comerciante 2, no la cuadrícula de ficha."
+        },
+        {
+          "kind": "canonical_model",
+          "myth": "la-sed-da-los-civilizados",
+          "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-16-la-sed-de-los-forasteros-medium-culture-scope-fix-01/carga_panela__object_sheet--canon.jpeg",
+          "sha256": "9fa441f5d929904e6a62e93c69e6b3a4a1c8e865f2435c9cf73b3263ee98e7b6",
+          "approved": true,
+          "role": "Fijar exactamente dos cargas de panela, una por hombre, sin copiar la ficha."
+        },
+        {
+          "kind": "canonical_model",
+          "myth": "la-sed-da-los-civilizados",
+          "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-16-la-sed-de-los-forasteros-medium-culture-scope-fix-01/utta__spatial_model--canon.jpeg",
+          "sha256": "bbb60dd50bc9e3f775c037f8c14ee5338f3d38655a07da5df3372112d304a445",
+          "approved": true,
+          "role": "Fijar Utta y excluir flora genérica de western, casas o agua."
+        }
+      ],
+      "api_method": "images.edit",
+      "source_output": "output/imagegen/wayuu/keyframes/la-sed-da-los-civilizados-preproduccion-01/b1a.sunburst-master.jpeg",
+      "output": "output/imagegen/wayuu/keyframes/la-sed-da-los-civilizados-preproduccion-01/b1a.jpeg",
+      "status": "prepared_not_generated"
+    }
+  ],
+  "prior_candidates": [],
+  "no_api_calls": true
+}

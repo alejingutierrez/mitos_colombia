@@ -1,0 +1,76 @@
+{
+  "model": "gpt-image-2.5-sunburst",
+  "logical_batch": 3,
+  "size": "1024x1536",
+  "output_format": "jpeg",
+  "output_compression": 92,
+  "concurrency_cap": 3,
+  "jobs": [
+    {
+      "unit_id": "P02",
+      "filename": "p02-primer-hombre-master-v1.jpeg",
+      "mode": "edit",
+      "quality": "high",
+      "input_files": [
+        "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-04/p01-papa-grande-rostro-v2-refined.jpeg"
+      ],
+      "label": "Huhun Krukroring Merana: primer hombre",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/biblia/produccion-api-05/p02.prompt.txt",
+      "out": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-05/p02-primer-hombre-master-v1.jpeg"
+    },
+    {
+      "unit_id": "H02",
+      "filename": "h02-padre-tres-hijos-master-v1.jpeg",
+      "mode": "edit",
+      "quality": "high",
+      "input_files": [
+        "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-04/h01-cuatro-adultos-rostros-v3.jpeg"
+      ],
+      "label": "Padre y tres hijos de la prueba",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/biblia/produccion-api-05/h02.prompt.txt",
+      "out": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-05/h02-padre-tres-hijos-master-v1.jpeg"
+    },
+    {
+      "unit_id": "A08",
+      "filename": "a08-caiman-master-v1.jpeg",
+      "mode": "generate",
+      "quality": "medium",
+      "input_files": [],
+      "label": "Caimán",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/biblia/produccion-api-05/a08.prompt.txt",
+      "out": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-05/a08-caiman-master-v1.jpeg"
+    },
+    {
+      "unit_id": "L04",
+      "filename": "l04-terreno-pozos-secos-llenos-master-v1.jpeg",
+      "mode": "generate",
+      "quality": "medium",
+      "input_files": [],
+      "label": "Terreno montañoso y pozos",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/biblia/produccion-api-05/l04.prompt.txt",
+      "out": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-05/l04-terreno-pozos-secos-llenos-master-v1.jpeg"
+    },
+    {
+      "unit_id": "U03",
+      "filename": "u03-macanas-util-excavacion-master-v1.jpeg",
+      "mode": "generate",
+      "quality": "medium",
+      "input_files": [],
+      "label": "Macana y útiles de trabajo",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/biblia/produccion-api-05/u03.prompt.txt",
+      "out": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-05/u03-macanas-util-excavacion-master-v1.jpeg"
+    },
+    {
+      "unit_id": "V03",
+      "filename": "v03-incendio-terreno-posterior-l01-v1.jpeg",
+      "mode": "edit",
+      "quality": "medium",
+      "input_files": [
+        "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-02/l01-monte-camino-claro-master-v2.jpeg"
+      ],
+      "label": "Incendio y terreno posterior",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/biblia/produccion-api-05/v03.prompt.txt",
+      "out": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-05/v03-incendio-terreno-posterior-l01-v1.jpeg"
+    }
+  ]
+}

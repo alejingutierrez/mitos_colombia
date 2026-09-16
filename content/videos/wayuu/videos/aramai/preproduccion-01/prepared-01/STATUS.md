@@ -1,0 +1,1 @@
+Paquete superado por prepared-02 antes de cualquier generación. Una prueba detectó que la continuidad general importaba vestuario de Arámai en un plano sin personas. Se aisló continuidad de mundo del inventario del plano. No ejecutar estos prompts; se conservan como evidencia de la corrección de preproducción. Cero imágenes generadas con este paquete.

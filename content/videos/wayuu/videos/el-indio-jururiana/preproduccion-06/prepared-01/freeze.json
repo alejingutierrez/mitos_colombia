@@ -1,0 +1,213 @@
+{
+  "schema": "wayuu-video-freeze/v1",
+  "created_at": "2026-09-07T21:34:50.907Z",
+  "plan": "content/videos/wayuu/videos/el-indio-jururiana/preproduccion-06/plan.json",
+  "plan_sha256": "db7b8cfdac97da6c99b75ae4fbf4dd8f40adf6e7ea5c76239a2cc980deb15602",
+  "style": "content/videos/wayuu/channel-dna.v2.json",
+  "style_sha256": "da3aa36702f381654441c018622e5ccf66ea217b5a420a83093620a8758a2912",
+  "checks": {
+    "shots": 16,
+    "words": 197,
+    "estimated_seconds": 112,
+    "generated": 15,
+    "pending": 1,
+    "warnings": [
+      "b1a: candidato piloto con notas visuales; no aprobación final",
+      "b1b: candidato piloto con notas visuales; no aprobación final",
+      "b2a: candidato piloto con notas visuales; no aprobación final",
+      "b2b: candidato piloto con notas visuales; no aprobación final",
+      "b3b: candidato piloto con notas visuales; no aprobación final",
+      "b4a: candidato piloto con notas visuales; no aprobación final",
+      "b4b: candidato piloto con notas visuales; no aprobación final",
+      "b5a: candidato piloto con notas visuales; no aprobación final",
+      "b5b: candidato piloto con notas visuales; no aprobación final",
+      "b6a: candidato piloto con notas visuales; no aprobación final",
+      "b6b: candidato piloto con notas visuales; no aprobación final",
+      "b7a: candidato piloto con notas visuales; no aprobación final",
+      "b7b: candidato piloto con notas visuales; no aprobación final",
+      "b8a: candidato piloto con notas visuales; no aprobación final",
+      "b8b: candidato piloto con notas visuales; no aprobación final"
+    ]
+  },
+  "files": {
+    "narrative_snapshot_verified": true,
+    "reference_checks": 26,
+    "public_freshness": "not_checked_by_offline_preparer"
+  },
+  "jobs": [
+    {
+      "id": "b3a",
+      "prompt_file": "content/videos/wayuu/videos/el-indio-jururiana/preproduccion-06/prepared-01/prompts/b3a.txt",
+      "prompt_sha256": "dea1973e4255ec4c56187ff880ae7878b5a99d408582550f616813bb688ff45f",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "864x1536",
+      "output_format": "jpeg",
+      "mode": "text_only",
+      "input_images": [],
+      "api_method": "images.generate",
+      "output": "output/imagegen/wayuu/keyframes/el-indio-jururiana-preproduccion-06/b3a.jpeg",
+      "status": "prepared_not_generated"
+    }
+  ],
+  "prior_candidates": [
+    {
+      "id": "b1a",
+      "status": "existing_pilot_candidate_not_final",
+      "path": "output/imagegen/wayuu/keyframes/el-indio-jururiana-preproduccion-02/b1a.jpeg",
+      "sha256": "26f2c731dd85a5e1115b0d68381556f59c69dd2b8ac9d7d3804ec42c78d0e878",
+      "qa_notes": [
+        "Apertura más abierta, personaje completo fuera del primer plano, sombrero junto a estera, sin rosetas.",
+        "Rastro se atenúa por distancia y lluvia; no afirmar borrado perfecto de todas las impresiones.",
+        "Reclinado ocupa algo más del ancho solicitado; aceptable como candidato por dominio ambiental."
+      ]
+    },
+    {
+      "id": "b1b",
+      "status": "existing_pilot_candidate_not_final",
+      "path": "output/imagegen/wayuu/keyframes/el-indio-jururiana-preproduccion-04/b1b.jpeg",
+      "sha256": "cfa685006538188b52a14a7ca062dd67cd907a85e415f78407b771eb7b7440e2",
+      "qa_notes": [
+        "Reparto completo, Kotin y sombrero, paquetes planos y terreno sin rosetas; material y distancia mejorados.",
+        "Se ven cuatro paquetes en vez de los tres fijados. Diferencia de cantidad editorial registrada, no fiel cumplimiento de ese número; semillas y acción de preparar permanecen claras. No se usa como conteo histórico."
+      ]
+    },
+    {
+      "id": "b2a",
+      "status": "existing_pilot_candidate_not_final",
+      "path": "output/imagegen/wayuu/keyframes/el-indio-jururiana-preproduccion-04/b2a.jpeg",
+      "sha256": "059c91e1063096bb6b40c09faf1669c9b2f6bdf730d4f43d5901bbb48b96f64a",
+      "qa_notes": [
+        "Tres paquetes sin asas, familia completa trabajando, rosetas eliminadas, sombrero y Kotin presentes.",
+        "Encuadre aún más cercano que 22%, pero ninguna persona se corta. Manta abierta en brazos al trabajar; no cambio a traje ceremonial."
+      ]
+    },
+    {
+      "id": "b2b",
+      "status": "existing_pilot_candidate_not_final",
+      "path": "output/imagegen/wayuu/keyframes/el-indio-jururiana-preproduccion-05/b2b.jpeg",
+      "sha256": "a715a4d9d8ec59062d947ebe90f07a9ae9083866fe568a25ef4de69ee2e223d2",
+      "qa_notes": [
+        "Cinco chivos completos separados en dos distancias, paquetes planos, vestuario y perfiles recortados.",
+        "Grupo detenido en lugar de caminando; compatible con reunión de recursos. Patas parcialmente superpuestas en algún animal; no afirmar conteo anatómico perfecto."
+      ]
+    },
+    {
+      "id": "b3b",
+      "status": "existing_pilot_candidate_not_final",
+      "path": "output/imagegen/wayuu/keyframes/el-indio-jururiana-preproduccion-03/b3b.jpeg",
+      "sha256": "0ba299584837d3a3b74ba8de5978d5266df8fbf1a6b48c282028d37af0ab0699",
+      "qa_notes": [
+        "Mayor completo con sombrero y Kotin largo, lluvia distante, rastro y terreno de hojas.",
+        "Sendero se prolonga por delante del mayor; plantas pequeñas se leen genéricas y no permiten identificación botánica. No tomar como ficha de vegetación.",
+        "Vivienda y paisaje aproximados, no reconstrucción precisa."
+      ]
+    },
+    {
+      "id": "b4a",
+      "status": "existing_pilot_candidate_not_final",
+      "path": "output/imagegen/wayuu/keyframes/el-indio-jururiana-preproduccion-02/b4a.jpeg",
+      "sha256": "4c00c64ac141e9b5cda4d16511113968e3ee24183748136aa0f199214f339686",
+      "qa_notes": [
+        "Sombrero y Kotin largo recuperados, sin rosetas ni dedos en huellas; papel y profundidad sostenidos.",
+        "La senda pasa delante del mayor en vez de terminar exactamente junto a talones. Figura algo mayor que 18%; permanece ambiental."
+      ]
+    },
+    {
+      "id": "b4b",
+      "status": "existing_pilot_candidate_not_final",
+      "path": "output/imagegen/wayuu/keyframes/el-indio-jururiana-preproduccion-05/b4b.jpeg",
+      "sha256": "615a0ccdc7b0e9b12b82ac186222eaf09c5d418527b311569e6b7f6bc3eb123f",
+      "qa_notes": [
+        "Cinco chivos completos, tres paquetes planos, familiares y mayor en resguardo, inundación localizada en capas de papel.",
+        "Personas algo más grandes que porcentaje solicitado; todas completas y ambiente dominante."
+      ]
+    },
+    {
+      "id": "b5a",
+      "status": "existing_pilot_candidate_not_final",
+      "path": "output/imagegen/wayuu/keyframes/el-indio-jururiana-preproduccion-05/b5a.jpeg",
+      "sha256": "0b11fb88e3bc2124e21d6d3b73daa2b8cedbe5212eea46d422300be9d4d6b459",
+      "qa_notes": [
+        "Mayor abre paquete con semillas visibles, otros dos cerrados, familiares de peinados coherentes sentados en suelo; papel sin rosetas.",
+        "Color de pared adquiere índigo y vestuario forma pliegues curvos; no son telas realistas ni nuevo episodio."
+      ]
+    },
+    {
+      "id": "b5b",
+      "status": "existing_pilot_candidate_not_final",
+      "path": "output/imagegen/wayuu/keyframes/el-indio-jururiana-preproduccion-05/b5b.jpeg",
+      "sha256": "f26d5faf197c9b313c3461c2add2d6455e7f152d21fdb0c448228418883264a1",
+      "qa_notes": [
+        "Reparto de paquete a la mujer, chivo junto al hombre, no vara/cuerda ni lluvia añadida; sombras y recortes.",
+        "Sólo cuatro chivos visibles, no los cinco solicitados. Se admite grupo parcialmente fuera de campo por corte, no contabilizar como desaparición narrativa.",
+        "Cantidad de semillas y tono cambian a escala pequeña, especie no afirmada."
+      ]
+    },
+    {
+      "id": "b6a",
+      "status": "existing_pilot_candidate_not_final",
+      "path": "output/imagegen/wayuu/keyframes/el-indio-jururiana-preproduccion-05/b6a.jpeg",
+      "sha256": "a399343fc75046f0c8a727f2a1e4569594523cc960cf0251d0220aded111c61c",
+      "qa_notes": [
+        "Paño rojo-arena vuelve al hombro de Warir; ropa e identidad del mayor conservadas, entrada seca sin utilería.",
+        "El borde de puerta ocluye parte del mayor, no figura cortada por el marco exterior. La casa domina."
+      ]
+    },
+    {
+      "id": "b6b",
+      "status": "existing_pilot_candidate_not_final",
+      "path": "output/imagegen/wayuu/keyframes/el-indio-jururiana-preproduccion-03/b6b.jpeg",
+      "sha256": "0afd5d79df0328462659b1e92e147db197c5776a5efe75e1961c2b99fff211a6",
+      "qa_notes": [
+        "Ambos arrodillados, palmas aún aproximándose, sombrero y paño de hombro presentes, suelo continuo y perfiles de papel.",
+        "Toma previa a la onda; no exige fenómeno añadido. El ángulo coloca puerta a izquierda y será contraplanado en b7b."
+      ]
+    },
+    {
+      "id": "b7a",
+      "status": "existing_pilot_candidate_not_final",
+      "path": "output/imagegen/wayuu/keyframes/el-indio-jururiana-preproduccion-03/b7a.jpeg",
+      "sha256": "11e051c9558bf609778c732081753ac47123a4d45f2e26ac552ebe07c22ecc75",
+      "qa_notes": [
+        "Palmas apoyadas, mayor arrodillado, ondulación de una hoja de suelo, sombra con aire y cabezas planas.",
+        "Dos curvaturas suaves en la misma hoja; sin lectura de grieta. Campo más cercano que porcentaje solicitado, ambos completos."
+      ]
+    },
+    {
+      "id": "b7b",
+      "status": "existing_pilot_candidate_not_final",
+      "path": "output/imagegen/wayuu/keyframes/el-indio-jururiana-preproduccion-02/b7b.jpeg",
+      "sha256": "fa4393c72b7fc12c045d2354df50c1e4289927d5a470255365d0fec1e72ab49c",
+      "qa_notes": [
+        "Una puerta, día seco, sombrero, suelo de hoja continua ondulada y perfiles planos.",
+        "Mayor se arrodilla también; conservarlo para continuidad de esta toma, postura de escucha compatible. Camisa de Warir se ve de manga corta; fijar ese detalle en tomas contiguas antes de despacho.",
+        "Onda discreta, sin grieta ni luz propia; no afirmar que la imagen animada ya exista."
+      ]
+    },
+    {
+      "id": "b8a",
+      "status": "existing_pilot_candidate_not_final",
+      "path": "output/imagegen/wayuu/keyframes/el-indio-jururiana-preproduccion-03/b8a.jpeg",
+      "sha256": "d9db32608c3a279a8183fcf05611fb9d14f5cc058986387ae73bb1b2a0d56c3d",
+      "qa_notes": [
+        "Warir con paño sobre hombro, sale a mirar hojas inclinadas; familiares distantes.",
+        "Figura más grande de lo pedido, pero vista desde atrás y subordinada a casa y paisaje, no retrato.",
+        "Familiar masculino lleva sombrero no fijado previamente; accesorio cotidiano sin significado ritual. No fingir identidad histórica exacta.",
+        "Recortes azules en cielo evocan viento; no son prueba de poder mágico nuevo."
+      ]
+    },
+    {
+      "id": "b8b",
+      "status": "existing_pilot_candidate_not_final",
+      "path": "output/imagegen/wayuu/keyframes/el-indio-jururiana-preproduccion-05/b8b.jpeg",
+      "sha256": "a4501b073e9e7e35507930c8a613c728bbb136c7daf1edc00a55d4a0332665c0",
+      "qa_notes": [
+        "Coda con paquete plano, familiares sentados en suelo continuo sin bancos/pedestal, Warir con paño de hombro sin flecos.",
+        "Cuatro chivos visibles en vez de cinco; no todos tienen que permanecer en campo después de la elipsis. Plano cálido algo mayor que escala solicitada, sin retrato.",
+        "No hay fantasma del mayor ni afirmación de ceremonia."
+      ]
+    }
+  ],
+  "no_api_calls": true
+}
