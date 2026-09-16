@@ -1,0 +1,324 @@
+{
+  "mito": "el-hijo-del-sol-goranchacha",
+  "comunidad": "Muiscas",
+  "carpeta_triptico": "el-hijo-del-sol-goranchacha",
+  "estructura": "9 bloques narrativos × 2 keyframes (bNa, bNb) = 18 escenas; el `acto` del tríptico cubre una, quedan 17 por generar",
+  "nota_deslinde": "b2a lo cubre la `entrada` del tríptico, b7a el `acto` y b9b la `huella`. El parto no se muestra; la piedra aparece ya envuelta. 17 escenas nuevas.",
+  "generacion_actual": {
+    "provider": "openai",
+    "model": "gpt-image-2",
+    "quality": "medium",
+    "account_source": "OPENAI_API_KEY from ignored .env"
+  },
+  "lineas": {
+    "b1": "En Guachetá corría la voz de que el Sol tomaría carne en una doncella del pueblo.",
+    "b2": "Antes de cada alborada subían al cerro y se tendían sobre la hierba.",
+    "b3": "Una mañana sintió la luz entrar y quedarse dentro de su cuerpo.",
+    "b4": "Parió una esmeralda grande y rica. La envolvió en algodones.",
+    "b5": "Al abrir la tela, halló convertida en criatura la piedra que había parido.",
+    "b6": "Salió de Guachetá y fue a la corte de Ramiriquí, que lo agasajó como a hijo del Sol.",
+    "b7": "Hizo traer columnas y mármoles tan grandes que llegaron de noche.",
+    "b8": "No se dejaba mirar a la cara: quienes se acercaban debían postrarse contra el suelo.",
+    "b9": "Su pregonero dio un estallido y se convirtió en humo hediondo."
+  },
+  "keyframes": [
+    {
+      "tag": "b1a",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "comp": "enfrentados",
+      "desc": "PLANO MEDIO de un corro de mujeres hablando en voz baja en un patio de bohíos al atardecer, todas de perfil y ninguna centrada. Sólo piedra baja, tierra y paja: sin columnas, mármol, templetes ni edificios de piedra tallada.",
+      "refs": [
+        "muchacha_guacheta"
+      ],
+      "prompt_file": "b1a.prompt.txt",
+      "prompt_sha256": "58c62307b45fd80adbce7eb002a512f9e5517297e61ecaeaac7ff2b046759f38",
+      "image_sha256": "0fde772057c1601d8cce17e2368985af0a9a5ddbe8aeb126d4253b5e6d79d53a",
+      "account_source": "OPENAI_API_KEY from ignored .env",
+      "package_prepared_at": "2026-09-03T16:33:18.291Z",
+      "ingested_at": "2026-09-03T16:34:04.564Z"
+    },
+    {
+      "tag": "b1b",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "comp": "paisaje_abierto",
+      "desc": "PLANO GENERAL de un cerro del altiplano visto desde el poblado, con el lado por donde sale el sol todavía oscuro. Sin figuras humanas ni animales: sólo cerro, poblado distante y la espera de la luz.",
+      "refs": [
+        "mitos/el-hijo-del-sol-goranchacha/entrada"
+      ],
+      "prompt_file": "b1b.prompt.txt",
+      "prompt_sha256": "99f302770d7b314ac6cb557f110df1f39cd7fd7ae5c4765d19026b66abf9cce1",
+      "image_sha256": "9dd83c947951e9dd555c6c6913dc7ac51e6c147c232c4176784e5f901a0763b3",
+      "account_source": "OPENAI_API_KEY from ignored .env",
+      "package_prepared_at": "2026-09-03T16:33:18.291Z",
+      "ingested_at": "2026-09-03T16:34:04.585Z"
+    },
+    {
+      "tag": "b2b",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "comp": "cenital",
+      "desc": "PLANO DETALLE de hierba escarchada con la huella alargada de una figura que estuvo recostada y el rocío corrido alrededor.",
+      "refs": [
+        "mitos/el-hijo-del-sol-goranchacha/entrada"
+      ],
+      "prompt_file": "b2b.prompt.txt",
+      "prompt_sha256": "d0a33c5f5e2d62732ac6d3a862c5b6a432d4f01619fb94a36c1c25591fa32d5b",
+      "image_sha256": "e4dcba13e33520f99b2654da7e0b6b8fdef2dcb68b32a7b38d0c1efa35dfec89",
+      "account_source": "OPENAI_API_KEY from ignored .env",
+      "package_prepared_at": "2026-09-03T16:33:18.291Z",
+      "ingested_at": "2026-09-03T16:34:04.616Z"
+    },
+    {
+      "tag": "b3a",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "comp": "peso_contrario",
+      "desc": "PLANO MEDIO CORTO de una cara joven recibiendo de lleno la luz rasante del primer sol, con los ojos cerrados.",
+      "refs": [
+        "muchacha_guacheta"
+      ],
+      "prompt_file": "b3a.prompt.txt",
+      "prompt_sha256": "acb1899b80262298f6bcf37b1f0e7d8210a5b21f46246dcef83870ac66e2c4fd",
+      "image_sha256": "f3b209bb59f9646aec8fe1b7a4182353dad3c333599120afad5ef0f0488d37cc",
+      "account_source": "OPENAI_API_KEY from ignored .env",
+      "package_prepared_at": "2026-09-03T16:33:18.291Z",
+      "ingested_at": "2026-09-03T16:34:04.637Z"
+    },
+    {
+      "tag": "b3b",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "comp": "peso_contrario",
+      "desc": "PLANO GENERAL del cerro ya iluminado con una sola figura sentada, incorporándose, y la otra bajando ya hacia el poblado.",
+      "refs": [
+        "mitos/el-hijo-del-sol-goranchacha/entrada"
+      ],
+      "prompt_file": "b3b.prompt.txt",
+      "prompt_sha256": "75a6064bab5edf471a313081bb98a15e9d8c678c3ac7c509261daf2a72f8fa9e",
+      "image_sha256": "be98fb0f9fed0ab8da8fac9fc830692b8fb360102ce5c61a2e484ef278b1adbb",
+      "account_source": "OPENAI_API_KEY from ignored .env",
+      "package_prepared_at": "2026-09-03T16:33:18.291Z",
+      "ingested_at": "2026-09-03T16:34:04.657Z"
+    },
+    {
+      "tag": "b4a",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "comp": "primer_plano",
+      "desc": "PLANO DETALLE de una esmeralda grande de talla tosca envuelta a medias en un lienzo de algodón crudo, sobre una estera.",
+      "refs": [
+        "esmeralda_algodones"
+      ],
+      "prompt_file": "b4a.prompt.txt",
+      "prompt_sha256": "e62418d5182e888282ab97b88d513bfc2ad3b3c51623e95eb0ddb71fc6d98fb9",
+      "image_sha256": "c1072fa9dadcca9b4f22ecd7e8ca1d35d2dd5e0dff09151d5ecca012ec5da22d",
+      "account_source": "OPENAI_API_KEY from ignored .env",
+      "package_prepared_at": "2026-09-03T16:33:18.291Z",
+      "ingested_at": "2026-09-03T16:34:04.675Z"
+    },
+    {
+      "tag": "b4b",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "comp": "peso_contrario",
+      "desc": "PLANO MEDIO de una mujer con un bulto pequeño de algodón sujeto contra la parte alta de su manta, de perfil, caminando por un patio bajo de bohíos. Sólo tierra apisonada, paja, caña y piedra baja: sin torres, muros circulares, columnas, templetes ni arquitectura de piedra tallada.",
+      "refs": [
+        "muchacha_guacheta",
+        "esmeralda_algodones"
+      ],
+      "prompt_file": "b4b.prompt.txt",
+      "prompt_sha256": "1945f81620131eb9bc923128a1bc08a3964a0b56c9b344b837a0509dc75dc6c7",
+      "image_sha256": "efc353e6dd1d6f2b71d4bfa70e5c8e61429a0716c3375aa7c3574d4e909ebf1e",
+      "account_source": "OPENAI_API_KEY from ignored .env",
+      "package_prepared_at": "2026-09-03T16:33:18.291Z",
+      "ingested_at": "2026-09-03T16:34:04.695Z"
+    },
+    {
+      "tag": "b5a",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "comp": "primer_plano",
+      "desc": "PLANO DETALLE de unas manos abriendo un lienzo de algodón y encontrando dentro, en lugar de una piedra, una pequeña figura de papel dormida y completamente envuelta en algodón.",
+      "refs": [
+        "esmeralda_algodones"
+      ],
+      "prompt_file": "b5a.prompt.txt",
+      "prompt_sha256": "79c119d3e47e1f3938076914c919ff9cbc33d9a70642f499cae9f16642419664",
+      "image_sha256": "d432d4a6fb3761dfbb511212188a8113692d95c3595f7ecb42b204b4f2b180e1",
+      "account_source": "OPENAI_API_KEY from ignored .env",
+      "package_prepared_at": "2026-09-03T16:33:18.291Z",
+      "ingested_at": "2026-09-03T16:34:04.715Z"
+    },
+    {
+      "tag": "b5b",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "comp": "simetria",
+      "desc": "PLANO MEDIO de la casa baja del cacique con gente reunida alrededor de un bulto pequeño de algodón crema, todos de perfil y en silencio. El bulto contiene una criatura de papel enteramente arropada: no hay esmeralda, piedra ni parto visible. Sólo bohío, tierra y paja; sin arquitectura de piedra tallada.",
+      "refs": [],
+      "prompt_file": "b5b.prompt.txt",
+      "prompt_sha256": "f610af0c73aa2aa384e325358b875a7b9b88d6f0fbef98bd3881d9d826e9f3fc",
+      "image_sha256": "b33d2c108bca91a5d3ae939ae20e7cbde039523700eb6b35578efce12927c043",
+      "account_source": "OPENAI_API_KEY from ignored .env",
+      "package_prepared_at": "2026-09-03T16:33:18.291Z",
+      "ingested_at": "2026-09-03T16:34:04.736Z"
+    },
+    {
+      "tag": "b6a",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "comp": "diagonal",
+      "desc": "PLANO GENERAL de una comitiva saliendo a recibir a un joven en el camino, con esteras y presentes extendidos en el suelo.",
+      "refs": [
+        "goranchacha_senor"
+      ],
+      "prompt_file": "b6a.prompt.txt",
+      "prompt_sha256": "0fbc182b0c0ba5f2180cbe3fcd7f7a402ebdd30afede3ecb04089c634ba939c5",
+      "image_sha256": "72437571616cb73fa782dc1861e38345f9e76c5168604b1c5f11b7b61a3826b6",
+      "account_source": "OPENAI_API_KEY from ignored .env",
+      "package_prepared_at": "2026-09-03T16:33:18.291Z",
+      "ingested_at": "2026-09-03T16:34:04.760Z"
+    },
+    {
+      "tag": "b6b",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "comp": "peso_contrario",
+      "desc": "PLANO MEDIO de un banquete de recibimiento con vasijas y mantas, y un joven sentado aparte sobre una estera baja, algo más alto que los demás. No hay trono, corona, templo ni arquitectura de piedra tallada.",
+      "refs": [
+        "goranchacha_senor"
+      ],
+      "prompt_file": "b6b.prompt.txt",
+      "prompt_sha256": "10eca10f61a651bb6dcecca3ccbecdf0eb9ad385beb412cfe5fbe77da6dfab87",
+      "image_sha256": "37f7983aeb39c736097452b564b32e86e5392b9bd0cdbeadd2d866176dff4e1e",
+      "account_source": "OPENAI_API_KEY from ignored .env",
+      "package_prepared_at": "2026-09-03T16:33:18.291Z",
+      "ingested_at": "2026-09-03T16:34:04.780Z"
+    },
+    {
+      "tag": "b7b",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "comp": "primer_plano",
+      "desc": "PLANO DETALLE de una cuerda gruesa tensa sobre el pliegue superior de una manta en la oscuridad, sin que se vea la cara de quien tira.",
+      "refs": [
+        "mitos/el-hijo-del-sol-goranchacha/acto"
+      ],
+      "prompt_file": "b7b.prompt.txt",
+      "prompt_sha256": "43916ff16a52249b8dba7dd6054c5d6f4c4f21dd784d18677c8a98d8a73d74bb",
+      "image_sha256": "96ac89d7d5a60645e4ce322cd50b318e86e7847a0ea0478b975221f67df6acfe",
+      "account_source": "OPENAI_API_KEY from ignored .env",
+      "package_prepared_at": "2026-09-03T16:33:18.291Z",
+      "ingested_at": "2026-09-03T16:34:04.800Z"
+    },
+    {
+      "tag": "b8a",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "comp": "cenital",
+      "desc": "PLANO CENITAL de varias personas postradas con la frente contra la tierra de un patio, vistas desde arriba y sin caras. Nadie permanece de pie; sólo mantas, cabello y tierra, sin armas, animales ni utilería añadida.",
+      "refs": [
+        "mitos/el-hijo-del-sol-goranchacha/acto"
+      ],
+      "prompt_file": "b8a.prompt.txt",
+      "prompt_sha256": "cbdadb430e25fb8d8ecefdcf6b186cd7286dba09959e914441d2193b46f4c584",
+      "image_sha256": "34b38845de09196db2ce5c4d09b8e48ec841c2605304e9ff82e4472c0085945f",
+      "account_source": "OPENAI_API_KEY from ignored .env",
+      "package_prepared_at": "2026-09-03T16:33:18.291Z",
+      "ingested_at": "2026-09-03T16:34:04.822Z"
+    },
+    {
+      "tag": "b8b",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "comp": "diagonal",
+      "desc": "PLANO MEDIO de unos pies descalzos y el borde de una manta finísima pasando entre las figuras postradas, sin detenerse. Sólo pies, piernas bajas y la manta en el 70% central: sin rostro, torso ni calzado.",
+      "refs": [
+        "goranchacha_senor"
+      ],
+      "prompt_file": "b8b.prompt.txt",
+      "prompt_sha256": "6a4f44b9e79e964a1af62b5574923fca812f9c9712e7b51d8027915a9da59651",
+      "image_sha256": "31b85bc0773075efe75325f33b77364019da42860aa47ff9e6a6d561b94ef7c8",
+      "account_source": "OPENAI_API_KEY from ignored .env",
+      "package_prepared_at": "2026-09-03T16:33:18.291Z",
+      "ingested_at": "2026-09-03T16:34:04.844Z"
+    },
+    {
+      "tag": "b9a",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "comp": "peso_contrario",
+      "desc": "PLANO MEDIO de una columna de humo oscuro y denso de papel levantándose en mitad de un patio de bohíos, con un grupo pequeño retrocediendo sólo de perfil o de espaldas. No se muestra explosión, fuego, cuerpo ni daño; sólo el humo como rastro imposible. Sin arquitectura de piedra tallada.",
+      "refs": [
+        "mitos/el-hijo-del-sol-goranchacha/acto"
+      ],
+      "prompt_file": "b9a.prompt.txt",
+      "prompt_sha256": "06cfb19c353eeb6188c8a47847cf4cc34ae1cb2cf08a25677792f6ed0999341d",
+      "image_sha256": "0ae3e4b2d235c27c7cf6c6f6cea8c62fdb54d2f26c2f753388b07f42cf8681d6",
+      "account_source": "OPENAI_API_KEY from ignored .env",
+      "package_prepared_at": "2026-09-03T16:33:18.291Z",
+      "ingested_at": "2026-09-03T16:34:04.864Z"
+    }
+  ],
+  "reusadas": [
+    {
+      "tag": "b2a",
+      "reusa": "mitos/el-hijo-del-sol-goranchacha/entrada"
+    },
+    {
+      "tag": "b7a",
+      "reusa": "mitos/el-hijo-del-sol-goranchacha/acto"
+    },
+    {
+      "tag": "b9b",
+      "reusa": "mitos/el-hijo-del-sol-goranchacha/huella"
+    }
+  ]
+}

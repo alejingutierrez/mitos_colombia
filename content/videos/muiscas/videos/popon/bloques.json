@@ -1,0 +1,322 @@
+{
+  "mito": "popon",
+  "comunidad": "Muiscas",
+  "carpeta_triptico": "popon",
+  "estructura": "9 bloques narrativos × 2 keyframes (bNa, bNb) = 18 escenas; el `acto` del tríptico cubre una, quedan 17 por generar",
+  "nota_deslinde": "b2a lo cubre la `entrada` del tríptico, b4a el `acto` y b8a la `huella`. Los bloques 8b y 9 son coloniales y lo declaran. Sin balsa, sin dragón y sin ofrendas en Guatavita. 17 escenas nuevas.",
+  "generacion_actual": {
+    "provider": "openai",
+    "model": "gpt-image-2",
+    "quality": "medium",
+    "account_source": "OPENAI_API_KEY from ignored .env"
+  },
+  "lineas": {
+    "b1": "El zipa soñó que se bañaba en el agua clara de su casa de Tena.",
+    "b2": "Llamó a los jeques para que le soltaran el sueño.",
+    "b3": "Faltaba Popón. No acudía con prisa a los llamados del cercado.",
+    "b4": "—No es la sangre de Hunsa. —¿De quién es, entonces? —Tuya.",
+    "b5": "Popón leyó el miedo en su silencio y esa misma noche salió de Bacatá.",
+    "b6": "—Digan a su señor que envíe gente a la laguna. Si el agua echa llamas, no hablé para ofenderlo.",
+    "b7": "La primera noche no vieron nada, y el gobernante ardió de cólera.",
+    "b8": "Subieron del agua unas llamas bajas que se movieron sobre la superficie y se apagaron.",
+    "b9": "La laguna no detuvo lo que venía. Sólo encendió, por un instante, una advertencia."
+  },
+  "keyframes": [
+    {
+      "tag": "b1a",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "comp": "primer_plano",
+      "desc": "PLANO DETALLE de sólo dos antebrazos del zipa dentro de agua clara sobre piedra natural irregular; sin rostro, torso, otra figura, piscina, tina, azulejo ni ritual. Los antebrazos permanecen dentro del 70% central del cuadro.",
+      "refs": [
+        "zipa_bacata"
+      ],
+      "prompt_file": "b1a.prompt.txt",
+      "prompt_sha256": "7811f7ae64e9702093f486d16c56c4f9c11880f6fec5741ba06ca75a9bfd008a",
+      "image_sha256": "0590de612b65745c9c70d3692994ff9e95333b9a6878bb140ca48ad44c71b64c",
+      "account_source": "OPENAI_API_KEY from ignored .env",
+      "package_prepared_at": "2026-09-03T16:56:42.278Z",
+      "ingested_at": "2026-09-03T16:58:56.106Z"
+    },
+    {
+      "tag": "b1b",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "comp": "primer_plano",
+      "desc": "PLANO DETALLE de sólo dos antebrazos de papel del zipa en la misma agua clara; polvo mineral rojo apagado, mate y granular queda apenas en suspensión, nunca sangre, herida, nube roja ni líquido corporal. Piedra natural irregular visible; sin rostro, torso, otra figura, joya, brazalete, metal, piscina, tina ni azulejo. Los antebrazos permanecen dentro del 70% central del cuadro.",
+      "refs": [
+        "zipa_bacata"
+      ],
+      "prompt_file": "b1b.prompt.txt",
+      "prompt_sha256": "4921dd7bb642fbb39359218c6492b42c28cfdaa6abf08a9a5d4f761b946af89a",
+      "image_sha256": "f175bf4bde38248fb33298cf2cee2642505ceac9b0ad181e8a3210bc7280000c",
+      "account_source": "OPENAI_API_KEY from ignored .env",
+      "package_prepared_at": "2026-09-03T16:56:42.278Z",
+      "ingested_at": "2026-09-03T16:58:56.128Z"
+    },
+    {
+      "tag": "b2b",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "comp": "diagonal",
+      "desc": "PLANO MEDIO de sólo varios jeques hablando por turnos ante un banco bajo de madera: figuras escalonadas que recorren la diagonal, todos de perfil y asintiendo entre sí. Sin zipa, Popón, manta de entrega ni gesto ceremonial.",
+      "refs": [
+        "mitos/popon/entrada"
+      ],
+      "prompt_file": "b2b.prompt.txt",
+      "prompt_sha256": "04c1978c219f4a5ebdf774f0d2b7fb9898dffca25acbd291af63f35902207aa4",
+      "image_sha256": "9e5bf97fcebfa081f7df2264b6a090baeb16138bbcf5393cbb1519504542f482",
+      "account_source": "OPENAI_API_KEY from ignored .env",
+      "package_prepared_at": "2026-09-03T16:56:42.278Z",
+      "ingested_at": "2026-09-03T16:58:56.149Z"
+    },
+    {
+      "tag": "b3a",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "comp": "figura_pequena",
+      "desc": "PLANO GENERAL de un sendero de tierra prehispánico que sube desde un valle hacia el altiplano; Popón camina despacio, pequeño y descentrado. Sin camino empedrado, cercas coloniales, caballos, ruinas ni arquitectura europea.",
+      "refs": [
+        "popon_jeque"
+      ],
+      "prompt_file": "b3a.prompt.txt",
+      "prompt_sha256": "6310d775001d99a922f4f67bf756b3b31d6ad569d18537cc77568be391b11cf1",
+      "image_sha256": "bed1c429064e997a6459c23de3e9cd034dfd547050c33beafd371c082565d5c7",
+      "account_source": "OPENAI_API_KEY from ignored .env",
+      "package_prepared_at": "2026-09-03T16:56:42.278Z",
+      "ingested_at": "2026-09-03T16:58:56.168Z"
+    },
+    {
+      "tag": "b3b",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "comp": "umbral",
+      "desc": "PLANO MEDIO: Popón entra de perfil desde el borde lateral y queda parcialmente fuera del cuadro; ante él se abre el vano de la casa grande y la sala. El polvo del sendero sigue en su manta. Sin zipa ni consejeros.",
+      "refs": [
+        "popon_jeque",
+        "salon_jeques"
+      ],
+      "prompt_file": "b3b.prompt.txt",
+      "prompt_sha256": "e36d79c3f674ba712c7940e485b2a7966a1db9004e42727947801c71051ad082",
+      "image_sha256": "f771a6957fe1550cb92eaca5c12793c1d15473b21665c66dede435419c783e24",
+      "account_source": "OPENAI_API_KEY from ignored .env",
+      "package_prepared_at": "2026-09-03T16:56:42.278Z",
+      "ingested_at": "2026-09-03T16:58:56.192Z"
+    },
+    {
+      "tag": "b4b",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "comp": "diagonal",
+      "desc": "PLANO MEDIO de sólo consejeros escalonados en diagonal: unos con la cabeza baja y otros con una mano levantada pidiendo algo, todos de perfil. Sin Popón, zipa ni trono.",
+      "refs": [
+        "salon_jeques"
+      ],
+      "prompt_file": "b4b.prompt.txt",
+      "prompt_sha256": "59ae327afd92ca366cd5406c2385e79b4929a44bb74d47bee9179e871f81424c",
+      "image_sha256": "5ac480a52d5332fab80b7433d378ccb49a8a5247c8ae93af74aa34c3847ea01d",
+      "account_source": "OPENAI_API_KEY from ignored .env",
+      "package_prepared_at": "2026-09-03T16:56:42.278Z",
+      "ingested_at": "2026-09-03T16:58:56.214Z"
+    },
+    {
+      "tag": "b5a",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "comp": "peso_contrario",
+      "desc": "PLANO MEDIO CORTO: Popón ocupa el tercio izquierdo y mira de perfil al zipa silencioso en el tercio derecho; el centro queda vacío y tenso. Sin consejeros ni otra figura.",
+      "refs": [
+        "popon_jeque",
+        "zipa_bacata"
+      ],
+      "prompt_file": "b5a.prompt.txt",
+      "prompt_sha256": "e01caa59bbb56f803f27c187e94708deac31d3d15d91ef197d12424e22a3a593",
+      "image_sha256": "86e8a28c6cf07b42897940cb868ee2106f75beb39db685fd90960c214453cefe",
+      "account_source": "OPENAI_API_KEY from ignored .env",
+      "package_prepared_at": "2026-09-03T16:56:42.278Z",
+      "ingested_at": "2026-09-03T16:58:56.233Z"
+    },
+    {
+      "tag": "b5b",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "comp": "figura_pequena",
+      "desc": "PLANO GENERAL nocturno: Popón ya está afuera del cercado y se aleja pequeño y solo por el sendero lateral; la puerta queda detrás, lejos. Sin perseguidores, consejeros ni otra figura.",
+      "refs": [
+        "popon_jeque",
+        "salon_jeques"
+      ],
+      "prompt_file": "b5b.prompt.txt",
+      "prompt_sha256": "21707b7c38ce55e3f90cf033980d43420b89d0556a7435bc97350ba33f0a773c",
+      "image_sha256": "68880ce2b1c5cd8ddbacbe78e2f0326b8e9ba010450ad99968c14848fa394eb2",
+      "account_source": "OPENAI_API_KEY from ignored .env",
+      "package_prepared_at": "2026-09-03T16:56:42.278Z",
+      "ingested_at": "2026-09-03T16:58:56.252Z"
+    },
+    {
+      "tag": "b6a",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "comp": "enfrentados",
+      "desc": "PLANO MEDIO nocturno: Popón queda a un lado del sendero de tierra frente a dos mensajeros agrupados al otro; el centro permanece libre, los tres de perfil. Sin vestuario, armas ni arquitectura colonial.",
+      "refs": [
+        "popon_jeque"
+      ],
+      "prompt_file": "b6a.prompt.txt",
+      "prompt_sha256": "dd9f1cfdac61037859becd26a4af60c7a3883728e4a892c363a75d594980f60a",
+      "image_sha256": "4ad6fe1baa805eaed26695f0e22dd16aff86ab6085af744453a5e2ee33cf3a22",
+      "account_source": "OPENAI_API_KEY from ignored .env",
+      "package_prepared_at": "2026-09-03T16:56:42.278Z",
+      "ingested_at": "2026-09-03T16:58:56.271Z"
+    },
+    {
+      "tag": "b6b",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "comp": "figura_pequena",
+      "desc": "PLANO GENERAL de un valle altoandino prehispánico: Popón, pequeño y descentrado, busca esconderse entre peñas y un sendero de tierra. Sin pinos, selva, caballos, europeos ni construcciones coloniales.",
+      "refs": [
+        "popon_jeque"
+      ],
+      "prompt_file": "b6b.prompt.txt",
+      "prompt_sha256": "17b3bbec66e38ad7a54b44428249ffee4a03f2356687a2a72d166fe5973c99dd",
+      "image_sha256": "26481113c9a1ff6a914ac4686ac75004cbc4e2e5304dad4016bd98a8fdff344b",
+      "account_source": "OPENAI_API_KEY from ignored .env",
+      "package_prepared_at": "2026-09-03T16:56:42.278Z",
+      "ingested_at": "2026-09-03T16:58:56.291Z"
+    },
+    {
+      "tag": "b7a",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "comp": "peso_contrario",
+      "desc": "PLANO GENERAL de la laguna antes de la señal: agua negra y quieta, sin una sola llama ni luz. Dos exploradores pequeños en el tercio izquierdo miran desde la orilla; sólo textura de papel y una luz ambiente nocturna mínima los hace legibles. Sin balsa, dragón ni ofrendas.",
+      "refs": [
+        "guatavita_llamas"
+      ],
+      "prompt_file": "b7a.prompt.txt",
+      "prompt_sha256": "80583c94888e37c4ce22ea00270cb9bbe9beec5fe179a414f60c974361c8c94b",
+      "image_sha256": "5d63cb53c2d2912151135bc852a052bb1e438c5d63e7b0d7b10531aebb266701",
+      "account_source": "OPENAI_API_KEY from ignored .env",
+      "package_prepared_at": "2026-09-03T16:56:42.278Z",
+      "ingested_at": "2026-09-03T16:58:56.311Z"
+    },
+    {
+      "tag": "b7b",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "comp": "peso_contrario",
+      "desc": "PLANO MEDIO CORTO: el zipa de perfil ocupa el tercio izquierdo, mandíbula apretada; al lado opuesto sólo se ve una pared oscura de bahareque. Sin interlocutor ni otra figura.",
+      "refs": [
+        "zipa_bacata"
+      ],
+      "prompt_file": "b7b.prompt.txt",
+      "prompt_sha256": "c896fc236df6bbe177933013d72ce3d2dae5569abb986129081c473647112365",
+      "image_sha256": "8b1e00ee8b5f26d8b94ddaa8ce7e4937e54944917fa9461dc5c17f893a8fdbb3",
+      "account_source": "OPENAI_API_KEY from ignored .env",
+      "package_prepared_at": "2026-09-03T16:56:42.278Z",
+      "ingested_at": "2026-09-03T16:58:56.332Z"
+    },
+    {
+      "tag": "b8b",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "comp": "diagonal",
+      "desc": "PLANO GENERAL colonial temprano del siglo XVI: camino real empedrado y aún vacío entre cercas de piedra, con jinetes muy pequeños y bultos de metal que se acercan al amanecer. Sin laguna, llamas, tunjos, figuras prehispánicas, combate, iglesia, casas ni asentamiento construido.",
+      "refs": [],
+      "prompt_file": "b8b.prompt.txt",
+      "prompt_sha256": "f9c0fe7bbf6aae519d1373f6d7bff67397180ffeb2d695f83eba1c2acdcc1aaf",
+      "image_sha256": "c82e2b93558357544dec081768555bbfd36fbd53ec2be6e4282b31d55672d263",
+      "account_source": "OPENAI_API_KEY from ignored .env",
+      "package_prepared_at": "2026-09-03T16:56:42.278Z",
+      "ingested_at": "2026-09-03T16:58:56.352Z"
+    },
+    {
+      "tag": "b9a",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "comp": "paisaje_abierto",
+      "desc": "PLANO GENERAL de época colonial temprana: antiguo cercado muisca vacío, puertas abiertas y esteras revueltas. Sin personas, animales, iglesia, teja ni plaza española.",
+      "refs": [],
+      "prompt_file": "b9a.prompt.txt",
+      "prompt_sha256": "f07405dacf81b1891afa8dae3a29209d5983eed723e0059bbf7103edcddb6247",
+      "image_sha256": "581a341883850b8b7a16acc25aaef8fca119978d2a177661f0daa1b8d769bb31",
+      "account_source": "OPENAI_API_KEY from ignored .env",
+      "package_prepared_at": "2026-09-03T16:56:42.278Z",
+      "ingested_at": "2026-09-03T16:58:56.376Z"
+    },
+    {
+      "tag": "b9b",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "comp": "paisaje_abierto",
+      "desc": "PLANO GENERAL de época colonial temprana: la laguna al amanecer, negra y quieta, con el cerro reflejado. Sin personas, animales, balsa, humo, llamas ni edificios europeos.",
+      "refs": [],
+      "prompt_file": "b9b.prompt.txt",
+      "prompt_sha256": "509dc24693f313caea6b450872ac92a07bee37755b14815420c25c8d8ac5f64f",
+      "image_sha256": "88e9a87d4f74cabf7e2102b205a81c7755c93d0a39cb36c67ab08d2f9dee9980",
+      "account_source": "OPENAI_API_KEY from ignored .env",
+      "package_prepared_at": "2026-09-03T16:56:42.278Z",
+      "ingested_at": "2026-09-03T16:58:56.400Z"
+    }
+  ],
+  "reusadas": [
+    {
+      "tag": "b2a",
+      "reusa": "mitos/popon/entrada"
+    },
+    {
+      "tag": "b4a",
+      "reusa": "mitos/popon/acto"
+    },
+    {
+      "tag": "b8a",
+      "reusa": "mitos/popon/huella"
+    }
+  ]
+}
