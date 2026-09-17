@@ -7,8 +7,7 @@
   "generacion_actual": {
     "provider": "openai",
     "model": "gpt-image-2",
-    "quality": "medium",
-    "account_source": "OPENAI_API_KEY from ignored .env"
+    "spec": "scripts/videos/specs/muisca-popon-escenas.mjs"
   },
   "lineas": {
     "b1": "El zipa soñó que se bañaba en el agua clara de su casa de Tena.",
@@ -305,18 +304,5 @@
       "ingested_at": "2026-09-03T16:58:56.400Z"
     }
   ],
-  "reusadas": [
-    {
-      "tag": "b2a",
-      "reusa": "mitos/popon/entrada"
-    },
-    {
-      "tag": "b4a",
-      "reusa": "mitos/popon/acto"
-    },
-    {
-      "tag": "b8a",
-      "reusa": "mitos/popon/huella"
-    }
-  ]
+  "reusadas": []
 }

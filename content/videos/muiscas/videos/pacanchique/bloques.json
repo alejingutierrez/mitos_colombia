@@ -7,8 +7,7 @@
   "generacion_actual": {
     "provider": "openai",
     "model": "gpt-image-2",
-    "quality": "medium",
-    "account_source": "OPENAI_API_KEY from ignored .env"
+    "spec": "scripts/videos/specs/muisca-pacanchique-escenas.mjs"
   },
   "lineas": {
     "b1": "Pacanchique y Azay crecieron entre los huertos de Baganique.",
@@ -312,18 +311,5 @@
       "ingested_at": "2026-09-03T17:11:26.881Z"
     }
   ],
-  "reusadas": [
-    {
-      "tag": "b3a",
-      "reusa": "mitos/pacanchique/entrada"
-    },
-    {
-      "tag": "b8a",
-      "reusa": "mitos/pacanchique/acto"
-    },
-    {
-      "tag": "b9b",
-      "reusa": "mitos/pacanchique/huella"
-    }
-  ]
+  "reusadas": []
 }

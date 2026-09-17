@@ -122,18 +122,10 @@
       "desc": "PLANO GENERAL de un hombre solo buscando entre los juncos de la orilla al atardecer, de perfil, con el agua a la rodilla."
     }
   ],
-  "reusadas": [
-    {
-      "tag": "b1a",
-      "reusa": "mitos/meicuchuca/entrada"
-    },
-    {
-      "tag": "b7a",
-      "reusa": "mitos/meicuchuca/acto"
-    },
-    {
-      "tag": "b9b",
-      "reusa": "mitos/meicuchuca/huella"
-    }
-  ]
+  "reusadas": [],
+  "generacion_actual": {
+    "provider": "openai",
+    "model": "gpt-image-2",
+    "spec": "scripts/videos/specs/muisca-meicuchuca-escenas.mjs"
+  }
 }

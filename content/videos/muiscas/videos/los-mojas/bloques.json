@@ -122,18 +122,10 @@
       "desc": "PLANO GENERAL del cerro con la niebla del alba moviéndose hacia el Oriente y la hierba doblándose toda hacia el mismo lado. Sin personas."
     }
   ],
-  "reusadas": [
-    {
-      "tag": "b2a",
-      "reusa": "mitos/los-mojas/entrada"
-    },
-    {
-      "tag": "b7a",
-      "reusa": "mitos/los-mojas/acto"
-    },
-    {
-      "tag": "b9b",
-      "reusa": "mitos/los-mojas/huella"
-    }
-  ]
+  "reusadas": [],
+  "generacion_actual": {
+    "provider": "openai",
+    "model": "gpt-image-2",
+    "spec": "scripts/videos/specs/muisca-mojas-escenas.mjs"
+  }
 }

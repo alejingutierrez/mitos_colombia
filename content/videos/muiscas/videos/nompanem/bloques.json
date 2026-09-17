@@ -122,18 +122,10 @@
       "desc": "PLANO MEDIO del viajero de perfil tres cuartos extendiendo el bastón hacia un lado del cuadro, devolviéndolo, con la gente detrás."
     }
   ],
-  "reusadas": [
-    {
-      "tag": "b2a",
-      "reusa": "mitos/nompanem/entrada"
-    },
-    {
-      "tag": "b5a",
-      "reusa": "mitos/nompanem/acto"
-    },
-    {
-      "tag": "b9b",
-      "reusa": "mitos/nompanem/huella"
-    }
-  ]
+  "reusadas": [],
+  "generacion_actual": {
+    "provider": "openai",
+    "model": "gpt-image-2",
+    "spec": "scripts/videos/specs/muisca-nompanem-escenas.mjs"
+  }
 }

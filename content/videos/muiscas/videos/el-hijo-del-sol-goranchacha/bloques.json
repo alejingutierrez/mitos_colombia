@@ -7,8 +7,7 @@
   "generacion_actual": {
     "provider": "openai",
     "model": "gpt-image-2",
-    "quality": "medium",
-    "account_source": "OPENAI_API_KEY from ignored .env"
+    "spec": "scripts/videos/specs/muisca-goranchacha-escenas.mjs"
   },
   "lineas": {
     "b1": "En Guachetá corría la voz de que el Sol tomaría carne en una doncella del pueblo.",
@@ -307,18 +306,5 @@
       "ingested_at": "2026-09-03T16:34:04.864Z"
     }
   ],
-  "reusadas": [
-    {
-      "tag": "b2a",
-      "reusa": "mitos/el-hijo-del-sol-goranchacha/entrada"
-    },
-    {
-      "tag": "b7a",
-      "reusa": "mitos/el-hijo-del-sol-goranchacha/acto"
-    },
-    {
-      "tag": "b9b",
-      "reusa": "mitos/el-hijo-del-sol-goranchacha/huella"
-    }
-  ]
+  "reusadas": []
 }

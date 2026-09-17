@@ -122,18 +122,10 @@
       "desc": "PLANO GENERAL de la acequia ya asentada llevando agua entre sembrados verdes, con gente pequeña trabajando lejos: sigue funcionando sin él."
     }
   ],
-  "reusadas": [
-    {
-      "tag": "b2a",
-      "reusa": "mitos/camino-de-bochica/entrada"
-    },
-    {
-      "tag": "b5a",
-      "reusa": "mitos/camino-de-bochica/acto"
-    },
-    {
-      "tag": "b9b",
-      "reusa": "mitos/camino-de-bochica/huella"
-    }
-  ]
+  "reusadas": [],
+  "generacion_actual": {
+    "provider": "openai",
+    "model": "gpt-image-2",
+    "spec": "scripts/videos/specs/muisca-camino-bochica-escenas.mjs"
+  }
 }

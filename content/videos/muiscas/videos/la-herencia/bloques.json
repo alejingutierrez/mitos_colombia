@@ -122,18 +122,10 @@
       "desc": "PLANO GENERAL del camino de vuelta a Bacatá con una figura caminando sola, sin séquito y sin gesto de triunfo."
     }
   ],
-  "reusadas": [
-    {
-      "tag": "b1a",
-      "reusa": "mitos/la-herencia/entrada"
-    },
-    {
-      "tag": "b7a",
-      "reusa": "mitos/la-herencia/acto"
-    },
-    {
-      "tag": "b9b",
-      "reusa": "mitos/la-herencia/huella"
-    }
-  ]
+  "reusadas": [],
+  "generacion_actual": {
+    "provider": "openai",
+    "model": "gpt-image-2",
+    "spec": "scripts/videos/specs/muisca-herencia-escenas.mjs"
+  }
 }
