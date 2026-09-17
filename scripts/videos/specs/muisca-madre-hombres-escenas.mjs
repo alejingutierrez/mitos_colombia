@@ -73,7 +73,7 @@ export const ITEMS = armar([
     fin: "desde lejos, la casa de barro y paja está levantada y los dos están delante de ella, pequeños, con el valle vacío alrededor.",
   }, "casa monumental, ceremonia, multitud, herramientas metalicas"),
   escp("b2b", [ref("companero_nino"), ref("bachue_adulta"), ref("altiplano_noche")], {
-    comun: `Noche junto al fuego. El niño aprendiendo a leer los cambios del cielo, a mantener el fuego y a caminar por los senderos que ella abre. Objeto ancla: el fuego y el cielo.`,
+    comun: `Noche junto al fuego, con las figuras siempre a media distancia y de espaldas. El niño aprendiendo a leer los cambios del cielo, a mantener el fuego y a caminar por los senderos que ella abre. Objeto ancla: el fuego y el cielo.`,
     camara: {
       a: "PLANO MACRO de unas manos acercando leña menuda a las brasas, un plano sin caras.",
       b: "la cámara ha basculado hacia arriba y ha retrocedido: PLANO GENERAL en contrapicado, a media distancia y de espaldas, con las dos figuras junto al fuego pequeñas y el cielo estrellado ocupando dos tercios del cuadro.",
