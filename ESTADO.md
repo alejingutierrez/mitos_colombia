@@ -20,18 +20,27 @@ está en la producción visual.
 |---|---|---|---|---|---|
 | **muiscas** | 304 fichas | 351 piezas, 41 mitos | 1.282 | **41/41** | corpus de guiones cerrado 2026-09-17 |
 | **wayuu** | v3 + inventario | 65 specs, 24 documentados | — | **27/27** | corpus de guiones cerrado 2026-09-16 |
-| **nasa-páez** | 110 | 554 | 956 | **25/25** | corpus de guiones cerrado 2026-09-16 |
+| **nasa-páez** | 110 | 554 | 956 | **26/26** | corpus de guiones cerrado 2026-09-17 |
 | **ette-ennaka** (chimila) | 162 | 303 | 271 | **23/23** | corpus de guiones cerrado 2026-09-16 |
 | **huitoto** (uitoto) | 7 fichas + 124 de investigación | 250 imágenes | — | — | recién abierta |
 
-La columna de guiones cuenta **pares acta+guion verificados**: 116 de 116 pasan
-`lint-guion` (forma) y `lint-acta` (fidelidad al canon). Los cuatro corpus están
-cerrados: cada mito de cada comunidad tiene su acta y su guion, y ninguno queda
-sin medir contra `myths.mito`.
+La columna de guiones cuenta **pares acta+guion verificados**: 117 de 117 pasan
+`lint-guion` (forma) y `lint-acta` (fidelidad al canon). Esas **cuatro**
+comunidades están cerradas contra la base: no queda un solo mito narrable suyo
+sin acta ni guion.
 
-Casi todos los guiones son N=18 (36 cuadros, ≈180 s). La excepción declarada es
-`veneracion-a-los-soberanos`, con N=16: es una sola escena continua y estirarla
-a dieciocho bloques habría sido rellenar. El acta lo dice y da la razón.
+**El corpus completo es otra cosa.** `myths` tiene **354 mitos narrables en 38
+comunidades**. Con guion hay 117; sin nada, **237** — andoque, chamí, kogui,
+huitoto, katíos, u'wa, sikuani, zenú, misak y veinticinco más. La cifra de
+cobertura real es 117/354, y el recuento por comunidad se saca así:
+
+    SELECT c.name, count(*) FROM myths m JOIN communities c ON c.id = m.community_id
+    WHERE m.mito IS NOT NULL AND length(trim(m.mito)) > 0 GROUP BY 1 ORDER BY 1;
+
+Casi todos los guiones son N=18 (36 cuadros, ≈180 s). Las dos excepciones
+declaradas son `veneracion-a-los-soberanos` y `el-trueno`, ambas con N=16: una
+es una sola escena continua, la otra son cuatro relatos breves. Estirarlas a
+dieciocho bloques habría sido rellenar, y el acta de cada una lo razona.
 
 ### La regla única y el acta
 
