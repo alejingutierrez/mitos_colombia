@@ -44,3 +44,30 @@ usarse. Por eso se apartan aquí.
 
 `docs/videos/MANUAL-DE-PRODUCCION.md` es la verdad operativa;
 `docs/videos/PRODUCCION-END-TO-END.md` el contrato con sus leyes y la cola.
+
+## Bachué y Bochica: el bake-off, aparte del lote
+
+Estos dos mitos no entraron en el lote del 31 de agosto porque ya se habían
+producido antes, cada uno con su propia tanda de pruebas. Sus planes de agosto
+viven en `videos/bachue/historico/` y `videos/bochica/historico/`:
+
+- **bachue** (10): `plan.json`, `plan-flash`, `plan-v3`, los seis `plan-mvp-a…f`
+  —el bake-off de voz que ganó la E— y `plan-v1.json`.
+- **bochica** (3): `plan.json`, `plan-flash` y `plan-v4`.
+
+Doce de esos trece son los que `MANUAL-DE-PRODUCCION.md` §631 enumera como *los
+doce planes de agosto que llevan `sfx`*. El decimotercero, `bachue/plan-v1.json`,
+se apartó por la misma razón aunque no lleve `sfx`: es del 22 de agosto, usa
+`musica-cama.m4a` en vez de un lecho y no tiene cierre de canal.
+
+**Lo que sigue vivo en la carpeta de cada mito es su linaje v4**, que es
+consultable y no se toca:
+
+- `bachue/`: `plan-v4` → `plan-v5-seedance` → `plan-v6-base` → `plan-v6` →
+  **`plan-v7-seleccion.json`**, el que montó el máster vigente con la selección
+  escena por escena del usuario.
+- `bochica/`: `plan-v5` → **`plan-v6.json`**, el que añadió el cierre de canal.
+
+Las referencias que apuntaban a estos archivos —`channel-dna.json` (bloques
+`video_1` y `video_2`, los dos ya marcados HISTÓRICO), `bochica-produccion.json` y
+la enumeración del manual— se actualizaron al moverlos.
