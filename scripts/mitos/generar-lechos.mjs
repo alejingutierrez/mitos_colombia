@@ -31,6 +31,7 @@ import process from "node:process";
 import { fileURLToPath } from "node:url";
 import dotenv from "dotenv";
 import { CHARACTERS } from "../../src/lib/narration-character.js";
+import { DEFAULT_WORLD, WORLDS } from "../../src/lib/narration-worlds.js";
 
 const rootDir = path.join(path.dirname(fileURLToPath(import.meta.url)), "..", "..");
 dotenv.config({ path: path.join(rootDir, ".env.local") });
@@ -52,16 +53,11 @@ const CRUCE_S = 1.5;   // crossfade que cierra el bucle
 const LUFS_OBJETIVO = -24;
 const TP_OBJETIVO = -1.5;
 
-/* Mundo sonoro común. Lo que cambia entre piezas es QUÉ lleva el peso; si sólo
- * se cambiaran adjetivos saldrían seis versiones de lo mismo. */
-const MUNDO =
-  "Pre-Columbian Andean and Muisca folk music, indigenous Colombian highlands. " +
-  "Only ancestral instruments: cane flutes, clay ocarina, panpipes, hide frame drum, " +
-  "seed rattles, shell rattles. Strictly no modern instruments, no synthesizers, " +
-  "no guitar, no piano, no drum kit, no vocals. Raw, acoustic, close-recorded, spacious. " +
-  "Steady and continuous from beginning to end, no intro, no fade out, no ending.";
+/* El mundo sonoro ya no está cableado aquí: vive en `narration-worlds.js`,
+ * porque el catálogo dejó de ser sólo andino cuando llegaron los wayúu. */
+const MUNDO_POR_DEFECTO = DEFAULT_WORLD;
 
-const CATALOGO = [
+const CATALOGO_ANDINO = [
   { slug: "07-caracol-de-montana", title: "Caracol de montaña", characters: ["montana", "ceremonia", "camino"], foco: "A conch shell trumpet sounds long low calls that echo off rock walls, answered far away by another. Sparse hide drum strokes between calls. Vast, announcing, ancient." },
   { slug: "08-lluvia-sobre-la-piedra", title: "Lluvia sobre la piedra", characters: ["agua", "montana"], foco: "Steady highland rain on stone and thatch, with a clay ocarina playing a slow descending figure through it. A soft shell rattle keeps a loose pulse. Wet, close, sheltered." },
   { slug: "09-telar-de-semillas", title: "Telar de semillas", characters: ["oficio", "comunidad"], foco: "Seed rattles and shell rattles interlock in a dry hypnotic weave, like hands working a loom. A single cane flute holds one long note above. Repetitive, textural, trance-like." },
@@ -142,6 +138,41 @@ const CATALOGO = [
     foco: "Someone awake while others sleep: the barest breath of a low flute, a single rattle brushed very rarely, the room's own quiet. Almost nothing happens. Protective, patient, hushed." },
 ];
 
+/* Mundo guajiro. Doce piezas para los 27 relatos wayúu: desierto, mar y
+ * rebaños en vez de páramo y frailejones. Los slugs llevan prefijo `w` para
+ * que el catálogo se lea de un vistazo y nunca choquen con los andinos. */
+const CATALOGO_GUAJIRO = [
+  { slug: "w01-viento-de-la-alta-guajira", title: "Viento de la Alta Guajira", characters: ["viento", "silencio"],
+    foco: "Relentless dry desert wind over open sand and thorn scrub, never letting up, with a low reed clarinet holding one long note inside it. Nothing else. Vast, parched, exposed." },
+  { slug: "w02-mar-contra-el-cardon", title: "Mar contra el cardón", characters: ["agua", "viento"],
+    foco: "Caribbean sea breaking on a desert shore: waves on sand and coral rock, wind carrying spray inland through cactus. A cane flute answers the swell in long phrases. Salt, open, endless." },
+  { slug: "w03-jaguey", title: "Jagüey", characters: ["agua", "comunidad"],
+    foco: "A desert water hole: animals drinking, hooves on wet clay, a gourd filling and pouring, low voices of work. A jaw harp pulses softly. Precious, shared, sustaining." },
+  { slug: "w04-lluvia-de-juya", title: "Lluvia de Juyá", characters: ["agua", "ceremonia"],
+    foco: "Rain arriving on parched ground after a long wait: first heavy drops on dust, then a downpour, distant thunder rolling across the peninsula. The kasha drum answers the thunder. Awaited, powerful, sacred." },
+  { slug: "w05-yonna", title: "Yonna", characters: ["ceremonia", "comunidad"],
+    foco: "The yonna dance: the kasha double-headed drum leading a firm circling cadence, feet on packed earth, a reed clarinet weaving above. Communal, ceremonial, insistent." },
+  { slug: "w06-rebano-al-atardecer", title: "Rebaño al atardecer", characters: ["camino", "comunidad"],
+    foco: "Goats and sheep moving home at dusk: many small bells at different rhythms, hooves on dry ground, an occasional whistle. A cane flute drifts over them. Unhurried, warm, homeward." },
+  { slug: "w07-chinchorro", title: "Chinchorro", characters: ["noche", "silencio"],
+    foco: "Night in a ranchería: a hammock's woven fibres creaking slowly, wind against the enramada roof, insects far off. One jaw harp note every long while. Drowsy, sheltered, still." },
+  { slug: "w08-salinas-de-manaure", title: "Salinas de Manaure", characters: ["oficio", "silencio"],
+    foco: "Salt work under hard sun: crust cracking and being scraped, salt poured into a basket, a wooden tool dragging. Very dry, repetitive, glaring. Almost no melody, only labour." },
+  { slug: "w09-turrompa-en-la-enramada", title: "Turrompa en la enramada", characters: ["noche", "comunidad"],
+    foco: "A jaw harp played under a thatched enramada at night, close and buzzing, with a second one answering from further away. Low wind. Intimate, hypnotic, unhurried." },
+  { slug: "w10-camino-de-la-sed", title: "Camino de la sed", characters: ["camino", "silencio"],
+    foco: "Walking the desert with no water in sight: footsteps in deep sand at a slowing pace, wind, dry thorn scraping. A single reed note fading in and out. Hard, depleted, going on anyway." },
+  { slug: "w11-fogon-de-la-ranceria", title: "Fogón de la ranchería", characters: ["fuego", "comunidad"],
+    foco: "A cooking fire in a desert settlement: dry thorn wood snapping and flaring, a pot set down, people moving nearby. A flute plays a short homely figure. Warm, domestic, evening." },
+  { slug: "w12-serrania-de-la-macuira", title: "Serranía de la Macuira", characters: ["montana", "viento"],
+    foco: "The cloud forest that rises out of the desert: sudden humidity, mist moving through low trees, unexpected birds after miles of dry wind. A reed clarinet holds a wide tone. Improbable, green, sheltered." },
+];
+
+const CATALOGOS = {
+  "andino-muisca": CATALOGO_ANDINO,
+  "guajiro-wayuu": CATALOGO_GUAJIRO,
+};
+
 const ff = (a) => spawnSync("ffmpeg", ["-y", "-loglevel", "error", ...a], { encoding: "utf8" });
 const medir = (f, filtro, re) => {
   const r = spawnSync("ffmpeg", ["-hide_banner", "-nostats", "-i", f, "-af", filtro, "-f", "null", "-"], { encoding: "utf8" });
@@ -189,32 +220,33 @@ function normalizar(archivo, dir) {
   return ok;
 }
 
-async function registrar({ slug, title, archivo, prompt, characters }) {
+async function registrar({ slug, title, archivo, prompt, characters, world }) {
   const blob = await put(`narraciones/lechos/${slug}.wav`, fs.readFileSync(archivo), {
     access: "public", contentType: "audio/wav",
     addRandomSuffix: false, allowOverwrite: true,
     token: process.env.BLOB_READ_WRITE_TOKEN,
   });
   await sql`
-    INSERT INTO narration_beds (slug, title, audio_url, duration_seconds, lufs, seam_step_db, prompt, characters)
+    INSERT INTO narration_beds (slug, title, audio_url, duration_seconds, lufs, seam_step_db, prompt, characters, world)
     VALUES (${slug}, ${title}, ${blob.url}, ${duracion(archivo)}, ${lufs(archivo)}, ${null}, ${prompt},
-            ${characters ? JSON.stringify(characters) : null})
+            ${characters ? JSON.stringify(characters) : null}, ${world ?? null})
     ON CONFLICT (slug) DO UPDATE SET
       title = EXCLUDED.title, audio_url = EXCLUDED.audio_url,
       duration_seconds = EXCLUDED.duration_seconds, lufs = EXCLUDED.lufs,
       prompt = COALESCE(EXCLUDED.prompt, narration_beds.prompt),
-      characters = COALESCE(EXCLUDED.characters, narration_beds.characters)
+      characters = COALESCE(EXCLUDED.characters, narration_beds.characters),
+      world = COALESCE(EXCLUDED.world, narration_beds.world)
   `;
   return blob.url;
 }
 
 async function main() {
   if (args.includes("--listar")) {
-    const r = await sql`SELECT slug, title, duration_seconds, lufs, characters FROM narration_beds ORDER BY slug`;
+    const r = await sql`SELECT slug, title, duration_seconds, lufs, characters, world FROM narration_beds ORDER BY world, slug`;
     console.log(`Catálogo de lechos: ${r.rows.length}\n`);
     for (const b of r.rows) {
       console.log(
-        `  ${b.slug.padEnd(26)} ${b.title.padEnd(28)} ${Number(b.duration_seconds).toFixed(2)}s · ` +
+        `  ${String(b.world || "?").padEnd(15)} ${b.slug.padEnd(30)} ${b.title.padEnd(28)} ` +
           `${Number(b.lufs).toFixed(1)} LUFS · ${(b.characters || []).join(", ") || "SIN ETIQUETAR"}`
       );
     }
@@ -238,22 +270,33 @@ async function main() {
       for (const [slug, title] of Object.entries(titulos)) {
         const archivo = path.join(base, `${slug}.wav`);
         if (!fs.existsSync(archivo)) { console.log(`· ${slug}: no está en la carpeta, se salta`); continue; }
-        const url = await registrar({ slug, title, archivo, prompt: null, characters: null });
+        const url = await registrar({ slug, title, archivo, prompt: null, characters: null, world: null });
         console.log(`✓ ${title.padEnd(28)} ${duracion(archivo).toFixed(2)}s · ${lufs(archivo).toFixed(1)} LUFS\n    ${url}`);
       }
     } else {
+      const mundo = valor("mundo", MUNDO_POR_DEFECTO);
+      if (!WORLDS[mundo]) {
+        console.error(`Mundo desconocido: ${mundo}. Disponibles: ${Object.keys(WORLDS).join(", ")}`);
+        process.exitCode = 1;
+        return;
+      }
+      const catalogo = CATALOGOS[mundo] || [];
       const cuantos = Number.parseInt(valor("nuevos", "0"), 10);
       if (!cuantos) { console.error("Uso: --nuevos N | --ingerir <carpeta> | --listar"); process.exitCode = 1; return; }
       const existentes = new Set((await sql`SELECT slug FROM narration_beds`).rows.map((r) => r.slug));
-      const pendientes = CATALOGO.filter((p) => !existentes.has(p.slug)).slice(0, cuantos);
-      if (!pendientes.length) { console.log("El catálogo de prompts ya está agotado; añade más en CATALOGO."); return; }
+      const pendientes = catalogo.filter((p) => !existentes.has(p.slug)).slice(0, cuantos);
+      if (!pendientes.length) {
+        console.log(`El catálogo de prompts de «${WORLDS[mundo].label}» ya está agotado; añade más entradas.`);
+        return;
+      }
+      console.log(`mundo sonoro: ${WORLDS[mundo].label}\n`);
 
       for (const p of pendientes) {
         const res = await fetch("https://api.elevenlabs.io/v1/music?output_format=pcm_48000", {
           method: "POST",
           headers: { "xi-api-key": process.env.ELEVENLABS_API_KEY, "Content-Type": "application/json" },
           body: JSON.stringify({
-            prompt: `${MUNDO} ${p.foco}`,
+            prompt: `${WORLDS[mundo].prompt} ${p.foco}`,
             music_length_ms: FUENTE_S * 1000,
             generation_mode: "loop",
             model_id: "music_v2",
@@ -281,7 +324,7 @@ async function main() {
         normalizar(mejor.archivo, dir);
         const url = await registrar({
           slug: p.slug, title: p.title, archivo: mejor.archivo,
-          prompt: `${MUNDO} ${p.foco}`, characters: p.characters,
+          prompt: `${WORLDS[mundo].prompt} ${p.foco}`, characters: p.characters, world: mundo,
         });
         await sql`UPDATE narration_beds SET seam_step_db = ${mejor.e} WHERE slug = ${p.slug}`;
         console.log(`✓ ${p.title.padEnd(28)} corte ${String(mejor.S).padStart(2)}s · costura ${mejor.e.toFixed(1)} dB · ${lufs(mejor.archivo).toFixed(1)} LUFS\n    ${url}`);
