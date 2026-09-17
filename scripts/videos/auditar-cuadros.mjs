@@ -17,7 +17,12 @@ const filas = [];
 
 // Fuente por comunidad, en orden de autoridad: el guion vivo manda sobre el
 // inventario en disco, porque es el que fija cuántos bloques hay.
-for (const dir of ["docs/videos/muiscas/mvp-guiones", "docs/videos/nasa-paeces/mvp-guiones"]) {
+for (const dir of [
+  "docs/videos/muiscas/mvp-guiones",
+  "docs/videos/nasa-paeces/mvp-guiones",
+  "docs/videos/ette-ennaka/mvp-guiones",
+  "docs/videos/wayuu/mvp-guiones",
+]) {
   if (!fs.existsSync(dir)) continue;
   const com = dir.split("/")[2];
   const vivos = new Map();
@@ -31,18 +36,26 @@ for (const dir of ["docs/videos/muiscas/mvp-guiones", "docs/videos/nasa-paeces/m
   for (const [m, { n }] of vivos) filas.push([com, m, n, "guion vivo"]);
 }
 
+/* Las dos fuentes de abajo son anteriores a la regla única y sólo valen para
+ * comunidades que todavía no tienen guion vivo. El guion manda: es el que fija
+ * cuántos bloques hay, y contar además el plan viejo o la selección de imágenes
+ * duplicaba el mito y reportaba faltantes que ya no existen. */
+const conGuion = new Set(filas.map(([c, m]) => `${c}/${m}`));
+
 // Wayuu: el plan de preproducción declara los bloques
 for (const p of fs.existsSync("content/videos/wayuu/videos") ? fs.readdirSync("content/videos/wayuu/videos") : []) {
   const fp = `content/videos/wayuu/videos/${p}/preproduccion-01/plan.json`;
-  if (!fs.existsSync(fp)) continue;
+  if (!fs.existsSync(fp) || conGuion.has(`wayuu/${p}`)) continue;
   filas.push(["wayuu", p, (JSON.parse(fs.readFileSync(fp, "utf8")).blocks || []).length * 2, "plan"]);
 }
 
 // Ette Ennaka: cuadros seleccionados en la campaña
 const sel = "content/videos/chimila/keyframes/produccion-api-03/selection.complete.v1.json";
 if (fs.existsSync(sel))
-  for (const x of JSON.parse(fs.readFileSync(sel, "utf8")).myths)
+  for (const x of JSON.parse(fs.readFileSync(sel, "utf8")).myths) {
+    if (conGuion.has(`ette-ennaka/${x.slug}`)) continue;
     filas.push(["ette-ennaka", x.slug, (x.selected || []).length, "selección"]);
+  }
 
 const bajos = filas.filter(([, , n]) => n < MIN);
 const altos = filas.filter(([, , n]) => n > MAX);

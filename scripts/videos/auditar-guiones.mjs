@@ -62,11 +62,18 @@ for (const { mito, g } of vivos("docs/videos/nasa-paeces/mvp-guiones")) {
 for (const { mito, g } of vivos("docs/videos/ette-ennaka/mvp-guiones")) {
   res.push(evalua(mito, "ette-ennaka", g.lines.map((x) => x.text || "").filter(Boolean)));
 }
+for (const { mito, g } of vivos("docs/videos/wayuu/mvp-guiones")) {
+  res.push(evalua(mito, "wayuu", g.lines.map((x) => x.text || "").filter(Boolean)));
+}
+/* Los planes de preproducción son anteriores a la regla única (bloques de 26
+ * palabras de mediana). Sólo cuentan para los mitos que todavía no tienen
+ * guion vivo; si no, el mismo mito aparecía dos veces y fallaba siempre. */
+const conGuion = new Set(res.filter((r) => r.comunidad === "wayuu").map((r) => r.nombre));
 const dirW = "content/videos/wayuu/videos";
 if (fs.existsSync(dirW)) {
   for (const m of fs.readdirSync(dirW)) {
     const fp = path.join(dirW, m, "preproduccion-01", "plan.json");
-    if (!fs.existsSync(fp)) continue;
+    if (!fs.existsSync(fp) || conGuion.has(m)) continue;
     const l = (JSON.parse(fs.readFileSync(fp, "utf8")).blocks || []).map((b) => b.voice_over || "").filter(Boolean);
     if (l.length) res.push(evalua(m, "wayuu", l));
   }
