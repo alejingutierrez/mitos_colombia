@@ -1,0 +1,91 @@
+{
+  "batch_id": "wayuu-v4-tanda-08-animales-rebano-v2",
+  "capa": "2 · animales · el rebaño y el camino",
+  "refuerzo": "refuerzo-papel-v3.md",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "laminas": [
+    {
+      "id": "u01-chivos",
+      "entidad": "chivos",
+      "formato": "1536x1024",
+      "version": "v2",
+      "prompt_sha256": "d1b6e6e710338949ba503fd56523bb28e5e3aaf37ab175503122c46621b21e2a",
+      "prompt_file": "prompts/u01-chivos.prompt.v2.txt",
+      "salida": "u01-chivos-v2.png",
+      "bytes": 2297003,
+      "sha256": "71e9ded4a32fa50eb5628320fa4f56dfb7c9d7bfd5acee8240c47f36ccea4b05"
+    },
+    {
+      "id": "u02-caballo",
+      "entidad": "caballo",
+      "formato": "1536x1024",
+      "version": "v2",
+      "prompt_sha256": "6fcc59da37d3cebb02425291fa8b8c5f3fbe5e7aedd3360cc4a2d294a891d3f0",
+      "prompt_file": "prompts/u02-caballo.prompt.v2.txt",
+      "salida": "u02-caballo-v2.png",
+      "bytes": 2390549,
+      "sha256": "9c4c66ec7474d05bcc2cd07e8b76dcaa8322f562e37c61ada9afff4b31892bc9"
+    },
+    {
+      "id": "u03-burro-mula",
+      "entidad": "burro_mula",
+      "formato": "1536x1024",
+      "version": "v2",
+      "prompt_sha256": "a3ad7479b1ec928de61a9cd5a2cdbde8be96ac4f4a4f3b73d5e64af8f81eb407",
+      "prompt_file": "prompts/u03-burro-mula.prompt.v2.txt",
+      "salida": "u03-burro-mula-v2.png",
+      "bytes": 2276934,
+      "sha256": "ada2ae73dc4c1c6ac5b70ee46eb85af45320a2dcdffeefd204b154d954406c8e"
+    },
+    {
+      "id": "u04-ganado-vacuno",
+      "entidad": "ganado_vacuno",
+      "formato": "1536x1024",
+      "version": "v2",
+      "prompt_sha256": "a34b9dbc022995a5fa1ef77185b82b66c9dd2bfec3ba490470695e6147064f73",
+      "prompt_file": "prompts/u04-ganado-vacuno.prompt.v2.txt",
+      "salida": "u04-ganado-vacuno-v2.png",
+      "bytes": 2051162,
+      "sha256": "81969249e71b1a7459e82001c16c1ea9437be1b76c50b4bef2bb53ce7aea9bb5"
+    },
+    {
+      "id": "u05-perros",
+      "entidad": "perros",
+      "formato": "1024x1024",
+      "version": "v2",
+      "prompt_sha256": "29b8131657b4a4379faa179412bd860fdab70d14a2225fdcca1922ea8287fab8",
+      "prompt_file": "prompts/u05-perros.prompt.v2.txt",
+      "salida": "u05-perros-v2.png",
+      "bytes": 1442519,
+      "sha256": "7d3bf72b6767ce229378fe886c27d91412abef2db13046ad44179cf9ed9d6442"
+    },
+    {
+      "id": "u06-caballito",
+      "entidad": "caballito",
+      "formato": "1536x1024",
+      "version": "v2",
+      "prompt_sha256": "cbc60208e776d90eb79edfc3acbb14672d022af108e06573c5b667fcdbc25ecf",
+      "prompt_file": "prompts/u06-caballito.prompt.v2.txt",
+      "salida": "u06-caballito-v2.png",
+      "bytes": 2236105,
+      "sha256": "09b90abd68b060cdabc2f8db1adbece0f13adc1f65001bebc25cdb6a77ca4fa4"
+    },
+    {
+      "id": "u07-lagartijas",
+      "entidad": "lagartijas",
+      "formato": "1024x1024",
+      "version": "v2",
+      "prompt_sha256": "8bb807d23366c1ed9e86cb3b41c73ff57b012b292e762183ebe4c715afc3882e",
+      "prompt_file": "prompts/u07-lagartijas.prompt.v2.txt",
+      "salida": "u07-lagartijas-v2.png",
+      "bytes": 1398454,
+      "sha256": "a34fadd5741634d62001205b47cb23292f2aa9f9d2edd38fd5a1c5933b08ebb5"
+    }
+  ],
+  "generado_el": "2026-09-17T16:39:08.650Z",
+  "proveedor": "OpenAI API de pago",
+  "motivo_v2": "El refuerzo v2 decía «cada pluma es una pieza recortada e independiente» y el modelo lo entendió como miles de plumitas ESCULPIDAS con volumen: salió escultura de papel maché, no papel recortado. El refuerzo v3 invierte la regla — POCAS PIEZAS, GRANDES Y PLANAS, con borde de tijera y sombra nítida — y prohíbe el volumen modelado. La v1 no se borra.",
+  "estado": "generado · pendiente de revisión artística",
+  "arte_aprobado": false
+}

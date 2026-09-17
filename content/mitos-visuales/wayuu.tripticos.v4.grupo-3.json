@@ -1,0 +1,242 @@
+{
+  "schema": "mitos-colombia/wayuu-tripticos-v4/grupo",
+  "grupo": "3 · los que pelean y los que cruzan",
+  "status": "propuesto",
+  "comunidad": "Wayúu",
+  "region": "Caribe",
+  "biblia": "content/mitos-visuales/_openai/wayuu/biblia-v4/ · 223 fichas · V4",
+  "snapshots": "content/mitos-visuales/production/wayuu-2026-09-17/narratives/",
+  "refuerzo": "refuerzo-papel-v3.md",
+  "deslindes_criticos": [
+    "MUJERES ARMADAS — el-indio-kuriruputa y los-dos-hermanos tienen los dos mujeres que pelean y ganan. Reparto: Kuriruputá se queda con EL ROBO NOCTURNO Y EL HERMANO HERIDO, y Los dos hermanos con LA PUNTERÍA Y LA VENGANZA DE ELLA. Ninguna de las dos escenas se repite.",
+    "HOMBRES VENADO — el-indio-jaichuasay y el hombre de Parashi (ya usado en Umaralá) comparten la transformación. Jaichuasay es el CAZADO; el de Parashi vendía maneas y no aparece aquí."
+  ],
+  "mitos": {
+    "el-hijo-del-condor": {
+      "titulo": "El hijo del Cóndor",
+      "hereda_biblia": ["c07-jose-juan", "p11-nina-del-encierro", "v02-juramia", "f08-jujia", "ac10-casa-de-piedra", "ac11-dominio-subterraneo", "z05-cordeleria", "ab06-roza", "z01-armas"],
+      "eventos": [
+        { "id": "rapto", "accion": "La niña abre la puerta del encierro por el calor; el cóndor Juramía vuela desde la montaña, la agarra por el pelo y se la lleva a su casa de piedra.", "required": true },
+        { "id": "la_huida", "accion": "El hijo estudia la puerta hasta dar con su secreto, le da a su madre corteza de trupillo para cubrirse y se van apenas sale el padre.", "required": true },
+        { "id": "soga_cortada", "accion": "Los peones, envidiosos, cortan la soga con él en el fondo del subterráneo; anda meses perdido hasta que Jujía le muestra la salida.", "required": true }
+      ],
+      "escenas": {
+        "entrada": { "acto": "entrada", "era": "historico_wayuu", "composicion": "contrapicado", "eventos": ["rapto"],
+          "beat": "Abre la puerta por el calor y algo baja de la montaña.",
+          "escena": "16:9. Cámara BAJA desde el patio, mirando hacia arriba; el horizonte cae en el tercio inferior. En el tercio inferior izquierdo, la puerta entreabierta de la casita del encierro y, en el umbral, una NIÑA de tres cuartos asomándose y mirando hacia arriba con la mano en el marco. Ocupando los dos tercios superiores, el cielo claro de mediodía y, recortado contra él, EL CÓNDOR JURAMÍA bajando en picado con las alas extendidas: cabeza y cuello desnudos, collar de plumas blancas, cuerpo negro y parches alares blancos. Está todavía alto y lejos de ella; no la toca. Al fondo, la ladera de la que vino. El tercio superior derecho queda abierto para el título.",
+          "paleta": "negro y blanco del cóndor contra cielo claro, ocre del muro, pardo de la manta corta de la niña, sombras cortas de mediodía" },
+        "acto": { "acto": "acto", "era": "historico_wayuu", "composicion": "umbral", "eventos": ["la_huida"],
+          "beat": "Salen de la cueva al amanecer, ella envuelta en corteza, mientras el padre no está.",
+          "escena": "9:16 vertical al amanecer, en la boca de la casa de piedra — otro lugar y otra luz que la entrada. COMPOSICIÓN UMBRAL: las dos figuras aparecen en el BORDE INFERIOR del encuadre, saliendo de la cueva, con parte del cuerpo aún dentro de la sombra de la abertura. Delante, la MADRE envuelta en una pieza ancha de CORTEZA DE TRUPILLO desde los hombros hasta debajo de la rodilla, sujetándola contra el cuerpo; detrás y medio dentro, el HIJO ya adulto, vuelto hacia ella y con una mano en la roca. Todo el resto del cuadro queda POR DELANTE DE ELLOS: la ladera pedregosa bajando y, al fondo, la llanura en luz fría de amanecer, todavía sin nadie. Ninguno de espaldas. Sin desnudez.",
+          "paleta": "pardo fibroso de la corteza, gris de la roca, negro de la abertura, malva frío de la llanura al amanecer" },
+        "huella": { "acto": "huella", "era": "historico_wayuu", "composicion": "cenital", "eventos": ["soga_cortada"],
+          "beat": "La soga queda cortada y colgando sobre un hueco sin fondo.",
+          "escena": "1:1 CENITAL a plomo mirando hacia ABAJO por la boca de un pozo o entrada de subterráneo, sin cielo. El borde de piedra del hueco forma un anillo irregular alrededor de todo el cuadro, y en el centro se abre la OSCURIDAD del pozo. Desde el borde superior baja una SOGA de fibra trenzada que termina EN UN CABO CORTADO EN LIMPIO a media altura, colgando en el aire sobre el negro, sin llegar a ninguna parte. Junto al borde de piedra, en el suelo, la marca donde estuvo apoyada. Nadie en cuadro. Emblema legible a tamaño pequeño.",
+          "paleta": "gris pardo de la piedra del brocal, fibra clara de la soga, negro plano del fondo del pozo",
+          "nota_simbolica": "La envidia de los peones cabe entera en un corte limpio. Lo que queda del mito es una soga que no llega." }
+      }
+    },
+
+    "el-indio-kuriruputa": {
+      "titulo": "El indio Kuriruputá",
+      "deslinde": "Se queda con EL ROBO NOCTURNO Y EL HERMANO HERIDO. La puntería y la venganza son de Los dos hermanos.",
+      "hereda_biblia": ["c03-kuriruputa", "c04-hermana-kuriruputa", "t13-kosinas", "ac06-matumuy", "ac07-kuitsa", "u04-ganado-vacuno", "z01-armas", "z04-adorno-y-valor"],
+      "eventos": [
+        { "id": "robo_nocturno", "accion": "Los kosinas abren un hueco en el costado opuesto a la puerta, sacan los mejores novillos y vuelven a cerrar la cerca; el novillo bravo brama y el dueño despierta.", "required": true },
+        { "id": "las_hermanas_pelean", "accion": "Las hermanas llegan creyendo que estará muerto, con un rifle y un pañuelo de cuatro varas; los kosinas van a cogerlas y cada una mata a uno.", "required": true },
+        { "id": "sueno_de_la_cura", "accion": "Tendido en el chinchorro con la rodilla rota, sueña que le dicen que se trague una contra y una tuma; despierta, lo hace y sana.", "required": true }
+      ],
+      "escenas": {
+        "entrada": { "acto": "entrada", "era": "historico_wayuu", "composicion": "cenital", "eventos": ["robo_nocturno"],
+          "beat": "De noche y con luna, el ganado sale por un hueco que no estaba.",
+          "escena": "16:9 CENITAL a plomo sobre los corrales de Matumuy, sin cielo, de noche con LUZ DE LUNA azul-plata. Vista desde arriba: dos corrales contiguos de varas, la casa cerrada a un costado, y en el corral de la derecha un HUECO ABIERTO en el lado opuesto a la puerta, con las varas apartadas y tiradas. Desde el hueco sale un reguero de HUELLAS DE GANADO bien marcadas que cruza el cuadro en diagonal hacia el borde. Dentro del otro corral, cuatro reses juntas y un NOVILLO apartado con la cabeza alta. Cinco figuras muy pequeñas de kosinas arreando, ya lejos, en el borde superior. Sombras duras y azules. El tercio inferior izquierdo queda abierto para el título.",
+          "paleta": "azul-plata de la arena bajo la luna, pardo de las varas, ocre apagado de la casa, sombras duras azules" },
+        "acto": { "acto": "acto", "era": "historico_wayuu", "composicion": "enfrentados", "eventos": ["las_hermanas_pelean"],
+          "beat": "Creían que eran mujeres fáciles de coger y se equivocaron.",
+          "escena": "9:16 vertical a media mañana, junto a la laguna de Kuitsá — otro lugar y otra luz que la entrada. DOS grupos a un lado y otro, ninguno centrado. A la IZQUIERDA y en primer término, LAS DOS HERMANAS de pie y firmes: una con el rifle levantado y apuntando, la otra con el pañuelo de cuatro varas todavía doblado sobre el brazo y un arma en la mano. Mantas azul apagada y parda, pañoletas. A la DERECHA y a media distancia, CUATRO KOSINAS deteniéndose en seco, con las coronas de corteza de cují, uno con el brazo bajando el arco. Entre los dos grupos, el vacío del arenal. Ningún cuerpo en el suelo, sin sangre y sin gesto de furia.",
+          "paleta": "azul apagado y pardo de las mantas, blanco del pañuelo, corteza de las coronas, arena clara, agua oscura de la laguna al fondo" },
+        "huella": { "acto": "huella", "era": "historico_wayuu", "composicion": "primer_plano", "eventos": ["sueno_de_la_cura"],
+          "beat": "Lo que queda es lo que el sueño le mandó tragarse.",
+          "escena": "1:1. PRIMER PLANO DOMINANTE: ocupando el centro del cuadro y muy nítida, UNA MANO ABIERTA con la palma hacia arriba, vista desde arriba, y sobre ella DOS COSAS PEQUEÑAS: una cuenta de TUMA de un rojo oscuro profundo y, junto a ella, una contra —un atadito de fibra y hoja, sin nada mágico a la vista—. La mano descansa sobre la tela de un chinchorro. Al fondo, desenfocada y en el borde, una rodilla vendada con una tira de tela. Nadie más. Luz de mañana lateral. Emblema legible a tamaño pequeño.",
+          "paleta": "piel #9A6642 de la mano, rojo oscuro de la tuma, pardo y verde apagado de la contra, algodón crudo del chinchorro",
+          "nota_simbolica": "«Para que te sanes, trágate una contra y una tuma». El sueño es el mecanismo de saber del corpus y no se dibuja como visión: se dibuja lo que ordenó, en la palma de la mano." }
+      }
+    },
+
+    "los-dos-hermanos": {
+      "titulo": "Los dos hermanos",
+      "deslinde": "Se queda con LA PUNTERÍA Y LA VENGANZA DE ELLA. El robo nocturno y el hermano herido son de Kuriruputá.",
+      "hereda_biblia": ["c05-la-hermana", "q11-el-hermano", "s03-criada", "w12-guaiguaya", "w11-alcaravan-diana", "u05-perros", "u03-burro-mula", "z01-armas", "z05-cordeleria"],
+      "eventos": [
+        { "id": "prueba_de_punteria", "accion": "Él tira una y dos veces y no pega; ella toma el fusil, le da al alcaraván en la cabeza y después parte la aguja al primer tiro.", "required": true },
+        { "id": "la_mula_llora", "accion": "El perro envuelve el cadáver en la cobija y la mula lo trae; la mula llora dos veces y ella sabe que lo mataron.", "required": true },
+        { "id": "queda_reinando", "accion": "Se presenta ante los hombres, las balas no le pegan, y al final queda sola reinando con su casta y con los animales de todos.", "required": true }
+      ],
+      "escenas": {
+        "entrada": { "acto": "entrada", "era": "historico_wayuu", "composicion": "diagonal", "eventos": ["prueba_de_punteria"],
+          "beat": "Ella levanta el fusil y le da; él acaba de fallar dos veces.",
+          "escena": "16:9 a media mañana en la sabana. La acción cruza el encuadre EN DIAGONAL de la esquina inferior izquierda a la superior derecha: abajo y cerca, los DOS HERMANOS a caballo, desmontados y de pie junto a los animales; ella con el fusil levantado y la mejilla en la culata, apuntando hacia arriba a la derecha; él a su lado, de tres cuartos, con su arma bajada y la cara vuelta hacia ella. Arriba y lejos, en la diagonal, un ALCARAVÁN en plena huida con las alas medio abiertas mostrando la banda blanca. Nada paralelo a los bordes. Un perro al pie de los caballos. El tercio inferior derecho queda abierto para el título.",
+          "paleta": "manta roja de ella, camisa crema de él, pardos de los caballos, pardo arenoso del alcaraván, llanura ocre, cielo claro" },
+        "acto": { "acto": "acto", "era": "historico_wayuu", "composicion": "peso_contrario", "eventos": ["la_mula_llora"],
+          "beat": "Llega la mula sola con el bulto encima, y ella ya sabe.",
+          "escena": "9:16 vertical al atardecer, en el patio de la casa — otro lugar y otra luz que la entrada. En el TERCIO INFERIOR IZQUIERDO, en primer término, LA HERMANA de pie, inmóvil, de tres cuartos, con las manos caídas. Toda la masa visual pesa en el LADO OPUESTO Y ARRIBA: entrando por el camino, una MULA sola con un BULTO ENVUELTO EN UNA COBIJA atravesado sobre el lomo y atado, y a su lado un PERRO caminando pegado a ella. Entre la mujer y la mula, el patio vacío con la luz rasante alargando las sombras hacia el este. El bulto está enteramente envuelto: no se ve ningún cuerpo, ninguna mano y ningún pie.",
+          "paleta": "rojo de la manta de ella, pardo de la cobija del bulto, mora oscura de la mula, ocre encendido del patio, sombra violeta larga" },
+        "huella": { "acto": "huella", "era": "historico_wayuu", "composicion": "simetria", "eventos": ["queda_reinando"],
+          "beat": "Queda sola, y todos los animales son suyos.",
+          "escena": "1:1 a media tarde. Composición centrada y casi simétrica, el horizonte recto. En el CENTRO EXACTO del cuadro y de frente, LA HERMANA de pie, sola, de cuerpo entero y pequeña dentro del encuadre, con la manta roja y el fusil bajado en una mano. A los dos lados, repartidos con simetría, DOS GRANDES REBAÑOS: a la izquierda cabras y ovejas, a la derecha caballos y vacas, todos quietos y vueltos hacia el mismo lado. Detrás, la llanura y el cielo. Nadie más: ni un hombre, ni un niño, ni una casa. Emblema legible a tamaño pequeño.",
+          "paleta": "rojo #BE3229 de la manta como único punto saturado, pardos y blancos de los rebaños, ocre de la llanura, cielo crema",
+          "nota_simbolica": "«Quedó sola, reinando con su casta, muy rica, con los animales de todos los hombres que había matado». La simetría de altar es aquí una entrega: el corpus le entrega la tierra a la que ganó." }
+      }
+    },
+
+    "el-indio-guerrero-ipuana": {
+      "titulo": "El guerrero Ipuana",
+      "hereda_biblia": ["p06-guerrero-ipuana", "q12-hijo-del-ipuana", "t08-jayariyu", "ac08-taiway", "ac09-wina", "y01-cardon", "z01-armas", "z11-oficio-de-curar"],
+      "eventos": [
+        { "id": "no_le_entra_la_muerte", "accion": "Le tiran rayas y flechas envenenadas y no le hacen daño; cuando una punta se le queda enterrada la bota y sigue andando.", "required": true },
+        { "id": "verano_y_emboscada", "accion": "Vino un verano muy largo, los jagüeyes se agrietaron; emprendió viaje a Taiway y le pusieron una emboscada en el camino.", "required": true },
+        { "id": "el_cardon_vacio", "accion": "El hijo no creyó el sueño; lo dejaron en la arena y no lo pusieron encima del cardón. Si lo hubieran hecho, habría resucitado.", "required": true }
+      ],
+      "escenas": {
+        "entrada": { "acto": "entrada", "era": "historico_wayuu", "composicion": "primer_plano", "eventos": ["no_le_entra_la_muerte"],
+          "beat": "Se saca la punta de la ropa y sigue andando como si nada.",
+          "escena": "16:9. PRIMER PLANO DOMINANTE: ocupando los dos tercios izquierdos y muy nítidas, LAS DOS MANOS del guerrero sacándose una PUNTA DE FLECHA de la manga de la camisa, con los dedos en pinza; la punta es pequeña y oscura y no hay sangre, ni herida, ni desgarrón grande en la tela. Al fondo y desenfocado, PEQUEÑO, el resto de su cuerpo de pie y, más allá, cuatro figuras de la casta enemiga a media distancia entre los cardones, con los arcos bajados. El objeto es el sujeto; la persona, el contexto. Luz alta de media mañana. El tercio superior derecho queda abierto para el título.",
+          "paleta": "crema de la camisa, oscuro de la punta, piel #9A6642 de las manos, gris-verde de los cardones al fondo" },
+        "acto": { "acto": "acto", "era": "historico_wayuu", "composicion": "figura_pequena", "eventos": ["verano_y_emboscada"],
+          "beat": "Va camino de Taiway por una trocha encajonada, y el verano ya secó todo.",
+          "escena": "9:16 vertical al mediodía — otro lugar y otra luz que la entrada. El paisaje ocupa casi todo el encuadre: una trocha estrecha ENCAJONADA entre dos lomas bajas y pardas, con el terreno agrietado, un jagüey vacío y cuarteado a un costado y matorral seco; al fondo, la franja verdosa de la ciénaga de Sinamaica. EL GUERRERO ES PEQUEÑO Y DESCENTRADO, en el tercio inferior, caminando solo por la trocha, de tres cuartos. En lo alto de las dos lomas, a izquierda y derecha y aún más pequeñas, DOS SILUETAS agachadas que él no ve. Cielo blanco lavado, sombras diminutas. La escala del terreno es el asunto.",
+          "paleta": "pardo reseco de las lomas, arcilla agrietada del jagüey, verde grisáceo de la ciénaga al fondo, cielo blanco, arena de la trocha" },
+        "huella": { "acto": "huella", "era": "historico_wayuu", "composicion": "contrapicado", "eventos": ["el_cardon_vacio"],
+          "beat": "Lo que queda es un cardón vacío y nadie encima.",
+          "escena": "1:1. Cámara BAJA al pie de un cardón guajiro, mirando hacia arriba; el horizonte cae en el tercio inferior. El cardón —varios tallos columnares acanalados naciendo en grupo desde la base— se recorta contra el cielo de la tarde y ocupa el centro del cuadro. En lo alto, entre dos tallos, hay una HORQUILLA ANCHA Y VACÍA, un sitio donde algo podría haberse apoyado y no se apoyó. Al pie del cardón, sobre la arena, un sombrero de ala caído. No hay cuerpo, no hay figura y no hay sangre. Emblema legible a tamaño pequeño.",
+          "paleta": "gris verdoso del cardón a contraluz, cielo de tarde crema y rosa, arena clara al pie, pardo del sombrero caído",
+          "nota_simbolica": "«Si lo hubieran puesto encima del cardón, habría resucitado». El nudo del mito es algo que NO pasó, y por eso la huella es una horquilla vacía." }
+      }
+    },
+
+    "el-indio-jaichuasay": {
+      "titulo": "El indio Jaichuasay",
+      "hereda_biblia": ["p05-jaichuasay", "v01-venado", "aa11-rancho-de-la-sierra", "ad02-serrania-baja", "x04-arco-flechas", "z05-cordeleria", "u02-caballo"],
+      "eventos": [
+        { "id": "el_venado_lo_lleva", "accion": "Flecha un venado que no cae; lo persigue cuesta arriba y sin darse cuenta deja atrás los caminos que conocía, hasta una lejana serranía.", "required": true },
+        { "id": "vive_como_indio", "accion": "Se queda allá: tiene un gran rancho en la sierra, duerme en su chinchorro, come, mira la niebla bajar por la tarde. Pero en la sabana vuelve a ser venado.", "required": true },
+        { "id": "el_flechazo_lo_revela", "accion": "En una cacería lo emboscan a pie; al recibir el flechazo el venado se vuelve un indio, y los cazadores lo reconocen.", "required": true }
+      ],
+      "escenas": {
+        "entrada": { "acto": "entrada", "era": "historico_wayuu", "composicion": "diagonal", "eventos": ["el_venado_lo_lleva"],
+          "beat": "Corre detrás de un venado que siempre está un poco más lejos.",
+          "escena": "16:9 a media mañana. La persecución cruza el encuadre EN DIAGONAL de la esquina inferior izquierda a la superior derecha, cuesta arriba entre cardones y trupillos. Abajo y cerca, JAICHUASAY corriendo de tres cuartos con el arco en la mano y la cara adelantada; arriba y lejos, en la misma diagonal y ya mucho más pequeño, EL VENADO en plena carrera, con la cola blanca levantada. Entre los dos, la cuesta y una distancia que no se acorta. Nada paralelo a los bordes; el horizonte inclinado. El tercio superior izquierdo queda abierto para el título.",
+          "paleta": "crema de la camisa, pardo rojizo del venado, ocre de la cuesta, gris-verde de los cardones, luz alta de mañana" },
+        "acto": { "acto": "acto", "era": "historico_wayuu", "composicion": "primer_plano", "eventos": ["vive_como_indio"],
+          "beat": "Vive en la sierra como un indio, pero oye algo que los demás no oyen.",
+          "escena": "9:16 vertical al final de la tarde, bajo la enramada de su rancho en la sierra — otro lugar y otra luz que la entrada. PRIMER PLANO DOMINANTE: ocupando los dos tercios superiores y muy nítida, LA CABEZA Y EL TORSO de Jaichuasay de tres cuartos, con la CABEZA VUELTA HACIA UN COSTADO Y ALGO INCLINADA, los ojos muy abiertos y el cuello tenso, escuchando; en la mano, un manojo de fibra de maguey. Abajo y desenfocado, el chinchorro colgado y el suelo del rancho. Al fondo, por el costado abierto, la NIEBLA bajando por la ladera en láminas planas. Ningún rasgo de venado: ni astas, ni orejas, ni hocico.",
+          "paleta": "crema de la camisa, verde grisáceo del maguey, verde nublado de la ladera, gris claro de la niebla en láminas, luz de tarde" },
+        "huella": { "acto": "huella", "era": "historico_wayuu", "composicion": "cenital", "eventos": ["el_flechazo_lo_revela"],
+          "beat": "En el suelo quedan las huellas, y a mitad de camino cambian.",
+          "escena": "1:1 CENITAL a plomo sobre la arena de una trocha, sin cielo, a media tarde. Vista desde arriba, una línea de huellas cruza el cuadro de abajo hacia arriba: en la MITAD INFERIOR son HUELLAS DE VENADO, pezuñas hendidas y bien marcadas; hacia el centro hay un punto donde la arena está removida; y en la MITAD SUPERIOR las huellas continúan siendo PISADAS HUMANAS DESCALZAS, en la misma línea y con la misma zancada. Junto al punto de cambio, una FLECHA clavada en la arena en ángulo. Ni cuerpo, ni animal, ni sangre. Emblema legible a tamaño pequeño.",
+          "paleta": "arena clara, sombras cortas dentro de cada huella, madera parda de la flecha, sombra violeta corta",
+          "nota_simbolica": "«En ese mismo momento, al recibir el flechazo, el venado se volvió un indio». La transformación se cuenta con dos clases de huella en una sola línea: es el único modo de mostrarla sin dibujar un híbrido." }
+      }
+    },
+
+    "el-pequeno-indio-kosina": {
+      "titulo": "El pequeño indio Kosina",
+      "hereda_biblia": ["f13-kosina-nino", "r10-madre-de-kosina", "r11-amigo-rico", "u06-caballito", "u07-lagartijas", "y07-kasha", "ab06-roza", "z03-recipientes"],
+      "eventos": [
+        { "id": "el_trupillo", "accion": "Vuelve con lagartijas y su madre tiene lista la comida: trupillo sancochado. Al día siguiente unos indios ricos le dan carne, arroz y panela, y su trupillo se lo echan a los burros.", "required": true },
+        { "id": "la_carrera", "accion": "El caballito de patas torcidas cobra brío cuando él toca la caja, se vuelve bonito y deja a todos veinte varas atrás.", "required": true },
+        { "id": "la_riqueza", "accion": "El caballo le entrega a sus hermanos y a su madre, le manda hacer un corral, y se mete por una cueva de donde no saldrá nunca más.", "required": true }
+      ],
+      "escenas": {
+        "entrada": { "acto": "entrada", "era": "historico_wayuu", "composicion": "enfrentados", "eventos": ["el_trupillo"],
+          "beat": "Le dan carne y panela, y su trupillo se lo echan a los burros.",
+          "escena": "16:9 a mediodía en un alto del camino. DOS presencias a un lado y otro, ninguna centrada. A la IZQUIERDA y en primer término, EL NIÑO KOSINA de pie, pequeño, con camisa y pantalón corto claros, sosteniendo con las dos manos un cuenco con trupillo sancochado. A la DERECHA, un grupo de TRES INDIOS RICOS a caballo, bien vestidos, con saco y sombrero, y uno inclinándose a ofrecerle un trozo de carne y una panela. Entre los dos, el vacío del camino. En el tercio inferior derecho, abajo y aparte, UN BURRO comiendo del suelo unas vainas de trupillo tiradas. Sombras cortas de mediodía. El tercio superior queda abierto para el título.",
+          "paleta": "crema de la ropa del niño, azul petróleo y pardos de los ricos, ocre del camino, vainas pardo claro en el suelo" },
+        "acto": { "acto": "acto", "era": "historico_wayuu", "composicion": "diagonal", "eventos": ["la_carrera"],
+          "beat": "El caballito feo pasa a los cuatro mejores y va veinte varas adelante.",
+          "escena": "9:16 vertical al atardecer, en la pista de la fiesta — otro lugar y otra luz que la entrada. La carrera cruza el encuadre EN DIAGONAL de la esquina inferior derecha a la superior izquierda. Abajo y detrás, CUATRO caballos grandes y sus jinetes, apretados y a todo galope. Arriba y muy por delante, solo y con mucho aire alrededor, EL CABALLITO —ahora bonito, la crin al viento, una pata delantera muy extendida— con KOSINA agarrado de la crin, sin montura y sin estribos, pequeño sobre él. Polvo dorado levantado a contraluz por toda la diagonal. Nada paralelo a los bordes.",
+          "paleta": "oro rasante en el polvo, pardos de los caballos, crema de la ropa del niño, sombra violeta larga, arena encendida" },
+        "huella": { "acto": "huella", "era": "historico_wayuu", "composicion": "paisaje_abierto", "eventos": ["la_riqueza"],
+          "beat": "Queda el corral lleno, y una cueva por donde se fue.",
+          "escena": "1:1 al amanecer. El territorio ocupa todo el encuadre y no hay ninguna figura humana. En el plano medio, un CORRAL AMPLIO de varas lleno de caballos —ocho o diez, de pelajes distintos, quietos y vueltos hacia el mismo lado—. A un costado y al fondo, en la falda de una loma, la BOCA OSCURA DE UNA CUEVA, pequeña y negra. Entre el corral y la cueva, sobre la arena, una única línea de huellas de casco que va del corral a la boca y no vuelve. La forma del terreno conduce la mirada de un punto al otro. Emblema legible a tamaño pequeño.",
+          "paleta": "pardos variados de los caballos, pardo de las varas, arena clara con huellas, negro plano de la boca de la cueva, luz malva de amanecer",
+          "nota_simbolica": "«Entregada toda esa riqueza, el caballo se fue y se metió por una cueva debajo de la tierra, de donde no saldrá nunca más». El regalo y la despedida en la misma lámina, unidos por una línea de huellas que no regresa." }
+      }
+    },
+
+    "el-indio-jururiana": {
+      "titulo": "Jururiana y la gran lluvia",
+      "hereda_biblia": ["p02-jururiana", "p03-warir", "r08-maratey", "ae07-presagios", "ae11-chubasco", "ac04-patsuo", "ac05-wawari", "u01-chivos", "aa05-corral"],
+      "eventos": [
+        { "id": "el_aviso", "accion": "Recorre las rancherías avisando que guarden las semillas y junten los chivos negros, y anuncia que en la madrugada caerá un chubasco que borrará sus huellas.", "required": true },
+        { "id": "la_prueba_a_oscuras", "accion": "Encierran a Warir en una casa tan oscura que no se ve la palma de la mano; camina derecho y se detiene donde Maratey contiene la respiración.", "required": true },
+        { "id": "la_tierra_es_mi_abuela", "accion": "Uno lanza una piedra grande contra el suelo y Warir se enoja: «no golpees a mi abuela; la tierra es mi abuela, y de ella tengo todos mis secretos».", "required": true }
+      ],
+      "escenas": {
+        "entrada": { "acto": "entrada", "era": "historico_wayuu", "composicion": "peso_contrario", "eventos": ["el_aviso"],
+          "beat": "Va de casa en casa avisando, y afuera el cielo está limpio.",
+          "escena": "16:9 a media tarde. En el TERCIO IZQUIERDO, en primer término y de tres cuartos, JURURIANA de pie junto a un corral de piedra, con la mano derecha dejando caer un puñado de semillas y la cara levantada oliendo el aire. Toda la masa visual pesa en el LADO OPUESTO: a la derecha, una ranchería con su enramada y su gente —cinco personas de edades distintas escuchándolo desde el patio— y, detrás, un corral con chivos donde ya están apartando los NEGROS de los pardos. Sobre todo ello, un cielo COMPLETAMENTE LIMPIO, sin una nube. El viento del nordeste mueve la ropa tendida. El tercio superior queda abierto para el título.",
+          "paleta": "crema de la camisa, manta parda al hombro, ocre del corral de piedra, negro y pardo de los chivos, cielo limpio sin nubes" },
+        "acto": { "acto": "acto", "era": "historico_wayuu", "composicion": "simetria", "eventos": ["la_prueba_a_oscuras"],
+          "beat": "En la oscuridad total camina derecho y se detiene justo ahí.",
+          "escena": "9:16 vertical dentro de la casa oscura — otro lugar y otra luz que la entrada. Composición centrada y casi simétrica. CASI TODO EL CUADRO ES NEGRO PLANO: los muros no se ven. En el centro, apenas revelados por una RENDIJA FINÍSIMA de luz que entra por el marco de la puerta al fondo, dos presencias: WARIR de pie en el centro exacto, de frente, con los ojos cerrados y las palmas abiertas a la altura de la cadera; y a un paso de él, pegado al muro derecho, MARATEY inmóvil, con la espalda recta y las manos planas contra los muslos, aguantando el aire. Nada más es visible. Sin efecto, sin aura y sin luz sobrenatural.",
+          "paleta": "negro plano dominante, una rendija fina de luz clara, apenas pardo en la ropa de los dos, piel apenas insinuada" },
+        "huella": { "acto": "huella", "era": "historico_wayuu", "composicion": "cenital", "eventos": ["la_tierra_es_mi_abuela"],
+          "beat": "Amanece y no queda una sola huella.",
+          "escena": "1:1 CENITAL a plomo sobre la arena de la trocha, sin cielo, al amanecer. El cuadro se divide en dos mitades por una línea de humedad: en la MITAD INFERIOR, la arena seca y CUBIERTA DE HUELLAS —pies descalzos, pezuñas de chivo, cascos—, cada una con su sombra dentro. En la MITAD SUPERIOR, la arena LISA, HÚMEDA Y MÁS OSCURA, SIN UNA SOLA HUELLA. En el centro, sobre la línea, una PIEDRA GRANDE apoyada en el suelo con una pequeña depresión del golpe alrededor. Nadie en cuadro. Emblema legible a tamaño pequeño.",
+          "paleta": "arena seca clara con huellas abajo, arena húmeda más oscura arriba, gris de la piedra, luz malva fría de amanecer",
+          "nota_simbolica": "El chubasco cumplió lo anunciado y la piedra es la que golpearon contra la abuela. Las dos cosas que el mito deja —una promesa cumplida y una falta de respeto— caben en el mismo suelo." }
+      }
+    },
+
+    "el-indio-pushalna": {
+      "titulo": "El indio Pushaina",
+      "hereda_biblia": ["c04-pushaina", "r09-hija-de-pushaina", "s02-nino-que-entra", "v09-animales-de-pushaina", "w13-gallinazo", "z03-recipientes", "aa01-piichi", "ab04-cementerio"],
+      "eventos": [
+        { "id": "la_caida", "accion": "Andaba en un caballo capón llamado Kasap; cayó sobre el anca, el animal se asustó y lo botó, y murió del golpe.", "required": true },
+        { "id": "la_comida_servida", "accion": "Muerto, pedía comida y ron; se la servían en una sala y se retiraban, y al rato sólo quedaban los huesos pelados y los platos vacíos.", "required": true },
+        { "id": "se_vuelve_gallinazo", "accion": "Un niño que no sabía nada se mete al cuarto y Pushaina vuela como un gallinazo y sale gritando que ese indio tiene la culpa.", "required": true }
+      ],
+      "escenas": {
+        "entrada": { "acto": "entrada", "era": "historico_wayuu", "composicion": "diagonal", "eventos": ["la_caida"],
+          "beat": "El caballo brinca y él ya va por el aire.",
+          "escena": "16:9 a media mañana en la llanura. La acción cruza el encuadre EN DIAGONAL: en el centro y en primer término, el CABALLO CAPÓN corveteando con las patas traseras levantadas y la cabeza baja, de tres cuartos; y desprendido de él, EN EL AIRE y todavía arriba y a la derecha, PUSHAINA en plena caída, con el sombrero saliéndosele y una mano extendida — no ha tocado el suelo, no hay golpe y no hay cuerpo tendido. Al fondo, la llanura con cardones y una ranchería lejana. Nada paralelo a los bordes. El tercio superior izquierdo queda abierto para el título.",
+          "paleta": "pardo del caballo, crema de la camisa y el pantalón, cuero de las botas, ocre de la llanura, cielo claro" },
+        "acto": { "acto": "acto", "era": "historico_wayuu", "composicion": "simetria", "eventos": ["la_comida_servida"],
+          "beat": "Le sirven, se retiran, y al rato sólo quedan los huesos.",
+          "escena": "9:16 vertical a media tarde, dentro de la casa grande — otro lugar y otra luz que la entrada. Composición centrada y casi simétrica, el suelo y los muros rectos. En el CENTRO EXACTO del cuadro, sobre una estera en el suelo de arena, una BATEA DE MADERA con HUESOS PELADOS Y LIMPIOS amontonados, y junto a ella dos platos vacíos y una botella de vidrio oscuro volcada. Alrededor, el cuarto ENTERAMENTE VACÍO: ni una silla, ni un chinchorro ocupado, ni una persona, ni una sombra con forma. Por la puerta del fondo entra una franja de luz de tarde. Sin figura, sin silueta y sin efecto.",
+          "paleta": "madera clara de la batea, blanco hueso, vidrio pardo oscuro, arena del suelo, ocre de los muros, franja de luz de tarde" },
+        "huella": { "acto": "huella", "era": "historico_wayuu", "composicion": "contrapicado", "eventos": ["se_vuelve_gallinazo"],
+          "beat": "Sale volando del cuarto y ya es un gallinazo.",
+          "escena": "1:1. Cámara BAJA desde el patio, mirando hacia arriba; el horizonte cae en el tercio inferior. En el tercio inferior, el vano oscuro de una puerta abierta. Contra el cielo de la tarde y ocupando los dos tercios superiores, UN GALLINAZO NEGRO recién salido, con las alas abiertas hacia arriba y hacia atrás, la cabeza y el cuello desnudos de piel gris, y las puntas de las alas plateadas por debajo. Está bajo todavía, cerca del techo. Ninguna figura humana en cuadro. Emblema legible a tamaño pequeño.",
+          "paleta": "negro mate del gallinazo, gris de la cabeza desnuda, plateado de las puntas alares, cielo de tarde crema, ocre del muro",
+          "nota_simbolica": "«Este indio que viene a verme tiene la culpa de que me vuelva gallinazo». La huella es la transformación misma, vista desde donde la vio el niño: desde abajo." }
+      }
+    },
+
+    "la-sed-da-los-civilizados": {
+      "titulo": "La sed de los forasteros",
+      "hereda_biblia": ["t07-dos-forasteros", "ac01-utta", "ac02-piedras-tendidas", "z06-pago-y-fiesta", "ad01-llanura-cardonal", "y02-trupillo", "ab02-casimba"],
+      "eventos": [
+        { "id": "la_carga", "accion": "Dos arijuna llegan a Utta a vender panela; traen los bloques envueltos en hojas secas y amarrados en cargas, y el dulce huele a caña quemada cada vez que el sol les da de lleno.", "required": true },
+        { "id": "la_sed", "accion": "Buscaron sombra y la sombra era poca; buscaron un jagüey y no lo hubo. Se acostaron en Utta con la carga a un lado y no pudieron seguir.", "required": true },
+        { "id": "las_dos_piedras", "accion": "Allí mismo se volvieron piedra: dos piedras tendidas en el suelo con la figura de un arijuna, en el sitio exacto donde se acostaron.", "required": true }
+      ],
+      "escenas": {
+        "entrada": { "acto": "entrada", "era": "historico_wayuu", "composicion": "figura_pequena", "eventos": ["la_carga"],
+          "beat": "Llegan con la carga a cuestas y todavía van hablando.",
+          "escena": "16:9 a media mañana. El paisaje ocupa casi todo el encuadre: la llanura de arena entre cardones y trupillos, con la trocha entrando desde el borde inferior y perdiéndose al fondo, y el horizonte ya empezando a disolverse en calima. LOS DOS FORASTEROS SON PEQUEÑOS Y DESCENTRADOS, en el tercio inferior izquierdo, caminando de tres cuartos por la trocha: uno con el atado de panela al hombro y el otro cargando el suyo delante con las dos manos, los dos con sombrero de fieltro, botas y ropa de comercio. Todavía van erguidos. La escala de la llanura es el asunto. El tercio derecho queda abierto para el título.",
+          "paleta": "pardos y grises de la tela de comercio, hojas secas ocre de la envoltura, arena clara, gris-verde de los cardones, calima al fondo" },
+        "acto": { "acto": "acto", "era": "historico_wayuu", "composicion": "peso_contrario", "eventos": ["la_sed"],
+          "beat": "Buscan sombra y la sombra es un trozo de nada.",
+          "escena": "9:16 vertical al MEDIODÍA — otra hora y otra distancia que la entrada. En el TERCIO INFERIOR IZQUIERDO, en primer término, LOS DOS HOMBRES apretados bajo un ÚNICO TRUPILLO cuya sombra es una mancha corta que no les cubre ni las piernas; uno sentado con la espalda contra el tronco y la cabeza echada atrás, el otro en cuclillas mirando la carga. Toda la masa visual pesa en el LADO OPUESTO Y ARRIBA: la llanura abierta y vacía, sin un solo jagüey, extendiéndose hasta un horizonte lavado bajo un CIELO ENTERAMENTE BLANCO. Entre la sombra y la llanura, el suelo desnudo. La carga de panela a un lado, sin abrir.",
+          "paleta": "oliva del trupillo, sombra corta azul-violeta, arena que devuelve la luz, CIELO BLANCO lavado, pardos de la ropa" },
+        "huella": { "acto": "huella", "era": "historico_wayuu", "composicion": "cenital", "eventos": ["las_dos_piedras"],
+          "beat": "Quedan dos piedras tendidas donde se acostaron.",
+          "escena": "1:1 CENITAL a plomo sobre la arena, sin cielo, a media tarde. Vistas desde arriba y en paralelo, DOS PIEDRAS ALARGADAS Y TENDIDAS una junto a la otra, de un pardo más claro que el suelo, con el contorno irregular pero ARTICULADO: un ensanchamiento en un extremo y dos prolongaciones en el otro, lo justo para insinuar una figura tendida sin llegar a ser un cuerpo — sin cara, sin manos y sin ropa. A un costado, los restos de la carga: dos atados deshechos con hojas secas sueltas esparcidas. La arena alrededor está lisa. Emblema legible a tamaño pequeño.",
+          "paleta": "pardo claro de las piedras, arena ocre, hojas secas ocre de los atados, sombras cortas de las piedras",
+          "nota_simbolica": "«Ustedes siempre vivirán muertos de sed». La gente de esa tierra resiste tres días sin agua y el arijuna apenas uno: la huella es la diferencia entre saber vivir en un sitio y no saberlo." }
+      }
+    }
+  }
+}

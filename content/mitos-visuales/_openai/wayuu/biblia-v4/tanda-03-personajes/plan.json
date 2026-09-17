@@ -1,0 +1,125 @@
+{
+  "schema": "mitos-colombia/wayuu-biblia-v4/tanda",
+  "batch_id": "wayuu-v4-tanda-03-personajes-ficha",
+  "capa": "1 · personas",
+  "correccion": "Las tandas 01 y 02 construyeron escenas, no fichas. La biblia se abre con personajes de cuerpo entero, frontales, centrados, sobre fondo mate liso crema, sin escenario ni utilería extra — la misma convención que produjo las 151 fichas muiscas. Esta tanda usa buildFicha() de scripts/mitos/art-direction.mjs para que una ficha wayúu sea intercambiable con una muisca.",
+  "contrato": "scripts/mitos/art-direction.mjs · FICHAS.personaje · 9:16",
+  "comunidad": "Wayúu",
+  "region": "Caribe",
+  "refuerzo_paper_cut": "Aplica además la dirección Huitoto del 2026-09-14 aprobada por el editor: exagerar las cualidades que hacen leer el papel recortado — bordes de corte, cantos interiores, pliegues, fibras, solapes y sombra entre capas, también a escala de miniatura.",
+  "canon_sha256": "f05c2561b15a97eb6a79d6fc851abca80115682c0ed23fb797a990be26039a18",
+  "laminas": [
+    {
+      "id": "f01-outsu",
+      "entidad": "outsu",
+      "era": "mitico_wayuu",
+      "descripcion": "Mujer wayúu anciana, la outsü. De pie, cuerpo entero, frontal, peso repartido en los dos pies, brazos junto al cuerpo y la mano derecha sosteniendo la ishira a la altura de la cadera. Manta larga de una pieza hasta el empeine, en papel teñido pardo oscuro, con un pliegue central marcado. Sobre los hombros el capote heredado, en papel de fibra gruesa más claro, cayendo por detrás de los brazos. Corona de lana en la cabeza, banda ancha de tiras de papel de dos colores sobrios. Manilla de tabaco en la muñeca izquierda. Waireñas de suela de cuero con capellada tejida. Cabello gris recogido, resuelto en pocas piezas recortadas. Rostro de anciana, sereno, sin gesto ni dramatismo.",
+      "paleta": "papel pardo oscuro de la manta, fibra clara del capote, lana en dos tonos sobrios, cuero de la waireña, gris del cabello, piel #9A6642",
+      "nota": "El repertorio es el documentado, no el de un chamán genérico. Sin plumas, sin tocado, sin humo."
+    },
+    {
+      "id": "f02-majayulu",
+      "entidad": "majayut",
+      "era": "mitico_wayuu",
+      "descripcion": "Muchacha wayúu de unos trece años, la majayülü recién salida del encierro. De pie, cuerpo entero, frontal, pies juntos, brazos rectos junto al cuerpo. MANTA CORTA HASTA LA RODILLA Y COMPLETAMENTE LISA, sin bordado, sin borde decorado y sin ningún adorno, en papel teñido de un solo color apagado. CABELLO CORTADO A RAS DEL CRÁNEO, muy corto, resuelto en una sola pieza de papel oscura y ajustada. NINGUNA joya: sin collar, sin tumas, sin aretes, sin pulsera. Descalza. Cuerpo delgado por el ayuno, postura recta y contenida. Rostro joven, serio, sin sonrisa.",
+      "paleta": "un solo papel apagado para la manta, papel oscuro del cabello corto, piel #9A6642, fondo crema",
+      "nota": "Austeridad, no pobreza. Es la corrección más importante de esta tanda: en las dos anteriores salió con manta larga y pelo largo, y la fuente documenta lo contrario."
+    },
+    {
+      "id": "f03-kuriruputa",
+      "entidad": "kuriruputa",
+      "era": "historico_wayuu",
+      "descripcion": "Hombre wayúu adulto, rico, el que brillaba como el sol. De pie, cuerpo entero, frontal, pies separados al ancho de los hombros, brazos junto al cuerpo y los pulgares enganchados en la faja. Conjunto completo y legible en capas: camisa de manga larga clara metida por dentro, pantalón claro hasta el tobillo, faja de fiesta ancha en papel teñido con dos franjas sobrias, manta de lujo doblada y sostenida sobre el hombro izquierdo cayendo por la espalda, sombrero de ala en la cabeza, waireñas de suela de cuero. Tres fajones de balas cruzados a la cintura, hechos de tiras de papel. Cabello negro corto. Rostro adulto, sereno.",
+      "paleta": "papel crema de la camisa y el pantalón, faja en dos tonos, manta en papel más oscuro, cuero de las waireñas, piel #9A6642",
+      "nota": "Es la prueba en imagen de que en este corpus tradicional NO significa menos ropa. Que la prenda superior se lea de frente y de perfil y no se funda en una sola pieza inferior."
+    },
+    {
+      "id": "f04-hermana-kuriruputa",
+      "entidad": "hermanas_de_kuriruputa",
+      "era": "historico_wayuu",
+      "descripcion": "Mujer wayúu adulta, hermana de Kuriruputá, la que peleó y ganó. De pie, cuerpo entero, frontal, pies firmes, el rifle bajado en la mano derecha con el cañón hacia el suelo y el brazo izquierdo junto al cuerpo. Manta larga de una pieza hasta el empeine en papel teñido azul apagado, con un solo pliegue central. Pañoleta clara cubriéndole la cabeza y cayendo sobre los hombros. Waireñas con borlas. Cabello largo oscuro por debajo de la pañoleta, en pocas piezas recortadas. Rostro adulto, firme, sin gesto de furia.",
+      "paleta": "azul apagado de la manta, papel claro de la pañoleta, negro del rifle, piel #9A6642, fondo crema",
+      "nota": "Manta AZUL a propósito: el rojo no puede ser el uniforme de todas las mujeres de la biblia."
+    },
+    {
+      "id": "f05-la-hermana",
+      "entidad": "la_hermana",
+      "era": "historico_wayuu",
+      "descripcion": "Mujer wayúu joven adulta, la hermana de Los dos hermanos, la que quedó reinando sola con su casta. De pie, cuerpo entero, frontal, pies separados, el fusil apoyado verticalmente en el suelo bajo la mano derecha, la mano izquierda abierta a media altura mostrando la palma. Manta larga hasta el empeine en papel teñido ROJO de manta, con una franja sobria en el bajo. Collar corto de tumas al cuello, cuentas rojas oscuras en pocas piezas. Waireñas con borlas. Cabello largo negro suelto en dos piezas recortadas. Rostro joven, decidido, sin heroísmo de pose.",
+      "paleta": "rojo de manta #BE3229, tumas rojo oscuro, negro del fusil y del cabello, piel #9A6642",
+      "nota": "Es la única mujer de esta tanda con manta roja, y es deliberado: el rojo es poder y elegancia, no el vestuario por defecto."
+    },
+    {
+      "id": "f06-ulepala",
+      "entidad": "ulepala",
+      "era": "mitico_wayuu",
+      "descripcion": "Hombre wayúu joven, Ulépala. De pie, cuerpo entero, frontal, pies juntos, el arco sostenido verticalmente en la mano izquierda junto al cuerpo y tres flechas en la mano derecha, sostenidas en abanico para que se vean las tres puntas distintas: una de hierro, una terminada en bola de cera y una de clavo. Wayuco corto sostenido por la si'ira, faja tejida, y encima camisa clara de manga larga. Manta de cuerpo entero doblada sobre un hombro. Descalzo. Cabello negro a la altura de la mandíbula. Rostro joven, atento.",
+      "paleta": "papel crema de la camisa, faja en dos tonos sobrios, manta en pardo, madera del arco, piel #9A6642",
+      "nota": "Las tres puntas nombradas por el canon son el mejor dato de cultura material del corpus y tienen que distinguirse a simple vista."
+    },
+    {
+      "id": "f07-jose-juan",
+      "entidad": "jose_juan",
+      "era": "historico_wayuu",
+      "descripcion": "Hombre wayúu joven, José Juan, el hijo del Cóndor. De pie, cuerpo entero, frontal, pies separados, el machete bajado en la mano derecha con el filo hacia el suelo, el brazo izquierdo junto al cuerpo. Camisa clara de manga larga arremangada hasta el codo, pantalón claro, faja estrecha, descalzo. Cabello negro revuelto, más largo de lo corriente. Rostro joven, común y corriente, sin ningún rasgo de ave y sin ninguna deformidad.",
+      "paleta": "papel crema de la camisa y el pantalón, acero del machete, piel #9A6642, fondo crema",
+      "nota": "La cara extraña que menciona el canon NO se dibuja: esa lectura pertenece a la reacción de los otros y se resuelve en las escenas, no en la ficha. Aquí es un hombre corriente."
+    },
+    {
+      "id": "f08-jujia",
+      "entidad": "jujia",
+      "era": "mitico_wayuu",
+      "descripcion": "Mujer wayúu anciana, Jujía, la vieja de la cueva. De pie, cuerpo entero, frontal, encorvada levemente, la mano izquierda subida al costado de la cabeza tapándose el lugar donde falta la oreja derecha, el brazo derecho colgando. Manta larga hasta el empeine en papel teñido pardo muy oscuro, gastada, con un pliegue roto. Cabello blanco largo en pocas piezas recortadas. Descalza. Rostro de anciana, duro, sin caricatura de bruja y sin garras.",
+      "paleta": "pardo muy oscuro de la manta, blanco del cabello, piel #5F3A28 en sombra con rojo en el terminador",
+      "nota": "La falta de la oreja es el rasgo de continuidad de la ficha: tiene que leerse de un vistazo. Su segundo estado —la mujer hermosa— es otra ficha."
+    },
+    {
+      "id": "f09-umarala",
+      "entidad": "umarala",
+      "era": "historico_wayuu",
+      "descripcion": "Hombre wayúu muy anciano, Umaralá. De pie, cuerpo entero, frontal, apoyado levemente, las manos al frente a la altura del pecho torciendo una hebra de maguey entre los dedos. Manta de algodón larga hasta el empeine sobre camisa clara; encima el capote heredado de su tía, de fibra gruesa, sobre los hombros. La ishira colgada de una correa al costado. Sombrero de ala. Descalzo. Cabello blanco a la altura del hombro. Rostro muy anciano, concentrado en las manos, sin mirar al frente.",
+      "paleta": "algodón crudo de la manta, fibra del capote, maguey verde grisáceo, piel #9A6642",
+      "nota": "Los dos objetos heredados —capote e ishira— tienen que estar presentes sin exhibirse."
+    },
+    {
+      "id": "f10-tia-piache",
+      "entidad": "tia_piache",
+      "era": "historico_wayuu",
+      "descripcion": "Mujer wayúu anciana, la tía de Umaralá, piache. De pie, cuerpo entero, frontal, las dos manos al frente sosteniendo la ishira a la altura del pecho, ofreciéndola. Manta larga hasta el empeine en papel teñido gris azulado. Capote de fibra gruesa sobre los hombros. Corona de lana. Cabello gris recogido. Descalza. Rostro de anciana, tranquilo, sin dramatismo.",
+      "paleta": "gris azulado de la manta, fibra del capote, lana de la corona, piel #9A6642",
+      "nota": "Es la misma prenda que hereda Umaralá: capote y corona deben ser reconocibles entre las dos fichas. Ése es el vínculo de continuidad del ciclo."
+    },
+    {
+      "id": "f11-worunka",
+      "entidad": "worunka",
+      "era": "mitico_wayuu",
+      "descripcion": "Mujer wayúu joven, Worunka, encinta y enferma. De pie, cuerpo entero, frontal, la mano derecha bajo el vientre y la izquierda apoyada en una vara larga clavada en el suelo. Manta larga hasta el empeine en papel teñido ocre claro, holgada, con el vientre marcado sólo por la caída de la tela. Descalza. Cabello negro largo suelto, movido hacia un lado. Rostro joven, cansado. Sin desnudez, sin anatomía explícita y sin gesto de dolor exhibido.",
+      "paleta": "ocre claro de la manta, madera de la vara, negro del cabello, piel #9A6642",
+      "nota": "Todo el nudo anatómico del relato queda fuera de la ficha. Aquí sólo hay una mujer embarazada, enferma y de pie."
+    },
+    {
+      "id": "f12-aramai",
+      "entidad": "aramai",
+      "era": "mitico_wayuu",
+      "descripcion": "Hombre wayúu anciano, Arámai. De pie, cuerpo entero, frontal, pies juntos, los brazos cruzados al frente a la altura de la cintura. Wayuco sostenido por la si'ira y encima manta larga de anciano cayendo desde el hombro hasta media pantorrilla, en papel teñido pardo claro. Sombrero de ala en la mano izquierda, bajado junto al cuerpo. Descalzo. Cabello blanco corto. Rostro muy anciano, preocupado, la mirada baja.",
+      "paleta": "pardo claro de la manta, faja en dos tonos, papel del sombrero, blanco del cabello, piel #9A6642",
+      "nota": "La manta larga del anciano es la caracterización que documenta Paz Ipuana para los mayores."
+    },
+    {
+      "id": "f13-kosina-nino",
+      "entidad": "kosina_nino",
+      "era": "historico_wayuu",
+      "descripcion": "Niño wayúu de unos nueve años, el pequeño indio Kosina. De pie, cuerpo entero, frontal, pies juntos, el arco pequeño en la mano izquierda apoyado en el suelo y tres lagartijas colgando de una cuerda en la mano derecha. VESTIDO CON ROPA CORRIENTE Y COMPLETA: camisa clara de manga corta y pantalón corto claro, faja estrecha. Descalzo. Cabello negro corto. Rostro de niño, serio, sin sonrisa y sin ternura de ilustración infantil.",
+      "paleta": "papel crema de la camisa y el pantalón, madera del arco, piel #9A6642, fondo crema",
+      "nota": "Figura infantil vestida y tratada con sobriedad. En la tanda anterior salió casi desnudo y eso no lo autoriza ninguna fuente."
+    },
+    {
+      "id": "f14-manna",
+      "entidad": "manna",
+      "era": "mitico_wayuu",
+      "descripcion": "Mujer wayúu joven, Manna, encinta. De pie, cuerpo entero, frontal, encorvada bajo el peso: carga a la espalda un haz de varas atado con una cuerda que le pasa por el pecho, y las cinco especies del haz se distinguen entre sí por grosor, color y corte — curarire, caujaro, albarico, un carrizo hueco y una tira de corteza de ceibote. La mano derecha sujeta la cuerda al pecho; la izquierda cuelga. Manta larga hasta el empeine en papel teñido ocre rojizo. Descalza. Cabello negro largo movido. EL OJO DERECHO CERRADO, sin herida, sin sangre. Rostro joven, agotado.",
+      "paleta": "ocre rojizo de la manta, cinco papeles distintos para las cinco maderas, negro del cabello, piel #9A6642",
+      "nota": "Las cinco especies del haz son el mejor dato botánico del corpus y tienen que distinguirse a simple vista."
+    }
+  ]
+}

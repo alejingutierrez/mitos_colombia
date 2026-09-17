@@ -1,0 +1,283 @@
+{
+  "schema": "mitos-colombia/wayuu-biblia-v4/tanda",
+  "batch_id": "wayuu-v4-tanda-01-piloto",
+  "tipo": "piloto multicategoria",
+  "autorizacion": {
+    "peticion_usuario": "vamos a hacer la primera tanda",
+    "modelo_pedido": "gpt-image-2.5-sunburst, calidad high, como las otras comunidades",
+    "forma_pedida": "una ficha por personaje, una por escenario, una por animal o criatura",
+    "arte_aprobado": false,
+    "inventario_congelado": false
+  },
+  "canon_sha256": "f05c2561b15a97eb6a79d6fc851abca80115682c0ed23fb797a990be26039a18",
+  "cubre_categorias": ["paisaje", "arquitectura", "lugar", "personaje", "animal", "planta", "objeto", "deidad_fuerza", "criatura", "colectivo", "fenomeno"],
+  "laminas": [
+    {
+      "id": "p01-llanura-cardonal",
+      "entidad": "llanura_cardonal",
+      "categoria": "paisaje",
+      "hora": "mediodia",
+      "formato": "1536x1024",
+      "peticion": "La llanura de arena de la Media Guajira a mediodía, con cardones columnares y trupillos dispersos hasta el horizonte. El suelo no es naranja: es costra parda con grava, y el calor sale de la luz vertical sobre ese pardo, no del color del suelo.",
+      "escena": "Trocha de arena en primer plano con costra agrietada y grava; cardonal en plano medio; horizonte disuelto en calima pálida y cálida.",
+      "que_hace": "Un pastor camina detrás de sus chivos por la trocha, pequeño en el encuadre, entrecerrando los ojos.",
+      "vida": "El rebaño levanta una línea baja de polvo; un segundo pastor a mucha distancia, casi indistinguible en la calima.",
+      "debe_verse": [
+        "sombras diminutas, de un tercio de la altura de cada figura o menos, en charco bajo los pies",
+        "el cardón como Stenocereus griseus: gris-verdoso, columnar, ramificado desde la base, cinco a ocho metros",
+        "el trupillo como la única sombra del paisaje, copa baja y ancha, verde oliva apagado",
+        "fondo lejano pálido cálido, de bajo contraste, nunca azulado",
+        "reverberación del suelo hacia arriba: la cara del pastor recibe luz rebotada desde abajo"
+      ],
+      "prohibido": "duna dorada, saguaro, montaña, cielo azul intenso en todo el cuadro, sombras largas",
+      "evidencia": "«Un hombre camina solo entre cardones y trupillos, con el viento del nordeste en la cara» · «La trocha iba entre cardones y trupillos, sobre una arena que devolvía el calor»"
+    },
+    {
+      "id": "p02-rancheria-enramada",
+      "entidad": "rancheria",
+      "categoria": "arquitectura",
+      "hora": "atardecer",
+      "formato": "1536x1024",
+      "peticion": "Una ranchería wayúu a la hora dorada: cinco casas dispersas de una misma familia materna, nunca un poblado ni una traza urbana. En el centro la enramada, que es la sala. La paleta sale de tres materiales y sólo de tres: palma seca en el techo, madera de yotojoro en la estructura, tierra en muros y piso.",
+      "escena": "Enramada abierta en primer plano con chinchorros colgados; la piichi cerrada detrás, caja casi ciega de una puerta y una ventana; cocina aparte cercada con cactus sembrado; corral al costado; la roza al borde. Nada simétrico.",
+      "que_hace": "Bajo la enramada una mujer teje en telar de horqueta clavado en el suelo; un anciano reclinado en chinchorro conversa con una visita sentada en cuclillas; una niña vuelve del corral contando chivos en voz alta.",
+      "vida": "Humo bajo saliendo de la cocina; el rebaño entrando al corral con su polvo dorado a contraluz; ropa tendida moviéndose con el alisio.",
+      "debe_verse": [
+        "el sol rasante encendiendo el ocre del suelo y volviendo miel el yotojoro, y al mismo tiempo las sombras alargadas al violeta profundo",
+        "el polvo levantado por el rebaño, visible como materia dorada en el aire",
+        "tres rangos de edad distintos y rostros distintos entre sí",
+        "ningún agua en el encuadre: la ranchería se sitúa alta y retirada del jagüey",
+        "un neutro limpio de control: algodón crudo en el telar"
+      ],
+      "prohibido": "poblado con calle, casas alineadas, jagüey o pozo en cuadro, zinc, alambre, mobiliario de silla",
+      "evidencia": "«los chinchorros colgaban apretados bajo las enramadas» · «el viento del nordeste entra por las rendijas de la enramada y mueve lo que quedó colgado de las vigas»"
+    },
+    {
+      "id": "p03-casimba",
+      "entidad": "casimba",
+      "categoria": "lugar",
+      "hora": "manana",
+      "formato": "1536x1024",
+      "peticion": "El lecho seco y agrietado de un jagüey en verano, con gente cavando casimbas en el fondo para sacar agua turbia y salobre. La sequía no es un pozo vacío: es trabajo.",
+      "escena": "Cuenca ancha de arcilla agrietada en placas, con el nivel viejo del agua marcado en el talud; tres hoyos excavados a distinta profundidad; cardones y trupillos en el borde alto.",
+      "que_hace": "Dos mujeres cavan con las manos y con una totuma; una tercera sube el agua turbia en una múcura apoyada en la cadera; un niño sostiene la cuerda de un burro cargado con dos recipientes.",
+      "vida": "Cabras flacas esperando en el borde; huellas cruzadas en la arcilla; un perro echado en la única sombra.",
+      "debe_verse": [
+        "el agua como lámina de papel turbia y ocre, nunca azul ni transparente",
+        "las placas de costra agrietada levantadas en los bordes, con luz rasante revelando el relieve",
+        "sombra azul-violeta ocupando el talud opuesto",
+        "esfuerzo real en la postura: rodillas dobladas, peso cargado, espalda tensa"
+      ],
+      "prohibido": "pozo de brocal, cubeta metálica, bomba, molino, agua limpia, gesto de súplica o mano extendida",
+      "evidencia": "«Buscaron un jagüey y no lo hubo» · «Los jagüeyes se secaban antes de que terminara el verano»"
+    },
+    {
+      "id": "p04-outsu",
+      "entidad": "outsu",
+      "categoria": "personaje",
+      "hora": "noche",
+      "formato": "1024x1536",
+      "peticion": "La outsü —la piache— en plena sesión de canto, de noche, junto al chinchorro del enfermo. Es una mujer mayor con un repertorio documentado: la ishira en la mano, el capote heredado, corona de lana. No es un chamán genérico.",
+      "escena": "Interior en penumbra bajo la enramada; el chinchorro del enfermo en primer plano; el fogón bajo como única fuente cálida, mancha naranja pequeña en un campo azul de noche.",
+      "que_hace": "Canta con los ojos entrecerrados mientras agita la ishira; tiene la boca llena de jugo de tabaco; su otra mano acaba de sobar el cuerpo del enfermo.",
+      "vida": "La familia al fondo, fuera del círculo de luz, reuniendo en silencio lo que el espíritu pidió; una mariposa nocturna blanca cerca del techo.",
+      "debe_verse": [
+        "el calor como punto y no como campo: cuanto más azul el entorno, más caliente se lee el fogón",
+        "el capote sobre los hombros, la ishira legible como maraca de calabazo",
+        "rostro mayor, individual, con la marca del oficio, nunca máscara ni pintura ceremonial inventada",
+        "el chinchorro con sus flecos largos y sus cabuyeras, mucho más grande que el cuerpo"
+      ],
+      "prohibido": "plumas, tocado, humo místico, aura, círculo de velas, símbolos en el suelo, cráneo, hueso, altar",
+      "evidencia": "«Ella llegó al caer la tarde, con su maraca y su tabaco» · «Le pasó las manos por el cuerpo al enfermo, lo sobó, escupió sobre él. Luego empezó a cantar»"
+    },
+    {
+      "id": "p05-majayut",
+      "entidad": "majayut",
+      "categoria": "personaje",
+      "hora": "amanecer",
+      "formato": "1024x1536",
+      "peticion": "La majayut en el momento exacto de salir del encierro, al amanecer. La indumentaria es la documentada y contradice el estereotipo: manta CORTA hasta la rodilla y lisa, sin adornos, el cabello cortado a ras, y ninguna joya.",
+      "escena": "Umbral de la casita del encierro, de espaldas a la penumbra, saliendo hacia la luz del este. Detrás, apenas visible, el chinchorro nuevo templado muy alto, casi al techo.",
+      "que_hace": "Sale entrecerrando los ojos por la luz, la mano apoyada en el marco, el paso todavía inseguro después del ayuno.",
+      "vida": "Una tinaja nueva junto al umbral; la maestra a un lado, de perfil, esperando; el suelo de arena sin barrer todavía.",
+      "debe_verse": [
+        "la luz del amanecer entrando sólo por el este, con todo lo que no la recibe todavía frío y casi malva",
+        "sombras larguísimas, violeta-azules, tendidas de oeste a este",
+        "la manta corta y lisa, el pelo al ras, cero joyería — que se lea austeridad, no pobreza",
+        "el chinchorro alto al fondo como una forma cerrada, sin cuerpo visible dentro"
+      ],
+      "prohibido": "manta larga bordada, collares, tumas, pintura facial ceremonial, sonrisa de postal, cabello largo suelto",
+      "evidencia": "«Cuando el encierro terminó y salió a la luz» · «la guardaron dentro del rancho, como se guarda a las niñas que van a ser majayuras»"
+    },
+    {
+      "id": "p06-chivos",
+      "entidad": "chivos",
+      "categoria": "animal",
+      "hora": "atardecer",
+      "formato": "1536x1024",
+      "peticion": "El rebaño de chivos y cabras volviendo al corral en la hora dorada. Es el animal que puebla el paisaje wayúu: sin él, la lámina no se lee habitada. Rebaño de cuarenta a cincuenta cabezas, con variación real de pelaje, edad y tamaño.",
+      "escena": "Trocha entre cardones que baja hacia el corral de palos; el polvo levantado por el rebaño llenando el aire a contraluz.",
+      "que_hace": "El rebaño avanza en masa, algunos rezagados ramoneando; un chivo negro destacado entre los pardos; una pastora los cuenta en voz alta al pasar la talanquera.",
+      "vida": "Cabritos pegados a las madres; un burro maneado al borde de la trocha; el perro cerrando la cola del rebaño.",
+      "debe_verse": [
+        "el polvo dorado como materia visible en el aire, no como niebla",
+        "pelaje resuelto en papel con fibras finas, con orejas caídas y cuernos de distinto tamaño",
+        "sombras alargadas violetas contra el ocre encendido del suelo",
+        "escala zoológica verificable contra la figura humana"
+      ],
+      "prohibido": "rebaño uniforme y clonado, oveja de lana europea, llama, camello, pasto verde",
+      "evidencia": "«Las cabras raspaban la arena buscando un pasto que no volvía a crecer» · «juntaran todos los chivos de color negro para llevarlos a Patsuo»"
+    },
+    {
+      "id": "p07-venado",
+      "entidad": "venado",
+      "categoria": "animal",
+      "hora": "mediodia",
+      "formato": "1024x1024",
+      "peticion": "El venado de La Guajira como bisagra entre hombre y animal: el corpus lo convierte en persona siete veces. Aquí es el animal, entero y sin hibridar, en el instante de alerta previo a la huida — pero la lámina debe insinuar que alguien mira desde adentro.",
+      "escena": "Claro entre cardones y tunas, con la serranía baja al fondo en calima pálida.",
+      "que_hace": "Está inmóvil con la cabeza vuelta, una pata delantera levantada, las orejas dirigidas en sentidos distintos.",
+      "vida": "Huellas frescas cruzando el primer plano; una flecha clavada en la arena a distancia, sin dueño en cuadro.",
+      "debe_verse": [
+        "morfología de venado americano correcta, cuerpo completo, cuatro extremidades coherentes",
+        "la insinuación de la persona resuelta SÓLO por la mirada y la quietud, nunca por rasgos humanos",
+        "sombra corta de mediodía y color lavado por la luz vertical"
+      ],
+      "prohibido": "híbrido, cara humana, manos, postura bípeda, astas de ciervo europeo, aura, ojos luminosos",
+      "evidencia": "«Aquel venado era un indio» · «atravesó el corazón del muchacho más hermoso y cayó un venado»"
+    },
+    {
+      "id": "p08-cardon",
+      "entidad": "cardon",
+      "categoria": "planta",
+      "hora": "atardecer",
+      "formato": "1024x1024",
+      "peticion": "El cardón guajiro (yosú, Stenocereus griseus) con iguaraya, en dos estados dentro de la misma lámina: una rama sin fruto y otra cargada. Es la despensa del desierto, no un decorado.",
+      "escena": "Un cardón adulto de siete metros ocupando el cuadro de abajo arriba, con el suelo de costra parda a sus pies y el cielo de poniente detrás.",
+      "que_hace": "Las manos de una mujer, entrando por el borde del cuadro, desprenden una iguaraya con una vara larga.",
+      "vida": "Un pájaro pequeño picoteando un fruto abierto en lo alto; frutos caídos y abiertos en el suelo.",
+      "debe_verse": [
+        "color gris-verdoso apagado, NUNCA verde esmeralda: es griseus",
+        "costillas verticales y areolas espinosas resueltas como cortes y fibras de papel",
+        "el rojo saturado de la iguaraya como único pigmento intenso del cuadro",
+        "ramificación desde la base, no tronco único con brazos tipo saguaro"
+      ],
+      "prohibido": "saguaro de western, cactus de dibujo animado, flor grande de opuntia, verde saturado",
+      "evidencia": "«Así se sembraron el cardón, la iguaraya y el sojoo, del que se saca miel» · «comiendo auyamas y frutas de cardón, semeruco y caujaro»"
+    },
+    {
+      "id": "p09-chinchorro",
+      "entidad": "chinchorro",
+      "categoria": "objeto",
+      "hora": "mediodia",
+      "formato": "1024x1024",
+      "peticion": "El chinchorro colgado bajo la enramada, vacío, a escala real. Es el objeto más repetido del corpus y la V3 lo dibujaba a escala de hamaca. Lleva flecos de treinta a cuarenta centímetros y cabuyeras de cincuenta a sesenta: es mucho más grande que un cuerpo.",
+      "escena": "Bajo la enramada, colgado entre dos horcones de yotojoro, con la llanura ardiendo detrás por el vano abierto.",
+      "que_hace": "Cuelga quieto en el centro y se mueve en los flecos, empujado por el alisio que entra por el costado abierto.",
+      "vida": "Una mochila susu colgada de un horcón; el contraluz del mediodía recortando la silueta del tejido.",
+      "debe_verse": [
+        "la TÉCNICA del tejido —urdimbre, densidad, cabuyeras, flecos largos— sin reproducir ningún patrón kanas con nombre",
+        "escala legible contra el horcón y la altura de la enramada",
+        "el interior en sombra azul-violeta contra el exterior lavado de blanco por el sol",
+        "franjas de color sobrias y anchas, propias del algodón y los tintes locales"
+      ],
+      "prohibido": "patrón geométrico identificable como kanas, greca navajo o azteca, colores de acrílico saturado, hamaca de playa, tapiz decorativo",
+      "evidencia": "«Nadie vuelve a colgar allí su chinchorro» · «Le colgaron un chinchorro tan grande que el joven parecía un muñequito de barro adentro»"
+    },
+    {
+      "id": "p10-wanuru",
+      "entidad": "wanuru",
+      "categoria": "deidad_fuerza",
+      "hora": "manana",
+      "formato": "1536x1024",
+      "peticion": "Wanurü representado SÓLO por su efecto. El canon es explícito: no se ve, se oye. Esta lámina es la prueba de que se puede dibujar sin darle cuerpo. Tampoco es un demonio: en las fuentes puede ser incluso el auxiliar bueno de la outsü.",
+      "escena": "Los alrededores de una casa al día siguiente: la mañana clara, todo en su sitio y todo mal.",
+      "que_hace": "Nadie. La lámina se cuenta por tres hechos: una cabra echada a la sombra del trupillo que no va a levantarse, las matas de patilla dobladas aunque el jagüey todavía tiene agua, y un chinchorro ocupado con alguien sudando de fiebre.",
+      "vida": "Una calavera de caballo puesta cerca de la entrada; la puerta de la casa vecina cerrada con palos; el viento moviendo lo que quedó colgado de las vigas.",
+      "debe_verse": [
+        "NINGUNA figura ni presencia sobrenatural, ninguna silueta, ninguna sombra con forma",
+        "los tres efectos legibles a la vez sin que ninguno domine",
+        "luz de mañana limpia y neutra: el horror sale de la normalidad, no de la atmósfera",
+        "la calavera de caballo como objeto real puesto por alguien, blanqueada por el sol"
+      ],
+      "prohibido": "figura encapuchada, ojos en la oscuridad, niebla, aura, serpiente gigante, esqueleto, diablo, cuernos, cualquier iconografía cristiana del mal",
+      "evidencia": "«No se lo veía; se lo oía en la voz de la piache» · «Una cabra se echa a la sombra del trupillo y no vuelve a levantarse. Las matas de patilla se doblan aunque el jagüey todavía tiene agua»"
+    },
+    {
+      "id": "p11-juya",
+      "entidad": "juya",
+      "categoria": "deidad_fuerza",
+      "hora": "mediodia",
+      "formato": "1024x1536",
+      "peticion": "Juyá, la lluvia, retratado exactamente como lo describe el canon —que es la única deidad del corpus con retrato literal, así que no hay margen editorial y no hace falta. Alto, grueso, panzudo, de rostro bellamente feo, con la cabellera blanca cayéndole sobre los hombros como espuma y una vara de bejuco en la mano.",
+      "escena": "Sus dominios: pastizales verdes, manantiales, arboledas y corrales bajo un cielo siempre nublado, donde todo es descomunal. Es la antítesis cromática del resto del corpus.",
+      "que_hace": "Está en las talanqueras de su corral restallando la vara de bejuco contra el suelo, a media risa.",
+      "vida": "Sus vacas lecheras pasando detrás, una muy vieja rezagada; un chinchorro gigantesco colgado al fondo; criadas pequeñas por comparación.",
+      "debe_verse": [
+        "escala descomunal establecida por comparación, nunca por perspectiva forzada",
+        "rostro bellamente feo: rasgos grandes y asimétricos, dignidad y humor, jamás monstruo",
+        "el verde profundo y húmedo permitido SÓLO aquí, bajo cielo nublado, sin luz rasante",
+        "la vara de bejuco como objeto real de arreo, no como cetro"
+      ],
+      "prohibido": "barba de dios cristiano, túnica, rayo en la mano, corona, nubes de tormenta dramáticas, musculatura heroica, aura",
+      "evidencia": "«Juyá era alto, grueso, panzudo, de rostro bellamente feo; la cabellera blanca le caía sobre los hombros como espuma, y en la mano llevaba una vara de bejuco que restallaba contra el suelo»"
+    },
+    {
+      "id": "p12-la-chama",
+      "entidad": "la_chama",
+      "categoria": "criatura",
+      "hora": "atardecer",
+      "formato": "1024x1536",
+      "peticion": "La Chama, cuyo contrato es no repetirse: nadie la ha visto dos veces igual. La lámina muestra sus formas como una secuencia en el mismo camino, de lejos a cerca, y la continuidad se juega en un solo detalle constante — la mano.",
+      "escena": "Un sendero de peñascos de la serranía al atardecer, con la boca de una cueva al fondo y la luz rasante entrando por el costado.",
+      "que_hace": "En el tramo lejano hay una flor junto a una piedra; más acá un objeto tirado en el camino; más cerca una anciana de cabellos larguísimos que se aleja; en primer plano, sólo una mano de mujer apoyada en la roca, la misma mano en las cuatro.",
+      "vida": "Un burro feo amarrado más allá con ollas ennegrecidas cargadas; huellas que cambian de forma a lo largo del sendero.",
+      "debe_verse": [
+        "cuatro estados en un solo plano continuo, sin viñetas ni marcos que los separen",
+        "la mano como la única constante, legible y repetida",
+        "oro rasante en la roca contra sombra violeta profunda en el sendero",
+        "nada sobrenatural en la superficie: la inquietud sale de la repetición, no del efecto"
+      ],
+      "prohibido": "transparencia, doble exposición, aura, ojos brillantes, bruja de cuento, garras, transformación a medias",
+      "evidencia": "«Nadie la había visto dos veces igual... como majayura, como tigre, como una flor o como un objeto tirado en el camino»"
+    },
+    {
+      "id": "p13-kosinas",
+      "entidad": "kosinas",
+      "categoria": "colectivo",
+      "hora": "noche",
+      "formato": "1536x1024",
+      "peticion": "Los kosinas esperando entre los cardones a que se oculte el sol. El canon les da UN solo rasgo material —corona de corteza de cují y flecha— y nada más. No se les inventa una iconografía de enemigo: son hombres esperando, con variación real de edad y de atuendo.",
+      "escena": "Borde de la laguna de Kuitsá en la primera oscuridad, con los cardones recortados contra el último azul y la luna dando luz suficiente para proyectar sombras sobre la arena clara.",
+      "que_hace": "Están quietos, en cuclillas y de pie, mirando hacia el mismo punto fuera de cuadro; uno afloja el arco, otro bebe de una totuma, otro escucha con la cabeza ladeada.",
+      "vida": "Huellas frescas sobre la arena a la luz de la luna; el agua de la laguna como lámina plana y oscura.",
+      "debe_verse": [
+        "la corona de corteza de cují como banda ancha de corteza, NUNCA plumas",
+        "seis o siete hombres con rostros y edades distintas y ropa distinta entre sí",
+        "luz de luna azul-plata suficiente para proyectar sombras sobre la arena",
+        "ninguna fuente cálida en el cuadro, ni fuego ni antorcha"
+      ],
+      "prohibido": "pintura de guerra en franjas, penachos, torsos desnudos uniformes, gesto amenazante de grupo, antorchas, iconografía de horda",
+      "evidencia": "«allí esperaron, quietos entre los cardones, hasta que se ocultó el sol» · «encontró a un indio kusina con flecha y corona de corteza de cují»"
+    },
+    {
+      "id": "p14-presagios",
+      "entidad": "presagios_de_lluvia",
+      "categoria": "fenomeno",
+      "hora": "atardecer",
+      "formato": "1536x1024",
+      "peticion": "Los cuatro presagios de lluvia en un solo plano continuo, que es como se dibuja «adivinar el tiempo» sin dibujar magia: guacharacas cantando, hormigas desplazándose en fila, chivos apareándose en masa y remolinos de arena repetidos.",
+      "escena": "La llanura al final de la tarde con las nubes subiendo por primera vez en meses, y el aire cambiado.",
+      "que_hace": "Un hombre mayor se ha detenido en el camino con la cabeza levantada, oliendo el aire; no señala ni gesticula.",
+      "vida": "Las cabras calladas, que es la señal que el canon nombra; una mujer recogiendo la ropa tendida antes de tiempo.",
+      "debe_verse": [
+        "los cuatro presagios repartidos por el cuadro sin jerarquía, cada uno legible a su escala",
+        "dos o tres remolinos de arena a distintas distancias, todos girando en el mismo sentido",
+        "la fila de hormigas como línea fina y continua en el primer plano bajo",
+        "el oro rasante todavía en el suelo y la primera sombra de nube encima"
+      ],
+      "prohibido": "rayo, tormenta ya desatada, lluvia cayendo, figura en trance, ojos en blanco, símbolos en el aire",
+      "evidencia": "«la altura de las nubes, el olor del aire antes del agua, el modo en que callan las cabras cuando cambia el viento»"
+    }
+  ]
+}

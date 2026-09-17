@@ -19,7 +19,7 @@ está en la producción visual.
 | comunidad | biblia | trípticos | keyframes | guiones+actas | estado |
 |---|---|---|---|---|---|
 | **muiscas** | 304 fichas | 351 piezas, 41 mitos | 1.282 | **41/41** | corpus de guiones cerrado 2026-09-17 |
-| **wayuu** | v3 + inventario | 65 specs, 24 documentados | — | **27/27** | corpus de guiones cerrado 2026-09-16 |
+| **wayuu** | **V4 · 223 fichas** | **81 piezas, 27 mitos · publicados** | — | **27/27** | biblia y trípticos V4 en producción desde 2026-09-17, pendiente de aprobación artística |
 | **nasa-páez** | 110 | 554 | 956 | **26/26** | corpus de guiones cerrado 2026-09-17 |
 | **ette-ennaka** (chimila) | 162 | 303 | 271 | **23/23** | corpus de guiones cerrado 2026-09-16 |
 | **huitoto** (uitoto) | 7 fichas + 124 de investigación | 250 imágenes | — | — | recién abierta |
@@ -41,6 +41,52 @@ Casi todos los guiones son N=18 (36 cuadros, ≈180 s). Las dos excepciones
 declaradas son `veneracion-a-los-soberanos` y `el-trueno`, ambas con N=16: una
 es una sola escena continua, la otra son cuatro relatos breves. Estirarlas a
 dieciocho bloques habría sido rellenar, y el acta de cada una lo razona.
+
+### La biblia wayúu V4 · 2026-09-17
+
+La V3 quedó **huérfana**: estaba congelada contra un snapshot del 2026-07-29 y el
+canon de los 27 mitos se reescribió entero el 2026-09-17. Jaccard medio entre el
+texto viejo y el nuevo: **0,142**. Se perdieron 32 nombres propios y entraron 75;
+**98 de 431 entidades** quedaron sin apoyo léxico.
+
+Denominador nuevo: **373 entidades, 223 fichas producidas** en cinco capas y
+dieciocho tandas, en el orden que fijó el editor —personas, animales, atrezo,
+mundo— con `buildFicha()` de `scripts/mitos/art-direction.mjs` y la API de pago
+de OpenAI (`gpt-image-2.5-sunburst`, `high`).
+
+Doctrina en [`docs/wayuu-biblia-visual-v4.md`](docs/wayuu-biblia-visual-v4.md),
+inventario en `content/mitos-visuales/wayuu.v4.inventario.json`, seis dossiers de
+investigación en
+[`docs/wayuu-investigacion-2026-09-17/`](docs/wayuu-investigacion-2026-09-17/)
+—los primarios no van a git porque el repo es público y tienen derechos: viven
+en `output/references/` y su expediente está en `FUENTES.md`—, y
+el plan de tandas con las correcciones pendientes en
+`content/mitos-visuales/_openai/wayuu/biblia-v4/PLAN-DE-TANDAS.md`.
+
+### Los trípticos wayúu V4, publicados
+
+Los 27 trípticos se rehicieron contra la biblia V4 y **están en producción desde
+el 2026-09-17**: 81 piezas, tres por mito, con recibo por mito en
+`content/mitos-visuales/production/wayuu-2026-09-17/publication-receipts/`. Cada
+recibo trae las URL anteriores: ese bloque es el respaldo para revertir.
+
+Se publicaron con `--preserve-original`, es decir **sin recortar**: los másters
+son 3:2, 2:3 y 1:1, y el recorte a 16:9 del pipeline le cortaba la honda y la
+cabeza a Mareiwa en `creacion-wayuu`, el ala al cóndor y las manos al hombre que
+sale despedido del caballo. La portada ya mide la vertical en vez de imponerle
+una proporción (ver el comentario de `mobileArtHeight` en `MythHero.js`), así
+que preservar el máster es lo que el sitio espera.
+
+**Falta la pasada de correcciones**, y la primera es ética: hay mochilas con
+geometría que se lee como **kanas**, que es justo lo que la prohibición
+documentada por el ICANH no permite imitar. Están publicadas. La lista completa
+está en `PLAN-DE-TANDAS.md`.
+
+**Dos trampas del prompt, ambas medidas y corregidas.** Un prompt de 6.341
+caracteres ahoga la técnica: el piloto salió fotorrealista. Y pedir «cada pluma
+es una pieza recortada» produce miles de plumitas ESCULPIDAS: la regla correcta
+es la contraria —pocas piezas grandes y planas, borde de tijera, sombra nítida—
+y está escrita en `refuerzo-papel-v3.md`.
 
 ### La regla única y el acta
 

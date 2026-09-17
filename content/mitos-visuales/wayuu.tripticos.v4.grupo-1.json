@@ -1,0 +1,634 @@
+{
+  "schema": "mitos-colombia/wayuu-tripticos-v4/grupo",
+  "grupo": "1 · origen y ley",
+  "status": "propuesto",
+  "comunidad": "Wayúu",
+  "region": "Caribe",
+  "orden": "cosmogónico, no alfabético: el elenco visual nace en el orden en que la mitología lo introduce, así cada mito hereda las fichas del anterior.",
+  "biblia": "content/mitos-visuales/_openai/wayuu/biblia-v4/ · 223 fichas · V4",
+  "snapshots": "content/mitos-visuales/production/wayuu-2026-09-17/narratives/",
+  "motivo": "Los 27 trípticos anteriores están atados a snapshots del 2026-09-05. El canon se reescribió el 2026-09-17 y validateNarrativePlan() rechaza los 27 con «el relato objetivo cambió». Se rehacen contra el canon vigente y contra la biblia V4.",
+  "refuerzo": "refuerzo-papel-v3.md · pocas piezas grandes y planas, borde de tijera, sombra nítida, color plano dentro de cada pieza",
+  "deslinde": "Dos mitos de la misma comunidad pueden compartir personaje, jamás una escena. Ninguna de las 27 entradas repite lugar, hora y acción con otra.",
+  "mitos": {
+    "creacion-wayuu": {
+      "titulo": "Creación Wayuu",
+      "hereda_biblia": [
+        "m02-mareiwa",
+        "y06-honda",
+        "ab11-tsitsi",
+        "ab12-kasuto",
+        "ab13-arachi",
+        "s13-primeros-wayuu",
+        "w08-wampiray",
+        "w09-urui",
+        "t05-pares-de-animales",
+        "y01-cardon"
+      ],
+      "eventos": [
+        {
+          "id": "disparo_honda",
+          "accion": "Mareiwa sube a la cima del Tsitsi, hace girar la piedra en la honda y la suelta; cae en Kasuto y el mar se aparta.",
+          "required": true
+        },
+        {
+          "id": "aves_siembran",
+          "accion": "Manda bandadas de wampiray y urui, que comen morva y siembran la Guajira con su estiércol.",
+          "required": false,
+          "descartado_con_razon": "Las tres escenas del tríptico son el disparo, la salida de la cueva y el reparto. La siembra por las aves queda cubierta por las fichas de biblia w08-wampiray y w09-urui y por la hoja z08 de frutos del monte; meterla como cuarta escena obligaría a repetir acto o a quitar el reparto, que es el nudo del mito."
+        },
+        {
+          "id": "salida_de_la_cueva",
+          "accion": "En una cueva honda dice «hágase el indio» y salen uno tras otro, con los ojos entrecerrados por el sol y sin nombre.",
+          "required": true
+        },
+        {
+          "id": "reparto_de_castas",
+          "accion": "Nombra dieciocho castas, reparte a cada una un par de animales y un pedazo de tierra, y pinta los hierros en la roca de Arachí.",
+          "required": true
+        }
+      ],
+      "escenas": {
+        "entrada": {
+          "acto": "entrada",
+          "era": "mitico_wayuu",
+          "composicion": "contrapicado",
+          "eventos": [
+            "disparo_honda"
+          ],
+          "beat": "Mareiwa, arriba del todo, suelta la piedra y el mar empieza a irse.",
+          "escena": "Cámara BAJA en la cima del Tsitsi, mirando hacia arriba: Mareiwa se recorta contra el cielo en el tercio superior derecho, con el brazo ya extendido y la honda vacía todavía girando, el cuerpo en el gesto que sigue al disparo. El horizonte cae en el tercio inferior y detrás de él, muy abajo, se ve el MAR RETIRÁNDOSE: una lámina verde-acero que deja al descubierto una franja de suelo salitroso y pálido, con charcos que ya brillan blancos. La piedra va pequeñísima en el aire, hacia la izquierda, a media altura. Roca de la cima en primer plano, de aristas planas. Luz de mañana clara, sombras azul-violeta. El tercio izquierdo queda abierto y limpio para el título.",
+          "paleta": "pardo gris de la roca, verde-acero del mar, blanco de sal en la franja descubierta, crema del cielo, sombra azul-violeta"
+        },
+        "acto": {
+          "acto": "acto",
+          "era": "mitico_wayuu",
+          "composicion": "umbral",
+          "eventos": [
+            "salida_de_la_cueva"
+          ],
+          "beat": "Salen de la cueva a la luz, entrecerrando los ojos, todavía sin nombre.",
+          "escena": "9:16 vertical. En el BORDE INFERIOR del encuadre, la boca oscura de la cueva; de ella emergen cinco figuras en fila, la primera ya entera fuera y la última con medio cuerpo todavía dentro de la sombra. TODAS LLEVAN LA MANO A MEDIA ALTURA HACIENDO SOMBRA SOBRE LA CARA y los ojos entrecerrados. Ropa sencilla de papel crudo sin teñir, sin una sola marca ni joya. Por encima de ellos, ocupando los dos tercios superiores del cuadro, el cielo de la mañana y una luz vertical y dura que cae sobre la arena clara. Nadie mira a la cámara. Otra hora y otro lugar que la entrada: allí era mañana en lo alto, aquí es luz cenital al ras del suelo.",
+          "paleta": "negro plano de la boca de la cueva, papeles crudos de la ropa, arena clara deslumbrante, cielo pálido"
+        },
+        "huella": {
+          "acto": "huella",
+          "era": "mitico_wayuu",
+          "composicion": "cenital",
+          "eventos": [
+            "reparto_de_castas"
+          ],
+          "beat": "Lo que queda: la roca donde se pintaron los hierros, y el hierro no se ve.",
+          "escena": "1:1 cenital a plomo sobre una gran piedra plana de Arachí, vista desde arriba y sin cielo. La cara de la piedra ocupa casi todo el cuadro, parda y con la textura del corte del papel. SOBRE ELLA NO HAY NINGUNA MARCA, NINGUNA LÍNEA Y NINGÚN SIGNO: la superficie está enteramente vacía. Alrededor de la piedra, en el borde del cuadro, se ve la arena y las huellas de muchos animales distintos que pasaron: pezuñas de cabra, cascos de caballo, pisadas de burro, todas hacia afuera y en direcciones distintas. Emblema legible a tamaño pequeño.",
+          "paleta": "pardo de la piedra, arena clara, huellas en sombra más oscura",
+          "nota_simbolica": "La huella del mito es el reparto, y el reparto se lee en las huellas que salen en todas las direcciones. La cara de la piedra va VACÍA: los diseños de los hierros están excluidos de la biblia."
+        }
+      }
+    },
+    "serranias-de-la-guajira": {
+      "titulo": "Serranías de La Guajira",
+      "hereda_biblia": [
+        "s14-caminantes",
+        "q01-itojoro",
+        "q03-epits",
+        "q04-wososopo",
+        "t06-monkis",
+        "ad02-serrania-baja",
+        "ad01-llanura-cardonal",
+        "y04-waireñas"
+      ],
+      "eventos": [
+        {
+          "id": "salida_sierra",
+          "accion": "Salen de Uchi Juroteka, en la Sierra Nevada, a correr tierras y conocer gentes.",
+          "required": true
+        },
+        {
+          "id": "caen_uno_a_uno",
+          "accion": "Se van quedando por el camino: los pies pelados, la sed, el hambre, el sueño. Cada uno da su nombre al sitio.",
+          "required": true
+        },
+        {
+          "id": "vueltos_cerros",
+          "accion": "Mareiwa los convierte en cerros y los montes llevan desde entonces sus nombres.",
+          "required": true
+        }
+      ],
+      "escenas": {
+        "entrada": {
+          "acto": "entrada",
+          "era": "mitico_wayuu",
+          "composicion": "diagonal",
+          "eventos": [
+            "salida_sierra"
+          ],
+          "beat": "Bajan de la Sierra enteros, con ánimo, hacia unos arenales que no se acaban.",
+          "escena": "16:9. Una fila de SIETE hombres cruza el encuadre EN DIAGONAL desde la esquina superior izquierda hacia la inferior derecha, bajando por un camino de tierra. Detrás y arriba, las laderas verdes y húmedas de la Sierra Nevada con niebla entre los pliegues; delante y abajo, el terreno se vuelve pálido y seco y empiezan los primeros cardones. Ninguno está de espaldas: van de tres cuartos, en marcha, conversando. El primero lleva el brazo levantado llamando a los de atrás. Cinco prendas superiores distintas entre ellos: franela, camisa a rayas, camisa oscura, saco, manta de cuerpo entero. TODOS CON LOS PIES SANOS. Uno lleva un par de sandalias puestas. Nada paralelo a los bordes. El tercio superior derecho queda abierto para el título.",
+          "paleta": "verdes húmedos de la sierra al fondo, pálido cálido de la llanura al frente, cinco papeles distintos en las prendas, ocre del camino"
+        },
+        "acto": {
+          "acto": "acto",
+          "era": "mitico_wayuu",
+          "composicion": "peso_contrario",
+          "eventos": [
+            "caen_uno_a_uno"
+          ],
+          "beat": "Wososopo ya no puede. Los otros siguen y él los mira irse.",
+          "escena": "9:16 vertical, a media tarde y en plena llanura de arena — otro lugar y otra luz que la entrada. En el TERCIO INFERIOR IZQUIERDO, en primer término, un hombre de pie pero vencido, con la manta de viaje azul apagada, sosteniendo una TOTUMA VOLCADA Y VACÍA en la mano; mira hacia arriba y a la derecha. Toda la masa visual del cuadro pesa en el LADO OPUESTO: la fila de los otros seis alejándose pequeña hacia el tercio superior derecho, y detrás de ellos la llanura abierta con cardones hasta el horizonte. Entre los dos lados, arena vacía. Sombras largas y violetas. El vacío entre él y ellos es el asunto.",
+          "paleta": "azul apagado de la manta, ocre encendido de la arena por la luz rasante, sombra violeta larga, gris-verde de los cardones al fondo"
+        },
+        "huella": {
+          "acto": "huella",
+          "era": "mitico_wayuu",
+          "composicion": "simetria",
+          "eventos": [
+            "vueltos_cerros"
+          ],
+          "beat": "Quedan los cerros, y cada uno tiene el nombre del que se quedó.",
+          "escena": "1:1. Horizonte recto en la mitad exacta del cuadro. Sobre él, SIETE CERROS BAJOS de perfiles distintos, alineados a lo ancho y separados entre sí, cada uno con su forma propia: uno ancho y romo, uno picudo, uno alargado, uno doble, uno pequeño y redondo, y dos juntos al borde del mar en el extremo derecho. Delante, la llanura lisa y vacía. Ningún cerro es igual a otro y ninguno tiene rasgos humanos. Luz plana de mediodía, sin dramatismo. Emblema legible a tamaño pequeño.",
+          "paleta": "pardos de los cerros en siete valores distintos, pálido de la llanura, cielo blanco lavado",
+          "nota_simbolica": "Siete perfiles distintos y ninguno con cara: el mito es que el territorio conserva los nombres de los que no llegaron. La simetría de altar se usa aquí porque es una entrega, no una comodidad."
+        }
+      }
+    },
+    "maleiwa": {
+      "titulo": "Mareiwa",
+      "advertencia": "El canon vigente de este slug es el CICLO DEL JAGUAR, no una cosmogonía. Deslinde obligatorio con creacion-wayuu: no comparten ni una escena ni un personaje.",
+      "hereda_biblia": [
+        "m04-kulirapata",
+        "m14-maleiwa-muchacho",
+        "r01-madre-de-jaguar",
+        "w07-paloma-vieja",
+        "v06-fulera",
+        "v05-cachicamo",
+        "aa07-jorolamatu",
+        "z09-maderas"
+      ],
+      "eventos": [
+        {
+          "id": "tres_del_algodon",
+          "accion": "De los residuos que Jaguar escupió nacen tres muchachos; la vieja los recoge, los pone en algodón y les da de comer.",
+          "required": true
+        },
+        {
+          "id": "paloma_revela",
+          "accion": "La Paloma Vieja los delata: «residuos de comida, escapados de la muerte, aquellos cuya madre fue comida por Jaguar».",
+          "required": false,
+          "descartado_con_razon": "La revelación de la Paloma Vieja está cubierta por su propia ficha de biblia w07, que la muestra en sus dos estados —escondida en la huerta y con las pestañas quemadas—. El tríptico elige nacimiento, suplantación y huella; la delación es el engranaje entre las dos primeras y no una escena propia."
+        },
+        {
+          "id": "suplantacion",
+          "accion": "Maleiwa toma los rasgos de la vieja —el pelo blanco, el algodón hilado en la pierna— y sirve la comida a Jaguar.",
+          "required": true
+        },
+        {
+          "id": "palo_brasil",
+          "accion": "Jaguar, muerto de sed, desgarra la corteza del palo brasil y desde entonces tiene estrías profundas.",
+          "required": true
+        }
+      ],
+      "escenas": {
+        "entrada": {
+          "acto": "entrada",
+          "era": "mitico_wayuu",
+          "composicion": "primer_plano",
+          "eventos": [
+            "tres_del_algodon"
+          ],
+          "beat": "En el algodón lloran tres cosas diminutas, y la vieja las está alimentando.",
+          "escena": "16:9. PRIMER PLANO DOMINANTE: ocupando los dos tercios izquierdos del cuadro y muy nítido, un nido de ALGODÓN CRUDO abierto sobre el suelo de tierra, y dentro de él TRES FIGURAS DIMINUTAS de recién nacidos, apenas tres formas de papel claro, una con la boca abierta. Al fondo y desenfocada, pequeña, la MADRE DE JAGUAR en cuclillas, anciana de pelo blanco, alargando una mano hacia el nido. Detrás de ella, el interior en penumbra de Jorolamatu con la puerta abierta al fondo. El objeto del hilo narrativo es el algodón. El tercio derecho queda abierto para el título. Luz lateral de mañana entrando por la puerta.",
+          "paleta": "blanco del algodón, piel #9A6642 de las figuras diminutas, pardo de la tierra, ocre en penumbra de los muros, franja de luz en la puerta"
+        },
+        "acto": {
+          "acto": "acto",
+          "era": "mitico_wayuu",
+          "composicion": "enfrentados",
+          "eventos": [
+            "suplantacion"
+          ],
+          "beat": "Jaguar come frente a la vieja, y la vieja es Maleiwa.",
+          "escena": "9:16 vertical, de noche junto al fogón — otro lugar y otra luz que la entrada. DOS FIGURAS a un lado y otro del cuadro, ninguna centrada, mirándose. A la IZQUIERDA, sentado, JAGUAR: jaguar americano de cuerpo bajo y macizo, rosetas con punto interior, con un cuenco delante y la cabeza baja comiendo. A la DERECHA, de pie, la figura de la VIEJA: manta mostaza, pelo blanco largo, el huso con algodón hilado contra el muslo — pero es Maleiwa dentro de ella, y eso se lee sólo en que los PIES que asoman bajo la manta son los de un muchacho, no los de una anciana. Entre los dos, el fogón bajo: la única pieza de papel cálido en un campo azul de noche. El vacío entre ellos es el centro real del cuadro.",
+          "paleta": "ocre y negro del jaguar, mostaza de la manta, blanco del pelo y del algodón, naranja contenido del fogón, azul de noche en todo lo demás"
+        },
+        "huella": {
+          "acto": "huella",
+          "era": "mitico_wayuu",
+          "composicion": "primer_plano",
+          "eventos": [
+            "palo_brasil"
+          ],
+          "beat": "Lo que queda es un árbol marcado por una sed que no se sació.",
+          "escena": "1:1. Un tramo de tronco de PALO BRASIL ocupando casi todo el cuadro, visto de frente y muy cerca, vertical. La corteza está DESGARRADA EN ESTRÍAS PROFUNDAS Y PARALELAS que bajan a lo largo del tronco, con los bordes levantados, y por las hendiduras asoma la MADERA ROJA del interior. No hay animal, no hay sangre y no hay figura: sólo el árbol y las marcas. Al pie, unas pocas virutas de corteza caídas sobre la arena. Luz rasante que entra por la izquierda y marca el relieve de cada estría. Emblema legible a tamaño pequeño.",
+          "paleta": "pardo estriado de la corteza, rojo intenso de la madera interior, arena clara al pie, sombra violeta en las hendiduras",
+          "nota_simbolica": "El mito deja una marca en un árbol: la sed que Fulera y Cachicamo le negaron quedó escrita en la corteza. Sin jaguar en cuadro, porque lo que permanece no es él."
+        }
+      }
+    },
+    "el-origen-del-fuego": {
+      "titulo": "El origen del fuego",
+      "hereda_biblia": [
+        "p01-junuunay",
+        "q08-kenaa",
+        "q09-serumaa",
+        "v10-jimut",
+        "ab07-gruta-del-fuego",
+        "y05-varitas-taladro",
+        "t01-humanidad-sin-fuego",
+        "aa06-vivienda-precaria"
+      ],
+      "eventos": [
+        {
+          "id": "robo_de_la_brasa",
+          "accion": "Junuunay finge frío junto a la fogata de Maleiwa y, cuando éste vuelve la cara, mete dos brasas en un morralito.",
+          "required": true
+        },
+        {
+          "id": "cadena_de_manos",
+          "accion": "Pasa una brasa a Kenáa y otra a Jimut, que la esconde dentro de un palo de caujaro y la reparte por todos los palos.",
+          "required": true
+        },
+        {
+          "id": "taladro_de_varitas",
+          "accion": "Los hombres ven a Jimut perforando un palo, taladran y frotan dos varitas de caujaro y brota el fuego.",
+          "required": true
+        }
+      ],
+      "escenas": {
+        "entrada": {
+          "acto": "entrada",
+          "era": "mitico_wayuu",
+          "composicion": "peso_contrario",
+          "eventos": [
+            "robo_de_la_brasa"
+          ],
+          "beat": "Junuunay tiembla junto a la fogata y Maleiwa vuelve la cara hacia el ruido.",
+          "escena": "16:9, de noche a la boca de la gruta. En el TERCIO IZQUIERDO, en primer término, JUNUUNAY en cuclillas junto a una fogata baja, los hombros encogidos y las manos extendidas hacia las llamas, con la otra mano ya metida bajo el brazo donde lleva el morralito; la fogata le da la ÚNICA LUZ DISTINTA del cuadro. Toda la masa visual pesa en el LADO OPUESTO: a la derecha, de pie y más grande, MALEIWA con la cabeza VUELTA HACIA ATRÁS Y HACIA LA DERECHA, mirando hacia la maleza fuera de cuadro de donde vino el ruido. Detrás de los dos, la pared de roca de la gruta. Todo lo que no toca el fuego está en azul de noche. Un tercio superior abierto para el título.",
+          "paleta": "naranja contenido del fuego sobre las dos figuras, azul de noche en la roca y el aire, pardo de las ropas"
+        },
+        "acto": {
+          "acto": "acto",
+          "era": "mitico_wayuu",
+          "composicion": "diagonal",
+          "eventos": [
+            "cadena_de_manos"
+          ],
+          "beat": "La brasa va de mano en mano y termina dentro de un palo.",
+          "escena": "9:16 vertical, al amanecer entre los palos del monte — otro lugar y otra luz que la entrada. La acción cruza el cuadro EN DIAGONAL de la esquina inferior izquierda a la superior derecha, en tres momentos escalonados en profundidad: abajo y cerca, las manos de JUNUUNAY entregando una brasa; en el medio, KENÁA alejándose con las dos manos ahuecadas; arriba y más lejos, JIMUT el cigarrón, muy ampliado y agarrado en vertical a un palo de caujaro, con la cabeza hundida en un agujero recién hecho y virutas saltando. Ninguna figura de espaldas. Luz fría y malva del amanecer, con un solo punto cálido en cada brasa.",
+          "paleta": "malva frío del amanecer, pardo de los troncos, tres puntos naranjas de brasa, verde grisáceo del monte"
+        },
+        "huella": {
+          "acto": "huella",
+          "era": "mitico_wayuu",
+          "composicion": "cenital",
+          "eventos": [
+            "taladro_de_varitas"
+          ],
+          "beat": "Lo que queda no es la brasa robada sino saber hacerla.",
+          "escena": "1:1 cenital a plomo, sin cielo. Sobre la tierra, vistas desde arriba, las DOS VARITAS DE CAUJARO del taladro: la tablilla horizontal con el hueco ennegrecido y la muesca en V, y la varita vertical apoyada en el hueco, sostenida por DOS PARES DE MANOS distintas que entran desde dos bordes opuestos del cuadro — sólo las manos, sin cuerpos ni caras. Al pie de la muesca, un montoncito de virutas oscuras y UNA SOLA CHISPA. Nada más. Emblema legible a tamaño pequeño.",
+          "paleta": "madera clara de las varitas, negro del hueco, pardo oscuro de las virutas, un punto naranja de la chispa, tierra parda",
+          "nota_simbolica": "El fuego no se hereda: se aprende. Las manos son de dos personas distintas porque el taladro necesita más de una, y esa es la diferencia entre el robo y el oficio."
+        }
+      }
+    },
+    "la-india-worunka": {
+      "titulo": "La India Worunka",
+      "hereda_biblia": [
+        "c11-worunka",
+        "m02-mareiwa",
+        "ac03-piedra-de-worunka",
+        "w02-sangre-toro",
+        "w03-carpintero",
+        "w04-guacamayo",
+        "ab03-arroyo-seco",
+        "z12-del-camino"
+      ],
+      "eventos": [
+        {
+          "id": "bajada_al_arroyo",
+          "accion": "Worunka baja de la Sierra de Macuira al arroyo del valle, encinta y enferma, a bañarse.",
+          "required": true
+        },
+        {
+          "id": "piedra_lanzada",
+          "accion": "Mareiwa toma una piedra y la lanza; rompe los dientes y dice «por aquí nacerán los hijos».",
+          "required": true
+        },
+        {
+          "id": "aves_rojas",
+          "accion": "Mete al Sangre Toro en la piedra y queda rojo; el Carpintero mete el copete y el Guacamayo también. Todos los pájaros con rojo tocaron esa piedra.",
+          "required": true
+        }
+      ],
+      "escenas": {
+        "entrada": {
+          "acto": "entrada",
+          "era": "mitico_wayuu",
+          "composicion": "figura_pequena",
+          "eventos": [
+            "bajada_al_arroyo"
+          ],
+          "beat": "Baja de la sierra al arroyo, pesada, apoyándose en una vara.",
+          "escena": "16:9. El paisaje ocupa casi todo el encuadre: el valle entre dos cerros bajos, con el arroyo corriendo por el fondo y las laderas de vegetación seca subiendo a los lados; arriba y atrás, la niebla de la Macuira colgada en el pliegue. WORUNKA es PEQUEÑA Y DESCENTRADA, en el tercio inferior izquierdo, bajando la última pendiente: manta ocre claro, una mano bajo el vientre y la otra en una vara larga, el cuerpo inclinado. Se la encuentra al mirar, no salta a la vista. La escala del valle es el asunto. Luz de media mañana. El tercio derecho, con el arroyo, queda abierto para el título.",
+          "paleta": "ocre claro de la manta, verdes secos de las laderas, gris de la niebla arriba, agua clara del arroyo, grava del cauce"
+        },
+        "acto": {
+          "acto": "acto",
+          "era": "mitico_wayuu",
+          "composicion": "contrapicado",
+          "eventos": [
+            "piedra_lanzada"
+          ],
+          "beat": "La piedra ya va en el aire y ella todavía no lo sabe.",
+          "escena": "9:16 vertical, al borde del agua y a media tarde — otra distancia y otra hora que la entrada. Cámara BAJA desde el cauce, mirando hacia arriba. En el tercio inferior, el agua somera y la grava. En el tercio medio y de espaldas al cerro, WORUNKA de pie en el agua hasta los tobillos, vista de tres cuartos y vestida, con la cabeza vuelta hacia arriba. Contra el cielo, en el tercio superior, MAREIWA de pie en lo alto del talud, recortado a contraluz, con el brazo todavía extendido después del lanzamiento. Entre los dos, en el aire, UNA PIEDRA PEQUEÑA a media trayectoria. Sin desnudez y sin anatomía explícita. El horizonte cae en el tercio inferior.",
+          "paleta": "contraluz pardo oscuro de la figura de arriba, ocre del talud, agua clara, cielo de tarde crema y rosa"
+        },
+        "huella": {
+          "acto": "huella",
+          "era": "mitico_wayuu",
+          "composicion": "primer_plano",
+          "eventos": [
+            "aves_rojas"
+          ],
+          "beat": "Lo que queda es una piedra en el arroyo y todos los pájaros rojos del mundo.",
+          "escena": "1:1. PRIMER PLANO DOMINANTE de una piedra clara y redondeada en el lecho del arroyo, mojada, ocupando la mitad inferior del cuadro y sin ninguna forma reconocible. POSADOS SOBRE ELLA Y ALREDEDOR, siete aves de plumaje rojo de tamaños distintos: un cardenal de copete, un pájaro enteramente rojo, un carpintero con sólo el copete rojo, un guacamayo grande de cola larga y tres pequeños. El rojo saturado de las aves es el único color intenso del cuadro; todo lo demás son grises y ocres del agua y la grava. Emblema legible a tamaño pequeño.",
+          "paleta": "gris claro de la piedra mojada, grava parda, agua clara, ROJO #BE3229 saturado repetido en siete aves",
+          "nota_simbolica": "El canon describe la forma de la piedra con precisión anatómica; la ficha la deja sin forma reconocible y pone el peso en los pájaros. El mito se cuenta por lo que quedó rojo."
+        }
+      }
+    },
+    "los-mellizos-transformadores": {
+      "titulo": "Los mellizos transformadores",
+      "hereda_biblia": [
+        "c14-manna",
+        "m03-simirriuu",
+        "m05-kalamantuunay",
+        "m06-hombres-tigres",
+        "m12-tumajule",
+        "m13-peeliyuu",
+        "y08-haz-de-varas",
+        "ae12-verdor",
+        "ae13-flechar-la-luna",
+        "ac15-palaa-puloina"
+      ],
+      "eventos": [
+        {
+          "id": "yonna_de_juya",
+          "accion": "En la fiesta en honor de Juyá, danzando entre polvaredas, Simirriuu tropieza con el seno de Manna y ella queda encinta.",
+          "required": true
+        },
+        {
+          "id": "huida_con_el_haz",
+          "accion": "Manna huye siete lunas cargando el haz de varas que los hijos le piden desde el vientre, y se puya el ojo con la caña brava.",
+          "required": true
+        },
+        {
+          "id": "arcos_quebrados",
+          "accion": "Los tigres son retados a flechar el disco de la luna; los niños les falsean las puntas y a cada uno se le quiebra el arco.",
+          "required": true
+        }
+      ],
+      "escenas": {
+        "entrada": {
+          "acto": "entrada",
+          "era": "mitico_wayuu",
+          "composicion": "enfrentados",
+          "eventos": [
+            "yonna_de_juya"
+          ],
+          "beat": "En la polvareda del baile, el viejo tropieza con ella y todo empieza.",
+          "escena": "16:9 al atardecer, en el pioi de la fiesta. DOS FIGURAS a un lado y otro del cuadro, ninguna centrada. A la DERECHA, MANNA avanzando con la manta abierta con las dos manos; a la IZQUIERDA, SIMIRRIUU retrocediendo con los brazos en alto, viejo, de cuerpo pesado y manta gris plomiza. Entre los dos, el vacío del círculo y una POLVAREDA DORADA levantada por los pies descalzos, que es lo que ocupa el centro real del cuadro. Alrededor del pioi, de pie y en cuclillas, ocho personas de edades distintas mirando; fuera del círculo, a un costado, el tamborero con la kasha terciada al hombro. Luz rasante que hace visible el polvo. El tercio superior queda abierto para el título.",
+          "paleta": "oro rasante en el polvo, rojo de la manta de Manna, gris plomizo de la de Simirriuu, arena clara del pioi, sombra violeta larga"
+        },
+        "acto": {
+          "acto": "acto",
+          "era": "mitico_wayuu",
+          "composicion": "figura_pequena",
+          "eventos": [
+            "huida_con_el_haz"
+          ],
+          "beat": "Camina encorvada bajo el haz por un desierto que sus hijos acaban de borrar.",
+          "escena": "9:16 vertical al mediodía, en pleno desierto de tolvaneras — otro lugar y otra luz que la entrada. El paisaje ocupa casi todo el encuadre: llanura ocre pelada, sin una brizna verde, con TRES REMOLINOS DE ARENA de distinto tamaño girando en el mismo sentido a distintas distancias. MANNA es PEQUEÑA Y DESCENTRADA, en el tercio inferior derecho, avanzando encorvada bajo el haz de cinco varas atado que le cruza la espalda, con el ojo derecho cerrado. La escala del desierto es el asunto. Sombras diminutas de mediodía, cielo lavado y blanco.",
+          "paleta": "ocre pelado de la llanura, polvo claro de los remolinos, ocre rojizo de la manta, cinco papeles distintos en el haz, cielo blanco"
+        },
+        "huella": {
+          "acto": "huella",
+          "era": "mitico_wayuu",
+          "composicion": "cenital",
+          "eventos": [
+            "arcos_quebrados"
+          ],
+          "beat": "Quedan los arcos rotos y las puntas dobladas en la arena, bajo la luna.",
+          "escena": "1:1 cenital a plomo sobre la arena, sin cielo, con LUZ DE LUNA azul-plata. Vistos desde arriba, CUATRO ARCOS tirados en el suelo, tres de ellos QUEBRADOS POR LA MITAD con las cuerdas sueltas y enredadas, y entre ellos varias flechas dispersas con las PUNTAS DOBLADAS Y FALSEADAS. La arena está pisoteada alrededor. No hay figuras, no hay tigres y no hay luna en cuadro: sólo su luz. Emblema legible a tamaño pequeño.",
+          "paleta": "azul-plata de la arena bajo la luna, madera parda de los arcos, oscuro de las puntas falseadas, sombras azules duras",
+          "nota_simbolica": "Los dos niños ganan sin tocar a nadie: sabotean de noche y dejan que la soberbia haga el resto. Lo que queda es el arma del fuerte, rota por su propia mano."
+        }
+      }
+    },
+    "waleker-el-origen-del-tejido": {
+      "titulo": "Waleker, el origen del tejido",
+      "hereda_biblia": [
+        "p09-irunuu",
+        "m08-waleker",
+        "s09-wokoloonat",
+        "s11-tejedoras",
+        "y09-tejidos-de-waleker",
+        "x06-telar",
+        "t11-servidores-de-wanuru",
+        "v13-hormigas",
+        "z05-cordeleria"
+      ],
+      "eventos": [
+        {
+          "id": "nina_entre_hormigas",
+          "accion": "Irunúu encuentra a una niña abandonada que juega entre las hormigas, la levanta y la llama Wokoloonat.",
+          "required": true
+        },
+        {
+          "id": "tejer_de_noche",
+          "accion": "De noche se convierte en Waleker y de su boca salen hilos de colores con los que teje hasta el amanecer.",
+          "required": true
+        },
+        {
+          "id": "promesa_rota",
+          "accion": "Irunúu dice su nombre en la casa de los servidores de Wanurü; ella se va y en sus manos queda un jirón de telaraña.",
+          "required": true
+        },
+        {
+          "id": "muchas_manos",
+          "accion": "Las mujeres recogen los tejidos, cuentan los dibujos y corrigen los errores hilo por hilo; el saber no se queda encerrado.",
+          "required": true
+        }
+      ],
+      "escenas": {
+        "entrada": {
+          "acto": "entrada",
+          "era": "mitico_wayuu",
+          "composicion": "cenital",
+          "eventos": [
+            "nina_entre_hormigas"
+          ],
+          "beat": "Una niña jugando en el suelo con una fila de hormigas, y una mano que llega.",
+          "escena": "16:9 CENITAL a plomo sobre el suelo de arena, sin cielo. Vista desde arriba, una NIÑA PEQUEÑA sentada en el suelo en el tercio izquierdo, de tres cuartos y con la cara visible, siguiendo con el dedo una FILA DE HORMIGAS que cruza el encuadre en diagonal cargando fragmentos de hoja. Desde el borde derecho entra UNA MANO ADULTA abierta, a media distancia de ella, todavía sin tocarla. La arena ocupa el resto. El objeto del hilo narrativo es la fila de hormigas. El tercio superior derecho queda abierto para el título. Luz de mediodía, sombras cortas y duras.",
+          "paleta": "arena clara, pardo rojizo de las hormigas, verde de los fragmentos de hoja, manta parda de la niña, piel #9A6642"
+        },
+        "acto": {
+          "acto": "acto",
+          "era": "mitico_wayuu",
+          "composicion": "primer_plano",
+          "eventos": [
+            "tejer_de_noche"
+          ],
+          "beat": "De la boca le salen los hilos y las manos tejen mientras todos duermen.",
+          "escena": "9:16 vertical, de noche dentro del rancho — otro lugar y otra luz que la entrada. PRIMER PLANO DOMINANTE: ocupando los dos tercios inferiores, las MANOS de Waleker tejiendo en un telar de horqueta, muy nítidas, con una faja a medio hacer entre ellas. Desde arriba y entrando en el cuadro, los HILOS DE COLORES bajan hasta las manos, y se ve que salen de su BOCA, en el tercio superior, donde la cara queda en penumbra y de tres cuartos. Detrás, el interior oscuro del rancho con un chinchorro colgado. Única fuente cálida: un fogón bajo fuera de cuadro que ilumina de lado. Los dibujos de la faja son bandas lisas sin patrón legible.",
+          "paleta": "hilos en cuatro colores planos sobrios, algodón crudo de la faja, azul de noche en el rancho, luz cálida lateral contenida"
+        },
+        "huella": {
+          "acto": "huella",
+          "era": "mitico_wayuu",
+          "composicion": "simetria",
+          "eventos": [
+            "promesa_rota",
+            "muchas_manos"
+          ],
+          "beat": "Se fue, y quedaron muchas manos contando los hilos.",
+          "escena": "1:1. Composición centrada y casi simétrica: en el CENTRO EXACTO, una faja terminada extendida en horizontal, sostenida en el aire por SEIS MANOS que entran desde los dos lados del cuadro, tres por lado, de edades distintas — una anciana, dos adultas, una joven, una niña. No se ven cuerpos ni caras: sólo las manos y el tejido. En el borde inferior, caído en el suelo y muy pequeño, un JIRÓN DE TELARAÑA blanquísimo, casi sin peso. La faja lleva bandas lisas y ningún patrón identificable. Emblema legible a tamaño pequeño.",
+          "paleta": "algodón crudo y tres colores planos en la faja, pieles de distintas edades, blanco del jirón, fondo pardo neutro",
+          "nota_simbolica": "El don de una noche se volvió trabajo de muchas manos. El jirón abajo es lo que le quedó al que rompió la promesa: casi nada."
+        }
+      }
+    },
+    "el-incesto": {
+      "titulo": "El incesto",
+      "sensibilidad": "Dos suicidios. Se representan el antes y la consecuencia pétrea, nunca el acto ni el cuerpo.",
+      "hereda_biblia": [
+        "r05-hermana-del-encierro",
+        "r07-segunda-majayura",
+        "r06-hermano-del-incesto",
+        "aa04-casa-del-encierro",
+        "ab17-piedra-entre-las-olas",
+        "ad03-costa-penascos",
+        "ab01-jaguey",
+        "aa02-enramada"
+      ],
+      "eventos": [
+        {
+          "id": "salida_encinta",
+          "accion": "Cuando el encierro termina y sale a la luz, está embarazada; el hijo es de su hermano.",
+          "required": true
+        },
+        {
+          "id": "senalamiento",
+          "accion": "A la otra la señalan en voz alta en el camino, junto al jagüey y a la sombra de la enramada, y nadie dice nada del padre.",
+          "required": true
+        },
+        {
+          "id": "consecuencia_petrea",
+          "accion": "Mareiwa las convierte en piedra y en cerro; el cerro se llama Katetamana, mujer colgada.",
+          "required": true
+        }
+      ],
+      "escenas": {
+        "entrada": {
+          "acto": "entrada",
+          "era": "mitico_wayuu",
+          "composicion": "umbral",
+          "eventos": [
+            "salida_encinta"
+          ],
+          "beat": "Sale del encierro a la luz, y el vientre ya se le nota.",
+          "escena": "16:9 al amanecer. COMPOSICIÓN UMBRAL: la muchacha aparece en el BORDE IZQUIERDO del encuadre, saliendo de la casita del encierro, con parte del cuerpo aún dentro de la sombra de la puerta; lleva manta blanca cruda corta, el pelo cortado a ras y las dos manos sobre el vientre crecido. Todo el resto del ancho queda POR DELANTE DE ELLA: el patio de arena de la ranchería, todavía vacío de gente, con una tinaja nueva junto al umbral, el corral al fondo y la llanura detrás. La luz del este entra rasante y le da de lleno sólo a ella; el resto del patio sigue en sombra fría. El tercio derecho queda abierto para el título.",
+          "paleta": "blanco crudo de la manta, ocre del muro, arena en sombra malva, franja de oro rasante desde el este, azul frío en el resto"
+        },
+        "acto": {
+          "acto": "acto",
+          "era": "mitico_wayuu",
+          "composicion": "peso_contrario",
+          "eventos": [
+            "senalamiento"
+          ],
+          "beat": "La señalan junto al jagüey y ella no puede levantar la cara.",
+          "escena": "9:16 vertical a media tarde, junto al jagüey y bajo la enramada — otro lugar y otra luz que la entrada. En el TERCIO INFERIOR IZQUIERDO, en primer término, la segunda majayura de pie, manta pardo rosada, pañoleta caída hacia adelante, LA CABEZA BAJA Y LA BARBILLA CONTRA EL PECHO, las manos entrelazadas. Toda la masa visual pesa en el LADO OPUESTO Y ARRIBA: seis personas de pie y sentadas bajo la enramada, vueltas hacia ella, hablando entre ellas; una tiene el brazo extendido señalando. Entre los dos lados, el borde del jagüey con agua. Ningún gesto violento. La distancia entre ella y el grupo es el asunto.",
+          "paleta": "pardo rosado de la manta, ocre del suelo, pajizo de la enramada, agua ocre del jagüey, luz de tarde alta"
+        },
+        "huella": {
+          "acto": "huella",
+          "era": "mitico_wayuu",
+          "composicion": "figura_pequena",
+          "eventos": [
+            "consecuencia_petrea"
+          ],
+          "beat": "Quedan una piedra en el mar y un cerro con su forma sobre la llanura.",
+          "escena": "1:1 al final de la tarde, en contraluz. El paisaje ocupa casi todo el encuadre y no hay ninguna figura humana. A la IZQUIERDA y abajo, el mar rompiendo contra el acantilado, y entre la espuma UNA PIEDRA SOLA vertical con costra blanca de sal encima. A la DERECHA y al fondo, sobre la llanura, un CERRO de perfil alargado recortado a contraluz. Los dos elementos son pequeños dentro del cuadro y hay mucho aire entre ellos. Ninguno tiene rasgos humanos, cara ni miembros. Emblema legible a tamaño pequeño.",
+          "paleta": "contraluz pardo oscuro del cerro, verde-acero del mar, blanco de la espuma y de la sal, cielo de tarde crema",
+          "nota_simbolica": "El canon nombra el cerro Katetamana, «mujer colgada». La huella deja los dos accidentes del territorio y ninguna figura: lo que permanece es la geografía, no el cuerpo."
+        }
+      }
+    },
+    "aramai": {
+      "titulo": "Arámai",
+      "hereda_biblia": [
+        "c12-aramai",
+        "aa03-rancheria",
+        "aa02-enramada",
+        "z02-fuego-y-cocina",
+        "u01-chivos",
+        "ab02-casimba",
+        "aa01-piichi",
+        "z01-armas"
+      ],
+      "eventos": [
+        {
+          "id": "tierra_llena",
+          "accion": "Donde había una ranchería hay tres; los chinchorros cuelgan apretados y los caminos se cruzan de huellas.",
+          "required": true
+        },
+        {
+          "id": "peticion",
+          "accion": "Camina lejos de las casas y le pide a Mareiwa que mande enfermedades para que mueran algunos.",
+          "required": true
+        },
+        {
+          "id": "wanuru_camina",
+          "accion": "Wanurú va de ranchería en ranchería; entra al caer la tarde y por la mañana alguien no se levanta del chinchorro.",
+          "required": true
+        }
+      ],
+      "escenas": {
+        "entrada": {
+          "acto": "entrada",
+          "era": "contemporaneo_wayuu",
+          "composicion": "paisaje_abierto",
+          "eventos": [
+            "tierra_llena"
+          ],
+          "beat": "La tierra llena: tres rancherías donde había una, y los caminos cruzados.",
+          "escena": "16:9 a media tarde, vista desde una loma baja. Diorama DENSO Y HABITADO: en el plano medio, TRES RANCHERÍAS muy cerca unas de otras, con sus enramadas, sus piichis y sus corrales casi tocándose, y bajo las enramadas los CHINCHORROS COLGADOS APRETADOS unos junto a otros. Entre ellas, los caminos de arena se cruzan y recruzan formando una red de huellas. Rebaños pequeños de chivos en dos corrales distintos y humo de dos cocinas. Al fondo, más allá, se ven otras dos rancherías. En el tercio inferior derecho, PEQUEÑO Y DESCENTRADO, un hombre anciano de pie, de tres cuartos, mirando todo eso. El tercio superior izquierdo queda abierto para el título.",
+          "paleta": "ocre de la tierra, pajizo de las enramadas, algodón crudo de los chinchorros apretados, gris del humo, pardos de los chivos"
+        },
+        "acto": {
+          "acto": "acto",
+          "era": "contemporaneo_wayuu",
+          "composicion": "figura_pequena",
+          "eventos": [
+            "peticion"
+          ],
+          "beat": "Camina lejos de las casas y habla solo con el cielo vacío.",
+          "escena": "9:16 vertical al mediodía, en la llanura abierta y lejos de todo — otro lugar y otra luz que la entrada. El paisaje ocupa casi todo el encuadre: llanura de costra parda y grava con cardones dispersos, cielo BLANCO lavado por la luz vertical, horizonte disuelto en calima. ARÁMAI es PEQUEÑO Y DESCENTRADO, en el tercio inferior, de pie y de tres cuartos, con el sombrero en la mano bajada y la cara levantada. Nadie más. Su sombra es un charco diminuto a sus pies. En el borde inferior del cuadro, muy al fondo y minúsculas, se ven las rancherías de las que se alejó. El silencio y la distancia son el asunto.",
+          "paleta": "costra parda y grava, gris-verde de los cardones, cielo blanco, calima al fondo, pardo claro de la manta"
+        },
+        "huella": {
+          "acto": "huella",
+          "era": "contemporaneo_wayuu",
+          "composicion": "primer_plano",
+          "eventos": [
+            "wanuru_camina"
+          ],
+          "beat": "Lo que queda: un chinchorro vacío y la casa que no se volvió a abrir.",
+          "escena": "1:1 al amanecer. PRIMER PLANO DOMINANTE: ocupando la mayor parte del cuadro y muy nítido, un CHINCHORRO VACÍO colgado bajo una enramada, quieto salvo los flecos movidos por el viento, con una manta doblada encima sin usar. Al fondo y desenfocada, pequeña, la PUERTA DE UNA CASA CERRADA CON PALOS cruzados. En el suelo, entre los dos, una CALAVERA DE CABALLO blanqueada puesta cerca de la entrada. Nadie en cuadro. Luz fría de amanecer entrando de lado. Emblema legible a tamaño pequeño.",
+          "paleta": "algodón crudo del chinchorro, pardo de la manta doblada, ocre del muro, blanco de la calavera, luz malva fría",
+          "nota_simbolica": "Wanurú no se dibuja: se dibuja lo que dejó. El chinchorro vacío, la casa cerrada y la calavera puesta en la entrada son las tres cosas que quedan cuando el que pidió ya no puede recogerlo."
+        }
+      }
+    }
+  }
+}
