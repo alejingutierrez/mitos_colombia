@@ -16,7 +16,11 @@ const RAIZ = process.cwd();
 const STAGE = path.join(RAIZ, ".qa-staging");
 const IMG = path.join(STAGE, "img");
 const VIDEOS = path.join(RAIZ, "content/videos/muiscas/videos");
-const ANCHO_THUMB = 720;
+// 480 px con mozjpeg deja cada miniatura en ~29 KB. No es capricho: el
+// artefacto admite 64 MB por version y 255 archivos por publicacion, y los
+// 41 mitos completos son ~1.700 cuadros. A 720 px no cabrian.
+const ANCHO_THUMB = 480;
+const CALIDAD_THUMB = 68;
 
 const datos = JSON.parse(fs.readFileSync(path.join(STAGE, "datos.json"), "utf8"));
 fs.mkdirSync(IMG, { recursive: true });
@@ -48,7 +52,7 @@ for (const mito of datos.mitos) {
           const necesita =
             !fs.existsSync(dst) || fs.statSync(dst).mtimeMs < fs.statSync(src).mtimeMs;
           if (necesita) {
-            await sharp(src).resize({ width: ANCHO_THUMB }).jpeg({ quality: 82 }).toFile(dst);
+            await sharp(src).resize({ width: ANCHO_THUMB }).jpeg({ quality: CALIDAD_THUMB, mozjpeg: true }).toFile(dst);
           }
         }
       }
