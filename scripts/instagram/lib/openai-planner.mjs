@@ -18,6 +18,7 @@ export async function planCarouselWithOpenAI({
   env = process.env,
   requireThirdImage = false,
   maxAttempts = 2,
+  systemPrompt = null,
 }) {
   const model = env.INSTAGRAM_OPENAI_MODEL || "gpt-5-mini";
   const client = new OpenAI({ apiKey: env.OPENAI_API_KEY });
@@ -31,7 +32,7 @@ export async function planCarouselWithOpenAI({
         model,
         reasoning: { effort: "low" },
         max_output_tokens: 6500,
-        instructions: buildPlannerSystemPrompt({ requireThirdImage }),
+        instructions: systemPrompt || buildPlannerSystemPrompt({ requireThirdImage }),
         input: [
           {
             role: "user",
