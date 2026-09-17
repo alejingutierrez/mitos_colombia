@@ -22,7 +22,7 @@ const frases = (s) => s.split(/(?<=[.!?])\s+/).filter((x) => x.trim()).length;
 function evalua(nombre, comunidad, lineas) {
   const errs = [];
   const N = lineas.length;
-  if (N < 9 || N > 12) errs.push(`N=${N} fuera de 9-12`);
+  if (N < 8 || N > 18) errs.push(`N=${N} fuera de 8-18 (16-36 cuadros, 80-180 s)`);
   const malW = lineas.filter((t) => palabras(t) < 17 || palabras(t) > 19).length;
   const malF = lineas.filter((t) => frases(t) !== 2).length;
   if (malW) errs.push(`${malW}/${N} bloques fuera de 17-19 palabras`);
