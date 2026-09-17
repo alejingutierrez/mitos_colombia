@@ -116,7 +116,7 @@ test("la dirección visual es ilustración 2D full paper cut, nunca maqueta", ()
 
 test("la ruta pública usa el perfil Kuiva revisado", () => {
   const route = fs.readFileSync(
-    new URL("../../src/app/comunidades/[slug]/page.js", import.meta.url),
+    new URL("../../src/lib/community-info.js", import.meta.url),
     "utf8",
   );
   const filters = fs.readFileSync(
@@ -125,5 +125,5 @@ test("la ruta pública usa el perfil Kuiva revisado", () => {
   );
   assert.match(route, /import \{ kuivaCommunityPage \}/);
   assert.match(route, /"kuibas": \{\s+\.\.\.kuivaCommunityPage,/);
-  assert.match(filters, /"kuibas"/);
+  assert.match(filters, /MIN_COMMUNITY_MYTHS = 1;/);
 });

@@ -202,7 +202,7 @@ test("los prompts exigen paper cut digital plano y escenas distintas", () => {
 
 test("la comunidad pública usa el perfil Zenú revisado", () => {
   const route = fs.readFileSync(
-    new URL("../../src/app/comunidades/[slug]/page.js", import.meta.url),
+    new URL("../../src/lib/community-info.js", import.meta.url),
     "utf8",
   );
   assert.match(route, /import \{ zenuCommunityPage \}/);

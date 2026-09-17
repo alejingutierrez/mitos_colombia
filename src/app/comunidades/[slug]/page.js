@@ -78,7 +78,15 @@ export async function generateMetadata({ params }) {
     fallback: {
       title: `Mitos ${title} | Mitos de Colombia`,
       description,
-      keywords: [community.name, "pueblo indígena", "Colombia", "mitología", "tradición oral"],
+      // Los términos de la ficha revisada mandan sobre el genérico: para los
+      // afrocolombianos, por ejemplo, "pueblo indígena" es sencillamente falso.
+      keywords: communityInfo.searchTerms || [
+        community.name,
+        "pueblo indígena",
+        "Colombia",
+        "mitología",
+        "tradición oral",
+      ],
     },
     seo,
     canonicalPath: `/comunidades/${slug}`,

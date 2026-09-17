@@ -12,7 +12,7 @@ import records from "../../editorial/ufaina/records.mjs";
 import { canonicalUfainaSlugs } from "../../editorial/ufaina/universe.mjs";
 
 const routePath = new URL(
-  "../../src/app/comunidades/[slug]/page.js",
+  "../../src/lib/community-info.js",
   import.meta.url,
 );
 const filtersPath = new URL(
@@ -107,7 +107,7 @@ test("la landing pública incluye el perfil Ufaina aunque tenga un solo mito", (
   const filters = fs.readFileSync(filtersPath, "utf8");
   assert.match(route, /import \{ ufainaCommunityPage \}/);
   assert.match(route, /"ufaina": \{\s+\.\.\.ufainaCommunityPage,/);
-  assert.match(filters, /"ufaina"/);
+  assert.match(filters, /MIN_COMMUNITY_MYTHS = 1;/);
 });
 
 test(

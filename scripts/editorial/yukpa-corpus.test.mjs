@@ -184,7 +184,7 @@ test("los prompts exigen paper cut digital plano y escenas distintas", () => {
 
 test("la ruta pública usa el perfil Yukpa revisado", () => {
   const route = fs.readFileSync(
-    new URL("../../src/app/comunidades/[slug]/page.js", import.meta.url),
+    new URL("../../src/lib/community-info.js", import.meta.url),
     "utf8",
   );
   const filters = fs.readFileSync(
@@ -193,5 +193,5 @@ test("la ruta pública usa el perfil Yukpa revisado", () => {
   );
   assert.match(route, /import \{ yukpaCommunityPage \}/);
   assert.match(route, /"yukpa": \{\s+\.\.\.yukpaCommunityPage,/);
-  assert.match(filters, /"yukpa"/);
+  assert.match(filters, /MIN_COMMUNITY_MYTHS = 1;/);
 });

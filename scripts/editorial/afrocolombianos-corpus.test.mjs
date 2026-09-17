@@ -208,7 +208,7 @@ test("los prompts exigen paper cut digital plano y escenas distintas", () => {
 
 test("la comunidad pública evita el SEO indígena genérico", () => {
   const route = fs.readFileSync(
-    new URL("../../src/app/comunidades/[slug]/page.js", import.meta.url),
+    new URL("../../src/lib/community-info.js", import.meta.url),
     "utf8",
   );
   assert.match(route, /import \{ afrocolombianCommunityPage \}/);
@@ -216,7 +216,11 @@ test("la comunidad pública evita el SEO indígena genérico", () => {
     route,
     /"afrocolombianos": \{\s+\.\.\.afrocolombianCommunityPage,/,
   );
-  assert.match(route, /communityInfo\.searchTerms \|\|/);
+  const page = fs.readFileSync(
+    new URL("../../src/app/comunidades/[slug]/page.js", import.meta.url),
+    "utf8",
+  );
+  assert.match(page, /communityInfo\.searchTerms \|\|/);
   assert.ok(
     afrocolombianCommunityPage.searchTerms.includes(
       "comunidades negras",

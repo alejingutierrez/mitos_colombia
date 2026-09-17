@@ -115,7 +115,7 @@ test("la landing identifica a Panán como comunidad del pueblo Pastos", () => {
 
 test("la ruta pública consume el perfil editorial de Panán", () => {
   const route = fs.readFileSync(
-    new URL("../../src/app/comunidades/[slug]/page.js", import.meta.url),
+    new URL("../../src/lib/community-info.js", import.meta.url),
     "utf8",
   );
   assert.match(route, /import \{ pananCommunityPage \}/);

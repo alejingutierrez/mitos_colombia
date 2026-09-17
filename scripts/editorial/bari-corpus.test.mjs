@@ -125,7 +125,7 @@ test("la landing usa Barí como nombre público y explica el slug legado", () =>
 
 test("la ruta pública consume el perfil editorial Barí", () => {
   const route = fs.readFileSync(
-    new URL("../../src/app/comunidades/[slug]/page.js", import.meta.url),
+    new URL("../../src/lib/community-info.js", import.meta.url),
     "utf8",
   );
   assert.match(route, /import \{ bariCommunityPage \}/);
