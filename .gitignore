@@ -72,10 +72,12 @@ tmp/
 # la rama de cada uno, no en la copia.
 .claude/worktrees/
 
-# Todo .claude/ salvo launch.json: settings.local.json y sus respaldos guardan
-# los permisos de una máquina concreta y es donde más fácil se cuela un token.
+# Todo .claude/ salvo launch.json y skills/: settings.local.json y sus respaldos
+# guardan los permisos de una máquina concreta y es donde más fácil se cuela un
+# token. Los skills, en cambio, son proceso del repo y se versionan.
 .claude/*
 !.claude/launch.json
+!.claude/skills/
 
 # Listas temporales del montador de stop-motion (las regenera montar.mjs)
 content/videos/**/.concat-*.txt
