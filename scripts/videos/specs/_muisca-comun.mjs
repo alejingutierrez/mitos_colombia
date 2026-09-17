@@ -1,11 +1,23 @@
 // Base común de los specs de escena muiscas. Existe porque son 37 mitos y las
 // reglas que valen para todos tienen que estar en un solo sitio.
 //
-// ── DOCTRINA v3: CADA ESCENA ES UN PAR A→B ────────────────────────────────
-// Decisión del usuario (2026-09-17): todos los mitos pasan a fotograma inicial
-// Y final. Seedance 2.5 lo admite —`models_explore` del 16-sep da
-// `medias.roles = [start_image, end_image, ...]`— y hasta ahora el canal nunca
-// lo había usado: era capacidad disponible y sin estrenar.
+// ── DOCTRINA v4: EL PAR ES UN PLANO CON MOVIMIENTO ────────────────────────
+// Corrección del usuario (2026-09-17): en la v3 los pares no tenían
+// prácticamente movimiento de cámara. El candado decía «se conserva
+// EXACTAMENTE el encuadre, la distancia de cámara, la luz, el decorado», así
+// que A y B salían siendo la misma foto con un detalle cambiado, y un modelo
+// de video no tiene de dónde sacar un plano de cinco segundos.
+//
+// Lo que se conserva entre A y B es el MUNDO: los mismos personajes con la
+// misma cara y el mismo vestuario, el mismo decorado, la misma hora del día.
+// Lo que cambia es todo lo demás:
+//   · LA CÁMARA SE MUEVE. Cada escena declara `camara: { a, b }` — desde qué
+//     plano arranca y en qué plano termina. Acercarse, alejarse, rodear,
+//     subir, bajar, pasar de gran plano general a plano medio, de perfil a
+//     frontal. El modelo de video interpola el recorrido.
+//   · LA ACCIÓN AVANZA UN TRAMO GRANDE. No «la mano se cerró un poco más»
+//     sino «la mano soltó la ofrenda, se retiró y el cuerpo ya se dio la
+//     vuelta». Cinco segundos de historia, no medio gesto.
 //
 // Estructura: 1 bloque de guion = 2 escenas = 2 clips de 5 s (se conserva el
 // ritmo y el `window: 9.5` del guion). Cada escena son DOS imágenes:
@@ -13,14 +25,14 @@
 //     <id>-B   fotograma final del mismo clip
 // Para N=9 eso da 18 escenas y 36 imágenes.
 //
-// `-B` LLEVA `-A` COMO REFERENCIA. El generador resuelve las dependencias por
+// `-B` LLEVA `-A` COMO REFERENCIA: el generador resuelve las dependencias por
 // olas (un ref sin «/» es un hermano de la misma spec), así que el fotograma
-// final se dibuja SOBRE el inicial y hereda encuadre, luz y personajes. Eso es
-// lo que hace que el par sea un plano y no dos imágenes parecidas.
+// final hereda personajes, vestuario y decorado del inicial. Pero NO hereda el
+// encuadre: el prompt de `-B` se lo prohíbe expresamente.
 //
-// Lo que cambia respecto de la v2: el estado final ya no se confía al texto del
-// prompt de movimiento, se FIJA en una imagen aprobada. Por eso `fin` describe
-// el resultado de la acción, no otra acción distinta.
+// Seedance 2.5 admite start_image + end_image —`models_explore` del 16-sep da
+// `medias.roles = [start_image, end_image, ...]`— y hasta ahora el canal nunca
+// lo había usado.
 //
 // ── Reglas heredadas ──────────────────────────────────────────────────────
 // De bochica (único video aprobado): cada escena declara ESCALA + LUZ + OBJETO
@@ -45,7 +57,7 @@
 // Lo que hay que impedir no es el tejido muisca sino la invención ajena.
 
 export const DIRECCION =
-  "los cuadros van en pares: el que dice FOTOGRAMA INICIAL abre un clip de 5 s y el que dice FOTOGRAMA FINAL lo cierra. El par es UN MISMO PLANO: misma cámara, misma distancia, misma luz, mismos personajes y mismo decorado; entre los dos sólo ha avanzado la acción que la escena describe. Un modelo de video rellenará lo que pasa en medio.";
+  "los cuadros van en pares y cada par es UN PLANO DE CINCO SEGUNDOS: el que dice FOTOGRAMA INICIAL lo abre y el que dice FOTOGRAMA FINAL lo cierra. Entre los dos LA CÁMARA SE HA MOVIDO —se acerca, se aleja, rodea, sube o baja, cambia de escala y de ángulo— y LA ACCIÓN HA AVANZADO UN TRAMO LARGO. Se conservan los personajes, el vestuario, el decorado y la hora del día; no se conserva el encuadre. Un modelo de video generará el recorrido intermedio, así que los dos cuadros no pueden parecer la misma foto.";
 
 export const VESTUARIO =
   " Vestuario como en las fichas de la biblia: manta de algodón crudo anudada al hombro, por la rodilla o algo más abajo, con cenefa tejida geométrica en el borde en la gente de rango y lisa en la gente común; los hombres jóvenes y los corredores van con el torso desnudo y guayuco; pies descalzos salvo donde la referencia calce.";
@@ -59,27 +71,44 @@ export const PALETTE_BASE =
 const B = "muiscas/biblia";
 export const ref = (n) => `${B}/${n}`;
 
-// Candado que hace del par un plano: el FINAL se dibuja sobre el INICIAL.
+// Candado v4: se hereda el MUNDO, no el encuadre. La segunda frase existe
+// porque el generador le pasa `-A` como referencia visual y sin ella el modelo
+// copia la composición en vez de continuar el plano.
 const LOCK =
-  " Es el FOTOGRAMA FINAL del mismo plano: se conserva EXACTAMENTE el encuadre, la distancia de cámara, la luz, el decorado y los personajes de la imagen de referencia del plano inicial, y lo ÚNICO que ha cambiado es la acción descrita.";
+  " Es el final del MISMO clip continuo que la imagen de referencia: los mismos personajes con la misma cara y el mismo vestuario, el mismo decorado y la misma hora del día. Pero NO repitas su encuadre: durante estos cinco segundos la cámara se ha desplazado y la escala, el ángulo y el punto de vista son OTROS, y la acción ha avanzado hasta el estado que se describe.";
 
 /**
- * Una escena = un clip = dos imágenes.
+ * Una escena = un clip de 5 s = dos imágenes.
  *
- * esc(id, refs, { comun, ini, fin }, avoid) devuelve `<id>-A` y `<id>-B`.
- * `comun` es lo que no cambia entre los dos (escala, luz, decorado, ancla);
- * `ini` y `fin` son los dos estados de la acción.
+ * esc(id, refs, { comun, camara: {a, b}, ini, fin }, avoid) devuelve
+ * `<id>-A` y `<id>-B`.
  *
- * `-B` recibe `<id>-A` como referencia extra para heredar el plano.
- * `conFiguras: true` añade el candado de vestuario a los dos.
+ *   comun  — lo que no cambia: decorado, luz, personajes, objeto ancla.
+ *   camara — `a` es el plano con que arranca el clip y `b` aquel en que
+ *            termina. TIENEN QUE SER DISTINTOS: distinta escala, distinto
+ *            ángulo o distinta posición. Ahí está el movimiento del plano.
+ *   ini    — la acción al empezar el clip.
+ *   fin    — la acción cinco segundos después, avanzada de verdad.
+ *
+ * `-B` recibe `<id>-A` como referencia extra para heredar personajes y
+ * decorado. `conFiguras: true` añade el candado de vestuario a los dos.
  */
-export function esc(id, refs, { comun, ini, fin }, avoid, conFiguras = false) {
+export function esc(id, refs, { comun, camara, ini, fin }, avoid, conFiguras = false) {
+  if (!camara || !camara.a || !camara.b) {
+    throw new Error(`esc(${id}): falta camara:{a,b} — la doctrina v4 exige declarar el movimiento`);
+  }
   const v = conFiguras ? VESTUARIO : "";
   return [
-    { id: `${id}-A`, kind: "keyframe", preset: "vertical", refs,
-      scene: `${comun} FOTOGRAMA INICIAL: ${ini}${v}`, avoid },
-    { id: `${id}-B`, kind: "keyframe", preset: "vertical", refs: [...refs, `${id}-A`],
-      scene: `${comun} FOTOGRAMA FINAL: ${fin}${LOCK}${v}`, avoid },
+    {
+      id: `${id}-A`, kind: "keyframe", preset: "vertical", refs,
+      scene: `${comun} FOTOGRAMA INICIAL del clip. CÁMARA: ${camara.a}. ACCIÓN: ${ini}${v}`,
+      avoid,
+    },
+    {
+      id: `${id}-B`, kind: "keyframe", preset: "vertical", refs: [...refs, `${id}-A`],
+      scene: `${comun} FOTOGRAMA FINAL del clip, cinco segundos después. LA CÁMARA SE HA MOVIDO: ${camara.b}. ACCIÓN: ${fin}${LOCK}${v}`,
+      avoid,
+    },
   ];
 }
 

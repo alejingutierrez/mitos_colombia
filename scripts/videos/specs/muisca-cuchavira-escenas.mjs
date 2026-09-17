@@ -1,6 +1,7 @@
 // Keyframes de Cuchavira — 9 bloques × 2 escenas × 2 cuadros = 36 imágenes ≈ 90 s.
 // Guion: guion-cuchavira-v2.json (N=9) · Acta: acta-cuchavira.json
-// DOCTRINA v3: cada escena es un par A→B (ver _muisca-comun.mjs).
+// DOCTRINA v4: cada par es UN PLANO CON MOVIMIENTO (ver _muisca-comun.mjs):
+// entre A y B la cámara se desplaza y la acción avanza un tramo largo.
 //
 // DESLINDE DURO: Cuchavira NO TIENE ROSTRO. La fuente lo dice expresamente: es
 // el aire mismo volviéndose luz mientras dura el agua en el aire. NINGUNA
