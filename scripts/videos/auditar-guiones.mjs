@@ -59,6 +59,9 @@ for (const { mito, g } of vivos("docs/videos/muiscas/mvp-guiones")) {
 for (const { mito, g } of vivos("docs/videos/nasa-paeces/mvp-guiones")) {
   res.push(evalua(mito, "nasa-páez", g.lines.map((x) => x.text || "").filter(Boolean)));
 }
+for (const { mito, g } of vivos("docs/videos/ette-ennaka/mvp-guiones")) {
+  res.push(evalua(mito, "ette-ennaka", g.lines.map((x) => x.text || "").filter(Boolean)));
+}
 const dirW = "content/videos/wayuu/videos";
 if (fs.existsSync(dirW)) {
   for (const m of fs.readdirSync(dirW)) {

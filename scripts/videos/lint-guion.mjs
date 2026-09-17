@@ -3,7 +3,7 @@
  * Valida un guion contra la regla única de la fase 1
  * (docs/videos/PRODUCCION-END-TO-END.md §2):
  *
- *   N bloques de 2 frases y 17-19 palabras, N entre 9 y 12,
+ *   N bloques de 2 frases y 17-19 palabras, N entre 8 y 18,
  *   a 2 clips por bloque ⇒ N×2 keyframes.
  *   Una sola cita directa, en el clímax.
  *   `window` = duración real del bloque − voice_offset (9,5 con 2 clips de 5 s).
@@ -23,7 +23,11 @@ for (const ruta of process.argv.slice(2)) {
   const g = JSON.parse(fs.readFileSync(ruta, "utf8"));
   const lineas = g.lines || [];
   const errores = [];
-  if (lineas.length < 9 || lineas.length > 12) errores.push(`N=${lineas.length} fuera de 9-12`);
+  /* La banda real es 8-18 bloques = 16-36 cuadros = 80-180 s (usuario,
+   * 2026-09-16). El «9-12 típico» del documento es una frecuencia observada, no
+   * un límite: el-diluvio necesita 14 para no sacrificar su segunda catástrofe. */
+  if (lineas.length < 8 || lineas.length > 18)
+    errores.push(`N=${lineas.length} fuera de 8-18 (16-36 cuadros, 80-180 s)`);
 
   lineas.forEach((l, i) => {
     const tag = l.bloque || `b${i + 1}`;

@@ -138,7 +138,14 @@ subió al **68 %**.
 
 Gancho con giro en el bloque 1 · cada verso abre con el plano que lo acompaña ·
 bookend de objeto · última línea con el agua quieta o su equivalente · **máximo
-dos nombres propios** · sin moralejas. Registro **fogón-visual-coloquial**:
+dos nombres propios** · sin moralejas.
+
+El cupo de dos nombres propios cuenta **nombres de persona y de lugar** —es para
+no saturar el oído con toponimia—. **No gastan cupo los nombres de especie ni de
+materia** (`karau`, `nuti`, `caña maná`, `totumo`): son contenido que el mito
+explica, y borrarlos cuesta fidelidad. Aprendido en el-diluvio, donde reducir el
+karau y el rabipelado a «uno» y «el otro» dejó sin nombre justo a los dos seres
+de los que proceden todos los animales. Registro **fogón-visual-coloquial**:
 oralidad cercana y digna («dicen que», «óigame bien»), imágenes sensoriales,
 cero slang que abarate.
 

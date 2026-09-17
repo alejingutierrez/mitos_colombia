@@ -29,6 +29,7 @@ const ruta = process.argv[2];
 const iG = process.argv.indexOf("--guion");
 const acta = JSON.parse(fs.readFileSync(ruta, "utf8"));
 const errs = [];
+const avisos = [];
 
 const sql = neon(process.env.POSTGRES_URL);
 const filas = await sql`SELECT mito FROM myths WHERE slug = ${acta.canon_slug}`;
@@ -60,6 +61,12 @@ if (iG > 0) {
   if (sinCubrir.length) errs.push(`nudos sin cubrir en el guion: ${sinCubrir.join(", ")}`);
   g.lines.forEach((l, i) => {
     if (!(l.cubre || []).length) errs.push(`${l.bloque || "b" + (i + 1)}: no cubre ningún nudo`);
+    /* Tres nudos en un bloque significa que N se quedó corto: dos frases no
+     * sostienen tres hechos sin que uno entre de refilón. Pasó en el-diluvio,
+     * donde el acta avisó del riesgo de sacrificar el incendio y el guion lo
+     * sacrificó igual, metiéndolo en media frase de un bloque con tres nudos. */
+    if ((l.cubre || []).length >= 3)
+      avisos.push(`${l.bloque || "b" + (i + 1)}: cubre ${l.cubre.length} nudos (${l.cubre.join(", ")}) — señal de que N se quedó corto`);
     for (const id of l.cubre || [])
       if (!nudos.some((n) => n.id === id)) errs.push(`${l.bloque}: cubre ${id}, que no está en el acta`);
   });
@@ -68,7 +75,9 @@ if (iG > 0) {
 if (errs.length) {
   console.log(`✘ ${acta.mito}`);
   errs.forEach((e) => console.log(`    ${e}`));
+  avisos.forEach((a) => console.log(`    ! ${a}`));
   process.exit(1);
 }
+avisos.forEach((a) => console.log(`  ! ${a}`));
 console.log(`✔ ${acta.mito} · ${nudos.length} nudos · N=${N} (${N * 2} cuadros, ≈${N * 10}s)` +
   (acta.descartes?.length ? ` · ${acta.descartes.length} descartes declarados` : ""));
