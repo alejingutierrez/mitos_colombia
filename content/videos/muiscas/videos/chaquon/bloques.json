@@ -2,138 +2,654 @@
   "mito": "chaquon",
   "comunidad": "Muiscas",
   "carpeta_triptico": "chaquon",
-  "estructura": "9 bloques narrativos × 2 keyframes (bNa, bNb) = 18 escenas; el `acto` del tríptico cubre una, quedan 17 por generar",
-  "nota_deslinde": "b1a lo cubre la `entrada` del tríptico, b4a el `acto` y b9b la `huella`. Chaquén no aparece como figura en ninguna escena. 18 planos totales: 15 escenas nuevas y 3 reutilizadas.",
+  "guion": "docs/videos/muiscas/mvp-guiones/guion-chaquon-v1.json",
+  "acta": "docs/videos/muiscas/actas/acta-chaquon.json",
+  "estructura": "18 bloques narrativos × 2 keyframes (bNa, bNb) = 36 escenas, todas generadas nuevas contra el guion vigente",
+  "nota_deslinde": "Chaquén NO ES UN PERSONAJE. La fuente lo define por negación: no vivía en templo ni en cerro, era la línea misma. LA IMAGEN NO LE DA CUERPO: lo que se ve son los postes, las piedras, la raya entre dos sementeras.",
+  "reemplaza": "historico/keyframes-plan-n9-20260917 (18 escenas del plan viejo de 9 bloques, ya no corresponden al guion)",
+  "generacion_actual": {
+    "provider": "openai",
+    "model": "gpt-image-2",
+    "spec": "scripts/videos/specs/muisca-chaquon-escenas.mjs",
+    "account_source": "OPENAI_API_KEY from ignored .env"
+  },
   "lineas": {
-    "b1": "El año comenzaba en los linderos. Los caciques hacían señalar los términos.",
-    "b2": "Aquella raya tenía un dueño que no se veía. Chaquén era la línea misma.",
-    "b3": "Quien respetaba el límite sembraba en paz. Quien lo cruzaba, sembraba un pleito.",
-    "b4": "Cuando llegaba la fiesta, el cacique ordenaba correr la tierra.",
-    "b5": "Subir al alto, dar la vuelta, volver por la misma carrera.",
-    "b6": "Correr la tierra era conocerla con el cuerpo, y demostrar que podía cruzarse entera.",
-    "b7": "A la llegada, el cacique alababa las danzas y entregaba mantas a los mejores.",
-    "b8": "Hombres y mujeres se tomaban de las manos en corro y cantaban las grandezas de los mayores.",
-    "b9": "Al amanecer, con las vasijas vacías, la raya seguía allí, quieta entre los surcos."
+    "b1": "El año comenzaba en los linderos. Cuando las lluvias ablandaban la tierra, los caciques hacían señalar los términos.",
+    "b2": "Se levantaban postes donde un sembrado terminaba y comenzaba el vecino. Donde una parcialidad entregaba su campo a otra.",
+    "b3": "Aquella raya tenía un dueño que no se veía. Era Chaquén, y no vivía en templo ni en cerro.",
+    "b4": "Era la línea misma, el borde entre dos sementeras. El puesto que decía hasta dónde llegaba cada trabajo.",
+    "b5": "Quien respetaba el límite sembraba en paz. Quien lo cruzaba a escondidas, sembraba un pleito con el vecino.",
+    "b6": "Cuando llegaba la fiesta, el cacique ordenaba correr la tierra. Los más valientes salían con plumas y diademas.",
+    "b7": "Recorrían el campo siguiendo los puestos. Subir al alto, dar la vuelta, volver por la misma carrera.",
+    "b8": "No era solo una prueba de piernas. Correr la tierra era conocerla con el cuerpo: sus linderos, sus quebradas.",
+    "b9": "El punto donde un surco entregaba la cosecha a otro. Y que el territorio podía cruzarse entero, sin romperse.",
+    "b10": "Sin boca que lo dijera, en el límite se oía. «Hasta aquí la tuya; de ahí, la del vecino».",
+    "b11": "A la llegada, el cacique alababa las danzas y entregaba mantas a los mejores. Repartía chicha para el camino.",
+    "b12": "Las flautas y los fotutos contestaban a los tambores. Hombres y mujeres se tomaban de las manos en corro.",
+    "b13": "Cantaban las grandezas de los mayores, con las vasijas en medio. La chicha iba pasando de mano en mano.",
+    "b14": "La plumería de la fiesta y de la guerra, los adornos. Todo se ofrecía a Chaquén junto al límite.",
+    "b15": "Así se cerraba el pacto. La celebración podía encenderse porque el orden de la tierra ya estaba puesto.",
+    "b16": "Las danzas recorrían los mismos términos que las carreras. La borrachera acababa la jornada en las casas.",
+    "b17": "Cuando el sol se iba de los campos. Al amanecer, con las vasijas vacías, la raya seguía allí.",
+    "b18": "Quieta entre los surcos, con la plumería dormida. Una línea de postes y piedras que ninguna fiesta borró."
   },
   "keyframes": [
     {
+      "tag": "b1a",
+      "bloque": "b1",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "refs": [
+        "sabana_linderos",
+        "poste_lindero"
+      ],
+      "desc": "Plano general vertical de LA MISMA sabana de la referencia al comenzar el año, vista desde el suelo hacia el fondo: parcelas de verdes distintos separadas por una raya de postes de madera vieja que se aleja hasta perderse; el cielo cargado después de la lluvia ocupa el tercio superior. Sin personas. Luz gris de mañana mojada.",
+      "avoid_extra": "personas, animales, arcoiris",
+      "prompt_sha256": "a8709b19428f7b51cc50c021c1ef12b0c054d79f9c68b154f47e7d58630c39f0",
+      "image_sha256": "1c5fcd2a3109cdb53e92a6c85d345d2d0380b0b185678b77b140800af9ac0fab",
+      "generated_at": "2026-09-17T12:57:30.592Z"
+    },
+    {
       "tag": "b1b",
-      "job": "20342247-c611-49a5-86ee-e2fe3f42151e",
-      "px": "1520x2688",
-      "comp": "primer_plano",
-      "desc": "PLANO DETALLE de un poste de madera entrando en tierra ablandada, con el barro cediendo alrededor de la base."
+      "bloque": "b1",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "refs": [
+        "poste_lindero"
+      ],
+      "desc": "PLANO DETALLE cenital de la tierra ablandada por la lluvia al pie de un poste de madera como el de la referencia: el barro oscuro cede y se abre alrededor de la base, con pozas de agua diminutas y briznas aplastadas. Sin personas, sin manos. Luz gris difusa.",
+      "avoid_extra": "personas, manos, herramientas, insectos",
+      "prompt_sha256": "ff8e5024c1f8ea3b9c1bec5121b727482c3e132a6118c1df210d2508004b16cf",
+      "image_sha256": "966a5643f3ae0e2dcc55c9af7ee687d8c958aded03c9b205b5c95e03cfa7bf46",
+      "generated_at": "2026-09-17T12:57:30.494Z"
     },
     {
       "tag": "b2a",
-      "job": "a94e80d6-a8ab-4767-8b80-9576379baf73",
-      "px": "1520x2688",
-      "comp": "simetria",
-      "desc": "PLANO GENERAL de una raya de postes cruzando la sabana entre dos parcelas distintas, sin una sola persona en el cuadro."
+      "bloque": "b2",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "refs": [
+        "poste_lindero",
+        "piraca_labrador",
+        "sabana_linderos"
+      ],
+      "desc": "Plano medio vertical: DOS hombres muiscas como el de la referencia, de perfil tres cuartos, clavando un poste de madera igual al de la referencia en la tierra ablandada; uno lo sostiene vertical con las dos manos, el otro apisona la base con una piedra plana. Detrás, la sabana de la referencia abriéndose en parcelas. Acción en el eje central, aire arriba y abajo.",
+      "avoid_extra": "herramientas metálicas, esfuerzo teatral, gritos",
+      "prompt_sha256": "d1d2e91b185ab1db3f03c6bbf105c633f339020a0ab6efbafd88cae150dde98d",
+      "image_sha256": "6af9dfb3365fba93eabca053b96dc36e963dfa46eef4b2c4d57078784fd56419",
+      "generated_at": "2026-09-17T12:57:29.579Z"
     },
     {
       "tag": "b2b",
-      "job": "8a878819-d970-47b7-9edb-9c24b2d0fe1d",
-      "px": "1520x2688",
-      "comp": "cenital",
-      "desc": "PLANO DETALLE del suelo justo en el límite: de un lado surcos abiertos, del otro hierba intacta, y entre ambos la piedra que marca."
+      "bloque": "b2",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "refs": [
+        "sabana_linderos",
+        "poste_lindero"
+      ],
+      "desc": "Plano general vertical, SIN personas: dos sembrados vecinos de verdes claramente distintos —uno de surcos rectos y otro de mata más alta— tocándose exactamente a lo largo de una raya de postes y piedras que cruza el encuadre de abajo hacia el fondo. La línea es el sujeto. Luz lateral de media mañana.",
+      "avoid_extra": "personas, animales, cercas de alambre, muros",
+      "prompt_sha256": "ac36eb16274dcadad858b88745a975ef9f27581958e40e730b6d61d7f4ddb508",
+      "image_sha256": "17b9701674f2474b67efcba53d5fdc88faccfb5c67d8356709413542ba0c2d52",
+      "generated_at": "2026-09-17T12:57:34.592Z"
     },
     {
       "tag": "b3a",
-      "job": "cedd114b-c165-44c1-a254-cb9c91062821",
-      "px": "1520x2688",
-      "comp": "enfrentados",
-      "desc": "PLANO MEDIO de dos labradores corrientes sembrando cada uno a su lado de la raya, de perfil y sin mirarse, tranquilos. Visten mantas simples de algodón crudo y llevan el cabello negro sin adornos. No usan diademas, plumas, penachos, pintura, insignias ni atuendo de corredores o de fiesta."
+      "bloque": "b3",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "refs": [
+        "poste_lindero",
+        "sabana_linderos"
+      ],
+      "desc": "Plano general vertical al atardecer, SIN NINGUNA figura: la raya de postes de la referencia recorre la sementera con la luz rasante alargando la sombra de cada poste sobre los surcos. El aire quieto, el campo vacío. La ausencia de personas es deliberada y debe leerse como calma, no como abandono.",
+      "avoid_extra": "personas, siluetas, sombras con forma humana, figuras en el horizonte, animales",
+      "prompt_sha256": "efcf5ae2f9cb2c71b208ef1742563ff9067f65593c3340b2c6bfd03ed4c4e694",
+      "image_sha256": "468860899252274d3599767fdcead61e01aaca09707f6b810e4160e4674804ef",
+      "generated_at": "2026-09-17T12:58:10.877Z"
     },
     {
       "tag": "b3b",
-      "job": "76bd4580-19b6-48a7-9260-47de35cb6a1d",
-      "px": "1520x2688",
-      "comp": "enfrentados",
-      "desc": "PLANO MEDIO de dos labradores corrientes discutiendo de pie sobre un surco que cruza la línea, señalando el suelo, ninguno centrado. Ambos llevan mantas simples y cabello negro sin adornos. No hay diademas, plumas, penachos, pintura, insignias ni atuendo de corredores o de fiesta."
-    },
-    {
-      "tag": "b4b",
-      "job": "6b94771e-58c5-46d9-a783-5385ab23208f",
-      "px": "1520x2688",
-      "comp": "primer_plano",
-      "desc": "PLANO DETALLE de unos pies descalzos golpeando la tierra en carrera, con el polvo saltando y la hierba del lindero al lado."
-    },
-    {
-      "tag": "b5a",
-      "job": "a26e2ec0-5fc4-4ca5-bfaf-fd87a33783fd",
-      "px": "1520x2688",
-      "comp": "contrapicado",
-      "desc": "CONTRAPICADO de un corredor coronando un alto recortado contra el cielo, el horizonte en el tercio inferior."
-    },
-    {
-      "tag": "b5b",
-      "job": "02ede290-f9e3-49a4-a962-eef8166b8bb7",
-      "px": "1520x2688",
-      "comp": "figura_pequena",
-      "desc": "PLANO GENERAL MUY ABIERTO del territorio entero visto desde el alto, con la línea de postes recorriéndolo y los corredores diminutos."
-    },
-    {
-      "tag": "b6a",
-      "job": "1f717ba2-4941-43aa-95aa-e6c21b826ddb",
-      "px": "1520x2688",
-      "comp": "diagonal",
-      "desc": "PLANO MEDIO de un corredor bajando por el borde de una quebrada siguiendo la línea de postes, de perfil, con la mano rozando un poste al pasar."
-    },
-    {
-      "tag": "b6b",
-      "job": "4e22b7a5-a1cb-4d76-bc3d-1482432e6c4a",
-      "px": "1520x2688",
-      "comp": "primer_plano",
-      "desc": "PLANO DETALLE de una mano tocando la muesca tallada de un poste al pasar corriendo, apenas un roce."
-    },
-    {
-      "tag": "b7a",
-      "job": "6b1315f5-abfb-4792-94d4-aea2eb625870",
-      "px": "1520x2688",
-      "comp": "enfrentados",
-      "desc": "PLANO MEDIO de un cacique entregando una manta doblada a un corredor sudado, los dos de perfil tres cuartos."
-    },
-    {
-      "tag": "b7b",
-      "job": "f5cad27b-2eda-46e5-9a5f-f6021572f3a2",
-      "px": "1520x2688",
-      "comp": "primer_plano",
-      "desc": "PLANO DETALLE de vasijas grandes de chicha alineadas y unas manos sirviendo de una a otra más pequeña."
-    },
-    {
-      "tag": "b8a",
-      "job": "7d4c3e7c-1e75-4d9a-8268-28903ae91b95",
-      "px": "1520x2688",
-      "comp": "simetria",
-      "desc": "PLANO GENERAL de un corro tomado de las manos girando alrededor de las vasijas puestas en el medio, con flautas y tambores a un lado."
-    },
-    {
-      "tag": "b8b",
-      "job": "463515c4-c124-46e5-a710-49e8a3f3e7b5",
-      "px": "1520x2688",
-      "comp": "peso_contrario",
-      "desc": "PLANO MEDIO de plumería y adornos de fiesta depositados en el suelo junto a un poste del límite, como ofrenda."
-    },
-    {
-      "tag": "b9a",
-      "job": "794edaa8-41a6-4ce3-900e-17be72ce6e08",
-      "px": "1520x2688",
-      "comp": "figura_pequena",
-      "desc": "PLANO GENERAL del campo al amanecer con la fiesta ya acabada: mantas tendidas, vasijas volcadas y nadie despierto."
-    }
-  ],
-  "reusadas": [
-    {
-      "tag": "b1a",
-      "reusa": "mitos/chaquon/entrada"
+      "bloque": "b3",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "refs": [
+        "poste_lindero",
+        "altiplano_noche"
+      ],
+      "desc": "CONTRAPICADO cerrado de un solo poste de madera como el de la referencia recortado contra el cielo del atardecer; muy al fondo y pequeños, desenfocados y sin importancia, la loma de un cerro y el techo de paja de un recinto. El poste ocupa el eje central y es lo único nítido. Sin personas.",
+      "avoid_extra": "personas, templos de piedra, escalinatas, altares, ídolos, ofrendas",
+      "prompt_sha256": "d6e14dfd2bfd281de0162aadf653e7b926c415c3c8e7f5ed40ebd56d72344b7a",
+      "image_sha256": "ebf3ecf326dbda6bf810975ab784607c2eafee0d596e4c907b8354d461c8913d",
+      "generated_at": "2026-09-17T12:58:11.614Z"
     },
     {
       "tag": "b4a",
-      "reusa": "mitos/chaquon/acto"
+      "bloque": "b4",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "refs": [
+        "lineas_tierra",
+        "sabana_cultivos"
+      ],
+      "desc": "PLANO CENITAL vertical sobre el borde entre dos sementeras como las de la referencia: a la izquierda surcos paralelos apretados, a la derecha surcos en otra dirección y otro verde, y entre ambos una franja de tierra pelada con postes y piedras alineados. Geometría clara, sin personas. Luz de mediodía nublado.",
+      "avoid_extra": "personas, animales, caminos empedrados, muros",
+      "prompt_sha256": "f72416e1f45fbf390e0a8252c333a4d648c96d804224ac0b5777e4a2698ccc87",
+      "image_sha256": "8117b2872a627fb10311633a26466754448479d60b4df1295c599a51fe06d6a7",
+      "generated_at": "2026-09-17T12:58:08.375Z"
+    },
+    {
+      "tag": "b4b",
+      "bloque": "b4",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "refs": [
+        "poste_lindero",
+        "tejo_piedras"
+      ],
+      "desc": "PLANO DETALLE del pie de un poste de madera con dos piedras planas asentadas a su base, como las de la referencia: el último surco llega exactamente hasta ellas y se detiene; al otro lado la tierra está sin labrar. Sin personas. Luz lateral baja que marca el canto de cada piedra.",
+      "avoid_extra": "personas, manos, raíces expuestas, insectos",
+      "prompt_sha256": "ae9109a385879fcf105657aa00b3d9a9e87e5f1f66881f78bbd9e3d273d51900",
+      "image_sha256": "5966791b7847f8ca948027a71f7ecee76a3c9c9646aa03ce8ec32b747e88aab8",
+      "generated_at": "2026-09-17T12:58:18.771Z"
+    },
+    {
+      "tag": "b5a",
+      "bloque": "b5",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "refs": [
+        "piraca_labrador",
+        "poste_lindero",
+        "sabana_cultivos"
+      ],
+      "desc": "Plano general vertical: EL MISMO labrador de la referencia, pequeño en el encuadre y de espaldas, sembrando tranquilo en su surco a dos pasos de la raya de postes, sin mirarla. El campo alrededor ordenado y abierto. Gesto sobrio de trabajo cotidiano. Luz cálida de media tarde.",
+      "avoid_extra": "primeros planos de rostro, dramatismo, herramientas metálicas",
+      "prompt_sha256": "8fc6d94224a1ce9cf8c98fb244363d1fda8d9f4b0b882604f6171ff9a1129e23",
+      "image_sha256": "10564910f7aeb857b5a18bffe97423c9595c884bedb6b059ec00c5dde9d5a5f2",
+      "generated_at": "2026-09-17T12:59:02.492Z"
+    },
+    {
+      "tag": "b5b",
+      "bloque": "b5",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "refs": [
+        "poste_lindero",
+        "piraca_labrador",
+        "altiplano_noche"
+      ],
+      "desc": "Plano medio nocturno de tensión contenida: DOS hombres muiscas como el de la referencia, enfrentados a ambos lados de un poste que está visiblemente torcido y removido de su base, señalando cada uno su lado de la tierra. Los cuerpos en el eje central, rostros serios, sin violencia ni armas. Luz fría de noche clara.",
+      "avoid_extra": "armas, golpes, sangre, rostros deformados por la ira, público",
+      "prompt_sha256": "6edfb04777a3a33c4a726110b882209151389cc6c62c711eab587c771657e991",
+      "image_sha256": "b7b23f8d6e8d529687e5f6ead4b1c24f2c29ab5335c71dc0ec76e5e428df103f",
+      "generated_at": "2026-09-17T12:58:59.858Z"
+    },
+    {
+      "tag": "b6a",
+      "bloque": "b6",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "refs": [
+        "zaque_tunja",
+        "plaza_fiesta_noche",
+        "familias_muiscas"
+      ],
+      "desc": "Plano medio vertical: EL MISMO cacique de la referencia, de pie en el borde de la plaza de la referencia y con el brazo extendido hacia el campo, dando la orden; a su alrededor, gente de la comunidad como la de la referencia escuchando en semicírculo, a media distancia. Mañana de fiesta, luz limpia.",
+      "avoid_extra": "tronos, coronas, gestos imperiales, multitudes arrodilladas",
+      "prompt_sha256": "ab5ceef8ed800119502aaaaf49804e2a03549cdc32c238dcb376082e37c59193",
+      "image_sha256": "e8d2c02b24c098d26ea75496774a18cb2a883a729e5ed6ed87adb5a58cfc76e6",
+      "generated_at": "2026-09-17T12:59:00.022Z"
+    },
+    {
+      "tag": "b6b",
+      "bloque": "b6",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "refs": [
+        "corredor_plumas",
+        "campo_pelado"
+      ],
+      "desc": "Plano medio vertical de CUATRO corredores idénticos al de la referencia —mismo rostro de papel, misma diadema de fibra con plumas roja, blanca y roja, mismo taparrabo crudo— formados hombro con hombro en el borde del campo pelado de la referencia, quietos, mirando al frente antes de salir. Cuerpos completos, sin cortar cabezas ni pies.",
+      "avoid_extra": "pintura corporal inventada, penachos grandes, armas, expresión feroz",
+      "prompt_sha256": "b85a8fb5e272b421b029f831c36eb365105bd5b4aa8e8095527a669120854e65",
+      "image_sha256": "2c6174d972801d2fd7fa23280c3d73fd6e5d9f7606a4df7c36c9f3185e743354",
+      "generated_at": "2026-09-17T12:58:57.491Z"
+    },
+    {
+      "tag": "b7a",
+      "bloque": "b7",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "refs": [
+        "corredor_plumas",
+        "camino_carrera",
+        "poste_lindero"
+      ],
+      "desc": "Plano general vertical: una fila de corredores como el de la referencia avanzando en carrera por EL MISMO camino de la referencia, pegados a la raya de postes que marca el borde de las sementeras; los cuerpos pequeños y escalonados hacia el fondo, la línea de postes guiando la mirada. Polvo bajo levantado por los pies.",
+      "avoid_extra": "público animando, banderas, líneas de meta, números",
+      "prompt_sha256": "aeed455962f24aa0c96c405b465f31500953c5a33b890b012765fc69ad789df0",
+      "image_sha256": "f58863073ca4d26e379d3909795e7482ddc85177ddffd428fffeed30c76b6034",
+      "generated_at": "2026-09-17T12:59:40.068Z"
+    },
+    {
+      "tag": "b7b",
+      "bloque": "b7",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "refs": [
+        "corredor_plumas",
+        "sendero_territorio"
+      ],
+      "desc": "Plano general muy abierto en CONTRAPICADO suave: los corredores de la referencia, ya muy pequeños, coronando el alto del cerro por EL MISMO sendero de la referencia y empezando a dar la vuelta; el cielo ocupa más de la mitad del encuadre. Figuras diminutas integradas al paisaje.",
+      "avoid_extra": "primeros planos, rostros reconocibles, cumbres nevadas, aves grandes",
+      "prompt_sha256": "acc57be0dc3dbf2a6392674395c48b27b6fce3b385910ac2c9acecb21fc8e554",
+      "image_sha256": "dac62ad6730e392bb9b3eda01fb57dc97b84123802774dc62dec7a2cb9ce5b5c",
+      "generated_at": "2026-09-17T12:59:37.834Z"
+    },
+    {
+      "tag": "b8a",
+      "bloque": "b8",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "refs": [
+        "corredor_plumas",
+        "sendero_territorio"
+      ],
+      "desc": "PLANO DETALLE a ras de suelo de dos pies descalzos de papel, como los del corredor de la referencia, entrando en el agua somera de una quebrada de piedras redondas; el agua se abre en dos ondas y salpica bajo. Sólo piernas de la rodilla hacia abajo. Luz de mañana.",
+      "avoid_extra": "rostros, cuerpos completos, sangre, heridas, calzado",
+      "prompt_sha256": "5da018e3b2e0a69d91092c161603fa30442ad80947ba6e21ee36015448b39c7b",
+      "image_sha256": "9ad38d9706e11a4ae2bb320993a44a3852f3542cec718d11cf20f5be833cceb3",
+      "generated_at": "2026-09-17T12:59:40.083Z"
+    },
+    {
+      "tag": "b8b",
+      "bloque": "b8",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "refs": [
+        "corredor_plumas",
+        "poste_lindero"
+      ],
+      "desc": "PLANO DETALLE de la mano de un corredor de papel rozando al pasar la madera gastada de un poste de lindero como el de la referencia, sin detenerse: los dedos apenas tocan la arista, el brazo en movimiento. Fondo de sementera desenfocado. El gesto es de reconocimiento, no de apoyo.",
+      "avoid_extra": "rostros, agarrar el poste, derribarlo, sangre",
+      "prompt_sha256": "f0a6fea4735ef61dfc145e8f12da7bb41eeae37668dc6cc31105d32e4b0b72df",
+      "image_sha256": "5f9cd2cd4fa4e70c3411b25a9ba6047b3c12f79aed76bb6aeb6807d1cf1009fb",
+      "generated_at": "2026-09-17T12:59:38.644Z"
+    },
+    {
+      "tag": "b9a",
+      "bloque": "b9",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "refs": [
+        "lineas_tierra",
+        "sabana_cultivos"
+      ],
+      "desc": "PLANO DETALLE del punto exacto donde un surco sembrado termina y empieza el del vecino: dos texturas de cultivo distintas tocándose en una línea limpia de tierra desnuda, con una piedra pequeña hincada como mojón. Sin personas, sin postes en este encuadre. Luz rasante que separa las dos texturas.",
+      "avoid_extra": "personas, manos, herramientas, animales",
+      "prompt_sha256": "cad7ca1512a0ceed917c3afc10fc9f34b5b5ba4f2c01b2f9fa6d5cb43d1197a7",
+      "image_sha256": "9c927f26b960230d3166ed6c1be526eedcc243df2b4f109e6920dcc12827101d",
+      "generated_at": "2026-09-17T13:00:26.032Z"
     },
     {
       "tag": "b9b",
-      "reusa": "mitos/chaquon/huella"
+      "bloque": "b9",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "refs": [
+        "sabana_linderos",
+        "sendero_territorio"
+      ],
+      "desc": "Plano general vertical MUY abierto del territorio entero desde lo alto: la sabana de la referencia con todas sus parcelas, y la raya de postes cruzándola completa desde el primer plano hasta el horizonte sin interrumpirse en ningún punto. Sin personas. La continuidad de la línea es el sujeto. Luz de tarde amplia.",
+      "avoid_extra": "personas, caminos que corten la línea, ríos que la interrumpan, nubes dramáticas",
+      "prompt_sha256": "c471040a5c312d413809e4424774064c4acaf0fad148bd8a7618ee6655186961",
+      "image_sha256": "8a2b1cf3970e664b8b5766c3c4f016bbad9e361b9f34a0fd048e15128c76f004",
+      "generated_at": "2026-09-17T13:00:19.787Z"
+    },
+    {
+      "tag": "b10a",
+      "bloque": "b10",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "refs": [
+        "poste_lindero",
+        "sabana_linderos"
+      ],
+      "desc": "Plano medio vertical del límite absolutamente solo: dos postes en primer término y la raya siguiendo al fondo, el aire quieto, ni una hoja movida, ninguna presencia. El encuadre está construido para que la falta de figura se note. Luz plana de mediodía nublado.",
+      "avoid_extra": "personas, siluetas, rostros en la madera, formas humanas en las nubes, animales, viento visible",
+      "prompt_sha256": "e2fbf061d36ee28198365761253bd25a0447698ce0507d919ec017eed3f06f0c",
+      "image_sha256": "b56173cd68df398640fc7c1962510c0d914b2b4584f08d0d1decce2c5e121c26",
+      "generated_at": "2026-09-17T13:00:14.587Z"
+    },
+    {
+      "tag": "b10b",
+      "bloque": "b10",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "refs": [
+        "lineas_tierra"
+      ],
+      "desc": "PLANO CENITAL muy cerrado sobre la línea de tierra desnuda que parte el terreno en dos mitades exactas, cada una con su labor distinta; la franja vacía recorre el encuadre entero de arriba abajo por el centro. Abstracción casi gráfica, hecha de tierra y papel. Sin personas.",
+      "avoid_extra": "personas, manos, texto, símbolos, flechas",
+      "prompt_sha256": "e5197c34d7ba68b5b78a530366d6e303ca03f798a96f2b2b90eaf579c8c4c80b",
+      "image_sha256": "248e67d1e630acd934ca95fd1a303e0a71f73bf44d9bf02b82279cc06e141fa8",
+      "generated_at": "2026-09-17T13:00:26.022Z"
+    },
+    {
+      "tag": "b11a",
+      "bloque": "b11",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "refs": [
+        "zaque_tunja",
+        "corredor_plumas",
+        "manta_reparto"
+      ],
+      "desc": "Plano medio vertical: EL MISMO cacique de la referencia entregando con las dos manos una manta doblada igual a la de la referencia a UNO de los corredores de la referencia, que la recibe también con las dos manos; ambos de perfil tres cuartos, a la misma altura, sin reverencia ni sumisión. Fondo de plaza a media tarde.",
+      "avoid_extra": "arrodillarse, besar manos, coronas, tronos, público aclamando",
+      "prompt_sha256": "79a0881978741ddea2f44bf255072ff508f053a62f581a9192d4403d3de4f63b",
+      "image_sha256": "42c14a6273845c9f49825bb6be7fef0651f80e0f2b54c7364b13f00f8230a666",
+      "generated_at": "2026-09-17T13:01:05.255Z"
+    },
+    {
+      "tag": "b11b",
+      "bloque": "b11",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "refs": [
+        "vasija_gacha",
+        "manta_vasijas",
+        "familias_muiscas"
+      ],
+      "desc": "Plano medio vertical del reparto de chicha: manos de varias personas de papel como las de la referencia acercando totumas y cuencos a una vasija de barro grande como la de la referencia, apoyada en el suelo sobre la manta de la referencia. Se ven torsos y brazos, no rostros completos. Ambiente de mediodía de fiesta.",
+      "avoid_extra": "embriaguez, caídas, desorden, vasos o jarras europeas, derrames",
+      "prompt_sha256": "a372a114433598189d936a0dc511ed5c447c755cabf3a45bf8f990407829a2f7",
+      "image_sha256": "b58057a19b7f08c4b01a60e663e33a3cca912989effe43bb2419e857b1ae8e9b",
+      "generated_at": "2026-09-17T13:01:06.586Z"
+    },
+    {
+      "tag": "b12a",
+      "bloque": "b12",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "refs": [
+        "familias_muiscas",
+        "plaza_fiesta_noche"
+      ],
+      "desc": "Plano medio vertical de músicos muiscas como los de la referencia en la plaza de la referencia: dos soplan flautas largas de caña y un tercero un fotuto de caracol, mientras al fondo se adivinan los tambores de cuero y madera. Los instrumentos en el eje central, las manos bien visibles. Últimas horas de luz.",
+      "avoid_extra": "instrumentos europeos, guitarras, trompetas de metal, partituras",
+      "prompt_sha256": "f1dcfc381bbdbb51d575920088dbbfca3bdc216b56e303ee5c89c0d178bd9c74",
+      "image_sha256": "75276fcaaad9eaa3dd9ef2e516797e28cecaf7d48a45320a9f05ab05a4a7c139",
+      "generated_at": "2026-09-17T13:01:07.094Z"
+    },
+    {
+      "tag": "b12b",
+      "bloque": "b12",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "refs": [
+        "familias_muiscas",
+        "plaza_fiesta_noche"
+      ],
+      "desc": "Plano general vertical de un corro: hombres y mujeres de papel como los de la referencia tomados de las manos formando un círculo abierto en la plaza de la referencia, vistos desde fuera y ligeramente en picado; el círculo no se cierra del todo en el borde inferior del encuadre. Gesto sereno, pasos cortos. Luz de atardecer.",
+      "avoid_extra": "danza frenética, saltos, fuego en las manos, máscaras",
+      "prompt_sha256": "0fc07de6062df6a092697d0d5c524ef21811546793f3daead128b367946d0f12",
+      "image_sha256": "5915be7dbc8da2df9e6496e3b3bcbc4e281b7035ac897a42ed150a62106dfbfd",
+      "generated_at": "2026-09-17T13:01:08.585Z"
+    },
+    {
+      "tag": "b13a",
+      "bloque": "b13",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "refs": [
+        "familias_muiscas",
+        "vasija_gacha",
+        "plaza_fiesta_noche"
+      ],
+      "desc": "Plano general vertical en picado suave: el corro de gente de la referencia cantando alrededor de tres vasijas de barro como la de la referencia puestas en el centro exacto del círculo, sobre el suelo barrido. Las bocas abiertas apenas, sin gesticulación. Anochecer, primeros fogones.",
+      "avoid_extra": "gritos, puños alzados, hogueras grandes, humo denso",
+      "prompt_sha256": "ffef9bd7e3f0c39b5062fa796285c9dfde801b6be981d622115715c26e5672da",
+      "image_sha256": "38e5f16d1e45fe416a2b70dcd42308bb786c5719310096df08541ee8ddcaeb8e",
+      "generated_at": "2026-09-17T13:01:47.951Z"
+    },
+    {
+      "tag": "b13b",
+      "bloque": "b13",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "refs": [
+        "vasija_gacha"
+      ],
+      "desc": "PLANO DETALLE de una totuma de chicha pasando de unas manos a otras: cuatro manos de papel en el centro del encuadre, dos entregando y dos recibiendo, el borde del cuenco mojado. Sólo manos y antebrazos, sin rostros. Luz cálida y baja de fogón.",
+      "avoid_extra": "rostros, bocas, derrames, brindis a la europea",
+      "prompt_sha256": "309059887d1d7c3fda82ed9b35fa0a50fc393b82c53ca722fdd16d17b1b4a5b8",
+      "image_sha256": "4fa914865eb67535d3b5f84bc370e8ad28db90689824d8c41e513049e7dbbb2f",
+      "generated_at": "2026-09-17T13:01:44.309Z"
+    },
+    {
+      "tag": "b14a",
+      "bloque": "b14",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "refs": [
+        "corredor_plumas",
+        "poste_lindero"
+      ],
+      "desc": "Plano medio vertical: dos personas de papel como la de la referencia, de espaldas y agachadas, DEPOSITANDO en el suelo al pie de un poste de lindero sus diademas de fibra con plumas y unos adornos pequeños; el poste queda vertical en el eje central y vacío. Nadie mira hacia arriba, nadie reza. Atardecer.",
+      "avoid_extra": "figura divina, rostro en el poste, luz sobrenatural, humo ritual, ídolos, gestos de adoración",
+      "prompt_sha256": "1ff84a70fa402efcf7dea55f061f280c30c82967a23888f323b7210f6335c59e",
+      "image_sha256": "ce453a9d1503c83cb9eb873bc1a80bbe351633152131e72102c9dbfd4e77e286",
+      "generated_at": "2026-09-17T13:01:49.695Z"
+    },
+    {
+      "tag": "b14b",
+      "bloque": "b14",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "refs": [
+        "poste_lindero"
+      ],
+      "desc": "PLANO DETALLE, SIN PERSONAS, de las plumas rojas y blancas y los adornos de fibra dejados sobre la tierra al pie del poste de la referencia; el viento apenas mueve una barba de pluma. La madera del poste sube fuera de cuadro. Última luz del día.",
+      "avoid_extra": "personas, manos, fuego, resplandores, ojos, rostros",
+      "prompt_sha256": "93d64ef8f683790c19713f1cc558ae1abc62e11d0a6af521766f575430b93d5d",
+      "image_sha256": "522bc816c7dbcb44c766b72946abe1f2434f04ee62e2e0462a5bebda543d87d5",
+      "generated_at": "2026-09-17T13:01:44.514Z"
+    },
+    {
+      "tag": "b15a",
+      "bloque": "b15",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "refs": [
+        "poste_lindero",
+        "plaza_fiesta_noche"
+      ],
+      "desc": "Plano general vertical con PESO CONTRARIO: en el primer término, grande y nítido, un poste de lindero de la referencia y la raya perdiéndose; al fondo y pequeña, la plaza de la referencia ya encendida de fogones y gente. El orden delante, la fiesta detrás, las dos en el mismo encuadre. Noche temprana.",
+      "avoid_extra": "incendios, chispas grandes, multitud desbordada",
+      "prompt_sha256": "4e0b1a5dbded3679171be2ef4ad860a391a4708b06ef6a0ce3a3c70f04c9c621",
+      "image_sha256": "6891acbc5650ba0e51b8e78f9d301d078b9c6bb64eca860c5534661be358f3c5",
+      "generated_at": "2026-09-17T13:02:29.196Z"
+    },
+    {
+      "tag": "b15b",
+      "bloque": "b15",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "refs": [
+        "plaza_fiesta_noche",
+        "poste_lindero"
+      ],
+      "desc": "Plano general vertical tomado DESDE la raya de postes, que cruza oscura y desenfocada el tercio inferior: más allá, los fogones de la fiesta de la referencia laten cálidos entre la gente. La línea en sombra enmarca la celebración sin participar de ella. Noche.",
+      "avoid_extra": "personas en primer plano, rostros iluminados por el fuego, humo denso",
+      "prompt_sha256": "f0fae8f2e5d4c075a26625d28533a4aeb1fa9fa013f980ec27bc270c78a8afac",
+      "image_sha256": "6adc5edbd03d2b5b563ed91da91c249d6e960c442d81353acf20cbc17babc361",
+      "generated_at": "2026-09-17T13:02:31.180Z"
+    },
+    {
+      "tag": "b16a",
+      "bloque": "b16",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "refs": [
+        "familias_muiscas",
+        "poste_lindero",
+        "altiplano_noche"
+      ],
+      "desc": "Plano general vertical nocturno: una fila de danzantes de papel como los de la referencia avanzando en hilera junto a la raya de postes, siguiendo exactamente el mismo trazado que siguieron los corredores; las figuras pequeñas y escalonadas, los postes marcando el camino. Cielo estrellado de papel perforado.",
+      "avoid_extra": "antorchas grandes, danza descontrolada, máscaras, animales",
+      "prompt_sha256": "926d0123ba24988debaba0ec9c5efffaa37c658fceb1383a4d4cb4adec27014c",
+      "image_sha256": "dbc9281bcd267a9bb2803db34ce1711b21cdd2e28f93ecbdfddc8e900ee7feed",
+      "generated_at": "2026-09-17T13:02:28.284Z"
+    },
+    {
+      "tag": "b16b",
+      "bloque": "b16",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "refs": [
+        "casa_barro_paja",
+        "altiplano_noche"
+      ],
+      "desc": "Plano general vertical de noche cerrada: tres o cuatro bohíos como el de la referencia con la luz tibia del fogón saliendo por la entrada; unas pocas figuras pequeñas terminan de entrar. El campo alrededor ya oscuro y quieto. La jornada acabándose en las casas.",
+      "avoid_extra": "cuerpos tirados, escenas de embriaguez, desorden, fuego fuera de control",
+      "prompt_sha256": "64a2210d8c93e4b1262d0738aeb2d1664d40a7dfe829659ea844c120b06ed9eb",
+      "image_sha256": "97ec7c4f40ff19e8abf5c88c1bb8e38e356fd3b08fa3c2274072289bb6fce95a",
+      "generated_at": "2026-09-17T13:02:27.823Z"
+    },
+    {
+      "tag": "b17a",
+      "bloque": "b17",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "refs": [
+        "sabana_linderos",
+        "poste_lindero"
+      ],
+      "desc": "Plano general vertical con la ÚLTIMA luz del día abandonando los campos: el sol ya fuera de cuadro deja sólo la coronilla de los postes encendida mientras los surcos se hunden en sombra azul. Sin personas. Silencio.",
+      "avoid_extra": "personas, sol visible con rostro, cielos incendiados, aves",
+      "prompt_sha256": "1269c9bb4e3649339d180c72e87b0528eca23827eff72d2a950ce180fe7af8f0",
+      "image_sha256": "e5fc1391cc8bfdcabf93c02640fef0c3ef75e62017fcfb5c6c7438f92ef24bcf",
+      "generated_at": "2026-09-17T13:03:11.431Z"
+    },
+    {
+      "tag": "b17b",
+      "bloque": "b17",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "refs": [
+        "vasija_gacha",
+        "manta_vasijas"
+      ],
+      "desc": "PLANO DETALLE del amanecer siguiente: dos vasijas de barro como la de la referencia volcadas y vacías sobre la manta de la referencia, con el rocío posado en el barro y una totuma caída de lado. Sin personas. Luz fría y limpia de primera hora.",
+      "avoid_extra": "personas, restos de comida, moscas, suciedad excesiva, vómito",
+      "prompt_sha256": "f210e44212becb09d325ef00fe8987cf29a4db7c0d838eb3778e9545a9c09daf",
+      "image_sha256": "49d47929e468be71bebb64025fd5095f36e1c27aafdf7267ddd42a5d327c3361",
+      "generated_at": "2026-09-17T13:03:10.273Z"
+    },
+    {
+      "tag": "b18a",
+      "bloque": "b18",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "refs": [
+        "poste_lindero",
+        "lineas_tierra"
+      ],
+      "desc": "PLANO DETALLE al amanecer de la plumería caída entre los surcos: las plumas rojas y blancas de las diademas quietas sobre la tierra húmeda, sin brillo, mojadas de rocío, junto a la base de un poste. Nadie las ha recogido todavía. Sin personas. Luz fría.",
+      "avoid_extra": "personas, manos, plumas volando, viento fuerte, aves",
+      "prompt_sha256": "9b821474f32460a77bee7406e18ffc6793d41b046cdf40a4ac837929255e8c66",
+      "image_sha256": "06cdb946c9fe4f55d18442328e562e6ca6bdd0d3e357fc3053a19ecdbe0fa74c",
+      "generated_at": "2026-09-17T13:03:10.251Z"
+    },
+    {
+      "tag": "b18b",
+      "bloque": "b18",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "refs": [
+        "sabana_linderos",
+        "poste_lindero"
+      ],
+      "desc": "Plano general vertical de cierre, SIN NADIE: la raya completa de postes y piedras atravesando la sementera en la primera luz, exactamente igual que en el primer bloque, intacta, con la niebla baja deshaciéndose entre los surcos. Nada indica que hubo fiesta salvo la quietud. Luz fría de amanecer.",
+      "avoid_extra": "personas, huellas humanas, basura, plumas, vasijas, cualquier rastro de celebración",
+      "prompt_sha256": "edfe6bf6328637355483a8f3d9cada6f0f824358d10ac1380689ea2e122e688c",
+      "image_sha256": "c5a5c122e70063555bb5000869d98f3804a901117441701832d2cebe377bab36",
+      "generated_at": "2026-09-17T13:03:09.401Z"
     }
   ]
 }
