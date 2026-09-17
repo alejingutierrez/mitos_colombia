@@ -1,0 +1,70 @@
+{
+ "plano": "P13",
+ "tipo": "kling",
+ "modo": "una_pasada",
+ "escala": "PM",
+ "mirada": "perfil tres cuartos hacia la izquierda, la cara nunca a cámara",
+ "duracion": 5,
+ "decorado": [
+  "La plaza de tierra apisonada de noche, vacía de gente en este encuadre; detrás, dos bohíos y la hilera de vasijas de chicha contra un muro; un fogón bajo fuera de centro a la derecha; la luna de papel alta a la derecha."
+ ],
+ "sujeto": [
+  "Huitaca: mujer muisca de unos treinta años, piel morena, cabello negro suelto y abundante, manta de algodón crudo casi lunar con dos franjas tejidas en ocre y rojo apagado echada sobre un hombro, descalza; en la mano izquierda, contra el costado, una OLLA DE BARRO GRIS baja y panzuda (siempre la misma olla).",
+  "Hecha de papel artesanal: capas, cortes visibles, fibras y bordes imperfectos; volumen bajo.",
+  "Está sola en el cuadro, de pie en el centro, de perfil tres cuartos hacia la izquierda, con la olla en la mano izquierda."
+ ],
+ "refs": [
+  {
+   "ruta": "content/videos/muiscas/videos/huitaca/v2/mundo/lookdev-plaza.jpg",
+   "rol": "hoja de lookdev del mundo: copia arquitectura, materiales, luna y paleta"
+  },
+  {
+   "ruta": "content/videos/muiscas/videos/huitaca/v2/mundo/ficha-huitaca.jpg",
+   "rol": "ficha de producción de Huitaca con su olla gris: identidad, ropa y atrezo exactos"
+  },
+  {
+   "ruta": "content/videos/muiscas/videos/huitaca/v2/mundo/ficha-lechuza.jpg",
+   "rol": "ficha de producción de la lechuza: la especie y los materiales exactos del ave"
+  }
+ ],
+ "A": "Huitaca de pie, de perfil tres cuartos hacia la izquierda, con la olla en la mano izquierda a la altura de la cadera; en su ANTEBRAZO DERECHO, levantado a media altura, asoman las primeras plumas marrón moteado pegadas a la piel; su cara es la suya, con sorpresa y sin horror; la manta cae entera sobre el hombro.",
+ "B": "En el sitio exacto donde estaba de pie, la LECHUZA de la ficha, PEQUEÑA (un tercio de la altura que tenía la mujer), posada sobre la MANTA CLARA caída en el suelo como una tela vacía; la OLLA DE BARRO GRIS está en el aire a la altura de la cintura de la mujer, a medio caer, con la chicha oscura asomando por el borde. No hay mujer ni figura híbrida: sólo el ave, la manta y la olla.",
+ "mascara": {
+  "x0": 0.02,
+  "y0": 0.1,
+  "x1": 0.72,
+  "y1": 0.98
+ },
+ "sujeto_movil": "Huitaca entera con su manta y su olla gris, y después la lechuza, la manta caída y la olla en el aire; nada más",
+ "accion": [
+  "Celdas 1-8: las plumas marrón moteado se extienden del antebrazo al hombro, al cuello y al pelo, en pasos iguales; ella sigue de pie, la olla gris en la mano izquierda contra la cadera durante TODAS estas celdas.",
+  "Celdas 9-18: ella se pliega hacia adelante en pasos iguales y pierde altura; la cara se va redondeando en cara de búho —REDONDA Y MARRÓN desde el primer rasgo de ave, nunca pálida ni blanca en forma de corazón—; la olla se le va soltando de la mano y queda en el aire a la altura de la cintura, siempre en el mismo sitio del cuadro.",
+  "Celdas 19-27: la manta clara se desliza del cuerpo y cae al suelo en pasos iguales (primero un pliegue, luego media manta, luego toda en el suelo); el cuerpo emplumado se encoge celda a celda; la olla sigue en el aire, en el mismo sitio, empezando a gotear chicha oscura.",
+  "Celdas 28-34: lo que queda se encoge celda a celda hasta ser una lechuza pequeña, un tercio de la altura de la mujer de la celda 1, posada sobre la manta caída; la olla sigue en el aire goteando, en el mismo sitio.",
+  "Celdas 35-36: reposo final igual al fotograma B: la lechuza pequeña quieta sobre la manta, la olla en el aire con la chicha asomando.",
+  "La olla describe UNA sola trayectoria continua: de la cadera (celda 1) al aire a la altura de la cintura (celda 18) y ahí se queda; nunca salta de sitio entre filas.",
+  "Nunca una persona de pie con cabeza de ave: el plegado y el encogimiento van juntos."
+ ],
+ "rejilla": [
+  6,
+  6
+ ],
+ "carpeta": "flipbook-36b",
+ "anclaje_escala": true,
+ "cadencia": 12,
+ "alto_final_relativo": 0.33,
+ "identidad_por_tramo": [
+  {
+   "hasta": 18,
+   "ref": "A.jpg",
+   "quien": "la misma mujer (Huitaca), la misma manta clara con sus franjas, la misma olla gris",
+   "rol": "el fotograma A: identidad, materiales, luz y escala de la mujer"
+  },
+  {
+   "hasta": 36,
+   "ref": "B.jpg",
+   "quien": "la MISMA lechuza de cara redonda marrón, la misma manta clara caída y la misma olla gris; NO hay ninguna mujer",
+   "rol": "el fotograma B: identidad, materiales, luz y escala de la lechuza, la manta caída y la olla"
+  }
+ ]
+}

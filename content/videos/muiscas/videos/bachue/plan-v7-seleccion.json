@@ -1,0 +1,182 @@
+{
+ "_notas": "Plan v7 de Bachué: MONTAJE POR SELECCIÓN DEL USUARIO (2026-09-16). Cada toma es la que el usuario eligió en la mesa de montaje escena por escena: c01=gemini, c02=seedance, c03=grok, c04=seedance, c05=seedance, c06=grok, c07=grok, c08=grok, c09=grok, c10=grok, c11=grok, c12=grok, c13=gemini, c14=gemini, c15=grok, c16=gemini, c17=seedance, c18=seedance. Las nueve tomas de la tanda grok son de agosto y venían a 720x1280: se reescalaron a 1080x1920 con lanczos y se recortaron a 5 s (cuatro duraban 6,04 s). Voces v4, lecho v6, mezcla narracion, sin subtítulos, título Asimovian y el CIERRE DE CANAL como bloque 20.",
+ "width": 1080,
+ "height": 1920,
+ "fps": 24,
+ "voice_offset": 0.5,
+ "mix": "narracion",
+ "voice_lufs": -16,
+ "music_lufs": -34,
+ "music_fade_out": 0,
+ "music": "lecho-v6.wav",
+ "burn_subtitles": false,
+ "write_srt": false,
+ "title_font": "../../../fonts/Asimovian-Regular.ttf",
+ "title_font_family": "Asimovian",
+ "title_size": 92,
+ "title_color": "#F5F0E6",
+ "title_y": 280,
+ "blocks": [
+  {
+   "n": 1,
+   "type": "motion",
+   "clip": "clips-seleccion/c01.mp4",
+   "duration": 5,
+   "voice": "voces-v4/voz01.wav",
+   "subtitle": "Dicen que al principio no había caminos. Puro agua y niebla. Una laguna quieta, allá arriba, cuidando la vida.",
+   "title": "Bachué",
+   "title_sub": "Mitos de Colombia · muiscas",
+   "_tanda": "gemini"
+  },
+  {
+   "n": 2,
+   "type": "motion",
+   "clip": "clips-seleccion/c02.mp4",
+   "duration": 5,
+   "_tanda": "seedance"
+  },
+  {
+   "n": 3,
+   "type": "motion",
+   "clip": "clips-seleccion/c03.mp4",
+   "duration": 5,
+   "voice": "voces-v4/voz02.wav",
+   "subtitle": "Y una mañana, el agua se abrió en círculos. Del fondo salió Bachué con un niño de la mano.",
+   "_tanda": "grok"
+  },
+  {
+   "n": 4,
+   "type": "motion",
+   "clip": "clips-seleccion/c04.mp4",
+   "duration": 5,
+   "_tanda": "seedance"
+  },
+  {
+   "n": 5,
+   "type": "motion",
+   "clip": "clips-seleccion/c05.mp4",
+   "duration": 5,
+   "voice": "voces-v4/voz03.wav",
+   "subtitle": "Se vinieron para el valle y armaron su casa. De noche, el fuego les contaba historias bajo las estrellas.",
+   "_tanda": "seedance"
+  },
+  {
+   "n": 6,
+   "type": "motion",
+   "clip": "clips-seleccion/c06.mp4",
+   "duration": 5,
+   "_tanda": "grok"
+  },
+  {
+   "n": 7,
+   "type": "motion",
+   "clip": "clips-seleccion/c07.mp4",
+   "duration": 5,
+   "voice": "voces-v4/voz04.wav",
+   "subtitle": "El niño creció y se volvió su compañero. Y de esos dos, óigame bien, nació toda la gente.",
+   "_tanda": "grok"
+  },
+  {
+   "n": 8,
+   "type": "motion",
+   "clip": "clips-seleccion/c08.mp4",
+   "duration": 5,
+   "_tanda": "grok"
+  },
+  {
+   "n": 9,
+   "type": "motion",
+   "clip": "clips-seleccion/c09.mp4",
+   "duration": 5,
+   "voice": "voces-v4/voz05.wav",
+   "subtitle": "Bachué caminaba estas tierras y donde paraba, nacía un pueblo. Sus pies sabían dónde estaba escondida el agua.",
+   "_tanda": "grok"
+  },
+  {
+   "n": 10,
+   "type": "motion",
+   "clip": "clips-seleccion/c10.mp4",
+   "duration": 5,
+   "_tanda": "grok"
+  },
+  {
+   "n": 11,
+   "type": "motion",
+   "clip": "clips-seleccion/c11.mp4",
+   "duration": 5,
+   "voice": "voces-v4/voz06.wav",
+   "subtitle": "Y les fue enseñando lo importante: guardar las semillas, escuchar a los demás, y el agua, compartirla siempre.",
+   "_tanda": "grok"
+  },
+  {
+   "n": 12,
+   "type": "motion",
+   "clip": "clips-seleccion/c12.mp4",
+   "duration": 5,
+   "_tanda": "grok"
+  },
+  {
+   "n": 13,
+   "type": "motion",
+   "clip": "clips-seleccion/c13.mp4",
+   "duration": 5,
+   "voice": "voces-v4/voz07.wav",
+   "subtitle": "Los años le fueron pintando la trenza de plata. Una tarde dijo tranquila: me está llamando la laguna.",
+   "_tanda": "gemini"
+  },
+  {
+   "n": 14,
+   "type": "motion",
+   "clip": "clips-seleccion/c14.mp4",
+   "duration": 5,
+   "_tanda": "gemini"
+  },
+  {
+   "n": 15,
+   "type": "motion",
+   "clip": "clips-seleccion/c15.mp4",
+   "duration": 5,
+   "voice": "voces-v4/voz08.wav",
+   "subtitle": "Todo el pueblo la acompañó hasta arriba. Allá entregó sus semillas y pidió una sola cosa: vivan en paz.",
+   "_tanda": "grok"
+  },
+  {
+   "n": 16,
+   "type": "motion",
+   "clip": "clips-seleccion/c16.mp4",
+   "duration": 5,
+   "_tanda": "gemini"
+  },
+  {
+   "n": 17,
+   "type": "motion",
+   "clip": "clips-seleccion/c17.mp4",
+   "duration": 5,
+   "voice": "voces-v4/voz09.wav",
+   "subtitle": "Se metieron al agua despacito. Dos serpientes hicieron un círculo y se hundieron. Y quedó la pura calma.",
+   "_tanda": "seedance"
+  },
+  {
+   "n": 18,
+   "type": "motion",
+   "clip": "clips-seleccion/c18.mp4",
+   "duration": 5,
+   "_tanda": "seedance"
+  },
+  {
+   "n": 19,
+   "type": "still",
+   "image": "../../biblia/laguna_iguaque_A.crop-9x16.jpg",
+   "kenburns": "out",
+   "duration": 4
+  },
+  {
+   "n": 20,
+   "type": "motion",
+   "clip": "../../cierre/cierre-canal-v1-mudo.mp4",
+   "duration": 8.42,
+   "voice": "../../cierre/voces-v1/voz-cierre.wav"
+  }
+ ],
+ "_nota": "v6 = v5 + el CIERRE DE CANAL como un bloque mas. El cierre es un mp4 mudo reusable (docs/videos/cierre-de-canal.md); su voz va en el mismo bloque y el lecho del video sigue sonando encima, asi no hay costura de audio."
+}

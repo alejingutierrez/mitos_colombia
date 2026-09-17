@@ -1,0 +1,26 @@
+{
+ "plano": "P15",
+ "tipo": "quieto",
+ "modo": "fijo",
+ "escala": "G",
+ "duracion": 3.9,
+ "decorado": [
+  "La plaza de tierra de noche con la GENTE DETENIDA A MEDIA DANZA: ocho o nueve figuras de papel quietas, escalonadas en tres planos, todas mirando hacia un ESPACIO VACÍO en el centro del cuadro donde sólo hay una manta clara en el suelo; los tambores callados en el suelo; dos fogones encendidos a los lados; bohíos y vasijas detrás; la luna de papel alta a la derecha."
+ ],
+ "refs": [
+  {
+   "ruta": "content/videos/muiscas/videos/huitaca/v2/mundo/lookdev-plaza.jpg",
+   "rol": "hoja de lookdev del mundo: copia arquitectura, materiales, luna y paleta"
+  }
+ ],
+ "A": "Todo detenido: nadie se mueve, todas las caras vueltas hacia el espacio vacío del centro; las llamas de los dos fogones altas.",
+ "fondo": {
+  "mueve": "ÚNICAMENTE las llamas de los dos fogones, sus brasas y su resplandor sobre el suelo; las personas siguen exactamente igual de quietas, en la misma pose",
+  "estados": [
+   "Las llamas altas y rectas; las brasas encendidas.",
+   "Las llamas más bajas y encogidas, partidas en dos puntas; se ve más brasa.",
+   "Las llamas vuelven a crecer inclinadas a la izquierda, una chispa suelta.",
+   "Las llamas a media altura, verticales, en tres puntas cortas; las brasas más rojas."
+  ]
+ }
+}

@@ -1,0 +1,22 @@
+{
+  "_notas": "Video 1 del carril Kling 3.0 por MCP (2026-09-09). Guion = las 9 líneas de content/videos/muiscas/videos/la-aparicion-del-hombre/bloques.json (escritas SOBRE los 17 keyframes 2K + el acto del tríptico — regla madre: las imágenes ya producidas son la base). Canon: DB slug la-aparicion-del-hombre (id 255, «La aparición de los primeros seres humanos»). Mapeo visual: bloque N → clips c(2N-1) y c(2N); b4b = acto del tríptico (c08). Cita directa única en b8 («¿Dónde estás?»); bookend oscuridad b1→b9; nombres propios: sólo Ramiriquí (b9). Ventana por bloque = 2 clips × 5 s = 10 s. VOZ = la misma de las narraciones del sitio (alejandro_narracion, DEFAULT_VOICE de src/lib/narration.js): eleven_multilingual_v2, st .35 / sim .9 / style .3 / speed 1.05 / speaker_boost. Se genera con --format wav (pcm_48000) para tener máster sin pérdida como en las narraciones.",
+  "aprobado": "2026-09-09 por usuario (encargo en chat: producir el primer video muisca con los keyframes y el guion existentes)",
+  "mito_slug": "la-aparicion-del-hombre",
+  "titulo_video": "La aparición del hombre",
+  "titulo_canon": "La aparición de los primeros seres humanos",
+  "voice_id": "9EHAKExD4lT2G6hPG74L",
+  "voice_name": "alejandro_narracion",
+  "model_id": "eleven_multilingual_v2",
+  "voice_settings": { "stability": 0.35, "similarity_boost": 0.9, "style": 0.3, "use_speaker_boost": true, "speed": 1.05 },
+  "lines": [
+    { "bloque": "b1", "text": "La tierra estaba a oscuras y dos caciques la recorrían sin apurarse.", "window": 9.5 },
+    { "bloque": "b2", "text": "El suelo y el agua ya existían, pero no había nadie más con quien compartirlos.", "window": 9.5 },
+    { "bloque": "b3", "text": "Buscaron una tierra amarilla que pudiera sostenerse entre los dedos.", "window": 9.5 },
+    { "bloque": "b4", "text": "Fueron formando piernas para subir lomas, manos para el trabajo y rostros.", "window": 9.5 },
+    { "bloque": "b5", "text": "Para otros cuerpos cortaron tallos altos y huecos, y entrelazaron sus fibras.", "window": 9.5 },
+    { "bloque": "b6", "text": "Eran ligeros, pero se mantenían en pie. El aire los atravesaba con un suspiro.", "window": 9.5 },
+    { "bloque": "b7", "text": "Entonces recibieron aliento. Se movió una mano. Un pie dejó una huella húmeda.", "window": 9.5 },
+    { "bloque": "b8", "text": "No podían verse, pero se escuchaban. —¿Dónde estás? —preguntó una voz.", "window": 9.5 },
+    { "bloque": "b9", "text": "Caminaron el territorio. Ramiriquí levantó la cabeza hacia la oscuridad.", "window": 9.5 }
+  ]
+}

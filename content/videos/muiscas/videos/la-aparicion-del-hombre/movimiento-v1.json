@@ -1,0 +1,168 @@
+{
+  "_notas": "Prompts de movimiento del video 1 (la-aparicion-del-hombre) para Kling 3.0 vía MCP de Higgsfield, escritos mirando cada keyframe (2026-09-09). Un prompt por clip; el keyframe recortado a 9:16 exacto (kf-9x16/) va como start_image. Regla: el prompt sólo pone en movimiento LO QUE YA SE VE en el keyframe (una acción principal + 1-2 secundarias + UNA cámara motivada); caras 'calm and identical, mouth closed'; conteo de figuras fijado; negativos mínimos al final. Estilo y sufijo de invariantes son byte-idénticos en los 18 (estilo_prefijo + cuerpo + invariantes_sufijo = campo prompt). Cámara alternada por escala según direccion-cinematografica.md: viajes L→R (c01, c02), cenitales fijos (c03 drift, c14 locked), contrapicado con tilt-up (c11, c18), retratos con push-in lentísimo. Bloque → clips: bN → c(2N-1), c(2N); b4b = acto del tríptico (c08).",
+  "modelo": {
+    "model": "kling3_0",
+    "mode": "pro",
+    "sound": "off",
+    "duration": 5,
+    "aspect_ratio": "9:16",
+    "costo_cr_por_clip": 8.75,
+    "verificado": "get_cost 2026-09-09 (std=7,5 · pro=8,75)"
+  },
+  "estilo_prefijo": "Handmade paper-maquette stop-motion animation with a slightly stepped cadence. ",
+  "invariantes_sufijo": " Every surface stays visibly cut paper, cardboard, natural fiber and dry clay with real edges and contact shadows; composition, palette and the cold night lighting stay exactly as in the starting image; motion begins on the first frame. No text, no lip-sync, no new characters.",
+  "clips": {
+    "c01": {
+      "bloque": "b1",
+      "keyframe": "kf-9x16/c01-b1a.jpg",
+      "origen": "keyframes/b1a.jpg",
+      "escala": "gran general",
+      "camara": "push-in muy lento",
+      "prompt": "Handmade paper-maquette stop-motion animation with a slightly stepped cadence. A vast dark highland at night, hills layered in cut paper. The two tiny paper figures on the faintly lit yellow ground walk slowly from left to right, side by side, with small stepped steps, their mantles swaying gently. The dry grass tufts tremble in a faint breeze; the far haze between the hills barely moves. Camera: one very slow push-in toward the two walkers, keeping them small inside the enormous landscape; the starless sky stays black-blue. Every surface stays visibly cut paper, cardboard, natural fiber and dry clay with real edges and contact shadows; composition, palette and the cold night lighting stay exactly as in the starting image; motion begins on the first frame. No text, no lip-sync, no new characters."
+    },
+    "c02": {
+      "bloque": "b1",
+      "keyframe": "kf-9x16/c02-b1b.jpg",
+      "origen": "keyframes/b1b.jpg",
+      "escala": "medio",
+      "camara": "travelling lateral L→R",
+      "prompt": "Handmade paper-maquette stop-motion animation with a slightly stepped cadence. The two paper caciques walk forward to the right with slow, deliberate stepped steps, the older one with the topknot half a step ahead; their cream cotton mantles swing and settle with each stride and a few hair strands shift. The dry paper grass at their knees brushes aside as they pass. Their faces stay calm and identical to the image, mouths closed. Camera: one slow lateral tracking shot moving right with them, keeping both figures in frame. Every surface stays visibly cut paper, cardboard, natural fiber and dry clay with real edges and contact shadows; composition, palette and the cold night lighting stay exactly as in the starting image; motion begins on the first frame. No text, no lip-sync, no new characters."
+    },
+    "c03": {
+      "bloque": "b2",
+      "keyframe": "kf-9x16/c03-b2a.jpg",
+      "origen": "keyframes/b2a.jpg",
+      "escala": "cenital",
+      "camara": "drift cenital hacia abajo",
+      "prompt": "Handmade paper-maquette stop-motion animation with a slightly stepped cadence. Seen from directly above, the thin dark stream runs down its stony channel: the water surface glints and ripples as it flows from the top of the frame to the bottom, curling in small eddies against the paper stones. The dry agave tufts on both banks tremble faintly. Camera: one slow overhead drift downward along the stream. No people anywhere. Every surface stays visibly cut paper, cardboard, natural fiber and dry clay with real edges and contact shadows; composition, palette and the cold night lighting stay exactly as in the starting image; motion begins on the first frame. No text, no lip-sync, no new characters."
+    },
+    "c04": {
+      "bloque": "b2",
+      "keyframe": "kf-9x16/c04-b2b.jpg",
+      "origen": "keyframes/b2b.jpg",
+      "escala": "medio corto",
+      "camara": "push-in muy lento",
+      "prompt": "Handmade paper-maquette stop-motion animation with a slightly stepped cadence. The two paper caciques stand facing each other in the dim night. The one on the left slowly lowers his open hand toward the yellow ground as if pointing to the earth, then raises his eyes to the other; the one on the right looks down at the lump of clay in his hands, turns it once, and lifts his head. Their mantles sway softly; mouths stay closed, no talking. Camera: one very slow push-in toward the lit ground between them. Every surface stays visibly cut paper, cardboard, natural fiber and dry clay with real edges and contact shadows; composition, palette and the cold night lighting stay exactly as in the starting image; motion begins on the first frame. No text, no lip-sync, no new characters."
+    },
+    "c05": {
+      "bloque": "b3",
+      "keyframe": "kf-9x16/c05-b3a.jpg",
+      "origen": "keyframes/b3a.jpg",
+      "escala": "primer plano",
+      "camara": "fija con push-in mínimo",
+      "prompt": "Handmade paper-maquette stop-motion animation with a slightly stepped cadence. The large paper hand presses its fingers deeper into the wet yellow clay, slowly closes them and scoops up a handful; crumbs of clay break off and tumble back into the hollow left behind. The small blurred figure in the background stays standing, watching. Camera: locked, with the slightest slow push-in toward the hand. Every surface stays visibly cut paper, cardboard, natural fiber and dry clay with real edges and contact shadows; composition, palette and the cold night lighting stay exactly as in the starting image; motion begins on the first frame. No text, no lip-sync, no new characters."
+    },
+    "c06": {
+      "bloque": "b3",
+      "keyframe": "kf-9x16/c06-b3b.jpg",
+      "origen": "keyframes/b3b.jpg",
+      "escala": "medio",
+      "camara": "push-in lento",
+      "prompt": "Handmade paper-maquette stop-motion animation with a slightly stepped cadence. The crouching paper figure tilts the shallow clay bowl a little further: a thin trickle of water pours from its lip onto the yellow earth and a dark wet stain spreads slowly across the ground; he then presses the softened clay with his free hand. His body moves in small stepped increments; his face stays calm and identical, mouth closed. Camera: one slow push-in toward the bowl and the wet ground. Every surface stays visibly cut paper, cardboard, natural fiber and dry clay with real edges and contact shadows; composition, palette and the cold night lighting stay exactly as in the starting image; motion begins on the first frame. No text, no lip-sync, no new characters."
+    },
+    "c07": {
+      "bloque": "b4",
+      "keyframe": "kf-9x16/c07-b4a.jpg",
+      "origen": "keyframes/b4a.jpg",
+      "escala": "detalle",
+      "camara": "fija a ras de suelo, push-in mínimo",
+      "prompt": "Handmade paper-maquette stop-motion animation with a slightly stepped cadence. Two freshly modeled yellow clay feet stand on the cracked dark earth. The toes of the right foot slowly curl and spread for the first time; the left heel lifts slightly and settles back, pressing crumbs of dry clay into the ground; small flakes fall from the ankles. Camera: locked at ground level with a very slow push-in. Every surface stays visibly cut paper, cardboard, natural fiber and dry clay with real edges and contact shadows; composition, palette and the cold night lighting stay exactly as in the starting image; motion begins on the first frame. No text, no lip-sync, no new characters."
+    },
+    "c08": {
+      "bloque": "b4",
+      "keyframe": "kf-9x16/c08-acto.jpg",
+      "origen": "../../mitos/la-aparicion-del-hombre/acto.jpg",
+      "escala": "primer plano dominante",
+      "camara": "push-in muy lento",
+      "prompt": "Handmade paper-maquette stop-motion animation with a slightly stepped cadence. Two large paper hands work a yellow clay face: the thumbs slowly smooth the brow and press the closed eyelids into shape, then the fingers draw gently down the cheek leaving fingerprint marks in the soft clay. The woven hollow-stem torso beside it stays in place. The blurred paper figures in the background bend and straighten slightly as they work. Camera: one very slow push-in toward the clay face. Every surface stays visibly cut paper, cardboard, natural fiber and dry clay with real edges and contact shadows; composition, palette and the cold night lighting stay exactly as in the starting image; motion begins on the first frame. No text, no lip-sync, no new characters."
+    },
+    "c09": {
+      "bloque": "b5",
+      "keyframe": "kf-9x16/c09-b5a.jpg",
+      "origen": "keyframes/b5a.jpg",
+      "escala": "medio",
+      "camara": "push-in lento",
+      "prompt": "Handmade paper-maquette stop-motion animation with a slightly stepped cadence. The paper figure grips a tall hollow stem with his left hand and pulls it free with a firm tug: the stem bends and snaps loose, the surrounding tall stems sway and spring back, and he tucks it into the bundle held under his right arm. His hair and short mantle shift with the effort; his face stays calm and identical, mouth closed. Camera: one slow push-in toward the figure and the bundle. Every surface stays visibly cut paper, cardboard, natural fiber and dry clay with real edges and contact shadows; composition, palette and the cold night lighting stay exactly as in the starting image; motion begins on the first frame. No text, no lip-sync, no new characters.",
+      "regen": {
+        "motivo": "v1: en el último segundo el personaje se endereza y mira a cámara (rompe la ética de espaldas/media distancia y le cambia la cara). v2 añade el candado de perfil y ojos en los tallos.",
+        "prompt_v2": "Handmade paper-maquette stop-motion animation with a slightly stepped cadence. The paper figure stays bent over the tall hollow stems for the whole clip, seen in three-quarter profile from the side, his eyes fixed on the stems and his head never turning toward the camera. He grips one tall stem with his left hand and pulls it free with a firm tug: the stem bends and snaps loose, the surrounding tall stems sway and spring back, and he tucks it into the bundle held under his right arm, then reaches for the next stem. His hair and short mantle shift with the effort; his face stays calm and identical, mouth closed. Camera: one slow push-in toward the hands and the bundle. Every surface stays visibly cut paper, cardboard, natural fiber and dry clay with real edges and contact shadows; composition, palette and the cold night lighting stay exactly as in the starting image; motion begins on the first frame. No text, no lip-sync, no new characters."
+      }
+    },
+    "c10": {
+      "bloque": "b5",
+      "keyframe": "kf-9x16/c10-b5b.jpg",
+      "origen": "keyframes/b5b.jpg",
+      "escala": "primer plano",
+      "camara": "fija con push-in mínimo",
+      "prompt": "Handmade paper-maquette stop-motion animation with a slightly stepped cadence. Two hands weave the hollow stems: the right hand pulls the loose fiber strip tight around the bundle, wraps it once more and tucks the end under the previous loop while the left hand steadies the woven torso, which flexes slightly; loose fiber ends quiver. The blurred figure in the background stays standing. Camera: locked with the slightest push-in toward the knot. Every surface stays visibly cut paper, cardboard, natural fiber and dry clay with real edges and contact shadows; composition, palette and the cold night lighting stay exactly as in the starting image; motion begins on the first frame. No text, no lip-sync, no new characters."
+    },
+    "c11": {
+      "bloque": "b6",
+      "keyframe": "kf-9x16/c11-b6a.jpg",
+      "origen": "keyframes/b6a.jpg",
+      "escala": "contrapicado",
+      "camara": "tilt-up lento",
+      "prompt": "Handmade paper-maquette stop-motion animation with a slightly stepped cadence. Low angle: a soft wind moves through the field of cut hollow stems, which sway and knock gently against each other; the tall grass plume on the right bends and springs back. The standing paper figure stays upright, only his cream mantle lifts and settles with the wind and a few hair strands move; his face stays calm and identical, mouth closed. The dark haze behind him drifts almost imperceptibly. Camera: one slow tilt up from the stems to the figure's face. Every surface stays visibly cut paper, cardboard, natural fiber and dry clay with real edges and contact shadows; composition, palette and the cold night lighting stay exactly as in the starting image; motion begins on the first frame. No text, no lip-sync, no new characters."
+    },
+    "c12": {
+      "bloque": "b6",
+      "keyframe": "kf-9x16/c12-b6b.jpg",
+      "origen": "keyframes/b6b.jpg",
+      "escala": "general simétrico",
+      "camara": "push-in muy lento",
+      "prompt": "Handmade paper-maquette stop-motion animation with a slightly stepped cadence. Seven standing figures wait motionless in the dark: a soft wind passes through them, lifting the frayed edges of the pale fiber garments on the two woven figures and stirring the yellow mantle of the clay figure in front, then everything settles. Dry grass tufts on the rocks tremble. The figures do not walk; their number, faces and positions stay exactly as in the image. Camera: one very slow push-in toward the front figure. Every surface stays visibly cut paper, cardboard, natural fiber and dry clay with real edges and contact shadows; composition, palette and the cold night lighting stay exactly as in the starting image; motion begins on the first frame. No text, no lip-sync, no new characters."
+    },
+    "c13": {
+      "bloque": "b7",
+      "keyframe": "kf-9x16/c13-b7a.jpg",
+      "origen": "keyframes/b7a.jpg",
+      "escala": "detalle",
+      "camara": "fija con push-in muy lento",
+      "prompt": "Handmade paper-maquette stop-motion animation with a slightly stepped cadence. The yellow clay hand lying on the ground comes alive: its fingers slowly uncurl and spread apart for the first time, the thumb lifts, and the whole hand rises a little from the ground before settling again as small flakes of drying clay fall away. The blurred paper figure in the background stays still, watching. Camera: locked with a very slow push-in toward the open palm. Every surface stays visibly cut paper, cardboard, natural fiber and dry clay with real edges and contact shadows; composition, palette and the cold night lighting stay exactly as in the starting image; motion begins on the first frame. No text, no lip-sync, no new characters."
+    },
+    "c14": {
+      "bloque": "b7",
+      "keyframe": "kf-9x16/c14-b7b.jpg",
+      "origen": "keyframes/b7b.jpg",
+      "escala": "detalle cenital",
+      "camara": "fija cenital",
+      "prompt": "Handmade paper-maquette stop-motion animation with a slightly stepped cadence. Seen from directly above, the yellow clay foot at the top of the frame lifts and steps forward out of the top edge, revealing the fresh footprint below: its wet rim glistens and slowly slumps as the mud settles, and small crumbs roll into the print. Stones, grass and dry stems around it stay in place. Camera: locked overhead. No new feet or people appear. Every surface stays visibly cut paper, cardboard, natural fiber and dry clay with real edges and contact shadows; composition, palette and the cold night lighting stay exactly as in the starting image; motion begins on the first frame. No text, no lip-sync, no new characters."
+    },
+    "c15": {
+      "bloque": "b8",
+      "keyframe": "kf-9x16/c15-b8a.jpg",
+      "origen": "keyframes/b8a.jpg",
+      "escala": "medio enfrentados",
+      "camara": "push-in muy lento",
+      "prompt": "Handmade paper-maquette stop-motion animation with a slightly stepped cadence. Two paper figures reach toward each other in the dark: their extended arms move slowly forward in small stepped increments until the fingertips almost touch, the hands trembling slightly as they search; their heads tilt a little as if listening. Mantles sway softly. Faces stay calm and identical, mouths closed, no talking. Camera: one very slow push-in toward the gap between the two hands. Every surface stays visibly cut paper, cardboard, natural fiber and dry clay with real edges and contact shadows; composition, palette and the cold night lighting stay exactly as in the starting image; motion begins on the first frame. No text, no lip-sync, no new characters."
+    },
+    "c16": {
+      "bloque": "b8",
+      "keyframe": "kf-9x16/c16-b8b.jpg",
+      "origen": "keyframes/b8b.jpg",
+      "escala": "primer plano",
+      "camara": "fija con push-in muy lento",
+      "prompt": "Handmade paper-maquette stop-motion animation with a slightly stepped cadence. The clay hand and the woven fiber hand hold each other: the clay fingers slowly tighten their grip, the fiber hand curls its braided fingers around in answer, and both hands lift slightly together before settling. A loose fiber strand quivers. Camera: locked with a very slow push-in toward the clasped hands; the deep black-blue background stays empty. Every surface stays visibly cut paper, cardboard, natural fiber and dry clay with real edges and contact shadows; composition, palette and the cold night lighting stay exactly as in the starting image; motion begins on the first frame. No text, no lip-sync, no new characters."
+    },
+    "c17": {
+      "bloque": "b9",
+      "keyframe": "kf-9x16/c17-b9a.jpg",
+      "origen": "keyframes/b9a.jpg",
+      "escala": "general diagonal",
+      "camara": "follow desde atrás",
+      "prompt": "Handmade paper-maquette stop-motion animation with a slightly stepped cadence. The paper figures walk up the faintly lit path away from the camera with slow stepped steps, one after another: the nearest figure lifts a foot and sets it down, mantles swaying, while the figures farther up keep climbing toward the upper left. Dry agave tufts tremble in a faint breeze. Their number stays exactly as in the image. Camera: one slow follow from behind, drifting gently up the path. Every surface stays visibly cut paper, cardboard, natural fiber and dry clay with real edges and contact shadows; composition, palette and the cold night lighting stay exactly as in the starting image; motion begins on the first frame. No text, no lip-sync, no new characters.",
+      "regen": {
+        "motivo": "v1: las mantas de las dos figuras cercanas se abren en horizontal como alas durante ~3 s (lectura de aleteo). v2 fija brazos abajo y mantas colgando que sólo oscilan en el borde.",
+        "prompt_v2": "Handmade paper-maquette stop-motion animation with a slightly stepped cadence. The paper figures climb the faintly lit path away from the camera with slow, quiet stepped steps, one after another, arms hanging at their sides; their mantles hang straight and only sway gently at the hem with each step, never lifting or spreading. The nearest figure lifts a foot and sets it down; the figures farther up keep climbing toward the upper left. Dry agave tufts tremble in a faint breeze. Their number, size and clothing stay exactly as in the image. Camera: one slow follow from behind, drifting gently up the path. Every surface stays visibly cut paper, cardboard, natural fiber and dry clay with real edges and contact shadows; composition, palette and the cold night lighting stay exactly as in the starting image; motion begins on the first frame. No text, no lip-sync, no new characters."
+      }
+    },
+    "c18": {
+      "bloque": "b9",
+      "keyframe": "kf-9x16/c18-b9b.jpg",
+      "origen": "keyframes/b9b.jpg",
+      "escala": "contrapicado",
+      "camara": "tilt-up lento",
+      "prompt": "Handmade paper-maquette stop-motion animation with a slightly stepped cadence. The paper figure holding the bowl of yellow clay slowly lifts his chin further toward the black starless sky, his eyes searching upward; his cream mantle stirs in a faint wind and settles, and the crumbs of clay in the bowl shift slightly. His face stays calm and identical, mouth closed, no talking. Camera: one slow tilt up following his gaze, ending on his raised face against the empty sky. Every surface stays visibly cut paper, cardboard, natural fiber and dry clay with real edges and contact shadows; composition, palette and the cold night lighting stay exactly as in the starting image; motion begins on the first frame. No text, no lip-sync, no new characters."
+    }
+  }
+}
