@@ -1,0 +1,589 @@
+{
+  "schema": "huitoto-new-batch/v1",
+  "batch_id": "huitotos-tanda-02-paper-cut",
+  "prepared_at": "2026-09-14T14:15:07.193332+00:00",
+  "authorization": {
+    "user_request": "Me gusta mucho. Vamos por la siguiente tanda pero vamos a exagerar un poco más todas las aquellas cualidades que realmente hagan ver la imagen como paper cut",
+    "scope_selected_by": "agent",
+    "planned_outputs": 12,
+    "previous_art_direction_accepted": true,
+    "previous_art_approval_is_not_community_validation": true
+  },
+  "scope": {
+    "ids": [
+      "P12",
+      "H01-44",
+      "B02",
+      "B03",
+      "B04",
+      "O01",
+      "O03",
+      "O05",
+      "O06-44",
+      "L03",
+      "L05",
+      "L06"
+    ],
+    "partial_units": {
+      "H01": [
+        "segunda hija de Dïïjoma, Ecofaiyaño"
+      ],
+      "O06": [
+        "ollita de cría",
+        "recipiente de almidón",
+        "coquillo de tabaco del ciclo 44"
+      ]
+    },
+    "community_denominator_frozen": false,
+    "full_bible_completion": false
+  },
+  "corpus": {
+    "path": "output/research/uitoto-mitos-dimension-biblia-visual-2026-09-13/corpus-snapshot.json",
+    "captured_at": "2026-09-14T03:54:40.773Z",
+    "sha256": "706cd53c4043fdf86ceb81e46929eaa087e68a5f707b5b9802b5474d0aced60c",
+    "fields": [
+      "mito",
+      "historia",
+      "versiones",
+      "research_notes"
+    ]
+  },
+  "continuity": {
+    "previous_selection_path": "output/imagegen/huitotos/biblia/tanda-01-revision-02/selection.v2.json",
+    "previous_selection_sha256": "645cf4afb0819e6582521ddd28fa93617cafa98622d5fe4fd8cacf77c03527f7",
+    "new_subjects": true,
+    "previous_files_replaced": false,
+    "reference_images_uploaded": false,
+    "direction": "expressive-cut-paper-relief/v1"
+  },
+  "execution": {
+    "provider": "OpenAI paid API",
+    "endpoint": "/v1/images/generations",
+    "cli": "/Users/alegut/.codex/skills/.system/imagegen/scripts/image_gen.py",
+    "model": "gpt-image-2.5-sunburst",
+    "quality": "high",
+    "output_format": "jpeg",
+    "output_compression": 95,
+    "concurrency": 3,
+    "max_attempts": 1,
+    "sdk_internal_retries": "SDK defaults, not extra selected variants",
+    "overwrite": false,
+    "publish": false,
+    "ingest": false
+  },
+  "jobs": [
+    {
+      "id": "P12",
+      "parent": "P12",
+      "title": "Nibagïeño · cuidadora de la boa",
+      "kind": "personaje",
+      "model_purpose": "identity_sheet",
+      "output_file": "p12-master-v1.jpeg",
+      "prompt_file": "prompts/p12-master-v1.prompt.txt",
+      "prompt_sha256": "ccf198d0b5bc89498b717d55edbb091060140c949e734fb66411fb33a4a201cc",
+      "contract_file": "p12-contract.json",
+      "contract_sha256": "b2cdd6a08e2c010b66cdf67e6666c3f382e7a608f823ffa306442d548d35f6db",
+      "request_sha256": "b663bb03aecfa514167b34a9156b3607559d24e4d9ca99c4b234bdf60f26a92c",
+      "size": "1024x1536",
+      "evidence": [
+        {
+          "myth_id": 44,
+          "title": "Dïïjoma, hombre-serpiente y águila",
+          "fields": [
+            "mito",
+            "historia",
+            "versiones",
+            "research_notes"
+          ],
+          "field_sha256": {
+            "mito": "1f519b0e93c7633bfba2b148c6cc8ca33d887bee661c043a2ef8831c7db7a0d9",
+            "historia": "573dfc1915cbbf48a2118698c3b4644a3bc517065ca404ad79d6ca6317e7f66e",
+            "versiones": "1349bea746e78cc6716b2117c7ad7512572a1fa4b34f76f2a64a84cce871ddb5",
+            "research_notes": "5efa342fe5fa96a9ae65c4f7057cd5439eac2ec87db664e6e66e453dcb486a45"
+          }
+        }
+      ],
+      "input_references": []
+    },
+    {
+      "id": "H01-44",
+      "parent": "H01",
+      "title": "Ecofaiyaño · segunda hija de Dïïjoma",
+      "kind": "personaje",
+      "model_purpose": "identity_sheet",
+      "output_file": "h01-44-master-v1.jpeg",
+      "prompt_file": "prompts/h01-44-master-v1.prompt.txt",
+      "prompt_sha256": "13ffd2427a7d152c75723f354c81c361abeda768e4fb6140e231d46cfeb3a017",
+      "contract_file": "h01-44-contract.json",
+      "contract_sha256": "b2357b1d686afa41565eee82ea789c3222bd14aac49618ff4038155e975ed1c3",
+      "request_sha256": "7b7f893fb46267ad1575a05addb849a2185c51f44726c5bd1a9fa66db9a4b96e",
+      "size": "1024x1536",
+      "evidence": [
+        {
+          "myth_id": 44,
+          "title": "Dïïjoma, hombre-serpiente y águila",
+          "fields": [
+            "mito",
+            "historia",
+            "versiones",
+            "research_notes"
+          ],
+          "field_sha256": {
+            "mito": "1f519b0e93c7633bfba2b148c6cc8ca33d887bee661c043a2ef8831c7db7a0d9",
+            "historia": "573dfc1915cbbf48a2118698c3b4644a3bc517065ca404ad79d6ca6317e7f66e",
+            "versiones": "1349bea746e78cc6716b2117c7ad7512572a1fa4b34f76f2a64a84cce871ddb5",
+            "research_notes": "5efa342fe5fa96a9ae65c4f7057cd5439eac2ec87db664e6e66e453dcb486a45"
+          }
+        }
+      ],
+      "input_references": []
+    },
+    {
+      "id": "B02",
+      "parent": "B02",
+      "title": "Coca · arbusto y hojas",
+      "kind": "planta",
+      "model_purpose": "botanical_sheet",
+      "output_file": "b02-master-v1.jpeg",
+      "prompt_file": "prompts/b02-master-v1.prompt.txt",
+      "prompt_sha256": "e2f37351a4f2a156e5f637fe2839771ef92341a22354524ce80a9ebc93ad3b36",
+      "contract_file": "b02-contract.json",
+      "contract_sha256": "5ce8d5c738addbcfb47403dcb29a113b6bfbd58c140e409eeea359d1800b3c58",
+      "request_sha256": "b1e225987d9115c30caa19cdb2d31f040ed893a2fdaaf695a3a8d0f76dde8296",
+      "size": "1024x1536",
+      "evidence": [
+        {
+          "myth_id": 47,
+          "title": "Buinaiño y el origen de la coca",
+          "fields": [
+            "mito",
+            "historia",
+            "versiones",
+            "research_notes"
+          ],
+          "field_sha256": {
+            "mito": "e2aa36d44d6a4981747abf74863e52c7f6bc326967d39614d048f1c2996520bf",
+            "historia": "1771f91790a2a9b705687aebb146fb058283ff73af924e78142adf208c3199da",
+            "versiones": "6e121abbbb187da997ceae729b1a0ff0f6c856cc43c13c16351633e49030aa86",
+            "research_notes": "f602f360ca8195b42610e5a574d77820eb2c9eafee17a2e6912e4740654a1045"
+          }
+        }
+      ],
+      "input_references": []
+    },
+    {
+      "id": "B03",
+      "parent": "B03",
+      "title": "Yarumo · hoja y raíz",
+      "kind": "planta",
+      "model_purpose": "botanical_sheet",
+      "output_file": "b03-master-v1.jpeg",
+      "prompt_file": "prompts/b03-master-v1.prompt.txt",
+      "prompt_sha256": "f4bc7a1808febf0c9a8b9d013111b09d4cae473920332d692a576048ecfd48aa",
+      "contract_file": "b03-contract.json",
+      "contract_sha256": "a63b0fc3b0b4827c3aa6dc788d69865744fdd8332a72914b658a796df5eefc81",
+      "request_sha256": "46b0163b3d64d503e6e9a68b54214f72b4b7f645b81c18e41322ddd8c81946ed",
+      "size": "1024x1536",
+      "evidence": [
+        {
+          "myth_id": 44,
+          "title": "Dïïjoma, hombre-serpiente y águila",
+          "fields": [
+            "mito",
+            "historia",
+            "versiones",
+            "research_notes"
+          ],
+          "field_sha256": {
+            "mito": "1f519b0e93c7633bfba2b148c6cc8ca33d887bee661c043a2ef8831c7db7a0d9",
+            "historia": "573dfc1915cbbf48a2118698c3b4644a3bc517065ca404ad79d6ca6317e7f66e",
+            "versiones": "1349bea746e78cc6716b2117c7ad7512572a1fa4b34f76f2a64a84cce871ddb5",
+            "research_notes": "5efa342fe5fa96a9ae65c4f7057cd5439eac2ec87db664e6e66e453dcb486a45"
+          }
+        },
+        {
+          "myth_id": 47,
+          "title": "Buinaiño y el origen de la coca",
+          "fields": [
+            "mito",
+            "historia",
+            "versiones",
+            "research_notes"
+          ],
+          "field_sha256": {
+            "mito": "e2aa36d44d6a4981747abf74863e52c7f6bc326967d39614d048f1c2996520bf",
+            "historia": "1771f91790a2a9b705687aebb146fb058283ff73af924e78142adf208c3199da",
+            "versiones": "6e121abbbb187da997ceae729b1a0ff0f6c856cc43c13c16351633e49030aa86",
+            "research_notes": "f602f360ca8195b42610e5a574d77820eb2c9eafee17a2e6912e4740654a1045"
+          }
+        }
+      ],
+      "input_references": []
+    },
+    {
+      "id": "B04",
+      "parent": "B04",
+      "title": "Tabaco · planta del renacimiento",
+      "kind": "planta",
+      "model_purpose": "botanical_sheet",
+      "output_file": "b04-master-v1.jpeg",
+      "prompt_file": "prompts/b04-master-v1.prompt.txt",
+      "prompt_sha256": "5999f36797c27c493c7708fe5508ffd0393ec1b48ccd45509e65df94e2874ac3",
+      "contract_file": "b04-contract.json",
+      "contract_sha256": "8f3fe1bccca7c6939b376bb8cda6e3bbb83e7a51e988a79b5b51417573e4f19a",
+      "request_sha256": "72406ace39af88ba3eaa8872ce91f70933ada1d357f162fa941e8e50d02ad045",
+      "size": "1024x1536",
+      "evidence": [
+        {
+          "myth_id": 41,
+          "title": "El rafue Uuikï, corazón del Padre",
+          "fields": [
+            "mito",
+            "historia",
+            "versiones",
+            "research_notes"
+          ],
+          "field_sha256": {
+            "mito": "c770700612db9958c4bfc2b1942cd8d7867fa9248afa1f22cf6961897724efbc",
+            "historia": "e7dcb8534b8f4742b1476a6b8457e56640553c8cb48f59c73865d8eae70adcbd",
+            "versiones": "4f7dc6f506a7aeff3e3ed95091e0b264803087f65f72fcf19b67de9da4850435",
+            "research_notes": "be6449b76bd0f3ec40522ab972e934ed3162f8cee0793f42eff1abf507e0a023"
+          }
+        }
+      ],
+      "input_references": []
+    },
+    {
+      "id": "O01",
+      "parent": "O01",
+      "title": "Uuikï · corazón-esfera y abrigo",
+      "kind": "objeto",
+      "model_purpose": "object_sheet",
+      "output_file": "o01-master-v2.jpeg",
+      "prompt_file": "prompts/o01-master-v2.prompt.txt",
+      "prompt_sha256": "6d79273c3321df1bbc02d36f106415d7e49f26798be57b3d4a0aaa9e8e12af3e",
+      "contract_file": "o01-contract.v2.json",
+      "contract_sha256": "4085824822352d2b9399f98ae7b10b90d7beed49f8e7baede290eb5cadaee3e6",
+      "size": "1536x1024",
+      "evidence": [
+        {
+          "myth_id": 41,
+          "title": "El rafue Uuikï, corazón del Padre",
+          "fields": [
+            "mito",
+            "historia",
+            "versiones",
+            "research_notes"
+          ],
+          "field_sha256": {
+            "mito": "c770700612db9958c4bfc2b1942cd8d7867fa9248afa1f22cf6961897724efbc",
+            "historia": "e7dcb8534b8f4742b1476a6b8457e56640553c8cb48f59c73865d8eae70adcbd",
+            "versiones": "4f7dc6f506a7aeff3e3ed95091e0b264803087f65f72fcf19b67de9da4850435",
+            "research_notes": "be6449b76bd0f3ec40522ab972e934ed3162f8cee0793f42eff1abf507e0a023"
+          }
+        }
+      ],
+      "input_references": [
+        {
+          "path": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/huitotos/biblia/tanda-02-paper-cut/o01-master-v1.jpeg",
+          "role": "own_generated_edit_target",
+          "sha256": "ee55c3a24057eb82cf3f199453f9ed0c46fb2302ec602006d3951fc6e8aaa640"
+        }
+      ],
+      "endpoint": "/v1/images/edits"
+    },
+    {
+      "id": "O03",
+      "parent": "O03",
+      "title": "Cerbatanas · cuerpo y proyectil",
+      "kind": "objeto",
+      "model_purpose": "object_sheet",
+      "output_file": "o03-master-v1.jpeg",
+      "prompt_file": "prompts/o03-master-v1.prompt.txt",
+      "prompt_sha256": "2d78a423f0133ce2e234858a00cb82806c014698dbe99e1366b6a9dd1c5e5595",
+      "contract_file": "o03-contract.v2.json",
+      "contract_sha256": "931f1924a8b31b6920dd0f5bb893d90e63a11ccfc5292462b4a2aaba7e003905",
+      "request_sha256": "32bbd6edbf31b65d2613670a8af83304cc8141922f5d0794968641ddc66806a4",
+      "size": "1536x1024",
+      "evidence": [
+        {
+          "myth_id": 43,
+          "title": "Jitoma y Nokaido, la contienda del Sol y el Tucán",
+          "fields": [
+            "mito",
+            "historia",
+            "versiones",
+            "research_notes"
+          ],
+          "field_sha256": {
+            "mito": "14ff3909922662ffec675298fd5ef8d04e627c1401fe714f40f6df98931404fe",
+            "historia": "74f51f135ade1529d3244255646f53b8e9715ad86afd3691e57b98927acfd12f",
+            "versiones": "92c63f3e5dd1db5432f53ec7a1b9ac5c99d0d6d441293f06006069eed08bb736",
+            "research_notes": "b3887abdec0ed4ec707ccc1917e3b8c6a903e6e2f5b123bf61f07c277e989cdc"
+          }
+        }
+      ],
+      "input_references": []
+    },
+    {
+      "id": "O05",
+      "parent": "O05",
+      "title": "Hamaca · trama y suspensión",
+      "kind": "objeto",
+      "model_purpose": "object_sheet",
+      "output_file": "o05-master-v1.jpeg",
+      "prompt_file": "prompts/o05-master-v1.prompt.txt",
+      "prompt_sha256": "b8ca63796b69a61447ea3c3b3ffaefd48c421624d22bce6864e844dcfa072c14",
+      "contract_file": "o05-contract.json",
+      "contract_sha256": "d708df10ecb5a0e597d60ca2b15a7bd1c73f1557abf319c04f3c64fbc71db7f2",
+      "request_sha256": "09f5d836484ae04ba56ed964caeb003719c91459e5289375dca99c8fc9309aa3",
+      "size": "1536x1024",
+      "evidence": [
+        {
+          "myth_id": 45,
+          "title": "Nofïzazima y la reconstrucción del cuerpo",
+          "fields": [
+            "mito",
+            "historia",
+            "versiones",
+            "research_notes"
+          ],
+          "field_sha256": {
+            "mito": "e85eba714f6c080604046a82557af465bfec0f2d6fe1bb780872b4b6f57f4736",
+            "historia": "1099ddca60c7a1da1e6dce14e2cc8e871f679f2beec89a09d3f292cb9b8a97fe",
+            "versiones": "4236f3ff4aaf24d15e1b0e9baad8b4551229985d71c05103daa2a3e4c74a7eda",
+            "research_notes": "308d9b1e3a77bc3229b2a85ed4803b625636dfc2c095ba6754977eef51b97c4b"
+          }
+        }
+      ],
+      "input_references": []
+    },
+    {
+      "id": "O06-44",
+      "parent": "O06",
+      "title": "Vasijas de Dïïjoma · tres usos",
+      "kind": "objeto",
+      "model_purpose": "object_sheet",
+      "output_file": "o06-44-master-v1.jpeg",
+      "prompt_file": "prompts/o06-44-master-v1.prompt.txt",
+      "prompt_sha256": "f70a0364ba87fca58dd015b19b5876974f8ebf00e17070db76fda7f407ae7176",
+      "contract_file": "o06-44-contract.json",
+      "contract_sha256": "bca66dd8da7b56c3a5d5126a0360f0db84698cf09e8f9821a1e1ff8cf7ad60c1",
+      "request_sha256": "ea95d73aa20c1943c834ef575fd3a3214438bcdb2a31292fb4d19ca498b08783",
+      "size": "1536x1024",
+      "evidence": [
+        {
+          "myth_id": 44,
+          "title": "Dïïjoma, hombre-serpiente y águila",
+          "fields": [
+            "mito",
+            "historia",
+            "versiones",
+            "research_notes"
+          ],
+          "field_sha256": {
+            "mito": "1f519b0e93c7633bfba2b148c6cc8ca33d887bee661c043a2ef8831c7db7a0d9",
+            "historia": "573dfc1915cbbf48a2118698c3b4644a3bc517065ca404ad79d6ca6317e7f66e",
+            "versiones": "1349bea746e78cc6716b2117c7ad7512572a1fa4b34f76f2a64a84cce871ddb5",
+            "research_notes": "5efa342fe5fa96a9ae65c4f7057cd5439eac2ec87db664e6e66e453dcb486a45"
+          }
+        }
+      ],
+      "input_references": []
+    },
+    {
+      "id": "L03",
+      "parent": "L03",
+      "title": "Río · ribera baja y paso",
+      "kind": "lugar",
+      "model_purpose": "spatial_model",
+      "output_file": "l03-master-v1.jpeg",
+      "prompt_file": "prompts/l03-master-v1.prompt.txt",
+      "prompt_sha256": "d37dae900bdc58dfb6dab88063f2cde3a4db08b5c019afb40fe0484ea3367c9c",
+      "contract_file": "l03-contract.json",
+      "contract_sha256": "bf73b2d134106d578f84e84ff4a8127aaa5baf9245b0df59d096d116624db312",
+      "request_sha256": "04282f45b00d85f4756f1922a008c27c8dfef4aad5bff5ad6308490ec6937e52",
+      "size": "1536x1024",
+      "evidence": [
+        {
+          "myth_id": 44,
+          "title": "Dïïjoma, hombre-serpiente y águila",
+          "fields": [
+            "mito",
+            "historia",
+            "versiones",
+            "research_notes"
+          ],
+          "field_sha256": {
+            "mito": "1f519b0e93c7633bfba2b148c6cc8ca33d887bee661c043a2ef8831c7db7a0d9",
+            "historia": "573dfc1915cbbf48a2118698c3b4644a3bc517065ca404ad79d6ca6317e7f66e",
+            "versiones": "1349bea746e78cc6716b2117c7ad7512572a1fa4b34f76f2a64a84cce871ddb5",
+            "research_notes": "5efa342fe5fa96a9ae65c4f7057cd5439eac2ec87db664e6e66e453dcb486a45"
+          }
+        }
+      ],
+      "input_references": []
+    },
+    {
+      "id": "L05",
+      "parent": "L05",
+      "title": "Monte · sendero y dosel",
+      "kind": "paisaje",
+      "model_purpose": "spatial_model",
+      "output_file": "l05-master-v1.jpeg",
+      "prompt_file": "prompts/l05-master-v1.prompt.txt",
+      "prompt_sha256": "dbf21de663515e5d9c4929b4bb72682a6835e49958ba7147c73a778115731cfe",
+      "contract_file": "l05-contract.json",
+      "contract_sha256": "2c2389a47f66455751e43ac605104bc532c2d4fff11c0ee6fcfef3e490fc3ddf",
+      "request_sha256": "1acd437432af419a4f42725f071570ecc6cf26317d6eb2c819d390de1684bbf2",
+      "size": "1536x1024",
+      "evidence": [
+        {
+          "myth_id": 43,
+          "title": "Jitoma y Nokaido, la contienda del Sol y el Tucán",
+          "fields": [
+            "mito",
+            "historia",
+            "versiones",
+            "research_notes"
+          ],
+          "field_sha256": {
+            "mito": "14ff3909922662ffec675298fd5ef8d04e627c1401fe714f40f6df98931404fe",
+            "historia": "74f51f135ade1529d3244255646f53b8e9715ad86afd3691e57b98927acfd12f",
+            "versiones": "92c63f3e5dd1db5432f53ec7a1b9ac5c99d0d6d441293f06006069eed08bb736",
+            "research_notes": "b3887abdec0ed4ec707ccc1917e3b8c6a903e6e2f5b123bf61f07c277e989cdc"
+          }
+        }
+      ],
+      "input_references": []
+    },
+    {
+      "id": "L06",
+      "parent": "L06",
+      "title": "Interior de la boa · viaje en profundidad",
+      "kind": "lugar",
+      "model_purpose": "spatial_model",
+      "output_file": "l06-master-v2.jpeg",
+      "prompt_file": "prompts/l06-master-v2.prompt.txt",
+      "prompt_sha256": "054e8bff2af84059f617c2dd4d57a584ce202551c52c81057236980b2c3224bc",
+      "contract_file": "l06-contract.json",
+      "contract_sha256": "cf9e39252f3348e9c2e7b96e023e4d4dfc2c8831e6efff021b940219bdd79059",
+      "size": "1536x1024",
+      "evidence": [
+        {
+          "myth_id": 44,
+          "title": "Dïïjoma, hombre-serpiente y águila",
+          "fields": [
+            "mito",
+            "historia",
+            "versiones",
+            "research_notes"
+          ],
+          "field_sha256": {
+            "mito": "1f519b0e93c7633bfba2b148c6cc8ca33d887bee661c043a2ef8831c7db7a0d9",
+            "historia": "573dfc1915cbbf48a2118698c3b4644a3bc517065ca404ad79d6ca6317e7f66e",
+            "versiones": "1349bea746e78cc6716b2117c7ad7512572a1fa4b34f76f2a64a84cce871ddb5",
+            "research_notes": "5efa342fe5fa96a9ae65c4f7057cd5439eac2ec87db664e6e66e453dcb486a45"
+          }
+        }
+      ],
+      "input_references": [
+        {
+          "path": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/huitotos/biblia/tanda-02-paper-cut/l06-master-v1.jpeg",
+          "role": "own_generated_edit_target",
+          "sha256": "09dad18af5061ddaf9c91ab80d15941e9605f8a89bed566fb6023e0699aced71"
+        },
+        {
+          "path": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/huitotos/biblia/tanda-01-revision-02/p11-revision-02-v4.jpeg",
+          "role": "own_generated_fictional_identity_reference",
+          "sha256": "e91d089ee42263f882a343e2638581f6f51e806ad5a7c22c54f63600c78948bc"
+        }
+      ],
+      "endpoint": "/v1/images/edits"
+    }
+  ],
+  "amendment": {
+    "at": "2026-09-14T14:17:07.316773+00:00",
+    "previous_freeze_sha256": "2d122193f56f5f2cce147a351b71ce68492c89ff1c465839594d73b2b012d933",
+    "reason": "Lectura directa precisa bola de almidón y canasto sin rendijas. Corrección propia antes de entrega; registro inicial preservado. Corrección bibliográfica cap. VII cerbatana.",
+    "superseded_job": {
+      "id": "O01",
+      "parent": "O01",
+      "title": "Uuikï · corazón-esfera y abrigo",
+      "kind": "objeto",
+      "model_purpose": "object_sheet",
+      "output_file": "o01-master-v1.jpeg",
+      "prompt_file": "prompts/o01-master-v1.prompt.txt",
+      "prompt_sha256": "f18c73d32f8c409ecab346e4537d1e806f0e6d15f762caefd1e27fc420b5f518",
+      "contract_file": "o01-contract.json",
+      "contract_sha256": "22b81d021010cc6680ab75201f974c880a48a028d2b8e547e220a3a85c7a264f",
+      "request_sha256": "7841394f9fffd9cd7e72783d3bc7dd3f0139f4ae9730e69b85f43c27a5ca91d9",
+      "size": "1536x1024",
+      "evidence": [
+        {
+          "myth_id": 41,
+          "title": "El rafue Uuikï, corazón del Padre",
+          "fields": [
+            "mito",
+            "historia",
+            "versiones",
+            "research_notes"
+          ],
+          "field_sha256": {
+            "mito": "c770700612db9958c4bfc2b1942cd8d7867fa9248afa1f22cf6961897724efbc",
+            "historia": "e7dcb8534b8f4742b1476a6b8457e56640553c8cb48f59c73865d8eae70adcbd",
+            "versiones": "4f7dc6f506a7aeff3e3ed95091e0b264803087f65f72fcf19b67de9da4850435",
+            "research_notes": "be6449b76bd0f3ec40522ab972e934ed3162f8cee0793f42eff1abf507e0a023"
+          }
+        }
+      ],
+      "input_references": []
+    },
+    "additional_image_requests": 1,
+    "selected_outputs": 12,
+    "planned_total_requests": 13,
+    "wave_02_concurrency": 2,
+    "correction_concurrency": 1
+  },
+  "amendment.v3": {
+    "at": "2026-09-14T14:21:25.899120+00:00",
+    "previous_freeze_sha256": "594583766464cafd9d9844d4bc1c952e2a9b6a7a5c833e8e4f7c18e63eba805f",
+    "reason": "L06 conserva interior expresivo; corregir figura propia al taparrabo estrecho de P11 y escala pequeña. Original inicial preservado.",
+    "superseded_job": {
+      "id": "L06",
+      "parent": "L06",
+      "title": "Interior de la boa · viaje en profundidad",
+      "kind": "lugar",
+      "model_purpose": "spatial_model",
+      "output_file": "l06-master-v1.jpeg",
+      "prompt_file": "prompts/l06-master-v1.prompt.txt",
+      "prompt_sha256": "adbfd673bc5177896cdd8910f76f786522def2b008bc670020eed83b5c576a11",
+      "contract_file": "l06-contract.json",
+      "contract_sha256": "cf9e39252f3348e9c2e7b96e023e4d4dfc2c8831e6efff021b940219bdd79059",
+      "request_sha256": "2fcf01649181bcdfa008413405079d89846072e460b7e039567a76c4cab02e97",
+      "size": "1536x1024",
+      "evidence": [
+        {
+          "myth_id": 44,
+          "title": "Dïïjoma, hombre-serpiente y águila",
+          "fields": [
+            "mito",
+            "historia",
+            "versiones",
+            "research_notes"
+          ],
+          "field_sha256": {
+            "mito": "1f519b0e93c7633bfba2b148c6cc8ca33d887bee661c043a2ef8831c7db7a0d9",
+            "historia": "573dfc1915cbbf48a2118698c3b4644a3bc517065ca404ad79d6ca6317e7f66e",
+            "versiones": "1349bea746e78cc6716b2117c7ad7512572a1fa4b34f76f2a64a84cce871ddb5",
+            "research_notes": "5efa342fe5fa96a9ae65c4f7057cd5439eac2ec87db664e6e66e453dcb486a45"
+          }
+        }
+      ],
+      "input_references": []
+    },
+    "additional_image_requests": 1,
+    "selected_outputs": 12,
+    "planned_total_requests": 14
+  }
+}

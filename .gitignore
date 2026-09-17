@@ -12,7 +12,7 @@ node_modules
 .claude/worktrees/
 
 artifacts/
-output/
+# (la regla de output/ vive más abajo, con su excepción medida)
 .env
 .env.*
 !.env.example
@@ -49,12 +49,21 @@ public/motifs/carousel/v1/
 # Payloads regenerables de las tandas de Higgsfield (se reemiten con mitos:tanda)
 scripts/tmp/
 
-# Binarios de salida de los pipelines de imagen y video. El espejo ligero
-# —planes, prompts, selecciones, manifiestos, revisiones— vive en content/
-# y sí se versiona. Aquí sólo quedan los jpeg/png que la tanda vuelve a
-# emitir. Si algo de output/ resulta ser conocimiento y no salida, su sitio
-# es content/ o docs/, no una excepción a esta regla.
-output/
+# Binarios de salida de los pipelines de imagen y video: 4,9 GB de jpeg y png
+# que la tanda vuelve a emitir.
+#
+# Excepción medida: dentro de output/ vive también conocimiento que NO se
+# regenera —los freeze.json, que son el contrato exacto con el que se produjo
+# cada pieza y sin los cuales no se puede reproducir; los manifest.json; los
+# requests-*.jsonl y las actas en .md—. Son 18,7 MB contra 4,9 GB. Ignorarlos
+# con el resto fue un error del 2026-09-16 que dejó 41 freezes fuera de git,
+# incluido el que la directiva de dirección huitoto cita como referencia.
+output/**
+!output/**/
+!output/**/freeze*.json
+!output/**/manifest.json
+!output/**/requests*.jsonl
+!output/**/*.md
 
 # Área de trabajo de una sesión: descargas, PDFs intermedios, payloads.
 tmp/
