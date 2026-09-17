@@ -18,15 +18,15 @@ está en la producción visual.
 
 | comunidad | biblia | trípticos | keyframes | guiones+actas | estado |
 |---|---|---|---|---|---|
-| **muiscas** | 304 fichas | 351 piezas, 41 mitos | 1.282 | **6/6** | cerrada y publicada · faltan 35 guiones del corpus |
+| **muiscas** | 304 fichas | 351 piezas, 41 mitos | 1.282 | **7/7** | cerrada y publicada · faltan 34 guiones del corpus |
 | **wayuu** | v3 + inventario | 65 specs, 24 documentados | — | **27/27** | corpus de guiones cerrado 2026-09-16 |
 | **nasa-páez** | 110 | 554 | 956 | **25/25** | corpus de guiones cerrado 2026-09-16 |
 | **ette-ennaka** (chimila) | 162 | 303 | 271 | **23/23** | corpus de guiones cerrado 2026-09-16 |
 | **huitoto** (uitoto) | 7 fichas + 124 de investigación | 250 imágenes | — | — | recién abierta |
 
-La columna de guiones cuenta **pares acta+guion verificados**: 81 de 81 pasan
+La columna de guiones cuenta **pares acta+guion verificados**: 82 de 82 pasan
 `lint-guion` (forma) y `lint-acta` (fidelidad al canon). Ojo con la lectura: en
-muiscas 6/6 significa que los seis guiones que existen están bien, no que la
+muiscas 7/7 significa que los siete guiones que existen están bien, no que la
 comunidad esté cubierta — el corpus muisca tiene 41 mitos.
 
 ### La regla única y el acta
@@ -45,6 +45,11 @@ Escribir las actas retroactivas de nasa y muiscas destapó **once citas o
 imágenes inventadas** en guiones que llevaban meses pasando el linter de forma
 —entre ellas una cita puesta en boca de Bachué y un final entero para
 el-hombre-tigre—. El linter mide la forma; el acta mide la fidelidad.
+
+**Ojo con `bochica`.** Son dos mitos distintos y el repo los confundió: `bochica`
+es el viajero que enseñó a tejer (guion v1, N=18) y `el-tequendama` es la
+inundación de Chibchacum con la vara de oro (v6, N=10). Nunca buscar uno por el
+otro.
 
 ## Dónde vive cada cosa
 
