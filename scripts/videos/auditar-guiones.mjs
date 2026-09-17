@@ -34,13 +34,30 @@ function evalua(nombre, comunidad, lineas) {
 }
 
 const res = [];
-const dirM = "docs/videos/muiscas/mvp-guiones";
-if (fs.existsSync(dirM)) {
-  for (const f of fs.readdirSync(dirM).filter((x) => x.endsWith(".json"))) {
-    const g = JSON.parse(fs.readFileSync(path.join(dirM, f), "utf8"));
-    const l = (g.lines || []).map((x) => x.text || "").filter(Boolean);
-    if (l.length) res.push(evalua(f.replace(/^guion-|\.json$/g, ""), "muiscas", l));
+
+/* Sólo se audita la versión VIVA de cada mito: el vN más alto. Las anteriores
+ * se conservan porque produjeron los másters entregados y la doctrina las cita,
+ * pero medirlas contra la regla de hoy no dice nada: son de antes de que se
+ * fijara. Lo de historico/ queda fuera por lo mismo. */
+function vivos(dir) {
+  if (!fs.existsSync(dir)) return [];
+  const porMito = new Map();
+  for (const f of fs.readdirSync(dir).filter((x) => x.endsWith(".json"))) {
+    const g = JSON.parse(fs.readFileSync(path.join(dir, f), "utf8"));
+    if (!(g.lines || []).length) continue;
+    const mito = g.mito || f.replace(/^guion-|-v\d+(?:-[\w-]+)?\.json$|\.json$/g, "");
+    const v = Number((f.match(/-v(\d+)(?:-[\w-]+)?\.json$/) || [0, 0])[1]);
+    const prev = porMito.get(mito);
+    if (!prev || v > prev.v) porMito.set(mito, { v, g, mito });
   }
+  return [...porMito.values()];
+}
+
+for (const { mito, g } of vivos("docs/videos/muiscas/mvp-guiones")) {
+  res.push(evalua(mito, "muiscas", g.lines.map((x) => x.text || "").filter(Boolean)));
+}
+for (const { mito, g } of vivos("docs/videos/nasa-paeces/mvp-guiones")) {
+  res.push(evalua(mito, "nasa-páez", g.lines.map((x) => x.text || "").filter(Boolean)));
 }
 const dirW = "content/videos/wayuu/videos";
 if (fs.existsSync(dirW)) {
@@ -51,18 +68,6 @@ if (fs.existsSync(dirW)) {
     if (l.length) res.push(evalua(m, "wayuu", l));
   }
 }
-const dirN = "content/videos/nasa-paeces/keyframes-comunidad-20260913/myths";
-if (fs.existsSync(dirN)) {
-  for (const m of fs.readdirSync(dirN)) {
-    const fp = path.join(dirN, m, "GUION.md");
-    if (!fs.existsSync(fp)) continue;
-    const l = fs.readFileSync(fp, "utf8").split(/\n## /).slice(1)
-      .map((s) => s.split("\n").slice(1).filter((x) => x.trim() && !x.trim().startsWith("- k")).join(" ").trim())
-      .filter(Boolean);
-    if (l.length) res.push(evalua(m, "nasa-páez", l));
-  }
-}
-
 const ok = res.filter((r) => !r.errs.length);
 console.log(`${res.length} guiones auditados · ${ok.length} cumplen · ${res.length - ok.length} no\n`);
 const porCom = {};
