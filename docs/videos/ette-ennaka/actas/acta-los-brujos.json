@@ -1,30 +1,114 @@
 {
-  "schema": "acta-de-reduccion-v1", "mito": "los-brujos", "comunidad": "ette-ennaka",
+  "schema": "acta-de-reduccion-v1",
+  "mito": "los-brujos",
+  "comunidad": "ette-ennaka",
   "canon_slug": "los-brujos",
   "canon_sha256": "658293bfe396188589b392b881694a293d8b867b88fb965fb3c4a78b13918afb",
   "nudos": [
-    { "id": "n01", "nudo": "Hay brujos buenos y malos, y la diferencia es funcional", "evidencia": "distinguió entre brujos buenos y malos" },
-    { "id": "n02", "nudo": "Los buenos curan enfermedades y llaman la lluvia cuando llega la sequía", "evidencia": "Los buenos curan enfermedades y llaman la lluvia cuando llega la sequía" },
-    { "id": "n03", "nudo": "Al morir siguen el mismo camino que las demás personas", "evidencia": "Al morir siguen el mismo camino que las demás personas" },
-    { "id": "n04", "nudo": "Los malos no se marchan al morir: regresan a causar daño", "evidencia": "No se marchan cuando mueren. Regresan para causar daño" },
-    { "id": "n05", "nudo": "Se transforman en tigres porque con forma humana serían reconocidos", "evidencia": "como serían reconocidos si conservaran forma humana, se transforman en tigres" },
-    { "id": "n06", "nudo": "Por eso al encontrar un felino no se sabe si es animal o muerto vuelto", "evidencia": "no siempre puede saber si está ante un animal o ante un muerto que ha vuelto ocultando su identidad" },
-    { "id": "n07", "nudo": "Unos hombres caminaban por el monte y les cayó la noche", "evidencia": "Un grupo de hombres caminaba por el monte cuando comenzó la noche" },
-    { "id": "n08", "nudo": "Encontraron una casa redonda y uno propuso dormir allí", "evidencia": "Encontraron una casa redonda y uno propuso dormir allí" },
-    { "id": "n09", "nudo": "Le advirtieron que dentro había un muerto enterrado y no era seguro", "evidencia": "le advirtieron que dentro había un muerto enterrado y que no era un lugar seguro" },
-    { "id": "n10", "nudo": "Ignoró la advertencia, entró y se acostó; los demás durmieron afuera", "evidencia": "El hombre ignoró la advertencia, entró en la casa y se acostó. Los demás prefirieron permanecer afuera" },
-    { "id": "n11", "nudo": "De noche llegó un tigre grande y mató al que dormía", "evidencia": "Durante la noche llegó un tigre grande y mató a quien dormía" },
-    { "id": "n12", "nudo": "Concluyeron que el enterrado había sido un brujo malo, y huyeron", "evidencia": "concluyeron que la persona enterrada allí había sido un brujo malo. Huyeron por el monte" },
-    { "id": "n13", "nudo": "No todos los tigres son brujos: la incertidumbre es parte del motivo", "evidencia": "Tampoco afirma que todos los tigres sean brujos: la incertidumbre es parte del motivo" }
+    {
+      "id": "n01",
+      "nudo": "Tangrutaya Mutsu distinguió entre brujos buenos y malos",
+      "evidencia": "Tangrutaya Mutsu distinguió entre brujos buenos y malos."
+    },
+    {
+      "id": "n02",
+      "nudo": "Los buenos curan enfermedades y llaman la lluvia cuando llega la sequía",
+      "evidencia": "Los buenos curan enfermedades y llaman la lluvia cuando llega la sequía."
+    },
+    {
+      "id": "n03",
+      "nudo": "Al morir siguen el mismo camino que las demás personas",
+      "evidencia": "Al morir siguen el mismo camino que las demás personas."
+    },
+    {
+      "id": "n04",
+      "nudo": "Su conocimiento beneficia a la comunidad y no altera su condición después de la muerte",
+      "evidencia": "Su conocimiento beneficia a la comunidad y no altera su condición después de la muerte."
+    },
+    {
+      "id": "n05",
+      "nudo": "Los malos brujos tienen otro destino: no se marchan cuando mueren",
+      "evidencia": "No se marchan cuando mueren."
+    },
+    {
+      "id": "n06",
+      "nudo": "Regresan para causar daño y, como serían reconocidos si conservaran forma humana, se transforman en tigres",
+      "evidencia": "como serían reconocidos si conservaran forma humana, se transforman en tigres"
+    },
+    {
+      "id": "n07",
+      "nudo": "Por eso, cuando alguien encuentra un felino en el monte, no siempre puede saber si está ante un animal o ante un muerto que ha vuelto ocultando su identidad",
+      "evidencia": "no siempre puede saber si está ante un animal o ante un muerto que ha vuelto ocultando su identidad"
+    },
+    {
+      "id": "n08",
+      "nudo": "Un grupo de hombres caminaba por el monte cuando comenzó la noche",
+      "evidencia": "Un grupo de hombres caminaba por el monte cuando comenzó la noche."
+    },
+    {
+      "id": "n09",
+      "nudo": "Encontraron una casa redonda y uno propuso dormir allí",
+      "evidencia": "Encontraron una casa redonda y uno propuso dormir allí."
+    },
+    {
+      "id": "n10",
+      "nudo": "Sus compañeros le advirtieron que dentro había un muerto enterrado y que no era un lugar seguro",
+      "evidencia": "le advirtieron que dentro había un muerto enterrado y que no era un lugar seguro"
+    },
+    {
+      "id": "n11",
+      "nudo": "El hombre ignoró la advertencia, entró en la casa y se acostó",
+      "evidencia": "El hombre ignoró la advertencia, entró en la casa y se acostó."
+    },
+    {
+      "id": "n12",
+      "nudo": "Los demás prefirieron permanecer afuera",
+      "evidencia": "Los demás prefirieron permanecer afuera."
+    },
+    {
+      "id": "n13",
+      "nudo": "Durante la noche llegó un tigre grande y mató a quien dormía",
+      "evidencia": "Durante la noche llegó un tigre grande y mató a quien dormía."
+    },
+    {
+      "id": "n14",
+      "nudo": "Sus compañeros concluyeron que la persona enterrada allí había sido un brujo malo",
+      "evidencia": "concluyeron que la persona enterrada allí había sido un brujo malo"
+    },
+    {
+      "id": "n15",
+      "nudo": "Huyeron por el monte",
+      "evidencia": "Huyeron por el monte."
+    },
+    {
+      "id": "n16",
+      "nudo": "El monte conserva la duda entre ambas presencias",
+      "evidencia": "El monte conserva la duda entre ambas presencias."
+    }
   ],
   "deslindes": [
-    "El tigre NO es un monstruo y no hay combate ni ceremonia para destruirlo. La consecuencia nace de no escuchar a quienes conocían el lugar.",
-    "Los brujos NO forman una jerarquía moral completa: el contraste de la fuente es funcional —curar y traer lluvia frente a regresar para dañar—, no una teología.",
-    "El monte conserva la duda entre las dos presencias. Ningún cuadro puede resolver si el felino es animal o muerto."
+    "NO todos los tigres son brujos, y el canon lo dice. La incertidumbre es el motivo del relato: en el monte uno puede encontrarse con uno u otro sin distinguirlos a simple vista.",
+    "Los brujos buenos NO son un contrapeso menor: curan enfermedades y llaman la lluvia, y al morir siguen el mismo camino que todos. Su oficio no los cambia.",
+    "La transformación en tigre es un DISFRAZ, no un castigo: se vuelven tigres porque conservando forma humana serían reconocidos.",
+    "NO hay combate contra el tigre ni ceremonia para destruirlo. Llega de noche, mata al que dormía, y los demás huyen. Eso es todo lo que ocurre.",
+    "La consecuencia nace de NO ESCUCHAR a quienes conocían el lugar. La advertencia era concreta: dentro hay un muerto enterrado.",
+    "La versión anterior convirtió al tigre en monstruo y a los brujos en una jerarquía moral completa. El canon mantiene un contraste funcional: curar y traer lluvia frente a regresar para dañar.",
+    "La imagen NO debe resolver la duda: un tigre en el monte tiene que poder ser las dos cosas."
   ],
   "descartes": [
-    { "que": "La comparación con la expansión publicada antes en el sitio", "razon": "Aparato del expediente; el deslinde ya impide que vuelva." }
+    {
+      "que": "La glosa sobre lo que la historia no relata —combate, ceremonia, jerarquía moral",
+      "razon": "Es aparato del expediente. Queda en deslindes, que es donde obliga a la imagen a no inventar la pelea."
+    },
+    {
+      "que": "Que los hombres iban caminando cuando comenzó la noche, además de encontrar la casa",
+      "razon": "Espacio. El bloque conserva el anochecer y el hallazgo de la casa redonda."
+    },
+    {
+      "que": "Que la casa no era un lugar seguro, además de tener un muerto enterrado",
+      "razon": "La cita conserva la parte concreta de la advertencia; el juicio sobre la seguridad se sigue de ella."
+    }
   ],
-  "N_propuesto": 9,
-  "razon_N": "Trece nudos en dos partes: la creencia y la escena que la encarna. La creencia necesita tres o cuatro bloques para que el ataque final se entienda, y la escena otros cinco. Nueve, 18 cuadros, ≈90 s."
+  "N_propuesto": 8,
+  "razon_N": "Dieciséis nudos. La primera mitad es la doctrina —dos clases de brujo y sus destinos— y la segunda es el caso que la comprueba. Ninguna funciona sin la otra, y las dos son breves. N = techo(16/2) = 8 bloques, 16 cuadros, ≈80 s."
 }
