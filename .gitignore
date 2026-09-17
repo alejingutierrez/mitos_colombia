@@ -61,3 +61,8 @@ tmp/
 # Worktrees de Claude Code: copias completas del repo. El trabajo vive en
 # la rama de cada uno, no en la copia.
 .claude/worktrees/
+
+# Todo .claude/ salvo launch.json: settings.local.json y sus respaldos guardan
+# los permisos de una máquina concreta y es donde más fácil se cuela un token.
+.claude/*
+!.claude/launch.json
