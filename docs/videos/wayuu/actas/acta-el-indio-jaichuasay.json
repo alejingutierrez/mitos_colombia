@@ -1,42 +1,150 @@
 {
-  "schema": "acta-de-reduccion-v1", "mito": "el-indio-jaichuasay", "comunidad": "wayuu",
+  "schema": "acta-de-reduccion-v1",
+  "mito": "el-indio-jaichuasay",
+  "comunidad": "wayuu",
   "canon_slug": "el-indio-jaichuasay",
-  "canon_sha256": "2b2a76897fc47d2f84165ca8df1d9980db59933ce095a516726dc3ba51b5b382",
+  "canon_sha256": "7ef01ae279ef7af64e5c95c99875ae7727e6258a2fbabba6d5912632f608993d",
   "nudos": [
-    { "id": "n01", "nudo": "Jaichuasay salió a cazar y vio un venado que se alejaba hacia una serranía", "evidencia": "Jaichuasay salió a cazar y vio un venado que se alejaba hacia una serranía" },
-    { "id": "n02", "nudo": "Preparó el arco y disparó, pero la flecha no detuvo al animal", "evidencia": "Preparó el arco y disparó, pero la flecha no detuvo al animal" },
-    { "id": "n03", "nudo": "Siguió sus huellas entre piedras y vegetación", "evidencia": "Siguió sus huellas entre piedras y vegetación" },
-    { "id": "n04", "nudo": "El venado siempre aparecía unos pasos más adelante y él dejó atrás el camino conocido", "evidencia": "El venado siempre aparecía unos pasos más adelante. Jaichuasay dejó atrás el camino conocido." },
-    { "id": "n05", "nudo": "Cuando quiso regresar no reconoció el lugar por donde había entrado", "evidencia": "Cuando quiso regresar, no reconoció el lugar por donde había entrado" },
-    { "id": "n06", "nudo": "La noche lo encontró en la serranía; escuchó movimientos y soñó que corría sobre cuatro patas", "evidencia": "La noche lo encontró en la serranía. Escuchó movimientos alrededor y soñó que corría sobre cuatro patas." },
-    { "id": "n07", "nudo": "Al despertar su cuerpo había cambiado: pezuñas, olfato agudo y la atención nerviosa de un venado", "evidencia": "Al despertar, su cuerpo había cambiado. Tenía pezuñas, olfato agudo y la atención nerviosa de un venado." },
-    { "id": "n08", "nudo": "En la sabana era animal: huía de las voces, bebía donde antes buscaba como cazador y entendía cada ruido como amenaza", "evidencia": "Huía de las voces, bebía en los lugares que antes buscaba como cazador y comprendía cada ruido como amenaza" },
-    { "id": "n09", "nudo": "Al acercarse a una ranchería recuperaba forma humana y podía hablar, comer y recordar su nombre", "evidencia": "al acercarse a una ranchería recuperaba forma humana. Podía hablar con su familia, comer con ellos y recordar su nombre." },
-    { "id": "n10", "nudo": "La doble vida desconcertaba a todos", "evidencia": "La doble vida desconcertaba a todos" },
-    { "id": "n11", "nudo": "Desaparecía durante días y regresaba sin explicar dónde había estado", "evidencia": "Jaichuasay desaparecía durante días y regresaba sin explicar dónde había estado" },
-    { "id": "n12", "nudo": "En su cuerpo humano quedaban cansancio y pequeñas heridas de monte", "evidencia": "En su cuerpo humano quedaban cansancio y pequeñas heridas de monte" },
-    { "id": "n13", "nudo": "Un grupo de cazadores vio al venado y lo persiguió; uno lanzó una flecha", "evidencia": "Un grupo de cazadores vio al venado y lo persiguió. Uno lanzó una flecha." },
-    { "id": "n14", "nudo": "El proyectil lo alcanzó y Jaichuasay cayó", "evidencia": "El proyectil lo alcanzó y Jaichuasay cayó" },
-    { "id": "n15", "nudo": "Al acercarse ya no encontraron al animal esperado: vieron a una persona herida", "evidencia": "ya no encontraron al animal esperado. Vieron a una persona herida." },
-    { "id": "n16", "nudo": "Reconocieron al ausente y comprendieron que habían cazado a quien compartía casa y parentesco con ellos", "evidencia": "Reconocieron al ausente y comprendieron que habían cazado a quien compartía casa y parentesco con ellos" },
-    { "id": "n17", "nudo": "Lo llevaron de regreso y la herida cerró lentamente", "evidencia": "Lo llevaron de regreso. La herida cerró lentamente." },
-    { "id": "n18", "nudo": "Después de aquel golpe dejó de convertirse, o aprendió a no internarse donde comenzaba el cambio", "evidencia": "Jaichuasay dejó de convertirse o aprendió a no internarse en el lugar donde comenzaba el cambio" },
-    { "id": "n19", "nudo": "Los cazadores evitaron durante un tiempo la serranía", "evidencia": "Los cazadores evitaron durante un tiempo la serranía" },
-    { "id": "n20", "nudo": "No porque todos los venados fueran personas ocultas, sino porque la presa y el cazador podían intercambiar posiciones", "evidencia": "No porque todos los venados fueran personas ocultas, sino porque habían descubierto que la presa y el cazador podían intercambiar posiciones" },
-    { "id": "n21", "nudo": "Volvió a caminar por la sabana como hombre y conservó recuerdos del viento, del miedo y de la velocidad del venado", "evidencia": "Conservó recuerdos del viento, del miedo y de la velocidad del venado" },
-    { "id": "n22", "nudo": "Cuando enseñaba a cazar pedía reconocer señales, límites y temporadas", "evidencia": "Cuando enseñaba a cazar, pedía reconocer señales, límites y temporadas" },
-    { "id": "n23", "nudo": "Quien persigue una vida puede encontrarse, por un instante, dentro de ella", "evidencia": "quien persigue una vida puede encontrarse, por un instante, dentro de ella" }
+    {
+      "id": "n01",
+      "nudo": "Jaichuasay salió a cazar con su arco, vio un venado en la sabana, tensó la cuerda y disparó",
+      "evidencia": "Jaichuasay salió a cazar con su arco. En la sabana vio un venado, tensó la cuerda y disparó."
+    },
+    {
+      "id": "n02",
+      "nudo": "La flecha le pegó, el venado no cayó: dio un salto y siguió corriendo, y Jaichuasay corrió detrás",
+      "evidencia": "La flecha le pegó. El venado no cayó: dio un salto y siguió corriendo, y Jaichuasay corrió detrás."
+    },
+    {
+      "id": "n03",
+      "nudo": "Lo siguió por la arena, entre los cardones y los trupillos, cuesta arriba",
+      "evidencia": "Lo siguió por la arena, entre los cardones y los trupillos, cuesta arriba."
+    },
+    {
+      "id": "n04",
+      "nudo": "Cada vez que creía alcanzarlo, el venado aparecía un poco más lejos",
+      "evidencia": "Cada vez que creía alcanzarlo, el venado aparecía un poco más lejos."
+    },
+    {
+      "id": "n05",
+      "nudo": "Sin darse cuenta, Jaichuasay dejó atrás los caminos que conocía",
+      "evidencia": "Sin darse cuenta, Jaichuasay dejó atrás los caminos que conocía."
+    },
+    {
+      "id": "n06",
+      "nudo": "El venado lo hizo desorientar y lo condujo a una lejana serranía",
+      "evidencia": "El venado lo hizo desorientar y lo condujo a una lejana serranía."
+    },
+    {
+      "id": "n07",
+      "nudo": "Aquel venado era un indio, y al llegar a la serranía convertía también en venado a quien lo persiguiera",
+      "evidencia": "Aquel venado era un indio. Y al llegar a la serranía convertía también en venado a quien lo persiguiera."
+    },
+    {
+      "id": "n08",
+      "nudo": "Jaichuasay se quedó allá",
+      "evidencia": "Jaichuasay se quedó allá."
+    },
+    {
+      "id": "n09",
+      "nudo": "Tenía un gran rancho en la sierra y vivía como un indio: dormía en su chinchorro, comía, miraba la niebla bajar por la tarde",
+      "evidencia": "Tenía un gran rancho en la sierra y vivía como un indio: dormía en su chinchorro, comía, miraba la niebla bajar por la tarde."
+    },
+    {
+      "id": "n10",
+      "nudo": "Pero cuando salía a la sabana se convertía otra vez en venado",
+      "evidencia": "Pero cuando salía a la sabana, se convertía otra vez en venado."
+    },
+    {
+      "id": "n11",
+      "nudo": "Varios indios llegaron a saberlo: en la serranía era indio; en la sabana, venado",
+      "evidencia": "Varios indios llegaron a saberlo: en la serranía era indio; en la sabana, venado."
+    },
+    {
+      "id": "n12",
+      "nudo": "De cuando en vez visitaba los ranchos de la gente con figura de indio",
+      "evidencia": "De cuando en vez visitaba los ranchos de la gente con figura de indio."
+    },
+    {
+      "id": "n13",
+      "nudo": "Llegaba con manojos de maguey como regalo y ellos le daban de comer",
+      "evidencia": "Llegaba con manojos de maguey como regalo, y ellos le daban de comer."
+    },
+    {
+      "id": "n14",
+      "nudo": "No tenía tranquilidad: miraba para todas partes y meneaba la cabeza como quien escucha algo que los demás no oyen",
+      "evidencia": "Meneaba la cabeza en todas direcciones, como quien escucha algo que los demás no oyen."
+    },
+    {
+      "id": "n15",
+      "nudo": "Apenas se encontraba de nuevo en el bosque se convertía en venado, y sólo volvía a ser indio al alcanzar su rancho en la serranía",
+      "evidencia": "apenas se encontraba de nuevo en el bosque se convertía en venado, y sólo volvía a ser indio cuando alcanzaba su rancho en la serranía."
+    },
+    {
+      "id": "n16",
+      "nudo": "En una ocasión se juntaron muchos indios para ir de cacería, con buenos caballos, buenos arcos y buenas flechas",
+      "evidencia": "En una ocasión se juntaron muchos indios para ir de cacería. Montaron buenos caballos y llevaban buenos arcos y buenas flechas."
+    },
+    {
+      "id": "n17",
+      "nudo": "Cuando atravesaban la sabana salió corriendo un venado: era el mismo Jaichuasay",
+      "evidencia": "Cuando atravesaban la sabana, salió corriendo un venado. Era el mismo Jaichuasay."
+    },
+    {
+      "id": "n18",
+      "nudo": "Varios caballos lo siguieron",
+      "evidencia": "Varios caballos lo siguieron."
+    },
+    {
+      "id": "n19",
+      "nudo": "Ni el mejor caballo de carrera pudo alcanzarlo: el venado abría distancia sobre la arena como si el viento lo empujara",
+      "evidencia": "Ni el mejor caballo de carrera pudo alcanzarlo: el venado abría distancia sobre la arena como si el viento lo empujara."
+    },
+    {
+      "id": "n20",
+      "nudo": "Pero algunos indios iban a pie y estaban emboscados en una trocha por donde el venado tenía que pasar",
+      "evidencia": "Pero algunos indios iban a pie y estaban emboscados en una trocha por donde el venado tenía que pasar."
+    },
+    {
+      "id": "n21",
+      "nudo": "Uno de ellos tensó el arco y disparó, y la flecha le abrió una herida",
+      "evidencia": "Uno de ellos tensó el arco y disparó. La flecha le dio y le abrió una herida."
+    },
+    {
+      "id": "n22",
+      "nudo": "En ese mismo momento, al recibir el flechazo, el venado se volvió un indio",
+      "evidencia": "En ese mismo momento, al recibir el flechazo, el venado se volvió un indio."
+    },
+    {
+      "id": "n23",
+      "nudo": "Los cazadores lo reconocieron y salieron a contar que el indio Jaichuasay era un venado",
+      "evidencia": "Los cazadores lo reconocieron. Todos salieron a contar que el indio Jaichuasay era un venado."
+    },
+    {
+      "id": "n24",
+      "nudo": "Tuvieron mucho miedo y no volvieron a cazar en aquella serranía",
+      "evidencia": "Tuvieron mucho miedo, y no volvieron a cazar en aquella serranía."
+    }
   ],
   "deslindes": [
-    "El relato NO dice que abandonara la carne ni que el venado dejara de ser cazado. La fuente lo aclara expresamente: dice algo más incómodo, que quien persigue una vida puede encontrarse dentro de ella.",
-    "NO todos los venados son personas ocultas. Los cazadores evitan la serranía por otra razón: descubrieron que presa y cazador pueden intercambiar posiciones.",
-    "La fuente NO decide si dejó de convertirse o si solo aprendió a no entrar donde empieza el cambio. El guion repite esa duda en lugar de resolverla.",
-    "La transformación NO es castigo. Nadie lo maldice: sigue al venado, se pierde, duerme y amanece cambiado.",
-    "Jaichuasay NO renuncia a cazar: enseña a cazar, y lo que pide es reconocer señales, límites y temporadas."
+    "El contagio es por PERSECUCIÓN: quien persigue al venado hasta la serranía se vuelve venado. No es maldición ni castigo por cazar.",
+    "La condición es geográfica y no tiene horario: indio en la serranía, venado en la sabana. Ese eje —arriba y abajo— organiza toda la dirección de arte.",
+    "Jaichuasay NO es monstruo ni enemigo. Visita los ranchos, lleva maguey de regalo, le dan de comer. Lo único raro en él es que no tiene tranquilidad.",
+    "El gesto que lo delata antes que nada es corporal: menea la cabeza como quien oye algo que los demás no oyen. Eso se muestra, no se explica.",
+    "La flecha lo devuelve a indio, no lo mata. El canon no dice que muera, y el guion no lo mata.",
+    "Lo que cierra la ficha es el miedo de los cazadores, no la suerte de Jaichuasay: dejaron de cazar en esa serranía.",
+    "El venado que es gente aparece también en «ulepala» y en «el-viaje-del-mas-alla», donde Juyá enseña que los animales son personas vistas de otro modo. Aquí no hay enseñanza: hay contagio. Fichas distintas."
   ],
   "descartes": [
-    { "que": "Que la enseñanza de la ficha suena incómoda para un lector actual", "razon": "Aparato del expediente. El guion la sostiene con la escena de los cazadores frente al cuerpo." }
+    {
+      "que": "La enumeración del equipo de la cacería —buenos caballos, buenos arcos, buenas flechas",
+      "razon": "Espacio: N es 12. Se conserva que se juntaron muchos indios, que es el nudo."
+    },
+    {
+      "que": "El detalle de que miraba para todas partes, aparte del meneo de cabeza",
+      "razon": "Son el mismo gesto dicho dos veces. Se conserva uno."
+    }
   ],
-  "N_propuesto": 18,
-  "razon_N": "Veintitrés nudos y cuatro tiempos: el rastreo que lo pierde, la doble vida, la cacería que lo hiere y lo que quedó después. Dieciocho bloques, 36 cuadros, ≈180 s."
+  "N_propuesto": 12,
+  "razon_N": "24 nudos consolidados, techo(24/2)=12, dentro de [8,18]. El canon tiene una sola transformación y dos cacerías que la enmarcan; la vida intermedia en la sierra es descripción, no acción. 12 bloques, 24 keyframes, ≈120 s."
 }
