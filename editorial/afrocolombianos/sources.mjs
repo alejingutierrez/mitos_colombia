@@ -1,0 +1,426 @@
+function source({ title, author, year, type, url, summary, limitation }) {
+  return {
+    title,
+    author,
+    ...(year ? { year } : {}),
+    type,
+    url,
+    summary,
+    limitation,
+  };
+}
+
+export const afrocolombianSources = {
+  arochaAnanse: source({
+    title: "Ombligados de Ananse: hilos ancestrales y modernos en el Pacífico colombiano",
+    author: "Jaime Arocha Rodríguez",
+    year: 1999,
+    type: "investigación antropológica con memoria oral afrochocoana",
+    url: "https://babel.banrepcultural.org/digital/api/collection/p17054coll10/id/2795/download",
+    summary:
+      "Conserva la narración comunicada por Don Pío Perea a Nina S. de Friedemann: Ananse era sacristán, comía hostias, fue condenado y habló desde el campanario.",
+    limitation:
+      "El episodio llega mediante una cadena de registro identificada y no representa todas las historias de Ananse del Pacífico.",
+  }),
+  bejaranoAnanse: source({
+    title:
+      "La araña Ananse, ancestro presente en el cuento «Betsabelina Ananse Docordó»",
+    author: "Paola Andrea Bejarano Alzate",
+    year: 2024,
+    type: "artículo académico sobre literatura afrocolombiana",
+    url: "https://revistas.udea.edu.co/index.php/lyl/article/view/356160",
+    summary:
+      "Analiza la continuidad de Ananse en una obra chocoana contemporánea y su relación con memoria, resistencia y vínculos ancestrales.",
+    limitation:
+      "Estudia una obra literaria contemporánea; no es una segunda versión del episodio del campanario.",
+  }),
+  smithsonianAnansiJourney: source({
+    title: "Anansi’s Journey: A Story of Jamaican Cultural Resistance",
+    author: "Emily Zobel Marshall, registro Smithsonian Libraries",
+    type: "estudio comparativo de circulación afroatlántica",
+    url: "https://www.si.edu/object/anansis-journey-story-jamaican-cultural-resistance-emily-zobel-marshall%3Asiris_sil_1021866",
+    summary:
+      "Documenta la trayectoria de Anansi en el Caribe y su capacidad de adaptación cultural como figura de resistencia.",
+    limitation:
+      "Se usa como comparación diaspórica, no para completar el relato colombiano con episodios jamaiquinos.",
+  }),
+  smithsonianAshanti: source({
+    title: "Ashanti Folk Tales from Ghana",
+    author: "Harold Courlander y Smithsonian Folkways",
+    year: 1966,
+    type: "registro sonoro y comparativo de cuentos ashanti",
+    url: "https://folkways.si.edu/harold-courlander/ashanti-folk-tales-from-ghana/childrens-prose/album/smithsonian",
+    summary:
+      "Ofrece un referente directo para comparar la figura de la araña embaucadora en narraciones ashanti.",
+    limitation:
+      "No prueba que un episodio ghanés sea la fuente lineal del relato chocoano.",
+  }),
+  valenciaTunda: source({
+    title: "El mito de la Tunda en el imaginario de Tumaco",
+    author: "Willian Javier Valencia Hurtado",
+    year: 2010,
+    type: "tesis de maestría en etnoliteratura con versiones orales",
+    url: "https://sired.udenar.edu.co/5247/1/83270.pdf",
+    summary:
+      "Reúne versiones de Tumaco, entre ellas la estudiante que sigue a una figura con el rostro de su madre hasta que sus compañeras alertan a la madre real.",
+    limitation:
+      "La tesis interpreta múltiples relatos; cada versión debe conservar su atribución y no convertirse en biografía única de la Tunda.",
+  }),
+  minCulturaTunda: source({
+    title: "La Tunda",
+    author: "Banco de Contenidos del Ministerio de Cultura de Colombia",
+    type: "registro sonoro institucional de tradición oral",
+    url: "https://bancodecontenidos.mincultura.gov.co/FichaDocumental?id=10283",
+    summary:
+      "Aporta una expresión oral pública de la Tunda dentro del patrimonio narrativo del Pacífico.",
+    limitation:
+      "La ficha audiovisual no sustituye la transcripción atribuida usada para el núcleo del relato.",
+  }),
+  banrepPacificOral: source({
+    title: "Tradición oral del Pacífico colombiano",
+    author: "Biblioteca Virtual del Banco de la República",
+    type: "colección sonora y documental de memoria regional",
+    url: "https://babel.banrepcultural.org/digital/collection/p17054coll18/id/343/",
+    summary:
+      "Sitúa narración, música y memoria oral en el Pacífico sin reducir sus expresiones a un repertorio homogéneo.",
+    limitation:
+      "Sirve como contexto de transmisión; no contiene necesariamente cada secuencia narrativa de esta colección.",
+  }),
+  kijimbaBook: source({
+    title: "La escuela en la tradición oral",
+    author: "Helena Roldán y Programa RED de la Universidad Nacional de Colombia",
+    year: 1998,
+    type: "libro pedagógico con narraciones orales atribuidas",
+    url: "https://books.google.com/books/about/La_escuela_en_la_tradici%C3%B3n_oral.html?id=P5WYUJAbAr8C",
+    summary:
+      "En las páginas 44 y 45 atribuye a Rosalba Cossio García el relato de Kijimba, el baile nocturno, la hiel y la fiesta de las ánimas.",
+    limitation:
+      "Google Books ofrece vista parcial; la adaptación se limita a los pasajes visibles y no completa vacíos.",
+  }),
+  unadAlabaos: source({
+    title: "Alabaos y gualíes del Chocó: patrimonio oral y prácticas mortuorias",
+    author: "Universidad Nacional Abierta y a Distancia",
+    type: "investigación académica sobre oralidad y duelo",
+    url: "https://repository.unad.edu.co/handle/10596/13955",
+    summary:
+      "Documenta prácticas orales y musicales asociadas con muerte, velorio y comunidad en el Chocó.",
+    limitation:
+      "No registra la trama de Kijimba y no se usa para añadir cantos o ceremonias al baile de las ánimas.",
+  }),
+  unicaucaDeath: source({
+    title: "Entre la muerte y los matachines: sentidos de comunidad guapireños",
+    author: "Universidad del Cauca",
+    type: "investigación antropológica sobre muerte y comunidad",
+    url: "https://repositorio.unicauca.edu.co/bitstream/handle/123456789/2620/Entre%20la%20muerte%20y%20los%20matachines.%20Sentidos%20de%20comunidad%20guapire%C3%B1os.pdf?isAllowed=y&sequence=1",
+    summary:
+      "Aporta contexto contemporáneo sobre relaciones entre muerte, celebración y comunidad en el Pacífico.",
+    limitation:
+      "Su territorio y objeto no son idénticos al relato chocoano; funciona como contexto, no como versión.",
+  }),
+  metDanceDeath: source({
+    title: "The Dance of Death",
+    author: "The Metropolitan Museum of Art",
+    type: "fuente comparativa museal",
+    url: "https://www.metmuseum.org/art/collection/search/334871",
+    summary:
+      "Documenta una representación europea de la danza de la muerte para una comparación visual y conceptual controlada.",
+    limitation:
+      "No se propone parentesco histórico con Kijimba ni se importan sus personajes al Pacífico.",
+  }),
+  britishUnderworld: source({
+    title: "Frightening fiestas and sacred ceremonies",
+    author: "The British Museum",
+    type: "ensayo museal comparativo sobre muertos y ceremonias",
+    url: "https://www.britishmuseum.org/blog/frightening-fiestas-and-sacred-ceremonies",
+    summary:
+      "Presenta distintas formas culturales de imaginar encuentros entre vivos y muertos.",
+    limitation:
+      "Es una comparación amplia; no demuestra influencia sobre la narración de Kijimba.",
+  }),
+  chocoTourismSierpe: source({
+    title: "Guía turística del Chocó: mitos y leyendas",
+    author: "Fondo de Promoción Turística de Colombia",
+    type: "guía institucional de divulgación territorial",
+    url: "https://cdn.colombia.com/docs/turismo/sitios-turisticos/pacifico/choco.pdf",
+    summary:
+      "Resume el núcleo de la Sierpe de Beté: tres cabezas, aparición durante fiestas patronales y temor entre pescadores.",
+    limitation:
+      "Es una síntesis breve y sin narrador individual; no respalda diálogos, curaciones, cantos ni desenlaces.",
+  }),
+  medioAtratoRisk: source({
+    title: "Caracterización general de escenarios de riesgo: Medio Atrato",
+    author: "Consejo Municipal para la Gestión del Riesgo de Desastres",
+    year: 2011,
+    type: "caracterización territorial institucional",
+    url: "https://repositorio.gestiondelriesgo.gov.co/bitstream/handle/20.500.11762/28505/Caracterizacion_MedioAtratoChoco_2011.pdf?isAllowed=y&sequence=2",
+    summary:
+      "Sitúa a Beté, su población mayoritariamente negra, la pesca, la agricultura, el río y las fiestas del municipio.",
+    limitation:
+      "No es una fuente narrativa y no prueba que toda práctica local forme parte de la leyenda.",
+  }),
+  unidadVictimasAtrato: source({
+    title: "El río Atrato: territorio, memoria y vida",
+    author: "Unidad para las Víctimas",
+    year: 2021,
+    type: "memoria territorial institucional",
+    url: "https://www.unidadvictimas.gov.co/especiales/Bojaya2DeMayo2021/rio.html",
+    summary:
+      "Describe la centralidad material y social del Atrato para las comunidades ribereñas.",
+    limitation:
+      "No registra la Sierpe; se usa solo para evitar un paisaje fluvial genérico.",
+  }),
+  minCulturaCuasimodo: source({
+    title: "La fiesta de Cuasimodo en Medio Atrato",
+    author: "Ministerio de Cultura de Colombia",
+    year: 2018,
+    type: "registro institucional de celebración local",
+    url: "https://mng.mincultura.gov.co/Paginas/ListEvents.aspx?PageFirstRow=7711&Paged=TRUE&View=%7BF72D6BDC-EF4D-4841-8A02-BE1D100F8102%7D&p_EventDate=20180606+19%3A52%3A36&p_ID=3224",
+    summary:
+      "Aporta contexto sobre festividades del Medio Atrato sin convertir una celebración concreta en escena obligatoria del relato.",
+    limitation:
+      "No documenta la Sierpe ni permite atribuirle cantos, altares o rituales específicos.",
+  }),
+  minCulturaSanPacho: source({
+    title: "Fiesta de San Francisco de Asís en Quibdó",
+    author: "Ministerio de Cultura de Colombia",
+    type: "expediente de patrimonio cultural inmaterial",
+    url: "https://www.mincultura.gov.co/direcciones/patrimonio-y-memoria/Paginas/servicios-informacion/LRPCI/fiesta-de-san-francisco-de-asis-en-quibdo.aspx",
+    summary:
+      "Documenta una fiesta patronal afrochocoana y sus funciones sociales y religiosas.",
+    limitation:
+      "San Pacho ocurre en Quibdó y no se traslada a Beté ni se usa para ampliar la leyenda.",
+  }),
+  metHydra: source({
+    title: "The Labors of Herakles: the Lernaean Hydra",
+    author: "The Metropolitan Museum of Art",
+    type: "fuente comparativa museal",
+    url: "https://www.metmuseum.org/de/essays/the-labors-of-herakles",
+    summary:
+      "Documenta la hidra de múltiples cabezas como paralelo formal de una gran serpiente acuática.",
+    limitation:
+      "La coincidencia de cabezas no prueba transmisión ni convierte a la Sierpe en monstruo griego.",
+  }),
+  banrepSerpents: source({
+    title: "Cosmología y simbolismo",
+    author: "Enciclopedia del Banco de la República",
+    type: "síntesis comparativa de simbolismo indígena colombiano",
+    url: "https://enciclopedia.banrepcultural.org/index.php?title=Cosmolog%C3%ADa_y_simbolismo",
+    summary:
+      "Ofrece comparaciones colombianas con serpientes y seres de varias cabezas en contextos distintos.",
+    limitation:
+      "No se usa para atribuir cosmologías indígenas a la tradición afrochocoana.",
+  }),
+  cnhmBuenaventura: source({
+    title: "Buenaventura: un puerto sin comunidad",
+    author: "Centro Nacional de Memoria Histórica",
+    year: 2015,
+    type: "investigación con memoria comunitaria local",
+    url: "https://centrodememoriahistorica.gov.co/descargas/informes-accesibles/buenaventura_accesible.pdf",
+    summary:
+      "Recoge una memoria local donde el Riviel y la mochita entran en canoas de quienes llegan del Chocó, los confunden y luego regresan al agua.",
+    limitation:
+      "El pasaje es una evocación comunitaria breve, no una biografía total del Riviel.",
+  }),
+  opcaRiviel: source({
+    title: "Patrimonios emergidos: herencia inmaterial y patrimonio sumergido en Tumaco y Buenaventura",
+    author: "Observatorio del Patrimonio Cultural y Arqueológico, Universidad de los Andes",
+    type: "investigación académica y patrimonial costera",
+    url: "https://cienciassociales.uniandes.edu.co/opca/articulo/patrimonios-emergidos-herencia-inmaterial-y-su-vinculo-con-el-patrimonio-sumergido-en-san-andres-de-tumaco-y-buenaventura/",
+    summary:
+      "Sitúa relatos, navegación y memorias del litoral dentro de relaciones vivas con el patrimonio marítimo.",
+    limitation:
+      "No confirma por sí sola cada detalle del Riviel y no reemplaza la memoria directa de Buenaventura.",
+  }),
+  uasbRiviel: source({
+    title: "El Riviel en la tradición oral del Pacífico colombo-ecuatoriano",
+    author: "Universidad Andina Simón Bolívar",
+    type: "tesis académica sobre circulación transfronteriza",
+    url: "https://repositorio.uasb.edu.ec/items/2f753427-b70f-40ea-b717-44130bcf0999",
+    summary:
+      "Estudia variantes y circulación del Riviel entre comunidades costeras del Pacífico.",
+    limitation:
+      "Las variantes regionales no se funden en una sola genealogía ni se proyectan automáticamente sobre Buenaventura.",
+  }),
+  rivielActors: source({
+    title: "Actores sociales y dinámicas culturales de la religiosidad popular negra",
+    author: "Investigación sobre testimonios del Pacífico colombiano",
+    type: "artículo académico con testimonios regionales",
+    url: "https://www.researchgate.net/publication/298090477_Actores_sociales_y_dinamicas_culturales_de_la_religiosidad_popular_negra_en_algunas_localidades_del_Pacifico_Colombiano_analisis_de_testimonios",
+    summary:
+      "Aporta contexto sobre entidades narrativas y religiosidad popular negra en localidades del Pacífico.",
+    limitation:
+      "La copia disponible es secundaria; se usa para contraste y no para afirmar detalles exclusivos.",
+  }),
+  udenarOralPacific: source({
+    title: "Tradición oral y memoria cultural del Pacífico nariñense",
+    author: "Universidad de Nariño",
+    type: "investigación etnoliteraria regional",
+    url: "https://sired.udenar.edu.co/2701/1/89852.pdf",
+    summary:
+      "Documenta circulación, transformación y funciones de relatos orales en el litoral nariñense.",
+    limitation:
+      "Es contexto regional; no sustituye la versión de Buenaventura ni fija un origen único del Riviel.",
+  }),
+  velasquezDeath: source({
+    title: "Tres cuentos de la tradición afrochocoana",
+    author: "Rogerio Velásquez Murillo; reproducción de Julio César Uribe Hermocillo",
+    year: 1960,
+    type: "reproducción pública de recopilación folclórica histórica",
+    url: "https://choco7dias.com/tres-cuentos-de-la-tradicion-afrochocoana/",
+    summary:
+      "Reproduce dos relatos publicados en la Revista Colombiana de Folclor: uno de Tutunendo y otro de Munguidó sobre la aparición de la muerte.",
+    limitation:
+      "La reproducción conserva lenguaje y mediaciones de 1960; las dos versiones no se fusionan ni se atribuyen a todo el Chocó.",
+  }),
+  rogerioProfile: source({
+    title: "Rogerio Velásquez Murillo",
+    author: "Enciclopedia del Banco de la República",
+    type: "perfil biográfico e historiográfico",
+    url: "https://enciclopedia.banrepcultural.org/Rogerio_Vel%C3%A1squez",
+    summary:
+      "Sitúa la trayectoria intelectual del investigador chocoano que recopiló los dos cuentos.",
+    limitation:
+      "No es una segunda versión narrativa; permite entender autor, periodo y mediación.",
+  }),
+  afriprovDeath: source({
+    title: "Origin of Death: Myth of the Chameleon and the Lizard",
+    author: "African Proverbs, Sayings and Stories",
+    type: "fuente comparativa africana",
+    url: "https://afriprov.tangaza.ac.ke/origin-of-death-myth-of-the-chameleon-and-the-lizard/",
+    summary:
+      "Conserva un relato africano del mensajero retrasado y el mensaje contrario que explica la mortalidad.",
+    limitation:
+      "La semejanza estructural no demuestra que la versión de Munguidó sea copia directa.",
+  }),
+  bakoDeath: source({
+    title: "An African perspective on the origin and meaning of death",
+    author: "N. Bako, University of South Africa",
+    type: "tesis académica comparativa",
+    url: "https://ir.unisa.ac.za/bitstream/handle/10500/3729/thesis_bako_n.pdf?isAllowed=y&sequence=1",
+    summary:
+      "Examina relatos africanos sobre mensajes demorados, animales y el origen de la mortalidad.",
+    limitation:
+      "Aporta comparación temática, no una genealogía demostrada para los cuentos afrochocoanos.",
+  }),
+  vaninPacific: source({
+    title: "Cultura del litoral Pacífico: todos los mundos son reales",
+    author: "Alfredo Vanín",
+    year: 1993,
+    type: "ensayo cultural afrocolombiano sobre el litoral",
+    url: "https://babel.banrepcultural.org/digital/collection/p17054coll10/id/2807/",
+    summary:
+      "Explica la pluralidad de mundos, memorias y expresiones orales del Pacífico desde una perspectiva regional afrocolombiana.",
+    limitation:
+      "No contiene todos los relatos ni autoriza a presentar el litoral como una cultura sin diferencias locales.",
+  }),
+  minCulturaAfro: source({
+    title: "Comunidades negras, afrocolombianas, raizales y palenqueras",
+    author: "Ministerio de Cultura de Colombia",
+    type: "perfil institucional contemporáneo",
+    url: "https://mng.mincultura.gov.co/areas/poblaciones/comunidades-negras-afrocolombianas-raizales-y-palenqueras/Paginas/default.aspx",
+    summary:
+      "Aporta el marco contemporáneo y plural para nombrar comunidades afrocolombianas sin usar Africano como comunidad única.",
+    limitation:
+      "No es una fuente narrativa ni reemplaza la autoidentificación de cada comunidad local.",
+  }),
+  minCulturaOral: source({
+    title: "Lenguas y tradición oral",
+    author: "Ministerio de Cultura de Colombia",
+    type: "marco institucional de salvaguardia de memoria oral",
+    url: "https://patrimonio.mincultura.gov.co/Paginas/Lenguas-y-tradici%C3%B3n-oral.aspx",
+    summary:
+      "Sitúa la tradición oral como patrimonio vivo que cambia según narradores, territorios y condiciones de transmisión.",
+    limitation:
+      "No respalda por sí sola ninguna escena ni permite declarar una versión como ancestral.",
+  }),
+  minCulturaViche: source({
+    title: "Saberes y tradiciones asociados a la manifestación del Viche/Biche",
+    author: "Ministerio de Cultura de Colombia",
+    year: 2021,
+    type: "expediente patrimonial construido con comunidades portadoras",
+    url: "https://mincultura.gov.co/direcciones/patrimonio-y-memoria/Paginas/servicios-informacion/LRPCI/saberes-y-tradiciones-asociados-a-la-manifestacion-del-vichebiche-del-pacifico.aspx",
+    summary:
+      "Documenta diferencias territoriales, transmisión familiar y relaciones entre río, mar, selva, trabajo, fiesta y duelo en el Pacífico.",
+    limitation:
+      "No es una fuente para añadir viche a todos los relatos ni homogeneizar cuatro departamentos.",
+  }),
+  unescoMarimba: source({
+    title: "Música de marimba y cantos y bailes tradicionales del Pacífico Sur",
+    author: "UNESCO y comunidades portadoras de Colombia y Ecuador",
+    year: 2015,
+    type: "expediente de patrimonio cultural inmaterial",
+    url: "https://ich.unesco.org/es/RL/musica-de-marimba-y-cantos-y-bailes-tradicionales-de-la-region-colombiana-del-pacifico-sur-y-de-la-provincia-ecuatoriana-de-esmeraldas-01099",
+    summary:
+      "Documenta transmisión, música, celebración y vida comunitaria en el Pacífico Sur.",
+    limitation:
+      "No prueba que toda fiesta de un relato use marimba ni que prácticas del sur describan el Medio Atrato.",
+  }),
+};
+
+export const afroSourceKeysBySlug = {
+  anansi: [
+    "arochaAnanse",
+    "bejaranoAnanse",
+    "smithsonianAnansiJourney",
+    "smithsonianAshanti",
+    "vaninPacific",
+    "minCulturaAfro",
+  ],
+  "tulavieja-tunda": [
+    "valenciaTunda",
+    "minCulturaTunda",
+    "banrepPacificOral",
+    "unescoMarimba",
+    "vaninPacific",
+    "minCulturaAfro",
+    "minCulturaOral",
+  ],
+  "kijimba-de-las-animas": [
+    "kijimbaBook",
+    "unadAlabaos",
+    "unicaucaDeath",
+    "minCulturaViche",
+    "unescoMarimba",
+    "vaninPacific",
+    "metDanceDeath",
+    "britishUnderworld",
+  ],
+  "la-sierpe-de-bete": [
+    "chocoTourismSierpe",
+    "medioAtratoRisk",
+    "unidadVictimasAtrato",
+    "minCulturaViche",
+    "minCulturaCuasimodo",
+    "minCulturaSanPacho",
+    "metHydra",
+    "banrepSerpents",
+  ],
+  "el-riviel-del-rosario": [
+    "cnhmBuenaventura",
+    "opcaRiviel",
+    "uasbRiviel",
+    "rivielActors",
+    "udenarOralPacific",
+    "vaninPacific",
+    "minCulturaViche",
+  ],
+  "como-aparecio-la-muerte-en-el-choco": [
+    "velasquezDeath",
+    "rogerioProfile",
+    "vaninPacific",
+    "unicaucaDeath",
+    "minCulturaViche",
+    "afriprovDeath",
+    "bakoDeath",
+  ],
+};
+
+export function pickAfroSources(slug) {
+  const keys = afroSourceKeysBySlug[slug];
+  if (!keys) throw new Error(`No hay dossier Afrocolombiano para ${slug}.`);
+  return keys.map((key) => {
+    const selected = afrocolombianSources[key];
+    if (!selected) throw new Error(`${slug}: fuente desconocida ${key}.`);
+    return selected;
+  });
+}

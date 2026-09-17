@@ -1,0 +1,100 @@
+import { defineWayuuMyth } from "../define-editorial-myth.mjs";
+
+const mito = `Durante una epidemia, Umaralá enfermó con gravedad. Su tía, una piache reconocida, cantó junto al chinchorro y movió la maraca para llamar a sus auxiliares.
+
+En medio de la fiebre, Umaralá escuchó un nombre dentro del canto: Jirairay. No era un espíritu distinto que peleaba como una persona, sino la forma de invocar a Wanurü durante la ceremonia. La enfermedad y la muerte parecían responder a esa voz.
+
+La tía pidió ayuda a su séyuu. Comprendió que la vida del sobrino exigía una pérdida. Puso la maraca y el capote sobre él, siguió cantando y entregó su propia vida.
+
+Umaralá despertó. Encontró a la mujer que lo había criado sin respiración. La enterró cerca de Maiceo y encendió fuego junto a la sepultura.
+
+Una noche la tía apareció en sueño. Le ordenó ir hacia Jarara, tomar sus instrumentos y atender a quienes lo buscaran. También le dio el nombre con que sería conocido: Umaralá.
+
+El joven obedeció. No proclamó que poseía por sí mismo el conocimiento. Cantaba con la maraca heredada y escuchaba a los auxiliares de su tía. Su fama creció porque visitaba a personas enfermas y no exigía pago antes de iniciar el trabajo.
+
+Una familia llegó a buscarlo para una mujer muy grave. Umaralá rechazó una montura y caminó hasta la casa. Cantó durante la noche. Al amanecer, la enferma respiraba con más calma.
+
+Los años pasaron. Otros intentaron imitar su nombre y sus gestos sin la misma relación de aprendizaje. Umaralá advertía que una maraca no convierte por sí sola a nadie en piache.
+
+Al final de su vida emprendió un viaje con dos compañeros. Uno era Jururiana; otro vestía piel de venado. El servidor que los vio partir recibió la orden de no seguirlos ni contar de inmediato lo ocurrido.
+
+Jururiana apareció después asociado con raíces y lluvia. El compañero de piel de venado desapareció del relato. Umaralá no regresó como antes.
+
+Su nombre quedó en los cantos de algunos piaches. La tía permaneció en el centro de su vocación: no como una mujer borrada por el héroe que salvó, sino como maestra, mediadora y fuente de los instrumentos.
+
+Cada curación repetía una deuda. Haber sobrevivido no hacía a Umaralá dueño de la vida ajena; lo obligaba a atenderla.`;
+
+const historia = `Chaves publicó dos materiales relacionados con Umaralá y los piaches. La trama central reúne orfandad, crianza por una tía piache, epidemia, sacrificio, herencia de maraca y capote, cambio de nombre, curaciones y viaje final. El texto también critica a imitadores y curadores venales, aunque esa oposición puede reflejar disputas internas y la mirada del recopilador.
+
+La corrección más importante afecta a Jirairay. Pineda Giraldo explica que Wanurü es la entidad asociada con enfermedad y muerte, mientras Jirairay es el nombre o canto con que se le invoca en ceremonias. La ficha anterior convirtió a Jirairay en un antagonista independiente. Esta revisión conserva la palabra dentro del canto y elimina la falsa identidad.
+
+“Piache” es el término histórico usado en las fuentes castellanas para especialistas rituales Wayuu, muchas de ellas mujeres. No equiparamos su trabajo con medicina clínica contemporánea ni reducimos las experiencias descritas a fraude o patología. Pineda escribió desde teorías de “magia” de mediados del siglo XX y utilizó diagnósticos psicológicos hoy problemáticos.
+
+La tía no es un instrumento narrativo desechable. Su decisión, enseñanza y aparición posterior fundan la autoridad de Umaralá. La revisión devuelve esa genealogía femenina al primer plano y evita presentar el sacrificio como obligación de toda cuidadora.
+
+La historia pertenece al registro de una práctica viva y cambiante; no fija qué debe creer, cantar o aceptar hoy cada especialista ritual Wayuu.`;
+
+const versiones = `Chaves ofrece más de una sección sobre Umaralá: una concentra la enfermedad y la tía; otra amplía curaciones, compañeros, Jururiana y el final. La página las integra porque comparten protagonista y continuidad, pero distingue su posible crecimiento editorial.
+
+Pineda documenta cantos, maraca, auxiliares, iniciación y enfermedad entre piaches sin narrar la misma biografía. Su trabajo confirma vocabulario y corrige Jirairay, no constituye una segunda versión de Umaralá.
+
+La curación de la mujer se presenta según la lógica del relato y no como resultado médico comprobado. No recomendamos sustituir atención sanitaria por prácticas descritas históricamente.
+
+“Jururiana y la gran lluvia” conserva una historia propia de sueño y preparación. El Jururiana compañero de Umaralá puede pertenecer al mismo ciclo, pero las fuentes no permiten asegurar que cada episodio describa a una sola persona histórica. Se enlazan y no se fusionan.
+
+La salida final permanece abierta: viaje, desaparición o tránsito hacia otro estado. No añadimos una ascensión literal a las estrellas.
+
+Los falsos imitadores pertenecen al comentario moral de la versión y no autorizan al sitio a juzgar la legitimidad de especialistas rituales actuales.`;
+
+const leccion =
+  "Recibir un saber heredado crea una obligación de cuidado y no una licencia para reclamar poder personal.";
+
+const similitudes = `“Jirairay” funciona como página complementaria: explica el canto y la corrección terminológica que esta biografía necesita. “Guanurú” examina otra entidad asociada con enfermedad, pero ninguna de las dos es un villano individual que Umaralá derrota.
+
+Jururiana hereda o desarrolla capacidades en el ciclo final. En su propia historia, transmite conocimiento a Warir mediante una prueba. Ambas páginas presentan saberes que pasan entre generaciones y requieren interpretación.
+
+Relatos de maestros que mueren para salvar o iniciar a un discípulo aparecen en muchas tradiciones. La semejanza formal no convierte a la tía en mártir cristiana ni a Umaralá en Prometeo. El eje Wayuu está en parentesco, maraca, canto, sueño y auxiliares.
+
+La transmisión de objetos recuerda investiduras rituales de otros pueblos, pero el capote y la maraca no son credenciales universales. La historia insiste en que imitarlos sin relación, aprendizaje y auxilio no reproduce la capacidad de la tía ni su responsabilidad.`;
+
+export default defineWayuuMyth({
+  slug: "umarala",
+  title: "Umaralá",
+  mito,
+  historia,
+  versiones,
+  leccion,
+  similitudes,
+  excerpt:
+    "Una tía piache entrega su vida, maraca y capote para salvar a Umaralá, quien recibe con ellos una vocación de cuidado.",
+  seoTitle: "Umaralá: la tía piache y su legado",
+  seoDescription:
+    "Lee el relato Wayuu de Umaralá, su tía piache, la epidemia y la herencia de maraca y capote, con la identidad de Jirairay corregida.",
+  focusKeywords: [
+    "Umaralá",
+    "mito de Umaralá",
+    "piache Wayuu",
+    "Jirairay",
+    "Wanurü",
+    "curación Wayuu",
+  ],
+  tags: ["Umaralá", "Wayúu", "curación", "sacrificio", "transformación"],
+  sourceKeys: [
+    "chaves1946",
+    "villa1993",
+    "pineda1950",
+    "perrin1980",
+    "minculturaWayuu",
+    "onicWayuu",
+    "regimenMacuira",
+  ],
+  researchNotes: `CORRECCIÓN: Jirairay es canto/nombre de invocación de Wanurü según Pineda, no espíritu separado.
+
+NÚCLEO: tía piache, epidemia, entrega de vida, maraca/capote, nombre Umaralá, curaciones, imitadores y viaje final.
+
+CAUTELA: narrar curaciones como tradición, no eficacia clínica; no romantizar sacrificio femenino.
+
+IMAGEN: se conserva la imagen publicada.
+
+GEOGRAFÍA: punto aproximado entre Maiceo/Jarara según la narración, no sepultura exacta.`,
+});

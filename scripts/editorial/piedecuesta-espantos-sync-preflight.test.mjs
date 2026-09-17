@@ -1,0 +1,29 @@
+import assert from "node:assert/strict";
+import { spawnSync } from "node:child_process";
+import test from "node:test";
+
+test("la sincronización acota ocho actualizaciones sin despublicar", () => {
+  const result = spawnSync(
+    process.execPath,
+    ["scripts/editorial/sync-piedecuesta-espantos-review.mjs"],
+    { cwd: process.cwd(), encoding: "utf8" },
+  );
+  assert.equal(result.status, 0, result.stderr);
+  const output = JSON.parse(result.stdout);
+  assert.equal(output.mode, "dry-run");
+  assert.equal(output.community.before, output.community.after);
+  assert.equal(output.community.profileUpdate, false);
+  assert.equal(output.universe.current, 8);
+  assert.equal(output.universe.inherited, 8);
+  assert.equal(output.universe.canonical, 8);
+  assert.equal(output.universe.reviewed, 8);
+  assert.deepEqual(output.universe.toCreate, []);
+  assert.equal(output.universe.toUpdate, 8);
+  assert.deepEqual(output.universe.toTransfer, []);
+  assert.deepEqual(output.universe.toDelete, []);
+  assert.equal(output.dossiers, 8);
+  assert.equal(output.imagePairs, 8);
+  assert.deepEqual(new Set(output.sourcesPerMyth), new Set([5, 6]));
+  assert.deepEqual(output.tags.toCreate, []);
+  assert.equal(output.imageProvenance.status, "pending");
+});

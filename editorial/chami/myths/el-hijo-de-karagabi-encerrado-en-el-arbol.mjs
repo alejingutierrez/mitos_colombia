@@ -1,0 +1,2 @@
+import { chamiMythsBySlug } from "../records.mjs";
+export default chamiMythsBySlug["el-hijo-de-karagabi-encerrado-en-el-arbol"];
