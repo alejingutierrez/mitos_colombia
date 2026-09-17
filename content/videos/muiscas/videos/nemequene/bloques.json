@@ -122,18 +122,13 @@
       "desc": "PLANO GENERAL del camino de regreso a Bacatá con una comitiva pequeña avanzando despacio, cargando algo entre varios, muy lejana."
     }
   ],
-  "reusadas": [
-    {
-      "tag": "b1a",
-      "reusa": "mitos/nemequene/entrada"
-    },
-    {
-      "tag": "b6a",
-      "reusa": "mitos/nemequene/acto"
-    },
-    {
-      "tag": "b9b",
-      "reusa": "mitos/nemequene/huella"
-    }
-  ]
+  "reusadas": [],
+  "guion": "docs/videos/muiscas/mvp-guiones/guion-nemequene-v2.json",
+  "acta": "docs/videos/muiscas/actas/acta-nemequene.json",
+  "generacion_actual": {
+    "provider": "openai",
+    "model": "gpt-image-2",
+    "spec": "scripts/videos/specs/muisca-nemequene-escenas.mjs",
+    "account_source": "OPENAI_API_KEY from ignored .env"
+  }
 }
