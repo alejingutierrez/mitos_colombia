@@ -1,43 +1,131 @@
 {
-  "schema": "acta-de-reduccion-v1", "mito": "la-majayura-que-pierde-a-los-hombres", "comunidad": "wayuu",
+  "schema": "acta-de-reduccion-v1",
+  "mito": "la-majayura-que-pierde-a-los-hombres",
+  "comunidad": "wayuu",
   "canon_slug": "la-majayura-que-pierde-a-los-hombres",
-  "canon_sha256": "f7ec269e560f2a92d6723d3544422011093cc3c99f8620cb8d9c1e27093458dc",
+  "canon_sha256": "7b988fcc6ab469e938af29d51772b47407241bf4b7dd3331c111d93dc3845900",
   "nudos": [
-    { "id": "n01", "nudo": "Cerca de Puró había una cueva de la que se hablaba en voz baja", "evidencia": "Cerca de Puró había una cueva de la que se hablaba en voz baja" },
-    { "id": "n02", "nudo": "Algunos hombres decían haber visto allí a una majayura de extraordinaria belleza", "evidencia": "Algunos hombres decían haber visto allí a una majayura de extraordinaria belleza" },
-    { "id": "n03", "nudo": "Aparecía al final de la tarde, cuando la luz confundía los caminos, y esperaba sin acercarse a las rancherías", "evidencia": "Aparecía al final de la tarde, cuando la luz confundía los caminos, y esperaba sin acercarse a las rancherías" },
-    { "id": "n04", "nudo": "Un joven la siguió; la muchacha caminó hacia las piedras y entró en la abertura", "evidencia": "Un joven la siguió. La muchacha caminó hacia las piedras y entró en la abertura." },
-    { "id": "n05", "nudo": "Él avanzó detrás, convencido de que había recibido una invitación", "evidencia": "Él avanzó detrás de ella, convencido de que había recibido una invitación" },
-    { "id": "n06", "nudo": "Dentro había agua, objetos valiosos y conocimientos que no se mostraban a cualquiera", "evidencia": "Había agua, objetos valiosos y conocimientos que no se mostraban a cualquiera" },
-    { "id": "n07", "nudo": "La majayura le indicó que debía guardar silencio", "evidencia": "La majayura le indicó que debía guardar silencio" },
-    { "id": "n08", "nudo": "Si regresaba con otros o revelaba lo visto, no encontraría otra vez la salida", "evidencia": "Si regresaba con otros o revelaba lo visto, no encontraría otra vez la salida" },
-    { "id": "n09", "nudo": "La curiosidad de sus compañeros fue más fuerte que su promesa y les habló de la mujer, la cueva y los bienes ocultos", "evidencia": "Les habló de la mujer, de la cueva y de los bienes ocultos" },
-    { "id": "n10", "nudo": "Varios decidieron acompañarlo y, al llegar a Puró, la majayura apareció de nuevo y los condujo entre las rocas", "evidencia": "la majayura apareció de nuevo. Los condujo entre las rocas." },
-    { "id": "n11", "nudo": "Unos entraron de inmediato, otros esperaron afuera, y la abertura pareció cerrarse sobre quienes habían cruzado", "evidencia": "Unos entraron de inmediato; otros esperaron afuera. La abertura pareció cerrarse sobre quienes habían cruzado." },
-    { "id": "n12", "nudo": "Los que quedaron en la llanura escucharon voces pero no pudieron distinguir de dónde venían", "evidencia": "Los que quedaron en la llanura escucharon voces, pero no pudieron distinguir de dónde venían" },
-    { "id": "n13", "nudo": "Pasaron las horas y nadie regresó", "evidencia": "Pasaron las horas. Nadie regresó." },
-    { "id": "n14", "nudo": "Después hubo más hombres que buscaron la cueva", "evidencia": "Después hubo más hombres que buscaron la cueva" },
-    { "id": "n15", "nudo": "Algunos creían que la muchacha entregaría secretos; otros querían recuperar a sus parientes", "evidencia": "Algunos creían que la muchacha entregaría secretos; otros querían recuperar a sus parientes" },
-    { "id": "n16", "nudo": "La majayura los hacía desviarse y quienes insistían terminaban perdidos, enfermos o muertos", "evidencia": "La majayura los hacía desviarse. Quienes insistían terminaban perdidos, enfermos o muertos." },
-    { "id": "n17", "nudo": "Un sabedor llamado Papach conocía el peligro", "evidencia": "Un sabedor llamado Papach conocía el peligro" },
-    { "id": "n18", "nudo": "Advirtió que aquel lugar no era una casa común ni la joven una persona disponible para ser tomada", "evidencia": "Advirtió que aquel lugar no era una casa común ni la joven una persona disponible para ser tomada" },
-    { "id": "n19", "nudo": "La cueva tenía dueño y límite: entrar sin comprenderlos era poner el cuerpo en un mundo cuyas reglas no se podían exigir", "evidencia": "La cueva tenía dueño y límite. Entrar sin comprenderlos era poner el cuerpo en un mundo cuyas reglas no se podían exigir." },
-    { "id": "n20", "nudo": "Con el tiempo la presencia quedó asociada con una piedra blanca que se adentraba en el mar", "evidencia": "la presencia quedó asociada con una piedra blanca que se adentraba en el mar" },
-    { "id": "n21", "nudo": "Los viajeros aprendieron a reconocer el sitio y a no confundir belleza con permiso", "evidencia": "Los viajeros aprendieron a reconocer el sitio y a no confundir belleza con permiso" },
-    { "id": "n22", "nudo": "La majayura no salió de Puró para conquistar hombres", "evidencia": "La majayura no salió de Puró para conquistar hombres" },
-    { "id": "n23", "nudo": "Ellos llegaron buscando algo que creían suyo: una mujer, una riqueza o un secreto", "evidencia": "Ellos llegaron buscando algo que creían suyo: una mujer, una riqueza o un secreto" },
-    { "id": "n24", "nudo": "El relato conserva su desaparición y también una pregunta sobre la mirada que los condujo hasta allí", "evidencia": "El relato conserva su desaparición y también una pregunta sobre la mirada que los condujo hasta allí" }
+    {
+      "id": "n01",
+      "nudo": "Puró es una cueva sagrada y ningún ser viviente puede entrar en ella",
+      "evidencia": "Puró es una cueva sagrada. Ningún ser viviente puede entrar en ella."
+    },
+    {
+      "id": "n02",
+      "nudo": "Allí vive una majayura: una señorita elegante, bonita y bien vestida",
+      "evidencia": "Allí vive una majayura: una señorita elegante, bonita y bien vestida"
+    },
+    {
+      "id": "n03",
+      "nudo": "Sale a pasear y se deja ver solo por algunas personas, a quienes les revela los secretos que pueblan esa tierra",
+      "evidencia": "que sale a pasear y se deja ver solo por algunas personas, a quienes les revela los secretos que pueblan esa tierra"
+    },
+    {
+      "id": "n04",
+      "nudo": "Sale en ciertas épocas, de día o de noche",
+      "evidencia": "Sale en ciertas épocas, de día o de noche."
+    },
+    {
+      "id": "n05",
+      "nudo": "Un hombre camina solo entre cardones y trupillos, con el viento del nordeste en la cara",
+      "evidencia": "Un hombre camina solo entre cardones y trupillos, con el viento del nordeste en la cara"
+    },
+    {
+      "id": "n06",
+      "nudo": "De pronto ella está ahí, un poco más adelante, y ese hombre le gusta",
+      "evidencia": "de pronto ella está ahí, un poco más adelante. Ese hombre le gusta."
+    },
+    {
+      "id": "n07",
+      "nudo": "Él la mira y ya no reconoce el camino: la trocha se le borra bajo los pies y los cerros no están donde estaban",
+      "evidencia": "Él la mira y ya no reconoce el camino: la trocha se le borra bajo los pies, los cerros no están donde estaban"
+    },
+    {
+      "id": "n08",
+      "nudo": "Va detrás de ella hasta la boca de Puró",
+      "evidencia": "va detrás de ella hasta la boca de Puró"
+    },
+    {
+      "id": "n09",
+      "nudo": "Adentro la majayura le revela los secretos que la cueva alberga",
+      "evidencia": "Adentro la majayura le revela los secretos que la cueva alberga."
+    },
+    {
+      "id": "n10",
+      "nudo": "Queda tan encantado con lo que encuentra que por lo general se queda allí y no vuelve",
+      "evidencia": "Él queda tan encantado con lo que encuentra que por lo general se queda allí y no vuelve."
+    },
+    {
+      "id": "n11",
+      "nudo": "Muchas veces la gente ha hallado después el cadáver del hombre a quien la majayura perdió",
+      "evidencia": "Muchas veces la gente ha hallado después el cadáver del hombre a quien la majayura perdió."
+    },
+    {
+      "id": "n12",
+      "nudo": "Otras veces el hombre ha desaparecido para siempre",
+      "evidencia": "Otras veces el hombre ha desaparecido para siempre."
+    },
+    {
+      "id": "n13",
+      "nudo": "Alguno logra regresar a su ranchería con los secretos que conoció en aquella tierra",
+      "evidencia": "Vuelve a su ranchería con los secretos que conoció en aquella tierra"
+    },
+    {
+      "id": "n14",
+      "nudo": "Le está absolutamente prohibido contar lo que vio y lo que hizo",
+      "evidencia": "le está absolutamente prohibido contar lo que vio y lo que hizo"
+    },
+    {
+      "id": "n15",
+      "nudo": "Calla junto al fuego, calla en el chinchorro, calla cuando le preguntan por los días en que faltó",
+      "evidencia": "Calla junto al fuego, calla en el chinchorro, calla cuando le preguntan por los días en que faltó."
+    },
+    {
+      "id": "n16",
+      "nudo": "Si desacata ese precepto, llega la muerte como castigo",
+      "evidencia": "Si desacata ese precepto, llega la muerte como castigo."
+    },
+    {
+      "id": "n17",
+      "nudo": "Hay otra forma en que se aparece: el hombre ve una piedra blanca muy cerca, tan cerca que desea llegar a ella",
+      "evidencia": "El hombre empieza a ver una piedra blanca muy cerca, tan cerca que desea llegar a ella."
+    },
+    {
+      "id": "n18",
+      "nudo": "Da unos pasos y la piedra se aleja un poco, a corta distancia, para que la siga",
+      "evidencia": "Da unos pasos y la piedra se aleja un poco, a corta distancia, para que la siga."
+    },
+    {
+      "id": "n19",
+      "nudo": "La piedra va delante, sobre la arena, y luego entra en el mar, y el hombre entra detrás y se ahoga",
+      "evidencia": "La piedra va delante, sobre la arena, y luego entra en el mar. El hombre entra detrás y se ahoga."
+    },
+    {
+      "id": "n20",
+      "nudo": "A los que logran alcanzarla, ella los convierte en piedra, y esa piedra se llama Papach",
+      "evidencia": "a los que logran alcanzarla, ella los convierte en piedra. Esa piedra se llama Papach."
+    }
   ],
   "deslindes": [
-    "Ella NO es una seductora que caza hombres. La fuente lo dice sin rodeos: no salió de Puró a conquistar a nadie; fueron ellos los que llegaron buscando una mujer, una riqueza o un secreto que creían suyos.",
-    "La advertencia de Papach es el centro y va literal: el lugar no era una casa común ni la joven una persona disponible para ser tomada. Suavizarla convertiría el relato en cuento de sirena.",
-    "NO se explica qué pasó con los que entraron. La fuente cierra en que nadie regresó, y el guion no resuelve ese hueco.",
-    "«No confundir belleza con permiso» es lo que aprendieron los viajeros, no una moraleja añadida. Cierra el guion porque cierra la fuente.",
-    "LA IMAGEN NO SEXUALIZA A LA MAJAYURA. La cueva, la luz del final de la tarde, las rocas y la piedra blanca dentro del mar son lo que sostiene la escena."
+    "No hay un protagonista: hay UN HOMBRE, cualquiera. El relato describe lo que le pasa a quien la ve, no la peripecia de alguien con nombre. La cámara no debe darle biografía.",
+    "Ella NO es un espanto ni un wanülüü. Es una majayura elegante y bien vestida, y lo que da son secretos. Lo mortal es seguirla, no ella.",
+    "Puró es una cueva sagrada donde ningún ser viviente puede entrar. Que él entre es ya la transgresión, antes de cualquier otra cosa.",
+    "El desvío se narra como pérdida del camino, no como hechizo visible: la trocha se borra, los cerros cambian de sitio. Nada de efectos sobre ella.",
+    "La prohibición de contar es el eje moral y se repite tres veces en el canon —junto al fuego, en el chinchorro, cuando preguntan—. Esa triple insistencia se conserva.",
+    "La segunda variante, la piedra blanca que se aleja, NO es un adorno: es la misma trampa con otra forma, y termina en el mar. Las dos aparecen en el guion.",
+    "Papach es la piedra en que quedan los que la alcanzan, y cierra la ficha. No se confunde con la piedra de «el-incesto» ni con la de «la-india-worunka».",
+    "El encierro de la majayura aparece en otras fichas wayuu; aquí la palabra nombra a la aparición, no al rito. No se cruzan."
   ],
   "descartes": [
-    { "que": "Que el joven volvió a su casa antes de contar el secreto", "razon": "Tránsito: el bloque siguiente ya arranca con la curiosidad de los compañeros." }
+    {
+      "que": "Los trupillos del primer encuentro y el detalle de que los cerros cambian de sitio",
+      "razon": "Espacio: N es 10. Se conservan los cardones, el nordeste y la trocha que se borra, que bastan para el desvío."
+    },
+    {
+      "que": "La distinción entre los que aparecen muertos y los que desaparecen como dos destinos separados",
+      "razon": "Quedan en un solo bloque. El acta conserva los dos nudos; el guion los dice seguidos."
+    }
   ],
-  "N_propuesto": 18,
-  "razon_N": "Veinticuatro nudos y cuatro tiempos: la aparición, la entrada con su condición, la vuelta con otros que no regresan, y la advertencia que reordena todo. Dieciocho bloques, 36 cuadros, ≈180 s."
+  "N_propuesto": 10,
+  "razon_N": "20 nudos consolidados, techo(20/2)=10, dentro de [8,18]. El canon no cuenta una historia sino un modo de perderse, con dos variantes —la cueva y la piedra blanca— y una prohibición en medio. Estirarlo repetiría el mismo plano del hombre que sigue. 10 bloques, 20 keyframes, ≈100 s."
 }
