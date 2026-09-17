@@ -53,6 +53,26 @@ const N = acta.N_propuesto;
 if (!(N >= 8 && N <= 18)) errs.push(`N_propuesto ${N} fuera de 8-18 (16-36 cuadros)`);
 if (!acta.razon_N) errs.push("sin razon_N: el largo debe salir de los nudos, no del molde");
 
+// La duración la deciden los nudos, no el gusto: cada bloque sostiene como
+// mucho dos, cada keyframe es un clip de 5 s. De ahí, N = techo(nudos / 2)
+// acotado a 8-18, o sea 16-36 keyframes, o sea 80-180 s de video.
+//
+// Sin esta comprobación el largo lo terminaba decidiendo cuán fino se troceaba
+// el canon: actas que declaraban un nudo por frase empujaban N al máximo y
+// convertían mitos de 90 s en videos de 180 s. Auditado el 2026-09-17 sobre los
+// 117 guiones: la correlación nudos-N era 0,93 y la de canon-nudos apenas 0,56,
+// es decir el troceo mandaba sobre el mito.
+const N_DERIVADO = Math.min(18, Math.max(8, Math.ceil(acta.nudos.length / 2)));
+if (N !== N_DERIVADO) {
+  errs.push(
+    `N_propuesto ${N} no sale de los nudos: ${acta.nudos.length} nudos piden N=${N_DERIVADO} ` +
+      `(${N_DERIVADO * 2} keyframes, ≈${N_DERIVADO * 10}s). ` +
+      (N > N_DERIVADO
+        ? "Si el mito de verdad da para más, el acta necesita más nudos; si no, sobra largo."
+        : "Consolida menos, o el guion deja nudos sin cubrir.")
+  );
+}
+
 if (iG > 0) {
   const g = JSON.parse(fs.readFileSync(process.argv[iG + 1], "utf8"));
   if (g.lines.length !== N) errs.push(`el guion trae ${g.lines.length} bloques y el acta propone ${N}`);

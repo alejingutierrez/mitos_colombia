@@ -7,7 +7,7 @@ import crypto from "node:crypto";
 const mito = process.argv[2];
 const specPath = process.argv[3];
 const spec = await import(path.resolve(specPath));
-const g = JSON.parse(fs.readFileSync(`docs/videos/muiscas/mvp-guiones/guion-${mito}-v1.json`, "utf8"));
+const g = JSON.parse(fs.readFileSync(`docs/videos/muiscas/mvp-guiones/guion-${mito}-v${process.argv[4] || 1}.json`, "utf8"));
 const acta = JSON.parse(fs.readFileSync(`docs/videos/muiscas/actas/acta-${mito}.json`, "utf8"));
 const kdir = `content/videos/muiscas/videos/${mito}/keyframes`;
 const man = JSON.parse(fs.readFileSync(`${kdir}/manifest.json`, "utf8"));
@@ -38,7 +38,7 @@ const out = {
   mito,
   comunidad: "Muiscas",
   carpeta_triptico: mito,
-  guion: `docs/videos/muiscas/mvp-guiones/guion-${mito}-v1.json`,
+  guion: `docs/videos/muiscas/mvp-guiones/guion-${mito}-v${process.argv[4] || 1}.json`,
   acta: `docs/videos/muiscas/actas/acta-${mito}.json`,
   estructura: `${g.lines.length} bloques narrativos × 2 keyframes (bNa, bNb) = ${g.lines.length * 2} escenas, todas generadas nuevas contra el guion vigente`,
   nota_deslinde: acta.deslindes[0],
