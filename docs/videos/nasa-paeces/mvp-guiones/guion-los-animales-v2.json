@@ -4,7 +4,7 @@
   "mito": "los-animales",
   "titulo": "Los animales",
   "canon_slug": "los-animales",
-  "nota_cita": "El canon refiere el grito del hombre sin citarlo. La cita rinde ese aviso, que es donde el relato deja ver que los dos bandos no ven lo mismo.",
+  "nota_cita": "La cita pone en estilo directo lo que el canon refiere: que gritó que venía otro animal.",
   "voice_id": "9EHAKExD4lT2G6hPG74L",
   "voice_name": "alejandro_narracion",
   "model_id": "eleven_multilingual_v2",
@@ -16,7 +16,11 @@
         "k03",
         "k01"
       ],
-      "text": "Dicen que fue a visitar a un pariente lejos y bebió chicha. Salió de noche con peinilla y escopeta."
+      "text": "Dicen que fue a visitar a un pariente lejos y bebió chicha. Salió de noche con peinilla y escopeta.",
+      "cubre": [
+        "n01",
+        "n02"
+      ]
     },
     {
       "window": 9.5,
@@ -25,7 +29,10 @@
         "k13",
         "k02"
       ],
-      "text": "Disparó pensando en guacharacas. Algo parecido a un cerdo se acercó, pero por más que miraba no veía cuerpo."
+      "text": "Disparó pensando en guacharacas. Algo parecido a un cerdo se acercó, pero por más que miraba no veía cuerpo.",
+      "cubre": [
+        "n03"
+      ]
     },
     {
       "window": 9.5,
@@ -34,7 +41,11 @@
         "k04",
         "k14"
       ],
-      "text": "Sacó la peinilla y volvió a disparar, esta vez al aire. Entonces empezaron a moverse animales alrededor."
+      "text": "Sacó la peinilla y volvió a disparar, esta vez al aire. Entonces empezaron a moverse animales alrededor.",
+      "cubre": [
+        "n04",
+        "n05"
+      ]
     },
     {
       "window": 9.5,
@@ -43,7 +54,11 @@
         "k05",
         "k06"
       ],
-      "text": "Las hojas sonaban bajo sus pasos y la noche no dejaba distinguirlos. Prendía fósforos y se apagaban enseguida."
+      "text": "Las hojas sonaban bajo sus pasos y la noche no dejaba distinguirlos. Prendía fósforos y se apagaban enseguida.",
+      "cubre": [
+        "n06",
+        "n07"
+      ]
     },
     {
       "window": 9.5,
@@ -52,7 +67,11 @@
         "k15",
         "k07"
       ],
-      "text": "Rodeado de ruidos sin forma, gritó. Una pariente oyó la voz y salió a buscarlo con su hija."
+      "text": "Rodeado de ruidos sin forma, gritó. Una pariente oyó la voz y salió a buscarlo con su hija.",
+      "cubre": [
+        "n08",
+        "n09"
+      ]
     },
     {
       "window": 9.5,
@@ -61,7 +80,11 @@
         "k08",
         "k16"
       ],
-      "text": "Llevaba un pedazo de bagazo encendido y la brasa los ahuyentó. Lo encontraron caído en un zanjón."
+      "text": "Llevaba un pedazo de bagazo encendido y la brasa los ahuyentó. Lo encontraron caído en un zanjón.",
+      "cubre": [
+        "n10",
+        "n11"
+      ]
     },
     {
       "window": 9.5,
@@ -70,7 +93,11 @@
         "k09",
         "k10"
       ],
-      "text": "Volvieron las dos adelante y él detrás. Al cruzar una quebrada creyó ver dos ojos brillando atrás."
+      "text": "Volvieron las dos adelante y él detrás. Al cruzar una quebrada creyó ver dos ojos brillando atrás.",
+      "cubre": [
+        "n12",
+        "n13"
+      ]
     },
     {
       "window": 9.5,
@@ -79,7 +106,11 @@
         "k11",
         "k17"
       ],
-      "text": "«¡Viene otro animal!», gritó él, y se adelantó. Ellas alumbraron el agua y no vieron absolutamente nada."
+      "text": "«¡Viene otro animal!», gritó él, y se adelantó. Ellas alumbraron el camino y no vieron absolutamente nada.",
+      "cubre": [
+        "n14",
+        "n15"
+      ]
     },
     {
       "window": 9.5,
@@ -88,7 +119,10 @@
         "k18",
         "k12"
       ],
-      "text": "Los disparos sólo multiplicaron el ruido. Una luz pequeña en dos manos fue la que lo llevó a casa."
+      "text": "Los disparos sólo multiplicaron el ruido. Una luz pequeña en dos manos fue la que lo llevó a casa.",
+      "cubre": [
+        "n16"
+      ]
     }
   ],
   "keyframes_nuevos": [
@@ -123,5 +157,7 @@
     "style": 0.45,
     "use_speaker_boost": true,
     "speed": 1.08
-  }
+  },
+  "acta": "docs/videos/nasa-paeces/actas/acta-los-animales.json",
+  "reescribe": "guion-los-animales-v2: b8 decía que alumbraron «el agua»; el canon dice que alumbraron el camino."
 }
