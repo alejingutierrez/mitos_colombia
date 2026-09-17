@@ -50,12 +50,12 @@ export const ITEMS = armar([
     fin: "al otro lado de la superficie está la laguna de noche, ancha y apenas rizada, con los juncales altos alrededor y ni una luz en la orilla.",
   }, "monstruo acuatico, criatura de terror, branquias, buzos, personas"),
   escp("b1b", [ref("fu_dios"), ref("fuquene_noche")], {
-    comun: `Noche sin luna. ${FU} saliendo del agua a la orilla de barro. Es desgarbado, no monstruoso. Objeto ancla: el agua que le escurre de los codos.`,
+    comun: `Noche sin luna. ${FU}, ya en la orilla de barro y con mantas secas, recién salido de la laguna. Es desgarbado, no monstruoso. Objeto ancla: sus hombros anchos contra el juncal.`,
     camara: {
-      a: "PLANO MACRO del agua cayendo de un codo sobre el barro de la orilla.",
+      a: "PLANO MACRO de sus pies hundidos en el barro de la orilla, con los juncos alrededor.",
       b: "la cámara ha RETROCEDIDO y ha subido: PLANO ENTERO de él ya en la orilla, de espaldas al agua y con mantas secas, con los juncales detrás.",
     },
-    ini: "unas gotas caen de un codo al barro, muy cerca del objetivo.",
+    ini: "los pies están hundidos en el barro y no se ve nada más.",
     fin: "desde más lejos se le ve entero y de pie, ya en la orilla, ancho de hombros y algo encorvado, con su manta corta anudada al hombro.",
   }, "monstruo, garras, colmillos, gigante fuera de escala, musculatura heroica"),
 
