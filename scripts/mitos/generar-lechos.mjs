@@ -46,10 +46,21 @@ const valor = (n, d = null) => {
   return i !== -1 && args[i + 1] && !args[i + 1].startsWith("--") ? args[i + 1] : d;
 };
 
-/* ---- parámetros del bucle (medidos, no supuestos: ver cabecera) ---- */
-const FUENTE_S = 45;   // lo que se le pide al modelo
-const LARGO_S = 30;    // duración del bucle entregado
-const CRUCE_S = 1.5;   // crossfade que cierra el bucle
+/* ---- parámetros del bucle (medidos, no supuestos: ver cabecera) ----
+ *
+ * La duración es un PARÁMETRO y no una constante desde que se midió el daño de
+ * dejarla en 30 s: los tramos de narración duran ~53 s de media, así que un
+ * lecho de 30 s sonaba 1,8 veces dentro de cada tramo y la música giraba en vez
+ * de avanzar. Con 90 s un tramo usa el 0,59 del lecho y no se repite ni una vez.
+ *
+ * El bucle se sigue construyendo aunque ya no haga falta para los tramos
+ * actuales: es el seguro para un relato futuro con tramos más largos, donde el
+ * lecho tendría que dar la vuelta.
+ */
+const LARGO_S = Number.parseInt(valor("largo", "30"), 10);
+const CRUCE_S = LARGO_S >= 60 ? 3 : 1.5;
+const FUENTE_S = LARGO_S + Math.max(15, Math.round(LARGO_S / 3)); // margen para esquivar entrada y salida
+const PASO_BARRIDO = LARGO_S >= 60 ? 3 : 1; // el barrido fino no escala a 90 s
 const LUFS_OBJETIVO = -24;
 const TP_OBJETIVO = -1.5;
 
@@ -166,6 +177,42 @@ const CATALOGO_GUAJIRO = [
     foco: "A cooking fire in a desert settlement: dry thorn wood snapping and flaring, a pot set down, people moving nearby. A flute plays a short homely figure. Warm, domestic, evening." },
   { slug: "w12-serrania-de-la-macuira", title: "Serranía de la Macuira", characters: ["montana", "viento"],
     foco: "The cloud forest that rises out of the desert: sudden humidity, mist moving through low trees, unexpected birds after miles of dry wind. A reed clarinet holds a wide tone. Improbable, green, sheltered." },
+
+  /* Segunda tanda guajira. Medida sobre los 27 relatos: `camino` domina el 35 %
+     de los tramos con sólo dos lechos que lo encabecen (14 usos cada uno), y
+     `comunidad`, `silencio` y `selva` suman otro 26 % SIN un solo lecho que los
+     encabece. Cuatro caminos distintos por el terreno que se cruza, y el resto
+     para los caracteres huérfanos. */
+  { slug: "w13-arena-que-se-mueve", title: "Arena que se mueve", characters: ["camino", "viento"],
+    foco: "Walking across shifting dune sand: each step sinking and dragging, sand hissing as it slides, wind pushing from the side. A reed clarinet bends a long note. Effortful, endless, shifting." },
+  { slug: "w14-huella-de-cabra", title: "Huella de cabra", characters: ["camino", "comunidad"],
+    foco: "Following a herd track through thorn scrub: hooves and sandals on hard-packed clay, branches brushing, one bell far ahead. A cane flute keeps the walking figure. Familiar, patient, homeward." },
+  { slug: "w15-orilla-de-sal", title: "Orilla de sal", characters: ["camino", "agua"],
+    foco: "Walking the edge where salt flat meets sea: crust cracking underfoot, shallow water, gulls far off. A flute answers the wide flat horizon. Bright, glaring, exposed." },
+  { slug: "w16-viaje-de-noche", title: "Viaje de noche", characters: ["camino", "noche"],
+    foco: "Travelling the desert after dark to escape the heat: unhurried footsteps, night insects, a jaw harp pulsing quietly with the pace. Cool, secretive, steady." },
+  { slug: "w17-palabrero", title: "Palabrero", characters: ["comunidad", "ceremonia"],
+    foco: "A pütchipü palabrero mediating between families: a measured, formal cadence on the kasha drum like careful speech, a reed clarinet answering as if replying. Deliberate, weighty, reconciling." },
+  { slug: "w18-tejido-de-chinchorro", title: "Tejido de chinchorro", characters: ["comunidad", "oficio"],
+    foco: "Weaving a hammock: the loom's threads pulled taut in a steady repeating motion, fibres creaking, several women working at slightly different speeds. A flute repeats a simple figure. Domestic, unhurried, communal." },
+  { slug: "w19-velorio", title: "Velorio", characters: ["comunidad", "silencio"],
+    foco: "A wake in the ranchería: many people present but almost no sound, a single drum stroke every long while, wind through the enramada. Heavy, shared, grieving." },
+  { slug: "w20-cementerio-de-clan", title: "Cementerio de clan", characters: ["silencio", "montana"],
+    foco: "A clan burial ground among rocks: nothing but wind over stone and the faintest reed tone arriving and dying. Almost total emptiness. Ancestral, still, reverent." },
+  { slug: "w21-sueno-de-la-majayura", title: "Sueño de la majayura", characters: ["silencio", "noche"],
+    foco: "A girl in seclusion dreaming: one very soft flute note held and released, the barest jaw harp far away, the room's own quiet. Suspended, inward, waiting." },
+  { slug: "w22-espera-sin-lluvia", title: "Espera sin lluvia", characters: ["silencio", "viento"],
+    foco: "The long drought: dry wind over cracked ground, nothing growing, no animals. A single reed note that never resolves. Parched, suspended, enduring." },
+  { slug: "w23-monte-de-trupillo", title: "Monte de trupillo", characters: ["selva", "viento"],
+    foco: "Thorn forest of trupillo and cardón: dry branches clicking against each other in the wind, small desert birds, lizards moving through leaf litter. Scratchy, alive, arid." },
+  { slug: "w24-aves-de-la-cienaga", title: "Aves de la ciénaga", characters: ["selva", "agua"],
+    foco: "Coastal wetland birds at the desert's edge: flamingos and waders calling over shallow brackish water, reeds moving. A flute answers them rarely. Wide, shimmering, populated." },
+  { slug: "w25-cerro-de-pilon", title: "Cerro de Pilón", characters: ["montana", "silencio"],
+    foco: "A lone hill standing over flat desert: wind accelerating around rock, a wide echo, one deep reed note from the base. Solitary, watchful, monumental." },
+  { slug: "w26-cardonal", title: "Cardonal", characters: ["montana", "selva"],
+    foco: "A forest of tall cardón cactus: wind whistling between ribbed columns, spines ticking, the ground bone-dry. A sparse flute figure moves through. Strange, upright, silent-alive." },
+  { slug: "w27-mano-en-el-telar", title: "Mano en el telar", characters: ["oficio", "silencio"],
+    foco: "One person weaving alone: the shuttle passing, thread pulled and tapped down, a slow private rhythm with long gaps. Barely any melody. Concentrated, solitary, unhurried." },
 ];
 
 const CATALOGOS = {
@@ -284,12 +331,13 @@ async function main() {
       const cuantos = Number.parseInt(valor("nuevos", "0"), 10);
       if (!cuantos) { console.error("Uso: --nuevos N | --ingerir <carpeta> | --listar"); process.exitCode = 1; return; }
       const existentes = new Set((await sql`SELECT slug FROM narration_beds`).rows.map((r) => r.slug));
-      const pendientes = catalogo.filter((p) => !existentes.has(p.slug)).slice(0, cuantos);
+      const rehacer = args.includes("--rehacer");
+      const pendientes = (rehacer ? catalogo : catalogo.filter((p) => !existentes.has(p.slug))).slice(0, cuantos);
       if (!pendientes.length) {
-        console.log(`El catálogo de prompts de «${WORLDS[mundo].label}» ya está agotado; añade más entradas.`);
+        console.log(`El catálogo de prompts de «${WORLDS[mundo].label}» ya está agotado; añade más entradas o usa --rehacer.`);
         return;
       }
-      console.log(`mundo sonoro: ${WORLDS[mundo].label}\n`);
+      console.log(`mundo sonoro: ${WORLDS[mundo].label} · piezas de ${LARGO_S}s${rehacer ? " · REHACIENDO las existentes" : ""}\n`);
 
       for (const p of pendientes) {
         const res = await fetch("https://api.elevenlabs.io/v1/music?output_format=pcm_48000", {
@@ -313,7 +361,7 @@ async function main() {
 
         // Barrido del punto de corte: nos quedamos con el escalón más pequeño.
         let mejor = null;
-        for (let S = 1; S + LARGO_S + CRUCE_S <= FUENTE_S; S += 1) {
+        for (let S = 1; S + LARGO_S + CRUCE_S <= FUENTE_S; S += PASO_BARRIDO) {
           const cand = path.join(dir, `_c${S}.wav`);
           if (!construirBucle(largo, S, cand)) continue;
           const e = escalonCostura(cand, dir);
