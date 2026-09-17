@@ -118,6 +118,28 @@ const CATALOGO = [
     foco: "A procession approaching and passing: hide drums in a firm walking cadence, conch trumpets answering each other, seed rattles from many people at once. Grand, public, ceremonial." },
   { slug: "32-farallon", title: "Farallón", characters: ["montana", "viento"],
     foco: "A sheer rock face: wind pressing against stone, enormous natural echo, one very deep flute note released into the void and coming back changed. No rhythm at all. Sheer, exposed, immense." },
+
+  /* Cuarta tanda. Con los 41 muiscas narrados se pudo medir la DEMANDA real:
+     126 tramos repartidos entre 32 lechos, media de 3,9 por lecho. `camino`
+     pedía 21 tramos con sólo dos lechos que lo encabezaran —10,5 cada uno, el
+     triple de la media— y `comunidad` iba a 6. Cuatro caminos distintos por el
+     suelo que se pisa, más dos de comunidad y dos de noche. */
+  { slug: "33-pasos-en-la-hojarasca", title: "Pasos en la hojarasca", characters: ["camino", "selva"],
+    foco: "Feet walking through deep dry leaves on a forest floor, very close and detailed, each step a soft crush. A cane flute breathes with the pace. Birds far above. Enclosed, green, moving." },
+  { slug: "34-puente-de-bejuco", title: "Puente de bejuco", characters: ["camino", "viento"],
+    foco: "A vine bridge over a gorge: fibres creaking and shifting under weight, wind moving through the ropes, the river far below barely audible. A single held flute note, uneasy. Suspended, careful, exposed." },
+  { slug: "35-vado-del-rio", title: "Vado del río", characters: ["camino", "agua"],
+    foco: "Fording a river on foot: water pushing against legs, careful steps on loose stones under the current, someone steadying themselves. An ocarina holds a cautious tone. Cold, deliberate, halfway across." },
+  { slug: "36-camino-de-sal", title: "Camino de sal", characters: ["camino", "comunidad"],
+    foco: "The salt road: many feet walking together at the same unhurried pace, loaded bundles shifting, seed rattles from several carriers. A panpipe traded between two players. Collective, laden, long-haul." },
+  { slug: "37-bohio-en-la-noche", title: "Bohío en la noche", characters: ["comunidad", "noche"],
+    foco: "Many people under one roof at night: low overlapping flutes like quiet conversation, a fire crackling in the middle, an occasional soft rattle. Rain outside. Warm, crowded, sheltered." },
+  { slug: "38-siembra", title: "Siembra", characters: ["comunidad", "oficio"],
+    foco: "Sowing together: digging sticks striking earth in a loose collective rhythm, seeds falling, many hands at slightly different speeds. A flute keeps a simple repeating figure. Hopeful, communal, earthbound." },
+  { slug: "39-neblina-nocturna", title: "Neblina nocturna", characters: ["noche", "viento"],
+    foco: "Night fog on the high plain: everything muffled and distant, wind moving without direction, one flute note arriving from somewhere unclear and fading. Nothing is visible. Disorienting, soft, cold." },
+  { slug: "40-guardian-del-sueno", title: "Guardián del sueño", characters: ["noche", "silencio"],
+    foco: "Someone awake while others sleep: the barest breath of a low flute, a single rattle brushed very rarely, the room's own quiet. Almost nothing happens. Protective, patient, hushed." },
 ];
 
 const ff = (a) => spawnSync("ffmpeg", ["-y", "-loglevel", "error", ...a], { encoding: "utf8" });
