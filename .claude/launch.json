@@ -6,6 +6,12 @@
       "runtimeExecutable": "npm",
       "runtimeArgs": ["run", "dev", "--", "--port", "3111"],
       "port": 3111
+    },
+    {
+      "name": "video-duelo",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "8099", "--directory", "/Users/alegut/MyApps/Personal/mitos_colombia/.claude/worktrees/myth-mobile-design-c8ea4f/content/videos/muiscas/videos/bochica/comparacion"],
+      "port": 8099
     }
   ]
 }

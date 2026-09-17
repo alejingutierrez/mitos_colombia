@@ -10,6 +10,8 @@
 //   node scripts/videos/validate-plan.mjs --plan content/videos/<x>/plan.json
 //   node scripts/videos/validate-plan.mjs --plan ... --suggest   (solo con voces:
 //     imprime las duraciones de clip recomendadas aunque falten los clips)
+//   node scripts/videos/validate-plan.mjs --plan ... --secos     (doctrina v3:
+//     error si el plan trae xfade o transition_dur — solo cortes secos)
 
 import { spawnSync } from "node:child_process";
 import fs from "node:fs";
@@ -59,12 +61,17 @@ function probeSpeechEnd(file, totalDur) {
   const lastEnd = ends.length >= starts.length ? ends[ends.length - 1] : totalDur;
   return lastEnd >= totalDur - 0.15 ? lastStart : totalDur;
 }
-// Partición en pares de clips de 5-6 s que cubra `need` segundos.
+// Partición en clips de 5-7 s que cubra `need` segundos (pares y, para ventanas
+// largas tipo clímax de la doctrina v3, ternas).
 function suggestPair(need) {
-  for (const [a, b] of [[5, 5], [5, 6], [6, 6], [6, 7], [7, 7]]) {
-    if (a + b >= need) return [a, b];
+  const combos = [
+    [5, 5], [5, 6], [6, 6], [6, 7], [7, 7],
+    [5, 5, 5], [5, 5, 6], [5, 6, 6], [6, 6, 6], [6, 6, 7], [7, 7, 7],
+  ];
+  for (const c of combos) {
+    if (c.reduce((a, d) => a + d, 0) >= need) return c;
   }
-  return [7, Math.ceil(need - 7)];
+  return [7, 7, Math.ceil(need - 14)];
 }
 
 let errors = preErrors;
@@ -87,6 +94,14 @@ for (const b of plan.blocks) {
 const musicPath = resolveInput(plan.music);
 if (plan.music && !fs.existsSync(musicPath)) err(`música no encontrada: ${plan.music}`);
 
+// 1b. Doctrina v3 (--secos): solo cortes secos — sin crossfades en el plan.
+if (secos) {
+  if (plan.transition_dur !== undefined) err(`plan v3: elimina "transition_dur" (solo cortes secos)`);
+  for (const b of plan.blocks) {
+    if (b.xfade !== undefined) err(`bloque ${b.n}: elimina "xfade" (plan v3 = solo cortes secos)`);
+  }
+}
+
 // 2. Ventanas narrativas: de cada bloque con voz al siguiente con voz (o el final)
 const voiced = plan.blocks
   .map((b, i) => ({ b, i }))
@@ -108,14 +123,15 @@ for (let k = 0; k < voiced.length; k++) {
   const nextI = k + 1 < voiced.length ? voiced[k + 1].i : plan.blocks.length;
   const window = durations.slice(i, nextI).reduce((a, d) => a + d, 0);
   const need = speechEnd + GAP;
-  const [a2, b2] = suggestPair(need);
+  const combo = suggestPair(need);
+  const comboTxt = combo.join("s + ") + "s";
   const label = `bloque ${b.n} (voz ${path.basename(b.voice)})`;
   if (suggest) {
-    console.log(`  ${label}: habla ${speechEnd.toFixed(2)}s → ventana mínima ${need.toFixed(1)}s → clips sugeridos ${a2}s + ${b2}s`);
+    console.log(`  ${label}: habla ${speechEnd.toFixed(2)}s → ventana mínima ${need.toFixed(1)}s → clips sugeridos ${comboTxt}`);
   }
   const isLastVoice = k === voiced.length - 1;
   if (window > 0 && window < need - 0.05) {
-    err(`${label}: ventana ${window.toFixed(1)}s < habla+aire ${need.toFixed(1)}s → sube duraciones (sugerido ${a2}+${b2})`);
+    err(`${label}: ventana ${window.toFixed(1)}s < habla+aire ${need.toFixed(1)}s → sube duraciones (sugerido ${comboTxt})`);
   } else if (window > 0 && window - need > 3.5 && !isLastVoice) {
     warn(`${label}: ${(window - need).toFixed(1)}s de aire muerto tras el habla — considera acortar clips`);
   }

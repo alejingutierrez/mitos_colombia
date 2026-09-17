@@ -68,10 +68,26 @@ Estrenada con Bochica (video 2). Complementa `plantillas-prompts.md` (fórmulas)
   ancla: los surcos ahogados, primer plano: borde de techo de paja".
 - El prompt de movimiento hereda el motivo de cámara del keyframe (si el keyframe es
   contrapicado de aparición, el movimiento es push-in reverente, no lateral).
+- **Cámara motivada y con endpoint** (doctrina v2): el movimiento se ancla a un
+  evento visible ("beginning as the first foam burst rises") y nombra dónde termina
+  el encuadre ("ending level with the crest"). UNA conducta por clip, dicha una vez;
+  compuestos coherentes (crane-up con tilt) permitidos, gramáticas mezcladas
+  (locked-off + orbit, dolly + whip-pan) prohibidas. Opcional un modificador de
+  textura ("slightly handheld"). Prohibidos en este estilo: 360 orbit, vuelos
+  rápidos, whip-pan, zoom rápido y la palabra "fast".
+- **Paralaje estándar**: todo movimiento pide la separación de planos de papel
+  ("foreground fronds drift faster than the far cliff") — la maqueta se siente real
+  cuando sus capas se mueven a velocidades distintas.
+- Ángulos legales sin personaje: overhead/top-down, macro, lateral, low/high angle.
+  Nunca over-the-shoulder sin personaje nombrado (el modelo inventa gente).
+- **Anti-"samey footage"**: no reabrir clips consecutivos en el mismo wide de
+  establecimiento; alternar tamaño y ángulo entre clips contiguos (además de la
+  alternancia de escalas de §2).
 - **Un gesto se completa por clip**: alguien termina de señalar, la vara termina de
-  volar, una ola termina de cerrarse. Nada queda a medias al corte.
+  volar, una ola termina de cerrarse. Nada queda a medias al corte. El cierre es
+  "settled, still micro-moving" — nunca congelado.
 - Los negativos se ajustan por familia de plano (paisaje/manos/serpientes/multitud),
-  ver plantillas §2.
+  ver plantillas §2 y `doctrina-movimiento-v2.md`.
 
 ## 5. Narrativa (guion)
 
