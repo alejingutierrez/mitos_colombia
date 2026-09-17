@@ -16,13 +16,35 @@ está en la producción visual.
 
 ## Estado por comunidad
 
-| comunidad | biblia | trípticos | keyframes | guiones | estado |
+| comunidad | biblia | trípticos | keyframes | guiones+actas | estado |
 |---|---|---|---|---|---|
-| **muiscas** | 304 fichas | 351 piezas, 41 mitos | 1.282 | 9 | cerrada y publicada |
-| **wayuu** | v3 + inventario | 65 specs, 24 documentados | — | 33 | trípticos cerrados 2026-09-07 |
-| **nasa-páez** | 110 | 554 | 956 | 26 | en producción |
-| **ette-ennaka** (chimila) | 162 | 303 | 271 | — | en producción |
+| **muiscas** | 304 fichas | 351 piezas, 41 mitos | 1.282 | **6/6** | cerrada y publicada · faltan 35 guiones del corpus |
+| **wayuu** | v3 + inventario | 65 specs, 24 documentados | — | **27/27** | corpus de guiones cerrado 2026-09-16 |
+| **nasa-páez** | 110 | 554 | 956 | **25/25** | corpus de guiones cerrado 2026-09-16 |
+| **ette-ennaka** (chimila) | 162 | 303 | 271 | **23/23** | corpus de guiones cerrado 2026-09-16 |
 | **huitoto** (uitoto) | 7 fichas + 124 de investigación | 250 imágenes | — | — | recién abierta |
+
+La columna de guiones cuenta **pares acta+guion verificados**: 81 de 81 pasan
+`lint-guion` (forma) y `lint-acta` (fidelidad al canon). Ojo con la lectura: en
+muiscas 6/6 significa que los seis guiones que existen están bien, no que la
+comunidad esté cubierta — el corpus muisca tiene 41 mitos.
+
+### La regla única y el acta
+
+Desde el 2026-09-16 todo guion nace de un **acta de reducción**
+(`docs/videos/<com>/actas/acta-<mito>.json`): declara los nudos irrenunciables
+con la frase literal del canon que los sostiene, los deslindes, y qué se
+descarta y por qué. Sin acta no hay guion.
+
+    node scripts/videos/lint-guion.mjs <guion.json>              # forma
+    node scripts/videos/lint-acta.mjs  <acta.json> --guion <g>   # fidelidad
+    node scripts/videos/auditar-guiones.mjs                      # todo el repo
+    node scripts/videos/auditar-cuadros.mjs                      # 16-36 cuadros
+
+Escribir las actas retroactivas de nasa y muiscas destapó **once citas o
+imágenes inventadas** en guiones que llevaban meses pasando el linter de forma
+—entre ellas una cita puesta en boca de Bachué y un final entero para
+el-hombre-tigre—. El linter mide la forma; el acta mide la fidelidad.
 
 ## Dónde vive cada cosa
 
