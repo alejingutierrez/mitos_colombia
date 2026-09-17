@@ -1,8 +1,20 @@
 // Reconstruye el panel de QA de keyframes: mira el disco, actualiza qué
-// escenas ya tienen sus dos cuadros, rehace las miniaturas y vuelve a
+// escenas ya tienen sus dos cuadros, compone un SPRITE por mito y vuelve a
 // embeber los datos en el HTML.
 //
 //   node scripts/videos/build-qa-panel.mjs
+//
+// ── POR QUÉ SPRITES ────────────────────────────────────────────────────────
+// La primera versión subía una miniatura por cuadro. Con 41 mitos eso son
+// ~1.700 archivos y el artefacto tiene un tope DURO de 512 por versión: a los
+// 30 mitos la publicación empezó a devolver 422. Empaquetar los cuadros de
+// cada mito en una sola imagen baja el conteo a 41 archivos sin cambiar los
+// bytes totales, que siguen debajo del tope de 64 MB.
+//
+// Cada sprite es una rejilla de CELDAS de 384×576 en COLUMNAS columnas. El
+// índice de cada cuadro es estable —orden de bloques del guion, y dentro de
+// cada escena primero A y luego B— y va guardado en datos.json, así que el
+// HTML puede calcular el background-position sin adivinar nada.
 //
 // La parte editorial de `.qa-staging/datos.json` (título, N, cita, deslindes,
 // bloques del guion) se conserva tal cual: aquí sólo se recalcula lo que
@@ -16,18 +28,19 @@ const RAIZ = process.cwd();
 const STAGE = path.join(RAIZ, ".qa-staging");
 const IMG = path.join(STAGE, "img");
 const VIDEOS = path.join(RAIZ, "content/videos/muiscas/videos");
-// 480 px con mozjpeg deja cada miniatura en ~29 KB. No es capricho: el
-// artefacto admite 64 MB por version y 255 archivos por publicacion, y los
-// 41 mitos completos son ~1.700 cuadros. A 720 px no cabrian.
-const ANCHO_THUMB = 480;
-const CALIDAD_THUMB = 68;
+
+export const CELDA_W = 384;
+export const CELDA_H = 576;
+export const COLUMNAS = 6;
+const CALIDAD = 70;
 
 const datos = JSON.parse(fs.readFileSync(path.join(STAGE, "datos.json"), "utf8"));
+fs.rmSync(IMG, { recursive: true, force: true });
 fs.mkdirSync(IMG, { recursive: true });
 
-const vigentes = new Set();
-let totalImgs = 0;
+datos.sprite = { w: CELDA_W, h: CELDA_H, cols: COLUMNAS };
 
+let totalImgs = 0;
 for (const mito of datos.mitos) {
   const dir = path.join(VIDEOS, mito.slug, "keyframes");
   const enDisco = new Set(
@@ -36,50 +49,64 @@ for (const mito of datos.mitos) {
       : [],
   );
 
+  // Índice estable: recorre los bloques en el orden del guion y, dentro de
+  // cada escena, primero el cuadro inicial y después el final.
+  const celdas = [];
   let n = 0;
   for (const bloque of mito.bloques) {
     for (const escena of bloque.escenas) {
-      for (const lado of ["A", "B"]) {
-        const archivo = `${escena.id}-${lado}.jpg`;
-        const hay = enDisco.has(archivo);
-        if (lado === "A") escena.hay = hay;
-        if (hay) {
-          n++;
-          const destino = `${mito.slug}__${archivo}`;
-          vigentes.add(destino);
-          const src = path.join(dir, archivo);
-          const dst = path.join(IMG, destino);
-          const necesita =
-            !fs.existsSync(dst) || fs.statSync(dst).mtimeMs < fs.statSync(src).mtimeMs;
-          if (necesita) {
-            await sharp(src).resize({ width: ANCHO_THUMB }).jpeg({ quality: CALIDAD_THUMB, mozjpeg: true }).toFile(dst);
-          }
-        }
+      const hayA = enDisco.has(`${escena.id}-A.jpg`);
+      const hayB = enDisco.has(`${escena.id}-B.jpg`);
+      escena.hay = hayA && hayB;
+      escena.i = escena.hay ? celdas.length : -1;
+      if (escena.hay) {
+        celdas.push(path.join(dir, `${escena.id}-A.jpg`));
+        celdas.push(path.join(dir, `${escena.id}-B.jpg`));
+        n += 2;
       }
-      // la escena cuenta como hecha sólo si tiene sus DOS cuadros
-      escena.hay = enDisco.has(`${escena.id}-A.jpg`) && enDisco.has(`${escena.id}-B.jpg`);
     }
   }
-  mito.imagenes = n;
-  if (mito.estado !== "producido") {
-    mito.estado = n === 0 ? "pendiente" : n >= mito.necesita ? "listo" : "parcial";
-  }
-  totalImgs += n;
-}
 
-// Miniaturas huérfanas (escenas renombradas o mitos rehechos).
-let borradas = 0;
-for (const f of fs.readdirSync(IMG)) {
-  if (!vigentes.has(f)) {
-    fs.unlinkSync(path.join(IMG, f));
-    borradas++;
+  mito.imagenes = n;
+  // `producido` deja de ser un estado y pasa a ser una ETIQUETA. Antes bloqueaba
+  // el recalculo, asi que los cuatro mitos con video v3 publicado se quedaban
+  // fuera de la mesa aunque ya tuvieran sus cuadros v4 en disco: 180 imagenes
+  // invisibles. El estado ahora sale siempre de los archivos.
+  if (mito.producido === undefined) mito.producido = mito.estado === "producido";
+  mito.estado = n === 0 ? "pendiente" : n >= mito.necesita ? "listo" : "parcial";
+  totalImgs += n;
+  if (!celdas.length) {
+    mito.filas = 0;
+    continue;
   }
+
+  const filas = Math.ceil(celdas.length / COLUMNAS);
+  mito.filas = filas;
+  const capas = await Promise.all(
+    celdas.map(async (src, i) => ({
+      input: await sharp(src).resize(CELDA_W, CELDA_H, { fit: "cover" }).toBuffer(),
+      left: (i % COLUMNAS) * CELDA_W,
+      top: Math.floor(i / COLUMNAS) * CELDA_H,
+    })),
+  );
+  await sharp({
+    create: {
+      width: COLUMNAS * CELDA_W,
+      height: filas * CELDA_H,
+      channels: 3,
+      background: { r: 27, g: 24, b: 21 },
+    },
+  })
+    .composite(capas)
+    .jpeg({ quality: CALIDAD, mozjpeg: true })
+    .toFile(path.join(IMG, `${mito.slug}.jpg`));
 }
 
 fs.writeFileSync(path.join(STAGE, "datos.json"), JSON.stringify(datos), "utf8");
 
 // Re-embeber en el HTML.
-const htmlPath = path.join(STAGE, "qa.html");
+// mesa.html es el artefacto vivo; qa.html quedo con el manifiesto viejo lleno.
+const htmlPath = path.join(STAGE, "mesa.html");
 const html = fs.readFileSync(htmlPath, "utf8");
 const marca = '<script type="application/json" id="datos">';
 const i = html.indexOf(marca);
@@ -88,8 +115,10 @@ if (i < 0 || j < 0) throw new Error("no encuentro el bloque #datos en qa.html");
 const nuevo = html.slice(0, i + marca.length) + JSON.stringify(datos) + html.slice(j);
 fs.writeFileSync(htmlPath, nuevo, "utf8");
 
+const sprites = fs.readdirSync(IMG).length;
+const bytes = fs.readdirSync(IMG).reduce((a, f) => a + fs.statSync(path.join(IMG, f)).size, 0);
 const listos = datos.mitos.filter((m) => m.estado === "listo").length;
 console.log(
-  `[qa] ${totalImgs} cuadros en disco · ${listos}/${datos.mitos.length} mitos completos · ` +
-    `${borradas} miniaturas huérfanas borradas · html ${(nuevo.length / 1024).toFixed(1)} KB`,
+  `[qa] ${totalImgs} cuadros · ${listos}/${datos.mitos.length} mitos completos · ` +
+    `${sprites} sprites (${(bytes / 1048576).toFixed(1)} MB) · html ${(nuevo.length / 1024).toFixed(1)} KB`,
 );
