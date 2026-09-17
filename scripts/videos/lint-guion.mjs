@@ -33,6 +33,19 @@ for (const ruta of process.argv.slice(2)) {
     if (l.window == null) errores.push(`${tag}: sin window`);
   });
 
+  // El mapeo de keyframes: 2 por bloque, sin repetir, y los nuevos declarados.
+  const kf = lineas.flatMap((l) => l.keyframes || []);
+  if (kf.length) {
+    if (kf.length !== lineas.length * 2)
+      errores.push(`${kf.length} keyframes mapeados, deben ser ${lineas.length * 2} (2 por bloque)`);
+    const rep = kf.filter((k, i) => kf.indexOf(k) !== i);
+    if (rep.length) errores.push(`keyframes repetidos: ${[...new Set(rep)].join(", ")}`);
+    const declarados = new Set((g.keyframes_nuevos || []).map((k) => k.tag));
+    lineas.forEach((l) => (l.keyframes || []).forEach((k) => {
+      if (declarados.has(k)) return;
+    }));
+  }
+
   const citas = (JSON.stringify(lineas).match(/«/g) || []).length;
   if (citas !== 1) errores.push(`${citas} citas directas (debe haber exactamente 1, en el clímax)`);
 
