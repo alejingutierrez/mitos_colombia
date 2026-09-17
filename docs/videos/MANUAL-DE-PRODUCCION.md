@@ -510,7 +510,7 @@ duración del archivo (incluye la cola de silencio) · **habla real** (fin del �
 
 **`SE PASA`** significa que la voz seguiría sonando cuando el plano ya cambió. El script cuenta el fallo y **sale con código 1**. La única respuesta admitida es **reescribir la línea** (mismo sentido, ≤19 palabras) y regenerar sólo esa toma con `--only N`. `atempo` está prohibido (ley 3): acelerar adelgaza el timbre del clon y mata la cadencia de fogón. Si la reescritura cambia el *contenido*, hay que volver a pedir aprobación y anotarla en `aprobado`. Otro caso que se resuelve igual: **~1 de cada 20 tomas sale con timbre raro**; el modelo no es determinista y la segunda suele salir limpia.
 
-**Elenco por línea** (`voice_id` y `voice_settings` por línea, como en `guion-f-duo.json`): es infraestructura del casting de agosto. Hoy no se usa; no borrarla, tampoco reinventarla.
+**Elenco por línea** (`voice_id` y `voice_settings` por línea, como en `historico/guion-f-duo.json`): es infraestructura del casting de agosto. Hoy no se usa; no borrarla, tampoco reinventarla.
 
 **Las voces descartadas:**
 

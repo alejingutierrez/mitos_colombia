@@ -197,7 +197,7 @@ async function prepareMyth({ slug, dataSlug, myth, index }) {
   const planDir = mythDir;
   const shots = slug === "bachue" ? await bachueShots(mythDir) : genericShots(myth);
   const voiceSpec = slug === "bachue"
-    ? JSON.parse(await fs.readFile(path.join(rootDir, "docs/videos/muiscas/mvp-guiones/guion-bachue-v3.json"), "utf8"))
+    ? JSON.parse(await fs.readFile(path.join(rootDir, "docs/videos/muiscas/mvp-guiones/historico/guion-bachue-v3.json"), "utf8"))
     : {
         ...VOICE,
         enfoque: `${myth.titulo} — narración del catálogo visual muisca`,
