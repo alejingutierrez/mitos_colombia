@@ -1,3 +1,5 @@
+import verticalImageDimensions from "./vertical-image-dimensions.json" with { type: "json" };
+
 function cleanImageUrl(value) {
   if (!value) return null;
   const normalized = String(value).trim();
@@ -115,6 +117,66 @@ export function hasMythImageRoles(myth, roles = []) {
   return roles.every((role) =>
     Boolean(getMythImage(myth, role, { fallback: false }))
   );
+}
+
+/**
+ * Proporción de respaldo cuando no conocemos la medida real de una obra.
+ *
+ * 2:3 no es un número elegido a ojo: es el formato de la mayoría del archivo
+ * vertical, así que una caja 2:3 es la que menos franja deja en promedio
+ * cuando falta el dato. Tiene la misma forma que devuelve `getImageAspect`
+ * para que el consumidor pueda usar una u otra sin ramificar.
+ */
+export const FALLBACK_IMAGE_ASPECT = Object.freeze({ w: 2, h: 3, ratio: 2 / 3 });
+
+/**
+ * Clave con la que una URL entra al mapa de dimensiones: la ruta del blob, sin
+ * host, sin query y sin la barra inicial.
+ *
+ * La ruta de Vercel Blob es estable —cada subida crea su propio
+ * `vertical/<tipo>/<slug>-<epoch>.jpg` y nadie reescribe una ruta publicada—,
+ * de modo que identifica los bytes aunque cambie el dominio del CDN.
+ */
+export function getImageDimensionKey(url) {
+  if (!url) return null;
+  const raw = String(url).trim();
+  if (!raw) return null;
+
+  try {
+    return decodeURIComponent(new URL(raw).pathname).replace(/^\/+/, "") || null;
+  } catch {
+    return raw.split(/[?#]/)[0].replace(/^\/+/, "") || null;
+  }
+}
+
+/**
+ * Medida real de una obra, tomada del mapa que genera
+ * `scripts/probe-vertical-dimensions.mjs` leyendo la cabecera de cada archivo.
+ *
+ * Existe porque la base de datos guarda la URL pero nunca el tamaño, y sin el
+ * tamaño la ficha del mito tiene que encuadrar todo en una caja fija: lo que
+ * no coincide sale con franjas negras.
+ *
+ * Devuelve `null` —nunca lanza— cuando la URL es vacía, no está en el mapa o
+ * el registro está corrupto. El consumidor decide el respaldo; si no tiene
+ * criterio propio, `FALLBACK_IMAGE_ASPECT` es el más razonable.
+ *
+ * @param {string|null|undefined} url URL absoluta o ruta del blob.
+ * @returns {{w: number, h: number, ratio: number}|null} `ratio` es ancho/alto
+ *   (0.667 en una obra 2:3). Para CSS: `aspectRatio: \`${w} / ${h}\``.
+ */
+export function getImageAspect(url) {
+  const key = getImageDimensionKey(url);
+  if (!key) return null;
+
+  const entry = verticalImageDimensions[key];
+  if (!entry) return null;
+
+  const w = Number(entry.w);
+  const h = Number(entry.h);
+  if (!Number.isFinite(w) || !Number.isFinite(h) || w <= 0 || h <= 0) return null;
+
+  return { w, h, ratio: w / h };
 }
 
 export function withMythImageVariants(myth = {}) {

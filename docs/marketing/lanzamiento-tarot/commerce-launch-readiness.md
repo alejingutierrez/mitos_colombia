@@ -53,7 +53,11 @@ puede recibir después un cobro adicional de transporte.
 
 ## Bold y órdenes
 
-- Configurar por separado las llaves activa y secreta de prueba y producción.
+- Pedir en Bold las llaves del **Botón de Pagos**, no las de la API de Pagos
+  en Línea. Son productos distintos: las llaves viejas `BOLD_API_KEY_*` /
+  `BOLD_SECRET_KEY_*` ya no las lee nadie y su endpoint responde `403` a
+  cualquier llave. Configurar por separado la llave de identidad y la
+  secreta, en prueba y en producción.
 - Crear y probar la tabla de órdenes en la base de datos de producción.
 - Registrar el endpoint firmado `/api/tarot/bold/events` en Bold.
 - El endpoint valida la firma sobre el cuerpo crudo, responde `200` de inmediato
@@ -72,17 +76,19 @@ puede recibir después un cobro adicional de transporte.
   conversión principal en Google Ads. La campaña no debe optimizarse con una
   acción distinta o todavía “no verificada”.
 - Confirmar en la cuenta real tarjeta, PSE, Nequi, Botón Bancolombia y QR Bre-B.
-  El efectivo en corresponsal queda excluido porque la API documentada no lo
-  ofrece.
+  Con el Botón de Pagos el medio se elige dentro de la ventana de Bold, no en un
+  formulario nuestro: la lista de `TAROT_BOLD_PAYMENT_METHODS` sólo respalda la
+  promesa pública de la página y hay que verificar que la cuenta los habilite.
+  El efectivo en corresponsal queda excluido porque no se anuncia.
 - Confirmar `NEXT_PUBLIC_SITE_URL` con la URL HTTPS definitiva. El retorno de
   Bold nunca se construye desde el `Host` recibido en la petición.
 
 ```dotenv
 BOLD_ENVIRONMENT=test
-BOLD_API_KEY_TEST=
-BOLD_SECRET_KEY_TEST=
-BOLD_API_KEY_PRODUCTION=
-BOLD_SECRET_KEY_PRODUCTION=
+BOLD_BUTTON_IDENTITY_KEY_TEST=
+BOLD_BUTTON_SECRET_KEY_TEST=
+BOLD_BUTTON_IDENTITY_KEY_PRODUCTION=
+BOLD_BUTTON_SECRET_KEY_PRODUCTION=
 TAROT_BOLD_PAYMENT_METHODS=card,pse,nequi,bancolombia,qr
 TAROT_ORDERS_READY=true
 TAROT_BOLD_WEBHOOK_READY=true
@@ -99,11 +105,13 @@ El código también acepta `GA4_MEASUREMENT_PROTOCOL_API_SECRET` como alias, per
 el proyecto de Vercel ya tiene `GA_MEASUREMENT_API_SECRET` en desarrollo,
 preview y producción. No hace falta copiar ni volver a crear ese secreto.
 
-La integración usa la API directa: los datos de tarjeta atraviesan el servidor
-únicamente durante la solicitud cifrada hacia Bold y no se persisten ni se
-registran. Antes de habilitar tarjeta en producción deben estar aprobadas la
-activación del comercio y las obligaciones de seguridad/PCI que Bold determine
-para esta modalidad. No se debe activar el checkout sólo por tener las llaves.
+La integración usa el Botón de Pagos en su modalidad *embedded*: el cobro ocurre
+dentro de una ventana de Bold sobre la misma página. Los datos de la tarjeta se
+escriben allí y no pasan por nuestro servidor, así que no se persisten ni se
+registran porque nunca los recibimos. La llave de identidad viaja al navegador
+por diseño —es la que abre la ventana—; la secreta sólo firma, en el servidor,
+la integridad de la orden y el webhook. Aun así, no se debe activar el checkout
+sólo por tener las llaves: falta la activación del comercio ante Bold.
 
 ## Prueba obligatoria antes de publicar anuncios
 

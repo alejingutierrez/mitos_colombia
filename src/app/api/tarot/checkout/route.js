@@ -1,16 +1,11 @@
 import { NextResponse } from "next/server";
 import {
-  createBoldPayment,
-  createBoldPaymentIntent,
-  buildBoldAddress,
-  buildBoldPaymentMethod,
+  buildBoldCheckoutConfig,
   getBoldConfiguration,
-  safeBoldNextAction,
 } from "../../../../lib/bold";
 import {
   createTarotOrder,
   markTarotOrderPaymentFailed,
-  markTarotOrderPaymentStarted,
 } from "../../../../lib/tarot-orders";
 import {
   getTarotProduct,
@@ -43,26 +38,17 @@ function validationError(message) {
   );
 }
 
-function cleanDeviceFingerprint(value) {
-  const number = (item, fallback) => {
-    const parsed = Number.parseInt(item, 10);
-    return Number.isFinite(parsed) ? parsed : fallback;
-  };
-  return {
-    device_type: value?.deviceType === "MOBILE" ? "MOBILE" : "DESKTOP",
-    os: cleanText(value?.os, 80) || "Unknown",
-    model: cleanText(value?.model, 80),
-    browser: cleanText(value?.browser, 120) || "Unknown",
-    java_enabled: value?.javaEnabled === true,
-    language: cleanText(value?.language, 20) || "es-CO",
-    color_depth: number(value?.colorDepth, 24),
-    screen_height: number(value?.screenHeight, 800),
-    screen_width: number(value?.screenWidth, 1280),
-    time_zone_offset: number(value?.timeZoneOffset, 300),
-    platform: cleanText(value?.platform, 80),
-  };
-}
-
+/**
+ * Prepara el pago con Botón de Pagos.
+ *
+ * Aquí NO se cobra ni se contacta a Bold: se crea la orden, se firma con la
+ * llave secreta —que nunca sale de este proceso— y se devuelve únicamente la
+ * configuración pública que el navegador necesita para abrir el modal.
+ *
+ * El cobro lo confirma después el webhook firmado, y la interfaz consulta el
+ * estado real de la orden. Una respuesta de esta ruta no significa que se haya
+ * pagado nada.
+ */
 export async function POST(request) {
   const product = getTarotProduct();
   if (!product.checkoutReady) {
@@ -95,10 +81,6 @@ export async function POST(request) {
   const postalCode = cleanText(body?.postalCode, 12).replace(/[^A-Za-z0-9-]/g, "");
   const addressLine1 = cleanText(body?.addressLine1, 180);
   const addressLine2 = cleanText(body?.addressLine2, 180);
-  const paymentMethodId = cleanText(body?.paymentMethod, 30).toLowerCase();
-  const configuredMethod = product.paymentMethods.find(
-    (method) => method.id === paymentMethodId && method.confirmed
-  );
   const campaign = cleanTarotCampaign(body?.campaign);
   const analytics = cleanGa4AnalyticsContext(body?.analytics);
   const privacyAccepted = body?.privacyAccepted === true;
@@ -125,35 +107,31 @@ export async function POST(request) {
   if (!city || !postalCode || addressLine1.length < 5) {
     return validationError("Completa ciudad, código postal y dirección de entrega.");
   }
-  if (!configuredMethod) {
-    return validationError("Selecciona un medio de pago habilitado en Bold.");
-  }
   if (!privacyAccepted) {
     return validationError("Debes aceptar el tratamiento de datos para crear el pedido.");
   }
 
-  let paymentMethod;
-  try {
-    paymentMethod = buildBoldPaymentMethod(paymentMethodId, body?.paymentDetails);
-  } catch {
-    return validationError("Revisa los datos del medio de pago seleccionado.");
-  }
-
+  /* Las llaves se comprueban ANTES de crear la orden: una orden que nace sin
+     poder firmarse sería un pedido fantasma en la base. */
   const configuration = getBoldConfiguration();
   if (!configuration.ready) {
     return NextResponse.json(
-      { error: "bold_not_ready", message: "Las llaves de Bold aún no están configuradas." },
+      {
+        error: "bold_not_ready",
+        message: "Las llaves de Botón de Pagos aún no están configuradas.",
+      },
       { status: 503, headers: NO_STORE }
     );
   }
 
   const unitPriceCop = product.priceCop;
-  const amountInCents = unitPriceCop * quantity * 100;
+  const totalCop = unitPriceCop * quantity;
+  const siteUrl = String(process.env.NEXT_PUBLIC_SITE_URL || "").trim().replace(/\/+$/, "");
   const order = await createTarotOrder({
     sku: product.sku,
     quantity,
     unitPriceCop,
-    amountInCents,
+    amountInCents: totalCop * 100,
     currency: product.currency,
     email,
     fullName,
@@ -167,116 +145,63 @@ export async function POST(request) {
     userId: account?.id || null,
   });
 
-  const siteUrl = String(process.env.NEXT_PUBLIC_SITE_URL || "").trim().replace(/\/+$/, "");
   const callbackUrl = new URL("/tarot/checkout/resultado", siteUrl);
   callbackUrl.searchParams.set("order", order.status_token);
-  const address = buildBoldAddress({
-    addressLine1,
-    addressLine2,
-    city,
-    region,
-    phone,
-    postalCode,
-  });
-  const payerAddress = {
-    street1: address.street1,
-    ...(address.street2 && { street2: address.street2 }),
-    city: address.city,
-    zip_code: postalCode,
-    province: address.province,
-    country: "CO",
-    phone,
-  };
-  const deviceFingerprint = cleanDeviceFingerprint(body?.deviceFingerprint);
 
   try {
-    await createBoldPaymentIntent(
-      {
-        reference_id: order.reference,
-        amount: {
-          currency: product.currency,
-          total_amount: unitPriceCop * quantity,
-          tip_amount: 0,
-          taxes: [],
-        },
-        description: `${product.name} · ${quantity} unidad${quantity === 1 ? "" : "es"}`,
-        metadata: {
-          key: "reference",
-          value: order.reference,
-        },
-        callback_url: callbackUrl.toString(),
-        customer: {
-          name: fullName,
-          phone,
-          email,
-          billing_address: address,
-          shipping_address: address,
-        },
-        device_fingerprint: deviceFingerprint,
+    const checkout = buildBoldCheckoutConfig({
+      orderId: order.reference,
+      /* El monto que se firma va en PESOS, no en centavos, y debe ser la misma
+         cadena que recibe el modal: Bold rechaza la firma si difieren. */
+      amountCop: totalCop,
+      currency: product.currency,
+      apiKey: configuration.apiKey,
+      secretKey: configuration.secretKey,
+      redirectionUrl: callbackUrl.toString(),
+      originUrl: new URL("/tarot/checkout", siteUrl).toString(),
+      description: `${product.name} · ${quantity} unidad${quantity === 1 ? "" : "es"}`,
+      customer: {
+        email,
+        fullName,
+        phone,
+        dialCode: "+57",
+        documentNumber,
+        documentType,
       },
-      { apiKey: configuration.apiKey }
-    );
-
-    const payment = await createBoldPayment(
-      {
-        reference_id: order.reference,
-        metadata: {
-          key: "reference",
-          value: order.reference,
-        },
-        payer: {
-          person_type: documentType === "NIT" ? "LEGAL_PERSON" : "NATURAL_PERSON",
-          name: fullName,
-          phone,
-          email,
-          document_type: documentType,
-          document_number: documentNumber,
-          billing_address: payerAddress,
-        },
-        payment_method: paymentMethod,
-        device_fingerprint: deviceFingerprint,
+      billingAddress: {
+        address: [addressLine1, addressLine2].filter(Boolean).join(", "),
+        city,
+        zipCode: postalCode,
+        state: region,
+        country: "CO",
       },
-      { apiKey: configuration.apiKey }
-    );
-
-    const transactionId = cleanText(payment?.transaction_id, 180);
-    if (!transactionId) throw new Error("Bold did not return a transaction id.");
-    await markTarotOrderPaymentStarted(
-      order.reference,
-      transactionId,
-      paymentMethod.name
-    );
+    });
 
     return NextResponse.json(
       {
         orderToken: order.status_token,
         statusUrl: `/api/tarot/orders/${order.status_token}`,
         resultUrl: callbackUrl.toString(),
-        transactionStatus: String(payment?.status || "RUNNING").toUpperCase(),
-        nextAction: safeBoldNextAction(payment),
+        /* Sólo datos públicos: la llave de identidad viaja al navegador por
+           diseño; la secreta se quedó en la firma y jamás se serializa. */
+        checkout,
       },
       { status: 201, headers: NO_STORE }
     );
   } catch (error) {
-    const providerStatus = Number(error?.status || 0);
-    const definiteFailure = providerStatus >= 400 && providerStatus < 500;
-    if (definiteFailure) {
-      await markTarotOrderPaymentFailed(order.reference).catch(() => undefined);
-    }
+    await markTarotOrderPaymentFailed(order.reference).catch(() => undefined);
     console.error("Bold checkout preparation failed", {
       code: error?.code || "bold_checkout_failed",
-      status: error?.status || 500,
       reference: order.reference,
     });
     return NextResponse.json(
       {
         error: "bold_checkout_failed",
-        message: "Bold no pudo iniciar el pago. No se confirmó ningún cobro.",
+        message: "No pudimos preparar el pago. No se confirmó ningún cobro.",
         orderToken: order.status_token,
         resultUrl: callbackUrl.toString(),
-        recoverable: !definiteFailure,
       },
-      { status: definiteFailure ? 422 : 502, headers: NO_STORE }
+      { status: 422, headers: NO_STORE }
     );
   }
 }

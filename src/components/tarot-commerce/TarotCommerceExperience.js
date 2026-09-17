@@ -6,6 +6,7 @@ import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { trackEvent } from "../../lib/analytics";
 import { captureTarotAttribution } from "../../lib/tarot-attribution";
+import { resolveTarotHeroFacts } from "../../lib/tarot-commerce";
 import { Header } from "../organisms/Header";
 import styles from "./TarotCommerce.module.css";
 
@@ -272,6 +273,11 @@ function Hero({ variant, product, onAction }) {
     alt: "Visualización provisional del Tarot de Mitos Colombianos",
     status: "provisional",
   };
+  const heroFacts = resolveTarotHeroFacts(variant, product);
+  // Tres de las seis landings abren con una acción de exploración. Ninguna
+  // puede quedarse sin camino de compra a la vista: es el destino de un clic
+  // pago, no una página de archivo.
+  const hasPurchaseAction = [variant.primaryAction, variant.secondaryAction].includes("cart");
 
   return (
     <section
@@ -311,6 +317,9 @@ function Hero({ variant, product, onAction }) {
           <div className={styles.heroActions}>
             <ActionButton action={variant.primaryAction} onClick={() => onAction(variant.primaryAction)}>{variant.primaryCta}</ActionButton>
             <ActionButton action={variant.secondaryAction} variant="secondary" onClick={() => onAction(variant.secondaryAction)}>{variant.secondaryCta}</ActionButton>
+            {hasPurchaseAction ? null : (
+              <ActionButton action="cart" variant="secondary" onClick={() => onAction("cart")}>Agregar al carrito</ActionButton>
+            )}
           </div>
           <ProductStatus product={product} inverse />
         </motion.div>
@@ -318,7 +327,9 @@ function Hero({ variant, product, onAction }) {
           <span>{variant.heroPanel.label}</span>
           <p>{variant.heroPanel.title}</p>
           <ul>
-            {variant.heroPanel.items.map((item) => <li key={item}>{item}</li>)}
+            {variant.heroPanel.items.map((item, index) => (
+              <li key={item}>{heroFacts[index]}</li>
+            ))}
           </ul>
         </aside>
         {heroVisual.status === "provisional" ? (
@@ -991,6 +1002,7 @@ export function TarotCommerceExperience({ variant, product, cards }) {
   const [companion, setCompanion] = useState(SECTION_COMPANION.story);
   const [journeyStep, setJourneyStep] = useState(1);
   const trackedView = useRef(false);
+  const trackedEngagement = useRef(false);
 
   const featured = cards[0] || null;
   const campaign = useMemo(() => ({
@@ -1016,6 +1028,32 @@ export function TarotCommerceExperience({ variant, product, cards }) {
       ...attribution.current,
     });
   }, [campaign, product]);
+
+  // Etapa "engage" del embudo. Mientras la compra siga en preview es la única
+  // señal real de interés que Google Ads puede optimizar, así que se emite una
+  // sola vez por visita y sólo ante una prueba de atención: bajar del hero,
+  // tocar la experiencia o permanecer veinte segundos con la pestaña a la vista.
+  const markEngaged = useCallback(
+    (reason) => {
+      if (trackedEngagement.current) return;
+      trackedEngagement.current = true;
+      trackEvent({
+        action: "landing_engaged",
+        category: "tarot_commerce",
+        label: variant.id,
+        engagement_reason: reason,
+        ...attribution.current,
+      });
+    },
+    [variant.id]
+  );
+
+  useEffect(() => {
+    const timer = window.setTimeout(() => {
+      if (document.visibilityState === "visible") markEngaged("dwell_20s");
+    }, 20000);
+    return () => window.clearTimeout(timer);
+  }, [markEngaged]);
 
   useEffect(() => {
     const hero = document.querySelector(`.${styles.hero}`);
@@ -1043,6 +1081,7 @@ export function TarotCommerceExperience({ variant, product, cards }) {
       const id = activeSection.getAttribute("data-commerce-section");
       const activeIndex = sections.indexOf(activeSection);
       if (activeIndex >= 0) setJourneyStep(activeIndex + 1);
+      if (activeIndex >= 1) markEngaged("scroll_depth");
       setCompanion(
         activeSection.getAttribute("data-companion") ||
           INTENT_COMPANIONS[variant.id]?.[id] ||
@@ -1063,7 +1102,7 @@ export function TarotCommerceExperience({ variant, product, cards }) {
       window.removeEventListener("resize", scheduleScrollCompanion);
       if (animationFrame) window.cancelAnimationFrame(animationFrame);
     };
-  }, [campaign, variant]);
+  }, [campaign, markEngaged, variant]);
 
   useEffect(() => {
     if (!cartOpen) return undefined;
@@ -1130,6 +1169,7 @@ export function TarotCommerceExperience({ variant, product, cards }) {
   }
 
   function trackDiagnostic(action, surface, item) {
+    markEngaged("interaction");
     trackEvent({
       action,
       category: "tarot_commerce",
@@ -1141,6 +1181,7 @@ export function TarotCommerceExperience({ variant, product, cards }) {
   }
 
   function handleAction(action) {
+    markEngaged("cta");
     trackEvent({
       action: "landing_cta_click",
       category: "tarot_commerce",

@@ -39,14 +39,14 @@ export function CommunityDetailTemplate({
         </MuralCell>
       ) : null}
 
-      <MuralCell label="Relatos de este pueblo" first={!region}>
+      <MuralCell label="Relatos de esta comunidad" first={!region}>
         <span className="atlas-figure mt-1 block font-editorial text-[length:var(--step-4)] leading-none text-jungle-700">
           {Number(count) || 0}
         </span>
       </MuralCell>
 
       {siblings.length ? (
-        <MuralCell label={`Otros pueblos de ${region?.name || "este territorio"}`}>
+        <MuralCell label={`Otras comunidades de ${region?.name || "este territorio"}`}>
           <MuralInlineList>
             {siblings.map((s) => (
               <span key={s.slug}>
@@ -62,10 +62,9 @@ export function CommunityDetailTemplate({
           </MuralInlineList>
         </MuralCell>
       ) : (
-        <MuralCell label="Otros pueblos">
+        <MuralCell label="Otras comunidades">
           <p className="mt-2.5 text-[0.8125rem] leading-relaxed text-ink-500">
-            Ningún otro pueblo de este territorio supera todavía el umbral de
-            relatos que da página propia.
+            Es la única comunidad de este territorio con relatos en el archivo.
           </p>
         </MuralCell>
       )}

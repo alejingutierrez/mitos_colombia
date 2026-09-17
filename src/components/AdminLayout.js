@@ -154,6 +154,16 @@ const adminMenuItems = [
       </svg>
     ),
   },
+  {
+    label: "Comentarios",
+    href: "/admin/comentarios",
+    icon: (
+      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a7 7 0 01-7 7H8l-5 3 1.6-4.2A7 7 0 0110 5h4a7 7 0 017 7z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 11h6M9 14h4" />
+      </svg>
+    ),
+  },
 ];
 
 export default function AdminLayout({ children, onLogout }) {

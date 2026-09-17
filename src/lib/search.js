@@ -1,6 +1,28 @@
 import { getSqlClient, getSqliteDb, isPostgres } from "./db";
 import { filterAllowedCommunities } from "./communityFilters";
 import { getTaxonomy } from "./myths";
+import {
+  SEARCH_WEIGHTS,
+  buildSearchTerms,
+  normalizeSearchText,
+  scoreSearchRow,
+} from "./search-terms";
+
+/**
+ * El typeahead (`/api/search`).
+ *
+ * Puntúa en JavaScript sobre un índice en memoria de mitos, territorios,
+ * pueblos y temas. Es el HERMANO de la página de resultados (`listMyths` en
+ * `lib/myths.js`), que puntúa lo mismo pero en SQL: los dos normalizan con
+ * `normalizeSearchText`, expanden con `buildSearchTerms` y suman con
+ * `SEARCH_WEIGHTS`, todo desde `lib/search-terms.js`. Antes cada uno tenía su
+ * propia idea de qué es relevante —y la página de resultados, de hecho, no
+ * tenía ninguna: ordenaba alfabéticamente.
+ *
+ * Lo único que este camino hace y el otro no es la tolerancia a erratas por
+ * distancia de edición: aquí hay ~800 candidatos en memoria y sale barato;
+ * en SQL sería una pasada por fila sobre la tabla entera.
+ */
 
 const CACHE_TTL_MS = 5 * 60 * 1000;
 let cachedCandidates = null;
@@ -20,45 +42,11 @@ const TYPE_BOOST = {
   tag: 1.0,
 };
 
-const SYNONYMS = {
-  selva: ["jungla", "bosque"],
-  jungla: ["selva", "bosque"],
-  bosque: ["selva", "jungla"],
-  rio: ["agua", "corriente", "laguna"],
-  agua: ["rio", "laguna", "mar"],
-  mar: ["agua", "oceano"],
-  costa: ["caribe", "pacifico"],
-  criatura: ["bestia", "monstruo"],
-  bestia: ["criatura", "monstruo"],
-  monstruo: ["criatura", "bestia"],
-  espiritu: ["fantasma", "alma"],
-  fantasma: ["espiritu", "aparicion"],
-};
-
-function normalizeText(value) {
-  if (!value) return "";
-  return String(value)
-    .toLowerCase()
-    .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "")
-    .replace(/[^a-z0-9\s]/g, " ")
-    .replace(/\s+/g, " ")
-    .trim();
-}
-
-function tokenize(value) {
-  if (!value) return [];
-  return value.split(" ").filter(Boolean);
-}
-
-function expandTokens(tokens) {
-  const expanded = new Set(tokens);
-  tokens.forEach((token) => {
-    const synonyms = SYNONYMS[token] || [];
-    synonyms.forEach((item) => expanded.add(item));
-  });
-  return Array.from(expanded);
-}
+/** Por debajo de esto una sugerencia es ruido y no se ofrece. */
+const MIN_SUGGESTION_SCORE = 25;
+/** A partir de esta longitud vale la pena pagar la distancia de edición. */
+const FUZZY_MIN_LENGTH = 4;
+const FUZZY_MIN_SIMILARITY = 0.72;
 
 function levenshteinDistance(a, b) {
   if (a === b) return 0;
@@ -93,51 +81,46 @@ function similarityScore(a, b) {
   return 1 - distance / length;
 }
 
+const MYTH_INDEX_SQL = `
+        SELECT
+          myths.id,
+          myths.title,
+          myths.slug,
+          myths.excerpt,
+          myths.tags_raw,
+          myths.focus_keywords_raw,
+          regions.name AS region,
+          regions.slug AS region_slug,
+          communities.name AS community,
+          communities.slug AS community_slug
+        FROM myths
+        JOIN regions ON regions.id = myths.region_id
+        LEFT JOIN communities ON communities.id = myths.community_id
+      `;
+
 async function loadMythIndex() {
   if (isPostgres()) {
     const sql = getSqlClient();
-    const result = await sql.query(
-      `
-        SELECT
-          myths.id,
-          myths.title,
-          myths.slug,
-          myths.excerpt,
-          myths.tags_raw,
-          myths.focus_keywords_raw,
-          regions.name AS region,
-          regions.slug AS region_slug,
-          communities.name AS community,
-          communities.slug AS community_slug
-        FROM myths
-        JOIN regions ON regions.id = myths.region_id
-        LEFT JOIN communities ON communities.id = myths.community_id
-      `
-    );
+    const result = await sql.query(MYTH_INDEX_SQL);
     return result.rows;
   }
 
-  const db = getSqliteDb();
-  return db
-    .prepare(
-      `
-        SELECT
-          myths.id,
-          myths.title,
-          myths.slug,
-          myths.excerpt,
-          myths.tags_raw,
-          myths.focus_keywords_raw,
-          regions.name AS region,
-          regions.slug AS region_slug,
-          communities.name AS community,
-          communities.slug AS community_slug
-        FROM myths
-        JOIN regions ON regions.id = myths.region_id
-        LEFT JOIN communities ON communities.id = myths.community_id
-      `
-    )
-    .all();
+  return getSqliteDb().prepare(MYTH_INDEX_SQL).all();
+}
+
+/**
+ * Los tres campos que puntúa `scoreSearchRow`, ya normalizados.
+ *
+ * Son los MISMOS tres que aísla el SQL de la página de resultados (título,
+ * metadatos, territorio y pueblo). El cuerpo del relato no está aquí ni allá:
+ * ni el índice lo carga ni el orden lo pesa.
+ */
+function toScorable(title, metaParts, placeParts) {
+  return {
+    title: normalizeSearchText(title),
+    meta: normalizeSearchText(metaParts.filter(Boolean).join(" ")),
+    place: normalizeSearchText(placeParts.filter(Boolean).join(" ")),
+  };
 }
 
 async function getSearchCandidates() {
@@ -146,28 +129,12 @@ async function getSearchCandidates() {
     return cachedCandidates;
   }
 
-  const [taxonomy, myths] = await Promise.all([
-    getTaxonomy(),
-    loadMythIndex(),
-  ]);
+  const [taxonomy, myths] = await Promise.all([getTaxonomy(), loadMythIndex()]);
 
   const candidates = [];
 
   myths.forEach((myth) => {
     const subtitleParts = [myth.region, myth.community].filter(Boolean);
-    const searchText = normalizeText(
-      [
-        myth.title,
-        myth.excerpt,
-        myth.tags_raw,
-        myth.focus_keywords_raw,
-        myth.region,
-        myth.community,
-      ]
-        .filter(Boolean)
-        .join(" ")
-    );
-
     candidates.push({
       id: `myth-${myth.slug}`,
       type: "myth",
@@ -175,8 +142,11 @@ async function getSearchCandidates() {
       title: myth.title,
       subtitle: subtitleParts.join(" · "),
       href: `/mitos/${myth.slug}`,
-      searchText,
-      titleText: normalizeText(myth.title),
+      scorable: toScorable(
+        myth.title,
+        [myth.excerpt, myth.tags_raw, myth.focus_keywords_raw],
+        [myth.region, myth.region_slug, myth.community, myth.community_slug]
+      ),
     });
   });
 
@@ -188,8 +158,7 @@ async function getSearchCandidates() {
       title: region.name,
       subtitle: `${region.myth_count || 0} mitos`,
       href: `/regiones/${region.slug}`,
-      searchText: normalizeText(`${region.name} ${region.slug}`),
-      titleText: normalizeText(region.name),
+      scorable: toScorable(region.name, [], [region.name, region.slug]),
     });
   });
 
@@ -202,10 +171,11 @@ async function getSearchCandidates() {
       title: community.name,
       subtitle: community.region ? `Region ${community.region}` : "Comunidad",
       href: `/comunidades/${community.slug}`,
-      searchText: normalizeText(
-        `${community.name} ${community.slug} ${community.region || ""}`
+      scorable: toScorable(
+        community.name,
+        [],
+        [community.name, community.slug, community.region]
       ),
-      titleText: normalizeText(community.name),
     });
   });
 
@@ -217,8 +187,7 @@ async function getSearchCandidates() {
       title: tag.name,
       subtitle: `${tag.myth_count || 0} mitos`,
       href: `/categorias/${tag.slug}`,
-      searchText: normalizeText(`${tag.name} ${tag.slug}`),
-      titleText: normalizeText(tag.name),
+      scorable: toScorable(tag.name, [tag.slug], []),
     });
   });
 
@@ -227,60 +196,41 @@ async function getSearchCandidates() {
   return candidates;
 }
 
-function scoreCandidate(candidate, query, tokens, expandedTokens) {
-  if (!candidate.searchText) return 0;
-  const text = candidate.searchText;
-  const title = candidate.titleText || "";
-  let score = 0;
+function scoreCandidate(candidate, terms) {
+  /* La distancia de edición se suma SIEMPRE, también cuando la puntuación base
+     es cero: es la única vía por la que una errata puede llegar a su mito. */
+  let score = scoreSearchRow(candidate.scorable, terms);
 
-  if (title === query) score += 140;
-  if (text === query) score += 120;
-
-  if (title.startsWith(query)) score += 110;
-  if (text.startsWith(query)) score += 90;
-
-  if (title.includes(query)) score += 80;
-  if (text.includes(query)) score += 55;
-
-  const tokenMatches = expandedTokens.filter((token) => text.includes(token)).length;
-  const titleMatches = expandedTokens.filter((token) => title.includes(token)).length;
-
-  score += tokenMatches * 12;
-  score += titleMatches * 18;
-
-  if (tokens.length > 1 && tokens.every((token) => title.includes(token))) {
-    score += 60;
-  }
-
-  if (query.length >= 4 && title.length >= 4) {
-    const similarity = similarityScore(title, query);
-    if (similarity >= 0.72) {
-      score += Math.round(similarity * 50);
+  const title = candidate.scorable.title;
+  if (terms.phrase.length >= FUZZY_MIN_LENGTH && title.length >= FUZZY_MIN_LENGTH) {
+    const similarity = similarityScore(title, terms.phrase);
+    if (similarity >= FUZZY_MIN_SIMILARITY) {
+      score += Math.round(similarity * SEARCH_WEIGHTS.titlePrefix);
     }
   }
 
-  const boost = TYPE_BOOST[candidate.type] || 1;
-  return Math.round(score * boost);
+  return Math.round(score * (TYPE_BOOST[candidate.type] || 1));
 }
 
+/**
+ * Sugerencias para el typeahead.
+ *
+ * @param {string} query lo que lleva escrito la persona
+ * @param {number} limit tope de sugerencias (1-12)
+ * @returns {Promise<Array<{id,type,label,title,subtitle,href}>>}
+ */
 export async function getSearchSuggestions(query, limit = 8) {
-  const normalizedQuery = normalizeText(query);
-  if (!normalizedQuery || normalizedQuery.length < 2) {
+  const terms = buildSearchTerms(query);
+  if (!terms.phrase || terms.phrase.length < 2) {
     return [];
   }
 
-  const tokens = tokenize(normalizedQuery);
-  const expandedTokens = expandTokens(tokens);
   const candidates = await getSearchCandidates();
 
-  const scored = candidates
-    .map((candidate) => {
-      const score = scoreCandidate(candidate, normalizedQuery, tokens, expandedTokens);
-      return { ...candidate, score };
-    })
-    .filter((item) => item.score >= 40)
-    .sort((a, b) => b.score - a.score)
-    .slice(0, Math.max(1, Math.min(limit, 12)));
-
-  return scored.map(({ score, searchText, titleText, ...item }) => item);
+  return candidates
+    .map((candidate) => ({ candidate, score: scoreCandidate(candidate, terms) }))
+    .filter((item) => item.score >= MIN_SUGGESTION_SCORE)
+    .sort((a, b) => b.score - a.score || a.candidate.title.localeCompare(b.candidate.title, "es"))
+    .slice(0, Math.max(1, Math.min(limit, 12)))
+    .map(({ candidate: { scorable, ...item } }) => item);
 }

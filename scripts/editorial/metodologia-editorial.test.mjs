@@ -46,22 +46,49 @@ test("el documento canónico cubre el flujo editorial completo", async () => {
   assert.match(document, /Universo canónico: 41 mitos/i);
 });
 
+/**
+ * La página pública dejó de ser una fotocopia del estándar interno: las
+ * especificaciones de imagen y de operación (16:9, vertical, regeneración,
+ * prueba en navegador) viven en `docs/metodologia-revision-mitos.md` y las
+ * asegura el caso de arriba —`no regenera imágenes por defecto`,
+ * `horizontal 16:9 es la portada`, `vertical es una segunda escena narrativa`
+ * y `navegador real`, además de la sección «Validación local y prueba en
+ * producción»—. Aquí se pinta lo que la página le promete al LECTOR: qué puede
+ * creerle a un relato y qué hacer si algo está mal.
+ */
 test("la página pública expone las reglas críticas", async () => {
-  const page = await read("src/app/metodologia/page.js");
+  // La prosa vive dentro de JSX, así que el formateador la parte donde quiera:
+  // una frase pinchada aquí puede quedar con un salto de línea en medio y hacer
+  // fallar el test sin que nadie haya tocado el texto. Se compara contra el
+  // fuente con los espacios colapsados; los regex siguen diciendo lo mismo.
+  const page = (await read("src/app/metodologia/page.js")).replace(/\s+/g, " ");
 
   assert.match(page, /En Relato solo ocurre la historia/i);
   assert.match(page, /Un niño puede seguir la acción/i);
   assert.match(page, /no creamos taxonomías/i);
   assert.match(page, /Integridad del registro y posibilidad de corregir/i);
-  assert.match(page, /verdad de producción/i);
-  assert.match(page, /no regenera imágenes por defecto/i);
-  assert.match(page, /horizontal 16:9 es la portada/i);
-  assert.match(page, /vertical\s+es una segunda escena\s+narrativa/i);
   assert.match(page, /una sola frase filosófica de 8 a\s+22 palabras/i);
   assert.match(page, /Cómo leemos las crónicas coloniales/i);
   assert.match(page, /Comparar sin borrar las diferencias/i);
   assert.match(page, /Correcciones, comunidad y derecho de respuesta/i);
-  assert.match(page, /updated="27 de julio de 2026"/i);
+
+  // Las promesas que sostienen la confianza del lector.
+  assert.match(page, /su bibliografía está pendiente/i);
+  assert.match(page, /no decide cuál nombre es más auténtico/i);
+  assert.match(page, /hacen falta territorio, transmisión y fuentes/i);
+  assert.match(
+    page,
+    /Una corrección documentada tiene prioridad sobre la consistencia del\s+archivo/i
+  );
+  assert.match(page, /adaptaciones editoriales para lectura digital/i);
+
+  // La cobertura de fuentes se interpola desde la base, nunca se escribe a
+  // mano: un número congelado convierte la sección más honesta de la página en
+  // la más falsa.
+  assert.match(page, /getSourceCoverageStats/);
+  assert.doesNotMatch(page, /\d+ de las \d+ fichas/);
+
+  assert.match(page, /updated="3 de septiembre de 2026"/i);
 });
 
 test("las páginas editoriales públicas no atribuyen el trabajo a IA", async () => {

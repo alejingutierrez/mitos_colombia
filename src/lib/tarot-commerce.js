@@ -1,3 +1,5 @@
+import { TAROT_PRODUCT_FACTS } from "./tarot-product-facts.js";
+
 const PRODUCT_SKU = "tarot-mitos-colombia-78";
 
 export const TAROT_COLOMBIA_REGIONS = [
@@ -10,18 +12,27 @@ export const TAROT_COLOMBIA_REGIONS = [
   "Valle del Cauca", "Vaupés", "Vichada",
 ];
 
+/**
+ * Medios que la baraja promete en su recorrido comercial.
+ *
+ * Con Botón de Pagos la elección ocurre DENTRO del modal de Bold: no los
+ * declaramos en la solicitud ni los pedimos en un formulario propio. La lista
+ * sigue existiendo porque la promesa pública sí es nuestra: si en la cuenta de
+ * Bold no están todos habilitados, la página estaría anunciando rutas que el
+ * modal no va a mostrar.
+ */
 export const TAROT_REQUIRED_PAYMENT_METHODS = [
   {
     id: "card",
     mark: "CARD",
     label: "Tarjeta débito o crédito",
-    detail: "Bold procesa la tarjeta y puede solicitar validación 3D Secure.",
+    detail: "Se paga dentro del modal de Bold; puede pedir validación 3D Secure.",
   },
   {
     id: "pse",
     mark: "PSE",
     label: "PSE",
-    detail: "El comprador elige su banco y continúa en su experiencia segura.",
+    detail: "El banco se elige dentro del modal y la autorización sigue allí.",
   },
   {
     id: "nequi",
@@ -193,17 +204,17 @@ export function getTarotCheckoutIntent(value) {
 export function getTarotProduct() {
   const priceCop = parsePositiveInteger(process.env.TAROT_PRICE_COP);
   const status = clean(process.env.TAROT_COMMERCE_STATUS) || "preview";
-  const dispatch = clean(process.env.TAROT_DISPATCH_TEXT);
+  const dispatch = clean(process.env.TAROT_DISPATCH_TEXT) || clean(TAROT_PRODUCT_FACTS.dispatch);
   const taxesIncluded = process.env.TAROT_TAXES_INCLUDED === "true";
   const shippingIncluded = process.env.TAROT_SHIPPING_INCLUDED === "true";
-  const shipping = clean(process.env.TAROT_SHIPPING_TEXT);
+  const shipping = clean(process.env.TAROT_SHIPPING_TEXT) || clean(TAROT_PRODUCT_FACTS.shipping);
   const shippingRegions = configuredShippingRegions(
-    process.env.TAROT_SHIPPING_REGIONS
+    process.env.TAROT_SHIPPING_REGIONS || TAROT_PRODUCT_FACTS.shippingRegions
   );
   const shippingRegionsReady = shippingRegions.length > 0;
-  const returns = clean(process.env.TAROT_RETURNS_TEXT);
-  const contents = clean(process.env.TAROT_PRODUCT_CONTENTS);
-  const physicalSpecs = clean(process.env.TAROT_PHYSICAL_SPECS);
+  const returns = clean(process.env.TAROT_RETURNS_TEXT) || clean(TAROT_PRODUCT_FACTS.returns);
+  const contents = clean(process.env.TAROT_PRODUCT_CONTENTS) || clean(TAROT_PRODUCT_FACTS.contents);
+  const physicalSpecs = clean(process.env.TAROT_PHYSICAL_SPECS) || clean(TAROT_PRODUCT_FACTS.physicalSpecs);
   const image = configuredProductImage(process.env.TAROT_PRODUCT_IMAGE);
   const imageStatus =
     (clean(process.env.TAROT_PRODUCT_IMAGE_STATUS) || "").toLowerCase() === "final"
@@ -226,15 +237,19 @@ export function getTarotProduct() {
     clean(process.env.BOLD_ENVIRONMENT)?.toLowerCase() === "production"
       ? "production"
       : "test";
-  const boldApiKey = clean(
+  /* Botón de Pagos tiene su propio par de llaves, distinto del de la API de
+     Pagos en Línea contra la que se construyó la primera versión del checkout.
+     Los nombres nuevos existen justamente para que no vuelvan a cruzarse: las
+     viejas `BOLD_API_KEY_*` resultaron ser de otro producto. */
+  const boldIdentityKey = clean(
     boldEnvironment === "production"
-      ? process.env.BOLD_API_KEY_PRODUCTION
-      : process.env.BOLD_API_KEY_TEST
+      ? process.env.BOLD_BUTTON_IDENTITY_KEY_PRODUCTION
+      : process.env.BOLD_BUTTON_IDENTITY_KEY_TEST
   );
   const boldSecretKey = clean(
     boldEnvironment === "production"
-      ? process.env.BOLD_SECRET_KEY_PRODUCTION
-      : process.env.BOLD_SECRET_KEY_TEST
+      ? process.env.BOLD_BUTTON_SECRET_KEY_PRODUCTION
+      : process.env.BOLD_BUTTON_SECRET_KEY_TEST
   );
   const checkoutSiteUrl = clean(process.env.NEXT_PUBLIC_SITE_URL);
   const checkoutRedirectReady = hasSecureCheckoutUrl(checkoutSiteUrl);
@@ -270,9 +285,7 @@ export function getTarotProduct() {
       imageReady &&
       sellerReady
   );
-  const paymentReady = Boolean(
-    boldApiKey && boldSecretKey
-  );
+  const paymentReady = Boolean(boldIdentityKey && boldSecretKey);
 
   return {
     sku: PRODUCT_SKU,
@@ -339,7 +352,8 @@ export function getTarotProduct() {
       !sellerReady && "Identidad y contacto verificables del vendedor",
     ].filter(Boolean),
     missingCheckoutFields: [
-      !paymentReady && "Llaves activa y secreta de Bold para el ambiente seleccionado",
+      !paymentReady &&
+        "Llaves de identidad y secreta de Botón de Pagos para el ambiente seleccionado",
       !paymentMethodsReady &&
         "Verificación en Bold de tarjeta, PSE, Nequi, Botón Bancolombia y QR Bre-B",
       !checkoutRedirectReady && "URL HTTPS definitiva para el retorno del pago",
@@ -430,7 +444,7 @@ export const TAROT_LANDING_VARIANTS = {
     heroPanel: {
       label: "Ficha de compra · Edición 01",
       title: "Una baraja completa, explicada antes de pagar",
-      items: ["78 cartas", "$124.900", "Envío incluido"],
+      items: ["78 cartas", "{price}", "{shipping}"],
     },
     galleryCount: 6,
     eyebrow: "Baraja editorial · 78 cartas",
@@ -837,4 +851,29 @@ export const TAROT_LANDING_VARIANTS = {
 
 export function getTarotLandingVariant(slug) {
   return TAROT_LANDING_VARIANTS[slug] || null;
+}
+
+/**
+ * Resuelve los tres hechos del panel del hero.
+ *
+ * Los tokens `{price}`, `{shipping}` y `{dispatch}` se llenan con el producto
+ * real. Antes el precio estaba escrito a mano en la configuración: la landing
+ * podía anunciar "$124.900" mientras la línea de estado, tres centímetros
+ * abajo, decía que la disponibilidad estaba por confirmar. Un visitante que
+ * llega por un anuncio no debería tener que decidir a cuál de las dos creerle.
+ */
+export function resolveTarotHeroFacts(variant, product) {
+  const tokens = {
+    "{price}": Number.isFinite(product?.priceCop)
+      ? formatCop(product.priceCop)
+      : "Precio confirmado antes de pagar",
+    "{shipping}": product?.shippingIncluded
+      ? "Envío incluido"
+      : "Envío informado antes de pagar",
+    "{dispatch}": product?.dispatch || "Despacho confirmado antes de cobrar",
+  };
+
+  return (variant?.heroPanel?.items || []).map(
+    (item) => tokens[item] ?? item
+  );
 }

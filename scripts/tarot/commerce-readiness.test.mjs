@@ -27,10 +27,10 @@ const ENV_KEYS = [
   "TAROT_SELLER_EMAIL",
   "TAROT_SELLER_PHONE",
   "BOLD_ENVIRONMENT",
-  "BOLD_API_KEY_TEST",
-  "BOLD_SECRET_KEY_TEST",
-  "BOLD_API_KEY_PRODUCTION",
-  "BOLD_SECRET_KEY_PRODUCTION",
+  "BOLD_BUTTON_IDENTITY_KEY_TEST",
+  "BOLD_BUTTON_SECRET_KEY_TEST",
+  "BOLD_BUTTON_IDENTITY_KEY_PRODUCTION",
+  "BOLD_BUTTON_SECRET_KEY_PRODUCTION",
   "TAROT_BOLD_PAYMENT_METHODS",
   "NEXT_PUBLIC_SITE_URL",
   "TAROT_ORDERS_READY",
@@ -95,7 +95,7 @@ test("preview mode fails closed with an auditable commercial checklist", () => {
   assert.ok(product.missingCommercialFields.includes("Aprobación de la imagen actual para esta etapa comercial"));
   assert.ok(product.missingCommercialFields.includes("Identidad y contacto verificables del vendedor"));
   assert.deepEqual(product.missingCheckoutFields, [
-    "Llaves activa y secreta de Bold para el ambiente seleccionado",
+    "Llaves de identidad y secreta de Botón de Pagos para el ambiente seleccionado",
     "Verificación en Bold de tarjeta, PSE, Nequi, Botón Bancolombia y QR Bre-B",
     "URL HTTPS definitiva para el retorno del pago",
     "Persistencia de órdenes",
@@ -217,8 +217,8 @@ test("checkout opens only after payment, persistence, webhook and analytics read
   configureCommercialProduct();
   Object.assign(process.env, {
     BOLD_ENVIRONMENT: "test",
-    BOLD_API_KEY_TEST: "test_api_key",
-    BOLD_SECRET_KEY_TEST: "test_secret_key",
+    BOLD_BUTTON_IDENTITY_KEY_TEST: "test_identity_key",
+    BOLD_BUTTON_SECRET_KEY_TEST: "test_secret_key",
     TAROT_BOLD_PAYMENT_METHODS: "card,pse,nequi,bancolombia,qr",
     NEXT_PUBLIC_SITE_URL: "https://www.mitosdecolombia.com",
     TAROT_ORDERS_READY: "true",
@@ -239,8 +239,8 @@ test("checkout accepts the existing GA4 server secret variable used by Vercel", 
   configureCommercialProduct();
   Object.assign(process.env, {
     BOLD_ENVIRONMENT: "test",
-    BOLD_API_KEY_TEST: "test_api_key",
-    BOLD_SECRET_KEY_TEST: "test_secret_key",
+    BOLD_BUTTON_IDENTITY_KEY_TEST: "test_identity_key",
+    BOLD_BUTTON_SECRET_KEY_TEST: "test_secret_key",
     TAROT_BOLD_PAYMENT_METHODS: "card,pse,nequi,bancolombia,qr",
     NEXT_PUBLIC_SITE_URL: "https://www.mitosdecolombia.com",
     TAROT_ORDERS_READY: "true",
@@ -259,8 +259,8 @@ test("checkout stays closed until server-side purchase tracking is confirmed", (
   configureCommercialProduct();
   Object.assign(process.env, {
     BOLD_ENVIRONMENT: "test",
-    BOLD_API_KEY_TEST: "test_api_key",
-    BOLD_SECRET_KEY_TEST: "test_secret_key",
+    BOLD_BUTTON_IDENTITY_KEY_TEST: "test_identity_key",
+    BOLD_BUTTON_SECRET_KEY_TEST: "test_secret_key",
     TAROT_BOLD_PAYMENT_METHODS: "card,pse,nequi,bancolombia,qr",
     NEXT_PUBLIC_SITE_URL: "https://www.mitosdecolombia.com",
     TAROT_ORDERS_READY: "true",
@@ -282,8 +282,8 @@ test("checkout stays closed until every promised payment method is confirmed", (
   configureCommercialProduct();
   Object.assign(process.env, {
     BOLD_ENVIRONMENT: "test",
-    BOLD_API_KEY_TEST: "test_api_key",
-    BOLD_SECRET_KEY_TEST: "test_secret_key",
+    BOLD_BUTTON_IDENTITY_KEY_TEST: "test_identity_key",
+    BOLD_BUTTON_SECRET_KEY_TEST: "test_secret_key",
     TAROT_BOLD_PAYMENT_METHODS: "card,nequi",
     NEXT_PUBLIC_SITE_URL: "https://www.mitosdecolombia.com",
     TAROT_ORDERS_READY: "true",
@@ -305,8 +305,8 @@ test("checkout requires a final HTTPS return URL", () => {
   configureCommercialProduct();
   Object.assign(process.env, {
     BOLD_ENVIRONMENT: "test",
-    BOLD_API_KEY_TEST: "test_api_key",
-    BOLD_SECRET_KEY_TEST: "test_secret_key",
+    BOLD_BUTTON_IDENTITY_KEY_TEST: "test_identity_key",
+    BOLD_BUTTON_SECRET_KEY_TEST: "test_secret_key",
     TAROT_BOLD_PAYMENT_METHODS: "card,pse,nequi,bancolombia,qr",
     NEXT_PUBLIC_SITE_URL: "http://localhost:3003",
     TAROT_ORDERS_READY: "true",

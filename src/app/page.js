@@ -4,16 +4,54 @@ import { getRoutePreviews } from "../lib/routes";
 import { buildSeoMetadata, getSeoEntry } from "../lib/seo";
 import {
   getCommunitySpotlights,
-  getDiverseMyths,
-  getFeaturedMythsWithImages,
   getHomeStats,
   getMythExtrasBySlugs,
+  getRotatingMythPool,
   getTaxonomy,
 } from "../lib/myths";
+import {
+  HOME_SECTIONS,
+  UNATTRIBUTED_LABEL,
+  assignThemeChips,
+  balancedPick,
+  buildMesaFilters,
+  dailySeed,
+  isImporterBucket,
+  mythMeta,
+  partitionSections,
+  pickSeeded,
+  sectionSeed,
+  shuffleSeeded,
+  toMesaCard,
+} from "../lib/home-rotation";
 import { getTarotCards, getDailyTarotSelection } from "../lib/tarot";
 import { getMythImage, withMythImageVariants } from "../lib/myth-images";
 
-export const revalidate = 86400;
+/**
+ * Home.
+ *
+ * La rotación entera cuelga de `dailySeed()` (reloj de Bogotá, salto a
+ * medianoche local) y de `sectionSeed()`, en `src/lib/home-rotation.js`. Aquí no
+ * se inventa azar: esta página elige QUÉ consulta y con qué semilla, y el motor
+ * decide el reparto.
+ */
+
+/**
+ * Cada cuánto se rehace el HTML.
+ *
+ * Estaba en 86400 (24 h), y ese era el muro detrás de TODA queja de rotación: la
+ * portada quedaba clavada al día en que se generó, y el cambio de mesa podía
+ * tardar casi un día entero en verse. Pero bajarlo a un minuto tampoco tiene
+ * sentido: el contenido sólo cambia UNA vez al día, a medianoche de Bogotá.
+ *
+ * 1800 s (30 min) es el punto medio honesto: el retraso máximo entre la
+ * medianoche colombiana y la mesa nueva es de media hora, a cambio de como mucho
+ * 48 regeneraciones al día (~5 consultas cada una, y las pesadas van además con
+ * `unstable_cache` sembrado por día, así que la mayoría ni tocan Neon). Las
+ * fichas de mito usan 3600 porque su contenido no rota: sólo cambia cuando lo
+ * edita alguien.
+ */
+export const revalidate = 1800;
 
 export async function generateMetadata() {
   const seo = await getSeoEntry("page", "home");
@@ -35,33 +73,6 @@ export async function generateMetadata() {
   });
 }
 
-function getDailySeed() {
-  const now = new Date();
-  const startOfYear = new Date(now.getFullYear(), 0, 0);
-  const diff = now - startOfYear;
-  const oneDay = 1000 * 60 * 60 * 24;
-  return Math.floor(diff / oneDay);
-}
-
-/* «Varios», «Mestizo» y «Mixto» son bolsas del importador, no territorios ni
-   pueblos: sirven para clasificar, no para recorrer. Se filtran de las secciones
-   que presentan una entidad con nombre propio. */
-const GENERIC_TAXA = new Set([
-  "varios",
-  "otros",
-  "mixto",
-  "mixta",
-  "mestizo",
-  "mestiza",
-  "sin region",
-  "sin región",
-  "sin comunidad",
-]);
-
-function isGeneric(name) {
-  return GENERIC_TAXA.has(String(name || "").trim().toLowerCase());
-}
-
 const REGION_MOTIFS = {
   Amazonas: "hoja",
   Andina: "montana",
@@ -71,70 +82,65 @@ const REGION_MOTIFS = {
   Insular: "sol",
 };
 
-function mythMeta(myth) {
-  return [myth?.region, myth?.community].filter(Boolean).join(" · ");
-}
-
-/* La línea de «por qué está aquí». Es un criterio real, no una etiqueta
-   decorativa: primero el tema con el que está clasificado, y si no lo tiene, el
-   pueblo que lo sostiene o el territorio del que viene. */
-function mythReason(myth, primaryTag) {
-  if (primaryTag?.name) return `Por tema · ${primaryTag.name.toLowerCase()}`;
-  if (myth.community && !isGeneric(myth.community)) {
-    return `Por comunidad · ${myth.community.toLowerCase()}`;
-  }
-  if (myth.region) return `Por territorio · ${myth.region.toLowerCase()}`;
-  return "Entra hoy al archivo";
-}
+/* La nube pinta el tamaño según cuántos relatos tiene la categoría. Con 1108
+   etiquetas y 837 de ellas con tres relatos o menos, dejar entrar a las de cola
+   llenaría la nube de polvo tipográfico. Cuatro es el piso para que una etiqueta
+   sea un hilo del archivo y no un accidente del importador. */
+const MIN_TAG_COUNT = 4;
+/* Las más grandes se quedan siempre: son la columna vertebral de la nube y sin
+   ellas la escala de tamaños se derrumba. El resto rota. */
+const TAG_SPINE = 6;
+const TAG_TOTAL = 22;
 
 export default async function Home() {
-  const seed = getDailySeed();
+  const daySeed = dailySeed();
 
-  const [
-    featuredMyths,
-    diverseMyths,
-    stats,
-    taxonomy,
-    routePreviews,
-    tarotCards,
-    communitySpotlights,
-  ] = await Promise.all([
-    getFeaturedMythsWithImages(28, seed),
-    getDiverseMyths(24, seed),
-    getHomeStats(),
-    getTaxonomy(),
-    getRoutePreviews(seed),
-    getTarotCards(),
-    getCommunitySpotlights(12, seed),
-  ]);
+  const [pool, communityRows, stats, taxonomy, routePreviews, tarotCards] =
+    await Promise.all([
+      getRotatingMythPool({ seed: daySeed, perRegion: 20 }),
+      // Se piden SEIS por comunidad para pintar cuatro: los que ya están en la
+      // portada se descartan abajo y hace falta ese margen.
+      getCommunitySpotlights({ seed: daySeed, perCommunity: 6 }),
+      getHomeStats(),
+      getTaxonomy(),
+      getRoutePreviews(daySeed),
+      getTarotCards(),
+    ]);
 
-  // Un solo pozo sin repetidos: cada sección consume su tramo con un cursor.
-  // Con `slice` fijos las secciones se solapaban y el mismo mito salía dos veces
-  // en la misma pantalla.
-  const pool = Array.from(
-    new Map(
-      [...(featuredMyths || []), ...(diverseMyths || [])]
-        .filter((myth) => myth?.slug && myth?.image_url)
-        .map((myth) => [myth.slug, myth])
-    ).values()
-  );
+  /* Reparto sin cursor compartido: cada sección saca su tramo del pozo ENTERO
+     con su propia semilla, y `partitionSections` sólo se encarga de que no se
+     repita nada en pantalla. Antes había un `take(n)` que avanzaba un índice
+     único sobre dos consultas concatenadas — y como nunca pasaba del elemento 16,
+     las 24 filas de la consulta equilibrada se traían en cada render sin poder
+     llegar jamás a la página. */
+  /* «Varios» NO es un territorio: es la región-bolsa del importador, y sus 11
+     relatos son exactamente los mismos que ya cuelgan de «Mestizo · Varios» y
+     «Mixto · Varios», o sea que llegan a la home por la superficie de «sin pueblo
+     identificado». Dejarla en el reparto la convertía en una sexta región con el
+     mismo peso que la Andina: 11 relatos (el 1,8 % del archivo) se llevaban el
+     17 % de la mesa y el visitante diario veía los mismos seis mitos una y otra
+     vez. Medido: con la bolsa dentro, Varios sacaba 102 de 600 cupos. */
+  const picks = partitionSections({
+    items: (pool || []).filter(
+      (myth) => myth?.slug && myth?.image_url && !isImporterBucket(myth.region)
+    ),
+    daySeed,
+    keyOf: (myth) => myth.slug,
+    groupBy: (myth) => myth.region_slug || "sin-region",
+    sections: [
+      { key: HOME_SECTIONS.PORTADA, count: 5 },
+      { key: HOME_SECTIONS.MESA, count: 10 },
+      { key: HOME_SECTIONS.MAPA, count: 1 },
+    ],
+  });
 
-  let cursor = 0;
-  const take = (count) => {
-    const slice = pool.slice(cursor, cursor + count);
-    cursor += slice.length;
-    return slice;
-  };
-
-  const coverRaw = take(5);
-  const todayRaw = take(10);
-  const mapMythRaw = take(1)[0] || null;
+  const coverRaw = picks[HOME_SECTIONS.PORTADA] || [];
+  const mesaRaw = picks[HOME_SECTIONS.MESA] || [];
+  const mapMythRaw = (picks[HOME_SECTIONS.MAPA] || [])[0] || null;
 
   // Etiquetas y obra vertical, sólo de los mitos que la página va a pintar.
   const extras = await getMythExtrasBySlugs(
-    [...coverRaw, ...todayRaw, mapMythRaw]
-      .filter(Boolean)
-      .map((myth) => myth.slug)
+    [...coverRaw, ...mesaRaw, mapMythRaw].filter(Boolean).map((myth) => myth.slug)
   );
 
   const cover = coverRaw.map((myth) => {
@@ -151,93 +157,119 @@ export default async function Home() {
       thumbUrl: getMythImage(withVariants, "landscape"),
     };
   });
+  const coverSlugs = new Set(cover.map((slide) => slide.slug));
 
-  // Los filtros de la mesa salen de las etiquetas reales de los diez elegidos.
-  // Cada mito cae en un solo chip (el más frecuente que tenga), así que el
-  // conteo hay que hacerlo DESPUÉS de repartir: contando etiquetas sueltas, un
-  // chip anunciaba «2» y al pulsarlo aparecía una sola tarjeta.
-  const tagFrequency = new Map();
-  todayRaw.forEach((myth) => {
-    (extras.get(myth.slug)?.tags || []).forEach((tag) => {
-      if (!tag?.slug) return;
-      const entry = tagFrequency.get(tag.slug) || { ...tag, count: 0 };
-      entry.count += 1;
-      tagFrequency.set(tag.slug, entry);
-    });
-  });
-  const ranked = [...tagFrequency.values()].sort(
-    (a, b) => b.count - a.count || a.name.localeCompare(b.name)
+  /* Lo que ya se pinta arriba no se repite abajo. Con sólo la portada excluida,
+     cuatro de los diez relatos de la mesa volvían a salir dentro de las pestañas
+     de comunidad en la misma carga. */
+  const shownSlugs = new Set([
+    ...coverSlugs,
+    ...mesaRaw.map((myth) => myth.slug),
+  ]);
+
+  /* Los chips salen de las etiquetas reales de los diez elegidos, y el conteo se
+     hace después de repartir (cada mito cae en UN chip). La misma función la usa
+     `/api/mesa`, para que «Barajar» devuelva chips coherentes con los pintados. */
+  const tagsOf = (myth) => extras.get(myth.slug)?.tags || [];
+  const { chips, themeOf } = assignThemeChips({ items: mesaRaw, tagsOf });
+
+  const today = mesaRaw.map((myth) =>
+    toMesaCard(myth, {
+      tags: tagsOf(myth),
+      theme: themeOf.get(myth.slug) || null,
+      motif: mythMotif(myth),
+    })
   );
+  const todayFilters = buildMesaFilters(today, chips);
 
-  const assign = (candidates) => {
-    const counts = new Map();
-    todayRaw.forEach((myth) => {
-      const tags = extras.get(myth.slug)?.tags || [];
-      const chip = candidates.find((candidate) =>
-        tags.some((tag) => tag.slug === candidate.slug)
-      );
-      if (chip) counts.set(chip.slug, (counts.get(chip.slug) || 0) + 1);
-    });
-    return counts;
-  };
+  /* ---- Comunidades ---------------------------------------------------- *
+     Antes llegaban SIEMPRE las mismas cinco: la consulta ordenaba por número de
+     relatos y la página cortaba a cinco, sin que la semilla tocara nada. Ahora la
+     selección rota y se reparte entre territorios, así que ningún pueblo se
+     queda con la pestaña en propiedad. */
+  /* El piso son CUATRO relatos: es lo que pinta una pestaña, y con menos queda a
+     medias. Deja fuera a los pueblos con uno, dos o tres relatos registrados
+     (Awa, Yukpa, Ansermas…), que siguen llegando por la mesa y por /comunidades:
+     la pestaña promete «muchas voces» y con dos tarjetas eso no se cumple.
+     Quedan 21 pueblos reales rotando sobre las cinco regiones. */
+  const COMMUNITY_MYTHS = 4;
+  const peoples = (communityRows || [])
+    .filter((item) => item?.name && !item.generic && item.mythCount >= COMMUNITY_MYTHS)
+    .map((item) => ({
+      ...item,
+      myths: (item.myths || []).filter(
+        (myth) => myth.imageUrl && !shownSlugs.has(myth.slug)
+      ),
+    }))
+    .filter((item) => item.myths.length >= COMMUNITY_MYTHS);
 
-  // Se descartan los chips que acaban con una sola tarjeta y se reparte otra
-  // vez: al caer uno, sus mitos pasan al siguiente que sí tengan.
-  let chipTags = ranked.slice(0, 6);
-  for (let pass = 0; pass < 4; pass += 1) {
-    const counts = assign(chipTags);
-    const kept = chipTags.filter((tag) => (counts.get(tag.slug) || 0) >= 2);
-    if (kept.length === chipTags.length) break;
-    chipTags = kept;
-  }
-  chipTags = chipTags.slice(0, 4);
-  const chipSlugs = new Set(chipTags.map((tag) => tag.slug));
-
-  const today = todayRaw.map((myth) => {
-    const tags = extras.get(myth.slug)?.tags || [];
-    const chip = chipTags.find((candidate) =>
-      tags.some((tag) => tag.slug === candidate.slug)
-    );
-    return {
+  const communities = balancedPick({
+    items: peoples,
+    count: 8,
+    seed: sectionSeed(daySeed, HOME_SECTIONS.COMUNIDADES),
+    groupBy: (item) => item.regionSlug || "sin-region",
+    keyOf: (item) => String(item.id),
+  }).map((item) => {
+    const myths = item.myths.slice(0, COMMUNITY_MYTHS).map((myth) => ({
       slug: myth.slug,
       title: myth.title,
       excerpt: myth.excerpt,
-      meta: mythMeta(myth),
-      motif: mythMotif(myth),
-      imageUrl: myth.image_url,
-      why: mythReason(myth, chip || tags[0]),
-      theme: chip?.slug || null,
-    };
-  });
-
-  const todayFilters = [
-    { key: "todos", label: "Todo el archivo", count: today.length },
-    ...chipTags.map((tag) => ({
-      key: tag.slug,
-      label: tag.name,
-      count: today.filter((myth) => myth.theme === tag.slug).length,
-    })),
-  ];
-
-  const communities = (communitySpotlights || [])
-    .filter((item) => item?.name && !isGeneric(item.name) && item.myth_image_url)
-    .slice(0, 5)
-    .map((item) => ({
+      imageUrl: myth.imageUrl,
+      motif: mythMotif({ slug: myth.slug, title: myth.title }),
+    }));
+    return {
       name: item.name,
       slug: item.slug,
       region: item.region,
-      mythCount: Number(item.myth_count) || 0,
-      myth: {
-        slug: item.myth_slug,
-        title: item.myth_title,
-        excerpt: item.myth_excerpt,
-        imageUrl: item.myth_image_url,
-        motif: mythMotif({ slug: item.myth_slug, title: item.myth_title }),
-      },
-    }));
+      regionSlug: item.regionSlug,
+      mythCount: item.mythCount,
+      kind: "pueblo",
+      label: item.name,
+      myths,
+      // `myth` = `myths[0]`. Lo conserva `CommunityTabs`, que hoy pinta uno solo.
+      myth: myths[0] || null,
+    };
+  });
 
-  // Ruta destacada: la primera con obra propia. El resto entra como fichas, y
-  // el numeral es su posición real en /rutas, no el orden de esta rejilla.
+  /* ---- Sin pueblo identificado ---------------------------------------- *
+     «Mestizo» y «Mixto» son diez bolsas del importador con 253 relatos: el 42,5 %
+     del archivo, que hasta ahora la home descartaba entero por no ser un pueblo.
+     No lo son —y por eso NO entran a las pestañas de comunidad— pero sí son
+     archivo, y entran con su propia etiqueta y su propio nombre. */
+  const buckets = (communityRows || []).filter((item) => item?.generic && item.myths?.length);
+  const unattributedMyths = balancedPick({
+    items: buckets.flatMap((item) => item.myths),
+    count: 4,
+    seed: sectionSeed(daySeed, HOME_SECTIONS.SIN_PUEBLO),
+    groupBy: (myth) => myth.regionSlug || "sin-region",
+    keyOf: (myth) => myth.slug,
+    exclude: coverSlugs,
+  }).map((myth) => ({
+    slug: myth.slug,
+    title: myth.title,
+    excerpt: myth.excerpt,
+    imageUrl: myth.imageUrl,
+    region: myth.region,
+    motif: mythMotif({ slug: myth.slug, title: myth.title }),
+  }));
+
+  const unattributed = unattributedMyths.length
+    ? {
+        kind: "sin-pueblo",
+        label: UNATTRIBUTED_LABEL,
+        description:
+          "Relatos que el archivo no puede atribuir a un pueblo concreto. Se recogieron sin esa procedencia, así que se muestran por territorio y no por comunidad.",
+        mythCount: buckets.reduce((total, item) => total + (item.mythCount || 0), 0),
+        regions: [...new Set(buckets.map((item) => item.region).filter(Boolean))],
+        myths: unattributedMyths,
+      }
+    : null;
+
+  /* ---- Rutas ----------------------------------------------------------- *
+     `getRoutePreviews` resuelve la obra de cada ruta por título curado, así que
+     la semilla no la tocaba nunca: la ruta a sangre y el orden de las fichas eran
+     los mismos todos los días desde que existe la sección. El numeral sigue
+     siendo la posición real en /rutas — se calcula ANTES de barajar. */
   const allRoutes = (routePreviews || []).map((route, index) => ({
     slug: route.slug,
     title: route.title,
@@ -246,12 +278,20 @@ export default async function Home() {
     imageUrl: route.preview?.image_url || null,
     portraitImageUrl: route.preview?.vertical_image_url || null,
   }));
+  const routeSeed = sectionSeed(daySeed, HOME_SECTIONS.RUTAS);
+  const routesWithArt = allRoutes.filter((route) => route.imageUrl);
   const featuredRoute =
-    allRoutes.find((route) => route.imageUrl) || allRoutes[0] || null;
-  const routes = allRoutes.filter((route) => route.slug !== featuredRoute?.slug);
+    pickSeeded(routesWithArt.length ? routesWithArt : allRoutes, 1, routeSeed)[0] || null;
+  const routes = shuffleSeeded(
+    allRoutes.filter((route) => route.slug !== featuredRoute?.slug),
+    routeSeed
+  );
 
+  /* Los cinco territorios son un conjunto CERRADO a propósito: son las regiones
+     reales del archivo, no una selección. No rotan porque la sección no promete
+     rotación — promete el mapa completo. «Varios» sí se cae: es una bolsa. */
   const regions = (taxonomy.regions || [])
-    .filter((region) => region?.name && !isGeneric(region.name))
+    .filter((region) => region?.name && !isImporterBucket(region.name))
     .sort((a, b) => Number(b.myth_count || 0) - Number(a.myth_count || 0))
     .slice(0, 5)
     .map((region) => ({
@@ -262,14 +302,26 @@ export default async function Home() {
       motif: REGION_MOTIFS[region.name] || "hoja",
     }));
 
-  const categories = (taxonomy.tags || [])
-    .filter((tag) => tag?.name && tag?.slug)
-    .slice(0, 22)
-    .map((tag) => ({
-      name: tag.name,
-      slug: tag.slug,
-      count: Number(tag.myth_count) || 0,
-    }));
+  /* ---- Categorías ------------------------------------------------------ *
+     Eran las 22 primeras por número de relatos, sin semilla: las mismas 22 de las
+     1108 que hay, en el mismo orden, todos los días. Ahora se queda la columna
+     vertebral (las seis mayores, que sostienen la escala de tamaños) y el resto
+     rota entre las etiquetas con peso real. */
+  const catSeed = sectionSeed(daySeed, HOME_SECTIONS.CATEGORIAS);
+  const tagPool = (taxonomy.tags || []).filter(
+    (tag) => tag?.name && tag?.slug && Number(tag.myth_count || 0) >= MIN_TAG_COUNT
+  );
+  const categories = shuffleSeeded(
+    [
+      ...tagPool.slice(0, TAG_SPINE),
+      ...pickSeeded(tagPool.slice(TAG_SPINE), TAG_TOTAL - TAG_SPINE, catSeed),
+    ],
+    catSeed
+  ).map((tag) => ({
+    name: tag.name,
+    slug: tag.slug,
+    count: Number(tag.myth_count) || 0,
+  }));
 
   // La sala del oráculo muestra la obra real de la carta: las 78 la tienen.
   const tarotSource = (tarotCards || []).filter((card) => card.card_name);
@@ -277,7 +329,7 @@ export default async function Home() {
   const tarot = getDailyTarotSelection(
     tarotWithArt.length >= 3 ? tarotWithArt : tarotSource,
     3,
-    seed
+    sectionSeed(daySeed, HOME_SECTIONS.ORACULO)
   ).map((card) => ({
     name: card.card_name,
     imageUrl: card.display_image_url || card.image_url || card.myth_image_url || "",
@@ -298,8 +350,8 @@ export default async function Home() {
       cover={cover}
       today={today}
       todayFilters={todayFilters}
-      todayCriterio="diez relatos con obra propia, repartidos entre los territorios con registro. La mesa se rehace cada día a medianoche."
       communities={communities}
+      unattributed={unattributed}
       featuredRoute={featuredRoute}
       routes={routes}
       regions={regions}

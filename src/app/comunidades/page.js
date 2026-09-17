@@ -2,7 +2,11 @@ import Link from "next/link";
 import { CommunityIndexTemplate } from "../../components/templates";
 import { Container, Heading, Text } from "../../components/atoms";
 import { AtlasSectionHeader } from "../../components/editorial/AtlasEditorial";
-import { filterAllowedCommunities, MIN_COMMUNITY_MYTHS } from "../../lib/communityFilters";
+import {
+  collectUnattributed,
+  filterAllowedCommunities,
+  listEmptyCommunities,
+} from "../../lib/communityFilters";
 import { getTaxonomy, listMythLinksByTaxon } from "../../lib/myths";
 import { REGION_MOTIFS, regionAccent } from "../../lib/region-info";
 import { buildSeoMetadata, getSeoEntry } from "../../lib/seo";
@@ -14,9 +18,9 @@ export async function generateMetadata() {
   const seo = await getSeoEntry("page", "comunidades");
   return buildSeoMetadata({
     fallback: {
-      title: "Comunidades indígenas | Mitos de Colombia",
+      title: "Comunidades del archivo | Mitos de Colombia",
       description:
-        "Conoce las comunidades indígenas que preservan la tradición oral y explora sus mitos por región.",
+        "Las comunidades que preservan la tradición oral colombiana y los relatos que el archivo conserva de cada una, con los que llegaron sin pueblo identificado.",
       keywords: [
         "comunidades indígenas",
         "mitos colombianos",
@@ -39,37 +43,53 @@ const ACENTO = {
 export default async function ComunidadesPage() {
   const taxonomy = await getTaxonomy();
 
+  // Todas las comunidades con al menos un relato. El listón bajó de seis a uno
+  // —ver `communityFilters`—: con seis se escondían diecisiete comunidades con
+  // treinta y ocho relatos, y una comunidad con tres relatos sigue siendo la
+  // única puerta a esos tres.
   const allowed = filterAllowedCommunities(taxonomy.communities).sort(
     (a, b) => (b.myth_count || 0) - (a.myth_count || 0)
   );
 
-  const communities = allowed.map((c) => ({
-    slug: c.slug,
-    name: c.name,
-    count: Number(c.myth_count) || 0,
-    imageUrl: c.image_url,
-    motif: REGION_MOTIFS[c.region_slug] || "condor",
-    regionName: c.region,
-    regionSlug: c.region_slug,
-    accent: ACENTO[regionAccent(c.region_slug)],
-  }));
+  const communities = allowed.map((c) => {
+    const acento = regionAccent(c.region_slug);
+    return {
+      slug: c.slug,
+      name: c.name,
+      count: Number(c.myth_count) || 0,
+      imageUrl: c.image_url,
+      motif: REGION_MOTIFS[c.region_slug] || "condor",
+      regionName: c.region,
+      regionSlug: c.region_slug,
+      accent: ACENTO[acento],
+      accentKey: acento,
+    };
+  });
 
-  // Chips de filtro: sólo territorios que tienen pueblos, con la suma de los
-  // relatos de esos pueblos (no la de la región entera, que incluiría relatos
-  // sin pueblo identificado y no cuadraría con el contador).
+  // Los relatos que entraron sin pueblo atribuido. No son una comunidad y no
+  // van en la mesa: tienen su propio registro, y desde aquí su puerta.
+  const unattributed = collectUnattributed(taxonomy.communities);
+
+  // Lo que queda fuera, dicho con nombre y apellido en vez de con un umbral.
+  const sinRelatos = listEmptyCommunities(taxonomy.communities);
+
+  // Chips de filtro: sólo territorios que tienen comunidades, con la suma de
+  // los relatos de esas comunidades (no la de la región entera, que incluiría
+  // los relatos sin pueblo identificado y no cuadraría con el contador).
   const regions = (taxonomy.regions || [])
     .map((region) => {
-      const suyos = communities.filter((c) => c.regionSlug === region.slug);
+      const suyas = communities.filter((c) => c.regionSlug === region.slug);
       return {
         slug: region.slug,
         name: region.name,
-        count: suyos.reduce((t, c) => t + (c.count || 0), 0),
+        count: suyas.reduce((t, c) => t + (c.count || 0), 0),
       };
     })
     .filter((region) => region.count > 0)
     .sort((a, b) => b.count - a.count);
 
-  // Índice rastreable: mitos representativos de los pueblos con más relatos.
+  // Índice rastreable: relatos representativos de las comunidades con más
+  // material.
   const top = allowed.slice(0, 9);
   const links = await Promise.all(
     top.map((c) => listMythLinksByTaxon("community", c.slug))
@@ -83,19 +103,42 @@ export default async function ComunidadesPage() {
     .filter((group) => group.myths.length > 0);
 
   const totalRelatos = communities.reduce((t, c) => t + (c.count || 0), 0);
+  const alcanzables = totalRelatos + (unattributed?.total || 0);
+  const totalArchivo = (taxonomy.regions || []).reduce(
+    (t, region) => t + (Number(region.myth_count) || 0),
+    0
+  );
+
+  const nota = [
+    `Están las ${communities.length} comunidades que tienen al menos un relato en el archivo, sin umbral: las de tres relatos y las de uno también aparecen, porque su página es la única puerta a esos relatos.`,
+    sinRelatos.length
+      ? `${
+          sinRelatos.length === 1 ? "Queda fuera una" : `Quedan fuera ${sinRelatos.length}`
+        } comunidad registrada sin ningún relato asociado todavía —${sinRelatos
+          .map((c) => c.name)
+          .join(", ")}—: su ficha estaría vacía.`
+      : null,
+  ]
+    .filter(Boolean)
+    .join(" ");
 
   return (
     <CommunityIndexTemplate
-      eyebrow="Los pueblos del archivo"
+      eyebrow="Las comunidades del archivo"
       title="Comunidades que preservan la tradición oral"
-      description={`${communities.length} pueblos con página propia y ${totalRelatos} relatos entre todos, a la vista de entrada. El tamaño de cada pieza dice cuántos relatos guarda; la búsqueda y los filtros recomponen la mesa sin cambiar de página.`}
+      description={`${communities.length} comunidades con página propia y ${totalRelatos} relatos entre todas, a la vista de entrada. El tamaño de cada pieza dice cuántos relatos guarda; la búsqueda y los filtros recomponen la mesa sin cambiar de página. Más abajo entran los ${
+        unattributed?.total || 0
+      } relatos que llegaron sin pueblo identificado${
+        totalArchivo ? `: entre unos y otros, ${alcanzables} de los ${totalArchivo} del archivo` : ""
+      }.`}
       communities={communities}
       regions={regions}
-      note={`Los pueblos con menos de ${MIN_COMMUNITY_MYTHS} relatos todavía no tienen página propia y por eso no aparecen en la mesa; sus historias sí se leen dentro de su territorio.`}
+      unattributed={unattributed}
+      note={nota}
       active="/comunidades"
     >
       {mythIndex.length ? (
-        <section className="border-y border-line-100 bg-mist-50">
+        <section className="border-b border-line-100">
           <Container size="atlas" className="py-14">
             <AtlasSectionHeader title="Mitos para empezar" />
             <div className="grid gap-x-8 gap-y-7 sm:grid-cols-2 lg:grid-cols-3">
@@ -142,10 +185,11 @@ export default async function ComunidadesPage() {
             </Text>
             <Text>
               El archivo presenta estas voces como un punto de partida
-              editorial. Cada página enlaza mitos relacionados para que la
-              lectura pueda avanzar desde una comunidad hacia su región, sus
-              temas y sus personajes recurrentes dentro de la tradición oral
-              colombiana.
+              editorial, y también dice lo que no sabe: de casi la mitad de los
+              relatos no consta quién los contó, y esos van aparte. Cada página
+              enlaza relatos relacionados para que la lectura pueda avanzar
+              desde una comunidad hacia su región, sus temas y sus personajes
+              recurrentes dentro de la tradición oral colombiana.
             </Text>
           </div>
         </div>

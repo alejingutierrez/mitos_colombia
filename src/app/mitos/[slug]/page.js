@@ -4,7 +4,8 @@ import {
   getRecommendedMyths,
   listAllMythSlugs,
 } from "../../../lib/myths";
-import { Comments } from "../../../components/Comments";
+import { CommentThread } from "../../../components/organisms";
+import { getApprovedCommentsForMyth } from "../../../lib/comments";
 import { buildSeoMetadata, getSeoEntry } from "../../../lib/seo";
 import { resolveRouteParams } from "../../../lib/next-route-props";
 import MythLocationMapClient from "../../../components/MythLocationMapClient";
@@ -88,7 +89,13 @@ export default async function MythDetailPage({ params }) {
     notFound();
   }
 
-  const recommended = await getRecommendedMyths(myth, 6);
+  // Los comentarios aprobados se resuelven EN SERVIDOR y viajan en el HTML.
+  // Antes sólo llegaban por `fetch` después de hidratar, así que ni Google ni
+  // un lector sin JS veían jamás una conversación que sí existe.
+  const [recommended, approvedComments] = await Promise.all([
+    getRecommendedMyths(myth, 6),
+    getApprovedCommentsForMyth(myth.id),
+  ]);
   const related = recommended.map((r) => ({
     slug: r.slug,
     title: r.title,
@@ -130,6 +137,9 @@ export default async function MythDetailPage({ params }) {
     leccion: myth.leccion,
     similitudes: myth.similitudes,
     tags: myth.tags,
+    // Narración de audio (ElevenLabs) cuando el mito ya está grabado. Sin fila
+    // en `myth_narrations` no baja nada al cliente y no aparece el cintillo.
+    narration: myth.narration,
     sources: myth.sources,
     keySources: myth.keySources,
     editorialUpdatedAt: myth.editorialUpdatedAt,
@@ -183,7 +193,17 @@ export default async function MythDetailPage({ params }) {
         related={related}
         breadcrumb={breadcrumb}
         map={map}
-        commentsSlot={<Comments mythId={myth.id} />}
+        commentsSlot={
+          <CommentThread
+            mythId={myth.id}
+            mythTitle={myth.title}
+            initialComments={approvedComments}
+            // La plantilla ya abre la sección con un h3 ("Voces de la
+            // comunidad"), así que el titular del hilo entra como hermano y no
+            // salta de nivel.
+            headingAs="h3"
+          />
+        }
       />
     </>
   );

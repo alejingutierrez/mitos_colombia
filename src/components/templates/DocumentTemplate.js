@@ -14,12 +14,19 @@ import { Header, MythGrid } from "../organisms";
 /**
  * Template · DocumentTemplate
  * Páginas de texto/editorial (metodología, sobre el proyecto, legal, contacto).
- * Hero + secciones numeradas de prosa + aside opcional (TOC, formulario, info) +
- * grilla de mitos relacionados opcional.
+ * Hero + `feature` opcional + secciones numeradas de prosa + aside opcional
+ * (TOC, info) + grilla de mitos relacionados opcional.
  *
  * Props: { eyebrow, title, description, breadcrumb?, updated?,
- *          sections: [{ title, body }], aside?, related?, accent? }
+ *          sections: [{ title, body }], feature?, aside?, related?, accent? }
  * `body` puede ser string (se parte en párrafos) o JSX.
+ *
+ * `feature` es una ranura a ANCHO DE COLUMNA que va entre el hero y la prosa,
+ * para lo que la persona vino a hacer (en /contacto, el formulario). Nació
+ * porque el formulario vivía en el `aside` de 320px: con `p-8` quedaban 256px
+ * útiles y su `md:grid-cols-2` —que mide la VENTANA, no la tarjeta— los partía
+ * en dos campos de 119px. Ningún ajuste de CSS arregla eso; había que sacarlo
+ * del aside. Es aditiva: sin `feature` la plantilla se comporta igual que antes.
  */
 
 function SectionBody({ body }) {
@@ -46,6 +53,7 @@ export function DocumentTemplate({
   breadcrumb,
   updated,
   sections = [],
+  feature,
   aside,
   related,
   accent = "jungle",
@@ -83,6 +91,16 @@ export function DocumentTemplate({
           </div>
           <Divider className="mt-10" />
         </Container>
+
+        {/* Ranura destacada: lo accionable, antes de la prosa larga */}
+        {feature ? (
+          <Container size="wide" className="pt-10 md:pt-12">
+            <div className={cn(aside ? "" : "mx-auto", "max-w-3xl")}>
+              {feature}
+              <Divider className="mt-12" />
+            </div>
+          </Container>
+        ) : null}
 
         {/* Cuerpo: secciones + aside */}
         <Container size="wide" className="py-12">

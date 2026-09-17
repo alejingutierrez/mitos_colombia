@@ -9,6 +9,7 @@ import {
   GTM_CONTAINER_ID,
 } from "../lib/google-tags";
 import { WebsiteJsonLd } from "../components/StructuredData";
+import { CampaignAttribution } from "../components/CampaignAttribution";
 
 const RAW_SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL ||
@@ -79,6 +80,7 @@ export default function RootLayout({ children }) {
             />
           </noscript>
         ) : null}
+        <CampaignAttribution />
         <a href="#contenido" className="skip-link">
           Saltar al contenido
         </a>

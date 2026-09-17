@@ -27,6 +27,11 @@ const COLOMBIA_BOUNDS = [
   [13.8, -66.4],
 ];
 
+// Encuadre inicial seguro: no depende del tamaño del contenedor. `MapFraming`
+// ajusta a `COLOMBIA_BOUNDS` en cuanto el mapa tiene caja real.
+const COLOMBIA_CENTER = [4.5, -72.9];
+const COLOMBIA_ZOOM = 5;
+
 const MAP_TILES =
   "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png";
 
@@ -80,30 +85,83 @@ function MapEvents({ onMapClick }) {
   return null;
 }
 
-function MapZoomBoost({ levels = 1 }) {
+// La rueda del ratón hace scroll de la página hasta que el visitante entra al
+// mapa con un clic o con el teclado; al salir vuelve a soltarla. Así la página
+// nunca queda atrapada sobre la cartografía y siempre se puede seguir bajando.
+function ScrollWheelGate() {
   const map = useMap();
-  const appliedRef = useRef(false);
 
   useEffect(() => {
-    if (!map || appliedRef.current) return;
+    if (!map) return undefined;
+    const container = map.getContainer();
+    const enable = () => map.scrollWheelZoom.enable();
+    const disable = () => map.scrollWheelZoom.disable();
 
-    const applyZoom = () => {
-      if (appliedRef.current) return;
-      const current = map.getZoom();
-      const maxZoom = map.getMaxZoom() ?? 18;
-      const target = Math.min(current + levels, maxZoom);
-      if (target !== current) {
-        map.setZoom(target, { animate: false });
+    disable();
+    container.addEventListener("click", enable);
+    container.addEventListener("focusin", enable);
+    container.addEventListener("mouseleave", disable);
+    container.addEventListener("focusout", disable);
+
+    return () => {
+      container.removeEventListener("click", enable);
+      container.removeEventListener("focusin", enable);
+      container.removeEventListener("mouseleave", disable);
+      container.removeEventListener("focusout", disable);
+      disable();
+    };
+  }, [map]);
+
+  return null;
+}
+
+// Encuadra el país cuando el contenedor ya tiene caja. El mapa se monta con un
+// `center`/`zoom` fijos —no con `bounds`— porque `fitBounds` sobre un
+// contenedor de tamaño cero calcula un zoom NaN y Leaflet lanza «Invalid LatLng
+// object: (NaN, NaN)», que revienta el árbol de React y deja la página entera
+// en blanco. Eso pasa de verdad: una pestaña que aún no pinta, un panel oculto
+// o cualquier primer layout donde la fila de la rejilla todavía mide 0.
+function MapFraming({ bounds, boost = 1 }) {
+  const map = useMap();
+  const framedRef = useRef(false);
+
+  useEffect(() => {
+    if (!map) return undefined;
+
+    const frame = () => {
+      if (framedRef.current) return;
+      const size = map.getSize();
+      if (size.x <= 0 || size.y <= 0) return;
+
+      framedRef.current = true;
+      map.fitBounds(bounds, { padding: [18, 18] });
+
+      // El acercamiento extra sólo cabe en el panel ancho de escritorio: en un
+      // contenedor angosto el encuadre ya llena la pantalla y un nivel más
+      // recorta el país por los costados.
+      if (size.x >= 640) {
+        const current = map.getZoom();
+        const target = Math.min(current + boost, map.getMaxZoom() ?? 18);
+        if (target !== current) {
+          map.setZoom(target, { animate: false });
+        }
       }
-      appliedRef.current = true;
     };
 
-    map.whenReady(() => {
-      requestAnimationFrame(() => {
-        requestAnimationFrame(applyZoom);
-      });
-    });
-  }, [map, levels]);
+    frame();
+    map.on("resize", frame);
+
+    // Si el contenedor pasa de 0 a tener caja sin que medie un `resize` de
+    // ventana, Leaflet no se entera: el observador de tamaño sí.
+    const observer =
+      typeof ResizeObserver !== "undefined" ? new ResizeObserver(frame) : null;
+    if (observer) observer.observe(map.getContainer());
+
+    return () => {
+      map.off("resize", frame);
+      if (observer) observer.disconnect();
+    };
+  }, [bounds, boost, map]);
 
   return null;
 }
@@ -380,6 +438,9 @@ export default function MapaExplorer() {
   const [query, setQuery] = useState("");
   const [region, setRegion] = useState("");
   const [community, setCommunity] = useState("");
+  // En móvil el mapa va primero y los filtros se despliegan bajo demanda; en
+  // escritorio el panel está siempre visible (`lg:block`).
+  const [filtersOpen, setFiltersOpen] = useState(false);
 
   const options = useMemo(() => {
     const regions = new Map();
@@ -514,161 +575,209 @@ export default function MapaExplorer() {
   };
 
   return (
-    <section className="grid min-h-[calc(100svh-4rem)] border-b border-line-100 bg-white lg:grid-cols-[27rem_1fr]">
-      <aside className="relative z-10 border-b border-line-100 p-6 lg:border-b-0 lg:border-r lg:p-9">
-        <h1 className="font-editorial text-[3.4rem] font-semibold leading-[0.9] tracking-[-0.035em] text-ink-900">
-          El mapa de los mitos de Colombia
-        </h1>
-        <p className="mt-5 text-sm leading-relaxed text-ink-700">
-          Cada relato anclado a su geografía.
-        </p>
-
-        <div className="atlas-map-controls mt-7 space-y-4">
-          <label className="relative block">
-            <span className="sr-only">Buscar mito o lugar</span>
-            <Icon
-              name="search"
-              size={18}
-              className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-ink-500"
+    <section
+      className="flex flex-col border-b border-line-100 bg-white lg:grid lg:h-[calc(100svh-4rem)] lg:grid-cols-[26rem_1fr]"
+      aria-labelledby="mapa-interactivo"
+    >
+      {/* El mapa va primero en móvil (`order-1`): queda a la vista apenas
+          termina el encabezado, sin obligar a bajar por el panel. En escritorio
+          la rejilla lo devuelve a la derecha. */}
+      <div className="relative order-1 h-[58svh] w-full overflow-hidden bg-mist-50 lg:order-2 lg:h-full lg:min-h-0">
+        <MapContainer
+          center={COLOMBIA_CENTER}
+          zoom={COLOMBIA_ZOOM}
+          minZoom={5}
+          scrollWheelZoom={false}
+          maxBounds={COLOMBIA_BOUNDS}
+          maxBoundsViscosity={0.8}
+          className="h-full w-full"
+        >
+          <MapEvents
+            onMapClick={() => {
+              setExpandedGroupKey(null);
+              setSelectedMyth(null);
+            }}
+          />
+          <ScrollWheelGate />
+          <MapFraming bounds={COLOMBIA_BOUNDS} boost={1} />
+          <TileLayer attribution={MAP_ATTRIBUTION} url={MAP_TILES} />
+          {groupMarkers.map((group) => (
+            <GroupMarker
+              key={group.key}
+              group={group}
+              isExpanded={expandedGroupKey === group.key}
+              onToggle={handleToggleGroup}
             />
-            <input
-              type="search"
-              value={query}
-              onChange={(event) => setQuery(event.target.value)}
-              placeholder="Buscar mito o lugar…"
-              className="min-h-12 w-full border border-line-200 bg-white pl-11 pr-4 text-sm text-ink-900 placeholder:text-ink-500 focus:border-jungle-600 focus:ring-0"
+          ))}
+          {expandedGroup ? (
+            <ExpandedGroupMarkers
+              group={expandedGroup}
+              onSelect={handleMythClick}
             />
-          </label>
-          <div className="grid grid-cols-2 gap-3">
-            <label>
-              <span className="atlas-kicker block">Región</span>
-              <select
-                value={region}
-                onChange={(event) => setRegion(event.target.value)}
-                className="mt-2 min-h-12 w-full border border-line-200 bg-white px-3 text-sm focus:border-jungle-600 focus:ring-0"
-              >
-                <option value="">Todas</option>
-                {options.regions.map((option) => (
-                  <option key={option.value} value={option.value}>
-                    {option.label}
-                  </option>
-                ))}
-              </select>
-            </label>
-            <label>
-              <span className="atlas-kicker block">Comunidad</span>
-              <select
-                value={community}
-                onChange={(event) => setCommunity(event.target.value)}
-                className="mt-2 min-h-12 w-full border border-line-200 bg-white px-3 text-sm focus:border-jungle-600 focus:ring-0"
-              >
-                <option value="">Todas</option>
-                {options.communities.map((option) => (
-                  <option key={option.value} value={option.value}>
-                    {option.label}
-                  </option>
-                ))}
-              </select>
-            </label>
-          </div>
-        </div>
+          ) : null}
+          {mythMarkers.map((myth) => (
+            <MythMarker
+              key={`${myth.id}-${myth.displayLat}-${myth.displayLng}`}
+              myth={myth}
+              onSelect={handleMythClick}
+              icon={getPinIcon({ count: 0, isActive: false })}
+            />
+          ))}
+        </MapContainer>
 
-        <div className="mt-8 border-t border-line-100 pt-7">
-          <div className="flex items-baseline justify-between">
-            <h2 className="font-editorial text-3xl font-semibold">
-              Cerca de este lugar
-            </h2>
-            <span className="text-xs text-ink-500">
-              {filteredData.length} {filteredData.length === 1 ? "mito" : "mitos"}
+        {/* El estado de los datos es un aviso encima del mapa, no un reemplazo:
+            las teselas se dibujan de inmediato y las chinchetas caen cuando
+            responde /api/mapa, que en frío puede tardar decenas de segundos. */}
+        {loading || error ? (
+          <p
+            role="status"
+            className="pointer-events-none absolute left-1/2 top-4 z-[600] -translate-x-1/2 border border-line-200 bg-white/95 px-4 py-2 text-xs text-ink-700 shadow-float"
+          >
+            {error ? (
+              <span className="text-ember-600">{error}</span>
+            ) : (
+              "Ubicando los mitos…"
+            )}
+          </p>
+        ) : null}
+
+        <MythPreviewCard myth={selectedMyth} onOpen={handleOpenMyth} />
+      </div>
+
+      <aside className="order-2 flex flex-col border-t border-line-100 lg:order-1 lg:min-h-0 lg:border-r lg:border-t-0">
+        <div className="px-5 py-6 lg:min-h-0 lg:flex-1 lg:overflow-y-auto lg:px-9 lg:py-8">
+          {/* El `text-[3.4rem]` anterior nunca se aplicó: la regla sin capa
+              `h1.font-editorial` de globals.css gana a las utilidades —y se
+              filtra a todas las `atlas-title-*`, que la aplican— así que el
+              titular medía 84px, cuatro líneas y 323px de alto: el panel no
+              cabía en pantalla. Igual que `.home-cover-title` en la portada,
+              aquí el titular baja al paso `--step-4` del sistema apoyándose en
+              `font-display`, que no arrastra esa regla. */}
+          <h1
+            id="mapa-interactivo"
+            className="font-display text-[length:var(--step-4)] leading-[1.04] tracking-[-0.012em] text-balance text-ink-900"
+          >
+            El mapa de los mitos de Colombia
+          </h1>
+          <p className="mt-4 text-sm leading-relaxed text-ink-700">
+            Cada relato anclado a su geografía.
+          </p>
+
+          <button
+            type="button"
+            onClick={() => setFiltersOpen((prev) => !prev)}
+            aria-expanded={filtersOpen}
+            aria-controls="mapa-filtros"
+            className="atlas-kicker mt-6 flex min-h-11 w-full items-center justify-between gap-3 border border-line-200 px-4 py-3 lg:hidden"
+          >
+            <span className="inline-flex items-center gap-2">
+              <Icon name="filter" size={16} />
+              Buscar y filtrar
             </span>
+            <Icon
+              name="chevron-down"
+              size={16}
+              className={`transition-transform ${filtersOpen ? "rotate-180" : ""}`}
+            />
+          </button>
+
+          <div
+            id="mapa-filtros"
+            className={`atlas-map-controls mt-4 space-y-4 lg:mt-7 lg:block ${
+              filtersOpen ? "block" : "hidden"
+            }`}
+          >
+            <label className="relative block">
+              <span className="sr-only">Buscar mito o lugar</span>
+              <Icon
+                name="search"
+                size={18}
+                className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-ink-500"
+              />
+              <input
+                type="search"
+                value={query}
+                onChange={(event) => setQuery(event.target.value)}
+                placeholder="Buscar mito o lugar…"
+                className="min-h-12 w-full border border-line-200 bg-white pl-11 pr-4 text-sm text-ink-900 placeholder:text-ink-500 focus:border-jungle-600 focus:ring-0"
+              />
+            </label>
+            <div className="grid grid-cols-2 gap-3">
+              <label>
+                <span className="atlas-kicker block">Región</span>
+                <select
+                  value={region}
+                  onChange={(event) => setRegion(event.target.value)}
+                  className="mt-2 min-h-12 w-full border border-line-200 bg-white px-3 text-sm focus:border-jungle-600 focus:ring-0"
+                >
+                  <option value="">Todas</option>
+                  {options.regions.map((option) => (
+                    <option key={option.value} value={option.value}>
+                      {option.label}
+                    </option>
+                  ))}
+                </select>
+              </label>
+              <label>
+                <span className="atlas-kicker block">Comunidad</span>
+                <select
+                  value={community}
+                  onChange={(event) => setCommunity(event.target.value)}
+                  className="mt-2 min-h-12 w-full border border-line-200 bg-white px-3 text-sm focus:border-jungle-600 focus:ring-0"
+                >
+                  <option value="">Todas</option>
+                  {options.communities.map((option) => (
+                    <option key={option.value} value={option.value}>
+                      {option.label}
+                    </option>
+                  ))}
+                </select>
+              </label>
+            </div>
           </div>
-          <div className="mt-4 divide-y divide-line-100">
-            {nearbyMyths.map((myth) => (
-              <button
-                key={myth.slug}
-                type="button"
-                onClick={() => handleMythClick(myth)}
-                className="group grid w-full grid-cols-[5.8rem_1fr_auto] items-center gap-4 py-4 text-left"
-              >
-                <span className="relative aspect-[4/3] overflow-hidden bg-mist-50">
-                  {myth.image_url ? (
-                    <Image
-                      src={myth.image_url}
-                      alt=""
-                      fill
-                      sizes="94px"
-                      className="atlas-image-zoom object-cover"
-                    />
-                  ) : null}
-                </span>
-                <span className="font-editorial text-xl font-semibold leading-none">
-                  {myth.title}
-                </span>
-                <Icon name="chevron-right" size={17} className="mc-arrow" />
-              </button>
-            ))}
+
+          <div className="mt-7 border-t border-line-100 pt-6">
+            <div className="flex items-baseline justify-between gap-4">
+              <h2 className="font-editorial text-2xl font-semibold">
+                Cerca de este lugar
+              </h2>
+              <span className="atlas-figure text-xs text-ink-500">
+                {filteredData.length}{" "}
+                {filteredData.length === 1 ? "mito" : "mitos"}
+              </span>
+            </div>
+            <div className="mt-3 divide-y divide-line-100">
+              {nearbyMyths.map((myth) => (
+                <button
+                  key={myth.slug}
+                  type="button"
+                  onClick={() => handleMythClick(myth)}
+                  className="group grid w-full grid-cols-[4.6rem_1fr_auto] items-center gap-4 py-3 text-left"
+                >
+                  <span className="relative aspect-[4/3] overflow-hidden bg-mist-50">
+                    {myth.image_url ? (
+                      <Image
+                        src={myth.image_url}
+                        alt=""
+                        fill
+                        sizes="74px"
+                        className="atlas-image-zoom object-cover"
+                      />
+                    ) : null}
+                  </span>
+                  <span className="font-editorial text-lg font-semibold leading-tight">
+                    {myth.title}
+                  </span>
+                  <Icon name="chevron-right" size={17} className="mc-arrow" />
+                </button>
+              ))}
+            </div>
+            <Link href="/mitos" className="atlas-link mt-5">
+              Ver el archivo completo <Icon name="arrow-right" size={16} />
+            </Link>
           </div>
-          <Link href="/mitos" className="atlas-link mt-6">
-            Ver el archivo completo <Icon name="arrow-right" size={16} />
-          </Link>
         </div>
       </aside>
-
-      <div className="relative min-h-[70svh] w-full overflow-hidden lg:min-h-[calc(100svh-4rem)]">
-          {loading ? (
-            <div className="flex h-full min-h-[70svh] items-center justify-center bg-mist-50">
-              <div className="text-sm text-ink-600">Cargando mapa...</div>
-            </div>
-          ) : error ? (
-            <div className="flex h-full min-h-[70svh] items-center justify-center bg-mist-50">
-              <div className="text-sm text-ember-600">{error}</div>
-            </div>
-          ) : (
-            <div className="absolute inset-0">
-              <MapContainer
-                bounds={COLOMBIA_BOUNDS}
-                boundsOptions={{ padding: [18, 18] }}
-                minZoom={5}
-                scrollWheelZoom={true}
-                maxBounds={COLOMBIA_BOUNDS}
-                maxBoundsViscosity={0.8}
-                className="h-full w-full"
-              >
-                <MapEvents
-                  onMapClick={() => {
-                    setExpandedGroupKey(null);
-                    setSelectedMyth(null);
-                  }}
-                />
-                <MapZoomBoost levels={1} />
-                <TileLayer attribution={MAP_ATTRIBUTION} url={MAP_TILES} />
-                {groupMarkers.map((group) => (
-                  <GroupMarker
-                    key={group.key}
-                    group={group}
-                    isExpanded={expandedGroupKey === group.key}
-                    onToggle={handleToggleGroup}
-                  />
-                ))}
-                {expandedGroup ? (
-                  <ExpandedGroupMarkers
-                    group={expandedGroup}
-                    onSelect={handleMythClick}
-                  />
-                ) : null}
-                {mythMarkers.map((myth) => (
-                  <MythMarker
-                    key={`${myth.id}-${myth.displayLat}-${myth.displayLng}`}
-                    myth={myth}
-                    onSelect={handleMythClick}
-                    icon={getPinIcon({ count: 0, isActive: false })}
-                  />
-                ))}
-              </MapContainer>
-              <MythPreviewCard myth={selectedMyth} onOpen={handleOpenMyth} />
-            </div>
-          )}
-      </div>
     </section>
   );
 }

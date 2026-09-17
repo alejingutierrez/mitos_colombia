@@ -175,20 +175,12 @@
 .paymentMethod small { color: #77736b; font-size: 0.73rem; line-height: 1.4; }
 .paymentMethod em { color: #9a6a2f; font-size: 0.65rem; font-style: normal; font-weight: 650; margin-top: 0.25rem; }
 .paymentMethod[data-confirmed="true"] em { color: var(--green); }
-.paymentChoice { display: grid; gap: 0.65rem; grid-template-columns: repeat(2, minmax(0, 1fr)); }
-.paymentChoice > label { align-items: flex-start; background: #fbfaf7; border: 1px solid #d5d1c8; border-radius: 5px; cursor: pointer; display: grid; gap: 0.75rem; grid-template-columns: 18px 34px 1fr; min-height: 96px; padding: 0.9rem; }
-.paymentChoice > label[data-selected="true"] { background: #f3f8f4; border-color: rgba(20, 63, 44, 0.7); box-shadow: 0 0 0 1px rgba(20, 63, 44, 0.12); }
-.paymentChoice > label:has(input:disabled) { cursor: not-allowed; opacity: 0.76; }
-.paymentChoice input { accent-color: var(--green); min-height: 18px; padding: 0; width: 18px; }
-.paymentChoice label > span:last-child { display: grid; gap: 0.25rem; }
-.paymentChoice strong { color: var(--green); font-size: 0.84rem; }
-.paymentChoice small { color: #77736b; font-size: 0.72rem; line-height: 1.4; }
-.cardFields { display: grid; gap: 0.9rem; grid-template-columns: repeat(2, minmax(0, 1fr)); }
-.qrAction { align-items: center; background: #f3f8f4; border: 1px solid rgba(20, 63, 44, 0.45); display: grid; gap: 1rem; justify-items: center; padding: 1.4rem; text-align: center; }
-.qrAction strong { color: var(--green); font-family: var(--font-display), sans-serif; font-size: 1.5rem; font-weight: 400; }
-.qrAction img { background: #fff; height: auto; max-width: 260px; padding: 0.75rem; width: 100%; }
-.qrAction p { color: #66635c; font-size: 0.78rem; line-height: 1.5; margin: 0; }
-.qrAction .primaryLink { margin-top: 0; }
+/* Aviso del estado del pago mientras la ventana de Bold está abierta. */
+.paymentNotice { align-items: flex-start; background: #f3f8f4; border: 1px solid rgba(20, 63, 44, 0.4); border-left: 4px solid var(--green); color: #46504a; display: flex; font-size: 0.8rem; gap: 0.6rem; line-height: 1.55; padding: 0.9rem 1rem; }
+.paymentNotice svg { color: var(--green); flex: 0 0 auto; margin-top: 0.1rem; }
+.paymentNotice[data-tone="alert"] { background: #fff0ed; border-color: #c98d84; border-left-color: #9f352a; color: #7b2c24; }
+.paymentNotice a { color: var(--green); font-weight: 600; text-underline-offset: 3px; }
+.paymentNotice[data-tone="alert"] svg { color: #9f352a; }
 .providerNote { align-items: flex-start; color: #69665f; display: flex; font-size: 0.78rem; gap: 0.55rem; line-height: 1.5; margin: 0.5rem 0 0; }
 .providerNote svg { color: var(--gold); flex: 0 0 auto; }
 .providerNote a { color: var(--green); text-underline-offset: 3px; }
@@ -280,8 +272,6 @@
   .missingFields ul { columns: 1; }
   .fieldGrid { grid-template-columns: 1fr; }
   .paymentMethods { grid-template-columns: 1fr; }
-  .paymentChoice,
-  .cardFields { grid-template-columns: 1fr; }
   .fullField { grid-column: auto; }
   .steps { margin-bottom: 3rem; }
   .steps li { font-size: 0.65rem; }

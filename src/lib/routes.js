@@ -1,407 +1,34 @@
 import { unstable_cache } from "next/cache";
+import { RUTAS } from "../../content/rutas/index.mjs";
+import { buildLabelIndex, normalizeRutas } from "../../content/rutas/model.mjs";
 import { getSqlClient, getSqliteDb, isPostgres } from "./db";
 
 const ONE_DAY = 60 * 60 * 24;
 
-export const ROUTES = [
-  {
-    slug: "guardianes-del-agua",
-    title: "Guardianes del agua",
-    description:
-      "Guardianes, pactos y relatos donde el agua dicta el equilibrio del territorio.",
-    detail: "Ríos sagrados, lagunas encantadas y pactos con el agua.",
-    intro:
-      "En esta ruta el agua es territorio sagrado: ríos que escuchan, lagunas que recuerdan y corrientes que advierten. Los relatos hablan de guardianes, pactos y castigos que sostienen el equilibrio.",
-    galleryIntro:
-      "Selección curada de mitos donde el agua es protagonista y los guardianes sostienen la memoria del territorio.",
-    tone: "Ríos y neblina",
-    accent: "river",
-    keywords: ["agua", "laguna", "mohan", "poira", "madre", "tesoro", "pescadores"],
-    highlights: [
-      {
-        title: "Ríos con memoria",
-        description: "Relatos donde el río escucha, responde y protege.",
-      },
-      {
-        title: "Lagunas sagradas",
-        description: "Pactos, ofrendas y tesoros custodiados por el agua.",
-      },
-      {
-        title: "Corrientes invisibles",
-        description: "Señales que anuncian cambio, castigo o renacimiento.",
-      },
-    ],
-    curated: {
-      coverTitle: "La madre agua",
-      heroTitles: [
-        "La madre agua",
-        "Héntserá y el agua",
-        "Lagunas encantadas",
-      ],
-      galleryTitles: [
-        "Zequiel",
-        "El tesoro de Caribare",
-        "Kugï y Nokuerai",
-        "El retorno de plumón amarillo",
-        "El origen del agua",
-        "El Carriazo de vereda San Isidro",
-        "El Reventón de Jacobo",
-      ],
-    },
-  },
-  {
-    slug: "cartografia-selva",
-    title: "Cartografía de la selva",
-    description: "Relatos de monte donde la selva marca fronteras invisibles.",
-    detail: "Mapas vivos, límites sagrados y guardianes del monte.",
-    intro:
-      "La selva se lee como un mapa: señales en las hojas, brumas que desvían y guardianes que ponen límites. Esta ruta reúne relatos que enseñan a leer el territorio.",
-    galleryIntro:
-      "Mitos de selva donde los guardianes trazan fronteras, rutas y señales invisibles.",
-    tone: "Selva y bruma",
-    accent: "jungle",
-    keywords: ["selva", "monte", "cazador", "tigre", "castigo", "venganza"],
-    highlights: [
-      {
-        title: "Fronteras vivas",
-        description: "Fronteras simbólicas entre lo humano y lo sagrado.",
-      },
-      {
-        title: "Señales del monte",
-        description: "Hojas, bruma y sonidos que orientan al viajero.",
-      },
-      {
-        title: "Guardianes del territorio",
-        description: "Presencias que castigan el exceso y cuidan la selva.",
-      },
-    ],
-    curated: {
-      coverTitle: "Los muertos en el monte",
-      heroTitles: [
-        "Los muertos en el monte",
-        "La sed da los civilizados",
-        "El Morrocoyo",
-      ],
-      galleryTitles: [
-        "Juma",
-        "Peleas y aventuras entre el sobrino conejo y el tío tigre",
-        "Dïïjoma",
-        "Kugï y Nokuerai",
-        "Jobiya Jitoma",
-        "Yepá castiaga a los animales",
-        "El cazador",
-      ],
-    },
-  },
-  {
-    slug: "bestiario-colombiano",
-    title: "Bestiario colombiano",
-    description: "Criaturas que encarnan miedos, pactos y fuerzas del paisaje.",
-    detail: "Bestias tutelares, serpientes y metamorfosis.",
-    intro:
-      "Un bestiario de seres fronterizos: mitad castigo, mitad advertencia. Aquí conviven serpientes, felinos míticos y guardianes que sostienen el equilibrio del territorio.",
-    galleryIntro:
-      "Relatos donde las criaturas marcan límites, castigos y transformaciones.",
-    tone: "Sombras y fuego",
-    accent: "ember",
-    keywords: ["caiman", "tigre", "serpiente", "brujo", "transformacion", "bestia"],
-    highlights: [
-      {
-        title: "Metamorfosis",
-        description: "Cuerpos que cambian para advertir o castigar.",
-      },
-      {
-        title: "Fieras tutelares",
-        description: "Serpientes, tigres y bestias que custodian el territorio.",
-      },
-      {
-        title: "Advertencias",
-        description: "Historias que marcan rutas peligrosas.",
-      },
-    ],
-    curated: {
-      coverTitle: "El hombre que soñó con caimán",
-      heroTitles: [
-        "El hombre que soñó con caimán",
-        "Los brujos",
-        "El hombre caimán",
-      ],
-      galleryTitles: [
-        "El hombre tigre",
-        "El tigre",
-        "La niña que se volvió serpiente",
-        "Yepá castiaga a los animales",
-        "Aribamias",
-        "Tasime (El Incesto)",
-        "La vieja colmillona",
-      ],
-    },
-  },
-  {
-    slug: "bosques-y-niebla",
-    title: "Bosques y niebla",
-    description: "Relatos en bosque húmedo donde la bruma guía y extravía.",
-    detail: "Hojarasquín, duendes y sombras del monte.",
-    intro:
-      "El bosque guarda secretos y pactos. La niebla no solo cubre: guía, oculta y protege. Esta ruta recorre relatos donde el follaje es un umbral.",
-    galleryIntro:
-      "Historias donde la bruma, el musgo y el bosque marcan fronteras sagradas.",
-    tone: "Humedad y bruma",
-    accent: "jungle",
-    keywords: ["bosque", "niebla", "monte", "pacto", "cazador", "diablo", "redencion"],
-    highlights: [
-      {
-        title: "Bruma protectora",
-        description: "La niebla como manto que guía o extravía.",
-      },
-      {
-        title: "Duendes del bosque",
-        description: "Travesuras que enseñan respeto por el monte.",
-      },
-      {
-        title: "Sombras del monte",
-        description: "Presencias que aparecen al borde del camino.",
-      },
-    ],
-    curated: {
-      coverTitle: "El Dominguez",
-      heroTitles: [
-        "El Dominguez",
-        "Los muertos en el monte",
-        "El diablo del puente del Común",
-      ],
-      galleryTitles: [
-        "El Doctor Galeacer",
-        "Historia de un viejo",
-        "Coste",
-        "El dalo",
-        "El guatín astuto",
-        "Tal para cual",
-        "El cazador",
-      ],
-    },
-  },
-  {
-    slug: "criaturas-nocturnas",
-    title: "Criaturas nocturnas",
-    description: "Apariciones y lamentos que se cuentan para sobrevivir la noche.",
-    detail: "Sombras, lamentos y presencias al filo de la noche.",
-    intro:
-      "En la noche se cruzan voces, presencias y advertencias. Son relatos para reconocer señales, cuidar los caminos y entender lo que ocurre cuando todo se apaga.",
-    galleryIntro:
-      "Relatos de apariciones y presencias que se cuentan para sobrevivir la noche.",
-    tone: "Noches rituales",
-    accent: "ink",
-    keywords: ["fantasma", "diablo", "pacto", "noche", "bus", "guango", "misterio"],
-    highlights: [
-      {
-        title: "Lamentos",
-        description: "Voces que viajan con el viento y recuerdan tragedias.",
-      },
-      {
-        title: "Apariciones",
-        description: "Presencias que avisan peligros en la oscuridad.",
-      },
-      {
-        title: "Rituales nocturnos",
-        description: "Noches donde los pactos se cierran.",
-      },
-    ],
-    curated: {
-      coverTitle: "El diablo del puente del Común",
-      heroTitles: [
-        "El diablo del puente del Común",
-        "Los fantasmas",
-        "El Doctor Galeacer",
-      ],
-      galleryTitles: [
-        "El fantasma de El Horizonte",
-        "No hay deuda que no se pague",
-        "El diablo",
-        "El guango",
-        "El bus fantasma",
-        "Taik",
-        "La niña de la carta",
-      ],
-    },
-  },
-  {
-    slug: "ritos-del-mar",
-    title: "Ritos del mar",
-    description: "Mareas, sirenas y guardianes costeros en el litoral colombiano.",
-    detail: "Cantos de marea, barcos y pactos marinos.",
-    intro:
-      "El mar se lee en cantos, ofrendas y tempestades. Esta ruta reúne mitos de costas, sirenas y guardianes del litoral.",
-    galleryIntro:
-      "Historias donde el mar es oráculo, peligro y refugio para las comunidades.",
-    tone: "Mareas y sal",
-    accent: "river",
-    keywords: ["mar", "playa", "barco", "fantasma", "caribe", "marea", "costero"],
-    highlights: [
-      {
-        title: "Cantos y sirenas",
-        description: "Voces saladas que seducen y protegen.",
-      },
-      {
-        title: "Guardianes costeros",
-        description: "Seres que custodian puertos y manglares.",
-      },
-      {
-        title: "Tempestades",
-        description: "Relatos nacidos del riesgo del mar.",
-      },
-    ],
-    curated: {
-      coverTitle: "Marineritis sentimental",
-      heroTitles: [
-        "Marineritis sentimental",
-        "Madre de playa",
-        "El barco fantasma",
-      ],
-      galleryTitles: [
-        "El padre Mera",
-        "Creación",
-        "El héroe",
-        "El castellano de San Juan",
-        "El mal del mar",
-        "En el sitio de Morillo",
-        "El Incesto",
-      ],
-    },
-  },
-  {
-    slug: "fronteras-y-caminos",
-    title: "Fronteras y caminos",
-    description: "Cruces de camino y viajes sagrados donde se prueban los pactos.",
-    detail: "Puentes, trochas y viajes entre mundos.",
-    intro:
-      "Toda ruta tiene un umbral. Aquí los caminos son pruebas: puentes, cruces y viajes sagrados donde se sellan pactos.",
-    galleryIntro:
-      "Relatos donde viajar implica negociar con fuerzas invisibles y guardianes.",
-    tone: "Cruces y caminos",
-    accent: "ember",
-    keywords: ["camino", "viaje", "puente", "ultratumba", "infierno", "tunjo", "redencion"],
-    highlights: [
-      {
-        title: "Puentes y umbrales",
-        description: "Lugares donde el viaje cambia de rumbo.",
-      },
-      {
-        title: "Viajes sagrados",
-        description: "Relatos de desplazamientos, canoas y pasos secretos.",
-      },
-      {
-        title: "Pactos de camino",
-        description: "Promesas que salvan o condenan.",
-      },
-    ],
-    curated: {
-      coverTitle: "El diablo del puente del Común",
-      heroTitles: [
-        "El diablo del puente del Común",
-        "Kugï y Nokuerai",
-        "El mundo de ultratumba",
-      ],
-      galleryTitles: [
-        "El viaje al cielo",
-        "La mina de oro en el infierno",
-        "El tunjo",
-        "La vista del libertador",
-        "El hombre flaco",
-        "La vieja, el burro y los huevos",
-        "La comida para los muertos",
-      ],
-    },
-  },
-  {
-    slug: "voces-urbanas",
-    title: "Voces urbanas",
-    description: "Leyendas coloniales y rumores actuales que siguen vivos en la ciudad.",
-    detail: "Callejones, plazas y memorias urbanas.",
-    intro:
-      "La ciudad también guarda mitos: relatos que viajan de barrio en barrio, adaptándose a nuevas plazas y edificios.",
-    galleryIntro:
-      "Historias urbanas donde la memoria colonial y los rumores actuales se cruzan.",
-    tone: "Ciudad y eco",
-    accent: "ink",
-    keywords: ["bogota", "tranvia", "ascensor", "teatro", "ciudad", "urbano", "plaza"],
-    highlights: [
-      {
-        title: "Rumores de barrio",
-        description: "Relatos que circulan entre plazas y callejones.",
-      },
-      {
-        title: "Sombras coloniales",
-        description: "Memorias de ciudades portuarias y plazas antiguas.",
-      },
-      {
-        title: "Mitos contemporáneos",
-        description: "Historias que se adaptan al ritmo urbano.",
-      },
-    ],
-    curated: {
-      coverTitle: "El bobo del tranvía",
-      heroTitles: [
-        "El bobo del tranvía",
-        "El toro en el ascensor",
-        "Anansi",
-      ],
-      galleryTitles: [
-        "El chenche",
-        "La confesión",
-        "La sombra",
-        "En el sitio de Morillo",
-        "El mono de la pila",
-        "El fantasma del teatro azul",
-        "Una reunión clandestina",
-      ],
-    },
-  },
-  {
-    slug: "montanas-paramos",
-    title: "Montañas y páramos",
-    description: "Alturas sagradas, lagunas de cima y guardianes del frío.",
-    detail: "Cumbres sagradas, lagunas de altura y viento frío.",
-    intro:
-      "En las cumbres se guarda el agua y la memoria. Esta ruta reúne relatos de montañas, lagunas sagradas y guardianes del frío.",
-    galleryIntro:
-      "Relatos de altura donde el viento y las lagunas marcan el ritmo del territorio.",
-    tone: "Alturas y viento",
-    accent: "river",
-    keywords: ["cerro", "paramo", "laguna", "tesoro", "encantado", "montana", "sierra"],
-    highlights: [
-      {
-        title: "Lagunas de altura",
-        description: "Ofrendas y tesoros que descansan en la cima.",
-      },
-      {
-        title: "Guardianes de la sierra",
-        description: "Cumbres protegidas por espíritus y custodios.",
-      },
-      {
-        title: "Viento frío",
-        description: "Señales que anuncian cambios de estación.",
-      },
-    ],
-    curated: {
-      coverTitle: "Lagunas encantadas",
-      heroTitles: [
-        "Lagunas encantadas",
-        "La laguna de María Panana.",
-        "Tradición del cerro",
-      ],
-      galleryTitles: [
-        "Fu, el dios de la torpeza",
-        "Namaku",
-        "El tesoro de Buzaga",
-        "El cerro encantado",
-        "La visita del joven desconocido",
-        "El Incesto",
-        "La chama",
-      ],
-    },
-  },
-];
+/**
+ * Rutas editoriales.
+ *
+ * Las rutas se escriben a mano en `content/rutas/<slug>.mjs` y se declaran en
+ * `content/rutas/index.mjs`; el contrato del objeto está documentado en
+ * `content/rutas/model.mjs`. Aquí sólo se normalizan y se resuelven contra la
+ * base de datos.
+ *
+ * La pertenencia de un mito a una ruta se declara por SLUG. Antes se declaraba
+ * por título en español y se resolvía con coincidencia difusa: corregir el
+ * título de un mito bastaba para que su ruta lo perdiera sin avisar.
+ *
+ * Todo lo que exportaba la versión anterior sigue exportado y funcionando; lo
+ * marcado como «heredado» existe sólo para no romper las páginas actuales.
+ */
+export const ROUTES = normalizeRutas(RUTAS);
+
+const ROUTES_BY_SLUG = new Map(ROUTES.map((route) => [route.slug, route]));
+
+const { index: LABEL_TO_SLUG, normalizeLabel } = buildLabelIndex(ROUTES);
+
+const ALL_ROUTE_MYTH_SLUGS = new Set(
+  ROUTES.flatMap((route) => route.mythSlugs)
+);
 
 const ACCENT_STYLES = {
   river: {
@@ -426,6 +53,330 @@ const ACCENT_STYLES = {
   },
 };
 
+export function getAccentStyles(accent) {
+  return ACCENT_STYLES[accent] || ACCENT_STYLES.river;
+}
+
+export function getRouteBySlug(slug) {
+  return ROUTES_BY_SLUG.get(String(slug || "").trim()) || undefined;
+}
+
+export function getRouteSlugs() {
+  return ROUTES.map((route) => route.slug);
+}
+
+export function isRouteSlug(slug) {
+  return ROUTES_BY_SLUG.has(String(slug || "").trim());
+}
+
+/** Slugs de los mitos de una ruta, en orden de lectura. */
+export function getRouteMythSlugs(routeOrSlug) {
+  const route =
+    typeof routeOrSlug === "string" ? getRouteBySlug(routeOrSlug) : routeOrSlug;
+  return route?.mythSlugs ? [...route.mythSlugs] : [];
+}
+
+/**
+ * Traduce una etiqueta de curaduría (o un slug) al slug real del mito.
+ * Devuelve null si la ruta no lo declara: no adivina.
+ */
+export function resolveRouteMythSlug(value) {
+  const raw = String(value || "").trim();
+  if (!raw) return null;
+  if (ALL_ROUTE_MYTH_SLUGS.has(raw)) return raw;
+  return LABEL_TO_SLUG.get(normalizeLabel(raw)) || null;
+}
+
+/* ------------------------------------------------------------------------ *
+ * Consultas
+ * ------------------------------------------------------------------------ */
+
+const MYTH_COLUMNS = `
+          myths.id,
+          myths.title,
+          myths.slug,
+          myths.excerpt,
+          myths.category_path,
+          myths.image_url,
+          myths.square_image_url`;
+
+const MYTH_JOINS = `
+        FROM myths
+        JOIN regions ON regions.id = myths.region_id
+        LEFT JOIN communities ON communities.id = myths.community_id`;
+
+const MYTH_TAXONOMY = `
+          regions.name AS region,
+          regions.slug AS region_slug,
+          communities.name AS community,
+          communities.slug AS community_slug`;
+
+async function getMythsBySlugsPostgres(slugs = []) {
+  if (!slugs.length) {
+    return [];
+  }
+  const sql = getSqlClient();
+
+  try {
+    const result = await sql.query(
+      `
+        SELECT
+${MYTH_COLUMNS},
+          vi.image_url AS vertical_image_url,
+${MYTH_TAXONOMY}
+${MYTH_JOINS}
+        LEFT JOIN LATERAL (
+          SELECT image_url
+          FROM vertical_images
+          WHERE entity_type = 'myth' AND entity_id = myths.id
+            AND COALESCE(updated_at, created_at) >=
+              COALESCE(myths.updated_at, updated_at, created_at)
+          ORDER BY updated_at DESC NULLS LAST, created_at DESC NULLS LAST
+          LIMIT 1
+        ) vi ON true
+        WHERE myths.slug = ANY($1)
+        ORDER BY array_position($1, myths.slug)
+      `,
+      [slugs]
+    );
+    return result.rows;
+  } catch (error) {
+    console.error("[routes] fallback: myths by slugs without vertical_images", error);
+    const result = await sql.query(
+      `
+        SELECT
+${MYTH_COLUMNS},
+${MYTH_TAXONOMY}
+${MYTH_JOINS}
+        WHERE myths.slug = ANY($1)
+        ORDER BY array_position($1, myths.slug)
+      `,
+      [slugs]
+    );
+    return result.rows;
+  }
+}
+
+function getMythsBySlugsSqlite(slugs = []) {
+  if (!slugs.length) {
+    return [];
+  }
+  const db = getSqliteDb();
+  const placeholders = slugs.map(() => "?").join(", ");
+  const orderCases = slugs.map(() => "WHEN ? THEN ?").join(" ");
+  const orderParams = slugs.flatMap((slug, index) => [slug, index]);
+
+  try {
+    const sql = `
+      SELECT
+${MYTH_COLUMNS},
+        (
+          SELECT image_url
+          FROM vertical_images vi
+          WHERE vi.entity_type = 'myth' AND vi.entity_id = myths.id
+            AND datetime(COALESCE(vi.updated_at, vi.created_at)) >=
+              datetime(COALESCE(myths.updated_at, vi.updated_at, vi.created_at))
+          ORDER BY vi.updated_at DESC, vi.created_at DESC
+          LIMIT 1
+        ) AS vertical_image_url,
+${MYTH_TAXONOMY}
+${MYTH_JOINS}
+      WHERE myths.slug IN (${placeholders})
+      ORDER BY CASE myths.slug ${orderCases} ELSE ${slugs.length} END
+    `;
+
+    return db.prepare(sql).all(...slugs, ...orderParams);
+  } catch (error) {
+    console.error("[routes] fallback: myths by slugs without vertical_images", error);
+    const sql = `
+      SELECT
+${MYTH_COLUMNS},
+${MYTH_TAXONOMY}
+${MYTH_JOINS}
+      WHERE myths.slug IN (${placeholders})
+      ORDER BY CASE myths.slug ${orderCases} ELSE ${slugs.length} END
+    `;
+    return db.prepare(sql).all(...slugs, ...orderParams);
+  }
+}
+
+/** Filas crudas de mitos, en el orden en que se pidieron los slugs. */
+export async function getMythsBySlugs(slugs = []) {
+  const unique = Array.from(
+    new Set((slugs || []).map((slug) => String(slug || "").trim()).filter(Boolean))
+  );
+  if (!unique.length) return [];
+  if (isPostgres()) {
+    return getMythsBySlugsPostgres(unique);
+  }
+  return getMythsBySlugsSqlite(unique);
+}
+
+/**
+ * Forma con la que las páginas consumen un mito de una ruta. Lleva las dos
+ * convenciones a propósito: `image_url` y compañía para los componentes que ya
+ * existen (y para `withMythImageVariants`), y camelCase para lo nuevo.
+ */
+function shapeMyth(row, entry) {
+  if (!row) return null;
+  return {
+    id: row.id,
+    slug: row.slug,
+    title: row.title,
+    excerpt: row.excerpt,
+    region: row.region,
+    regionSlug: row.region_slug,
+    community: row.community,
+    communitySlug: row.community_slug,
+    categoryPath: row.category_path,
+    imageUrl: row.image_url || null,
+    verticalImageUrl: row.vertical_image_url || null,
+    squareImageUrl: row.square_image_url || null,
+    href: `/mitos/${row.slug}`,
+    label: entry?.label || row.title,
+    featured: Boolean(entry?.featured),
+    note: entry?.note || null,
+    /* compatibilidad con los componentes actuales */
+    image_url: row.image_url || null,
+    vertical_image_url: row.vertical_image_url || null,
+    square_image_url: row.square_image_url || null,
+    region_slug: row.region_slug,
+    community_slug: row.community_slug,
+    category_path: row.category_path,
+  };
+}
+
+/**
+ * Resuelve varias rutas con sus mitos en UNA sola consulta.
+ *
+ * @param {string[]|undefined} slugs rutas a resolver; sin argumento, todas.
+ * @returns {Promise<Array>} rutas normalizadas con `myths`, `momentos[].myths`,
+ *   `cover` y `looseMyths` ya resueltos a objetos de mito.
+ */
+export async function getRoutesWithMyths(slugs) {
+  const routes = Array.isArray(slugs)
+    ? slugs.map((slug) => getRouteBySlug(slug)).filter(Boolean)
+    : ROUTES;
+
+  if (!routes.length) return [];
+
+  const wanted = Array.from(new Set(routes.flatMap((route) => route.mythSlugs)));
+  const rows = await getMythsBySlugs(wanted);
+  const bySlug = new Map(rows.map((row) => [row.slug, row]));
+
+  return routes.map((route) => {
+    const resolved = new Map();
+    route.myths.forEach((entry) => {
+      const myth = shapeMyth(bySlug.get(entry.slug), entry);
+      if (myth) resolved.set(entry.slug, myth);
+    });
+
+    const myths = route.mythSlugs
+      .map((slug) => resolved.get(slug))
+      .filter(Boolean);
+    const missingMythSlugs = route.mythSlugs.filter(
+      (slug) => !resolved.has(slug)
+    );
+
+    return {
+      ...route,
+      myths,
+      missingMythSlugs,
+      cover: resolved.get(route.cover) || myths[0] || null,
+      coverSlug: route.cover,
+      featuredMyths: myths.filter((myth) => myth.featured),
+      looseMyths: route.looseMythSlugs
+        .map((slug) => resolved.get(slug))
+        .filter(Boolean),
+      momentos: route.momentos.map((momento) => ({
+        ...momento,
+        myths: momento.myths.map((slug) => resolved.get(slug)).filter(Boolean),
+      })),
+    };
+  });
+}
+
+/** Una ruta con sus mitos resueltos, en una sola consulta. `null` si no existe. */
+export async function getRouteWithMyths(routeOrSlug) {
+  const slug =
+    typeof routeOrSlug === "string" ? routeOrSlug : routeOrSlug?.slug;
+  if (!slug || !isRouteSlug(slug)) return null;
+  const [resolved] = await getRoutesWithMyths([slug]);
+  return resolved || null;
+}
+
+/* ------------------------------------------------------------------------ *
+ * Portadas de /rutas y de la home
+ * ------------------------------------------------------------------------ */
+
+function pickPreview(route) {
+  const withArt = route.myths.filter((myth) => myth.image_url);
+  return (
+    (route.cover?.image_url ? route.cover : null) ||
+    route.featuredMyths.find((myth) => myth.image_url) ||
+    withArt[0] ||
+    route.cover ||
+    route.myths[0] ||
+    null
+  );
+}
+
+const getRoutePreviewsCached = unstable_cache(
+  async () => {
+    const resolved = await getRoutesWithMyths();
+    return resolved.map((route) => ({
+      ...route,
+      preview: pickPreview(route),
+    }));
+  },
+  // v2: la clave cambió al pasar de títulos difusos a slugs. Sin bump, Next
+  // seguiría sirviendo durante un día el objeto viejo, sin `myths`.
+  ["route-previews-v2"],
+  { revalidate: ONE_DAY }
+);
+
+/**
+ * Rutas con su obra de portada resuelta. `seed` se conserva por compatibilidad
+ * de firma: el binding ya no es aleatorio, así que no altera el resultado.
+ */
+export async function getRoutePreviews() {
+  return getRoutePreviewsCached();
+}
+
+/** Imagen para Open Graph: la portada de la ruta, o el primer mito con arte. */
+export async function getRouteOgImage(input) {
+  const slugs = [];
+
+  if (typeof input === "string") {
+    const route = getRouteBySlug(input);
+    if (route) {
+      slugs.push(route.cover, ...route.mythSlugs);
+    }
+  } else if (Array.isArray(input)) {
+    input.forEach((item) => {
+      const slug = resolveRouteMythSlug(item);
+      if (slug) slugs.push(slug);
+    });
+  }
+
+  const ordered = Array.from(new Set(slugs.filter(Boolean)));
+  if (!ordered.length) return null;
+
+  const rows = await getMythsBySlugs(ordered);
+  const withArt = rows.find((row) => row.image_url && row.image_url.trim());
+  return withArt?.image_url || null;
+}
+
+/* ------------------------------------------------------------------------ *
+ * Heredado
+ *
+ * Lo que sigue existe para que las páginas que todavía piden mitos «por
+ * título» no se rompan. Ya no adivinan: primero traducen la etiqueta a slug
+ * con el censo de las rutas, y sólo caen a la búsqueda difusa cuando la
+ * etiqueta no pertenece a ninguna ruta. Código nuevo: usa
+ * `getRouteWithMyths()`.
+ * ------------------------------------------------------------------------ */
+
 function normalizeInput(value) {
   if (!value) {
     return null;
@@ -433,25 +384,6 @@ function normalizeInput(value) {
   const trimmed = String(value).trim().toLowerCase();
   return trimmed.length ? trimmed : null;
 }
-
-const TITLE_STOPWORDS = new Set([
-  "el",
-  "la",
-  "los",
-  "las",
-  "del",
-  "de",
-  "y",
-  "en",
-  "al",
-  "un",
-  "una",
-  "unos",
-  "unas",
-  "por",
-  "para",
-  "con",
-]);
 
 function stripDiacritics(value) {
   if (!value) {
@@ -468,53 +400,6 @@ function normalizeTitle(value) {
   return cleaned.replace(/[^a-z0-9]+/g, " ").trim();
 }
 
-function getTitleTokens(value) {
-  const normalized = normalizeTitle(value);
-  return normalized
-    .split(" ")
-    .map((token) => token.trim())
-    .filter((token) => token.length > 2 && !TITLE_STOPWORDS.has(token));
-}
-
-function buildTitlePatterns(titles = []) {
-  const patterns = new Set();
-
-  titles
-    .map((item) => (item ? String(item).trim() : ""))
-    .filter(Boolean)
-    .forEach((title) => {
-      const noParens = title.replace(/\([^)]*\)/g, " ").trim();
-      const noPunct = title.replace(/[^A-Za-z0-9\u00C0-\u017F]+/g, " ").trim();
-      const normalized = normalizeTitle(title);
-      const tokens = getTitleTokens(title);
-      const compact = tokens.join(" ").trim();
-
-      [title, noParens, noPunct, normalized, compact]
-        .filter(Boolean)
-        .forEach((candidate) => {
-          const trimmed = candidate.trim();
-          if (trimmed.length >= 4 && !TITLE_STOPWORDS.has(trimmed)) {
-            patterns.add(trimmed);
-          }
-        });
-
-      if (tokens.length) {
-        const longest = tokens.reduce((acc, item) => (item.length > acc.length ? item : acc), "");
-        if (longest.length >= 4) {
-          patterns.add(longest);
-        }
-        if (tokens.length >= 2) {
-          patterns.add(tokens.slice(0, 2).join(" "));
-        }
-        if (tokens.length >= 3) {
-          patterns.add(tokens.slice(0, 3).join(" "));
-        }
-      }
-    });
-
-  return Array.from(patterns);
-}
-
 function scoreTitleMatch(requestedTitle, candidateTitle) {
   const requested = normalizeTitle(requestedTitle);
   const candidate = normalizeTitle(candidateTitle);
@@ -522,7 +407,6 @@ function scoreTitleMatch(requestedTitle, candidateTitle) {
   if (!requested || !candidate) {
     return 0;
   }
-
   if (requested === candidate) {
     return 100;
   }
@@ -555,14 +439,34 @@ function scoreTitleMatch(requestedTitle, candidateTitle) {
   return score;
 }
 
+/**
+ * Heredado. Empareja títulos con candidatos. Las etiquetas que pertenecen a
+ * una ruta se resuelven por slug (exactas); el resto conserva el emparejamiento
+ * difuso de siempre.
+ */
 export function resolveMythsByTitles(titles, candidates = []) {
   const resolved = new Map();
   const used = new Set();
+  const bySlug = new Map(
+    candidates.filter(Boolean).map((candidate) => [candidate.slug, candidate])
+  );
+  const pending = [];
 
-  titles.forEach((title) => {
+  (titles || []).forEach((title) => {
+    const slug = resolveRouteMythSlug(title);
+    const candidate = slug ? bySlug.get(slug) : null;
+    if (candidate) {
+      used.add(candidate.slug);
+      resolved.set(title, candidate);
+      return;
+    }
+    pending.push(title);
+    resolved.set(title, null);
+  });
+
+  pending.forEach((title) => {
     let best = null;
     let bestScore = 0;
-
     candidates.forEach((candidate) => {
       if (!candidate || used.has(candidate.slug)) {
         return;
@@ -573,17 +477,240 @@ export function resolveMythsByTitles(titles, candidates = []) {
         best = candidate;
       }
     });
-
     if (best && bestScore > 0) {
       used.add(best.slug);
       resolved.set(title, best);
-    } else {
-      resolved.set(title, null);
     }
   });
 
   return resolved;
 }
+
+const TITLE_STOPWORDS = new Set([
+  "el",
+  "la",
+  "los",
+  "las",
+  "del",
+  "de",
+  "y",
+  "en",
+  "al",
+  "un",
+  "una",
+  "unos",
+  "unas",
+  "por",
+  "para",
+  "con",
+]);
+
+function getTitleTokens(value) {
+  return normalizeTitle(value)
+    .split(" ")
+    .map((token) => token.trim())
+    .filter((token) => token.length > 2 && !TITLE_STOPWORDS.has(token));
+}
+
+function buildTitlePatterns(titles = []) {
+  const patterns = new Set();
+
+  titles
+    .map((item) => (item ? String(item).trim() : ""))
+    .filter(Boolean)
+    .forEach((title) => {
+      const noParens = title.replace(/\([^)]*\)/g, " ").trim();
+      const noPunct = title.replace(/[^A-Za-z0-9\u00C0-\u017F]+/g, " ").trim();
+      const normalized = normalizeTitle(title);
+      const tokens = getTitleTokens(title);
+      const compact = tokens.join(" ").trim();
+
+      [title, noParens, noPunct, normalized, compact]
+        .filter(Boolean)
+        .forEach((candidate) => {
+          const trimmed = candidate.trim();
+          if (trimmed.length >= 4 && !TITLE_STOPWORDS.has(trimmed)) {
+            patterns.add(trimmed);
+          }
+        });
+
+      if (tokens.length) {
+        const longest = tokens.reduce(
+          (acc, item) => (item.length > acc.length ? item : acc),
+          ""
+        );
+        if (longest.length >= 4) {
+          patterns.add(longest);
+        }
+        if (tokens.length >= 2) {
+          patterns.add(tokens.slice(0, 2).join(" "));
+        }
+        if (tokens.length >= 3) {
+          patterns.add(tokens.slice(0, 3).join(" "));
+        }
+      }
+    });
+
+  return Array.from(patterns);
+}
+
+function buildTitleWhereSqlite(patterns = []) {
+  const clauses = [];
+  const params = {};
+
+  patterns
+    .map((item) => (item ? String(item).trim().toLowerCase() : ""))
+    .filter(Boolean)
+    .forEach((pattern, index) => {
+      const key = `t${index}`;
+      params[key] = `%${pattern}%`;
+      clauses.push(
+        `(
+          lower(myths.title) LIKE :${key} OR
+          lower(myths.tags_raw) LIKE :${key} OR
+          lower(myths.focus_keywords_raw) LIKE :${key} OR
+          lower(myths.category_path) LIKE :${key}
+        )`
+      );
+    });
+
+  return {
+    whereClause: clauses.length ? `WHERE ${clauses.join(" OR ")}` : "",
+    params,
+  };
+}
+
+async function getMythsByFuzzyTitlesPostgres(titles = []) {
+  const patterns = buildTitlePatterns(titles).map((pattern) => `%${pattern}%`);
+  if (!patterns.length) {
+    return [];
+  }
+  const sql = getSqlClient();
+
+  try {
+    const result = await sql.query(
+      `
+        SELECT
+${MYTH_COLUMNS},
+          vi.image_url AS vertical_image_url,
+${MYTH_TAXONOMY}
+${MYTH_JOINS}
+        LEFT JOIN LATERAL (
+          SELECT image_url
+          FROM vertical_images
+          WHERE entity_type = 'myth' AND entity_id = myths.id
+            AND COALESCE(updated_at, created_at) >=
+              COALESCE(myths.updated_at, updated_at, created_at)
+          ORDER BY updated_at DESC NULLS LAST, created_at DESC NULLS LAST
+          LIMIT 1
+        ) vi ON true
+        WHERE
+          myths.title ILIKE ANY($1) OR
+          myths.tags_raw ILIKE ANY($1) OR
+          myths.focus_keywords_raw ILIKE ANY($1) OR
+          myths.category_path ILIKE ANY($1)
+      `,
+      [patterns]
+    );
+    return result.rows;
+  } catch (error) {
+    console.error("[routes] fallback: myths by titles without vertical_images", error);
+    const result = await sql.query(
+      `
+        SELECT
+${MYTH_COLUMNS},
+${MYTH_TAXONOMY}
+${MYTH_JOINS}
+        WHERE
+          myths.title ILIKE ANY($1) OR
+          myths.tags_raw ILIKE ANY($1) OR
+          myths.focus_keywords_raw ILIKE ANY($1) OR
+          myths.category_path ILIKE ANY($1)
+      `,
+      [patterns]
+    );
+    return result.rows;
+  }
+}
+
+function getMythsByFuzzyTitlesSqlite(titles = []) {
+  const patterns = buildTitlePatterns(titles);
+  if (!patterns.length) {
+    return [];
+  }
+  const db = getSqliteDb();
+  const { whereClause, params } = buildTitleWhereSqlite(patterns);
+
+  try {
+    const sql = `
+      SELECT
+${MYTH_COLUMNS},
+        (
+          SELECT image_url
+          FROM vertical_images vi
+          WHERE vi.entity_type = 'myth' AND vi.entity_id = myths.id
+            AND datetime(COALESCE(vi.updated_at, vi.created_at)) >=
+              datetime(COALESCE(myths.updated_at, vi.updated_at, vi.created_at))
+          ORDER BY vi.updated_at DESC, vi.created_at DESC
+          LIMIT 1
+        ) AS vertical_image_url,
+${MYTH_TAXONOMY}
+${MYTH_JOINS}
+      ${whereClause}
+    `;
+    return db.prepare(sql).all(params);
+  } catch (error) {
+    console.error("[routes] fallback: myths by titles without vertical_images", error);
+    const sql = `
+      SELECT
+${MYTH_COLUMNS},
+${MYTH_TAXONOMY}
+${MYTH_JOINS}
+      ${whereClause}
+    `;
+    return db.prepare(sql).all(params);
+  }
+}
+
+/**
+ * Heredado. Devuelve los mitos correspondientes a una lista de etiquetas.
+ * Las que pertenecen a una ruta se piden por slug; las demás caen a la
+ * búsqueda difusa de siempre.
+ */
+export async function getMythsByTitles(titles = []) {
+  const list = (titles || []).filter(Boolean);
+  if (!list.length) return [];
+
+  const slugs = [];
+  const leftovers = [];
+  list.forEach((title) => {
+    const slug = resolveRouteMythSlug(title);
+    if (slug) slugs.push(slug);
+    else leftovers.push(title);
+  });
+
+  const [bySlug, byFuzzy] = await Promise.all([
+    slugs.length ? getMythsBySlugs(slugs) : Promise.resolve([]),
+    leftovers.length
+      ? isPostgres()
+        ? getMythsByFuzzyTitlesPostgres(leftovers)
+        : Promise.resolve(getMythsByFuzzyTitlesSqlite(leftovers))
+      : Promise.resolve([]),
+  ]);
+
+  const merged = new Map();
+  [...bySlug, ...byFuzzy].forEach((row) => {
+    if (row?.slug && !merged.has(row.slug)) merged.set(row.slug, row);
+  });
+  return Array.from(merged.values());
+}
+
+/* ------------------------------------------------------------------------ *
+ * Búsqueda por palabra clave
+ *
+ * Ya no la usa ninguna ruta —todas declaran sus mitos— pero se conserva como
+ * herramienta para explorar el archivo al componer una ruta nueva.
+ * ------------------------------------------------------------------------ */
 
 function clampNumber(value, min, max, fallback) {
   const parsed = Number.parseInt(value, 10);
@@ -667,20 +794,10 @@ async function getRouteMythsPostgres({ keywords = [], limit = 12, seed = 0 }) {
     const result = await sql.query(
       `
         SELECT
-          myths.id,
-          myths.title,
-          myths.slug,
-          myths.excerpt,
-          myths.category_path,
-          myths.image_url,
+${MYTH_COLUMNS},
           vi.image_url AS vertical_image_url,
-          regions.name AS region,
-          regions.slug AS region_slug,
-          communities.name AS community,
-          communities.slug AS community_slug
-        FROM myths
-        JOIN regions ON regions.id = myths.region_id
-        LEFT JOIN communities ON communities.id = myths.community_id
+${MYTH_TAXONOMY}
+${MYTH_JOINS}
         LEFT JOIN LATERAL (
           SELECT image_url
           FROM vertical_images
@@ -706,19 +823,9 @@ async function getRouteMythsPostgres({ keywords = [], limit = 12, seed = 0 }) {
     const result = await sql.query(
       `
         SELECT
-          myths.id,
-          myths.title,
-          myths.slug,
-          myths.excerpt,
-          myths.category_path,
-          myths.image_url,
-          regions.name AS region,
-          regions.slug AS region_slug,
-          communities.name AS community,
-          communities.slug AS community_slug
-        FROM myths
-        JOIN regions ON regions.id = myths.region_id
-        LEFT JOIN communities ON communities.id = myths.community_id
+${MYTH_COLUMNS},
+${MYTH_TAXONOMY}
+${MYTH_JOINS}
         ${whereClause}
         ORDER BY
           CASE WHEN myths.image_url IS NOT NULL THEN 0 ELSE 1 END,
@@ -741,12 +848,7 @@ function getRouteMythsSqlite({ keywords = [], limit = 12, seed = 0 }) {
   try {
     const sql = `
       SELECT
-        myths.id,
-        myths.title,
-        myths.slug,
-        myths.excerpt,
-        myths.category_path,
-        myths.image_url,
+${MYTH_COLUMNS},
         (
           SELECT image_url
           FROM vertical_images vi
@@ -756,13 +858,8 @@ function getRouteMythsSqlite({ keywords = [], limit = 12, seed = 0 }) {
           ORDER BY vi.updated_at DESC, vi.created_at DESC
           LIMIT 1
         ) AS vertical_image_url,
-        regions.name AS region,
-        regions.slug AS region_slug,
-        communities.name AS community,
-        communities.slug AS community_slug
-      FROM myths
-      JOIN regions ON regions.id = myths.region_id
-      LEFT JOIN communities ON communities.id = myths.community_id
+${MYTH_TAXONOMY}
+${MYTH_JOINS}
       ${whereClause}
       ORDER BY
         CASE WHEN image_url IS NOT NULL THEN 0 ELSE 1 END,
@@ -776,19 +873,9 @@ function getRouteMythsSqlite({ keywords = [], limit = 12, seed = 0 }) {
     console.error("[routes] vertical_images unavailable, fallback to myths.image_url", error);
     const sql = `
       SELECT
-        myths.id,
-        myths.title,
-        myths.slug,
-        myths.excerpt,
-        myths.category_path,
-        myths.image_url,
-        regions.name AS region,
-        regions.slug AS region_slug,
-        communities.name AS community,
-        communities.slug AS community_slug
-      FROM myths
-      JOIN regions ON regions.id = myths.region_id
-      LEFT JOIN communities ON communities.id = myths.community_id
+${MYTH_COLUMNS},
+${MYTH_TAXONOMY}
+${MYTH_JOINS}
       ${whereClause}
       ORDER BY
         CASE WHEN myths.image_url IS NOT NULL THEN 0 ELSE 1 END,
@@ -805,425 +892,4 @@ export async function getRouteMyths({ keywords = [], limit = 12, seed = 0 } = {}
     return getRouteMythsPostgres({ keywords, limit, seed });
   }
   return getRouteMythsSqlite({ keywords, limit, seed });
-}
-
-function buildTitleWhereSqlite(patterns = []) {
-  const clauses = [];
-  const params = {};
-
-  patterns
-    .map((item) => (item ? String(item).trim().toLowerCase() : ""))
-    .filter(Boolean)
-    .forEach((pattern, index) => {
-      const key = `t${index}`;
-      params[key] = `%${pattern}%`;
-      clauses.push(
-        `(
-          lower(myths.title) LIKE :${key} OR
-          lower(myths.tags_raw) LIKE :${key} OR
-          lower(myths.focus_keywords_raw) LIKE :${key} OR
-          lower(myths.category_path) LIKE :${key}
-        )`
-      );
-    });
-
-  return {
-    whereClause: clauses.length ? `WHERE ${clauses.join(" OR ")}` : "",
-    params,
-  };
-}
-
-async function getMythsByTitlesPostgres(titles = []) {
-  const patterns = buildTitlePatterns(titles).map((pattern) => `%${pattern}%`);
-  if (!patterns.length) {
-    return [];
-  }
-  const sql = getSqlClient();
-
-  try {
-    const result = await sql.query(
-      `
-        SELECT
-          myths.id,
-          myths.title,
-          myths.slug,
-          myths.excerpt,
-          myths.category_path,
-          myths.image_url,
-          vi.image_url AS vertical_image_url,
-          regions.name AS region,
-          regions.slug AS region_slug,
-          communities.name AS community,
-          communities.slug AS community_slug
-        FROM myths
-        JOIN regions ON regions.id = myths.region_id
-        LEFT JOIN communities ON communities.id = myths.community_id
-        LEFT JOIN LATERAL (
-          SELECT image_url
-          FROM vertical_images
-          WHERE entity_type = 'myth' AND entity_id = myths.id
-            AND COALESCE(updated_at, created_at) >=
-              COALESCE(myths.updated_at, updated_at, created_at)
-          ORDER BY updated_at DESC NULLS LAST, created_at DESC NULLS LAST
-          LIMIT 1
-        ) vi ON true
-        WHERE
-          myths.title ILIKE ANY($1) OR
-          myths.tags_raw ILIKE ANY($1) OR
-          myths.focus_keywords_raw ILIKE ANY($1) OR
-          myths.category_path ILIKE ANY($1)
-      `,
-      [patterns]
-    );
-    return result.rows;
-  } catch (error) {
-    console.error("[routes] fallback: myths by titles without vertical_images", error);
-    const result = await sql.query(
-      `
-        SELECT
-          myths.id,
-          myths.title,
-          myths.slug,
-          myths.excerpt,
-          myths.category_path,
-          myths.image_url,
-          regions.name AS region,
-          regions.slug AS region_slug,
-          communities.name AS community,
-          communities.slug AS community_slug
-        FROM myths
-        JOIN regions ON regions.id = myths.region_id
-        LEFT JOIN communities ON communities.id = myths.community_id
-        WHERE
-          myths.title ILIKE ANY($1) OR
-          myths.tags_raw ILIKE ANY($1) OR
-          myths.focus_keywords_raw ILIKE ANY($1) OR
-          myths.category_path ILIKE ANY($1)
-      `,
-      [patterns]
-    );
-    return result.rows;
-  }
-}
-
-function getMythsByTitlesSqlite(titles = []) {
-  const patterns = buildTitlePatterns(titles);
-  if (!patterns.length) {
-    return [];
-  }
-  const db = getSqliteDb();
-  const { whereClause, params } = buildTitleWhereSqlite(patterns);
-
-  try {
-    const sql = `
-      SELECT
-        myths.id,
-        myths.title,
-        myths.slug,
-        myths.excerpt,
-        myths.category_path,
-        myths.image_url,
-        (
-          SELECT image_url
-          FROM vertical_images vi
-          WHERE vi.entity_type = 'myth' AND vi.entity_id = myths.id
-            AND datetime(COALESCE(vi.updated_at, vi.created_at)) >=
-              datetime(COALESCE(myths.updated_at, vi.updated_at, vi.created_at))
-          ORDER BY vi.updated_at DESC, vi.created_at DESC
-          LIMIT 1
-        ) AS vertical_image_url,
-        regions.name AS region,
-        regions.slug AS region_slug,
-        communities.name AS community,
-        communities.slug AS community_slug
-      FROM myths
-      JOIN regions ON regions.id = myths.region_id
-      LEFT JOIN communities ON communities.id = myths.community_id
-      ${whereClause}
-    `;
-    return db.prepare(sql).all(params);
-  } catch (error) {
-    console.error("[routes] fallback: myths by titles without vertical_images", error);
-    const sql = `
-      SELECT
-        myths.id,
-        myths.title,
-        myths.slug,
-        myths.excerpt,
-        myths.category_path,
-        myths.image_url,
-        regions.name AS region,
-        regions.slug AS region_slug,
-        communities.name AS community,
-        communities.slug AS community_slug
-      FROM myths
-      JOIN regions ON regions.id = myths.region_id
-      LEFT JOIN communities ON communities.id = myths.community_id
-      ${whereClause}
-    `;
-    return db.prepare(sql).all(params);
-  }
-}
-
-export async function getMythsByTitles(titles = []) {
-  if (isPostgres()) {
-    return getMythsByTitlesPostgres(titles);
-  }
-  return getMythsByTitlesSqlite(titles);
-}
-
-export async function getRouteOgImage(titles = []) {
-  const patterns = buildTitlePatterns(titles);
-  if (!patterns.length) return null;
-
-  if (isPostgres()) {
-    const sql = getSqlClient();
-    const result = await sql.query(
-      `
-        SELECT image_url
-        FROM myths
-        WHERE image_url IS NOT NULL
-          AND image_url != ''
-          AND (
-            title ILIKE ANY($1) OR
-            tags_raw ILIKE ANY($1) OR
-            focus_keywords_raw ILIKE ANY($1) OR
-            category_path ILIKE ANY($1)
-          )
-        ORDER BY id ASC
-        LIMIT 1
-      `,
-      [patterns.map((pattern) => `%${pattern}%`)]
-    );
-    return result.rows?.[0]?.image_url || null;
-  }
-
-  const db = getSqliteDb();
-  const { whereClause, params } = buildTitleWhereSqlite(patterns);
-  const row = db
-    .prepare(
-      `
-        SELECT myths.image_url
-        FROM myths
-        ${whereClause}
-          AND myths.image_url IS NOT NULL
-          AND myths.image_url != ''
-        ORDER BY myths.id ASC
-        LIMIT 1
-      `
-    )
-    .get(params);
-  return row?.image_url || null;
-}
-
-async function getMythsBySlugsPostgres(slugs = []) {
-  if (!slugs.length) {
-    return [];
-  }
-  const sql = getSqlClient();
-
-  try {
-    const result = await sql.query(
-      `
-        SELECT
-          myths.id,
-          myths.title,
-          myths.slug,
-          myths.excerpt,
-          myths.category_path,
-          myths.image_url,
-          vi.image_url AS vertical_image_url,
-          regions.name AS region,
-          regions.slug AS region_slug,
-          communities.name AS community,
-          communities.slug AS community_slug
-        FROM myths
-        JOIN regions ON regions.id = myths.region_id
-        LEFT JOIN communities ON communities.id = myths.community_id
-        LEFT JOIN LATERAL (
-          SELECT image_url
-          FROM vertical_images
-          WHERE entity_type = 'myth' AND entity_id = myths.id
-            AND COALESCE(updated_at, created_at) >=
-              COALESCE(myths.updated_at, updated_at, created_at)
-          ORDER BY updated_at DESC NULLS LAST, created_at DESC NULLS LAST
-          LIMIT 1
-        ) vi ON true
-        WHERE myths.slug = ANY($1)
-        ORDER BY array_position($1, myths.slug)
-      `,
-      [slugs]
-    );
-    return result.rows;
-  } catch (error) {
-    console.error("[routes] fallback: myths by slugs without vertical_images", error);
-    const result = await sql.query(
-      `
-        SELECT
-          myths.id,
-          myths.title,
-          myths.slug,
-          myths.excerpt,
-          myths.category_path,
-          myths.image_url,
-          regions.name AS region,
-          regions.slug AS region_slug,
-          communities.name AS community,
-          communities.slug AS community_slug
-        FROM myths
-        JOIN regions ON regions.id = myths.region_id
-        LEFT JOIN communities ON communities.id = myths.community_id
-        WHERE myths.slug = ANY($1)
-        ORDER BY array_position($1, myths.slug)
-      `,
-      [slugs]
-    );
-    return result.rows;
-  }
-}
-
-function getMythsBySlugsSqlite(slugs = []) {
-  if (!slugs.length) {
-    return [];
-  }
-  const db = getSqliteDb();
-  const placeholders = slugs.map(() => "?").join(", ");
-  const orderCases = slugs
-    .map(() => "WHEN ? THEN ?")
-    .join(" ");
-  const orderParams = slugs.flatMap((slug, index) => [slug, index]);
-
-  try {
-    const sql = `
-      SELECT
-        myths.id,
-        myths.title,
-        myths.slug,
-        myths.excerpt,
-        myths.category_path,
-        myths.image_url,
-        (
-          SELECT image_url
-          FROM vertical_images vi
-          WHERE vi.entity_type = 'myth' AND vi.entity_id = myths.id
-            AND datetime(COALESCE(vi.updated_at, vi.created_at)) >=
-              datetime(COALESCE(myths.updated_at, vi.updated_at, vi.created_at))
-          ORDER BY vi.updated_at DESC, vi.created_at DESC
-          LIMIT 1
-        ) AS vertical_image_url,
-        regions.name AS region,
-        regions.slug AS region_slug,
-        communities.name AS community,
-        communities.slug AS community_slug
-      FROM myths
-      JOIN regions ON regions.id = myths.region_id
-      LEFT JOIN communities ON communities.id = myths.community_id
-      WHERE myths.slug IN (${placeholders})
-      ORDER BY CASE myths.slug ${orderCases} ELSE ${slugs.length} END
-    `;
-
-    return db.prepare(sql).all(...slugs, ...orderParams);
-  } catch (error) {
-    console.error("[routes] fallback: myths by slugs without vertical_images", error);
-    const sql = `
-      SELECT
-        myths.id,
-        myths.title,
-        myths.slug,
-        myths.excerpt,
-        myths.category_path,
-        myths.image_url,
-        regions.name AS region,
-        regions.slug AS region_slug,
-        communities.name AS community,
-        communities.slug AS community_slug
-      FROM myths
-      JOIN regions ON regions.id = myths.region_id
-      LEFT JOIN communities ON communities.id = myths.community_id
-      WHERE myths.slug IN (${placeholders})
-      ORDER BY CASE myths.slug ${orderCases} ELSE ${slugs.length} END
-    `;
-    return db.prepare(sql).all(...slugs, ...orderParams);
-  }
-}
-
-export async function getMythsBySlugs(slugs = []) {
-  if (isPostgres()) {
-    return getMythsBySlugsPostgres(slugs);
-  }
-  return getMythsBySlugsSqlite(slugs);
-}
-
-const getRoutePreviewsCached = unstable_cache(
-  async (seed = 0) => {
-    const safeSeed = Number.isFinite(seed) ? seed : 0;
-    const routesWithCurated = ROUTES.map((route) => {
-      const curatedTitles = [
-        route.curated?.coverTitle,
-        ...(route.curated?.heroTitles || []),
-        ...(route.curated?.galleryTitles || []),
-      ].filter(Boolean);
-      return {
-        route,
-        curatedTitles: Array.from(new Set(curatedTitles)),
-      };
-    });
-
-    const allCuratedTitles = Array.from(
-      new Set(
-        routesWithCurated.flatMap((item) => item.curatedTitles)
-      )
-    );
-    const curatedResult = allCuratedTitles.length
-      ? await getMythsByTitles(allCuratedTitles)
-      : [];
-
-    const previews = await Promise.all(
-      routesWithCurated.map(async ({ route, curatedTitles }, index) => {
-        let preview = null;
-
-        if (curatedTitles.length) {
-          const resolvedMap = resolveMythsByTitles(curatedTitles, curatedResult);
-          const cover = route.curated?.coverTitle
-            ? resolvedMap.get(route.curated.coverTitle)
-            : null;
-          const resolvedList = curatedTitles
-            .map((title) => resolvedMap.get(title))
-            .filter(Boolean);
-          preview =
-            cover ||
-            resolvedList.find((item) => item.image_url) ||
-            resolvedList[0] ||
-            null;
-        }
-
-        if (!preview) {
-          const myths = await getRouteMyths({
-            keywords: route.keywords,
-            limit: 3,
-            seed: safeSeed + index * 7,
-          });
-          preview = myths.find((item) => item.image_url) || myths[0] || null;
-        }
-
-        return { ...route, preview };
-      })
-    );
-
-    return previews;
-  },
-  ["route-previews"],
-  { revalidate: ONE_DAY }
-);
-
-export async function getRoutePreviews(seed = 0) {
-  return getRoutePreviewsCached(seed);
-}
-
-export function getRouteBySlug(slug) {
-  return ROUTES.find((route) => route.slug === slug);
-}
-
-export function getAccentStyles(accent) {
-  return ACCENT_STYLES[accent] || ACCENT_STYLES.river;
 }

@@ -2,6 +2,15 @@ node_modules
 .next
 .superpowers
 .worktrees/
+
+# Claude Code: settings.local.json guarda los permisos de esta maquina y ha
+# llegado a contener tokens dentro de las reglas de allow, asi que nunca se
+# versiona. launch.json si se versiona: solo declara el puerto de dev y es
+# configuracion compartida del proyecto.
+.claude/settings.local.json
+.claude/*.local.json
+.claude/worktrees/
+
 artifacts/
 .env
 .env.*

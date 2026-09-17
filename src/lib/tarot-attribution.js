@@ -84,11 +84,19 @@ export function readTarotAttribution({ storages, now = Date.now() } = {}) {
   return {};
 }
 
+/**
+ * Campos que no vienen del clic sino de la página donde ocurre la captura.
+ * Se conservan cuando un capturador de alcance global vuelve a leer la misma
+ * visita, para que la landing no pierda su intención declarada.
+ */
+const CONTEXT_FIELDS = ["campaign", "content", "landing_intent"];
+
 export function captureTarotAttribution({
   search,
   context = {},
   storages,
   now = Date.now(),
+  keepStoredContext = false,
 } = {}) {
   const candidates = storages || availableBrowserStorages();
   const query = new URLSearchParams(
@@ -111,10 +119,18 @@ export function captureTarotAttribution({
 
   const hasClickAttribution = Object.keys(incoming).length > 0;
   const previous = readTarotAttribution({ storages: candidates, now });
+  const inheritedContext = keepStoredContext
+    ? Object.fromEntries(
+        CONTEXT_FIELDS.filter((field) => previous[field]).map((field) => [
+          field,
+          previous[field],
+        ])
+      )
+    : {};
   const campaign = cleanTarotCampaign(
     hasClickAttribution || !Object.keys(previous).length
-      ? { ...incoming, ...context }
-      : previous
+      ? { ...incoming, ...inheritedContext, ...context }
+      : { ...previous, ...context }
   );
   if (!Object.keys(campaign).length) return {};
 

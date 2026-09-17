@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { getImageAspect } from "../../lib/myth-images";
 import { Container, ImageFrame, Motif } from "../atoms";
 
 /**
@@ -14,7 +15,7 @@ import { Container, ImageFrame, Motif } from "../atoms";
  * más abajo.
  *
  *   --avail  alto libre = pantalla − header (4rem)
- *   --art    alto de la obra a ancho completo (2:3 ⇒ 150vw)
+ *   --art    alto REAL de la obra a ancho completo (2:3 ⇒ 150vw, 9:16 ⇒ 177,78vw)
  *   --peek   mínimo de artículo asomando, para que no quede una rendija
  *
  *   alto = min(--avail, max(--art, 2·--art + --peek − --avail))
@@ -23,17 +24,47 @@ import { Container, ImageFrame, Motif } from "../atoms";
  * cero recorte, 199px de artículo asomando. Cuando la obra casi llena la
  * pantalla y sólo dejaría una rendija (iPhone SE: 603 libres, obra 562 ⇒ 41px)
  * gana el segundo término, la portada toma todo el alto y `cover` recorta ~7%
- * por los costados en vez de dejar el sobrante colgando.
+ * por los costados en vez de dejar el sobrante colgando. Los dos ejemplos son
+ * de una obra 2:3; con una 9:16 el mismo iPhone 15 mide 698 de obra, la
+ * portada se queda en 737 y el recorte cae del 15,6 % (cuando se le imponía
+ * 2:3 a todo) al 5,3 %, y por los costados.
  *
  * Escritorio — sin cambios: la apaisada llena la ventana, scrim suave y el
  * texto apoyado abajo a la izquierda.
  */
 
-// Las verticales del archivo son 1024×1536 (`IMAGE_PRESETS.vertical`), o sea
-// 2:3 — no 9:16. Si un mito sólo tiene apaisada, 4:5 recorta menos que
-// forzarla al retrato completo.
+// El grueso de las verticales del archivo es 1024×1536 (`IMAGE_PRESETS.vertical`),
+// o sea 2:3 — no 9:16 —, y es el respaldo cuando no conocemos la medida real.
+// Si un mito sólo tiene apaisada, 4:5 recorta menos que forzarla al retrato
+// completo.
 const PORTRAIT_ART = "150vw";
 const FALLBACK_ART = "125vw";
+// 1:2. Más allá la obra no cabe en ninguna pantalla y el segundo término de la
+// fórmula dejaría de significar nada.
+const MAX_ART_VW = 200;
+
+/**
+ * Alto de la obra a ancho completo, medido y no supuesto.
+ *
+ * `PORTRAIT_ART` daba 2:3 a TODAS las verticales, pero 207 de las 596 son 9:16
+ * (177,78vw): a esas la portada les recortaba el 15,6 % por arriba y por abajo
+ * con `object-cover`. Con la medida real la caja es la de la obra y el recorte
+ * desaparece salvo que la pantalla no dé para más, que es justo lo que decide
+ * la fórmula de abajo.
+ *
+ * Se mide en el servidor —esta plantilla no es un componente de cliente—, así
+ * que el mapa de dimensiones no viaja al navegador: sólo el número resultante.
+ */
+function mobileArtHeight(verticalImageUrl) {
+  if (!verticalImageUrl) return FALLBACK_ART;
+  const aspect = getImageAspect(verticalImageUrl);
+  if (!aspect || !(aspect.ratio > 0)) return PORTRAIT_ART;
+  // La ranura vertical con una obra apaisada dentro: no es una portada de
+  // retrato y forzarla a 2:3 sería recortarle media escena.
+  if (aspect.ratio >= 1) return FALLBACK_ART;
+  const vw = Math.min(MAX_ART_VW, Math.round((aspect.h / aspect.w) * 10000) / 100);
+  return `${vw}vw`;
+}
 
 const isLongTitle = (title) => String(title || "").length > 26;
 
@@ -47,7 +78,7 @@ export function MythHero({ myth }) {
       className="relative w-full overflow-hidden bg-[rgb(var(--atlas-night))] md:h-auto md:min-h-[calc(100svh-4rem)]"
       style={{
         "--avail": "calc(100svh - 4rem)",
-        "--art": myth.verticalImageUrl ? PORTRAIT_ART : FALLBACK_ART,
+        "--art": mobileArtHeight(myth.verticalImageUrl),
         "--peek": "8rem",
         height:
           "min(var(--avail), max(var(--art), calc(2 * var(--art) + var(--peek) - var(--avail))))",

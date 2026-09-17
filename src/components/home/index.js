@@ -1,6 +1,7 @@
 export { HomeCover } from "./HomeCover";
 export { TodayTable } from "./TodayTable";
 export { CommunityTabs } from "./CommunityTabs";
+export { UnattributedBand } from "./UnattributedBand";
 export { TarotBand } from "./TarotBand";
 export {
   RouteBanner,

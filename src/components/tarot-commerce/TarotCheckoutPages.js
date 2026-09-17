@@ -13,11 +13,23 @@ import {
   getConfirmedTarotPurchase,
 } from "../../lib/tarot-purchase";
 import { getTarotCheckoutIntent } from "../../lib/tarot-commerce";
+import {
+  BOLD_CHECKOUT_FAILED_EVENT,
+  BOLD_CHECKOUT_LOADED_EVENT,
+  loadBoldCheckoutScript,
+  onBoldCheckoutClosed,
+  openBoldEmbeddedCheckout,
+} from "../../lib/bold-browser";
 import { Header } from "../organisms/Header";
 import styles from "./TarotCheckout.module.css";
 
 const CART_KEY = "mitos_tarot_cart_v1";
 const FINAL_ORDER_STATUSES = new Set(["APPROVED", "DECLINED", "VOIDED", "ERROR"]);
+const PAYMENT_POLL_INTERVAL_MS = 3000;
+/* La transacción puede tardar hasta 10 minutos en aparecer del lado de Bold. */
+const PAYMENT_POLL_MAX_ATTEMPTS = 200;
+/* Cuando el modal se cierra, un minuto más antes de dejar de esperar. */
+const PAYMENT_POLL_ATTEMPTS_AFTER_CLOSE = 20;
 
 function Icon({ name, size = 21 }) {
   const paths = {
@@ -90,40 +102,35 @@ function useCheckoutIntent() {
   return intent;
 }
 
-function getDeviceFingerprint() {
-  const userAgent = navigator.userAgent || "";
-  return {
-    deviceType: /Mobi|Android/i.test(userAgent) ? "MOBILE" : "DESKTOP",
-    os: navigator.userAgentData?.platform || navigator.platform || "Unknown",
-    model: "",
-    browser: userAgent.slice(0, 120),
-    javaEnabled: typeof navigator.javaEnabled === "function" && navigator.javaEnabled(),
-    language: navigator.language || "es-CO",
-    colorDepth: window.screen?.colorDepth || 24,
-    screenHeight: window.screen?.height || 800,
-    screenWidth: window.screen?.width || 1280,
-    timeZoneOffset: new Date().getTimezoneOffset(),
-    platform: navigator.platform || "",
-  };
-}
+/**
+ * Carga la librería del botón y avisa cuando está lista.
+ *
+ * Se hace en un efecto porque React no ejecuta los <script> que renderiza. El
+ * botón de pago permanece deshabilitado hasta que la librería responde: pedir
+ * los datos y descubrir después que la pasarela no cargó sería prometer un
+ * pago que no existe.
+ */
+function useBoldCheckoutLibrary(enabled) {
+  const [status, setStatus] = useState("loading");
 
-function followBoldNextAction(checkout) {
-  if (checkout?.nextAction?.redirectUrl) {
-    const destination = new URL(checkout.nextAction.redirectUrl);
-    if (destination.protocol !== "https:") throw new Error("El destino de pago de Bold no es válido.");
-    if (checkout.nextAction.redirectMethod === "POST") {
-      const form = document.createElement("form");
-      form.method = "POST";
-      form.action = destination.toString();
-      form.hidden = true;
-      document.body.appendChild(form);
-      form.submit();
-      return true;
-    }
-    window.location.assign(destination.toString());
-    return true;
-  }
-  return false;
+  useEffect(() => {
+    if (!enabled) return undefined;
+    const ready = () => setStatus("ready");
+    const failed = () => setStatus("failed");
+    /* Los nombres salen de las constantes que dispara el cargador: escritos a
+       mano, renombrar una allá dejaría el botón deshabilitado para siempre y
+       en silencio. */
+    window.addEventListener(BOLD_CHECKOUT_LOADED_EVENT, ready);
+    window.addEventListener(BOLD_CHECKOUT_FAILED_EVENT, failed);
+    if (window.BoldCheckout) setStatus("ready");
+    else loadBoldCheckoutScript();
+    return () => {
+      window.removeEventListener(BOLD_CHECKOUT_LOADED_EVENT, ready);
+      window.removeEventListener(BOLD_CHECKOUT_FAILED_EVENT, failed);
+    };
+  }, [enabled]);
+
+  return status;
 }
 
 function StoreHeader({ quantity }) {
@@ -256,7 +263,7 @@ function PaymentPreview({ methods }) {
       <p className={styles.sectionEyebrow}>Elige después, entiende ahora</p>
       <h2 id="payment-preview-title">Cinco rutas de pago, una sola confirmación segura</h2>
       <p>
-        La integración usa la API de Bold. Aquí puedes comprobar cuáles rutas están realmente activadas antes de compartir tus datos.
+        El pago ocurre en una ventana de Bold sobre esta misma página. Aquí puedes comprobar cuáles rutas están realmente activadas antes de compartir tus datos.
       </p>
       <PaymentMethodGrid methods={methods} />
     </section>
@@ -273,7 +280,7 @@ function TrustSequence({ product }) {
       </div>
       <ol>
         <li><span>01</span><strong>Antes</strong><p>{conditionsReady ? "Ves el total, el envío incluido y la entrega confirmada." : "Faltan condiciones comerciales; por eso el pago permanece cerrado."}</p></li>
-        <li><span>02</span><strong>Durante</strong><p>Bold procesa el medio habilitado; los datos de tarjeta se transmiten cifrados y no se guardan en la orden.</p></li>
+        <li><span>02</span><strong>Durante</strong><p>Bold abre su ventana de pago sobre esta página; los datos de la tarjeta se escriben allí y no pasan por nuestro servidor.</p></li>
         <li><span>03</span><strong>Después</strong><p>La compra sólo se confirma al recibir y conciliar el estado final del procesador.</p></li>
       </ol>
     </section>
@@ -374,16 +381,13 @@ export function TarotCheckoutPage({ product, account = null }) {
   const [quantity, setQuantity] = useState(0);
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState("");
-  const [paymentMethod, setPaymentMethod] = useState(
-    product.paymentMethods.find((method) => method.confirmed)?.id || "card"
-  );
-  const [pseBanks, setPseBanks] = useState([]);
-  const [pseBankCode, setPseBankCode] = useState("");
-  const [paymentAction, setPaymentAction] = useState(null);
+  const [payment, setPayment] = useState(null);
+  const [paymentNotice, setPaymentNotice] = useState("");
   const trackedView = useRef(false);
   const analyticsContextPromise = useRef(null);
   const errorRef = useRef(null);
   const intent = useCheckoutIntent();
+  const boldStatus = useBoldCheckoutLibrary(product.checkoutReady);
 
   useEffect(() => {
     setQuantity(readQuantity());
@@ -397,30 +401,86 @@ export function TarotCheckoutPage({ product, account = null }) {
     if (error) errorRef.current?.focus();
   }, [error]);
 
+  /**
+   * Vigila el pago mientras el modal está abierto.
+   *
+   * Bold no expone ninguna devolución de llamada de "pagado": la única verdad
+   * es nuestra orden, que confirma el webhook firmado. Por eso aquí sólo se
+   * consulta el estado del pedido. El cierre del modal adelanta la consulta,
+   * nunca da el pago por hecho.
+   */
   useEffect(() => {
-    if (!product.checkoutReady || paymentMethod !== "pse" || pseBanks.length) return;
+    if (!payment?.statusUrl) return undefined;
     let active = true;
-    fetch("/api/tarot/bold/pse-banks", { cache: "no-store" })
-      .then(async (response) => {
-        const body = await response.json();
-        if (!response.ok) throw new Error("No fue posible consultar los bancos PSE.");
-        if (active) setPseBanks(body.banks || []);
-      })
-      .catch((bankError) => {
-        if (active) setError(bankError.message);
-      });
-    return () => { active = false; };
-  }, [paymentMethod, product.checkoutReady, pseBanks.length]);
+    let timer;
+    let attempts = 0;
+    let deadline = PAYMENT_POLL_MAX_ATTEMPTS;
+
+    const stopListening = onBoldCheckoutClosed(() => {
+      deadline = Math.min(deadline, attempts + PAYMENT_POLL_ATTEMPTS_AFTER_CLOSE);
+      setPaymentNotice(
+        "Cerraste la ventana de pago. Si completaste el pago, estamos confirmándolo con Bold."
+      );
+    });
+
+    async function check() {
+      attempts += 1;
+      try {
+        const response = await fetch(payment.statusUrl, { cache: "no-store" });
+        const result = await response.json();
+        if (!active) return;
+        const status = response.ok ? result?.order?.status : null;
+
+        if (status === "APPROVED") {
+          window.location.assign(payment.resultUrl);
+          return;
+        }
+        if (status && FINAL_ORDER_STATUSES.has(status)) {
+          setSubmitting(false);
+          setPaymentNotice("");
+          setPayment(null);
+          setError(
+            status === "DECLINED"
+              ? "Bold no aprobó el pago. No se realizó ningún cobro; puedes intentar de nuevo con otro medio."
+              : status === "VOIDED"
+                ? "La transacción quedó anulada. No hay ningún cobro vigente; puedes iniciar un pago nuevo."
+                : "El pago terminó con un error y no se confirmó ningún cobro. Puedes intentarlo de nuevo."
+          );
+          return;
+        }
+      } catch {
+        // Un fallo puntual de red no interrumpe la verificación.
+      }
+      if (!active) return;
+      if (attempts >= deadline) {
+        setSubmitting(false);
+        setPayment(null);
+        setPaymentNotice("");
+        setError(
+          "No recibimos la confirmación de Bold. Si completaste el pago, revisa el estado de tu pedido antes de intentar otro cobro."
+        );
+        return;
+      }
+      timer = window.setTimeout(check, PAYMENT_POLL_INTERVAL_MS);
+    }
+
+    timer = window.setTimeout(check, PAYMENT_POLL_INTERVAL_MS);
+    return () => {
+      active = false;
+      window.clearTimeout(timer);
+      stopListening();
+    };
+  }, [payment]);
 
   async function handleSubmit(event) {
     event.preventDefault();
-    if (!product.checkoutReady || submitting) return;
+    if (!product.checkoutReady || submitting || boldStatus !== "ready") return;
     setSubmitting(true);
     setError("");
+    setPaymentNotice("");
 
     const data = new FormData(event.currentTarget);
     try {
-      const selectedBank = pseBanks.find((bank) => bank.bankCode === pseBankCode);
       const analytics = await (
         analyticsContextPromise.current || getAnalyticsSessionContext()
       );
@@ -440,19 +500,6 @@ export function TarotCheckoutPage({ product, account = null }) {
           postalCode: data.get("postalCode"),
           addressLine1: data.get("addressLine1"),
           addressLine2: data.get("addressLine2"),
-          paymentMethod,
-          paymentDetails: paymentMethod === "card" ? {
-            cardNumber: data.get("cardNumber"),
-            cardholderName: data.get("cardholderName"),
-            expirationMonth: data.get("expirationMonth"),
-            expirationYear: data.get("expirationYear"),
-            installments: data.get("installments"),
-            cvc: data.get("cvc"),
-          } : paymentMethod === "pse" ? {
-            bankCode: selectedBank?.bankCode,
-            bankName: selectedBank?.bankName,
-          } : {},
-          deviceFingerprint: getDeviceFingerprint(),
           privacyAccepted: data.get("privacyAccepted") === "yes",
           campaign: {
             ...readTarotAttribution(),
@@ -463,10 +510,6 @@ export function TarotCheckoutPage({ product, account = null }) {
       });
       const result = await response.json();
       if (!response.ok) {
-        if (result.recoverable && result.orderToken && result.resultUrl) {
-          window.location.assign(result.resultUrl);
-          return;
-        }
         throw new Error(result.message || "No fue posible preparar el pago.");
       }
 
@@ -479,17 +522,36 @@ export function TarotCheckoutPage({ product, account = null }) {
         items: [{ item_id: product.sku, item_name: product.name, price: product.priceCop, quantity }],
         ...readTarotAttribution(),
       });
-      if (result.nextAction?.qrPayload) {
-        setPaymentAction({ ...result.nextAction, resultUrl: result.resultUrl });
-        setSubmitting(false);
-      } else if (!followBoldNextAction(result)) {
-        window.location.assign(result.resultUrl);
-      }
+
+      /* El modal se abre con la configuración firmada en el servidor. Si la
+         apertura falla, el pedido queda creado pero sin cobro: se dice, no se
+         disimula. */
+      openBoldEmbeddedCheckout(result.checkout);
+      /* No se afirma que la ventana está abierta: si Bold la rechaza sólo deja
+         un aviso en la consola, y anunciar una ventana que no aparece sería
+         mentirle a quien está esperando pagar. */
+      setPaymentNotice(
+        "Termina el pago en la ventana de Bold. Si no la ves, no se ha cobrado nada y puedes volver a intentarlo."
+      );
+      setPayment({ statusUrl: result.statusUrl, resultUrl: result.resultUrl });
     } catch (checkoutError) {
       setError(checkoutError.message || "No fue posible preparar el pago.");
+      setPaymentNotice("");
       setSubmitting(false);
     }
   }
+
+  const paymentButtonLabel = !product.checkoutReady
+    ? "Pago disponible al completar las condiciones de lanzamiento"
+    : boldStatus === "loading"
+      ? "Cargando la ventana de pago de Bold…"
+      : boldStatus === "failed"
+        ? "La ventana de pago de Bold no está disponible"
+        : payment
+          ? "Esperando la confirmación de Bold…"
+          : submitting
+            ? "Preparando tu pedido…"
+            : `Pagar ${price(product, quantity)} con Bold`;
 
   return (
     <div className={styles.checkoutPage}>
@@ -545,49 +607,38 @@ export function TarotCheckoutPage({ product, account = null }) {
               </section>
               <section>
                 <h2>Pago protegido por Bold</h2>
-                <p className={styles.paymentIntro}>Elige uno de los medios habilitados por Bold. PSE, Nequi, Bancolombia y 3D Secure pueden llevarte a la experiencia segura de la entidad; el QR Bre-B se muestra aquí.</p>
-                <div className={styles.paymentChoice} role="radiogroup" aria-label="Medio de pago">
-                  {product.paymentMethods.map((method) => (
-                    <label key={method.id} data-selected={paymentMethod === method.id ? "true" : "false"}>
-                      <input type="radio" name="paymentMethodChoice" value={method.id} checked={paymentMethod === method.id} onChange={() => setPaymentMethod(method.id)} disabled={submitting} />
-                      <span className={styles.paymentMark} aria-hidden="true">{method.mark}</span>
-                      <span><strong>{method.label}</strong><small>{method.detail}</small></span>
-                    </label>
-                  ))}
-                </div>
-                {paymentMethod === "pse" ? (
-                  <label>Banco para PSE<select value={pseBankCode} onChange={(event) => setPseBankCode(event.target.value)} required disabled={!product.checkoutReady || submitting}><option value="">Selecciona tu banco</option>{pseBanks.map((bank) => <option key={bank.bankCode} value={bank.bankCode}>{bank.bankName}</option>)}</select></label>
-                ) : null}
-                {paymentMethod === "card" ? (
-                  <div className={styles.cardFields}>
-                    <label className={styles.fullField}>Número de tarjeta<input name="cardNumber" type="text" inputMode="numeric" autoComplete="cc-number" pattern="[0-9 ]{13,23}" required maxLength={23} disabled={!product.checkoutReady || submitting} /></label>
-                    <label className={styles.fullField}>Nombre del titular<input name="cardholderName" type="text" autoComplete="cc-name" required minLength={3} maxLength={120} disabled={!product.checkoutReady || submitting} /></label>
-                    <label>Mes<input name="expirationMonth" type="number" autoComplete="cc-exp-month" min="1" max="12" required disabled={!product.checkoutReady || submitting} /></label>
-                    <label>Año<input name="expirationYear" type="number" autoComplete="cc-exp-year" min={new Date().getFullYear()} max={new Date().getFullYear() + 20} required disabled={!product.checkoutReady || submitting} /></label>
-                    <label>CVC<input name="cvc" type="password" inputMode="numeric" autoComplete="cc-csc" pattern="[0-9]{3,4}" minLength={3} maxLength={4} required disabled={!product.checkoutReady || submitting} /></label>
-                    <label>Cuotas<select name="installments" defaultValue="1" required disabled={!product.checkoutReady || submitting}>{[1, 2, 3, 6, 12, 18, 24, 36].map((value) => <option key={value} value={value}>{value}</option>)}</select></label>
+                <p className={styles.paymentIntro}>Al confirmar se abre una ventana de Bold sobre esta misma página. Allí eliges el medio, escribes tus datos de pago y vuelves aquí sin salir del sitio.</p>
+                <PaymentMethodGrid methods={product.paymentMethods} />
+                {product.checkoutReady && boldStatus === "failed" ? (
+                  <div className={styles.paymentNotice} data-tone="alert" role="alert">
+                    <Icon name="info" size={18} />
+                    <span>No pudimos cargar la ventana de pago de Bold. Revisa tu conexión y recarga la página; no se ha cobrado nada.</span>
                   </div>
                 ) : null}
-                {paymentAction?.qrPayload ? (
-                  <div className={styles.qrAction} role="status">
-                    <strong>Escanea este QR Bre-B para completar el pago</strong>
-                    {/* Bold entrega esta imagen en Base64; nunca se persiste en el navegador. */}
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img src={`data:image/png;base64,${paymentAction.qrPayload}`} alt="Código QR Bre-B generado por Bold" />
-                    <p>El código tiene una vigencia limitada. La compra sólo se confirma cuando Bold apruebe la transacción.</p>
-                    <a className={styles.primaryLink} href={paymentAction.resultUrl}>Ver estado del pago <Icon name="arrow" /></a>
+                {paymentNotice ? (
+                  <div className={styles.paymentNotice} role="status">
+                    <Icon name="clock" size={18} />
+                    <span>
+                      {paymentNotice}
+                      {payment ? (
+                        <>
+                          {" "}
+                          <a href={payment.resultUrl}>Ver el estado de este pedido</a>.
+                        </>
+                      ) : null}
+                    </span>
                   </div>
                 ) : null}
-                <p className={styles.providerNote}><Icon name="lock" size={18} />Mitos de Colombia conserva sólo los datos de la orden. Los datos de tarjeta viajan cifrados por TLS a Bold durante esta solicitud y no se guardan en la base de datos ni se incluyen en registros. Consulta la <Link href="/privacidad">política de privacidad</Link>.</p>
+                <p className={styles.providerNote}><Icon name="lock" size={18} />Mitos de Colombia conserva sólo los datos de la orden. Los datos de la tarjeta se escriben dentro de la ventana de Bold: no pasan por nuestro servidor, no se guardan en la base de datos y no aparecen en registros. Consulta la <Link href="/privacidad">política de privacidad</Link>.</p>
               </section>
               {error ? <p ref={errorRef} className={styles.formError} role="alert" tabIndex={-1}>{error}</p> : null}
               <label className={styles.legalConsent}>
                 <input name="privacyAccepted" type="checkbox" value="yes" required disabled={submitting} />
                 <span>He leído los <Link href="/terminos">términos de compra</Link> y autorizo el tratamiento de mis datos para crear, pagar y entregar este pedido según la <Link href="/privacidad">política de privacidad</Link>.</span>
               </label>
-              <button type="submit" className={product.checkoutReady ? styles.paymentButton : styles.disabledButton} disabled={!product.checkoutReady || submitting || Boolean(paymentAction)}>
+              <button type="submit" className={product.checkoutReady ? styles.paymentButton : styles.disabledButton} disabled={!product.checkoutReady || submitting || boldStatus !== "ready"}>
                 <Icon name="lock" size={19} />
-                {submitting ? "Procesando con Bold…" : product.checkoutReady ? `Pagar ${price(product, quantity)} con Bold` : "Pago disponible al completar las condiciones de lanzamiento"}
+                {paymentButtonLabel}
               </button>
             </form>
             <aside className={styles.checkoutAside}>
@@ -634,6 +685,8 @@ function resultContent(order, loading, error) {
 function publicPaymentMethod(value) {
   return {
     CARD: "Tarjeta débito o crédito",
+    /* Botón de Pagos reporta la tarjeta web con su propio nombre. */
+    CARD_WEB: "Tarjeta débito o crédito",
     CREDIT_CARD: "Tarjeta débito o crédito",
     PSE: "PSE",
     NEQUI: "Nequi",
@@ -690,8 +743,28 @@ function publicPaymentStatus(status) {
   }[status] || "Estado por confirmar";
 }
 
+/**
+ * Lo que Bold anuncia al volver a nuestra URL de retorno.
+ *
+ * Es un dato de cortesía —lo agrega Bold como `?bold-tx-status=`— y sólo sirve
+ * para acompañar la espera mientras confirmamos de verdad. Nunca decide el
+ * estado de la orden: eso lo hace el webhook firmado.
+ */
+function readBoldReturnHint() {
+  if (typeof window === "undefined") return "";
+  const status = new URLSearchParams(window.location.search)
+    .get("bold-tx-status");
+  return {
+    approved: "Bold reportó el pago como aprobado. Lo estamos confirmando con su aviso firmado.",
+    rejected: "Bold reportó el pago como rechazado. Estamos confirmándolo antes de darlo por definitivo.",
+    failed: "Bold reportó un fallo en el pago. Estamos confirmándolo antes de darlo por definitivo.",
+    pending: "Bold reportó el pago como pendiente. Puede tardar unos minutos en resolverse.",
+  }[String(status || "").toLowerCase()] || "";
+}
+
 export function TarotOrderResultPage({ token, product, account = null }) {
   const [order, setOrder] = useState(null);
+  const [boldReturnHint, setBoldReturnHint] = useState("");
   const [cartQuantity, setCartQuantity] = useState(0);
   const [loading, setLoading] = useState(Boolean(token));
   const [error, setError] = useState(token ? "" : "Falta el identificador seguro de la orden.");
@@ -703,6 +776,7 @@ export function TarotOrderResultPage({ token, product, account = null }) {
 
   useEffect(() => {
     setCartQuantity(readQuantity());
+    setBoldReturnHint(readBoldReturnHint());
   }, []);
 
   useEffect(() => {
@@ -812,6 +886,12 @@ export function TarotOrderResultPage({ token, product, account = null }) {
           <p className={styles.resultEyebrow}>{content.eyebrow}</p>
           <h1>{content.title}</h1>
           <p className={styles.resultBody}>{content.body}</p>
+          {boldReturnHint && !order?.paymentConfirmed ? (
+            <div className={styles.paymentNotice} role="status">
+              <Icon name="info" size={18} />
+              <span>{boldReturnHint}</span>
+            </div>
+          ) : null}
           <p className={styles.resultIntent}>{resultPromise}</p>
           {order ? (
             <dl className={styles.resultSummary}>

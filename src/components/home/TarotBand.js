@@ -101,7 +101,7 @@ export function TarotBand({ cards = [] }) {
                   alt=""
                   fill
                   sizes="(max-width: 767px) 144px, 208px"
-                  quality={70}
+                  quality={68}
                   className="object-cover"
                 />
               </button>
