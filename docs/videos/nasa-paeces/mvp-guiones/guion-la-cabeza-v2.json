@@ -1,164 +1,23 @@
 {
-  "enfoque": "fogon-visual-coloquial",
-  "comunidad": "nasa-paeces",
-  "mito": "la-cabeza",
-  "titulo": "La cabeza",
-  "canon_slug": "la-cabeza",
-  "reescribe": "guion-la-cabeza-v2: b6 citaba «al amanecer se va» atribuido a testigos, frase que el canon no trae.",
-  "nota_cita": "La cita es la advertencia de la propia narración, y es lo que separa a la cabeza de las otras apariciones del ciclo.",
-  "voice_id": "9EHAKExD4lT2G6hPG74L",
-  "voice_name": "alejandro_narracion",
-  "model_id": "eleven_multilingual_v2",
+  "enfoque": "fogon-visual-coloquial", "comunidad": "nasa-paeces",
+  "mito": "la-cabeza", "titulo": "La cabeza", "canon_slug": "la-cabeza",
+  "acta": "docs/videos/nasa-paeces/actas/acta-la-cabeza.json",
+  "nota_cita": "La cita pone en estilo directo el aviso que el hombre da junto al fogón, referido en indirecto y con sus mismas palabras.",
+  "reescribe": "La versión anterior medía un canon que Neon ya reescribió en voz de fogón. 23 nudos reales, N = techo(23/2) = 12: 24 keyframes, ≈120 s.",
+  "voice_id": "9EHAKExD4lT2G6hPG74L", "voice_name": "alejandro_narracion", "model_id": "eleven_multilingual_v2",
   "lines": [
-    {
-      "window": 9.5,
-      "bloque": "b1",
-      "keyframes": [
-        "k01",
-        "k02"
-      ],
-      "text": "Dicen que una cabeza andaba sola de noche. Sin cuerpo, con un solo diente y una sola oreja.",
-      "cubre": [
-        "n01",
-        "n02"
-      ]
-    },
-    {
-      "window": 9.5,
-      "bloque": "b2",
-      "keyframes": [
-        "k03",
-        "k04"
-      ],
-      "text": "Un hombre sentado en una piedra la vio. Le pegó con el bordón, la tiró al río y corrió.",
-      "cubre": [
-        "n03",
-        "n04"
-      ]
-    },
-    {
-      "window": 9.5,
-      "bloque": "b3",
-      "keyframes": [
-        "k05",
-        "k06"
-      ],
-      "text": "La cabeza salió de la quebrada y empezó a perseguirlo. Él se adelantó y subió a un árbol alto.",
-      "cubre": [
-        "n05",
-        "n06"
-      ]
-    },
-    {
-      "window": 9.5,
-      "bloque": "b4",
-      "keyframes": [
-        "k07",
-        "k08"
-      ],
-      "text": "Pasó de largo, pero volvió. Podía buscarlo por el olor, y llegó derecho al pie del tronco.",
-      "cubre": [
-        "n07",
-        "n08"
-      ]
-    },
-    {
-      "window": 9.5,
-      "bloque": "b5",
-      "keyframes": [
-        "k13",
-        "k14"
-      ],
-      "text": "No alcanzaba a subir. Se golpeaba una y otra vez contra el tronco mientras esperaba allá abajo.",
-      "cubre": [
-        "n09"
-      ]
-    },
-    {
-      "window": 9.5,
-      "bloque": "b6",
-      "keyframes": [
-        "k09",
-        "k15"
-      ],
-      "text": "Cuando cantó el gallo tuvo que dejarlo. La narración advertía: «puede aparecérsele a cualquier hombre, hubiera bebido o no».",
-      "cubre": [
-        "n10",
-        "n11"
-      ]
-    },
-    {
-      "window": 9.5,
-      "bloque": "b7",
-      "keyframes": [
-        "k10",
-        "k16"
-      ],
-      "text": "La cabeza tenía casa y parientes. Si el día la cogía lejos, pedía posada y seguía la noche siguiente.",
-      "cubre": [
-        "n12",
-        "n13"
-      ]
-    },
-    {
-      "window": 9.5,
-      "bloque": "b8",
-      "keyframes": [
-        "k11",
-        "k17"
-      ],
-      "text": "No era una cosa suelta: conservaba olfato, rumbo y familia. Bajaba pendientes fácil y le costaba subir.",
-      "cubre": [
-        "n14",
-        "n15"
-      ]
-    },
-    {
-      "window": 9.5,
-      "bloque": "b9",
-      "keyframes": [
-        "k12",
-        "k18"
-      ],
-      "text": "El hombre bajó y fue a contarlo. Sobrevivir no bastaba: había que avisar por dónde andaba la cabeza.",
-      "cubre": [
-        "n16",
-        "n17"
-      ]
-    }
+    { "window": 9.5, "bloque": "b1", "cubre": ["n01","n02"], "text": "Anda de noche y se levanta lejos de su casa. Un hombre se sentó a descansar con su bordón." },
+    { "window": 9.5, "bloque": "b2", "cubre": ["n03","n04"], "text": "Abajo sonaba el río y la neblina subía borrando los rastrojos. En esa neblina la vio venir." },
+    { "window": 9.5, "bloque": "b3", "cubre": ["n05","n06"], "text": "Era una cabeza sola, con un diente y una oreja. Le pegó de lleno y la mandó al agua." },
+    { "window": 9.5, "bloque": "b4", "cubre": ["n07","n08"], "text": "Después salió corriendo. La cabeza salió de la quebrada detrás de él, bajando la pendiente como una piedra suelta." },
+    { "window": 9.5, "bloque": "b5", "cubre": ["n09","n10"], "text": "Lo pasó de largo: él ya estaba trepado en un árbol, sin respirar. Se devolvió, buscándolo con el olor." },
+    { "window": 9.5, "bloque": "b6", "cubre": ["n11","n12"], "text": "Husmeó el camino, el barranco, las raíces. Al pie del tronco se detuvo y lo vio arriba: no alcanzaba." },
+    { "window": 9.5, "bloque": "b7", "cubre": ["n13","n14"], "text": "Cabeceó contra el palo, y volvió a cabecear. Toda la noche golpeó la madera y el árbol temblaba." },
+    { "window": 9.5, "bloque": "b8", "cubre": ["n15","n16"], "text": "No bajó, no gritó; el frío le entró por la espalda mojada. Cantó un gallo lejos, en alguna casa." },
+    { "window": 9.5, "bloque": "b9", "cubre": ["n17","n18"], "text": "La cabeza dejó el árbol y se fue para su casa. Allí tiene parientes que le dan posada." },
+    { "window": 9.5, "bloque": "b10", "cubre": ["n19","n20"], "text": "Baja las pendientes sin trabajo; subirlas le cuesta. A veces se mete bajo tierra y sale en un campo." },
+    { "window": 9.5, "bloque": "b11", "cubre": ["n21","n22"], "text": "Se bajó del árbol con la primera luz, temblando. Se sentó junto al fogón y les contó a todos." },
+    { "window": 9.5, "bloque": "b12", "cubre": ["n23"], "text": "Les dijo lo que había entendido esa noche. «La cabeza le puede salir a cualquiera, borracho o sereno»." }
   ],
-  "keyframes_nuevos": [
-    {
-      "tag": "k13",
-      "desc": "PLANO BAJO de la cabeza junto al tronco con unas hojas desplazadas alrededor; sin deformación ni violencia gráfica."
-    },
-    {
-      "tag": "k14",
-      "desc": "CONTRAPICADO desde el pie del árbol hacia la copa, el hombre pequeño arriba sujeto a una rama; la espera legible por la distancia."
-    },
-    {
-      "tag": "k15",
-      "desc": "PLANO MEDIO de dos personas conversando de noche en un corredor rural, gesto de advertencia; ninguna aparición en cuadro."
-    },
-    {
-      "tag": "k16",
-      "desc": "PLANO GENERAL de una casa rural con la puerta entreabierta al alba; sin familiares monstruosos inventados."
-    },
-    {
-      "tag": "k17",
-      "desc": "PLANO GENERAL de una pendiente de papel plegado: la cabeza baja con facilidad por un costado y queda detenida al pie del otro."
-    },
-    {
-      "tag": "k18",
-      "desc": "PLANO DETALLE de cierre: el bordón apoyado contra la pared de la casa a la luz de la mañana, sin nadie en cuadro."
-    }
-  ],
-  "voice_settings": {
-    "stability": 0.25,
-    "similarity_boost": 0.9,
-    "style": 0.45,
-    "use_speaker_boost": true,
-    "speed": 1.08
-  },
-  "acta": "docs/videos/nasa-paeces/actas/acta-la-cabeza.json"
+  "voice_settings": { "stability": 0.25, "similarity_boost": 0.9, "style": 0.45, "use_speaker_boost": true, "speed": 1.08 }
 }
