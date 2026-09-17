@@ -18,16 +18,20 @@ está en la producción visual.
 
 | comunidad | biblia | trípticos | keyframes | guiones+actas | estado |
 |---|---|---|---|---|---|
-| **muiscas** | 304 fichas | 351 piezas, 41 mitos | 1.282 | **7/7** | cerrada y publicada · faltan 34 guiones del corpus |
+| **muiscas** | 304 fichas | 351 piezas, 41 mitos | 1.282 | **41/41** | corpus de guiones cerrado 2026-09-17 |
 | **wayuu** | v3 + inventario | 65 specs, 24 documentados | — | **27/27** | corpus de guiones cerrado 2026-09-16 |
 | **nasa-páez** | 110 | 554 | 956 | **25/25** | corpus de guiones cerrado 2026-09-16 |
 | **ette-ennaka** (chimila) | 162 | 303 | 271 | **23/23** | corpus de guiones cerrado 2026-09-16 |
 | **huitoto** (uitoto) | 7 fichas + 124 de investigación | 250 imágenes | — | — | recién abierta |
 
-La columna de guiones cuenta **pares acta+guion verificados**: 82 de 82 pasan
-`lint-guion` (forma) y `lint-acta` (fidelidad al canon). Ojo con la lectura: en
-muiscas 7/7 significa que los siete guiones que existen están bien, no que la
-comunidad esté cubierta — el corpus muisca tiene 41 mitos.
+La columna de guiones cuenta **pares acta+guion verificados**: 116 de 116 pasan
+`lint-guion` (forma) y `lint-acta` (fidelidad al canon). Los cuatro corpus están
+cerrados: cada mito de cada comunidad tiene su acta y su guion, y ninguno queda
+sin medir contra `myths.mito`.
+
+Casi todos los guiones son N=18 (36 cuadros, ≈180 s). La excepción declarada es
+`veneracion-a-los-soberanos`, con N=16: es una sola escena continua y estirarla
+a dieciocho bloques habría sido rellenar. El acta lo dice y da la razón.
 
 ### La regla única y el acta
 
