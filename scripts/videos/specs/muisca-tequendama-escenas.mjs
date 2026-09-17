@@ -2,40 +2,61 @@
 // Guion: docs/videos/muiscas/mvp-guiones/guion-el-tequendama-v7.json (N=11)
 // Acta:  docs/videos/muiscas/actas/acta-el-tequendama.json           (21 nudos)
 //
-// DOCTRINA (de `muisca-bochica-escenas`): cada escena declara ESCALA + LUZ +
-// OBJETO ANCLA + CAPA DE PRIMER PLANO, y ancla identidad con EL MISMO / LA
-// MISMA ... de la referencia.
+// DOCTRINA v2 — tres reglas que se suman a las de bochica
+// (ESCALA + LUZ + OBJETO ANCLA + CAPA DE PRIMER PLANO + anclaje de identidad).
+//
+// 1. PLANO INICIAL. Es el `start_image` que un modelo de video animará 5 s
+//    (ver movimiento-v4.json de bochica: tramos 0-2 / 2-4 / 4-5 s + travelling).
+//    Cada escena describe el instante en que la acción EMPIEZA, nunca su
+//    resultado, deja aire hacia donde algo va a moverse y declara SE MOVERÁ.
+//    Prohibidos los macros sin nada vivo dentro y los estados terminales: la
+//    primera vuelta puso la apertura de la peña como un detalle de fisura
+//    inmóvil, que es justo lo que un modelo de video no puede animar.
+//
+// 2. LO MÍTICO SE MUESTRA. La primera vuelta confundió «no inventar
+//    iconografía» con «no mostrar el mito» y dejó a CUCHAVIRA —que ES el
+//    arcoíris— en una banda lechosa y descolorida. El deslinde real: no se
+//    inventan símbolos ajenos a la fuente, pero el arco de Cuchavira es un
+//    prodigio del relato y se ve entero, luminoso y con sus colores.
+//
+// 3. CONTINUIDAD DE PERSONAJE. En cada cuadro se repiten los rasgos fijos.
 //
 // DESLINDE CONTRA BOCHICA (video YA PRODUCIDO): `muisca-bochica-escenas` ya
-// tiene el instante de la vara volando y el salto naciendo (b7b, b8a). Este
-// video NO repite esos planos. Aquí la apertura se ve DESDE ABAJO y DESDE EL
-// AGUA, y el peso del relato no está en el milagro sino en lo que queda mal
-// hecho: la abertura angosta y el agua que vuelve cada invierno.
+// tiene la vara volando (b7b) y el salto naciendo en gran plano (b8a). Este
+// video NO repite esos encuadres: aquí la peña se abre vista DESDE EL AGUA y a
+// la altura del río, y el peso está en lo que queda mal hecho.
 //
 // DESLINDES DEL ACTA:
-// · El remedio NO es completo. La vara era delgada, la abertura quedó angosta
-//   y cada invierno las aguas regresan. Nada de salvación limpia.
-// · Chibchacum NO es perdonado: en la misma escena en que la sabana se seca,
-//   le cargan la tierra encima para siempre. Las dos cosas van juntas.
-// · Cuchavira es EL ARCO sobre el que Bochica se para, no un personaje.
+// · El remedio NO es completo: la abertura quedó angosta y el agua vuelve.
+// · Chibchacum NO es perdonado: le cargan la tierra en la misma escena.
+// · Cuchavira es EL ARCO sobre el que Bochica se para, no un personaje aparte.
 // · El cierre NO decide: puente o puerta, la imagen no lo resuelve.
 //
 // GUION DE LUZ: gris cerrado de vasija → plomizo de invierno → frío del
-// desprecio → verde gris de inundación → lluvia en las lomas → el arco como
-// única luz de color → contraluz desde la cumbre → blanco de espuma →
-// luz baja que delata lo angosto → penumbra del peso → tarde sin fin.
+// desprecio → verde gris de inundación → lluvia en las lomas → EL ARCO como
+// estallido de color → contraluz desde la cumbre → blanco de espuma → luz baja
+// que delata lo angosto → penumbra del peso → tarde sin fin.
 
 export const SPEC_NAME = "muisca-tequendama-escenas";
 export const OUT_DIR = "muiscas/videos/el-tequendama/keyframes";
 
 export const SHARED_AVOID =
-  "texto, letras, logos, marcas de agua, marcos o bordes; CGI, render 3D o ilustracion digital pulida; miniatura tilt-shift; maqueta de plastilina, arcilla o resina; terreno o vegetacion modelados en 3D; desenfoque fotografico de poca profundidad de campo; cielo fotografico o en degradado liso; rasgos europeos en cualquier persona; sandalias, calzado, tunicas blancas largas o ropa que no sea la manta muisca de las referencias; coronas, tronos, templos europeos o cruces; piramides, penachos o iconografia mesoamericana; grecas, meandros o cenefas decorativas repetidas; joyeria inventada u oro en el cuerpo; desnudez, sexualizacion o dramatismo de catastrofe moderna; cambiar los rostros, mantas o materiales de los personajes de referencia; gigantes o cuerpos humanos fuera de escala salvo donde la escena lo pida; arcoiris saturado de siete franjas vivas";
+  "texto, letras, logos, marcas de agua, marcos o bordes; CGI, render 3D o ilustracion digital pulida; miniatura tilt-shift; maqueta de plastilina, arcilla o resina; terreno o vegetacion modelados en 3D; desenfoque fotografico de poca profundidad de campo; cielo fotografico o en degradado liso; rasgos europeos en cualquier persona; sandalias, calzado, tunicas blancas largas o ropa que no sea la manta muisca de las referencias; coronas, tronos, templos europeos o cruces; piramides, penachos o iconografia mesoamericana; grecas, meandros o cenefas decorativas repetidas; joyeria inventada u oro en el cuerpo; oro, tunjos dorados o metal en las ofrendas; desnudez, sexualizacion o dramatismo de catastrofe moderna; cadaveres, sangre, animales muertos; cambiar los rostros, mantas o materiales de los personajes de referencia; gigantes o cuerpos humanos fuera de escala salvo donde la escena lo pida";
+
+export const DIRECCION =
+  "cada cuadro es el PRIMER FOTOGRAMA de un clip de 5 s que animará un modelo de video: la acción está empezando y no terminada, y la composición deja aire en la dirección del movimiento. Cada escena declara SE MOVERÁ: eso es lo que tiene que poder animarse.";
 
 export const PALETTE =
-  "gris plomo de invierno, verde frio de sabana anegada, pardo de agua turbia, crema de algodon crudo, blanco de espuma y niebla; el oro batido SOLO en la vara y el arco; sin saturacion ni neones";
+  "gris plomo de invierno, verde frio de sabana anegada, pardo de agua turbia, crema de algodon crudo, blanco de espuma y niebla; el oro batido en la vara; EL ARCO DE CUCHAVIRA es la unica explosion de color del video y si lleva sus franjas; sin neones";
+
+// CONTINUIDAD: rasgos fijos que se repiten en cada cuadro donde salen.
+const BOCHICA =
+  "EL MISMO Bochica de la referencia (anciano, barba blanca al pecho, pelo gris con cinta, manta cruda al hombro, descalzo)";
+const CHIBCHACUM =
+  "EL MISMO Chibchacum de la referencia (adulto, rostro ancho y grave, pelo negro a los hombros, manta cruda al hombro, descalzo)";
 
 const VESTUARIO =
-  " Vestuario: manta de algodón crudo lisa anudada a un hombro y por encima de la rodilla como en las referencias, todos los pies descalzos, sin cenefas ni joyas.";
+  " Vestuario de los demás: manta de algodón crudo lisa anudada a un hombro y por encima de la rodilla, todos los pies descalzos, sin cenefas ni joyas.";
 
 const B = "muiscas/biblia";
 const kf = (id, refs, scene, avoid) => ({ id, kind: "keyframe", preset: "vertical", refs, scene, avoid });
@@ -44,89 +65,89 @@ const kfp = (id, refs, scene, avoid) => ({ id, kind: "keyframe", preset: "vertic
 export const ITEMS = [
   // b1 — La sabana era una vasija cerrada. Dos peñas que no se apartaban.
   kf("b1a", [`${B}/sabana_cultivos`, `${B}/rocas_tequendama`],
-    "GRAN PLANO GENERAL cenital suave, luz gris cerrada sin sol. LA MISMA sabana de la referencia vista como un cuenco: los cultivos de papel ocupan el fondo del valle y las montañas lo cierran por los cuatro lados, sin salida visible. Al fondo del cuadro, pequeñas, LAS MISMAS dos peñas juntas de la referencia. EL VALLE ESTÁ COMPLETAMENTE DESHABITADO: no hay una sola figura humana en el encuadre. El río de papel serpentea por el fondo del valle y SE QUEDA ahí, estancado: la cordillera no tiene ninguna muesca, ningún corte y ninguna caída de agua por donde el río pueda salir. Capa de primer plano: el filo oscuro de una loma. Objeto ancla: las dos peñas cerradas.",
-    "personas, figuras humanas, siluetas, bastones, varas, cascada, salto de agua, caida de agua, torrente bajando, muesca o corte en la cordillera, desfiladero abierto, abertura en la roca, sol"),
+    "GRAN PLANO GENERAL en picado suave, luz gris cerrada sin sol, nubes bajas corriendo. LA MISMA sabana de la referencia vista como un cuenco: los cultivos de papel ocupan el fondo del valle y las montañas lo cierran por los cuatro lados. El río serpentea hasta LAS MISMAS dos peñas juntas de la referencia, al fondo, y allí se queda estancado: la cordillera no tiene muesca, ni corte, ni caída de agua. El valle está deshabitado. SE MOVERÁ: las nubes bajas cruzan, el río brilla y corre despacio, las sombras recorren las parcelas. Capa de primer plano: el filo oscuro de una loma. Objeto ancla: las dos peñas cerradas.",
+    "personas, figuras humanas, siluetas, cascada, caida de agua, muesca o corte en la cordillera, desfiladero abierto, sol"),
   kf("b1b", [`${B}/rocas_tequendama`],
-    "PLANO MEDIO frontal, luz plana y fría. LAS MISMAS dos peñas de la referencia vistas de cerca y de frente, juntas y sin separación, con el río de papel llegando a su pie y quedándose ahí, ancho y quieto, sin salida. La junta entre las dos rocas es una línea cerrada de arriba abajo. Capa de primer plano: el agua detenida en sombra. Objeto ancla: la junta cerrada de las peñas.",
-    "personas, cascada, espuma, grieta, luz saliendo de la roca"),
+    "PLANO GENERAL FRONTAL desde el agua, luz plana y fría. LAS MISMAS dos peñas de la referencia de cerca y de frente, juntas y sin separación, con el río llegando a su pie, ancho y girando en remolinos lentos porque no tiene salida. La junta entre las dos rocas es una línea cerrada de arriba abajo. SE MOVERÁ: el agua gira en remolinos contra la roca y sube un poco, la niebla se desliza por la pared. Capa de primer plano: el agua arremolinada en sombra. Objeto ancla: la junta cerrada.",
+    "personas, cascada, espuma, grieta, luz saliendo de la roca, agua completamente inmovil"),
 
   // b2 — Las aguas se devolvían. Chibchacum, dios de labradores y mercaderes.
   kf("b2a", [`${B}/sabana_anegada`, `${B}/casa_tierras_llanas`],
-    "PLANO GENERAL bajo, luz plomiza de aguacero de invierno. LA MISMA sabana anegada de la referencia con el agua devolviéndose sobre los surcos, entrando entre las matas y rodeando LOS MISMOS bohíos de la referencia; lluvia de hilos finos de papel. Todo gris y verde apagado. Sin personas. Capa de primer plano: una mata de maíz medio hundida. Objeto ancla: la línea de agua subiendo por una pared de barro.",
-    "personas, botes, rayos, dramatismo de catastrofe moderna"),
+    "PLANO GENERAL bajo, luz plomiza de aguacero. LA MISMA sabana anegada de la referencia con el agua DEVOLVIÉNDOSE sobre los surcos en ese momento: el borde de la lámina de agua avanza entre las matas y ya toca la base de LOS MISMOS bohíos de la referencia; lluvia de hilos finos de papel cayendo. Queda terreno seco por delante que el agua aún no ha tomado. SE MOVERÁ: la lámina de agua avanza y cubre el terreno seco, la lluvia cae, las matas se doblan. Capa de primer plano: una mata de maíz a punto de hundirse. Objeto ancla: el borde del agua avanzando.",
+    "personas, botes, rayos, catastrofe moderna, agua ya estancada y quieta"),
   kf("b2b", [`${B}/chibchacum_dios`, `${B}/mercado_bacata`],
-    "PLANO MEDIO, luz interior cálida y baja de bohío. EL MISMO Chibchacum de la referencia, de pie y sereno, entre los bultos y las cargas del MISMO mercado de la referencia: mantas dobladas, sal en panes, mazorcas en cestos. Es el dios de los que siembran y de los que cargan, y se ve en lo que lo rodea. Capa de primer plano: un cesto de mazorcas en sombra. Objeto ancla: las manos de Chibchacum sobre una carga.",
-    "trono, altar, adoracion, gente arrodillada, oro"),
+    `PLANO MEDIO, luz interior cálida y baja. ${CHIBCHACUM}. Está de pie y sereno entre los bultos del MISMO mercado de la referencia —mantas dobladas, sal en panes, mazorcas en cestos—, levantando una carga con las dos manos. Es el dios de los que siembran y de los que cargan, y se ve en lo que lo rodea. SE MOVERÁ: él termina de alzar la carga, el polvo flota en la luz, la llama de la lámpara late. Capa de primer plano: un cesto de mazorcas en sombra. Objeto ancla: sus manos bajo la carga.`,
+    "trono, altar, adoracion, gente arrodillada, oro, figura estatica sin accion"),
 
   // b3 — Murmuraron y regatearon las ofrendas. Él sintió el desprecio.
   kfp("b3a", [`${B}/familias_muiscas`, `${B}/figurilla_chibchacum`],
-    "PLANO MEDIO CORTO, luz de mediodía dura y sin gracia. TRES adultos de LAS MISMAS familias de la referencia, de perfil y muy juntos, regateando: uno retira con la mano LA MISMA figurilla de ofrenda de la referencia de un cuenco y la guarda; los otros dos hablan entre ellos mirando hacia otro lado. Nadie está en actitud de rezo. Capa de primer plano: el borde del cuenco de ofrendas. Objeto ancla: la figurilla a medio retirar.",
-    "rostros grotescos, caricatura de avaricia, monedas, dinero"),
+    "PLANO MEDIO CORTO, luz de mediodía dura. TRES adultos de LAS MISMAS familias de la referencia, de perfil y muy juntos, regateando: el de la izquierda está SACANDO del cuenco LA MISMA figurilla de BARRO COCIDO PARDO de la referencia, con la mano ya cerrada sobre ella y el brazo empezando a retirarse; los otros dos hablan entre ellos mirando a otro lado. Nadie está en actitud de rezo. SE MOVERÁ: la mano acaba de sacar la figurilla y la guarda, las bocas hablan. Capa de primer plano: el borde del cuenco. Objeto ancla: la figurilla a medio salir.",
+    "rostros grotescos, caricatura de avaricia, monedas, dinero, oro, figurilla ya guardada"),
   kf("b3b", [`${B}/chibchacum_dios`],
-    "PRIMER PLANO MEDIO, luz azul fría que entra de lado. EL MISMO Chibchacum de la referencia de tres cuartos, quieto, la mirada baja y fija, la mandíbula apretada; el frío del desprecio se ve en la luz, no en el gesto: su lado iluminado es azul y el otro está en sombra dura. Fondo oscuro y neutro. Capa de primer plano: un hombro en sombra. Objeto ancla: el ojo iluminado.",
-    "ira teatral, gritos, fuego, ojos brillantes, sobrenatural"),
+    `PRIMER PLANO MEDIO, luz azul fría que entra de lado. ${CHIBCHACUM}. De tres cuartos, girando LENTAMENTE la cabeza hacia el lado iluminado mientras baja la mirada; la mandíbula se está apretando. El frío del desprecio está en la luz, no en el gesto: un lado azul, el otro en sombra dura. Fondo oscuro y neutro. SE MOVERÁ: la cabeza termina de girar, la mandíbula se aprieta, el pelo se mueve. Capa de primer plano: un hombro en sombra. Objeto ancla: el ojo iluminado.`,
+    "ira teatral, gritos, fuego, ojos brillantes, sobrenatural, cabeza inmovil"),
 
   // b4 — Sacó de tierras lejanas dos ríos. El agua se tragó todo.
   kf("b4a", [`${B}/sabana_anegada`, `${B}/recodo_funza`],
-    "GRAN PLANO GENERAL en picado, luz verde gris de tormenta. DOS ríos de papel entrando en el cuadro desde dos esquinas distintas del fondo y juntándose sobre LA MISMA sabana de la referencia, que ya es una lámina de agua turbia; LOS MISMOS recodos de la referencia desbordados. Sin personas. Capa de primer plano: la copa de un árbol asomando del agua. Objeto ancla: el punto donde los dos ríos se juntan.",
-    "personas, olas de mar, tsunami, espuma blanca, dramatismo moderno"),
+    "GRAN PLANO GENERAL en picado, luz verde gris de tormenta. DOS ríos de papel ENTRANDO en el cuadro desde dos esquinas del fondo, con sus dos cabezas de agua turbia avanzando sobre LA MISMA sabana de la referencia y todavía sin juntarse: entre las dos lenguas queda una franja de campo seco. LOS MISMOS recodos de la referencia ya desbordados detrás. SE MOVERÁ: las dos lenguas avanzan y se juntan sobre la franja seca, la tormenta corre. Capa de primer plano: la copa de un árbol. Objeto ancla: el hueco seco entre los dos ríos.",
+    "personas, olas de mar, tsunami, dramatismo moderno, los dos rios ya unidos"),
   kf("b4b", [`${B}/casa_tierras_llanas`, `${B}/sabana_anegada`],
-    "PLANO DETALLE, luz gris difusa. EL MISMO bohío de la referencia con el agua ya dentro: la paja del alero goteando, una vasija volcada flotando de lado, un camino de piedras de papel desapareciendo bajo el agua turbia. Nadie alrededor, todo abandonado hace poco. Capa de primer plano: la vasija que flota. Objeto ancla: el camino que se hunde.",
-    "personas, cadaveres, animales muertos, dramatismo excesivo"),
+    "PLANO MEDIO, luz gris difusa. EL MISMO bohío de la referencia con el agua entrando por la puerta en ese momento: la lámina turbia cruza el umbral y empieza a rodear una vasija que aún está de pie en el suelo de tierra; la paja del alero gotea. Nadie alrededor, abandonado hace poco. SE MOVERÁ: el agua sigue entrando, la vasija se vuelca y empieza a flotar, las gotas caen del alero. Capa de primer plano: el umbral mojado. Objeto ancla: la vasija todavía en pie.",
+    "personas, cadaveres, animales muertos, dramatismo excesivo, vasija ya flotando"),
 
   // b5 — Subieron a las lomas. Llenaron de ofrendas el templo de Bochica.
   kfp("b5a", [`${B}/familias_muiscas`, `${B}/loma_pelada_noche`],
-    "PLANO GENERAL en contrapicado suave, luz de lluvia fina que empieza a escampar. Una fila de gente de LAS MISMAS familias de la referencia subiendo DE ESPALDAS por LA MISMA loma pelada de la referencia, cargando en las manos lo poco que cabía: un cesto, una manta enrollada, una vasija. Abajo, al fondo, el agua gris. Capa de primer plano: el barro de la cuesta en sombra. Objeto ancla: la vasija que carga el último.",
-    "rostros de frente, llanto, panico, multitud desbordada, niños llorando"),
+    "PLANO GENERAL en contrapicado suave, lluvia fina que empieza a escampar. Una fila de gente de LAS MISMAS familias de la referencia subiendo DE ESPALDAS por LA MISMA loma pelada de la referencia, cargando lo poco que cabía —un cesto, una manta enrollada, una vasija—; van a media cuesta y por delante les queda loma. Abajo y al fondo, el agua gris. SE MOVERÁ: la fila sigue subiendo, la lluvia amaina, las mantas ondean. Capa de primer plano: el barro de la cuesta. Objeto ancla: la vasija que carga el último.",
+    "rostros de frente, llanto, panico, multitud desbordada, fila ya en la cima"),
   kfp("b5b", [`${B}/templo_ofrendas`, `${B}/figurilla_chibchacum`],
-    "PLANO MEDIO interior, luz de lámparas de sebo, cálida y escasa. EL MISMO templo de ofrendas de la referencia con el suelo cubierto de ofrendas hasta no caber: figurillas de BARRO COCIDO PARDO idénticas a LA MISMA de la referencia, mantas de algodón crudo dobladas, cuencos de barro y mazorcas. TODO es barro, algodón, madera y maíz: en este cuadro NO hay una sola pieza de oro ni de metal, ni brillos dorados. Dos manos dejando una figurilla más en el borde del montón. Capa de primer plano: el montón en sombra. Objeto ancla: la última figurilla de barro.",
-    "oro, tunjos dorados, metal, brillos dorados, joyas, El Dorado, cruces, altares europeos, sacerdotes con vestiduras"),
+    "PLANO MEDIO interior, luz de lámparas de sebo, cálida y escasa. EL MISMO templo de la referencia con el suelo cubierto de ofrendas hasta casi no caber: figurillas de BARRO COCIDO PARDO idénticas a LA MISMA de la referencia, mantas de algodón crudo dobladas, cuencos de barro y mazorcas. TODO es barro, algodón, madera y maíz: ni una pieza de oro ni de metal. Dos manos bajan una figurilla más hacia el borde del montón sin haberla soltado aún. SE MOVERÁ: las manos dejan la figurilla y se retiran, las llamas de sebo laten. Capa de primer plano: el montón en sombra. Objeto ancla: la figurilla que aún no se suelta.",
+    "oro, tunjos dorados, metal, brillos dorados, cruces, altares europeos, sacerdotes, ofrenda ya depositada"),
 
-  // b6 — Un arco de luz sobre la llanura. En su cumbre, Bochica.
+  // b6 — Un arco de luz sobre la llanura. En su cumbre, Bochica. (CUCHAVIRA)
   kf("b6a", [`${B}/valle_anegado_arco`, `${B}/sabana_anegada`],
-    "GRAN PLANO GENERAL, luz que se abre después de la lluvia. EL MISMO arco de la referencia tendido de lado a lado sobre LA MISMA llanura inundada de la referencia: una sola banda ancha de luz pálida y lechosa, apenas teñida de ocre y gris; NO tiene franjas de colores separadas ni se parece a un arcoíris de siete colores: es luz, no color. El agua gris debajo lo devuelve partido. Sin personas. Capa de primer plano: juncos a contraluz. Objeto ancla: el arranque del arco tocando el agua.",
-    "arcoiris saturado, siete franjas vivas, personas, angeles, nubes fotográficas"),
+    "GRAN PLANO GENERAL, el cielo abriéndose después del aguacero. EL MISMO arco de Cuchavira de la referencia TENDIÉNDOSE de lado a lado sobre LA MISMA llanura inundada: un arco ENORME y LUMINOSO de bandas de papel de color —rojo, ocre, verde, azul— que ya apoyó un extremo en el agua y está creciendo hacia el otro lado del cuadro, donde todavía le falta cerrar. Es el prodigio del relato y se ve entero. El agua gris de abajo empieza a devolverlo en su reflejo. SE MOVERÁ: el arco termina de cerrarse hasta el otro extremo, su reflejo se arma en el agua, las nubes se retiran. Capa de primer plano: juncos a contraluz. Objeto ancla: el extremo del arco que avanza.",
+    "personas, angeles, nubes fotográficas, arco ya cerrado y quieto, arco palido o descolorido, cielo sin arco"),
   kf("b6b", [`${B}/bochica_anciano`, `${B}/valle_anegado_arco`, `${B}/vara_dorada`],
-    "CONTRAPICADO LARGO desde el agua, contraluz dorado. EL MISMO Bochica anciano de la referencia, pequeño y recortado, de pie en la cumbre del MISMO arco de la referencia, con LA MISMA vara dorada de la referencia en la mano derecha en vertical. La figura se lee por silueta contra la luz; la barba y la manta movidas por el viento. Capa de primer plano: la superficie del agua inundada. Objeto ancla: la vara vertical contra el cielo.",
-    "rostro en primer plano, aureola, rayos divinos, alas, gente adorando"),
+    `PLANO GENERAL en contrapicado desde el agua, contraluz dorado. ${BOCHICA}. Está apareciendo en la cumbre del MISMO arco de Cuchavira de la referencia —que cruza el cuadro entero con sus bandas de color—, de pie y todavía recortado a media silueta contra la luz, con LA MISMA vara dorada de la referencia empezando a alzarse en la mano derecha. Por delante y por debajo queda toda la llanura inundada. SE MOVERÁ: la vara termina de alzarse, la barba y la manta ondean, la luz de detrás crece. Capa de primer plano: la superficie del agua. Objeto ancla: la vara subiendo.`,
+    "rostro en primer plano, aureola, rayos dibujados, alas, gente adorando, vara ya en alto, arco descolorido"),
 
-  // b7 — Llamó a los caciques. (CITA: no les quitaré esos dos ríos)
-  kfp("b7a", [`${B}/gameza_cacique`, `${B}/sabana_anegada`],
-    "PLANO MEDIO LARGO a la altura de los ojos, luz dorada baja. CUATRO caciques como EL MISMO de la referencia de pie en la orilla del agua, en semicírculo abierto hacia el fondo del cuadro, todos mirando hacia arriba y hacia afuera de cuadro. No hay nadie frente a ellos en el encuadre: a quien escuchan está fuera. Capa de primer plano: el agua lamiendo la orilla. Objeto ancla: las cuatro cabezas alzadas.",
-    "arrodillarse, adoracion, manos juntas, llanto, figura divina en cuadro"),
+  // b7 — Llamó a los caciques. (CITA)
+  kfp("b7a", [`${B}/gameza_cacique`, `${B}/sabana_anegada`, `${B}/valle_anegado_arco`],
+    "PLANO MEDIO LARGO a la altura de los ojos, luz dorada baja con el arco de color visible al fondo. CUATRO caciques como EL MISMO de la referencia de pie en la orilla del agua, en semicírculo abierto hacia el fondo, ALZANDO la cara hacia lo alto: las cabezas van a media subida y no todas al mismo tiempo. A quien escuchan está fuera de cuadro, arriba. SE MOVERÁ: las cuatro cabezas terminan de alzarse, las mantas ondean, el agua lame la orilla. Capa de primer plano: el agua en la orilla. Objeto ancla: las cabezas alzándose.",
+    "arrodillarse, adoracion, manos juntas, llanto, figura divina en cuadro, cabezas ya alzadas y quietas"),
   kf("b7b", [`${B}/rocas_tequendama`, `${B}/vara_dorada`],
-    "PLANO GENERAL desde el nivel del agua, luz dorada de tarde. LAS MISMAS dos peñas cerradas de la referencia al fondo, y muy arriba y pequeña, apenas insinuada, LA MISMA vara dorada de la referencia señalándolas desde el arco. El cuadro está construido para que la sierra ocupe el peso y la promesa sea un punto de luz. Capa de primer plano: el agua quieta en sombra. Objeto ancla: la punta de la vara apuntando a la junta.",
-    "grieta ya abierta, cascada, espuma, personas"),
+    "PLANO GENERAL desde el nivel del agua, luz dorada de tarde. LAS MISMAS dos peñas de la referencia llenando el fondo, TODAVÍA CERRADAS Y PEGADAS la una a la otra, sin ninguna abertura, garganta ni caída de agua entre ellas, y arriba a la izquierda, pequeña pero nítida, LA MISMA vara dorada de la referencia empezando a apuntar hacia la junta: la punta va a mitad de recorrido. El cuadro está construido para que la sierra pese y la promesa sea un punto de luz que aún se mueve. SE MOVERÁ: la vara termina de apuntar a la junta, un destello recorre su filo, el agua se riza. Capa de primer plano: el agua en sombra. Objeto ancla: la punta de la vara.",
+    "grieta ya abierta, desfiladero, garganta abierta, canon, cascada, salto de agua, espuma, lago al pie, personas, vara inmovil"),
 
   // b8 — La vara mordió la peña y el agua huyó. (NO repetir el plano de bochica)
   kf("b8a", [`${B}/rocas_tequendama`],
-    "PLANO DETALLE CERRADÍSIMO, luz rasante que entra por la fisura. El punto exacto donde LA MISMA junta de las peñas de la referencia se rompe: capas de papel-roca separándose una de otra, un hilo de luz atravesando la fisura de arriba abajo y el primer chorro de agua colándose a presión por lo más angosto. NO se ve el conjunto de la cascada ni la vara. Capa de primer plano: el canto astillado de la roca. Objeto ancla: el hilo de luz en la fisura.",
-    "plano general de cascada, vara en cuadro, personas, salto completo, arcoiris"),
+    "PLANO GENERAL FRONTAL a la altura del río, muy cerca del pie de las peñas, luz rasante que entra por la grieta. LAS MISMAS peñas de la referencia EMPEZANDO A ABRIRSE: una grieta vertical de luz recorre la junta de arriba abajo, las capas de papel-roca se separan a los dos lados y por lo más angosto sale ya el primer chorro a presión, con las primeras láminas de roca desprendiéndose hacia el agua. Toda la altura de las peñas está en cuadro. SE MOVERÁ: la grieta se ensancha, el chorro crece hasta volverse torrente, las láminas caen. Capa de primer plano: el agua represada al pie. Objeto ancla: la grieta de luz abriéndose.",
+    "vara en cuadro, personas, cascada ya formada del todo, detalle macro de roca sin agua, arcoiris"),
   kf("b8b", [`${B}/sabana_anegada`, `${B}/sabana_cultivos`],
-    "GRAN PLANO GENERAL cenital, luz que va aclarando de gris a limpio. LA MISMA sabana de la referencia vaciándose: el agua retrocede y deja ver los surcos de LOS MISMOS cultivos de la referencia, con la marca de barro claro señalando hasta dónde llegó. Se lee el paso del tiempo en las franjas del légamo. Sin personas. Capa de primer plano: légamo agrietado. Objeto ancla: la línea de barro más alta.",
-    "personas, celebracion, banderas, sol pleno"),
+    "GRAN PLANO GENERAL en picado, la luz aclarando de gris a limpio. LA MISMA sabana de la referencia VACIÁNDOSE: el agua retrocede y va dejando ver los surcos de LOS MISMOS cultivos de la referencia, con el légamo marcando franjas hasta dónde llegó; todavía queda medio valle bajo el agua. SE MOVERÁ: el agua sigue retirándose y descubre más surcos, la luz aclara, la niebla se levanta. Capa de primer plano: légamo agrietado. Objeto ancla: el borde del agua retirándose.",
+    "personas, celebracion, banderas, sol pleno, valle ya seco del todo"),
 
   // b9 — La vara era delgada y la abertura quedó angosta.
   kf("b9a", [`${B}/salto_tequendama`],
-    "PLANO GENERAL FRONTAL, luz baja que entra de costado y delata el tamaño. EL MISMO salto del Tequendama de la referencia visto de frente, pero el encuadre subraya lo ESTRECHO: dos paredes enormes de roca de papel casi tocándose y, entre ellas, una columna de agua flaca para todo lo que tiene que pasar. Las paredes ocupan dos tercios del cuadro y el agua un tercio. Capa de primer plano: el borde de la peña en sombra. Objeto ancla: el estrechamiento entre las dos paredes.",
+    "PLANO GENERAL FRONTAL, luz baja de costado que delata el tamaño. EL MISMO salto del Tequendama de la referencia, pero el encuadre subraya lo ESTRECHO: dos paredes enormes de roca casi tocándose ocupan dos tercios del cuadro y entre ellas pasa una columna de agua flaca para todo lo que tiene que salir, con el agua represada arriba todavía empujando. SE MOVERÁ: la columna cae y la espuma sube desde el fondo, el agua de arriba sigue llegando y se atasca en el paso. Capa de primer plano: el borde de la peña en sombra. Objeto ancla: el estrechamiento entre las paredes.",
     "cascada ancha y triunfal, arcoiris, personas, espuma gloriosa"),
   kf("b9b", [`${B}/sabana_anegada`, `${B}/sabana_cultivos`],
-    "PLANO GENERAL bajo, luz gris de otro invierno igual al primero. LOS MISMOS campos bajos de la referencia otra vez con agua entre los surcos, no tanta como antes pero la misma agua y el mismo gris; LAS MISMAS matas de la referencia con el pie hundido. La escena rima a propósito con el invierno del comienzo. Capa de primer plano: un surco encharcado. Objeto ancla: el agua otra vez entre las matas.",
-    "personas, inundacion total, dramatismo, sol"),
+    "PLANO GENERAL bajo, luz gris de otro invierno igual al primero. LOS MISMOS campos bajos de la referencia con el agua VOLVIENDO entre los surcos: no tanta como antes, pero el mismo gris y el mismo avance lento, y LAS MISMAS matas de la referencia empezando a hundir el pie. La escena rima a propósito con el invierno del comienzo. SE MOVERÁ: el agua sigue subiendo entre los surcos, la llovizna cae, las matas se doblan. Capa de primer plano: un surco encharcándose. Objeto ancla: el agua otra vez entre las matas.",
+    "personas, inundacion total, dramatismo, sol, agua ya estancada"),
 
   // b10 — Bochica cargó la tierra sobre los hombros de Chibchacum.
   kf("b10a", [`${B}/chibchacum_dios`],
-    "CONTRAPICADO CERRADO, penumbra de luz baja y lateral. EL MISMO Chibchacum de la referencia de espaldas y de rodillas, visto desde abajo, con los hombros y la nuca cargando un peso que sale de cuadro por arriba; la espalda tensa, las manos abiertas contra el suelo. NO se ve qué carga: el peso está fuera del encuadre. Capa de primer plano: una mano abierta contra la tierra. Objeto ancla: la nuca tensa.",
-    "globo terraqueo, planeta, esfera, Atlas griego, cadenas, sangre"),
+    `PLANO ENTERO en contrapicado, penumbra de luz baja y lateral. ${CHIBCHACUM}. Está de rodillas, visto desde abajo, RECIBIENDO sobre los hombros y la nuca el peso de la tierra: encima de él se apoya la base curva y oscura del mundo, una masa enorme de capas de papel-tierra con raíces y piedra que entra por todo el borde superior del cuadro y ya toca sus hombros. Los brazos empiezan a tensarse y las manos a abrirse contra el suelo. El prodigio se ve: se entiende que carga la tierra. SE MOVERÁ: la masa baja y se asienta sobre él, los brazos terminan de tensarse, cae polvo. Capa de primer plano: una mano abriéndose contra la tierra. Objeto ancla: el punto donde la tierra toca su hombro.`,
+    "globo terraqueo, planeta azul, esfera con continentes, Atlas griego, cadenas, sangre, peso fuera de cuadro"),
   kf("b10b", [`${B}/casa_barro_paja`, `${B}/vasija_gacha`],
-    "PLANO DETALLE, luz quieta de interior. Dentro del MISMO bohío de la referencia, LA MISMA vasija de barro de la referencia sobre el suelo con el agua de adentro temblando en círculos concéntricos, y un poco de polvo cayendo de la viga de arriba. La casa está entera; sólo el suelo se movió. Capa de primer plano: el canto de la vasija. Objeto ancla: los círculos en el agua.",
-    "grietas grandes, derrumbe, casas cayendo, personas corriendo, catastrofe"),
+    "PLANO MEDIO BAJO, luz quieta de interior. Dentro del MISMO bohío de la referencia, LA MISMA vasija de barro de la referencia en el suelo con el agua empezando a temblar en círculos, y los primeros hilos de polvo cayendo de la viga. La casa está entera: sólo el suelo se movió. SE MOVERÁ: los círculos del agua se ensanchan, la vasija se desplaza un poco, el polvo sigue cayendo. Capa de primer plano: el canto de la vasija. Objeto ancla: los círculos en el agua.",
+    "grietas grandes, derrumbe, casas cayendo, personas corriendo, catastrofe, agua quieta"),
 
   // b11 — Quedó el salto y su rumor. ¿Puente o puerta?
   kf("b11a", [`${B}/salto_tequendama`],
-    "GRAN PLANO GENERAL en contrapicado, luz de tarde constante y sin hora. EL MISMO salto de la referencia cayendo entero, con la niebla de espuma de algodón subiendo del vacío y las paredes húmedas brillando. La imagen está construida para que se oiga: todo el cuadro es agua cayendo y vapor. Sin personas. Capa de primer plano: helechos de papel a contraluz. Objeto ancla: la columna de agua.",
-    "personas, arcoiris saturado, turistas, barandas, puentes modernos"),
+    "GRAN PLANO GENERAL en contrapicado, luz de tarde constante. EL MISMO salto de la referencia cayendo entero, con la niebla de espuma de algodón SUBIENDO desde el vacío y las paredes húmedas brillando; el cuadro deja aire arriba para que la niebla siga subiendo. Todo el plano es agua cayendo y vapor subiendo a la vez. SE MOVERÁ: la columna de agua cae sin parar, la niebla sube y llena el aire de arriba, los helechos tiemblan. Capa de primer plano: helechos a contraluz. Objeto ancla: la columna de agua.",
+    "personas, turistas, barandas, puentes modernos, agua congelada"),
   kf("b11b", [`${B}/valle_anegado_arco`, `${B}/salto_tequendama`],
-    "PLANO GENERAL final, luz indecisa entre tarde y niebla. EL MISMO arco de la referencia otra vez sobre el valle, ahora sin nadie encima, con un extremo apoyado cerca del MISMO salto de la referencia y el otro perdiéndose en la niebla sin que se vea dónde termina. La imagen no resuelve si es puente o puerta y el encuadre lo deja abierto a propósito. Capa de primer plano: la niebla cruzando. Objeto ancla: el extremo del arco que se pierde.",
-    "personas, figura divina, puerta dibujada, puente construido, señales, simbolos"),
+    "PLANO GENERAL final, luz indecisa entre tarde y niebla. EL MISMO arco de Cuchavira de la referencia otra vez sobre el valle, ahora sin nadie encima y con sus bandas de color aún vivas: un extremo apoyado cerca del MISMO salto de la referencia y el otro entrando en un banco de niebla que se mueve, de modo que no se ve dónde termina. La imagen no resuelve si es puente o puerta. SE MOVERÁ: la niebla corre y tapa y destapa el extremo lejano del arco, el salto humea. Capa de primer plano: la niebla cruzando. Objeto ancla: el extremo del arco que se pierde.",
+    "personas, figura divina, puerta dibujada, puente construido, señales, simbolos, arco descolorido"),
 ];
