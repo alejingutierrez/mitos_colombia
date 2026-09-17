@@ -20,20 +20,31 @@ const MATERIAL =
   " MATERIAL: todo el cuadro está hecho de papel artesanal recortado, plegado y encolado en capas, fotografiado de frente con luz pareja; se ven el canto del papel, la fibra y el pliegue en cada pieza, incluidos cielo, montañas, tierra y vegetación.";
 
 export const SHARED_AVOID =
-  "texto, letras, logos, marcas de agua, marcos o bordes; CGI, render 3D o ilustracion digital pulida; miniatura tilt-shift; maqueta de plastilina, arcilla, resina o ceramica; terreno o vegetacion modelados en 3D; musgo o cesped realista; desenfoque fotografico de poca profundidad de campo; cielo fotografico o en degradado liso; cabezas modeladas y redondeadas con piel lisa; sandalias, calzado, tunicas blancas largas o ropa que no sea la manta muisca de las referencias; coronas, tronos o templos europeos; piramides, penachos o iconografia mesoamericana; simbolos espirituales inventados; joyeria inventada u oro en el cuerpo; desnudez, sexualizacion o dramatismo excesivo; cambiar los rostros, mantas o materiales de los personajes de referencia; cualquier figura, rostro, silueta o presencia que represente a Chaquen como ser o divinidad";
+  "texto, letras, logos, marcas de agua, marcos o bordes; CGI, render 3D o ilustracion digital pulida; miniatura tilt-shift; maqueta de plastilina, arcilla, resina o ceramica; terreno o vegetacion modelados en 3D; musgo o cesped realista; desenfoque fotografico de poca profundidad de campo; cielo fotografico o en degradado liso; cabezas modeladas y redondeadas con piel lisa; sandalias, calzado, tunicas blancas largas o ropa que no sea la manta muisca de las referencias; coronas, tronos o templos europeos; piramides, penachos o iconografia mesoamericana; grecas, meandros, cenefas de llave griega, bordes decorativos repetidos en la ropa o en la piedra; escalinatas y plataformas de piedra labrada; simbolos espirituales inventados; joyeria inventada u oro en el cuerpo; desnudez, sexualizacion o dramatismo excesivo; cambiar los rostros, mantas o materiales de los personajes de referencia; gigantes, figuras colosales o cualquier cuerpo humano fuera de escala respecto del paisaje; cualquier figura, rostro, silueta o presencia que represente a Chaquen como ser o divinidad";
 
 export const PALETTE =
   "verdes de sementera en franjas distintas, pardo mojado de tierra ablandada, gris mineral de piedra y poste, crema de algodon crudo, ocres de paja; rojo y blanco solo en las plumas; sin saturacion ni neones";
 
+// CANDADO DE VESTUARIO: en la segunda vuelta (18 cuadros, 2026-09-17) el avoid
+// no bastó. Prohibir «sandalias» y «túnicas blancas largas» en negativo dejó
+// pasar sandalias de correas en b6b y togas con greca dorada en b3b y b6a: los
+// modelos de imagen obedecen mucho mejor una instrucción afirmativa que una
+// prohibición. Desde aquí, toda escena con personas lleva el vestuario descrito
+// en positivo, y la prohibición se queda sólo como red de seguridad.
+const VESTUARIO =
+  " VESTUARIO: manta de algodón crudo lisa, anudada a un hombro y por encima de la rodilla como en las referencias; TODOS los pies descalzos; sin cenefas, bolsos, joyas ni nada dorado.";
+
 const B = "muiscas/biblia";
 const kf = (id, refs, scene, avoid) => ({ id, kind: "keyframe", preset: "vertical", refs, scene: scene + MATERIAL, avoid });
+// Variante para escenas con figuras humanas: añade el candado de vestuario.
+const kfp = (id, refs, scene, avoid) => ({ id, kind: "keyframe", preset: "vertical", refs, scene: scene + VESTUARIO + MATERIAL, avoid });
 
 export const ITEMS = [
   // b1 — El año comenzaba en los linderos. Se levantaban postes.
   kf("b1a", [`${B}/sabana_linderos`, `${B}/poste_lindero`],
     "La sabana de la referencia después de la lluvia, con la raya de postes cruzando las parcelas hasta el fondo. Sin personas.",
     "personas, animales, arcoiris, nubes fotográficas"),
-  kf("b1b", [`${B}/poste_lindero`, `${B}/piraca_labrador`],
+  kfp("b1b", [`${B}/poste_lindero`, `${B}/piraca_labrador`],
     "Dos hombres muiscas como el de la referencia clavan un poste igual al de la referencia en la tierra ablandada: uno lo sostiene, el otro apisona la base con una piedra.",
     "herramientas metálicas, esfuerzo teatral"),
 
@@ -46,20 +57,24 @@ export const ITEMS = [
     "personas, templos de piedra, altares, ídolos, ofrendas"),
 
   // b3 — Quien respetaba el límite sembraba en paz. Se ordenaba correr la tierra.
-  kf("b3a", [`${B}/piraca_labrador`, `${B}/poste_lindero`, `${B}/sabana_cultivos`],
+  kfp("b3a", [`${B}/piraca_labrador`, `${B}/poste_lindero`, `${B}/sabana_cultivos`],
     "El labrador de la referencia, pequeño y de espaldas, sembrando tranquilo en su surco a dos pasos de la raya de postes, sin mirarla.",
     "primeros planos de rostro, dramatismo, herramientas metálicas"),
-  kf("b3b", [`${B}/zaque_tunja`, `${B}/plaza_fiesta_noche`],
+  kfp("b3b", [`${B}/zaque_tunja`, `${B}/plaza_fiesta_noche`],
     "El cacique de la referencia, de pie en el borde de la plaza de la referencia, con el brazo extendido hacia el campo dando la orden; gente escuchando en semicírculo a media distancia.",
     "tronos, coronas, gestos imperiales, multitudes arrodilladas"),
 
   // b4 — Salían con plumas. Conocerla con el cuerpo y cruzarla entera.
-  kf("b4a", [`${B}/corredor_plumas`, `${B}/camino_carrera`, `${B}/poste_lindero`],
+  kfp("b4a", [`${B}/corredor_plumas`, `${B}/camino_carrera`, `${B}/poste_lindero`],
     "Vista muy abierta del territorio: los corredores de la referencia, pequeños y escalonados, avanzando junto a la raya de postes, que cruza el campo entero sin interrumpirse hasta el horizonte.",
     "público animando, banderas, líneas de meta, números"),
-  kf("b4b", [`${B}/corredor_plumas`, `${B}/sendero_territorio`],
-    "Plano detalle a ras de suelo: dos pies descalzos de papel, como los del corredor de la referencia, entrando en el agua somera de una quebrada de piedras redondas.",
-    "rostros, cuerpos completos, sangre, calzado"),
+  kfp("b4b", [`${B}/corredor_plumas`, `${B}/sendero_territorio`],
+    // La primera versión de este cuadro salió colosal: los pies llegaban a la
+    // altura de las montañas y el resultado leía como un dios caminando el
+    // territorio, justo lo que el deslinde duro prohíbe. El encuadre ahora se
+    // cierra sobre la quebrada y no deja horizonte con el que comparar escala.
+    "Plano detalle a ras del agua, cámara a un palmo del suelo: los pies descalzos de una persona de tamaño normal, cortados a media pantorrilla por el borde superior del cuadro, pisando el agua somera de una quebrada. Los cantos rodados que rodean los pies son del tamaño de un puño y sirven de referencia de escala. El encuadre se cierra sobre el agua y las piedras: NO se ve horizonte, ni montañas, ni cielo, ni la otra orilla.",
+    "rostros, cuerpos completos, sangre, calzado, gigantes, pies colosales, montañas, cielo, horizonte, vista de paisaje"),
 
   // b5 — Sin boca que lo dijera, se oía. (CITA)
   kf("b5a", [`${B}/poste_lindero`, `${B}/sabana_linderos`],
@@ -70,18 +85,18 @@ export const ITEMS = [
     "personas, manos, texto, símbolos, flechas"),
 
   // b6 — Entregaba mantas y repartía chicha. Flautas y fotutos.
-  kf("b6a", [`${B}/zaque_tunja`, `${B}/corredor_plumas`, `${B}/manta_reparto`],
+  kfp("b6a", [`${B}/zaque_tunja`, `${B}/corredor_plumas`, `${B}/manta_reparto`],
     "El cacique de la referencia entrega con las dos manos una manta doblada como la de la referencia a uno de los corredores de la referencia, que la recibe también con las dos manos, ambos a la misma altura.",
     "arrodillarse, besar manos, público aclamando"),
-  kf("b6b", [`${B}/familias_muiscas`, `${B}/plaza_fiesta_noche`],
+  kfp("b6b", [`${B}/familias_muiscas`, `${B}/plaza_fiesta_noche`],
     "Músicos muiscas como los de la referencia: dos soplan flautas largas de caña y un tercero un fotuto de caracol; al fondo, tambores de cuero y madera.",
     "instrumentos europeos, guitarras, trompetas de metal, partituras"),
 
   // b7 — Corro con las vasijas en medio. La plumería junto al límite.
-  kf("b7a", [`${B}/familias_muiscas`, `${B}/vasija_gacha`, `${B}/plaza_fiesta_noche`],
+  kfp("b7a", [`${B}/familias_muiscas`, `${B}/vasija_gacha`, `${B}/plaza_fiesta_noche`],
     "Corro de hombres y mujeres de papel como los de la referencia, tomados de las manos alrededor de tres vasijas de barro como la de la referencia puestas en el centro, vistos en picado suave.",
     "danza frenética, saltos, máscaras, fuego en las manos"),
-  kf("b7b", [`${B}/poste_lindero`, `${B}/corredor_plumas`],
+  kfp("b7b", [`${B}/poste_lindero`, `${B}/corredor_plumas`],
     "Dos personas de papel como la de la referencia, de espaldas y agachadas, depositando en el suelo al pie de un poste sus diademas con plumas y unos adornos. Nadie mira hacia arriba, nadie reza; el poste queda vacío.",
     "figura divina, rostro en el poste, luz sobrenatural, humo ritual, gestos de adoración"),
 
@@ -89,13 +104,13 @@ export const ITEMS = [
   kf("b8a", [`${B}/poste_lindero`, `${B}/plaza_fiesta_noche`],
     "En primer término, grande, un poste de lindero y la raya perdiéndose; al fondo y pequeña, la plaza de la referencia ya encendida de fogones. El orden delante, la fiesta detrás.",
     "incendios, chispas grandes, multitud desbordada"),
-  kf("b8b", [`${B}/familias_muiscas`, `${B}/poste_lindero`, `${B}/altiplano_noche`],
+  kfp("b8b", [`${B}/familias_muiscas`, `${B}/poste_lindero`, `${B}/altiplano_noche`],
     "De noche, una fila de danzantes de papel como los de la referencia avanzando en hilera junto a la raya de postes, siguiendo el mismo trazado de los corredores. Cielo de papel perforado.",
     "antorchas grandes, danza descontrolada, máscaras"),
 
   // b9 — Vasijas vacías, plumería dormida, la raya intacta.
   kf("b9a", [`${B}/vasija_gacha`, `${B}/manta_vasijas`],
-    "Plano detalle del amanecer: dos vasijas de barro como la de la referencia volcadas y vacías sobre la manta de la referencia, con plumas rojas y blancas caídas al lado, mojadas de rocío.",
+    "Plano detalle del amanecer: dos vasijas de barro como la de la referencia volcadas y vacías sobre la manta de la referencia, con plumas rojas y blancas caídas al lado y gotas de rocío encima.",
     "personas, restos de comida, suciedad excesiva"),
   kf("b9b", [`${B}/sabana_linderos`, `${B}/poste_lindero`],
     "Cierre sin nadie: la raya completa de postes y piedras atravesando la sementera en la primera luz, igual que en el primer cuadro, intacta, con niebla baja entre los surcos.",
