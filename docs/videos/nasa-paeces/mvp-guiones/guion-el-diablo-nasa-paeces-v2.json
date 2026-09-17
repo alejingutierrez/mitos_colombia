@@ -1,29 +1,168 @@
 {
-  "enfoque": "fogon-visual-coloquial", "comunidad": "nasa-paeces",
-  "mito": "el-diablo-nasa-paeces", "titulo": "El diablo", "canon_slug": "el-diablo-nasa-paeces",
-  "reescribe": "GUION.md de 5 bloques y 10 cuadros (59 s)",
-  "nota_cita": "El canon no trae diálogo: la identificación es un razonamiento del padre. La cita rinde ese razonamiento como habla, sin añadir conversación con el jinete, que la fuente niega expresamente.",
-  "voice_id": "9EHAKExD4lT2G6hPG74L", "voice_name": "alejandro_narracion", "model_id": "eleven_multilingual_v2",
+  "enfoque": "fogon-visual-coloquial",
+  "comunidad": "nasa-paeces",
+  "mito": "el-diablo-nasa-paeces",
+  "titulo": "El diablo",
+  "canon_slug": "el-diablo-nasa-paeces",
+  "reescribe": "guion-el-diablo-nasa-paeces-v2: b9 describía la puerta «entre el agua y las peñas, vacía y oscura», que el canon no dice.",
+  "nota_cita": "La cita pone en estilo directo lo que el canon refiere de forma indirecta: que pensó que el jinete era el diablo.",
+  "voice_id": "9EHAKExD4lT2G6hPG74L",
+  "voice_name": "alejandro_narracion",
+  "model_id": "eleven_multilingual_v2",
   "lines": [
-    { "window": 9.5, "bloque": "b1", "keyframes": ["k03","k04"], "text": "Un padre volvía a caballo con su compadre, y detrás venía el hijo. El compadre iba despacio, cargado." },
-    { "window": 9.5, "bloque": "b2", "keyframes": ["k05","k11"], "text": "En la bajada vieron un hombre delante de ellos. Cayó lluvia corta y empezó a levantarse una nube." },
-    { "window": 9.5, "bloque": "b3", "keyframes": ["k06","k12"], "text": "Corría sobre un caballo negro de cola corta. Llevaba capa negra, y nadie alcanzó a verle la cara." },
-    { "window": 9.5, "bloque": "b4", "keyframes": ["k07","k13"], "text": "El padre siguió hasta la quebrada de El Tablón. Allí el jinete ya no estaba en ninguna parte." },
-    { "window": 9.5, "bloque": "b5", "keyframes": ["k01","k02"], "text": "En la quebrada encontró una puerta. Intentó abrirla y no pudo; su caballo tuvo que pasar de un salto." },
-    { "window": 9.5, "bloque": "b6", "keyframes": ["k08","k09"], "text": "Miró alrededor y buscó huellas. No halló al hombre, ni al caballo negro, ni rastro de por dónde siguieron." },
-    { "window": 9.5, "bloque": "b7", "keyframes": ["k14","k15"], "text": "Entonces lo dijo, y así quedó: «ese que iba adelante era el diablo». No hubo cuernos ni fuego." },
-    { "window": 9.5, "bloque": "b8", "keyframes": ["k16","k17"], "text": "Por esos caminos andaban otras cosas. Un hombre flaco con luz, una cabeza sola, animales que no se veían." },
-    { "window": 9.5, "bloque": "b9", "keyframes": ["k10","k18"], "text": "Lo que distingue esta historia es la puerta. Quedó cerrada entre el agua y las peñas, vacía y oscura." }
+    {
+      "window": 9.5,
+      "bloque": "b1",
+      "keyframes": [
+        "k03",
+        "k04"
+      ],
+      "text": "Un padre volvía a caballo con su compadre, y detrás venía el hijo. El compadre iba despacio, cargado.",
+      "cubre": [
+        "n01",
+        "n02"
+      ]
+    },
+    {
+      "window": 9.5,
+      "bloque": "b2",
+      "keyframes": [
+        "k05",
+        "k11"
+      ],
+      "text": "En la bajada vieron un hombre delante de ellos. Cayó lluvia corta y empezó a levantarse una nube.",
+      "cubre": [
+        "n03",
+        "n04"
+      ]
+    },
+    {
+      "window": 9.5,
+      "bloque": "b3",
+      "keyframes": [
+        "k06",
+        "k12"
+      ],
+      "text": "Corría sobre un caballo negro de cola corta. Llevaba capa negra, y nadie alcanzó a verle la cara.",
+      "cubre": [
+        "n05"
+      ]
+    },
+    {
+      "window": 9.5,
+      "bloque": "b4",
+      "keyframes": [
+        "k07",
+        "k13"
+      ],
+      "text": "El padre siguió hasta la quebrada de El Tablón. Allí el jinete ya no estaba en ninguna parte.",
+      "cubre": [
+        "n06"
+      ]
+    },
+    {
+      "window": 9.5,
+      "bloque": "b5",
+      "keyframes": [
+        "k01",
+        "k02"
+      ],
+      "text": "En la quebrada encontró una puerta. Intentó abrirla y no pudo; su caballo tuvo que pasar de un salto.",
+      "cubre": [
+        "n07"
+      ]
+    },
+    {
+      "window": 9.5,
+      "bloque": "b6",
+      "keyframes": [
+        "k08",
+        "k09"
+      ],
+      "text": "Miró alrededor y buscó huellas. No halló al hombre, ni al caballo negro, ni rastro de por dónde siguieron.",
+      "cubre": [
+        "n08"
+      ]
+    },
+    {
+      "window": 9.5,
+      "bloque": "b7",
+      "keyframes": [
+        "k14",
+        "k15"
+      ],
+      "text": "Entonces lo dijo, y así quedó: «ese que iba adelante era el diablo». No hubo cuernos ni fuego.",
+      "cubre": [
+        "n09",
+        "n10"
+      ]
+    },
+    {
+      "window": 9.5,
+      "bloque": "b8",
+      "keyframes": [
+        "k16",
+        "k17"
+      ],
+      "text": "Por esos caminos andaban otras cosas. Un hombre flaco con luz, una cabeza sola, animales que no se veían.",
+      "cubre": [
+        "n11"
+      ]
+    },
+    {
+      "window": 9.5,
+      "bloque": "b9",
+      "keyframes": [
+        "k10",
+        "k18"
+      ],
+      "text": "Lo que distingue esta historia es la puerta. Sugiere un paso que el viajero humano no consigue cruzar.",
+      "cubre": [
+        "n12",
+        "n13"
+      ]
+    }
   ],
   "keyframes_nuevos": [
-    {"tag":"k11","desc":"PLANO GENERAL de tiras cortas de lluvia de papel sobre la bajada y una nube empezando a subir desde el fondo del valle; sin jinete."},
-    {"tag":"k12","desc":"PLANO DETALLE de la capa negra plegada al viento y la cola corta del caballo; el rostro queda fuera de campo, sin oscuridad antropomorfa."},
-    {"tag":"k13","desc":"PLANO GENERAL de la quebrada vacía al final del camino, luz gris; sin jinete, sin humo y sin señal de paso."},
-    {"tag":"k14","desc":"PLANO MEDIO CORTO del padre detenido sobre el caballo, mirando atrás hacia el camino recorrido; gesto de razonamiento, no de miedo teatral."},
-    {"tag":"k15","desc":"PLANO GENERAL nocturno del camino completamente vacío entre peñas; ninguna figura demoníaca visible, ni cuernos ni fuego."},
-    {"tag":"k16","desc":"PLANO MEDIO de una figura muy delgada sentada al borde de un camino con una luz pequeña en la mano; sobria, sin rostro deformado."},
-    {"tag":"k17","desc":"PLANO GENERAL de un tramo de camino en penumbra con vegetación movida a los lados, sin animal visible; lo invisible queda sugerido."},
-    {"tag":"k18","desc":"PLANO DETALLE de cierre: la hoja de la puerta cerrada, madera sencilla contra el talud, sin luz detrás ni símbolo alguno."}
+    {
+      "tag": "k11",
+      "desc": "PLANO GENERAL de tiras cortas de lluvia de papel sobre la bajada y una nube empezando a subir desde el fondo del valle; sin jinete."
+    },
+    {
+      "tag": "k12",
+      "desc": "PLANO DETALLE de la capa negra plegada al viento y la cola corta del caballo; el rostro queda fuera de campo, sin oscuridad antropomorfa."
+    },
+    {
+      "tag": "k13",
+      "desc": "PLANO GENERAL de la quebrada vacía al final del camino, luz gris; sin jinete, sin humo y sin señal de paso."
+    },
+    {
+      "tag": "k14",
+      "desc": "PLANO MEDIO CORTO del padre detenido sobre el caballo, mirando atrás hacia el camino recorrido; gesto de razonamiento, no de miedo teatral."
+    },
+    {
+      "tag": "k15",
+      "desc": "PLANO GENERAL nocturno del camino completamente vacío entre peñas; ninguna figura demoníaca visible, ni cuernos ni fuego."
+    },
+    {
+      "tag": "k16",
+      "desc": "PLANO MEDIO de una figura muy delgada sentada al borde de un camino con una luz pequeña en la mano; sobria, sin rostro deformado."
+    },
+    {
+      "tag": "k17",
+      "desc": "PLANO GENERAL de un tramo de camino en penumbra con vegetación movida a los lados, sin animal visible; lo invisible queda sugerido."
+    },
+    {
+      "tag": "k18",
+      "desc": "PLANO DETALLE de cierre: la hoja de la puerta cerrada, madera sencilla contra el talud, sin luz detrás ni símbolo alguno."
+    }
   ],
-  "voice_settings": { "stability": 0.25, "similarity_boost": 0.9, "style": 0.45, "use_speaker_boost": true, "speed": 1.08 }
+  "voice_settings": {
+    "stability": 0.25,
+    "similarity_boost": 0.9,
+    "style": 0.45,
+    "use_speaker_boost": true,
+    "speed": 1.08
+  },
+  "acta": "docs/videos/nasa-paeces/actas/acta-el-diablo-nasa-paeces.json"
 }

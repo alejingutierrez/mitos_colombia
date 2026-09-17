@@ -1,28 +1,171 @@
 {
-  "enfoque": "fogon-visual-coloquial", "comunidad": "nasa-paeces",
-  "mito": "el-hombre-tigre", "titulo": "El hombre tigre", "canon_slug": "el-hombre-tigre",
-  "reescribe": "GUION.md de 5 bloques y 10 cuadros (55 s)",
-  "voice_id": "9EHAKExD4lT2G6hPG74L", "voice_name": "alejandro_narracion", "model_id": "eleven_multilingual_v2",
+  "enfoque": "fogon-visual-coloquial",
+  "comunidad": "nasa-paeces",
+  "mito": "el-hombre-tigre",
+  "titulo": "El hombre tigre",
+  "canon_slug": "el-hombre-tigre",
+  "reescribe": "guion-el-hombre-tigre-v2: b9 terminaba con «un puño de sal» en la mano, final que el canon no tiene.",
+  "voice_id": "9EHAKExD4lT2G6hPG74L",
+  "voice_name": "alejandro_narracion",
+  "model_id": "eleven_multilingual_v2",
   "lines": [
-    { "window": 9.5, "bloque": "b1", "keyframes": ["k01","k02"], "text": "Dicen que antes había gente tigre. Personas que podían volverse como el tigre de monte que atacaba las ovejas." },
-    { "window": 9.5, "bloque": "b2", "keyframes": ["k11","k12"], "text": "Salieron con escopetas y perro a cazar uno y no lo encontraron. Entonces invitaron a un hombre tigre." },
-    { "window": 9.5, "bloque": "b3", "keyframes": ["k03","k04"], "text": "Entró al monte llevando una peinilla. Encontró al tigre verdadero y se puso a jugar con él." },
-    { "window": 9.5, "bloque": "b4", "keyframes": ["k05","k06"], "text": "Cuando el animal se enfureció lo enfrentó y lo mató. Tenía más fuerza que él porque comía sal." },
-    { "window": 9.5, "bloque": "b5", "keyframes": ["k07","k08"], "text": "Dejó el cuerpo en el camino y llamó a los otros. Llegaron con las armas listas, de lejos." },
-    { "window": 9.5, "bloque": "b6", "keyframes": ["k09","k13"], "text": "El tigre parecía vivo y se devolvieron del susto. «Está muerto», tuvo que asegurarles para que se acercaran." },
-    { "window": 9.5, "bloque": "b7", "keyframes": ["k14","k15"], "text": "Decían que los hombres tigre vivían lejos. Y que algunos ladrones se volvían tigres para ir por las vacas." },
-    { "window": 9.5, "bloque": "b8", "keyframes": ["k16","k17"], "text": "Otro cazador vio en el páramo a un hombre encender fuego desde la axila. Llevaba un bastón de oro." },
-    { "window": 9.5, "bloque": "b9", "keyframes": ["k10","k18"], "text": "Quiso quitárselo y se volvió tigre para perseguirlo. Al final le quedó en la mano un puño de sal." }
+    {
+      "window": 9.5,
+      "bloque": "b1",
+      "keyframes": [
+        "k01",
+        "k02"
+      ],
+      "text": "Dicen que antes había gente tigre. Personas que podían volverse como el tigre de monte que atacaba las ovejas.",
+      "cubre": [
+        "n01"
+      ]
+    },
+    {
+      "window": 9.5,
+      "bloque": "b2",
+      "keyframes": [
+        "k11",
+        "k12"
+      ],
+      "text": "Salieron con escopetas y perro a cazar uno y no lo encontraron. Entonces invitaron a un hombre tigre.",
+      "cubre": [
+        "n02",
+        "n03"
+      ]
+    },
+    {
+      "window": 9.5,
+      "bloque": "b3",
+      "keyframes": [
+        "k03",
+        "k04"
+      ],
+      "text": "Entró al monte llevando una peinilla. Encontró al tigre verdadero y se puso a jugar con él.",
+      "cubre": [
+        "n04",
+        "n05"
+      ]
+    },
+    {
+      "window": 9.5,
+      "bloque": "b4",
+      "keyframes": [
+        "k05",
+        "k06"
+      ],
+      "text": "Cuando el animal se enfureció lo enfrentó y lo mató. Tenía más fuerza que él porque comía sal.",
+      "cubre": [
+        "n06",
+        "n07"
+      ]
+    },
+    {
+      "window": 9.5,
+      "bloque": "b5",
+      "keyframes": [
+        "k07",
+        "k08"
+      ],
+      "text": "Dejó el cuerpo en el camino y llamó a los otros. Llegaron con las armas listas, de lejos.",
+      "cubre": [
+        "n08"
+      ]
+    },
+    {
+      "window": 9.5,
+      "bloque": "b6",
+      "keyframes": [
+        "k09",
+        "k13"
+      ],
+      "text": "El tigre parecía vivo y se devolvieron del susto. «Está muerto», tuvo que asegurarles para que se acercaran.",
+      "cubre": [
+        "n09",
+        "n10"
+      ]
+    },
+    {
+      "window": 9.5,
+      "bloque": "b7",
+      "keyframes": [
+        "k14",
+        "k15"
+      ],
+      "text": "Decían que los hombres tigre vivían lejos. Y que algunos ladrones se volvían tigres para ir por las vacas.",
+      "cubre": [
+        "n11",
+        "n12"
+      ]
+    },
+    {
+      "window": 9.5,
+      "bloque": "b8",
+      "keyframes": [
+        "k16",
+        "k17"
+      ],
+      "text": "Otro cazador vio en el páramo a un hombre encender fuego desde la axila. Llevaba un bastón de oro.",
+      "cubre": [
+        "n13",
+        "n14"
+      ]
+    },
+    {
+      "window": 9.5,
+      "bloque": "b9",
+      "keyframes": [
+        "k10",
+        "k18"
+      ],
+      "text": "Se volvió tigre y lo persiguió. Recogió su plátano y, ya como hombre, se lo contó a su mujer.",
+      "cubre": [
+        "n15",
+        "n16"
+      ]
+    }
   ],
   "keyframes_nuevos": [
-    {"tag":"k11","desc":"PLANO GENERAL de dos cazadores con perro recorriendo el monte con las escopetas bajas; ningún felino a la vista."},
-    {"tag":"k12","desc":"PLANO MEDIO de los cazadores de pie ante la puerta de una casa hablando con un adulto de ropa marrón-verde; ninguna forma híbrida."},
-    {"tag":"k13","desc":"PLANO MEDIO de los cazadores detenidos a varios pasos del felino inmóvil, cuerpos en tensión; sin heridas visibles ni trofeo."},
-    {"tag":"k14","desc":"GRAN GENERAL de una cordillera lejana con casas dispersas muy pequeñas; sin rótulos, mapas ni ciudad identificable."},
-    {"tag":"k15","desc":"PLANO GENERAL nocturno de vacas en un potrero y, aparte en el mismo cuadro, la silueta de un felino al borde del monte; sin ataque."},
-    {"tag":"k16","desc":"PLANO MEDIO en páramo de un hombre de pie con un bastón claro, una llama pequeña naciendo junto a su costado; sobrio, sin efecto pirotécnico."},
-    {"tag":"k17","desc":"PLANO DETALLE del bastón apoyado en la paja del páramo, brillo mate; sin pedrería ni símbolo añadido."},
-    {"tag":"k18","desc":"PLANO DETALLE de cierre: una jigra con un plátano asado y, al lado, una mano abierta con un puño de sal blanca de papel."}
+    {
+      "tag": "k11",
+      "desc": "PLANO GENERAL de dos cazadores con perro recorriendo el monte con las escopetas bajas; ningún felino a la vista."
+    },
+    {
+      "tag": "k12",
+      "desc": "PLANO MEDIO de los cazadores de pie ante la puerta de una casa hablando con un adulto de ropa marrón-verde; ninguna forma híbrida."
+    },
+    {
+      "tag": "k13",
+      "desc": "PLANO MEDIO de los cazadores detenidos a varios pasos del felino inmóvil, cuerpos en tensión; sin heridas visibles ni trofeo."
+    },
+    {
+      "tag": "k14",
+      "desc": "GRAN GENERAL de una cordillera lejana con casas dispersas muy pequeñas; sin rótulos, mapas ni ciudad identificable."
+    },
+    {
+      "tag": "k15",
+      "desc": "PLANO GENERAL nocturno de vacas en un potrero y, aparte en el mismo cuadro, la silueta de un felino al borde del monte; sin ataque."
+    },
+    {
+      "tag": "k16",
+      "desc": "PLANO MEDIO en páramo de un hombre de pie con un bastón claro, una llama pequeña naciendo junto a su costado; sobrio, sin efecto pirotécnico."
+    },
+    {
+      "tag": "k17",
+      "desc": "PLANO DETALLE del bastón apoyado en la paja del páramo, brillo mate; sin pedrería ni símbolo añadido."
+    },
+    {
+      "tag": "k18",
+      "desc": "PLANO DETALLE de cierre: una jigra con un plátano asado y, al lado, una mano abierta con un puño de sal blanca de papel."
+    }
   ],
-  "voice_settings": { "stability": 0.25, "similarity_boost": 0.9, "style": 0.45, "use_speaker_boost": true, "speed": 1.08 }
+  "voice_settings": {
+    "stability": 0.25,
+    "similarity_boost": 0.9,
+    "style": 0.45,
+    "use_speaker_boost": true,
+    "speed": 1.08
+  },
+  "acta": "docs/videos/nasa-paeces/actas/acta-el-hombre-tigre.json",
+  "nota_cita": "La cita pone en estilo directo lo que el cazador tuvo que asegurarles para que se acercaran."
 }
