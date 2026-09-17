@@ -1,155 +1,25 @@
 {
-  "enfoque": "fogon-visual-coloquial",
-  "comunidad": "nasa-paeces",
-  "mito": "la-nina-que-se-volvio-serpiente",
-  "titulo": "La niña que se volvió serpiente",
-  "canon_slug": "la-nina-que-se-volvio-serpiente",
-  "reescribe": "guion-la-nina-que-se-volvio-serpiente-v2: b6 citaba «déjenos salir» y b9 decía «quedó el pañolón»; ni una ni otra están en el canon.",
-  "voice_id": "9EHAKExD4lT2G6hPG74L",
-  "voice_name": "alejandro_narracion",
-  "model_id": "eleven_multilingual_v2",
+  "enfoque": "fogon-visual-coloquial", "comunidad": "nasa-paeces",
+  "mito": "la-nina-que-se-volvio-serpiente", "titulo": "La niña que se volvió serpiente", "canon_slug": "la-nina-que-se-volvio-serpiente",
+  "acta": "docs/videos/nasa-paeces/actas/acta-la-nina-que-se-volvio-serpiente.json",
+  "nota_cita": "La cita es el único parlamento del canon y es literal. Son las tres palabras que dejan a la niña fuera de la misa.",
+  "reescribe": "La versión anterior medía un canon que Neon ya reescribió en voz de fogón. 28 nudos reales, N = techo(28/2) = 14: 28 keyframes, ≈140 s.",
+  "voice_id": "9EHAKExD4lT2G6hPG74L", "voice_name": "alejandro_narracion", "model_id": "eleven_multilingual_v2",
   "lines": [
-    {
-      "window": 9.5,
-      "bloque": "b1",
-      "keyframes": [
-        "k03",
-        "k15"
-      ],
-      "text": "Dicen que en una creciente bajó una niña. La gente la recogió y un matrimonio se hizo cargo.",
-      "cubre": [
-        "n01"
-      ]
-    },
-    {
-      "window": 9.5,
-      "bloque": "b2",
-      "keyframes": [
-        "k16",
-        "k02"
-      ],
-      "text": "Llegó después un sacerdote para una fiesta. Todos se prepararon para ir a misa, y ella quería acompañarlos.",
-      "cubre": [
-        "n02",
-        "n03"
-      ]
-    },
-    {
-      "window": 9.5,
-      "bloque": "b3",
-      "keyframes": [
-        "k01",
-        "k04"
-      ],
-      "text": "No tenía vestido, y sus cuidadores salieron sin ella. Tomó un pañolón viejo y corrió detrás del grupo.",
-      "cubre": [
-        "n04",
-        "n05"
-      ]
-    },
-    {
-      "window": 9.5,
-      "bloque": "b4",
-      "keyframes": [
-        "k05",
-        "k06"
-      ],
-      "text": "Ellos alcanzaban la iglesia cuando ella llegó a la quebrada. Allí mismo se transformó en una serpiente.",
-      "cubre": [
-        "n06"
-      ]
-    },
-    {
-      "window": 9.5,
-      "bloque": "b5",
-      "keyframes": [
-        "k07",
-        "k17"
-      ],
-      "text": "Era larga como el arco iris, con dos orejas. Rodeó el templo y metió la cabeza por la puerta.",
-      "cubre": [
-        "n07",
-        "n08"
-      ]
-    },
-    {
-      "window": 9.5,
-      "bloque": "b6",
-      "keyframes": [
-        "k08",
-        "k18"
-      ],
-      "text": "Devoró a los que estaban adentro. «Espere», le pidieron los que la habían criado, y sólo a ellos dejó.",
-      "cubre": [
-        "n09",
-        "n10"
-      ]
-    },
-    {
-      "window": 9.5,
-      "bloque": "b7",
-      "keyframes": [
-        "k09",
-        "k10"
-      ],
-      "text": "Se levantó hacia el cielo para alcanzar a la Virgen. Dos águilas salieron, la mordieron y la hicieron caer.",
-      "cubre": [
-        "n11",
-        "n12"
-      ]
-    },
-    {
-      "window": 9.5,
-      "bloque": "b8",
-      "keyframes": [
-        "k11",
-        "k12"
-      ],
-      "text": "Su muerte no terminó la cosa. Aparecieron culebras en otros lugares, y una atacaba a los que tenían labranza.",
-      "cubre": [
-        "n13",
-        "n14"
-      ]
-    },
-    {
-      "window": 9.5,
-      "bloque": "b9",
-      "keyframes": [
-        "k13",
-        "k14"
-      ],
-      "text": "Vino por el agua y acabó repartida en el territorio. Quedaron lugares, olores, colores y culebras nuevas.",
-      "cubre": [
-        "n15",
-        "n16"
-      ]
-    }
+    { "window": 9.5, "bloque": "b1", "cubre": ["n01","n02"], "text": "La creciente bajó por la quebrada revuelta de barro y de palos. En esa agua bajó una niña." },
+    { "window": 9.5, "bloque": "b2", "cubre": ["n03","n04"], "text": "La sacaron entre varios. Un matrimonio la crió, y creció junto al fogón, entre las jigras colgadas." },
+    { "window": 9.5, "bloque": "b3", "cubre": ["n05","n06"], "text": "Llegó el padre para celebrar una fiesta. Salieron para misa con la ropa guardada para los días grandes." },
+    { "window": 9.5, "bloque": "b4", "cubre": ["n07","n08"], "text": "La niña quiso ir también. «No tienes vestido», le dijeron los que la habían criado desde la creciente." },
+    { "window": 9.5, "bloque": "b5", "cubre": ["n09","n10"], "text": "Y salieron sin ella. Se quedó en la puerta hasta que los pasos se perdieron ladera abajo." },
+    { "window": 9.5, "bloque": "b6", "cubre": ["n11","n12"], "text": "Descolgó un pañolón viejo y salió detrás, con ardientes deseos de misa. Corría con la neblina en la cara." },
+    { "window": 9.5, "bloque": "b7", "cubre": ["n13","n14"], "text": "Cuando ellos llegaban a la iglesia, ella llegaba a la quebrada Yutuk. Allí se convirtió en serpiente." },
+    { "window": 9.5, "bloque": "b8", "cubre": ["n15","n16"], "text": "Era larga como el arco iris, con dos orejas de burro. Rodeó la iglesia entera y entró la cabeza." },
+    { "window": 9.5, "bloque": "b9", "cubre": ["n17","n18"], "text": "Se comió a todas las gentes. Sólo el matrimonio que la criaba le suplicó que esperara, y ella esperó." },
+    { "window": 9.5, "bloque": "b10", "cubre": ["n19","n20"], "text": "Los dos salieron tristes, por encima del cuerpo que cerraba el atrio. Se irguió al cielo, hacia la Virgen." },
+    { "window": 9.5, "bloque": "b11", "cubre": ["n21","n22"], "text": "Salieron dos águilas de Puelchi y se dirigieron a la plaza. La mordieron en dos y cayó al suelo." },
+    { "window": 9.5, "bloque": "b12", "cubre": ["n23","n24"], "text": "Vino un hombre con una mula a destrozarla; después montó y corrió lejos. Allí se pudrió, y aparecieron culebras." },
+    { "window": 9.5, "bloque": "b13", "cubre": ["n25","n26"], "text": "En Ulnengá había una, en un chupadero que olía feo al sol. Subía y se comía a las gentes." },
+    { "window": 9.5, "bloque": "b14", "cubre": ["n27","n28"], "text": "Avisaron a un inglés, que la destrozó con su espada. La cabeza cayó en Ulnengá, el rabo en Loto." }
   ],
-  "keyframes_nuevos": [
-    {
-      "tag": "k15",
-      "desc": "PLANO GENERAL de una quebrada crecida bajando entre laderas, sin figuras; el agua como única presencia."
-    },
-    {
-      "tag": "k16",
-      "desc": "PLANO MEDIO de un grupo de adultos vestidos para la fiesta saliendo de sus casas; la niña no aparece en cuadro."
-    },
-    {
-      "tag": "k17",
-      "desc": "PLANO DETALLE de la cabeza azul con dos orejas de papel entrando por el vano oscuro de la puerta; sin interior visible y sin víctimas en cuadro."
-    },
-    {
-      "tag": "k18",
-      "desc": "PLANO MEDIO de los dos cuidadores alejándose por la plaza de espaldas, cabizbajos; el cuerpo de la serpiente rodeando el edificio al fondo, sin sangre ni restos."
-    }
-  ],
-  "voice_settings": {
-    "stability": 0.25,
-    "similarity_boost": 0.9,
-    "style": 0.45,
-    "use_speaker_boost": true,
-    "speed": 1.08
-  },
-  "nota_cita": "La cita rinde lo que el canon refiere de forma indirecta: que le pidieran esperar, y que solo a ellos dejó salir.",
-  "acta": "docs/videos/nasa-paeces/actas/acta-la-nina-que-se-volvio-serpiente.json"
+  "voice_settings": { "stability": 0.25, "similarity_boost": 0.9, "style": 0.45, "use_speaker_boost": true, "speed": 1.08 }
 }

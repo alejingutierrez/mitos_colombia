@@ -1,162 +1,25 @@
 {
-  "enfoque": "fogon-visual-coloquial",
-  "comunidad": "nasa-paeces",
-  "mito": "la-visita-del-joven-desconocido",
-  "titulo": "La visita del joven desconocido",
-  "canon_slug": "la-visita-del-joven-desconocido",
-  "nota_cita": "La cita pone en estilo directo la advertencia que el canon refiere: que nadie debía quitarlas porque eran parte de su vida.",
-  "voice_id": "9EHAKExD4lT2G6hPG74L",
-  "voice_name": "alejandro_narracion",
-  "model_id": "eleven_multilingual_v2",
+  "enfoque": "fogon-visual-coloquial", "comunidad": "nasa-paeces",
+  "mito": "la-visita-del-joven-desconocido", "titulo": "El joven del filo", "canon_slug": "la-visita-del-joven-desconocido",
+  "acta": "docs/videos/nasa-paeces/actas/acta-la-visita-del-joven-desconocido.json",
+  "nota_cita": "La cita es el único parlamento del canon y es literal: la excusa que la muchacha le da a su madre para seguir subiendo.",
+  "reescribe": "La versión anterior medía un canon que Neon ya reescribió en voz de fogón. 28 nudos reales, N = techo(28/2) = 14: 28 keyframes, ≈140 s.",
+  "voice_id": "9EHAKExD4lT2G6hPG74L", "voice_name": "alejandro_narracion", "model_id": "eleven_multilingual_v2",
   "lines": [
-    {
-      "window": 9.5,
-      "bloque": "b1",
-      "keyframes": [
-        "k02",
-        "k13"
-      ],
-      "text": "Dicen que un joven desconocido llegó a vivir a uno de los filos. Una muchacha empezó a visitarlo seguido.",
-      "cubre": [
-        "n01",
-        "n02"
-      ]
-    },
-    {
-      "window": 9.5,
-      "bloque": "b2",
-      "keyframes": [
-        "k03",
-        "k04"
-      ],
-      "text": "Cuando la madre preguntaba, ella contaba otra cosa. Que una culebra tiraba torcazas y subía a recogerlas.",
-      "cubre": [
-        "n03"
-      ]
-    },
-    {
-      "window": 9.5,
-      "bloque": "b3",
-      "keyframes": [
-        "k05",
-        "k06"
-      ],
-      "text": "Nació el niño con unas formas como gusanos. «No se las quiten, que son su vida», advirtió la madre.",
-      "cubre": [
-        "n04",
-        "n05"
-      ]
-    },
-    {
-      "window": 9.5,
-      "bloque": "b4",
-      "keyframes": [
-        "k14",
-        "k07"
-      ],
-      "text": "Un día se fue a la labranza y lo dejó en la hamaca. El niño despertó mientras ella tardaba.",
-      "cubre": [
-        "n06",
-        "n07"
-      ]
-    },
-    {
-      "window": 9.5,
-      "bloque": "b5",
-      "keyframes": [
-        "k15",
-        "k08"
-      ],
-      "text": "La abuela se acercó, lo levantó y se los quitó uno por uno. El niño se murió ahí mismo.",
-      "cubre": [
-        "n08"
-      ]
-    },
-    {
-      "window": 9.5,
-      "bloque": "b6",
-      "keyframes": [
-        "k09",
-        "k16"
-      ],
-      "text": "Al volver entendió lo que había pasado. Corrió hasta la laguna y se tiró, pero no se ahogó: desapareció.",
-      "cubre": [
-        "n09",
-        "n10"
-      ]
-    },
-    {
-      "window": 9.5,
-      "bloque": "b7",
-      "keyframes": [
-        "k10",
-        "k17"
-      ],
-      "text": "También desapareció el joven del filo. Los médicos decían que la pareja seguía viviendo dentro del agua.",
-      "cubre": [
-        "n11",
-        "n12"
-      ]
-    },
-    {
-      "window": 9.5,
-      "bloque": "b8",
-      "keyframes": [
-        "k18",
-        "k11"
-      ],
-      "text": "La abuela quiso obligarla a salir y convocó una reunión. No sirvió: los dos se pasaron a otra laguna.",
-      "cubre": [
-        "n13",
-        "n14"
-      ]
-    },
-    {
-      "window": 9.5,
-      "bloque": "b9",
-      "keyframes": [
-        "k01",
-        "k12"
-      ],
-      "text": "La laguna se secó y quedaron barriales en los potreros. Se supo por una nube negra que cruzó.",
-      "cubre": [
-        "n15",
-        "n16"
-      ]
-    }
+    { "window": 9.5, "bloque": "b1", "cubre": ["n01","n02"], "text": "Los primeros de Calderas contaban que un jovencito llegó al filo. Nadie supo de dónde venía ni de quién." },
+    { "window": 9.5, "bloque": "b2", "cubre": ["n03","n04"], "text": "Allá arriba el monte se cierra y la neblina sube a media tarde. Una muchacha empezó a visitarlo, seguido." },
+    { "window": 9.5, "bloque": "b3", "cubre": ["n05","n06"], "text": "La madre la regañaba por esas subidas. «Una culebra me tira torcazas desde unas ramas; voy a recogerlas», contestaba." },
+    { "window": 9.5, "bloque": "b4", "cubre": ["n07","n08"], "text": "De pronto se le notó el embarazo. Tuvo un hijo raro: en el cuerpo le salían unos gusanos." },
+    { "window": 9.5, "bloque": "b5", "cubre": ["n09","n10"], "text": "Recomendó que no se los quitaran: eran la misma vida del niño. Lo cargaban despacio, sin pasarle la mano." },
+    { "window": 9.5, "bloque": "b6", "cubre": ["n11","n12"], "text": "Una mañana salió a la labranza y se demoró arrancando hierba entre el maíz. El niño despertó mientras tanto." },
+    { "window": 9.5, "bloque": "b7", "cubre": ["n13","n14"], "text": "La abuela lo tomó de la hamaca y le quitó los gusanos, uno por uno. El niño se murió." },
+    { "window": 9.5, "bloque": "b8", "cubre": ["n15","n16"], "text": "Regresó la madre y se quejó de que no había razón para matarlo. La casa quedó en silencio." },
+    { "window": 9.5, "bloque": "b9", "cubre": ["n17","n18"], "text": "Como estaba cerca de una laguna, salió y se botó a ella. No se ahogó: desapareció únicamente." },
+    { "window": 9.5, "bloque": "b10", "cubre": ["n19","n20"], "text": "También desapareció el desconocido y el filo quedó vacío. Los médicos dijeron que ella vivía en la laguna." },
+    { "window": 9.5, "bloque": "b11", "cubre": ["n21","n22"], "text": "La abuela resolvió hacerla brujiar y promovió una reunión de médicos. Pidieron un zapallo quiteño y trapos de mujer." },
+    { "window": 9.5, "bloque": "b12", "cubre": ["n23","n24"], "text": "Los juntaron y los lanzaron al agua. Los dos se corrieron para la laguna de Santa Rosa, más lejos." },
+    { "window": 9.5, "bloque": "b13", "cubre": ["n25","n26"], "text": "La de Calderas se secó. Los barriales de esos potreros son restos suyos, y el ganado los pisa." },
+    { "window": 9.5, "bloque": "b14", "cubre": ["n27","n28"], "text": "De seguro salieron a las cuatro, en medio de una nube negra. Por eso se sabe dónde están." }
   ],
-  "keyframes_nuevos": [
-    {
-      "tag": "k13",
-      "desc": "PLANO GENERAL del filo de montaña con una vivienda sola recortada contra el cielo; sin figuras."
-    },
-    {
-      "tag": "k14",
-      "desc": "PLANO MEDIO de una hamaca con el bulto envuelto y quieto en un interior en penumbra; nadie más en cuadro."
-    },
-    {
-      "tag": "k15",
-      "desc": "PLANO DETALLE de una mano mayor junto al borde EXTERIOR de la manta cerrada; el cuerpo del niño nunca se ve, ni gusanos ni herida."
-    },
-    {
-      "tag": "k16",
-      "desc": "PLANO DETALLE de la superficie de la laguna cerrándose en ondas anchas; sin cuerpo, sin burbujas, sin rostro."
-    },
-    {
-      "tag": "k17",
-      "desc": "PLANO GENERAL del filo ahora vacío, la misma vivienda sin nadie; espejo exacto de k13."
-    },
-    {
-      "tag": "k18",
-      "desc": "PLANO MEDIO de varios médicos reunidos de pie en la orilla con un zapallo y un atado de tela; sin ritual explícito ni objeto íntimo reconocible."
-    }
-  ],
-  "voice_settings": {
-    "stability": 0.25,
-    "similarity_boost": 0.9,
-    "style": 0.45,
-    "use_speaker_boost": true,
-    "speed": 1.08
-  },
-  "acta": "docs/videos/nasa-paeces/actas/acta-la-visita-del-joven-desconocido.json"
+  "voice_settings": { "stability": 0.25, "similarity_boost": 0.9, "style": 0.45, "use_speaker_boost": true, "speed": 1.08 }
 }
