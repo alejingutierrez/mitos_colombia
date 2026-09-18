@@ -21,6 +21,16 @@
       "limitations": "Testimonio contemporáneo mediado por un reportaje, sin documento colonial que confirme la secuencia. No es una segunda transmisión independiente de la anterior: Yoani y Merardo Largo son hermanos y ambas fuentes salen de la misma casa. La única caracterización de los jeques es «grandes sabios»: no hay número, ropa, insignia, edad ni cuerpo. Y sitúa el valle de Umbra en Belén de Umbría, no en Quinchía, lo que corrige la lectura territorial que el censo daba por obvia."
     },
     {
+      "id": "umb-cieza-1553",
+      "role": "primary_or_early",
+      "title": "La crónica del Perú, capítulo XVI: las costumbres de los caciques e indios comarcanos a la villa de Ancerma (texto íntegro en escaneo público)",
+      "author": "Pedro de Cieza de León",
+      "year": 1553,
+      "locator": "https://archive.org/download/lacrnicadelper00ciez/lacrnicadelper00ciez_djvu.txt",
+      "supports": "Es el único texto del siglo XVI que nombra este pueblo y lo hace dos veces, y las dos importan. La primera: «El sitio donde está fundada la villa de Ancerma es llamado por los indios naturales Umbra» —el nombre de esta biblia es, en la fuente más antigua, el nombre que la gente daba a su propio sitio, frente al que le pusieron los españoles—. La segunda sostiene la primera frase del relato de Tasime: el nombre español viene de la palabra local para la sal, porque «oían a los indios que en viendo sal la llamaban y nombraban ancer, como es la verdad, y entre los indios no tiene otro nombre». Oro y sal no son un adorno del mito: son lo que da nombre al territorio. Añade además el paisaje de comarca —«sierras muy grandes, sin montaña ninguna», con las casas «desviadas alguna distancia unas de otras»— y registra un «peñol fuerte» que sirve de refugio en tiempo de guerra.",
+      "limitations": "Es un conquistador escribiendo sobre la comarca de la villa española, no sobre Guakurama ni sobre Quinchía, y su categoría para lo sagrado local es «el diablo». No menciona a los jeques de este relato, ni a Tasime, ni el beé, ni el cerro con ninguno de sus nombres. Se usa aquí para el topónimo, la etimología de la sal y el paisaje, y para nada más."
+    },
+    {
       "id": "umb-gonzalez-2025",
       "role": "academic",
       "title": "¿Es el umbra una lengua chocó?: un primer acercamiento desde la lingüística comparada",
@@ -176,10 +186,10 @@
       "affects": ["guakurama", "casas_separadas", "trabajo_de_la_sal", "gente_umbra"]
     },
     {
-      "claim": "El oro y la sal no son adorno narrativo: en el mismo municipio hay fuentes saladas documentadas junto al puerto de Irra y oro de filón y de aluvión, y los pueblos de Guacuma están descritos como conocedores de ambas explotaciones",
+      "claim": "El oro y la sal no son adorno narrativo: en el mismo municipio hay fuentes saladas documentadas junto al puerto de Irra y oro de filón y de aluvión, y los pueblos de Guacuma están descritos como conocedores de ambas explotaciones. Y la crónica de 1553 lo lleva más lejos: el nombre español de la provincia sale de la palabra local para la sal, porque «oían a los indios que en viendo sal la llamaban y nombraban ancer»",
       "basis": "documented_core",
       "sensitivity": "public",
-      "source_ids": ["umb-cardona-irra-2014"],
+      "source_ids": ["umb-cardona-irra-2014", "umb-cieza-1553"],
       "affects": ["guakurama", "trabajo_de_la_sal", "orfebreria_de_guakurama", "gente_umbra"]
     },
     {
@@ -412,6 +422,13 @@
       "sensitivity": "contextual",
       "source_ids": ["umb-gonzalez-2025", "umb-albicentenario-tasime", "umb-espectador-2021"],
       "affects": ["gente_umbra", "los_jeques_de_guacuma", "la_joven_de_guakurama", "el_hermano"]
+    },
+    {
+      "claim": "«Umbra» no es un rótulo impuesto: en la fuente más antigua es el nombre propio del sitio —«el sitio donde está fundada la villa de Ancerma es llamado por los indios naturales Umbra»—, frente a Anserma, que es el nombre español. La biblia trabaja con el nombre que la gente se daba, y el paisaje de comarca que el mismo texto describe es de sierras grandes sin bosque cerrado, con las casas desviadas unas de otras",
+      "basis": "documented_core",
+      "sensitivity": "public",
+      "source_ids": ["umb-cieza-1553"],
+      "affects": ["gente_umbra", "guakurama", "valle_de_umbra", "casas_separadas"]
     },
     {
       "claim": "La clasificación del umbra sigue en discusión y la comparación léxica no permite plantear filiación chocó; las identificaciones seguras entre Umbra, Kirma, Anserma y Quimbaya están expresamente cuestionadas, y ésa es la razón documental por la que esta biblia no comparte nada con la de Ansermas",
