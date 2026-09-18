@@ -114,6 +114,33 @@ sólo se paga la imagen.** El runbook está en
 [`proveedores-openai-bedrock.md`](proveedores-openai-bedrock.md). Se descarta
 toda URL que no venga del buscador.
 
+### El mapeo que hay que hacer al pasar al inventario
+
+**Los dos vocabularios no coinciden, y es un defecto de este kit.** La matriz de
+evidencia usa los enums de la V2; el validador del inventario V3
+(`scripts/mitos/biblia-v3.mjs`) usa otros. Sin este mapeo explícito, el paso de
+la Etapa 0 a la Etapa 1 pierde información:
+
+| matriz de evidencia (V2) | `entity.evidence_basis` (V3) |
+|---|---|
+| `documented_core` | `documented` |
+| `variant` | `variant` |
+| `contemporary_memory` | `documented` — y se anota la mediación en la nota |
+| `academic_hypothesis` | `inferred` |
+| `editorial_interpretation` | `editorial_interpretation` |
+| `uncertain` | `uncertain` |
+
+| sensibilidad (V2) | `entity.sensitivity` (V3) | consecuencia |
+|---|---|---|
+| `public` | `public` | — |
+| `contextual` | `contextual` | — |
+| `consult_required` | `sensitive` | no se genera hasta resolver la consulta |
+| `do_not_visualize` | — | la entidad va `visual_status: "excluded"` |
+
+**`do_not_visualize` no tiene equivalente en V3 a propósito**: no es un grado de
+sensibilidad de una ficha que existe, es la ausencia de ficha. Se resuelve en
+`visual_status`, no en `sensitivity`.
+
 ## 2 · Las siete pasadas
 
 Cada mito se lee **completo, en los cuatro campos**, y se registran siete
