@@ -1,0 +1,26 @@
+{
+  "schema": "myth-community-repair/v1",
+  "fecha": "2026-09-18T16:35:57.859Z",
+  "motivo": "El expediente editorial huitoto lo reclama como canónico (universe.mjs, media.mjs, definitions-other.mjs) y su región ya era amazonas, pero community_id estaba en NULL: la base tenía 21 relatos donde el universo heredado declara 22. Detectado por los verificadores huitoto residuales.",
+  "before": {
+    "id": 59,
+    "slug": "peleas-y-aventuras-entre-el-sobrino-conejo-y-el-tio-tigre",
+    "title": "Peleas entre el sobrino Conejo y el tío Tigre",
+    "community_id": null,
+    "region_id": 1,
+    "updated_at": "2026-09-14T20:27:27.768Z"
+  },
+  "after": {
+    "id": 59,
+    "slug": "peleas-y-aventuras-entre-el-sobrino-conejo-y-el-tio-tigre",
+    "community_id": 3,
+    "updated_at": "2026-09-14T20:27:27.768Z"
+  },
+  "comunidad": {
+    "id": 3,
+    "slug": "huitotos",
+    "name": "Huitoto / Murui-Muina",
+    "region_id": 1
+  },
+  "revertir": "UPDATE myths SET community_id = NULL WHERE id = 59;"
+}
