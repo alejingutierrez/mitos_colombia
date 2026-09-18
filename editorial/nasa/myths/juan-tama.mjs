@@ -1,50 +1,48 @@
 import { defineNasaMyth } from "../define-editorial-myth.mjs";
-import {
-  composeNasaHistory,
-  composeNasaSimilarities,
-  composeNasaVersions,
-} from "../compose-sections.mjs";
 
-const mito = `Durante el tiempo de la lluvia grande, el día y la noche parecían durar lo mismo. Los médicos tradicionales habían observado las señales y avisaron a la comunidad que una laguna o una quebrada iba a dar a luz.
+const mito = `Llovió muchos días seguidos. El agua no aflojaba ni de día ni de noche, las quebradas bajaban gruesas y arrastrando palos, la neblina no se levantaba de los filos y en las casas el fogón no alcanzaba a secar la ropa. Los médicos leyeron lo que estaba pasando y avisaron a la gente: un agua iba a parir.
 
-Las personas reunieron coca. Durante semanas, los sabedores prepararon el nacimiento y armonizaron el lugar. Cuando llegaron los rayos, la tempestad y la creciente de los ríos, caminaron de noche hacia el agua.
+Durante semanas prepararon el sitio. Reunieron coca y armonizaron la orilla, y esperaron.
 
-De la laguna salió un niño. Venía envuelto en un chumbe y llevaba como almohada un libro con títulos de los resguardos. Era Juan Tama, hijo del agua, de la estrella y del Trueno.
+Cuando reventó la tormenta caminaron de noche hacia el agua. Caían rayos sobre los filos y el ruido bajaba por el cañón sin parar. La quebrada creció y se desbordó.
 
-Los médicos lo recogieron y lo entregaron a mujeres jóvenes para que lo alimentaran. Las versiones recuerdan que sus nodrizas murieron. El niño creció en un tiempo marcado por violencia, despojo y ríos teñidos por la lucha.
+Entonces lo sacaron. Era un niño. Venía envuelto en un chumbe y traía por almohada un libro con los títulos de las tierras. Lo levantaron entre los truenos y lo bajaron abrigado, sin hablar mucho, por el mismo camino embarrado.
 
-Cuando estuvo preparado, Juan Tama comenzó a caminar. Recorrió montañas, ríos y límites del Cauca. No buscaba fundar un pueblo vacío, sino volver a orientar comunidades que ya existían y atravesaban conflictos.
+Se lo entregaron a muchachas jóvenes para que lo alimentaran. Ninguna resistió mucho tiempo. Una tras otra fueron muriendo, y hubo que buscar más, hasta que el niño pudo comer y dejó de necesitarlas.
 
-Defendió los territorios y procuró que sus linderos fueran reconocidos. Enseñó que la tierra no debía venderse ni pasar a manos extrañas, que la autoridad debía sostenerse en comunidad y que la autonomía dependía de recordar las leyes propias.
+Creció en años malos, con gente desplazada de sus rozas, cosechas perdidas y ríos que bajaban revueltos después de las peleas.
 
-En unas narraciones enfrentó invasiones españolas; en otras, conflictos con Pijaos o Misak. Cada comunidad sitúa el nacimiento en un agua cercana: Pátalo, el río Lucero, una quebrada de Pitayó u otros lugares. Ninguna laguna cancela a las demás.
+Cuando estuvo preparado empezó a caminar. Subió filos, cruzó ríos, durmió en casas ajenas. No llegaba a tierra vacía: en cada sitio había gente, y esa gente estaba cansada, dividida o a punto de quedarse sin lo suyo. Se sentaba a oírlos antes de decir nada.
 
-Después de recorrer y aconsejar, Juan Tama regresó al agua. Algunas voces dicen que caminó por sí mismo hacia la laguna; otras, que la comunidad lo llevó. No murió como alguien separado del territorio: volvió al lugar que lo había dado a luz.
+A los Pijaos los enfrentó y los echó del territorio.
 
-Desde allí su palabra continúa. El Trueno puede llamar a los Thê’jwala, las autoridades refrescan sus bastones y los mayores vuelven a narrar la historia según el sitio y el momento. Juan Tama permanece menos como retrato único que como orientación: agua, estrella, memoria, autoridad y defensa de una tierra que no termina de nacer.`;
+Después vinieron los linderos. Los caminó uno por uno, de mojón en mojón, y no descansó hasta que quedaron reconocidos. Donde reunía a la gente dejaba dicho lo mismo: que la tierra no se vende, que no pase a manos extrañas, que la autoridad se sostiene entre todos y que las leyes propias no se olvidan por comodidad.
 
-const historia = composeNasaHistory({
-  informants:
-    "La página no depende de una sola voz: compara el análisis de Simone Ferrari sobre la obra bilingüe del diseñador Nasa Gustavo Yonda, un manuscrito de Álvaro Ulcué citado por Gustavo Wilches-Chaux y estudios de memoria de Tierradentro.",
-  sourceDetail:
-    "Juan Tama tiene además dimensión histórica. Documentos producidos entre 1698 y 1708 muestran a un cacique que solicitó reconocimiento de títulos territoriales ante la Real Audiencia. Una de esas memorias lo nombra hijo de la estrella y de la quebrada Tama. Mito, historia y acción jurídica no se separan de la misma manera que en una biografía occidental.",
-  editorialDecision:
-    "Su ausencia era la principal brecha del catálogo Nasa. Se incorpora como mito nuevo con trazabilidad propia, sin reemplazar a Llíban ni a Juan Chiracol. El Relato reúne solo elementos convergentes y marca las divergencias de lugar y adversarios.",
-});
+Cuando terminó de caminar dijo que no iba a morir. Subió al páramo y llegó a la laguna. Entró en ella sin detenerse y el agua se cerró encima. No volvió a salir.
 
-const versiones = composeNasaVersions({
-  variantDetail:
-    "Las versiones coinciden en un nacimiento acuático anunciado por tormenta, la intervención de médicos tradicionales, el crecimiento de una autoridad, la defensa territorial y el regreso a una laguna. Cambian el río o laguna de origen, los adversarios, la forma de crianza, los mandatos y la manera del retorno.",
-  relationDetail:
-    "Gustavo Yonda construyó una versión bilingüe y visual con mayores de Tierradentro; Álvaro Ulcué reelaboró el relato desde una perspectiva católica y caminante; otras transcripciones proceden de Macedonio Perdomo y Asdrúbal Plaza. Esta página no declara una de ellas canónica.",
-});
+La laguna lleva su nombre. Todavía suben las autoridades antes de entrar en el cargo, a lavar los bastones en esa agua fría, y cuando hace mucha falta se paran en la orilla y lo llaman.`;
 
-const similitudes = composeNasaSimilarities({
-  comparisonDetail:
-    "El Popol Vuh presenta figuras que ordenan una comunidad en tiempos de prueba y cuya palabra vincula origen, territorio y continuidad. La comparación se limita a la función orientadora. Juan Tama nace del agua y la estrella, camina linderos y se relaciona con títulos de resguardo dentro de una historia Nasa propia.",
-  internalDetail:
-    "Llíban es hijo del Trueno o Trueno mismo, llega en una creciente, defiende la tierra y se retira a una laguna. Juan Chiracol deja consejos para no venderla y vigila desde El Caspe. Bernal ya observó semejanzas con Juan Tama; la nueva ficha hace visible esa red sin fusionar a los tres.",
-});
+const historia = `Esta página no descansa en el corpus de Calderas. Segundo Bernal Villa no recogió a Juan Tama en 1953: en la introducción de su artículo escribe que José Pérez de Barradas había recogido el mito, que Gregorio Hernández de Alba hacía referencia a él y que el misionero lazarista David González lo tenía, bastante elaborado y sintético, en su obra inédita «Los Paeces», igual que G. Burg; y añade que muchos de los cuentos que él sí recogió en Calderas presentan marcada semejanza con el de Juan Tama. Es decir: en 1953 el mito ya circulaba impreso por fuera de Calderas y Bernal lo usó como término de comparación de todo lo demás. Un año después, en «Medicina y magia entre los paeces», anota que la vara de chonta del médico, donada por el Trueno, toma su nombre del héroe, a quien describe como fundador de pueblos, guerrero, gobernante, legislador y médico afamado.
+
+Lo que sostiene la página son fuentes propias, casi todas posteriores y de distinta naturaleza. Joanne Rappaport sostiene en 1981 que Juan Tama y Llíban son en el fondo la misma figura, con relatos casi idénticos: hallado en un río entre truenos, criado por los páez, armado con una boleadora que se vuelve culebra, vencedor de los pijaos y desaparecido en una laguna que queda sagrada y a la que peregrinaba el cabildo; lee el conjunto como mesianismo comparado con los Andes peruanos y apoya sus datos en Bernal y en documentos coloniales. Jorge Orozco Meneses registra en 1996 que el padre era el trueno y la madre la estrella, de donde viene el nombre, que fue encontrado en la quebrada de Lucero y que no muere sino que desaparece en la laguna de su nombre, donde puede ser llamado. Gustavo Wilches-Chaux transcribe en 2005 el nacimiento a partir de un manuscrito de Álvaro Ulcué y lo vincula con el agua, el trueno y las avalanchas de Tierradentro. Simone Ferrari compara en 2022 las versiones escritas y estudia la obra bilingüe del diseñador nasa Gustavo Yonda, construida con mayores de Tierradentro. María Patricia Farfán Sopó recoge en 2023, en entrevista en el norte del Cauca, una versión viva: una laguna sagrada se desbordó tras días de tormenta y de sus aguas salió un niño cubierto de escamas que un médico tradicional rescató.
+
+Juan Tama tiene además expediente judicial. Martha Elizabeth Varón Páez y Luisa Fernanda Bríñez García contrastan al cacique de Vitoncó, con títulos coloniales y herencia de su tío, con la figura del hijo de la estrella enviado por el trueno cuyo nacimiento habrían predicho los médicos tradicionales, y recogen testimonios de que sigue acompañando al pueblo; la ficha anterior fecha entre 1698 y 1708 las gestiones de reconocimiento de títulos ante la Real Audiencia. Mito, documento y acción política no se separan aquí como en una biografía occidental: el CRIC sostiene Tierradentro como territorio ancestral vinculando memoria, autonomía y la figura de Juan Tama con la defensa comunitaria de hoy. Cautela final: ninguna de estas fuentes es una narración escuchada en su sitio y en su lengua, y esta edición no declara canónica a ninguna.`;
+
+const versiones = `No hay un texto primario único para esta página, y eso cambia el modo de leer sus diferencias. Las versiones coinciden en un nacimiento acuático anunciado por la tormenta, en la intervención de los médicos, en una crianza difícil, en el crecimiento de una autoridad que camina y aconseja, en la defensa de la tierra y en el regreso al agua. Cambian el lugar, los adversarios, la forma de la crianza, los mandatos y la manera del retorno.
+
+El lugar es lo primero que se mueve. Orozco Meneses lo encuentra en la quebrada de Lucero; otras comunidades lo sitúan en Pátalo, en el río Lucero o en una quebrada de Pitayó, y cada una conserva el suyo sin cancelar a las demás. Por eso el Relato no nombra el agua de la que sale. Los adversarios también cambian: donde unas narraciones ponen invasiones españolas, otras ponen a los Pijaos y otras conflictos con los Misak; el Relato sigue a Rappaport, que resume la figura como vencedora de los pijaos, y deja aquí constancia del resto. El retorno se cuenta de dos maneras, caminando él solo hasta la laguna o llevado por la comunidad; el Relato sigue a Orozco Meneses, para quien no muere sino que desaparece en la laguna de su nombre, donde puede ser llamado. El detalle del chumbe y del libro de títulos viene de la ficha anterior y no aparece en todas las narraciones.
+
+Las mediaciones son distintas entre sí y conviene no mezclarlas. Gustavo Yonda construyó con mayores de Tierradentro una obra bilingüe y visual que Ferrari analiza; Álvaro Ulcué reelaboró el mito desde una perspectiva católica y caminante, y por esa vía lo transcribe Wilches-Chaux; hay además transcripciones atribuidas a Macedonio Perdomo y a Asdrúbal Plaza; Farfán Sopó recoge en el norte del Cauca la del niño cubierto de escamas, publicada en inglés con el testimonio original en nota. Rappaport, por su parte, no aporta una versión sino una identificación: Juan Tama y Llíban serían la misma figura. Esa es una hipótesis de autora, apoyada en Bernal y en fuentes coloniales, y esta página no la adopta.
+
+Conviene distinguir esta ficha de “Llíban, el hijo del Trueno” y de “El Trueno”, que pertenecen al corpus de Calderas de 1953, con narradores nombrados y variantes numeradas. Juan Tama llega por otra puerta: fuentes contemporáneas, memoria organizativa y documentos coloniales.`;
+
+const similitudes = `El primer paralelo es “Llíban, el hijo del Trueno”. En el texto de Calderas los médicos hacen crecer una quebrada y sacan de ella al hijo del Trueno, lo crían con muchachas que resisten tres o cuatro meses y mueren, el niño se vuelve el mejor médico de Tierradentro, mata a los Pijaos con una boleadora que resulta ser una culebra y termina viviendo en una laguna. Rappaport sostiene que los dos son en el fondo la misma figura. La diferencia está en el archivo: Juan Tama aparece además en documentos coloniales, como cacique de Vitoncó con títulos y linderos, y Llíban no.
+
+El segundo es “Juan Chiracol”. También es una autoridad que pelea contra los Pijaos, deja dicho que la tierra no se venda porque por ella peleó, se despide y sigue vigilando desde una laguna. Se diferencia por el origen: nace de una mujer y un tigre, sin trueno ni estrella, y no deja descendencia.
+
+El tercero es “El Trueno”, del que dependen los otros dos. Rappaport describe las lagunas como sus casas, y Bernal documenta en 1954 que el médico recibe su vocación en visiones del Trueno y es consagrado a la orilla de una laguna. Ese es el fondo común: la laguna no es un escenario sino la instancia que da y recibe la autoridad.
+
+Bernal escribió en 1953 que muchos de los cuentos que recogió en Calderas presentan marcada semejanza con el de Juan Tama. Conviene repetir la advertencia con la que él mismo trabajaba: el parecido señala un problema compartido, de dónde viene el mandato, cómo se sostiene y a dónde vuelve, y no una historia única de la que las demás serían copias. Fuera del área nasa el expediente no aporta comparativa que se sostenga, y la remisión al Popol Vuh que traía la ficha anterior se retira.`;
 
 export default defineNasaMyth({
   slug: "juan-tama",
@@ -53,7 +51,7 @@ export default defineNasaMyth({
   historia,
   versiones,
   leccion:
-    "La autonomía perdura cuando territorio, memoria y autoridad vuelven a cuidarse en comunidad.",
+    "El mandato que más dura no es el que se impone sino el que alguien acepta cuidar.",
   similitudes,
   excerpt:
     "Juan Tama nace de una laguna durante la gran lluvia, recorre los linderos, defiende los resguardos y vuelve al agua.",
@@ -75,8 +73,32 @@ export default defineNasaMyth({
     "unicaucaMemory",
     "minculturaNasa",
     "cricTerritory",
-    "onicNasa",
+    "acinNasa",
+    "nasaCxhacxha",
     "bernal1953",
+    {
+      key: "rappaportMesianismo1981",
+      summary:
+        "Sostiene que Juan Tama y Llíban son en el fondo la misma figura, con relatos casi idénticos: hallado en un río entre truenos, criado por los páez, armado con una boleadora que se vuelve culebra, vencedor de los pijaos y desaparecido en una laguna que queda sagrada, adonde el cabildo peregrinaba.",
+      limitation:
+        "Lee el relato como mesianismo comparado con los Andes peruanos y no distingue las versiones locales; apoya sus datos en Bernal y en fuentes coloniales.",
+    },
+    "paezNarrativas2022",
+    "sopoNasa2023",
+    {
+      key: "villaMedicina1954",
+      summary:
+        "Explica que la vara de chonta del médico, donada por el Trueno, toma su nombre del héroe: fundador de pueblos, guerrero, gobernante, legislador y médico afamado, y describe la laguna como el lugar donde el Trueno consagra a los médicos.",
+      limitation:
+        "Trata al héroe sólo de paso, como etimología de la vara; su foco es la práctica médica de Calderas y las parcialidades vecinas.",
+    },
+    {
+      key: "menesesMitos1996",
+      summary:
+        "Registra que su padre era el trueno y su madre la estrella, de donde viene el nombre, que fue encontrado en la quebrada de Lucero y que no muere sino que desaparece en la laguna de su nombre, donde puede ser llamado.",
+      limitation:
+        "Texto breve de divulgación pedagógica con testimonios recogidos en varias parcialidades.",
+    },
   ],
   imagePromptHorizontal:
     "Maqueta artesanal de papel recortado y fibras naturales, composición horizontal 16:9. Noche de lluvia intensa en una laguna de páramo de Tierradentro; médicos tradicionales Nasa esperan en la orilla con jigras y bastones, mientras un niño envuelto en chumbe emerge del agua bajo una estrella y relámpagos. Ropa Nasa sobria y documentada, sin tocados panindígenas, sin texto, sin marcos, atmósfera sagrada y comunitaria.",
