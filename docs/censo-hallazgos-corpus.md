@@ -47,6 +47,20 @@ es pagar por una ficción, y producirlo contra un módulo sin aplicar deja la
 lámina sin texto que la sostenga. Lo que no se puede es decidirlo corpus por
 corpus, como quedó hoy.
 
+### Y un expediente que nombra la fuente equivocada
+
+**Kogui.** `editorial/kogui/sources.mjs` atribuye los diecinueve relatos a
+Reichel-Dolmatoff, *Los Kogi* tomo II, 1951. **No son de ahí: son de Chaves
+1947**, recogidos de dos narradores con nombre en San Andrés, en noviembre de
+1946 —un poblado de veintiocho casas a 1.400 m en la vertiente occidental que
+fue invadido en 1948 y **dejó de existir**—. La diferencia no es bibliográfica:
+el templo de ese poblado estaba techado con **hoja de palma y no con paja**, y
+lo confirman dos observaciones independientes, Chaves en 1946 y Reichel en
+1975. Quien dibujara el techo desde el tomo II lo dibujaría mal.
+
+Peor: el tomo II **no existe en acceso abierto en ninguna parte**, así que la
+atribución nunca se pudo verificar contra el texto que decía citar.
+
 ## 2. Cinco corpus que no deberían tener biblia propia
 
 - **Pirsa** — el relato es el capítulo CXVIII de Cieza (1553) sobre un hecho de

@@ -365,6 +365,12 @@ corroboraciones.
 | La forma de la casa ceremonial, de no encontrarse fuente, se resuelve por la tipología general y se declara reversible | `editorial_interpretation` | `contextual` | — | `casa_uwa` |
 | Los Llanos Orientales se dibujan como banda lejana vista desde la sierra, sin una sola pieza de la biblia Sikuani | `editorial_interpretation` | `public` | canon, censo | `llanos_orientales`, `tigres_de_los_llanos`, `yanoa` |
 | Las lecturas sincréticas de Mincultura (Siria=Jehová, Sikakua=Bolívar) no se visualizan | `editorial_interpretation` | `public` | `mincultura-uwa` | `sira`, `rurcoca`, `rukwa` |
+| Dasa Duba es el dios creador y dueño de los animales de este mundo y actúa llamando con el pensamiento, sin cuerpo descrito | `documented_core` | `public` | `uwa-izketa-2020` | `dasa_duba` |
+| El ayo es planta sagrada de alimento físico y espiritual, lo cuidan las mujeres y se siembra junto a la casa; la cal es la piedra sagrada que lo acompaña; el tabaco (*baka*) se masca al inicio de los rituales | `documented_core` | `public` | `uwa-izketa-2020`, `mincultura-uwa` | `coca_ayo`, `tabaco`, `cal_para_el_ayo`, `iurusa` |
+| En la dimensión de los muertos las almas son murciélagos de día y sombras con forma de persona de noche, cocinan en mollas de barro y comen el vapor; las huertas están limpias y dan grandes racimos de plátano | `documented_core` | `public` | `uwa-izketa-2020` | `almas_de_la_otra_dimension`, `dimension_de_los_muertos`, `comida_de_vapor_de_las_almas`, `uktara` |
+| El piso medio y bajo es bosque andino hacia 2.300 m, altoandino hacia 3.200 m y bosque de tierra baja hacia 700 m | `documented_core` | `public` | `cocuy-fisico`, `mincultura-uwa` | `paisaje_bosque_y_piedemonte_uwa`, `rios_y_quebradas_uwa` |
+| La sangre de Lisha es el agua que corre por los ríos del territorio ancestral: el río es resultado del relato, no fondo neutro | `documented_core` | `public` | `uwa-izketa-2020` | `rios_y_quebradas_uwa`, `lisha`, `laguna_de_lisha`, `rio_keroa`, `quebrada_monoa_lia` |
+| Seis fichas `required` no tienen ninguna base visual fuera del canon: la madre del fuego, el padre Monoa, la culebra del camino, el tigrillo, la perdiz y los pichones de cigüeña | `uncertain` | `public` | `uwa-izketa-2020` | `madre_del_fuego`, `monoa_padre`, `culebra_del_camino`, `tigrillo`, `perdiz`, `pichones_de_ciguena` |
 
 ## 10 · Revisión cultural — `documented_exception`
 
@@ -440,8 +446,16 @@ Anbaiya; el contenido de las secretas; y cualquier diseño textil concreto.
    Kejeta**, y el canon prohíbe inventarlas. Tres fichas quedan con anatomía
    genérica de familia.
 8. **Ituma, suskuara, kuibura y suara** —los objetos de poder de Yanoa— no tienen
-   forma documentada en ninguna fuente consultada. La ficha
-   `objetos_de_poder_de_yanoa` no tiene base visual suficiente.
+   forma documentada en ninguna fuente consultada.
+
+**Fichas `required` que siguen sin base visual suficiente (siete):**
+`objetos_de_poder_de_yanoa`, `madre_del_fuego`, `monoa_padre`,
+`culebra_del_camino`, `tigrillo`, `perdiz` y `pichones_de_ciguena`. Las seis
+últimas sólo pueden resolverse por función y por escala dentro de la escena —el
+tigrillo por la postura de acompañar sin amenazar, la perdiz por el canto de
+lluvia, los pichones por estar dentro de una cueva— y esa resolución debe
+declararse como interpretación editorial reversible en el bloque `design` de cada
+ficha, no pasar como rasgo documentado.
 
 ## 12 · Sistema visual propuesto
 

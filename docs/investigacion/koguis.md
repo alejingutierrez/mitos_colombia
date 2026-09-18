@@ -786,8 +786,18 @@ enmascarado, así que cae también bajo la exclusión de máscaras.
 
 **Décima, que se añade: la Casa-Internado — `do_not_visualize`.** Ver §5.4.
 
-**Y una que el censo no marcó y debería quedar en `consult_required`:** el
-*kwalama del subsuelo* que el PES describe —ollas de barro enterradas en las
+**Y dos que el censo no marcó y deberían quedar en `consult_required`.**
+
+La primera es el **bastón de autoridad**. El censo le dio ficha propia como
+objeto de gobierno, y el relato de Naowa lo trata así —«Naowa le dio después un
+bastón, y con el bastón quedó mejor aún»—. Pero en las fuentes el bastón tallado
+no es un atributo civil: se guarda en los templos de los centros ceremoniales
+**junto con las máscaras de baile y las coronas de plumas**; el bastón con
+muescas (*niguigui*) del mama es un sistema preciso de notación; y el rayo de luz
+que entra por el ápice del templo se llama *nuči*, «bastón del Sol». Está en la
+misma vitrina que lo que ya se excluyó. Pasa a `consult_required`.
+
+La segunda es el *kwalama del subsuelo* que el PES describe —ollas de barro enterradas en las
 cuencas que contienen «las figuras que representan las semillas originales de
 toda clase de especies animales y vegetales», y figuras en piedra que funcionan
 como mapas—. No aparece en el `mito` de ningún relato, pero es lo más cercano
@@ -921,7 +931,7 @@ columna `afecta` usa los `id` de entidad del censo.
 | 47 | La escala de la mujer múltiple se deduce de la puerta baja, los horcones y los banquitos del nuhué documentados | `editorial_interpretation` | `public` | reichel1975, chaves1947 | mujer_multiple_yangauki, horcones, banco |
 | 48 | Kandutu es «como un cocuyo»: el relato compara, no identifica; la ficha es construcción editorial | `editorial_interpretation` | `public` | chaves1947 | kandutu |
 | 49 | La casa de nueve cuartos no tiene referente kogui: es construcción editorial; el «hoyito por la pared» puede tomar su lógica del orificio tapado del ápice, sin identificarlos | `editorial_interpretation` | `public` | chaves1947, reichel1975 | casa_de_la_magri_nueve_cuartos, hoyito_en_la_pared |
-| 50 | Las máscaras son objetos inalienables que sólo los mamas pueden tratar; dos restituidas en 2023 y tres objetos más en 2025 | `documented_core` | `do_not_visualize` | spk2023, spk2025, zapata2025 | mascaras_rituales, guateovan, simbolo_solar_de_varitas, confesion_y_tani_cansamaria |
+| 50 | Las máscaras son objetos inalienables que sólo los mamas pueden tratar; dos restituidas en 2023 y tres objetos más en 2025 | `documented_core` | `do_not_visualize` | spk2023, spk2025, zapata2025 | mascaras_rituales, cuatro_varones_taumaturgos, simbolo_solar_de_varitas, confesion_y_tani_cansamaria |
 | 51 | La iniciación del poporo y la primera menstruación son trabajos tradicionales del paso generacional | `documented_core` | `do_not_visualize` | pes2017, reichel1950 | iniciacion_del_poporo |
 | 52 | Los pagamentos se rigen por códigos dictados en los sitios sagrados por medio de los mamos | `documented_core` | `do_not_visualize` | pes2017, decreto2018 | pagamento_y_piedra_de_pagar |
 | 53 | Los Ezwamas mayores son Kuamaka, Suribaka, Makutama y Nuabaka; son espacios de gobierno cuidados por mamos y sagas | `documented_core` | `do_not_visualize` | pes2017, ogt | sitios_sagrados_ezwama |
@@ -932,6 +942,25 @@ columna `afecta` usa los `id` de entidad del censo.
 | 58 | Los materiales del techo —paja o palma, madera, bejuco— y el fuego nacen dentro del propio corpus y no pueden aparecer antes de sus relatos | `documented_core` | `public` | chaves1947 | casa_de_espuma_de_agua, oscuridad_antes_del_sol, tierra_que_endurece, creacion, bosque_de_la_sierra, palma_de_empajar, bejuco, arboles |
 | 59 | Las paredes de esterilla de caña brava las hacen obreros especializados: en San Andrés sólo una persona sabía la técnica | `documented_core` | `public` | chaves1947 | casa_de_habitacion_kogui, poblado_kogui |
 | 60 | La cuenca de Palomino, donde vive Hiwihá, está habitada y cultivada y sus mamos conocen 189 especies medicinales; no es un lugar maldito | `documented_core` | `public` | carbono2013 | hiwiha, palomino_poblado, bosque_de_la_sierra |
+| 61 | El poblado del corpus fue invadido por mestizos en 1948 y dejó de existir dos años después del registro | `documented_core` | `public` | reichel1975 | san_andres, poblado_kogui |
+| 62 | La trampa de machucón tiene nombre y forma: *ahuímalda*, «trampa que consiste de un madero caidizo», cargada aquí con mucha piedra; es además nombre de un grupo de descendencia | `documented_core` | `public` | reichel1950, chaves1947 | trampa_de_machucon, kashindukwe, nunkasha, chucha |
+| 63 | El bastón tallado es objeto ritual guardado en los templos mayores junto a máscaras y coronas de plumas; el bastón con muescas del mama es un sistema de notación, y el rayo que entra al templo se llama «bastón del Sol» | `documented_core` | `consult_required` | reichel1975, pes2017 | baston_de_autoridad, colectivo_mamas, sol_mama, naowa_wastora |
+| 64 | Cultivos del poblado en 1946: plátano, caña, malanga, yuca, ñame, maíz, fríjol y guandul en templado; papa, cebolla y legumbres en páramo; un buey, gallinas y uno o dos perros por familia | `documented_core` | `public` | chaves1947, pes2017 | yuca, platano, malanga, maiz, roza, frijol, name_ñame, papa |
+| 65 | Plátano, yuca y malanga —los tres alimentos que pide el Sol— son las tres hijas del padre del bastimento, y el maíz el único hombre: deben leerse como hermanas y el maíz aparte | `documented_core` | `public` | chaves1947 | yuca, platano, malanga, maiz, madre_del_bastimento, sol_mama |
+| 66 | La piña no es cultivo documentado del poblado: en el corpus sólo es la forma bajo la cual el devorador ve a una mujer. Resuelve una visión, no una huerta | `editorial_interpretation` | `public` | chaves1947 | pina, vision_que_cambia, mujer_que_parece_pina, nuanashe |
+| 67 | El orden de los partos de Naowa es la ficha: sin hueso (culebra, gusano, lombriz, culebra ciega), después pájaros, después perico ligero, león y tigre. Es progresión de esqueleto, no fauna | `documented_core` | `public` | chaves1947 | colectivo_animales_sin_huesos, colectivo_pajaros, colectivo_animales_del_monte, naowa_wastora, criatura_sin_huesos |
+| 68 | La chucha: no se pela sino que se chamusca, tripas enterradas sin hondura, sin sacarle el corazón, y el rabo pelado porque se desolló bajo la piedra | `documented_core` | `public` | chaves1947 | chucha, seiskwisbuche, mujer_multiple_yangauki |
+| 69 | A ningún otro pueblo de la Sierra se le pone indumentaria kogui; los «civilizados» no se dibujan como tipos étnicos sino como ausencia o silueta sin rasgo | `editorial_interpretation` | `contextual` | chaves1947, pes2017 | colectivo_pueblos_del_mundo, naowa_wastora, colectivo_capuchinos |
+| 70 | El «libro» que la Magri entrega como título de autoridad no tiene forma material documentada en ninguna fuente kogui, en un corpus transmitido de memoria entre hombres que no leían | `editorial_interpretation` | `public` | chaves1947 | libro, gran_madre, nuanashe, kashindukwe |
+| 71 | La sangre atraviesa cuatro relatos y las `research_notes` piden tratarla sin violencia gráfica y presentar la menstrual como materia creadora: se resuelve como materia y color, nunca como herida | `documented_core` | `contextual` | chaves1947 | sangre, sangre_de_menstruacion, anguiskuitse, naowa_wastora, seiskwisbuche |
+| 72 | El cordón cosido en hombros, mangas y pantalones se tuerce dentro del templo colgando del *pispiska* y es el cordón umbilical con la Madre: el cordón se ve, el acto de torcerlo no | `documented_core` | `contextual` | reichel1975, reichel1950 | colectivo_gente_kogui, algodon, interior_del_nuhue |
+| 73 | El corpus no describe el cuerpo de casi nadie: cuatro descripciones en veinte relatos. Toda otra ficha de identidad humana es construcción editorial declarada | `documented_core` | `public` | chaves1947 | las 28 fichas humanas del censo |
+
+Setenta y tres afirmaciones: 63 `documented_core`, 7
+`editorial_interpretation`, 1 `academic_hypothesis`, 1 `contemporary_memory` y
+1 `variant`; por sensibilidad, 52 `public`, 8 `contextual`, 3
+`consult_required` y 10 `do_not_visualize`. **Las 84 fichas `required` del censo
+tienen al menos una afirmación que las afecta.**
 
 ---
 
