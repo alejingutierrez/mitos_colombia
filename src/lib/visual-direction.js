@@ -121,6 +121,19 @@ export function getCompositionLines(schema) {
  * prehispánico es un error de época tan grave como ponerle una cruz a Bochica.
  */
 export const ERA_REGISTERS = {
+  // El corpus chamí se narra en tiempo mítico pero fue transcrito en 1945, y sus
+  // propios relatos traen hacha, machete, serrucho y hasta pesos y centavos.
+  // Forzarle el registro "prehispanico" sería prohibir el hacha con la que
+  // Karagabí abre la palma de la que sale la gente.
+  mitico_chami: {
+    label: "Tiempo mítico chamí, narrado en 1945",
+    lines: [
+      "ÉPOCA: tiempo mítico chamí, cuando los animales eran gente y Karagabí hacía a las personas.",
+      "Materiales: madera, guadua, palma, barro, fibra, bejuco, algodón y majagua; hacha y machete SÍ existen en este corpus, igual que la red, la bodoquera, la chicha y el tambor.",
+      "Vestido: telas sencillas y falda de envolver, majagua blanca y chaquira blanca en la cabeza y en las manos SOLO cuando el relato lo nombre. NO okama de pechera ni chaquira contemporánea, NO raso ni encaje, NO tocado de plumas, orejeras de disco, nariguera ni corona.",
+      "NO puede aparecer: páramo, frailejones, laguna de altura, geometría muisca, maloca amazónica, penacho, ni selva esmeralda con niebla como atmósfera general.",
+    ],
+  },
   prehispanico: {
     label: "Prehispánico",
     lines: [
@@ -199,6 +212,11 @@ export function getEraLines(era) {
  * ------------------------------------------------------------------ */
 
 export const REGION_CRAFT = {
+  // Los chamí figuran como "Andina" en la base, pero la línea andina de arriba es
+  // de páramo muisca y les inyectaría frailejones y geometría ajena. Esta entrada
+  // existe para la vertiente donde ocurre su corpus.
+  "Cordillera Occidental":
+    "vertiente de montaña sobre las fuentes del Calima: río de piedras, guadual, monte que se abre en roza, laderas y derrumbes, luz de día abierto; NUNCA páramo, frailejones, niebla fría ni geometría muisca",
   Andina:
     "paramo altoandino, laguna sagrada, frailejones, piedra gris humeda, niebla fria, oro mate y geometria muisca sobria cuando aplique",
   Caribe:
@@ -248,8 +266,13 @@ export const COMMUNITY_CRAFT = {
     "lenguaje visual Sikuani: sabana, vivienda tradicional, maraca, fauna de llanura y transformacion ritual sugerida",
   Tumaco:
     "lenguaje visual del Pacifico narinense: manglar, madera, marea, canoas, lluvia y brillo marino contenido",
+  // Corregida el 2026-09-17 contra la investigación (docs/chami-investigacion-2026-09-17):
+  // el corpus de los catorce relatos es de Corozal, Río Frío (Valle), no del eje
+  // cafetero; el okama de chaquira es adorno CONTEMPORÁNEO y meterlo en un relato
+  // mítico es anacronismo; y la pinta de jagua identifica al grupo, de modo que
+  // «trazos geométricos» genéricos inventan una filiación.
   "Chamí":
-    "lenguaje visual Embera Chami: montana humeda del eje cafetero, rio de piedras, tambo de madera sobre pilotes, chaquira de colores en pechera y pintura corporal de jagua en trazos geometricos",
+    "lenguaje visual Embera Chami: vertiente oriental de la Cordillera Occidental sobre las fuentes del Calima, rio de piedras como eje del mundo, tambo de madera sobre pilotes con escalera de tronco con muescas, guadua, roza de maiz, chicha y tambor; la pinta de jagua identifica al grupo y NO se inventa un diseno; nada de okama ni chaquira de pechera contemporanea, ni tocado de plumas, orejeras de disco o nariguera",
   "Huitoto / Murui-Muina":
     "lenguaje visual Murui-Muina: maloca de techo conico, mambeadero, chagra abierta en la selva, canastos, manguare de dos troncos y penumbra verde de interior",
   "Katíos":

@@ -1,0 +1,121 @@
+{
+  "schema": "biblia-tanda-freeze/v1",
+  "comunidad": "chami",
+  "biblia": "v1",
+  "tanda": "08-atrezo-3",
+  "capa": "3 · atrezo",
+  "fecha": "2026-09-17",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "size": "1024x1024",
+  "tipo_de_ficha": "prop (1:1)",
+  "firmas": {
+    "la palma barrigona": "doce cortes de hacha tapados con hojas de rascadera, y por el del centro asoman dos figuritas humanas",
+    "el jenené": "el tronco abierto y dentro no hay madera sino agua, con peces suspendidos",
+    "las flores del monte": "una de ellas recortada en el mismo crema del fondo: está y no está, como la casa que dejan ver"
+  },
+  "correcciones": [
+    {
+      "ficha": "t08-04-jenene",
+      "causa": "salió como ESCENA con río, montañas y gente talando; es el peor incumplimiento del contrato de ficha",
+      "arreglo": "refuerzo explícito; ahora es el árbol solo sobre crema, con el agua dentro"
+    },
+    {
+      "ficha": "t08-07-chontaduro",
+      "causa": "fondo de palmeras en vez de crema",
+      "arreglo": "mismo refuerzo"
+    }
+  ],
+  "fichas": [
+    {
+      "id": "t08-01-balsa",
+      "titulo": "La balsa",
+      "chars": 8376,
+      "sha256": "4c4aa964c032696c89e853d5560e592afe30b3593c659cc21b1c7c195147f6d3",
+      "prompt_sha256": "4c4aa964c032696c89e853d5560e592afe30b3593c659cc21b1c7c195147f6d3",
+      "imagen": "t08-01-balsa-v1.png",
+      "imagen_sha256": "f3748948e76a88d2a8fe5d61cf7db5a84ae35f8fadd2f1c686d37ebc544c2ed7"
+    },
+    {
+      "id": "t08-02-palma-barrigona",
+      "titulo": "La palma barrigona",
+      "chars": 9555,
+      "sha256": "db4e1e2eda26cff689392da2458c75501c44247602251dae45aab6404db4ef83",
+      "prompt_sha256": "db4e1e2eda26cff689392da2458c75501c44247602251dae45aab6404db4ef83",
+      "imagen": "t08-02-palma-barrigona-v1.png",
+      "imagen_sha256": "0ecb563ae2c64a10d871ad00fd640b7e66431dc85844f47816456bf7b29235f8"
+    },
+    {
+      "id": "t08-03-hojas-rascadera",
+      "titulo": "Las hojas de rascadera",
+      "chars": 8408,
+      "sha256": "bdbd69f8f6a6d1b5d5c3b7029a767c44b98cc26e8b4fe761aa0396b943b2af71",
+      "prompt_sha256": "bdbd69f8f6a6d1b5d5c3b7029a767c44b98cc26e8b4fe761aa0396b943b2af71",
+      "imagen": "t08-03-hojas-rascadera-v1.png",
+      "imagen_sha256": "1dbf88d0a05dd613695e2d19ddfc642f9d66c77fa3991ebebc83b1b02137ad09"
+    },
+    {
+      "id": "t08-04-jenene",
+      "titulo": "El jenené, el árbol que tenía el agua",
+      "chars": 9557,
+      "sha256": "d506a5abedf20a088075f8ddea08df138e9db60fd54a7c183ca3e6317c5decef",
+      "prompt_sha256": "b06893af149cf0867c2730b81f19481f37fb8544867e8112a5b3f17797283d65",
+      "imagen": "t08-04-jenene-v1.png",
+      "imagen_sha256": "038a50057d3413c5f54597aa35ed82099a0b899a02eebcfbd237b141a7cb63b0"
+    },
+    {
+      "id": "t08-05-arbol-balso",
+      "titulo": "El árbol de balso",
+      "chars": 8503,
+      "sha256": "a6c1813b7636d42bdc6f8119c40b60e003ac0888b86d57feeb7ac5f57837d1e3",
+      "prompt_sha256": "a6c1813b7636d42bdc6f8119c40b60e003ac0888b86d57feeb7ac5f57837d1e3",
+      "imagen": "t08-05-arbol-balso-v1.png",
+      "imagen_sha256": "3e2bc1e3c281030b235e7fcb8d20f2628854ace4644f08aa2ec855da0ab7ebf1"
+    },
+    {
+      "id": "t08-06-corozo",
+      "titulo": "El corozo",
+      "chars": 8426,
+      "sha256": "d0888796336fa4c9180c60df2619b8a48d02beae58b095c006fe65300f305e25",
+      "prompt_sha256": "d0888796336fa4c9180c60df2619b8a48d02beae58b095c006fe65300f305e25",
+      "imagen": "t08-06-corozo-v1.png",
+      "imagen_sha256": "51426aec81b48753b28d2c387af0e58edc4c698c62c0aa027e603e48e1ae9623"
+    },
+    {
+      "id": "t08-07-chontaduro",
+      "titulo": "El chontaduro",
+      "chars": 8495,
+      "sha256": "d1f82fe5604c9a239ab8e7ae2fb8470b188d9698ed6de1135c90ec2b5ba1fbd8",
+      "prompt_sha256": "0b93f28659df9811d67d5e08a73cf2b42e2f6773ed7b5913441ecd7ca6345c65",
+      "imagen": "t08-07-chontaduro-v1.png",
+      "imagen_sha256": "1b57af5d58743fb7aa76a79da8d35121f135ec9d3c2d4c10a1e74b618dbe4dbb"
+    },
+    {
+      "id": "t08-08-guadua",
+      "titulo": "La guadua",
+      "chars": 8496,
+      "sha256": "f982ce0cf4a778afa066f88883f198798b98034e1be3e33a1deb9c022eb63c2f",
+      "prompt_sha256": "f982ce0cf4a778afa066f88883f198798b98034e1be3e33a1deb9c022eb63c2f",
+      "imagen": "t08-08-guadua-v1.png",
+      "imagen_sha256": "d87e8aebb46050dfc630c9d2f9d5e50ea078ee6632f837bfbb1c186a84ba9e9b"
+    },
+    {
+      "id": "t08-09-maiz",
+      "titulo": "El maíz chiquito",
+      "chars": 8463,
+      "sha256": "021de0361ae284573a7a5cf5239a28f8b1b324058d72a3e92935a2d40622260a",
+      "prompt_sha256": "021de0361ae284573a7a5cf5239a28f8b1b324058d72a3e92935a2d40622260a",
+      "imagen": "t08-09-maiz-v1.png",
+      "imagen_sha256": "2f4c40a1799b0966f6c52c1a5ca85b99902fb8ff97fc08dbeb8a1b01895b9138"
+    },
+    {
+      "id": "t08-10-flores-del-monte",
+      "titulo": "Las flores del monte",
+      "chars": 9457,
+      "sha256": "c914ac068023c1c6e0684dd85c390d090022f7352e0331f3ffe3103f84480ac8",
+      "prompt_sha256": "c914ac068023c1c6e0684dd85c390d090022f7352e0331f3ffe3103f84480ac8",
+      "imagen": "t08-10-flores-del-monte-v1.png",
+      "imagen_sha256": "0e42deef23bcfb9a015e50b72953c05593fc8a2d8745db625d3bc2b437362393"
+    }
+  ]
+}
