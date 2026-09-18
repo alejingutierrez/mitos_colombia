@@ -699,6 +699,7 @@ reversibles y atribuibles a quien edita, no a quien investiga.
 | El envoltorio de hojas: pequeño con unos pocos peces, abierto de un golpe, y los peces llenan la casa. El mismo objeto en dos usos, no dos modelos | `documented_core` | `public` | moruapu2000 | `envoltorio-de-hojas-con-peces`, `peces-del-envoltorio`, `varas-largas-para-asar`, `hombre-grulla`, `esposa-del-hombre-grulla`, `vivienda-tikuna` |
 | **Ni la hoja ni el atado están documentados**: hoja doblada sin fibra ni nudo, declarado como editorial | `uncertain` | `consult_required` | ausencia | `envoltorio-de-hojas-con-peces` |
 | Deslinde con los corpus vecinos del Amazonas y exclusión de la máscara de yanchama como ambientación: **decisión de esta edición, no hallazgo de fuente** | `editorial_interpretation` | `public` | — (sin fuente, por definición) | `comunidad-tikuna` |
+| El hermano menor de Moe: espía y desde entonces las virutas dejan de ser sábalos; ayuda a terminar la canoa, viaja sobre su lomo invertido, es transformado en ave, **no puede volar** en Moruapü y Moe hunde la canoa con él | `documented_core` | `public` | moruapu2000 | `hermano-menor-de-moe`, `moe`, `canoa-de-moe`, `sabalo`, `cerro-woruapu-moruapu`, `gran-boa` |
 
 ---
 

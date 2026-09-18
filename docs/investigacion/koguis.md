@@ -27,11 +27,12 @@ el lugar y la materia de todo lo que se va a dibujar.
 Diecinueve de las veinte fichas vienen de **Milcíades Chaves Ch., «Mitología
 kágaba», *Boletín de Arqueología* II (5-6): 423-520, Bogotá, 1947**, hoy en
 acceso abierto en el Fondo Editorial del ICANH. La vigésima, Gauteován, viene de
-una compilación secundaria que resume a Krickeberg resumiendo a Preuss. El tomo
-II de Reichel-Dolmatoff sigue sin acceso abierto y **no se consultó en esta
-investigación**; lo que sí se consultó, por primera vez en este expediente, es
-el **tomo I de 1950**, que es donde está casi toda la evidencia material que
-sostiene este dossier.
+la compilación de Eugenia Villa Posse de 1993, que reproduce a Krickeberg
+resumiendo a Preuss; se leyó completa en esta investigación y se cita por página.
+El tomo II de Reichel-Dolmatoff sigue sin acceso abierto, **no se consultó** y
+por eso **queda fuera del expediente**, con su razón anotada al pie de §11; lo
+que sí se consultó, por primera vez en este expediente, es el **tomo I de 1950**,
+que es donde está casi toda la evidencia material que sostiene este dossier.
 
 Las consecuencias no son bibliográficas, son visuales:
 
@@ -871,7 +872,34 @@ es un cuerpo.**
 | `gomez2020` | académica, jaguar | Fabio Gómez Cardona | *El jaguar en la literatura Kogi*, Univalle, 2020 · <https://bibliotecadigital.univalle.edu.co/> | Ciclo del jaguar; *nébbis-kuái* y máscara de jaguar; Duginavi héroe solar-agrícola; etimología de Námaku; versión larga de Seiskwisbuche | Análisis literario sobre versiones ya publicadas, sin campo propio; depende del tomo II |
 | `decreto2018` | normativa construida con los pueblos | Presidencia de la República | Decreto 1500 de 2018 · <https://normograma.mincultura.gov.co/compilacion/docs/decreto_1500_2018.htm> | La Línea Negra como tejido de espacios sagrados; sitios donde los padres están representados en forma de tigres como cuidadores del territorio | Finalidad jurídica y territorial, no narrativa |
 | `preuss1926` | primaria temprana, **no consultada** | Konrad Theodor Preuss | *Forschungsreise zu den Kágaba*, Mödling bei Wien, 1926 · registro en PHAIDRA, Univ. de Viena <https://phaidra.univie.ac.at/view/o:454926> · trad. española 1993 | Textos en lengua, fiestas y fotografías de máscaras de 1914-1915 | **No se pudo leer en esta investigación**: el repositorio está tras una barrera anti-bot. Reichel-Dolmatoff escribió en 1950 que los capítulos de religión, mitos y condiciones sociales de Preuss contienen errores «tan frecuentes que sería casi imposible tratar de corregirlos uno por uno», salvando sólo las descripciones de fiestas y las fotografías |
-| `reichel1951` | **no consultada, sin acceso abierto** | Gerardo Reichel-Dolmatoff | *Los Kogi*, tomo II, 1951 (ed. Procultura 1985) | Traería otras versiones de Gotzé, Námaku, Seiskwisbuche y el ciclo del jaguar | No existe en acceso abierto en ninguna parte verificada; **el expediente anterior lo daba por fuente de los 19 relatos y no lo es** |
+| `gauteovan` | comparación, la única ficha que no viene de Chaves | Investigación y compilación de Eugenia Villa Posse, reproduciendo a Walter Krickeberg (*Etnología de América*, III-4, p. 373, México, 1946) resumiendo a Preuss | *Mitos y leyendas de Colombia*, vol. III, apartado 2.2 «Gauteován», pp. 48-49. Colección Integración cultural, IADAP, Quito, 1.ª ed. diciembre de 1993, ISBN 9978-60-004-3 · <https://www.flacso.edu.ec/biblio/catalog/resGet.php?resId=44622> | La Madre Gauteován como creadora y madre prístina; el primer puesto del dios solar; los templos llamados casas de sol con un símbolo solar de varitas en la cúspide; los cuatro varones taumaturgos y el pacto; las caras cedidas como máscaras de madera, tallas toscas y arcaicas que los kágabas de entonces ya no sabían esculpir; los muertos en los cerros más altos | Cadena de cuatro eslabones y ninguno de los tres primeros es kággaba; no identifica relator ni transcribe un relato kogui continuo. El propio texto habla de un pueblo «en estado primitivo de cultura» y de «demonios o espíritus de la naturaleza», y compara con Bachué, con Homero y el Olimpo y con México: vocabulario del compilador y de su época, que no se reproduce como voz comunitaria. El pacto de las caras no aparece en ninguna otra fuente. El enlace que citaba el expediente anterior devuelve 403; el registrado aquí resuelve y sirve el PDF completo, verificado en esta investigación |
+
+### Una obra que quedó fuera del expediente, y por qué
+
+**`reichel1951`, el tomo II de *Los Kogi*, no figura en este expediente.** No es
+un olvido: es la consecuencia de las dos cosas que la investigación encontró
+sobre él.
+
+La primera es que **no es la fuente de este corpus.** La versión anterior de
+`editorial/kogui/sources.mjs` lo declaraba «corpus etnográfico primario» y le
+atribuía «las secuencias que sustentan las diecinueve fichas». No las sustenta:
+las sustenta Chaves 1947, con dos narradores con nombre, y el PDF por el que el
+sitio creía estar citando el tomo II era en realidad la reimpresión de Eugenia
+Villa Posse de 1993 —la misma compiladora del volumen que sostiene Gauteován—.
+
+La segunda es que **no se puede verificar.** Se buscó en el catálogo del Fondo
+Editorial del ICANH, en HathiTrust, en repositorios universitarios y en
+buscador abierto, y no existe en acceso abierto en ninguna parte. Todo lo que
+hoy se sabe de su contenido llega de segunda mano: por Gómez Cardona, que lo
+analiza sin reproducirlo entero, y por un ensayo de concurso sin filiación
+académica que cita de él el relato de Gotzé.
+
+Una entrada de expediente con un localizador que no se puede abrir es una
+entrada que invita a citar lo que no se ha leído, y este dossier no sostiene ni
+una sola afirmación con ese volumen. Por eso queda aquí, como nota, y no arriba,
+como fuente. Si algún día se digitaliza, lo que traería —otras versiones de
+Gotzé, Námaku, Seiskwisbuche y el ciclo del jaguar— obliga a reabrir por lo
+menos cuatro fichas del censo.
 
 ---
 
