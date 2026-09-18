@@ -2,7 +2,9 @@ import assert from "node:assert/strict";
 import { spawnSync } from "node:child_process";
 import test from "node:test";
 
-test("la sincronización Yagua prevé cinco altas y la transferencia de Chimbilaco", () => {
+import { skipWithoutPostgres } from "../lib/test-postgres.mjs";
+
+test("la sincronización Yagua prevé cinco altas y la transferencia de Chimbilaco", { skip: skipWithoutPostgres }, () => {
   const result = spawnSync(
     process.execPath,
     ["scripts/editorial/sync-yagua-review.mjs"],

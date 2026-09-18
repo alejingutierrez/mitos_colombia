@@ -2,7 +2,9 @@ import assert from "node:assert/strict";
 import { spawnSync } from "node:child_process";
 import test from "node:test";
 
-test("la sincronización Yukpa hace preflight sin exigir imágenes pendientes", () => {
+import { skipWithoutPostgres } from "../lib/test-postgres.mjs";
+
+test("la sincronización Yukpa hace preflight sin exigir imágenes pendientes", { skip: skipWithoutPostgres }, () => {
   const result = spawnSync(
     process.execPath,
     ["scripts/editorial/sync-yukpa-review.mjs"],

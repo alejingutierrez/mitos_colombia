@@ -2,7 +2,9 @@ import assert from "node:assert/strict";
 import { spawnSync } from "node:child_process";
 import test from "node:test";
 
-test("el verificador reporta el frente pendiente de imágenes y sync", () => {
+import { skipWithoutPostgres } from "../lib/test-postgres.mjs";
+
+test("el verificador reporta el frente pendiente de imágenes y sync", { skip: skipWithoutPostgres }, () => {
   const result = spawnSync(
     process.execPath,
     ["scripts/editorial/verify-bogota-mestizo-night-review.mjs"],
@@ -19,7 +21,7 @@ test("el verificador reporta el frente pendiente de imágenes y sync", () => {
   assert.equal(output.imageProvenance.status, "pending");
 });
 
-test("el modo estricto impide afirmar cierre antes de imágenes y sync", () => {
+test("el modo estricto impide afirmar cierre antes de imágenes y sync", { skip: skipWithoutPostgres }, () => {
   const result = spawnSync(
     process.execPath,
     [

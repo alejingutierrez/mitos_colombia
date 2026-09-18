@@ -2,7 +2,9 @@ import assert from "node:assert/strict";
 import { spawnSync } from "node:child_process";
 import test from "node:test";
 
-test("la sincronización prepara seis actualizaciones y una transferencia", () => {
+import { skipWithoutPostgres } from "../lib/test-postgres.mjs";
+
+test("la sincronización prepara seis actualizaciones y una transferencia", { skip: skipWithoutPostgres }, () => {
   const result = spawnSync(process.execPath, ["scripts/editorial/sync-caribe-mixto-final-review.mjs"], { cwd: process.cwd(), encoding: "utf8" });
   assert.equal(result.status, 0, result.stderr);
   const output = JSON.parse(result.stdout);

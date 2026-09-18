@@ -2,7 +2,9 @@ import assert from "node:assert/strict";
 import { spawnSync } from "node:child_process";
 import test from "node:test";
 
-test("la sincronización prepara tres actualizaciones y dos transferencias", () => {
+import { skipWithoutPostgres } from "../lib/test-postgres.mjs";
+
+test("la sincronización prepara tres actualizaciones y dos transferencias", { skip: skipWithoutPostgres }, () => {
   const result = spawnSync(
     process.execPath,
     ["scripts/editorial/sync-varios-mestizo-final-review.mjs"],

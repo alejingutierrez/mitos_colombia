@@ -2,6 +2,11 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import { validatePlan, validateV3Inputs, verifyFiles, buildPrompt, prepare } from './wayuu-preproduction.mjs';
+import { skipWithoutArtifacts } from "../lib/test-artifacts.mjs";
+
+const SIN_ARTEFACTOS = skipWithoutArtifacts(
+  "output/imagegen/wayuu-v3-production",
+);
 const path = 'content/videos/wayuu/videos/aramai/preproduccion-01/plan.json';
 const source = JSON.parse(await readFile(path, 'utf8'));
 const style = JSON.parse(await readFile(source.style, 'utf8'));
@@ -25,13 +30,13 @@ for (const [name, mutate, error] of [
   ['conteo de VO falso',p=>p.blocks[0].word_count=99,/Conteo/],
   ['paleta heredada sin decisión propia',p=>p.palette='',/paleta propia/],
 ]) test('rechaza '+name,()=>{const p=fresh();mutate(p);assert.throws(()=>validatePlan(p),error);});
-test('fuentes, modelos y cinco candidatos conservan hashes',async()=>assert.equal((await verifyFiles(source)).narrative_snapshot_verified,true));
+test('fuentes, modelos y cinco candidatos conservan hashes', { skip: SIN_ARTEFACTOS },async()=>assert.equal((await verifyFiles(source)).narrative_snapshot_verified,true));
 test('detecta cambio en contenido fuente',async()=>{const p=fresh();p.narrative.content_sha256='0'.repeat(64);await assert.rejects(verifyFiles(p),/Relato local cambió/);});
 test('plano de pausa no recibe contrato mágico ni vestuario de Arámai',()=>{
   const p=buildPrompt(source,source.blocks[3].keyframes[0],style);
   assert.match(p,/Pausa de consecuencia cotidiana/); assert.doesNotMatch(p,/COMPORTAMIENTO IMPOSIBLE:/); assert.doesNotMatch(p,/Kemiisa/);
 });
-test('solo los instantes faltantes entran al congelado y no se sobrescribe',async()=>{
+test('solo los instantes faltantes entran al congelado y no se sobrescribe', { skip: SIN_ARTEFACTOS },async()=>{
   const out='content/videos/wayuu/videos/aramai/preproduccion-01/prepared-03';
   const frozen=JSON.parse(await readFile(out+'/freeze.json','utf8'));
   assert.equal(frozen.jobs.length,13);assert.equal(frozen.jobs[0].id,'b3b');
