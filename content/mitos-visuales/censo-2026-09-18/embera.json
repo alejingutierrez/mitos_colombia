@@ -1,0 +1,285 @@
+{
+  "id": "embera",
+  "label": "Embera",
+  "pages": 1,
+  "canon_pages": 1,
+  "read_note": "Leí «Los Burumia» completo con sus cuatro campos y editorial/embera/{universe,community,sources}.mjs y el módulo del mito; canon y módulo coinciden. El hallazgo mayor está en universe.mjs y confirma la sospecha del encargo con números: el expediente partía de 26 slugs etiquetados «Emberá»; 20 se trasladan a Chamí, 4 a Katío y 1 a leyenda popular chocoana, y queda exactamente uno. Es decir, esta comunidad no es una comunidad: es el residuo de una limpieza de frontera. Pero hay un matiz que me sorprendió y que cambia la recomendación: el sobreviviente no es Chamí ni Katío. «Los Burumia» transcurre en la quebrada Usagará y el río Bojayá, ámbito Emberá Dóbida, y el módulo declara que se queda bajo la etiqueta genérica sólo porque la taxonomía del sitio todavía no tiene Dóbida. Absorberlo en Chamí sería un error documentado (el propio módulo advierte que la proximidad bibliográfica no autoriza fusiones); Katío es el vecino más cercano en mundo fluvial chocoano, pero sigue siendo otro subgrupo. Segundo hallazgo: la narración es de guerra entre pueblos, no de creación; casi no tiene seres, tiene gente, canoas y río. Eso hace la biblia barata pero exige cuidado con dos cosas: la adaptación redujo el detalle de cautiverio y antropofagia sin eliminarlos como motores, y el módulo prohíbe violencia explícita, fuego, deidades y oro. Tercero, la séptima pasada: la página anterior fusionaba Carautas, Bibidí, las Antomia, oro, incesto, transformaciones y un incendio de Karaví; todo eso está retirado y lo dejo excluded porque el slug todavía dice «los-burumias-y-carautas» y puede arrastrar a quien produzca imágenes. Quedó dudoso el perro: no conduce ninguna acción, pero viaja en la canoa y está en la portada aprobada, así que le doy ficha y la declaro la más débil de esta biblia. Y quedó dudoso cómo dibujar a los Burumia: el canon se niega a decidir si son seres, un pueblo recordado o adversarios históricos; su lámina tiene que resolverse como vecinos humanos, nunca como criaturas.",
+  "entities": [
+    {
+      "id": "burumia",
+      "name": "Los Burumia",
+      "kind": "colectivo",
+      "myths": ["los-burumias-y-carautas"],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Conducen toda la acción: vigilan la ruta, capturan, retienen y son atacados. Su lámina debe declarar la ambigüedad que el canon se niega a resolver («no decide si Burumia nombra seres, un pueblo recordado, adversarios históricos o varias capas»): se dibujan como un poblado humano vecino, jamás como criaturas ni monstruos."
+    },
+    {
+      "id": "gente_embera",
+      "name": "Gente Emberá del Bojayá",
+      "kind": "colectivo",
+      "myths": ["los-burumias-y-carautas"],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Las familias que suben en canoa, el grupo escondido en el rastrojo que dispara y los que organizan el ataque: una sola gramática de grupo para todos. El canon avisa que la edición de 1984 decía «cholos» y que aquí se lee «gente Emberá»."
+    },
+    {
+      "id": "dos_jovenes_fugados",
+      "name": "El muchacho y la joven que escapan",
+      "kind": "personaje",
+      "myths": ["los-burumias-y-carautas"],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Protagonistas: crecen cautivos, aprenden el monte, bajan el río y revelan quién estaba detrás de las desapariciones. Una sola hoja para la pareja; él con arco y bodoquera, ella conocedora de los senderos. El relato los muestra creciendo, pero su forma actuante es la de jóvenes."
+    },
+    {
+      "id": "mujer_mayor_cautiva",
+      "name": "La mujer mayor cautiva",
+      "kind": "personaje",
+      "myths": ["los-burumias-y-carautas"],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Conduce la acción decisiva: observa en silencio durante años, sabe de las canoas abandonadas y de las hachas, prepara la comida y explica cómo rodear el asentamiento. Se queda; son los jóvenes quienes parten."
+    },
+    {
+      "id": "explorador_murcielago",
+      "name": "El explorador transformado en murciélago",
+      "kind": "criatura",
+      "myths": ["los-burumias-y-carautas"],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Única transformación del relato, mostrada y decisiva: vuela de noche sobre el asentamiento y cuenta las viviendas, y su error (no ver la casa apartada) produce el final. Fichó sólo la forma murciélago: su forma humana es un miembro genérico del colectivo Emberá y se resuelve con esa gramática."
+    },
+    {
+      "id": "canoa",
+      "name": "La canoa grande",
+      "kind": "objeto",
+      "myths": ["los-burumias-y-carautas"],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Objeto por el que se cuenta el relato: la fuga baja el río en ella, y los últimos Burumia sólo se salvan porque derriban un árbol y hacen otra. Una hoja cubre la grande, las pequeñas rotas y la recién tallada."
+    },
+    {
+      "id": "perro_de_la_canoa",
+      "name": "El perro que baja en la canoa",
+      "kind": "animal",
+      "myths": ["los-burumias-y-carautas"],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "La ficha más débil de esta biblia y lo digo de frente: no conduce ninguna acción y sólo se nombra una vez. Va como required porque está en la composición horizontal aprobada y sin hoja el ilustrador le inventa una raza; si el guion lo retira, esta ficha cae."
+    },
+    {
+      "id": "poblado_burumia_en_el_alto",
+      "name": "El poblado Burumia sobre el alto",
+      "kind": "arquitectura",
+      "myths": ["los-burumias-y-carautas"],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Escenario propio y no intercambiable: desde sus casas se ve quién remonta el agua, hay un camino vigilado que hay que rodear, y contar las viviendas es un beat de la trama. El modelo espacial tiene que permitir contarlas desde el aire."
+    },
+    {
+      "id": "usagara_y_bojaya",
+      "name": "Quebrada Usagará, río Bojayá y selva lluviosa del Chocó",
+      "kind": "paisaje",
+      "myths": ["los-burumias-y-carautas"],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Modelo de entorno de todo el relato: agua oscura, rastrojo de la ribera, niebla y follaje en capas. La coordenada del canon aproxima la confluencia cartográfica, no el alto de las casas."
+    },
+    {
+      "id": "casa_apartada",
+      "name": "La casa apartada que el explorador no vio",
+      "kind": "arquitectura",
+      "myths": ["los-burumias-y-carautas"],
+      "decision": "embedded",
+      "covered_by": "poblado_burumia_en_el_alto",
+      "sheets": 0,
+      "note": "Es la bisagra del final, pero su rasgo es espacial: estar fuera del conteo. Va como variante del mismo modelo del poblado, no como arquitectura distinta."
+    },
+    {
+      "id": "desembocadura_y_costa_del_rio_valle",
+      "name": "La cabecera del Bojayá, el río Valle y la costa",
+      "kind": "paisaje",
+      "myths": ["los-burumias-y-carautas"],
+      "decision": "embedded",
+      "covered_by": "usagara_y_bojaya",
+      "sheets": 0,
+      "note": "Último tramo de la huida. Es el mismo mundo fluvial abriéndose al mar; si un keyframe necesita mar abierto se resuelve como variante del mismo modelo, no como paisaje nuevo."
+    },
+    {
+      "id": "rastrojo_de_la_emboscada",
+      "name": "El rastrojo donde espera el grupo Emberá",
+      "kind": "paisaje",
+      "myths": ["los-burumias-y-carautas"],
+      "decision": "embedded",
+      "covered_by": "usagara_y_bojaya",
+      "sheets": 0,
+      "note": "Vegetación de ribera del mismo modelo; es la escena vertical aprobada."
+    },
+    {
+      "id": "canoas_pequenas_rotas",
+      "name": "Las canoas pequeñas que rompen para impedir la persecución",
+      "kind": "objeto",
+      "myths": ["los-burumias-y-carautas"],
+      "decision": "embedded",
+      "covered_by": "canoa",
+      "sheets": 0,
+      "note": "Mismo objeto en otro tamaño y en estado roto; cabe en la hoja de la canoa."
+    },
+    {
+      "id": "arbol_convertido_en_canoa",
+      "name": "El árbol derribado y tallado a toda prisa en el río Valle",
+      "kind": "objeto",
+      "myths": ["los-burumias-y-carautas"],
+      "decision": "embedded",
+      "covered_by": "canoa",
+      "sheets": 0,
+      "note": "Es la canoa en su estado de fabricación; una misma hoja puede mostrar tronco, desbaste y casco terminado."
+    },
+    {
+      "id": "familias_de_las_canoas_capturadas",
+      "name": "Las familias que suben en varias canoas y son atacadas",
+      "kind": "colectivo",
+      "myths": ["los-burumias-y-carautas"],
+      "decision": "embedded",
+      "covered_by": "gente_embera",
+      "sheets": 0,
+      "note": "Miembros genéricos del colectivo ya fichado; no tienen rasgo propio en el texto."
+    },
+    {
+      "id": "comida_para_el_viaje",
+      "name": "La comida que prepara la mujer mayor",
+      "kind": "objeto",
+      "myths": ["los-burumias-y-carautas"],
+      "decision": "embedded",
+      "covered_by": "mujer_mayor_cautiva",
+      "sheets": 0,
+      "note": "Sin descripción en el texto; es un gesto de su ficha, no un objeto que merezca diseño propio."
+    },
+    {
+      "id": "canaletes",
+      "name": "Canaletes",
+      "kind": "objeto",
+      "myths": ["los-burumias-y-carautas"],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_embera",
+      "sheets": 0,
+      "note": "Objeto menor con un beat propio: levantar el canalete es lo que evita que las flechas los maten."
+    },
+    {
+      "id": "hachas",
+      "name": "Hachas",
+      "kind": "objeto",
+      "myths": ["los-burumias-y-carautas"],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_embera",
+      "sheets": 0,
+      "note": "Entre lo que la mujer mayor sabe que hay abandonado bajo el alto, y con lo que se talla la última canoa."
+    },
+    {
+      "id": "machetes",
+      "name": "Machetes",
+      "kind": "objeto",
+      "myths": ["los-burumias-y-carautas"],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_embera",
+      "sheets": 0,
+      "note": "Nombrados junto a las hachas y los canaletes en el mismo hallazgo."
+    },
+    {
+      "id": "arco_y_flechas",
+      "name": "Arco y flechas",
+      "kind": "objeto",
+      "myths": ["los-burumias-y-carautas"],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_embera",
+      "sheets": 0,
+      "note": "El muchacho aprende a fabricar el arco; el grupo escondido dispara las flechas. Mismo objeto en los dos extremos del relato."
+    },
+    {
+      "id": "bodoquera",
+      "name": "Bodoquera",
+      "kind": "objeto",
+      "myths": ["los-burumias-y-carautas"],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_embera",
+      "sheets": 0,
+      "note": "Se nombra como aprendizaje del muchacho cautivo; cultura material fuerte del Chocó que conviene fijar aunque no tenga escena propia."
+    },
+    {
+      "id": "los_cuna",
+      "name": "Los Cuna",
+      "kind": "colectivo",
+      "myths": ["los-burumias-y-carautas"],
+      "decision": "excluded",
+      "reason": "se mencionan pero nunca se ven: existen sólo como la acusación equivocada que los jóvenes desmienten; dibujarlos metería a un pueblo entero en una escena en la que el relato dice que no estuvo",
+      "sheets": 0,
+      "note": "Verificado contra el texto: «Durante mucho tiempo había creído que los Cuna eran responsables… no eran los Cuna, sino los Burumia»."
+    },
+    {
+      "id": "carautas",
+      "name": "Carautas",
+      "kind": "criatura",
+      "myths": ["los-burumias-y-carautas"],
+      "decision": "excluded",
+      "reason": "fusión editorial retirada: no aparece en la narración de Odilia Dogiramá y el canon aclara que su mención venía de una unión posterior",
+      "sheets": 0,
+      "note": "Sigue vivo en el slug «los-burumias-y-carautas». Es la trampa número uno de esta ficha para quien produzca imágenes leyendo la URL."
+    },
+    {
+      "id": "karavi_y_el_incendio",
+      "name": "Karaví y el incendio enviado",
+      "kind": "deidad_fuerza",
+      "myths": ["los-burumias-y-carautas"],
+      "decision": "excluded",
+      "reason": "invención retirada: la pareja visual anterior fue rechazada precisamente por representar un incendio y una deidad gigantesca inexistentes en la fuente",
+      "sheets": 0,
+      "note": "El módulo prohíbe fuego y deidades en los dos prompts nuevos justamente por esto."
+    },
+    {
+      "id": "antomia_bibidi_oro_e_incesto",
+      "name": "Las Antomia, Bibidí/Bibidigomia, el oro y el incesto",
+      "kind": "criatura",
+      "myths": ["los-burumias-y-carautas"],
+      "decision": "excluded",
+      "reason": "episodios de otros ciclos, retirados: Bibidí y Bibidigomia pertenecen a corpus distintos y la proximidad bibliográfica no autoriza fusionarlos",
+      "sheets": 0,
+      "note": "Séptima pasada. Chaves 1945 aporta Bibidigomia con un narrador Katío y otra región: es material vecino, no de este relato."
+    },
+    {
+      "id": "cautiverio_y_antropofagia",
+      "name": "Las escenas de cautiverio y antropofagia",
+      "kind": "fenomeno",
+      "myths": ["los-burumias-y-carautas"],
+      "decision": "excluded",
+      "reason": "do_not_visualize: la adaptación redujo deliberadamente el detalle explícito y el módulo prohíbe violencia explícita en las dos escenas, aunque el peligro siga siendo motor de la fuga",
+      "sheets": 0,
+      "note": "No se borran del relato, se dejan fuera de la imagen. La tensión se resuelve con distancia, vigilancia y niebla, no con la escena."
+    }
+  ],
+  "sheet_groups": [
+    {
+      "id": "hoja_utileria_embera",
+      "kind": "objeto",
+      "covers": ["canaletes", "hachas", "machetes", "arco_y_flechas", "bodoquera"],
+      "sheets": 1,
+      "note": "Cinco objetos menores en una hoja: es la cultura material completa del relato, herramientas de río y de monte. Nada ceremonial, nada de oro."
+    }
+  ],
+  "totals": {
+    "entities": 26,
+    "required": 9,
+    "embedded": 12,
+    "excluded": 5,
+    "sheets": 10
+  }
+}

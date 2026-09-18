@@ -1,0 +1,1296 @@
+{
+  "id": "eje-cafetero-mestizo",
+  "label": "Eje cafetero (Caldas)",
+  "era": "conquista, colonización antioqueña y república cafetera; siglos XVI, XIX y XX",
+  "pages": 9,
+  "canon_pages": 0,
+  "read_note": "Leí los 9 cuerpos completos de editorial/caldas-mestizo/definitions.mjs con sus secciones Mito, Historia, Versiones, Lección, Similitudes y las dos escenas de imagen. Ninguna tiene campo `mito` publicado: el relato vive en el cuerpo, así que sobre ninguna se escribe guion ni video, pero las nueve aportan entidades. Tres cosas que no esperaba. (1) La iconografía cafetera del encargo casi no existe en estos relatos: no hay una sola mención de cafetal, beneficiadero, guadual ni guaca, y la arriería aparece una vez, de refilón, como «posada de arrieros». Lo que sí aparece —y por eso lo fiché— es el kit del caminante de monte: sombrero, machete, carriel, ruana y farol de vela, todos juntos en la huida de Rafael Toro. La casa de bahareque con balcón tampoco se describe nunca con ese nombre; la deduje como el tipo de vivienda de cinco escenas (casa de Clementina, posada de Los Zorros, tiendas del camino, casa de costura, casa desde donde se amenaza al niño) y hay que declararlo como inferencia de época, no como dato del texto. (2) Sólo cuatro de las nueve páginas son colonización antioqueña o república cafetera: dos son ficción de conquista de 1546 y 1592 (De frente al sol, In illo tempore), una es leyenda del nevado sin época fijada (Cumanday) y otra —Cuento de ánimas— está territorialmente en Rionegro y Girón, SANTANDER, y el propio módulo la reubica fuera de Caldas; la conté porque el encargo dice nueve páginas, pero sus entidades (procesión de ánimas, Jovita, Laurián, Ñuá Ulogia, tijeras, mortaja) son santandereanas y el editor debería decidir si financia esa ficha aquí o en el bucket de Santander. (3) El Coco, figura del título de una página, se queda SIN ficha: la fuente le niega rostro («presencia incorpórea», «no necesita un rostro fijo») y dibujarlo sería inventarlo; lo que sí se ficha son los dos calabazos de Riosucio, que son cuerpos fabricados y documentados. Lo que más costó decidir: los atacantes «presentados como pijaos» de De frente al sol —los dejé excluded porque el cuento no los describe, sólo los oye como amenaza desde la casa, y el keyframe los saca del cuadro; ficharlos exigiría investigación material propia y eso es otro encargo, no este censo—, y la esposa y el hijo de Cumanday, que mueren dentro del relato pero no tienen ni un rasgo y la propia ficha prohíbe inventarles vestuario étnico.",
+  "entities": [
+    {
+      "id": "laurian",
+      "name": "Laurián",
+      "kind": "personaje",
+      "myths": [
+        "cuento-de-animas"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Campesino cantor que baja al mercado y vuelve bebido: conduce el primer episodio y termina en la copa de un árbol. Ojo: territorio de Rionegro, Santander, no Caldas."
+    },
+    {
+      "id": "nua_ulogia",
+      "name": "Ñuá Ulogia, la costurera",
+      "kind": "personaje",
+      "myths": [
+        "cuento-de-animas"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Segunda protagonista del mismo slug, con acción propia: corta el ruedo de la mortaja y recibe el golpe. No se funde con Laurián; el módulo insiste en que son dos episodios."
+    },
+    {
+      "id": "don_fernan_lopez_de_sandoval",
+      "name": "Don Fernán López de Sandoval",
+      "kind": "personaje",
+      "myths": [
+        "de-frente-al-sol"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Viejo encomendero armado que recorre el corredor y cierra el relato con el juicio sobre su hijo; está en la portada."
+    },
+    {
+      "id": "rodrigo",
+      "name": "Rodrigo",
+      "kind": "personaje",
+      "myths": [
+        "de-frente-al-sol"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "El joven que no da la espalda: su postura es el título y la escena vertical entera («permanece de frente bajo la luz del amanecer»)."
+    },
+    {
+      "id": "rafael_toro",
+      "name": "Rafael Toro, el aserrador",
+      "kind": "personaje",
+      "myths": [
+        "el-aserrador"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [
+        "con farol, ruana, machete y carriel",
+        "en fuga, sin sombrero, machete, carriel ni ruana y con la ropa rasgada"
+      ],
+      "panregional": false,
+      "note": "Protagonista de las dos escenas. El estado de fuga cambia la silueta de verdad: va soltando las cuatro prendas una por una, y ese despojo es la medida del miedo. No cobro hoja extra porque es el mismo cuerpo perdiendo utilería ya fichada."
+    },
+    {
+      "id": "cumanday",
+      "name": "Cumanday",
+      "kind": "personaje",
+      "myths": [
+        "el-cacique-cumanday"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Cacique joven que sube por las hierbas y queda detenido en el tiempo junto a la grieta. SENSIBILIDAD: la escena exige «sin símbolos étnicos inventados» y la página declara la filiación páez como conjetura del autor; la ficha no puede tomar nada de la biblia nasa."
+    },
+    {
+      "id": "viejo_del_costal",
+      "name": "El Viejo del Costal",
+      "kind": "personaje",
+      "myths": [
+        "el-viejo-del-costal"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [
+        "anciano limosnero con el saco al hombro y una mano oculta"
+      ],
+      "panregional": false,
+      "note": "Anciano limosnero con saco grande y una mano escondida. Su eficacia está en lo que no muestra, así que la ficha debe resolver la mano oculta, no la garra."
+    },
+    {
+      "id": "jeronimo_de_vezga",
+      "name": "Jerónimo de Vezga",
+      "kind": "personaje",
+      "myths": [
+        "in-illo-tempore"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Cambia de bando, fracasa y vuelve a entregar el sombrero: está en las dos escenas y es el único con arco completo del relato."
+    },
+    {
+      "id": "clementina",
+      "name": "Clementina, la bruja salamineña",
+      "kind": "personaje",
+      "myths": [
+        "las-brujas"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Recibe, muestra el baúl y administra su propia fama. NO la marco panregional: comparte la palabra «bruja» con la del Tranvía en Bogotá, pero no un cuerpo, y la página separa expresamente a Aspasia."
+    },
+    {
+      "id": "jovita_la_difunta",
+      "name": "Jovita, la difunta de la mortaja larga",
+      "kind": "criatura",
+      "myths": [
+        "cuento-de-animas"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [
+        "ánima retrasada con la mortaja demasiado larga",
+        "con las piernas descubiertas tras el corte"
+      ],
+      "panregional": false,
+      "note": "Es la única ánima con cuerpo, nombre y acción: pide ayuda y luego golpea. El cambio de largo de la mortaja es lo que mueve la escena, pero es la misma silueta."
+    },
+    {
+      "id": "el_unon",
+      "name": "El Uñón",
+      "kind": "criatura",
+      "myths": [
+        "el-aserrador"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Figura más grande que un hombre, cubierta de pelo, con barba abundante y uñas desmesuradas. El relato conserva la duda («quizá una fiera») y la ficha debe permitirla: nada de rostro definido. No lo marco panregional —es figura del occidente caldense—, aunque su rasgo de uñas lo emparente con la Mano Peluda."
+    },
+    {
+      "id": "cole_cabuya",
+      "name": "El Cole-cabuya",
+      "kind": "criatura",
+      "myths": [
+        "el-cole-cabuya"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [
+        "cuerpo de burro",
+        "cuerpo de perro"
+      ],
+      "panregional": false,
+      "note": "Un solo cuerpo ambiguo, como pide la escena («un animal ambiguo entre burro y perro»). La cola de fibra levantada y la mirada son la acción; no persigue, obstruye. La ambigüedad es el diseño, así que los dos estados no cuestan dos hojas."
+    },
+    {
+      "id": "calabazo_iluminado_de_tatinez",
+      "name": "El calabazo iluminado de Tatínez",
+      "kind": "criatura",
+      "myths": [
+        "el-coco"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [
+        "cabeza luminosa que avanza sola",
+        "calabazo, vela y portador revelados"
+      ],
+      "panregional": false,
+      "note": "Escenificación fabricada, no ser sobrenatural: calabazo grande con ojos y boca recortados, vela dentro y un portador que lo carga sobre la cabeza. Las dos escenas de la página son justamente el efecto y su desmontaje."
+    },
+    {
+      "id": "fantasma_de_ruben_bayer",
+      "name": "El fantasma de Rubén Bayer",
+      "kind": "criatura",
+      "myths": [
+        "el-coco"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Segunda construcción de Riosucio y silueta distinta: calabazo pequeño con aspecto de calavera sobre un palo, cubierto con tela blanca. La página insiste en que no son intercambiables con la de Tatínez."
+    },
+    {
+      "id": "procesion_de_animas",
+      "name": "La procesión de ánimas",
+      "kind": "colectivo",
+      "myths": [
+        "cuento-de-animas"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": true,
+      "note": "PANREGIONAL: las ánimas del purgatorio recorren varios corpus del censo. Lo propio de esta versión no es cafetero sino santandereano y literario: van con cirios por un camino rural de Rionegro, reprenden por embriaguez y por trabajar en día de guarda, y reclutan a una difunta con la mortaja mal cosida. Disciplinan conducta doméstica, no castigan monte."
+    },
+    {
+      "id": "colectivo_campesinos_y_arrieros",
+      "name": "Campesinos, arrieros y familias del occidente caldense",
+      "kind": "colectivo",
+      "myths": [
+        "cuento-de-animas",
+        "el-aserrador",
+        "el-cacique-cumanday",
+        "el-coco",
+        "el-cole-cabuya",
+        "el-viejo-del-costal",
+        "las-brujas"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "AQUÍ ESTÁ EL AHORRO: siete relatos pedían gente de monte y de pueblo y es una sola hoja. Cubre la familia que busca a Laurián, doña Carmela y su posada, el compañero aserrador, el visitante de la cumbre, Carlitos y Milia, los niños amenazados, la familia en la puerta, Camilo Ángel Echeverri y el narrador."
+    },
+    {
+      "id": "colectivo_espanoles_de_la_conquista",
+      "name": "Españoles de la conquista: encomenderos, administradores, vigías y sus familias",
+      "kind": "colectivo",
+      "myths": [
+        "de-frente-al-sol",
+        "in-illo-tempore"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Segunda hoja de gente, obligatoria porque 1546 y 1592 no visten como 1900. Cubre a Antón Dávalos, a los dos Don Diego (que son personajes distintos con el mismo nombre en dos cuentos), a Isabel, a los vigías y a la expedición de Robledo."
+    },
+    {
+      "id": "baul_de_fotografias_perforadas",
+      "name": "El baúl de las fotografías perforadas",
+      "kind": "objeto",
+      "myths": [
+        "las-brujas"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Es el objeto por el que se cuenta el relato: la casa funciona como archivo material de la fama de Clementina y las imágenes perforadas a la altura del corazón o de los ojos son la única prueba que el cuento ofrece. Ocupa toda la escena vertical."
+    },
+    {
+      "id": "camino_de_montana_caldense",
+      "name": "El camino de montaña",
+      "kind": "paisaje",
+      "myths": [
+        "cuento-de-animas",
+        "de-frente-al-sol",
+        "el-aserrador",
+        "el-cole-cabuya",
+        "in-illo-tempore",
+        "las-brujas"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [
+        "de día, ladera y bosque",
+        "de noche, con zanjas y desniveles"
+      ],
+      "panregional": false,
+      "note": "LA DEDUPLICACIÓN MÁS GRANDE DEL BUCKET: seis relatos ocurren en el mismo camino de ladera y es una hoja. Cubre La Miel, La Toma, Hojas Anchas, Los Zorros y Caramanta; Llanogrande, Pasmí y La Loma; el cruce Salamina-Pácora y la quebrada El Palo; las montañas de Anserma; el río de Chinchiná; y el árbol en cuya copa amanece Laurián."
+    },
+    {
+      "id": "casa_de_bahareque",
+      "name": "Casa rural de bahareque con corredor",
+      "kind": "arquitectura",
+      "myths": [
+        "cuento-de-animas",
+        "el-aserrador",
+        "el-viejo-del-costal",
+        "las-brujas"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Segunda gran deduplicación: la casa apartada de Clementina, la posada de arrieros de Los Zorros, las tiendas del camino y la casa desde donde se amenaza al niño son el mismo tipo de vivienda con distinto mobiliario. INFERENCIA DECLARADA: ningún relato dice «bahareque» ni «balcón de colores»; el tipo se fija por época y territorio y hay que autorizarlo como tal."
+    },
+    {
+      "id": "calle_de_pueblo_riosucio",
+      "name": "Calle tradicional de Riosucio",
+      "kind": "arquitectura",
+      "myths": [
+        "el-coco",
+        "el-viejo-del-costal"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [
+        "de noche",
+        "al caer la tarde"
+      ],
+      "panregional": false,
+      "note": "Dos relatos comparten la misma calle de pueblo, que es el escenario donde los calabazos funcionan y por donde pasa el limosnero. No es el camino de monte: hay casas continuas y gente en la puerta."
+    },
+    {
+      "id": "casa_colonial_de_encomienda",
+      "name": "Casa colonial de encomienda",
+      "kind": "arquitectura",
+      "myths": [
+        "de-frente-al-sol",
+        "in-illo-tempore"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [
+        "en pie, con corredor y vigías",
+        "en ruinas (Playa Rica)"
+      ],
+      "panregional": false,
+      "note": "Una hoja para los dos cuentos de conquista: la casona de Chinchiná desde cuyo corredor se vigila el río y la casa de Don Diego que Jerónimo abandona y a la que vuelve. La ruina de Playa Rica es el marco del recuerdo y se resuelve como estado del mismo modelo."
+    },
+    {
+      "id": "nevado_del_ruiz_cumanday",
+      "name": "El Nevado del Ruiz (Cumanday)",
+      "kind": "paisaje",
+      "myths": [
+        "el-cacique-cumanday"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Laderas volcánicas, nieve y grietas: es el obstáculo, el sepulcro y el guardián del encargo. Nada del camino de monte lo reemplaza."
+    },
+    {
+      "id": "mortaja_demasiado_larga",
+      "name": "La mortaja demasiado larga",
+      "kind": "objeto",
+      "myths": [
+        "cuento-de-animas"
+      ],
+      "decision": "embedded",
+      "covered_by": "jovita_la_difunta",
+      "sheets": 0,
+      "note": "Es lo que Jovita lleva puesto y la razón de que se retrase: va en su ficha, con los dos largos."
+    },
+    {
+      "id": "hueso_que_parecia_cirio",
+      "name": "El hueso que parecía un cirio",
+      "kind": "objeto",
+      "myths": [
+        "cuento-de-animas"
+      ],
+      "decision": "embedded",
+      "covered_by": "jovita_la_difunta",
+      "sheets": 0,
+      "note": "Lo levanta ella y la ambigüedad cirio/hueso es un rasgo de su ficha, no una pieza aparte."
+    },
+    {
+      "id": "arbol_de_laurian",
+      "name": "El árbol en cuya copa aparece Laurián",
+      "kind": "planta",
+      "myths": [
+        "cuento-de-animas"
+      ],
+      "decision": "embedded",
+      "covered_by": "camino_de_montana_caldense",
+      "sheets": 0,
+      "note": "Arbol sin especie ni descripción: vegetación del camino ya fichado."
+    },
+    {
+      "id": "familia_que_busca_a_laurian",
+      "name": "La familia que sale a buscarlo",
+      "kind": "colectivo",
+      "myths": [
+        "cuento-de-animas"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_campesinos_y_arrieros",
+      "sheets": 0,
+      "note": "Miembros genéricos del colectivo campesino."
+    },
+    {
+      "id": "tiendas_del_camino",
+      "name": "Las tiendas del camino",
+      "kind": "arquitectura",
+      "myths": [
+        "cuento-de-animas"
+      ],
+      "decision": "embedded",
+      "covered_by": "casa_de_bahareque",
+      "sheets": 0,
+      "note": "Donde Laurián gasta el dinero en guarapo: la misma casa rural con mostrador."
+    },
+    {
+      "id": "mesa_de_costura_y_ventana",
+      "name": "La mesa de costura y la ventana",
+      "kind": "objeto",
+      "myths": [
+        "cuento-de-animas"
+      ],
+      "decision": "embedded",
+      "covered_by": "casa_de_bahareque",
+      "sheets": 0,
+      "note": "Mobiliario del interior ya fichado; la ventana es el marco desde donde ve la procesión."
+    },
+    {
+      "id": "anton_davalos",
+      "name": "Antón Dávalos",
+      "kind": "personaje",
+      "myths": [
+        "de-frente-al-sol"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_espanoles_de_la_conquista",
+      "sheets": 0,
+      "note": "Administrador que confirma la defensa; habla una vez y no recibe descripción."
+    },
+    {
+      "id": "don_diego_de_frente_al_sol",
+      "name": "Don Diego (De frente al sol)",
+      "kind": "personaje",
+      "myths": [
+        "de-frente-al-sol"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_espanoles_de_la_conquista",
+      "sheets": 0,
+      "note": "Acompañante sin rasgos. NO es el mismo Don Diego de In illo tempore: dos cuentos del mismo autor con un nombre repetido, y fundirlos sería un error de censo."
+    },
+    {
+      "id": "don_diego_padre_de_isabel",
+      "name": "Don Diego, el anciano padre de Isabel (In illo tempore)",
+      "kind": "personaje",
+      "myths": [
+        "in-illo-tempore"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_espanoles_de_la_conquista",
+      "sheets": 0,
+      "note": "Decisión difícil: toma la decisión que cierra el relato (niega el matrimonio) y está en la escena vertical, pero el cuento no le da más rasgo que «el anciano»."
+    },
+    {
+      "id": "isabel",
+      "name": "Isabel",
+      "kind": "personaje",
+      "myths": [
+        "in-illo-tempore"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_espanoles_de_la_conquista",
+      "sheets": 0,
+      "note": "Aparece en la escena del rechazo pero no habla ni recibe descripción; queda entre el afecto y la autoridad paterna."
+    },
+    {
+      "id": "expedicion_de_robledo",
+      "name": "La expedición de Robledo",
+      "kind": "colectivo",
+      "myths": [
+        "in-illo-tempore"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_espanoles_de_la_conquista",
+      "sheets": 0,
+      "note": "Tropa a la que Jerónimo se une; sin descripción propia."
+    },
+    {
+      "id": "rio_de_chinchina",
+      "name": "El río de la encomienda de Chinchiná",
+      "kind": "paisaje",
+      "myths": [
+        "de-frente-al-sol"
+      ],
+      "decision": "embedded",
+      "covered_by": "camino_de_montana_caldense",
+      "sheets": 0,
+      "note": "Sólo funciona como la otra orilla desde donde se acercan los atacantes."
+    },
+    {
+      "id": "ruina_de_playa_rica",
+      "name": "Los restos de la casona de Playa Rica",
+      "kind": "arquitectura",
+      "myths": [
+        "de-frente-al-sol"
+      ],
+      "decision": "embedded",
+      "covered_by": "casa_colonial_de_encomienda",
+      "sheets": 0,
+      "note": "Marco del recuerdo, declarado como estado de la misma casa; ninguna de las dos escenas de la página lo monta."
+    },
+    {
+      "id": "dona_carmela_piedrahita",
+      "name": "Doña Carmela Piedrahita",
+      "kind": "personaje",
+      "myths": [
+        "el-aserrador"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_campesinos_y_arrieros",
+      "sheets": 0,
+      "note": "Atiende la posada y cierra la persecución dando refugio; nombrada pero sin un rasgo."
+    },
+    {
+      "id": "posada_de_arrieros_los_zorros",
+      "name": "La posada de arrieros de Los Zorros",
+      "kind": "arquitectura",
+      "myths": [
+        "el-aserrador"
+      ],
+      "decision": "embedded",
+      "covered_by": "casa_de_bahareque",
+      "sheets": 0,
+      "note": "Única arriería visible del bucket y aun así es un interior de casa rural con viajeros."
+    },
+    {
+      "id": "companero_aserrador",
+      "name": "El compañero de trabajo",
+      "kind": "personaje",
+      "myths": [
+        "el-aserrador"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_campesinos_y_arrieros",
+      "sheets": 0,
+      "note": "Se nombra al abrir la jornada y desaparece; Rafael regresa solo."
+    },
+    {
+      "id": "toponimos_de_la_huida",
+      "name": "La Miel, La Toma, Hojas Anchas, Los Zorros y Caramanta",
+      "kind": "lugar",
+      "myths": [
+        "el-aserrador"
+      ],
+      "decision": "embedded",
+      "covered_by": "camino_de_montana_caldense",
+      "sheets": 0,
+      "note": "Cinco topónimos que ordenan la huida y son el mismo camino de ladera."
+    },
+    {
+      "id": "visitante_de_la_cumbre",
+      "name": "El visitante que llega a la cumbre",
+      "kind": "personaje",
+      "myths": [
+        "el-cacique-cumanday"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_campesinos_y_arrieros",
+      "sheets": 0,
+      "note": "Recibe el encargo y está en la escena vertical, pero la propia página dice que el relato no lo identifica."
+    },
+    {
+      "id": "grieta_del_nevado",
+      "name": "La grieta",
+      "kind": "paisaje",
+      "myths": [
+        "el-cacique-cumanday"
+      ],
+      "decision": "embedded",
+      "covered_by": "nevado_del_ruiz_cumanday",
+      "sheets": 0,
+      "note": "Accidente del mismo paisaje; es donde desaparece y donde lo encuentran."
+    },
+    {
+      "id": "portador_del_calabazo",
+      "name": "El portador del calabazo (Tatínez)",
+      "kind": "personaje",
+      "myths": [
+        "el-coco"
+      ],
+      "decision": "embedded",
+      "covered_by": "calabazo_iluminado_de_tatinez",
+      "sheets": 0,
+      "note": "El cuerpo queda oculto por la oscuridad y sólo se revela al final: es parte de la ficha del aparato, no un personaje aparte."
+    },
+    {
+      "id": "palo_y_tela_blanca",
+      "name": "El palo y la tela blanca",
+      "kind": "objeto",
+      "myths": [
+        "el-coco"
+      ],
+      "decision": "embedded",
+      "covered_by": "fantasma_de_ruben_bayer",
+      "sheets": 0,
+      "note": "Son la estructura de ese fantasma; sin ellos no hay silueta."
+    },
+    {
+      "id": "ninos_asustados",
+      "name": "Los niños a los que se asusta",
+      "kind": "colectivo",
+      "myths": [
+        "el-coco",
+        "el-viejo-del-costal"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_campesinos_y_arrieros",
+      "sheets": 0,
+      "note": "Destinatarios de la amenaza en dos relatos; las escenas piden expresamente no mostrarlos aterrorizados."
+    },
+    {
+      "id": "cola_de_cabuya",
+      "name": "La cola de cabuya",
+      "kind": "objeto",
+      "myths": [
+        "el-cole-cabuya"
+      ],
+      "decision": "embedded",
+      "covered_by": "cole_cabuya",
+      "sheets": 0,
+      "note": "Da el nombre y es parte del cuerpo: una fibra cotidiana vuelta señal."
+    },
+    {
+      "id": "flor_de_guache_y_canabrava",
+      "name": "La flor del guache y la cañabrava",
+      "kind": "planta",
+      "myths": [
+        "el-cole-cabuya"
+      ],
+      "decision": "embedded",
+      "covered_by": "cole_cabuya",
+      "sheets": 0,
+      "note": "Son la referencia de forma para dibujar la cola; no aparecen como plantas en escena."
+    },
+    {
+      "id": "carlitos_hijo_de_milia",
+      "name": "Carlitos, hijo de Milia",
+      "kind": "personaje",
+      "myths": [
+        "el-cole-cabuya"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_campesinos_y_arrieros",
+      "sheets": 0,
+      "note": "Ve al animal y enferma, pero la fuente no da descripción clínica ni física; muchacho del colectivo."
+    },
+    {
+      "id": "milia",
+      "name": "Milia",
+      "kind": "personaje",
+      "myths": [
+        "el-cole-cabuya"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_campesinos_y_arrieros",
+      "sheets": 0,
+      "note": "Sólo se nombra como la madre."
+    },
+    {
+      "id": "llanogrande_pasmi_la_loma",
+      "name": "Llanogrande, Pasmí y La Loma",
+      "kind": "lugar",
+      "myths": [
+        "el-cole-cabuya"
+      ],
+      "decision": "embedded",
+      "covered_by": "camino_de_montana_caldense",
+      "sheets": 0,
+      "note": "Los tres lugares con manifestaciones fechadas entre 1969 y 1972; el mismo camino y la misma bifurcación."
+    },
+    {
+      "id": "mano_peluda",
+      "name": "La Mano Peluda",
+      "kind": "criatura",
+      "myths": [
+        "el-viejo-del-costal"
+      ],
+      "decision": "embedded",
+      "covered_by": "viejo_del_costal",
+      "sheets": 0,
+      "panregional": true,
+      "note": "PANREGIONAL y aun así embebida, que es justo lo que el editor necesita saber: en varios corpus la Mano Peluda es figura autónoma, pero en la versión caldense es un rasgo del viejo limosnero —la mano que mantiene escondida y que se imagina como garra—, y la página la separa expresamente de la Mano Peluda mexicana. Si se produce una ficha nacional, esta versión entra como variante «mano de un cuerpo», no como entidad."
+    },
+    {
+      "id": "costal",
+      "name": "El costal",
+      "kind": "objeto",
+      "myths": [
+        "el-viejo-del-costal"
+      ],
+      "decision": "embedded",
+      "covered_by": "viejo_del_costal",
+      "sheets": 0,
+      "note": "Va al hombro y es el espacio cerrado donde desaparece quien no obedece: inseparable de su ficha."
+    },
+    {
+      "id": "baston_y_manta",
+      "name": "El bastón y la manta",
+      "kind": "objeto",
+      "myths": [
+        "el-viejo-del-costal"
+      ],
+      "decision": "embedded",
+      "covered_by": "viejo_del_costal",
+      "sheets": 0,
+      "note": "Prendas del mismo personaje; la manta es lo que oculta la mano."
+    },
+    {
+      "id": "familia_en_la_puerta",
+      "name": "La familia que observa desde la puerta",
+      "kind": "colectivo",
+      "myths": [
+        "el-viejo-del-costal"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_campesinos_y_arrieros",
+      "sheets": 0,
+      "note": "El adulto que señala la calle y el niño que imagina el saco; sin rasgos propios."
+    },
+    {
+      "id": "casa_de_clementina",
+      "name": "La casa apartada de Clementina",
+      "kind": "arquitectura",
+      "myths": [
+        "las-brujas"
+      ],
+      "decision": "embedded",
+      "covered_by": "casa_de_bahareque",
+      "sheets": 0,
+      "note": "Vivienda rural junto al cruce; lo que la vuelve inquietante es el contenido, que ya tiene ficha propia en el baúl."
+    },
+    {
+      "id": "camilo_angel_echeverri",
+      "name": "Camilo Ángel Echeverri",
+      "kind": "personaje",
+      "myths": [
+        "las-brujas"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_campesinos_y_arrieros",
+      "sheets": 0,
+      "note": "Conduce al narrador hasta la casa y está en la portada, pero no tiene ni un rasgo descrito."
+    },
+    {
+      "id": "el_narrador_visitante",
+      "name": "El narrador que hace la visita",
+      "kind": "personaje",
+      "myths": [
+        "las-brujas",
+        "cuento-de-animas"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_campesinos_y_arrieros",
+      "sheets": 0,
+      "note": "Voz en primera persona en dos relatos; en ninguno se describe a sí mismo."
+    },
+    {
+      "id": "montanas_de_anserma",
+      "name": "Las montañas de Anserma",
+      "kind": "paisaje",
+      "myths": [
+        "in-illo-tempore"
+      ],
+      "decision": "embedded",
+      "covered_by": "camino_de_montana_caldense",
+      "sheets": 0,
+      "note": "Fondo de la partida de Jerónimo; misma ladera andina."
+    },
+    {
+      "id": "fotografias_perforadas",
+      "name": "Las fotografías perforadas",
+      "kind": "objeto",
+      "myths": [
+        "las-brujas"
+      ],
+      "decision": "embedded",
+      "covered_by": "baul_de_fotografias_perforadas",
+      "sheets": 0,
+      "note": "Perforadas a la altura del corazón o de los ojos: son el contenido del baúl fichado y su detalle decisivo."
+    },
+    {
+      "id": "sombrero_de_ala",
+      "name": "El sombrero",
+      "kind": "objeto",
+      "myths": [
+        "el-aserrador",
+        "in-illo-tempore"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_arriero_caldense",
+      "sheets": 0,
+      "note": "Primero de los objetos que Rafael suelta y también el que Jerónimo entrega ante Don Diego."
+    },
+    {
+      "id": "machete",
+      "name": "El machete",
+      "kind": "objeto",
+      "myths": [
+        "el-aserrador"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_arriero_caldense",
+      "sheets": 0,
+      "note": "Segundo objeto abandonado en la huida."
+    },
+    {
+      "id": "carriel",
+      "name": "El carriel",
+      "kind": "objeto",
+      "myths": [
+        "el-aserrador"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_arriero_caldense",
+      "sheets": 0,
+      "note": "Tercer objeto abandonado; única pieza inequívocamente antioqueña del bucket."
+    },
+    {
+      "id": "ruana",
+      "name": "La ruana",
+      "kind": "objeto",
+      "myths": [
+        "el-aserrador"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_arriero_caldense",
+      "sheets": 0,
+      "note": "Cuarto objeto abandonado."
+    },
+    {
+      "id": "farol_de_vela",
+      "name": "El farol con un trozo de vela",
+      "kind": "objeto",
+      "myths": [
+        "el-aserrador"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_arriero_caldense",
+      "sheets": 0,
+      "note": "Es la luz que revela al Uñón y lo primero que cae; objeto menor pero decisivo."
+    },
+    {
+      "id": "velas_de_clementina",
+      "name": "Las velas",
+      "kind": "objeto",
+      "myths": [
+        "las-brujas"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_brujeria_de_clementina",
+      "sheets": 0,
+      "note": "Parte del repertorio que Clementina muestra en vez de esconder."
+    },
+    {
+      "id": "aguas_perfumadas",
+      "name": "Los frascos de aguas perfumadas",
+      "kind": "objeto",
+      "myths": [
+        "las-brujas"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_brujeria_de_clementina",
+      "sheets": 0,
+      "note": "Objeto menor del mismo repertorio."
+    },
+    {
+      "id": "ramas_de_clementina",
+      "name": "Las ramas",
+      "kind": "planta",
+      "myths": [
+        "las-brujas"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_brujeria_de_clementina",
+      "sheets": 0,
+      "note": "Sin especie declarada; van como utilería, no como planta fichada."
+    },
+    {
+      "id": "escobas",
+      "name": "Las escobas",
+      "kind": "objeto",
+      "myths": [
+        "las-brujas"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_brujeria_de_clementina",
+      "sheets": 0,
+      "note": "Están en la casa como objeto doméstico; el relato no las hace volar."
+    },
+    {
+      "id": "papeles_con_formulas",
+      "name": "Los papeles con fórmulas",
+      "kind": "objeto",
+      "myths": [
+        "las-brujas"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_brujeria_de_clementina",
+      "sheets": 0,
+      "note": "Objeto menor que permite imaginar encargos sin probar efectos."
+    },
+    {
+      "id": "tijeras_de_costura",
+      "name": "Las tijeras",
+      "kind": "objeto",
+      "myths": [
+        "cuento-de-animas"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_animas_y_conquista",
+      "sheets": 0,
+      "note": "Con ellas Ñuá Ulogia corta el ruedo y provoca el castigo."
+    },
+    {
+      "id": "cirios_de_la_procesion",
+      "name": "Los cirios de la procesión",
+      "kind": "objeto",
+      "myths": [
+        "cuento-de-animas"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_animas_y_conquista",
+      "sheets": 0,
+      "note": "Lo que hace visible a la procesión de noche."
+    },
+    {
+      "id": "totuma_de_guarapo",
+      "name": "La totuma de guarapo",
+      "kind": "objeto",
+      "myths": [
+        "cuento-de-animas"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_animas_y_conquista",
+      "sheets": 0,
+      "note": "La bebida de las tiendas del camino, causa del primer episodio."
+    },
+    {
+      "id": "atado_de_hierbas",
+      "name": "El atado de hierbas del nevado",
+      "kind": "planta",
+      "myths": [
+        "el-cacique-cumanday"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_animas_y_conquista",
+      "sheets": 0,
+      "note": "Cumanday lo carga en las dos escenas, pero la página declara que no se identifica la planta: va como atado genérico, sin especie inventada."
+    },
+    {
+      "id": "armas_de_los_defensores",
+      "name": "Las armas de fuego de los defensores",
+      "kind": "objeto",
+      "myths": [
+        "de-frente-al-sol"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_animas_y_conquista",
+      "sheets": 0,
+      "note": "«Los defensores disparan y resisten»: armas de 1592 sin modelo especificado."
+    },
+    {
+      "id": "el_coco_incorporeo",
+      "name": "El Coco",
+      "kind": "criatura",
+      "myths": [
+        "el-coco"
+      ],
+      "decision": "excluded",
+      "reason": "La fuente le niega cuerpo: «no necesita un rostro fijo», «presencia incorpórea que los adultos nombran». Dibujarlo sería inventarle la forma que el relato le quita a propósito.",
+      "sheets": 0,
+      "panregional": true,
+      "note": "PANREGIONAL y sin ficha: el Coco recorre varios corpus y todo el mundo hispánico, pero aquí su fuerza es la advertencia, no la apariencia. Si el editor produce una ficha nacional del Coco, la versión caldense aporta exactamente esto: la negativa a tener rostro, y dos calabazos que ocupan su lugar."
+    },
+    {
+      "id": "chucho",
+      "name": "Chucho",
+      "kind": "criatura",
+      "myths": [
+        "el-coco"
+      ],
+      "decision": "excluded",
+      "reason": "Otro nombre de la misma presencia sin cuerpo; hereda la misma falta de evidencia visual.",
+      "sheets": 0,
+      "note": "«También puede llamarse Chucho»."
+    },
+    {
+      "id": "origen_africano_del_coco",
+      "name": "El origen africano y el culto a los antepasados",
+      "kind": "fenomeno",
+      "myths": [
+        "el-coco"
+      ],
+      "decision": "excluded",
+      "reason": "Es una genealogía interpretativa que la propia página declara no demostrada, y no tiene forma visual.",
+      "sheets": 0,
+      "note": "La revisión retira la afirmación de un origen único."
+    },
+    {
+      "id": "atacantes_presentados_como_pijaos",
+      "name": "Los atacantes presentados como pijaos",
+      "kind": "colectivo",
+      "myths": [
+        "de-frente-al-sol"
+      ],
+      "decision": "excluded",
+      "reason": "El cuento no los describe: sólo son ruido que crece al otro lado del río y amenaza oída desde la casa, filtrada por una voz colonial que los vuelve masa anónima. Dibujarlos desde esa voz sería inventarlos.",
+      "sheets": 0,
+      "note": "DECISIÓN QUE MÁS COSTÓ. La portada de la página los deja fuera de cuadro a propósito («antes del combate»). Si el editor quiere representarlos, no sale de este relato: exige investigación material propia y es otro encargo, no este censo."
+    },
+    {
+      "id": "jorge_robledo",
+      "name": "Jorge Robledo",
+      "kind": "personaje",
+      "myths": [
+        "in-illo-tempore"
+      ],
+      "decision": "excluded",
+      "reason": "Su llegada, captura y ejecución se narran fuera de escena; el cuento no lo describe ni lo pone frente al lector.",
+      "sheets": 0,
+      "note": "Funciona como noticia que altera el equilibrio, no como cuerpo."
+    },
+    {
+      "id": "pedro_de_heredia",
+      "name": "Pedro de Heredia",
+      "kind": "personaje",
+      "myths": [
+        "in-illo-tempore"
+      ],
+      "decision": "excluded",
+      "reason": "Se nombra sólo como la fuerza que captura a Robledo; nunca aparece.",
+      "sheets": 0,
+      "note": "Igual que Robledo."
+    },
+    {
+      "id": "orrego",
+      "name": "Orrego, el esposo de Clementina",
+      "kind": "personaje",
+      "myths": [
+        "las-brujas"
+      ],
+      "decision": "excluded",
+      "reason": "Está muerto antes del relato y sólo existe en lo que ella cuenta; ninguna escena lo muestra.",
+      "sheets": 0,
+      "note": "La ficha se niega expresamente a convertir su versión en expediente."
+    },
+    {
+      "id": "aspasia_bruja_de_las_minas",
+      "name": "Aspasia (o Cecilia), la bruja de las minas",
+      "kind": "personaje",
+      "myths": [
+        "las-brujas"
+      ],
+      "decision": "excluded",
+      "reason": "Pertenece a otra obra y otro autor (novela de Gregorio Sánchez Gómez, ambientada en Marmato); la desfusión editorial la separa de Clementina.",
+      "sheets": 0,
+      "note": "Mezclarlas borraba dos obras, dos autores y dos contextos."
+    },
+    {
+      "id": "brujas_volantonas",
+      "name": "Las brujas volantonas",
+      "kind": "criatura",
+      "myths": [
+        "las-brujas"
+      ],
+      "decision": "excluded",
+      "reason": "Se mencionan como narraciones caldenses comparables que expresamente no se insertan en esta visita.",
+      "sheets": 0,
+      "note": "Verificado en «Versiones»."
+    },
+    {
+      "id": "sacerdote_de_caramanta",
+      "name": "El sacerdote de Caramanta",
+      "kind": "personaje",
+      "myths": [
+        "el-aserrador"
+      ],
+      "decision": "excluded",
+      "reason": "Interviene sólo en la cadena de transmisión —objeta que un espíritu cause heridas físicas—, no en ninguna escena del episodio.",
+      "sheets": 0,
+      "note": "Su objeción es lo que mantiene abierta la duda del relato, pero es habla, no cuerpo."
+    },
+    {
+      "id": "informante_de_velez_correa",
+      "name": "El hombre que transmitió el episodio",
+      "kind": "personaje",
+      "myths": [
+        "el-aserrador"
+      ],
+      "decision": "excluded",
+      "reason": "Voz de transmisión sin cuerpo descrito: lo oyó de estudiante décadas antes.",
+      "sheets": 0,
+      "note": "Su duda («nadie supo qué persiguió a Rafael») sí condiciona la ficha del Uñón."
+    },
+    {
+      "id": "la_fiera",
+      "name": "La fiera",
+      "kind": "animal",
+      "myths": [
+        "el-aserrador"
+      ],
+      "decision": "excluded",
+      "reason": "Es una hipótesis alternativa sin una sola descripción; ficharla sería elegir la explicación que el relato deja abierta.",
+      "sheets": 0,
+      "note": "«Quizá había sido una fiera»."
+    },
+    {
+      "id": "virgen_del_carmen",
+      "name": "La Virgen del Carmen",
+      "kind": "deidad_fuerza",
+      "myths": [
+        "el-aserrador"
+      ],
+      "decision": "excluded",
+      "reason": "Invocada durante la huida; no hay imagen, estampa, altar ni aparición en el relato.",
+      "sheets": 0,
+      "note": "Verificado: sólo «invocó a la Virgen del Carmen»."
+    },
+    {
+      "id": "senor_de_los_milagros_de_giron",
+      "name": "El Señor de los Milagros de Girón",
+      "kind": "deidad_fuerza",
+      "myths": [
+        "cuento-de-animas"
+      ],
+      "decision": "excluded",
+      "reason": "Destinatario de una promesa; ninguna escena muestra la imagen ni el santuario.",
+      "sheets": 0,
+      "note": "Además es santandereano, como todo este slug."
+    },
+    {
+      "id": "mercado_de_los_lunes",
+      "name": "El mercado de los lunes",
+      "kind": "lugar",
+      "myths": [
+        "cuento-de-animas"
+      ],
+      "decision": "excluded",
+      "reason": "Rutina nombrada dos veces («bajaba al mercado», «atendía a la gente del mercado») sin una sola descripción de plaza, puesto o mercancía.",
+      "sheets": 0,
+      "note": "Si el editor lo quiere, hay que investigarlo, no leerlo."
+    },
+    {
+      "id": "esposa_de_cumanday",
+      "name": "La esposa de Cumanday",
+      "kind": "personaje",
+      "myths": [
+        "el-cacique-cumanday"
+      ],
+      "decision": "excluded",
+      "reason": "Enferma y muere dentro del relato pero no recibe un solo rasgo, ninguna escena la muestra y la propia ficha prohíbe inventar vestuario o símbolos étnicos.",
+      "sheets": 0,
+      "note": "SEGUNDA DECISIÓN DIFÍCIL: es la razón del viaje y aun así dibujarla obligaría a inventar exactamente lo que la página veta."
+    },
+    {
+      "id": "recien_nacido_de_cumanday",
+      "name": "El recién nacido",
+      "kind": "personaje",
+      "myths": [
+        "el-cacique-cumanday"
+      ],
+      "decision": "excluded",
+      "reason": "Igual que la madre: muere antes de recibir la medicina, sin descripción ni escena.",
+      "sheets": 0,
+      "note": "La espera termina fuera de cuadro."
+    },
+    {
+      "id": "brujo_de_las_hierbas",
+      "name": "El brujo que indica las hierbas",
+      "kind": "personaje",
+      "myths": [
+        "el-cacique-cumanday"
+      ],
+      "decision": "excluded",
+      "reason": "La página declara expresamente que el relato no identifica al brujo, la planta ni el visitante.",
+      "sheets": 0,
+      "note": "Da la instrucción y desaparece."
+    },
+    {
+      "id": "alejandrino_izquierdo",
+      "name": "Alejandrino Izquierdo",
+      "kind": "personaje",
+      "myths": [
+        "el-cole-cabuya"
+      ],
+      "decision": "excluded",
+      "reason": "Voz que resume la función social del relato («aparecía donde había gente que vivía mal»); no participa en ninguna escena.",
+      "sheets": 0,
+      "note": "Es interpretación recogida, no personaje."
+    },
+    {
+      "id": "julian_bueno_rodriguez",
+      "name": "Julián Bueno Rodríguez",
+      "kind": "personaje",
+      "myths": [
+        "el-cole-cabuya",
+        "el-viejo-del-costal"
+      ],
+      "decision": "excluded",
+      "reason": "Fuente e intérprete citado en dos páginas; no es parte de ningún relato.",
+      "sheets": 0,
+      "note": "Igual que Vélez Correa y Gartner: cadena de transmisión."
+    },
+    {
+      "id": "resguardo_de_san_lorenzo",
+      "name": "El resguardo de San Lorenzo",
+      "kind": "lugar",
+      "myths": [
+        "el-cole-cabuya"
+      ],
+      "decision": "excluded",
+      "reason": "Es un territorio indígena vivo que la página declara para no borrarlo, no un escenario descrito del relato.",
+      "sheets": 0,
+      "note": "SENSIBILIDAD: se declara y no se ilustra. La categoría editorial «mestizo» no autoriza a convertirlo en paisaje de folclor ni a atribuirle el relato."
+    },
+    {
+      "id": "copla_campesina_de_gartner",
+      "name": "La copla campesina",
+      "kind": "fenomeno",
+      "myths": [
+        "el-viejo-del-costal"
+      ],
+      "decision": "excluded",
+      "reason": "Es texto cantado; no tiene forma visual.",
+      "sheets": 0,
+      "note": "Prueba la circulación de la amenaza, no una imagen."
+    },
+    {
+      "id": "comparaciones_externas_caldas",
+      "name": "Menciones comparativas (Cuco, Hombre del Saco, Bogeyman, Bicho-papão, Cadejo, Ánima Sola, Orfeo, Izanagi, Mano Peluda mexicana)",
+      "kind": "fenomeno",
+      "myths": [
+        "el-coco",
+        "el-viejo-del-costal",
+        "el-cole-cabuya",
+        "el-cacique-cumanday",
+        "cuento-de-animas"
+      ],
+      "decision": "excluded",
+      "reason": "Aparecen sólo en la sección «Similitudes» como comparación explícita, nunca como escena.",
+      "sheets": 0,
+      "note": "Criterio uniforme del censo, igual que en Bogotá: la comparación no entra al inventario."
+    }
+  ],
+  "sheet_groups": [
+    {
+      "id": "hoja_utileria_arriero_caldense",
+      "kind": "objeto",
+      "covers": [
+        "sombrero_de_ala",
+        "machete",
+        "carriel",
+        "ruana",
+        "farol_de_vela"
+      ],
+      "sheets": 1,
+      "note": "Los cinco objetos que Rafael Toro va soltando en la huida son, además, el kit del caminante de monte de todo el bucket: una lámina y se reutiliza."
+    },
+    {
+      "id": "hoja_utileria_brujeria_de_clementina",
+      "kind": "objeto",
+      "covers": [
+        "velas_de_clementina",
+        "aguas_perfumadas",
+        "ramas_de_clementina",
+        "escobas",
+        "papeles_con_formulas"
+      ],
+      "sheets": 1,
+      "note": "Cinco objetos menores que hacen de la casa un archivo de la fama; el baúl con fotografías va aparte porque es el objeto del relato."
+    },
+    {
+      "id": "hoja_utileria_animas_y_conquista",
+      "kind": "objeto",
+      "covers": [
+        "tijeras_de_costura",
+        "cirios_de_la_procesion",
+        "totuma_de_guarapo",
+        "atado_de_hierbas",
+        "armas_de_los_defensores"
+      ],
+      "sheets": 1,
+      "note": "Cinco piezas sueltas de los relatos que no comparten mundo material: costura, procesión, tienda de camino, nevado y defensa de 1592."
+    }
+  ],
+  "totals": {
+    "entities": 97,
+    "required": 23,
+    "embedded": 51,
+    "excluded": 23,
+    "sheets": 26,
+    "panregional_required": 1
+  }
+}

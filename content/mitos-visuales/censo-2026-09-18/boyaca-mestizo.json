@@ -1,0 +1,1001 @@
+{
+  "id": "boyaca-mestizo",
+  "label": "Boyaca mestizo",
+  "era": "mezclada y sin un solo denominador: dos paginas coloniales y republicanas (Tunja empedrada, trapiches del Valle de Tenza) y tres paginas de ciclo muzo y chibcha sin fecha, atribuidas a pueblos indigenas",
+  "pages": 5,
+  "canon_pages": 0,
+  "read_note": "Lei las 5 paginas completas desde el cuerpo real (campo content) y no desde los modulos editorial/boyaca-mestizo-residual y boyaca-mixto-residual, que contienen revisiones NO aplicadas y con otro contenido. La diferencia es material: el modulo elimina a Antonio Bustamante de El cucacuy por invencion no corroborada y anade una variante del cerdo dorado con duende de Lengupa; en la pagina real Bustamante es el narrador principal y el cerdo no existe. Idem Furatena: el modulo usa la version BOYAPAZ donde Tena se suicida, y la pagina usa la version donde Tena manda degollar a Zarbi, mata a Fura y se mata. Censo contra la pagina. La sorpresa grande es que el encargo describia Boyaca como altiplano campesino de paramo, frailejon, ruana, tapia pisada y camino real, y el corpus real no es eso. No hay ni un paramo, ni un frailejon, ni una ruana, ni una mina de sal en las cinco paginas. Lo que hay es: una leyenda picaresca colonial en Tunja e Iza, un espanto de trapiche y canaduzal del Valle de Tenza, y tres cosmogonias atribuidas a los muzos y los chibchas, situadas en el Magdalena, en el Minero esmeraldero y en el lago de Tota. Tres de esas cinco paginas traen material muisca o chibcha explicito, escrito en el texto y no importado por mi. Lo dudoso: Boquicha y las quinzitas, dos palabras que el texto no define y que excluyo antes que inventarlas. Y el cuerpo de La sombra creadora dedica dos parrafos enteros a Tales de Mileto, Ciceron y Anaximandro, lo que dice bastante del estado editorial de esa ruta. Ninguna de las 5 tiene campo mito: no se les escribe guion ni video, pero aportan entidades.",
+  "entities": [
+    {
+      "id": "cumbres_del_valle_de_iza",
+      "name": "Cumbres verdes del valle de Iza",
+      "kind": "paisaje",
+      "myths": [
+        "el-tesoro-de-buzaga"
+      ],
+      "decision": "required",
+      "sheets": 2,
+      "states": [
+        "cuesta_que_se_multiplica"
+      ],
+      "panregional": false,
+      "note": "Las verdes cumbres que escoltan el valle, el monte vigoroso y la espesura donde esta la choza. Es el escenario del acto entero. El estado aparte se lo gana el texto y no la interpretacion: a cada paso la cuesta parecia burlarse de ellos, multiplicandose, y esa cuesta que se alarga hasta el infinito es una regla grafica que el modelo de entorno normal no da."
+    },
+    {
+      "id": "tunja_colonial",
+      "name": "Tunja colonial",
+      "kind": "arquitectura",
+      "myths": [
+        "el-tesoro-de-buzaga"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Las callejuelas de la muy noble y antigua ciudad, las piedras que Lope empedra, la iglesia donde Benito de Laserna dice su misa tempranera. El relato abre y cierra aqui, y es la unica arquitectura de pueblo colonial del corpus."
+    },
+    {
+      "id": "trapiche_y_canaduzales_nocturnos",
+      "name": "Trapiche, hornilla y canaduzales",
+      "kind": "arquitectura",
+      "myths": [
+        "el-cucacuy"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "El Cucacuy no ronda paramos ni lagunas: ronda trapiches, parrillas de fuego y hornillos encendidos entre campos de cana, y entra alli como huesped no invitado. Sin esta hoja no hay relato, y es tambien el correctivo a la iconografia de tapia y teja que uno esperaria de Boyaca."
+    },
+    {
+      "id": "selva_y_rio_de_tierra_caliente",
+      "name": "Selva y rio de tierra caliente",
+      "kind": "paisaje",
+      "myths": [
+        "la-sombra-creadora",
+        "los-mensajeros-de-los-dioses"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "La enmaranada espesura junto al fluir impetuoso del Magdalena donde Are talla y arroja las figuras, y la vegetacion densa y bulliciosa donde Mayavita vive tras cruzar la cordillera. Son dos vertientes distintas del mapa, pero el mismo modelo de entorno: dosel cerrado, calor y agua. Una hoja con variante de ribera."
+    },
+    {
+      "id": "penones_de_fura_y_tena",
+      "name": "Los penones de Fura y Tena sobre el Minero",
+      "kind": "paisaje",
+      "myths": [
+        "furatena"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Los dos cerros separados por el rio que llevo el nombre del amante, con los filones esmeraldiferos. Es el desenlace hecho geografia, y por eso esta hoja absorbe tambien la roca en que queda Zarbi y el penasco de Itoco: no se pagan estados de petrificacion en Fura y Tena."
+    },
+    {
+      "id": "lago_y_fuente_de_turubiuta",
+      "name": "El lago y la fuente de Turubiuta",
+      "kind": "paisaje",
+      "myths": [
+        "los-mensajeros-de-los-dioses"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "La fuente donde Mongata y la joven se encuentran buscando agua, y la inmensa laguna que Mayavita mira sintiendo distancias que nunca piso. Escenario de los dos arranques del relato, y no es intercambiable con la selva caliente."
+    },
+    {
+      "id": "vivienda_y_taller_de_alfarero",
+      "name": "Vivienda y taller de alfarero",
+      "kind": "arquitectura",
+      "myths": [
+        "los-mensajeros-de-los-dioses"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "El hogar junto a la fuente donde ella siembra y teje y el hace grandes cantaros decorados. Media pagina transcurre aqui y el oficio de Mongata no existe sin el taller."
+    },
+    {
+      "id": "lope_badillo",
+      "name": "Lope Badillo",
+      "kind": "personaje",
+      "myths": [
+        "el-tesoro-de-buzaga"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Empedrador de manos curtidas y espalda encorvada, con una sola camisa raida y un vestidillo de jergueta. Conduce el relato: pide, confia el secreto, sube, lanza la piedra y vuelve a empedrar calles."
+    },
+    {
+      "id": "padre_benito_de_laserna",
+      "name": "Padre Benito de Laserna",
+      "kind": "personaje",
+      "myths": [
+        "el-tesoro-de-buzaga"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Clerigo aficionado al repique de las monedas que acepta la mitad del botin, carga al mohan como un san Cristobal desventurado y lo rocia con agua bendita. El desenlace es suyo."
+    },
+    {
+      "id": "vieja_india_guardiana",
+      "name": "La vieja india",
+      "kind": "personaje",
+      "myths": [
+        "el-tesoro-de-buzaga"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Guardiana de secretos antiguos de la region: ofrece la solucion, guia midiendo los pasos y se detiene en el limite diciendo que mas alla no se atreve. Aviso para la hoja: el texto la llama india sin nombrar pueblo alguno, asi que su vestuario no puede tomarse prestado de la biblia muisca."
+    },
+    {
+      "id": "mohan_de_buzaga",
+      "name": "El mohan de Buzaga",
+      "kind": "criatura",
+      "myths": [
+        "el-tesoro-de-buzaga"
+      ],
+      "decision": "required",
+      "sheets": 2,
+      "states": [
+        "polvo_y_hueso"
+      ],
+      "panregional": true,
+      "note": "Panregional: el Mohan aparece en varios corpus de este censo, y en el corpus llanero de este mismo encargo esta fichada su hembra, la Mojana. Lo boyacense de esta version es que no es un mohan de rio sino de cumbre: espectro anciano, enjuto y acartonado, sentado sobre un duho, mitad hechicero mitad demonio en la voz cristiana del texto, custodio de tesoros entre montanas, y su arma no es la seduccion sino el peso. El estado aparte lo exige el texto: cae rodando y se transforma en polvo y hueso, silueta que la hoja de identidad no da."
+    },
+    {
+      "id": "antonio_bustamante",
+      "name": "Antonio Bustamante",
+      "kind": "personaje",
+      "myths": [
+        "el-cucacuy"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Hombre cuyas palabras tienen peso de lider, endurecido por los anos y con un brillo particular en los ojos. Dirige la comitiva, define al Cucacuy como espanto lujurioso y confiesa haberle tirado miel caliente. Es quien sostiene toda la primera version de la pagina."
+    },
+    {
+      "id": "cucacuy",
+      "name": "El Cucacuy",
+      "kind": "criatura",
+      "myths": [
+        "el-cucacuy"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Hombre desnudo y friolento que busca el calor de las llamas, con bordon, un calabazo que es carcel de demonios en miniatura y un pulgar largo y antinatural con el que silba perforando el aire. No se marca panregional: comparte familia con los silbadores de camino de otros corpus, pero ni el nombre ni el calabazo ni el pulgar aparecen fuera de Boyaca y Cundinamarca. Verificado: en el cuerpo de la pagina NO existe la variante del cerdo dorado con duende; esa esta solo en el modulo editorial sin aplicar."
+    },
+    {
+      "id": "are_dios_creador",
+      "name": "Are",
+      "kind": "deidad_fuerza",
+      "myths": [
+        "la-sombra-creadora",
+        "furatena"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "La gran sombra cargada de misterios que se tiende sobre la tierra con forma humana y tamano descomunal, sin ojos pero con mirada. Unico personaje que cruza dos paginas del corpus: talla los hombres de madera junto al Magdalena y crea a Fura y Tena. Su hoja lleva sus dos materiales, madera y tierra del Carare."
+    },
+    {
+      "id": "fura",
+      "name": "Fura",
+      "kind": "personaje",
+      "myths": [
+        "furatena"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Madre de la humanidad muzo, ensena agricultura y alfareria, deslumbra incluso a las mariposas, peregrina con Zarbi y termina cargando su cadaver. Su llanto es el origen de las esmeraldas. La petrificacion final la cubre la hoja de los penones."
+    },
+    {
+      "id": "tena",
+      "name": "Tena",
+      "kind": "personaje",
+      "myths": [
+        "furatena"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Padre de la humanidad muzo y maestro de las tecnicas guerreras; testigo invisible del desliz, manda degollar a Zarbi, mata a Fura y se mata."
+    },
+    {
+      "id": "zarbi",
+      "name": "Zarbi",
+      "kind": "personaje",
+      "myths": [
+        "furatena"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Extranjero de ojos azules y barba rubia que llega buscando la planta de la eterna juventud. Rasgos fisicos explicitos, cosa rara en este corpus, y el rio lleva su nombre."
+    },
+    {
+      "id": "figuras_de_madera",
+      "name": "Las figuras de madera",
+      "kind": "criatura",
+      "myths": [
+        "la-sombra-creadora"
+      ],
+      "decision": "required",
+      "sheets": 2,
+      "states": [
+        "nacidos_del_agua"
+      ],
+      "panregional": false,
+      "note": "Are las esculpe cuidando desde la curva de las cejas hasta la suavidad de las manos, las amontona junto al rio y las arroja al agua. El estado se gana la hoja porque la pagina pone en escena las dos siluetas: la estatua inerte apilada en la orilla y los recien nacidos del agua que se sacuden los reflejos, torpes al principio y despues vibrantes."
+    },
+    {
+      "id": "mongata",
+      "name": "Mongata",
+      "kind": "personaje",
+      "myths": [
+        "los-mensajeros-de-los-dioses"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Alfarero que hereda de su padre el arte de las vasijas, se casa junto a la fuente y despide a su esposa por esteril creyendo obedecer a los dioses. Su hoja cubre tambien al padre artesano de calices y copas rituales, que el texto no describe aparte."
+    },
+    {
+      "id": "madre_de_mayavita",
+      "name": "La madre de Mayavita",
+      "kind": "personaje",
+      "myths": [
+        "los-mensajeros-de-los-dioses"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Repudiada y muda: acepta el destino, descubre el embarazo, calla la verdad y cria sola a su hija. Conduce la mitad del relato aunque nunca se la nombre."
+    },
+    {
+      "id": "mayavita",
+      "name": "Mayavita",
+      "kind": "personaje",
+      "myths": [
+        "los-mensajeros-de-los-dioses"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Crece aislada con la naturaleza como guia, modela dos aves con hojas, vuela, vive en la selva y cae al regresar. Es el titulo y el sacrificio de la pagina."
+    },
+    {
+      "id": "guacamayas_de_mayavita",
+      "name": "Las guacamayas de Mayavita",
+      "kind": "animal",
+      "myths": [
+        "los-mensajeros-de-los-dioses"
+      ],
+      "decision": "required",
+      "sheets": 2,
+      "states": [
+        "plumaje_encendido_de_sua"
+      ],
+      "panregional": false,
+      "note": "Modeladas con hojas del arbusto de grao, cobran vida subitamente, aprenden la lengua de los hombres y regresan solas. El estado es obligatorio: primero son figuras de hojas y despues son aves cuyos cuerpos parecen iluminarse por dentro con el canto dorado de la luz de Sua. Dos siluetas, dos hojas."
+    },
+    {
+      "id": "sua_el_sol",
+      "name": "Sua",
+      "kind": "deidad_fuerza",
+      "myths": [
+        "los-mensajeros-de-los-dioses"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "El sol chibcha en cuyo oro se funde el atardecer y a cuyo astro las guacamayas llevan los rezos. AVISO AL EDITOR: este es material muisca explicito dentro del corpus boyacense. La biblia muisca ya existe y es de este mismo territorio; antes de producir esta hoja hay que comprobar si Sua ya esta fichado alli, porque duplicarlo seria fabricar dos identidades para la misma deidad."
+    },
+    {
+      "id": "pueblo_muzo",
+      "name": "El pueblo muzo",
+      "kind": "colectivo",
+      "myths": [
+        "furatena",
+        "la-sombra-creadora"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Los que aprenden de Fura y Tena la agricultura, la alfareria y las tecnicas despiadadas de los guerreros, y los fieros pobladores dispuestos a derramar sangre por cada mota de territorio que expulsan a los muiscas. Son los mismos: una gramatica de grupo con registro de labranza y registro de guerra."
+    },
+    {
+      "id": "comunidad_muisca_chibcha",
+      "name": "La comunidad muisca o chibcha",
+      "kind": "colectivo",
+      "myths": [
+        "furatena",
+        "los-mensajeros-de-los-dioses",
+        "la-sombra-creadora"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "AVISO AL EDITOR: aqui esta la respuesta a si algun relato boyacense trae material muisca explicito. Si, tres. En Furatena la tierra es adoratorio de los muiscas, las peregrinaciones se hacen en secreto y los muiscas ofrecen esmeraldas hasta que los muzos los expulsan. En Los mensajeros son los ojos chibchas los que ven el canto dorado de Sua. En La sombra creadora los muzos surgieron del rio al igual que los chibchas. No es iconografia prestada por mi: esta escrita en las tres paginas. Y por eso mismo esta ficha no debe producirse sin cotejar la biblia muisca existente."
+    },
+    {
+      "id": "comunidad_campesina_boyacense",
+      "name": "Comunidad campesina boyacense",
+      "kind": "colectivo",
+      "myths": [
+        "el-cucacuy",
+        "el-tesoro-de-buzaga"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Los aldeanos temerosos que evitan dejar hornillos encendidos, la comitiva que acompana a Bustamante por la vereda, las gentes de Tunja, la mujer de Lope y los chicuelos que trae al mundo cada ano. Es el unico grupo de epoca colonial tardia y republicana del corpus, y absorbe a media docena de nombrados sin cuerpo."
+    },
+    {
+      "id": "mariposas_de_muzo",
+      "name": "Las mariposas de Muzo",
+      "kind": "colectivo",
+      "myths": [
+        "furatena"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Rodean a Fura desde el principio y al final son sus lloros convertidos en mariposas brillantes que aun tinen de color el aire sobre Muzo. Imagen firmante de la region, y el relato no se cierra sin ellas."
+    },
+    {
+      "id": "esmeraldas",
+      "name": "Las esmeraldas",
+      "kind": "objeto",
+      "myths": [
+        "furatena",
+        "el-tesoro-de-buzaga"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Nacen de las lagrimas interminables de Fura y se esparcen por las cordilleras; y son lo que el mohan promete a Laserna para que siga cargandolo. Dos paginas, un cuerpo: la piedra verde en veta y en mano."
+    },
+    {
+      "id": "choza_del_mohan",
+      "name": "La choza del mohan",
+      "kind": "arquitectura",
+      "myths": [
+        "el-tesoro-de-buzaga"
+      ],
+      "decision": "embedded",
+      "covered_by": "cumbres_del_valle_de_iza",
+      "sheets": 0,
+      "note": "Refugio humilde y expectante entre la espesura de los arboles, al coronar la cima. Una construccion de una linea: el modelo de entorno la lleva."
+    },
+    {
+      "id": "luna_nueva_y_creciente",
+      "name": "Luna nueva y luna creciente",
+      "kind": "fenomeno",
+      "myths": [
+        "el-tesoro-de-buzaga",
+        "el-cucacuy"
+      ],
+      "decision": "embedded",
+      "covered_by": "cumbres_del_valle_de_iza",
+      "sheets": 0,
+      "note": "La luna nueva que apenas susurra sobre la travesia y las noches de luna creciente del Valle de Tenza. Iluminacion, no entidad."
+    },
+    {
+      "id": "monte_y_arboles_de_iza",
+      "name": "El monte y los arboles",
+      "kind": "planta",
+      "myths": [
+        "el-tesoro-de-buzaga"
+      ],
+      "decision": "embedded",
+      "covered_by": "cumbres_del_valle_de_iza",
+      "sheets": 0,
+      "note": "Espesura sin especie nombrada."
+    },
+    {
+      "id": "calabazo_con_demonios",
+      "name": "El calabazo",
+      "kind": "objeto",
+      "myths": [
+        "el-cucacuy"
+      ],
+      "decision": "embedded",
+      "covered_by": "cucacuy",
+      "sheets": 0,
+      "note": "Carcel de miniaturas infernales de la que puede desatar demonios a su antojo, y donde desaparece a las mujeres. Inseparable de su cuerpo: va en su hoja de identidad."
+    },
+    {
+      "id": "bordon_del_cucacuy",
+      "name": "El bordon",
+      "kind": "objeto",
+      "myths": [
+        "el-cucacuy"
+      ],
+      "decision": "embedded",
+      "covered_by": "cucacuy",
+      "sheets": 0,
+      "note": "Con el deambula eternamente; parte de la silueta."
+    },
+    {
+      "id": "pulgar_silbador",
+      "name": "El pulgar largo",
+      "kind": "objeto",
+      "myths": [
+        "el-cucacuy"
+      ],
+      "decision": "embedded",
+      "covered_by": "cucacuy",
+      "sheets": 0,
+      "note": "Peculiar y antinatural, al silbar perfora el aire con un sonido que ensordece la razon. Es el rasgo que la hoja de identidad tiene que fijar en la mano, y la misma regla acustica sirve para cualquier variante."
+    },
+    {
+      "id": "hornillos_y_fogones",
+      "name": "Hornillos, fogones y parrillas de fuego",
+      "kind": "arquitectura",
+      "myths": [
+        "el-cucacuy"
+      ],
+      "decision": "embedded",
+      "covered_by": "trapiche_y_canaduzales_nocturnos",
+      "sheets": 0,
+      "note": "Lo que el espanto busca; parte del modelo espacial del trapiche."
+    },
+    {
+      "id": "cana_de_azucar",
+      "name": "Los campos de cana",
+      "kind": "planta",
+      "myths": [
+        "el-cucacuy"
+      ],
+      "decision": "embedded",
+      "covered_by": "trapiche_y_canaduzales_nocturnos",
+      "sheets": 0,
+      "note": "Por ellos rumorea la figura a lo lejos."
+    },
+    {
+      "id": "ribera_del_magdalena",
+      "name": "La ribera del Magdalena",
+      "kind": "lugar",
+      "myths": [
+        "la-sombra-creadora"
+      ],
+      "decision": "embedded",
+      "covered_by": "selva_y_rio_de_tierra_caliente",
+      "sheets": 0,
+      "note": "La orilla donde el rio detiene un momento su eterno fluir y devuelve al mundo hombres y mujeres. Variante de ribera de la misma hoja de entorno."
+    },
+    {
+      "id": "arboles_taciturnos_y_madera",
+      "name": "Los arboles taciturnos y su madera",
+      "kind": "planta",
+      "myths": [
+        "la-sombra-creadora"
+      ],
+      "decision": "embedded",
+      "covered_by": "selva_y_rio_de_tierra_caliente",
+      "sheets": 0,
+      "note": "De ellos sale la materia de las figuras; inclinan sus copas en reverencia."
+    },
+    {
+      "id": "tortolas_y_pajaros",
+      "name": "Tortolas y pajaros",
+      "kind": "animal",
+      "myths": [
+        "los-mensajeros-de-los-dioses"
+      ],
+      "decision": "embedded",
+      "covered_by": "selva_y_rio_de_tierra_caliente",
+      "sheets": 0,
+      "note": "Trinan y arrullan el viento junto al hogar y en la selva; fauna del modelo de entorno."
+    },
+    {
+      "id": "rio_zarbi_o_minero",
+      "name": "El rio Zarbi o Minero",
+      "kind": "lugar",
+      "myths": [
+        "furatena"
+      ],
+      "decision": "embedded",
+      "covered_by": "penones_de_fura_y_tena",
+      "sheets": 0,
+      "note": "Separa los cuerpos convertidos en piedra y lleva el nombre del amante muerto."
+    },
+    {
+      "id": "zarbi_convertido_en_roca",
+      "name": "Zarbi convertido en roca",
+      "kind": "lugar",
+      "myths": [
+        "furatena"
+      ],
+      "decision": "embedded",
+      "covered_by": "penones_de_fura_y_tena",
+      "sheets": 0,
+      "note": "No se paga estado: la masa rocosa vive dentro del modelo de paisaje junto a los dos cerros."
+    },
+    {
+      "id": "itoco_penasco",
+      "name": "Itoco",
+      "kind": "lugar",
+      "myths": [
+        "furatena"
+      ],
+      "decision": "embedded",
+      "covered_by": "penones_de_fura_y_tena",
+      "sheets": 0,
+      "note": "El hijo de la tragedia, convertido en el mas rico de los filones esmeraldiferos. Como persona nunca se pone en escena; como roca lo lleva la hoja de los penones."
+    },
+    {
+      "id": "filon_esmeraldifero",
+      "name": "Los filones y veneros de Muzo",
+      "kind": "lugar",
+      "myths": [
+        "furatena"
+      ],
+      "decision": "embedded",
+      "covered_by": "penones_de_fura_y_tena",
+      "sheets": 0,
+      "note": "Vetas verdes de la region esmeraldera."
+    },
+    {
+      "id": "primeros_hombres_y_mujeres_del_rio",
+      "name": "Los primeros hombres y mujeres",
+      "kind": "colectivo",
+      "myths": [
+        "la-sombra-creadora"
+      ],
+      "decision": "embedded",
+      "covered_by": "figuras_de_madera",
+      "sheets": 0,
+      "note": "Los recien nacidos del agua que Are reparte en parejas son exactamente las figuras ya fichadas, en su estado vivo."
+    },
+    {
+      "id": "arbusto_de_grao",
+      "name": "El arbusto de grao",
+      "kind": "planta",
+      "myths": [
+        "los-mensajeros-de-los-dioses"
+      ],
+      "decision": "embedded",
+      "covered_by": "guacamayas_de_mayavita",
+      "sheets": 0,
+      "note": "Sus hojas son el material de las aves, y por eso la hoja de estado en hojas lo fija. El texto no permite identificar la especie y eso debe escribirse."
+    },
+    {
+      "id": "guacamayas_jovenes",
+      "name": "Las guacamayas jovenes",
+      "kind": "animal",
+      "myths": [
+        "los-mensajeros-de-los-dioses"
+      ],
+      "decision": "embedded",
+      "covered_by": "guacamayas_de_mayavita",
+      "sheets": 0,
+      "note": "Las crias que emprenden el regreso; mismo cuerpo a otra edad."
+    },
+    {
+      "id": "padre_artesano_de_mongata",
+      "name": "El padre artesano",
+      "kind": "personaje",
+      "myths": [
+        "los-mensajeros-de-los-dioses"
+      ],
+      "decision": "embedded",
+      "covered_by": "mongata",
+      "sheets": 0,
+      "note": "Consagrado a calices y copas rituales para caciques y senores. Mismo oficio y mismo registro; el texto no le da rasgos."
+    },
+    {
+      "id": "esposas_del_padre",
+      "name": "Las esposas del padre",
+      "kind": "colectivo",
+      "myths": [
+        "los-mensajeros-de-los-dioses"
+      ],
+      "decision": "embedded",
+      "covered_by": "comunidad_campesina_boyacense",
+      "sheets": 0,
+      "note": "Nombradas solo por el afecto que nunca dieron a Mongata."
+    },
+    {
+      "id": "vasijas_y_cantaros_de_barro",
+      "name": "Vasijas y cantaros decorados",
+      "kind": "objeto",
+      "myths": [
+        "los-mensajeros-de-los-dioses"
+      ],
+      "decision": "embedded",
+      "covered_by": "vivienda_y_taller_de_alfarero",
+      "sheets": 0,
+      "note": "Decorados con amor invocado de entranas ancestrales; utileria fija del taller."
+    },
+    {
+      "id": "calices_y_copas_rituales",
+      "name": "Calices y copas rituales",
+      "kind": "objeto",
+      "myths": [
+        "los-mensajeros-de-los-dioses"
+      ],
+      "decision": "embedded",
+      "covered_by": "vivienda_y_taller_de_alfarero",
+      "sheets": 0,
+      "note": "Lo que el padre fabricaba por encargo."
+    },
+    {
+      "id": "mujer_de_lope_y_los_chicuelos",
+      "name": "La mujer de Lope y los chicuelos",
+      "kind": "colectivo",
+      "myths": [
+        "el-tesoro-de-buzaga"
+      ],
+      "decision": "embedded",
+      "covered_by": "comunidad_campesina_boyacense",
+      "sheets": 0,
+      "note": "Ella lava en el rio la unica ropa; el trae un comelon al mundo cada ano. Sin descripcion propia."
+    },
+    {
+      "id": "viajero_interlocutor",
+      "name": "El viajero que pregunta",
+      "kind": "personaje",
+      "myths": [
+        "el-cucacuy"
+      ],
+      "decision": "embedded",
+      "covered_by": "comunidad_campesina_boyacense",
+      "sheets": 0,
+      "note": "Cautivado por las historias de su infancia, insiste en saber si el espanto vive en los deseos de Bustamante."
+    },
+    {
+      "id": "comitiva_de_bustamante",
+      "name": "La comitiva de la vereda",
+      "kind": "colectivo",
+      "myths": [
+        "el-cucacuy"
+      ],
+      "decision": "embedded",
+      "covered_by": "comunidad_campesina_boyacense",
+      "sheets": 0,
+      "note": "Los hombres a los que Bustamante advierte que esa noche habra problemas."
+    },
+    {
+      "id": "mujeres_jovenes_del_valle",
+      "name": "Las mujeres jovenes del valle",
+      "kind": "colectivo",
+      "myths": [
+        "el-cucacuy"
+      ],
+      "decision": "embedded",
+      "covered_by": "comunidad_campesina_boyacense",
+      "sheets": 0,
+      "note": "Objetivo del rapto en el texto. El grupo cubre sus cuerpos y la hoja debe registrar que el relato las convierte en presa sin darles accion."
+    },
+    {
+      "id": "ropa_de_jergueta_de_lope",
+      "name": "La camisa raida y el vestidillo de jergueta",
+      "kind": "objeto",
+      "myths": [
+        "el-tesoro-de-buzaga"
+      ],
+      "decision": "embedded",
+      "covered_by": "lope_badillo",
+      "sheets": 0,
+      "note": "Unica muda del empedrador, que lo obliga a esperar en cama mientras se seca. Vestuario de su hoja."
+    },
+    {
+      "id": "tierra_del_carare",
+      "name": "La tierra del Carare",
+      "kind": "objeto",
+      "myths": [
+        "furatena"
+      ],
+      "decision": "embedded",
+      "covered_by": "are_dios_creador",
+      "sheets": 0,
+      "note": "Segundo material del creador junto a la madera del Magdalena; la hoja de Are debe llevar ambos."
+    },
+    {
+      "id": "miel_caliente",
+      "name": "La miel caliente",
+      "kind": "objeto",
+      "myths": [
+        "el-cucacuy"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_boyaca",
+      "sheets": 0,
+      "note": "Lo que Bustamante le tira para ahuyentar su descaro; el dulce hirviente es su unica humillacion conocida."
+    },
+    {
+      "id": "agua_bendita",
+      "name": "El agua bendita",
+      "kind": "objeto",
+      "myths": [
+        "el-tesoro-de-buzaga"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_boyaca",
+      "sheets": 0,
+      "note": "Rompe el hechizo y deshace al mohan."
+    },
+    {
+      "id": "piedra_lanzada",
+      "name": "La piedra que rebota",
+      "kind": "objeto",
+      "myths": [
+        "el-tesoro-de-buzaga"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_boyaca",
+      "sheets": 0,
+      "note": "Como si estuviese hecha de suenos y no de materia, rebota y golpea a Lope."
+    },
+    {
+      "id": "duho_del_mohan",
+      "name": "El duho",
+      "kind": "objeto",
+      "myths": [
+        "el-tesoro-de-buzaga"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_boyaca",
+      "sheets": 0,
+      "note": "Aviso: el duho es asiento prehispanico y aparece bajo el mohan en un relato colonial de autor. Es material muisca o al menos prehispanico explicito en el texto, no invencion de la biblia; la hoja debe citarlo como cita del relato."
+    },
+    {
+      "id": "orfebreria_prometida",
+      "name": "Tunjos y gargantillas",
+      "kind": "objeto",
+      "myths": [
+        "el-tesoro-de-buzaga"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_boyaca",
+      "sheets": 0,
+      "note": "El mohan los enumera para prolongar la trampa. Misma advertencia que el duho: tunjos y gargantillas son orfebreria muisca nombrada por el propio texto."
+    },
+    {
+      "id": "boquicha",
+      "name": "Boquicha",
+      "kind": "personaje",
+      "myths": [
+        "los-mensajeros-de-los-dioses"
+      ],
+      "decision": "excluded",
+      "reason": "El texto la nombra una sola vez, asistida por Boquicha, y nunca dice si es persona, lugar o deidad.",
+      "sheets": 0,
+      "note": "Ficharla obligaria a decidir que es. Queda registrada como mencion sin resolver."
+    },
+    {
+      "id": "sacerdote_chibcha",
+      "name": "El sacerdote",
+      "kind": "personaje",
+      "myths": [
+        "los-mensajeros-de-los-dioses"
+      ],
+      "decision": "excluded",
+      "reason": "Solo se invoca su mandato cuando Mongata justifica el repudio; nunca entra en escena ni se describe.",
+      "sheets": 0,
+      "note": "Es justo la trampa que habia que evitar: dibujar aqui un sacerdote traeria vestuario y parafernalia muisca que el relato no da."
+    },
+    {
+      "id": "quinzitas",
+      "name": "Las quinzitas",
+      "kind": "animal",
+      "myths": [
+        "los-mensajeros-de-los-dioses"
+      ],
+      "decision": "excluded",
+      "reason": "Aparecen una vez, veloces, como eco del deseo de Mayavita, y el texto nunca dice que son.",
+      "sheets": 0,
+      "note": "Aves, insectos o figura retorica: no hay como saberlo y dibujarlas seria inventarlas."
+    },
+    {
+      "id": "planta_de_la_eterna_juventud",
+      "name": "La planta de la eterna juventud",
+      "kind": "planta",
+      "myths": [
+        "furatena"
+      ],
+      "decision": "excluded",
+      "reason": "Es la mision de Zarbi y el relato no la muestra jamas, ni la nombra por especie, ni dice si la encuentra.",
+      "sheets": 0,
+      "note": ""
+    },
+    {
+      "id": "hierbas_mortiferas_de_los_cocacuyes",
+      "name": "Las hierbas mortiferas",
+      "kind": "planta",
+      "myths": [
+        "el-cucacuy"
+      ],
+      "decision": "excluded",
+      "reason": "El registro colonial de Valcarcel dice que las dejaban en las puertas; el relato no las describe ni las pone en escena.",
+      "sheets": 0,
+      "note": ""
+    },
+    {
+      "id": "cocacuyes_coloniales",
+      "name": "Los cocacuyes de la Provincia de Tunja",
+      "kind": "colectivo",
+      "myths": [
+        "el-cucacuy"
+      ],
+      "decision": "excluded",
+      "reason": "Capa exclusivamente lexical e historica: personas a las que un oidor llamo brujos entre 1635 y 1636, sin una sola descripcion.",
+      "sheets": 0,
+      "note": "Ademas, ligarlos al espanto moderno confundiria semejanza de palabra con identidad cultural."
+    },
+    {
+      "id": "oidor_juan_de_valcarcel",
+      "name": "El oidor Juan de Valcarcel",
+      "kind": "personaje",
+      "myths": [
+        "el-cucacuy"
+      ],
+      "decision": "excluded",
+      "reason": "Funcionario real citado como fuente en el apartado de historia; no es personaje del relato.",
+      "sheets": 0,
+      "note": ""
+    },
+    {
+      "id": "pacto_con_el_diablo",
+      "name": "El pacto con el diablo",
+      "kind": "fenomeno",
+      "myths": [
+        "el-cucacuy"
+      ],
+      "decision": "excluded",
+      "reason": "Se enuncia como origen del Cucacuy, que hizo un pacto oscuro y murio sin bautizo; el diablo no aparece, no habla y no se describe.",
+      "sheets": 0,
+      "note": "Nota para el editor: esto es lo mas cerca que este corpus llega al diablo apostador, y no llega."
+    },
+    {
+      "id": "rey_de_los_danabas",
+      "name": "El rey de los Danabas",
+      "kind": "personaje",
+      "myths": [
+        "furatena"
+      ],
+      "decision": "excluded",
+      "reason": "Aparece en una digresion sobre el origen mineral de las esmeraldas en otras culturas; no actua en el ciclo muzo.",
+      "sheets": 0,
+      "note": ""
+    },
+    {
+      "id": "monarca_de_las_serpientes",
+      "name": "El monarca de las serpientes",
+      "kind": "criatura",
+      "myths": [
+        "furatena"
+      ],
+      "decision": "excluded",
+      "reason": "Misma digresion: roba las esmeraldas de la bilis del rey de los Danabas. Ni cuerpo ni escena dentro del relato.",
+      "sheets": 0,
+      "note": ""
+    },
+    {
+      "id": "egipto_y_europa_medieval",
+      "name": "Egipto y la Europa medieval",
+      "kind": "lugar",
+      "myths": [
+        "furatena"
+      ],
+      "decision": "excluded",
+      "reason": "Se citan como lugares donde las piedras verdes relucieron en la devocion de otros pueblos; comentario del compilador.",
+      "sheets": 0,
+      "note": ""
+    },
+    {
+      "id": "tales_ciceron_y_anaximandro",
+      "name": "Tales de Mileto, Ciceron y Anaximandro",
+      "kind": "personaje",
+      "myths": [
+        "la-sombra-creadora"
+      ],
+      "decision": "excluded",
+      "reason": "Digresion filosofica anadida por compiladores sobre el agua como principio de todas las cosas; no son personajes del relato muzo.",
+      "sheets": 0,
+      "note": "Verificado: ocupan dos parrafos completos del cuerpo de la pagina, lo que dice bastante sobre el estado editorial de esta ruta."
+    },
+    {
+      "id": "obispo_piedrahita",
+      "name": "El obispo de Piedrahita",
+      "kind": "personaje",
+      "myths": [
+        "la-sombra-creadora"
+      ],
+      "decision": "excluded",
+      "reason": "Fuente colonial citada en el apartado de historia como quien recogio el relato; no es personaje.",
+      "sheets": 0,
+      "note": ""
+    },
+    {
+      "id": "san_cristobal",
+      "name": "San Cristobal",
+      "kind": "personaje",
+      "myths": [
+        "el-tesoro-de-buzaga"
+      ],
+      "decision": "excluded",
+      "reason": "Comparacion del narrador para describir al clerigo cargando al mohan; no es un personaje del relato.",
+      "sheets": 0,
+      "note": ""
+    },
+    {
+      "id": "alcaravan",
+      "name": "El alcaravan",
+      "kind": "animal",
+      "myths": [
+        "el-tesoro-de-buzaga"
+      ],
+      "decision": "excluded",
+      "reason": "El mohan anuncia que el alcaravan canta y la luna esta con nosotros. Se oye como senal y nunca se ve.",
+      "sheets": 0,
+      "note": ""
+    },
+    {
+      "id": "maya_quiche",
+      "name": "Los Maya-Quiche",
+      "kind": "colectivo",
+      "myths": [
+        "los-mensajeros-de-los-dioses"
+      ],
+      "decision": "excluded",
+      "reason": "Citados en el apartado de historia como otro pueblo que hilo a las guacamayas en su narrativa de la creacion; comparacion, no relato.",
+      "sheets": 0,
+      "note": ""
+    }
+  ],
+  "sheet_groups": [
+    {
+      "id": "hoja_utileria_boyaca",
+      "kind": "objeto",
+      "covers": [
+        "miel_caliente",
+        "agua_bendita",
+        "piedra_lanzada",
+        "duho_del_mohan",
+        "orfebreria_prometida"
+      ],
+      "sheets": 1,
+      "note": "Cinco objetos menores, dos de ellos con advertencia: el duho y los tunjos son material prehispanico y muisca nombrado por el propio texto de El tesoro de Buzaga, y la hoja debe presentarlos como cita del relato y no como decoracion importada."
+    }
+  ],
+  "totals": {
+    "entities": 77,
+    "required": 28,
+    "embedded": 33,
+    "excluded": 16,
+    "sheets": 33,
+    "panregional_required": 1
+  }
+}

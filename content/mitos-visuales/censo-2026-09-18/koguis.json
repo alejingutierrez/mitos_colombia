@@ -1,0 +1,2965 @@
+{
+  "id": "koguis",
+  "label": "Kogui (Kággaba)",
+  "pages": 20,
+  "canon_pages": 20,
+  "read_note": "Leí entero koguis.canon.md (20 fichas, los cuatro campos: mito, historia, versiones, research_notes; separé los bloques de «fuentes declaradas» a un archivo aparte para poder leer los cuatro campos completos sin truncar). Leí también editorial/kogui/universe.mjs (20 slugs heredados, sin fusiones ni adiciones) y las escenas y research_notes de editorial/kogui/definitions.mjs, y §«Qué construye la Biblia» de docs/biblia-visual-v3.md. Lo que más sorprende: casi todo el corpus sale de dos narradores del mismo mes de 1946 (Seye Ababi Makó y Benito Sontinkama) y eso hace que el panteón se repita hasta la saciedad —la Magri aparece en once relatos, Sintana en nueve, la Casa Ceremonial en nueve, el tigre en seis—, así que el ahorro por dedupe es enorme: 229 entidades detectadas se resuelven en 94 fichas. Dos hallazgos que cambian el conteo: «La madre de los primeros alimentos» es un párrafo copiado casi literal de «Kasaugé, el padre árbol» (cero entidades nuevas salvo la roza), y «El primer hombre y la primera mujer» dispara veintitantos nombres propios en un solo párrafo de lista de nacimientos que no actúan nunca —van todos a un colectivo de padres y madres antiguos, que es de lejos el ahorro más grande del censo. También sorprende que el corpus no describe el cuerpo de casi nadie: no hay una sola descripción física salvo Kasaugue («un hombre con mucha barba y mucho pelo»), Naowa con barba y bigote, el sol «feo, mal hecho» y la mujer múltiple que no cabe por la puerta. Eso obliga a que muchas fichas required sean construcción editorial declarada, no descripción recuperada. Quedó dudoso: (1) si Seraira y Serawi son el mismo padre —los uní por grafía, con Chaves documentadamente inestable, pero ninguna fuente lo dice; (2) si «el primer hombre» de Madre Wastora y el niño criado aparte de Sintana son la misma figura —los uní por continuidad visual, y es una decisión mía, no de la fuente; (3) Wastora = Haba-Naowa lo dice el propio relato, y Chaves iguala Luitsama/Naowa/Wastora/Magri, pero los relatos se publican separados: uní Naowa+Wastora y dejé la Magri aparte porque sus cuerpos narrativos no coinciden (la Magri entrega, Naowa pare y gobierna); (4) la sangre como ficha de fenómeno es la decisión que menos me convence, aunque cuatro relatos dependen de cómo se dibuje y las research_notes exigen tratarla sin violencia gráfica.",
+  "entities": [
+    {
+      "id": "gran_madre",
+      "name": "La Gran Madre (la Magri / Luitsama / Magri Regina / Gauteován)",
+      "kind": "deidad_fuerza",
+      "myths": [
+        "canibalismo",
+        "creacion-koguis",
+        "el-algodon-koguis",
+        "el-maiz-koguis",
+        "el-sol-mama",
+        "guateovan",
+        "kashindukwe",
+        "la-candela-gotze",
+        "namaku",
+        "naowa-entrega-el-gobierno-a-su-hijo",
+        "seiskwisbuche-y-yangauki"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Once relatos. Da la bola azul, el algodón, las semillas, el sol, el fuego; esconde y entrega las nueve tierras. El propio corpus identifica Gauteován con Gaulchováng y con la Madre de la creación («La Madre de esta página es la misma de la página de la creación»), y Chaves escribe que la primera fuerza es «una mujer, personificada en Luitsama, Naowa, Wastora o la primera Magri». Una sola ficha; los alias no se fichan aparte."
+    },
+    {
+      "id": "naowa_wastora",
+      "name": "Madre Naowa (Haba-Naowa / Madre Wastora)",
+      "kind": "deidad_fuerza",
+      "myths": [
+        "creacion-koguis",
+        "el-primer-hombre-y-la-primera-mujer",
+        "madre-wastora",
+        "naowa-entrega-el-gobierno-a-su-hijo"
+      ],
+      "decision": "required",
+      "sheets": 2,
+      "states": [
+        "con barba, bigote, poporo y bastón"
+      ],
+      "note": "El relato de Wastora dice en su primera línea «Ahora Wastora se llama Haba-Naowa», así que la unión la hace la fuente. Pare animales sin huesos, recibe las piedras en el ombligo, fabrica al primer hombre con vello, sangre y espíritu, y gobierna con poporo. El estado barbado cuesta ficha porque el relato de Naowa lo muestra y lo quita: «Naowa tenía bigote y barba. Se los quitó y se los entregó al hijo» —cambia la silueta y es el eje del relato."
+    },
+    {
+      "id": "sol_mama",
+      "name": "El Sol (Mama)",
+      "kind": "deidad_fuerza",
+      "myths": [
+        "el-arco-iris-susabanka",
+        "el-sol-mama",
+        "guateovan",
+        "kasauge-el-padre-arbol",
+        "kashindukwe",
+        "la-candela-gotze"
+      ],
+      "decision": "required",
+      "sheets": 2,
+      "states": [
+        "hombrecito feo y mal hecho, antes de ser vestido"
+      ],
+      "note": "Seis relatos. Es «el dios solar» de Gauteován y el «Mama» de Susabanka. El estado cuesta ficha porque el relato narra las dos formas como escena: «El sol era como un hombrecito feo, mal hecho… Entonces lo vistieron de puro oro»."
+    },
+    {
+      "id": "luna",
+      "name": "La Luna",
+      "kind": "deidad_fuerza",
+      "myths": [
+        "el-arco-iris-susabanka",
+        "el-sol-mama"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Mujer fea vestida de oro que persigue al sol y queda ensombrecida por un puñado de ceniza. La ceniza no cambia la silueta —cambia la superficie— así que va dentro de la misma ficha; la menguante es una fase de la misma ficha."
+    },
+    {
+      "id": "susabanka",
+      "name": "Susabanka, el arco iris",
+      "kind": "deidad_fuerza",
+      "myths": [
+        "el-arco-iris-susabanka"
+      ],
+      "decision": "required",
+      "sheets": 2,
+      "states": [
+        "hecho piedra"
+      ],
+      "note": "Conduce acción: obedece los mandatos del Sol, pide y come, hace hijos. El estado cuesta ficha porque la primera línea da las dos formas —«Susabanka es el arco iris… no se murió sino que se hizo piedra»— y una banda de color y una piedra erguida no son la misma silueta."
+    },
+    {
+      "id": "madre_del_bastimento",
+      "name": "El padre del bastimento, que era una mujer",
+      "kind": "deidad_fuerza",
+      "myths": [
+        "kasauge-el-padre-arbol",
+        "los-primeros-indios"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Madre de los alimentos cuyas hijas son la yuca, el plátano y la malanga, y cuyo único hijo varón es el maíz. Aparece con el mismo párrafo en dos relatos: una sola ficha. El corpus conserva a propósito la tensión «padre… que era una mujer» y la ficha debe conservarla también."
+    },
+    {
+      "id": "tierra_negra",
+      "name": "La Tierra Negra, madre del cultivo",
+      "kind": "deidad_fuerza",
+      "myths": [
+        "creacion-koguis"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Es la hija por la que se cuenta el relato y conduce su propia acción: oye la música por el hoyito de la pared «y salió ella misma sin que la Magri se diera cuenta». No es intercambiable con las otras ocho tierras."
+    },
+    {
+      "id": "hiwiha",
+      "name": "Hiwihá, madre de las enfermedades",
+      "kind": "deidad_fuerza",
+      "myths": [
+        "la-enfermedad-hiwiha"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Figura titular de su ficha; llega al mundo y sigue viviendo en Palomino. Advertencia honesta: el relato no da un solo rasgo físico y el nombre oscila entre Hiwihá, Hiwibá, Hiwila e Hiwilá, con un verbo en plural que deja abierto si es un ser o un grupo. La ficha será construcción editorial declarada."
+    },
+    {
+      "id": "sintana",
+      "name": "Sintana",
+      "kind": "personaje",
+      "myths": [
+        "creacion-koguis",
+        "el-algodon-koguis",
+        "el-primer-hombre-y-la-primera-mujer",
+        "el-sol-mama",
+        "kasauge-el-padre-arbol",
+        "la-candela-gotze",
+        "la-enfermedad-hiwiha",
+        "naowa-entrega-el-gobierno-a-su-hijo"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Ocho relatos. Seca el agua, aplica las piedras al ombligo de Naowa, cuenta las lunas, pelea contra Kasaugue, pide el fuego, recibe Palomino. El actor masculino más reutilizado del corpus."
+    },
+    {
+      "id": "seraira",
+      "name": "Seraira (también Serawi)",
+      "kind": "personaje",
+      "myths": [
+        "creacion-koguis",
+        "el-maiz-koguis",
+        "el-primer-hombre-y-la-primera-mujer",
+        "el-sol-mama",
+        "kasauge-el-padre-arbol"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Cinco relatos: toca música para sacar la tierra negra, es marido de la Magri, vigila a Naowa, pelea contra Kasaugue. Uní Serawi con Seraira por grafía —Chaves alterna Sekukue/Sekukwe, Kakaraviku/Karaviku/Kakariviku en la misma página—, pero ninguna fuente lo afirma: es una decisión de continuidad, no un dato."
+    },
+    {
+      "id": "kimaku",
+      "name": "Kimaku",
+      "kind": "personaje",
+      "myths": [
+        "creacion-koguis",
+        "el-sol-mama",
+        "kimaku"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Trae los dos idiomas y seca la tierra, compone los cultivos, y es el que huye de las mujeres inventadas. Tres relatos, un solo cuerpo."
+    },
+    {
+      "id": "sekukue",
+      "name": "Sekukue (Sekúkwe)",
+      "kind": "personaje",
+      "myths": [
+        "creacion-koguis",
+        "el-primer-hombre-y-la-primera-mujer",
+        "el-sol-mama"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Primer habitante: hace la casa de espuma, seca el agua y sopla al sol hacia el cielo. Actúa en dos de los tres relatos."
+    },
+    {
+      "id": "kakarabiku",
+      "name": "Kakarabiku (Kakaraviku / Karaviku)",
+      "kind": "personaje",
+      "myths": [
+        "creacion-koguis",
+        "el-sol-mama"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Actúa en los dos relatos en que aparece: hace la casa de espuma y es quien sopla al sol y a la luna para levantarlos. Las tres grafías son de la misma página impresa."
+    },
+    {
+      "id": "seyunkue",
+      "name": "Seyunkue (Seyunkwe)",
+      "kind": "personaje",
+      "myths": [
+        "creacion-koguis",
+        "el-sol-mama"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Conduce una acción: es uno de los tres que van a pedirle las tierras a la Magri, vuelta tras vuelta. Ficha delgada pero necesaria para la continuidad de la escena central de la creación."
+    },
+    {
+      "id": "bunkuase",
+      "name": "Búnkuase",
+      "kind": "personaje",
+      "myths": [
+        "el-primer-hombre-y-la-primera-mujer",
+        "naowa-entrega-el-gobierno-a-su-hijo"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "«El dueño del mundo era Búnkuase… él fue el rey del mundo y él lo gobernaba»: manda espiar a Naowa, decide que haya también una niña, escribe los doce libros, y le quita Sintana a Naowa. Dos relatos, acción en ambos."
+    },
+    {
+      "id": "namsiku",
+      "name": "Námsiku",
+      "kind": "personaje",
+      "myths": [
+        "canibalismo",
+        "el-algodon-koguis"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Acompaña al Mama a adivinar y pone el moha; trae el algodón a la tierra y hace el semillero. Actúa en los dos relatos."
+    },
+    {
+      "id": "nemkardi",
+      "name": "Némkardi",
+      "kind": "personaje",
+      "myths": [
+        "canibalismo"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Un solo relato, pero conduce toda su segunda mitad: da consejos durante nueve noches, castiga cuatro y cinco días, y de su fracaso sale la trampa de machucón."
+    },
+    {
+      "id": "nunkasha",
+      "name": "Núnkasha",
+      "kind": "personaje",
+      "myths": [
+        "kashindukwe",
+        "nunkasha-y-kashindukwe"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Hermano mayor que aconseja, ayuna al menor y arma la celada del maizal y el piñal; en el otro relato manda hacer la trampa de veinte metros. Dos relatos, protagonista en uno."
+    },
+    {
+      "id": "nuanashe",
+      "name": "Nuánashe",
+      "kind": "personaje",
+      "myths": [
+        "canibalismo",
+        "kasauge-el-padre-arbol",
+        "kashindukwe",
+        "nunkasha-y-kashindukwe"
+      ],
+      "decision": "required",
+      "sheets": 2,
+      "states": [
+        "tigre"
+      ],
+      "note": "Cuatro relatos. El estado cuesta ficha: «De día Nuánashe es como un indio. De noche toma la bolita entre la boca, se vuelve tigre». Las dos formas actúan y la silueta cambia por completo."
+    },
+    {
+      "id": "kashindukwe",
+      "name": "Kashindukwe (Kashindukue)",
+      "kind": "personaje",
+      "myths": [
+        "canibalismo",
+        "kasauge-el-padre-arbol",
+        "kashindukwe",
+        "nunkasha-y-kashindukwe"
+      ],
+      "decision": "required",
+      "sheets": 2,
+      "states": [
+        "tigre (el «perfecto tigre Maluteyan» al que le quitaron gorra, poporo y todo)"
+      ],
+      "note": "Cuatro relatos. Las dos grafías del impreso (mitos 11 y 12) son el mismo personaje. El estado cuesta ficha porque el relato narra el despojo pieza por pieza hasta que «quedó sólo como un tigre»."
+    },
+    {
+      "id": "namaku",
+      "name": "Námaku",
+      "kind": "personaje",
+      "myths": [
+        "el-arco-iris-susabanka",
+        "kashindukwe",
+        "namaku"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Tres relatos. Una sola ficha y sin estado de tigre: la historia de su ficha lo dice expreso —«en ningún momento cuenta que Námaku mismo se transforme»—; el que es tigre de noche es su padre. Añadirle un estado sería importar la versión larga del tomo II."
+    },
+    {
+      "id": "kasaugue",
+      "name": "Kasaugue, el padre árbol",
+      "kind": "personaje",
+      "myths": [
+        "kasauge-el-padre-arbol",
+        "kashindukwe",
+        "los-primeros-indios",
+        "el-primer-hombre-y-la-primera-mujer"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "La única descripción física completa del corpus: «un hombre con mucha barba y mucho pelo». Retiene el principio de la vegetación y vuelve al final de los tiempos. Su reparto en árboles no cuesta ficha porque el resultado es el bosque, que ya se ficha como paisaje."
+    },
+    {
+      "id": "gotze",
+      "name": "Gotzé",
+      "kind": "personaje",
+      "myths": [
+        "la-candela-gotze"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Dispara las cuatro flechas que reparten la candela por el mundo y «aún vive». Es el que ejecuta el acto por el que se cuenta el relato."
+    },
+    {
+      "id": "niwalui",
+      "name": "Niwalui (Niwalwi / Niwali)",
+      "kind": "personaje",
+      "myths": [
+        "el-maiz-koguis"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Una sola ficha, y su forma canónica es la piedra blanca: el relato no da cuerpo de hombre, sólo que «no se murió, sino que se volvió piedra de blanco» y que los mamas se comunican con él. Sembró todas las semillas y las dejó a su hijo."
+    },
+    {
+      "id": "mamagakue",
+      "name": "Mamagakue (Namagakue)",
+      "kind": "personaje",
+      "myths": [
+        "el-algodon-koguis"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Es un mama, pero no genérico: el relato se titula por él y es el destinatario nombrado del algodón, que recibe y cultiva. Ficha propia para que el tríptico tenga a quién sostener la escena."
+    },
+    {
+      "id": "terana",
+      "name": "Terana, el Tairona",
+      "kind": "personaje",
+      "myths": [
+        "kimaku"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Decide el desenlace: se cambia la ropa con Kimaku, ocupa su lugar y quema a las perseguidoras con el bastoncito de oro. Su ropa intercambiada va embebida en las dos fichas."
+    },
+    {
+      "id": "nunula",
+      "name": "Nunula (Nulula)",
+      "kind": "personaje",
+      "myths": [
+        "seiskwisbuche-y-yangauki"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "El cuñado explotado que se esconde bajo el agua, finge su muerte con la piedra Anguiskuitse y fabrica las siete mujeres en una. Las research_notes exigen que conserve su agencia, así que ficha propia."
+    },
+    {
+      "id": "seiskwisbuche",
+      "name": "Seiskwisbuche",
+      "kind": "personaje",
+      "myths": [
+        "seiskwisbuche-y-yangauki"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Protagonista del relato más largo del conjunto, seguido desde el parricidio hasta el amanecer posterior a su muerte. No cuento estado extra: el hinchazón y el hundimiento final son degradación, no otra silueta, y las research_notes piden no representar el cuerpo con violencia gráfica."
+    },
+    {
+      "id": "ambu_ambu",
+      "name": "Ambu-Ambu",
+      "kind": "personaje",
+      "myths": [
+        "nunkasha-y-kashindukwe"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Compra todas las mujeres y toda la gente, pelea y muere: de su muerte sale el episodio por el que se cuenta el relato —«Fue así como Nuánashe aprendió a comer gente»."
+    },
+    {
+      "id": "niwiwe",
+      "name": "Ñiwiwe",
+      "kind": "personaje",
+      "myths": [
+        "kasauge-el-padre-arbol",
+        "los-primeros-indios"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Padre del cultivo: es el que siembra detrás de Dugunawi. El mismo párrafo se repite en dos relatos, una sola ficha."
+    },
+    {
+      "id": "dugunawi",
+      "name": "Dugunawi",
+      "kind": "personaje",
+      "myths": [
+        "kasauge-el-padre-arbol",
+        "los-primeros-indios"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Limpia, desmonta y socala. No lo fusiono con el Dukinawi de Hiwihá ni con el Duginávi héroe solar del tomo I: la propia ficha dice que la identificación «no la hace ninguna de las tres fuentes y aquí no se da por hecha»."
+    },
+    {
+      "id": "primer_hombre",
+      "name": "El primer hombre",
+      "kind": "personaje",
+      "myths": [
+        "el-primer-hombre-y-la-primera-mujer",
+        "madre-wastora"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Fusiono el niño criado aparte por Sintana y el hombre que Haba-Naowa hace con vello, sangre y punto de espíritu: son el mismo lugar narrativo y dos diseños distintos romperían la continuidad entre dos fichas vecinas. Decisión editorial mía, no de la fuente, que publica los dos relatos por separado. El recién nacido blando se cubre en la ficha de criatura sin huesos."
+    },
+    {
+      "id": "primera_mujer",
+      "name": "La primera mujer",
+      "kind": "personaje",
+      "myths": [
+        "el-primer-hombre-y-la-primera-mujer",
+        "madre-wastora"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Misma fusión y misma advertencia que el primer hombre: la niña criada en la casa de mujer y la hija a la que Haba-Naowa le pone la piedra de gente comparten ficha. La menarquia y la unión con el hermano se tratan sin escena, según las research_notes."
+    },
+    {
+      "id": "colectivo_gente_kogui",
+      "name": "La gente kogui (hombres, mujeres, niños y viejos)",
+      "kind": "colectivo",
+      "myths": [
+        "canibalismo",
+        "creacion-koguis",
+        "el-algodon-koguis",
+        "el-primer-hombre-y-la-primera-mujer",
+        "incesto-de-padre-hija",
+        "kashindukwe",
+        "madre-wastora",
+        "naowa-entrega-el-gobierno-a-su-hijo",
+        "nunkasha-y-kashindukwe",
+        "seiskwisbuche-y-yangauki"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Gramática de grupo para las cuatro edades. Absorbe todos los papeles humanos sin nombre del corpus: la mujer y la hija de Nuánashe, los cuatro sobrevivientes de Mamalowi, las muchachas del moha, las mujeres que van por agua y leña, la gente armada de macana, la hermana de Seiskwisbuche, los indios que reciben el algodón. Aquí está el segundo ahorro más grande del censo."
+    },
+    {
+      "id": "colectivo_mamas",
+      "name": "Los mamas",
+      "kind": "colectivo",
+      "myths": [
+        "canibalismo",
+        "creacion-koguis",
+        "el-maiz-koguis",
+        "guateovan",
+        "incesto-de-padre-hija",
+        "kashindukwe",
+        "namaku",
+        "naowa-entrega-el-gobierno-a-su-hijo",
+        "seiskwisbuche-y-yangauki"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Nueve relatos. Adivinan, prohíben, curan, se comunican con Niwalui y guardan el idioma antiguo. Una sola gramática de grupo. Absorbe al Mama adivino, al Mama de San Miguel y a Aluseiye y Mulkwehe, a quienes el propio relato identifica con ellos: «Los mamas son como Núnkasha, como Aluseiye y como Mulkwehe». La ficha cubre la figura, no su práctica ritual: pagamento, iniciación e interior del nuhué quedan excluidos aparte."
+    },
+    {
+      "id": "colectivo_cabos",
+      "name": "Los cabos",
+      "kind": "colectivo",
+      "myths": [
+        "el-primer-hombre-y-la-primera-mujer",
+        "seiskwisbuche-y-yangauki"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Oficio real y recurrente —los dos narradores del corpus eran cabos de su mama—. Absorbe a Bahavé, Antwakukwe, Duguwé, Mandalawó Manawi y al cabo que Seiskwisbuche manda a vigilar: misma función, ningún cuerpo propio."
+    },
+    {
+      "id": "colectivo_padres_madres_antiguos",
+      "name": "Los padres y madres antiguos nombrados sin cuerpo",
+      "kind": "colectivo",
+      "myths": [
+        "el-primer-hombre-y-la-primera-mujer",
+        "guateovan",
+        "la-enfermedad-hiwiha"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "El ahorro mayor del censo. Una sola gramática de grupo para los veintitantos nombres que el corpus enumera sin que actúen nunca —«Todos existieron antes del amanecer»—, más los cuatro padres de Gauteován y los repartidores de tierra de Hiwihá. Fichar cada nombre habría sumado más de veinticinco fichas sin una sola línea de evidencia visual detrás."
+    },
+    {
+      "id": "colectivo_gente_de_tigre",
+      "name": "La gente de tigre (los que de día son indios y de noche fieras)",
+      "kind": "colectivo",
+      "myths": [
+        "canibalismo",
+        "kashindukwe",
+        "namaku"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "El relato la da como población, no como excepción: «De San Andrés para abajo, hacia Tucurinca, todos eran indios que durante el día trabajaban y al caer la noche se volvían león, tigre». Absorbe a los indios Navikue de San Miguel y al padre de Námaku de la quebrada del Bollo, que no tienen otra descripción."
+    },
+    {
+      "id": "colectivo_capuchinos",
+      "name": "Los capuchinos, gente de Kasaugue",
+      "kind": "colectivo",
+      "myths": [
+        "kasauge-el-padre-arbol"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Conducen la acción con que cierra el relato, dicha en presente en 1946: «los capuchinos quieren matar a los mamas, ahora mismo, siempre los matan». Son los misioneros, no monos capuchinos —el error que la revisión del corpus corrigió—, y la ficha debe impedir que la ilustración los vuelva animales."
+    },
+    {
+      "id": "colectivo_pueblos_del_mundo",
+      "name": "Los pueblos que hizo Haba-Naowa",
+      "kind": "colectivo",
+      "myths": [
+        "madre-wastora"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Kogui, aruaco, atanquero, marocazo, chimila, guajiro, y después francés y chino. Cierra el relato y necesita gramática propia. La ficha debe fijar diferencia sin caricatura: el corpus sólo da los nombres, ningún rasgo, y cualquier tipificación sería invención."
+    },
+    {
+      "id": "colectivo_nueve_hijas_tierras",
+      "name": "Las nueve hijas-tierras de la Magri",
+      "kind": "colectivo",
+      "myths": [
+        "creacion-koguis"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Gramática de las ocho tierras que no producen —blanca, arenosa blanca, roja y negra, amarillosa, roja, amarillosa revuelta con negra— entregadas una por una. La novena, la Tierra Negra, se ficha aparte porque actúa por sí misma."
+    },
+    {
+      "id": "colectivo_mujeres_inventadas",
+      "name": "Las mujeres inventadas por el padre malo",
+      "kind": "colectivo",
+      "myths": [
+        "kimaku"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Criatura colectiva que se multiplica en cada quebrada: una, dos, diez, quince. Tienen dientes en el sexo y persiguen a Kimaku hasta la laguna. Gramática de grupo que incluye la regla de multiplicación; el motivo sexual se conserva sin detalle gráfico, según las research_notes."
+    },
+    {
+      "id": "colectivo_mujeres_cucaracha",
+      "name": "Las mujeres cucarachas",
+      "kind": "colectivo",
+      "myths": [
+        "seiskwisbuche-y-yangauki"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Echadas de la casa por golosas, dos quedan para lavar y asear, y la última sobrevive la noche de los animales subiendo al estrado con siete chipi-chipi. Son el único testigo del final del relato. La ambigüedad mujer/cucaracha es del texto y la ficha debe resolverla sin cerrarla."
+    },
+    {
+      "id": "colectivo_animales_sin_huesos",
+      "name": "Los animales sin huesos que parió Naowa",
+      "kind": "colectivo",
+      "myths": [
+        "el-primer-hombre-y-la-primera-mujer"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Culebra, gusano, lombriz de tierra, culebra ciega: «todo animal que no tenía hueso». Es la imagen que sostiene la primera mitad del relato y una sola gramática los cubre."
+    },
+    {
+      "id": "colectivo_pajaros",
+      "name": "Los pájaros",
+      "kind": "colectivo",
+      "myths": [
+        "el-primer-hombre-y-la-primera-mujer",
+        "nunkasha-y-kashindukwe"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "«Después parió pájaros, la pava y todo pájaro»; y las palomas y pavas del maizal ilusorio de Núnkasha. Dos relatos, una gramática."
+    },
+    {
+      "id": "colectivo_animales_del_monte",
+      "name": "Los animales del monte",
+      "kind": "colectivo",
+      "myths": [
+        "el-primer-hombre-y-la-primera-mujer",
+        "nunkasha-y-kashindukwe",
+        "seiskwisbuche-y-yangauki"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "León, perico ligero, zorra, y los perros y gatos que lamen la sangre al final de Seiskwisbuche. Ninguno actúa solo; todos aparecen en enumeración. El jaguar sí se ficha aparte porque conduce medio corpus."
+    },
+    {
+      "id": "mujer_multiple_yangauki",
+      "name": "La mujer múltiple (Yangauki)",
+      "kind": "criatura",
+      "myths": [
+        "seiskwisbuche-y-yangauki"
+      ],
+      "decision": "required",
+      "sheets": 2,
+      "states": [
+        "desdoblada en siete, hasta quedar una mujer común"
+      ],
+      "note": "Dos siluetas incompatibles y las dos narradas: la mujer enorme que no cabe por la puerta y obliga a arrancar siete horcones y poner cuatro bancos, y el desdoblamiento en la quebrada —«se oyó como un pito, y de ella salió una mujer; otro pito, y salió otra, y así hasta seis»—. Por eso cuesta dos. Su gran cabellera, de la que salen plátano, maíz y frijol, va dentro."
+    },
+    {
+      "id": "criatura_sin_huesos",
+      "name": "La criatura sin huesos",
+      "kind": "criatura",
+      "myths": [
+        "incesto-de-padre-hija",
+        "madre-wastora"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Una sola ficha para el hijo del incesto —«con la cabeza blandita, y las manos, y los brazos, y las piernas también blanditas, como si no tuviera huesos»— y para el primer hombre de Wastora, que «nació blando, no tenía huesos». Mismo problema visual, mismo modelo."
+    },
+    {
+      "id": "jaguar",
+      "name": "El tigre (jaguar)",
+      "kind": "animal",
+      "myths": [
+        "canibalismo",
+        "el-primer-hombre-y-la-primera-mujer",
+        "el-sol-mama",
+        "kashindukwe",
+        "namaku",
+        "nunkasha-y-kashindukwe",
+        "seiskwisbuche-y-yangauki"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Siete relatos. Ficha del animal, distinta de los hombres transformados: sirve de base a los estados de Nuánashe y Kashindukwe, a la gente de tigre y a la calavera. Absorbe las huellas."
+    },
+    {
+      "id": "chucha",
+      "name": "La chucha",
+      "kind": "animal",
+      "myths": [
+        "seiskwisbuche-y-yangauki"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Conduce su propia escena: cae en la trampa, la chamuscan, canta desde la boca de la olla, brinca, corre y se escapa dejando el rabo desollado. El relato es etiológico —«por eso la chucha tiene el rabo sin pelo»— y ese rabo va dentro de la misma ficha."
+    },
+    {
+      "id": "kandutu",
+      "name": "Kándutu, el animalito como un cocuyo",
+      "kind": "animal",
+      "myths": [
+        "el-sol-mama"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Primer intento de luz de la Madre, con nombre propio y acción propia: «existió, pero no alumbraba bien y seguía de noche». Sin él la invención del sol no tiene antes."
+    },
+    {
+      "id": "maiz",
+      "name": "Maíz",
+      "kind": "planta",
+      "myths": [
+        "el-maiz-koguis",
+        "kasauge-el-padre-arbol",
+        "los-primeros-indios",
+        "nunkasha-y-kashindukwe",
+        "seiskwisbuche-y-yangauki"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Cinco relatos, y en dos es escenario: el maizal de la celada de Núnkasha. Es además «el único hombre» entre las hijas del padre del bastimento."
+    },
+    {
+      "id": "yuca",
+      "name": "Yuca",
+      "kind": "planta",
+      "myths": [
+        "el-arco-iris-susabanka",
+        "el-sol-mama",
+        "kasauge-el-padre-arbol",
+        "los-primeros-indios"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Cuatro relatos: hija del bastimento, alimento de Susabanka, y lo que más le gusta al sol —bollo y almidón de yuca, que van dentro de esta ficha."
+    },
+    {
+      "id": "platano",
+      "name": "Plátano",
+      "kind": "planta",
+      "myths": [
+        "el-arco-iris-susabanka",
+        "el-sol-mama",
+        "kasauge-el-padre-arbol",
+        "los-primeros-indios",
+        "seiskwisbuche-y-yangauki"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Cinco relatos: hija del bastimento, alimento del Sol y de Susabanka, y uno de los tres que salen de la cabellera de la mujer múltiple."
+    },
+    {
+      "id": "malanga",
+      "name": "Malanga",
+      "kind": "planta",
+      "myths": [
+        "el-arco-iris-susabanka",
+        "el-maiz-koguis",
+        "el-sol-mama",
+        "kasauge-el-padre-arbol",
+        "los-primeros-indios"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Cinco relatos: hija del bastimento, semilla de la mochila de la Magri, alimento del Sol y de Susabanka."
+    },
+    {
+      "id": "algodon",
+      "name": "Algodón",
+      "kind": "planta",
+      "myths": [
+        "el-algodon-koguis"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Es el objeto por el que se cuenta el relato, y además «el algodón era un indio»: hijo de la Magri y planta a la vez. El semillero va dentro de esta ficha."
+    },
+    {
+      "id": "coca_haiu",
+      "name": "Coca (haiu)",
+      "kind": "planta",
+      "myths": [
+        "namaku",
+        "naowa-entrega-el-gobierno-a-su-hijo"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "La hoja que Naowa comía antes del traspaso y lo único que come el Mama de San Miguel cuando no puede comer nada. Ficha botánica; la mata y la hoja cosechada, no el uso ritual."
+    },
+    {
+      "id": "pina",
+      "name": "Piña",
+      "kind": "planta",
+      "myths": [
+        "canibalismo",
+        "kashindukwe",
+        "nunkasha-y-kashindukwe"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Tres relatos y siempre en el mismo lugar del mecanismo: es lo que el devorador ve en vez de una mujer, y el piñal es la trampa final. No es decorado."
+    },
+    {
+      "id": "bola_azul",
+      "name": "La bolita azul (maluteyauye / piedra azul o verde)",
+      "kind": "objeto",
+      "myths": [
+        "canibalismo",
+        "kashindukwe",
+        "nunkasha-y-kashindukwe"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "El objeto por el que se cuenta todo el ciclo del devorador: se pone en la boca, se traga, se guarda en la mochila, y al caérsele muere el hombre y escapa el tigre. Una ficha para las tres grafías; la palabra maluteyauye se conserva sin equivalencia inventada."
+    },
+    {
+      "id": "poporo",
+      "name": "El poporo",
+      "kind": "objeto",
+      "myths": [
+        "canibalismo",
+        "el-primer-hombre-y-la-primera-mujer",
+        "naowa-entrega-el-gobierno-a-su-hijo"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Objeto visible y nombrado en tres relatos, y el eje del traspaso de gobierno. El calamutza, el palito con que se aplican las cuentas al ombligo, va dentro. Ojo: la ficha cubre el objeto, no la iniciación, que queda excluida por sensible."
+    },
+    {
+      "id": "mochila",
+      "name": "La mochila",
+      "kind": "objeto",
+      "myths": [
+        "el-maiz-koguis",
+        "el-sol-mama",
+        "nunkasha-y-kashindukwe"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Trae las semillas del mundo, guarda la bolita azul, y es parte del despojo final de Nuánashe. Restricción dura y explícita en el contrato: se fija el lenguaje —forma, fibra, asa, boca, chipire— y queda prohibido inventar un ejemplar con dibujo tejido; ese diseño se excluye aparte."
+    },
+    {
+      "id": "calavera_de_tigre",
+      "name": "La calavera de tigre",
+      "kind": "objeto",
+      "myths": [
+        "canibalismo",
+        "el-sol-mama",
+        "kashindukwe"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Tres relatos: se pone para volverse tigre, se guarda tras la muerte de Kashindukue, y en ella se le da de comer al sol. Está en el cuerpo del mito, no sólo en la etnografía."
+    },
+    {
+      "id": "trampa_de_machucon",
+      "name": "La trampa de machucón",
+      "kind": "objeto",
+      "myths": [
+        "canibalismo",
+        "kashindukwe",
+        "seiskwisbuche-y-yangauki"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Tres relatos y dos escalas: la de veinte metros cargada de piedra con que matan a Kashindukwe y la pequeña en que cae la chucha. Una sola ficha con las dos escalas declaradas."
+    },
+    {
+      "id": "libro",
+      "name": "El libro",
+      "kind": "objeto",
+      "myths": [
+        "canibalismo",
+        "el-primer-hombre-y-la-primera-mujer",
+        "kashindukwe",
+        "nunkasha-y-kashindukwe"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Cuatro relatos. La Magri lo da y él marca autoridad: «yo también tengo mi libro y mi Casa Ceremonial». Incluye los doce libros que Búnkuase escribe mientras Naowa pare. La propia ficha subraya la rareza —un libro en un relato transmitido de memoria— y eso debe verse en el diseño, no disimularse."
+    },
+    {
+      "id": "baston_de_autoridad",
+      "name": "El bastón de gobierno",
+      "kind": "objeto",
+      "myths": [
+        "naowa-entrega-el-gobierno-a-su-hijo"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Segunda pieza de la entrega, después del poporo: «Naowa le dio después un bastón, y con el bastón quedó mejor aún». Las research_notes exigen que no se vuelva accesorio exótico."
+    },
+    {
+      "id": "bastoncito_de_oro",
+      "name": "El bastoncito de oro de Terana",
+      "kind": "objeto",
+      "myths": [
+        "kimaku"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Produce el desenlace: se lo saca de debajo del brazo, se frota las manos y «la candela surgió por todas partes». No es intercambiable con el bastón de gobierno."
+    },
+    {
+      "id": "cuatro_flechas_de_fuego",
+      "name": "Las cuatro flechas de fuego",
+      "kind": "objeto",
+      "myths": [
+        "la-candela-gotze"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "El objeto por el que se cuenta el relato. Arriba, abajo, a la derecha y a la izquierda —no los puntos cardinales, que son de la otra versión— y sin inventar colores ni correspondencias rituales. El arco va dentro."
+    },
+    {
+      "id": "kagaba_kuitse",
+      "name": "Kagaba-Kuitse, la piedra de gente",
+      "kind": "objeto",
+      "myths": [
+        "madre-wastora"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Título y eje del relato: la piedrita larga que Haba-Naowa le pone en la barriga a la hija para que conciba. La grafía buena es la de Chaves, no el «ragaba-kuitse» de la reimpresión de 1993, y el tomo I la sitúa entre las cuentas de collar (kággaba-kuítsi)."
+    },
+    {
+      "id": "instrumentos_de_musica",
+      "name": "Carrizo, trompa y caja",
+      "kind": "objeto",
+      "myths": [
+        "creacion-koguis"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Los tres instrumentos con que Seraira y Kimaku sacan a la Tierra Negra. Es el acto por el que se cuenta el relato fundacional del corpus; una ficha de objeto cubre la familia de tres."
+    },
+    {
+      "id": "nuhue_kansa_maria",
+      "name": "La casa ceremonial (nuhué / Kansa María), exterior",
+      "kind": "arquitectura",
+      "myths": [
+        "canibalismo",
+        "el-maiz-koguis",
+        "el-primer-hombre-y-la-primera-mujer",
+        "el-sol-mama",
+        "guateovan",
+        "kashindukwe",
+        "naowa-entrega-el-gobierno-a-su-hijo",
+        "nunkasha-y-kashindukwe",
+        "seiskwisbuche-y-yangauki"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Nueve relatos: la arquitectura más reutilizada del corpus. Ficha del exterior y del emplazamiento solamente. El interior y lo que pasa dentro queda excluido por sensible, y ese límite es una restricción de producción real, no una nota al pie: el desenlace de Seiskwisbuche ocurre dentro. Kansa María es el edificio, no una sustancia ni un principio femenino —el error que la revisión del corpus corrigió en las veinte fichas."
+    },
+    {
+      "id": "casa_de_habitacion_kogui",
+      "name": "La casa de habitación kogui",
+      "kind": "arquitectura",
+      "myths": [
+        "creacion-koguis",
+        "el-primer-hombre-y-la-primera-mujer",
+        "kasauge-el-padre-arbol",
+        "seiskwisbuche-y-yangauki"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Distinta del nuhué. Cubre la primera casa que hay que techar y que obliga a vencer a Kasaugue, la casa de espuma de agua de la creación, la casa de mujer donde se cría la niña, y la casa de horcones de Seiskwisbuche."
+    },
+    {
+      "id": "casa_de_la_magri_nueve_cuartos",
+      "name": "La casa de la Magri, de nueve cuartos",
+      "kind": "arquitectura",
+      "myths": [
+        "creacion-koguis"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Escenario entero del relato fundacional y no intercambiable con ninguna otra casa: ocho cuartos que se atraviesan, un noveno donde está encerrada la Tierra Negra, y el hoyito en la pared por donde entra la música. El hoyito va dentro."
+    },
+    {
+      "id": "sierra_nevada",
+      "name": "La Sierra Nevada",
+      "kind": "paisaje",
+      "myths": [
+        "canibalismo",
+        "creacion-koguis",
+        "el-algodon-koguis",
+        "el-arco-iris-susabanka",
+        "el-maiz-koguis",
+        "el-primer-hombre-y-la-primera-mujer",
+        "el-sol-mama",
+        "guateovan",
+        "incesto-de-padre-hija",
+        "kasauge-el-padre-arbol",
+        "kashindukwe",
+        "kimaku",
+        "la-candela-gotze",
+        "la-enfermedad-hiwiha",
+        "los-primeros-indios",
+        "madre-wastora",
+        "namaku",
+        "naowa-entrega-el-gobierno-a-su-hijo",
+        "nunkasha-y-kashindukwe",
+        "seiskwisbuche-y-yangauki"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Los veinte relatos. Modelo de entorno con las franjas de altura: absorbe el páramo adonde va a comer el Mama de San Miguel, los cerros donde viven Námaku y los muertos, el cerro donde Núnkasha guarda a Nuánashe, y la banda de cielo."
+    },
+    {
+      "id": "mar_y_agua_primordial",
+      "name": "El agua sin tierra (y el mar del final)",
+      "kind": "paisaje",
+      "myths": [
+        "canibalismo",
+        "creacion-koguis",
+        "kasauge-el-padre-arbol",
+        "kashindukwe"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Una sola ficha para el principio y el final, porque el corpus los hace idénticos: «no había cerros, no había nada» al comienzo, y «no habrá árboles y no habrá cerros, y el mar llenará todo» cuando se acabe el sol. Dos relatos lo dicen con las mismas palabras."
+    },
+    {
+      "id": "bosque_de_la_sierra",
+      "name": "El bosque nacido del cuerpo de Kasaugue",
+      "kind": "paisaje",
+      "myths": [
+        "creacion-koguis",
+        "kasauge-el-padre-arbol",
+        "la-candela-gotze"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Absorbe los árboles, las palmas de empajar nacidas de los cabellos y los bejucos nacidos de las barbas. Es también el antes: «si Kasaugue no hubiera existido, la tierra fuera limpia»."
+    },
+    {
+      "id": "quebrada_y_rio",
+      "name": "La quebrada y el río de montaña",
+      "kind": "paisaje",
+      "myths": [
+        "kimaku",
+        "la-enfermedad-hiwiha",
+        "namaku",
+        "nunkasha-y-kashindukwe",
+        "seiskwisbuche-y-yangauki"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Cinco relatos. Absorbe el río Palomino, la quebrada del Bollo, las quebradas que Kimaku va cruzando y la quebrada con piedra donde Nunula se esconde bajo el agua."
+    },
+    {
+      "id": "laguna",
+      "name": "La laguna",
+      "kind": "lugar",
+      "myths": [
+        "kimaku"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Escenario del clímax de Kimaku, con la piedra grande donde Terana se sienta y donde arden las perseguidoras. No es intercambiable con la quebrada ya fichada."
+    },
+    {
+      "id": "roza",
+      "name": "La roza",
+      "kind": "lugar",
+      "myths": [
+        "canibalismo",
+        "el-algodon-koguis",
+        "el-maiz-koguis",
+        "kashindukwe",
+        "los-primeros-indios",
+        "nunkasha-y-kashindukwe"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Seis relatos. Es donde ocurren los devoramientos, donde Dugunawi desmonta y Ñiwiwe siembra, donde está el semillero de algodón y donde Núnkasha tiende la celada. Escenario recurrente y no decorativo."
+    },
+    {
+      "id": "poblado_kogui",
+      "name": "El poblado kogui",
+      "kind": "lugar",
+      "myths": [
+        "canibalismo",
+        "el-maiz-koguis",
+        "kashindukwe",
+        "la-enfermedad-hiwiha",
+        "namaku",
+        "nunkasha-y-kashindukwe"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Una sola ficha para todos los asentamientos nombrados —San Miguel, San Andrés, Tucurinca, Takina, Mamalowi/Mamaluwi, Palomino—, porque el corpus no distingue ninguno visualmente. Ahorro limpio de cinco fichas."
+    },
+    {
+      "id": "oscuridad_antes_del_sol",
+      "name": "La oscuridad anterior al sol",
+      "kind": "fenomeno",
+      "myths": [
+        "creacion-koguis",
+        "el-sol-mama",
+        "la-candela-gotze"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Regla de fenómeno: cómo se ve un mundo sin sol. Absorbe el palo blanco podrido «que de noche parece candela», única luz del monte, y el amanecer que llega cuando el sol se levanta."
+    },
+    {
+      "id": "tierra_que_endurece",
+      "name": "La tierra blanda que endurece",
+      "kind": "fenomeno",
+      "myths": [
+        "creacion-koguis",
+        "incesto-de-padre-hija"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Dos relatos con la misma imagen: «la tierra era blandita y todo se enterraba» hasta que se endurece. Es el acto entero del relato del incesto y la mitad del de la creación; sin regla de fenómeno no hay cómo dibujarlo."
+    },
+    {
+      "id": "candela",
+      "name": "La candela",
+      "kind": "fenomeno",
+      "myths": [
+        "kimaku",
+        "la-candela-gotze"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "El fuego que Gotzé reparte en cuatro direcciones y el que surge de las manos de Terana. Regla de fenómeno compartida por los dos relatos."
+    },
+    {
+      "id": "vision_que_cambia",
+      "name": "La visión que cambia (la gente que parece comida y al revés)",
+      "kind": "fenomeno",
+      "myths": [
+        "canibalismo",
+        "kashindukwe",
+        "nunkasha-y-kashindukwe"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "El mecanismo del ciclo del devorador, repetido en tres relatos: la mujer «se le pareció como una piña», la hija también, y el maizal con palomas y zorras que al tragarse la bolita se vuelve gente armada de flechas. Una regla de fenómeno resuelve las tres escenas y evita tener que ilustrar el devoramiento."
+    },
+    {
+      "id": "sangre",
+      "name": "La sangre",
+      "kind": "fenomeno",
+      "myths": [
+        "canibalismo",
+        "el-primer-hombre-y-la-primera-mujer",
+        "madre-wastora",
+        "seiskwisbuche-y-yangauki"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Cuatro relatos con cuatro funciones distintas: delata al devorador, es lo que Naowa se come cuando le quitan al hijo, es materia creadora en Wastora, y llena la casa ceremonial la noche de la muerte de Seiskwisbuche. Las research_notes obligan a un tratamiento sin violencia gráfica, y eso necesita regla escrita. Es la ficha de la que menos seguro estoy: podría vivir en la guía de estilo en vez de en el inventario."
+    },
+    {
+      "id": "gorra_de_kashindukwe",
+      "name": "La gorra de Kashindukwe",
+      "kind": "objeto",
+      "myths": [
+        "canibalismo"
+      ],
+      "decision": "embedded",
+      "covered_by": "kashindukwe",
+      "sheets": 0,
+      "note": "Pieza del despojo, ropa del personaje."
+    },
+    {
+      "id": "camisa_remendada",
+      "name": "La camisa remendada del pobre",
+      "kind": "objeto",
+      "myths": [
+        "canibalismo"
+      ],
+      "decision": "embedded",
+      "covered_by": "kashindukwe",
+      "sheets": 0,
+      "note": "Disfraz con que Kashindukue vuelve al pueblo; ropa del personaje, no cambia la silueta."
+    },
+    {
+      "id": "tigre_maluteyan",
+      "name": "El tigre Maluteyan",
+      "kind": "criatura",
+      "myths": [
+        "canibalismo"
+      ],
+      "decision": "embedded",
+      "covered_by": "kashindukwe",
+      "sheets": 0,
+      "note": "Es el estado final ya contabilizado en la segunda hoja de Kashindukwe, no otro ser."
+    },
+    {
+      "id": "calamutza",
+      "name": "El calamutza, palo del poporo",
+      "kind": "objeto",
+      "myths": [
+        "el-primer-hombre-y-la-primera-mujer"
+      ],
+      "decision": "embedded",
+      "covered_by": "poporo",
+      "sheets": 0,
+      "note": "Parte del poporo; con él se aplican las cuentas al ombligo."
+    },
+    {
+      "id": "vestido_de_oro_del_sol",
+      "name": "Vestido, mochila y gorro de oro",
+      "kind": "objeto",
+      "myths": [
+        "el-sol-mama"
+      ],
+      "decision": "embedded",
+      "covered_by": "sol_mama",
+      "sheets": 0,
+      "note": "Ropa del personaje: es exactamente lo que define su segunda hoja."
+    },
+    {
+      "id": "cenizas_de_la_luna",
+      "name": "El puñado de ceniza",
+      "kind": "objeto",
+      "myths": [
+        "el-sol-mama"
+      ],
+      "decision": "embedded",
+      "covered_by": "luna",
+      "sheets": 0,
+      "note": "Tratamiento de superficie de la luna, no silueta."
+    },
+    {
+      "id": "menguante_y_estrella",
+      "name": "La menguante y la estrella que lleva el Sol",
+      "kind": "fenomeno",
+      "myths": [
+        "el-arco-iris-susabanka"
+      ],
+      "decision": "embedded",
+      "covered_by": "luna",
+      "sheets": 0,
+      "note": "Fase lunar y punto de cielo; se resuelven en la gramática nocturna de la ficha de la Luna."
+    },
+    {
+      "id": "ropa_de_terana",
+      "name": "La ropa de Terana",
+      "kind": "objeto",
+      "myths": [
+        "kimaku"
+      ],
+      "decision": "embedded",
+      "covered_by": "terana",
+      "sheets": 0,
+      "note": "El intercambio de ropa es el truco del relato, pero es ropa de dos personajes ya fichados."
+    },
+    {
+      "id": "ropa_de_kimaku",
+      "name": "La ropa de Kimaku",
+      "kind": "objeto",
+      "myths": [
+        "kimaku"
+      ],
+      "decision": "embedded",
+      "covered_by": "kimaku",
+      "sheets": 0,
+      "note": "Mismo intercambio, la otra mitad."
+    },
+    {
+      "id": "ropa_de_los_recien_nacidos",
+      "name": "La ropa del niño y de la niña",
+      "kind": "objeto",
+      "myths": [
+        "el-primer-hombre-y-la-primera-mujer"
+      ],
+      "decision": "embedded",
+      "covered_by": "primer_hombre",
+      "sheets": 0,
+      "note": "Lo único que Naowa encuentra al despertar, y se lo come. Ropa de personaje."
+    },
+    {
+      "id": "horcones",
+      "name": "Los horcones",
+      "kind": "arquitectura",
+      "myths": [
+        "seiskwisbuche-y-yangauki"
+      ],
+      "decision": "embedded",
+      "covered_by": "casa_de_habitacion_kogui",
+      "sheets": 0,
+      "note": "Estructura de la casa; hay que arrancar siete para que entre la mujer múltiple."
+    },
+    {
+      "id": "casa_de_espuma_de_agua",
+      "name": "La casa de espuma de agua",
+      "kind": "arquitectura",
+      "myths": [
+        "creacion-koguis"
+      ],
+      "decision": "embedded",
+      "covered_by": "casa_de_habitacion_kogui",
+      "sheets": 0,
+      "note": "Es la misma casa hecha de otra materia; la espuma se declara como acabado dentro de la ficha."
+    },
+    {
+      "id": "casa_de_mujer",
+      "name": "La casa de mujer",
+      "kind": "arquitectura",
+      "myths": [
+        "el-primer-hombre-y-la-primera-mujer"
+      ],
+      "decision": "embedded",
+      "covered_by": "casa_de_habitacion_kogui",
+      "sheets": 0,
+      "note": "Adonde llevan a la niña; el corpus no la describe distinta."
+    },
+    {
+      "id": "hoyito_en_la_pared",
+      "name": "El hoyito de la pared del noveno cuarto",
+      "kind": "arquitectura",
+      "myths": [
+        "creacion-koguis"
+      ],
+      "decision": "embedded",
+      "covered_by": "casa_de_la_magri_nueve_cuartos",
+      "sheets": 0,
+      "note": "Detalle decisivo —por ahí oye la música la Tierra Negra— pero es parte del edificio."
+    },
+    {
+      "id": "vestidos_vueltos_piedra",
+      "name": "Los vestidos vueltos piedra",
+      "kind": "objeto",
+      "myths": [
+        "seiskwisbuche-y-yangauki"
+      ],
+      "decision": "embedded",
+      "covered_by": "seiskwisbuche",
+      "sheets": 0,
+      "note": "Lo que Seiskwisbuche encuentra tras el desdoblamiento; despojo del personaje."
+    },
+    {
+      "id": "semillero_de_algodon",
+      "name": "El semillero de algodón",
+      "kind": "planta",
+      "myths": [
+        "el-algodon-koguis"
+      ],
+      "decision": "embedded",
+      "covered_by": "algodon",
+      "sheets": 0,
+      "note": "Fase de cultivo dentro de la ficha botánica del algodón."
+    },
+    {
+      "id": "bollo_y_almidon_de_yuca",
+      "name": "Bollo y almidón de yuca",
+      "kind": "objeto",
+      "myths": [
+        "el-sol-mama"
+      ],
+      "decision": "embedded",
+      "covered_by": "yuca",
+      "sheets": 0,
+      "note": "Preparaciones de la yuca; lo que más le gusta al sol."
+    },
+    {
+      "id": "palma_de_empajar",
+      "name": "La palma de empajar",
+      "kind": "planta",
+      "myths": [
+        "kasauge-el-padre-arbol"
+      ],
+      "decision": "embedded",
+      "covered_by": "bosque_de_la_sierra",
+      "sheets": 0,
+      "note": "Nacida de los cabellos de Kasaugue; parte del bosque y del techo de la casa."
+    },
+    {
+      "id": "bejuco",
+      "name": "El bejuco",
+      "kind": "planta",
+      "myths": [
+        "kasauge-el-padre-arbol"
+      ],
+      "decision": "embedded",
+      "covered_by": "bosque_de_la_sierra",
+      "sheets": 0,
+      "note": "Nacido de las barbas de Kasaugue."
+    },
+    {
+      "id": "arboles",
+      "name": "Los árboles",
+      "kind": "planta",
+      "myths": [
+        "canibalismo",
+        "kasauge-el-padre-arbol"
+      ],
+      "decision": "embedded",
+      "covered_by": "bosque_de_la_sierra",
+      "sheets": 0,
+      "note": "Lo que Nuánashe y Kashindukue piden que exista, y en lo que se reparte Kasaugue."
+    },
+    {
+      "id": "palo_blanco_podrido",
+      "name": "El palo blanco podrido que parece candela",
+      "kind": "planta",
+      "myths": [
+        "la-candela-gotze"
+      ],
+      "decision": "embedded",
+      "covered_by": "oscuridad_antes_del_sol",
+      "sheets": 0,
+      "note": "Única luz del monte antes del fuego; pertenece a la regla de la oscuridad."
+    },
+    {
+      "id": "maizal_ilusorio",
+      "name": "El maizal que en verdad es gente armada",
+      "kind": "fenomeno",
+      "myths": [
+        "nunkasha-y-kashindukwe"
+      ],
+      "decision": "embedded",
+      "covered_by": "vision_que_cambia",
+      "sheets": 0,
+      "note": "Caso concreto de la regla de visión que cambia."
+    },
+    {
+      "id": "mujer_que_parece_pina",
+      "name": "La mujer que parece una piña madura",
+      "kind": "fenomeno",
+      "myths": [
+        "canibalismo",
+        "kashindukwe"
+      ],
+      "decision": "embedded",
+      "covered_by": "vision_que_cambia",
+      "sheets": 0,
+      "note": "El mismo mecanismo, en los dos relatos del devorador."
+    },
+    {
+      "id": "sangre_de_menstruacion",
+      "name": "La sangre de menstruación de Haba-Naowa",
+      "kind": "fenomeno",
+      "myths": [
+        "madre-wastora"
+      ],
+      "decision": "embedded",
+      "covered_by": "sangre",
+      "sheets": 0,
+      "note": "Materia creadora, no impureza: lo exigen las research_notes. Caso de la regla de la sangre."
+    },
+    {
+      "id": "aluna_hala",
+      "name": "El aluna-hala, el vello genital",
+      "kind": "objeto",
+      "myths": [
+        "madre-wastora"
+      ],
+      "decision": "embedded",
+      "covered_by": "naowa_wastora",
+      "sheets": 0,
+      "note": "Primera materia del primer hombre; se resuelve como gesto dentro de la ficha de la Madre. Ojo con el falso amigo: aquí aluna no es el concepto de pensamiento, es la única vez que la palabra aparece en el volumen y significa otra cosa."
+    },
+    {
+      "id": "huellas_de_jaguar",
+      "name": "Las huellas",
+      "kind": "objeto",
+      "myths": [
+        "canibalismo"
+      ],
+      "decision": "embedded",
+      "covered_by": "jaguar",
+      "sheets": 0,
+      "note": "Rastro del animal ya fichado."
+    },
+    {
+      "id": "leon_puma",
+      "name": "El león",
+      "kind": "animal",
+      "myths": [
+        "el-primer-hombre-y-la-primera-mujer",
+        "kashindukwe",
+        "seiskwisbuche-y-yangauki"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_animales_del_monte",
+      "sheets": 0,
+      "note": "Nunca actúa solo: siempre en enumeración junto al tigre."
+    },
+    {
+      "id": "zorra",
+      "name": "La zorra",
+      "kind": "animal",
+      "myths": [
+        "nunkasha-y-kashindukwe"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_animales_del_monte",
+      "sheets": 0,
+      "note": "Parte del maizal ilusorio."
+    },
+    {
+      "id": "perico_ligero",
+      "name": "El perico ligero",
+      "kind": "animal",
+      "myths": [
+        "el-primer-hombre-y-la-primera-mujer"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_animales_del_monte",
+      "sheets": 0,
+      "note": "Una mención en una lista de partos."
+    },
+    {
+      "id": "perros_y_gatos",
+      "name": "Los perros y los gatos",
+      "kind": "animal",
+      "myths": [
+        "seiskwisbuche-y-yangauki"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_animales_del_monte",
+      "sheets": 0,
+      "note": "Entre los animales que lamen la sangre la última noche."
+    },
+    {
+      "id": "pava",
+      "name": "La pava",
+      "kind": "animal",
+      "myths": [
+        "el-primer-hombre-y-la-primera-mujer",
+        "nunkasha-y-kashindukwe"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_pajaros",
+      "sheets": 0,
+      "note": "Nombrada dos veces, siempre dentro de una enumeración de aves."
+    },
+    {
+      "id": "palomas",
+      "name": "Las palomas",
+      "kind": "animal",
+      "myths": [
+        "nunkasha-y-kashindukwe"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_pajaros",
+      "sheets": 0,
+      "note": "Parte del maizal ilusorio."
+    },
+    {
+      "id": "culebra",
+      "name": "La culebra",
+      "kind": "animal",
+      "myths": [
+        "el-primer-hombre-y-la-primera-mujer"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_animales_sin_huesos",
+      "sheets": 0,
+      "note": "Primer parto de Naowa."
+    },
+    {
+      "id": "culebra_ciega",
+      "name": "La culebra ciega",
+      "kind": "animal",
+      "myths": [
+        "el-primer-hombre-y-la-primera-mujer"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_animales_sin_huesos",
+      "sheets": 0,
+      "note": "Misma tanda de partos sin hueso."
+    },
+    {
+      "id": "gusano",
+      "name": "El gusano",
+      "kind": "animal",
+      "myths": [
+        "el-primer-hombre-y-la-primera-mujer"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_animales_sin_huesos",
+      "sheets": 0,
+      "note": "Misma tanda."
+    },
+    {
+      "id": "lombriz_de_tierra",
+      "name": "La lombriz de tierra",
+      "kind": "animal",
+      "myths": [
+        "el-primer-hombre-y-la-primera-mujer"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_animales_sin_huesos",
+      "sheets": 0,
+      "note": "Misma tanda."
+    },
+    {
+      "id": "navikue",
+      "name": "Los indios Navikue, gente de tigre",
+      "kind": "colectivo",
+      "myths": [
+        "canibalismo"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_gente_de_tigre",
+      "sheets": 0,
+      "note": "El propio texto los define como gente de tigre y les da el mismo cuerpo."
+    },
+    {
+      "id": "padre_de_namaku",
+      "name": "El padre de Námaku, de la quebrada del Bollo",
+      "kind": "personaje",
+      "myths": [
+        "namaku"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_gente_de_tigre",
+      "sheets": 0,
+      "note": "Indio de día y tigre de noche, sin nombre ni descripción: miembro del colectivo ya fichado."
+    },
+    {
+      "id": "padrastro_de_namaku",
+      "name": "El padrastro de Námaku",
+      "kind": "personaje",
+      "myths": [
+        "namaku"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_mamas",
+      "sheets": 0,
+      "note": "Crió al Mama de San Miguel; el relato no dice nada más de él."
+    },
+    {
+      "id": "mama_de_san_miguel",
+      "name": "El Mama de San Miguel",
+      "kind": "personaje",
+      "myths": [
+        "namaku"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_mamas",
+      "sheets": 0,
+      "note": "Individuado por su tarea —cura y ayuna para no volverse tigre—, pero sin cuerpo propio en el texto."
+    },
+    {
+      "id": "mama_adivino",
+      "name": "El Mama que va a adivinar",
+      "kind": "personaje",
+      "myths": [
+        "canibalismo"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_mamas",
+      "sheets": 0,
+      "note": "Le avisa la brisa; sin nombre ni descripción."
+    },
+    {
+      "id": "aluseiye",
+      "name": "Aluseiye",
+      "kind": "personaje",
+      "myths": [
+        "kashindukwe"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_mamas",
+      "sheets": 0,
+      "note": "El propio relato lo identifica con los mamas: «Los mamas son como Núnkasha, como Aluseiye y como Mulkwehe»."
+    },
+    {
+      "id": "mulkwehe",
+      "name": "Mulkwehe",
+      "kind": "personaje",
+      "myths": [
+        "kashindukwe"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_mamas",
+      "sheets": 0,
+      "note": "Misma identificación del texto, misma cobertura."
+    },
+    {
+      "id": "bahave",
+      "name": "Bahavé (Bahawé)",
+      "kind": "personaje",
+      "myths": [
+        "el-primer-hombre-y-la-primera-mujer"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_cabos",
+      "sheets": 0,
+      "note": "Cabo mandado a espiar a Naowa; oficio, no cuerpo."
+    },
+    {
+      "id": "antwakukwe",
+      "name": "Antwakukwe",
+      "kind": "personaje",
+      "myths": [
+        "el-primer-hombre-y-la-primera-mujer"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_cabos",
+      "sheets": 0,
+      "note": "Mismo oficio en el segundo parto."
+    },
+    {
+      "id": "duguwe",
+      "name": "Duguwé (Dukuwe)",
+      "kind": "personaje",
+      "myths": [
+        "el-primer-hombre-y-la-primera-mujer"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_cabos",
+      "sheets": 0,
+      "note": "Cabo de Búnkuase, nombrado sin acción."
+    },
+    {
+      "id": "mandalawo_manawi",
+      "name": "Mandalawó Manawi",
+      "kind": "personaje",
+      "myths": [
+        "el-primer-hombre-y-la-primera-mujer"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_cabos",
+      "sheets": 0,
+      "note": "Cabo de Búnkuase en la lista de antes del amanecer."
+    },
+    {
+      "id": "cabo_de_seiskwisbuche",
+      "name": "El cabo de Seiskwisbuche",
+      "kind": "personaje",
+      "myths": [
+        "seiskwisbuche-y-yangauki"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_cabos",
+      "sheets": 0,
+      "note": "El que vigila la colina y avisa que viene la mujer."
+    },
+    {
+      "id": "solsewan",
+      "name": "La madre Solsewan",
+      "kind": "deidad_fuerza",
+      "myths": [
+        "el-primer-hombre-y-la-primera-mujer"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_padres_madres_antiguos",
+      "sheets": 0,
+      "note": "Nombrada una vez, en la primera línea, y no vuelve a actuar."
+    },
+    {
+      "id": "soaluiku",
+      "name": "Soaluiku",
+      "kind": "personaje",
+      "myths": [
+        "el-primer-hombre-y-la-primera-mujer"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_padres_madres_antiguos",
+      "sheets": 0,
+      "note": "Nombre de la lista de antes del amanecer, sin acción."
+    },
+    {
+      "id": "monsawi",
+      "name": "Monsawi",
+      "kind": "personaje",
+      "myths": [
+        "el-primer-hombre-y-la-primera-mujer"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_padres_madres_antiguos",
+      "sheets": 0,
+      "note": "Nombre de la lista, sin acción."
+    },
+    {
+      "id": "sabi",
+      "name": "Sábi",
+      "kind": "personaje",
+      "myths": [
+        "el-primer-hombre-y-la-primera-mujer"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_padres_madres_antiguos",
+      "sheets": 0,
+      "note": "Nombre de la lista, sin acción."
+    },
+    {
+      "id": "gulchawi",
+      "name": "Gulchawi",
+      "kind": "personaje",
+      "myths": [
+        "el-primer-hombre-y-la-primera-mujer"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_padres_madres_antiguos",
+      "sheets": 0,
+      "note": "Nombre de la lista, sin acción."
+    },
+    {
+      "id": "napita",
+      "name": "Napita",
+      "kind": "personaje",
+      "myths": [
+        "el-primer-hombre-y-la-primera-mujer"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_padres_madres_antiguos",
+      "sheets": 0,
+      "note": "Nombre de la lista, sin acción."
+    },
+    {
+      "id": "tawatitona",
+      "name": "Tawatitoná",
+      "kind": "personaje",
+      "myths": [
+        "el-primer-hombre-y-la-primera-mujer"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_padres_madres_antiguos",
+      "sheets": 0,
+      "note": "Nombre de la lista, sin acción."
+    },
+    {
+      "id": "natuna",
+      "name": "El padre Natuna",
+      "kind": "personaje",
+      "myths": [
+        "el-primer-hombre-y-la-primera-mujer"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_padres_madres_antiguos",
+      "sheets": 0,
+      "note": "Nombre de la lista, sin acción."
+    },
+    {
+      "id": "andoe",
+      "name": "Andoé",
+      "kind": "personaje",
+      "myths": [
+        "el-primer-hombre-y-la-primera-mujer"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_padres_madres_antiguos",
+      "sheets": 0,
+      "note": "Nombre de la lista, sin acción."
+    },
+    {
+      "id": "kalawako",
+      "name": "Kalawakó",
+      "kind": "personaje",
+      "myths": [
+        "el-primer-hombre-y-la-primera-mujer"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_padres_madres_antiguos",
+      "sheets": 0,
+      "note": "Nombre de la lista, sin acción."
+    },
+    {
+      "id": "sangolomena",
+      "name": "Sangolomená",
+      "kind": "personaje",
+      "myths": [
+        "el-primer-hombre-y-la-primera-mujer"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_padres_madres_antiguos",
+      "sheets": 0,
+      "note": "Nombre de la lista, sin acción."
+    },
+    {
+      "id": "salasukuita",
+      "name": "Salasukuitá",
+      "kind": "personaje",
+      "myths": [
+        "el-primer-hombre-y-la-primera-mujer"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_padres_madres_antiguos",
+      "sheets": 0,
+      "note": "Nombre de la lista, sin acción."
+    },
+    {
+      "id": "salase",
+      "name": "Salase",
+      "kind": "personaje",
+      "myths": [
+        "el-primer-hombre-y-la-primera-mujer"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_padres_madres_antiguos",
+      "sheets": 0,
+      "note": "Nombre de la lista, sin acción."
+    },
+    {
+      "id": "mensehele",
+      "name": "Mensehele",
+      "kind": "personaje",
+      "myths": [
+        "el-primer-hombre-y-la-primera-mujer"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_padres_madres_antiguos",
+      "sheets": 0,
+      "note": "Nombre de la lista, sin acción."
+    },
+    {
+      "id": "seyunkawa",
+      "name": "Seyúnkawa (Seyankakua)",
+      "kind": "personaje",
+      "myths": [
+        "el-primer-hombre-y-la-primera-mujer"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_padres_madres_antiguos",
+      "sheets": 0,
+      "note": "Nombre de la lista, con dos grafías en la misma fuente y sin acción."
+    },
+    {
+      "id": "seiyeleukwe",
+      "name": "Seiyeleukwe (Seiyelenkue)",
+      "kind": "personaje",
+      "myths": [
+        "el-primer-hombre-y-la-primera-mujer"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_padres_madres_antiguos",
+      "sheets": 0,
+      "note": "Nombre de la lista, dos grafías, sin acción."
+    },
+    {
+      "id": "nuba",
+      "name": "Ñuba",
+      "kind": "deidad_fuerza",
+      "myths": [
+        "el-primer-hombre-y-la-primera-mujer"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_padres_madres_antiguos",
+      "sheets": 0,
+      "note": "Una de las madres que vinieron cuando nació el mundo; sin acción."
+    },
+    {
+      "id": "buiban",
+      "name": "Buibán",
+      "kind": "deidad_fuerza",
+      "myths": [
+        "el-primer-hombre-y-la-primera-mujer"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_padres_madres_antiguos",
+      "sheets": 0,
+      "note": "Otra de esas madres; sin acción."
+    },
+    {
+      "id": "mulkakukue",
+      "name": "Mulkakukué, la madre del sol",
+      "kind": "deidad_fuerza",
+      "myths": [
+        "el-primer-hombre-y-la-primera-mujer"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_padres_madres_antiguos",
+      "sheets": 0,
+      "note": "Nombrada como madre del sol y nada más. No la fusiono con la Madre que inventa el sol en El Sol — Mama: el corpus no lo hace."
+    },
+    {
+      "id": "anurtsama_dosama",
+      "name": "Anurtsama Dosama",
+      "kind": "deidad_fuerza",
+      "myths": [
+        "el-primer-hombre-y-la-primera-mujer"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_padres_madres_antiguos",
+      "sheets": 0,
+      "note": "Otra madre de la lista; sin acción."
+    },
+    {
+      "id": "sivalikukue",
+      "name": "Sivalikukue (Sibalikukwe)",
+      "kind": "deidad_fuerza",
+      "myths": [
+        "el-primer-hombre-y-la-primera-mujer"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_padres_madres_antiguos",
+      "sheets": 0,
+      "note": "Madre de Búnkuase, nombrada una vez."
+    },
+    {
+      "id": "alwawiku",
+      "name": "Alwawiku (Alawawiku)",
+      "kind": "personaje",
+      "myths": [
+        "la-enfermedad-hiwiha"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_padres_madres_antiguos",
+      "sheets": 0,
+      "note": "Recibe una parte de la tierra; el texto sólo dice que «es gente»."
+    },
+    {
+      "id": "dukinawi",
+      "name": "Dukinawi",
+      "kind": "personaje",
+      "myths": [
+        "la-enfermedad-hiwiha"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_padres_madres_antiguos",
+      "sheets": 0,
+      "note": "Recibe San Miguel. No lo fusiono con Dugunawi: la ficha advierte que «la identificación no la hace ninguna de las tres fuentes y aquí no se da por hecha»."
+    },
+    {
+      "id": "hatleja",
+      "name": "Hatleja (Hatleha)",
+      "kind": "personaje",
+      "myths": [
+        "la-enfermedad-hiwiha"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_padres_madres_antiguos",
+      "sheets": 0,
+      "note": "Acompaña a Dukinawi y recibe la otra parte."
+    },
+    {
+      "id": "mulkokokwi",
+      "name": "Mulkokókwi (Mulkukokwi)",
+      "kind": "deidad_fuerza",
+      "myths": [
+        "la-enfermedad-hiwiha"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_padres_madres_antiguos",
+      "sheets": 0,
+      "note": "Madre de los cuatro que reparten la tierra —no cuatro hijos de Hiwihá, error que la revisión del corpus corrigió."
+    },
+    {
+      "id": "cuatro_varones_taumaturgos",
+      "name": "Los cuatro varones taumaturgos",
+      "kind": "colectivo",
+      "myths": [
+        "guateovan"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_padres_madres_antiguos",
+      "sheets": 0,
+      "note": "Los cuatro padres prístinos que celebran el pacto. Misma gramática visual que los demás padres antiguos; la escena stagea cuatro de ellos."
+    },
+    {
+      "id": "mujer_de_nuanashe",
+      "name": "La mujer de Nuánashe",
+      "kind": "personaje",
+      "myths": [
+        "canibalismo",
+        "kashindukwe",
+        "nunkasha-y-kashindukwe"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_gente_kogui",
+      "sheets": 0,
+      "note": "Sin nombre ni descripción; su papel es ser vista como piña, que ya se resuelve en la regla de visión."
+    },
+    {
+      "id": "hija_de_nuanashe",
+      "name": "La hija de Nuánashe",
+      "kind": "personaje",
+      "myths": [
+        "kashindukwe"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_gente_kogui",
+      "sheets": 0,
+      "note": "Una línea, sin descripción."
+    },
+    {
+      "id": "sobrevivientes_de_mamalowi",
+      "name": "La vieja, el viejo, la niña y el niño que quedaron",
+      "kind": "colectivo",
+      "myths": [
+        "canibalismo",
+        "nunkasha-y-kashindukwe"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_gente_kogui",
+      "sheets": 0,
+      "note": "Los cuatro sobrevivientes con que se repuebla el pueblo; son las cuatro edades de la gramática del colectivo."
+    },
+    {
+      "id": "muchachas_del_moha",
+      "name": "Las muchachas que se ponen con el moha",
+      "kind": "colectivo",
+      "myths": [
+        "canibalismo"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_gente_kogui",
+      "sheets": 0,
+      "note": "Puestas para la adivinación; sin descripción."
+    },
+    {
+      "id": "pelado_enterrado",
+      "name": "El pelado que Kashindukue pide y entierra",
+      "kind": "personaje",
+      "myths": [
+        "canibalismo"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_gente_kogui",
+      "sheets": 0,
+      "note": "Niño sin nombre. Las research_notes prohíben ilustrar el episodio con violencia gráfica."
+    },
+    {
+      "id": "hermana_de_seiskwisbuche",
+      "name": "La hermana de Seiskwisbuche",
+      "kind": "personaje",
+      "myths": [
+        "seiskwisbuche-y-yangauki"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_gente_kogui",
+      "sheets": 0,
+      "note": "Presente en toda la primera mitad y sin una sola línea de descripción."
+    },
+    {
+      "id": "mujeres_que_van_por_agua",
+      "name": "Las mujeres que van a la quebrada por agua o leña",
+      "kind": "colectivo",
+      "myths": [
+        "nunkasha-y-kashindukwe"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_gente_kogui",
+      "sheets": 0,
+      "note": "A quienes Nuánashe asusta convertido en tigre."
+    },
+    {
+      "id": "gente_armada_del_maizal",
+      "name": "La gente armada que aparece en el maizal",
+      "kind": "colectivo",
+      "myths": [
+        "nunkasha-y-kashindukwe"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_gente_kogui",
+      "sheets": 0,
+      "note": "Los que disparan flechas y los que dan con la macana; miembros genéricos del colectivo."
+    },
+    {
+      "id": "hombre_y_su_hija_del_incesto",
+      "name": "El hombre y su hija",
+      "kind": "colectivo",
+      "myths": [
+        "incesto-de-padre-hija"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_gente_kogui",
+      "sheets": 0,
+      "note": "El relato no les da nombre ni rasgo; el acto no se representa."
+    },
+    {
+      "id": "hija_de_haba_naowa",
+      "name": "La hija a la que Haba-Naowa le pone la piedra",
+      "kind": "personaje",
+      "myths": [
+        "madre-wastora"
+      ],
+      "decision": "embedded",
+      "covered_by": "primera_mujer",
+      "sheets": 0,
+      "note": "Es el mismo lugar narrativo de la primera mujer ya fichada."
+    },
+    {
+      "id": "indios_que_reciben_el_algodon",
+      "name": "Los indios a quienes Námsiku reparte el algodón",
+      "kind": "colectivo",
+      "myths": [
+        "el-algodon-koguis"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_gente_kogui",
+      "sheets": 0,
+      "note": "«Regaló a todos los indios que había, para que lo cultivaran»."
+    },
+    {
+      "id": "gran_cabellera",
+      "name": "La gran cabellera de la que salen plátano, maíz y frijol",
+      "kind": "objeto",
+      "myths": [
+        "seiskwisbuche-y-yangauki"
+      ],
+      "decision": "embedded",
+      "covered_by": "mujer_multiple_yangauki",
+      "sheets": 0,
+      "note": "Rasgo del personaje ya fichado."
+    },
+    {
+      "id": "san_miguel",
+      "name": "San Miguel",
+      "kind": "lugar",
+      "myths": [
+        "canibalismo",
+        "el-maiz-koguis",
+        "la-enfermedad-hiwiha",
+        "namaku"
+      ],
+      "decision": "embedded",
+      "covered_by": "poblado_kogui",
+      "sheets": 0,
+      "note": "Nombrado en cuatro relatos y nunca descrito."
+    },
+    {
+      "id": "san_andres",
+      "name": "San Andrés",
+      "kind": "lugar",
+      "myths": [
+        "kashindukwe",
+        "namaku"
+      ],
+      "decision": "embedded",
+      "covered_by": "poblado_kogui",
+      "sheets": 0,
+      "note": "Nombrado, no descrito."
+    },
+    {
+      "id": "tucurinca",
+      "name": "Tucurinca",
+      "kind": "lugar",
+      "myths": [
+        "kashindukwe"
+      ],
+      "decision": "embedded",
+      "covered_by": "poblado_kogui",
+      "sheets": 0,
+      "note": "Nombrado como extremo de la comarca de la gente de tigre."
+    },
+    {
+      "id": "takina",
+      "name": "Takina",
+      "kind": "lugar",
+      "myths": [
+        "el-maiz-koguis"
+      ],
+      "decision": "embedded",
+      "covered_by": "poblado_kogui",
+      "sheets": 0,
+      "note": "Donde vive Niwalui. Sus santuarios no se ilustran; la ficha del poblado sólo cubre el asentamiento."
+    },
+    {
+      "id": "mamalowi",
+      "name": "Mamalowi (Mamaluwi)",
+      "kind": "lugar",
+      "myths": [
+        "canibalismo",
+        "nunkasha-y-kashindukwe"
+      ],
+      "decision": "embedded",
+      "covered_by": "poblado_kogui",
+      "sheets": 0,
+      "note": "El pueblo grande que queda vacío y se repuebla; sin rasgos propios."
+    },
+    {
+      "id": "palomino_poblado",
+      "name": "Palomino",
+      "kind": "lugar",
+      "myths": [
+        "la-enfermedad-hiwiha"
+      ],
+      "decision": "embedded",
+      "covered_by": "poblado_kogui",
+      "sheets": 0,
+      "note": "Donde vive Hiwihá y donde Sintana recibe su parte. El valle y el río van en la ficha de quebrada y río."
+    },
+    {
+      "id": "quebrada_del_bollo",
+      "name": "La quebrada del Bollo",
+      "kind": "paisaje",
+      "myths": [
+        "namaku"
+      ],
+      "decision": "embedded",
+      "covered_by": "quebrada_y_rio",
+      "sheets": 0,
+      "note": "Donde vive el padre tigre de Námaku."
+    },
+    {
+      "id": "paramo",
+      "name": "El Páramo",
+      "kind": "paisaje",
+      "myths": [
+        "namaku"
+      ],
+      "decision": "embedded",
+      "covered_by": "sierra_nevada",
+      "sheets": 0,
+      "note": "Franja de altura del modelo de entorno; adonde va a comer el Mama de San Miguel."
+    },
+    {
+      "id": "cerro_alto",
+      "name": "El cerro alto",
+      "kind": "paisaje",
+      "myths": [
+        "canibalismo",
+        "guateovan",
+        "namaku",
+        "nunkasha-y-kashindukwe"
+      ],
+      "decision": "embedded",
+      "covered_by": "sierra_nevada",
+      "sheets": 0,
+      "note": "Donde está la Casa Ceremonial de Kashindukue, donde vive Námaku, donde Núnkasha guarda a Nuánashe y donde habitan los muertos. El corpus no describe ninguna entrada ni cueva: eso sería invención."
+    },
+    {
+      "id": "cielo",
+      "name": "El cielo («allá arriba»)",
+      "kind": "paisaje",
+      "myths": [
+        "el-arco-iris-susabanka",
+        "el-sol-mama"
+      ],
+      "decision": "embedded",
+      "covered_by": "sierra_nevada",
+      "sheets": 0,
+      "note": "Banda superior del modelo de entorno; el corpus no la describe aparte."
+    },
+    {
+      "id": "fin_del_mundo_anegado",
+      "name": "El mundo anegado del final",
+      "kind": "fenomeno",
+      "myths": [
+        "kasauge-el-padre-arbol",
+        "kashindukwe"
+      ],
+      "decision": "embedded",
+      "covered_by": "mar_y_agua_primordial",
+      "sheets": 0,
+      "note": "Los dos relatos lo describen con las mismas palabras del principio; misma ficha."
+    },
+    {
+      "id": "amanecer",
+      "name": "El amanecer",
+      "kind": "fenomeno",
+      "myths": [
+        "el-sol-mama",
+        "la-candela-gotze"
+      ],
+      "decision": "embedded",
+      "covered_by": "oscuridad_antes_del_sol",
+      "sheets": 0,
+      "note": "«Cuando se levantó se acabó la noche»; es el otro extremo de la misma regla."
+    },
+    {
+      "id": "flecha",
+      "name": "La flecha",
+      "kind": "objeto",
+      "myths": [
+        "kashindukwe",
+        "nunkasha-y-kashindukwe"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_armas",
+      "sheets": 0,
+      "note": "Arma menor; agrupada en hoja de utilería."
+    },
+    {
+      "id": "arco",
+      "name": "El arco",
+      "kind": "objeto",
+      "myths": [
+        "la-candela-gotze"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_armas",
+      "sheets": 0,
+      "note": "Con el que Gotzé dispara; la ficha de las cuatro flechas lleva el gesto, el arco va en la hoja."
+    },
+    {
+      "id": "machete_de_piedra",
+      "name": "El machete de piedra",
+      "kind": "objeto",
+      "myths": [
+        "kashindukwe"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_armas",
+      "sheets": 0,
+      "note": "Intento fallido de matar al devorador."
+    },
+    {
+      "id": "macana",
+      "name": "La macana",
+      "kind": "objeto",
+      "myths": [
+        "nunkasha-y-kashindukwe"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_armas",
+      "sheets": 0,
+      "note": "Con la que rematan a Nuánashe en el piñal."
+    },
+    {
+      "id": "palos_para_hurgar",
+      "name": "Los palos con que hurgan bajo la piedra",
+      "kind": "objeto",
+      "myths": [
+        "seiskwisbuche-y-yangauki"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_armas",
+      "sheets": 0,
+      "note": "Con los que Seiskwisbuche busca a Nunula bajo el agua."
+    },
+    {
+      "id": "piedra_de_muchas_facetas",
+      "name": "La piedra de muchas facetas",
+      "kind": "objeto",
+      "myths": [
+        "el-primer-hombre-y-la-primera-mujer"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_piedras",
+      "sheets": 0,
+      "note": "Una de las dos que Sintana apega al ombligo de Naowa."
+    },
+    {
+      "id": "piedra_agujerada",
+      "name": "La piedra agujerada",
+      "kind": "objeto",
+      "myths": [
+        "el-primer-hombre-y-la-primera-mujer"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_piedras",
+      "sheets": 0,
+      "note": "La otra del primer parto."
+    },
+    {
+      "id": "cuenta_grande",
+      "name": "La cuenta grande",
+      "kind": "objeto",
+      "myths": [
+        "el-primer-hombre-y-la-primera-mujer"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_piedras",
+      "sheets": 0,
+      "note": "Del segundo parto, al lado izquierdo del ombligo."
+    },
+    {
+      "id": "cuenta_pequena",
+      "name": "La cuenta pequeña",
+      "kind": "objeto",
+      "myths": [
+        "el-primer-hombre-y-la-primera-mujer"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_piedras",
+      "sheets": 0,
+      "note": "La otra del segundo parto."
+    },
+    {
+      "id": "anguiskuitse",
+      "name": "Anguiskuitse, la piedra que bota agua como sangre",
+      "kind": "objeto",
+      "myths": [
+        "seiskwisbuche-y-yangauki"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_piedras",
+      "sheets": 0,
+      "note": "Piedra nombrada con la que Nunula finge su muerte. Misma familia formal que las cuentas; agrupada."
+    },
+    {
+      "id": "cajita_de_paja",
+      "name": "La cajita de paja",
+      "kind": "objeto",
+      "myths": [
+        "el-primer-hombre-y-la-primera-mujer"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_domestica",
+      "sheets": 0,
+      "note": "Donde Sintana mete al niño y a la niña; dos ejemplares del mismo objeto."
+    },
+    {
+      "id": "olla",
+      "name": "La olla",
+      "kind": "objeto",
+      "myths": [
+        "seiskwisbuche-y-yangauki"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_domestica",
+      "sheets": 0,
+      "note": "Donde la chucha reaparece sentada en la boca."
+    },
+    {
+      "id": "banco",
+      "name": "El banco",
+      "kind": "objeto",
+      "myths": [
+        "seiskwisbuche-y-yangauki"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_domestica",
+      "sheets": 0,
+      "note": "Cuatro para la mujer múltiple y uno de regalo para el viaje."
+    },
+    {
+      "id": "embil",
+      "name": "El embil",
+      "kind": "objeto",
+      "myths": [
+        "canibalismo",
+        "namaku"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_domestica",
+      "sheets": 0,
+      "note": "Tabaco molido y cocinado con ceniza. El relato de Námaku no explica qué es; la hoja lo resuelve como pasta en su recipiente, sin reconstruir uso ritual."
+    },
+    {
+      "id": "frijol",
+      "name": "Fríjol",
+      "kind": "planta",
+      "myths": [
+        "el-maiz-koguis",
+        "seiskwisbuche-y-yangauki"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_semillas_menores",
+      "sheets": 0,
+      "note": "Aparece en listas de semillas y en la cabellera de la mujer múltiple; nunca conduce nada."
+    },
+    {
+      "id": "name_ñame",
+      "name": "Ñame",
+      "kind": "planta",
+      "myths": [
+        "el-maiz-koguis"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_semillas_menores",
+      "sheets": 0,
+      "note": "Semilla de la mochila de la Magri."
+    },
+    {
+      "id": "papa",
+      "name": "Papa",
+      "kind": "planta",
+      "myths": [
+        "el-maiz-koguis"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_semillas_menores",
+      "sheets": 0,
+      "note": "Semilla de la mochila de la Magri."
+    },
+    {
+      "id": "mascaras_rituales",
+      "name": "Las máscaras",
+      "kind": "objeto",
+      "myths": [
+        "guateovan",
+        "creacion-koguis"
+      ],
+      "decision": "excluded",
+      "reason": "do_not_visualize",
+      "sheets": 0,
+      "note": "Sensibilidad declarada del encargo y de la propia ficha: «ÉTICA VISUAL: no se reproduce ninguna máscara u objeto ceremonial específico». La historia de guateovan cita al Museo Etnológico de Berlín declarando que la venta de las dos máscaras de Preuss «siempre fue inadmisible» según la ley religiosa kogui y que sólo los mamas pueden tratar con esos objetos. Verificado en el texto: el relato afirma que existen y no describe su forma más allá de «tallas toscas de madera»."
+    },
+    {
+      "id": "interior_del_nuhue",
+      "name": "El interior de la casa ceremonial y lo que pasa dentro",
+      "kind": "arquitectura",
+      "myths": [
+        "canibalismo",
+        "el-maiz-koguis",
+        "el-sol-mama",
+        "naowa-entrega-el-gobierno-a-su-hijo",
+        "nunkasha-y-kashindukwe",
+        "seiskwisbuche-y-yangauki"
+      ],
+      "decision": "excluded",
+      "reason": "consult_required",
+      "sheets": 0,
+      "note": "Sensibilidad declarada. Consecuencia de producción que el editor debe conocer antes de aprobar: el desenlace de Seiskwisbuche transcurre entero dentro —la sangre que llena la casa, el último estrado, los siete chipi-chipi— y tendrá que resolverse desde fuera, por umbral o por elipsis. También quedan fuera los fogones y el estrado."
+    },
+    {
+      "id": "iniciacion_del_poporo",
+      "name": "La iniciación y el bautizo del poporo",
+      "kind": "fenomeno",
+      "myths": [
+        "el-primer-hombre-y-la-primera-mujer",
+        "naowa-entrega-el-gobierno-a-su-hijo"
+      ],
+      "decision": "excluded",
+      "reason": "consult_required",
+      "sheets": 0,
+      "note": "Sensibilidad declarada. Verificado: el relato de Naowa dice «El hijo bautizó su poporo, y desde el bautizo le lució todavía mejor» y el del primer hombre dice «Cuando él ya fue un hombrecito, Sintana le dio poporo». El objeto sí se ficha; el rito no. Se excluye igualmente la ceremonia de primera menstruación que el mismo relato menciona («cuando a la mujercita le vino la primera menstruación, hizo el mama»)."
+    },
+    {
+      "id": "pagamento_y_piedra_de_pagar",
+      "name": "El pagamento y la piedra de pagar",
+      "kind": "objeto",
+      "myths": [
+        "el-sol-mama"
+      ],
+      "decision": "excluded",
+      "reason": "consult_required",
+      "sheets": 0,
+      "note": "Sensibilidad declarada. Verificado en el último párrafo de El Sol — Mama: «Arriba, en la Casa Ceremonial, hay una piedra que es para pagar, para dar de comer al sol», con el montón de piedras y el espíritu. La propia ficha advierte que las palabras «espíritu» y «pagar» son de la traducción de 1946 y que las research_notes piden mencionar la ofrenda «sin reconstruir objetos o gestos desconocidos»."
+    },
+    {
+      "id": "sitios_sagrados_ezwama",
+      "name": "Las ezwamas y los sitios sagrados de la Línea Negra",
+      "kind": "lugar",
+      "myths": [
+        "kasauge-el-padre-arbol"
+      ],
+      "decision": "excluded",
+      "reason": "consult_required",
+      "sheets": 0,
+      "note": "Sensibilidad declarada. Verificado: aparecen sólo en el campo versiones de Kasaugé, en la versión contemporánea del Mama Shibulata (las ezwamas de Seizhua y Sʉxdzibake, los árboles Kaxsouggi rodeados de piedras haxsʉnkalda), no en el mito. Doble razón para excluir: sensibles y no narrados."
+    },
+    {
+      "id": "dibujo_de_mochila",
+      "name": "El dibujo tejido de una mochila",
+      "kind": "objeto",
+      "myths": [
+        "el-maiz-koguis",
+        "el-sol-mama",
+        "nunkasha-y-kashindukwe"
+      ],
+      "decision": "excluded",
+      "reason": "do_not_visualize",
+      "sheets": 0,
+      "note": "Regla del encargo: el lenguaje sí, el ejemplar no. La ficha de la mochila fija forma, fibra, asa y boca; queda prohibido inventar un dibujo tejido, que en la Sierra identifica linaje. La fuente de la UNESCO citada en el algodón explica la mochila parte por parte como lectura del origen del universo: razón de más para no dibujar un ejemplar."
+    },
+    {
+      "id": "simbolo_solar_de_varitas",
+      "name": "El símbolo solar de varitas en la cúspide del techo",
+      "kind": "objeto",
+      "myths": [
+        "guateovan"
+      ],
+      "decision": "excluded",
+      "reason": "objeto ceremonial que sólo aparece en una cadena secundaria (Preuss → Krickeberg → compilación), y la ficha prohíbe reproducir objetos ceremoniales específicos",
+      "sheets": 0,
+      "note": "Verificado en el mito de Gauteován: «los templos, o casas de fiesta, se llaman casas de sol y llevan en la cúspide del techo un símbolo solar compuesto con varitas». El campo versiones de esa misma ficha señala que el nombre «casas de sol» choca con «cansamaría» del tomo I y que no se funden. Sin fuente kogui directa y con la prohibición de ética visual encima, no se dibuja."
+    },
+    {
+      "id": "calavera_de_sol",
+      "name": "La calavera de sol",
+      "kind": "objeto",
+      "myths": [
+        "el-sol-mama"
+      ],
+      "decision": "excluded",
+      "reason": "sin evidencia visual: el texto la nombra una vez y no dice qué es",
+      "sheets": 0,
+      "note": "Verificado: «Se le da de comer en calavera de sol y en calavera de tigre». La de tigre sí se ficha porque el corpus la describe en tres relatos; la de sol no aparece en ninguna otra parte y darle forma sería inventarla. Va además dentro del tramo de pagamento, ya excluido."
+    },
+    {
+      "id": "moha",
+      "name": "El moha",
+      "kind": "objeto",
+      "myths": [
+        "canibalismo"
+      ],
+      "decision": "excluded",
+      "reason": "sin evidencia visual: palabra no glosada en el impreso",
+      "sheets": 0,
+      "note": "Verificado en el relato: «mandó a conversar y poner una moha y varias muchachas» y después «ya puse el moha». El texto no dice qué es —objeto, planta, persona— y ni Chaves ni las fuentes de la ficha lo glosan. Dibujarlo sería inventarlo."
+    },
+    {
+      "id": "siguate",
+      "name": "El siguate",
+      "kind": "objeto",
+      "myths": [
+        "kimaku"
+      ],
+      "decision": "excluded",
+      "reason": "sin evidencia visual: palabra no glosada en el impreso",
+      "sheets": 0,
+      "note": "Verificado: «El siguate hervía como miel, y todas las mujeres se quemaron». La propia ficha lo declara: es una «palabra del desenlace que el volumen no glosa en ninguna parte y que no vuelve a aparecer». El efecto de hervor se resuelve en la ficha de la candela."
+    },
+    {
+      "id": "chipi_chipi",
+      "name": "Los siete chipi-chipi",
+      "kind": "objeto",
+      "myths": [
+        "seiskwisbuche-y-yangauki"
+      ],
+      "decision": "excluded",
+      "reason": "sin evidencia visual: palabra no glosada en el impreso",
+      "sheets": 0,
+      "note": "Verificado: «se subió al último estrado con siete chipi-chipi, y cada vez que los animales olían algo arriba dejaba caer uno». Ni el relato ni la historia ni las versiones dicen qué son. Además la escena ocurre dentro de la casa ceremonial, ya excluida."
+    },
+    {
+      "id": "aparatos_para_secar_el_agua",
+      "name": "Los aparatos para secar el agua",
+      "kind": "objeto",
+      "myths": [
+        "creacion-koguis"
+      ],
+      "decision": "excluded",
+      "reason": "sin evidencia visual: el texto los nombra por comparación y no los describe",
+      "sheets": 0,
+      "note": "Verificado: «se pusieron a secar el agua, con aparatos mejores que los motores que ahora tienen los civilizados». Toda la información es una comparación de 1946 con motores; darles forma sería inventar una máquina que el relato no describe."
+    },
+    {
+      "id": "espiritu_como_materia",
+      "name": "El espíritu como materia (espíritu de plátano, de piedra, punto de espíritu)",
+      "kind": "fenomeno",
+      "myths": [
+        "el-sol-mama",
+        "kasauge-el-padre-arbol",
+        "madre-wastora"
+      ],
+      "decision": "excluded",
+      "reason": "sin forma descrita, y el tramo principal en que aparece es el pagamento, ya excluido por sensible",
+      "sheets": 0,
+      "note": "Verificado en tres relatos: «El sol come espíritu de plátano… y todo se le da en espíritu de piedra»; «Le cogieron el espíritu y lo regaron por todo el mundo»; «sacó de su cuerpo un punto de espíritu». La ficha de El Sol — Mama advierte que «espíritu» y «pagar» son palabras de la traducción al castellano de 1946 y no necesariamente del idioma kogui. En Kasaugé, el efecto —los árboles— sí se ficha; la sustancia, no."
+    },
+    {
+      "id": "ubatashi",
+      "name": "Ubatáshi",
+      "kind": "criatura",
+      "myths": [
+        "kashindukwe"
+      ],
+      "decision": "excluded",
+      "reason": "sin evidencia visual: se anuncia su llegada y nunca se lo ve ni se lo describe",
+      "sheets": 0,
+      "note": "Verificado: «cuando viene oscureciendo, viene Ubatáshi, y hay que llevar idioma de antiguo, del que hablan los mamas, para conversar con él». Es todo lo que el relato dice. La historia añade, desde Parra Witte, que hoy se los nombra y que «llegarán con el trueno y el fuego», pero eso es fuente externa sobre el futuro, no un cuerpo."
+    },
+    {
+      "id": "los_muertos_en_los_cerros",
+      "name": "Los muertos que habitan los cerros más altos",
+      "kind": "colectivo",
+      "myths": [
+        "guateovan"
+      ],
+      "decision": "excluded",
+      "reason": "se afirma que habitan allí y nunca se los ve",
+      "sheets": 0,
+      "note": "Verificado: «los muertos habitan en los cerros más elevados. Los cerros más altos son el símbolo del cielo». La síntesis los compara con el Olimpo, comparación del compilador que la ficha rechaza. Los cerros sí se fichan dentro de la Sierra; los muertos no tienen cuerpo en el texto."
+    },
+    {
+      "id": "idiomas_de_kimaku",
+      "name": "El idioma para secar la tierra y el idioma de ahora",
+      "kind": "fenomeno",
+      "myths": [
+        "creacion-koguis"
+      ],
+      "decision": "excluded",
+      "reason": "no es visualizable: es lengua, no forma",
+      "sheets": 0,
+      "note": "Verificado: «trajo un idioma con palabras para secar la tierra, una lengua que todavía saben los mamas… el idioma de ahora, con el que se saluda y se pide». Su efecto —la tierra que endurece— sí se ficha como fenómeno."
+    },
+    {
+      "id": "espana_y_otro_pais",
+      "name": "España y «otro país, otra tierra»",
+      "kind": "lugar",
+      "myths": [
+        "kasauge-el-padre-arbol"
+      ],
+      "decision": "excluded",
+      "reason": "se menciona y nunca se ve: el relato no lleva la escena allá",
+      "sheets": 0,
+      "note": "Verificado: «usted va a vivir en otro país, en otra tierra. Era muy malo y lo mandaron para España». Las research_notes exigen que «la mención de España se atribuye y no se vuelve aventura», así que no hay escenario que fichar."
+    },
+    {
+      "id": "acto_sexual",
+      "name": "El acto sexual («hacer cosas»)",
+      "kind": "fenomeno",
+      "myths": [
+        "el-primer-hombre-y-la-primera-mujer",
+        "incesto-de-padre-hija",
+        "kimaku",
+        "madre-wastora",
+        "seiskwisbuche-y-yangauki"
+      ],
+      "decision": "excluded",
+      "reason": "la fuente lo dice en eufemismo y las research_notes prohíben el detalle gráfico",
+      "sheets": 0,
+      "note": "Verificado: la propia ficha de Kimaku señala que «hacer cosas» es «el eufemismo con que la transcripción vierte el acto sexual en varios relatos». Las research_notes de Kimaku piden conservar el motivo «sin detalle gráfico ni generalización misógina», las de Wastora piden tratar la sangre como materia creadora, y las del incesto advierten que el relato origina una prohibición y no describe una práctica."
+    },
+    {
+      "id": "escenas_de_devoramiento",
+      "name": "Las escenas de devoramiento y los cuerpos atacados",
+      "kind": "fenomeno",
+      "myths": [
+        "canibalismo",
+        "kashindukwe",
+        "nunkasha-y-kashindukwe",
+        "seiskwisbuche-y-yangauki"
+      ],
+      "decision": "excluded",
+      "reason": "prohibición editorial expresa en las research_notes: «se evita representar ataques o cuerpos con violencia gráfica»",
+      "sheets": 0,
+      "note": "Verificado en las research_notes de nunkasha-y-kashindukwe y en la historia de canibalismo, que explica que la máscara y el gobierno son el centro del relato y que eso «permite contar el episodio sin ilustrar a nadie siendo comido». El mecanismo narrativo se resuelve con la ficha de la visión que cambia."
+    },
+    {
+      "id": "confesion_y_tani_cansamaria",
+      "name": "La confesión (aluna ishguashi) y el baile del Tani-Cansamaría",
+      "kind": "fenomeno",
+      "myths": [
+        "canibalismo",
+        "el-algodon-koguis",
+        "nunkasha-y-kashindukwe"
+      ],
+      "decision": "excluded",
+      "reason": "consult_required; y además no están en el mito, sólo en historia",
+      "sheets": 0,
+      "note": "Verificado: aparecen únicamente en los campos historia, desde Parra Witte y desde Zapata-Mujica y Forero Bedoya. El baile lo oficia el mama enmascarado, así que cae también bajo la exclusión de máscaras."
+    },
+    {
+      "id": "figuras_solo_en_variantes",
+      "name": "Figuras que sólo existen en variantes o en fuentes externas",
+      "kind": "personaje",
+      "myths": [
+        "canibalismo",
+        "creacion-koguis",
+        "el-sol-mama",
+        "incesto-de-padre-hija",
+        "kasauge-el-padre-arbol",
+        "kashindukwe",
+        "la-candela-gotze",
+        "los-primeros-indios",
+        "madre-wastora",
+        "namaku",
+        "naowa-entrega-el-gobierno-a-su-hijo",
+        "nunkasha-y-kashindukwe",
+        "seiskwisbuche-y-yangauki"
+      ],
+      "decision": "excluded",
+      "reason": "no aparecen en el campo mito de ninguna ficha: pertenecen a variantes de otras cadenas que el corpus declara expresamente no fundir",
+      "sheets": 0,
+      "note": "Decisión única para: Seyuko y la laguna Mainbankokwi, Nukasá, Búnkua-sé, Dyíuamályi, Námukalye, Ambú-ámbu-hermano, Tungexa, Séijakaxa, Nurlita, Jangauli, Kuncha-Vitaueya, Enduksama, Mulkuexe, Seldabáuiku, Kuabángui, Seilánkua, Húgukui, Hirvuixa, Guxtsé, Aluna Java, el pueblo Kaxsouggi con Kaldakshé y Kaldāwiā, y el Duginavi héroe solar. Verificado uno por uno en los campos versiones e historia. Cada ficha repite la misma instrucción —«no se funden», «no se elige entre ellas»—, y fichar estas figuras metería en la biblia un corpus que las páginas no narran."
+    },
+    {
+      "id": "fauna_y_flora_solo_en_variantes",
+      "name": "Fauna y flora que sólo existen en variantes",
+      "kind": "animal",
+      "myths": [
+        "creacion-koguis",
+        "el-sol-mama",
+        "incesto-de-padre-hija",
+        "kimaku",
+        "el-algodon-koguis"
+      ],
+      "decision": "excluded",
+      "reason": "no aparecen en el campo mito de ninguna ficha",
+      "sheets": 0,
+      "note": "Decisión única para: el sapo, la culebra y el jaguar azul, el jaguar grande, el cangrejo y el alacrán esposas del sol en el tomo I; el murciélago hijo del incesto solar; el gallinazo, la guatinaja, el zahíno y el ñeque de la versión larga; la batata, la auyama y el wandul de la segunda creación de Sontinkama; el guayabo, la macana, la fruta kandjí y la ceiba. Verificado en versiones e historia."
+    }
+  ],
+  "sheet_groups": [
+    {
+      "id": "hoja_utileria_armas",
+      "kind": "objeto",
+      "covers": [
+        "flecha",
+        "arco",
+        "machete_de_piedra",
+        "macana",
+        "palos_para_hurgar"
+      ],
+      "sheets": 1,
+      "note": "Cinco piezas de arma y herramienta que aparecen sueltas y nunca conducen el relato por sí mismas. Se agrupan en una hoja de utilería, como resolvió wayúu V4 con sus objetos menores. La trampa de machucón no entra aquí: tiene ficha propia porque mata a dos personajes."
+    },
+    {
+      "id": "hoja_utileria_piedras",
+      "kind": "objeto",
+      "covers": [
+        "piedra_de_muchas_facetas",
+        "piedra_agujerada",
+        "cuenta_grande",
+        "cuenta_pequena",
+        "anguiskuitse"
+      ],
+      "sheets": 1,
+      "note": "Cinco piedras y cuentas pequeñas de la misma familia formal: las cuatro que Sintana apega al ombligo de Naowa y la que Nunula usa para fingir su muerte. La Kagaba-Kuitse queda fuera y con ficha propia porque da título a su relato y está documentada como tipo de cuenta (kággaba-kuítsi) fuera del corpus."
+    },
+    {
+      "id": "hoja_utileria_domestica",
+      "kind": "objeto",
+      "covers": [
+        "cajita_de_paja",
+        "olla",
+        "banco",
+        "embil"
+      ],
+      "sheets": 1,
+      "note": "Enseres y sustancias menores del interior doméstico —no del ceremonial—. Cuatro piezas; queda espacio declarado para una quinta si el diseño de trípticos encuentra otra."
+    },
+    {
+      "id": "hoja_semillas_menores",
+      "kind": "planta",
+      "covers": [
+        "frijol",
+        "name_ñame",
+        "papa"
+      ],
+      "sheets": 1,
+      "note": "Las tres semillas que sólo aparecen dentro de enumeraciones de la mochila de la Magri y de la cabellera de la mujer múltiple. No conducen nada y no merecen lámina botánica individual; una hoja las cubre."
+    }
+  ],
+  "totals": {
+    "entities": 221,
+    "required": 84,
+    "embedded": 115,
+    "excluded": 22,
+    "sheets": 94
+  }
+}

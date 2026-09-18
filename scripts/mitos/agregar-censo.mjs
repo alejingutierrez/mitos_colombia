@@ -170,41 +170,78 @@ export function audit(census) {
   };
 }
 
-/** Una figura que aparece como `required` en dos o mas corpus se produce dos o mas veces. */
+/**
+ * Los espantos se identifican por su **primera palabra con peso** —duende,
+ * mohan, madremonte, patasola—, porque el resto del nombre es la variante
+ * local. Cruzar por las dos primeras palabras costo una medicion falsa: «El
+ * Duende» y «El Duende de la quebrada» daban claves distintas, y el informe
+ * dijo que el Duende salia en un corpus cuando sale en nueve.
+ *
+ * Lo que no es figura se cruza con dos palabras: «casa campesina» y «casa
+ * senorial» son dos escenarios distintos y fundirlos seria el error inverso.
+ */
+const FIGURE_KINDS = new Set(["criatura", "deidad_fuerza", "personaje"]);
+
+/**
+ * Cabezas que no identifican a nadie. «La mujer que…», «el hombre de…», «don
+ * Fulano» son gramaticas de rol, y cada corpus tiene la suya: cruzarlas
+ * produjo un informe que proponia una sola lamina de «mujer» para dieciseis
+ * comunidades, que es exactamente al reves de lo que manda la doctrina.
+ */
+const ROLE_HEADS = new Set([
+  "mujer", "hombre", "madre", "padre", "hijo", "hija", "hermano", "hermana",
+  "esposa", "esposo", "joven", "anciana", "anciano", "nino", "nina", "abuelo",
+  "abuela", "don", "dona", "dama", "senor", "senora", "gente", "pareja",
+  "familia", "cacique", "jefe", "narrador", "muchacho", "muchacha",
+  // Titulos y nombres de pila: «San Pedro» y «San Antonio» no son la misma figura.
+  "san", "santa", "santo", "juan", "maria", "diego", "simon", "jose",
+]);
+
+export function figureKey(entity) {
+  const words = String(entity.name || entity.id)
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/[^a-z]+/g, " ")
+    .trim()
+    .split(/\s+/)
+    .filter((word) => word && !STOP_WORDS.has(word));
+  if (!words.length) return null;
+  if (!FIGURE_KINDS.has(entity.kind)) return words.slice(0, 2).join(" ");
+  return ROLE_HEADS.has(words[0]) ? null : words[0];
+}
+
+/**
+ * Una figura `required` en dos o mas corpus se produce dos o mas veces.
+ *
+ * **Solo se cruza el corpus sin comunidad.** Entre pueblos indigenas no hay
+ * ahorro que valga: dos jaguares de dos comunidades distintas son dos
+ * jaguares, y compartir la lamina es la falta mas grave de este repo. El
+ * folclor mestizo es lo contrario —la Llorona es la misma en catorce
+ * regiones— y ahi si se produce una canonica.
+ */
 export function crossRegional(censuses) {
-  const byName = new Map();
+  const byKey = new Map();
   for (const census of censuses) {
+    const id = census.id || String(census.__file || "").replace(/\.json$/, "");
+    if (INDIGENOUS.has(id)) continue;
     for (const entity of census.entities || []) {
       if (entity.decision !== "required") continue;
-      if (!entity.panregional) continue;
-      // Cada agente nombra a su manera: «caballo-sin-cabeza», «El Caballo sin
-      // Cabeza», «caballo_sin_cabeza». Los separadores se vuelven espacio —no
-      // se borran, o tres palabras quedarian pegadas en una— y se descartan
-      // los articulos y las preposiciones, que no distinguen a nadie.
-      const STOP = new Set(["el", "la", "los", "las", "de", "del", "sin", "y", "un", "una"]);
-      const key = String(entity.name || entity.id)
-        .toLowerCase()
-        .normalize("NFD")
-        .replace(/[̀-ͯ]/g, "")
-        .replace(/[^a-z]+/g, " ")
-        .trim()
-        .split(/\s+/)
-        .filter((word) => word && !STOP.has(word))
-        .slice(0, 2)
-        .join(" ");
-      if (!byName.has(key)) byName.set(key, []);
-      byName.get(key).push({ corpus: census.id, name: entity.name, sheets: Number(entity.sheets || 0) });
+      const key = figureKey(entity);
+      if (!key) continue;
+      if (!byKey.has(key)) byKey.set(key, []);
+      byKey.get(key).push({ corpus: id, name: entity.name, kind: entity.kind, sheets: Number(entity.sheets || 0) });
     }
   }
-  return [...byName.entries()]
-    .filter(([, uses]) => uses.length > 1)
-    .map(([key, uses]) => ({
-      key,
-      corpora: uses.length,
-      sheets: uses.reduce((total, use) => total + use.sheets, 0),
-      savings: uses.reduce((total, use) => total + use.sheets, 0) - Math.max(...uses.map((u) => u.sheets)),
-      uses,
-    }))
+  return [...byKey.entries()]
+    .map(([key, uses]) => {
+      const corpora = new Set(uses.map((use) => use.corpus));
+      const sheets = uses.reduce((total, use) => total + use.sheets, 0);
+      // Se produce una canonica; lo que se ahorra son las laminas de las
+      // demas regiones, menos la variante barata que aqui no se descuenta.
+      return { key, corpora: corpora.size, sheets, savings: sheets - Math.max(...uses.map((use) => use.sheets)), uses };
+    })
+    .filter((item) => item.corpora > 1)
     .sort((a, b) => b.savings - a.savings);
 }
 
@@ -374,6 +411,43 @@ function main() {
     } else {
       console.log("  ninguna coincide todavía: faltan censos regionales por llegar");
     }
+  }
+
+  if (args.csv) {
+    const csvPath = resolve(String(args.csv));
+    mkdirSync(dirname(csvPath), { recursive: true });
+    const escape = (value) => `"${String(value ?? "").replace(/"/g, '""')}"`;
+    const lines = ["corpus,ficha_id,nombre,categoria,laminas,estados,relatos,panregional,nota"];
+    for (const census of censuses) {
+      const id = census.id || String(census.__file).replace(/\.json$/, "");
+      for (const entity of census.entities || []) {
+        if (entity.decision !== "required") continue;
+        lines.push(
+          [
+            id,
+            entity.id,
+            entity.name,
+            entity.kind,
+            entity.sheets || 0,
+            (entity.states || []).join(" | "),
+            (entity.myths || []).length,
+            entity.panregional ? "si" : "",
+            entity.note,
+          ]
+            .map(escape)
+            .join(","),
+        );
+      }
+      for (const group of census.sheet_groups || []) {
+        lines.push(
+          [id, group.id, group.id, `${group.kind} (hoja de agrupación)`, group.sheets || 0, "", (group.covers || []).length, "", group.note]
+            .map(escape)
+            .join(","),
+        );
+      }
+    }
+    writeFileSync(csvPath, `${lines.join("\n")}\n`);
+    console.log(`\nlista completa: ${csvPath} (${lines.length - 1} fichas)`);
   }
 
   if (args.md) {

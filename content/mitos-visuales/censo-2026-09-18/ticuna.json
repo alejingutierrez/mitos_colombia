@@ -1,0 +1,1242 @@
+{
+  "id": "ticuna",
+  "label": "Ticuna",
+  "pages": 6,
+  "canon_pages": 6,
+  "read_note": "Leí los 6 mitos del canon congelado (sha256 aa081d62…) con los cuatro campos, más editorial/ticuna/universe.mjs, community.mjs y definitions.mjs (sceneHorizontal/sceneVertical, que aquí son el documento más restrictivo del expediente). Sorpresas: (1) este corpus casi no recicla elenco — seis relatos con seis repartos distintos y sólo Yoí, Ípi, el huito, el río, el cerro y la chagra cruzan de página, así que el número por mito sube por estructura del corpus y no por falta de dedupe; (2) el scene prompt de «creacion» ya impone un contrato durísimo (Ngutapa como silueta geométrica sin rasgos anatómicos, y prohibición explícita de diadema, collares, aretes, pintura corporal, tatuajes y vestuario inventado en todo el mito), que es justamente la barrera contra la iconografía de clan; (3) el cerro aparece como Woruapü en Santos 2010 y Moruapü en Moruapü 2000 — lo deduplico como un solo lugar con las dos grafías declaradas, porque son dos ediciones del mismo accidente y multiplicarlo sería crear un duplicado ortográfico. Sensibilidad: excluí el clan Garza, la pelazón (que el canon ya retiró por infundada), los cantos, fórmulas e instrucciones rituales, las localizaciones sensibles, los detalles operativos de la pesca con sustancias vegetales y las dos escenas de violencia sexual. Las máscaras de yanchama NO aparecen en ninguno de los seis relatos: no hay nada que excluir, pero dejo dicho que no pueden entrar como iconografía Ticuna genérica. Quedó flojo: Mowíchina, que abre el corpus creando la tierra y a Ngutapa y después desaparece sin una sola línea de cuerpo — lo excluí, y si el video necesita ese primer plano habrá que resolverlo con el mismo contrato abstracto de Ngutapa y declararlo como decisión editorial, no como dato.",
+  "entities": [
+    {
+      "id": "mowichina",
+      "name": "Mowíchina",
+      "kind": "deidad_fuerza",
+      "myths": [
+        "creacion"
+      ],
+      "decision": "excluded",
+      "reason": "sin evidencia visual",
+      "sheets": 0,
+      "note": "Verificado: el relato le da un solo verbo («creador de los inmortales, dio forma a la tierra y creó a Ngutapa») y no vuelve a aparecer. Ninguna fuente le da cuerpo y los dos scene prompts existentes eligieron no incluirlo. Ficharlo produciría un segundo creador abstracto confundible con Ngutapa."
+    },
+    {
+      "id": "ngutapa",
+      "name": "Ngutapa",
+      "kind": "deidad_fuerza",
+      "myths": [
+        "creacion"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Primer inmortal y padre de los cuatro hermanos: conduce el relato de apertura. El prompt ya fija el contrato completo (silueta humanoide geométrica de papel liso, torso rectangular abstracto, sin rasgos anatómicos, nunca con pecho femenino) y muestra las dos rodillas circulares luminosas en las dos escenas, así que la gestación es una sola forma y no paga estado."
+    },
+    {
+      "id": "kuayare",
+      "name": "Kuãyaré",
+      "kind": "personaje",
+      "myths": [
+        "creacion"
+      ],
+      "decision": "required",
+      "sheets": 2,
+      "states": [
+        "avispa"
+      ],
+      "note": "Conduce el giro del relato: decide que Ngutapa sienta el dolor que le causó, se transforma y lo pica en ambas rodillas. El estado paga hoja porque el relato lo muestra y la silueta cambia por completo; el prompt vertical es exactamente la avispa geométrica."
+    },
+    {
+      "id": "avispa",
+      "name": "Avispa en que se convierte Kuãyaré",
+      "kind": "animal",
+      "myths": [
+        "creacion"
+      ],
+      "decision": "embedded",
+      "covered_by": "kuayare",
+      "sheets": 0,
+      "note": "No es un animal del corpus sino la forma transformada de un personaje; se produce como su hoja de estado, ya contabilizada."
+    },
+    {
+      "id": "yoi",
+      "name": "Yoí",
+      "kind": "deidad_fuerza",
+      "myths": [
+        "creacion",
+        "el-combate-del-sueno-y-la-palabra"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Reaparece en dos relatos conduciendo la acción: nace de la rodilla derecha, derriba Wone, exprime el huito y pesca a la gente Tikuna en Eware. Recordado como reflexivo y sensato frente a Ípi; esa diferencia es de carácter y no de silueta, así que no paga estado."
+    },
+    {
+      "id": "ipi",
+      "name": "Ípi",
+      "kind": "deidad_fuerza",
+      "myths": [
+        "creacion",
+        "el-combate-del-sueno-y-la-palabra"
+      ],
+      "decision": "required",
+      "sheets": 2,
+      "states": [
+        "pez con la frente brillante"
+      ],
+      "note": "Reaparece en dos relatos. El estado paga hoja porque el relato lo muestra y cambia la silueta: queda incorporado en la masa de huito, es arrojado al agua, toma forma de pez y se distingue entre el cardumen por el brillo de la frente, que es cómo la mujer lo reconoce y lo saca."
+    },
+    {
+      "id": "ipi-pez",
+      "name": "Ípi en forma de pez",
+      "kind": "animal",
+      "myths": [
+        "el-combate-del-sueno-y-la-palabra"
+      ],
+      "decision": "embedded",
+      "covered_by": "ipi",
+      "sheets": 0,
+      "note": "Forma transformada del mismo personaje; se produce como su hoja de estado, ya contabilizada."
+    },
+    {
+      "id": "mowacha-y-aukuna",
+      "name": "Mowacha y Aüküná",
+      "kind": "colectivo",
+      "myths": [
+        "creacion"
+      ],
+      "decision": "embedded",
+      "covered_by": "inmortales",
+      "sheets": 0,
+      "note": "Las dos hermanas nacidas con Yoí e Ípi. Están nombradas y aparecen en el prompt horizontal como dos de las cuatro siluetas pequeñas, pero ninguna fuente les da acción propia ni un solo rasgo que las distinga: se resuelven desde la gramática de los inmortales."
+    },
+    {
+      "id": "parientes-de-kuayare",
+      "name": "Parientes que liberan y cuidan a Kuãyaré",
+      "kind": "colectivo",
+      "myths": [
+        "creacion"
+      ],
+      "decision": "embedded",
+      "covered_by": "inmortales",
+      "sheets": 0,
+      "note": "Aparecen sólo como quienes la liberan y la curan; sin descripción. Pertenecen al tiempo anterior a los mortales, así que se cubren con los inmortales y no con la comunidad Tikuna."
+    },
+    {
+      "id": "primeros-intentos-de-ngutapa",
+      "name": "Primeros seres que Ngutapa juzgó incompletos",
+      "kind": "criatura",
+      "myths": [
+        "creacion"
+      ],
+      "decision": "excluded",
+      "reason": "sin evidencia visual",
+      "sheets": 0,
+      "note": "Verificado: «juzgaba incompletos a los seres que hacía y los hacía desaparecer». Están definidos por ser incompletos y por desaparecer; la fuente no dice en qué eran incompletos. Dibujarlos sería inventar una teratología entera."
+    },
+    {
+      "id": "inmortales",
+      "name": "Seres inmortales del tiempo anterior",
+      "kind": "colectivo",
+      "myths": [
+        "creacion",
+        "el-combate-del-sueno-y-la-palabra"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Pueblan el mundo oscuro y son los «otros seres» que Yoí e Ípi convocan para derribar Wone: sin ellos no hay tala. Reaparecen en dos relatos. La hoja es gramática de grupo bajo el mismo contrato de abstracción geométrica de Ngutapa, precisamente para que nadie invente un catálogo de criaturas."
+    },
+    {
+      "id": "agresion-a-kuayare",
+      "name": "Violencia de Ngutapa contra Kuãyaré",
+      "kind": "fenomeno",
+      "myths": [
+        "creacion"
+      ],
+      "decision": "excluded",
+      "reason": "do_not_visualize",
+      "sheets": 0,
+      "note": "Verificado contra el relato («la llevó contra su voluntad y la trató con violencia») y contra la decisión editorial del módulo, que resume la violencia sin recrear escenas gráficas. Se narra, no se dibuja."
+    },
+    {
+      "id": "wone",
+      "name": "Wone, el árbol inmenso",
+      "kind": "planta",
+      "myths": [
+        "el-combate-del-sueno-y-la-palabra",
+        "creacion"
+      ],
+      "decision": "required",
+      "sheets": 2,
+      "states": [
+        "caído, convertido en la red fluvial"
+      ],
+      "note": "Es el objeto por el que se cuenta el relato y aparece también en el prompt vertical de «creacion» como el techo del mundo oscuro. El estado paga hoja porque el relato lo muestra y la silueta cambia radicalmente: árbol que cubre el mundo, y después tronco que es el cauce del Amazonas con ramas que son afluentes y follaje que son lagos."
+    },
+    {
+      "id": "corazon-de-wone",
+      "name": "Corazón de Wone",
+      "kind": "objeto",
+      "myths": [
+        "el-combate-del-sueno-y-la-palabra"
+      ],
+      "decision": "embedded",
+      "covered_by": "wone",
+      "sheets": 0,
+      "note": "Hay que sacarlo porque el árbol no quiere morir, y varios intentan llevárselo. Es parte de la ficha del árbol, no un objeto autónomo; su viaje se resuelve con la hoja de Wone y la del tintín."
+    },
+    {
+      "id": "tintin",
+      "name": "Tintín que transporta el corazón",
+      "kind": "animal",
+      "myths": [
+        "el-combate-del-sueno-y-la-palabra"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Conduce la acción decisiva después de que otros fracasan: lleva el corazón hasta la cima del cerro y lo siembra, de donde nacen el umarí y la compañera de Yoí. Roedor documentado; la hoja evita que se convierta en un animal genérico."
+    },
+    {
+      "id": "arbol-de-umari",
+      "name": "Árbol de umarí nacido del corazón",
+      "kind": "planta",
+      "myths": [
+        "el-combate-del-sueno-y-la-palabra"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Nace del corazón sembrado y su último fruto se transforma en la mujer que acompaña a Yoí: es el objeto que produce un personaje. No es intercambiable con Wone ni con la vegetación de fondo."
+    },
+    {
+      "id": "mujer-nacida-del-umari",
+      "name": "Mujer nacida del último fruto de umarí",
+      "kind": "personaje",
+      "myths": [
+        "el-combate-del-sueno-y-la-palabra"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Conduce acciones propias: prueba las carnadas junto a Yoí y es quien logra sacar a Ípi del agua. No es una figura de parentesco sin cuerpo: el relato la hace nacer de un fruto y actuar."
+    },
+    {
+      "id": "huito",
+      "name": "Huito",
+      "kind": "planta",
+      "myths": [
+        "el-combate-del-sueno-y-la-palabra",
+        "origen-de-la-luna-tikuna"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Reaparece en dos relatos con función decisiva y cuerpo reconocible: el afrecho de sus frutos verdes se vuelve peces y oscurece la quebrada que por eso se llama Eware; su jugo marca la cara del visitante lunar y no se borra. Su tinte oscuro es la firma visual de los dos mitos."
+    },
+    {
+      "id": "peces-de-eware",
+      "name": "Peces que cruzan la orilla y se hacen gente",
+      "kind": "colectivo",
+      "myths": [
+        "el-combate-del-sueno-y-la-palabra",
+        "la-canoa-de-moe",
+        "origen-del-friaje-tikuna"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Gramática de cardumen para todo el corpus: los peces nacidos del afrecho que al tocar tierra se vuelven personas, los sábalos de las astillas de Moe y los peces que desbordan el envoltorio. Una sola hoja de peces de río, con las especies nombradas dentro, en vez de tres."
+    },
+    {
+      "id": "sabalo",
+      "name": "Sábalos nacidos de las astillas",
+      "kind": "animal",
+      "myths": [
+        "la-canoa-de-moe"
+      ],
+      "decision": "embedded",
+      "covered_by": "peces-de-eware",
+      "sheets": 0,
+      "note": "Especie nombrada que se resuelve dentro de la gramática de peces de río ya fichada; el hecho drawable es la astilla que toca el agua y cambia, no una segunda anatomía."
+    },
+    {
+      "id": "peces-del-envoltorio",
+      "name": "Peces que se multiplican al abrirse el envoltorio",
+      "kind": "colectivo",
+      "myths": [
+        "origen-del-friaje-tikuna"
+      ],
+      "decision": "embedded",
+      "covered_by": "peces-de-eware",
+      "sheets": 0,
+      "note": "Misma gramática de cardumen; lo específico es la cantidad que desborda la casa, que resuelve la hoja del envoltorio."
+    },
+    {
+      "id": "gente-tikuna-pescada",
+      "name": "Gente Tikuna sacada del agua con yuca",
+      "kind": "colectivo",
+      "myths": [
+        "el-combate-del-sueno-y-la-palabra"
+      ],
+      "decision": "embedded",
+      "covered_by": "comunidad-tikuna",
+      "sheets": 0,
+      "note": "Cada pez que toca la tierra se transforma en una persona: son la comunidad Tikuna en su momento de origen, no otro colectivo."
+    },
+    {
+      "id": "otras-naciones-pescadas-por-ipi",
+      "name": "Otras naciones que pesca Ípi",
+      "kind": "colectivo",
+      "myths": [
+        "el-combate-del-sueno-y-la-palabra"
+      ],
+      "decision": "excluded",
+      "reason": "sensible: la edición retira las clasificaciones raciales de la fuente",
+      "sheets": 0,
+      "note": "Verificado: el propio mito dice que la página no repite las clasificaciones raciales añadidas al final de la edición académica y que esas glosas requieren crítica histórica. Dibujar «las otras naciones» restituiría exactamente lo que la edición retiró."
+    },
+    {
+      "id": "quebrada-eware",
+      "name": "Quebrada Eware",
+      "kind": "lugar",
+      "myths": [
+        "el-combate-del-sueno-y-la-palabra"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Escenario del acto del relato y no intercambiable con el río grande: es agua oscurecida por el huito, de crecida estacional, donde ocurre la pesca de los humanos. Da nombre al mito."
+    },
+    {
+      "id": "rio-tatu-amazonas",
+      "name": "Río Tatü, el Amazonas",
+      "kind": "paisaje",
+      "myths": [
+        "el-combate-del-sueno-y-la-palabra",
+        "la-canoa-de-moe",
+        "origen-del-sol-tikuna"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Nace del tronco de Wone y reaparece en tres relatos: por él entran los peces a Eware, por él viaja la canoa de Moe y sobre él cae la luz del Sol. Modelo de entorno del gran cauce."
+    },
+    {
+      "id": "afluentes-quebradas-y-riachuelos",
+      "name": "Afluentes, quebradas y riachuelos de las ramas",
+      "kind": "paisaje",
+      "myths": [
+        "el-combate-del-sueno-y-la-palabra"
+      ],
+      "decision": "embedded",
+      "covered_by": "rio-tatu-amazonas",
+      "sheets": 0,
+      "note": "Ramas gruesas y pequeñas de Wone convertidas en red hidrográfica; son escala del mismo modelo fluvial."
+    },
+    {
+      "id": "lagos-y-lagunas-del-follaje",
+      "name": "Lagos y lagunas nacidos del follaje",
+      "kind": "paisaje",
+      "myths": [
+        "el-combate-del-sueno-y-la-palabra"
+      ],
+      "decision": "embedded",
+      "covered_by": "rio-tatu-amazonas",
+      "sheets": 0,
+      "note": "Última capa de la misma transformación del árbol en agua; no tiene acto propio que la separe del modelo fluvial."
+    },
+    {
+      "id": "cerro-woruapu-moruapu",
+      "name": "Cerro Woruapü o Moruapü",
+      "kind": "lugar",
+      "myths": [
+        "el-combate-del-sueno-y-la-palabra",
+        "la-canoa-de-moe"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Reaparece en dos relatos: allí siembra el tintín el corazón de Wone y allí espera Moru a Moe. Santos 2010 escribe Woruapü y la compilación de Moruapü escribe Moruapü; el canon no arbitra, así que una sola hoja declara las dos grafías en vez de inventar dos cerros."
+    },
+    {
+      "id": "mundo-oscuro-primordial",
+      "name": "Mundo oscuro, nublado y semejante a vapor de agua",
+      "kind": "paisaje",
+      "myths": [
+        "creacion",
+        "el-combate-del-sueno-y-la-palabra"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Los dos primeros relatos transcurren en él y no es la selva ya formada: no hay cauces, ni claridad, ni límites. Modelo de entorno anterior a la caída de Wone; sin esta hoja se dibujaría una selva nocturna cualquiera y se perdería el argumento."
+    },
+    {
+      "id": "fuente-primordial",
+      "name": "Fuente de agua primordial",
+      "kind": "lugar",
+      "myths": [
+        "creacion",
+        "el-combate-del-sueno-y-la-palabra"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Reaparece en dos relatos con función propia: junto a ella encuentra Ngutapa a Kuãyaré, a ella son llevados los cuatro hermanos para recibir fuerza y pensamiento, y por el tronco de Wone bajan sus aguas. Está en el prompt horizontal de «creacion»."
+    },
+    {
+      "id": "moe",
+      "name": "Moe",
+      "kind": "personaje",
+      "myths": [
+        "la-canoa-de-moe"
+      ],
+      "decision": "required",
+      "sheets": 2,
+      "states": [
+        "ave"
+      ],
+      "note": "Conduce todo el relato: mata los loros, acepta a Moru, talla la canoa, hunde a su hermano y parte con ella. El estado paga hoja porque el relato lo muestra («él mismo tomó otra forma de pájaro») y la silueta cambia; el prompt vertical pide dos pequeñas aves. La fuente no aclara la especie y la hoja no debe inventar equivalencias zoológicas."
+    },
+    {
+      "id": "moru",
+      "name": "Moru",
+      "kind": "personaje",
+      "myths": [
+        "la-canoa-de-moe"
+      ],
+      "decision": "required",
+      "sheets": 2,
+      "states": [
+        "loro"
+      ],
+      "note": "El relato muestra las dos formas y las hace alternar: el loro que se transforma en joven, y la joven que al amanecer vuelve a ser ave y se sube al techo. Las dos siluetas son necesarias y el argumento entero depende de que una oculte a la otra."
+    },
+    {
+      "id": "loros-moru",
+      "name": "Loros Moru",
+      "kind": "colectivo",
+      "myths": [
+        "la-canoa-de-moe"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Conducen la acción de apertura: comen los frutos de chontaduro antes de que maduren y Moe empieza a matarlos, que es el reclamo del que nace todo. Gramática de bandada de la que Moru y su madre son miembros."
+    },
+    {
+      "id": "madre-de-moru",
+      "name": "Madre de Moru",
+      "kind": "personaje",
+      "myths": [
+        "la-canoa-de-moe"
+      ],
+      "decision": "embedded",
+      "covered_by": "loros-moru",
+      "sheets": 0,
+      "note": "Pone la condición final para aceptar a Moe. Una línea de acción y ninguna descripción: miembro del mismo pueblo de aves ya fichado."
+    },
+    {
+      "id": "suegra-de-moe",
+      "name": "Madre de Moe, suegra de Moru",
+      "kind": "personaje",
+      "myths": [
+        "la-canoa-de-moe"
+      ],
+      "decision": "embedded",
+      "covered_by": "comunidad-tikuna",
+      "sheets": 0,
+      "note": "Encarga la chicha, no ve el trabajo hecho y reprende a Moru: el relato gira sobre su percepción, no sobre su cuerpo, y la fuente no le da un solo rasgo. Se resuelve desde la gramática de la comunidad."
+    },
+    {
+      "id": "hermano-menor-de-moe",
+      "name": "Hermano menor de Moe",
+      "kind": "personaje",
+      "myths": [
+        "la-canoa-de-moe"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Conduce el quiebre: espía y desde ese momento las virutas dejan de transformarse; después no puede volar y Moe hunde la canoa con él. Su forma de ave es la segunda de las dos aves del prompt vertical y se resuelve con la gramática de estado de Moe, así que no paga hoja aparte."
+    },
+    {
+      "id": "canoa-de-moe",
+      "name": "Canoa tallada por Moe",
+      "kind": "objeto",
+      "myths": [
+        "la-canoa-de-moe"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Es el objeto por el que se cuenta y se titula el relato. Navegar boca abajo es una orientación de uso, no otro modelo; su conversión en boa la resuelve la hoja de la gran boa."
+    },
+    {
+      "id": "arbol-de-pescado",
+      "name": "Árbol de pescado de la quebrada",
+      "kind": "planta",
+      "myths": [
+        "la-canoa-de-moe"
+      ],
+      "decision": "embedded",
+      "covered_by": "selva-y-varzea-del-amazonas",
+      "sheets": 0,
+      "note": "La fuente no lo identifica botánicamente: lo que el relato muestra es la astilla que cae al agua y se vuelve sábalo. El modelo de entorno debe fijar una silueta de árbol ribereño documentada para no inventar una especie."
+    },
+    {
+      "id": "gran-boa",
+      "name": "Gran boa",
+      "kind": "criatura",
+      "myths": [
+        "la-canoa-de-moe",
+        "origen-del-friaje-tikuna"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Reaparece en dos relatos con cuerpo reconocible: la canoa convertida en boa al llegar a Moruapü, y la boa que impide recoger los peces en la laguna hasta que las grullas la vencen y la cocinan. Son dos boas distintas y una sola hoja de cuerpo."
+    },
+    {
+      "id": "tinaja",
+      "name": "Tinaja",
+      "kind": "objeto",
+      "myths": [
+        "la-canoa-de-moe",
+        "origen-del-friaje-tikuna"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Reaparece en dos relatos y en ambos hace un truco visual: tres tinajas llenas de chicha que la suegra no ve hasta que las golpea, y una serpiente que resulta ser una tinaja cuando el compañero la voltea. La hoja fija la forma para que los dos trucos funcionen."
+    },
+    {
+      "id": "chicha-invisible",
+      "name": "Chicha de maíz invisible para la suegra",
+      "kind": "objeto",
+      "myths": [
+        "la-canoa-de-moe"
+      ],
+      "decision": "embedded",
+      "covered_by": "tinaja",
+      "sheets": 0,
+      "note": "El contenido es el problema de puesta en escena (visible para el lector, invisible para ella) y se resuelve en la hoja de la tinaja, no en una ficha de bebida."
+    },
+    {
+      "id": "chontaduro",
+      "name": "Chontaduro",
+      "kind": "planta",
+      "myths": [
+        "la-canoa-de-moe"
+      ],
+      "decision": "embedded",
+      "covered_by": "chagra",
+      "sheets": 0,
+      "note": "Sus frutos verdes son lo que comen los loros y por eso empieza el relato. Es una palma cultivada del mismo espacio ya fichado y no tiene acto propio."
+    },
+    {
+      "id": "joven-que-se-vuelve-luna",
+      "name": "Joven que se convierte en Luna",
+      "kind": "personaje",
+      "myths": [
+        "origen-de-la-luna-tikuna"
+      ],
+      "decision": "required",
+      "sheets": 2,
+      "states": [
+        "cuerpo luminoso, Luna llena"
+      ],
+      "note": "Conduce el relato y le da título. El estado paga hoja porque el relato lo muestra y cambia la silueta: entra por la abertura del tronco, trepa hacia el espacio y queda como cuerpo luminoso. La mancha de huito en la cara es el rasgo que la primera hoja tiene que resolver."
+    },
+    {
+      "id": "luna-como-astro",
+      "name": "Luna en el cielo",
+      "kind": "fenomeno",
+      "myths": [
+        "origen-de-la-luna-tikuna"
+      ],
+      "decision": "embedded",
+      "covered_by": "joven-que-se-vuelve-luna",
+      "sheets": 0,
+      "note": "El corpus no tiene un astro separado de la persona: la Luna es él. Se produce como su hoja de estado, ya contabilizada."
+    },
+    {
+      "id": "clan-garza",
+      "name": "Clan Garza",
+      "kind": "colectivo",
+      "myths": [
+        "origen-de-la-luna-tikuna"
+      ],
+      "decision": "excluded",
+      "reason": "consult_required",
+      "sheets": 0,
+      "note": "Verificado: el relato abre con «la Luna era un joven del clan Garza» y no vuelve sobre ello. La pertenencia clánica es material sensible y los scene prompts del corpus ya prohíben diadema, collares, aretes, pintura corporal y tatuajes, que son justo donde se codificaría. No se ficha ninguna marca de clan."
+    },
+    {
+      "id": "hermana-del-joven-luna",
+      "name": "Hermana del joven Luna",
+      "kind": "personaje",
+      "myths": [
+        "origen-de-la-luna-tikuna"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Conduce la acción: observa la dentadura, va a la chagra, mastica la wocha, recibe en su cuerpo a la mujer boruga y marca la cara del visitante con huito. El relato gira sobre su cuerpo, porque es confundida con la esposa escondida. Está en el prompt horizontal con el cuenco de huito junto a la hamaca."
+    },
+    {
+      "id": "mujer-boruga",
+      "name": "Mujer boruga escondida en la chagra",
+      "kind": "criatura",
+      "myths": [
+        "origen-de-la-luna-tikuna"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Conduce una acción propia: entra en el cuerpo de la hermana cuando esta mastica la wocha, y es la causa de la confusión. El relato sólo la muestra ya transformada en mujer, así que una hoja, sin forma animal que la fuente no escenifica."
+    },
+    {
+      "id": "boruga-animal",
+      "name": "Boruga como animal",
+      "kind": "animal",
+      "myths": [
+        "origen-de-la-luna-tikuna"
+      ],
+      "decision": "embedded",
+      "covered_by": "mujer-boruga",
+      "sheets": 0,
+      "note": "El origen animal está en el nombre pero el relato nunca muestra la transformación; se anota dentro de su ficha y no se produce como estado."
+    },
+    {
+      "id": "madre-del-joven-luna",
+      "name": "Madre del joven Luna",
+      "kind": "personaje",
+      "myths": [
+        "origen-de-la-luna-tikuna"
+      ],
+      "decision": "embedded",
+      "covered_by": "comunidad-tikuna",
+      "sheets": 0,
+      "note": "Indica preparar el jugo de huito y después reprende al hijo. Identificada sólo por parentesco y sin ningún rasgo: gramática de la comunidad."
+    },
+    {
+      "id": "cunado-del-joven-luna",
+      "name": "Cuñado que derriba el árbol",
+      "kind": "personaje",
+      "myths": [
+        "origen-de-la-luna-tikuna"
+      ],
+      "decision": "embedded",
+      "covered_by": "comunidad-tikuna",
+      "sheets": 0,
+      "note": "Corta la base del árbol mientras Luna sube por dentro. Una acción, cero descripción: gramática de la comunidad."
+    },
+    {
+      "id": "wocha",
+      "name": "Wocha",
+      "kind": "planta",
+      "myths": [
+        "origen-de-la-luna-tikuna"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Es el objeto que dispara el relato: sus hojas masticadas dan color oscuro y brillante a los dientes y transfieren a la mujer boruga. La fuente no la identifica botánicamente, y por eso necesita hoja propia: sin ella el modelo la inventa distinta en cada escena."
+    },
+    {
+      "id": "arbol-del-centro-de-la-chagra",
+      "name": "Árbol del centro de la chagra nueva",
+      "kind": "planta",
+      "myths": [
+        "origen-de-la-luna-tikuna"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Es el vehículo del ascenso y el sujeto del prompt vertical: el joven entra por una abertura del tronco y trepa hacia el espacio. No es intercambiable con Wone, con el umarí ni con la vegetación de fondo; su interior recortado es lo que hay que resolver."
+    },
+    {
+      "id": "relacion-prohibida-entre-hermanos",
+      "name": "Relación prohibida entre los hermanos",
+      "kind": "fenomeno",
+      "myths": [
+        "origen-de-la-luna-tikuna"
+      ],
+      "decision": "excluded",
+      "reason": "do_not_visualize",
+      "sheets": 0,
+      "note": "Verificado: el relato la nombra sin escena («se acercó a ella y cometió una relación prohibida») y el prompt horizontal dice literalmente «sin representar contacto sexual». La marca de huito es la forma visual que el expediente eligió para hacerla visible."
+    },
+    {
+      "id": "hombre-grulla",
+      "name": "Hombre que se transforma en grulla",
+      "kind": "personaje",
+      "myths": [
+        "origen-del-friaje-tikuna"
+      ],
+      "decision": "required",
+      "sheets": 2,
+      "states": [
+        "grulla"
+      ],
+      "note": "Conduce el relato. El estado paga hoja porque el relato lo muestra y cambia la silueta: viaja volando con la bandada, aprende a ver como ellas y finalmente parte con ellas para siempre. El prompt horizontal pide exactamente el hombre-grulla en vuelo."
+    },
+    {
+      "id": "grullas",
+      "name": "Bandada de grullas",
+      "kind": "colectivo",
+      "myths": [
+        "origen-del-friaje-tikuna"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Conducen la acción colectiva: se reúnen para la pesca, construyen la casa, vencen a la boa y quedan en la memoria como madres del friaje. Gramática de bandada. El canon advierte que la publicación en castellano dice grullas y otras traducciones dicen garzas: la hoja no puede resolverlo inventando una especie."
+    },
+    {
+      "id": "jefe-de-las-grullas",
+      "name": "Jefe de las grullas",
+      "kind": "personaje",
+      "myths": [
+        "origen-del-friaje-tikuna"
+      ],
+      "decision": "embedded",
+      "covered_by": "grullas",
+      "sheets": 0,
+      "note": "Ordena construir la casa; ninguna fuente lo distingue del resto de la bandada. Miembro del colectivo ya fichado."
+    },
+    {
+      "id": "companero-grulla",
+      "name": "Compañero que le enseña a ver",
+      "kind": "personaje",
+      "myths": [
+        "origen-del-friaje-tikuna"
+      ],
+      "decision": "embedded",
+      "covered_by": "grullas",
+      "sheets": 0,
+      "note": "Le muestra que lo que parece animal también es material de la vivienda y voltea la serpiente que era tinaja. Función pedagógica sin cuerpo propio."
+    },
+    {
+      "id": "esposa-del-hombre-grulla",
+      "name": "Esposa del hombre grulla",
+      "kind": "personaje",
+      "myths": [
+        "origen-del-friaje-tikuna"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Conduce el clímax: ve llegar la bandada, juzga pequeño el envoltorio y lo abre de un golpe, y los peces llenan la casa. Está en el prompt vertical como parte de la pareja sorprendida."
+    },
+    {
+      "id": "friaje",
+      "name": "Friaje",
+      "kind": "fenomeno",
+      "myths": [
+        "origen-del-friaje-tikuna"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Es el fenómeno que el relato explica y el que sigue existiendo, ya disminuido. La regla tiene que cubrir también la percepción transformada que el frío hace posible: varas que son peces eléctricos, hojas de techo que son rayas, serpiente que es tinaja. Eso es una sola regla de fenómeno con sus ejemplos, no un segundo modelo."
+    },
+    {
+      "id": "varas-y-hojas-de-la-casa-de-las-grullas",
+      "name": "Varas y hojas que son peces eléctricos y rayas",
+      "kind": "objeto",
+      "myths": [
+        "origen-del-friaje-tikuna"
+      ],
+      "decision": "embedded",
+      "covered_by": "friaje",
+      "sheets": 0,
+      "note": "El par material/animal es el ejemplo de la regla ya fichada, no dos objetos: cuando busca varas ve peces eléctricos y cuando recoge hojas encuentra rayas."
+    },
+    {
+      "id": "pez-electrico",
+      "name": "Peces eléctricos",
+      "kind": "animal",
+      "myths": [
+        "origen-del-friaje-tikuna"
+      ],
+      "decision": "embedded",
+      "covered_by": "friaje",
+      "sheets": 0,
+      "note": "Sólo existen como percepción de las varas dentro del mundo de las grullas; nunca actúan. Se resuelven en la regla del fenómeno."
+    },
+    {
+      "id": "serpiente-que-era-tinaja",
+      "name": "Serpiente que resulta ser una tinaja",
+      "kind": "animal",
+      "myths": [
+        "origen-del-friaje-tikuna"
+      ],
+      "decision": "embedded",
+      "covered_by": "friaje",
+      "sheets": 0,
+      "note": "Mismo mecanismo: lo que el hombre teme se revela como recipiente al voltearlo. Ejemplo de la regla, cubierto además por la hoja de la tinaja."
+    },
+    {
+      "id": "raya",
+      "name": "Raya",
+      "kind": "animal",
+      "myths": [
+        "origen-del-friaje-tikuna"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Además de ser lo que el hombre ve en lugar de las hojas, es animal con papel etiológico: cocinan la boa con una raya y la fuerza de esos animales queda asociada al friaje. Cuerpo reconocible y función en el desenlace."
+    },
+    {
+      "id": "envoltorio-de-hojas-con-peces",
+      "name": "Envoltorio de hojas con unos pocos peces",
+      "kind": "objeto",
+      "myths": [
+        "origen-del-friaje-tikuna"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Es el objeto por el que se cuenta el desenlace: pequeño y despreciable hasta que se abre y los peces llenan la casa. Es el sujeto del prompt vertical. Abrirlo es un uso del mismo objeto, no otro modelo."
+    },
+    {
+      "id": "laguna-de-las-grullas",
+      "name": "Laguna de la pesca colectiva",
+      "kind": "lugar",
+      "myths": [
+        "origen-del-friaje-tikuna"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Escenario del acto del relato: allí construyen la casa, allí está la boa y allí ocurre la pesca. No es intercambiable con el río ni con la quebrada, que ya tienen hoja."
+    },
+    {
+      "id": "casa-de-las-grullas",
+      "name": "Casa construida en la laguna",
+      "kind": "arquitectura",
+      "myths": [
+        "origen-del-friaje-tikuna"
+      ],
+      "decision": "embedded",
+      "covered_by": "vivienda-tikuna",
+      "sheets": 0,
+      "note": "Levantada con varas y hojas dentro del mundo de las grullas; comparte tipología con la vivienda ya fichada y su rareza está en el material transformado, que resuelve la regla del friaje."
+    },
+    {
+      "id": "pesca-con-sustancias-vegetales",
+      "name": "Procedimiento de pesca con sustancias vegetales",
+      "kind": "objeto",
+      "myths": [
+        "origen-del-friaje-tikuna"
+      ],
+      "decision": "excluded",
+      "reason": "consult_required",
+      "sheets": 0,
+      "note": "Verificado: el propio mito declara que omite los detalles operativos y no los presenta como instrucciones. No se ficha ni el material ni el gesto."
+    },
+    {
+      "id": "cazador-que-se-vuelve-sol",
+      "name": "Cazador que se convierte en Sol",
+      "kind": "personaje",
+      "myths": [
+        "origen-del-sol-tikuna"
+      ],
+      "decision": "required",
+      "sheets": 2,
+      "states": [
+        "Sol"
+      ],
+      "note": "Conduce el relato. El estado paga hoja porque el relato lo muestra y cambia la silueta: bebe el achiote derramado, sale corriendo, empieza a elevarse y desde lo alto reconoce a su esposa y brilla con plenitud. Los dos prompts usan una forma cada uno."
+    },
+    {
+      "id": "sol-como-astro",
+      "name": "Sol en el cielo",
+      "kind": "fenomeno",
+      "myths": [
+        "origen-del-sol-tikuna"
+      ],
+      "decision": "embedded",
+      "covered_by": "cazador-que-se-vuelve-sol",
+      "sheets": 0,
+      "note": "Igual que la Luna: el astro es la persona. Se produce como su hoja de estado, ya contabilizada."
+    },
+    {
+      "id": "esposa-del-sol",
+      "name": "Esposa del Sol",
+      "kind": "personaje",
+      "myths": [
+        "origen-del-sol-tikuna"
+      ],
+      "decision": "required",
+      "sheets": 2,
+      "states": [
+        "árbol de algodón"
+      ],
+      "note": "El estado paga hoja porque el relato lo muestra y cambia la silueta por completo: no presencia la partida, no puede dormir, y con el tiempo se transforma en un árbol de algodón que la suegra siembra en el extremo de la chagra. El árbol es el sujeto del prompt vertical y es lo que hace brillar al Sol."
+    },
+    {
+      "id": "arbol-de-algodon",
+      "name": "Árbol de algodón de la chagra",
+      "kind": "planta",
+      "myths": [
+        "origen-del-sol-tikuna"
+      ],
+      "decision": "embedded",
+      "covered_by": "esposa-del-sol",
+      "sheets": 0,
+      "note": "No es una planta más del cultivo sino la forma transformada de un personaje; se produce como su hoja de estado, ya contabilizada."
+    },
+    {
+      "id": "suegra-del-sol",
+      "name": "Suegra del Sol",
+      "kind": "personaje",
+      "myths": [
+        "origen-del-sol-tikuna"
+      ],
+      "decision": "embedded",
+      "covered_by": "comunidad-tikuna",
+      "sheets": 0,
+      "note": "Cocina el zumo de achiote, pide a su hija que descanse y siembra el árbol de algodón. Identificada sólo por parentesco y sin un solo rasgo descrito: gramática de la comunidad."
+    },
+    {
+      "id": "suegro-del-sol",
+      "name": "Suegro del Sol",
+      "kind": "personaje",
+      "myths": [
+        "origen-del-sol-tikuna"
+      ],
+      "decision": "embedded",
+      "covered_by": "comunidad-tikuna",
+      "sheets": 0,
+      "note": "Lo despide desde abajo y le señala que cerca existe otro mundo. Una línea, sin descripción."
+    },
+    {
+      "id": "achiote",
+      "name": "Achiote",
+      "kind": "planta",
+      "myths": [
+        "origen-del-sol-tikuna"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Es el objeto por el que se cuenta el relato: el zumo rojo que se derrama sobre el cuerpo, en el suelo y en el fondo de la olla, y que al beberse da la fuerza extraordinaria. Está en el prompt horizontal. No puede confundirse con el huito: uno es rojo y da fuerza, el otro es oscuro y delata."
+    },
+    {
+      "id": "danta",
+      "name": "Danta cazada",
+      "kind": "animal",
+      "myths": [
+        "origen-del-sol-tikuna"
+      ],
+      "decision": "embedded",
+      "covered_by": "selva-y-varzea-del-amazonas",
+      "sheets": 0,
+      "note": "Aparece cargada al hombro en el trayecto de vuelta y no vuelve a intervenir; no está en ninguno de los dos prompts. Fauna del modelo de entorno, que debe fijar su silueta documentada para que no se dibuje un venado."
+    },
+    {
+      "id": "animales-del-monte-pescados-con-frutos",
+      "name": "Animales del monte sacados con carnada de frutos",
+      "kind": "colectivo",
+      "myths": [
+        "el-combate-del-sueno-y-la-palabra"
+      ],
+      "decision": "embedded",
+      "covered_by": "selva-y-varzea-del-amazonas",
+      "sheets": 0,
+      "note": "La fuente no nombra una sola especie: son el contraste con la carnada de yuca que saca gente. Fauna del modelo de entorno."
+    },
+    {
+      "id": "aves-de-plumaje-oscuro",
+      "name": "Aves de plumaje oscuro de la variante",
+      "kind": "animal",
+      "myths": [
+        "origen-de-la-luna-tikuna"
+      ],
+      "decision": "embedded",
+      "covered_by": "selva-y-varzea-del-amazonas",
+      "sheets": 0,
+      "note": "La variante de Julia del Águila relaciona las hojas usadas para quitarse el huito con aves oscuras, y el prompt vertical pide hojas convertidas en aves. Sin especie ni acción: fauna del entorno."
+    },
+    {
+      "id": "comunidad-tikuna",
+      "name": "Comunidad Tikuna",
+      "kind": "colectivo",
+      "myths": [
+        "creacion",
+        "el-combate-del-sueno-y-la-palabra",
+        "la-canoa-de-moe",
+        "origen-de-la-luna-tikuna",
+        "origen-del-friaje-tikuna",
+        "origen-del-sol-tikuna"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "La hoja que más trabajo ahorra: suegras, suegros, cuñados, madres y la gente pescada en Eware salen todos de aquí. Su contrato es el más estricto del expediente y está literalmente escrito en el prompt de «creacion»: sin diadema, collares, aretes, pintura corporal, tatuajes ni vestuario inventado. Esa prohibición es también la barrera contra la marca de clan."
+    },
+    {
+      "id": "vivienda-tikuna",
+      "name": "Vivienda Tikuna",
+      "kind": "arquitectura",
+      "myths": [
+        "la-canoa-de-moe",
+        "origen-del-friaje-tikuna",
+        "origen-del-sol-tikuna",
+        "origen-de-la-luna-tikuna"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Reaparece en cuatro relatos con cuerpo reconocible: la casa de la madre de Moe con el techo al que sube Moru, la casa que los peces desbordan, la casa de la suegra donde se rompe la olla y la casa donde cuelga la hamaca. El prompt de «creacion» prohíbe casas en ese mito, lo que confirma que aquí sí hay una tipología que fijar."
+    },
+    {
+      "id": "chagra",
+      "name": "Chagra",
+      "kind": "lugar",
+      "myths": [
+        "la-canoa-de-moe",
+        "origen-de-la-luna-tikuna",
+        "origen-del-sol-tikuna"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Reaparece en tres relatos como espacio de trabajo con acto propio: allí están las mazorcas que la suegra cree intactas, allí esconde el joven Luna a la mujer boruga y cultiva la wocha, y allí se eleva el Sol y se siembra el árbol de algodón."
+    },
+    {
+      "id": "selva-y-varzea-del-amazonas",
+      "name": "Selva y várzea del Trapecio Amazónico",
+      "kind": "paisaje",
+      "myths": [
+        "creacion",
+        "el-combate-del-sueno-y-la-palabra",
+        "la-canoa-de-moe",
+        "origen-de-la-luna-tikuna",
+        "origen-del-friaje-tikuna",
+        "origen-del-sol-tikuna"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Modelo de entorno de los seis relatos: bosque inundable, orillas, quebradas y lagunas. Recoge además la fauna y los árboles que ninguna fuente identifica, para que no se inventen especie por especie."
+    },
+    {
+      "id": "otro-mundo-cercano-al-sol",
+      "name": "Otro mundo cercano al lugar al que sube el Sol",
+      "kind": "lugar",
+      "myths": [
+        "origen-del-sol-tikuna"
+      ],
+      "decision": "excluded",
+      "reason": "se menciona pero nunca se ve",
+      "sheets": 0,
+      "note": "Verificado: el suegro «le señaló que cerca del lugar al que subía existía otro mundo» y el relato no vuelve sobre ello. No hay escena, no hay descripción, no hay ficha."
+    },
+    {
+      "id": "pelazon",
+      "name": "Pelazón",
+      "kind": "fenomeno",
+      "myths": [
+        "el-combate-del-sueno-y-la-palabra",
+        "creacion"
+      ],
+      "decision": "excluded",
+      "reason": "consult_required",
+      "sheets": 0,
+      "note": "Verificado en el campo historia de las dos fichas heredadas: la página anterior construía una historia de María y la pelazón sin cadena documental verificable, y la revisión la retiró. Es además material ritual sensible. No entra al inventario visual por ninguna vía."
+    },
+    {
+      "id": "cantos-formulas-e-instrucciones-rituales",
+      "name": "Cantos, fórmulas e instrucciones rituales",
+      "kind": "objeto",
+      "myths": [
+        "creacion",
+        "el-combate-del-sueno-y-la-palabra",
+        "la-canoa-de-moe",
+        "origen-de-la-luna-tikuna",
+        "origen-del-friaje-tikuna",
+        "origen-del-sol-tikuna"
+      ],
+      "decision": "excluded",
+      "reason": "consult_required",
+      "sheets": 0,
+      "note": "Los seis research_notes repiten la misma línea: se parafrasea material publicado y no se reproducen cantos, fórmulas ni instrucciones rituales. No tienen forma visual y darles una sería fabricar liturgia Tikuna."
+    },
+    {
+      "id": "localizaciones-sensibles",
+      "name": "Localizaciones sensibles del territorio",
+      "kind": "lugar",
+      "myths": [
+        "creacion",
+        "el-combate-del-sueno-y-la-palabra",
+        "la-canoa-de-moe",
+        "origen-de-la-luna-tikuna",
+        "origen-del-friaje-tikuna",
+        "origen-del-sol-tikuna"
+      ],
+      "decision": "excluded",
+      "reason": "consult_required",
+      "sheets": 0,
+      "note": "Los seis mitos declaran coordenadas aproximadas del Trapecio Amazónico y no del lugar exacto de cada episodio, y los research_notes excluyen expresamente las localizaciones sensibles. El paisaje se produce genérico y situado, nunca identificable."
+    },
+    {
+      "id": "yuca-carnada",
+      "name": "Raíz de yuca usada como carnada",
+      "kind": "planta",
+      "myths": [
+        "el-combate-del-sueno-y-la-palabra"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_ticuna_pesca",
+      "sheets": 0,
+      "note": "Con ella se pesca a la gente Tikuna y está en el prompt vertical, pero es un objeto menor de una escena: vive en la hoja de utilería con forma documentada."
+    },
+    {
+      "id": "vara-percutora-de-la-canoa",
+      "name": "Vara que golpea la madera de la canoa",
+      "kind": "objeto",
+      "myths": [
+        "la-canoa-de-moe"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_ticuna_pesca",
+      "sheets": 0,
+      "note": "Produce el sonido fino durante el viaje río abajo. Objeto menor de una escena."
+    },
+    {
+      "id": "varas-largas-para-asar",
+      "name": "Varas largas para asar los peces",
+      "kind": "objeto",
+      "myths": [
+        "origen-del-friaje-tikuna"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_ticuna_pesca",
+      "sheets": 0,
+      "note": "Lo que el hombre pide al llegar con el envoltorio. Objeto menor."
+    },
+    {
+      "id": "herramientas-de-talla-de-moe",
+      "name": "Herramientas con que Moe talla la canoa",
+      "kind": "objeto",
+      "myths": [
+        "la-canoa-de-moe"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_ticuna_pesca",
+      "sheets": 0,
+      "note": "El relato dice que talla la madera sin describir el instrumento; la hoja de utilería resuelve una forma documentada en vez de dejar que se invente en cada plano."
+    },
+    {
+      "id": "hamaca",
+      "name": "Hamaca",
+      "kind": "objeto",
+      "myths": [
+        "origen-de-la-luna-tikuna"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_ticuna_pesca",
+      "sheets": 0,
+      "note": "Junto a ella se conserva el jugo de huito y está en el prompt horizontal. Objeto menor pero recurrente en cualquier interior: la hoja debe fijarlo bien."
+    },
+    {
+      "id": "olla-de-barro-rota",
+      "name": "Olla de barro que se rompe",
+      "kind": "objeto",
+      "myths": [
+        "origen-del-sol-tikuna"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_ticuna_domestica",
+      "sheets": 0,
+      "note": "Está en el prompt horizontal como resto abajo del ascenso. Objeto menor; no se confunde con la tinaja, que sí tiene hoja por aparecer en dos relatos."
+    },
+    {
+      "id": "totuma",
+      "name": "Totuma",
+      "kind": "objeto",
+      "myths": [
+        "origen-del-sol-tikuna"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_ticuna_domestica",
+      "sheets": 0,
+      "note": "Con ella recoge el achiote derramado en el suelo. Objeto menor de una acción."
+    },
+    {
+      "id": "chambira",
+      "name": "Fibra de chambira",
+      "kind": "planta",
+      "myths": [
+        "origen-del-sol-tikuna"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_ticuna_domestica",
+      "sheets": 0,
+      "note": "Se seca al sol para tejidos y cierra el relato ligando el astro al trabajo cotidiano. Está en el prompt vertical. Material menor, pero debe tener forma documentada y no pasar por otra fibra."
+    },
+    {
+      "id": "maiz-y-mazorcas",
+      "name": "Maíz, mazorcas y los tres granos",
+      "kind": "planta",
+      "myths": [
+        "la-canoa-de-moe"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_ticuna_domestica",
+      "sheets": 0,
+      "note": "Las mazorcas que parecen intactas y los tres granos con que Moru llena tres tinajas. Objeto menor del que depende el malentendido."
+    },
+    {
+      "id": "hilo-asociado-con-la-wocha",
+      "name": "Hilo asociado con la planta wocha",
+      "kind": "objeto",
+      "myths": [
+        "origen-de-la-luna-tikuna"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_ticuna_domestica",
+      "sheets": 0,
+      "note": "El joven pide recuperarlo antes de abrir la chagra nueva. La paráfrasis es deliberadamente vaga y la hoja de utilería debe dejarlo así de sobrio, sin inventarle uso ritual."
+    }
+  ],
+  "sheet_groups": [
+    {
+      "id": "hoja_utileria_ticuna_pesca",
+      "kind": "objeto",
+      "covers": [
+        "yuca-carnada",
+        "vara-percutora-de-la-canoa",
+        "varas-largas-para-asar",
+        "herramientas-de-talla-de-moe",
+        "hamaca"
+      ],
+      "sheets": 1,
+      "note": "Utilería del río, la canoa y la pesca: cinco objetos menores que ninguna escena describe y que el modelo inventaría distinto cada vez. Una hoja fija material, escala y acabado."
+    },
+    {
+      "id": "hoja_utileria_ticuna_domestica",
+      "kind": "objeto",
+      "covers": [
+        "olla-de-barro-rota",
+        "totuma",
+        "chambira",
+        "maiz-y-mazorcas",
+        "hilo-asociado-con-la-wocha"
+      ],
+      "sheets": 1,
+      "note": "Utilería de la casa y la chagra: los cinco objetos menores del Sol, la canoa de Moe y la Luna. Incluye la fibra de chambira, que cierra un relato y no puede quedar sin forma documentada."
+    }
+  ],
+  "totals": {
+    "entities": 95,
+    "required": 42,
+    "embedded": 42,
+    "excluded": 11,
+    "sheets": 53
+  }
+}
