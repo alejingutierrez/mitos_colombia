@@ -69,7 +69,7 @@ export const andoqueSources = {
     title: "Pueblo Andoke",
     author: "Comunidad Andoke de Aduche",
     type: "sitio comunitario contemporáneo",
-    url: "https://puebloandoke.com/",
+    url: "https://puebloandoke.org/",
     summary:
       "Presenta iniciativas, territorio y vida comunitaria desde una plataforma vinculada al pueblo Andoke.",
     limitation:
@@ -79,11 +79,11 @@ export const andoqueSources = {
     title: "Expedición Andoke",
     author: "Instituto Geográfico Agustín Codazzi y pueblo Andoke",
     type: "cartografía participativa y contexto territorial",
-    url: "https://expediciones.igac.gov.co/andoque/",
+    url: "https://expediciones.igac.gov.co/andoke/",
     summary:
-      "Sitúa el territorio, la memoria geográfica y el trabajo participativo contemporáneo con la comunidad Andoke.",
+      "Sitúa el territorio, la memoria geográfica y el trabajo participativo contemporáneo con la comunidad Andoke. La expedición del 4 al 9 de noviembre de 2024 en el Resguardo Predio Putumayo registró 19 lugares, de los cuales 11 son sitios sagrados y 6 tradicionales.",
     limitation:
-      "Su propósito es territorial, no narrativo; no constituye otra versión de cada mito.",
+      "Su propósito es territorial, no narrativo; no constituye otra versión de cada mito. Los once sitios sagrados que publica se tratan como localización reservada: se citan, no se ilustran de forma identificable.",
   }),
 };
 

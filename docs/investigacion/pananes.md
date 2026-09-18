@@ -503,7 +503,6 @@ testimonio deja ver del duende: **nadie lo vio.**
 | `pan-origen-blog-2010` | community_voice | Memoria digital comunitaria de Panán | El origen de los Pananes: La Tuta | https://origendelospananes.blogspot.com/2010/10/el-origen.html | Versión comunitaria del origen; La Tuta a unos 400 m del resguardo; María Panana como «el feto o guagua que se estaba criando dentro de la laguna» | Blog sin autoría individual ni fecha de revisión; su versión de María Panana **contradice la contención del canon** |
 | `pan-historia-blog` | territorial | Memoria digital comunitaria de Panán | Historia del Resguardo Indígena de Panán | https://historiaresguardoindigenapanan.blogspot.com/ | Veredas, hidrografía y grafías alternas (Guamorran, Cualchio) | Archivo local sin aparato crítico |
 | `pan-ojeda-2006` | academic | Andrea Ojeda Guerrero | Medicina tradicional en el Resguardo Indígena de Panán | https://sired.udenar.edu.co/14318/ | Medicina propia, plantas y categorías comunitarias de enfermedad; aprobación de autoridades del resguardo | Sólo ficha de repositorio consultada; no se leyó el texto completo |
-| `pan-ortega-2020` | academic | Andrea Carolina Ortega Valenzuela (U. de Caldas) | La constante creación del mundo del cueche. La vida de los indígenas pasto del resguardo de Cumbal | citado en CNMH 2021, pp. 35-36 y bibliografía | Marco de lugares pesados / sangre liviana y pesada; cueche como enfermedad de monte | **No se localizó el texto completo en línea**; se cita a través del CNMH |
 | `pan-cangahua-orstom` | academic | PRONAREG–ORSTOM / IRD | Los suelos con cangahua en el Ecuador | https://horizon.documentation.ird.fr/exl-doc/pleins_textes/pleins_textes_7/divers2/010012918.pdf | Cangahua = «tierra estéril» en quichua; paleosuelo «muy compacto, duro», «maciza, amarillenta», bajo horizonte «pardo claro, arenoso fino» | Es Ecuador, no Nariño; la formación es la misma unidad interandina pero el dato no es local de Panán |
 | `pan-uribe-icanh` | academic | María Victoria Uribe | Pastos y Quillacingas: dos grupos étnicos en busca de identidad arqueológica (Rev. Col. de Antropología, ICANH) | https://revistas.icanh.gov.co/index.php/rca/article/view/1844 | Secuencia Capulí–Piartal–Tuza y su atribución étnica | Sólo ficha y resumen consultados |
 | `pan-tuza-cuasmal` | academic | Marco Vargas (ESPOL) | Análisis de la cerámica Cuasmal o Tuza, sitio 02C1-044, San Gabriel | https://www.dspace.espol.edu.ec/bitstream/123456789/24316/1/Art%C3%ADculo%20Tesis%20Marco%20Vargas.pdf | Color base blanco hueso, diseños en negro y rojo claro; negativo y positivo; formas: platos hondos de base anular, ánforas, ocarinas | **El PDF no se pudo descargar** (conexión interrumpida); el dato proviene del resumen indexado, no de lectura directa |
@@ -514,6 +513,21 @@ testimonio deja ver del duende: **nadie lo vio.**
 **Transmisiones, no corroboraciones.** Los dos blogs comunitarios, el Plan de Vida y el
 corpus de 2016 comparten autores y fuentes orales: Dumer Mamián está detrás del dragón de
 tres cabezas en las tres. Cuentan como **una** transmisión sobre ese punto, no como tres.
+
+**Una fuente retirada del expediente.** Ortega, Andrea Carolina (2020), *La constante
+creación del mundo del cueche. La vida de los indígenas pasto del resguardo de Cumbal*,
+trabajo de grado en Antropología de la Universidad de Caldas, **no tiene aquí localizador
+consultable y por eso no figura en la tabla**. Es la fuente de donde salen el marco de
+lugares pesados y livianos, el de sangre pesada y liviana, y la inclusión del cueche entre
+las enfermedades de monte junto al mal viento y la malora: es decir, lo más útil que tiene
+este dossier para la dimensión simbólica. Se buscó en el repositorio institucional de la
+Universidad de Caldas —que responde con una pantalla de verificación antibots y no entrega
+resultados— y en el agregador RedCol de Minciencias, cuya búsqueda devolvió error 500. Lo
+único verificable es la cita dentro del CNMH 2021, pp. 35-36, así que **las dos
+afirmaciones que dependían de ella quedan atribuidas al CNMH**, que es donde de verdad se
+leyeron, con la advertencia de que ahí son transmisión y no lectura. Si alguien consigue el
+texto de primera mano, la entrada vuelve al expediente; mientras tanto vale más la carencia
+declarada que una línea que nadie puede abrir.
 
 ---
 
@@ -646,9 +660,13 @@ representación del bastón de mando y la lista de sitios que aceptan lámina.
 5. **La Basílica encantada: sin estudio.** El propio corpus «lamenta el desinterés de
    autoridades indígenas por estudiar el lugar». No hay levantamiento, ni datación, ni
    planta. *Consecuencia*: la lámina no puede resolver la pregunta; tiene que sostenerla.
-6. **Ortega 2020 no se leyó directamente.** El marco de lugares pesados y sangre
-   liviana/pesada, que es el más útil de todo el dossier para lo simbólico, se cita a través
-   del CNMH.
+6. **Ortega 2020 no se leyó y se retiró del expediente por no tener localizador
+   consultable.** El marco de lugares pesados y de sangre liviana y pesada, que es el más
+   útil de todo el dossier para lo simbólico, se cita a través del CNMH 2021 (pp. 35-36). El
+   repositorio de la Universidad de Caldas devuelve una pantalla antibots y la búsqueda de
+   RedCol falla con error 500. *Consecuencia*: las dos afirmaciones que dependían de esa
+   fuente quedan atribuidas al CNMH y marcadas como transmisión; localizar el texto de
+   primera mano es la tarea pendiente más rentable de este expediente.
 7. **La cerámica Tuza se documentó por resumen, no por lectura.** El PDF de ESPOL no
    descargó y el artículo de Banrepcultural devolvió página vacía. Los colores declarados
    —blanco hueso, negro, rojo claro— deben verificarse antes de fijar la paleta de la hoja
