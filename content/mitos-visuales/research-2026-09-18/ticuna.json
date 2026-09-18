@@ -132,14 +132,44 @@
       "limitations": "Sólo se leyeron los resúmenes de repositorio, no los textos completos"
     },
     {
-      "id": "tik.deslinde",
+      "id": "tik.humboldt2012",
+      "role": "territorial",
+      "title": "Libro rojo de peces dulceacuícolas de Colombia, ficha de Potamotrygon motoro",
+      "author": "Instituto de Investigación de Recursos Biológicos Alexander von Humboldt",
+      "year": 2012,
+      "locator": "https://reporte.humboldt.org.co/assets/docs/2016/1/101/libro-rojo-de-peces-dulceacuicolas-de-colombia-2012-ficha-potamotrygon-motoro.pdf",
+      "supports": "La raya de agua dulce del Amazonas colombiano: dorso gris, marrón o beige con ocelos generalmente tricolores —centro amarillo, anillo intermedio anaranjado y anillo periférico negro—, mayores que el diámetro del ojo y dispuestos en unas cinco series elípticas",
+      "limitations": "Es una ficha de estado de conservación: da morfología y distribución, no relación cultural con los tikuna"
+    },
+    {
+      "id": "tik.inp2018",
       "role": "comparison",
-      "title": "Deslinde con los corpus vecinos del Amazonas colombiano y con el repertorio de máscaras de yanchama",
-      "author": "Censos del lote 2026-09-18 y biblia huitoto cerrada",
+      "title": "Ficha técnica 005, Brycon amazonicus",
+      "author": "Instituto Nacional de Pesca, Ecuador",
+      "year": 2018,
+      "locator": "https://www.institutopesca.gob.ec/wp-content/uploads/2018/01/FICHA-005-Brycon-amazonicus.pdf",
+      "supports": "El sábalo: cuerpo gris plateado claro, algo más oscuro en el dorso, aletas con leve coloración rojiza, banda lateral oscura del opérculo a la base de la cola, escamas cicloideas y caudal ligeramente bifurcada, hasta unos 60 cm; adultos omnívoros con preferencia por frutos y semillas",
+      "limitations": "Es una ficha pesquera ecuatoriana; se usa por morfología de la especie, no por su presencia concreta en el trapecio, que consta aparte en un estudio poblacional de Leticia"
+    },
+    {
+      "id": "tik.adw",
+      "role": "comparison",
+      "title": "Animal Diversity Web, cuentas de Cuniculus paca, Tapirus terrestris, Eunectes murinus, Electrophorus electricus, Myoprocta pratti y Myoprocta acouchy",
+      "author": "University of Michigan Museum of Zoology",
+      "year": 0,
+      "locator": "https://animaldiversity.org/accounts/Cuniculus_paca/",
+      "supports": "Morfología de los animales del corpus: la paca con pelaje pardo oscuro a negro, vientre pálido y tres a cinco hileras longitudinales de manchas blancas en los flancos; la danta pardo negruzca con áreas blanquecinas en mejillas, pecho y borde superior de las orejas y crin de pelos ralos de la frente a los hombros; la anaconda verde oliva con vientre amarillento y manchas redondeadas alternas; la anguila eléctrica de gris a pardo o negro con la parte ventral anterior amarillenta; y las dos especies de Myoprocta entre las que se reparte el nombre tintín",
+      "limitations": "Es un compendio zoológico general, sin relación con el trapecio ni con los tikuna; para la danta advierte además que la cría manchada corresponde a otra especie del género"
+    },
+    {
+      "id": "tik.gbif",
+      "role": "academic",
+      "title": "Registros de ocurrencia de la familia Gruidae en Suramérica, API de ocurrencias de GBIF, consultada el 18 de septiembre de 2026",
+      "author": "GBIF",
       "year": 2026,
-      "locator": "content/mitos-visuales/censo-2026-09-18/",
-      "supports": "Sirve sólo para deslindar: ninguna iconografía huitoto, andoque, ufaina, tucano ni desana entra en esta biblia, y la máscara de yanchama no pertenece a este corpus",
-      "limitations": "Comparación negativa: no aporta ningún rasgo visual tikuna"
+      "locator": "https://api.gbif.org/v1/occurrence/search?familyKey=9313&country=CO&limit=0&facet=scientificName",
+      "supports": "Verificación directa de que no hay grullas nativas en Suramérica: Colombia tiene ocho registros de Gruidae y las tres especies presentes son del Viejo Mundo —Anthropoides paradiseus, Balearica regulorum y Grus grus—, con seis de los ocho registros como especímenes preservados; Perú, Ecuador, Venezuela y Bolivia tienen cero",
+      "limitations": "Es un agregador y por tanto una sola transmisión; confirma la ausencia de la familia pero no dice qué ave nombra el relato"
     }
   ],
   "evidence_matrix": [
@@ -569,7 +599,7 @@
       "basis": "documented_core",
       "sensitivity": "public",
       "source_ids": [
-        "tik.deslinde"
+        "tik.humboldt2012"
       ],
       "affects": [
         "raya"
@@ -580,7 +610,7 @@
       "basis": "documented_core",
       "sensitivity": "public",
       "source_ids": [
-        "tik.deslinde"
+        "tik.adw"
       ],
       "affects": [
         "boruga-animal",
@@ -592,7 +622,7 @@
       "basis": "documented_core",
       "sensitivity": "consult_required",
       "source_ids": [
-        "tik.deslinde",
+        "tik.gbif",
         "tik.moruapu2000"
       ],
       "affects": [
@@ -609,7 +639,7 @@
       "basis": "documented_core",
       "sensitivity": "public",
       "source_ids": [
-        "tik.deslinde"
+        "tik.inp2018"
       ],
       "affects": [
         "sabalo",
@@ -622,7 +652,7 @@
       "basis": "documented_core",
       "sensitivity": "public",
       "source_ids": [
-        "tik.deslinde"
+        "tik.adw"
       ],
       "affects": [
         "gran-boa",
@@ -634,7 +664,7 @@
       "basis": "documented_core",
       "sensitivity": "public",
       "source_ids": [
-        "tik.deslinde"
+        "tik.adw"
       ],
       "affects": [
         "danta"
@@ -646,7 +676,7 @@
       "sensitivity": "public",
       "source_ids": [
         "tik.santos2010",
-        "tik.deslinde"
+        "tik.adw"
       ],
       "affects": [
         "tintin"
@@ -788,6 +818,99 @@
         "canoa-de-moe",
         "vara-percutora-de-la-canoa"
       ]
+    },
+    {
+      "claim": "El cerro Woruapü o Moruapü está documentado por función y por nombre, con dos grafías que el canon no arbitra: en su cima siembra el tintín el corazón de Wone, y de ahí crece el árbol de umarí; y es el punto al que Moe baja por el río para encontrarse con Moru. La compilación de 2000 lleva su nombre en el título, de modo que el cerro nombra un libro entero de relatos de mayores.",
+      "basis": "documented_core",
+      "sensitivity": "public",
+      "source_ids": [
+        "tik.santos2010",
+        "tik.moruapu2000"
+      ],
+      "affects": [
+        "cerro-woruapu-moruapu",
+        "tintin",
+        "corazon-de-wone",
+        "arbol-de-umari",
+        "moe",
+        "moru"
+      ]
+    },
+    {
+      "claim": "Ninguna fuente describe la forma del cerro: no hay altura, perfil, roca ni vegetación. Se dibuja como un relieve sin rasgos identificables, y además debe serlo: el canon excluye las localizaciones sensibles y fija coordenadas aproximadas del Trapecio y no el lugar exacto de cada episodio. Lo único que la lámina puede sostener es la relación —una cima que recibe algo sembrado y un punto al final de un viaje río abajo—, no un accidente geográfico reconocible.",
+      "basis": "uncertain",
+      "sensitivity": "contextual",
+      "source_ids": [
+        "tik.santos2010",
+        "tik.moruapu2000"
+      ],
+      "affects": [
+        "cerro-woruapu-moruapu",
+        "localizaciones-sensibles"
+      ]
+    },
+    {
+      "claim": "El árbol del centro de la chagra está documentado por su papel y por un rasgo físico decisivo: el joven abre una chagra nueva, en el centro crece un árbol, cuando está grande llama a su cuñado para derribarlo y, mientras el otro corta la base, él entra por una abertura del tronco y trepa hacia el espacio. El interior hueco y la abertura son lo que hay que resolver; una variante añade que permaneció oculto tres días antes de alumbrar como Luna llena.",
+      "basis": "documented_core",
+      "sensitivity": "public",
+      "source_ids": [
+        "tik.moruapu2000"
+      ],
+      "affects": [
+        "arbol-del-centro-de-la-chagra",
+        "joven-que-se-vuelve-luna",
+        "cunado-del-joven-luna",
+        "chagra"
+      ]
+    },
+    {
+      "claim": "La especie de ese árbol no está documentada, ni su porte, corteza ni hoja. Se resuelve por contraste declarado: no es Wone, que tiene raíces tabloides inmensas y tapa el mundo, ni es el umarí, que nace del corazón sembrado; es un árbol de chagra nueva, es decir joven, aislado y en suelo abierto y quemado. Esa lectura es interpretación editorial reversible, no dato.",
+      "basis": "uncertain",
+      "sensitivity": "consult_required",
+      "source_ids": [
+        "tik.moruapu2000"
+      ],
+      "affects": [
+        "arbol-del-centro-de-la-chagra",
+        "wone",
+        "arbol-de-umari"
+      ]
+    },
+    {
+      "claim": "El envoltorio de hojas con peces está documentado por su función y por su contraste de escala: el hombre vuelve del viaje con un paquete pequeño de hojas con unos pocos peces y pide varas largas para asarlos; la mujer lo juzga demasiado pequeño y lo abre de un golpe, y los peces se multiplican hasta llenar la casa. Pequeño y despreciable hasta que se abre: la lámina necesita el mismo objeto en sus dos usos, no dos modelos.",
+      "basis": "documented_core",
+      "sensitivity": "public",
+      "source_ids": [
+        "tik.moruapu2000"
+      ],
+      "affects": [
+        "envoltorio-de-hojas-con-peces",
+        "peces-del-envoltorio",
+        "varas-largas-para-asar",
+        "hombre-grulla",
+        "esposa-del-hombre-grulla",
+        "vivienda-tikuna"
+      ]
+    },
+    {
+      "claim": "Ni la especie de la hoja ni la técnica del atado están documentadas para los tikuna en ninguna fuente consultada. Se dibuja el envoltorio como hoja doblada sobre sí misma sin fibra visible ni nudo descrito, y esa elección queda declarada como interpretación editorial; la alternativa —inventarle un amarre— es exactamente la trampa chamí en miniatura.",
+      "basis": "uncertain",
+      "sensitivity": "consult_required",
+      "source_ids": [
+        "tik.moruapu2000"
+      ],
+      "affects": [
+        "envoltorio-de-hojas-con-peces"
+      ]
+    },
+    {
+      "claim": "Deslinde de esta biblia, declarado como decisión editorial y no como hallazgo de fuente: ninguna ficha toma iconografía de los corpus vecinos del Amazonas colombiano —huitoto, andoque, ufaina, tucano, desana—, que tienen biblia o censo propio, y ninguna usa la máscara de yanchama como ambientación amazónica genérica. El deslinde no lo dice una fuente: lo decide esta edición, y por eso es reversible y queda escrito.",
+      "basis": "editorial_interpretation",
+      "sensitivity": "public",
+      "source_ids": [],
+      "affects": [
+        "comunidad-tikuna"
+      ]
     }
   ],
   "cultural_review": {
@@ -878,6 +1001,21 @@
       "question": "¿Cuánta lluvia, qué meses y qué caída térmica tiene el friaje en el Amazonas colombiano según el IDEAM?",
       "searched": "búsqueda dirigida al IDEAM",
       "result": "No encontrada una caracterización del IDEAM para el Amazonas colombiano. Se usa la del SENAMHI peruano con su límite declarado: la caída es mayor en la selva sur que en la norte."
+    },
+    {
+      "question": "¿Qué forma tiene el cerro Woruapü o Moruapü: altura, perfil, roca, vegetación?",
+      "searched": "Santos 2010 íntegro, la compilación de Moruapü vía canon, fuentes territoriales del Trapecio",
+      "result": "No encontrado, y probablemente no deba buscarse más: el canon excluye las localizaciones sensibles. Se dibuja la relación —cima sembrada, destino de un viaje río abajo— y no un accidente reconocible."
+    },
+    {
+      "question": "¿Qué especie es el árbol que crece en el centro de la chagra nueva y por cuyo tronco sube el joven Luna?",
+      "searched": "canon de origen-de-la-luna-tikuna, Santos 2010, botánica de chagra amazónica",
+      "result": "No encontrado. Se resuelve por contraste declarado con Wone y con el umarí, como árbol joven y aislado de chagra recién abierta, y la elección queda marcada como editorial."
+    },
+    {
+      "question": "¿De qué hoja se hace el envoltorio de peces y cómo se ata?",
+      "searched": "canon de origen-del-friaje-tikuna, Santos 2010, etnobotánica del trapecio",
+      "result": "No encontrado ni la especie ni la técnica. Se dibuja hoja doblada sin fibra ni nudo descrito, declarado como editorial."
     }
   ],
   "visual_system_draft": {

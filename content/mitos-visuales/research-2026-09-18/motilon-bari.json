@@ -140,16 +140,6 @@
       "locator": "https://www.persee.fr/doc/jsa_0037-9174_1966_num_55_2_2517",
       "supports": "Sería la fuente de planimetría del bohío: su índice trata cuatro casas nombradas individualmente, Orobia, Abratatu-Bagduibi, Aytrabana y Sabourun, lo que hace muy probable que contenga plantas y medidas por casa. Pinton 1965 es la monografía acompañante, con campo de marzo a diciembre de 1964 en la vertiente occidental de la Sierra de Perijá",
       "limitations": "No se pudo leer el cuerpo del texto: Persée carga las imágenes de forma diferida y la descarga en PDF devuelve 403. Sólo se verificaron la referencia y el índice"
-    },
-    {
-      "id": "bari.comparacion",
-      "role": "comparison",
-      "title": "Deslinde con Yuko-Yukpa y Wayuu, y con los ciclos caribes",
-      "author": "Censo motilon-bari 2026-09-18 y expediente editorial",
-      "year": 2026,
-      "locator": "content/mitos-visuales/censo-2026-09-18/motilon-bari.json",
-      "supports": "Sirve sólo para deslindar: Yuko-Yukpa y Wayuu son pueblos vivos nombrados dentro del relato de las cenizas y quedan fuera de toda representación; el Yukpa es además el pueblo que sí figura en el Auto 004 de 2009, lo que explica la confusión frecuente entre los dos Motilones; y el expediente ya descartó La historia del monito Pwácari por paralelos caribes sin atribución barí firme",
-      "limitations": "Comparación negativa: no aporta ningún rasgo visual barí"
     }
   ],
   "evidence_matrix": [
@@ -911,6 +901,109 @@
       "affects": [
         "yacura"
       ]
+    },
+    {
+      "claim": "La Señora de la Luna está documentada por lo que hace y por el territorio que gobierna, no por su cuerpo: es dueña de los animales, autoriza la caza bajo la condición del encuentro íntimo, y cuando la condición se rompe corta el bejuco. El territorio que gobierna sí está descrito —iluminado, con animales mansos y abundantes—, y los hombres vuelven de él fríos, débiles y enfermos. La lámina la reconoce por su dominio: es la única figura del corpus cuyo retrato es su territorio.",
+      "basis": "documented_core",
+      "sensitivity": "public",
+      "source_ids": [
+        "bari.rocha2010",
+        "bari.mandato2021"
+      ],
+      "affects": [
+        "senora-de-la-luna",
+        "territorio-iluminado-de-la-luna",
+        "animales-mansos-de-la-luna",
+        "cazadores-bari-de-la-luna",
+        "bejuco-celeste",
+        "luna"
+      ]
+    },
+    {
+      "claim": "Ninguna fuente describe el cuerpo de la Señora de la Luna: ni edad, ni porte, ni vestido, ni adorno. Y las tres ausencias generales del corpus barí pesan aquí más que en ninguna otra ficha —no hay pintura corporal documentada, no hay adorno de plumas atestiguado y los Barí no tenían especialistas religiosos—, de modo que cualquier atributo que la señalara como deidad sería invención. El prompt editorial ya prohíbe el palacio y el romance; se añade la prohibición de personificación grecorromana y de cualquier insignia. Es figura sin retrato, declarada como tal. No se funde con Chibáig, que es otra mujer en otro relato.",
+      "basis": "uncertain",
+      "sensitivity": "consult_required",
+      "source_ids": [
+        "bari.rocha2010",
+        "bari.beckerman"
+      ],
+      "affects": [
+        "senora-de-la-luna",
+        "chibaig",
+        "luna"
+      ]
+    },
+    {
+      "claim": "El bejuco celeste está documentado en sus dos variantes y en sus dos estados, y el canon prohíbe promediarlas: en la versión de Galvis un bejuco resistente une la Luna y la Tierra, los cazadores suben por él y la Señora de la Luna lo corta; en la de De Alcácer los Barí fabrican un bejuco enorme para descender del cielo y un gallinazo lo corta después. Fabricado en una variante y crecido en la otra, tenso entre dos mundos y luego seccionado y colgante: son dos siluetas, y por eso la ficha paga dos hojas.",
+      "basis": "documented_core",
+      "sensitivity": "public",
+      "source_ids": [
+        "bari.rocha2010",
+        "bari.mandato2021"
+      ],
+      "affects": [
+        "bejuco-celeste",
+        "senora-de-la-luna",
+        "gallinazo-zamuro",
+        "luna",
+        "territorio-iluminado-de-la-luna"
+      ]
+    },
+    {
+      "claim": "La especie del bejuco no está documentada, pero el bejuco sí es materia barí corriente y eso da el anclaje sin inventar: antes de que hubiera ríos, la gente calmaba la sed cortando bejucos que guardaban un líquido claro y dulce. El bejuco celeste se dibuja con la materia de un bejuco de agua real —grueso, fibroso, cortable— y sin especie declarada; su escala cosmológica es lo editorial, su materia no.",
+      "basis": "uncertain",
+      "sensitivity": "public",
+      "source_ids": [
+        "bari.memoria2016",
+        "bari.rocha2010"
+      ],
+      "affects": [
+        "bejuco-celeste",
+        "bejucos-de-agua"
+      ]
+    },
+    {
+      "claim": "Chibáig sí tiene cuerpo documentado, y es la única figura celeste barí que lo tiene. Sabaseba escogió a una mujer Saimadoyi que acostumbraba caminar siempre desnuda en la oscuridad y que se caracterizaba porque su palidez la hacía brillar; le encargó pasearse por el cielo, sobre todo de noche, y la llamó Chibáig. Está adornada de collares que se le ven cuando aparece; muchas veces se cansa de su trabajo y duerme, y por eso hay noches en que no se la ve y otras en que empieza antes de que llegue la noche, sin que termine el día. Las fases lunares se explican como sombreros: luna llena es que se ha puesto su sombrero grande, y luna pequeña su sombrero pequeño.",
+      "basis": "documented_core",
+      "sensitivity": "public",
+      "source_ids": [
+        "bari.hernandez2015",
+        "bari.mundobari"
+      ],
+      "affects": [
+        "chibaig",
+        "luna",
+        "nandou",
+        "saimadoyi",
+        "dia-y-noche",
+        "fenomenos-del-cielo-ordenado"
+      ]
+    },
+    {
+      "claim": "Los sombreros de Chibáig conectan con un objeto barí real y no hay que inventarles forma: el CNMH lista los sombreros de lukua entre lo que los Barí hacen. El sombrero grande y el pequeño se dibujan como dos tamaños de una misma pieza tejida barí, no como un tocado simbólico; y los collares que se le ven al aparecer son los collares que la propia cartilla lista entre los objetos del pueblo, cuyo material ninguna fuente especifica. Esto matiza el negativo general del corpus: no hay adorno de plumas, pero sí hay collares y sombreros, y Chibáig los lleva.",
+      "basis": "academic_hypothesis",
+      "sensitivity": "contextual",
+      "source_ids": [
+        "bari.hernandez2015",
+        "bari.somosbari",
+        "bari.cnmh2018"
+      ],
+      "affects": [
+        "chibaig",
+        "comunidad-bari",
+        "luna"
+      ]
+    },
+    {
+      "claim": "Deslinde de esta biblia, declarado como decisión editorial y no como hallazgo de fuente: Yuko-Yukpa y Wayuu quedan fuera de toda representación pese a estar nombrados dentro del relato de las cenizas, porque son pueblos vivos con biblia propia o en curso y porque ese episodio es justamente donde una imagen produciría una jerarquía racial; y no se toma iconografía yukpa, u'wa ni caribe, en coherencia con el descarte editorial previo de La historia del monito Pwácari por paralelos caribes sin atribución barí firme. Conviene recordar que el Yukpa es el pueblo que sí figura en el Auto 004 de 2009, lo que explica la confusión frecuente entre los dos Motilones.",
+      "basis": "editorial_interpretation",
+      "sensitivity": "public",
+      "source_ids": [],
+      "affects": [
+        "yuko-yukpa",
+        "wayuu-o-guajiros",
+        "comunidad-bari"
+      ]
     }
   ],
   "cultural_review": {
@@ -1011,6 +1104,16 @@
       "question": "¿Dónde está el anexo de especies de Avendaño 2012, con las 266 aves de las tierras bajas del Catatumbo?",
       "searched": "revista de la Sociedad Antioqueña de Ornitología y repositorios",
       "result": "No localizado en ninguna parte; el PDF disponible de 14 páginas no lo contiene. Sin él, la avifauna del corpus se resuelve con GBIF, que es una sola transmisión."
+    },
+    {
+      "question": "¿Cómo es el cuerpo de la Señora de la Luna: edad, porte, vestido, adorno?",
+      "searched": "antología de Rocha, Mandato 2021, memoria 2016, cartilla Somos Barí, Mundo Barí, tesis de Hernández Gómez",
+      "result": "No encontrado. Es figura sin retrato y se reconoce por el territorio que gobierna, que sí está descrito. Contrasta con Chibáig, que sí tiene cuerpo documentado; no se funden."
+    },
+    {
+      "question": "¿Qué especie de bejuco es el bejuco celeste?",
+      "searched": "antología de Rocha, Mandato 2021, memoria 2016, plan de manejo del parque",
+      "result": "No encontrado. El anclaje disponible es que los bejucos de agua —gruesos, fibrosos, cortados para beber— son materia barí documentada; la especie queda sin declarar."
     }
   ],
   "visual_system_draft": {

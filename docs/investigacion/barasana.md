@@ -450,6 +450,31 @@ corpus usa también en registro público.
 | 26 | El registro visual no puede ser arqueológico: Hee Yaia Keti Oka es un sistema vivo y hay gobierno propio en funciones | `documented_core` | public | `br-planvida-2025` | todas |
 | 27 | El material del puente de Warimi es desconocido: la fuente sólo dice que tiene amarras y que se sueltan | `uncertain` | public | canon congelado | `puente_de_warimi`, `amarras_del_puente` |
 | 28 | La canoa-anaconda, el dueño de la noche con su recipiente, las casas de paso, la Puerta de las Aguas y la danta existen también en Desana y Tucano con otros nombres y otras funciones | `variant` | public | `br-acaipi-2015`, dossiers desana y tucano | `anaconda_yeba`, `vasija`, `anacondas_ancestrales`, `danta_barasana`, `rio_de_leche` |
+| 29 | El incesto del Sol registrado entre los Desana no pertenece al corpus barasana y se registra para que la cercanía de área no lo cuele: «los Barasana no cuentan esa secuencia del mismo modo» | `variant` | do_not_visualize | `br-reichel-1971`, `br-shj-palm-1979` | `sol_barasana`, `luna_muyhu`, `eclipse_y_luna_roja` |
+| 30 | La Anaconda de los Barasana es Yeba y sólo Yeba; no se le asignan las trayectorias de Anaconda Celeste, Remedio ni de Agua | `documented_core` | contextual | `br-acaipi-2015` | `anaconda_yeba`, `anaconda_celeste`, `anacondas_ancestrales`, `gente_barasano` |
+
+### 12-bis · Las nueve fichas que faltaban
+
+La primera versión de esta matriz dejaba nueve fichas del censo sin ninguna afirmación que las
+sostuviera —se habrían producido de memoria—. Volví al texto íntegro de la publicación de 2015 y
+cinco tenían material bueno; cuatro no lo tienen en ninguna fuente accesible y quedan con la
+indeterminación declarada. Dos de esas cuatro —**Umu** y **la gran quema**— el editor debería
+considerar pasarlas a `embedded`: corregir el censo es mejor salida que fabricar evidencia para algo
+que quizá no había que dibujar aparte.
+
+| # | afirmación | base | sensibilidad | fuentes | afecta |
+|---|---|---|---|---|---|
+| 31 | El Diablo de Breo es cuerpo propio y trabajador del reparto: la publicación lo pone tres veces junto a la Pava, el Torcedor de Cumare y los Jaguares —«pegaban castañas de kutu», «colgando racimos»—. Su materia es el breo, resina negra que la misma fuente usa con cera de abejas en la prevención-rezo | `documented_core` | contextual | `br-acaipi-2015` | `diablo_de_breo`, `gente_frutales_silvestres`, `torcedor_de_cumare`, `kata_bahi`, `jaguares_de_yurupari` |
+| 32 | Las palmas y frutales tienen especies, nombres en lengua y relaciones de color: «Los gusanos mojojoy recibirán **el color del Caraná**»; «sus semillas serán mis dientes» sobre ibacaba y castaña; y el calendario nombra Guama ~Bedé, Caimo ~Kadea, Uva Iye, Chontaduro Hota, Umarí ~Woabi. La lámina se ordena por destino —oriente, sabana, orilla—, no como vitrina botánica | `documented_core` | public | `br-acaipi-2015` | `palmas_y_frutales_silvestres`, `gente_frutales_silvestres`, `calendario_y_epocas`, `arbol_de_caimo`, `selva_pira_parana` |
+| 33 | Sawa Sawa es hijo del Gran Chamán ~Bedi y hermano menor del Sol junto con Kahe Sawari; corta una **palma de Asaí**, la usa para bajar a su hermano al hueco y la suelta a media altura. Antagonista por engaño, no por fuerza | `documented_core` | contextual | `br-acaipi-2015` | `sawa_sawa`, `kahe_sawari`, `sol_barasana`, `gran_quema` |
+| 34 | El estado de guacamaya se muestra, pero su contexto en la publicación es restringido: el nido se propone para sacar plumas y hacer «Coronas de Danza -Gahe ~Odi- para nuestros dos hijos que han mirado Yuruparí». La lámina muestra la transformación y **nunca** la corona ni el contexto de iniciación | `documented_core` | do_not_visualize | `br-acaipi-2015` | `sawa_sawa`, `kahe_sawari`, `gente_barasano` |
+| 35 | El cráneo de Kahe Sawari se convierte en el Cuenco de Cera de Abejas de la Tierra, «otorgado al grupo étnico barasano, como símbolo de nuestro planeta». La transformación es pública; el Cuenco está entre los poderes enumerados del ~kubu y no se representa como objeto | `documented_core` | do_not_visualize | `br-acaipi-2015` | `kahe_sawari`, `cera_de_abejas`, `gran_quema` |
+| 36 | La embarcación de fuego del Sol no está descrita en ninguna fuente accesible: masa de luz en movimiento sobre el río, sin casco, sin quilla, sin remo y sin tripulación, expresamente distinta de la canoa-anaconda. Forma declarada editorial y reversible | `uncertain` | public | `br-shj-palm-1979`, `br-acaipi-2015` | `embarcacion_de_fuego_del_sol`, `sol_barasana`, `kahe_sawari` |
+| 37 | Umu no tiene especie, talla ni color en ninguna fuente accesible. Se resuelve por la acción y por la silueta en vuelo, nunca por el plumaje. **Candidata legítima a `embedded` dentro de `meneri_ya`** | `uncertain` | public | `br-shj-palm-1979` | `umu`, `meneri_ya`, `luna_muyhu` |
+| 38 | Rame sólo está nombrada en el canon vía Hugh-Jones, sin especie ni plumaje: rapaz grande cuya escala se declara por comparación con la figura humana. **No se le presta el cuerpo del «Yuruparí Tigre-Águila» ni el del Cerro-estantillo del Águila-Tigre** que nombra la publicación: son materia restringida y de otro registro | `uncertain` | contextual | `br-shj-palm-1979`, `br-acaipi-2015` | `rame_aguila`, `warimi`, `jaguares_del_trueno` |
+| 39 | «La Gente del Cielo» del ciclo de Warimi no puede leerse como retrato de un pueblo vivo: en la publicación comunitaria esa misma expresión designa a **los Tatuyo**, vecinos reales del Pirá Paraná. Se resuelve por el plano de arriba y por el acto de recomponer, sin ningún rasgo étnico | `variant` | consult_required | `br-acaipi-2015`, `br-shj-palm-1979` | `gente_del_cielo`, `luna_muyhu`, `warimi` |
+| 40 | El caimo es árbol de chagra y no vegetación de selva: la publicación lo nombra en lengua —Caimo ~Kadea— entre los cultivos cosechados. En el relato conduce la acción: «una rama la impulsó al cielo» | `documented_core` | public | `br-acaipi-2015`, `br-shj-palm-1979` | `arbol_de_caimo`, `meneri_ya`, `chagra_barasana`, `calendario_y_epocas` |
+| 41 | La gran quema no está descrita por ninguna fuente accesible: fenómeno de tres fases —prender, extenderse, dejar restos— en capas de papel que consumen, sin cuerpos ardiendo y sin espectáculo de fuego. **Candidata legítima a `embedded` dentro de `kahe_sawari`** | `editorial_interpretation` | contextual | `br-shj-palm-1979`, `br-acaipi-2015` | `gran_quema`, `kahe_sawari`, `sawa_sawa` |
 
 ---
 
@@ -516,7 +541,14 @@ documentos que ellos publicaron.
    Busqué «arena», «playa», «agua negra», «color del agua» en los dos documentos del Pirá Paraná: los
    únicos aciertos de «arena» fueron falsos positivos de OCR. El dato es ecología regional y así queda.
 6. **El material del puente de Warimi es desconocido** y ninguna fuente lo aporta.
-7. **«Hee Botari» aparece en el editorial y no en el canon congelado.** Lo localicé en la publicación
+7. **Cuatro fichas no tienen descripción en ninguna fuente accesible**: la embarcación de fuego del
+   Sol, el ave Umu, el águila Rame y la gran quema. Las cuatro vienen de Hugh-Jones vía el canon y su
+   texto no es accesible. Se sostienen con forma declarada editorial y reversible, y **Umu y la gran
+   quema se señalan al editor como candidatas a `embedded`**.
+8. **«La Gente del Cielo» es también el nombre de los Tatuyo** en la publicación comunitaria. El censo
+   no lo vio. La coincidencia obliga a resolver la ficha sin ningún rasgo étnico, para que no se lea
+   como retrato de un pueblo vecino vivo.
+9. **«Hee Botari» aparece en el editorial y no en el canon congelado.** Lo localicé en la publicación
    de 2015, donde sí está, con el sentido de «Postes del Yuruparí»; queda documentado, pero el canon
    debería incorporarlo o el editorial retirarlo.
 

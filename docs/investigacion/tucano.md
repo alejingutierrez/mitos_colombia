@@ -376,6 +376,9 @@ una sola voz, y ninguna otra fuente del expediente aporta una segunda versión d
 | 22 | El corpus entero descansa sobre una sola transmisión —un etnógrafo, un narrador, un intérprete, 1953–1954— | `documented_core` | public | `tc-fulop-1954`, `tc-fulop-1956` | todas |
 | 23 | El ser cantor nocturno no tiene especie y se resuelve por el sonido, no por el animal | `uncertain` | public | canon congelado | `ser_cantor_nocturno` |
 | 24 | El ciclo de la canoa ancestral, el dueño de la noche con su recipiente, las casas y la danta existen también en Desana y Barasana con otros nombres y otras funciones | `variant` | public | dossiers desana y barasana | `canoa_transformacion_guio`, `dueno_de_la_noche_tucano`, `caja_de_la_noche`, `casas_de_surgimiento`, `vejke_danta` |
+| 25 | Yepá Huáke es autónomo, sopla, interroga, reparte y abandona; no es Yebá Gõãmü, que es formado por la Abuela del Mundo, no tiene cuerpo y su acto es poner límite. En Barasana no hay demiurgo único | `variant` | public | `tc-fulop-1954` | `yepa_huake`, `yupuri_bauro` |
+| 26 | Las semillas del sueño tienen función y destinatario declarados: el dueño de la noche explica que «debían relacionarse con **el corazón**» y que Yepá Huáke repartiría el contenido entre los grupos. Se representan en reparto —de mano a mano, hacia el pecho—, no como carga ni como cosecha | `documented_core` | public | `tc-fulop-1954` | `semillas_del_sueno`, `dueno_de_la_noche_tucano`, `yepa_huake`, `caja_de_la_noche`, `noche_y_sueno` |
+| 27 | Ninguna fuente da especie, tamaño ni forma botánica a las semillas del sueño: sólo el prompt aprobado añade «pequeñas semillas luminosas». Semilla genérica sin especie reconocible, luminosa por función y no por materia, con la indeterminación declarada | `uncertain` | public | `tc-fulop-1954` | `semillas_del_sueno` |
 
 ---
 
@@ -437,6 +440,9 @@ fueron contactadas: es una decisión de alcance, no una imposibilidad.
    ausencia se trata como restricción, no como permiso.
 7. **No hay descripción del color del agua por ninguna fuente tucano.** El dato de aguas negras es
    ecología regional.
+8. **Las semillas del sueño no tienen especie ni forma en ninguna parte.** Sólo hay la función —el
+   sueño ligado al corazón— y el adjetivo «luminosas» del prompt aprobado. La ficha se sostiene con
+   la indeterminación declarada, sin elegir una planta.
 
 ---
 

@@ -532,6 +532,46 @@ propio relato del friaje: «no bastaba con mirar desde su experiencia humana».
 
 ---
 
+### Tres fichas que sólo la carencia sostiene
+
+La compuerta de la Etapa 0 encontró tres entidades `required` que ninguna
+afirmación de este dossier tocaba. Se van a producir igual, así que quedan aquí
+con lo que la fuente sí da y con lo que no da, que es la respuesta honesta.
+
+**El cerro Woruapü o Moruapü.** Está documentado por función y por nombre, con
+dos grafías que el canon no arbitra: en su cima siembra el tintín el corazón de
+Wone, y de ahí crece el umarí; y es el punto al que Moe baja por el río para
+encontrarse con Moru. La compilación de 2000 lleva su nombre en el título, de
+modo que el cerro nombra un libro entero de relatos de mayores. **Ninguna fuente
+describe su forma**: no hay altura, perfil, roca ni vegetación. Y aquí la
+carencia coincide con una prohibición: el canon excluye las localizaciones
+sensibles y sus coordenadas son aproximadas al Trapecio, no al lugar de cada
+episodio. Se dibuja la relación —una cima que recibe algo sembrado, un punto al
+final de un viaje río abajo— y **no un accidente geográfico reconocible**.
+
+**El árbol del centro de la chagra.** Tiene un rasgo físico decisivo y
+documentado: el joven abre una chagra nueva, en el centro crece un árbol,
+cuando está grande llama a su cuñado para derribarlo y, mientras el otro corta
+la base, **él entra por una abertura del tronco** y trepa hacia el espacio. El
+interior hueco y la abertura son el sujeto de la lámina; una variante añade que
+permaneció oculto tres días antes de alumbrar como Luna llena. **La especie no
+está documentada**, ni el porte, ni la corteza, ni la hoja. Se resuelve por
+contraste declarado: no es Wone, que tiene raíces tabloides inmensas y tapa el
+mundo, ni es el umarí, que nace del corazón sembrado; es un árbol de chagra
+recién abierta, es decir joven, aislado y en suelo quemado. Esa lectura es
+interpretación editorial reversible, no dato.
+
+**El envoltorio de hojas con peces.** Documentado por función y por contraste de
+escala: el hombre vuelve del viaje con un paquete pequeño de hojas con unos
+pocos peces y pide varas largas para asarlos; la mujer lo juzga demasiado
+pequeño y lo abre de un golpe, y los peces se multiplican hasta llenar la casa.
+Pequeño y despreciable hasta que se abre: la lámina necesita **el mismo objeto
+en sus dos usos**, no dos modelos, y el censo acierta al no pagarle un estado.
+**Ni la especie de la hoja ni la técnica del atado están documentadas** para los
+tikuna en ninguna fuente consultada. Se dibuja hoja doblada sobre sí misma, sin
+fibra visible ni nudo descrito, y la elección queda declarada: inventarle un
+amarre sería la trampa chamí en miniatura.
+
 ## 7 · Dimensión simbólica
 
 **El agua hace el cuerpo.** Nacer, curarse, recibir los cuatro principios,
@@ -578,7 +618,18 @@ color de la piel de los pueblos al afrecho del duramen del fruto de uito.
 | `tik.icanh1993` | primary_or_early (colección) | ICANH, Colección Etnográfica | Máscara Tikuna E-93-VI-256, ingreso 1993, ficha 2014 | coleccionetnograficaicanh.wordpress.com | Registro institucional: «fibra vegetal de yanchama y colorantes vegetales», **41 × 70 cm**, máscara ritual | Ficha mínima, sin colector, sin comunidad de origen, sin descripción del diseño |
 | `tik.palmas` | academic | Repositorio UNAL y repositorio Javeriana | Dinámica poblacional de tres palmas usadas en construcción; y dinámicas de uso del caraná en Zaragoza, Leticia | repositorio.unal.edu.co · repository.javeriana.edu.co | **Caraná (*Lepidocaryum tenue*) por sus hojas para techar; barrigona (*Iriartea deltoidea*) y zancona (*Socratea exorrhiza*) por sus tallos** para estructura y pisos; techo de caraná de hasta 6 años, 9 con ahumado | Sólo se leyeron los resúmenes de repositorio |
 | `tik.ceramica` | community_voice (regional) | IIAP, revista *Attalea* nº 4 | Los ecos de Mowacha: la cerámica en el pueblo ticuna, oct 2021 | attalea.iiap.gob.pe (**la URL devuelve 404**; el PDF de la revista es texto en imagen) | **Mowacha** como primera alfarera; arcilla blanquecina caolinítica llamada ***nea***; el espíritu **Yewaex** de la quebrada y el permiso para extraer; tinajas de 4200–3700 años AP | No se pudo abrir ni extraer; el contenido proviene del resultado de búsqueda. **Tratar como indicio, no como cita** |
-| `tik.deslinde` | comparison | Huitoto, andoque, ufaina, tucano, desana; y el propio repertorio de máscaras | biblia huitoto cerrada; censos del lote | — | Sirven **sólo** para deslindar | Comparación negativa |
+| `tik.humboldt2012` | territorial | Instituto Humboldt | Libro rojo de peces dulceacuícolas de Colombia, ficha de *Potamotrygon motoro*, 2012 | reporte.humboldt.org.co (PDF, verificado 200) | **Los ocelos tricolores de la raya**: centro amarillo, anillo intermedio anaranjado y anillo periférico negro, mayores que el ojo y en unas cinco series elípticas | Ficha de estado de conservación: da morfología y distribución, no relación cultural |
+| `tik.inp2018` | comparison | Instituto Nacional de Pesca, Ecuador | Ficha técnica 005, *Brycon amazonicus*, 2018 | institutopesca.gob.ec (PDF, verificado 200) | El sábalo: gris plateado claro, aletas de leve coloración rojiza, banda lateral oscura del opérculo a la cola, hasta unos 60 cm, y adultos con preferencia por frutos y semillas | Ficha pesquera ecuatoriana; se usa por morfología, no por presencia en el trapecio |
+| `tik.adw` | comparison | University of Michigan Museum of Zoology | Animal Diversity Web, cuentas de *Cuniculus paca*, *Tapirus terrestris*, *Eunectes murinus*, *Electrophorus electricus*, *Myoprocta pratti* y *M. acouchy* | animaldiversity.org (las seis cuentas verificadas 200, con sección de descripción física) | Morfología de paca, danta, anaconda, anguila eléctrica y las dos especies entre las que se reparte el nombre tintín | Compendio zoológico general, sin relación con el trapecio ni con los tikuna |
+| `tik.gbif` | academic | GBIF | Registros de ocurrencia de Gruidae en Suramérica, API consultada el 18 de septiembre de 2026 | api.gbif.org · `familyKey=9313` | **Verificación propia de que no hay grullas nativas en Suramérica**: Colombia tiene ocho registros y las tres especies son del Viejo Mundo —*Anthropoides paradiseus*, *Balearica regulorum* y *Grus grus*—, seis de ellos especímenes preservados; Perú, Ecuador, Venezuela y Bolivia, cero | Agregador, una sola transmisión; confirma la ausencia de la familia pero no dice qué ave nombra el relato |
+
+**Nota sobre los deslindes.** El deslinde con los corpus vecinos del Amazonas
+colombiano —huitoto, andoque, ufaina, tucano, desana— y la exclusión de la
+máscara de yanchama como ambientación genérica **no son fuentes**: son
+decisiones de esta edición. Estaban listadas como fuente en una versión
+anterior de esta tabla, lo que era un error de categoría. Van ahora en la
+matriz como una fila `editorial_interpretation` sin fuente, que es lo que son:
+reversibles y atribuibles a quien edita, no a quien investiga.
 
 ---
 
@@ -641,6 +692,13 @@ color de la piel de los pueblos al afrecho del duramen del fruto de uito.
 | El friaje: 6–10 al año, 3–7 días, máximas de 35 a 22 °C y mínimas de 22 a 11 °C, junio–agosto; **tormenta y cielo cubierto en la entrada, cielo despejado en la fase fría** | `documented_core` | `public` | senamhi | `friaje`, `grullas`, `laguna-de-las-grullas` |
 | Canoa tikuna: madera, forma y modo de propulsión | `uncertain` | `consult_required` | ausencia total | `canoa-de-moe` |
 | Golpear el casco de la canoa con una vara | `uncertain` | `consult_required` | ausencia total | `vara-percutora-de-la-canoa` |
+| El cerro Woruapü/Moruapü: dos grafías no arbitradas, cima donde el tintín siembra el corazón de Wone y destino del viaje río abajo de Moe | `documented_core` | `public` | santos2010, moruapu2000 | `cerro-woruapu-moruapu`, `tintin`, `corazon-de-wone`, `arbol-de-umari`, `moe`, `moru` |
+| **Ninguna fuente describe la forma del cerro**; y el canon excluye las localizaciones sensibles, así que se dibuja la relación y no un accidente reconocible | `uncertain` | `contextual` | ausencia + canon | `cerro-woruapu-moruapu`, `localizaciones-sensibles` |
+| El árbol del centro de la chagra: crece en una chagra nueva, el cuñado corta la base y el joven **entra por una abertura del tronco** y trepa | `documented_core` | `public` | moruapu2000 | `arbol-del-centro-de-la-chagra`, `joven-que-se-vuelve-luna`, `cunado-del-joven-luna`, `chagra` |
+| **Su especie no está documentada**; se resuelve por contraste declarado con Wone y con el umarí, como árbol joven de chagra recién abierta | `uncertain` | `consult_required` | ausencia | `arbol-del-centro-de-la-chagra`, `wone`, `arbol-de-umari` |
+| El envoltorio de hojas: pequeño con unos pocos peces, abierto de un golpe, y los peces llenan la casa. El mismo objeto en dos usos, no dos modelos | `documented_core` | `public` | moruapu2000 | `envoltorio-de-hojas-con-peces`, `peces-del-envoltorio`, `varas-largas-para-asar`, `hombre-grulla`, `esposa-del-hombre-grulla`, `vivienda-tikuna` |
+| **Ni la hoja ni el atado están documentados**: hoja doblada sin fibra ni nudo, declarado como editorial | `uncertain` | `consult_required` | ausencia | `envoltorio-de-hojas-con-peces` |
+| Deslinde con los corpus vecinos del Amazonas y exclusión de la máscara de yanchama como ambientación: **decisión de esta edición, no hallazgo de fuente** | `editorial_interpretation` | `public` | — (sin fuente, por definición) | `comunidad-tikuna` |
 
 ---
 
@@ -710,6 +768,9 @@ existe justamente como advertencia contra folclorizar.
 | Pelaje del tintín; color del fruto del chontaduro; forma y medidas de la tinaja grande | zoología, botánica, cerámica | **No encontrados.** |
 | Prohibición publicada de fotografiar máscaras, emitida por autoridad tikuna | búsqueda dirigida | **No encontrada.** Hay restricción ontológica documentada y hay comercio y catalogación simultáneos. |
 | **Nimuendajú, *The Tukuna* (1952)** | acceso abierto, repositorios | **Sin acceso libre.** Es el vacío que más pesa: probablemente resuelve vivienda con medidas, canoa, vara percutora, tintín y tinaja. Conseguirlo por biblioteca es la acción más rentable antes del inventario. |
+| ¿Qué forma tiene el cerro Woruapü o Moruapü? | Santos 2010 íntegro, Moruapü vía canon, fuentes territoriales del Trapecio | **No encontrado**, y probablemente no deba buscarse más: el canon excluye las localizaciones sensibles. Se dibuja la relación, no el accidente. |
+| ¿Qué especie es el árbol del centro de la chagra? | canon de `origen-de-la-luna-tikuna`, Santos 2010, botánica de chagra amazónica | **No encontrado.** Se resuelve por contraste con Wone y el umarí, y la elección queda marcada como editorial. |
+| ¿De qué hoja se hace el envoltorio de peces y cómo se ata? | canon de `origen-del-friaje-tikuna`, Santos 2010, etnobotánica del trapecio | **No encontrado** ni la especie ni la técnica. Hoja doblada sin fibra ni nudo, declarado como editorial. |
 | Goulard 2009 y la nota del Museu do Índio | books.openedition.org, gov.br | **Inaccesibles automáticamente**: OpenEdition sirve páginas vacías a cliente no interactivo y gov.br responde 401. |
 | *Historias de los abuelos de Moruapü* página a página | babel.banrepcultural.org | **Sólo por paráfrasis.** El visor no entrega texto plano. |
 | Documentos visuales de ATICOYA, CIMTAR, AZCAITA o Museu Magüta | búsqueda dirigida | **No aparecieron.** La voz comunitaria obtenida es de autoría individual o institucional peruana. |

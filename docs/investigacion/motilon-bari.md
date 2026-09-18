@@ -530,6 +530,74 @@ editorial documentada, o se dibujan como ave carroñera grande sin rasgo
 diagnóstico. La ficha `tucan` se resuelve con las especies que sí están
 registradas.
 
+### Chibáig sí tiene cuerpo, y es la única figura celeste barí que lo tiene
+
+Éste es el hallazgo que cierra la ficha más floja del corpus. La tesis de
+Hernández Gómez recoge el pasaje completo: completada la función del Sol,
+Sabaseba vio que la oscuridad de la noche perturbaba a los Barí y **decidió
+escoger a una mujer Saimadoyi que acostumbraba caminar siempre desnuda en la
+oscuridad y que se caracterizaba porque su palidez la hacía brillar**; le
+encargó que se paseara por el cielo, sobre todo de noche, y desde allí la llamó
+Chibáig.
+
+Y sigue, con tres detalles que ninguna otra figura barí tiene:
+
+- «**Ella está adornada de collares que se le ven cuando aparece.**»
+- «Muchas veces **se cansa de su trabajo y duerme**, por eso hay noches sin que
+  se le vea y otras lo inicia antes de llegar la noche, sin que termine el día.»
+- **Las fases lunares son sombreros**: «cuando es luna llena y está toda
+  completa, es porque se ha puesto su **sombrero grande**, y cuando está
+  pequeña, cuando se ha puesto su **sombrero pequeño**».
+
+Esto matiza el negativo general del corpus sin contradecirlo. No hay adorno de
+plumas atestiguado —eso se mantiene—, pero **sí hay collares y sí hay
+sombreros**: la cartilla lista los *collares* y los *cintillos* entre lo que los
+Barí hacen, y el CNMH añade los **sombreros de lukua**. De modo que el sombrero
+grande y el pequeño de Chibáig se dibujan como **dos tamaños de una misma pieza
+tejida barí**, no como un tocado simbólico, y sus collares son los collares que
+el pueblo hace, cuyo material ninguna fuente especifica. El vínculo entre la
+fase lunar y el sombrero de lukua es lectura de este dossier y se declara como
+tal; lo que no es lectura es que los sombreros estén en el relato y que los
+sombreros existan como objeto barí.
+
+Para la lámina: **palidez que brilla por sí sola**, no luz añadida; collares
+visibles sólo al aparecer; y dos tamaños de sombrero como las dos fases. Y una
+regla de continuidad: **Chibáig no se funde con la Señora de la Luna**, que es
+otra mujer, en otro relato y en otra variante.
+
+### La Señora de la Luna y el bejuco: dos fichas que la carencia sostiene
+
+La compuerta encontró tres entidades `required` sin una sola afirmación que las
+tocara. La de Chibáig quedó resuelta arriba; estas dos se resuelven declarando
+lo que falta.
+
+**La Señora de la Luna** está documentada por lo que hace y por el territorio
+que gobierna, no por su cuerpo: es dueña de los animales, autoriza la caza bajo
+la condición del encuentro íntimo, y cuando la condición se rompe corta el
+bejuco. El territorio sí está descrito —**iluminado, con animales mansos y
+abundantes**— y los hombres vuelven de él fríos, débiles y enfermos. **Ninguna
+fuente describe su cuerpo**: ni edad, ni porte, ni vestido, ni adorno. Y las
+tres ausencias generales del corpus pesan aquí más que en ninguna otra ficha
+—no hay pintura corporal documentada, no hay adorno de plumas atestiguado y no
+había especialistas religiosos—, de modo que cualquier atributo que la señalara
+como deidad sería invención. El prompt editorial ya prohíbe el palacio y el
+romance; se añade la prohibición de personificación grecorromana y de cualquier
+insignia. **Es la única figura del corpus cuyo retrato es su territorio**, y así
+se dibuja.
+
+**El bejuco celeste** está documentado en sus dos variantes y en sus dos
+estados, y el canon prohíbe promediarlas: en la versión de Galvis un bejuco
+resistente une la Luna y la Tierra, los cazadores suben por él y la Señora de la
+Luna lo corta; en la de De Alcácer los Barí **fabrican** un bejuco enorme para
+descender del cielo y un gallinazo lo corta después. Crecido en una variante y
+hecho en la otra, tenso entre dos mundos y luego seccionado y colgante: son dos
+siluetas, y por eso la ficha paga dos hojas. **La especie no está
+documentada**, pero el bejuco sí es materia barí corriente y eso da el anclaje
+sin inventar: antes de que hubiera ríos, la gente calmaba la sed **cortando
+bejucos que guardaban un líquido claro y dulce**. El bejuco celeste se dibuja
+con la materia de un bejuco de agua real —grueso, fibroso, cortable— y sin
+especie declarada. Su escala cosmológica es lo editorial; su materia, no.
+
 ### El gran árbol
 
 La toponimia barí nombra sus propios gigantes: **sakbabá / sabá = ceiba** —«alto
@@ -675,7 +743,14 @@ corpus barí una secuencia sombría: el mandato es la alegría de una piña madu
 | `bari.icanh1947` | primary_or_early (objeto) | Instituto Colombiano de Antropología e Historia | Flecha etnia Barí, cat. 47-II-51250, colectada en 1947 | coleccionetnograficaicanh.wordpress.com | Objeto barí medido: caña delgada, hilo blanco y negro enrollado, punta de madera fina, **73 cm** | Un solo objeto; no hay arco |
 | `bari.corte` | territorial / estatal | Corte Constitucional | Auto 004 de 2009; **Auto 266 de 2017**; Sentencia T-052 de 2017 | corteconstitucional.gov.co | **Confirmación negativa: los Barí no están en el Auto 004 de 2009 —el número 22 de esa lista es el pueblo Yukpa—**; el **Auto 266 de 2017** sí los nombra entre los pueblos dejados fuera y dice que esa exclusión produjo su invisibilización y aumentó su riesgo de extinción; T-052 de 2017 es el caso barí, presentado por Ñatubaiyibarí | La relatoría del Auto 266 tiene la codificación rota y el numeral no se confirmó carácter por carácter |
 | `bari.jaulin1966` | primary_or_early — **localizado y no leído** | Robert Jaulin, «La maison bari (III)», *Journal de la Société des Américanistes* 55(2): 563-640; y Solange Pinton, «Les Barí», JSA 54: 247-333, 1965 | 1966 / 1965 | persee.fr | Sería **la fuente de planimetría**: su índice trata cuatro casas nombradas individualmente —Orobia, Abratatu-Bagduibi, Aytrabana, Sabourun—, lo que casi garantiza plantas y medidas por casa | **No se pudo leer el cuerpo del texto**: Persée carga las imágenes de forma diferida y la descarga devuelve 403 |
-| `bari.comparacion` | comparison | Yuko-Yukpa y Wayuu | — | censo `motilon-bari.json` | Sirven **sólo** para deslindar: son pueblos vivos nombrados dentro del relato de las cenizas y quedan fuera de toda representación. El Yukpa es además el pueblo que sí está en el Auto 004 | Comparación negativa |
+**Nota sobre el deslinde.** La exclusión de Yuko-Yukpa y Wayuu, y el rechazo de
+iconografía yukpa, u'wa o caribe, **no son una fuente**: son decisiones de esta
+edición. Estaban listadas como fuente en una versión anterior de esta tabla, lo
+que era un error de categoría. Van ahora en la matriz como una fila
+`editorial_interpretation` sin fuente, que es lo que son: reversibles y
+atribuibles a quien edita. El dato duro asociado —que el Yukpa es el pueblo que
+sí figura en el Auto 004 de 2009 y los Barí no— sí tiene fuente y está en
+`bari.corte`.
 
 **Transmisiones, no corroboraciones.** Las versiones de Galvis, De Alcácer,
 Neglia y Olson, Triana y Mendoza y De Armellada llegan **todas** por la
@@ -752,6 +827,13 @@ que lo cita abiertamente.
 | Correspondencia entre color de ceniza y color de piel de los pueblos surgidos | `documented_core` (texto) | `do_not_visualize` (como imagen) | mandato2021, rocha2010 | `cenizas-dispersadas`, `gentes-nacidas-de-las-cenizas`, `yuko-yukpa`, `wayuu-o-guajiros` |
 | Sitios sagrados: bohíos, caminos ancestrales, cementerios y lugares de caza y pesca, «porque en ellos habitan espíritus que merecen respeto» | `documented_core` | `do_not_visualize` | somosbari, memoria2016 | `sitios-del-catatumbo` |
 | Anatomía del yácura | `uncertain` | `consult_required` | ausencia | `yacura` (excluida) |
+| **Chibáig tiene cuerpo documentado**: mujer Saimadoyi que caminaba desnuda en la oscuridad y **cuya palidez la hacía brillar**, encargada de pasearse por el cielo; **adornada de collares que se le ven cuando aparece**; se cansa y duerme, y por eso hay noches sin luna; y **las fases son sombreros**, grande la llena y pequeño la menguante | `documented_core` | `public` | hernandez2015, mundobari | `chibaig`, `luna`, `nandou`, `saimadoyi`, `dia-y-noche`, `fenomenos-del-cielo-ordenado` |
+| Sus sombreros y collares conectan con objetos barí reales —**sombreros de lukua** y collares listados por la propia cartilla—, de modo que se dibujan como dos tamaños de una pieza tejida barí y no como tocado simbólico | `academic_hypothesis` | `contextual` | hernandez2015, somosbari, cnmh2018 | `chibaig`, `comunidad-bari`, `luna` |
+| La Señora de la Luna está documentada por su función y por su dominio —dueña de los animales, territorio iluminado con animales mansos, corta el bejuco— y los hombres vuelven fríos, débiles y enfermos | `documented_core` | `public` | rocha2010, mandato2021 | `senora-de-la-luna`, `territorio-iluminado-de-la-luna`, `animales-mansos-de-la-luna`, `cazadores-bari-de-la-luna`, `bejuco-celeste`, `luna` |
+| **Ninguna fuente describe su cuerpo**; con los tres negativos del corpus, cualquier insignia sería invención. Es figura sin retrato: se reconoce por su territorio y **no se funde con Chibáig** | `uncertain` | `consult_required` | ausencia + beckerman | `senora-de-la-luna`, `chibaig`, `luna` |
+| El bejuco celeste en sus dos variantes y dos estados: crecido y cortado por la Señora en una, **fabricado** y cortado por el gallinazo en la otra; tenso entre mundos y luego seccionado y colgante | `documented_core` | `public` | rocha2010, mandato2021 | `bejuco-celeste`, `senora-de-la-luna`, `gallinazo-zamuro`, `luna`, `territorio-iluminado-de-la-luna` |
+| **Su especie no está documentada**, pero el bejuco es materia barí corriente: antes de los ríos se bebía cortando bejucos de líquido claro y dulce. Materia real, escala cosmológica editorial | `uncertain` | `public` | memoria2016, rocha2010 | `bejuco-celeste`, `bejucos-de-agua` |
+| Exclusión de Yuko-Yukpa y Wayuu y rechazo de iconografía yukpa, u'wa o caribe: **decisión de esta edición, no hallazgo de fuente** | `editorial_interpretation` | `public` | — (sin fuente, por definición) | `yuko-yukpa`, `wayuu-o-guajiros`, `comunidad-bari` |
 
 ---
 
@@ -838,6 +920,8 @@ visualizable**, no por estar prohibida.
 | ¿El texto oficial de la Ley 80 de 1931 y los números de resolución del INCORA? | SUIN-Juriscol | **No abiertos.** La ley está citada por las fuentes barí; el registro oficial falló. |
 | ¿Adrián de Santo Tomás? | búsqueda dirigida | **Nada en absoluto.** |
 | ¿El anexo de especies de Avendaño 2012, con las 266 aves del Catatumbo bajo? | revista y repositorios | **No localizado en ninguna parte.** El PDF disponible no lo contiene. |
+| ¿Cómo es el cuerpo de la Señora de la Luna? | antología de Rocha, Mandato 2021, memoria 2016, *Somos Barí*, *Mundo Barí*, tesis | **No encontrado.** Es figura sin retrato y se reconoce por el territorio que gobierna. Contrasta con Chibáig, que sí lo tiene; no se funden. |
+| ¿Qué especie de bejuco es el bejuco celeste? | antología de Rocha, Mandato, memoria, plan del parque | **No encontrado.** El anclaje disponible es que los bejucos de agua son materia barí documentada; la especie queda sin declarar. |
 
 ---
 

@@ -578,7 +578,14 @@ página no se pudo cargar y **no se afirma como hecho**.
 | `wou.herlihy` | comparison (conflaciona) | Peter H. Herlihy, *Emberá and Wounaan*, Encyclopedia of World Cultures | s. f. | encyclopedia.com y everyculture.com | Únicas medidas de casa disponibles: circular, sin paredes, de **15 a 20 m de diámetro**, con **piso de palma rajada a 1,5 m o más**; la paruma «antes de corteza»; canoas monóxilas con plataforma de proa; cronología de contacto | **Trata a los dos pueblos como uno**; pesado hacia Panamá y Darién; sin fecha |
 | `wou.sicultura` | comparison (a evitar) | Ministerio de Cultura de Panamá / Sicultura | El jaibanismo…; Diseños y significados de la pintura en jagua…, act. 17 de junio de 2025 | sicultura.gob.pa | **La lista de exclusión emberá**: bastón tallado, caracol, ídolos exentos, chicha cantada, casa grande. Y del tinte: el zumo empieza **gris claro**, se oscurece con carbón o ceniza, y dura **de ocho a doce días** | **Conflaciona en el título mientras concede *benkʌn* en el cuerpo**: es el modo de fallo exacto que hay que vigilar |
 | `wou.reichel` | primary_or_early — **localizado y no leído** | Gerardo Reichel-Dolmatoff, *Notas etnográficas sobre los indios del Chocó* (1960) y *Contribuciones a la etnografía de los indios del Chocó* (1962), con campo entre «los Noanamá y Emberá del San Juan y Baudó»; Manuel Lucena Salmoral, *Nuevas observaciones sobre los waunana del Chocó* (1962) | 1960-1962 | revistas.icanh.gov.co | Sería la mejor evidencia visual primaria del bajo San Juan hacia 1960 | **No se pudo leer una sola página**: todas las rutas de texto completo devolvieron 403 o CAPTCHA. Citas verificadas sólo en los metadatos de la revista |
-| `wou.deslinde` | comparison | Emberá y biblia chamí cerrada | — | `editorial/wounaan/records.mjs` y censo | Sirve **sólo** para deslindar: jaibaná, jais, okama, bastón tallado, caracol, ídolos y todo el repertorio chamí quedan fuera | Comparación negativa |
+**Nota sobre el deslinde.** El cortafuegos emberá —jaibaná, jais, okama, bastón
+tallado, caracol, ídolos exentos y todo el repertorio de la biblia chamí— **no
+es una fuente**: es una decisión de esta edición, y de hecho va *contra* la
+fuente institucional, que es la que conflaciona. Estaba listado como fuente en
+una versión anterior de esta tabla, lo que era un error de categoría. Va ahora
+en la matriz como una fila `editorial_interpretation` sin fuente. Lo que sí
+tiene fuente es la lista concreta de piezas emberá que hay que excluir, y está
+en `wou.sicultura`.
 
 **Transmisiones, no corroboraciones.** Tres casos en este corpus: la frase
 enciclopédica sobre la casa circular de techo cónico, repetida en cuatro sitios

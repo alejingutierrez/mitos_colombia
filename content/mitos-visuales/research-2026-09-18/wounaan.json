@@ -150,16 +150,6 @@
       "locator": "https://revistas.icanh.gov.co/index.php/rca/article/view/1588",
       "supports": "Sería la mejor evidencia visual primaria del bajo San Juan waunana hacia 1960",
       "limitations": "No se pudo leer una sola página: todas las rutas de texto completo devolvieron 403 o CAPTCHA. Las citas están verificadas sólo en los metadatos de la revista del ICANH. Es la carencia documental más grave del corpus"
-    },
-    {
-      "id": "wou.deslinde",
-      "role": "comparison",
-      "title": "Deslinde con la iconografía emberá y con la biblia chamí cerrada",
-      "author": "Censo wounaan 2026-09-18 y expediente editorial",
-      "year": 2026,
-      "locator": "content/mitos-visuales/censo-2026-09-18/wounaan.json",
-      "supports": "Sirve sólo para deslindar: jaibaná, jais, okama, bastón tallado con figuras, caracol de mar, ídolos exentos, chicha cantada, casa grande y todo el repertorio de la biblia chamí quedan fuera de esta biblia",
-      "limitations": "Comparación negativa: no aporta ningún rasgo visual wounaan"
     }
   ],
   "evidence_matrix": [
@@ -913,6 +903,17 @@
         "casa-wounaan-sobre-pilotes",
         "barca-o-chingo-suspendida",
         "machete-y-hacha"
+      ]
+    },
+    {
+      "claim": "Deslinde de esta biblia, declarado como decisión editorial y no como hallazgo de fuente: ninguna ficha toma referencia visual de la biblia chamí ni de material emberá, y las palabras jaibaná, jais y okama quedan prohibidas en todo prompt aunque aparezcan en la fuente institucional citada. El deslinde no lo dicta ninguna fuente —al contrario, la fuente institucional es la que conflaciona—: lo decide esta edición, y por eso es reversible y queda escrito dentro de la hoja.",
+      "basis": "editorial_interpretation",
+      "sensitivity": "public",
+      "source_ids": [],
+      "affects": [
+        "jaibana-y-la-iconografia-embera",
+        "comunidad-wounaan",
+        "benkhuun"
       ]
     }
   ],

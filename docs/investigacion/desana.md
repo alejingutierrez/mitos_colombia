@@ -361,6 +361,32 @@ son fichas bibliográficas de esa misma obra.
 | 21 | La corona de fibra vegetal con plumas y pigmentos naturales es una clase de objeto documentada en el Vaupés | `variant` | contextual | `ds-icanh-corona`, `ds-pib-tukano` | fichas humanas con adorno |
 | 22 | El ciclo de la canoa ancestral, el dueño de la noche con su recipiente y las casas de transformación existen también en Tucano y Barasana con otros nombres y otras funciones | `variant` | public | `ds-kehiripora-1995`, dossiers tucano y barasana | `pamurigahsiru`, `nami`, `recipiente_de_la_noche`, `casas_de_transformacion` |
 
+### 10-bis · Las dieciséis fichas que faltaban
+
+La primera versión de esta matriz dejaba catorce fichas del censo sin una sola afirmación que las
+sostuviera —se habrían producido de memoria, que es justo lo que la Etapa 0 existe para impedir—.
+Volví al texto íntegro de 1995 y casi todas tenían material; sólo una quedó en indeterminación
+declarada.
+
+| # | afirmación | base | sensibilidad | fuentes | afecta |
+|---|---|---|---|---|---|
+| 23 | El hermano menor es el único que no se duerme: «só ficou olhando o seu último irmão. A ele, o sono não atacou», y antes había amarrado su hamaca «num cantinho da parede». Figura despierta en hamaca de rincón, no protagonista de centro | `documented_core` | public | `ds-kehiripora-1995` | `hermano_menor_noche`, `maloca_de_nami`, `nami`, `oscuridad_noche` |
+| 24 | Lo que sale del recipiente son **dos clases con nombre propio** —«o japu da noite (ñamiumu)» y «os grilos da noite (ñamipigãrã)»—, que escapan «causando um grande espanto» y dejan la caja vacía; después cae un aguacero. **Corrige** la nota del censo, que las trató como enjambre indiferenciado | `documented_core` | public | `ds-kehiripora-1995` | `criaturas_de_la_noche`, `recipiente_de_la_noche`, `oscuridad_noche` |
+| 25 | El interior de la maloca tiene geografía declarada en el libro: la puerta «por onde ficava o forno nas grandes malocas» y «debaixo da terceira coluna da casa, isto é, no espaço de dança da casa» | `documented_core` | contextual | `ds-kehiripora-1995` | `maloca_desana`, `maloca_de_nami`, `maloca_del_universo` |
+| 26 | La esposa de Gãïpayã es la mujer de la casa donde crece la pupunha —él vive junto a «a Maloca do seu sogro»— y es quien advierte que escondió la semilla bajo el pie y después bajo el brazo, y se la reclama. Conduce la bisagra por la palabra | `documented_core` | contextual | `ds-kehiripora-1995` | `esposa_de_gainpaya`, `gainpaya`, `palma_chontaduro`, `maloca_subacuatica_piro` |
+| 27 | Nügüye en gavilán: «transformou-se num grande gavião», vuela, «pousou em cima da cumieira» y canta «Coá, coá, coá coá coá»; Abe lo derriba con cerbatana y dardo envenenado y lo echa al fuego, donde «o gavião mexeu as asas». Su hermana es «gente de gavião» | `documented_core` | public | `ds-kehiripora-1995` | `nuguye`, `abe_sol`, `maloca_desana`, `incendio_del_mundo` |
+| 28 | La esposa de Abe se define por trabajo doméstico y negación de alimento: quita la espuma de la manicuera y manda a la niña al puerto con el bebé. Su registro es la casa y el puerto, nunca el acto de violencia | `documented_core` | contextual | `ds-kehiripora-1995` | `esposa_de_abe`, `abe_sol`, `nuguye`, `maloca_desana` |
+| 29 | Ãgãmahsãpu **sí tiene especie** y el censo lo dio por indeterminado: «Ele era o primeiro inambu», y la nota traduce su nombre como «inambu maior, pai, pessoa». Persona con porte de inambu, sin estado: la fuente nunca lo muestra transformado | `documented_core` | public | `ds-kehiripora-1995` | `agamahsapu`, `aves_hijas_agamahsapu`, `casas_de_transformacion` |
+| 30 | Las aves de Ãgãmahsãpu son grupo con especies nombradas: «As garças, as cegonhas, as garças-reais e os socós eram seus preparadores de ipadu». Cuatro clases de zancudas de ribera, distintas de las criaturas nocturnas | `documented_core` | public | `ds-kehiripora-1995` | `aves_hijas_agamahsapu`, `agamahsapu`, `rio_vaupes_tiquie` |
+| 31 | El umarí es fruto de reparto y de ciclo: llega distribuyéndose «antes do tempo do umari dar frutos» y su abundancia depende del recorrido. Se representa en mano, en cesto y en árbol | `documented_core` | public | `ds-kehiripora-1995` | `umari`, `agamahsapu`, `casas_de_transformacion`, `calendario_estacional` |
+| 32 | El rito de distribución del umarí tiene nombre —Miubehari, Mübuhañahani— y es procedimiento: no se representa como ceremonia, ni con cantos, ni con danza, ni con formación | `documented_core` | do_not_visualize | `ds-kehiripora-1995` | `umari`, `agamahsapu`, `casas_de_transformacion`, `calendario_estacional` |
+| 33 | La mandioca nace de un cuerpo que la contenía: Baaribo «tinha toda espécie de plantas que a gente come no mundo. Ele as tinha em si mesmo […] Transformando-se, ele produzia a comida» | `documented_core` | public | `ds-kehiripora-1995` | `mandioca`, `baaribo`, `chagra_circular`, `hijo_de_baaribo` |
+| 34 | El chontaduro tiene **cuatro variedades nombradas y coloreadas** en un solo tronco: «üridiari, vermelho-alaranjada; üriboho, branca; ürinahsikatu, fruta listrada; ürisawe, verde miúda». Son colores de fruto en una lámina y no extienden la paleta del mundo | `documented_core` | public | `ds-kehiripora-1995` | `palma_chontaduro`, `gainpaya`, `esposa_de_gainpaya`, `maloca_subacuatica_piro` |
+| 35 | La chagra de Baaribo tiene forma y técnica: espacio circular marcado en el bosque y quemado **desde el interior hacia afuera**. No es un claro rectangular | `documented_core` | public | `ds-kehiripora-1995` | `chagra_circular`, `baaribo`, `mandioca` |
+| 36 | El cañaveral es lugar propio y no intercambiable con la selva, pero la fuente no da la especie de caña: masa de tallos altos y delgados, sin identificar, con la indeterminación declarada | `uncertain` | public | `ds-kehiripora-1995` | `canaveral`, `nuguye`, `incendio_del_mundo`, `selva_vaupes` |
+| 37 | El incendio tiene tres fases y una materia de partida: cuatro leñas nombradas, el cuerpo que no arde porque sube a la Maloca del Universo, «somente queimaram os seus enfeites», y de los adornos el fuego pasa al pasto y de ahí al mundo | `documented_core` | public | `ds-kehiripora-1995` | `incendio_del_mundo`, `guramuye`, `paxiuba`, `canaveral` |
+| 38 | El calendario es una relación y no una lista —«un canto aparece, un fruto madura, una especie de pez se mueve»—; la figura circular de la escena aprobada es decisión editorial y el corpus prohíbe convertirla en fechas o predicción | `editorial_interpretation` | contextual | `ds-kehiripora-1995` | `calendario_estacional`, `agamahsapu`, `aves_hijas_agamahsapu`, `umari`, `peces_del_rio` |
+
 ---
 
 ## 11 · Revisión cultural — `documented_exception`
@@ -418,7 +444,14 @@ la razón por la que el alcance se recorta.
    tukano general, y queda por eso como `academic_hypothesis`.
 5. **No encontré la ficha del clan Kêhíripõrã en el registro del Museu do Índio** con un localizador
    estable que añadiera datos de cultura material. El perfil del ProDoclin es institucional y breve.
-6. **No hay condiciones de uso publicadas por los titulares desana.** A diferencia del Pirá Paraná
+6. **La fuente no da la especie del cañaveral ni las variedades de la mandioca.** Busqué «cana»,
+   «capim», «mandioca» y «maniva» en el texto íntegro: nombra el lugar y la planta y nunca la
+   especie. Ambas fichas se dibujan con la indeterminación declarada.
+7. **No hay descripción de cuerpo para la esposa de Abe, la esposa de Gãïpayã ni el hermano menor.**
+   Los tres se sostienen por acción, posición y oficio —la espuma de manicuera y el puerto, la palabra
+   que reclama la semilla, la hamaca de rincón y la vigilia—. Cualquier rasgo de rostro o atavío sería
+   invención.
+8. **No hay condiciones de uso publicadas por los titulares desana.** A diferencia del Pirá Paraná
    —donde ACAIPI y el Consejo Indígena sí publicaron reglas—, no localicé ningún protocolo desana sobre
    reproducción, imagen o investigación. La ausencia se trata como restricción, no como permiso.
 

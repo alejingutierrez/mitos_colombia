@@ -93,32 +93,403 @@
     }
   ],
   "evidence_matrix": [
-    {"claim": "El corpus no nombra ningún color: cero azul, cero verde, cero rojo, cero ocre en los siete relatos. La «paleta de verde selva, azul río, ocres minerales» es un envoltorio de casa repetido en los siete prompts horizontales, no una lectura del texto.", "basis": "documented_core", "sensitivity": "public", "source_ids": ["tc-fulop-1954", "tc-fulop-1956"], "affects": ["rios_vaupes_negro_amazonas", "monte_vaupes", "mares", "canoa_transformacion_guio"]},
-    {"claim": "El Vaupés es río de aguas negras: ámbar de té a contraluz, espejo casi blanco en superficie, arena blanca en orilla; nunca azul.", "basis": "academic_hypothesis", "sensitivity": "public", "source_ids": ["tc-aguas-negras"], "affects": ["rios_vaupes_negro_amazonas", "mares", "canoa_transformacion_guio", "casas_de_surgimiento"]},
-    {"claim": "La paleta debe derivarse de las tres materias que el corpus sí nombra —yuca y almidón, tierra que se extiende en niveles, agua— y de la única oposición cromática del texto, oscuridad contra claridad.", "basis": "editorial_interpretation", "sensitivity": "public", "source_ids": ["tc-fulop-1954", "tc-fulop-1956"], "affects": ["yuca_tucano", "huerta_de_yuca", "formacion_de_la_tierra", "noche_y_sueno"]},
-    {"claim": "La luz del corpus orienta y mide, no revela: «la claridad no entra como un personaje que combate la oscuridad ni como un astro robado». Luz alta, difusa, de sombra corta y sin acento.", "basis": "documented_core", "sensitivity": "public", "source_ids": ["tc-fulop-1954"], "affects": ["sol_tucano", "noche_y_sueno", "viento_y_soplo", "formacion_de_la_tierra"]},
-    {"claim": "El corpus describe operaciones y no superficies: soplar hacia cuatro rumbos, remontar el río, entrar y detenerse en casas, abrir la caja antes de tiempo, comerse la propia cola, desdoblarse entre humano y espíritu. La composición debe ser diagramática, con eje y dirección.", "basis": "editorial_interpretation", "sensitivity": "public", "source_ids": ["tc-fulop-1954", "tc-fulop-1956"], "affects": ["viento_y_soplo", "formacion_de_la_tierra", "noche_y_sueno", "animales_del_diawi", "boraro", "canoa_transformacion_guio"]},
-    {"claim": "El umbral del corpus es el puerto, no la puerta: la mujer de Yúpuri Baúro recibe la semilla en el puerto mientras los demás permanecen dentro de la casa sin interrumpir.", "basis": "documented_core", "sensitivity": "public", "source_ids": ["tc-fulop-1956"], "affects": ["casas_de_surgimiento", "diawi", "mujer_de_yupuri_bauro", "huerta_de_yuca"]},
-    {"claim": "Las casas de surgimiento son estaciones de reparto y de abandono que producen geografía social, y se resuelven como umbrales geométricos en fila, no como edificios retratados; el corpus prohíbe además cartografiarlas.", "basis": "editorial_interpretation", "sensitivity": "contextual", "source_ids": ["tc-fulop-1954"], "affects": ["casas_de_surgimiento", "pueblos_y_jefes_de_la_canoa", "canoa_transformacion_guio"]},
-    {"claim": "La maloca tukano es rectangular con techo triangular y puertas en los dos extremos: la oriental del agua y de los hombres, por donde entró la Anaconda ancestral, y la occidental de las mujeres, con la cumbrera leída como camino del sol.", "basis": "academic_hypothesis", "sensitivity": "contextual", "source_ids": ["tc-pib-tukano", "tc-rodriguez-lamus-1958"], "affects": ["diawi", "casas_de_surgimiento"]},
-    {"claim": "No se representa el interior de la maloca en función ceremonial, ni la fachada pintada, ni ninguna formación de baile.", "basis": "documented_core", "sensitivity": "consult_required", "source_ids": ["tc-unesco-00574", "tc-pib-tukano"], "affects": ["diawi", "casas_de_surgimiento", "gente_tucano"]},
-    {"claim": "El carayurú (Arrabidaea chica) es el rojo documentado del área, usado en la pintura corporal y en la pintura del banco tukano, con función de vitalizar y proteger.", "basis": "variant", "sensitivity": "contextual", "source_ids": ["tc-carayuru", "tc-pib-tukano"], "affects": ["gente_tucano", "banco", "yepa_huake", "yupuri_bauro", "yepa_vejkeo"]},
-    {"claim": "La corona de fibra vegetal con plumas y pigmentos naturales es una clase de pieza documentada del Vaupés, con un ejemplar registrado del propio departamento.", "basis": "variant", "sensitivity": "contextual", "source_ids": ["tc-icanh-corona", "tc-pib-tukano"], "affects": ["gente_tucano", "pueblos_y_jefes_de_la_canoa"]},
-    {"claim": "Ningún diseño de pintura, ningún patrón y ninguna corona concreta se copian ni se inventan: el dossier documenta la clase de pieza y prohíbe el ejemplar.", "basis": "documented_core", "sensitivity": "consult_required", "source_ids": ["tc-carayuru", "tc-icanh-corona"], "affects": ["gente_tucano", "yepa_huake", "yupuri_bauro", "yepa_vejkeo", "mujeres_dejkepaeg_majsa", "seritia_y_pataro", "pueblos_y_jefes_de_la_canoa"]},
-    {"claim": "La decisión vigente de cuerpo humano es silueta geométrica de papel liso, adulta y secundaria a la escena material, sin rasgos étnicos, marcas en la piel, tatuajes, pintura ni vestuario decorado.", "basis": "editorial_interpretation", "sensitivity": "public", "source_ids": ["tc-fulop-1954", "tc-fulop-1956"], "affects": ["yepa_huake", "yupuri_bauro", "yepa_vejkeo", "mujer_de_yupuri_bauro", "seritia_y_pataro", "aleman", "gente_tucano", "mujeres_dejkepaeg_majsa", "pueblos_y_jefes_de_la_canoa"]},
-    {"claim": "Boraró y Boraró Numió son dos y el relato los distingue por género y por la dirección del sueño: si quien sueña es un hombre la aparición se asocia con Boraró Numió, y si es una mujer con Boraró.", "basis": "documented_core", "sensitivity": "public", "source_ids": ["tc-fulop-1956"], "affects": ["boraro", "boraro_numio", "sueno_y_perdida_del_alma", "diaojpekowi"]},
-    {"claim": "«Translúcido» es decisión editorial y no rasgo documentado: la palabra no aparece en el corpus y sólo existe una vez en el prompt aprobado. La ficha única se sostiene, pero el desdoblamiento se declara reversible.", "basis": "editorial_interpretation", "sensitivity": "public", "source_ids": ["tc-fulop-1956"], "affects": ["boraro", "boraro_numio"]},
-    {"claim": "Está prohibido darle a Boraró el cuerpo documentado entre los Desana —pies vueltos hacia atrás, piernas sin rodilla, piel pálida con pelambre negra, colmillos—: es la imagen por defecto de la región y sería copia de iconografía de otra comunidad.", "basis": "variant", "sensitivity": "do_not_visualize", "source_ids": ["tc-reichel-1971", "tc-fulop-1956"], "affects": ["boraro", "boraro_numio"]},
-    {"claim": "El único rasgo distintivo que el corpus autoriza para Boraró es el cangrejo: «se los veía con frecuencia comiendo cangrejos».", "basis": "documented_core", "sensitivity": "public", "source_ids": ["tc-fulop-1956"], "affects": ["boraro", "boraro_numio"]},
-    {"claim": "Los instrumentos de yuruparí están restringidos por género y por iniciación y no se representan en ninguna forma; el módulo del corpus ya declara la acción omit-operational-sacred-flute.", "basis": "documented_core", "sensitivity": "do_not_visualize", "source_ids": ["tc-unesco-00574", "tc-pib-tukano"], "affects": ["yepa_huake", "silbato_poderoso", "gente_tucano"]},
-    {"claim": "El silbato de la danta debe tener forma inequívocamente no tubular —ni trompeta, ni flauta, ni tubo de palma— para que ninguna lámina del corpus pueda leerse como un instrumento de yuruparí.", "basis": "editorial_interpretation", "sensitivity": "contextual", "source_ids": ["tc-fulop-1956", "tc-unesco-00574"], "affects": ["silbato_poderoso", "vejke_danta", "yepa_huake"]},
-    {"claim": "El acto de fumar y soplar hacia los cuatro rumbos es público y se conserva como fenómeno; el ejemplar de tabaco ceremonial no se muestra. El lenguaje sí, el ejemplar no.", "basis": "documented_core", "sensitivity": "do_not_visualize", "source_ids": ["tc-fulop-1954"], "affects": ["viento_y_soplo", "yepa_huake"]},
-    {"claim": "Las capas coloniales del relato —países, fábricas, armas, médicos, torre tipo Babel, calles y almacenes de Bogotá— pertenecen al narrador de 1953 y se representan por su hueco: papel y libro siempre en blanco, sin mapa, bandera, arma ni uniforme.", "basis": "documented_core", "sensitivity": "public", "source_ids": ["tc-fulop-1954"], "affects": ["papel_y_cuaderno", "aleman", "memoria_sin_papel", "gente_tucano", "yepa_huake"]},
-    {"claim": "El corpus entero descansa sobre una sola transmisión: un etnógrafo, un narrador (Marcos Sierra), un intérprete (Manuel Sierra), dos campañas contiguas en 1953 y 1954 sobre el río Paca.", "basis": "documented_core", "sensitivity": "public", "source_ids": ["tc-fulop-1954", "tc-fulop-1956"], "affects": ["yepa_huake", "yupuri_bauro", "gente_tucano", "canoa_transformacion_guio"]},
-    {"claim": "El ser cantor nocturno no tiene especie en la fuente y se resuelve por el sonido —voces que se multiplican y permiten medir el tiempo— y no por un animal reconocible.", "basis": "uncertain", "sensitivity": "public", "source_ids": ["tc-fulop-1954"], "affects": ["ser_cantor_nocturno", "noche_y_sueno"]},
-    {"claim": "La canoa-güío, el dueño de la noche con su recipiente, las casas y la danta existen también en Desana y Barasana con otros nombres y otras funciones; son variantes de área, no la misma ficha.", "basis": "variant", "sensitivity": "public", "source_ids": ["tc-fulop-1954", "tc-unesco-00574"], "affects": ["canoa_transformacion_guio", "dueno_de_la_noche_tucano", "caja_de_la_noche", "casas_de_surgimiento", "vejke_danta"]},
-    {"claim": "Yepá Huáke es autónomo, sopla los rumbos, interroga, reparte y abandona; no es el mismo personaje que Yebá Gõãmü (Desana), que es formado por la Abuela del Mundo, no tiene cuerpo y su acto es poner límite. En Barasana no existe demiurgo único.", "basis": "variant", "sensitivity": "public", "source_ids": ["tc-fulop-1954"], "affects": ["yepa_huake", "yupuri_bauro"]},
-    {"claim": "La danta Vejké es la primera interrogada y la que pierde: se le sustituye el silbato poderoso por otro pequeño y se la destierra a la selva. El corpus niega expresamente la corte animal, la danta reina y el mono que recibe el silbato.", "basis": "documented_core", "sensitivity": "public", "source_ids": ["tc-fulop-1956"], "affects": ["vejke_danta", "silbato_poderoso", "animales_del_diawi", "yepa_huake"]}
+    {
+      "claim": "El corpus no nombra ningún color: cero azul, cero verde, cero rojo, cero ocre en los siete relatos. La «paleta de verde selva, azul río, ocres minerales» es un envoltorio de casa repetido en los siete prompts horizontales, no una lectura del texto.",
+      "basis": "documented_core",
+      "sensitivity": "public",
+      "source_ids": [
+        "tc-fulop-1954",
+        "tc-fulop-1956"
+      ],
+      "affects": [
+        "rios_vaupes_negro_amazonas",
+        "monte_vaupes",
+        "mares",
+        "canoa_transformacion_guio"
+      ]
+    },
+    {
+      "claim": "El Vaupés es río de aguas negras: ámbar de té a contraluz, espejo casi blanco en superficie, arena blanca en orilla; nunca azul.",
+      "basis": "academic_hypothesis",
+      "sensitivity": "public",
+      "source_ids": [
+        "tc-aguas-negras"
+      ],
+      "affects": [
+        "rios_vaupes_negro_amazonas",
+        "mares",
+        "canoa_transformacion_guio",
+        "casas_de_surgimiento"
+      ]
+    },
+    {
+      "claim": "La paleta debe derivarse de las tres materias que el corpus sí nombra —yuca y almidón, tierra que se extiende en niveles, agua— y de la única oposición cromática del texto, oscuridad contra claridad.",
+      "basis": "editorial_interpretation",
+      "sensitivity": "public",
+      "source_ids": [
+        "tc-fulop-1954",
+        "tc-fulop-1956"
+      ],
+      "affects": [
+        "yuca_tucano",
+        "huerta_de_yuca",
+        "formacion_de_la_tierra",
+        "noche_y_sueno"
+      ]
+    },
+    {
+      "claim": "La luz del corpus orienta y mide, no revela: «la claridad no entra como un personaje que combate la oscuridad ni como un astro robado». Luz alta, difusa, de sombra corta y sin acento.",
+      "basis": "documented_core",
+      "sensitivity": "public",
+      "source_ids": [
+        "tc-fulop-1954"
+      ],
+      "affects": [
+        "sol_tucano",
+        "noche_y_sueno",
+        "viento_y_soplo",
+        "formacion_de_la_tierra"
+      ]
+    },
+    {
+      "claim": "El corpus describe operaciones y no superficies: soplar hacia cuatro rumbos, remontar el río, entrar y detenerse en casas, abrir la caja antes de tiempo, comerse la propia cola, desdoblarse entre humano y espíritu. La composición debe ser diagramática, con eje y dirección.",
+      "basis": "editorial_interpretation",
+      "sensitivity": "public",
+      "source_ids": [
+        "tc-fulop-1954",
+        "tc-fulop-1956"
+      ],
+      "affects": [
+        "viento_y_soplo",
+        "formacion_de_la_tierra",
+        "noche_y_sueno",
+        "animales_del_diawi",
+        "boraro",
+        "canoa_transformacion_guio"
+      ]
+    },
+    {
+      "claim": "El umbral del corpus es el puerto, no la puerta: la mujer de Yúpuri Baúro recibe la semilla en el puerto mientras los demás permanecen dentro de la casa sin interrumpir.",
+      "basis": "documented_core",
+      "sensitivity": "public",
+      "source_ids": [
+        "tc-fulop-1956"
+      ],
+      "affects": [
+        "casas_de_surgimiento",
+        "diawi",
+        "mujer_de_yupuri_bauro",
+        "huerta_de_yuca"
+      ]
+    },
+    {
+      "claim": "Las casas de surgimiento son estaciones de reparto y de abandono que producen geografía social, y se resuelven como umbrales geométricos en fila, no como edificios retratados; el corpus prohíbe además cartografiarlas.",
+      "basis": "editorial_interpretation",
+      "sensitivity": "contextual",
+      "source_ids": [
+        "tc-fulop-1954"
+      ],
+      "affects": [
+        "casas_de_surgimiento",
+        "pueblos_y_jefes_de_la_canoa",
+        "canoa_transformacion_guio"
+      ]
+    },
+    {
+      "claim": "La maloca tukano es rectangular con techo triangular y puertas en los dos extremos: la oriental del agua y de los hombres, por donde entró la Anaconda ancestral, y la occidental de las mujeres, con la cumbrera leída como camino del sol.",
+      "basis": "academic_hypothesis",
+      "sensitivity": "contextual",
+      "source_ids": [
+        "tc-pib-tukano",
+        "tc-rodriguez-lamus-1958"
+      ],
+      "affects": [
+        "diawi",
+        "casas_de_surgimiento"
+      ]
+    },
+    {
+      "claim": "No se representa el interior de la maloca en función ceremonial, ni la fachada pintada, ni ninguna formación de baile.",
+      "basis": "documented_core",
+      "sensitivity": "consult_required",
+      "source_ids": [
+        "tc-unesco-00574",
+        "tc-pib-tukano"
+      ],
+      "affects": [
+        "diawi",
+        "casas_de_surgimiento",
+        "gente_tucano"
+      ]
+    },
+    {
+      "claim": "El carayurú (Arrabidaea chica) es el rojo documentado del área, usado en la pintura corporal y en la pintura del banco tukano, con función de vitalizar y proteger.",
+      "basis": "variant",
+      "sensitivity": "contextual",
+      "source_ids": [
+        "tc-carayuru",
+        "tc-pib-tukano"
+      ],
+      "affects": [
+        "gente_tucano",
+        "banco",
+        "yepa_huake",
+        "yupuri_bauro",
+        "yepa_vejkeo"
+      ]
+    },
+    {
+      "claim": "La corona de fibra vegetal con plumas y pigmentos naturales es una clase de pieza documentada del Vaupés, con un ejemplar registrado del propio departamento.",
+      "basis": "variant",
+      "sensitivity": "contextual",
+      "source_ids": [
+        "tc-icanh-corona",
+        "tc-pib-tukano"
+      ],
+      "affects": [
+        "gente_tucano",
+        "pueblos_y_jefes_de_la_canoa"
+      ]
+    },
+    {
+      "claim": "Ningún diseño de pintura, ningún patrón y ninguna corona concreta se copian ni se inventan: el dossier documenta la clase de pieza y prohíbe el ejemplar.",
+      "basis": "documented_core",
+      "sensitivity": "consult_required",
+      "source_ids": [
+        "tc-carayuru",
+        "tc-icanh-corona"
+      ],
+      "affects": [
+        "gente_tucano",
+        "yepa_huake",
+        "yupuri_bauro",
+        "yepa_vejkeo",
+        "mujeres_dejkepaeg_majsa",
+        "seritia_y_pataro",
+        "pueblos_y_jefes_de_la_canoa"
+      ]
+    },
+    {
+      "claim": "La decisión vigente de cuerpo humano es silueta geométrica de papel liso, adulta y secundaria a la escena material, sin rasgos étnicos, marcas en la piel, tatuajes, pintura ni vestuario decorado.",
+      "basis": "editorial_interpretation",
+      "sensitivity": "public",
+      "source_ids": [
+        "tc-fulop-1954",
+        "tc-fulop-1956"
+      ],
+      "affects": [
+        "yepa_huake",
+        "yupuri_bauro",
+        "yepa_vejkeo",
+        "mujer_de_yupuri_bauro",
+        "seritia_y_pataro",
+        "aleman",
+        "gente_tucano",
+        "mujeres_dejkepaeg_majsa",
+        "pueblos_y_jefes_de_la_canoa"
+      ]
+    },
+    {
+      "claim": "Boraró y Boraró Numió son dos y el relato los distingue por género y por la dirección del sueño: si quien sueña es un hombre la aparición se asocia con Boraró Numió, y si es una mujer con Boraró.",
+      "basis": "documented_core",
+      "sensitivity": "public",
+      "source_ids": [
+        "tc-fulop-1956"
+      ],
+      "affects": [
+        "boraro",
+        "boraro_numio",
+        "sueno_y_perdida_del_alma",
+        "diaojpekowi"
+      ]
+    },
+    {
+      "claim": "«Translúcido» es decisión editorial y no rasgo documentado: la palabra no aparece en el corpus y sólo existe una vez en el prompt aprobado. La ficha única se sostiene, pero el desdoblamiento se declara reversible.",
+      "basis": "editorial_interpretation",
+      "sensitivity": "public",
+      "source_ids": [
+        "tc-fulop-1956"
+      ],
+      "affects": [
+        "boraro",
+        "boraro_numio"
+      ]
+    },
+    {
+      "claim": "Está prohibido darle a Boraró el cuerpo documentado entre los Desana —pies vueltos hacia atrás, piernas sin rodilla, piel pálida con pelambre negra, colmillos—: es la imagen por defecto de la región y sería copia de iconografía de otra comunidad.",
+      "basis": "variant",
+      "sensitivity": "do_not_visualize",
+      "source_ids": [
+        "tc-reichel-1971",
+        "tc-fulop-1956"
+      ],
+      "affects": [
+        "boraro",
+        "boraro_numio"
+      ]
+    },
+    {
+      "claim": "El único rasgo distintivo que el corpus autoriza para Boraró es el cangrejo: «se los veía con frecuencia comiendo cangrejos».",
+      "basis": "documented_core",
+      "sensitivity": "public",
+      "source_ids": [
+        "tc-fulop-1956"
+      ],
+      "affects": [
+        "boraro",
+        "boraro_numio"
+      ]
+    },
+    {
+      "claim": "Los instrumentos de yuruparí están restringidos por género y por iniciación y no se representan en ninguna forma; el módulo del corpus ya declara la acción omit-operational-sacred-flute.",
+      "basis": "documented_core",
+      "sensitivity": "do_not_visualize",
+      "source_ids": [
+        "tc-unesco-00574",
+        "tc-pib-tukano"
+      ],
+      "affects": [
+        "yepa_huake",
+        "silbato_poderoso",
+        "gente_tucano"
+      ]
+    },
+    {
+      "claim": "El silbato de la danta debe tener forma inequívocamente no tubular —ni trompeta, ni flauta, ni tubo de palma— para que ninguna lámina del corpus pueda leerse como un instrumento de yuruparí.",
+      "basis": "editorial_interpretation",
+      "sensitivity": "contextual",
+      "source_ids": [
+        "tc-fulop-1956",
+        "tc-unesco-00574"
+      ],
+      "affects": [
+        "silbato_poderoso",
+        "vejke_danta",
+        "yepa_huake"
+      ]
+    },
+    {
+      "claim": "El acto de fumar y soplar hacia los cuatro rumbos es público y se conserva como fenómeno; el ejemplar de tabaco ceremonial no se muestra. El lenguaje sí, el ejemplar no.",
+      "basis": "documented_core",
+      "sensitivity": "do_not_visualize",
+      "source_ids": [
+        "tc-fulop-1954"
+      ],
+      "affects": [
+        "viento_y_soplo",
+        "yepa_huake"
+      ]
+    },
+    {
+      "claim": "Las capas coloniales del relato —países, fábricas, armas, médicos, torre tipo Babel, calles y almacenes de Bogotá— pertenecen al narrador de 1953 y se representan por su hueco: papel y libro siempre en blanco, sin mapa, bandera, arma ni uniforme.",
+      "basis": "documented_core",
+      "sensitivity": "public",
+      "source_ids": [
+        "tc-fulop-1954"
+      ],
+      "affects": [
+        "papel_y_cuaderno",
+        "aleman",
+        "memoria_sin_papel",
+        "gente_tucano",
+        "yepa_huake"
+      ]
+    },
+    {
+      "claim": "El corpus entero descansa sobre una sola transmisión: un etnógrafo, un narrador (Marcos Sierra), un intérprete (Manuel Sierra), dos campañas contiguas en 1953 y 1954 sobre el río Paca.",
+      "basis": "documented_core",
+      "sensitivity": "public",
+      "source_ids": [
+        "tc-fulop-1954",
+        "tc-fulop-1956"
+      ],
+      "affects": [
+        "yepa_huake",
+        "yupuri_bauro",
+        "gente_tucano",
+        "canoa_transformacion_guio"
+      ]
+    },
+    {
+      "claim": "El ser cantor nocturno no tiene especie en la fuente y se resuelve por el sonido —voces que se multiplican y permiten medir el tiempo— y no por un animal reconocible.",
+      "basis": "uncertain",
+      "sensitivity": "public",
+      "source_ids": [
+        "tc-fulop-1954"
+      ],
+      "affects": [
+        "ser_cantor_nocturno",
+        "noche_y_sueno"
+      ]
+    },
+    {
+      "claim": "La canoa-güío, el dueño de la noche con su recipiente, las casas y la danta existen también en Desana y Barasana con otros nombres y otras funciones; son variantes de área, no la misma ficha.",
+      "basis": "variant",
+      "sensitivity": "public",
+      "source_ids": [
+        "tc-fulop-1954",
+        "tc-unesco-00574"
+      ],
+      "affects": [
+        "canoa_transformacion_guio",
+        "dueno_de_la_noche_tucano",
+        "caja_de_la_noche",
+        "casas_de_surgimiento",
+        "vejke_danta"
+      ]
+    },
+    {
+      "claim": "Yepá Huáke es autónomo, sopla los rumbos, interroga, reparte y abandona; no es el mismo personaje que Yebá Gõãmü (Desana), que es formado por la Abuela del Mundo, no tiene cuerpo y su acto es poner límite. En Barasana no existe demiurgo único.",
+      "basis": "variant",
+      "sensitivity": "public",
+      "source_ids": [
+        "tc-fulop-1954"
+      ],
+      "affects": [
+        "yepa_huake",
+        "yupuri_bauro"
+      ]
+    },
+    {
+      "claim": "La danta Vejké es la primera interrogada y la que pierde: se le sustituye el silbato poderoso por otro pequeño y se la destierra a la selva. El corpus niega expresamente la corte animal, la danta reina y el mono que recibe el silbato.",
+      "basis": "documented_core",
+      "sensitivity": "public",
+      "source_ids": [
+        "tc-fulop-1956"
+      ],
+      "affects": [
+        "vejke_danta",
+        "silbato_poderoso",
+        "animales_del_diawi",
+        "yepa_huake"
+      ]
+    },
+    {
+      "claim": "Las semillas del sueño tienen función declarada y destinatario: el dueño de la noche explica que «las pequeñas semillas del sueño debían relacionarse con el corazón» y que Yepá Huáke repartiría el contenido entre los grupos. Se representan en reparto —de mano a mano, hacia el pecho— y no como carga ni como cosecha.",
+      "basis": "documented_core",
+      "sensitivity": "public",
+      "source_ids": [
+        "tc-fulop-1954"
+      ],
+      "affects": [
+        "semillas_del_sueno",
+        "dueno_de_la_noche_tucano",
+        "yepa_huake",
+        "caja_de_la_noche",
+        "noche_y_sueno"
+      ]
+    },
+    {
+      "claim": "Ninguna fuente da especie, tamaño ni forma botánica a las semillas del sueño: sólo el prompt aprobado añade que son «pequeñas semillas luminosas». La ficha las fija como semilla genérica sin especie reconocible, luminosa por función y no por materia, y declara la indeterminación en vez de elegir una planta.",
+      "basis": "uncertain",
+      "sensitivity": "public",
+      "source_ids": [
+        "tc-fulop-1954"
+      ],
+      "affects": [
+        "semillas_del_sueno"
+      ]
+    }
   ],
   "cultural_review": {
     "status": "documented_exception",
@@ -138,13 +509,46 @@
     ]
   },
   "gaps": [
-    {"question": "¿Qué dice literalmente la transcripción de Fulop, más allá de la paráfrasis del canon congelado?", "searched": "Localizadores del ICANH (RCA vol. 3 y vol. 5) y del repositorio Icesi; búsqueda del PDF en abierto.", "result": "Sólo hay ficha del artículo, sin texto completo accesible. Todo el cotejo se hizo contra el canon congelado, que es paráfrasis. Es la carencia que más limita la precisión de este dossier."},
-    {"question": "¿Existe alguna publicación de sabedores tucano accesible en texto que sirva como voz comunitaria de primera mano?", "searched": "Búsqueda del libro de Gabriel dos Santos Gentil (2005) y de la colección de Ñahuri y Kumarõ con FOIRN (2003) en acervos abiertos.", "result": "Sólo fichas catalográficas, sin texto. El corpus Tucano es el único de los tres del Vaupés sin voz comunitaria legible en el expediente, y el dossier lo declara como asimetría."},
-    {"question": "¿El corpus describe la vivienda tucano en algún punto?", "searched": "Búsqueda de «maloca», «poste», «techo», «puerta» y «umbral» en los siete relatos y en definitions.mjs.", "result": "Cero ocurrencias de «maloca». Todo el apartado arquitectónico se apoya en Rodríguez Lamus 1958 y en la síntesis del ISA, y queda como academic_hypothesis. Una biblia que dibuje casas tucano está dibujando etnografía, no relato."},
-    {"question": "¿El corpus describe algún cuerpo, vestido, adorno o pintura?", "searched": "Búsqueda de pintura corporal, tocado, pelo, ropa, rostro y estatura en los siete campos mito.", "result": "Cero en todas. Las tres anclas del dossier —carayurú, corona de fibra y plumas, guayuco— son regionales, no tucano-específicas ni del ciclo de Fulop, y por eso van como variant."},
-    {"question": "¿Hay condiciones de uso publicadas por titulares tucano sobre reproducción, imagen o investigación, equivalentes a las del Pirá Paraná?", "searched": "Búsqueda de protocolos y reglas de uso de organizaciones tucano del Vaupés colombiano y del Alto Río Negro.", "result": "No localicé ninguna. La ausencia se trata como restricción, no como permiso, y el dossier aplica por defecto el criterio más estricto del área."},
-    {"question": "¿Alguna fuente tucano describe el color del agua o la orilla del Vaupés?", "searched": "Búsqueda de color, agua negra, playa y arena en el canon congelado y en el perfil del ISA.", "result": "Nada. El dato de aguas negras procede de ecología regional y va como academic_hypothesis."},
-    {"question": "¿La etnografía sostiene el desdoblamiento translúcido de Boraró en una sola ficha?", "searched": "Lectura completa del pasaje de Boraró en el canon y de los catorce prompts aprobados; búsqueda de la descripción del boráro en la literatura regional.", "result": "La etnografía no sostiene lo translúcido, pero sostiene la ficha única por una razón mejor: la única descripción corporal detallada que existe —pies invertidos, piernas sin rodilla, piel pálida— es material desana, y dar figura a Boraró invitaría a un préstamo que el kit prohíbe. Ficha única, con esa prohibición nombrada en el contrato."}
+    {
+      "question": "¿Qué dice literalmente la transcripción de Fulop, más allá de la paráfrasis del canon congelado?",
+      "searched": "Localizadores del ICANH (RCA vol. 3 y vol. 5) y del repositorio Icesi; búsqueda del PDF en abierto.",
+      "result": "Sólo hay ficha del artículo, sin texto completo accesible. Todo el cotejo se hizo contra el canon congelado, que es paráfrasis. Es la carencia que más limita la precisión de este dossier."
+    },
+    {
+      "question": "¿Existe alguna publicación de sabedores tucano accesible en texto que sirva como voz comunitaria de primera mano?",
+      "searched": "Búsqueda del libro de Gabriel dos Santos Gentil (2005) y de la colección de Ñahuri y Kumarõ con FOIRN (2003) en acervos abiertos.",
+      "result": "Sólo fichas catalográficas, sin texto. El corpus Tucano es el único de los tres del Vaupés sin voz comunitaria legible en el expediente, y el dossier lo declara como asimetría."
+    },
+    {
+      "question": "¿El corpus describe la vivienda tucano en algún punto?",
+      "searched": "Búsqueda de «maloca», «poste», «techo», «puerta» y «umbral» en los siete relatos y en definitions.mjs.",
+      "result": "Cero ocurrencias de «maloca». Todo el apartado arquitectónico se apoya en Rodríguez Lamus 1958 y en la síntesis del ISA, y queda como academic_hypothesis. Una biblia que dibuje casas tucano está dibujando etnografía, no relato."
+    },
+    {
+      "question": "¿El corpus describe algún cuerpo, vestido, adorno o pintura?",
+      "searched": "Búsqueda de pintura corporal, tocado, pelo, ropa, rostro y estatura en los siete campos mito.",
+      "result": "Cero en todas. Las tres anclas del dossier —carayurú, corona de fibra y plumas, guayuco— son regionales, no tucano-específicas ni del ciclo de Fulop, y por eso van como variant."
+    },
+    {
+      "question": "¿Hay condiciones de uso publicadas por titulares tucano sobre reproducción, imagen o investigación, equivalentes a las del Pirá Paraná?",
+      "searched": "Búsqueda de protocolos y reglas de uso de organizaciones tucano del Vaupés colombiano y del Alto Río Negro.",
+      "result": "No localicé ninguna. La ausencia se trata como restricción, no como permiso, y el dossier aplica por defecto el criterio más estricto del área."
+    },
+    {
+      "question": "¿Alguna fuente tucano describe el color del agua o la orilla del Vaupés?",
+      "searched": "Búsqueda de color, agua negra, playa y arena en el canon congelado y en el perfil del ISA.",
+      "result": "Nada. El dato de aguas negras procede de ecología regional y va como academic_hypothesis."
+    },
+    {
+      "question": "¿La etnografía sostiene el desdoblamiento translúcido de Boraró en una sola ficha?",
+      "searched": "Lectura completa del pasaje de Boraró en el canon y de los catorce prompts aprobados; búsqueda de la descripción del boráro en la literatura regional.",
+      "result": "La etnografía no sostiene lo translúcido, pero sostiene la ficha única por una razón mejor: la única descripción corporal detallada que existe —pies invertidos, piernas sin rodilla, piel pálida— es material desana, y dar figura a Boraró invitaría a un préstamo que el kit prohíbe. Ficha única, con esa prohibición nombrada en el contrato."
+    },
+    {
+      "question": "¿Qué son materialmente las semillas del sueño?",
+      "searched": "Lectura del episodio completo en el canon congelado y búsqueda de especie, planta o forma en definitions.mjs y en los catorce prompts aprobados.",
+      "result": "No hay especie ni forma en ninguna parte: sólo la función (el sueño ligado al corazón) y el adjetivo «luminosas» del prompt. La ficha declara la indeterminación."
+    }
   ],
   "visual_system_draft": {
     "technique": "Papel recortado y quilling fotografiado como maqueta 3D inmersiva, a sangre por los cuatro límites, sin borde exterior, sin cartón soporte, sin mesa, sin estudio y sin marco; la cámara está dentro del diorama y recorta su perímetro. La técnica abre y cierra el prompt y manda sobre todo lo demás.",
@@ -152,7 +556,16 @@
     "style_medium": "Composición diagramática: eje de río con dirección de marcha declarada, centro que irradia a cuatro rumbos, fila de umbrales geométricos. Cámara frontal o cenital baja, casi sin escorzo, horizonte medio. Un paisaje que se lee como esquema sin llegar a ser un mapa, y que nunca se cartografía.",
     "lighting": "Alta, difusa y uniforme, de sombra corta y sin acento dramático: luz que orienta y mide, no que revela. El único contraste extremo del corpus es la caja abierta, con la noche saliendo de golpe contra la claridad del sendero.",
     "era": "Cosmogonía del Vaupés narrada en 1953. Fibra, madera, cerámica, calabazo, canoa monóxila, banco de madera, hoja de palma y semilla; sin metal, sin tela industrial, sin herramienta de contacto. Una sola pieza de contacto admitida, el papel, y siempre en blanco.",
-    "materials_base": ["tubérculo y almidón de yuca", "tierra y suelo en niveles", "agua de aguas negras", "banco de madera", "fibra tejida", "semilla", "hoja de palma", "papel sin escribir"],
+    "materials_base": [
+      "tubérculo y almidón de yuca",
+      "tierra y suelo en niveles",
+      "agua de aguas negras",
+      "banco de madera",
+      "fibra tejida",
+      "semilla",
+      "hoja de palma",
+      "papel sin escribir"
+    ],
     "palette_rules": [
       "La base es el par tierra-almidón: pardo de suelo en niveles contra el blanco crudo de la yuca y del papel en blanco.",
       "El agua se resuelve en ámbar oscuro con reflejo especular; jamás en azul.",
