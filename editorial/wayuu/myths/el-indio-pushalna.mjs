@@ -1,53 +1,55 @@
 import { defineWayuuMyth } from "../define-editorial-myth.mjs";
 
-const mito = `Pushaina viajaba montado en Kasap cuando el caballo tropezó. El jinete cayó con fuerza y quedó tendido sobre la tierra. Quienes lo acompañaban no encontraron respiración ni respuesta.
+const mito = `Pushaina andaba en un caballo capón llamado Kasap. Un día salió a montar, cayó sobre el anca del caballo, y el animal se asustó, brincó y lo botó. Pushaina murió del golpe.
 
-La noticia llegó a su familia. Prepararon el cuerpo y comenzaron el duelo. Pero antes de completar los ritos, Pushaina abrió los ojos. Regresaba con hambre y con una memoria confusa de voces que los demás no habían escuchado.
+Muerto ya, volvió a hablar. Les pidió a los demás que no fueran a matarlo, porque él se convertiría en culebra, en zorro, en mapurito; que cuando vieran cualquiera de esos animales le dejaran comida y algunas botellas de ron.
 
-Desde aquel día, una presencia invisible lo seguía. Le pedía comida cuando nadie estaba cerca. Si Pushaina no respondía, la voz lo despertaba durante la noche. Él dejaba porciones apartadas y al amanecer ya no estaban.
+Su hija lo mantuvo. Lo tenía encerrado en una casa grande, como si de verdad estuviera vivo. Pushaina se aparecía a todos, pero nadie lo veía: solo oían su voz. De repente, en una casa cualquiera, sonaba:
 
-La familia dudaba. Unos creían que la caída había cambiado su juicio; otros pensaban que había vuelto acompañado de un ser del otro lado. Para probarlo, ocultaron un anillo y le preguntaron dónde estaba.
+—Soy yo y vengo a visitarte. Mata un chivo y dame la comida.
 
-Pushaina cerró los ojos. Escuchó a la presencia y señaló el lugar exacto. La prueba aumentó su fama. Empezaron a buscarlo para recuperar objetos y comprender señales.
+Y todo el mundo le servía. Ponían lo que pedía en una sala y se retiraban. Al rato solo quedaban los huesos pelados y los platos vacíos. Quien le llevaba los alimentos lo oía, pero nunca lo vio. Cuando quería comer una res, le bastaba anunciar su deseo a alguien que tuviera animales para que lo obedecieran de inmediato, porque le tenían mucho miedo y no querían disgustarlo. Después aparecían los huesos.
 
-El poder no permanecía quieto. En ocasiones Pushaina desaparecía de la vista y un gallinazo volaba sobre la ranchería. Otras veces encontraban un ciempiés donde él había estado sentado. La gente decía que podía tomar esas formas, o que la presencia se las prestaba para desplazarse sin ser reconocido.
+Una vez la hija pasó tres días sin oírlo. Al terminar el tercero sintió que llegaba y le preguntó dónde había andado.
 
-Cada transformación tenía un costo. Pushaina regresaba cansado y la voz exigía más alimento. Comprendió que saber lo oculto no significaba dominar a quien le entregaba la respuesta.
+—Bebiendo chicha con unos indios, allá en los cementerios.
 
-Una noche volvió a montar a Kasap. El caballo se detuvo en el mismo lugar de la caída. Pushaina sintió que el camino de los vivos y el de los muertos se tocaban allí. Dejó comida sobre una piedra y pidió que la presencia no siguiera a su familia.
+En otra ocasión murió un hombre y nadie sabía dónde había dejado un anillo de gran valor. Fueron a preguntarle a Pushaina.
 
-El viento levantó polvo. Un gallinazo descendió, tomó una parte y volvió al cielo. Un ciempiés cruzó bajo la piedra. Pushaina regresó a la ranchería sin escuchar la voz.
+—El anillo está empeñado en poder de fulana de tal, por el valor de una oveja negra.
 
-No perdió todos sus sueños ni su capacidad de encontrar señales. Aprendió, sin embargo, a no convertir cada acierto en autoridad. Había muerto y vuelto, pero esa frontera no le pertenecía.`;
+Fueron donde la mujer, le preguntaron por el anillo, y ella confirmó lo que Pushaina había dicho. De ahí en adelante lo tuvieron como a un gran adivino.
 
-const historia = `Chaves publicó el relato a partir de Juancito Iguarán, hombre del clan Pushaina que no hablaba castellano, con Roberto Iguarán como intérprete. Esa cadena permite corregir un error de la ficha: “Pushalna” parece una lectura tipográfica de Pushaina, nombre clanil ampliamente documentado. Conservamos el slug histórico por estabilidad, pero el título visible cambia a “Pushaina”.
+Pero con el correr del tiempo, un niño que no sabía nada se metió al cuarto donde habitaba Pushaina. Apenas entró el niño, Pushaina voló como un gallinazo y salió fuera del cuarto, gritando:
 
-La narración combina caída de caballo, muerte aparente o retorno, hambre de una presencia invisible, adivinación y transformaciones en gallinazo y ciempiés. No contamos con el texto en wayuunaiki para determinar si un mismo sujeto ejecuta todas las metamorfosis o si la traducción acercó experiencias distintas.
+—Este indio que viene a verme tiene la culpa de que me vuelva gallinazo.`;
 
-Pineda documentó la relación entre piaches, espíritus auxiliares, sueños, cantos y diagnóstico de objetos o causas ocultas. Su material ayuda a evitar la etiqueta genérica de “hechicero”, pero no identifica a Pushaina como piache ni confirma su historia. Perrin aporta contexto sobre los muertos que aparecen en sueños y el tránsito hacia Jepira.
+const historia = `Milcíades Chaves publicó este cuento en 1946 en el Boletín de Arqueología, como el noveno de sus «Mitos, leyendas y cuentos de la Guajira», y es el que lleva pegada la nota de procedencia del bloque: «Informador de los anteriores cuentos: Juancito Iguarán, de 70 años, perteneciente a la casta Pushiana; no habla castellano. Intérprete, Roberto Iguarán, mestizo, hijo de Gaspar Iguarán y de Etelvina Cárdenas, natural de Puerto Estrella, 46 años». Un anciano del propio clan contó en wayuunaiki la historia de un muerto de su clan; un intérprete mestizo la puso en castellano; un antropólogo de Bogotá la escribió. Chaves alterna las grafías «Pushiana» y «Pushaina»; el nombre del clan está ampliamente documentado como Pushaina, y Andrea García Puello, Francis Araque Barboza y Ennia Cardona describen su cosmovisión y su historia en 2024. El «Pushalna» de la dirección de esta página es un error tipográfico heredado; se conserva por estabilidad del enlace.
 
-La versión anterior trataba el retorno como superpoder heroico. La revisión conserva lo extraordinario y subraya dependencia, cansancio y límites. En estas fuentes, relacionarse con presencias no humanas puede dar conocimiento y también imponer obligaciones. No es una habilidad de entretenimiento ni una práctica que el sitio recomiende reproducir.
+Chaves leyó el cuento como afirmación «del hombre superior a los demás, del individuo vidente y de la influencia decisiva que ejerce sobre el pueblo guajiro». Es su lectura de época, la de un Instituto Etnológico que buscaba, según su propia introducción, comprender la religión de los «grupos primitivos» para incorporarlos a una nacionalidad. También son suyas, o del intérprete, palabras como «resucitó», «adivino» y «cementerios». Conviene no leer «resucitó» en clave cristiana: el cuento no describe un cuerpo que vuelve, sino un muerto que sigue hablando, comiendo y exigiendo desde una casa cerrada.
 
-Corregir el nombre visible evita perpetuar un error sin borrar la historia de la URL ni fingir que conocemos una ortografía original ausente del registro disponible.`;
+Las fuentes wayuu contemporáneas ayudan a entender esa figura sin nombrarla. Barbara Kazianka registra que con los yolujaa, los muertos, se conversa en sueños como con una persona, que un muerto puede aparecer con sed y hambre pidiendo ser atendido, y que negarse puede causar la muerte; es el paralelo etnográfico más cercano a la voz que pide un chivo. Silvia Serrano López describe la relación dialógica entre la outsü, su espíritu auxiliar aseyuu y la familia, y el sueño como vía por la que los muertos comunican lo que ocurrirá; Marcela Hernández Chacón explica que todo ser tiene un aseyuu y que la ouutsü es «un ojo visionario». Rafael Balza García presenta a la outsü como quien restablece el orden ante el mal wanülüü. Ninguna de estas fuentes habla de Pushaina, de una caída de caballo ni de un muerto que se vuelve gallinazo o ciempiés, y ninguna autoriza a llamarlo piache u outsü: el cuento no le da oficio. Roberto Pineda Giraldo describía en 1950 los sueños guajiros como «revelaciones del porvenir» y, según la ficha bibliográfica del expediente, recoge un relato sobre un individuo del clan Pushaina y el vaticinio onírico de su muerte; no pudimos cotejar si es el mismo personaje.
 
-const versiones = `Solo se localizó una versión narrativa completa, mediada por Chaves y su intérprete; Villa Posse la vuelve a publicar. La ausencia de otras versiones no obliga a despublicar el mito, según el criterio definido para esta revisión, pero sí a declarar la dependencia documental.
+Dos cautelas editoriales. La ficha anterior había inventado otra trama: un Pushaina que sobrevive a la caída, una presencia invisible que lo acompaña, una prueba con un anillo escondido y un pacto sobre una piedra. Nada de eso está en Chaves, y el Relato vuelve al muerto que come. La segunda cautela es el final de Chaves: el ciempiés que se mete entre las piernas de las muchachas para declarar si son «señoritas» es una escena de intrusión y miedo sobre mujeres jóvenes, narrada sin distancia. El Relato termina antes, con el gallinazo, y ese episodio se documenta en Versiones como dato de la publicación de 1946; no lo ponemos en escena ni lo explicamos como costumbre.`;
 
-El nombre Kasap se mantiene como nombre del caballo sin proponer una traducción. La caída puede leerse como muerte, desmayo o tránsito ritual; la fuente usa el retorno para abrir la relación con la presencia, pero no ofrece diagnóstico.
+const versiones = `Hay una sola cadena documental: Chaves 1946 y su reedición por Eugenia Villa Posse en 1993, que conserva la procedencia y no aporta informante nuevo. Las fuentes etnográficas del expediente (Pineda, Perrin, Kazianka, Serrano López, Hernández Chacón, Balza García) tratan sueños, muertos y curadoras, no a Pushaina.
 
-Gallinazo y ciempiés aparecen como formas asociadas con Pushaina. No los convertimos en “animales totémicos” del clan ni extendemos la metamorfosis a todos los piaches. Son motivos de esta narración concreta.
+Dentro del texto de Chaves hay dos pasajes ambiguos que el Relato resuelve de una manera y declara aquí. El primero: «apenas entró el niño voló como un gallinazo y salió fuera del cuarto diciendo: este indio que viene a verme tiene la culpa de que me vuelva gallinazo». La frase permite que vuele el niño o que vuele Pushaina; como quien habla se queja de «este indio que viene a verme», entendemos que es el muerto quien sale volando. El segundo: los animales anunciados (culebra, zorro, mapurito) no coinciden con los que luego adopta (gallinazo, ciempiés). El cuento no lo explica; el Relato conserva la lista anunciada y el gallinazo sin fundirlos, y el ciempiés queda documentado más abajo.
 
-La página se relaciona con “El viaje del más allá” porque una persona cruza o roza la muerte y vuelve con condiciones. No se fusiona: Pushaina no emprende un recorrido por los dominios de Juyá ni busca a una pareja fallecida; su conflicto es vivir acompañado por una voz que alimenta su conocimiento y su deuda.`;
+La ficha anterior de este sitio contaba una variante sin fuente: Pushaina no moría, volvía con hambre y con una memoria confusa, una presencia invisible le pedía comida, la familia escondía un anillo para probarlo, y él terminaba dejando comida sobre una piedra para que la presencia dejara de seguirlos. En Chaves, Pushaina muere del golpe; la hija lo mantiene encerrado; la voz manda matar chivos y reses; el anillo es de un muerto ajeno y está empeñado por una oveja negra; y nadie negocia nada: le sirven por miedo. Esta edición prefiere ese texto, más incómodo, porque es el único documentado. Kasap, el ron, la oveja negra y la chicha en los cementerios son datos de Chaves.
+
+Esta ficha se distingue de “El viaje del más allá” y de “Ulépala”, donde un vivo cruza hacia el país de los muertos y vuelve con una condición que rompe; Pushaina no viaja: se queda en su casa, muerto, y son los vivos quienes lo sostienen. Se distingue también de “Jururiana y la gran lluvia”, del mismo informante, donde un vivo lee el tiempo y su nieto pasa una prueba a oscuras; ambos «adivinan», pero uno desde la fiesta y otro desde la tumba.
+
+Chaves cierra su texto con un episodio en que Pushaina, convertido en ciempiés, pasa entre las piernas de las muchachas para decir a los hombres si siguen siendo señoritas. Se conserva aquí como dato de la publicación de 1946 y no se pone en escena en el Relato: es una humillación sexual que el propio texto narra sin distancia, y la página se lee también con niños.`;
 
 const leccion =
-  "Volver con conocimiento no concede dominio sobre la muerte ni elimina las obligaciones adquiridas al cruzar sus límites.";
+  "Lo que se alimenta por miedo no se despide nunca y con cada plato servido reclama más.";
 
-const similitudes = `“El viaje del más allá” y “Ulépala” también narran un regreso imposible de conservar sin costo. En esas páginas, contar lo visto conduce al desenlace fatal; Pushaina permanece entre los vivos, pero debe negociar con una presencia que exige alimento. El parecido es el retorno condicionado, no una trama única.
+const similitudes = `“El indio Jaichuasay” es el paralelo interno más directo en cuanto a la forma: un cazador se convierte en venado y luego recupera el cuerpo humano. Pushaina también cambia de cuerpo (culebra, zorro, mapurito, gallinazo, ciempiés), pero ya está muerto, y sus formas no son un accidente de la caza sino la manera en que un muerto sigue entrando en las casas. “El viaje del más allá” y “Ulépala” cuentan regresos del país de los muertos que no pueden sostenerse; aquí el regreso se sostiene demasiado bien, a costa de chivos, reses y miedo. Con “Jururiana y la gran lluvia”, recogido al mismo tiempo y de la misma voz de Puerto Estrella, comparte la prueba del vidente: allí un hombre escondido en una casa oscura, aquí un anillo empeñado; en ambos casos la comunidad no cree hasta comprobar.
 
-“El indio Jaichuasay” convierte a un cazador en venado y luego lo devuelve a forma humana. Pushaina adopta o aparece ligado a gallinazo y ciempiés. Ambas narraciones deshacen una frontera fija entre cuerpos, aunque la primera se concentra en caza y serranía y la segunda en muerte, voz y adivinación.
+El expediente cita las Metamorfosis de Ovidio como comparación, y el eco existe: cuerpos humanos que se vuelven aves, reptiles o insectos, y una marca que queda en el animal. La diferencia es mayor que la semejanza. En Ovidio la transformación es casi siempre irreversible y la impone un dios como castigo o como salvación (Aracne en araña, Ío en vaca, las Piérides en urracas); Pushaina se transforma él mismo, cuando quiere, y vuelve a ser voz. Además, en Ovidio la metamorfosis cierra una historia; aquí la abre, porque cada animal es una forma de seguir pidiendo. No hay ninguna relación de origen entre el poema latino y el cuento de Puerto Estrella: la comparación solo sirve para ver qué hace cada mundo con la idea de cambiar de cuerpo.
 
-Las metamorfosis animales recuerdan relatos clásicos donde una figura divina cambia de forma para escapar o intervenir. El paralelo formal no hace de Pushaina un chamán universal ni prueba contacto con Ovidio. En La Guajira, cada animal participa de relaciones ecológicas y narrativas concretas.
-
-La prueba del anillo se parece a cuentos de adivinos que encuentran un objeto oculto. Aquí su función no es demostrar fraude o genialidad, sino hacer visible que la familia necesita comprobar un vínculo que solo Pushaina escucha.`;
+Un paralelo documentado fuera de la literatura está en la etnografía wayuu actual. Barbara Kazianka registra que los yolujaa aparecen con hambre y sed, piden ser atendidos y castigan la negativa; Silvia Serrano López describe la voz auxiliar que dialoga con la curadora y con la familia. El cuento de Pushaina parece una forma extrema de esa relación: el muerto no habla en sueños sino en la sala, y no pide atención sino un chivo entero.`;
 
 export default defineWayuuMyth({
   slug: "el-indio-pushalna",
@@ -72,13 +74,42 @@ export default defineWayuuMyth({
   ],
   tags: ["Wayúu", "espiritualidad", "muerte", "transformación"],
   sourceKeys: [
-    "chaves1946",
+    {
+      key: "chaves1946",
+      summary:
+        "Contiene el relato completo El indio Pushaina (el guajiro que se convierte en gallinazo y en ciempiés y combate a los kosinas).",
+      limitation:
+        "Libro general de mitos guajiros; OCR parcial.",
+    },
     "villa1993",
-    "pineda1950",
+    {
+      key: "pineda1950",
+      summary:
+        "Incluye un relato de informantes sobre un individuo del clan Pushaina y el vaticinio onírico de su muerte.",
+      limitation:
+        "Mención breve del clan dentro de una obra general de magia guajira.",
+    },
     "perrin1980",
     "minculturaWayuu",
-    "onicWayuu",
+    "pesPalabreros",
     "ovidMetamorphoses",
+    "cosmovisionCotidianidad2024",
+    "garciaOutsu2011",
+    {
+      key: "serranoOutsu",
+      summary:
+        "Describe la relación dialógica entre la curadora, su espíritu auxiliar aseyuu, los objetos de poder y la familia, y el sueño como vía por la que los muertos comunican hechos que sucederán a la familia: la misma estructura de voz auxiliar, hambre y prueba familiar del relato.",
+      limitation:
+        "Etnografía de la Media Guajira actual con outsü mujeres; no trata varones, adivinación de objetos ni metamorfosis en gallinazo o ciempiés.",
+    },
+    "chaconmujer2023",
+    {
+      key: "kaziankaYolujaa",
+      summary:
+        "Registra que con los yolujaa se conversa en sueños como con una persona, que un muerto puede aparecer con sed y hambre pidiendo ser atendido y que negarse puede causar la muerte: el paralelo etnográfico más cercano a la presencia que exige comida a Pushaina.",
+      limitation:
+        "Habla de yolujaa y wanülüü, no de un espíritu que otorga adivinación o metamorfosis; el material es de comunidades evangélicas actuales.",
+    },
   ],
   researchNotes: `CORRECCIÓN DE IDENTIDAD: el registro fuente identifica a Juancito Iguarán como Pushaina; “Pushalna” se trata como error tipográfico. Slug preservado.
 

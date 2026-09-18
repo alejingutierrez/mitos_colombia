@@ -1,63 +1,63 @@
 import { defineWayuuMyth } from "../define-editorial-myth.mjs";
 
-const mito = `Jururiana vivía cerca de Patsuo y era conocido por escuchar señales que otros pasaban por alto. Una noche soñó con lluvias tan fuertes que los caminos desaparecían y con una enfermedad que avanzaba detrás del agua.
+const mito = `Jururiana salió a recorrer las rancherías. Fue de casa en casa, entre corrales de piedra y trupillos, y en cada una repitió lo mismo: que guardaran las semillas, porque las lluvias estaban por llegar, y que juntaran todos los chivos de color negro para llevarlos a Patsuo, cerca de Puerto Estrella, donde la gente se reunía a comer.
 
-Al despertar llamó a su familia.
+Antes de irse dio un último aviso.
 
-—Guarden semillas y aseguren animales oscuros —les indicó—. Cuando cambie el cielo no habrá tiempo de buscar lo necesario.
+—Yo me voy a mi casa. En la madrugada caerá un chubasco que borrará por completo mis huellas.
 
-Unos obedecieron. Otros dijeron que la mañana estaba limpia y que no valía la pena trabajar por un sueño. Jururiana preparó depósitos, revisó los techos y llevó parte de su familia hacia un lugar alto.
+El cielo estaba limpio y el viento soplaba seco del nordeste. Pero en la madrugada el agua golpeó la arena y, cuando la gente salió a mirar, no quedaba una sola huella del camino de Jururiana. Todo había ocurrido tal como él lo dijo.
 
-Las nubes llegaron desde el mar. Durante varios días la lluvia golpeó la tierra. Los cauces secos se llenaron y algunas rancherías quedaron aisladas. Después aparecieron fiebre y muerte.
+Después anunció su propia muerte y dio el plazo: un mes. Exactamente al cumplirse el mes, Jururiana murió.
 
-Quienes habían guardado alimento pudieron esperar. Jururiana no celebró que su anuncio fuera correcto. Repartió semillas y animales entre quienes habían perdido los suyos.
+Quedó Warir, su nieto. Había aprendido a estudiar el tiempo como lo estudiaba el abuelo: la altura de las nubes, el olor del aire antes del agua, el modo en que callan las cabras cuando cambia el viento. Warir organizó una fiesta en Wawari, abajo de Puerto Estrella. Hubo carreras de caballos sobre la llanura y baile de chichamaya hasta entrada la noche.
 
-Mucho tiempo después quiso saber si su nieto Warir había heredado la capacidad de comprender señales. Lo llevó a una habitación oscura y le pidió que dijera de dónde provenía el conocimiento.
+En medio de la fiesta, los hombres quisieron saber si el nieto adivinaba de verdad o solo cargaba el nombre del abuelo. Lo encerraron en una casa oscura, tan cerrada que adentro no se veía ni la palma de la mano. Antes, sin que Warir lo supiera, habían escondido allí a un hombre llamado Maratey.
 
-Warir permaneció en silencio. No podía mirar el horizonte ni seguir huellas. Puso las manos sobre el suelo y respondió:
+—¿Dónde está Maratey? —le preguntaron.
 
-—Mma, nuestra abuela Tierra, guarda lo que ocurrió y lo que se aproxima. Los sueños hablan porque nuestros cuerpos también pertenecen a ella.
+Warir no tanteó las paredes. Caminó derecho en la oscuridad y se detuvo en el lugar preciso donde Maratey contenía la respiración. Cuando abrieron la puerta, todos quedaron convencidos de que el nieto sabía.
 
-Jururiana quedó satisfecho. No esperaba una adivinación brillante, sino el reconocimiento de una relación. La sabiduría no estaba encerrada en un hombre: pasaba por sueños, suelo, memoria y parentesco.
+La fiesta seguía cuando llegó un posta con el polvo del camino en la ropa. Traía una noticia: el nieto del cacique estaba enfermo y se iba a morir. Los hombres se volvieron hacia Warir.
 
-Warir salió de la oscuridad. Aprendió a observar cambios de viento, conducta de animales, humedad y palabras de los mayores. Nunca trató cada sueño como orden literal. Los comparaba con el territorio y consultaba a la familia antes de actuar.
+—¿Es cierto?
 
-Cuando Jururiana murió, su nombre siguió unido a la gran lluvia. Quienes repetían la historia recordaban tanto su previsión como su deber de compartir lo preparado.
+—Su nieto está enfermo —contestó—, pero se aliviará. Será un hombre.
 
-Patsuo no quedó como escenario de un profeta que dominaba el futuro. Quedó como lugar donde una advertencia solo tuvo sentido porque alguien convirtió el conocimiento en cuidado para otros.`;
+Y así sucedió.
 
-const historia = `Chaves publicó este relato en 1946. La secuencia reúne una profecía de lluvia y muerte, la recomendación de reunir semillas y animales, y una prueba al nieto Warir en una habitación oscura. La respuesta del joven vincula los secretos con la Tierra como abuela.
+Entonces uno de los que estaban en la fiesta levantó una piedra grande con las dos manos y la lanzó contra el suelo. El golpe se sintió en los pies de todos. Warir se enojó.
 
-La ficha anterior presentaba a Jururiana como héroe individual y convertía cada imagen del sueño en predicción infalible. La revisión distingue previsión de omnisciencia. En muchas prácticas Wayuu, los sueños tienen peso en decisiones, enfermedad y relaciones con los muertos, pero no funcionan como un código universal que un lector externo pueda aplicar sin contexto.
+—No golpees a mi abuela —dijo—. La tierra es mi abuela, y de ella tengo todos mis secretos.
 
-Patsuo aparece cerca de Puerto Estrella en la cadena histórica consultada. Las fuentes territoriales confirman la importancia cultural de la Alta Guajira, pero no permiten fijar la escena en una casa o fecha. También evitamos identificar la enfermedad anunciada con una epidemia histórica concreta.
+Nadie volvió a tirar piedras esa noche. Desde entonces, todos respetaron al nieto de Jururiana.`;
 
-El cierre sobre Mma es especialmente valioso porque descentra al profeta. El conocimiento no nace solo de una facultad extraordinaria: se vincula con tierra, memoria y transmisión entre generaciones. Esa lectura es compatible con el episodio sin presentar una filosofía homogénea de todos los Wayuu.
+const historia = `Este cuento lo publicó Milcíades Chaves en 1946, en el Boletín de Arqueología, dentro de «Mitos, leyendas y cuentos de la Guajira», un conjunto de quince textos recogidos para el Instituto Etnológico Nacional. La nota de informante que cierra ese bloque de cuentos de Puerto Estrella nombra a Juancito Iguarán, de setenta años, de la casta Pushaina, que no hablaba castellano, y al intérprete Roberto Iguarán, mestizo de Puerto Estrella, de cuarenta y seis. Lo que leemos pasó, por tanto, del wayuunaiki al castellano de un intérprete y de ahí a la prosa de un antropólogo; el wayuunaiki original no se conservó.
 
-La reescritura incorpora el compartir como consecuencia editorial prudente de preparar recursos en una crisis; no atribuye una norma económica detallada que la fuente no desarrolla.
+Chaves leía estos cuentos con las categorías de la antropología nacional de su época. En su introducción explica que conocer «el mecanismo de la religión de los grupos primitivos» sirve para «incorporar» una sociedad «a un credo, a una filosofía o a una nacionalidad», y presenta a Jururiana como el hombre cuyo poder de adivinación le da «lugar preferente en la sociedad» y que «se declara él mismo descendiente de la madre tierra». Palabras como «cacique», «adivinar» o «casta» son suyas, no del narrador wayuu. Roberto Pineda Giraldo, en 1950, describió desde teorías de la magia cómo el guajiro tomaba los sueños por «revelaciones del porvenir» y por hechos sociales que determinan actos colectivos; su lenguaje («primitivo», «determinista») pertenece al mismo momento.
 
-El relato sigue siendo, ante todo, una pieza de memoria transmitida y no un pronóstico que deba comprobarse con meteorología actual.`;
+El cuento no habla de sueños: Jururiana y su nieto «estudiaban el tiempo». Aun así, la memoria wayuu contemporánea permite entender por qué un aviso así obliga a actuar. Carmen Laura Paz Reverol, antropóloga wayuu, explica que Lapü, el sueño, pronostica sucesos sobre salud, enfermedad, vida y muerte y sirve para prever situaciones difíciles; Dalia Araujo y José Enrique Finol documentan que la mayoría de los wayuu toma acciones después de una premonición, y Nelly García Gavidia describe esos mensajes como premonitorios y prescriptivos. Barbara Kazianka registra que los muertos alertan a sus familiares en sueños y comparten conocimientos. Estas fuentes tratan la Guajira venezolana y no mencionan a Jururiana; sirven de encuadre, no de prueba.
 
-const versiones = `La versión narrativa localizada depende de Chaves y de su reedición posterior por Villa Posse. No se halló una versión independiente con otro informante. La página publica esa limitación en vez de transformar estudios generales sobre sueños en testimonios del mismo episodio.
+La lluvia que Jururiana anuncia tiene, en la voz wayuu, un nombre propio. Rafael Segundo Mercado Epieyu presenta a Juya como genio fecundante que rige estaciones y constelaciones; Daza-Daza, Rodríguez-Valencia y Carabalí-Angola lo describen como ser dador de vida, y Brígida Sánchez lo sitúa como deidad masculina en pareja con Pulowi. Carrasquero y Finol asocian a Juya y a sus hermanos con las formas de la precipitación. El cuento de Chaves, sin embargo, no nombra a Juya: guardar semillas cuando el invierno se acerca es, ante todo, saber agrícola de una tierra donde el agua manda. Patsuo, Wawari y Puerto Estrella pertenecen a la Alta Guajira; los documentos del Parque Nacional Natural Macuira y del Régimen Especial de Manejo describen esa región, sus fuentes de agua y su valor cultural, pero no fijan el cuento en un punto exacto.
 
-Los animales recomendados aparecen como cabras negras en algunas síntesis. El color puede tener una función ritual o provenir de la literalidad del registro; sin material wayuunaiki y comentarios del narrador, no le asignamos un simbolismo definitivo.
+Una cautela editorial: la ficha anterior había añadido un sueño de lluvia y epidemia, un reparto de semillas y una abuela Tierra llamada Mma. Nada de eso está en Chaves. Esta edición vuelve al cuento tal como se publicó, con su chubasco, su muerte anunciada, su prueba a oscuras y su piedra contra el suelo.`;
 
-La gran lluvia se ha leído como diluvio y la muerte como epidemia. El texto no necesita que ambos sean universales. Una inundación localizada en cauces y rancherías basta para comprender el peligro, y la enfermedad permanece sin diagnóstico.
+const versiones = `Solo existe una cadena documental para este cuento. Chaves lo publicó en 1946 y Eugenia Villa Posse lo reeditó en 1993 en «Mitos y leyendas de Colombia», tomo I, conservando la procedencia bibliográfica; esa reedición no es un testimonio independiente, sino la misma voz de Puerto Estrella copiada de nuevo. Ninguna de las fuentes contemporáneas del expediente narra el episodio: Pineda, Perrin, Paz Reverol o Kazianka hablan de sueños, muertos y lluvia en general, no de Jururiana.
 
-“Arámai” también conecta mortandad, Mareiwa y supervivencia, pero desde una petición destructiva. “Jururiana” conserva advertencia, preparación y transmisión. Las páginas se enlazan como respuestas opuestas ante la amenaza y no se fusionan.
+Dentro de esa única cadena hay una irregularidad que conviene declarar. En el texto de Chaves, al describir la prueba de la casa oscura, se dice que escondieron a Maratey «para que Jururiana lo encontrara», aunque Jururiana ya ha muerto un párrafo antes. Todo lo demás (la fiesta, la pregunta del posta, el enojo por la piedra) se atribuye al nieto, así que leemos ese nombre como un desliz del intérprete o del copista y ponemos a Warir en la casa oscura. La grafía «Warir» es la de Chaves; no debe igualarse sin prueba a Walirü, figura animal de otros cuentos.
 
-El nieto Warir no debe confundirse automáticamente con Walirü, figura animal o sobrenatural de otros relatos. La ortografía castellana del registro no garantiza identidad entre nombres parecidos.`;
+La ficha anterior de este sitio contaba otra historia: un sueño de lluvias y enfermedad, vecinos que dudan, un reparto de semillas entre quienes perdieron las suyas, y una prueba en la que el propio abuelo encierra al nieto y este responde invocando a Mma, la Tierra. Esa versión venía de una lectura editorial, no de Chaves, y por eso el Relato la abandona. En el cuento publicado, la prueba la hace la comunidad en una fiesta, con un hombre escondido y un posta que trae una enfermedad ajena; la tierra aparece al final, cuando alguien la golpea con una piedra. El título «Jururiana y la gran lluvia» tampoco viene del texto, que solo menciona un chubasco de madrugada.
+
+Esta ficha se distingue de “Umaralá”, donde el saber es de un piache que cura y prescribe, y de “El indio Pushaina”, publicado en el mismo bloque y con el mismo informante, donde el vidente es un muerto que habla desde una casa cerrada. Jururiana y Warir son vivos que leen el tiempo y son puestos a prueba por su propia gente.`;
 
 const leccion =
-  "Prever una crisis vale cuando el conocimiento se convierte en preparación, consulta y cuidado para otros.";
+  "Heredar un saber es recibir también la desconfianza de quienes quieren verlo probado.";
 
-const similitudes = `Los relatos de inundación de muchas tradiciones incluyen una advertencia, almacenamiento y traslado a un lugar seguro. El parecido con Noé o con episodios del Popol Vuh está en anticipar agua destructiva; no demuestra préstamo ni vuelve la lluvia de Patsuo un diluvio mundial.
+const similitudes = `El paralelo más cercano dentro del corpus es “El indio Pushaina”, publicado por Chaves en el mismo bloque y con el mismo informante de Puerto Estrella. Allí también una comunidad comprueba a un vidente pidiéndole que localice algo oculto (un anillo empeñado) y, cuando acierta, «lo tenían como a un gran adivino». La diferencia es de mundo: Pushaina responde desde la muerte, encerrado y temido, mientras Warir responde en una fiesta, vivo, y su saber remite a la tierra que pisa. “Umaralá” muestra el saber de un piache que cura y anuncia; en Jururiana no hay curación ni oficio ritual, sino lectura del tiempo. “Arámai” ofrece un contraste: quien prevé la escasez pide un daño que luego no controla, mientras Jururiana anuncia y deja que cada casa guarde lo suyo.
 
-“Arámai” ofrece un contraste interno: su protagonista pide una enfermedad para resolver la escasez y pierde control del daño. Jururiana escucha una amenaza y prepara medios para sostener la vida. Las dos páginas muestran que prever población, alimento y enfermedad puede conducir a responsabilidades opuestas.
+La prueba de la casa oscura tiene un eco documentado en el Popol Vuh, en la edición de Allen Christenson: los señores de Xibalba someten a los visitantes a la Casa Oscura, donde deben pasar la noche sin luz y salir enteros, y los gemelos vencen además al nombrar a cada señor sin haberlos visto. La resonancia está en que el conocimiento se prueba retirando la vista. La diferencia es de fondo: en el Popol Vuh la oscuridad es una trampa mortal de los señores del inframundo, y en la Alta Guajira es una comprobación que la propia gente organiza en una fiesta y que termina en respeto, no en sacrificio. No hay indicio de contacto entre ambas historias; solo comparten una forma de poner a prueba.
 
-“Umaralá” también transmite un saber mediante una pariente mayor y objetos rituales. Allí la herencia se activa en la curación; aquí el abuelo prueba a Warir y la respuesta remite a Mma. En ambos casos, el conocimiento no es una hazaña aislada, sino una relación entre generaciones.
-
-La habitación oscura recuerda pruebas iniciáticas en las que se retiran señales habituales para escuchar otra fuente de conocimiento. La comparación debe permanecer formal. No afirmamos que exista una ceremonia Wayuu general con esa prueba ni la equiparamos a escuelas esotéricas de otros pueblos.`;
+El enojo de Warir por la piedra recuerda que en varios cuentos del corpus la tierra y el agua son parientes y no escenario: Mercado Epieyu presenta a Juya como quien rige las estaciones, y Chaves anota que Jururiana «se declara descendiente de la madre tierra». Esa filiación se afirma en una frase, no en una doctrina, y esta ficha la conserva así.`;
 
 export default defineWayuuMyth({
   slug: "el-indio-jururiana",
@@ -89,6 +89,32 @@ export default defineWayuuMyth({
     "macuira",
     "regimenMacuira",
     "popolVuh",
+    "mercadoAleeya",
+    "recursoAgua2018",
+    "filosofiaMitica2005",
+    "carrasqueroFinolYonna",
+    {
+      key: "pazReverolSuenos",
+      summary:
+        "Una antropóloga wayuu explica que Lapü pronostica sucesos sobre salud, enfermedad, vida y muerte y que el sueño sirve para prever situaciones difíciles, el mismo eje de la profecía de Jururiana y de la respuesta de Warir.",
+      limitation:
+        "Trata sueños de enfermedad infantil y curación en la Guajira venezolana; no menciona a Jururiana, Patsuo ni un sueño de lluvia.",
+    },
+    "vilchezSueno2010",
+    {
+      key: "cuandoCambian2004",
+      summary:
+        "Sintetiza que los sueños son mensajes de Lapü, premonitorios y prescriptivos, y que no soñar se vive como amenaza de muerte, lo que sitúa la profecía de Jururiana dentro de una institución onírica wayuu y no como don individual.",
+      limitation:
+        "Su foco es el cambio de esas creencias por las iglesias evangélicas en la costa venezolana; la parte sobre Lapü es de encuadre, no etnografía de la Alta Guajira colombiana.",
+    },
+    {
+      key: "kaziankaYolujaa",
+      summary:
+        "Documenta que los muertos protegen y pueden alertar a sus familiares en sueños, dando consejos o compartiendo conocimientos: un canal de advertencia familiar comparable al aviso que Jururiana transmite y prueba en su nieto.",
+      limitation:
+        "Trata la relación con los antepasados y su reinterpretación evangélica; no habla de profecías de lluvia ni de la transmisión intergeneracional del don de soñar.",
+    },
   ],
   researchNotes: `NÚCLEO: sueño de lluvia y muerte; semillas y animales preparados; Patsuo; prueba del nieto Warir en oscuridad; Tierra como abuela y fuente de secretos.
 
