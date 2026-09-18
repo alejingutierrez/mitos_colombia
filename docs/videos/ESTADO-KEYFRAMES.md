@@ -12,12 +12,17 @@ rehacerlo** con la doctrina v4.
 
 | Comunidad | Mitos | Actas | Guiones | Biblia | Specs v4 | Keyframes v4 | Estado |
 |---|---:|---:|---:|---|---:|---:|---|
-| **Muiscas** | 41 | 41 | 85 | 302 láminas instaladas | **41** | **1.852** | ✅ **aprobado** |
-| **Wayúu** | 27 | 27 | 54 | 237 láminas instaladas (V4) | **27** | **1.652** | ✅ **aprobado** |
-| Nasa – Páez | 26 | 26 | 36 | sólo texto, 0 láminas | 0 | 0 | ⛔ rehacer |
-| Ette Ennaka (Chimila) | 23 | 23 | 62 | 23 láminas sueltas | 0 | 0 | ⛔ rehacer |
-| Huitoto / Murui-Muina | 21 | 18 | 18 | 20 láminas sueltas | 0 | 0 | ⛔ rehacer |
-| Chamí | 14 primarios | 0 | 0 | **V1 cerrada, 118 fichas** | 0 | 0 | ⛔ rehacer |
+| **Muiscas** | 41 | 41 | 85 | 151 fichas · **instalada** | **41** | **1.852** | ✅ **aprobado** |
+| **Wayúu** | 27 | 27 | 54 | 237 fichas V4 · **instalada** | **27** | **1.652** | ✅ **aprobado** |
+| Nasa – Páez | 26 | 26 | 36 | **60/60 · cerrada** | 0 | 0 | ⛔ rehacer keyframes |
+| Ette Ennaka (Chimila) | 23 | 23 | 62 | 51 de 54 · casi cerrada | 0 | 0 | ⛔ rehacer keyframes |
+| Huitoto / Murui-Muina | 21 | 18 | 18 | **196/196 · cerrada** | 0 | 0 | ⛔ rehacer keyframes |
+| Chamí | 14 primarios | 0 | 0 | **118 fichas · V1 cerrada** | 0 | 0 | ⛔ falta lo editorial |
+
+**Ninguna comunidad está esperando biblia.** Las cuatro pendientes ya la tienen
+cerrada o casi. Lo que falta en todas es **instalarla como referencias**
+(`content/videos/<com>/biblia/*.jpg`, que es lo que leen los specs) y escribir
+los specs v4.
 
 Totales aprobados: **3.504 cuadros · 68 mitos · ~147 min de video** a razón de
 10 s por bloque de guion.
@@ -96,43 +101,56 @@ versión, de ahí los sprites).
 
 El orden no es negociable: **sin acta no hay guion, y sin biblia no hay spec.**
 
-### Nasa – Páez (26 mitos) — la más avanzada de las pendientes
+### Nasa – Páez (26 mitos) — la más lista de las pendientes
 - ✅ 26 actas de reducción en `docs/videos/nasa-paeces/actas/`.
-- ✅ `inventory.v2.json` y `BIBLIA-NASA.md` en `content/videos/nasa-paeces/biblia/`.
-- ❌ **La biblia no tiene ni una lámina generada.** Es todo texto.
-- ❌ 36 guiones existen, pero contra la metodología vieja.
-- ⚠️ Lo que hay en `output/imagegen/nasa-paeces/keyframes/` son **596 PNG de una
-  sola tanda** (`el-trueno-produccion-01`), que por dentro cubre 29 mitos con
-  280 imágenes más. Metodología anterior: **no sirve**.
+- ✅ **Biblia cerrada: 60/60 unidades**, `status: complete_editorial_bible`
+  (2026-09-12). 17 personajes, 7 entidades, 10 paisajes maestros, 8 variantes,
+  12 packs de utilería, 6 de reparto. Originales en
+  `output/imagegen/nasa-paeces/biblia/produccion-api-02/` (84 `.jpeg`);
+  inventario en `inventory.v2.json`, linaje y rechazos en `selection.v2.json`
+  (60 aceptaciones, 16 rechazos).
+- ❌ **La biblia no está instalada como refs**: no hay
+  `content/videos/nasa-paeces/biblia/*.jpg`.
+- ⚠️ Lo que hay en `output/imagegen/nasa-paeces/keyframes/` son **~600 imágenes
+  de una sola tanda** (`el-trueno-produccion-01`), que por dentro cubre 29
+  mitos. Metodología anterior: **no sirve**.
 
 **Falta:** normalizar el inventario al formato V4 (con `sensibilidad` y
-`nota_visual` por entidad), generar la biblia, instalarla como refs, escribir
-26 specs, generar ~1.700 cuadros.
+`nota_visual` por entidad), instalar la biblia como refs, escribir 26 specs,
+generar ~1.700 cuadros.
 
 ### Ette Ennaka / Chimila (23 mitos)
 - ✅ 23 actas en `docs/videos/ette-ennaka/actas/`.
-- ✅ `inventory.v1.json` + `BIBLIA-ETTE.md`.
-- ⚠️ 23 láminas de biblia en `output/imagegen/chimila/biblia/` — **muy por
-  debajo** de las 237 wayúu o las 302 muiscas. Es un piloto, no una biblia.
-- ⚠️ 49 keyframes viejos repartidos en 3 tandas `produccion-api-0*`, cubriendo
-  23 mitos a razón de 2 por mito. Metodología anterior: **no sirve**.
+- ✅ Inventario decidido y verificado: **54 master sheets** declarados
+  (`inventory.v1.json`, `verification.v1.json` en `passed`, 23 mitos mapeados).
+- ✅ **51 de los 54 maestros generados** a lo largo de siete tandas
+  `produccion-api-01…07`; la última son retoques de rostro y atuendo.
+- ❌ No instalada como refs.
+- ⚠️ ~140 keyframes viejos en 3 tandas `produccion-api-0*`, cubriendo 23 mitos.
+  Metodología anterior: **no sirve**.
 
-**Falta:** dimensionar y generar la biblia completa, instalarla, 23 specs,
+**Falta:** cerrar los 3 maestros que faltan, instalar la biblia, 23 specs,
 ~1.500 cuadros.
 
-### Huitoto / Murui-Muina (21 mitos)
-- ⚠️ **18 actas para 21 mitos** — faltan 3, y hay 3 fichas bloqueadas esperando
-  una decisión tuya.
-- ⚠️ 20 láminas de biblia. Igual que Chimila: piloto.
-- ✅ Existe dirección visual propia: `docs/direccion-huitoto-paper-cut-2026-09-14.md`.
+### Huitoto / Murui-Muina (21 mitos) — la biblia más grande del proyecto
+- ✅ **Biblia cerrada: 196/196 maestros seleccionados**, 18 registros / 17
+  ciclos, gpt-image-2.5-sunburst en `high`
+  (`output/imagegen/huitotos/biblia/cierre-2026-09-14/`). Trae contratos,
+  prompts, provenance, freeze firmado y revisión individual.
+- ✅ Dirección visual propia: `docs/direccion-huitoto-paper-cut-2026-09-14.md`.
+- ❌ No instalada como refs.
+- ⚠️ **18 actas para 21 mitos** — faltan 3.
+- ⚠️ Los expedientes literarios **39 / 57 / 58** necesitan cotejo integral, y la
+  ruta 59 conserva atribución regional insuficiente. Es la decisión que está
+  esperándote.
 - ❌ 0 keyframes de cualquier tipo.
 
-**Falta:** cerrar las 3 actas que faltan, resolver las fichas bloqueadas,
-biblia completa, 21 specs, ~1.400 cuadros.
+**Falta:** resolver los 3 expedientes, cerrar las 3 actas, instalar la biblia,
+21 specs, ~1.400 cuadros.
 
 ### Chamí (14 relatos primarios)
 - ✅ **Biblia V1 cerrada: 118 fichas** sobre 147 entidades (27 embebidas, 2
-  excluidas). Inventario en
+  excluidas), 470 imágenes. Inventario en
   `.claude/worktrees/wayuu-myths-methodology-b88ddd/content/mitos-visuales/chami.v1.inventario.json`.
 - ❌ **No hay `docs/videos/chami/`**: cero actas, cero guiones.
 - ❌ La biblia **no está instalada como referencias**: no existe
@@ -173,6 +191,15 @@ Rendimiento observado en la tanda final wayúu: **~24 cuadros/min** con
 
 ## 6. Trampas que ya costaron caro
 
+- **Las biblias no están todas en `.jpg`/`.png`.** Nasa, Chimila y Huitoto
+  guardan sus maestros en **`.jpeg`**. Un censo que busque sólo `*.jpg` y
+  `*.png` da cero y hace parecer que no hay biblia donde sí la hay. Contar
+  siempre con `-iname "*.jpeg"` incluido.
+- **«Láminas en disco» no es «biblia instalada».** Son dos cosas: los originales
+  viven en `output/imagegen/<com>/biblia/`, pero los specs sólo leen
+  `content/videos/<com>/biblia/<id>.jpg`. Muiscas y wayúu son las únicas
+  instaladas. Ojo también con que en muiscas los 302 archivos son **151 fichas +
+  151 `crop-9x16`**.
 - **Las fichas de otra comunidad se cuelan por costumbre.** En los specs wayúu
   aparecieron `altiplano_noche`, `copo_algodon` y `plaza_fiesta_noche`, que son
   **muiscas**. Para eso está `check-refs.mjs`.
