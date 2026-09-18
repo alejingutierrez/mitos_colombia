@@ -71,16 +71,37 @@ function parseArgs(argv) {
   return out;
 }
 
+/**
+ * Los agentes dejan fragmentos de trabajo en el mismo directorio —`verify.mjs`,
+ * lotes a medio fundir—. Un censo se reconoce porque trae `entities` como
+ * lista; lo demas no se cuenta, o el presupuesto suma archivos de borrador.
+ */
 export function loadCensus(dir) {
-  return readdirSync(dir)
-    .filter((name) => name.endsWith(".json"))
+  const skipped = [];
+  const censuses = readdirSync(dir)
+    .filter((name) => name.endsWith(".json") && !name.startsWith("_"))
     .sort()
     .map((name) => {
       const data = JSON.parse(readFileSync(join(dir, name), "utf8"));
       data.__file = name;
       return data;
+    })
+    .filter((data) => {
+      if (Array.isArray(data.entities)) return true;
+      skipped.push(data.__file);
+      return false;
     });
+  if (skipped.length) console.log(`(ignorados por no ser censos: ${skipped.join(", ")})\n`);
+  return censuses;
 }
+
+/** Las 28 comunidades indigenas pendientes; el resto es corpus sin comunidad. */
+export const INDIGENOUS = new Set([
+  "koguis", "katios", "pananes", "andoque", "u-wa", "guahibo-sikuani", "desana", "tucano",
+  "zenu", "misak-guambianos", "barasana", "motilon-bari", "ticuna", "quillacingas", "wounaan",
+  "quimbaya", "makawanes", "kuibas", "ansermas", "umbra", "awa", "cuycuyes", "yukpa",
+  "eperara-siapidara", "pirsa", "embera", "nukak-maku", "ufaina",
+]);
 
 /** No se le cree a `totals`: se recalcula y se reporta la diferencia. */
 export function audit(census) {
@@ -127,9 +148,14 @@ export function audit(census) {
     problems.push(`totals.entities declara ${declared.entities}, hay ${entities.length}`);
   }
 
+  // Un censo puede llegar sin `id` —se escribe por lotes y el campo es lo
+  // ultimo—, y entonces el nombre del archivo es la identidad que queda.
+  const id = census.id || String(census.__file || "sin-id").replace(/\.json$/, "");
+  if (!census.id) problems.push("falta el campo id; se usa el nombre del archivo");
+
   return {
-    id: census.id,
-    label: census.label || census.id,
+    id,
+    label: census.label || id,
     era: census.era || null,
     pages: Number(census.pages || 0),
     canon_pages: Number(census.canon_pages ?? census.pages ?? 0),
@@ -284,6 +310,28 @@ function main() {
     (totals.pages ? (totals.sheets / totals.pages).toFixed(1) : "-").padStart(6),
     (totals.sheets * perSheet * ATTEMPTS.central).toFixed(2).padStart(7),
   );
+
+  // Las dos mitades no se comparan: una son comunidades con canon narrable,
+  // la otra son paginas regionales que en su mayoria ni siquiera tienen `mito`.
+  for (const [label, keep] of [
+    ["  de ellas, indígenas", (row) => INDIGENOUS.has(row.id)],
+    ["  de ellas, sin comunidad", (row) => !INDIGENOUS.has(row.id)],
+  ]) {
+    const subset = rows.filter(keep);
+    const pages = subset.reduce((total, row) => total + row.pages, 0);
+    const sheets = subset.reduce((total, row) => total + row.sheets, 0);
+    console.log(
+      label.padEnd(28),
+      String(pages).padStart(4),
+      "".padStart(5),
+      "".padStart(4),
+      "".padStart(4),
+      "".padStart(4),
+      String(sheets).padStart(7),
+      (pages ? (sheets / pages).toFixed(1) : "-").padStart(6),
+      (sheets * perSheet * ATTEMPTS.central).toFixed(2).padStart(7),
+    );
+  }
 
   const closedPages = CLOSED.reduce((total, item) => total + item.pages, 0);
   console.log(
