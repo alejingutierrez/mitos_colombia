@@ -565,6 +565,12 @@ Base: `documented_core` · `variant` · `contemporary_memory` · `academic_hypot
 | 38 | La especie de la «lechuza» de Cuchicuelan no está determinada; *Tyto alba* llega aproximadamente a 3.000 m en los Andes | uncertain | public | literatura ornitológica consultada | lechuza |
 | 39 | «Checher», «caspimote», «cuaza» y «león» no tienen identificación botánica localizable | uncertain | public | búsqueda sin resultado | checher, monte_nativo |
 | 40 | El corpus sitúa la fundación de La Tuta ante cultivos de trigo, cebada, haba y maíz: tres de los cuatro son de introducción europea | editorial_interpretation | public | corpus §4.1.1 + historia agrícola | tres_caciques, chagra, la_tuta |
+| 41 | El caballo se niega a avanzar, retrocede «como asustándose» y amanece con la crin del cuello y toda la cola «bien carnejada y enredada»: la trenza es la única huella y nadie vio al duende | documented_core | public | estacio-tatamues-2016 §4.1.6 | caballo, cangagua, duende |
+| 42 | El Chutún habita el checher en hileras o cercos naturales y se deja ver «como un animal de aspecto desagradable»; el canon prohíbe añadirle especie zoológica | documented_core | public | corpus §4.2.4 | chutun, checher, chagra |
+| 43 | La Viuda toma la ropa de la mujer en quien el hombre piensa, se deja ver sólo por él, nunca muestra el rostro y sus ojos se recuerdan como carbones o rayos; el canon obliga a evitar burla y sexualización | documented_core | contextual | corpus §4.2 | la_viuda |
+| 44 | La memoria registra la hacienda La Lechuza y sus peones, el paso de comuneros al Ecuador como jornaleros y las recuperaciones de tierra de los setenta a los noventa; hoy el territorio habitado es potrero con cercas y zanjas | documented_core | public | estacio-tatamues-2016; planvida-2005; cnmh-mujerespastos-2021 | hacienda_la_lechuza, peones, terratenientes, paisaje habitado |
+| 45 | El palo santo es el madero hallado en el Cucho y enviado a San Antonio de Ibarra; la fuente declara que no se reconstruye el aspecto del árbol ni de la primera imagen | documented_core | contextual | corpus §4.1.3 | palo_santo, virgen (excluida), talladores (excluidos) |
+| 46 | La técnica textil documentada es el tejido en guanga con lana de oveja; ningún diseño concreto está documentado | contemporary_memory | consult_required | cnmh-mujerespastos-2021; planvida-2005 | comuneros, la_vieja |
 
 ---
 
