@@ -27,12 +27,13 @@ import sharp from "sharp";
 const RAIZ = process.cwd();
 const STAGE = path.join(RAIZ, ".qa-staging");
 const IMG = path.join(STAGE, "img");
-const VIDEOS = path.join(RAIZ, "content/videos/muiscas/videos");
+// El directorio de keyframes lo trae cada mito: el panel ya no es sólo muisca.
+const DIR_POR_DEFECTO = (slug) => path.join(RAIZ, "content/videos/muiscas/videos", slug, "keyframes");
 
-export const CELDA_W = 384;
-export const CELDA_H = 576;
+export const CELDA_W = 336;
+export const CELDA_H = 504;
 export const COLUMNAS = 6;
-const CALIDAD = 70;
+const CALIDAD = 58;
 
 const datos = JSON.parse(fs.readFileSync(path.join(STAGE, "datos.json"), "utf8"));
 fs.rmSync(IMG, { recursive: true, force: true });
@@ -42,7 +43,8 @@ datos.sprite = { w: CELDA_W, h: CELDA_H, cols: COLUMNAS };
 
 let totalImgs = 0;
 for (const mito of datos.mitos) {
-  const dir = path.join(VIDEOS, mito.slug, "keyframes");
+  const dir = mito.dir ? path.join(RAIZ, mito.dir) : DIR_POR_DEFECTO(mito.slug);
+  const img = mito.img || mito.slug;
   const enDisco = new Set(
     fs.existsSync(dir)
       ? fs.readdirSync(dir).filter((f) => f.endsWith(".jpg") && !f.includes("crop"))
@@ -99,7 +101,7 @@ for (const mito of datos.mitos) {
   })
     .composite(capas)
     .jpeg({ quality: CALIDAD, mozjpeg: true })
-    .toFile(path.join(IMG, `${mito.slug}.jpg`));
+    .toFile(path.join(IMG, `${img}.jpg`));
 }
 
 fs.writeFileSync(path.join(STAGE, "datos.json"), JSON.stringify(datos), "utf8");
@@ -118,7 +120,13 @@ fs.writeFileSync(htmlPath, nuevo, "utf8");
 const sprites = fs.readdirSync(IMG).length;
 const bytes = fs.readdirSync(IMG).reduce((a, f) => a + fs.statSync(path.join(IMG, f)).size, 0);
 const listos = datos.mitos.filter((m) => m.estado === "listo").length;
+const porCom = [...new Set(datos.mitos.map((m) => m.comunidad || "muiscas"))]
+  .map((c) => {
+    const ms = datos.mitos.filter((m) => (m.comunidad || "muiscas") === c);
+    return `${c} ${ms.filter((m) => m.estado === "listo").length}/${ms.length}`;
+  })
+  .join(" · ");
 console.log(
-  `[qa] ${totalImgs} cuadros · ${listos}/${datos.mitos.length} mitos completos · ` +
+  `[qa] ${totalImgs} cuadros · ${listos}/${datos.mitos.length} mitos completos (${porCom}) · ` +
     `${sprites} sprites (${(bytes / 1048576).toFixed(1)} MB) · html ${(nuevo.length / 1024).toFixed(1)} KB`,
 );

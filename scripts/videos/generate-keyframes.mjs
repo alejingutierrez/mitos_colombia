@@ -77,7 +77,9 @@ function buildPrompt(item, spec) {
   }[item.kind];
 
   return [
-    "Dirección de arte para la biblia visual en video de mitos colombianos (pueblo muisca, altiplano cundiboyacense).",
+    // El pueblo y su territorio los pone la spec: el generador ya no es sólo
+    // muisca. Sin CONTEXTO se conserva el encabezado histórico.
+    `Dirección de arte para la biblia visual en video de mitos colombianos (${spec.CONTEXTO || "pueblo muisca, altiplano cundiboyacense"}).`,
     "",
     "Técnica central:",
     "- Fotografía frontal de una maqueta física real de papel artesanal, no ilustración digital.",
