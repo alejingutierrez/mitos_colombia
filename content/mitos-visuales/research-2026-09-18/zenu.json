@@ -114,6 +114,15 @@
       "locator": "https://www.laguiademonteria.co/mitos-y-leyendas-de-cordoba/",
       "supports": "Sostiene el núcleo cordobés y mestizo de la página transferida. Describe a Juan Lara como «un espíritu burlón que aparece de vereda en vereda y de pueblo en pueblo», que al ser rechazado «empieza a hacerle la guerra lanzando piedras en los techos con risotadas», y cuyas risas «se oyen en el aire, las cuales no se sabe de dónde vienen». Añade el dato que cierra el deslinde: en vida fue un hombre libidinoso condenado a vagar sin ser correspondido, es decir, el fantasma de un muerto de pueblo y no un ser del Gran Zenú. Sitúa el personaje en un repertorio cordobés vecino —el Duende, el agüero del Yacabó, los Animes «de color oscuro, que tienen la boca roja y los ojos centellantes»— que comparte época y mundo material.",
       "limitations": "Compilación periodística y turística, sin narrador, sin fecha y sin transcripción oral. No es fuente zenú y no se usa para nada del corpus indígena: aquí sirve exclusivamente para la página mestiza transferida a Caribe > Córdoba > Mestizo. No describe la casa, el patio, la ropa ni el paisaje."
+    },
+    {
+      "id": "guia_monteria_lugares",
+      "role": "territorial",
+      "title": "6 lugares que debes visitar en el municipio de San Andrés de Sotavento",
+      "author": "La Guía de Montería",
+      "locator": "https://www.laguiademonteria.co/6-lugares-que-debes-visitar-en-el-municipio-de-san-andres-de-sotavento/",
+      "supports": "Sitúa el cerro Tofeme «en el oeste del municipio de San Andrés de Sotavento», en «zona fronteriza con el municipio de Chimá», y dice qué se ve desde la cumbre: «parte de los territorios Zenúes, el azul del agua de las ciénagas, corregimientos más cercanos». Es la única descripción de la vista desde el cerro y la única mención de color del agua en cualquier fuente del expediente. Recoge además que «debajo del Cerro Tofeme, hay un Caimán de Oro» enterrado en la conquista, con sus extremidades hacia distintas ciénagas y municipios, y una tradición local de San Antonio en una cueva del cerro «con plantas de ají y árboles de totumo». Enumera los hitos del pueblo: el Parque del Sombrero Vueltiao, el Parque de la Babilla, el Museo Zenú José Dolores Paternina, el balneario Las Peñitas y la iglesia.",
+      "limitations": "Guía turística municipal, sin autor, sin fecha y sin narrador. No da altitud, ni vegetación, ni dimensiones del cerro, y su versión del caimán está resumida al mínimo. Se usa sólo para la ubicación, la vista y el repertorio de hitos del pueblo."
     }
   ],
   "evidence_matrix": [
@@ -122,315 +131,609 @@
       "basis": "editorial_interpretation",
       "sensitivity": "public",
       "source_ids": [],
-      "affects": ["babilla_antigua", "ceiba_primera", "luz_de_insectos", "anciana_tejedora_cana_flecha", "buscador_de_guacas", "muchacho_del_limon", "aserrador_y_arbol_que_habla", "trenza_del_aire_y_amuleto", "baston_de_mexion", "camellones_y_canales_miticos"]
+      "affects": [
+        "babilla_antigua",
+        "ceiba_primera",
+        "luz_de_insectos",
+        "anciana_tejedora_cana_flecha",
+        "buscador_de_guacas",
+        "muchacho_del_limon",
+        "aserrador_y_arbol_que_habla",
+        "trenza_del_aire_y_amuleto",
+        "baston_de_mexion",
+        "camellones_y_canales_miticos"
+      ]
     },
     {
       "claim": "La casa zenú tradicional se construye en lomas «dominando el panorama», con techo de palma amarga o palmito, paredes de caña flecha, estructura de madera y amarres de bejuco; tiene dos módulos y su techo puede ser transportado. El taller de trenzado es el centro de la vida social.",
       "basis": "documented_core",
       "sensitivity": "public",
-      "source_ids": ["artesanias_resguardo_2013", "mincultura_zenu"],
-      "affects": ["pobladores_primeros_gran_zenu", "paisaje_gran_zenu", "hoja_utileria_zenu_sustento"]
+      "source_ids": [
+        "artesanias_resguardo_2013",
+        "mincultura_zenu"
+      ],
+      "affects": [
+        "pobladores_primeros_gran_zenu",
+        "paisaje_gran_zenu",
+        "hoja_utileria_zenu_sustento"
+      ]
     },
     {
       "claim": "El territorio tiene dos estaciones con fechas y produce dos paisajes distintos: invierno de abril a noviembre, con lámina de agua sobre la sabana, y verano de diciembre a marzo, con tierra dura y agrietada y playones descubiertos. Cada lámina de paisaje debe declarar en cuál está.",
       "basis": "documented_core",
       "sensitivity": "public",
-      "source_ids": ["artesanias_resguardo_2013"],
-      "affects": ["paisaje_gran_zenu", "cienaga_la_sierpe", "resguardo_san_andres", "cerro_corcovao", "monte_del_encanto", "llanura_inundable"]
+      "source_ids": [
+        "artesanias_resguardo_2013"
+      ],
+      "affects": [
+        "paisaje_gran_zenu",
+        "cienaga_la_sierpe",
+        "resguardo_san_andres",
+        "cerro_corcovao",
+        "monte_del_encanto",
+        "llanura_inundable"
+      ]
     },
     {
       "claim": "El vocabulario del paisaje es preciso y hay que dibujarlo con él: ciénagas interconectadas por caños, con zonas de inundación fluctuante llamadas playones alrededor de una ciénaga, y orillares y vegas en las orillas de los ríos.",
       "basis": "documented_core",
       "sensitivity": "public",
-      "source_ids": ["fao_anfibia_2021"],
-      "affects": ["cienaga_la_sierpe", "paisaje_gran_zenu", "llanura_inundable"]
+      "source_ids": [
+        "fao_anfibia_2021"
+      ],
+      "affects": [
+        "cienaga_la_sierpe",
+        "paisaje_gran_zenu",
+        "llanura_inundable"
+      ]
     },
     {
       "claim": "El sistema hidráulico de canales y camellones es prehispánico y está fechado, pero las dos fuentes no coinciden: 200 a.C.–1000 d.C. sobre 500.000 + 150.000 hectáreas según el Museo del Oro, y 800 a.C.–1200 d.C. según la FAO. La discrepancia se declara y no se promedia.",
       "basis": "uncertain",
       "sensitivity": "public",
-      "source_ids": ["banrep_zenu", "fao_anfibia_2021"],
-      "affects": ["camellones_y_canales_miticos", "pobladores_primeros_gran_zenu"]
+      "source_ids": [
+        "banrep_zenu",
+        "fao_anfibia_2021"
+      ],
+      "affects": [
+        "camellones_y_canales_miticos",
+        "pobladores_primeros_gran_zenu"
+      ]
     },
     {
       "claim": "El gesto de conducir el agua es una capacidad documentada de los descendientes —entre ellos «vinieron médicos tradicionales e ingenieros hidráulicos»— y entra en la lámina del colectivo; el camellón como escena mítica no existe y el módulo lo retira expresamente. Ningún canal, ningún camellón, ninguna vista aérea de espina de pescado.",
       "basis": "documented_core",
       "sensitivity": "contextual",
-      "source_ids": ["zenu_creacion_sotavento", "fao_anfibia_2021"],
-      "affects": ["pobladores_primeros_gran_zenu", "camellones_y_canales_miticos", "oficios_del_poblamiento"]
+      "source_ids": [
+        "zenu_creacion_sotavento",
+        "fao_anfibia_2021"
+      ],
+      "affects": [
+        "pobladores_primeros_gran_zenu",
+        "camellones_y_canales_miticos",
+        "oficios_del_poblamiento"
+      ]
     },
     {
       "claim": "La técnica orfebre distintiva de estas llanuras es la falsa filigrana, «por medio de la cual el oro se expresó como un verdadero tejido de metal», hecha por fundición a la cera perdida y no por hilos soldados. El oficio del oro se muestra como gesto y como materia; un ejemplar concreto requiere consulta previa.",
       "basis": "documented_core",
       "sensitivity": "consult_required",
-      "source_ids": ["banrep_zenu"],
-      "affects": ["pieza_orfebreria_zenu", "pobladores_primeros_gran_zenu"]
+      "source_ids": [
+        "banrep_zenu"
+      ],
+      "affects": [
+        "pieza_orfebreria_zenu",
+        "pobladores_primeros_gran_zenu"
+      ]
     },
     {
       "claim": "El corpus zenú tiene un solo color y es el oro: contado con frontera de palabra sobre los siete campos mito, oro aparece 11 veces y no hay una sola ocurrencia de negro, blanco, rojo, verde, azul ni gris. Y sus cuatro apariciones narrativas son peligro y no premio: el caimán que si se saca hunde el resguardo, el fruto que cierra el camino, los restos convertidos en oro, el tesoro que sólo se sugiere «con un resplandor apagado bajo el agua».",
       "basis": "documented_core",
       "sensitivity": "public",
-      "source_ids": ["zenu_creacion_sotavento", "cuentos_bossa_navarro"],
-      "affects": ["caiman_de_oro", "totumo_de_oro", "canoa_encantada", "tesoro_sumergido"]
+      "source_ids": [
+        "zenu_creacion_sotavento",
+        "cuentos_bossa_navarro"
+      ],
+      "affects": [
+        "caiman_de_oro",
+        "totumo_de_oro",
+        "canoa_encantada",
+        "tesoro_sumergido"
+      ]
     },
     {
       "claim": "La paleta sale del oficio y son dos colores, los dos cocinados: negro de barro alcalino (pH 8-9) durante tres días más cocción con jagua, dividivi y cáscara de plátano hasta «un color negro brillante»; y blanco de cocción con cogollo de caña agria y secado al sol. Barro contra sol.",
       "basis": "documented_core",
       "sensitivity": "public",
-      "source_ids": ["artesanias_resguardo_2013", "artesanias_cana_flecha"],
-      "affects": ["capa_sombrero_universo", "hoja_utileria_zenu_sustento", "haz_de_fibras"]
+      "source_ids": [
+        "artesanias_resguardo_2013",
+        "artesanias_cana_flecha"
+      ],
+      "affects": [
+        "capa_sombrero_universo",
+        "hoja_utileria_zenu_sustento",
+        "haz_de_fibras"
+      ]
     },
     {
       "claim": "La caña flecha es una gramínea silvestre de sabana seca tropical que crece en hondonadas de suelo arcilloso y arenoso; la fibra sale de la nervadura central de la hoja, raspada con cuchillo sobre una banda de cuero en el muslo y ripiada a 1 o 2 milímetros. La trenza mide 1,2 a 1,7 cm y se nombra por pares: 9, 11, 15, 19, 21, 23 y 25.",
       "basis": "documented_core",
       "sensitivity": "public",
-      "source_ids": ["artesanias_resguardo_2013", "artesanias_cana_flecha", "defensoria_2022"],
-      "affects": ["capa_sombrero_universo", "hoja_utileria_zenu_sustento", "haz_de_fibras"]
+      "source_ids": [
+        "artesanias_resguardo_2013",
+        "artesanias_cana_flecha",
+        "defensoria_2022"
+      ],
+      "affects": [
+        "capa_sombrero_universo",
+        "hoja_utileria_zenu_sustento",
+        "haz_de_fibras"
+      ]
     },
     {
       "claim": "Ninguna pinta real de caña flecha se reproduce. Son más de setenta diseños con nombre propio que «simbolizan elementos totémicos de la cultura Sinú» e «identidades totémicas de antiguos clanes familiares»; el trenzado tiene Denominación de Origen y Plan Especial de Salvaguardia. Son identidad y son sustento.",
       "basis": "documented_core",
       "sensitivity": "do_not_visualize",
-      "source_ids": ["artesanias_resguardo_2013", "artesanias_cana_flecha", "defensoria_2022"],
-      "affects": ["pintas_cana_flecha", "capa_sombrero_universo"]
+      "source_ids": [
+        "artesanias_resguardo_2013",
+        "artesanias_cana_flecha",
+        "defensoria_2022"
+      ],
+      "affects": [
+        "pintas_cana_flecha",
+        "capa_sombrero_universo"
+      ]
     },
     {
       "claim": "El sombrero-universo: «las fibras estaban entrelazadas en espiral», Mexión dio al manto «una forma cónica para poder observar desde arriba lo que pasaba en la tierra», y el cono se aplanó porque los seres «subieron por el sombrero y fueron al cielo, y hubo tanto peso que el sombrero cónico se aplanó». Es una escena con figuras trepando una espiral, no un peso abstracto.",
       "basis": "documented_core",
       "sensitivity": "public",
-      "source_ids": ["onic_ley_origen"],
-      "affects": ["capa_sombrero_universo", "tarra", "mexion", "tres_ambitos_del_sombrero"]
+      "source_ids": [
+        "onic_ley_origen"
+      ],
+      "affects": [
+        "capa_sombrero_universo",
+        "tarra",
+        "mexion",
+        "tres_ambitos_del_sombrero"
+      ]
     },
     {
       "claim": "El reparto de los tres ámbitos va por partes del sombrero: «la plantilla del sombrero es el cielo, la copa es donde está la naturaleza, sus pintas representan la flora y fauna, y las alas es donde está la abundancia». El nivel intermedio son literalmente las pintas, que son do_not_visualize: se resuelve por el trenzado mismo —alternancia de pares claros y oscuros, giro de la espiral, relieve de la trenza— sin ninguna secuencia legible ni copiable.",
       "basis": "documented_core",
       "sensitivity": "contextual",
-      "source_ids": ["onic_ley_origen", "banrep_zenu"],
-      "affects": ["tres_ambitos_del_sombrero", "capa_sombrero_universo", "pintas_cana_flecha"]
+      "source_ids": [
+        "onic_ley_origen",
+        "banrep_zenu"
+      ],
+      "affects": [
+        "tres_ambitos_del_sombrero",
+        "capa_sombrero_universo",
+        "pintas_cana_flecha"
+      ]
     },
     {
       "claim": "Tarra no es un anciano dueño de aquel tiempo: la fuente dice «Su hijo Tarra», es decir, hijo de Mexión y Manexka, que vivían en el cielo con sus hijos. Cambia su edad y su porte.",
       "basis": "documented_core",
       "sensitivity": "public",
-      "source_ids": ["onic_ley_origen"],
-      "affects": ["tarra"]
+      "source_ids": [
+        "onic_ley_origen"
+      ],
+      "affects": [
+        "tarra"
+      ]
     },
     {
       "claim": "La fuente llama a los mensajeros «los ángeles llamados mensajeros» y pone en el cielo del sombrero a Dios, Jesucristo y el Espíritu Santo. El módulo retiró los ángeles y dejó «mensajeros». La lámina dibuja mensajeros adultos zenúes y la capa católica queda declarada en la ficha, no en la imagen.",
       "basis": "documented_core",
       "sensitivity": "contextual",
-      "source_ids": ["onic_ley_origen"],
-      "affects": ["mensajeros_de_tarra", "tarra", "capa_sombrero_universo"]
+      "source_ids": [
+        "onic_ley_origen"
+      ],
+      "affects": [
+        "mensajeros_de_tarra",
+        "tarra",
+        "capa_sombrero_universo"
+      ]
     },
     {
       "claim": "Manexca es «la mujer de un solo seno y la más bella de todas las mujeres». Es el único rasgo de cuerpo documentado de una figura femenina en todo el corpus y basta para una ficha propia.",
       "basis": "documented_core",
       "sensitivity": "public",
-      "source_ids": ["zenu_creacion_sotavento"],
-      "affects": ["manexca"]
+      "source_ids": [
+        "zenu_creacion_sotavento"
+      ],
+      "affects": [
+        "manexca"
+      ]
     },
     {
       "claim": "Mexión es «el indio hermoso como el sol», y al final sube al cielo y se convierte en Thi, la Luna: es el mismo ser en dos estados y no dos seres.",
       "basis": "documented_core",
       "sensitivity": "public",
-      "source_ids": ["zenu_creacion_sotavento"],
-      "affects": ["mexion", "thi_luna"]
+      "source_ids": [
+        "zenu_creacion_sotavento"
+      ],
+      "affects": [
+        "mexion",
+        "thi_luna"
+      ]
     },
     {
       "claim": "Ninha y Thi son un par complementario y no dos fichas equivalentes: «NINHA-THI corresponde a la divinidad bisexual, que representa al hombre y la mujer Zenú», con la luna como símbolo de la mujer y el sol como símbolo del hombre.",
       "basis": "documented_core",
       "sensitivity": "contextual",
-      "source_ids": ["zenu_creacion_sotavento"],
-      "affects": ["ninha_sol", "thi_luna", "ciclo_dia_noche"]
+      "source_ids": [
+        "zenu_creacion_sotavento"
+      ],
+      "affects": [
+        "ninha_sol",
+        "thi_luna",
+        "ciclo_dia_noche"
+      ]
     },
     {
       "claim": "La oscuridad primordial no es sólo falta de luz: es oscura, fría y húmeda, sin astros ni plantas ni animales ni gente, y «todo estaba absolutamente en silencio». Es una lámina de materia mojada y no de negro vacío.",
       "basis": "documented_core",
       "sensitivity": "public",
-      "source_ids": ["zenu_creacion_sotavento"],
-      "affects": ["ciclo_dia_noche"]
+      "source_ids": [
+        "zenu_creacion_sotavento"
+      ],
+      "affects": [
+        "ciclo_dia_noche"
+      ]
     },
     {
       "claim": "Lo que la primera luz revela está enumerado: la tierra se calentó, «se volvió completamente dura y esta parte seca la llamó RESGUARDO», las aguas se separaron «formando inmensos espejos de aguas dulces y saladas», y aparecieron lomas, cerros, ríos, quebradas y arroyos.",
       "basis": "documented_core",
       "sensitivity": "public",
-      "source_ids": ["zenu_creacion_sotavento"],
-      "affects": ["paisaje_gran_zenu", "ninha_sol"]
+      "source_ids": [
+        "zenu_creacion_sotavento"
+      ],
+      "affects": [
+        "paisaje_gran_zenu",
+        "ninha_sol"
+      ]
     },
     {
       "claim": "Los oficios del poblamiento tienen materia concreta: barro modelado en tinajas, múcuras, platos y vasijas; trabajo del oro; trenzado de iraca, caña flecha, enea y bejuco; cultivo de yuca y maíz. El oficio está repartido por sexo en el presente documentado: el hombre raspa la fibra, la mujer trenza.",
       "basis": "documented_core",
       "sensitivity": "public",
-      "source_ids": ["zenu_creacion_sotavento", "artesanias_resguardo_2013"],
-      "affects": ["pobladores_primeros_gran_zenu", "oficios_del_poblamiento", "hoja_utileria_zenu_sustento", "ceramica_de_barro", "maiz", "yuca"]
+      "source_ids": [
+        "zenu_creacion_sotavento",
+        "artesanias_resguardo_2013"
+      ],
+      "affects": [
+        "pobladores_primeros_gran_zenu",
+        "oficios_del_poblamiento",
+        "hoja_utileria_zenu_sustento",
+        "ceramica_de_barro",
+        "maiz",
+        "yuca"
+      ]
     },
     {
       "claim": "El mundo de abajo es agua, no tierra: «debajo de la tierra hay agua viva, ese mundo acuático subterráneo lo imaginan como un pozo inmenso, un río caudaloso o gran mar», que «permanece viva así haya tiempos de lluvia o de sequía». El corte del resguardo es un cuerpo dorado tendido en agua, con caminos y viviendas encima, no un corte geológico de estratos de suelo.",
       "basis": "documented_core",
       "sensitivity": "public",
-      "source_ids": ["fao_anfibia_2021", "onic_ley_origen"],
-      "affects": ["caiman_de_oro", "resguardo_san_andres", "rio_subterraneo", "caminos_y_viviendas_del_resguardo"]
+      "source_ids": [
+        "fao_anfibia_2021",
+        "onic_ley_origen"
+      ],
+      "affects": [
+        "caiman_de_oro",
+        "resguardo_san_andres",
+        "rio_subterraneo",
+        "caminos_y_viviendas_del_resguardo"
+      ]
     },
     {
       "claim": "Hay dos orientaciones documentadas del cuerpo del caimán y cambian dónde cae cada parte, no la silueta: la versión escolar pone la cola en el centro de Tofeme, el pecho en San Andrés y una pata delantera en Sampués; Drexler pone cabeza y corazón bajo la iglesia de San Andrés. Una sola lámina, con la salvedad de no volverla mapa.",
       "basis": "variant",
       "sensitivity": "contextual",
-      "source_ids": ["cuentos_bossa_navarro", "fao_anfibia_2021"],
-      "affects": ["caiman_de_oro", "resguardo_san_andres", "toponimos_del_cuerpo_del_caiman", "cienaga_de_betanci"]
+      "source_ids": [
+        "cuentos_bossa_navarro",
+        "fao_anfibia_2021"
+      ],
+      "affects": [
+        "caiman_de_oro",
+        "resguardo_san_andres",
+        "toponimos_del_cuerpo_del_caiman",
+        "cienaga_de_betanci"
+      ]
     },
     {
       "claim": "La iglesia de San Andrés no se dibuja. Drexler sitúa cabeza y corazón del caimán bajo ella, la escena vertical del módulo ordena «sin representar una iglesia específica», y dibujarla señalaría un punto de excavación en un lugar real y habitado.",
       "basis": "documented_core",
       "sensitivity": "do_not_visualize",
-      "source_ids": ["defensoria_2022", "fao_anfibia_2021"],
-      "affects": ["iglesia_de_san_andres", "resguardo_san_andres", "caiman_de_oro"]
+      "source_ids": [
+        "defensoria_2022",
+        "fao_anfibia_2021"
+      ],
+      "affects": [
+        "iglesia_de_san_andres",
+        "resguardo_san_andres",
+        "caiman_de_oro"
+      ]
     },
     {
       "claim": "Tofeme es ñato además de tuerto: «el Mocán -guerrero- Tofán o Tofeme, ñato y tuerto de tanto guerrear, ya que viejo lo pusieron a vigilar al enemigo en lo más alto del cerro». Es un guerrero anciano puesto de vigía, no un chamán ni un cacique.",
       "basis": "documented_core",
       "sensitivity": "public",
-      "source_ids": ["defensoria_2022"],
-      "affects": ["tofeme_mocan"]
+      "source_ids": [
+        "defensoria_2022"
+      ],
+      "affects": [
+        "tofeme_mocan"
+      ]
     },
     {
-      "claim": "El cerro Corcovao o Tofeme está al occidente de San Andrés de Sotavento, en zona limítrofe con Chimá, a unos 150 metros sobre el nivel del mar. Es una loma jorobada baja sobre sabana desde la que se ve la llanura entera, no una montaña.",
+      "claim": "El cerro Corcovao o Tofeme está «en el oeste del municipio de San Andrés de Sotavento», en «zona fronteriza con el municipio de Chimá», y desde su cumbre se ve «parte de los territorios Zenúes, el azul del agua de las ciénagas, corregimientos más cercanos». Es una loma jorobada sobre sabana desde la que se domina la llanura, no una montaña andina: ninguna fuente le da altitud y por eso la escala queda declarada como incierta.",
       "basis": "documented_core",
       "sensitivity": "public",
-      "source_ids": ["defensoria_2022"],
-      "affects": ["cerro_corcovao", "llanura_inundable"]
+      "source_ids": [
+        "defensoria_2022",
+        "guia_monteria_lugares"
+      ],
+      "affects": [
+        "cerro_corcovao",
+        "llanura_inundable"
+      ]
     },
     {
       "claim": "La señal de Tofeme es un trueno seco con voz ronca que anuncia al enemigo, y el ciclo mayor son tormentas e inundaciones que vuelven tras largos periodos. Son dos fases visualmente opuestas: relámpago seco sobre cielo despejado, y agua subiendo en la llanura.",
       "basis": "documented_core",
       "sensitivity": "public",
-      "source_ids": ["defensoria_2022", "cuentos_bossa_navarro"],
-      "affects": ["trueno_y_tormenta_corcovao", "tofeme_mocan", "enemigo_del_corcovao"]
+      "source_ids": [
+        "defensoria_2022",
+        "cuentos_bossa_navarro"
+      ],
+      "affects": [
+        "trueno_y_tormenta_corcovao",
+        "tofeme_mocan",
+        "enemigo_del_corcovao"
+      ]
     },
     {
       "claim": "La isla flotante tiene exactamente una mención en todo el expediente y ninguna descripción: «Una versión menciona una isla que flotaba y recibía a quienes habían atendido la advertencia». No hay materia, escala ni forma documentadas, y la lámina se declara como lectura editorial reversible.",
       "basis": "uncertain",
       "sensitivity": "public",
-      "source_ids": ["defensoria_2022"],
-      "affects": ["isla_flotante"]
+      "source_ids": [
+        "defensoria_2022"
+      ],
+      "affects": [
+        "isla_flotante"
+      ]
     },
     {
       "claim": "El totumo es Crescentia cujete, que crece silvestre en Córdoba y Sucre; su madera sirve para herramientas, la pulpa para alimento animal y jarabe, y la corteza se convierte en totuma. Es un árbol de fruto duro y redondo, no un frutal decorativo.",
       "basis": "documented_core",
       "sensitivity": "public",
-      "source_ids": ["artesanias_totumo"],
-      "affects": ["totumo_de_oro", "totuma_recipiente", "hoja_utileria_zenu_sustento"]
+      "source_ids": [
+        "artesanias_totumo"
+      ],
+      "affects": [
+        "totumo_de_oro",
+        "totuma_recipiente",
+        "hoja_utileria_zenu_sustento"
+      ]
     },
     {
       "claim": "El totumo de oro del cerro es intocable y el castigo es el extravío: crece «en lo más alto del cerro, debajo del árbol de totumo de oro que nadie puede coger, porque se pierde en la manigua». Es el mismo cuerpo botánico que el del monte y cuesta una sola ficha.",
       "basis": "documented_core",
       "sensitivity": "public",
-      "source_ids": ["defensoria_2022", "artesanias_totumo"],
-      "affects": ["totumo_de_oro", "extravio_del_camino", "cerro_corcovao"]
+      "source_ids": [
+        "defensoria_2022",
+        "artesanias_totumo"
+      ],
+      "affects": [
+        "totumo_de_oro",
+        "extravio_del_camino",
+        "cerro_corcovao"
+      ]
     },
     {
       "claim": "El monte del encanto tiene tres imágenes concretas en la variante escolar y sólo tres: «una gran laguna con arenas brillantes como el sol en la cúspide del cerro», «varios caimanes en la orilla» y «una hermosa mata de ají, cargada de frutos maduros» junto a «un palo de totumo grande». Los caimanes de esa laguna son animales de monte de tamaño normal y no deben parecerse al caimán de oro.",
       "basis": "variant",
       "sensitivity": "public",
-      "source_ids": ["cuentos_bossa_navarro"],
-      "affects": ["monte_del_encanto", "laguna_con_caimanes", "caimanes_de_la_laguna", "mata_de_aji", "restos_convertidos_en_oro"]
+      "source_ids": [
+        "cuentos_bossa_navarro"
+      ],
+      "affects": [
+        "monte_del_encanto",
+        "laguna_con_caimanes",
+        "caimanes_de_la_laguna",
+        "mata_de_aji",
+        "restos_convertidos_en_oro"
+      ]
     },
     {
       "claim": "La única ocupación que una fuente da al protagonista del totumo es «un aserrador que salió al monte en busca de madera»; la escena del módulo ordena dibujarlo sin armas ni herramientas. Se dibuja un adulto del monte con las manos libres y el oficio queda declarado en la ficha como lectura editorial reversible.",
       "basis": "editorial_interpretation",
       "sensitivity": "public",
-      "source_ids": ["artesanias_totumo"],
-      "affects": ["visitante_del_monte", "cazador_del_encanto", "mochilas_del_cazador", "aserrador_y_arbol_que_habla"]
+      "source_ids": [
+        "artesanias_totumo"
+      ],
+      "affects": [
+        "visitante_del_monte",
+        "cazador_del_encanto",
+        "mochilas_del_cazador",
+        "aserrador_y_arbol_que_habla"
+      ]
     },
     {
       "claim": "El mecanismo del extravío es geométrico y no narrativo: el camino se pliega y devuelve al mismo árbol una y otra vez mientras el fruto esté fuera de su lugar; «el árbol lo obligó a devolverlo» y sólo al devolverlo aparece la salida. Sin esa regla dibujada, el mito no se lee.",
       "basis": "documented_core",
       "sensitivity": "public",
-      "source_ids": ["artesanias_totumo", "cuentos_bossa_navarro"],
-      "affects": ["extravio_del_camino", "monte_del_encanto", "totumo_de_oro"]
+      "source_ids": [
+        "artesanias_totumo",
+        "cuentos_bossa_navarro"
+      ],
+      "affects": [
+        "extravio_del_camino",
+        "monte_del_encanto",
+        "totumo_de_oro"
+      ]
     },
     {
       "claim": "Torcorá no es una serpiente lisa: la única fuente que le da cuerpo dice que es «una bruja» que «duerme sobre el tesoro» y que «Ella tiene patas y plumas en las orejas». Son los dos únicos rasgos anatómicos documentados de la criatura y se conservan; la forma serpentina es la que el módulo pone en escena.",
       "basis": "documented_core",
       "sensitivity": "public",
-      "source_ids": ["identidad_zenu_torcora"],
-      "affects": ["torcora", "torcora_forma_bruja"]
+      "source_ids": [
+        "identidad_zenu_torcora"
+      ],
+      "affects": [
+        "torcora",
+        "torcora_forma_bruja"
+      ]
     },
     {
       "claim": "La canoa y su sello: «En la ciénaga de La Sierpe, aparece de pronto la canoa con el tesoro», con «el limón de acero que está en el ojo de esa canoa», y «el que la ve está perdido si quita el limón de acero», porque entonces la guardiana despierta y ataca. El ojo es parte de la proa y no existe fuera de ella.",
       "basis": "documented_core",
       "sensitivity": "public",
-      "source_ids": ["identidad_zenu_torcora"],
-      "affects": ["canoa_encantada", "limon_de_acero", "ojo_de_la_proa", "torcora"]
+      "source_ids": [
+        "identidad_zenu_torcora"
+      ],
+      "affects": [
+        "canoa_encantada",
+        "limon_de_acero",
+        "ojo_de_la_proa",
+        "torcora"
+      ]
     },
     {
       "claim": "El limón de acero es acero y es un anacronismo que el corpus trae: está en el núcleo más estable de la tradición y el módulo prohíbe reemplazarlo por un candado moderno. Se dibuja como el corpus lo dice —esfera metálica del tamaño de un fruto— y no se convierte en pieza precolombina ni se usa para darle aire colonial al resto del estrato.",
       "basis": "documented_core",
       "sensitivity": "public",
-      "source_ids": ["identidad_zenu_torcora"],
-      "affects": ["limon_de_acero", "canoa_encantada"]
+      "source_ids": [
+        "identidad_zenu_torcora"
+      ],
+      "affects": [
+        "limon_de_acero",
+        "canoa_encantada"
+      ]
     },
     {
       "claim": "La ciénaga de La Sierpe no tiene descripción física en ninguna fuente localizada: sólo se sabe que allí «aparece de pronto la canoa». La lámina se construye con el paisaje genérico de ciénaga del bajo San Jorge —espejo de agua, caños, playones, vegetación acuática— y así queda declarado.",
       "basis": "uncertain",
       "sensitivity": "public",
-      "source_ids": ["identidad_zenu_torcora", "fao_anfibia_2021"],
-      "affects": ["cienaga_la_sierpe"]
+      "source_ids": [
+        "identidad_zenu_torcora",
+        "fao_anfibia_2021"
+      ],
+      "affects": [
+        "cienaga_la_sierpe"
+      ]
     },
     {
       "claim": "La regla espacial que ordena todo el corpus: lo encantado pasa afuera. Los «ojos de agua viva» —cuevas, lagunas y arroyos interconectados por túneles— «se localizan fuera de los pueblos y es allá, en los montes, en donde están los sitios sagrados», y «es en el monte donde el hombre puede de repente chocar con los espíritus». El cerro, el monte del extravío y la ciénaga van fuera del asentamiento.",
       "basis": "documented_core",
       "sensitivity": "public",
-      "source_ids": ["onic_ley_origen", "mincultura_zenu"],
-      "affects": ["monte_del_encanto", "cerro_corcovao", "cienaga_la_sierpe", "paisaje_gran_zenu", "resguardo_san_andres"]
+      "source_ids": [
+        "onic_ley_origen",
+        "mincultura_zenu"
+      ],
+      "affects": [
+        "monte_del_encanto",
+        "cerro_corcovao",
+        "cienaga_la_sierpe",
+        "paisaje_gran_zenu",
+        "resguardo_san_andres"
+      ]
     },
     {
       "claim": "La fauna que la orfebrería y la cerámica zenú representan autoriza el poblamiento del paisaje y nada más: aves acuáticas, caimanes, peces, felinos y venados, patos pisingos y patos cuchara, pinzas de cangrejo. Autoriza qué animales pueblan la ciénaga y la sabana; no autoriza copiar una pieza.",
       "basis": "documented_core",
       "sensitivity": "contextual",
-      "source_ids": ["banrep_zenu"],
-      "affects": ["paisaje_gran_zenu", "cienaga_la_sierpe", "pieza_orfebreria_zenu"]
+      "source_ids": [
+        "banrep_zenu"
+      ],
+      "affects": [
+        "paisaje_gran_zenu",
+        "cienaga_la_sierpe",
+        "pieza_orfebreria_zenu"
+      ]
     },
     {
       "claim": "La evidencia sobre el cuerpo y el vestido del estrato de fundación es indirecta y sale de la iconografía: mujeres «vestidas con largas faldas tejidas» con «pintura corporal que reproducía diseños similares», «todo el oro que tienen lo echan encima de sí y cuentas», sombreros de plumas, y «sombreros, gorros y tocados como prendas básicas de la indumentaria». Como la pintura reproducía el mismo repertorio que hoy son las pintas, ninguna figura lleva diseño legible: la falda se resuelve por textura y alternancia clara-oscura.",
       "basis": "academic_hypothesis",
       "sensitivity": "contextual",
-      "source_ids": ["banrep_zenu", "artesanias_resguardo_2013"],
-      "affects": ["pobladores_primeros_gran_zenu", "mensajeros_de_tarra", "pintas_cana_flecha"]
+      "source_ids": [
+        "banrep_zenu",
+        "artesanias_resguardo_2013"
+      ],
+      "affects": [
+        "pobladores_primeros_gran_zenu",
+        "mensajeros_de_tarra",
+        "pintas_cana_flecha"
+      ]
     },
     {
       "claim": "Ninguna ofrenda de niños ni escena de la danza de la pelazón entra a imagen. La recopilación comunitaria dice que «en algunas ceremonias ofrecían niños y niñas al sol y la luna, además, antes de llevarlos al ritual del bautismo y a la danza de la pelazón», y el propio expediente editorial registra que la adaptación omite el material sacrificial.",
       "basis": "documented_core",
       "sensitivity": "do_not_visualize",
-      "source_ids": ["zenu_creacion_sotavento"],
-      "affects": ["pobladores_primeros_gran_zenu", "ciclo_dia_noche", "ninha_sol"]
+      "source_ids": [
+        "zenu_creacion_sotavento"
+      ],
+      "affects": [
+        "pobladores_primeros_gran_zenu",
+        "ciclo_dia_noche",
+        "ninha_sol"
+      ]
     },
     {
       "claim": "Ningún mogote funerario ni tumba entra a imagen. Los túmulos funerarios se cierran «para proteger a sus muertos de los brujos, que pueden transformar cadáveres en pescados sin espinas», y no es común ver cementerios cerca de las comunidades por el mal de aire.",
       "basis": "documented_core",
       "sensitivity": "do_not_visualize",
-      "source_ids": ["onic_ley_origen"],
-      "affects": ["resguardo_san_andres", "caminos_y_viviendas_del_resguardo"]
+      "source_ids": [
+        "onic_ley_origen"
+      ],
+      "affects": [
+        "resguardo_san_andres",
+        "caminos_y_viviendas_del_resguardo"
+      ]
     },
     {
       "claim": "Juan Lara ya no es zenú y su página no admite iconografía precolombina. universe.mjs lo transfiere a Caribe > Córdoba > Mestizo y las fuentes cordobesas lo describen como «un espíritu burlón que aparece de vereda en vereda y de pueblo en pueblo» que en vida fue un hombre libidinoso: el fantasma de un muerto de pueblo. Nada de caña flecha, pinta, orfebrería ni sombrero vueltiao en esas cinco fichas.",
       "basis": "documented_core",
       "sensitivity": "public",
-      "source_ids": ["guia_monteria_juanlara"],
-      "affects": ["mujer_asediada", "familia_de_la_casa", "vivienda_rural_cordobesa", "juan_lara", "trenza_del_aire_y_amuleto"]
+      "source_ids": [
+        "guia_monteria_juanlara"
+      ],
+      "affects": [
+        "mujer_asediada",
+        "familia_de_la_casa",
+        "vivienda_rural_cordobesa",
+        "juan_lara",
+        "trenza_del_aire_y_amuleto"
+      ]
     },
     {
       "claim": "El cuerpo visible de Juan Lara son las piedras y la risa, y sólo eso: «empieza a hacerle la guerra lanzando piedras en los techos con risotadas» y sus risas «se oyen en el aire, las cuales no se sabe de dónde vienen». Las dos escenas del módulo ordenan no mostrar un agresor, de modo que las piedras y la risa necesitan regla visual propia y él no tiene ficha.",
       "basis": "documented_core",
       "sensitivity": "public",
-      "source_ids": ["guia_monteria_juanlara"],
-      "affects": ["piedras_del_techo", "risa_en_el_aire", "juan_lara"]
+      "source_ids": [
+        "guia_monteria_juanlara"
+      ],
+      "affects": [
+        "piedras_del_techo",
+        "risa_en_el_aire",
+        "juan_lara"
+      ]
     },
     {
       "claim": "La vivienda de la página mestiza es casa de pueblo cordobés: techo que recibe piedras, patio vacío, puerta y umbral, luces de vigilia, camino y cielo nocturno alrededor. Comparte con la región los materiales vernáculos —palma, madera, tierra— pero no lleva paredes de caña flecha tejida ni taller de trenzado, porque eso es la marca del oficio zenú y la página fue transferida precisamente para no atribuirlo. Ninguna fuente describe esa casa: es reconstrucción vernácula declarada.",
       "basis": "editorial_interpretation",
       "sensitivity": "public",
       "source_ids": [],
-      "affects": ["vivienda_rural_cordobesa", "noche_cordobesa", "luces_de_la_casa", "regalos_en_el_umbral", "familia_de_la_casa", "mujer_asediada"]
+      "affects": [
+        "vivienda_rural_cordobesa",
+        "noche_cordobesa",
+        "luces_de_la_casa",
+        "regalos_en_el_umbral",
+        "familia_de_la_casa",
+        "mujer_asediada"
+      ]
     }
   ],
   "cultural_review": {
@@ -490,6 +793,11 @@
       "question": "¿Hay alguna fuente primaria o temprana consultable sobre los zenú —crónica del siglo XVI, etnografía de comienzos del XX— con localizador propio?",
       "searched": "Enciclopedia del Museo del Oro y caracterizaciones institucionales, que relatan las crónicas de segunda mano; búsqueda por cronistas.",
       "result": "Ninguna. Este expediente no tiene una sola fuente con rol primary_or_early, y el preflight lo señala como advertencia. Lo que se sabe de las crónicas —el templo del Finzenú con figuras de madera enchapadas en oro, la cacica, las hamacas de algodón, las esteras de caña flecha— llega siempre por síntesis curatorial. La búsqueda quedó incompleta además porque el presupuesto de consultas web de la sesión (200) se agotó a mitad del trabajo, y las últimas verificaciones se hicieron por descarga directa de URLs ya conocidas."
+    },
+    {
+      "question": "¿Qué altura, qué forma y qué vegetación tiene el cerro Corcovao o Tofeme?",
+      "searched": "Cartilla de la Defensoría, guía municipal de los hitos de San Andrés de Sotavento, recopilación escolar de Bossa Navarro.",
+      "result": "Ninguna fuente consultable da una altitud. Un buscador devolvió «unos 150 m s. n. m.» pero al abrir la página citada no aparece esa cifra —probablemente sintetizó la altitud media del municipio desde un mapa topográfico—, de modo que el dato se retiró de este dossier. Lo verificado es sólo la ubicación (occidente del municipio, límite con Chimá) y la vista desde la cumbre. La silueta jorobada que el censo pide reconocer no está descrita en ninguna parte y queda como lectura editorial."
     }
   ],
   "visual_system_draft": {

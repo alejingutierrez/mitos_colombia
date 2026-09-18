@@ -73,9 +73,12 @@ y esa frontera es la regla más dura de este expediente.
 6. **Tofeme es ñato, además de tuerto.** La nota al pie de la cartilla de la Defensoría —que remite
    al SINIC— lo describe: «el Mocán -guerrero- Tofán o Tofeme, **ñato y tuerto de tanto guerrear**,
    ya que viejo lo pusieron a vigilar al enemigo en lo más alto del cerro, debajo del árbol de totumo
-   de oro que nadie puede coger, porque **se pierde en la manigua**». Y el cerro es real y medible:
-   al occidente de San Andrés de Sotavento, límite con Chimá, **unos 150 m s. n. m.** Es una loma
-   baja sobre sabana, no una montaña.
+   de oro que nadie puede coger, porque **se pierde en la manigua**». Y el cerro es un lugar real y
+   ubicable: está «en el oeste del municipio de San Andrés de Sotavento», en «zona fronteriza con el
+   municipio de Chimá», y desde su cumbre se ve «parte de los territorios Zenúes, **el azul del agua
+   de las ciénagas**, corregimientos más cercanos». Es una loma que domina la llanura, no una montaña
+   andina. **Su altitud, en cambio, no la da ninguna fuente**: un buscador devolvió «unos 150 m s. n.
+   m.» y al abrir la página citada esa cifra no existe, así que se retiró (§12, carencia 9).
 
 ---
 
@@ -237,9 +240,13 @@ Zenufana; la propia ONIC, dos párrafos después, reparte «los sistemas de irri
 artificiales para la siembra, los sombreros vueltiaos y las artesanías en cerámica, respectivamente».
 **Se declara la discrepancia y no se dibuja ninguna de las dos como mapa de oficios.**
 
-**Cerro Corcovao / Tofeme**, medido: al occidente de San Andrés de Sotavento, zona limítrofe con
-Chimá, altitud media **150 m s. n. m.**, dentro del área municipal. Una jorobada baja sobre sabana,
-desde la que se ve la llanura entera. No es una montaña andina y no puede dibujarse como tal.
+**Cerro Corcovao / Tofeme**, ubicado: «en el oeste del municipio de San Andrés de Sotavento», «zona
+fronteriza con el municipio de Chimá». Y lo único que se sabe de cómo se ve es lo que se ve **desde**
+él: «parte de los territorios Zenúes, el azul del agua de las ciénagas, corregimientos más cercanos».
+Es una altura que domina la llanura y no una montaña andina. La misma guía recoge que «debajo del
+Cerro Tofeme, hay un Caimán de Oro» y una tradición local de San Antonio en una cueva del cerro «con
+plantas de ají y árboles de totumo», que es el mismo repertorio del encanto de la recopilación
+escolar. **Su altura no la da ninguna fuente y no se inventa** (§12, carencia 9).
 
 ---
 
@@ -430,6 +437,7 @@ pluma, porque eso produce papel maché.
 | `identidad_zenu_torcora` | community_voice | Proyecto educativo Identidad Cultural Zenú, *Torcorá y la canoa de La Sierpe* | — | identidadculturalzenu.blogspot.com · `leyenda-de-las-mohanas…` | Que Torcorá es «una bruja» que «duerme sobre el tesoro» y que **«ella tiene patas y plumas en las orejas»**; «En la ciénaga de La Sierpe, aparece de pronto la canoa con el tesoro»; «el limón de acero que está en el ojo de esa canoa»; «el que la ve está perdido si quita el limón de acero» y entonces «ataca» | Blog compilatorio sin narrador identificado ni fecha; reúne relatos de procedencias distintas en una misma página |
 | `artesanias_totumo` | institutional | Artesanías de Colombia / CENDAR, *Figuras que nacen de un fruto de oro* | — | artesaniasdecolombia.com.co · `figuras-que-nacen-de-un-fruto-de-oro_1399` | La versión corta de la leyenda: «un **aserrador** que salió al monte en busca de madera, encontró un árbol del que colgaba un totumo de oro. El hombre, emocionado, arrancó el fruto, pero **el árbol lo obligó a devolverlo**»; el totumo como *Crescentia cujete*, silvestre en Córdoba y Sucre; madera para herramientas, pulpa para animales y jarabe, corteza convertida en totuma o tallada | Nota de divulgación institucional, de pocas líneas, sin narrador ni lugar; el relato está resumido al mínimo y **el aserrador contradice la escena del módulo**, que pide al visitante «sin armas ni herramientas» |
 | `artesanias_cana_flecha` | institutional | Artesanías de Colombia, ficha de sector *Caña flecha* | — | artesaniasdecolombia.com.co · `cana-flecha_183` | El raspado sobre banda de cuero en el muslo; el ripiado a 1-2 mm; los tres días en barro; la cocción con jagua, dividivi, bija y cáscara de plátano; el blanqueo con cogollos de caña agria; «pares en blanco y negro»; hasta 21 fibras simultáneas; «sus pintas representan identidades totémicas de antiguos clanes familiares»; el tallo florecido «se emplea para cercar las casas» | Ficha comercial de oficio: no fecha nada, no distingue época y no es una narración |
+| `guia_monteria_lugares` | territorial | La Guía de Montería, *6 lugares que debes visitar en el municipio de San Andrés de Sotavento* | — | laguiademonteria.co · `6-lugares-que-debes-visitar-…` | La ubicación del cerro Tofeme «en el oeste del municipio», en «zona fronteriza con el municipio de Chimá», y lo que se ve desde la cumbre: «parte de los territorios Zenúes, **el azul del agua de las ciénagas**, corregimientos más cercanos» —única mención de color del agua en todo el expediente—; que «debajo del Cerro Tofeme, hay un Caimán de Oro» enterrado en la conquista; una tradición de San Antonio en una cueva del cerro «con plantas de ají y árboles de totumo»; y los hitos del pueblo: Parque del Sombrero Vueltiao, Parque de la Babilla, Museo Zenú José Dolores Paternina, balneario Las Peñitas, iglesia | Guía turística municipal sin autor, sin fecha y sin narrador. **No da altitud**, ni vegetación, ni dimensiones del cerro, y su versión del caimán está resumida al mínimo |
 | `guia_monteria_juanlara` | comparison | La Guía de Montería, *Mitos y leyendas de Córdoba* | — | laguiademonteria.co · `mitos-y-leyendas-de-cordoba` | Juan Lara como «un espíritu burlón que aparece de vereda en vereda y de pueblo en pueblo», que al ser rechazado «empieza a hacerle la guerra lanzando piedras en los techos con risotadas», cuyas risas «se oyen en el aire, las cuales no se sabe de dónde vienen»; y que **en vida fue un hombre libidinoso condenado a vagar**; más el repertorio cordobés vecino (el Duende, el Yacabó, los Animes «de color oscuro, que tienen la boca roja y los ojos centellantes») | Compilación periodística y turística, sin narrador ni transcripción; **no es fuente zenú y aquí se usa sólo para la página mestiza transferida** |
 
 **Cadenas de transmisión, no corroboraciones.** Las decenas de páginas que repiten «el caimán de oro
@@ -452,7 +460,8 @@ sol para el blanco—; la falsa filigrana como oro tejido por cera perdida; el c
 enterrado que sostiene el resguardo; el agua viva como mundo de abajo; Manexca de un solo seno;
 Mexión hermoso como el sol; Tofeme anciano, tuerto y ñato; Tarra hijo de Mexión y Manexka; la capa
 entrelazada en espiral y el cono hecho para observar; el limón de acero en el ojo de la proa; el
-cerro de 150 m al occidente de San Andrés; los sitios encantados **en el monte, fuera del pueblo**.
+cerro al occidente de San Andrés, en el límite con Chimá, desde el que se ve «el azul del agua de las
+ciénagas»; y los sitios encantados **en el monte, fuera del pueblo**.
 
 **`documented_core` · `contextual`** — los tres ámbitos del sombrero con su reparto plantilla/copa/ala
 (el nivel medio **son las pintas**, y por eso se resuelve por trenzado y no por diseño); el reparto de
@@ -585,6 +594,13 @@ económico de quien habría que consultar.
 8. **El presupuesto de búsqueda web se agotó** a mitad del trabajo (200 consultas), de modo que las
    últimas verificaciones se hicieron por descarga directa de URLs ya conocidas. Quedaron sin intentar
    búsquedas sobre La Sierpe, sobre el pito atravesado y sobre fotografía histórica del resguardo.
+9. **El cerro Corcovao no tiene altura documentada, y hubo que retirar una que parecía tenerla.** Un
+   buscador devolvió «unos 150 m s. n. m.» para el cerro Tofeme; al abrir la página citada esa cifra
+   **no aparece** —probablemente sintetizó la altitud media del municipio desde un mapa topográfico—,
+   así que se retiró del dossier y de la matriz. Lo verificado es sólo la ubicación y la vista desde
+   la cumbre. La silueta jorobada que el censo pide reconocer no está descrita en ninguna fuente y
+   queda como lectura editorial. **Es el único dato que este dossier tuvo que desmontar después de
+   haberlo escrito**, y queda anotado para que no vuelva a entrar.
 
 ---
 
