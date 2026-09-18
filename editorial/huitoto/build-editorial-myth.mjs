@@ -51,9 +51,13 @@ export function buildHuitotoEditorialMyth(input) {
   if (!media) throw new Error(`Falta inventario visual para ${input.slug}.`);
   const categoryPath = huitotoCategoryBySlug[input.slug];
   if (!categoryPath) throw new Error(`Falta taxonomía para ${input.slug}.`);
-  const historia = `${input.historyCore}\n\n${sharedHistory}`;
-  const versiones = `${input.versionCore}\n\n${sharedVersions}`;
-  const similitudes = `${input.similarityCore}\n\n${sharedSimilarities}`;
+  // Cada ficha escribe su propia capa documental. Los `…Core` más el bloque
+  // compartido son la disposición heredada: sobrevive sólo para los mitos que
+  // todavía no han pasado por la reescritura editorial.
+  const historia = input.historia ?? `${input.historyCore}\n\n${sharedHistory}`;
+  const versiones = input.versiones ?? `${input.versionCore}\n\n${sharedVersions}`;
+  const similitudes =
+    input.similitudes ?? `${input.similarityCore}\n\n${sharedSimilarities}`;
   const imagePromptHorizontal = horizontalPrompt(input.sceneHorizontal);
   const imagePromptVertical = verticalPrompt(input.sceneVertical);
   const record = {
@@ -64,6 +68,7 @@ export function buildHuitotoEditorialMyth(input) {
     latitude: media.latitude,
     longitude: media.longitude,
     mito: input.mito,
+    ...(input.relatoCorto ? { relatoCorto: input.relatoCorto } : {}),
     historia,
     versiones,
     leccion: input.leccion,
