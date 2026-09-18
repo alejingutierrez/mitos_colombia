@@ -151,13 +151,19 @@ export function crossRegional(censuses) {
     for (const entity of census.entities || []) {
       if (entity.decision !== "required") continue;
       if (!entity.panregional) continue;
+      // Cada agente nombra a su manera: «caballo-sin-cabeza», «El Caballo sin
+      // Cabeza», «caballo_sin_cabeza». Los separadores se vuelven espacio —no
+      // se borran, o tres palabras quedarian pegadas en una— y se descartan
+      // los articulos y las preposiciones, que no distinguen a nadie.
+      const STOP = new Set(["el", "la", "los", "las", "de", "del", "sin", "y", "un", "una"]);
       const key = String(entity.name || entity.id)
         .toLowerCase()
         .normalize("NFD")
         .replace(/[̀-ͯ]/g, "")
-        .replace(/^(el|la|los|las)\s+/, "")
-        .replace(/[^a-z\s]/g, "")
+        .replace(/[^a-z]+/g, " ")
+        .trim()
         .split(/\s+/)
+        .filter((word) => word && !STOP.has(word))
         .slice(0, 2)
         .join(" ");
       if (!byName.has(key)) byName.set(key, []);
@@ -174,6 +180,60 @@ export function crossRegional(censuses) {
       uses,
     }))
     .sort((a, b) => b.savings - a.savings);
+}
+
+/** Normaliza un nombre para poder cruzarlo entre censos escritos por manos distintas. */
+const STOP_WORDS = new Set(["el", "la", "los", "las", "de", "del", "sin", "y", "un", "una"]);
+export function nameKey(value) {
+  return String(value || "")
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[̀-ͯ]/g, "")
+    .replace(/[^a-z]+/g, " ")
+    .trim()
+    .split(/\s+/)
+    .filter((word) => word && !STOP_WORDS.has(word))
+    .slice(0, 2)
+    .join(" ");
+}
+
+/**
+ * El corpus nacional propone producir una lamina canonica de cada espanto y
+ * que las regiones la hereden. El ahorro que declara es una estimacion de la
+ * distribucion conocida del folclor; esto lo mide contra los censos reales.
+ */
+export function nationalOverlap(censuses, nationalId = "varios-sin-territorio") {
+  const national = censuses.find((census) => census.id === nationalId);
+  if (!national) return null;
+
+  const roster = new Map();
+  for (const entity of national.entities || []) {
+    if (entity.decision !== "required") continue;
+    roster.set(nameKey(entity.name), {
+      name: entity.name,
+      recommended: Boolean(entity.nacional_recomendada),
+      sheets: Number(entity.sheets || 0),
+      hits: [],
+    });
+  }
+
+  for (const census of censuses) {
+    if (census.id === nationalId) continue;
+    for (const entity of census.entities || []) {
+      if (entity.decision !== "required") continue;
+      const hit = roster.get(nameKey(entity.name));
+      if (hit) hit.hits.push({ corpus: census.id, name: entity.name, sheets: Number(entity.sheets || 0) });
+    }
+  }
+
+  const matched = [...roster.values()].filter((item) => item.hits.length);
+  return {
+    roster: roster.size,
+    recommended: [...roster.values()].filter((item) => item.recommended).length,
+    matched,
+    // Lo que se ahorra es la lamina regional, no la nacional: esa se produce igual.
+    savings: matched.reduce((total, item) => total + item.hits.reduce((sum, hit) => sum + hit.sheets, 0), 0),
+  };
 }
 
 function main() {
@@ -246,6 +306,26 @@ function main() {
       console.log(`  ${item.key.padEnd(22)} ${item.corpora} corpus · ${item.sheets} fichas · ahorra ${item.savings}  (${item.uses.map((u) => u.corpus).join(", ")})`);
     }
     console.log(`  ahorro total: ${savings} fichas = $${(savings * perSheet * ATTEMPTS.central).toFixed(2)}`);
+  }
+
+  const national = nationalOverlap(censuses);
+  if (national) {
+    console.log(
+      `\nroster nacional: ${national.roster} figuras, ${national.recommended} recomendadas como lámina única`,
+    );
+    if (national.matched.length) {
+      console.log(`  coinciden de verdad en otros censos (${national.matched.length}):`);
+      for (const item of national.matched.sort((a, b) => b.hits.length - a.hits.length)) {
+        console.log(
+          `    ${item.name.slice(0, 34).padEnd(36)} ${String(item.hits.length).padStart(2)} corpus · ahorra ${item.hits.reduce((total, hit) => total + hit.sheets, 0)}  (${item.hits.map((hit) => hit.corpus).join(", ")})`,
+        );
+      }
+      console.log(
+        `  ahorro medido: ${national.savings} láminas = $${(national.savings * perSheet * ATTEMPTS.central).toFixed(2)}`,
+      );
+    } else {
+      console.log("  ninguna coincide todavía: faltan censos regionales por llegar");
+    }
   }
 
   if (args.md) {
