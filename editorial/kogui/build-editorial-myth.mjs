@@ -58,17 +58,21 @@ export function buildKoguiEditorialMyth(input) {
   const categoryPath = koguiCategoryBySlug[input.slug];
   if (!categoryPath) throw new Error(`Falta taxonomía para ${input.slug}.`);
   const reception = input.sourceMode === "gauteovan";
-  const historia = `${input.historyCore}\n\n${
+  // Cada ficha escribe su propia capa documental; los `…Core` más el bloque
+  // compartido son la disposición heredada.
+  const historia = input.historia ?? `${input.historyCore}\n\n${
     reception
       ? `${gauteovanHistory}\n\n${gauteovanHistoryNote}`
       : `${corpusHistory}\n\n${corpusHistoryNote}`
   }`;
-  const versiones = `${input.versionCore}\n\n${
+  const versiones = input.versiones ?? `${input.versionCore}\n\n${
     reception
       ? `${gauteovanVersions}\n\n${gauteovanVersionsNote}`
       : `${corpusVersions}\n\n${corpusVersionsNote}`
   }`;
-  const similitudes = `${input.similarityCore}\n\n${sharedSimilarities}\n\n${sharedSimilaritiesNote}`;
+  const similitudes =
+    input.similitudes ??
+    `${input.similarityCore}\n\n${sharedSimilarities}\n\n${sharedSimilaritiesNote}`;
   const imagePromptHorizontal = horizontalPrompt(input.sceneHorizontal);
   const imagePromptVertical = verticalPrompt(input.sceneVertical);
   const record = {
@@ -79,6 +83,7 @@ export function buildKoguiEditorialMyth(input) {
     latitude: media.latitude,
     longitude: media.longitude,
     mito: input.mito,
+    ...(input.relatoCorto ? { relatoCorto: input.relatoCorto } : {}),
     historia,
     versiones,
     leccion: input.leccion,
