@@ -23,6 +23,7 @@ está en la producción visual.
 | **nasa-páez** | 110 | 554 | 956 | **26/26** | corpus de guiones cerrado 2026-09-17 |
 | **ette-ennaka** (chimila) | 162 | 303 | 271 | **23/23** | corpus de guiones cerrado 2026-09-16 |
 | **huitoto** (uitoto) | 7 fichas + 124 de investigación | 250 imágenes | — | — | recién abierta |
+| **chamí** (emberá chamí) | **V1 · 191 fichas** | **66 de 66 · las 22 páginas, publicadas 2026-09-18** | — | — | biblia cerrada 2026-09-17, faltan correcciones y consulta | 22 mitos con tríptico propio · ninguna página sin lámina | — | — | etapa 1 abierta 2026-09-17, tanda 01 hecha |
 
 La columna de guiones cuenta **pares acta+guion verificados**: 117 de 117 pasan
 `lint-guion` (forma) y `lint-acta` (fidelidad al canon). Esas **cuatro**
@@ -87,6 +88,75 @@ caracteres ahoga la técnica: el piloto salió fotorrealista. Y pedir «cada plu
 es una pieza recortada» produce miles de plumitas ESCULPIDAS: la regla correcta
 es la contraria —pocas piezas grandes y planas, borde de tijera, sombra nítida—
 y está escrita en `refuerzo-papel-v3.md`.
+
+### La investigación chamí · 2026-09-17
+
+Etapa 0 **cerrada**: los cuatro pasos de la puerta V2, la gramática mítica, una
+segunda pasada sobre las fuentes y el expediente visual —catorce documentos,
+2.083 líneas— en
+[`docs/chami-investigacion-2026-09-17/`](docs/chami-investigacion-2026-09-17/).
+**La etapa 1 no se abre** hasta que se apruebe la excepción cultural del paso 3
+y se resuelvan los cuatro asuntos `consult_required` —tres son el jaibaná—.
+La matriz de evidencia deja **36 afirmaciones o escenas en `do_not_visualize`**.
+
+**Dimensionado** (`content/mitos-visuales/chami.v1.inventario.json`): 147
+entidades y **118 fichas** en cuatro capas —36 personas, 24 animales, 34 atrezo,
+24 mundo—, unas diez tandas, más **42 trípticos**. Por mito da **8,4 fichas**,
+prácticamente lo mismo que wayuu (8,3): la biblia es la mitad de grande porque
+el corpus es la mitad de grande, no porque cada mito dé menos.
+
+**Biblia cerrada el 2026-09-17**: **118 fichas** en diez tandas y cuatro capas
+—36 personas, 24 animales, 34 atrezo, 24 mundo—, congeladas con hash de prompt e
+imagen en `content/mitos-visuales/_openai/chami/biblia-v1/`, más una pasada de
+once correcciones. El cierre está en `CIERRE.md`. Antes de generar hubo que
+corregir **tres reglas del repo** que contradecían la investigación: la entrada
+`Chamí` de `COMMUNITY_CRAFT` (eje cafetero, pechera de chaquira, jagua
+genérica), `REGION_CRAFT.Andina` —que le habría metido páramo y geometría
+muisca— y la época `prehispanico`, que prohíbe el metal y con él **el hacha de
+Karagabí**. Se añadieron `REGION_CRAFT["Cordillera Occidental"]` y
+`ERA_REGISTERS.mitico_chami`.
+
+Dos lecciones de técnica, las dos escritas en `PLAN-DE-TANDAS.md`. **El modelo
+esculpe por defecto**: hay que abrir con la técnica y nombrar el cuerpo y la
+cara por separado, porque se arreglan en pasos distintos. Y **el pelaje es la
+trampa de los animales**: en wayuu el refuerzo pedía «cada pluma como recorte
+independiente» y produjo papel maché; aquí la regla va invertida desde la
+primera lámina y las 24 fichas de animales salieron a la primera.
+
+**El jaibaná no tiene ficha**, y es deliberado: es el asunto `consult_required`
+que la excepción cultural dejó fuera hasta que haya consulta.
+
+Al medirlo apareció otra cosa: los catorce textos publicados miden todos entre
+1.764 y 2.069 caracteres, pero **su porción narrativa va de 530 a 1.966**. El
+comentario editorial se usó para emparejar el largo, y en
+`creacion-embera`, `hentsera-y-el-agua` y `la-oscuridad` **el relato es menos de
+un tercio de la página**. Es la plantilla compartida, ahora alcanzando también a
+`mito`.
+
+**Las 22 páginas chamí no son 22 mitos narrables.** Son catorce relatos
+primarios —los catorce de Reichel-Dolmatoff 1953, uno por página—, cinco
+páginas editoriales que no tienen una narración única que ilustrar, dos
+mediaciones mestizas de Caldas (una explícitamente cristianizada) y un relato
+katío transferido. `jinopotabar` y `el-hijo-de-la-nutria` son **el mismo**
+relato 2. El denominador de la biblia sale de los catorce.
+
+Los catorce vienen de **un solo sitio y un solo momento**: Corozal, Río Frío,
+Valle del Cauca, 1945; unas 60 personas en cinco casas, migrantes desde
+Caldas y Antioquia hacia 1930. **No es el corazón chamí**, que está en
+Risaralda. Y **de esos catorce no se conoce el nombre de ningún narrador**.
+
+Dos trampas medidas antes de generar nada. La primera: el mismo PDF del
+*Boletín de Arqueología* trae el artículo «Los Chibcha» cuarenta páginas antes,
+y su jagua con bija roja **es muisca**; un `grep` sobre el boletín entero la
+mezcla con lo chamí. La segunda: el corpus dice **«verde» cero veces** y
+«lluvia/nube» una sola; lo que nombra sin parar es **sol/día (66), casa (60) y
+agua (53)**. Dibujar selva esmeralda con niebla sería el error del azul wayuu
+con otro color.
+
+Y el hallazgo más fuerte, de Vasco con Rosa Elvira: el **chokó**, cántaro de
+barro con forma humana que **es un ancestro**, se encierra con la niña en su
+iniciación y sale en andas con ella. «El chokó es la primera princesa de la
+fiesta; la niña es sólo la segunda.»
 
 ### La regla única y el acta
 

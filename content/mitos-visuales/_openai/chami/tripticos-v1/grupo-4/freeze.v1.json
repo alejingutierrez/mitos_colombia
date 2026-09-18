@@ -1,0 +1,185 @@
+{
+  "schema": "triptico-grupo-freeze/v1",
+  "comunidad": "chami",
+  "grupo": 4,
+  "fecha": "2026-09-18",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "formatos": {
+    "entrada": "16:9 · 1536x1024",
+    "acto": "9:16 · 1024x1536",
+    "huella": "1:1 · 1024x1024"
+  },
+  "orden": "las cuatro que faltaban: Jinu Potó, el origen de los animales, las transformaciones, las gotas de Lomaprieta",
+  "doctrina": "tres ESCENAS DISTINTAS por mito; la huella es un EMBLEMA sobre fondo liso",
+  "motivo_del_grupo": "corrige una omisión: en los grupos 1-3 se dieron por excluidas cuatro páginas y sólo tres se habían declarado. La razón dada para jinopotabar —«es el mismo relato 2 que el-hijo-de-la-nutria»— era FALSA: es una narración propia de 3.370 caracteres (pelea con la luna, caída al mundo dojura, regreso por Chokorró). los-guardianes-vengadores-de-la-naturaleza no se declaró en absoluto.",
+  "reparto_de_composicion": {
+    "paisaje_abierto": 2,
+    "enfrentados": 1,
+    "simetria": 3,
+    "diagonal": 1,
+    "cenital": 2,
+    "figura_pequena": 1,
+    "primer_plano": 1,
+    "contrapicado": 1
+  },
+  "maximo_esquema": 3,
+  "correcciones": [
+    {
+      "pieza": "las-transformaciones--huella",
+      "motivo": "salió una rana y un CABALLO en vez de un tominejo y un zaino; no hay animales domésticos europeos en este mundo"
+    }
+  ],
+  "registros_declarados": [
+    {
+      "mito": "los-guardianes-vengadores-de-la-naturaleza",
+      "registro": "mediación mestiza de Caldas EXPLÍCITAMENTE CRISTIANIZADA (Bueno Rodríguez 1988)",
+      "decision": "se dibuja lo que el texto dice y nada más: de «Dios» sólo las manos que el texto nombra, sin cuerpo, cara, túnica ni aureola; los «ángeles» son gotas con una silueta mínima, NUNCA querubines europeos con alas, halo o túnica; ninguna cruz ni símbolo religioso; ninguna figura chamí, porque el relato no nombra a nadie"
+    },
+    {
+      "mito": "las-transformaciones",
+      "registro": "compilación de episodios ya ilustrados en los grupos 1-3",
+      "decision": "el tríptico se ancla en el ÚNICO beat propio de esta página —Dumío estirando tominejos hasta volverlos zainos— para no repetir escenas que ya tienen sus láminas"
+    },
+    {
+      "mito": "el-origen-de-los-animales",
+      "registro": "compilación editorial",
+      "decision": "se ancla en el hilo que ningún otro tríptico usa: el jenené que guardaba el agua, tumbado, su raíz vuelta mar y sus ramas ríos"
+    }
+  ],
+  "imagenes": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chami-v1/tripticos-grupo-4",
+  "piezas": [
+    {
+      "id": "jinopotabar--entrada",
+      "mito": "jinopotabar",
+      "formato": "entrada",
+      "composicion": "paisaje_abierto",
+      "escena": "La luna que no deja dormir",
+      "prompt_sha256": "1b0af2a8a156611c504d65fcc5e4f8e183f1f817d449426d0e7ff3c76cb76580",
+      "prompt_file": "jinopotabar--entrada.prompt.txt",
+      "imagen_sha256": "1583703b0da80b4fab5a60fa534597476c7bac6ce9cd7f5944cf3059329c6cea",
+      "narrativa_sha256": "01f07b9a422a5d356a37685cdd89996aa7aaab355cc8774320b88c5eb421d81c"
+    },
+    {
+      "id": "jinopotabar--acto",
+      "mito": "jinopotabar",
+      "formato": "acto",
+      "composicion": "enfrentados",
+      "escena": "Le daña el ojo a la luna",
+      "prompt_sha256": "c398f6289dd7faab39b1363ee8a3771ac5b88fdbcf033fca75291c3090e149cf",
+      "prompt_file": "jinopotabar--acto.prompt.txt",
+      "imagen_sha256": "d5c31db283de71d79d975f609152286086ef6babefdf963b319156f9c01d089a",
+      "narrativa_sha256": "01f07b9a422a5d356a37685cdd89996aa7aaab355cc8774320b88c5eb421d81c"
+    },
+    {
+      "id": "jinopotabar--huella",
+      "mito": "jinopotabar",
+      "formato": "huella",
+      "composicion": "simetria",
+      "escena": "Lo que quedó: el ojo dañado y las dos palabras",
+      "prompt_sha256": "4323a06888716bbf7f98223e11ff8f3efa0d1aad057b292ceb77b8d4f139d3ca",
+      "prompt_file": "jinopotabar--huella.prompt.txt",
+      "imagen_sha256": "8513f6d6a226fd65f55916de8b808cdb03d84580b349961186207b41072606df",
+      "narrativa_sha256": "01f07b9a422a5d356a37685cdd89996aa7aaab355cc8774320b88c5eb421d81c"
+    },
+    {
+      "id": "el-origen-de-los-animales--entrada",
+      "mito": "el-origen-de-los-animales",
+      "formato": "entrada",
+      "composicion": "paisaje_abierto",
+      "escena": "Los burumiáes duermen dentro del jenené",
+      "prompt_sha256": "96ee73d8496a764eb985b1858a13a54022194d2e73ccb675eb3fdecb6b69be04",
+      "prompt_file": "el-origen-de-los-animales--entrada.prompt.txt",
+      "imagen_sha256": "2716d021694195b558bc3cb3b389a94dc051c7a8016b7c5747fb2b3259ad0ba4",
+      "narrativa_sha256": "f44e06d6db60494ad5a1788e126a1872a7142b57d10aac70e5790b8d65ed78ef"
+    },
+    {
+      "id": "el-origen-de-los-animales--acto",
+      "mito": "el-origen-de-los-animales",
+      "formato": "acto",
+      "composicion": "diagonal",
+      "escena": "El jenené cae y sale el agua",
+      "prompt_sha256": "52378923c8cfbc89ab5078c0d2ff3ef63b1b58e4c911769699741aea6647d33c",
+      "prompt_file": "el-origen-de-los-animales--acto.prompt.txt",
+      "imagen_sha256": "dc51218ffc4a32f0f158913fbadeafc88b62b6de15f4457bc8972cc23c4dde27",
+      "narrativa_sha256": "f44e06d6db60494ad5a1788e126a1872a7142b57d10aac70e5790b8d65ed78ef"
+    },
+    {
+      "id": "el-origen-de-los-animales--huella",
+      "mito": "el-origen-de-los-animales",
+      "formato": "huella",
+      "composicion": "cenital",
+      "escena": "Lo que quedó: la raíz es el mar y las ramas son los ríos",
+      "prompt_sha256": "2302a82c484e21167bf22fbeddd47c5055ec20fc018678d50f6742a21c9e5bd5",
+      "prompt_file": "el-origen-de-los-animales--huella.prompt.txt",
+      "imagen_sha256": "b2e7e05a8ba06ab97610488a63291f5aac4869fc484d59b27682a096648bd2a2",
+      "narrativa_sha256": "f44e06d6db60494ad5a1788e126a1872a7142b57d10aac70e5790b8d65ed78ef"
+    },
+    {
+      "id": "las-transformaciones--entrada",
+      "mito": "las-transformaciones",
+      "formato": "entrada",
+      "composicion": "figura_pequena",
+      "escena": "Dumío y los tominejos",
+      "prompt_sha256": "de6d63eb491500444ae7ad7d5f9f3effd4f7a345e37b8725931099df4e5456bc",
+      "prompt_file": "las-transformaciones--entrada.prompt.txt",
+      "imagen_sha256": "6668d5c13bea87d0c1641654e7b9cb48af11042451b2d66691139ad62384a88c",
+      "narrativa_sha256": "27a8e0d7e2f5e55d1f79b4dcc4b63f83f141c751894aafe5f379abd93174967b"
+    },
+    {
+      "id": "las-transformaciones--acto",
+      "mito": "las-transformaciones",
+      "formato": "acto",
+      "composicion": "primer_plano",
+      "escena": "El tominejo se estira y se vuelve zaino",
+      "prompt_sha256": "da62f6c7d408e6178df6ddaed4fab3994e47027c8148613d9cfc1d64f225d240",
+      "prompt_file": "las-transformaciones--acto.prompt.txt",
+      "imagen_sha256": "06a517b799d9b5a2c38b2c8109da5232b06b7c518d55ab6bf63be5a9270cd9e6",
+      "narrativa_sha256": "27a8e0d7e2f5e55d1f79b4dcc4b63f83f141c751894aafe5f379abd93174967b"
+    },
+    {
+      "id": "las-transformaciones--huella",
+      "mito": "las-transformaciones",
+      "formato": "huella",
+      "composicion": "simetria",
+      "escena": "Lo que quedó: la yerba que lo hacía",
+      "prompt_sha256": "47ed558af77c2d49931b1e2f806e0ca40aa565776f627f4fc238b7527529c4e6",
+      "prompt_file": "las-transformaciones--huella.prompt.v2.txt",
+      "imagen_sha256": "4e45ce338f730625aa23bdcce549139744638b5ce9c7a26abc1b04af34c6e612",
+      "narrativa_sha256": "27a8e0d7e2f5e55d1f79b4dcc4b63f83f141c751894aafe5f379abd93174967b"
+    },
+    {
+      "id": "los-guardianes-vengadores-de-la-naturaleza--entrada",
+      "mito": "los-guardianes-vengadores-de-la-naturaleza",
+      "formato": "entrada",
+      "composicion": "simetria",
+      "escena": "Las manos que chorrean",
+      "prompt_sha256": "ba9ebcfe7f9248240600f369a61a88b704c627f082884c06eec684677830b6d4",
+      "prompt_file": "los-guardianes-vengadores-de-la-naturaleza--entrada.prompt.txt",
+      "imagen_sha256": "9413ee7637f6dad4650b6850f20e027e8edc60abbd4265ba20623744c9afc349",
+      "narrativa_sha256": "09e2207063356988459ece267d7e48b9ed089d11c04c8444eda4f6e3a88ed52d"
+    },
+    {
+      "id": "los-guardianes-vengadores-de-la-naturaleza--acto",
+      "mito": "los-guardianes-vengadores-de-la-naturaleza",
+      "formato": "acto",
+      "composicion": "contrapicado",
+      "escena": "Dijo detente",
+      "prompt_sha256": "708239700f77a65689eda14fb3dc1b48901c5a51b45fdbeb29a89eaef2b77f4f",
+      "prompt_file": "los-guardianes-vengadores-de-la-naturaleza--acto.prompt.txt",
+      "imagen_sha256": "4541ea935f39d51b296b3b66f029c850065e22d75e1282e967532cf13332dd72",
+      "narrativa_sha256": "09e2207063356988459ece267d7e48b9ed089d11c04c8444eda4f6e3a88ed52d"
+    },
+    {
+      "id": "los-guardianes-vengadores-de-la-naturaleza--huella",
+      "mito": "los-guardianes-vengadores-de-la-naturaleza",
+      "formato": "huella",
+      "composicion": "cenital",
+      "escena": "Lo que quedó: los cuatro espíritus",
+      "prompt_sha256": "56c6574736d91b2a63fe946422217dd4778d066e26efc8466084332e9b63aa4f",
+      "prompt_file": "los-guardianes-vengadores-de-la-naturaleza--huella.prompt.txt",
+      "imagen_sha256": "e863b829639d45b4cc62298a010b424f8cf881c9728f7a58a26dbe1a51aeeb33",
+      "narrativa_sha256": "09e2207063356988459ece267d7e48b9ed089d11c04c8444eda4f6e3a88ed52d"
+    }
+  ]
+}

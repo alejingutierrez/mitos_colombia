@@ -1,0 +1,244 @@
+{
+  "schema": "triptico-grupo-freeze/v1",
+  "comunidad": "chami",
+  "grupo": 2,
+  "fecha": "2026-09-18",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "formatos": {
+    "entrada": "16:9 · 1536x1024",
+    "acto": "9:16 · 1024x1536",
+    "huella": "1:1 · 1024x1024"
+  },
+  "orden": "relatos humanos: el árbol, el baile, la nutria, el guatín, Horchíbarí, la mujer hormiga",
+  "doctrina": "tres ESCENAS DISTINTAS por mito, una por formato; la huella es un EMBLEMA sobre fondo liso, no una escena (DOCTRINA-HUELLA.md), aplicada desde la primera generación",
+  "reparto_de_composicion": {
+    "figura_pequena": 2,
+    "primer_plano": 1,
+    "simetria": 3,
+    "umbral": 2,
+    "enfrentados": 1,
+    "diagonal": 2,
+    "contrapicado": 2,
+    "cenital": 3,
+    "paisaje_abierto": 1,
+    "peso_contrario": 1
+  },
+  "maximo_esquema": 3,
+  "correcciones": [
+    {
+      "pieza": "el-hijo-de-karagabi-encerrado-en-el-arbol--acto",
+      "motivo": "la corteza salió como fotografía de árbol real; se rehízo con la corteza en tiras planas de papel superpuestas y el dedo legible"
+    },
+    {
+      "pieza": "el-hijo-de-karagabi-encerrado-en-el-arbol--huella",
+      "motivo": "misma rotura de técnica; además el tronco salió aserrado con anillos: se rehízo cerrado y de pie con la línea del corte sellada"
+    },
+    {
+      "pieza": "el-guatin-astuto--entrada",
+      "motivo": "el guatín salió sin manchas (ñeque); la ficha t04-01 lo fija como guagua/paca con cuatro hileras de manchas"
+    }
+  ],
+  "registros_declarados": [],
+  "imagenes": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chami-v1/tripticos-grupo-2",
+  "piezas": [
+    {
+      "id": "el-hijo-de-karagabi-encerrado-en-el-arbol--entrada",
+      "mito": "el-hijo-de-karagabi-encerrado-en-el-arbol",
+      "formato": "entrada",
+      "composicion": "figura_pequena",
+      "escena": "El hombre llega al árbol",
+      "prompt_sha256": "3f7dd8948d4b45d1d2979fb76cb732d8739ecc5560055d45359bc20eb596ae8c",
+      "prompt_file": "el-hijo-de-karagabi-encerrado-en-el-arbol--entrada.prompt.txt",
+      "imagen_sha256": "719588bc870f4e8a055304d7e46b194161628cf41f97ee0d7ddeaa6a88258a0e",
+      "narrativa_sha256": "e912675990ecea07480dea3a23ee84c929b09e433283b69253ea4214e55e82f4"
+    },
+    {
+      "id": "el-hijo-de-karagabi-encerrado-en-el-arbol--acto",
+      "mito": "el-hijo-de-karagabi-encerrado-en-el-arbol",
+      "formato": "acto",
+      "composicion": "primer_plano",
+      "escena": "El dedo afuera",
+      "prompt_sha256": "8416892cf59e8081b92acc0ca70482851a741dfd24babc4ca68401d8cf161f9e",
+      "prompt_file": "el-hijo-de-karagabi-encerrado-en-el-arbol--acto.prompt.v2.txt",
+      "imagen_sha256": "850b6f3aa3118a4de251c3504d663b6c03034ef3d7c30e4490f0a73d0d02420e",
+      "narrativa_sha256": "e912675990ecea07480dea3a23ee84c929b09e433283b69253ea4214e55e82f4"
+    },
+    {
+      "id": "el-hijo-de-karagabi-encerrado-en-el-arbol--huella",
+      "mito": "el-hijo-de-karagabi-encerrado-en-el-arbol",
+      "formato": "huella",
+      "composicion": "simetria",
+      "escena": "Lo que quedó: el tronco cerrado y el temblor",
+      "prompt_sha256": "3205798451e0a328a976ff7706b398de07efa23e17fa5cb228b1006c85d1b05e",
+      "prompt_file": "el-hijo-de-karagabi-encerrado-en-el-arbol--huella.prompt.v2.txt",
+      "imagen_sha256": "d3b6871ec26237efab198d52065aeb809d2cf0f11c1a28a174ae55106fb28ecd",
+      "narrativa_sha256": "e912675990ecea07480dea3a23ee84c929b09e433283b69253ea4214e55e82f4"
+    },
+    {
+      "id": "la-mujer-de-karagabi--entrada",
+      "mito": "la-mujer-de-karagabi",
+      "formato": "entrada",
+      "composicion": "umbral",
+      "escena": "El forastero llega al baile",
+      "prompt_sha256": "f0136254d9648b8c587fc7fa0e42a1bb1a6d09ca5c0c5b273e6379ef69a22789",
+      "prompt_file": "la-mujer-de-karagabi--entrada.prompt.txt",
+      "imagen_sha256": "0da551b7b4e2f4f32cca020a4ad7ebaaeed9f09e7fd492284be01101b2dd0735",
+      "narrativa_sha256": "f307201adfb57d62950b61a50a195da147a08a2c0142548ed971a2d72c3fccd2"
+    },
+    {
+      "id": "la-mujer-de-karagabi--acto",
+      "mito": "la-mujer-de-karagabi",
+      "formato": "acto",
+      "composicion": "enfrentados",
+      "escena": "El forastero y ella",
+      "prompt_sha256": "41584ebd7fe0505f220d26211dfc29906317cada167b8a9ba9e1e27790d5efaf",
+      "prompt_file": "la-mujer-de-karagabi--acto.prompt.txt",
+      "imagen_sha256": "cf5a82003e74a457dec6c89908e0eb5b2a0aaffe3cd8b13d012e88174aaecf6f",
+      "narrativa_sha256": "f307201adfb57d62950b61a50a195da147a08a2c0142548ed971a2d72c3fccd2"
+    },
+    {
+      "id": "la-mujer-de-karagabi--huella",
+      "mito": "la-mujer-de-karagabi",
+      "formato": "huella",
+      "composicion": "simetria",
+      "escena": "Lo que quedó: la lorita y la luna",
+      "prompt_sha256": "1d542bc65960311fec4e03eec28b83954b0fd9d90d15c04e0aa2f3a56fd433dd",
+      "prompt_file": "la-mujer-de-karagabi--huella.prompt.txt",
+      "imagen_sha256": "836f0fd6ae31182af1c535265cd6e71e6a18691fa77ede4bd5ad818c5f89f483",
+      "narrativa_sha256": "f307201adfb57d62950b61a50a195da147a08a2c0142548ed971a2d72c3fccd2"
+    },
+    {
+      "id": "el-hijo-de-la-nutria--entrada",
+      "mito": "el-hijo-de-la-nutria",
+      "formato": "entrada",
+      "composicion": "diagonal",
+      "escena": "La nutria y el pescador",
+      "prompt_sha256": "dbacb519204110349aa14d48d52d4e2c741faebce042dafc0d15d41155fa62e7",
+      "prompt_file": "el-hijo-de-la-nutria--entrada.prompt.txt",
+      "imagen_sha256": "227f4ea9ea0ba7914eee9fe5b367c57ed6c2dc73ec4df21f47ec39f4983070a0",
+      "narrativa_sha256": "cd229cef43705b413848d4f70870f1472c864f53ecd12616e76a73c136dcfbdb"
+    },
+    {
+      "id": "el-hijo-de-la-nutria--acto",
+      "mito": "el-hijo-de-la-nutria",
+      "formato": "acto",
+      "composicion": "contrapicado",
+      "escena": "Dentro de la ballena",
+      "prompt_sha256": "bd7ccb2ee1363939b1c03a79991f3bdc4d06ccf115da34e21743992ad3c11f65",
+      "prompt_file": "el-hijo-de-la-nutria--acto.prompt.txt",
+      "imagen_sha256": "1488e627e92d65ff2b4cac0d657009cdf9ba770ca0aa88668b583b11c2142d21",
+      "narrativa_sha256": "cd229cef43705b413848d4f70870f1472c864f53ecd12616e76a73c136dcfbdb"
+    },
+    {
+      "id": "el-hijo-de-la-nutria--huella",
+      "mito": "el-hijo-de-la-nutria",
+      "formato": "huella",
+      "composicion": "cenital",
+      "escena": "Lo que quedó: la estera vacía",
+      "prompt_sha256": "ac68611fafda7aabd07e0fdb9e660c9f75ebe57857ba27c0ecd1ee4dff4f1772",
+      "prompt_file": "el-hijo-de-la-nutria--huella.prompt.txt",
+      "imagen_sha256": "b23113c48121ed4c2b99ca39ef5e1725e738596c8a7cea1c85c22c7a2af0ee6d",
+      "narrativa_sha256": "cd229cef43705b413848d4f70870f1472c864f53ecd12616e76a73c136dcfbdb"
+    },
+    {
+      "id": "el-guatin-astuto--entrada",
+      "mito": "el-guatin-astuto",
+      "formato": "entrada",
+      "composicion": "paisaje_abierto",
+      "escena": "El guatín come corozo y llega el jaguar",
+      "prompt_sha256": "19d85852c186919ffbde9c756e4877427edd0bc890477aa347f5003c2490d814",
+      "prompt_file": "el-guatin-astuto--entrada.prompt.v2.txt",
+      "imagen_sha256": "ca66c3636ec9c02a219ff8b4c3cf93f069fe13a2b37ce21006c0f85fcaacb47a",
+      "narrativa_sha256": "bb49a9c6a3ba18a53b9d1edc0fa0685c39098de63b44ccfdec2c3ed0f72f0b61"
+    },
+    {
+      "id": "el-guatin-astuto--acto",
+      "mito": "el-guatin-astuto",
+      "formato": "acto",
+      "composicion": "diagonal",
+      "escena": "El bulto de miel y hojas junto al río",
+      "prompt_sha256": "34a9b108383a3d3eaaf1b255eb91113b115977a284ff88a6bc6a3d4fc52d26ae",
+      "prompt_file": "el-guatin-astuto--acto.prompt.txt",
+      "imagen_sha256": "1c86329d1163711752d1df128d5d993883e05ccf42d6d25cd5ee25a236677ce2",
+      "narrativa_sha256": "bb49a9c6a3ba18a53b9d1edc0fa0685c39098de63b44ccfdec2c3ed0f72f0b61"
+    },
+    {
+      "id": "el-guatin-astuto--huella",
+      "mito": "el-guatin-astuto",
+      "formato": "huella",
+      "composicion": "cenital",
+      "escena": "Lo que quedó: el corozo partido",
+      "prompt_sha256": "a1c48c8acc7374421486449c827ab1b1abce88262d035924eba849d8ec3f3180",
+      "prompt_file": "el-guatin-astuto--huella.prompt.txt",
+      "imagen_sha256": "5b0ee120a6db6c1a2098f4021ba041b62349506ea5a10b6ef6d529be790df92c",
+      "narrativa_sha256": "bb49a9c6a3ba18a53b9d1edc0fa0685c39098de63b44ccfdec2c3ed0f72f0b61"
+    },
+    {
+      "id": "horchibari--entrada",
+      "mito": "horchibari",
+      "formato": "entrada",
+      "composicion": "peso_contrario",
+      "escena": "El joven llega al territorio de Horchíbarí",
+      "prompt_sha256": "01bc56b4294b57c09019cd2936e84fddb9d8ba4c131902836cfa80f31842b67f",
+      "prompt_file": "horchibari--entrada.prompt.txt",
+      "imagen_sha256": "90edce7ab503d17ee3ee2295591fc7cf0399263ba13df7898883e790b3518ae7",
+      "narrativa_sha256": "85801cda6d7797190cec779db2620fea04283ac69a364204cfcb6019509d25f5"
+    },
+    {
+      "id": "horchibari--acto",
+      "mito": "horchibari",
+      "formato": "acto",
+      "composicion": "contrapicado",
+      "escena": "El juego de rodar por el derrumbe",
+      "prompt_sha256": "9d6a309881801b845223f25b5db1cd2c80557ff07005f1e354dba0167ab0c6b6",
+      "prompt_file": "horchibari--acto.prompt.txt",
+      "imagen_sha256": "afad6d99e87b30b2da0d59a12579235d38ce30098ba048ea82de62704c9df3e5",
+      "narrativa_sha256": "85801cda6d7797190cec779db2620fea04283ac69a364204cfcb6019509d25f5"
+    },
+    {
+      "id": "horchibari--huella",
+      "mito": "horchibari",
+      "formato": "huella",
+      "composicion": "simetria",
+      "escena": "Lo que quedó: las dos manos y el camino cortado",
+      "prompt_sha256": "8eb863d9cc972dfb61a20c168f94910067eb7bef044d4f62118e59a5d0a8824b",
+      "prompt_file": "horchibari--huella.prompt.txt",
+      "imagen_sha256": "ee2a12482d1bbcb1bb79d39c1adf9fc6a06184d84487e4dc5447264977e38317",
+      "narrativa_sha256": "85801cda6d7797190cec779db2620fea04283ac69a364204cfcb6019509d25f5"
+    },
+    {
+      "id": "la-mujer-hormiga--entrada",
+      "mito": "la-mujer-hormiga",
+      "formato": "entrada",
+      "composicion": "figura_pequena",
+      "escena": "La mujer sale de la tierra",
+      "prompt_sha256": "11fae26e93816fddcbbd4b3f2466fa7dfd72208a4df33bed17f939699bfa4e1f",
+      "prompt_file": "la-mujer-hormiga--entrada.prompt.txt",
+      "imagen_sha256": "2c0bdcc599b194fc393cddc9b290ad3c7a4674bf8f4d2f61d9691b24452b573a",
+      "narrativa_sha256": "c9d207ce248dae1a60fe7a2c9c0bd9c54c357761681b94750d91830aaf860add"
+    },
+    {
+      "id": "la-mujer-hormiga--acto",
+      "mito": "la-mujer-hormiga",
+      "formato": "acto",
+      "composicion": "umbral",
+      "escena": "La suegra ve los tambos",
+      "prompt_sha256": "bba660dcaf5d02196e5de3365232ac79d8d7e5e358c4531acf7e6c0f8cdac168",
+      "prompt_file": "la-mujer-hormiga--acto.prompt.txt",
+      "imagen_sha256": "c60365919724c88a49f43869f22b4b36b914fa2f469836cb564c45217f7988f1",
+      "narrativa_sha256": "c9d207ce248dae1a60fe7a2c9c0bd9c54c357761681b94750d91830aaf860add"
+    },
+    {
+      "id": "la-mujer-hormiga--huella",
+      "mito": "la-mujer-hormiga",
+      "formato": "huella",
+      "composicion": "cenital",
+      "escena": "Lo que quedó: la seña y la cosecha que se fue",
+      "prompt_sha256": "398ffe2d696e52969edf41f4879e9ab63492ddb4c63e30e0b1ee3e052cd9f597",
+      "prompt_file": "la-mujer-hormiga--huella.prompt.txt",
+      "imagen_sha256": "2a27cd53960c1f6c10b5b3de0a259b95907874619bc69f7affee0aa21cd8d1a6",
+      "narrativa_sha256": "c9d207ce248dae1a60fe7a2c9c0bd9c54c357761681b94750d91830aaf860add"
+    }
+  ]
+}
