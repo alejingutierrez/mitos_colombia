@@ -1,5 +1,3 @@
-const narrativeBoundary = `Esta ficha parafrasea una versión publicada y localizada. No añade diálogos, vestuario, fórmulas, procedimientos ceremoniales ni lugares precisos ausentes de la fuente, y no presenta la voz de un relator como doctrina total del pueblo Huitoto / Murui-Muina.`;
-
 export function huitotoDefinition({
   title,
   summary,
@@ -15,7 +13,7 @@ export function huitotoDefinition({
     title,
     summary,
     tags,
-    mito: `${mito}\n\n${narrativeBoundary}`,
+    mito,
     excerpt: summary,
     seoTitle: resolvedSeoTitle,
     seoDescription: summary,

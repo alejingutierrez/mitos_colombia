@@ -1,65 +1,53 @@
 import { defineWayuuMyth } from "../define-editorial-myth.mjs";
 
-const mito = `Irunúu encontró a una niña abandonada que jugaba entre hormigas. Su cuerpo parecía distinto y otras personas la rechazaban. Él la llevó a su casa y la llamó Wokoloonat.
+const mito = `Irunúu encontró a una niña abandonada que jugaba entre las hormigas. Su cuerpo era distinto del de los otros, y por eso la gente la apartaba. Él la levantó del suelo, la llevó a su casa y la llamó Wokoloonat.
 
-Durante el día, la niña permanecía callada. Por la noche se convertía en una joven llamada Waleker. De su boca salían hilos de colores. Con ellos tejía fajas, chinchorros y telas cuyos diseños recordaban mariposas, espuma, nubes, flores y el arco del cielo.
+De día, la niña callaba. Se sentaba a la sombra del rancho, sin hablar con nadie. Pero de noche, cuando todos dormían, se convertía en una joven llamada Waleker. De su boca salían hilos de colores, y con ellos tejía hasta el amanecer: fajas, chinchorros, telas con dibujos que recordaban mariposas, la espuma del mar, las nubes, las flores y el arco del cielo.
 
-Irunúu descubrió la transformación. Waleker le pidió guardar el secreto. Si él callaba, ella continuaría a su lado y enseñaría lo que sabía.
+Una noche Irunúu despertó y la vio tejer. Waleker no huyó. Le pidió una sola cosa: que guardara el secreto. Si él callaba, ella seguiría a su lado y le enseñaría lo que sabía. Irunúu lo prometió.
 
-El joven recibió tejidos que nadie había visto. En una reunión, otras personas preguntaron quién los hacía. Irunúu protegió el secreto durante un tiempo.
+Desde entonces recibió tejidos que nadie había visto en la Guajira. Cuando los llevó a una reunión, la gente preguntaba quién los hacía, de dónde venían esos colores. Irunúu callaba, y durante un tiempo el secreto estuvo a salvo.
 
-Después entró en una casa que parecía velorio y en realidad pertenecía a servidores de Wanurü. Allí lo rodearon halagos y preguntas. Irunúu reveló el nombre de Waleker y prometió entregarla a cambio de reconocimiento y caza.
+Un día entró en una casa donde parecía haber un velorio. No lo era: la casa pertenecía a los servidores de Wanurü. Lo rodearon, lo halagaron, le preguntaron por sus tejidos, le prometieron reconocimiento y buena caza. Irunúu, mareado entre los halagos, dijo el nombre de Waleker y prometió entregarla.
 
-Cuando recuperó el sentido, regresó a casa. Waleker ya sabía lo ocurrido. Le recordó la condición y se alejó hacia el monte.
+Cuando recuperó el sentido estaba solo, y volvió a su casa. Waleker ya sabía lo que había pasado. Le recordó la condición, sin gritar, y echó a andar hacia el monte. Irunúu corrió tras ella y la tomó de la manta para detenerla. En sus manos quedó un jirón de telaraña. Waleker era ya una araña, y desapareció entre los cardones.
 
-Irunúu intentó detenerla tomando su manta. En sus manos quedó un jirón de telaraña. Waleker adoptó forma de araña y desapareció.
+Pero antes de irse había dejado los tejidos. Irunúu los recogió y los llevó a las mujeres, que los miraron de cerca, contaron los hilos, imitaron los dibujos y enseñaron a otras. El saber no se quedó encerrado con quien había roto la promesa.
 
-Antes de irse dejó los tejidos. Irunúu los llevó a mujeres capaces de observarlos, imitarlos y enseñar a otras. El conocimiento no quedó encerrado con quien había roto la promesa.
+Waleker tampoco lo había inventado sola. Había aprendido colores y formas de tejedoras anteriores: de Atía, la del arco iris; de Kanaspi y de otras maestras del paisaje.
 
-Waleker había aprendido colores y formas de tejedoras anteriores: Atía, relacionada con el arco iris; Kanaspi y otras maestras del paisaje. Por eso el relato no reduce el tejido a invención individual ni a mercancía.
+Irunúu lamentó la pérdida el resto de sus días. Las mujeres, en cambio, afinaron las técnicas, contaron los dibujos y corrigieron los errores hilo por hilo. La araña quedó tejiendo en los rincones, como una memoria, y el don de una noche se volvió un trabajo de muchas manos.`;
 
-Irunúu lamentó la pérdida. Su corazón quedó asociado en algunas versiones con una estrella fugaz que no debía señalarse.
+const historia = `La versión más difundida de esta historia es la que escribió Ramón Paz Ipuana, autor wayuu, en Ale’eya: conceptos y descripciones de la cultura wayuu (tomo II): allí aparecen Irunúu, la niña Wokoloonat y la tejedora nocturna Waleker. Un estudio sobre etnoeducación de 2006, Süchiki Walekerü, atribuye la leyenda tal como circula en las escuelas a la creación literaria de Paz Ipuana sobre el origen del tejido, y el Diccionario de mitología wayuu de la Corporación Jayeechi sistematiza personajes y episodios a partir de Paz Ipuana y de Perrin, con consultas a docentes y sabedores; es una obra derivada, no una voz oral independiente. No hay un texto primario digitalizado consultable: el Relato se reescribió sobre esa versión y no le añade nada que no estuviera ya en ella. Es un relato ausente del corpus de Chaves de 1946: no viene de la recolección colombiana sino de la obra de Paz Ipuana.
 
-Las mujeres desarrollaron técnicas, contaron diseños y corrigieron errores hilo por hilo. La araña permaneció como presencia de memoria, no como sustituta de las maestras humanas.
+Un maestro wayuu, Rafael Mercado Epieyu (2018), relee a Paz Ipuana desde adentro: Waleker es la abuela araña, deidad del arte del tejido, hija de Isashii; a los ojos infértiles es una criatura chata, cabezona y fétida, y a los fértiles, la que crea con salivas resplandecientes el saber del tejido. Esa doble mirada es la que la ficha respeta al no llamar «deforme» a la niña: su cuerpo distinto es lo que los demás no saben mirar. Mercado liga además el mito al encierro de las jóvenes y a Irunu como estrella fugaz.
 
-Cada tejido nuevo llevaba transformación y disciplina. El don inicial necesitaba atención, práctica y transmisión. Waleker se perdió para Irunúu, pero su saber dejó de depender de su secreto.`;
+El tejido es práctica viva, y las instituciones que lo documentan describen el oficio más que la narración. El ICANH, en Hilos en el desierto, relaciona a Walé’kerü con fajas y chinchorros y describe el telar, el huso, el encierro y la transmisión familiar. Artesanías de Colombia (2018) la presenta como la araña que enseñó a tejer, de cuya boca salía hilo ya torcido y preparado, y explica su papel de guía en la iniciación de las jóvenes y la transmisión matrilineal; su texto sobre los kanas vincula esos dibujos al hilo de colores nocturno. Martha Ramírez Zapata (1995) documentó técnicas y el lugar de Wale’kerü en procesos de etnoeducación con comunidades. Aguilar Ipuana y Márquez Reyes (2006) recuerdan que también hay hombres que tejen entre los wayuu: el oficio no es una obligación femenina, aunque su transmisión sea sobre todo materna. La caracterización del Ministerio de Cultura sitúa todo esto en un pueblo binacional cuya economía y educación cambian.
 
-const historia = `Esta página se incorpora porque Waleker es uno de los relatos Wayuu más difundidos y estaba ausente del corpus. Ramón Paz Ipuana publicó una versión extensa vinculada con Irunúu y Wokoloonat. Un diccionario pedagógico de mitología reproduce episodios y reconoce esa dependencia.
+Cautelas. Las versiones institucionales omiten a Irunúu y la traición: cuentan una maestra araña sin pérdida; la de Paz Ipuana hace de la ruptura del secreto el centro. La «casa de los servidores de Wanurü» no es un infierno: Wanülü es la fuerza del mal y de la muerte, y aquí opera por halago, no por castigo. Y la lectura editorial del final —el don se vuelve trabajo de muchas manos— sigue el propio movimiento de la historia, que lleva de una tejedora sobrenatural a mujeres que observan, imitan y enseñan.`;
 
-La leyenda tiene presencia en etnoeducación, patrimonio y práctica textil contemporánea. ICANH y Artesanías de Colombia relacionan a Walé’kerü con aprendizaje de fajas, chinchorros, mochilas, telar e iniciación de jóvenes. Esas instituciones contextualizan continuidad; no hablan por todas las tejedoras.
+const versiones = `Hay al menos tres cadenas que no deben fundirse.
 
-La versión de Irunúu contiene rechazo por diferencia corporal, secreto, promesa rota y pérdida. La revisión evita llamar “deforme” a la niña como identidad y no describe el tejido como magia sin trabajo. El relato mismo conduce de un don sobrenatural a observación, imitación y enseñanza humana.
+La de Paz Ipuana, base del Relato: Irunúu rescata a la niña Wokoloonat, descubre a Waleker tejiendo de noche con hilos que salen de su boca, promete guardar el secreto, lo rompe en la casa de los servidores de Wanurü y pierde a la joven, que se vuelve araña y le deja un jirón de telaraña en la mano; los tejidos quedan para ser imitados y enseñados. Mercado Epieyu (2018), que sigue esa cadena, añade la filiación de Waleker como hija de Isashii y el destino de Irunu como estrella fugaz; la ficha anterior recogía la idea de que esa estrella no debía señalarse. El Relato deja ese final en Versiones porque no pudo cotejarse con el texto.
 
-El tejido Wayuu es práctica viva, económica y estética. No se presenta como fósil ni como labor femenina obligatoria. Las fuentes contemporáneas muestran aprendizaje familiar y comunitario, pero también cambios de materiales, mercados y educación.
+La de Miguel Ángel Jusayú, transcrita por Romero Serrada (2014): Waleker enseña primero a una sola mujer; se fuga con un wayuu; come el algodón y de su boca sale el hilo ya torcido; teje de noche; y enseña los kanas haciendo caminitos a las muchachas en encierro. No hay Irunúu ni traición. Romero añade dos relatos hermanos, el del comején y el de la kanaaspi, que la cadena de Paz Ipuana convierte en maestras anteriores de Waleker.
 
-La página incorpora una pareja visual propia sin apropiarse de fotografías de artesanas. La portada representa el tejido nocturno secreto; la escena vertical muestra transformación y transmisión entre generaciones. Las figuras son recortes de papel, no retratos de personas reales.
+La variante escolar y arquitectónica, resumida en Anales de Investigación en Arquitectura (2020): una niña huérfana maltratada por sus tías, que se atribuyen sus tejidos hasta que el padre descubre la verdad; Waleker escapa y después enseña a las jóvenes durante el encierro. Cambian el cuidador (el padre, no Irunúu), la falta (maltrato y robo, no promesa rota) y el camino hacia la enseñanza (el encierro, no los tejidos dejados).
 
-La incorporación también equilibra un inventario que narraba muchas figuras masculinas y de combate, pero omitía un ciclo central de creación, trabajo y transmisión femenina entre distintas generaciones Wayuu vivas.`;
+Las versiones de Artesanías de Colombia y del ICANH cuentan la araña maestra sin pérdida: de su boca salía el hilo, tejía de noche y al amanecer había una faja hecha; las mujeres heredaron de ella la técnica y la paciencia. Son resúmenes institucionales sin informante.
 
-const versiones = `En la versión asociada con Paz Ipuana, Irunúu rescata a Wokoloonat, descubre a Waleker tejiendo de noche, revela el secreto en un dominio de espíritus y pierde a la joven cuando se convierte en araña. Los tejidos quedan para ser imitados y enseñados.
-
-Otra variante, difundida en estudios de arquitectura y educación, presenta a una niña huérfana maltratada por sus tías. Ellas se atribuyen sus tejidos hasta que el padre descubre la verdad. Waleker escapa y después enseña a jóvenes durante el encierro.
-
-Las variantes comparten niña subestimada, tejido nocturno, revelación, transformación en araña y transmisión a mujeres. Cambian cuidador, traición y camino hacia la enseñanza. No se funden como si cada episodio ocurriera a una sola protagonista.
-
-La anciana araña que ayuda al viajero en Ulépala o “El viaje del más allá” puede recibir un nombre próximo. La semejanza no basta para identificarla con Waleker del origen del tejido.
-
-La página usa “Waleker” en el título por reconocimiento y conserva formas Wale’kerü o Walé’kerü dentro del aparato editorial completo.`;
+El Relato sigue a Paz Ipuana porque es la única versión con arco completo —hallazgo, secreto, traición, transformación, legado— y porque la ficha anterior ya la había elegido; no incorpora al padre ni a las tías, ni el algodón comido, ni la estrella fugaz. Esta ficha no debe confundirse con la anciana que ayuda a volver en “Ulépala” ni con la araña de “El viaje del más allá”: el hilo y el nombre próximo no bastan para identificarlas.`;
 
 const leccion =
-  "Un saber permanece cuando el don se convierte en práctica paciente, memoria compartida y enseñanza entre generaciones.";
+  "Un don recibido en secreto se pierde cuando se cambia por aplauso y sobrevive cuando otras manos lo aprenden.";
 
 const imagePromptHorizontal = `Portada horizontal 16:9 de “Waleker, el origen del tejido” como ilustración editorial digital 2D full paper cut y paper quilling, acabado gráfico plano de borde a borde, nunca fotografía, objeto físico, maqueta, diorama, CGI ni render 3D. Dentro de una ranchería Wayuu nocturna, Waleker, figura adulta estilizada con manta sobria, teje en un telar sencillo mientras hilos finos y enrollados de colores pasan delicadamente de su boca y sus manos hacia una faja; Irunúu aparece solo como silueta discreta en el umbral y una araña pequeña queda junto al telar. Capas gráficas recortadas, bordes de papel visibles y sombras suaves entre planos; cardones, arena, índigo y acentos textiles controlados. Sin retratos reales, exotización, tocados panindígenas, texto, logos, marco ni fotorrealismo.`;
 
 const imagePromptVertical = `Segunda escena vertical 9:16 de “Waleker, el origen del tejido”, distinta de la portada, como ilustración editorial digital 2D full paper cut y paper quilling, acabado gráfico plano de borde a borde, nunca fotografía, objeto físico, maqueta, diorama, CGI ni render 3D. En el patio de una ranchería al amanecer, una araña serena de papel asciende por un hilo hasta una telaraña delicada de filigrana; abajo, tres figuras femeninas adultas y estilizadas de distintas generaciones observan una faja y practican juntas en un telar, pasando el hilo de una mano a otra. Capas gráficas recortadas, cardones, arena, Macuira distante, índigo y acentos textiles controlados. Sin retratos reales, exotización, tocados panindígenas, texto, logos, marco ni fotorrealismo.`;
 
-const similitudes = `Aracne, en la tradición griega, es una tejedora convertida en araña después de competir con una diosa. Waleker también une tejido y araña, pero no es castigada por orgullo: deja un conocimiento después de traición, pérdida o maltrato.
+const similitudes = `Dentro del corpus, “El origen del fuego” es el paralelo más claro: una técnica que estaba oculta o en manos de uno solo pasa a muchas casas, y sobrevive porque deja de depender de una posesión única. Aquí el tejido pasa de la creadora a las mujeres que observan y enseñan; allá la llama se reparte. En ambos casos el reparto tiene reglas de cuidado. “Ulépala” ofrece otro secreto con plazo: una anciana entrega un ovillo de hilo para volver y exige callar dos inviernos; Ulépala habla antes y muere. Waleker también pone una condición de silencio; Irunúu la rompe por halago y pierde a la tejedora, no la vida. “El viaje del más allá” incluye una araña que protege el regreso: comparte con Waleker la capacidad de tender un paso entre mundos, pero nada permite afirmar que sean la misma.
 
-En numerosos relatos, una persona sobrenatural entrega una técnica y desaparece al romperse una condición. El paralelo ayuda a ver la relación entre secreto y oficio, pero no explica los diseños, materiales y aprendizajes Wayuu.
-
-“El viaje del más allá” incluye una araña protectora del regreso. Esa presencia comparte capacidad de tender un paso entre mundos; no se afirma que sea la misma Waleker.
-
-“El origen del fuego” ofrece otra técnica distribuida después de estar oculta. La llama pasa a muchas casas; el tejido pasa de la creadora a mujeres que observan y enseñan. En ambos casos, un recurso cultural sobrevive cuando deja de depender de una sola posesión, aunque conserva reglas de cuidado.`;
+Fuera del ámbito wayuu, la Aracne de las Metamorfosis de Ovidio, tejedora convertida en araña, es la comparación que viene sola, y la diferencia importa más que el parecido: Aracne es castigada por competir con una diosa; Waleker no es castigada, es traicionada, y su transformación no es pena sino salida, y deja detrás un oficio. El motivo de la compañera sobrenatural que entrega una técnica y desaparece al romperse una condición aparece en muchos relatos del mundo; ayuda a ver la relación entre secreto y oficio, pero no explica los kanas, los materiales ni el encierro wayuu en que las jóvenes aprenden.`;
 
 export default defineWayuuMyth({
   slug: "waleker-el-origen-del-tejido",
@@ -86,13 +74,25 @@ export default defineWayuuMyth({
   imagePromptHorizontal,
   imagePromptVertical,
   sourceKeys: [
-    "pazIpuana",
+    {
+      key: "pazIpuana",
+      summary:
+        "Contiene la versión extensa de Paz Ipuana del relato de Waleker/Irunúu, base de la leyenda del origen del tejido.",
+      limitation:
+        "Obra general ya citada en otras fichas.",
+    },
     "dictionaryWayuu",
     "banrepWaleker",
     "scieloWaleker",
     "icanhTejedoras",
     "ortWaleker",
     "minculturaWayuu",
+    "arteTejido2006",
+    "epieyuMiedo2018",
+    "serradatejido2014",
+    "artesaniaWalekeru2018",
+    "colombiaQue",
+    "ovidMetamorphoses",
   ],
   researchNotes: `INCORPORACIÓN: relato Wayuu ampliamente documentado y ausente del inventario.
 
